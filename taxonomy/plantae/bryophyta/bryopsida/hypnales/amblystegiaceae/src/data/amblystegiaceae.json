@@ -2037,10 +2037,15 @@
             "itis": [
               "16199"
             ],
-            "checklistbank": "198072",
-            "wikispecies": "Hygrohypnum_ochraceum"
+            "checklistbank": [
+              "198072",
+              "urn:lsid:marinespecies.org:taxname:292810"
+            ],
+            "wikispecies": [
+              "Hygrohypnum_ochraceum"
+            ]
           },
-          "authorityIds": "itis:16199",
+          "authorityIds": "checklistbank:198072,checklistbank:urn:lsid:marinespecies.org:taxname:292810,itis:16199,wikispecies:Hygrohypnum_ochraceum",
           "commonName": "hygrohypnum moss",
           "description": "Hygrohypnum ochraceum (hygrohypnum moss) is a amblystegiaceae species found in its native region."
         },
@@ -2131,11 +2136,14 @@
           "authorship": "Loeske, 1903",
           "sourceIds": {
             "checklistbank": "786815",
-            "checklistbank-139831": "871575"
+            "checklistbank-139831": [
+              "871575"
+            ]
           },
           "children": [],
           "uuid": "cfd37b27-434c-5da-b5e-6d69c63bbc79f1",
-          "description": "Hygrohypnum palustre is a amblystegiaceae species found in its native region."
+          "description": "Hygrohypnum palustre is a amblystegiaceae species found in its native region.",
+          "authorityIds": "checklistbank:786815,checklistbank-139831:871575"
         },
         {
           "id": "SP_HYGROHYPNUM_NERVOSISSIMUM_PARRIAT",
@@ -2187,22 +2195,6 @@
       "name": "\"Hygrohypnum",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_HYGROHYPNUM_OCHRACEUM_TURN_EX_WILS_LOESKE",
-          "name": "\"Hygrohypnum ochraceum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hygrohypnum",
-          "authorship": "\"(Turn. ex Wils.) Loeske\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:292810",
-            "wikispecies": "Hygrohypnum_ochraceum"
-          },
-          "children": [],
-          "uuid": "66f427a0-578e-573-8f3-f937a4366f1d23",
-          "description": "\"Hygrohypnum ochraceum\" is a amblystegiaceae species found in its native region."
-        },
         {
           "id": "SP_HYGROHYPNUM_ALPESTRE",
           "name": "Hygrohypnum alpestre",
@@ -2332,18 +2324,6 @@
           },
           "uuid": "307ecba4-051d-4286-afbc-63849ae12298",
           "children": []
-        },
-        {
-          "id": "SP_HYGROHYPNUM_PALUSTRE",
-          "name": "Hygrohypnum palustre",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hygrohypnum",
-          "sourceIds": {
-            "checklistbank-139831": "871575"
-          },
-          "uuid": "c4ba22bd-35fc-411f-ab8f-460a316f4bf8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5211,9 +5191,12 @@
           "uuid": "6bca9469-da8e-5dc-ad5-fe545925666904",
           "sourceIds": {
             "checklistbank": "445157",
-            "checklistbank-139831": "445157"
+            "checklistbank-139831": [
+              "445157"
+            ]
           },
-          "description": "Drepanocladus hallii is a amblystegiaceae species found in its native region."
+          "description": "Drepanocladus hallii is a amblystegiaceae species found in its native region.",
+          "authorityIds": "checklistbank:445157,checklistbank-139831:445157"
         },
         {
           "id": "SP_DREPANOCLADUS_PERPLICATUS_G_ROTH_1908",
@@ -5254,9 +5237,12 @@
           "uuid": "1eb9cb7d-8686-55b-ab7-2d41b80022fe31",
           "sourceIds": {
             "checklistbank": "445158",
-            "checklistbank-139831": "445158"
+            "checklistbank-139831": [
+              "445158"
+            ]
           },
-          "description": "Drepanocladus sparsus is a amblystegiaceae species found in its native region."
+          "description": "Drepanocladus sparsus is a amblystegiaceae species found in its native region.",
+          "authorityIds": "checklistbank:445158,checklistbank-139831:445158"
         },
         {
           "id": "SP_DREPANOCLADUS_JAMESII_MACOUNII_GROUT_1909",
@@ -5424,9 +5410,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Drepanocladus",
           "sourceIds": {
-            "checklistbank-139831": "162084"
+            "checklistbank-139831": [
+              "162084"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:162084"
         }
       ]
     },
@@ -5475,31 +5464,8 @@
           "sourceIds": {
             "checklistbank-139831": "162084"
           },
-          "uuid": "9486404e-9c10-40fe-b705-999beca1e459"
-        },
-        {
-          "id": "SP_DREPANOCLADUS_HALLII",
-          "name": "Drepanocladus hallii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Drepanocladus",
-          "sourceIds": {
-            "checklistbank-139831": "445157"
-          },
-          "uuid": "60b46d9c-95ff-4c89-8eb6-3759c8571fb8"
-        },
-        {
-          "id": "SP_DREPANOCLADUS_SPARSUS",
-          "name": "Drepanocladus sparsus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Drepanocladus",
-          "sourceIds": {
-            "checklistbank-139831": "445158"
-          },
-          "uuid": "74a48cdf-df22-4f80-8dea-58904bbee8ce"
+          "uuid": "9486404e-9c10-40fe-b705-999beca1e459",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8315,23 +8281,6 @@
           "description": "Hypnum nitens is a amblystegiaceae species found in its native region."
         },
         {
-          "id": "SP_HYPNUM_BAMBERGERI_SCHIMP_1860",
-          "name": "Hypnum bambergeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Hypnum",
-          "authorship": "Schimp., 1860",
-          "sourceIds": {
-            "checklistbank": "6028",
-            "wikispecies": "Hypnum_bambergeri"
-          },
-          "children": [],
-          "uuid": "75f57213-1d93-575-bfe-a54844885521e0",
-          "commonName": "Bamberger's golden plait moss",
-          "description": "Hypnum bambergeri (Bamberger's golden plait moss) is a amblystegiaceae species found in its native region."
-        },
-        {
           "id": "SP_HYPNUM_FASTIGIATUM_BRID_1827",
           "name": "Hypnum fastigiatum",
           "rank": "SPECIES",
@@ -8345,22 +8294,6 @@
           "children": [],
           "uuid": "14600584-6420-5fe-865-8656648331bb78",
           "description": "Hypnum fastigiatum is a amblystegiaceae species found in its native region."
-        },
-        {
-          "id": "SP_HYPNUM_SAUTERI_SCHIMP_1850",
-          "name": "Hypnum sauteri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hypnum",
-          "authorship": "Schimp., 1850",
-          "sourceIds": {
-            "checklistbank": "434474",
-            "wikispecies": "Hypnum_sauteri"
-          },
-          "children": [],
-          "uuid": "0c4c082b-7af3-590-826-12f115f987f811",
-          "description": "Hypnum sauteri is a amblystegiaceae species found in its native region."
         },
         {
           "id": "SP_HYPNUM_FALCATUM_BRID_1801",
@@ -9704,7 +9637,7 @@
     }
   ],
   "genusCount": 84,
-  "speciesCount": 504,
+  "speciesCount": 502,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

@@ -278,10 +278,21 @@
             "col": [
               "58YW5"
             ],
-            "checklistbank": "a98b9305-8704-47e2-8fcc-cd5ab3a3ef8e",
-            "wikispecies": "Tripneustes_gratilla"
+            "checklistbank": [
+              "a98b9305-8704-47e2-8fcc-cd5ab3a3ef8e",
+              "urn:lsid:marinespecies.org:taxname:513682"
+            ],
+            "wikispecies": [
+              "Tripneustes_gratilla"
+            ],
+            "checklistbank-127379": [
+              "a98b9305-8704-47e2-8fcc-cd5ab3a3ef8e"
+            ],
+            "checklistbank-139831": [
+              "122127"
+            ]
           },
-          "authorityIds": "col:58YW5",
+          "authorityIds": "checklistbank:a98b9305-8704-47e2-8fcc-cd5ab3a3ef8e,checklistbank:urn:lsid:marinespecies.org:taxname:513682,checklistbank-127379:a98b9305-8704-47e2-8fcc-cd5ab3a3ef8e,checklistbank-139831:122127,col:58YW5,wikispecies:Tripneustes_gratilla",
           "commonName": "collector urchin",
           "description": "Tripneustes gratilla, the collector urchin or halloween urchin, is a species of sea urchin."
         },
@@ -581,24 +592,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TRIPNEUSTES_GRATILLA_DAFNI_1983",
-          "name": "\"Tripneustes gratilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tripneustes",
-          "authorship": "\"Dafni, 1983\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:513682",
-            "wikispecies": "Tripneustes_gratilla",
-            "checklistbank-127379": "a98b9305-8704-47e2-8fcc-cd5ab3a3ef8e",
-            "checklistbank-139831": "122127"
-          },
-          "children": [],
-          "uuid": "6cdfd2de-f170-594-b90-cfe28ea6e96eac",
-          "description": "\"Tripneustes gratilla is a toxopneustidae species found in its native region."
-        },
-        {
           "id": "SP_TRIPNEUSTES_VENTRICOSUS_TAUBER_1951",
           "name": "\"Tripneustes ventricosus",
           "rank": "SPECIES",
@@ -624,7 +617,8 @@
           "sourceIds": {
             "checklistbank-139831": "67762"
           },
-          "uuid": "1e0c5950-2f51-46e4-90e8-83511ff15cd4"
+          "uuid": "1e0c5950-2f51-46e4-90e8-83511ff15cd4",
+          "children": []
         },
         {
           "id": "SP_TRIPNEUSTES_AUSTRALIAE",
@@ -636,7 +630,8 @@
           "sourceIds": {
             "checklistbank-139831": "1567521"
           },
-          "uuid": "1e02f2b7-1462-47fb-bcee-2d4139e07acf"
+          "uuid": "1e02f2b7-1462-47fb-bcee-2d4139e07acf",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2496,7 +2491,7 @@
       "lineage": "Toxopneustidae"
     }
   ],
-  "speciesCount": 140,
+  "speciesCount": 139,
   "appSlug": "toxopneustidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

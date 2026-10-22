@@ -824,9 +824,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1325448"
             ],
-            "checklistbank-1174": "txn:135803"
+            "checklistbank-1174": [
+              "txn:135803"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1325448"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1325448,col:6X92T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1325448,checklistbank-1174:txn:135803,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1325448,col:6X92T",
           "authorship": "(Brocchi, 1814)"
         },
         {
@@ -2286,9 +2291,14 @@
               "urn:lsid:marinespecies.org:taxname:1581844"
             ],
             "gbif-backbone": "4956997",
-            "checklistbank-1174": "txn:115034"
+            "checklistbank-1174": [
+              "txn:115034"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1581844"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1581844,col:CJG5C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1581844,checklistbank-1174:txn:115034,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1581844,col:CJG5C,gbif-backbone:4956997",
           "authorship": "R. A. Philippi, 1841"
         },
         {
@@ -2688,9 +2698,14 @@
               "urn:lsid:marinespecies.org:taxname:1325454"
             ],
             "gbif-backbone": "4956998",
-            "checklistbank-1174": "txn:135802"
+            "checklistbank-1174": [
+              "txn:135802"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1325454"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1325454,col:4T3WF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1325454,checklistbank-1174:txn:135802,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1325454,col:4T3WF,gbif-backbone:4956998",
           "authorship": "(J. De C. Sowerby, 1824)"
         },
         {
@@ -4882,36 +4897,6 @@
           "children": []
         },
         {
-          "id": "SP_RINGICULA_BUCCINEA_BROCCHI_1814",
-          "name": "Ringicula buccinea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ringicula",
-          "authorship": "(Brocchi, 1814)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1325448",
-            "checklistbank-1174": "txn:135803"
-          },
-          "uuid": "d9282e2e-e117-43b0-bef3-11002b7d1043",
-          "children": []
-        },
-        {
-          "id": "SP_RINGICULA_VENTRICOSA_J_DE_C_SOWERBY_1824",
-          "name": "Ringicula ventricosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ringicula",
-          "authorship": "(J. De C. Sowerby, 1824)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1325454",
-            "checklistbank-1174": "txn:135802"
-          },
-          "uuid": "979a685a-50cf-41a6-9b1c-86d761001c6a",
-          "children": []
-        },
-        {
           "id": "SP_RINGICULA_MINOR_GRATELOUP_1838",
           "name": "Ringicula minor",
           "rank": "SPECIES",
@@ -4937,21 +4922,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1571835"
           },
           "uuid": "91d1d0bb-52c3-4b5a-ae4a-d563af412f29",
-          "children": []
-        },
-        {
-          "id": "SP_RINGICULA_STRIATA_R_A_PHILIPPI_1841",
-          "name": "Ringicula striata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ringicula",
-          "authorship": "R. A. Philippi, 1841",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1581844",
-            "checklistbank-1174": "txn:115034"
-          },
-          "uuid": "e9f2e85f-921f-44c3-945d-5f244390127e",
           "children": []
         },
         {
@@ -5034,7 +5004,8 @@
           "sourceIds": {
             "checklistbank-139831": "418493"
           },
-          "uuid": "126eb0af-9101-4636-8ff2-f1f9712e8a8a"
+          "uuid": "126eb0af-9101-4636-8ff2-f1f9712e8a8a",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_ORIENTALIS",
@@ -5046,7 +5017,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202469"
           },
-          "uuid": "ecc5be81-cca2-4720-b544-11cd67ccc15d"
+          "uuid": "ecc5be81-cca2-4720-b544-11cd67ccc15d",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_MINICHEVI",
@@ -5058,7 +5030,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202470"
           },
-          "uuid": "0a045da8-dcbc-4f87-bd56-1cd434bfbaf5"
+          "uuid": "0a045da8-dcbc-4f87-bd56-1cd434bfbaf5",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_HARDINGI",
@@ -5070,7 +5043,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202476"
           },
-          "uuid": "0261ec5e-8503-4e93-8281-f9238cc7f3f2"
+          "uuid": "0261ec5e-8503-4e93-8281-f9238cc7f3f2",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_KURODAI",
@@ -5082,7 +5056,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202477"
           },
-          "uuid": "d931a1ee-6185-428a-9934-a6094529970d"
+          "uuid": "d931a1ee-6185-428a-9934-a6094529970d",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_OKADAI",
@@ -5094,7 +5069,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202478"
           },
-          "uuid": "ea2459f8-e57f-4bdb-b7be-b34180666bee"
+          "uuid": "ea2459f8-e57f-4bdb-b7be-b34180666bee",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_TOSAENSIS",
@@ -5106,7 +5082,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202479"
           },
-          "uuid": "aa5cb332-64bd-4bd6-951b-742971fa0b5d"
+          "uuid": "aa5cb332-64bd-4bd6-951b-742971fa0b5d",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_TAKEYAMAI",
@@ -5118,7 +5095,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202481"
           },
-          "uuid": "dd9c7c76-74ba-4edd-84ea-50ce3aa108d0"
+          "uuid": "dd9c7c76-74ba-4edd-84ea-50ce3aa108d0",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_PUSILLA",
@@ -5130,7 +5108,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202486"
           },
-          "uuid": "fad5b590-7cb2-456d-957e-8844a5f7dbc8"
+          "uuid": "fad5b590-7cb2-456d-957e-8844a5f7dbc8",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_ASSULARUM",
@@ -5142,7 +5121,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202505"
           },
-          "uuid": "87abf7d7-dfcc-408c-8d3e-6fac62dc7dec"
+          "uuid": "87abf7d7-dfcc-408c-8d3e-6fac62dc7dec",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_NITIDA",
@@ -5154,7 +5134,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202512"
           },
-          "uuid": "ea69b210-c0e3-4cde-bf31-3defa03ff5de"
+          "uuid": "ea69b210-c0e3-4cde-bf31-3defa03ff5de",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_ABYSSICOLA",
@@ -5166,7 +5147,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202513"
           },
-          "uuid": "feb57b5c-1551-41be-b095-3fdea25f9847"
+          "uuid": "feb57b5c-1551-41be-b095-3fdea25f9847",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_CARON",
@@ -5178,7 +5160,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202516"
           },
-          "uuid": "db633e18-3781-4933-b639-cf25e1495278"
+          "uuid": "db633e18-3781-4933-b639-cf25e1495278",
+          "children": []
         },
         {
           "id": "SP_RINGICULA_GRANDINOSA",
@@ -5190,7 +5173,8 @@
           "sourceIds": {
             "checklistbank-139831": "1202517"
           },
-          "uuid": "e6129e28-ca2a-407d-91d5-d259a36513ad"
+          "uuid": "e6129e28-ca2a-407d-91d5-d259a36513ad",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7379,7 +7363,7 @@
     }
   ],
   "genusCount": 18,
-  "speciesCount": 410,
+  "speciesCount": 421,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

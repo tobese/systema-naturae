@@ -39,6 +39,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import zipfile
 import importColChecklist as ICC  # noqa: E402
+import authorityIndex  # noqa: E402
 import sources  # noqa: E402
 
 
@@ -61,7 +62,7 @@ def _is_txtree(path):
     return False
 
 
-def transform_records(r: "ICC.RoutedSpecies"):
+def transform_records(r: "ICC.RoutedSpecies", diverted: list):
     """Yield one importTransformed.py-shaped record per staged species.
 
     route_species() stages by (kingdom, slug) once it has matched a family
@@ -75,6 +76,21 @@ def transform_records(r: "ICC.RoutedSpecies"):
     exist as names in our family-matching data but were never scaffolded.
     Skip those here, the same way main() does, rather than crash a run that
     may have thousands of other species to apply first.
+
+    Before yielding, each candidate is checked against authorityIndex --
+    the same tree-wide (kingdom, authority, key) index merge_family's
+    direct-write path already consults, but only as a warning there
+    (importSpeciesFile.py's own docstring: "a false positive here would
+    silently drop good data"). importwrite's own duplicate gate
+    (crossfamily.go) is session-local, not tree-wide -- "a species in a
+    family this process has never loaded is invisible to it until that
+    family is loaded" -- so this split pipeline had no tree-wide check at
+    all until now. A hit here means a candidate's external id already
+    belongs to a species in a DIFFERENT family: diverted into `diverted`
+    instead of yielded, so it lands in needs-validation.jsonl rather than
+    silently creating (or racing to create) a second copy. Found
+    2026-10-22: 24 of the ~59 cross-kingdom duplicates and homonym-bugs
+    cleaned up by hand this session came in exactly this way.
     """
     import glob as _glob
     files = {}
@@ -99,6 +115,27 @@ def transform_records(r: "ICC.RoutedSpecies"):
                 species["authorship"] = authorship
             if source_id:
                 species["sourceIds"] = {r.source_key: source_id}
+
+            if source_id:
+                try:
+                    hits = authorityIndex.conflicts_for(
+                        kingdom, slug, bare, {r.source_key: source_id})
+                except Exception as e:
+                    hits = []
+                    print(f"  ! authorityIndex lookup failed for {bare!r}, "
+                          f"letting it through unchecked: {e}")
+                if hits:
+                    auth, akey, other_name, other_slug, other_id = hits[0]
+                    diverted.append({
+                        "kingdom": kingdom, "intendedFamily": slug,
+                        "species": species, "genusName": g,
+                        "conflict": {"authority": auth, "key": akey,
+                                     "existingName": other_name,
+                                     "existingFamily": other_slug,
+                                     "existingId": other_id},
+                    })
+                    continue
+
             yield {
                 "kingdom": kingdom,
                 "family": slug,
@@ -152,8 +189,9 @@ def main() -> int:
         return 0
 
     meta = r.meta
+    diverted = []
     path = sources.record_transformed(
-        args.work_slug, "transformed.jsonl", transform_records(r),
+        args.work_slug, "transformed.jsonl", transform_records(r, diverted),
         source=ICC.SOURCE,
         source_dataset_id=meta.get("key") or meta.get("alias") or "",
         source_url=meta.get("url") or "",
@@ -171,6 +209,20 @@ def main() -> int:
     staged_total = sum(len(v) for v in r.staged.values())
     print(f"\n  wrote {path}  ({staged_total:,} species staged, "
           f"not yet applied to the tree)")
+
+    if diverted:
+        vpath = sources.record_transformed(
+            args.work_slug, "needs-validation.jsonl", diverted,
+            source=ICC.SOURCE,
+            source_dataset_id=meta.get("key") or meta.get("alias") or "",
+            source_url=meta.get("url") or "",
+            archive_path=args.archive,
+            transformer="transformColChecklist.transform_records (authority conflict)",
+        )
+        print(f"  wrote {vpath}  ({len(diverted):,} species held back -- "
+              f"external id already belongs to a species in a different "
+              f"family, see the conflict field in each row for where)")
+
     print(f"  apply with: IMPORTWRITE_URL=<url> "
           f"python3 scripts/importTransformed.py {args.work_slug}")
     return 0

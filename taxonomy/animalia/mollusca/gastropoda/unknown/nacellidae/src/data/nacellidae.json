@@ -370,9 +370,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:325448"
             ],
-            "checklistbank-1174": "txn:147860"
+            "checklistbank-1174": [
+              "txn:147860"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:325448"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:325448,col:S3NR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:325448,checklistbank-1174:txn:147860,checklistbank-2011:urn:lsid:marinespecies.org:taxname:325448,col:S3NR",
           "authorship": "(Reeve, 1854)"
         },
         {
@@ -1616,21 +1621,6 @@
           "children": []
         },
         {
-          "id": "SP_CELLANA_EXARATA_REEVE_1854",
-          "name": "Cellana exarata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cellana",
-          "authorship": "(Reeve, 1854)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:325448",
-            "checklistbank-1174": "txn:147860"
-          },
-          "uuid": "21712524-fc5a-47b3-84a1-c8aec480240f",
-          "children": []
-        },
-        {
           "id": "SP_CELLANA_FLAVA_F_W_HUTTON_1873",
           "name": "Cellana flava",
           "rank": "SPECIES",
@@ -1949,7 +1939,8 @@
           "sourceIds": {
             "checklistbank-139831": "369018"
           },
-          "uuid": "5b1bf4b8-4e11-4366-8611-516f9917d2f9"
+          "uuid": "5b1bf4b8-4e11-4366-8611-516f9917d2f9",
+          "children": []
         },
         {
           "id": "SP_CELLANA_OLIVERI",
@@ -1961,7 +1952,8 @@
           "sourceIds": {
             "checklistbank-139831": "497294"
           },
-          "uuid": "8d83713f-4ee0-4f67-9376-1544c42a9f07"
+          "uuid": "8d83713f-4ee0-4f67-9376-1544c42a9f07",
+          "children": []
         },
         {
           "id": "SP_CELLANA_PRICEI",
@@ -1973,7 +1965,8 @@
           "sourceIds": {
             "checklistbank-139831": "1075667"
           },
-          "uuid": "5374a94b-3d31-47b4-b7bb-e8d0a89d32d0"
+          "uuid": "5374a94b-3d31-47b4-b7bb-e8d0a89d32d0",
+          "children": []
         },
         {
           "id": "SP_CELLANA_HOWENSIS",
@@ -1985,7 +1978,8 @@
           "sourceIds": {
             "checklistbank-139831": "1100790"
           },
-          "uuid": "b8dbc393-8621-4224-8a0f-47904dc8744e"
+          "uuid": "b8dbc393-8621-4224-8a0f-47904dc8744e",
+          "children": []
         },
         {
           "id": "SP_CELLANA_TURBATOR",
@@ -1997,7 +1991,8 @@
           "sourceIds": {
             "checklistbank-139831": "1212271"
           },
-          "uuid": "e255a54d-f09c-4ffc-952c-bbb1a2f3aeef"
+          "uuid": "e255a54d-f09c-4ffc-952c-bbb1a2f3aeef",
+          "children": []
         },
         {
           "id": "SP_CELLANA_VITIENSIS",
@@ -2009,7 +2004,8 @@
           "sourceIds": {
             "checklistbank-139831": "1212272"
           },
-          "uuid": "de373f88-9578-4b69-8dfe-e5c870631bef"
+          "uuid": "de373f88-9578-4b69-8dfe-e5c870631bef",
+          "children": []
         },
         {
           "id": "SP_CELLANA_ANALOGIA",
@@ -2021,7 +2017,8 @@
           "sourceIds": {
             "checklistbank-139831": "1212273"
           },
-          "uuid": "b4ddbded-7ced-409f-942e-a78004ce8d6a"
+          "uuid": "b4ddbded-7ced-409f-942e-a78004ce8d6a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2975,7 +2972,8 @@
           "sourceIds": {
             "checklistbank-139831": "1212282"
           },
-          "uuid": "9d67c83c-73e7-48c7-8dc9-5897c49efbec"
+          "uuid": "9d67c83c-73e7-48c7-8dc9-5897c49efbec",
+          "children": []
         },
         {
           "id": "SP_NACELLA_MIRIM",
@@ -2987,7 +2985,8 @@
           "sourceIds": {
             "checklistbank-139831": "1695302"
           },
-          "uuid": "6c41254a-3af9-4495-a21b-137c917132d8"
+          "uuid": "6c41254a-3af9-4495-a21b-137c917132d8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3401,7 +3400,7 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 183,
+  "speciesCount": 191,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

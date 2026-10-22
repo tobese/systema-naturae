@@ -29,10 +29,21 @@
             "col": [
               "6TWLT"
             ],
-            "checklistbank": "126585",
-            "wikispecies": "Pediculus_humanus"
+            "checklistbank": [
+              "126585",
+              "urn:lsid:marinespecies.org:taxname:1491236"
+            ],
+            "wikispecies": [
+              "Pediculus_humanus"
+            ],
+            "checklistbank-127379": [
+              "d5c930a8-2bb2-40bf-89cc-fe3d2bd5c9db"
+            ],
+            "checklistbank-139831": [
+              "321532"
+            ]
           },
-          "authorityIds": "col:6TWLT,itis:186074",
+          "authorityIds": "checklistbank:126585,checklistbank:urn:lsid:marinespecies.org:taxname:1491236,checklistbank-127379:d5c930a8-2bb2-40bf-89cc-fe3d2bd5c9db,checklistbank-139831:321532,col:6TWLT,itis:186074,wikispecies:Pediculus_humanus",
           "commonName": "body louse",
           "description": "Pediculus humanus is a species of louse that infests humans."
         },
@@ -487,24 +498,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PEDICULUS_HUMANUS_DE_GEER",
-          "name": "\"Pediculus humanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pediculus",
-          "authorship": "\"de Geer\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1491236",
-            "wikispecies": "Pediculus_humanus",
-            "checklistbank-127379": "d5c930a8-2bb2-40bf-89cc-fe3d2bd5c9db",
-            "checklistbank-139831": "321532"
-          },
-          "children": [],
-          "uuid": "30fb82a0-e661-58f-829-c2ad0c98f45cd8",
-          "description": "\"Pediculus humanus is a pediculidae species found in its native region."
-        },
-        {
           "id": "SP_PEDICULUS_MJOBERGI",
           "name": "Pediculus mjobergi",
           "rank": "SPECIES",
@@ -514,7 +507,8 @@
           "sourceIds": {
             "checklistbank-139831": "1038724"
           },
-          "uuid": "6310724a-5191-40a5-8015-7cf64513e126"
+          "uuid": "6310724a-5191-40a5-8015-7cf64513e126",
+          "children": []
         },
         {
           "id": "SP_PEDICULUS_SCHAEFFI",
@@ -526,14 +520,15 @@
           "sourceIds": {
             "checklistbank-139831": "1038726"
           },
-          "uuid": "0c9af679-b796-4435-b7e6-a4b16c2373e2"
+          "uuid": "0c9af679-b796-4435-b7e6-a4b16c2373e2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pediculidae"
     }
   ],
-  "speciesCount": 34,
+  "speciesCount": 33,
   "appSlug": "pediculidae",
   "lineage": "Troctomorpha",
   "genusCount": 2,

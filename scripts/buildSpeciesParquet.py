@@ -190,13 +190,74 @@ def rows_for_family(fam, ranks: dict) -> list:
     return out
 
 
+def _cache_path(kingdom: str) -> str:
+    """Per-kingdom cache parquet underneath the final output.
+
+    Most imports touch one kingdom (a plant checklist, a fungi checklist),
+    so re-parsing all six kingdoms' ~0.97 GB of JSON on every rebuild wastes
+    five-sixths of the work. Each kingdom's own cache is rebuilt only when
+    one of ITS family files is newer than it; the final `--out` file is
+    always reassembled, but that last step is a pure parquet-to-parquet
+    union with no JSON involved, so it stays cheap even when every kingdom
+    is already warm.
+    """
+    d = os.path.dirname(DEFAULT_OUT)
+    return os.path.join(d, f".species-cache-{kingdom}.parquet")
+
+
+def _kingdom_newest_mtime(kingdom: str) -> float:
+    newest = 0.0
+    for fam in iter_family_files(kingdom):
+        try:
+            newest = max(newest, os.path.getmtime(fam.path))
+        except OSError:
+            pass
+    return newest
+
+
+def _build_kingdom_cache(duckdb, k: str, cache_path: str, t0: float) -> int:
+    """(Re)write one kingdom's cache parquet from its family files. Returns
+    the row count written."""
+    jsonl = cache_path + ".jsonl"
+    k_t0, k_rows, files = time.time(), 0, 0
+    ranks_by_path = rank_map(k)
+    with open(jsonl, "w", encoding="utf-8") as fh:
+        for fam in iter_family_files(k):
+            ranks = ranks_by_path.get(fam.path)
+            if ranks is None:
+                # No FAMILY node resolves to this file. Recorded rather than
+                # silently given invented ranks; see verifyTree's note about
+                # plantae's 223 declared-but-empty families.
+                ranks = {"kingdom": k, "phylum": "", "cls": "", "ord": "",
+                         "family": fam.slug}
+            rows = rows_for_family(fam, ranks)
+            for r in rows:
+                fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+            k_rows += len(rows)
+            files += 1
+            if files % 1000 == 0:
+                print(f"  {k:10s} {files:>6,} files  {k_rows:>9,} rows  "
+                      f"{time.time() - t0:.0f}s elapsed", flush=True)
+    con = duckdb.connect()
+    cols = ", ".join(f'"{c}"' for c in COLUMNS)
+    con.execute(f"""
+        COPY (
+            SELECT {cols} FROM read_json_auto('{jsonl}', maximum_object_size=10485760)
+        ) TO '{cache_path}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    con.close()
+    os.remove(jsonl)
+    print(f"  {k:10s} {k_rows:>9,} species cached in {time.time() - k_t0:.0f}s")
+    return k_rows
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=DEFAULT_OUT)
     ap.add_argument("--kingdom", choices=KINGDOMS,
                     help="one kingdom; default all six")
     ap.add_argument("--force", action="store_true",
-                    help="rebuild even if the output is newer than the tree")
+                    help="rebuild every kingdom's cache, even warm ones")
     args = ap.parse_args()
 
     try:
@@ -210,70 +271,46 @@ def main() -> int:
 
     kingdoms = [args.kingdom] if args.kingdom else KINGDOMS
 
-    if os.path.exists(args.out) and not args.force:
-        newest = 0.0
-        for k in KINGDOMS:
-            for fam in iter_family_files(k):
-                try:
-                    newest = max(newest, os.path.getmtime(fam.path))
-                except OSError:
-                    pass
-        if os.path.getmtime(args.out) >= newest:
-            print(f"  {os.path.relpath(args.out, ROOT)} is newer than the "
-                  f"tree; pass --force to rebuild")
+    t0 = time.time()
+    total = 0
+    rebuilt = []
+    for k in kingdoms:
+        cache_path = _cache_path(k)
+        if (not args.force and os.path.exists(cache_path)
+                and os.path.getmtime(cache_path) >= _kingdom_newest_mtime(k)):
+            print(f"  {k:10s} cache is warm, reusing")
+            continue
+        total += _build_kingdom_cache(duckdb, k, cache_path, t0)
+        rebuilt.append(k)
+
+    cache_paths = [_cache_path(k) for k in KINGDOMS if os.path.exists(_cache_path(k))]
+    if not cache_paths:
+        print("  no kingdom caches exist yet -- nothing to assemble")
+        return 0
+    if not rebuilt and os.path.exists(args.out) and not args.force:
+        newest_cache = max(os.path.getmtime(p) for p in cache_paths)
+        if os.path.getmtime(args.out) >= newest_cache:
+            print(f"\n  every kingdom cache is warm and "
+                  f"{os.path.relpath(args.out, ROOT)} is already current")
             return 0
 
-    t0 = time.time()
-    jsonl = args.out + ".jsonl"
-    total = 0
-    files = 0
-    unranked = 0
-    with open(jsonl, "w", encoding="utf-8") as fh:
-        for k in kingdoms:
-            k_t0, k_rows = time.time(), 0
-            ranks_by_path = rank_map(k)
-            for fam in iter_family_files(k):
-                ranks = ranks_by_path.get(fam.path)
-                if ranks is None:
-                    # No FAMILY node resolves to this file. Recorded rather than
-                    # silently given invented ranks; see verifyTree's note about
-                    # plantae's 223 declared-but-empty families.
-                    unranked += 1
-                    ranks = {"kingdom": k, "phylum": "", "cls": "", "ord": "",
-                             "family": fam.slug}
-                rows = rows_for_family(fam, ranks)
-                for r in rows:
-                    fh.write(json.dumps(r, ensure_ascii=False) + "\n")
-                k_rows += len(rows)
-                files += 1
-                if files % 1000 == 0:
-                    print(f"  {files:>6,} files  {total:>9,} rows  "
-                          f"{time.time() - t0:.0f}s elapsed", flush=True)
-            print(f"  {k:10s} {k_rows:>9,} species in "
-                  f"{time.time() - k_t0:.0f}s")
-            total += k_rows
-    if unranked:
-        print(f"  note: {unranked:,} family files had no taxonomy node and were "
-              f"written with empty phylum/class/order")
-
-    print(f"\n  {total:,} species from {files:,} family files in "
-          f"{time.time() - t0:.0f}s; writing parquet")
-
+    print(f"\n  reassembling {os.path.relpath(args.out, ROOT)} from "
+          f"{len(cache_paths)} kingdom cache(s) ({len(rebuilt)} just rebuilt)")
     con = duckdb.connect()
-    cols = ", ".join(f'"{c}"' for c in COLUMNS)
+    list_sql = "[" + ", ".join(f"'{p}'" for p in cache_paths) + "]"
     con.execute(f"""
         COPY (
-            SELECT {cols} FROM read_json_auto('{jsonl}', maximum_object_size=10485760)
+            SELECT * FROM read_parquet({list_sql})
         ) TO '{args.out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     rows_out = con.execute(
         f"SELECT count(*) FROM read_parquet('{args.out}')").fetchone()[0]
     con.close()
-    os.remove(jsonl)
 
     size = os.path.getsize(args.out)
     print(f"  wrote {os.path.relpath(args.out, ROOT)}: {rows_out:,} rows, "
-          f"{size / 1e6:.0f} MB in {time.time() - t0:.0f}s total")
+          f"{size / 1e6:.0f} MB in {time.time() - t0:.0f}s total "
+          f"({total:,} species re-parsed from JSON this run)")
     print("\n  derived and gitignored -- the family files remain the truth. "
           "Rebuild after an import.")
     return 0

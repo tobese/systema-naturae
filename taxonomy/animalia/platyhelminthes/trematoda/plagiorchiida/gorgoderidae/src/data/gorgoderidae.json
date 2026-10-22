@@ -4933,12 +4933,18 @@
           "lineage": "Phyllodistomum",
           "authorship": "(Olfers, 1816)",
           "sourceIds": {
-            "checklistbank": "242207",
-            "checklistbank-139831": "1005952"
+            "checklistbank": [
+              "242207",
+              "urn:lsid:marinespecies.org:taxname:728594"
+            ],
+            "checklistbank-139831": [
+              "1005952"
+            ]
           },
           "children": [],
           "uuid": "cc97fe67-e4ef-5ac-aa7-7d57ecc3d13a17",
-          "description": "Phyllodistomum folium is a gorgoderidae species found in its native region."
+          "description": "Phyllodistomum folium is a gorgoderidae species found in its native region.",
+          "authorityIds": "checklistbank:242207,checklistbank:urn:lsid:marinespecies.org:taxname:728594,checklistbank-139831:1005952"
         },
         {
           "id": "SP_PHYLLODISTOMUM_MACROCOTYLE_L_HE_1909",
@@ -6962,9 +6968,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Phyllodistomum",
           "sourceIds": {
-            "checklistbank-139831": "1005953"
+            "checklistbank-139831": [
+              "1005953"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1005953"
         }
       ]
     },
@@ -9931,22 +9940,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PHYLLODISTOMUM_FOLIUM_OLFERS_1816_BRAUN_1899",
-          "name": "\"Phyllodistomum folium\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phyllodistomum",
-          "authorship": "\"(Olfers, 1816) Braun, 1899\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:728594",
-            "checklistbank-139831": "1005952"
-          },
-          "children": [],
-          "uuid": "81f0488f-1c43-557-901-d78a6f1586c893",
-          "description": "\"Phyllodistomum folium\" is a gorgoderidae species found in its native region."
-        },
-        {
           "id": "SP_PHYLLODISTOMUM_UMBLAE_FABRICIUS_1780_BAKKE_1982",
           "name": "\"Phyllodistomum umblae\"",
           "rank": "SPECIES",
@@ -10012,7 +10005,8 @@
           "sourceIds": {
             "checklistbank-139831": "1005953"
           },
-          "uuid": "d4f35a89-3938-423a-be5b-8de04a80e612"
+          "uuid": "d4f35a89-3938-423a-be5b-8de04a80e612",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

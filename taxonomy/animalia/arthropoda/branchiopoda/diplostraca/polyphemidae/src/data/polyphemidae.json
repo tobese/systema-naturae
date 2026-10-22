@@ -21,10 +21,18 @@
             "col": [
               "4LDT2"
             ],
-            "checklistbank": "ott2960345",
-            "wikispecies": "Polyphemus_exiguus"
+            "checklistbank": [
+              "ott2960345",
+              "urn:lsid:marinespecies.org:taxname:412890"
+            ],
+            "wikispecies": [
+              "Polyphemus_exiguus"
+            ],
+            "checklistbank-139831": [
+              "1708970"
+            ]
           },
-          "authorityIds": "col:4LDT2",
+          "authorityIds": "checklistbank:ott2960345,checklistbank:urn:lsid:marinespecies.org:taxname:412890,checklistbank-139831:1708970,col:4LDT2,wikispecies:Polyphemus_exiguus",
           "children": [],
           "description": "Polyphemus exiguus is a polyphemus species found in its native region."
         },
@@ -99,11 +107,19 @@
           "authorship": "(Linnaeus, 1758)",
           "sourceIds": {
             "checklistbank": "257993",
-            "wikispecies": "Polyphemus_pediculus"
+            "wikispecies": [
+              "Polyphemus_pediculus"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:409915"
+            ],
+            "checklistbank-139831": [
+              "483930"
+            ]
           },
           "children": [],
           "uuid": "8322ca1d-cda2-58f-94b-7f1281f4ac3dbe",
-          "authorityIds": "checklistbank:257993,checklistbank-2011:urn:lsid:marinespecies.org:taxname:409915,wikispecies:Polyphemus_pediculus"
+          "authorityIds": "checklistbank:257993,checklistbank-139831:483930,checklistbank-2011:urn:lsid:marinespecies.org:taxname:409915,wikispecies:Polyphemus_pediculus"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -115,39 +131,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_POLYPHEMUS_EXIGUUS_G_O_SARS_1897",
-          "name": "\"Polyphemus exiguus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Polyphemus",
-          "authorship": "\"G.O. Sars, 1897\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:412890",
-            "wikispecies": "Polyphemus_exiguus",
-            "checklistbank-139831": "1708970"
-          },
-          "children": [],
-          "uuid": "a9a0b77a-518a-5bf-8e8-6a14482cff136e",
-          "description": "\"Polyphemus exiguus\" is a polyphemidae species found in its native region."
-        },
-        {
-          "id": "SP_POLYPHEMUS_PEDICULUS_LINNAEUS_1761",
-          "name": "Polyphemus pediculus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Polyphemus",
-          "authorship": "(Linnaeus, 1761)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:409915",
-            "wikispecies": "Polyphemus_pediculus",
-            "checklistbank-139831": "483930"
-          },
-          "uuid": "32cfcb9c-0584-44f5-ac91-ae0b315a069b",
-          "children": []
-        },
-        {
           "id": "SP_POLYPHEMUS_BREVICAUDIS",
           "name": "Polyphemus brevicaudis",
           "rank": "SPECIES",
@@ -157,7 +140,8 @@
           "sourceIds": {
             "checklistbank-139831": "1708971"
           },
-          "uuid": "7db81c8c-e4b2-4ca9-b0c7-598c8b829ac8"
+          "uuid": "7db81c8c-e4b2-4ca9-b0c7-598c8b829ac8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -253,7 +237,7 @@
       "lineage": "polyphemidae"
     }
   ],
-  "speciesCount": 14,
+  "speciesCount": 12,
   "appSlug": "polyphemidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Branchiopoda",

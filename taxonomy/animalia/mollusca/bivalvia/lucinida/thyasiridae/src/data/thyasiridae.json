@@ -606,10 +606,15 @@
             "col": [
               "K429"
             ],
-            "checklistbank": "61652",
-            "checklistbank-1174": "txn:90902"
+            "checklistbank": [
+              "61652",
+              "urn:lsid:marinespecies.org:taxname:141652"
+            ],
+            "checklistbank-1174": [
+              "txn:90902"
+            ]
           },
-          "authorityIds": "col:K429,itis:80501"
+          "authorityIds": "checklistbank:61652,checklistbank:urn:lsid:marinespecies.org:taxname:141652,checklistbank-1174:txn:90902,col:K429,itis:80501"
         },
         {
           "id": "SP_AXINOPSIDA_PEGODONTA_STILWELL_ZINSMEISTER_1992",
@@ -650,9 +655,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:246819"
             ],
-            "checklistbank-1174": "txn:384665"
+            "checklistbank-1174": [
+              "txn:384665"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:246819"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:246819,col:K42B,itis:80500"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:246819,checklistbank-1174:txn:384665,checklistbank-2011:urn:lsid:marinespecies.org:taxname:246819,col:K42B,itis:80500"
         },
         {
           "id": "SP_AXINOPSIDA_SUBQUADRATA",
@@ -716,37 +726,6 @@
       "name": "\"Axinopsida",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_AXINOPSIDA_ORBICULATA_G_O_SARS_1878",
-          "name": "\"Axinopsida orbiculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Axinopsida",
-          "authorship": "\"(G. O. Sars, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141652",
-            "checklistbank-1174": "txn:90902"
-          },
-          "children": [],
-          "uuid": "38b85ed7-5ffc-5c8-9e8-6900d90056a9c3",
-          "description": "\"Axinopsida orbiculata\" is a thyasiridae species found in its native region."
-        },
-        {
-          "id": "SP_AXINOPSIDA_SERRICATA_P_P_CARPENTER_1864",
-          "name": "Axinopsida serricata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Axinopsida",
-          "authorship": "(P. P. Carpenter, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:246819",
-            "checklistbank-1174": "txn:384665"
-          },
-          "uuid": "f3847ac3-9731-4627-a1cd-cdf514166b30",
-          "children": []
-        },
         {
           "id": "SP_AXINOPSIDA_CORDATA_A_E_VERRILL_K_J_BUSH_1898",
           "name": "Axinopsida cordata",
@@ -3481,9 +3460,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:141672"
             ],
-            "checklistbank-1174": "txn:108113"
+            "checklistbank-1174": [
+              "txn:108113"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:141672"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:141672,col:56PGM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:141672,checklistbank-1174:txn:108113,checklistbank-2011:urn:lsid:marinespecies.org:taxname:141672,col:56PGM",
           "authorship": "(R. A. Philippi, 1845)"
         },
         {
@@ -4597,12 +4581,15 @@
           "authorship": "P. G. Oliver & A. M. Holmes, 2006",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:390215",
-            "checklistbank-139831": "1208336"
+            "checklistbank-139831": [
+              "1208336"
+            ]
           },
           "children": [],
           "uuid": "8e3eaf67-b1a6-511-a27-4a24757cd413b8",
           "commonName": "Southward's Cleft Clam",
-          "description": "Thyasira southwardae (Southward's Cleft Clam) is a thyasiridae species found in its native region."
+          "description": "Thyasira southwardae (Southward's Cleft Clam) is a thyasiridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:390215,checklistbank-139831:1208336"
         },
         {
           "id": "SP_THYASIRA_KAWAMURAI_T_HABE_1951",
@@ -4614,11 +4601,14 @@
           "authorship": "T. Habe, 1951",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:722749",
-            "checklistbank-139831": "1208349"
+            "checklistbank-139831": [
+              "1208349"
+            ]
           },
           "children": [],
           "uuid": "e0c02f3a-580e-520-b2d-9b23d5462ee7e2",
-          "description": "Thyasira kawamurai is a thyasiridae species found in its native region."
+          "description": "Thyasira kawamurai is a thyasiridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:722749,checklistbank-139831:1208349"
         },
         {
           "id": "SP_THYASIRA_BARTRUMI_A_W_B_POWELL_1935",
@@ -5377,21 +5367,6 @@
           "children": []
         },
         {
-          "id": "SP_THYASIRA_SARSII_R_A_PHILIPPI_1845",
-          "name": "Thyasira sarsii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thyasira",
-          "authorship": "(R. A. Philippi, 1845)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:141672",
-            "checklistbank-1174": "txn:108113"
-          },
-          "uuid": "8a6c1058-ef1e-4499-87ad-5c2865bc7b1d",
-          "children": []
-        },
-        {
           "id": "SP_THYASIRA_TRISINUATA_A_D_ORBIGNY_1853",
           "name": "Thyasira trisinuata",
           "rank": "SPECIES",
@@ -5656,30 +5631,6 @@
           },
           "uuid": "b49d622d-50f9-4fb1-a23e-5423f49453d7",
           "children": []
-        },
-        {
-          "id": "SP_THYASIRA_SOUTHWARDAE",
-          "name": "Thyasira southwardae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thyasira",
-          "sourceIds": {
-            "checklistbank-139831": "1208336"
-          },
-          "uuid": "4706da3a-844c-4cfa-9c7c-1df1faed5a62"
-        },
-        {
-          "id": "SP_THYASIRA_KAWAMURAI",
-          "name": "Thyasira kawamurai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thyasira",
-          "sourceIds": {
-            "checklistbank-139831": "1208349"
-          },
-          "uuid": "09710ec4-0bb5-49a6-bf51-8be012c56539"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5919,11 +5870,14 @@
           "authorship": "P. G. Oliver & A. M. Holmes, 2007",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:458002",
-            "checklistbank-139831": "1208371"
+            "checklistbank-139831": [
+              "1208371"
+            ]
           },
           "children": [],
           "uuid": "8585eb55-823b-536-82a-29f2aef77af47d",
-          "description": "Axinus cascadiensis is a thyasiridae species found in its native region."
+          "description": "Axinus cascadiensis is a thyasiridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:458002,checklistbank-139831:1208371"
         },
         {
           "id": "SP_AXINUS_VOLSKENSIS_ARKHANGEL_SKY_1904",
@@ -6181,18 +6135,6 @@
           },
           "uuid": "c09a9e71-32df-4e05-b1b0-23c1742dca13",
           "children": []
-        },
-        {
-          "id": "SP_AXINUS_CASCADIENSIS",
-          "name": "Axinus cascadiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Axinus",
-          "sourceIds": {
-            "checklistbank-139831": "1208371"
-          },
-          "uuid": "4d38105d-1620-4958-a1f3-05703601a31b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8536,7 +8478,7 @@
     }
   ],
   "genusCount": 41,
-  "speciesCount": 461,
+  "speciesCount": 458,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

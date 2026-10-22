@@ -1506,11 +1506,14 @@
           "authorship": "Martens, 1885",
           "sourceIds": {
             "checklistbank": "78988",
-            "checklistbank-139831": "1118153"
+            "checklistbank-139831": [
+              "1118153"
+            ]
           },
           "children": [],
           "uuid": "2f9809f2-7c25-539-8c9-68b18e9ff3d0cb",
-          "description": "Castalia undosa is a hyriidae species found in its native region."
+          "description": "Castalia undosa is a hyriidae species found in its native region.",
+          "authorityIds": "checklistbank:78988,checklistbank-139831:1118153"
         },
         {
           "id": "SP_CASTALIA_SCHOMBERGIANA_SOWERBY_1869",
@@ -1537,11 +1540,14 @@
           "authorship": "A. d'Orbigny, 1835",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1353085",
-            "checklistbank-139831": "1114284"
+            "checklistbank-139831": [
+              "1114284"
+            ]
           },
           "children": [],
           "uuid": "568465f1-d2f4-597-88f-bb28b9923be95b",
-          "description": "Castalia inflata is a hyriidae species found in its native region."
+          "description": "Castalia inflata is a hyriidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1353085,checklistbank-139831:1114284"
         },
         {
           "id": "SP_CASTALIA_SULCATA_KRAUSS_1849",
@@ -1792,30 +1798,6 @@
           },
           "uuid": "83963c7c-a973-439a-bf4c-d75baa08b752",
           "children": []
-        },
-        {
-          "id": "SP_CASTALIA_INFLATA",
-          "name": "Castalia inflata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Castalia",
-          "sourceIds": {
-            "checklistbank-139831": "1114284"
-          },
-          "uuid": "10f39c8c-2be3-47cc-a491-5ffd5f714684"
-        },
-        {
-          "id": "SP_CASTALIA_UNDOSA",
-          "name": "Castalia undosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Castalia",
-          "sourceIds": {
-            "checklistbank-139831": "1118153"
-          },
-          "uuid": "5523f419-da5d-46c6-b365-9d99565b53e1"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2227,9 +2209,14 @@
               "urn:lsid:marinespecies.org:taxname:1517695"
             ],
             "gbif-backbone": "5932817",
-            "checklistbank-1174": "txn:122612"
+            "checklistbank-1174": [
+              "txn:122612"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1517695"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1517695,col:CH22Z",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1517695,checklistbank-1174:txn:122612,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1517695,col:CH22Z,gbif-backbone:5932817",
           "authorship": "(A. d'Orbigny, 1839)"
         },
         {
@@ -3978,21 +3965,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1517669"
           },
           "uuid": "aadca874-ddbc-4380-8053-c36a136d8249",
-          "children": []
-        },
-        {
-          "id": "SP_DIPLODON_DILUVII_A_D_ORBIGNY_1839",
-          "name": "Diplodon diluvii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diplodon",
-          "authorship": "(A. d'Orbigny, 1839)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1517695",
-            "checklistbank-1174": "txn:122612"
-          },
-          "uuid": "26c2836d-9312-412c-9923-5bdf3272303e",
           "children": []
         },
         {
@@ -5820,7 +5792,7 @@
     }
   ],
   "genusCount": 38,
-  "speciesCount": 291,
+  "speciesCount": 290,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

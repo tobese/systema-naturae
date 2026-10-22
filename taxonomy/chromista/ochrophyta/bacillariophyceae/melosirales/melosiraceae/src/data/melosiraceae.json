@@ -8468,11 +8468,19 @@
             "itis": [
               "2339"
             ],
-            "checklistbank": "117503",
-            "wikispecies": "Melosira_varians"
+            "checklistbank": [
+              "117503",
+              "urn:lsid:marinespecies.org:taxname:149043"
+            ],
+            "wikispecies": [
+              "Melosira_varians"
+            ],
+            "checklistbank-139831": [
+              "325515"
+            ]
           },
           "uuid": "98986ed6-ce0e-5c7-b4b-97b78edd12338e",
-          "authorityIds": "gbif:3194090,itis:2339"
+          "authorityIds": "checklistbank:117503,checklistbank:urn:lsid:marinespecies.org:taxname:149043,checklistbank-139831:325515,gbif:3194090,itis:2339,wikispecies:Melosira_varians"
         },
         {
           "id": "MELOSIRA_VARIANTE",
@@ -9002,23 +9010,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MELOSIRA_VARIANS_C_AGARDH_1827",
-          "name": "\"Melosira varians\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melosira",
-          "authorship": "\"C.Agardh, 1827\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:149043",
-            "wikispecies": "Melosira_varians",
-            "checklistbank-139831": "325515"
-          },
-          "children": [],
-          "uuid": "987e03b3-d8ba-548-bb6-b81c2e01c916e4",
-          "description": "\"Melosira varians\" is a melosiraceae species found in its native region."
-        },
-        {
           "id": "SP_MELOSIRA_UNDULATA_EHRENBERG_K_TZING_1844",
           "name": "\"Melosira undulata\"",
           "rank": "SPECIES",
@@ -9393,7 +9384,8 @@
           "sourceIds": {
             "checklistbank-139831": "359956"
           },
-          "uuid": "cae9b2cb-01a0-4226-a228-5e55c9a2395f"
+          "uuid": "cae9b2cb-01a0-4226-a228-5e55c9a2395f",
+          "children": []
         },
         {
           "id": "SP_MELOSIRA_NUMMULOIDES",
@@ -9405,7 +9397,8 @@
           "sourceIds": {
             "checklistbank-139831": "460262"
           },
-          "uuid": "91f264aa-ef92-4b69-ac59-1962e811f70c"
+          "uuid": "91f264aa-ef92-4b69-ac59-1962e811f70c",
+          "children": []
         },
         {
           "id": "SP_MELOSIRA_ARCTICA",
@@ -9417,7 +9410,8 @@
           "sourceIds": {
             "checklistbank-139831": "970070"
           },
-          "uuid": "18a42f02-8302-4e24-9d3c-2f1774415948"
+          "uuid": "18a42f02-8302-4e24-9d3c-2f1774415948",
+          "children": []
         },
         {
           "id": "SP_MELOSIRA_JAPONICA",
@@ -9429,7 +9423,8 @@
           "sourceIds": {
             "checklistbank-139831": "970078"
           },
-          "uuid": "c74d2fa1-3097-450f-902e-99fc75bc1cb7"
+          "uuid": "c74d2fa1-3097-450f-902e-99fc75bc1cb7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10948,7 +10943,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 570,
+  "speciesCount": 569,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

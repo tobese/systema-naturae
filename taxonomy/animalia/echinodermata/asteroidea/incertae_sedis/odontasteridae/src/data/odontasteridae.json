@@ -700,7 +700,8 @@
           "sourceIds": {
             "checklistbank-139831": "429247"
           },
-          "uuid": "0b5b4ba5-1614-4d99-b61e-837533f27c0d"
+          "uuid": "0b5b4ba5-1614-4d99-b61e-837533f27c0d",
+          "children": []
         },
         {
           "id": "SP_DIPLODONTIAS_DILATATUS",
@@ -712,7 +713,8 @@
           "sourceIds": {
             "checklistbank-139831": "429248"
           },
-          "uuid": "870af480-5e51-4990-b8ce-dbbe3aa27315"
+          "uuid": "870af480-5e51-4990-b8ce-dbbe3aa27315",
+          "children": []
         },
         {
           "id": "SP_DIPLODONTIAS_ROBUSTUS",
@@ -724,7 +726,8 @@
           "sourceIds": {
             "checklistbank-139831": "429249"
           },
-          "uuid": "9a87b754-b37a-4a46-b0b4-a9a178407961"
+          "uuid": "9a87b754-b37a-4a46-b0b4-a9a178407961",
+          "children": []
         },
         {
           "id": "SP_DIPLODONTIAS_PAXILLOSUS",
@@ -736,7 +739,8 @@
           "sourceIds": {
             "checklistbank-139831": "1165719"
           },
-          "uuid": "51f33b37-7047-4b4f-a337-5856aeae606e"
+          "uuid": "51f33b37-7047-4b4f-a337-5856aeae606e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -852,10 +856,18 @@
             "col": [
               "9FQ7"
             ],
-            "checklistbank": "ott3656205",
-            "wikispecies": "Acodontaster_elongatus"
+            "checklistbank": [
+              "ott3656205",
+              "urn:lsid:marinespecies.org:taxname:178253"
+            ],
+            "wikispecies": [
+              "Acodontaster_elongatus"
+            ],
+            "checklistbank-139831": [
+              "255848"
+            ]
           },
-          "authorityIds": "col:9FQ7,itis:203336",
+          "authorityIds": "checklistbank:ott3656205,checklistbank:urn:lsid:marinespecies.org:taxname:178253,checklistbank-139831:255848,col:9FQ7,itis:203336,wikispecies:Acodontaster_elongatus",
           "description": "Acodontaster elongatus is a odontasteridae species found in its native region."
         },
         {
@@ -898,23 +910,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ACODONTASTER_ELONGATUS_KOEHLER_1912",
-          "name": "\"Acodontaster elongatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Acodontaster",
-          "authorship": "\"(Koehler, 1912)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:178253",
-            "wikispecies": "Acodontaster_elongatus",
-            "checklistbank-139831": "255848"
-          },
-          "children": [],
-          "uuid": "fc955c52-1108-564-aa3-bd7c42e1baef57",
-          "description": "\"Acodontaster elongatus is a odontasteridae species found in its native region."
-        },
-        {
           "id": "SP_ACODONTASTER_HODGSONI",
           "name": "Acodontaster hodgsoni",
           "rank": "SPECIES",
@@ -924,7 +919,8 @@
           "sourceIds": {
             "checklistbank-139831": "1165720"
           },
-          "uuid": "8bed20f9-2685-4240-926c-a36e04a2cc50"
+          "uuid": "8bed20f9-2685-4240-926c-a36e04a2cc50",
+          "children": []
         },
         {
           "id": "SP_ACODONTASTER_CAPITATUS",
@@ -936,7 +932,8 @@
           "sourceIds": {
             "checklistbank-139831": "1165721"
           },
-          "uuid": "bd661759-86d0-4935-855e-1f353c1f3ac8"
+          "uuid": "bd661759-86d0-4935-855e-1f353c1f3ac8",
+          "children": []
         },
         {
           "id": "SP_ACODONTASTER_MARGINATUS",
@@ -948,7 +945,8 @@
           "sourceIds": {
             "checklistbank-139831": "1165722"
           },
-          "uuid": "5fc2128f-e889-493d-a024-691f24b3762e"
+          "uuid": "5fc2128f-e889-493d-a024-691f24b3762e",
+          "children": []
         },
         {
           "id": "SP_ACODONTASTER_CONSPICUUS",
@@ -960,7 +958,8 @@
           "sourceIds": {
             "checklistbank-139831": "1165723"
           },
-          "uuid": "5938ed32-43a8-4152-9904-9d582b7db1be"
+          "uuid": "5938ed32-43a8-4152-9904-9d582b7db1be",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1365,7 +1364,7 @@
       "lineage": "odontasteridae"
     }
   ],
-  "speciesCount": 66,
+  "speciesCount": 65,
   "appSlug": "odontasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Asteroidea",

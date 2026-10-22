@@ -676,11 +676,16 @@
             "itis": [
               "2668"
             ],
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:237430",
-            "wikispecies": "Hemidiscus_cuneiformis"
+            "checklistbank": [
+              "urn:lsid:dyntaxa.se:Taxon:237430",
+              "urn:lsid:marinespecies.org:taxname:180367"
+            ],
+            "wikispecies": [
+              "Hemidiscus_cuneiformis"
+            ]
           },
           "uuid": "9e840a92-978d-5f9-9f0-e0ef0d80c7d364",
-          "authorityIds": "gbif:5421651,itis:2668"
+          "authorityIds": "checklistbank:urn:lsid:dyntaxa.se:Taxon:237430,checklistbank:urn:lsid:marinespecies.org:taxname:180367,gbif:5421651,itis:2668,wikispecies:Hemidiscus_cuneiformis"
         },
         {
           "id": "HEMIDISCUS_KANAYANUS",
@@ -874,22 +879,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HEMIDISCUS_CUNEIFORMIS_WALLICH_1860",
-          "name": "\"Hemidiscus cuneiformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hemidiscus",
-          "authorship": "\"Wallich, 1860\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:180367",
-            "wikispecies": "Hemidiscus_cuneiformis"
-          },
-          "children": [],
-          "uuid": "9e0102b0-7d08-57b-905-8a18822fc3f41d",
-          "description": "\"Hemidiscus cuneiformis\" is a hemidiscaceae species found in its native region."
-        },
-        {
           "id": "SP_HEMIDISCUS_OVALIS",
           "name": "Hemidiscus ovalis",
           "rank": "SPECIES",
@@ -981,12 +970,17 @@
             "itis": [
               "2661"
             ],
-            "checklistbank": "148742",
-            "wikispecies": "Actinocyclus_normanii",
+            "checklistbank": [
+              "148742",
+              "urn:lsid:marinespecies.org:taxname:148945"
+            ],
+            "wikispecies": [
+              "Actinocyclus_normanii"
+            ],
             "gbif-backbone": "9103686"
           },
           "uuid": "9accd358-2892-535-ab4-40b364b5a0af85",
-          "authorityIds": "gbif:9103686,itis:2661"
+          "authorityIds": "checklistbank:148742,checklistbank:urn:lsid:marinespecies.org:taxname:148945,gbif:9103686,gbif-backbone:9103686,itis:2661,wikispecies:Actinocyclus_normanii"
         },
         {
           "id": "ACTINOCYCLUS_ROPERI",
@@ -1231,10 +1225,15 @@
             "itis": [
               "2665"
             ],
-            "checklistbank": "taicol: 43043",
-            "checklistbank-1174": "txn:453837"
+            "checklistbank": [
+              "taicol: 43043",
+              "urn:lsid:marinespecies.org:taxname:149283"
+            ],
+            "checklistbank-1174": [
+              "txn:453837"
+            ]
           },
-          "authorityIds": "itis:2665",
+          "authorityIds": "checklistbank:taicol: 43043,checklistbank:urn:lsid:marinespecies.org:taxname:149283,checklistbank-1174:txn:453837,itis:2665",
           "description": "Actinocyclus ehrenbergii is a hemidiscaceae species found in its native region."
         },
         {
@@ -5911,38 +5910,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ACTINOCYCLUS_NORMANII_GREGORY_HUSTEDT_1957",
-          "name": "\"Actinocyclus normanii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinocyclus",
-          "authorship": "\"(Gregory) Hustedt, 1957\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:148945",
-            "wikispecies": "Actinocyclus_normanii"
-          },
-          "children": [],
-          "uuid": "785fa8f8-f7f0-5aa-868-2bc9882c0f5c32",
-          "description": "\"Actinocyclus normanii\" is a hemidiscaceae species found in its native region."
-        },
-        {
-          "id": "SP_ACTINOCYCLUS_EHRENBERGII_RALFS_1861",
-          "name": "\"Actinocyclus ehrenbergii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinocyclus",
-          "authorship": "\"Ralfs, 1861\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:149283",
-            "checklistbank-1174": "txn:453837"
-          },
-          "children": [],
-          "uuid": "8d5b6c4f-0694-5a6-8d3-a078c4555cfd31",
-          "description": "\"Actinocyclus ehrenbergii\" is a hemidiscaceae species found in its native region."
-        },
-        {
           "id": "SP_ACTINOCYCLUS_SUBTILIS_W_GREGORY_RALFS_1861",
           "name": "\"Actinocyclus subtilis\"",
           "rank": "SPECIES",
@@ -6094,7 +6061,8 @@
           "sourceIds": {
             "checklistbank-139831": "1270071"
           },
-          "uuid": "d8db2394-1d6e-4d76-b810-8c64923198b5"
+          "uuid": "d8db2394-1d6e-4d76-b810-8c64923198b5",
+          "children": []
         },
         {
           "id": "SP_ACTINOCYCLUS_TENUISSIMUS",
@@ -6106,7 +6074,8 @@
           "sourceIds": {
             "checklistbank-139831": "1577960"
           },
-          "uuid": "83b9629f-225a-4220-9e97-c589a5c15013"
+          "uuid": "83b9629f-225a-4220-9e97-c589a5c15013",
+          "children": []
         },
         {
           "id": "SP_ACTINOCYCLUS_CURVATULUS",
@@ -6118,7 +6087,8 @@
           "sourceIds": {
             "checklistbank-139831": "1608799"
           },
-          "uuid": "c4706aa0-19c2-4457-b1fe-f701faa384d0"
+          "uuid": "c4706aa0-19c2-4457-b1fe-f701faa384d0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

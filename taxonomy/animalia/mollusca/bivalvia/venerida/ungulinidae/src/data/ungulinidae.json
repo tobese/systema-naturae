@@ -51,11 +51,16 @@
             "col": [
               "3DXFQ"
             ],
-            "checklistbank": "103029",
+            "checklistbank": [
+              "103029",
+              "urn:lsid:marinespecies.org:taxname:420809"
+            ],
             "gbif-backbone": "4949524",
-            "checklistbank-1174": "txn:109172"
+            "checklistbank-1174": [
+              "txn:109172"
+            ]
           },
-          "authorityIds": "col:3DXFQ",
+          "authorityIds": "checklistbank:103029,checklistbank:urn:lsid:marinespecies.org:taxname:420809,checklistbank-1174:txn:109172,col:3DXFQ,gbif-backbone:4949524",
           "authorship": "(d'Orbigny, 1853)"
         },
         {
@@ -144,9 +149,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1665341"
             ],
-            "checklistbank-1174": "txn:103015"
+            "checklistbank-1174": [
+              "txn:103015"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1665341"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1665341,col:BHTFM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1665341,checklistbank-1174:txn:103015,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1665341,col:BHTFM",
           "authorship": "(F. M. Anderson, 1905)"
         },
         {
@@ -597,22 +607,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FELANIELLA_CANDEANA_A_D_ORBIGNY_1853",
-          "name": "\"Felaniella candeana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Felaniella",
-          "authorship": "\"(A. d'Orbigny, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420809",
-            "checklistbank-1174": "txn:109172"
-          },
-          "children": [],
-          "uuid": "c3857419-496f-5ac-8c2-1f9a9fb3444718",
-          "description": "\"Felaniella candeana\" is a ungulinidae species found in its native region."
-        },
-        {
           "id": "SP_FELANIELLA_USTA_A_A_GOULD_1861",
           "name": "\"Felaniella usta\"",
           "rank": "SPECIES",
@@ -726,21 +720,6 @@
           "children": []
         },
         {
-          "id": "SP_FELANIELLA_HARFORDI_F_M_ANDERSON_1905",
-          "name": "Felaniella harfordi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Felaniella",
-          "authorship": "(F. M. Anderson, 1905)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1665341",
-            "checklistbank-1174": "txn:103015"
-          },
-          "uuid": "5c181e5a-8606-4e31-beed-45d7e9e1ac61",
-          "children": []
-        },
-        {
           "id": "SP_FELANIELLA_PARILIS_CONRAD_1848",
           "name": "Felaniella parilis",
           "rank": "SPECIES",
@@ -778,7 +757,8 @@
           "sourceIds": {
             "checklistbank-139831": "1209002"
           },
-          "uuid": "da2f292d-2564-49d6-b5d2-7b7ca130cb04"
+          "uuid": "da2f292d-2564-49d6-b5d2-7b7ca130cb04",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1821,10 +1801,15 @@
             "itis": [
               "80582"
             ],
-            "checklistbank": "103024",
-            "checklistbank-1174": "txn:135917"
+            "checklistbank": [
+              "103024",
+              "urn:lsid:marinespecies.org:taxname:420807"
+            ],
+            "checklistbank-1174": [
+              "txn:135917"
+            ]
           },
-          "authorityIds": "col:36LC7,itis:80582"
+          "authorityIds": "checklistbank:103024,checklistbank:urn:lsid:marinespecies.org:taxname:420807,checklistbank-1174:txn:135917,col:36LC7,itis:80582"
         },
         {
           "id": "SP_DIPLODONTA_OESIA_PACAUD_2020",
@@ -4232,34 +4217,6 @@
           "description": "Diplodonta nigeriensis is a ungulinidae species found in its native region."
         },
         {
-          "id": "SP_DIPLODONTA_EDDYSTONIA_J_T_MARSHALL_1895",
-          "name": "Diplodonta eddystonia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diplodonta",
-          "authorship": "(J.T. Marshall, 1895)",
-          "children": [],
-          "sourceIds": {
-            "checklistbank": "61882"
-          },
-          "uuid": "47238b9d-f47b-538-94e-d5e47b4dba8f7b"
-        },
-        {
-          "id": "SP_DIPLODONTA_APICALIS_PHILIPPI_1836",
-          "name": "Diplodonta apicalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diplodonta",
-          "authorship": "Philippi, 1836",
-          "sourceIds": {
-            "checklistbank": "61880"
-          },
-          "children": [],
-          "uuid": "d74e64b1-2947-53c-b29-25fd1d8ffcdaee"
-        },
-        {
           "id": "SP_DIPLODONTA_PORTESIANA_D_ORBIGNY_1846",
           "name": "Diplodonta portesiana",
           "rank": "SPECIES",
@@ -4309,22 +4266,6 @@
           "children": [],
           "uuid": "4d76210b-9f32-5d4-99c-5316813d59ec48",
           "description": "\"Diplodonta rotundata\" is a ungulinidae species found in its native region."
-        },
-        {
-          "id": "SP_DIPLODONTA_NUCLEIFORMIS_W_WAGNER_1840",
-          "name": "\"Diplodonta nucleiformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diplodonta",
-          "authorship": "\"(W. Wagner, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420807",
-            "checklistbank-1174": "txn:135917"
-          },
-          "children": [],
-          "uuid": "5ce76286-f31e-518-950-686d06b732e5ce",
-          "description": "\"Diplodonta nucleiformis\" is a ungulinidae species found in its native region."
         },
         {
           "id": "SP_DIPLODONTA_PUNCTATA_SAY_1822",
@@ -4731,7 +4672,8 @@
           "sourceIds": {
             "checklistbank-139831": "1209004"
           },
-          "uuid": "a85a3151-46e9-491f-8a87-b59ab44b0e16"
+          "uuid": "a85a3151-46e9-491f-8a87-b59ab44b0e16",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8220,7 +8162,7 @@
     }
   ],
   "genusCount": 31,
-  "speciesCount": 449,
+  "speciesCount": 446,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

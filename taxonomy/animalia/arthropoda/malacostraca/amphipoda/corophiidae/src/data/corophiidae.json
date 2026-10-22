@@ -1341,21 +1341,6 @@
           "uuid": "c04147b9-6719-5e4-ab3-fcd9327ea45b24"
         },
         {
-          "id": "SP_COROPHIUM_ROBUSTUM_SARS_1895",
-          "name": "Corophium robustum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Corophium",
-          "authorship": "Sars, 1895",
-          "sourceIds": {
-            "checklistbank": "260726",
-            "checklistbank-2008": "321691"
-          },
-          "children": [],
-          "uuid": "231fb3fe-056b-5fd-b84-be5e8d56bd2f88"
-        },
-        {
           "id": "SP_COROPHIUM_SERRATICAUDATUM_REN_2003",
           "name": "Corophium serraticaudatum",
           "rank": "SPECIES",
@@ -2073,37 +2058,6 @@
       "name": "Protomedeia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PROTOMEDEIA_GRANDIMANA_BR_GGEN_1905",
-          "name": "Protomedeia grandimana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Protomedeia",
-          "authorship": "Brüggen,  1905",
-          "sourceIds": {
-            "checklistbank": "22444",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:102444",
-            "gbif-backbone": "2218141",
-            "checklistbank-139831": "1240440"
-          },
-          "children": [],
-          "uuid": "4c6c13f8-f158-505-8cc-828dd466b54903"
-        },
-        {
-          "id": "SP_PROTOMEDEIA_GURJANOVAE_BULYCHEVA_1951",
-          "name": "Protomedeia gurjanovae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Protomedeia",
-          "authorship": "Bulycheva 1951",
-          "sourceIds": {
-            "checklistbank": "22445"
-          },
-          "children": [],
-          "uuid": "cbfadde6-4229-545-991-608c9b3bf98bd8"
-        },
         {
           "id": "SP_PROTOMEDEIA_PENATES",
           "name": "Protomedeia penates",
@@ -3490,13 +3444,18 @@
           "authorship": "\"Conlan, 1983\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:431410",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:431408"
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:431408"
+            ],
+            "checklistbank-139831": [
+              "1242885"
+            ]
           },
           "children": [],
           "uuid": "883d6afe-c478-562-a5a-b121cf59869f46",
           "description": "\"Cheirimedeia macrocarpa is a corophiidae species found in its native region.",
           "speciesList": [],
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:431410,checklistbank-2011:urn:lsid:marinespecies.org:taxname:431408"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:431410,checklistbank-139831:1242885,checklistbank-2011:urn:lsid:marinespecies.org:taxname:431408"
         },
         {
           "id": "SP_CHEIRIMEDEIA_DULKEITI_GURJANOVA_1951",
@@ -3592,21 +3551,6 @@
       "name": "Cheirimedeia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CHEIRIMEDEIA_MACROCARPA_BULY_EVA_1952",
-          "name": "Cheirimedeia macrocarpa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cheirimedeia",
-          "authorship": "(Bulyčeva, 1952)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:431408",
-            "checklistbank-139831": "1242885"
-          },
-          "children": [],
-          "uuid": "fc59238a-13d8-53e-a46-c0b60a0370dc15"
-        },
         {
           "id": "SP_CHEIRIMEDEIA_ALASKENSIS_STEBBING_1910",
           "name": "Cheirimedeia alaskensis",
@@ -6240,7 +6184,7 @@
       "lineage": "Corophiidae"
     }
   ],
-  "speciesCount": 315,
+  "speciesCount": 311,
   "appSlug": "corophiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

@@ -26,11 +26,22 @@
           "children": [],
           "sourceIds": {
             "gbif": 8014281,
-            "checklistbank": "840908",
-            "wikispecies": "Toxoplasma_gondii"
+            "checklistbank": [
+              "840908",
+              "urn:lsid:marinespecies.org:taxname:563542"
+            ],
+            "wikispecies": [
+              "Toxoplasma_gondii"
+            ],
+            "checklistbank-127379": [
+              "509d3b4b-2046-47b4-9abd-f82d7d195001"
+            ],
+            "checklistbank-139831": [
+              "366905"
+            ]
           },
           "uuid": "ce60f0fc-65e8-5fa-993-40f6ec8268d526",
-          "authorityIds": "gbif:8014281",
+          "authorityIds": "checklistbank:840908,checklistbank:urn:lsid:marinespecies.org:taxname:563542,checklistbank-127379:509d3b4b-2046-47b4-9abd-f82d7d195001,checklistbank-139831:366905,gbif:8014281,wikispecies:Toxoplasma_gondii",
           "authorship": "(Nicolle & Manceaux, 1908)"
         },
         {
@@ -63,33 +74,6 @@
           "description": "Toxoplasma sp. is a sarcocystidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_TOXOPLASMA",
-      "name": "\"Toxoplasma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TOXOPLASMA_GONDII_NICOLLE_MANCEAUX_1908",
-          "name": "\"Toxoplasma gondii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Toxoplasma",
-          "authorship": "\"(Nicolle & Manceaux, 1908)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:563542",
-            "wikispecies": "Toxoplasma_gondii",
-            "checklistbank-127379": "509d3b4b-2046-47b4-9abd-f82d7d195001",
-            "checklistbank-139831": "366905"
-          },
-          "children": [],
-          "uuid": "d96fa061-f1c6-5d4-b32-1f544f1212b5fd",
-          "description": "\"Toxoplasma gondii\" is a sarcocystidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sarcocystidae"
     },
     {
       "id": "GENUS_SARCOCYSTIS",
@@ -3081,8 +3065,8 @@
       "lineage": "sarcocystidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 189,
+  "genusCount": 18,
+  "speciesCount": 188,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

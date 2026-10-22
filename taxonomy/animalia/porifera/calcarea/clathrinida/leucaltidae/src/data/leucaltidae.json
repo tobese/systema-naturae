@@ -998,21 +998,6 @@
           "description": "Leucaltis sp. is a leucaltidae species found in its native region."
         },
         {
-          "id": "SP_LEUCALTIS_CLATHRIA_HAECKEL",
-          "name": "Leucaltis clathria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leucaltis",
-          "authorship": "Haeckel",
-          "sourceIds": {
-            "checklistbank": "234456ed-fe19-4b89-8669-932b849087f2",
-            "wikispecies": "Leucaltis_clathria"
-          },
-          "children": [],
-          "uuid": "e2283365-5de3-587-b9a-f4f9c7281f9af9"
-        },
-        {
           "id": "SP_LEUCALTIS_MAURITIANA_SCHUFFNER_1877",
           "name": "Leucaltis mauritiana",
           "rank": "SPECIES",
@@ -1044,14 +1029,19 @@
           "lineage": "\"Leucaltis",
           "authorship": "\"Haeckel, 1872\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:132290",
-            "wikispecies": "Leucaltis_clathria",
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:132290",
+              "234456ed-fe19-4b89-8669-932b849087f2"
+            ],
+            "wikispecies": [
+              "Leucaltis_clathria"
+            ],
             "checklistbank-139831": "983862"
           },
           "children": [],
           "uuid": "17f16802-1c64-595-bcc-99c197fbbf6e7d",
           "description": "\"Leucaltis clathria\" is a leucaltidae species found in its native region.",
-          "authorityIds": "checklistbank:234456ed-fe19-4b89-8669-932b849087f2,checklistbank:urn:lsid:marinespecies.org:taxname:132290,wikispecies:Leucaltis_clathria"
+          "authorityIds": "checklistbank:234456ed-fe19-4b89-8669-932b849087f2,checklistbank:urn:lsid:marinespecies.org:taxname:132290,checklistbank-139831:983862,wikispecies:Leucaltis_clathria"
         },
         {
           "id": "SP_LEUCALTIS_TENUIS_H_ZAWA_1929",
@@ -1077,7 +1067,8 @@
           "sourceIds": {
             "checklistbank-139831": "451194"
           },
-          "uuid": "837eba47-6e25-4c26-abd9-8bfdb887f755"
+          "uuid": "837eba47-6e25-4c26-abd9-8bfdb887f755",
+          "children": []
         },
         {
           "id": "SP_LEUCALTIS_NODUSGORDII",
@@ -1089,7 +1080,8 @@
           "sourceIds": {
             "checklistbank-139831": "1463121"
           },
-          "uuid": "9504931a-6b59-4bcb-9217-c88542c0470e"
+          "uuid": "9504931a-6b59-4bcb-9217-c88542c0470e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1121,7 +1113,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 64,
+  "speciesCount": 63,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

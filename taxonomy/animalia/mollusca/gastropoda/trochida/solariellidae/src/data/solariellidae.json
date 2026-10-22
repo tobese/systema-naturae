@@ -4372,9 +4372,14 @@
               "urn:lsid:marinespecies.org:taxname:1888732"
             ],
             "gbif-backbone": "8720274",
-            "checklistbank-1174": "txn:356150"
+            "checklistbank-1174": [
+              "txn:356150"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1888732"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1888732,col:VG4JK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1888732,checklistbank-1174:txn:356150,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1888732,col:VG4JK,gbif-backbone:8720274",
           "authorship": "C. E. Weaver & K. van W. Palmer, 1922"
         },
         {
@@ -5323,9 +5328,14 @@
               "urn:lsid:marinespecies.org:taxname:1888731"
             ],
             "gbif-backbone": "9605048",
-            "checklistbank-1174": "txn:356149"
+            "checklistbank-1174": [
+              "txn:356149"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1888731"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1888731,col:VF6XK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1888731,checklistbank-1174:txn:356149,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1888731,col:VF6XK,gbif-backbone:9605048",
           "authorship": "C. E. Weaver & K. van W. Palmer, 1922"
         },
         {
@@ -5948,9 +5958,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1289056"
             ],
-            "checklistbank-1174": "txn:445967"
+            "checklistbank-1174": [
+              "txn:445967"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1289056"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1289056,col:6Z4T3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1289056,checklistbank-1174:txn:445967,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1289056,col:6Z4T3",
           "authorship": "(E. A. Smith, 1880)"
         },
         {
@@ -5977,10 +5992,15 @@
             "col": [
               "4Y4YB"
             ],
-            "checklistbank": "61846",
-            "checklistbank-1174": "txn:444753"
+            "checklistbank": [
+              "61846",
+              "urn:lsid:marinespecies.org:taxname:141846"
+            ],
+            "checklistbank-1174": [
+              "txn:444753"
+            ]
           },
-          "authorityIds": "col:4Y4YB,itis:69916"
+          "authorityIds": "checklistbank:61846,checklistbank:urn:lsid:marinespecies.org:taxname:141846,checklistbank-1174:txn:444753,col:4Y4YB,itis:69916"
         },
         {
           "id": "SP_SOLARIELLA_VAUGHANI_MANSFIELD_1930",
@@ -8778,20 +8798,6 @@
           "description": "Solariella enamellata is a solariellidae species found in its native region."
         },
         {
-          "id": "SP_SOLARIELLA_VAILLANTI_DAUTZENBERG_FISCHER_H_1896",
-          "name": "Solariella vaillanti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "authorship": "(Dautzenberg & Fischer H., 1896)",
-          "sourceIds": {
-            "checklistbank": "61845"
-          },
-          "children": [],
-          "uuid": "e5e5b30f-af91-5ec-bde-6e6386a5404d2d"
-        },
-        {
           "id": "SP_SOLARIELLA_BAKONICA_STRAUSZ_1966",
           "name": "Solariella bakonica",
           "rank": "SPECIES",
@@ -8942,22 +8948,6 @@
           "children": [],
           "uuid": "15228bec-96a3-5eb-842-a96d1a920f978d",
           "description": "\"Solariella rhina\" is a solariellidae species found in its native region."
-        },
-        {
-          "id": "SP_SOLARIELLA_VARICOSA_MIGHELS_C_B_ADAMS_1842",
-          "name": "\"Solariella varicosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solariella",
-          "authorship": "\"(Mighels & C. B. Adams, 1842)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141846",
-            "checklistbank-1174": "txn:444753"
-          },
-          "children": [],
-          "uuid": "bcbdfaaa-ffa6-598-940-4ba0a841b79c8c",
-          "description": "\"Solariella varicosa\" is a solariellidae species found in its native region."
         },
         {
           "id": "SP_SOLARIELLA_TURBINOIDES_DESHAYES_1863",
@@ -9144,21 +9134,6 @@
           "children": []
         },
         {
-          "id": "SP_SOLARIELLA_VANCOUVERENSIS_E_A_SMITH_1880",
-          "name": "Solariella vancouverensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "authorship": "(E. A. Smith, 1880)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1289056",
-            "checklistbank-1174": "txn:445967"
-          },
-          "uuid": "0bea1bbc-16df-434c-af74-1252a52662ee",
-          "children": []
-        },
-        {
           "id": "SP_SOLARIELLA_PERIOMPHALIA_E_VON_MARTENS_1901",
           "name": "Solariella periomphalia",
           "rank": "SPECIES",
@@ -9184,36 +9159,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1570416"
           },
           "uuid": "9a1629b5-e648-4a61-9796-daba33d14794",
-          "children": []
-        },
-        {
-          "id": "SP_SOLARIELLA_OLEQUAHENSIS_C_E_WEAVER_K_VAN_W_PALMER_1922",
-          "name": "Solariella olequahensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "authorship": "C. E. Weaver & K. van W. Palmer, 1922",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1888731",
-            "checklistbank-1174": "txn:356149"
-          },
-          "uuid": "da8ac75b-3a19-4823-a3af-3b4e60c95459",
-          "children": []
-        },
-        {
-          "id": "SP_SOLARIELLA_CRESCENTENSIS_C_E_WEAVER_K_VAN_W_PALMER_1922",
-          "name": "Solariella crescentensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "authorship": "C. E. Weaver & K. van W. Palmer, 1922",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1888732",
-            "checklistbank-1174": "txn:356150"
-          },
-          "uuid": "5760cb98-6168-4e45-a5c1-7518735a8120",
           "children": []
         },
         {
@@ -9254,7 +9199,8 @@
           "sourceIds": {
             "checklistbank-139831": "1213864"
           },
-          "uuid": "5297faf1-82d2-4767-adef-81407c8b0140"
+          "uuid": "5297faf1-82d2-4767-adef-81407c8b0140",
+          "children": []
         },
         {
           "id": "SP_SOLARIELLA_KEMPI",
@@ -9266,7 +9212,8 @@
           "sourceIds": {
             "checklistbank-139831": "1213865"
           },
-          "uuid": "522dfac9-f36a-4dda-984c-b4e71856862d"
+          "uuid": "522dfac9-f36a-4dda-984c-b4e71856862d",
+          "children": []
         },
         {
           "id": "SP_SOLARIELLA_ANARENSIS",
@@ -9278,7 +9225,8 @@
           "sourceIds": {
             "checklistbank-139831": "1213870"
           },
-          "uuid": "15b9c1f8-8458-4376-9ab0-69ea278a4a2d"
+          "uuid": "15b9c1f8-8458-4376-9ab0-69ea278a4a2d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12174,7 +12122,7 @@
     }
   ],
   "genusCount": 38,
-  "speciesCount": 690,
+  "speciesCount": 688,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

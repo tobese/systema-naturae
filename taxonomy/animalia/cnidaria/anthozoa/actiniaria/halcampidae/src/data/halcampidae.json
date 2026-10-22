@@ -512,9 +512,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Halianthella",
           "sourceIds": {
-            "checklistbank-139831": "668131"
+            "checklistbank-139831": [
+              "668131"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:668131"
         }
       ]
     },
@@ -549,7 +552,8 @@
           "sourceIds": {
             "checklistbank-139831": "668131"
           },
-          "uuid": "a79533de-0743-43c0-be3e-8976e7d07c3a"
+          "uuid": "a79533de-0743-43c0-be3e-8976e7d07c3a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -741,9 +745,11 @@
               "52532"
             ],
             "checklistbank": "196731",
-            "checklistbank-139831": "196731"
+            "checklistbank-139831": [
+              "196731"
+            ]
           },
-          "authorityIds": "itis:52532",
+          "authorityIds": "checklistbank:196731,checklistbank-139831:196731,itis:52532",
           "commonName": "prickly anemone",
           "description": "Cactosoma arenaria (prickly anemone) is a halcampidae species found in its native region."
         },
@@ -833,18 +839,6 @@
           "children": [],
           "uuid": "bb5fdfd9-74b6-5ef-848-ea37bf70abede9",
           "description": "\"Cactosoma chilense\" is a halcampidae species found in its native region."
-        },
-        {
-          "id": "SP_CACTOSOMA_ARENARIA",
-          "name": "Cactosoma arenaria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cactosoma",
-          "sourceIds": {
-            "checklistbank-139831": "196731"
-          },
-          "uuid": "20d99d4e-e792-4ffa-892b-b3bac2614114"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1357,7 +1351,7 @@
     }
   ],
   "genusCount": 25,
-  "speciesCount": 60,
+  "speciesCount": 61,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

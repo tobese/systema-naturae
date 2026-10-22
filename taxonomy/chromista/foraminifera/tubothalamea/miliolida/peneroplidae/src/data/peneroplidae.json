@@ -2452,11 +2452,16 @@
             "itis": [
               "44924"
             ],
-            "checklistbank": "txn:240882",
-            "checklistbank-1174": "txn:240882"
+            "checklistbank": [
+              "txn:240882",
+              "urn:lsid:marinespecies.org:taxname:737115"
+            ],
+            "checklistbank-1174": [
+              "txn:240882"
+            ]
           },
           "uuid": "ffa29afe-7dd8-55e-81b-c6833107499ded",
-          "authorityIds": "col:7T2NT,gbif:7555436,itis:44924",
+          "authorityIds": "checklistbank:txn:240882,checklistbank:urn:lsid:marinespecies.org:taxname:737115,checklistbank-1174:txn:240882,col:7T2NT,gbif:7555436,itis:44924",
           "authorship": "d'Orbigny 1839"
         },
         {
@@ -2676,11 +2681,16 @@
             "col": [
               "34M69"
             ],
-            "checklistbank": "ott7550708",
-            "checklistbank-1174": "txn:384455"
+            "checklistbank": [
+              "ott7550708",
+              "urn:lsid:marinespecies.org:taxname:917566"
+            ],
+            "checklistbank-1174": [
+              "txn:384455"
+            ]
           },
           "uuid": "1a35f720-d6ca-55f-817-696d18a2ad2d84",
-          "authorityIds": "col:34M69,gbif:9417074",
+          "authorityIds": "checklistbank:ott7550708,checklistbank:urn:lsid:marinespecies.org:taxname:917566,checklistbank-1174:txn:384455,col:34M69,gbif:9417074",
           "authorship": "dOrbigny 1904"
         },
         {
@@ -2925,22 +2935,6 @@
           "description": "\"Dendritina juleana\" is a peneroplidae species found in its native region."
         },
         {
-          "id": "SP_DENDRITINA_ELEGANS_D_ORBIGNY_1846",
-          "name": "\"Dendritina elegans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dendritina",
-          "authorship": "\"d'Orbigny, 1846\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:737115",
-            "checklistbank-1174": "txn:240882"
-          },
-          "children": [],
-          "uuid": "1ea26550-ca76-5b7-89f-1d3d5c47d5d07c",
-          "description": "\"Dendritina elegans\" is a peneroplidae species found in its native region."
-        },
-        {
           "id": "SP_DENDRITINA_ALWORTHI_MCCULLOCH_1977",
           "name": "\"Dendritina alworthi\"",
           "rank": "SPECIES",
@@ -3074,22 +3068,6 @@
           "children": [],
           "uuid": "ca50bf95-0f39-53e-8dd-fa3a9971c2c29b",
           "description": "\"Dendritina preelegans\" is a peneroplidae species found in its native region."
-        },
-        {
-          "id": "SP_DENDRITINA_RANGI_D_ORBIGNY_IN_FORNASINI_1904",
-          "name": "\"Dendritina rangi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dendritina",
-          "authorship": "\"d'Orbigny in Fornasini, 1904\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:917566",
-            "checklistbank-1174": "txn:384455"
-          },
-          "children": [],
-          "uuid": "4858a0ae-2115-559-a4c-cb6ca8139d8114",
-          "description": "\"Dendritina rangi\" is a peneroplidae species found in its native region."
         },
         {
           "id": "SP_DENDRITINA_MARIAE_SEROVA_1955",
@@ -3894,11 +3872,16 @@
             "col": [
               "4Z7YY"
             ],
-            "checklistbank": "ott4918587",
-            "wikispecies": "Spirolina_semilituus"
+            "checklistbank": [
+              "ott4918587",
+              "urn:lsid:marinespecies.org:taxname:597387"
+            ],
+            "wikispecies": [
+              "Spirolina_semilituus"
+            ]
           },
           "uuid": "5711adc6-95c5-537-8d6-d95aaf2e66f73f",
-          "authorityIds": "col:4Z7YY,gbif:8112152"
+          "authorityIds": "checklistbank:ott4918587,checklistbank:urn:lsid:marinespecies.org:taxname:597387,col:4Z7YY,gbif:8112152,wikispecies:Spirolina_semilituus"
         },
         {
           "id": "SPIROLINA_SIMPLEX",
@@ -4196,22 +4179,6 @@
           "children": [],
           "uuid": "9b2b47eb-c24d-53c-b40-a70c99a1cf82cc",
           "description": "\"Spirolina pedum\" is a peneroplidae species found in its native region."
-        },
-        {
-          "id": "SP_SPIROLINA_SEMILITUUS_LINNAEUS_1758",
-          "name": "\"Spirolina semilituus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spirolina",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:597387",
-            "wikispecies": "Spirolina_semilituus"
-          },
-          "children": [],
-          "uuid": "1b4ada47-62cd-50d-a76-e0eb65885c7980",
-          "description": "\"Spirolina semilituus\" is a peneroplidae species found in its native region."
         },
         {
           "id": "SP_SPIROLINA_AUSTRIACA_D_ORBIGNY_1846",
@@ -5456,33 +5423,6 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Peneroplidae"
-    },
-    {
-      "id": "GENUS_ARCHAIAS",
-      "name": "Archaias",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ARCHAIAS_ANGULATUS_FICHTEL_MOLL_1798",
-          "name": "Archaias angulatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Archaias",
-          "authorship": "(Fichtel & Moll, 1798)",
-          "sourceIds": {
-            "checklistbank": "32792",
-            "checklistbank-1174": "txn:240887",
-            "checklistbank-139831": "528535"
-          },
-          "children": [],
-          "uuid": "9c5a3233-c067-5dd-99c-3552d8b807265f",
-          "commonName": "Turtle Grass Foram",
-          "description": "Archaias angulatus (Turtle Grass Foram) is a peneroplidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "peneroplidae"
     },
     {
       "id": "GENUS_COSCINOPIRA",
@@ -14474,8 +14414,8 @@
       "lineage": "peneroplidae"
     }
   ],
-  "genusCount": 33,
-  "speciesCount": 921,
+  "genusCount": 32,
+  "speciesCount": 917,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

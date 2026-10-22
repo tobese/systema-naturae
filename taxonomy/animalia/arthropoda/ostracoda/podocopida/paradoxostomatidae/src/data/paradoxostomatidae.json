@@ -912,10 +912,15 @@
             "col": [
               "75MYT"
             ],
-            "checklistbank": "ott2962703",
-            "wikispecies": "Paradoxostoma_geraldtonense"
+            "checklistbank": [
+              "ott2962703",
+              "urn:lsid:marinespecies.org:taxname:810130"
+            ],
+            "wikispecies": [
+              "Paradoxostoma_geraldtonense"
+            ]
           },
-          "authorityIds": "col:75MYT",
+          "authorityIds": "checklistbank:ott2962703,checklistbank:urn:lsid:marinespecies.org:taxname:810130,col:75MYT,wikispecies:Paradoxostoma_geraldtonense",
           "description": "Paradoxostoma geraldtonense is a paradoxostomatidae species found in its native region."
         },
         {
@@ -5436,22 +5441,6 @@
           "description": "\"Paradoxostoma geraldtonensis is a paradoxostomatidae species found in its native region."
         },
         {
-          "id": "SP_PARADOXOSTOMA_GERALDTONENSE_HARTMANN_1979",
-          "name": "\"Paradoxostoma geraldtonense",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paradoxostoma",
-          "authorship": "\"Hartmann, 1979\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:810130",
-            "wikispecies": "Paradoxostoma_geraldtonense"
-          },
-          "children": [],
-          "uuid": "b3bc3953-7458-5da-a8d-f9f68e06c1169b",
-          "description": "\"Paradoxostoma geraldtonense is a paradoxostomatidae species found in its native region."
-        },
-        {
           "id": "SP_PARADOXOSTOMA_CAECUM_M_LLER_1894",
           "name": "Paradoxostoma caecum",
           "rank": "SPECIES",
@@ -6026,7 +6015,8 @@
           "sourceIds": {
             "checklistbank-139831": "951259"
           },
-          "uuid": "eac9517d-2734-4070-9893-c730c04270d6"
+          "uuid": "eac9517d-2734-4070-9893-c730c04270d6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10491,7 +10481,7 @@
       "lineage": "Paradoxostomatidae"
     }
   ],
-  "speciesCount": 564,
+  "speciesCount": 563,
   "appSlug": "paradoxostomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",

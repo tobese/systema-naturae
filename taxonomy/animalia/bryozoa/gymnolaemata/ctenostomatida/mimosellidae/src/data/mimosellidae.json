@@ -70,18 +70,6 @@
           },
           "authorityIds": "col:KLDW",
           "authorship": "(Harmer, 1915)"
-        },
-        {
-          "id": "SP_BANTARIELLA_VERTICILLATA",
-          "name": "Bantariella verticillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bantariella",
-          "sourceIds": {
-            "checklistbank-139831": "368991"
-          },
-          "children": []
         }
       ]
     },
@@ -284,11 +272,14 @@
           "authorship": "\"(Heller, 1867)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:111626",
-            "checklistbank-139831": "368991"
+            "checklistbank-139831": [
+              "368991"
+            ]
           },
           "children": [],
           "uuid": "95f9cbdc-a27b-5b0-93e-5e483465c94e2b",
-          "description": "\"Bantariella verticillata\" is a mimosellidae species found in its native region."
+          "description": "\"Bantariella verticillata\" is a mimosellidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:111626,checklistbank-139831:368991"
         },
         {
           "id": "SP_BANTARIELLA_COOKAE_BANTA_1968",
@@ -356,7 +347,7 @@
     }
   ],
   "genusCount": 3,
-  "speciesCount": 19,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

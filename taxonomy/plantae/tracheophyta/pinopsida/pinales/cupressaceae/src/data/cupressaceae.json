@@ -1147,7 +1147,8 @@
           "sourceIds": {
             "checklistbank-139831": "1504356"
           },
-          "uuid": "f326e693-a5a3-4d78-8beb-783cd444e5de"
+          "uuid": "f326e693-a5a3-4d78-8beb-783cd444e5de",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1474,12 +1475,26 @@
             "itis": [
               "183456"
             ],
-            "checklistbank": "150734",
+            "checklistbank": [
+              "150734",
+              "urn:lsid:marinespecies.org:taxname:1492691"
+            ],
             "checklistbank-2008": "93590",
             "gbif-backbone": "2684030",
-            "checklistbank-1174": "txn:511535"
+            "checklistbank-1174": [
+              "txn:511535"
+            ],
+            "checklistbank-2232": [
+              "383232"
+            ],
+            "checklistbank-1141": [
+              "f3157c1b-ab29-5f48-bb26-041fc28c71ad"
+            ],
+            "checklistbank-133813": [
+              "https://id.biodiversity.org.au/node/apni/2903291"
+            ]
           },
-          "authorityIds": "col:32FXZ,itis:183456,wfo:wfo-0000630789"
+          "authorityIds": "checklistbank:150734,checklistbank:urn:lsid:marinespecies.org:taxname:1492691,checklistbank-1141:f3157c1b-ab29-5f48-bb26-041fc28c71ad,checklistbank-1174:txn:511535,checklistbank-133813:https://id.biodiversity.org.au/node/apni/2903291,checklistbank-2008:93590,checklistbank-2232:383232,col:32FXZ,gbif-backbone:2684030,itis:183456,wfo:wfo-0000630789"
         },
         {
           "id": "SP_CUPRESSUS_TONKINENSIS",
@@ -2891,25 +2906,6 @@
           "description": "\"Cupressus arizonica\" is a cupressaceae species found in its native region."
         },
         {
-          "id": "SP_CUPRESSUS_SEMPERVIRENS_LINNAEUS",
-          "name": "\"Cupressus sempervirens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cupressus",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1492691",
-            "checklistbank-2232": "383232",
-            "checklistbank-1141": "f3157c1b-ab29-5f48-bb26-041fc28c71ad",
-            "checklistbank-1174": "txn:511535",
-            "checklistbank-133813": "https://id.biodiversity.org.au/node/apni/2903291"
-          },
-          "children": [],
-          "uuid": "7c2e7c0c-45fe-5ff-bd3-feb349e1c21c89",
-          "description": "\"Cupressus sempervirens\" is a cupressaceae species found in its native region."
-        },
-        {
           "id": "SP_CUPRESSUS_GANSUENSIS_MAERKI_J_HOCH",
           "name": "Cupressus gansuensis",
           "rank": "SPECIES",
@@ -3371,11 +3367,22 @@
             "col": [
               "3GJ4K"
             ],
-            "checklistbank": "Glyptostrobus_pensilis_Staunton_ex_DDon_KKoch",
+            "checklistbank": [
+              "Glyptostrobus_pensilis_Staunton_ex_DDon_KKoch",
+              "urn:lsid:marinespecies.org:taxname:1634550"
+            ],
             "checklistbank-2008": "610596",
-            "checklistbank-1174": "txn:396689"
+            "checklistbank-1174": [
+              "txn:396689"
+            ],
+            "checklistbank-2232": [
+              "385446"
+            ],
+            "checklistbank-1141": [
+              "e4f05c78-6c0b-51f9-9636-6848d4fd4c77"
+            ]
           },
-          "authorityIds": "col:3GJ4K,wfo:wfo-0000704724"
+          "authorityIds": "checklistbank:Glyptostrobus_pensilis_Staunton_ex_DDon_KKoch,checklistbank:urn:lsid:marinespecies.org:taxname:1634550,checklistbank-1141:e4f05c78-6c0b-51f9-9636-6848d4fd4c77,checklistbank-1174:txn:396689,checklistbank-2008:610596,checklistbank-2232:385446,col:3GJ4K,wfo:wfo-0000704724"
         },
         {
           "id": "SP_GLYPTOSTROBUS_EUROPAEUS",
@@ -3528,24 +3535,6 @@
       "name": "\"Glyptostrobus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_GLYPTOSTROBUS_PENSILIS_STAUNTON_EX_D_DON_K_KOCH",
-          "name": "\"Glyptostrobus pensilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Glyptostrobus",
-          "authorship": "\"(Staunton ex D.Don) K.Koch\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634550",
-            "checklistbank-2232": "385446",
-            "checklistbank-1141": "e4f05c78-6c0b-51f9-9636-6848d4fd4c77",
-            "checklistbank-1174": "txn:396689"
-          },
-          "children": [],
-          "uuid": "1346468f-db83-576-ad8-fd7bdb7856a156",
-          "description": "\"Glyptostrobus pensilis\" is a cupressaceae species found in its native region."
-        },
         {
           "id": "SP_GLYPTOSTROBUS_EUROPAEUS_BRONGNIART_1833",
           "name": "Glyptostrobus europaeus",
@@ -3789,9 +3778,17 @@
             "checklistbank": "Juniperus_barbadensis_L",
             "checklistbank-2008": "629967",
             "gbif-backbone": "2684378",
-            "checklistbank-1174": "txn:511782"
+            "checklistbank-1174": [
+              "txn:511782"
+            ],
+            "checklistbank-2232": [
+              "3292258"
+            ],
+            "checklistbank-1141": [
+              "8b58c8bc-a3b9-5b60-8e46-70b45977466a"
+            ]
           },
-          "authorityIds": "col:6NGFP,wfo:wfo-0000355559"
+          "authorityIds": "checklistbank:Juniperus_barbadensis_L,checklistbank-1141:8b58c8bc-a3b9-5b60-8e46-70b45977466a,checklistbank-1174:txn:511782,checklistbank-2008:629967,checklistbank-2232:3292258,col:6NGFP,gbif-backbone:2684378,wfo:wfo-0000355559"
         },
         {
           "id": "SP_JUNIPERUS_BERMUDIANA",
@@ -3897,9 +3894,14 @@
               "6NGFJ"
             ],
             "checklistbank": "Juniperus_californica_Carrière",
-            "checklistbank-1174": "txn:449534"
+            "checklistbank-1174": [
+              "txn:449534"
+            ],
+            "checklistbank-2232": [
+              "377520"
+            ]
           },
-          "authorityIds": "col:6NGFJ,itis:194816,wfo:wfo-0000355594"
+          "authorityIds": "checklistbank:Juniperus_californica_Carrière,checklistbank-1174:txn:449534,checklistbank-2232:377520,col:6NGFJ,itis:194816,wfo:wfo-0000355594"
         },
         {
           "id": "SP_JUNIPERUS_CANARIENSIS",
@@ -4061,11 +4063,16 @@
             "wfo": [
               "wfo-0000355532"
             ],
-            "checklistbank": "150741",
+            "checklistbank": [
+              "150741",
+              "urn:lsid:marinespecies.org:taxname:1634584"
+            ],
             "checklistbank-2008": "104397",
-            "checklistbank-1174": "txn:511785"
+            "checklistbank-1174": [
+              "txn:511785"
+            ]
           },
-          "authorityIds": "col:6NGH4,itis:194820,wfo:wfo-0000355532"
+          "authorityIds": "checklistbank:150741,checklistbank:urn:lsid:marinespecies.org:taxname:1634584,checklistbank-1174:txn:511785,checklistbank-2008:104397,col:6NGH4,itis:194820,wfo:wfo-0000355532"
         },
         {
           "id": "SP_JUNIPERUS_CONVALLIUM",
@@ -4729,9 +4736,14 @@
             ],
             "checklistbank": "150701",
             "checklistbank-2008": "104409",
-            "checklistbank-1174": "txn:511779"
+            "checklistbank-1174": [
+              "txn:511779"
+            ],
+            "checklistbank-2232": [
+              "377576"
+            ]
           },
-          "authorityIds": "col:6NFYP,itis:822545,wfo:wfo-0000355658"
+          "authorityIds": "checklistbank:150701,checklistbank-1174:txn:511779,checklistbank-2008:104409,checklistbank-2232:377576,col:6NFYP,itis:822545,wfo:wfo-0000355658"
         },
         {
           "id": "SP_JUNIPERUS_PHOENICEA",
@@ -4760,9 +4772,14 @@
             ],
             "checklistbank": "150709",
             "checklistbank-2008": "104410",
-            "checklistbank-1174": "txn:511786"
+            "checklistbank-1174": [
+              "txn:511786"
+            ],
+            "checklistbank-2232": [
+              "377581"
+            ]
           },
-          "authorityIds": "col:6NFYQ,itis:822606,wfo:wfo-0000355663"
+          "authorityIds": "checklistbank:150709,checklistbank-1174:txn:511786,checklistbank-2008:104410,checklistbank-2232:377581,col:6NFYQ,itis:822606,wfo:wfo-0000355663"
         },
         {
           "id": "SP_JUNIPERUS_PINCHOTII",
@@ -5040,9 +5057,14 @@
             ],
             "checklistbank": "150711",
             "checklistbank-2008": "104413",
-            "checklistbank-1174": "txn:511784"
+            "checklistbank-1174": [
+              "txn:511784"
+            ],
+            "checklistbank-2232": [
+              "377333"
+            ]
           },
-          "authorityIds": "col:6NGC2,itis:505931,wfo:wfo-0000354994"
+          "authorityIds": "checklistbank:150711,checklistbank-1174:txn:511784,checklistbank-2008:104413,checklistbank-2232:377333,col:6NGC2,itis:505931,wfo:wfo-0000354994"
         },
         {
           "id": "SP_JUNIPERUS_SALTILLENSIS",
@@ -5303,9 +5325,17 @@
             "checklistbank": "150714",
             "checklistbank-2008": "104419",
             "gbif-backbone": "2684528",
-            "checklistbank-1174": "txn:511780"
+            "checklistbank-1174": [
+              "txn:511780"
+            ],
+            "checklistbank-2232": [
+              "530126"
+            ],
+            "checklistbank-1141": [
+              "3aaf2f7c-b62a-56f9-b4aa-7d0acada4892"
+            ]
           },
-          "authorityIds": "col:6NHWF,wfo:wfo-0000353681"
+          "authorityIds": "checklistbank:150714,checklistbank-1141:3aaf2f7c-b62a-56f9-b4aa-7d0acada4892,checklistbank-1174:txn:511780,checklistbank-2008:104419,checklistbank-2232:530126,col:6NHWF,gbif-backbone:2684528,wfo:wfo-0000353681"
         },
         {
           "id": "SP_JUNIPERUS_TIBETICA",
@@ -5399,12 +5429,23 @@
             "wfo": [
               "wfo-0000354923"
             ],
-            "checklistbank": "150715",
+            "checklistbank": [
+              "150715",
+              "urn:lsid:marinespecies.org:taxname:1492694"
+            ],
             "checklistbank-2008": "104422",
             "gbif-backbone": "2684391",
-            "checklistbank-1174": "txn:449537"
+            "checklistbank-1174": [
+              "txn:449537"
+            ],
+            "checklistbank-2232": [
+              "377287"
+            ],
+            "checklistbank-1141": [
+              "4e1102d2-c5f0-5c6b-9669-cba3fc225596"
+            ]
           },
-          "authorityIds": "col:6NHW6,itis:18048,wfo:wfo-0000354923"
+          "authorityIds": "checklistbank:150715,checklistbank:urn:lsid:marinespecies.org:taxname:1492694,checklistbank-1141:4e1102d2-c5f0-5c6b-9669-cba3fc225596,checklistbank-1174:txn:449537,checklistbank-2008:104422,checklistbank-2232:377287,col:6NHW6,gbif-backbone:2684391,itis:18048,wfo:wfo-0000354923"
         },
         {
           "id": "SP_JUNIPERUS_ZANONII",
@@ -6939,24 +6980,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_JUNIPERUS_VIRGINIANA_LINNAEUS",
-          "name": "\"Juniperus virginiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Juniperus",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1492694",
-            "checklistbank-2232": "377287",
-            "checklistbank-1141": "4e1102d2-c5f0-5c6b-9669-cba3fc225596",
-            "checklistbank-1174": "txn:449537"
-          },
-          "children": [],
-          "uuid": "6f2fc745-69ec-55c-a98-6e571192bd9a82",
-          "description": "\"Juniperus virginiana\" is a cupressaceae species found in its native region."
-        },
-        {
           "id": "SP_JUNIPERUS_BERMUDIANA_LINNAEUS_1753",
           "name": "\"Juniperus bermudiana\"",
           "rank": "SPECIES",
@@ -6972,38 +6995,6 @@
           "children": [],
           "uuid": "7eec208e-e172-52c-acb-8f45cbc28c614f",
           "description": "\"Juniperus bermudiana\" is a cupressaceae species found in its native region."
-        },
-        {
-          "id": "SP_JUNIPERUS_COMMUNIS_L",
-          "name": "\"Juniperus communis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Juniperus",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634584",
-            "checklistbank-1174": "txn:511785"
-          },
-          "children": [],
-          "uuid": "c9986298-b5a8-5d9-861-5ad0fe7e4c1233",
-          "description": "\"Juniperus communis\" is a cupressaceae species found in its native region."
-        },
-        {
-          "id": "SP_JUNIPERUS_THURIFERA_V_LA_P_SCH_F_V_LA",
-          "name": "Juniperus thurifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Juniperus",
-          "authorship": "(Véla & P.Schäf.) Véla",
-          "sourceIds": {
-            "checklistbank-2232": "530126",
-            "checklistbank-1141": "3aaf2f7c-b62a-56f9-b4aa-7d0acada4892",
-            "checklistbank-1174": "txn:511780"
-          },
-          "uuid": "9225a5d1-a9e8-4844-a7a4-51eae31b9373",
-          "children": []
         },
         {
           "id": "SP_JUNIPERUS_STANDLEYI_STEYERM",
@@ -7203,22 +7194,6 @@
           "children": []
         },
         {
-          "id": "SP_JUNIPERUS_BARBADENSIS_BRITTON_GREUTER_R_RANKIN",
-          "name": "Juniperus barbadensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Juniperus",
-          "authorship": "(Britton) Greuter & R.Rankin",
-          "sourceIds": {
-            "checklistbank-2232": "3292258",
-            "checklistbank-1141": "8b58c8bc-a3b9-5b60-8e46-70b45977466a",
-            "checklistbank-1174": "txn:511782"
-          },
-          "uuid": "2d21913e-5da4-41e0-a598-187a4a4d90e7",
-          "children": []
-        },
-        {
           "id": "SP_JUNIPERUS_CERROPASTORENSIS_J_M_APARICIO_URIBE_ECH",
           "name": "Juniperus ×cerropastorensis",
           "rank": "SPECIES",
@@ -7343,21 +7318,6 @@
             "checklistbank-2232": "377331"
           },
           "uuid": "8099e480-7242-4065-906b-f9f568a413f8",
-          "children": []
-        },
-        {
-          "id": "SP_JUNIPERUS_SABINA_L",
-          "name": "Juniperus sabina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Juniperus",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank-2232": "377333",
-            "checklistbank-1174": "txn:511784"
-          },
-          "uuid": "6e3ff86d-4dee-4e51-9750-590336494e90",
           "children": []
         },
         {
@@ -7627,21 +7587,6 @@
           "children": []
         },
         {
-          "id": "SP_JUNIPERUS_CALIFORNICA_CARRI_RE",
-          "name": "Juniperus californica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Juniperus",
-          "authorship": "Carrière",
-          "sourceIds": {
-            "checklistbank-2232": "377520",
-            "checklistbank-1174": "txn:449534"
-          },
-          "uuid": "34981669-57f9-42b1-ada7-92ea21e00cd2",
-          "children": []
-        },
-        {
           "id": "SP_JUNIPERUS_CANARIENSIS_GUYOT_MATHOU",
           "name": "Juniperus canariensis",
           "rank": "SPECIES",
@@ -7709,36 +7654,6 @@
             "checklistbank-2232": "377575"
           },
           "uuid": "bf366c8b-a428-4990-83b4-bc3764d567e8",
-          "children": []
-        },
-        {
-          "id": "SP_JUNIPERUS_OXYCEDRUS_L",
-          "name": "Juniperus oxycedrus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Juniperus",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank-2232": "377576",
-            "checklistbank-1174": "txn:511779"
-          },
-          "uuid": "1bbfcce2-fb40-4fdc-82a6-813ba0461f27",
-          "children": []
-        },
-        {
-          "id": "SP_JUNIPERUS_PHOENICEA_L",
-          "name": "Juniperus phoenicea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Juniperus",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank-2232": "377581",
-            "checklistbank-1174": "txn:511786"
-          },
-          "uuid": "f3b5d2c6-73be-45a7-8a72-b2a384e5adad",
           "children": []
         },
         {
@@ -8690,11 +8605,16 @@
             "itis": [
               "505490"
             ],
-            "checklistbank": "150755",
+            "checklistbank": [
+              "150755",
+              "urn:lsid:marinespecies.org:taxname:1634575"
+            ],
             "checklistbank-2008": "126449",
-            "checklistbank-1174": "txn:452412"
+            "checklistbank-1174": [
+              "txn:452412"
+            ]
           },
-          "authorityIds": "col:56NTP,itis:505490,wfo:wfo-0000407772"
+          "authorityIds": "checklistbank:150755,checklistbank:urn:lsid:marinespecies.org:taxname:1634575,checklistbank-1174:txn:452412,checklistbank-2008:126449,col:56NTP,itis:505490,wfo:wfo-0000407772"
         },
         {
           "id": "SP_THUJA_PLICATA",
@@ -9394,22 +9314,6 @@
       "name": "\"Thuja",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_THUJA_OCCIDENTALIS_L",
-          "name": "\"Thuja occidentalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thuja",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634575",
-            "checklistbank-1174": "txn:452412"
-          },
-          "children": [],
-          "uuid": "38274fa5-5d07-517-b75-5a23451abf3b56",
-          "description": "\"Thuja occidentalis\" is a cupressaceae species found in its native region."
-        },
         {
           "id": "SP_THUJA_KORAIENSIS_NAKAI",
           "name": "Thuja koraiensis",
@@ -10610,11 +10514,16 @@
             "wfo": [
               "wfo-0000408602"
             ],
-            "checklistbank": "150838",
+            "checklistbank": [
+              "150838",
+              "urn:lsid:marinespecies.org:taxname:1634552"
+            ],
             "checklistbank-2008": "125811",
-            "checklistbank-1174": "txn:396686"
+            "checklistbank-1174": [
+              "txn:396686"
+            ]
           },
-          "authorityIds": "col:5526G,itis:18041,wfo:wfo-0000408602"
+          "authorityIds": "checklistbank:150838,checklistbank:urn:lsid:marinespecies.org:taxname:1634552,checklistbank-1174:txn:396686,checklistbank-2008:125811,col:5526G,itis:18041,wfo:wfo-0000408602"
         },
         {
           "id": "SP_TAXODIUM_MUCRONATUM_TEN",
@@ -10637,9 +10546,14 @@
               "5526P"
             ],
             "checklistbank": "49665",
-            "checklistbank-1174": "txn:396687"
+            "checklistbank-1174": [
+              "txn:396687"
+            ],
+            "wikispecies": [
+              "Taxodium_mucronatum"
+            ]
           },
-          "authorityIds": "col:5526P,itis:183432,wfo:wfo-0000408584",
+          "authorityIds": "checklistbank:49665,checklistbank-1174:txn:396687,col:5526P,itis:183432,wfo:wfo-0000408584,wikispecies:Taxodium_mucronatum",
           "commonName": "Mexican Cypress",
           "description": "Taxodium mucronatum, commonly known as Montezuma bald cypress, Montezuma cypress, , or , is derived from the Nahuatl name for the tree, , which means 'upright drum in water' or 'old man of the water'."
         },
@@ -11025,36 +10939,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TAXODIUM_DISTICHUM_L_RICH",
-          "name": "\"Taxodium distichum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Taxodium",
-          "authorship": "\"(L.) Rich.\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634552",
-            "checklistbank-1174": "txn:396686"
-          },
-          "children": [],
-          "uuid": "87334bae-c507-543-8d6-95ae367cefd605",
-          "description": "\"Taxodium distichum\" is a cupressaceae species found in its native region."
-        },
-        {
-          "id": "SP_TAXODIUM_MUCRONATUM",
-          "name": "Taxodium mucronatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Taxodium",
-          "sourceIds": {
-            "wikispecies": "Taxodium_mucronatum",
-            "checklistbank-1174": "txn:396687"
-          },
-          "uuid": "6c2e563a-9cb0-45f0-b0ee-93f98a02abbe",
-          "children": []
-        },
-        {
           "id": "SP_TAXODIUM_OCCIDENTALE_NEWBERRY_1863",
           "name": "Taxodium occidentale",
           "rank": "SPECIES",
@@ -11134,7 +11018,8 @@
           "sourceIds": {
             "checklistbank-139831": "169570"
           },
-          "uuid": "d2246f03-1249-47db-8109-56a6404a8bf6"
+          "uuid": "d2246f03-1249-47db-8109-56a6404a8bf6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11470,11 +11355,16 @@
             "col": [
               "4WSQG"
             ],
-            "checklistbank": "194576",
+            "checklistbank": [
+              "194576",
+              "urn:lsid:marinespecies.org:taxname:1634544"
+            ],
             "checklistbank-2008": "122785",
-            "checklistbank-1174": "txn:396683"
+            "checklistbank-1174": [
+              "txn:396683"
+            ]
           },
-          "authorityIds": "col:4WSQG,itis:183435,wfo:wfo-0000437871"
+          "authorityIds": "checklistbank:194576,checklistbank:urn:lsid:marinespecies.org:taxname:1634544,checklistbank-1174:txn:396683,checklistbank-2008:122785,col:4WSQG,itis:183435,wfo:wfo-0000437871"
         },
         {
           "id": "SP_SEQUOIA_DISTICHA_HEER",
@@ -12199,22 +12089,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SEQUOIA_SEMPERVIRENS_D_DON_ENDL",
-          "name": "\"Sequoia sempervirens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sequoia",
-          "authorship": "\"(D.Don) Endl.\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634544",
-            "checklistbank-1174": "txn:396683"
-          },
-          "children": [],
-          "uuid": "d5108b60-e198-506-aff-3b6a172026a2e1",
-          "description": "\"Sequoia sempervirens\" is a cupressaceae species found in its native region."
-        },
-        {
           "id": "SP_SEQUOIA_AFFINIS_LESQUEREUX_1876",
           "name": "Sequoia affinis",
           "rank": "SPECIES",
@@ -12463,12 +12337,17 @@
             "itis": [
               "505864"
             ],
-            "checklistbank": "Metasequoia_glyptostroboides_Hu__WCCheng",
+            "checklistbank": [
+              "Metasequoia_glyptostroboides_Hu__WCCheng",
+              "urn:lsid:marinespecies.org:taxname:1634542"
+            ],
             "checklistbank-2008": "108448",
             "gbif-backbone": "5284231",
-            "checklistbank-1174": "txn:396684"
+            "checklistbank-1174": [
+              "txn:396684"
+            ]
           },
-          "authorityIds": "col:42D4S,itis:505864,wfo:wfo-0000452120"
+          "authorityIds": "checklistbank:Metasequoia_glyptostroboides_Hu__WCCheng,checklistbank:urn:lsid:marinespecies.org:taxname:1634542,checklistbank-1174:txn:396684,checklistbank-2008:108448,col:42D4S,gbif-backbone:5284231,itis:505864,wfo:wfo-0000452120"
         },
         {
           "id": "SP_METASEQUOIA_FOXII",
@@ -12543,22 +12422,6 @@
       "name": "\"Metasequoia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_METASEQUOIA_GLYPTOSTROBOIDES_HU_W_C_CHENG",
-          "name": "\"Metasequoia glyptostroboides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Metasequoia",
-          "authorship": "\"Hu & W.C.Cheng\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634542",
-            "checklistbank-1174": "txn:396684"
-          },
-          "children": [],
-          "uuid": "9badd908-f53e-5f7-91b-af12ef6e8a61c1",
-          "description": "\"Metasequoia glyptostroboides\" is a cupressaceae species found in its native region."
-        },
         {
           "id": "SP_METASEQUOIA_OCCIDENTALIS_CHANEY_1951",
           "name": "Metasequoia occidentalis",
@@ -12704,12 +12567,17 @@
             "itis": [
               "183438"
             ],
-            "checklistbank": "150857",
+            "checklistbank": [
+              "150857",
+              "urn:lsid:marinespecies.org:taxname:1634546"
+            ],
             "checklistbank-2008": "122788",
             "gbif-backbone": "2684120",
-            "checklistbank-1174": "txn:396685"
+            "checklistbank-1174": [
+              "txn:396685"
+            ]
           },
-          "authorityIds": "col:4WSQK,itis:183438,wfo:wfo-0000496705"
+          "authorityIds": "checklistbank:150857,checklistbank:urn:lsid:marinespecies.org:taxname:1634546,checklistbank-1174:txn:396685,checklistbank-2008:122788,col:4WSQK,gbif-backbone:2684120,itis:183438,wfo:wfo-0000496705"
         },
         {
           "id": "SP_SEQUOIADENDRON_CHANEYI",
@@ -12741,31 +12609,6 @@
           "description": "Sequoiadendron fordi is a cupressaceae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_SEQUOIADENDRON",
-      "name": "\"Sequoiadendron",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SEQUOIADENDRON_GIGANTEUM_LINDL_J_BUCHHOLZ",
-          "name": "\"Sequoiadendron giganteum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sequoiadendron",
-          "authorship": "\"(Lindl.) J.Buchholz\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634546",
-            "checklistbank-1174": "txn:396685"
-          },
-          "children": [],
-          "uuid": "638d6d89-8b81-5aa-80e-4764d399efdb8d",
-          "description": "\"Sequoiadendron giganteum\" is a cupressaceae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cupressaceae"
     },
     {
       "id": "GENUS_CALOCEDRUS",
@@ -13047,9 +12890,14 @@
               "wfo-0000555588"
             ],
             "checklistbank": "Athrotaxis_cupressoides_DDon",
-            "checklistbank-1174": "txn:396680"
+            "checklistbank-1174": [
+              "txn:396680"
+            ],
+            "checklistbank-2232": [
+              "382223"
+            ]
           },
-          "authorityIds": "col:JF6F,wfo:wfo-0000555588"
+          "authorityIds": "checklistbank:Athrotaxis_cupressoides_DDon,checklistbank-1174:txn:396680,checklistbank-2232:382223,col:JF6F,wfo:wfo-0000555588"
         },
         {
           "id": "SP_ATHROTAXIS_SELAGINOIDES",
@@ -13070,10 +12918,15 @@
             "col": [
               "JF6K"
             ],
-            "checklistbank": "Athrotaxis_selaginoides_DDon",
-            "checklistbank-1174": "txn:396682"
+            "checklistbank": [
+              "Athrotaxis_selaginoides_DDon",
+              "urn:lsid:marinespecies.org:taxname:1634540"
+            ],
+            "checklistbank-1174": [
+              "txn:396682"
+            ]
           },
-          "authorityIds": "col:JF6K,wfo:wfo-0000555596"
+          "authorityIds": "checklistbank:Athrotaxis_selaginoides_DDon,checklistbank:urn:lsid:marinespecies.org:taxname:1634540,checklistbank-1174:txn:396682,col:JF6K,wfo:wfo-0000555596"
         },
         {
           "id": "SP_ATHROTAXIS_LAXIFOLIA_HOOK",
@@ -13177,37 +13030,6 @@
       "name": "\"Athrotaxis",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ATHROTAXIS_SELAGINOIDES_D_DON",
-          "name": "\"Athrotaxis selaginoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Athrotaxis",
-          "authorship": "D.Don",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634540",
-            "checklistbank-1174": "txn:396682"
-          },
-          "children": [],
-          "uuid": "06343f80-02b7-5bb-b8d-3f82092541856e",
-          "description": "\"Athrotaxis selaginoides\" is a cupressaceae species found in its native region."
-        },
-        {
-          "id": "SP_ATHROTAXIS_CUPRESSOIDES_D_DON",
-          "name": "Athrotaxis cupressoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Athrotaxis",
-          "authorship": "D.Don",
-          "sourceIds": {
-            "checklistbank-2232": "382223",
-            "checklistbank-1174": "txn:396680"
-          },
-          "uuid": "cfde14aa-55f1-4cf2-9d72-1933415876df",
-          "children": []
-        },
         {
           "id": "SP_ATHROTAXIS_UNGERI_FLORIN_1940",
           "name": "Athrotaxis ungeri",
@@ -13499,11 +13321,19 @@
             "itis": [
               "18046"
             ],
-            "checklistbank": "Chamaecyparis_thyoides_L_Britton__al",
+            "checklistbank": [
+              "Chamaecyparis_thyoides_L_Britton__al",
+              "urn:lsid:marinespecies.org:taxname:1634579"
+            ],
             "checklistbank-2008": "610827",
-            "checklistbank-1174": "txn:447716"
+            "checklistbank-1174": [
+              "txn:447716"
+            ],
+            "checklistbank-2232": [
+              "382860"
+            ]
           },
-          "authorityIds": "col:TJJP,itis:18046,wfo:wfo-0000599490"
+          "authorityIds": "checklistbank:Chamaecyparis_thyoides_L_Britton__al,checklistbank:urn:lsid:marinespecies.org:taxname:1634579,checklistbank-1174:txn:447716,checklistbank-2008:610827,checklistbank-2232:382860,col:TJJP,itis:18046,wfo:wfo-0000599490"
         },
         {
           "id": "SP_CHAMAECYPARIS_FLIFERA_VEITCH_EX_S_N_CL",
@@ -13700,23 +13530,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CHAMAECYPARIS_THYOIDES_L_BRITTON_STERNS_POGGENB",
-          "name": "\"Chamaecyparis thyoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chamaecyparis",
-          "authorship": "\"(L.) Britton, Sterns & Poggenb.\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634579",
-            "checklistbank-2232": "382860",
-            "checklistbank-1174": "txn:447716"
-          },
-          "children": [],
-          "uuid": "b08cf267-57b1-5e2-873-ff779c42193005",
-          "description": "\"Chamaecyparis thyoides\" is a cupressaceae species found in its native region."
-        },
-        {
           "id": "SP_CHAMAECYPARIS_FORMOSENSIS_MATSUM",
           "name": "Chamaecyparis formosensis",
           "rank": "SPECIES",
@@ -13814,11 +13627,19 @@
             "wfo": [
               "wfo-0000628423"
             ],
-            "checklistbank": "150853",
+            "checklistbank": [
+              "150853",
+              "urn:lsid:marinespecies.org:taxname:1634548"
+            ],
             "checklistbank-2008": "93471",
-            "checklistbank-1174": "txn:396688"
+            "checklistbank-1174": [
+              "txn:396688"
+            ],
+            "checklistbank-1141": [
+              "76b2fa6a-1746-5fda-8c6e-c0b17176a342"
+            ]
           },
-          "authorityIds": "col:ZY5W,itis:501832,wfo:wfo-0000628423"
+          "authorityIds": "checklistbank:150853,checklistbank:urn:lsid:marinespecies.org:taxname:1634548,checklistbank-1141:76b2fa6a-1746-5fda-8c6e-c0b17176a342,checklistbank-1174:txn:396688,checklistbank-2008:93471,col:ZY5W,itis:501832,wfo:wfo-0000628423"
         },
         {
           "id": "SP_CRYPTOMERIA_FORTUNEI_HOOIBR_EX_BILLAIN_1853",
@@ -13939,32 +13760,6 @@
       ]
     },
     {
-      "id": "GENUS_CRYPTOMERIA",
-      "name": "\"Cryptomeria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CRYPTOMERIA_JAPONICA_THUNB_EX_L_F_D_DON",
-          "name": "\"Cryptomeria japonica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptomeria",
-          "authorship": "\"(Thunb. ex L.f.) D.Don\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634548",
-            "checklistbank-1141": "76b2fa6a-1746-5fda-8c6e-c0b17176a342",
-            "checklistbank-1174": "txn:396688"
-          },
-          "children": [],
-          "uuid": "aafc668f-daa6-56a-8d8-4683be19fecc91",
-          "description": "\"Cryptomeria japonica\" is a cupressaceae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cupressaceae"
-    },
-    {
       "id": "GENUS_CUNNINGHAMIA",
       "name": "Cunninghamia",
       "rank": "GENUS",
@@ -13991,9 +13786,14 @@
               "wfo-0000629337"
             ],
             "checklistbank": "Cunninghamia_konishii_Hayata",
-            "checklistbank-1174": "txn:396678"
+            "checklistbank-1174": [
+              "txn:396678"
+            ],
+            "checklistbank-2232": [
+              "383009"
+            ]
           },
-          "authorityIds": "col:6C3N2,wfo:wfo-0000629337"
+          "authorityIds": "checklistbank:Cunninghamia_konishii_Hayata,checklistbank-1174:txn:396678,checklistbank-2232:383009,col:6C3N2,wfo:wfo-0000629337"
         },
         {
           "id": "SP_CUNNINGHAMIA_LANCEOLATA",
@@ -14021,11 +13821,16 @@
             "itis": [
               "501840"
             ],
-            "checklistbank": "Cunninghamia_lanceolata_Lamb_Hook",
+            "checklistbank": [
+              "Cunninghamia_lanceolata_Lamb_Hook",
+              "urn:lsid:marinespecies.org:taxname:1634536"
+            ],
             "checklistbank-2008": "610665",
-            "checklistbank-1174": "txn:396677"
+            "checklistbank-1174": [
+              "txn:396677"
+            ]
           },
-          "authorityIds": "col:6BRMR,itis:501840,wfo:wfo-0000629338"
+          "authorityIds": "checklistbank:Cunninghamia_lanceolata_Lamb_Hook,checklistbank:urn:lsid:marinespecies.org:taxname:1634536,checklistbank-1174:txn:396677,checklistbank-2008:610665,col:6BRMR,itis:501840,wfo:wfo-0000629338"
         },
         {
           "id": "SP_CUNNINGHAMIA_UNICANALICULATA",
@@ -14129,46 +13934,6 @@
           "uuid": "8aa24d06-7c14-514-ba1-a271ee2e050630"
         }
       ]
-    },
-    {
-      "id": "GENUS_CUNNINGHAMIA",
-      "name": "\"Cunninghamia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CUNNINGHAMIA_LANCEOLATA_LAMB_HOOK",
-          "name": "\"Cunninghamia lanceolata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cunninghamia",
-          "authorship": "\"(Lamb.) Hook.\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634536",
-            "checklistbank-1174": "txn:396677"
-          },
-          "children": [],
-          "uuid": "7f8d4e55-b089-5f7-b7a-0733aa8bfea636",
-          "description": "\"Cunninghamia lanceolata\" is a cupressaceae species found in its native region."
-        },
-        {
-          "id": "SP_CUNNINGHAMIA_KONISHII_HAYATA",
-          "name": "Cunninghamia konishii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cunninghamia",
-          "authorship": "Hayata",
-          "sourceIds": {
-            "checklistbank-2232": "383009",
-            "checklistbank-1174": "txn:396678"
-          },
-          "uuid": "cde65d59-fc68-4478-846e-200c4adf947a",
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cupressaceae"
     },
     {
       "id": "GENUS_FITZROYA",
@@ -18751,8 +18516,8 @@
       "lineage": "cupressaceae"
     }
   ],
-  "genusCount": 166,
-  "speciesCount": 1040,
+  "genusCount": 163,
+  "speciesCount": 1020,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

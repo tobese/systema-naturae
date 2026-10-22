@@ -1855,10 +1855,18 @@
             "col": [
               "4KBKN"
             ],
-            "checklistbank": "38798",
-            "wikispecies": "Pleurogonium_inerme"
+            "checklistbank": [
+              "38798",
+              "urn:lsid:marinespecies.org:taxname:264231"
+            ],
+            "wikispecies": [
+              "Pleurogonium_inerme"
+            ],
+            "checklistbank-139831": [
+              "1256045"
+            ]
           },
-          "authorityIds": "col:4KBKN,itis:93059",
+          "authorityIds": "checklistbank:38798,checklistbank:urn:lsid:marinespecies.org:taxname:264231,checklistbank-139831:1256045,col:4KBKN,itis:93059,wikispecies:Pleurogonium_inerme",
           "description": "Pleurogonium inerme is a paramunnidae species found in its native region."
         },
         {
@@ -2246,23 +2254,6 @@
       "name": "\"Pleurogonium",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PLEUROGONIUM_INERME_KUSSAKIN_1962",
-          "name": "\"Pleurogonium inerme",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleurogonium",
-          "authorship": "\"Kussakin, 1962\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:264231",
-            "wikispecies": "Pleurogonium_inerme",
-            "checklistbank-139831": "1256045"
-          },
-          "children": [],
-          "uuid": "38f7b58e-7013-54c-8db-0cbad345cb208a",
-          "description": "\"Pleurogonium inerme is a paramunnidae species found in its native region."
-        },
         {
           "id": "SP_PLEUROGONIUM_BIFOLIUM",
           "name": "Pleurogonium bifolium",
@@ -5537,7 +5528,7 @@
       "lineage": "paramunnidae"
     }
   ],
-  "speciesCount": 262,
+  "speciesCount": 261,
   "appSlug": "paramunnidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

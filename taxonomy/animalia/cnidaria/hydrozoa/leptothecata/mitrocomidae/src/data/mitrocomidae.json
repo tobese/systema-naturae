@@ -376,9 +376,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Mitrocomella",
           "sourceIds": {
-            "checklistbank-139831": "676079"
+            "checklistbank-139831": [
+              "676079"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:676079"
         }
       ]
     },
@@ -457,7 +460,8 @@
           "sourceIds": {
             "checklistbank-139831": "676079"
           },
-          "uuid": "a1616268-7c90-4095-954d-7f11a44b5300"
+          "uuid": "a1616268-7c90-4095-954d-7f11a44b5300",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1181,9 +1185,11 @@
               "50445"
             ],
             "checklistbank": "37748",
-            "checklistbank-139831": "789053"
+            "checklistbank-139831": [
+              "789053"
+            ]
           },
-          "authorityIds": "itis:50445",
+          "authorityIds": "checklistbank:37748,checklistbank-139831:789053,itis:50445",
           "description": "Cyclocanna welshi is a mitrocomidae species found in its native region."
         }
       ]
@@ -1207,18 +1213,6 @@
           "children": [],
           "uuid": "5b37a741-afa8-533-a43-b060a88a1b1180",
           "description": "\"Cyclocanna producta\" is a mitrocomidae species found in its native region."
-        },
-        {
-          "id": "SP_CYCLOCANNA_WELSHI",
-          "name": "Cyclocanna welshi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cyclocanna",
-          "sourceIds": {
-            "checklistbank-139831": "789053"
-          },
-          "uuid": "14357496-e038-4fc1-bd92-2d74e9a5fbf0"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1607,7 +1601,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 74,
+  "speciesCount": 75,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

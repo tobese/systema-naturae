@@ -563,10 +563,18 @@
             "col": [
               "6D5S3"
             ],
-            "checklistbank": "261969",
-            "wikispecies": "Dicrurus_macrocercus"
+            "checklistbank": [
+              "261969",
+              "urn:lsid:marinespecies.org:taxname:1606551"
+            ],
+            "wikispecies": [
+              "Dicrurus_macrocercus"
+            ],
+            "checklistbank-139831": [
+              "8277"
+            ]
           },
-          "authorityIds": "col:6D5S3,itis:179656,wikidata:Q46435",
+          "authorityIds": "checklistbank:261969,checklistbank:urn:lsid:marinespecies.org:taxname:1606551,checklistbank-139831:8277,col:6D5S3,itis:179656,wikidata:Q46435,wikispecies:Dicrurus_macrocercus",
           "authorship": "Vieillot, 1817"
         },
         {
@@ -1064,23 +1072,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DICRURUS_MACROCERCUS_VIEILLOT_1817",
-          "name": "\"Dicrurus macrocercus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dicrurus",
-          "authorship": "\"Vieillot, 1817\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606551",
-            "wikispecies": "Dicrurus_macrocercus",
-            "checklistbank-139831": "8277"
-          },
-          "children": [],
-          "uuid": "42b5a60c-a205-588-b55-3f590805e6bd60",
-          "description": "\"Dicrurus macrocercus\" is a dicruridae species found in its native region."
-        },
-        {
           "id": "SP_DICRURUS_ADSIMILIS",
           "name": "Dicrurus adsimilis",
           "rank": "SPECIES",
@@ -1413,7 +1404,8 @@
           "sourceIds": {
             "checklistbank-170809": "229725407"
           },
-          "uuid": "6ba72e1b-acd8-441a-9d20-d2f4bbb4cba8"
+          "uuid": "6ba72e1b-acd8-441a-9d20-d2f4bbb4cba8",
+          "children": []
         },
         {
           "id": "SP_DICRURUS_ANNECTENS_HODGSON_1836",
@@ -1426,7 +1418,8 @@
           "sourceIds": {
             "checklistbank-170809": "22706970"
           },
-          "uuid": "5fe6b28b-ae37-45be-bbbc-822a0d9303f1"
+          "uuid": "5fe6b28b-ae37-45be-bbbc-822a0d9303f1",
+          "children": []
         },
         {
           "id": "SP_DICRURUS_PALAWANENSIS_TWEEDDALE_1878",
@@ -1439,7 +1432,8 @@
           "sourceIds": {
             "checklistbank-170809": "232589773"
           },
-          "uuid": "593af620-81b8-4365-b6d7-d5e679343885"
+          "uuid": "593af620-81b8-4365-b6d7-d5e679343885",
+          "children": []
         },
         {
           "id": "SP_DICRURUS_STRIATUS_TWEEDDALE_1877",
@@ -1452,7 +1446,8 @@
           "sourceIds": {
             "checklistbank-170809": "103711049"
           },
-          "uuid": "5ff70e93-be97-4c39-a3c2-a4279b31b308"
+          "uuid": "5ff70e93-be97-4c39-a3c2-a4279b31b308",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1606,7 +1601,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 79,
+  "speciesCount": 78,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

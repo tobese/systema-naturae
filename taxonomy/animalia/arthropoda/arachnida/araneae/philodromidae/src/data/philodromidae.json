@@ -821,20 +821,6 @@
           "uuid": "5a69bdd9-6090-55e-bb0-06f3a1cf466e15"
         },
         {
-          "id": "SP_TIBELLUS_PARALELLUS_C_L_KOCH_1837",
-          "name": "Tibellus paralellus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tibellus",
-          "authorship": "(C.L. Koch, 1837)",
-          "sourceIds": {
-            "checklistbank": "227208"
-          },
-          "children": [],
-          "uuid": "9825fd44-1cb4-520-9c2-41e8c21e3b7c7b"
-        },
-        {
           "id": "SP_TIBELLUS_PARALLELUS_C_L_KOCH",
           "name": "Tibellus parallelus",
           "rank": "SPECIES",
@@ -1897,13 +1883,18 @@
           "lineage": "Pulchellodromus",
           "authorship": "(Kroneberg, 1875)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:nmbe.ch:spidersp:029837"
+            "checklistbank": [
+              "urn:lsid:nmbe.ch:spidersp:029837"
+            ],
+            "checklistbank-139831": [
+              "819752"
+            ]
           },
           "children": [],
           "uuid": "d593c322-374a-5a5-94d-57fe892a8c3ef6",
           "description": "Pulchellodromus humilis is a philodromidae species found in its native region.",
           "speciesList": [],
-          "authorityIds": "checklistbank:urn:lsid:nmbe.ch:spidersp:029837"
+          "authorityIds": "checklistbank:urn:lsid:nmbe.ch:spidersp:029837,checklistbank-139831:819752"
         },
         {
           "id": "SP_PULCHELLODROMUS_BISTIGMA_SIMON_1870",
@@ -9040,21 +9031,6 @@
           "uuid": "70de71f5-dd74-593-a26-fb3d469b270e16"
         },
         {
-          "id": "SP_PHILODROMUS_HUMILIS_KRONEBERG_1875",
-          "name": "Philodromus humilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Philodromus",
-          "authorship": "Kroneberg, 1875",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:nmbe.ch:spidersp:029837",
-            "checklistbank-139831": "819752"
-          },
-          "children": [],
-          "uuid": "f66b64bb-47a0-560-917-3f19498e555dba"
-        },
-        {
           "id": "SP_PHILODROMUS_MARUSIKI_LOGUNOV_1997",
           "name": "Philodromus marusiki",
           "rank": "SPECIES",
@@ -9224,34 +9200,6 @@
           },
           "children": [],
           "uuid": "590ddc6a-c991-5f9-b8c-b33774909ca6a7"
-        },
-        {
-          "id": "SP_PHILODROMUS_GLAUCINOIDES_WUNDERLICH_1987",
-          "name": "Philodromus glaucinoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Philodromus",
-          "authorship": "Wunderlich, 1987",
-          "sourceIds": {
-            "checklistbank": "227145"
-          },
-          "children": [],
-          "uuid": "8a69a518-2393-57a-b0f-d97781e5085be7"
-        },
-        {
-          "id": "SP_PHILODROMUS_MARIONSCHMIDTI_SCHMIDT_1990",
-          "name": "Philodromus marionschmidti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Philodromus",
-          "authorship": "(Schmidt, 1990)",
-          "sourceIds": {
-            "checklistbank": "227155"
-          },
-          "children": [],
-          "uuid": "69916148-1ca1-5f0-863-6ba32e51fffcd2"
         },
         {
           "id": "SP_PHILODROMUS_BIGIBBUS_LAWRENCE_1928",
@@ -10734,21 +10682,6 @@
           "uuid": "673a2dc1-e32d-518-b1c-1e1f009b64e70a"
         },
         {
-          "id": "SP_THANATUS_ARIDORUM_SILHAVY_1940",
-          "name": "Thanatus aridorum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thanatus",
-          "authorship": "Silhavy, 1940",
-          "sourceIds": {
-            "checklistbank": "227173",
-            "gbif-backbone": "2148038"
-          },
-          "children": [],
-          "uuid": "7ec4d199-fd54-528-85f-b4f393d5e2a000"
-        },
-        {
           "id": "SP_THANATUS_CONSTELLATUS_CHARITONOV_1946",
           "name": "Thanatus constellatus",
           "rank": "SPECIES",
@@ -10775,20 +10708,6 @@
           },
           "children": [],
           "uuid": "ce67a832-bca4-595-b5e-d6b4513864ee3d"
-        },
-        {
-          "id": "SP_THANATUS_JUGORUM_SIMON_1916",
-          "name": "Thanatus jugorum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thanatus",
-          "authorship": "Simon, 1916",
-          "sourceIds": {
-            "checklistbank": "227187"
-          },
-          "children": [],
-          "uuid": "d8289259-a54f-50c-959-40823a1e94ca24"
         },
         {
           "id": "SP_THANATUS_ALPINUS_KULCZY_SKI_1887",
@@ -16544,7 +16463,7 @@
       "lineage": "philodromidae"
     }
   ],
-  "speciesCount": 736,
+  "speciesCount": 730,
   "appSlug": "philodromidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",

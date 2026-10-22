@@ -13396,9 +13396,11 @@
             ],
             "checklistbank": "673693",
             "checklistbank-2008": "673693",
-            "checklistbank-139831": "425826"
+            "checklistbank-139831": [
+              "425826"
+            ]
           },
-          "authorityIds": "col:5CKHH,wfo:wfo-0000428213",
+          "authorityIds": "checklistbank:673693,checklistbank-139831:425826,checklistbank-2008:673693,col:5CKHH,wfo:wfo-0000428213",
           "description": "Xylocarpus rumphii is a small tree in the mahogany family Meliaceae which is native to coastlines of Madagascar, southeast Asia, Queensland, and the southwestern Pacific islands."
         },
         {
@@ -13511,18 +13513,6 @@
           "children": [],
           "uuid": "e933b2bc-7614-513-9a0-9141b2910bde5f",
           "description": "\"Xylocarpus moluccensis\" is a meliaceae species found in its native region."
-        },
-        {
-          "id": "SP_XYLOCARPUS_RUMPHII",
-          "name": "Xylocarpus rumphii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Xylocarpus",
-          "sourceIds": {
-            "checklistbank-139831": "425826"
-          },
-          "uuid": "bffbfc0a-3feb-43fb-a2d0-f6057574935a"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -32786,12 +32776,26 @@
             "wfo": [
               "wfo-0000450150"
             ],
-            "checklistbank": "Melia_azedarach_L",
+            "checklistbank": [
+              "Melia_azedarach_L",
+              "urn:lsid:marinespecies.org:taxname:1492190"
+            ],
             "checklistbank-2008": "107838",
             "gbif-backbone": "5914287",
-            "checklistbank-1174": "txn:493599"
+            "checklistbank-1174": [
+              "txn:493599"
+            ],
+            "checklistbank-2232": [
+              "2505106"
+            ],
+            "checklistbank-1141": [
+              "bdbedcf3-2135-5996-8d87-ace4ca362806"
+            ],
+            "checklistbank-133813": [
+              "https://id.biodiversity.org.au/node/apni/2894326"
+            ]
           },
-          "authorityIds": "col:3ZDZL,itis:29024,wfo:wfo-0000450150",
+          "authorityIds": "checklistbank:Melia_azedarach_L,checklistbank:urn:lsid:marinespecies.org:taxname:1492190,checklistbank-1141:bdbedcf3-2135-5996-8d87-ace4ca362806,checklistbank-1174:txn:493599,checklistbank-133813:https://id.biodiversity.org.au/node/apni/2894326,checklistbank-2008:107838,checklistbank-2232:2505106,col:3ZDZL,gbif-backbone:5914287,itis:29024,wfo:wfo-0000450150",
           "commonName": "Lilac",
           "continents": [
             "Africa",
@@ -32935,25 +32939,6 @@
       "name": "\"Melia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MELIA_AZEDARACH_LINNAEUS",
-          "name": "\"Melia azedarach\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melia",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1492190",
-            "checklistbank-2232": "2505106",
-            "checklistbank-1141": "bdbedcf3-2135-5996-8d87-ace4ca362806",
-            "checklistbank-1174": "txn:493599",
-            "checklistbank-133813": "https://id.biodiversity.org.au/node/apni/2894326"
-          },
-          "children": [],
-          "uuid": "c303e69b-85cf-539-9a8-f8d78bf97483c4",
-          "description": "\"Melia azedarach\" is a meliaceae species found in its native region."
-        },
         {
           "id": "SP_MELIA_VOLKENSII_G_RKE",
           "name": "Melia volkensii",
@@ -35592,7 +35577,7 @@
     }
   ],
   "genusCount": 112,
-  "speciesCount": 1900,
+  "speciesCount": 1899,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

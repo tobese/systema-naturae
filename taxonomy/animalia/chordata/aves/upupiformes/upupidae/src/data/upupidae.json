@@ -35,10 +35,18 @@
             "col": [
               "7DLHC"
             ],
-            "checklistbank": "ott412129",
-            "wikispecies": "Upupa_epops"
+            "checklistbank": [
+              "ott412129",
+              "urn:lsid:marinespecies.org:taxname:1451644"
+            ],
+            "wikispecies": [
+              "Upupa_epops"
+            ],
+            "checklistbank-139831": [
+              "20969"
+            ]
           },
-          "authorityIds": "col:7DLHC,itis:178117,wikidata:Q25247",
+          "authorityIds": "checklistbank:ott412129,checklistbank:urn:lsid:marinespecies.org:taxname:1451644,checklistbank-139831:20969,col:7DLHC,itis:178117,wikidata:Q25247,wikispecies:Upupa_epops",
           "authorship": "Linnaeus, 1758"
         },
         {
@@ -97,9 +105,17 @@
             ],
             "checklistbank": "ott3600736",
             "gbif-backbone": "5788441",
-            "checklistbank-1174": "txn:372739"
+            "checklistbank-1174": [
+              "txn:372739"
+            ],
+            "wikispecies": [
+              "Upupa_marginata"
+            ],
+            "checklistbank-170809": [
+              "22729402"
+            ]
           },
-          "authorityIds": "col:8VDTV,itis:1174535,wikidata:Q27074808",
+          "authorityIds": "checklistbank:ott3600736,checklistbank-1174:txn:372739,checklistbank-170809:22729402,col:8VDTV,gbif-backbone:5788441,itis:1174535,wikidata:Q27074808,wikispecies:Upupa_marginata",
           "authorship": "Cabanis and Heine 1860"
         },
         {
@@ -273,38 +289,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_UPUPA_EPOPS_LINNAEUS_1758",
-          "name": "\"Upupa epops\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Upupa",
-          "authorship": "\"Linnaeus, 1758\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1451644",
-            "wikispecies": "Upupa_epops",
-            "checklistbank-139831": "20969"
-          },
-          "children": [],
-          "uuid": "3d242292-059b-5c1-936-689a11d1ddc4f1",
-          "description": "\"Upupa epops\" is a upupidae species found in its native region."
-        },
-        {
-          "id": "SP_UPUPA_MARGINATA",
-          "name": "Upupa marginata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Upupa",
-          "sourceIds": {
-            "wikispecies": "Upupa_marginata",
-            "checklistbank-1174": "txn:372739",
-            "checklistbank-170809": "22729402"
-          },
-          "uuid": "8314702e-3d75-4824-8f1f-7e4feb42e589",
-          "children": []
-        },
-        {
           "id": "SP_UPUPA_ANTAIOS",
           "name": "Upupa antaios",
           "rank": "SPECIES",
@@ -323,7 +307,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 17,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

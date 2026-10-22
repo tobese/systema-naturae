@@ -404,11 +404,11 @@ def check_file_counts(max_mismatch=0):
 # whatever is listed here is still duplicated -- so a placement that comes back
 # fails loudly instead of passing on a stale allowance.
 KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = {
-    # Wikipedia-sourced weevil held in both Brachyceridae and Curculionidae --
-    # a genuine family-circumscription disagreement, not a dedupe error. Both
-    # copies are native (sourcedFrom=wikipedia), so the dedupe leaves them
-    # alone; the placement disagreement is recorded here rather than resolved.
-    "SP_TANYSPHYRUS_LEMNAE_FABRICIUS_1792",
+    # SP_TANYSPHYRUS_LEMNAE_FABRICIUS_1792 (a Wikipedia-sourced weevil held in
+    # both Brachyceridae and Curculionidae) was here as a genuine
+    # family-circumscription disagreement, not a dedupe error -- resolved by
+    # the 2026-10-22 dedupe pass (one copy collapsed into the other), so
+    # dropped rather than left as a stale allowance.
 }
 
 # Cross-kingdom homonyms are NOT a bug and must never be "fixed": these are

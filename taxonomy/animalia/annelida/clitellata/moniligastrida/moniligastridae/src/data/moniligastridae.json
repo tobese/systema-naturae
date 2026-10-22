@@ -2950,9 +2950,11 @@
               "976516"
             ],
             "checklistbank": "1550479",
-            "checklistbank-139831": "1550479"
+            "checklistbank-139831": [
+              "1550479"
+            ]
           },
-          "authorityIds": "itis:976516",
+          "authorityIds": "checklistbank:1550479,checklistbank-139831:1550479,itis:976516",
           "description": "Drawida grandis is a moniligastridae species found in its native region."
         },
         {
@@ -5088,9 +5090,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Drawida",
           "sourceIds": {
-            "checklistbank-139831": "505294"
+            "checklistbank-139831": [
+              "505294"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:505294"
         }
       ]
     },
@@ -5138,19 +5143,8 @@
           "sourceIds": {
             "checklistbank-139831": "505294"
           },
-          "uuid": "5844eb10-879d-49a0-a7e2-cfd9bcebeef7"
-        },
-        {
-          "id": "SP_DRAWIDA_GRANDIS",
-          "name": "Drawida grandis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Drawida",
-          "sourceIds": {
-            "checklistbank-139831": "1550479"
-          },
-          "uuid": "7ecf2d95-0f4d-4887-a538-d636da25226e"
+          "uuid": "5844eb10-879d-49a0-a7e2-cfd9bcebeef7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6945,7 +6939,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 412,
+  "speciesCount": 413,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -382,11 +382,16 @@
           "children": [],
           "sourceIds": {
             "gbif": 7669726,
-            "checklistbank": "Trypanosoma_dohrni",
-            "wikispecies": "Trypanosoma_dohrni"
+            "checklistbank": [
+              "Trypanosoma_dohrni",
+              "urn:lsid:marinespecies.org:taxname:562894"
+            ],
+            "wikispecies": [
+              "Trypanosoma_dohrni"
+            ]
           },
           "uuid": "8a129791-8a26-559-8a8-8428b805d6d07d",
-          "authorityIds": "gbif:7669726"
+          "authorityIds": "checklistbank:Trypanosoma_dohrni,checklistbank:urn:lsid:marinespecies.org:taxname:562894,gbif:7669726,wikispecies:Trypanosoma_dohrni"
         },
         {
           "id": "TRYPANOSOMA_ERNEYI",
@@ -3730,22 +3735,6 @@
           "description": "\"Trypanosoma delagei\" is a trypanosomatidae species found in its native region."
         },
         {
-          "id": "SP_TRYPANOSOMA_DOHRNI_YAKIMOV_1911",
-          "name": "\"Trypanosoma dohrni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trypanosoma",
-          "authorship": "\"Yakimov, 1911\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:562894",
-            "wikispecies": "Trypanosoma_dohrni"
-          },
-          "children": [],
-          "uuid": "ea55b64c-33b0-56a-903-36695ef086a202",
-          "description": "\"Trypanosoma dohrni\" is a trypanosomatidae species found in its native region."
-        },
-        {
           "id": "SP_TRYPANOSOMA_FROESI_LIMA_1976",
           "name": "\"Trypanosoma froesi\"",
           "rank": "SPECIES",
@@ -4168,7 +4157,8 @@
           "sourceIds": {
             "checklistbank-139831": "895972"
           },
-          "uuid": "2b78a030-3642-4008-9c8c-b1fbb57ff220"
+          "uuid": "2b78a030-3642-4008-9c8c-b1fbb57ff220",
+          "children": []
         },
         {
           "id": "SP_TRYPANOSOMA_PSEUDOMIYAGII",
@@ -4180,7 +4170,8 @@
           "sourceIds": {
             "checklistbank-139831": "971915"
           },
-          "uuid": "a9f904ab-e7e3-4692-8912-5deb514d9bd7"
+          "uuid": "a9f904ab-e7e3-4692-8912-5deb514d9bd7",
+          "children": []
         },
         {
           "id": "SP_TRYPANOSOMA_EVANSI",
@@ -4192,7 +4183,8 @@
           "sourceIds": {
             "checklistbank-139831": "972039"
           },
-          "uuid": "346d6510-2ea6-4657-8a17-2a905c1d3f03"
+          "uuid": "346d6510-2ea6-4657-8a17-2a905c1d3f03",
+          "children": []
         },
         {
           "id": "SP_TRYPANOSOMA_IRWINI",
@@ -4204,7 +4196,8 @@
           "sourceIds": {
             "checklistbank-139831": "1441908"
           },
-          "uuid": "9b618c55-5b79-4841-b274-1a622a324bc1"
+          "uuid": "9b618c55-5b79-4841-b274-1a622a324bc1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8383,7 +8376,7 @@
     }
   ],
   "genusCount": 45,
-  "speciesCount": 524,
+  "speciesCount": 527,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,

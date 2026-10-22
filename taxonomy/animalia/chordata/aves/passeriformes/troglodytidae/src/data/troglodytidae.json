@@ -1893,10 +1893,15 @@
             "itis": [
               "178547"
             ],
-            "checklistbank": "3967",
-            "wikispecies": "Troglodytes_troglodytes"
+            "checklistbank": [
+              "3967",
+              "urn:lsid:marinespecies.org:taxname:558598"
+            ],
+            "wikispecies": [
+              "Troglodytes_troglodytes"
+            ]
           },
-          "authorityIds": "col:598TT,itis:178547,wikidata:Q25740",
+          "authorityIds": "checklistbank:3967,checklistbank:urn:lsid:marinespecies.org:taxname:558598,col:598TT,itis:178547,wikidata:Q25740,wikispecies:Troglodytes_troglodytes",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -2329,22 +2334,6 @@
       "name": "\"Troglodytes",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TROGLODYTES_TROGLODYTES_LINNAEUS_1758",
-          "name": "\"Troglodytes troglodytes\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Troglodytes",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558598",
-            "wikispecies": "Troglodytes_troglodytes"
-          },
-          "children": [],
-          "uuid": "efad5a66-a43a-5d0-b99-4bb0a8a679a900",
-          "description": "\"Troglodytes troglodytes\" is a troglodytidae species found in its native region."
-        },
         {
           "id": "SP_TROGLODYTES_MONTICOLA",
           "name": "Troglodytes monticola",
@@ -3388,22 +3377,6 @@
             "checklistbank": "plawre3"
           },
           "description": "Cantorchilus zeledoni (Canebrake Wren) is a troglodytidae species found in its native region."
-        },
-        {
-          "id": "SP_CANTORCHILUS_GUARAYANUS_D_ORBIGNY_LAFRESNAYE_1837",
-          "name": "Cantorchilus guarayanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cantorchilus",
-          "authorship": "(d'Orbigny & Lafresnaye, 1837)",
-          "sourceIds": {
-            "checklistbank": "Cantorchilus_guarayanus",
-            "wikispecies": "Cantorchilus_guarayanus",
-            "gbif-backbone": "6089532"
-          },
-          "children": [],
-          "uuid": "37398662-956e-505-b53-aa5d138d89b663"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3570,7 +3543,7 @@
     }
   ],
   "genusCount": 25,
-  "speciesCount": 138,
+  "speciesCount": 136,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -946,10 +946,15 @@
             "col": [
               "42SKJ"
             ],
-            "checklistbank": "ott3002530",
-            "wikispecies": "Microcerberus_stygius"
+            "checklistbank": [
+              "ott3002530",
+              "urn:lsid:marinespecies.org:taxname:1748781"
+            ],
+            "wikispecies": [
+              "Microcerberus_stygius"
+            ]
           },
-          "authorityIds": "col:42SKJ,itis:545473",
+          "authorityIds": "checklistbank:ott3002530,checklistbank:urn:lsid:marinespecies.org:taxname:1748781,col:42SKJ,itis:545473,wikispecies:Microcerberus_stygius",
           "description": "Microcerberus stygius is a microcerberidae species found in its native region."
         },
         {
@@ -1115,22 +1120,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MICROCERBERUS_STYGIUS_CVETKOV_1963",
-          "name": "\"Microcerberus stygius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Microcerberus",
-          "authorship": "\"Cvetkov, 1963\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1748781",
-            "wikispecies": "Microcerberus_stygius"
-          },
-          "children": [],
-          "uuid": "8868352c-e070-5e9-9df-1ca8b3fef24a32",
-          "description": "\"Microcerberus stygius is a microcerberidae species found in its native region."
-        },
-        {
           "id": "SP_MICROCERBERUS_MONODI",
           "name": "Microcerberus monodi",
           "rank": "SPECIES",
@@ -1166,7 +1155,8 @@
           "sourceIds": {
             "checklistbank-139831": "1187693"
           },
-          "uuid": "351f35a4-a7fc-44c9-a94c-75a31a728b50"
+          "uuid": "351f35a4-a7fc-44c9-a94c-75a31a728b50",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2018,7 +2008,7 @@
       "lineage": "microcerberidae"
     }
   ],
-  "speciesCount": 103,
+  "speciesCount": 102,
   "appSlug": "microcerberidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

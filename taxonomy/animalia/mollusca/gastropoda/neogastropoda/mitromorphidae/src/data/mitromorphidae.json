@@ -1360,10 +1360,15 @@
             "col": [
               "73KZJ"
             ],
-            "checklistbank": "104696",
-            "checklistbank-1174": "txn:107893"
+            "checklistbank": [
+              "104696",
+              "urn:lsid:marinespecies.org:taxname:432776"
+            ],
+            "checklistbank-1174": [
+              "txn:107893"
+            ]
           },
-          "authorityIds": "col:73KZJ",
+          "authorityIds": "checklistbank:104696,checklistbank:urn:lsid:marinespecies.org:taxname:432776,checklistbank-1174:txn:107893,col:73KZJ",
           "authorship": "(Sowerby, 1844)"
         },
         {
@@ -5208,22 +5213,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MITROMORPHA_DORMITOR_G_B_SOWERBY_I_1844",
-          "name": "\"Mitromorpha dormitor\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mitromorpha",
-          "authorship": "\"(G. B. Sowerby I, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:432776",
-            "checklistbank-1174": "txn:107893"
-          },
-          "children": [],
-          "uuid": "099f109d-bfb2-5ba-af7-472cf321811b85",
-          "description": "\"Mitromorpha dormitor\" is a mitromorphidae species found in its native region."
-        },
-        {
           "id": "SP_MITROMORPHA_CRENIPICTA_DAUTZENBERG_1889",
           "name": "Mitromorpha crenipicta",
           "rank": "SPECIES",
@@ -5896,7 +5885,8 @@
           "sourceIds": {
             "checklistbank-139831": "1551537"
           },
-          "uuid": "e5ce8db0-bcea-4ab2-a3c9-3906e6207bad"
+          "uuid": "e5ce8db0-bcea-4ab2-a3c9-3906e6207bad",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

@@ -66023,11 +66023,16 @@
             "col": [
               "LWGX"
             ],
-            "checklistbank": "Bischofia_javanica_Blume",
+            "checklistbank": [
+              "Bischofia_javanica_Blume",
+              "urn:lsid:marinespecies.org:taxname:1491958"
+            ],
             "checklistbank-2008": "447120",
-            "checklistbank-1174": "txn:444650"
+            "checklistbank-1174": [
+              "txn:444650"
+            ]
           },
-          "authorityIds": "col:LWGX,itis:28239,wfo:wfo-0000342237",
+          "authorityIds": "checklistbank:Bischofia_javanica_Blume,checklistbank:urn:lsid:marinespecies.org:taxname:1491958,checklistbank-1174:txn:444650,checklistbank-2008:447120,col:LWGX,itis:28239,wfo:wfo-0000342237",
           "description": "Bischofia javanica, or bishop wood, is a plant species of the family Phyllanthaceae.",
           "commonName": "Bishopwood",
           "continents": [
@@ -66095,22 +66100,6 @@
       "name": "\"Bischofia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_BISCHOFIA_JAVANICA_BLUME",
-          "name": "\"Bischofia javanica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bischofia",
-          "authorship": "Blume",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1491958",
-            "checklistbank-1174": "txn:444650"
-          },
-          "children": [],
-          "uuid": "cd8578a9-6e70-5b2-9d1-65c4c389de7365",
-          "description": "\"Bischofia javanica\" is a phyllanthaceae species found in its native region."
-        },
         {
           "id": "SP_BISCHOFIA_POLYCARPA_H_L_V_AIRY_SHAW",
           "name": "Bischofia polycarpa",
@@ -84764,7 +84753,7 @@
     }
   ],
   "genusCount": 107,
-  "speciesCount": 4567,
+  "speciesCount": 4566,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

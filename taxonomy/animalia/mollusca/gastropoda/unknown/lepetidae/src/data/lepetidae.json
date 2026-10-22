@@ -249,10 +249,15 @@
             "col": [
               "3T98W"
             ],
-            "checklistbank": "108864",
-            "checklistbank-1174": "txn:108240"
+            "checklistbank": [
+              "108864",
+              "urn:lsid:marinespecies.org:taxname:140187"
+            ],
+            "checklistbank-1174": [
+              "txn:108240"
+            ]
           },
-          "authorityIds": "col:3T98W,itis:69759"
+          "authorityIds": "checklistbank:108864,checklistbank:urn:lsid:marinespecies.org:taxname:140187,checklistbank-1174:txn:108240,col:3T98W,itis:69759"
         },
         {
           "id": "SP_LEPETA_CONCENTRICA",
@@ -507,22 +512,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LEPETA_CAECA_O_F_M_LLER_1776",
-          "name": "\"Lepeta caeca\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lepeta",
-          "authorship": "\"(O. F. Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140187",
-            "checklistbank-1174": "txn:108240"
-          },
-          "children": [],
-          "uuid": "671f5cdf-862e-50b-93b-e7ef39bc0cd1f9",
-          "description": "\"Lepeta caeca\" is a lepetidae species found in its native region."
-        },
-        {
           "id": "SP_LEPETA_CONCENTRICA_MIDDENDORFF_1848",
           "name": "Lepeta concentrica",
           "rank": "SPECIES",
@@ -546,7 +535,8 @@
           "sourceIds": {
             "checklistbank-139831": "1669555"
           },
-          "uuid": "54f555f7-e88f-4622-be4e-7a9c3a1269df"
+          "uuid": "54f555f7-e88f-4622-be4e-7a9c3a1269df",
+          "children": []
         },
         {
           "id": "SP_LEPETA_GRANDIS",
@@ -558,7 +548,8 @@
           "sourceIds": {
             "checklistbank-139831": "1702381"
           },
-          "uuid": "727066d7-c05b-4384-8fb7-f47ba7b3f5bc"
+          "uuid": "727066d7-c05b-4384-8fb7-f47ba7b3f5bc",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -965,7 +956,8 @@
           "sourceIds": {
             "checklistbank-139831": "1212253"
           },
-          "uuid": "92899e5c-0a45-46e9-9532-35314930c920"
+          "uuid": "92899e5c-0a45-46e9-9532-35314930c920",
+          "children": []
         },
         {
           "id": "SP_PROPILIDIUM_MOSKALEVI",
@@ -977,7 +969,8 @@
           "sourceIds": {
             "checklistbank-139831": "1702385"
           },
-          "uuid": "e86b7a65-b477-465a-91bd-af54149c9fae"
+          "uuid": "e86b7a65-b477-465a-91bd-af54149c9fae",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1452,7 +1445,7 @@
     }
   ],
   "genusCount": 16,
-  "speciesCount": 71,
+  "speciesCount": 74,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

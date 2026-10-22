@@ -5322,10 +5322,15 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:418477"
             ],
-            "checklistbank-1174": "txn:387074"
+            "checklistbank-1174": [
+              "txn:387074"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:418477"
+            ]
           },
           "uuid": "a98c488e-1a04-529-b1a-6f3b894036ba48",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:418477,gbif:7364355",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:418477,checklistbank-1174:txn:387074,checklistbank-2011:urn:lsid:marinespecies.org:taxname:418477,gbif:7364355",
           "authorship": "(J.W.Bailey) Roper, 1859"
         },
         {
@@ -6130,21 +6135,6 @@
           "children": []
         },
         {
-          "id": "SP_BIDDULPHIA_TUOMEYI_J_W_BAILEY_ROPER_1859",
-          "name": "Biddulphia tuomeyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Biddulphia",
-          "authorship": "(J.W.Bailey) Roper, 1859",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:418477",
-            "checklistbank-1174": "txn:387074"
-          },
-          "uuid": "9cec9697-0e58-4ee0-9a5b-4b686f0b5333",
-          "children": []
-        },
-        {
           "id": "SP_BIDDULPHIA_JUNCTA_A_SCHMIDT_A_MANN_1925",
           "name": "Biddulphia juncta",
           "rank": "SPECIES",
@@ -6420,7 +6410,8 @@
           "sourceIds": {
             "checklistbank-139831": "486525"
           },
-          "uuid": "8d87975f-c09c-43eb-9413-28a33d3917d8"
+          "uuid": "8d87975f-c09c-43eb-9413-28a33d3917d8",
+          "children": []
         },
         {
           "id": "SP_BIDDULPHIA_PARALLELA",
@@ -6432,7 +6423,8 @@
           "sourceIds": {
             "checklistbank-139831": "970004"
           },
-          "uuid": "283889a6-8b0b-47ec-a789-421960b986d4"
+          "uuid": "283889a6-8b0b-47ec-a789-421960b986d4",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10101,23 +10093,6 @@
           "description": "Cerataulus smithii is a biddulphiaceae species found in its native region."
         },
         {
-          "id": "SP_CERATAULUS_TURGIDUS_EHRENBERG_1843",
-          "name": "Cerataulus turgidus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cerataulus",
-          "authorship": "Ehrenberg,1843",
-          "sourceIds": {
-            "checklistbank": "d4bcb2cf-f2d6-4513-81f4-5208c8b8b66b",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:628227",
-            "wikispecies": "Cerataulus_turgidus"
-          },
-          "children": [],
-          "uuid": "a13881c4-8596-578-b21-801c77f788a643",
-          "description": "Cerataulus turgidus is a biddulphiaceae species found in its native region."
-        },
-        {
           "id": "SP_CERATAULUS_POLYMORPHUS_MONT_VAN_HEURCK",
           "name": "Cerataulus polymorphus",
           "rank": "SPECIES",
@@ -10611,7 +10586,7 @@
     }
   ],
   "genusCount": 48,
-  "speciesCount": 594,
+  "speciesCount": 592,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

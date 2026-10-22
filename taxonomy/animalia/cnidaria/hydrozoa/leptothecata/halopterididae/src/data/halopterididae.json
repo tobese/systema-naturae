@@ -994,21 +994,6 @@
           "children": [],
           "uuid": "7f5d588b-0cc9-55f-b2f-c1c614d9a25520",
           "description": "Monostaechas natalensis is a halopterididae species found in its native region."
-        },
-        {
-          "id": "SP_MONOSTAECHAS_QUADRIDENS_MCCRADY",
-          "name": "Monostaechas quadridens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Monostaechas",
-          "authorship": "McCrady",
-          "sourceIds": {
-            "checklistbank": "0d4cda0c-e124-4f49-b2db-2804364be089",
-            "checklistbank-139831": "195443"
-          },
-          "children": [],
-          "uuid": "39b4e7b6-a1ca-50c-a7e-efa8b83fb345c0"
         }
       ]
     },
@@ -2132,9 +2117,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Antennella",
           "sourceIds": {
-            "checklistbank-139831": "195445"
+            "checklistbank-139831": [
+              "195445"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:195445"
         }
       ]
     },
@@ -3421,21 +3409,6 @@
           "description": "Halopteris schucherti is a halopterididae species found in its native region."
         },
         {
-          "id": "SP_HALOPTERIS_GLUTINOSA_LAMOUROUX",
-          "name": "Halopteris glutinosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Halopteris",
-          "authorship": "Lamouroux",
-          "sourceIds": {
-            "checklistbank": "a898d27f-9424-49d7-a840-1b05a8c287cf",
-            "checklistbank-139831": "668216"
-          },
-          "children": [],
-          "uuid": "5bf3e6d6-e7ab-5d1-880-be286fc73ab39a"
-        },
-        {
           "id": "SP_HALOPTERIS_ZYGOCLADIA_BALE_1914",
           "name": "Halopteris zygocladia",
           "rank": "SPECIES",
@@ -4308,7 +4281,8 @@
           "sourceIds": {
             "checklistbank-139831": "195445"
           },
-          "uuid": "9802807f-3038-449b-8d05-afade236d557"
+          "uuid": "9802807f-3038-449b-8d05-afade236d557",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4374,12 +4348,18 @@
           "lineage": "\"Halopteris",
           "authorship": "\"(Lamouroux, 1816)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:117633",
-            "checklistbank-139831": "668216"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:117633",
+              "a898d27f-9424-49d7-a840-1b05a8c287cf"
+            ],
+            "checklistbank-139831": [
+              "668216"
+            ]
           },
           "children": [],
           "uuid": "09d3db2f-e19d-5e9-989-366c91c1fdd2f5",
-          "description": "\"Halopteris glutinosa\" is a halopterididae species found in its native region."
+          "description": "\"Halopteris glutinosa\" is a halopterididae species found in its native region.",
+          "authorityIds": "checklistbank:a898d27f-9424-49d7-a840-1b05a8c287cf,checklistbank:urn:lsid:marinespecies.org:taxname:117633,checklistbank-139831:668216"
         },
         {
           "id": "SP_HALOPTERIS_LIECHTENSTERNII_MARKTANNER_TURNERETSCHER_1890",
@@ -4675,12 +4655,18 @@
           "lineage": "\"Monostaechas",
           "authorship": "\"(McCrady, 1859)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:117635",
-            "checklistbank-139831": "195443"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:117635",
+              "0d4cda0c-e124-4f49-b2db-2804364be089"
+            ],
+            "checklistbank-139831": [
+              "195443"
+            ]
           },
           "children": [],
           "uuid": "fc0d365c-8e0c-503-bef-a70bff4257399c",
-          "description": "\"Monostaechas quadridens\" is a halopterididae species found in its native region."
+          "description": "\"Monostaechas quadridens\" is a halopterididae species found in its native region.",
+          "authorityIds": "checklistbank:0d4cda0c-e124-4f49-b2db-2804364be089,checklistbank:urn:lsid:marinespecies.org:taxname:117635,checklistbank-139831:195443"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5130,7 +5116,7 @@
     }
   ],
   "genusCount": 34,
-  "speciesCount": 250,
+  "speciesCount": 249,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

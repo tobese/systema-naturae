@@ -369,12 +369,20 @@
             "col": [
               "3ZV78"
             ],
-            "checklistbank": "118603",
-            "wikispecies": "Merluccius_merluccius",
-            "gbif-backbone": "6486637"
+            "checklistbank": [
+              "118603",
+              "urn:lsid:marinespecies.org:taxname:463591"
+            ],
+            "wikispecies": [
+              "Merluccius_merluccius"
+            ],
+            "gbif-backbone": "6486637",
+            "checklistbank-139831": [
+              "118603"
+            ]
           },
           "uuid": "0304946d-3fec-59e-9f8-8885bf2e67f2e0",
-          "authorityIds": "col:3ZV78,gbif:177711374,gbif:2415643,itis:164795",
+          "authorityIds": "checklistbank:118603,checklistbank:urn:lsid:marinespecies.org:taxname:463591,checklistbank-139831:118603,col:3ZV78,gbif:177711374,gbif:2415643,gbif-backbone:6486637,itis:164795,wikispecies:Merluccius_merluccius",
           "commonName": "hake",
           "description": "Merluccius merluccius or the European hake is a merluccid hake of the genus Merluccius."
         },
@@ -1173,23 +1181,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MERLUCCIUS_MERLUCCIUS_RAFINESQUE_1810",
-          "name": "\"Merluccius merluccius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Merluccius",
-          "authorship": "\"Rafinesque, 1810\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:463591",
-            "wikispecies": "Merluccius_merluccius",
-            "checklistbank-139831": "118603"
-          },
-          "children": [],
-          "uuid": "57c84c66-474a-545-8f7-6492ce4d26c9d7",
-          "description": "\"Merluccius merluccius is a merlucciidae species found in its native region."
-        },
-        {
           "id": "SP_MERLUCCIUS_ALBIDUS",
           "name": "Merluccius albidus",
           "rank": "SPECIES",
@@ -1227,7 +1218,8 @@
           "sourceIds": {
             "checklistbank-139831": "105597"
           },
-          "uuid": "a3f8f4bd-8eab-493a-9723-4e49c1cdea9a"
+          "uuid": "a3f8f4bd-8eab-493a-9723-4e49c1cdea9a",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_PRODUCTUS",
@@ -1239,7 +1231,8 @@
           "sourceIds": {
             "checklistbank-139831": "105599"
           },
-          "uuid": "e2949d6c-15cc-4603-9c07-642a7137beaa"
+          "uuid": "e2949d6c-15cc-4603-9c07-642a7137beaa",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_BILINEARIS",
@@ -1251,7 +1244,8 @@
           "sourceIds": {
             "checklistbank-139831": "224886"
           },
-          "uuid": "d95539eb-cd3b-42d3-b8a8-3422e8f04ef5"
+          "uuid": "d95539eb-cd3b-42d3-b8a8-3422e8f04ef5",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_HUBBSI",
@@ -1263,7 +1257,8 @@
           "sourceIds": {
             "checklistbank-139831": "426138"
           },
-          "uuid": "fa994230-3085-485c-80b6-e70bdbbdebf4"
+          "uuid": "fa994230-3085-485c-80b6-e70bdbbdebf4",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_SENEGALENSIS",
@@ -1275,7 +1270,8 @@
           "sourceIds": {
             "checklistbank-139831": "491184"
           },
-          "uuid": "16536122-f33b-487c-914d-f27a891827c8"
+          "uuid": "16536122-f33b-487c-914d-f27a891827c8",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_CAPENSIS",
@@ -1287,7 +1283,8 @@
           "sourceIds": {
             "checklistbank-139831": "617335"
           },
-          "uuid": "4c2cd491-181b-4f6f-b692-f8f5f1de4f46"
+          "uuid": "4c2cd491-181b-4f6f-b692-f8f5f1de4f46",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_PARADOXUS",
@@ -1299,7 +1296,8 @@
           "sourceIds": {
             "checklistbank-139831": "617338"
           },
-          "uuid": "a304fcf6-3bd5-4fb8-a11a-e27a8f2ed864"
+          "uuid": "a304fcf6-3bd5-4fb8-a11a-e27a8f2ed864",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_POLLI",
@@ -1311,7 +1309,8 @@
           "sourceIds": {
             "checklistbank-139831": "617340"
           },
-          "uuid": "4534302a-f78c-4ad6-8a18-c492f54294ff"
+          "uuid": "4534302a-f78c-4ad6-8a18-c492f54294ff",
+          "children": []
         },
         {
           "id": "SP_MERLUCCIUS_ANGUSTIMANUS",
@@ -1323,7 +1322,8 @@
           "sourceIds": {
             "checklistbank-139831": "1439823"
           },
-          "uuid": "c9b93864-1531-4d24-955a-8968a838ac3d"
+          "uuid": "c9b93864-1531-4d24-955a-8968a838ac3d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2174,7 +2174,7 @@
       "lineage": "merlucciidae"
     }
   ],
-  "speciesCount": 115,
+  "speciesCount": 114,
   "appSlug": "merlucciidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",

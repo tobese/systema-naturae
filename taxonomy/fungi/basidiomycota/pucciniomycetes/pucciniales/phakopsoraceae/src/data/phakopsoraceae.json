@@ -6693,11 +6693,22 @@
             "col": [
               "T4MN"
             ],
-            "checklistbank": "9b0ae5da-44b2-4e10-b959-a6dde2c83cd0",
-            "wikispecies": "Cerotelium_fici"
+            "checklistbank": [
+              "9b0ae5da-44b2-4e10-b959-a6dde2c83cd0",
+              "urn:lsid:marinespecies.org:taxname:1485535"
+            ],
+            "wikispecies": [
+              "Cerotelium_fici"
+            ],
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60065013"
+            ],
+            "checklistbank-139831": [
+              "328341"
+            ]
           },
           "uuid": "db67201b-8549-5d2-935-abf29b85b0bab0",
-          "authorityIds": "col:T4MN,gbif:9206047,mycobank:100242"
+          "authorityIds": "checklistbank:9b0ae5da-44b2-4e10-b959-a6dde2c83cd0,checklistbank:urn:lsid:marinespecies.org:taxname:1485535,checklistbank-139831:328341,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60065013,col:T4MN,gbif:9206047,mycobank:100242,wikispecies:Cerotelium_fici"
         },
         {
           "id": "CEROTELIUM_FICICOLA",
@@ -7290,24 +7301,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CEROTELIUM_FICI_CASTAGNE_ARTHUR_1917",
-          "name": "\"Cerotelium fici\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cerotelium",
-          "authorship": "\"(Castagne) Arthur, 1917\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1485535",
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60065013",
-            "wikispecies": "Cerotelium_fici",
-            "checklistbank-139831": "328341"
-          },
-          "children": [],
-          "uuid": "cfbb0929-954d-587-b7c-fa135b3092e658",
-          "description": "\"Cerotelium fici\" is a phakopsoraceae species found in its native region."
-        },
-        {
           "id": "SP_CEROTELIUM_DESMIUM_BERK_BROOME_ARTHUR_1925",
           "name": "Cerotelium desmium",
           "rank": "SPECIES",
@@ -7331,7 +7324,8 @@
           "sourceIds": {
             "checklistbank-139831": "1020143"
           },
-          "uuid": "f02ab045-036c-4180-b4d8-1b92c0c7dc29"
+          "uuid": "f02ab045-036c-4180-b4d8-1b92c0c7dc29",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9147,7 +9141,7 @@
   ],
   "authorship": "Cummins & Hiratsuka f.",
   "genusCount": 36,
-  "speciesCount": 367,
+  "speciesCount": 366,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

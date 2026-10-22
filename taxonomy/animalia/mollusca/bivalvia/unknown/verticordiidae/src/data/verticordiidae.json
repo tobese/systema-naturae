@@ -959,9 +959,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Halicardia",
           "sourceIds": {
-            "checklistbank-139831": "1206912"
+            "checklistbank-139831": [
+              "1206912"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1206912"
         }
       ]
     },
@@ -1055,7 +1058,8 @@
           "sourceIds": {
             "checklistbank-139831": "1206912"
           },
-          "uuid": "8b21d09a-47d7-4d80-a23b-2bc8d3dc2a4c"
+          "uuid": "8b21d09a-47d7-4d80-a23b-2bc8d3dc2a4c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1599,11 +1603,14 @@
           "authorship": "Simone & Cunha, 2008",
           "sourceIds": {
             "checklistbank": "102735",
-            "checklistbank-139831": "1206922"
+            "checklistbank-139831": [
+              "1206922"
+            ]
           },
           "children": [],
           "uuid": "1f6693de-e892-581-820-a460df2f1cba4f",
-          "description": "Spinosipella agnes is a verticordiidae species found in its native region."
+          "description": "Spinosipella agnes is a verticordiidae species found in its native region.",
+          "authorityIds": "checklistbank:102735,checklistbank-139831:1206922"
         },
         {
           "id": "SP_SPINOSIPELLA_TINGA_SIMONE_CUNHA_2008",
@@ -1615,11 +1622,14 @@
           "authorship": "Simone & Cunha, 2008",
           "sourceIds": {
             "checklistbank": "102736",
-            "checklistbank-139831": "1206925"
+            "checklistbank-139831": [
+              "1206925"
+            ]
           },
           "children": [],
           "uuid": "1a47cdf7-1cd9-5a1-979-574c5b558e3748",
-          "description": "Spinosipella tinga is a verticordiidae species found in its native region."
+          "description": "Spinosipella tinga is a verticordiidae species found in its native region.",
+          "authorityIds": "checklistbank:102736,checklistbank-139831:1206925"
         }
       ]
     },
@@ -1674,30 +1684,6 @@
           "children": [],
           "uuid": "07421087-4343-5b8-a87-559bac0d1ac453",
           "description": "\"Spinosipella deshayesiana\" is a verticordiidae species found in its native region."
-        },
-        {
-          "id": "SP_SPINOSIPELLA_AGNES",
-          "name": "Spinosipella agnes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spinosipella",
-          "sourceIds": {
-            "checklistbank-139831": "1206922"
-          },
-          "uuid": "60ae5dc4-fc3b-42a8-bfb9-84c3e4bc8177"
-        },
-        {
-          "id": "SP_SPINOSIPELLA_TINGA",
-          "name": "Spinosipella tinga",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spinosipella",
-          "sourceIds": {
-            "checklistbank-139831": "1206925"
-          },
-          "uuid": "90ea27b7-bd5c-4eb3-806f-5f18b93946e7"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2892,20 +2878,6 @@
           "uuid": "45dbf190-3188-5ac-be0-bccf93d866cf00"
         },
         {
-          "id": "SP_VERTICORDIA_QUADRATA_SMITH_E_A_1885",
-          "name": "Verticordia quadrata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Verticordia",
-          "authorship": "Smith E.A., 1885",
-          "sourceIds": {
-            "checklistbank": "61958"
-          },
-          "children": [],
-          "uuid": "6c4cf278-7157-5ee-874-ad9a7f06df07cb"
-        },
-        {
           "id": "SP_VERTICORDIA_WOODII",
           "name": "Verticordia woodii",
           "rank": "SPECIES",
@@ -2913,9 +2885,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Verticordia",
           "sourceIds": {
-            "checklistbank-139831": "311643"
+            "checklistbank-139831": [
+              "311643"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:311643"
         }
       ]
     },
@@ -2979,7 +2954,8 @@
           "sourceIds": {
             "checklistbank-139831": "311643"
           },
-          "uuid": "1fdc5da1-fd67-4127-b6a1-086eb772dea5"
+          "uuid": "1fdc5da1-fd67-4127-b6a1-086eb772dea5",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3067,10 +3043,15 @@
             "col": [
               "58TPM"
             ],
-            "checklistbank": "txn:421585",
-            "checklistbank-1174": "txn:421585"
+            "checklistbank": [
+              "txn:421585",
+              "urn:lsid:marinespecies.org:taxname:508021"
+            ],
+            "checklistbank-1174": [
+              "txn:421585"
+            ]
           },
-          "authorityIds": "col:58TPM",
+          "authorityIds": "checklistbank:txn:421585,checklistbank:urn:lsid:marinespecies.org:taxname:508021,checklistbank-1174:txn:421585,col:58TPM",
           "authorship": "(Adams and Reeve 1863)"
         },
         {
@@ -3310,22 +3291,6 @@
           "children": [],
           "uuid": "0ef4acfc-93c4-5ea-9cc-aa3d1e4b774928",
           "description": "\"Trigonulina ornata\" is a verticordiidae species found in its native region."
-        },
-        {
-          "id": "SP_TRIGONULINA_NOVEMCOSTATA_A_ADAMS_REEVE_1850",
-          "name": "\"Trigonulina novemcostata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trigonulina",
-          "authorship": "\"(A. Adams & Reeve, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:508021",
-            "checklistbank-1174": "txn:421585"
-          },
-          "children": [],
-          "uuid": "e43608ee-c9dd-5f0-8bc-81251861170ec4",
-          "description": "\"Trigonulina novemcostata\" is a verticordiidae species found in its native region."
         },
         {
           "id": "SP_TRIGONULINA_ROGERSI_J_A_GARDNER_1943",
@@ -3756,34 +3721,6 @@
           "children": [],
           "uuid": "727e8484-5359-565-8c6-fe5b0b0ccafd94",
           "description": "Lyonsiella frielei is a verticordiidae species found in its native region."
-        },
-        {
-          "id": "SP_LYONSIELLA_ABYSSICOLA_SARS_G_O_1878",
-          "name": "Lyonsiella abyssicola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyonsiella",
-          "authorship": "Sars G.O., 1878",
-          "sourceIds": {
-            "checklistbank": "61947"
-          },
-          "children": [],
-          "uuid": "7ddae7bd-7655-5c5-8c0-4de1e052e392a8"
-        },
-        {
-          "id": "SP_LYONSIELLA_COMPRESSA_LOCARD_1898",
-          "name": "Lyonsiella compressa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyonsiella",
-          "authorship": "(Locard, 1898)",
-          "sourceIds": {
-            "checklistbank": "61948"
-          },
-          "children": [],
-          "uuid": "405c0fcc-f007-571-b81-74dc56f59b347d"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4002,7 +3939,7 @@
     }
   ],
   "genusCount": 27,
-  "speciesCount": 220,
+  "speciesCount": 218,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

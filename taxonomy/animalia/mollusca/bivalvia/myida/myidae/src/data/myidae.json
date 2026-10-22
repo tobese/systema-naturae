@@ -256,10 +256,15 @@
             "col": [
               "4YV77"
             ],
-            "checklistbank": "219487",
-            "checklistbank-1174": "txn:375541"
+            "checklistbank": [
+              "219487",
+              "urn:lsid:marinespecies.org:taxname:420973"
+            ],
+            "checklistbank-1174": [
+              "txn:375541"
+            ]
           },
-          "authorityIds": "col:4YV77",
+          "authorityIds": "checklistbank:219487,checklistbank:urn:lsid:marinespecies.org:taxname:420973,checklistbank-1174:txn:375541,col:4YV77",
           "authorship": "(H. Adams & A. Adams, 1854)"
         },
         {
@@ -1259,22 +1264,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SPHENIA_FRAGILIS_H_ADAMS_A_ADAMS_1854",
-          "name": "\"Sphenia fragilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sphenia",
-          "authorship": "\"(H. Adams & A. Adams, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420973",
-            "checklistbank-1174": "txn:375541"
-          },
-          "children": [],
-          "uuid": "f22c5016-b998-591-819-9815c6c41f8ed8",
-          "description": "\"Sphenia fragilis\" is a myidae species found in its native region."
-        },
-        {
           "id": "SP_SPHENIA_LUTICOLA_VALENCIENNES_1846",
           "name": "Sphenia luticola",
           "rank": "SPECIES",
@@ -1312,7 +1301,8 @@
           "sourceIds": {
             "checklistbank-139831": "483138"
           },
-          "uuid": "d7ad07a4-05f0-4005-873d-31f7cb568964"
+          "uuid": "d7ad07a4-05f0-4005-873d-31f7cb568964",
+          "children": []
         },
         {
           "id": "SP_SPHENIA_COREANICA",
@@ -1324,7 +1314,8 @@
           "sourceIds": {
             "checklistbank-139831": "1206140"
           },
-          "uuid": "9a3cb02c-4bf3-4cf9-8513-9a3eee7ffc61"
+          "uuid": "9a3cb02c-4bf3-4cf9-8513-9a3eee7ffc61",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2880,9 +2871,17 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:505893"
             ],
-            "checklistbank-1174": "txn:59923"
+            "checklistbank-1174": [
+              "txn:59923"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:505893"
+            ],
+            "checklistbank-127379": [
+              "9e22882f-32a0-45c7-8a88-470746cae8fc"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505893,col:ZY72",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505893,checklistbank-1174:txn:59923,checklistbank-127379:9e22882f-32a0-45c7-8a88-470746cae8fc,checklistbank-2011:urn:lsid:marinespecies.org:taxname:505893,col:ZY72",
           "authorship": "(A. Adams, 1851)"
         },
         {
@@ -3147,22 +3146,6 @@
           "description": "\"Cryptomya californica\" is a myidae species found in its native region."
         },
         {
-          "id": "SP_CRYPTOMYA_ELLIPTICA_A_ADAMS_1851",
-          "name": "Cryptomya elliptica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cryptomya",
-          "authorship": "(A. Adams, 1851)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:505893",
-            "checklistbank-1174": "txn:59923",
-            "checklistbank-127379": "9e22882f-32a0-45c7-8a88-470746cae8fc"
-          },
-          "uuid": "18f6ab2d-2e4a-4fc1-8120-671ddbdf316a",
-          "children": []
-        },
-        {
           "id": "SP_CRYPTOMYA_PHILIPPINARUM_A_ADAMS_1851",
           "name": "Cryptomya philippinarum",
           "rank": "SPECIES",
@@ -3228,7 +3211,8 @@
           "sourceIds": {
             "checklistbank-139831": "965915"
           },
-          "uuid": "564d5ef6-a433-4d1f-b497-389bc9aa7eac"
+          "uuid": "564d5ef6-a433-4d1f-b497-389bc9aa7eac",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4293,7 +4277,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 243,
+  "speciesCount": 241,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -143,11 +143,19 @@
             "itis": [
               "660756"
             ],
-            "checklistbank": "8a334560-2eaa-4ae4-bbb3-cb2545006b06",
-            "wikispecies": "Grapsus_albolineatus",
-            "gbif-backbone": "2225820"
+            "checklistbank": [
+              "8a334560-2eaa-4ae4-bbb3-cb2545006b06",
+              "urn:lsid:marinespecies.org:taxname:207523"
+            ],
+            "wikispecies": [
+              "Grapsus_albolineatus"
+            ],
+            "gbif-backbone": "2225820",
+            "checklistbank-127379": [
+              "8be06ae6-440b-4044-817e-7b8d06ec2817"
+            ]
           },
-          "authorityIds": "col:6L4W5,itis:660756",
+          "authorityIds": "checklistbank:8a334560-2eaa-4ae4-bbb3-cb2545006b06,checklistbank:urn:lsid:marinespecies.org:taxname:207523,checklistbank-127379:8be06ae6-440b-4044-817e-7b8d06ec2817,col:6L4W5,gbif-backbone:2225820,itis:660756,wikispecies:Grapsus_albolineatus",
           "commonName": "Shore crab",
           "description": "Grapsus albolineatus, also called the mottled crab or mottled lightfoot crab, is a species of decapod crustacean in the family Grapsidae, native to the Indo-Pacific."
         },
@@ -749,20 +757,6 @@
           "uuid": "1900fa1b-78ae-501-a4b-11b02cc03a15e3"
         },
         {
-          "id": "SP_GRAPSUS_ADSCENCIONIS_OSBECK_1765",
-          "name": "Grapsus adscencionis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Grapsus",
-          "authorship": "(Osbeck, 1765)",
-          "sourceIds": {
-            "checklistbank": "27453"
-          },
-          "children": [],
-          "uuid": "46954f67-29c7-5a3-983-4ead4e2a807b40"
-        },
-        {
           "id": "SP_GRAPSUS_RETICULATUS_1999",
           "name": "Grapsus reticulatus,",
           "rank": "SPECIES",
@@ -799,23 +793,6 @@
       "name": "\"Grapsus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_GRAPSUS_ALBOLINEATUS_LATREILLE_I_IN_I_MILBERT_1812",
-          "name": "\"Grapsus albolineatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Grapsus",
-          "authorship": "\"Latreille <i>in</i> Milbert, 1812\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207523",
-            "wikispecies": "Grapsus_albolineatus",
-            "checklistbank-127379": "8be06ae6-440b-4044-817e-7b8d06ec2817"
-          },
-          "children": [],
-          "uuid": "d76c6e04-eff6-540-968-934a45b4209342",
-          "description": "\"Grapsus albolineatus\" is a grapsidae species found in its native region."
-        },
         {
           "id": "SP_GRAPSUS_GRAPSUS",
           "name": "Grapsus grapsus",
@@ -923,7 +900,8 @@
           "sourceIds": {
             "checklistbank-139831": "67578"
           },
-          "uuid": "c7575006-7d57-4892-ad78-d667560aee06"
+          "uuid": "c7575006-7d57-4892-ad78-d667560aee06",
+          "children": []
         },
         {
           "id": "SP_GRAPSUS_FOURMANOIRI",
@@ -935,7 +913,8 @@
           "sourceIds": {
             "checklistbank-139831": "569362"
           },
-          "uuid": "1ed92748-8969-472b-ba39-21961edf84cb"
+          "uuid": "1ed92748-8969-472b-ba39-21961edf84cb",
+          "children": []
         },
         {
           "id": "SP_GRAPSUS_GRANULOSUS",
@@ -947,7 +926,8 @@
           "sourceIds": {
             "checklistbank-139831": "1227667"
           },
-          "uuid": "d486bf72-0319-4f9b-adf0-788f5b4f1258"
+          "uuid": "d486bf72-0319-4f9b-adf0-788f5b4f1258",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3051,7 +3031,7 @@
       "lineage": "grapsidae"
     }
   ],
-  "speciesCount": 175,
+  "speciesCount": 176,
   "appSlug": "grapsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

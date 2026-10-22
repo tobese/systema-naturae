@@ -707,10 +707,15 @@
             "col": [
               "57G72"
             ],
-            "checklistbank": "61690",
-            "checklistbank-1174": "txn:106537"
+            "checklistbank": [
+              "61690",
+              "urn:lsid:marinespecies.org:taxname:141690"
+            ],
+            "checklistbank-1174": [
+              "txn:106537"
+            ]
           },
-          "authorityIds": "col:57G72",
+          "authorityIds": "checklistbank:61690,checklistbank:urn:lsid:marinespecies.org:taxname:141690,checklistbank-1174:txn:106537,col:57G72",
           "authorship": "(Montagu, 1803)"
         },
         {
@@ -796,9 +801,11 @@
               "8RWKJ"
             ],
             "checklistbank": "1650229",
-            "checklistbank-139831": "1650229"
+            "checklistbank-139831": [
+              "1650229"
+            ]
           },
-          "authorityIds": "col:8RWKJ",
+          "authorityIds": "checklistbank:1650229,checklistbank-139831:1650229,col:8RWKJ",
           "description": "Tornus carinatus is a tornidae species found in its native region."
         },
         {
@@ -1539,22 +1546,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TORNUS_SUBCARINATUS_MONTAGU_1803",
-          "name": "\"Tornus subcarinatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tornus",
-          "authorship": "\"(Montagu, 1803)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141690",
-            "checklistbank-1174": "txn:106537"
-          },
-          "children": [],
-          "uuid": "739710f6-6ed0-5e8-b34-cb3a06d629d0d3",
-          "description": "\"Tornus subcarinatus\" is a tornidae species found in its native region."
-        },
-        {
           "id": "SP_TORNUS_CARABOBOENSIS_WEISBORD_1962",
           "name": "\"Tornus caraboboensis\"",
           "rank": "SPECIES",
@@ -1652,18 +1643,6 @@
           },
           "uuid": "a53dae90-36b1-47ee-b3c0-947e78c45190",
           "children": []
-        },
-        {
-          "id": "SP_TORNUS_CARINATUS",
-          "name": "Tornus carinatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tornus",
-          "sourceIds": {
-            "checklistbank-139831": "1650229"
-          },
-          "uuid": "5e6c2fe1-13b1-4049-ad14-ff5aed5d9b19"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3439,9 +3418,11 @@
               "9FZDN"
             ],
             "checklistbank": "1415580",
-            "checklistbank-139831": "1415580"
+            "checklistbank-139831": [
+              "1415580"
+            ]
           },
-          "authorityIds": "col:9FZDN",
+          "authorityIds": "checklistbank:1415580,checklistbank-139831:1415580,col:9FZDN",
           "description": "Solariorbis callusa is a tornidae species found in its native region."
         },
         {
@@ -3508,11 +3489,14 @@
           "authorship": "K. M. De Jong & Coomans, 1988",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:533438",
-            "checklistbank-139831": "1222656"
+            "checklistbank-139831": [
+              "1222656"
+            ]
           },
           "children": [],
           "uuid": "df7b3211-314b-57b-b58-f4c63524273397",
-          "description": "Solariorbis antillensis is a tornidae species found in its native region."
+          "description": "Solariorbis antillensis is a tornidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:533438,checklistbank-139831:1222656"
         },
         {
           "id": "SP_SOLARIORBIS_SUBANGULATUS_ALDRICH_1921",
@@ -3932,9 +3916,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Solariorbis",
           "sourceIds": {
-            "checklistbank-139831": "331374"
+            "checklistbank-139831": [
+              "331374"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:331374"
         },
         {
           "id": "SP_SOLARIORBIS_SEMIPUNCTUS",
@@ -3944,9 +3931,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Solariorbis",
           "sourceIds": {
-            "checklistbank-139831": "1222658"
+            "checklistbank-139831": [
+              "1222658"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1222658"
         },
         {
           "id": "SP_SOLARIORBIS_SCHUMOI",
@@ -4344,19 +4334,8 @@
           "sourceIds": {
             "checklistbank-139831": "331374"
           },
-          "uuid": "b7f7ad21-a4ab-4656-9533-67f7734a8411"
-        },
-        {
-          "id": "SP_SOLARIORBIS_ANTILLENSIS",
-          "name": "Solariorbis antillensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariorbis",
-          "sourceIds": {
-            "checklistbank-139831": "1222656"
-          },
-          "uuid": "0a789339-0083-459f-88fe-79d95ea0004e"
+          "uuid": "b7f7ad21-a4ab-4656-9533-67f7734a8411",
+          "children": []
         },
         {
           "id": "SP_SOLARIORBIS_SEMIPUNCTUS",
@@ -4368,19 +4347,8 @@
           "sourceIds": {
             "checklistbank-139831": "1222658"
           },
-          "uuid": "1d193a4d-2e88-465b-a5d1-dc531c49f4aa"
-        },
-        {
-          "id": "SP_SOLARIORBIS_CALLUSA",
-          "name": "Solariorbis callusa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariorbis",
-          "sourceIds": {
-            "checklistbank-139831": "1415580"
-          },
-          "uuid": "a5b03f0d-067f-4bba-889f-58a0dddb7b0f"
+          "uuid": "1d193a4d-2e88-465b-a5d1-dc531c49f4aa",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6458,9 +6426,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Anticlimax",
           "sourceIds": {
-            "checklistbank-139831": "1222698"
+            "checklistbank-139831": [
+              "1222698"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1222698"
         },
         {
           "id": "SP_ANTICLIMAX_SOLOMONENSIS",
@@ -6470,9 +6441,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Anticlimax",
           "sourceIds": {
-            "checklistbank-139831": "1222701"
+            "checklistbank-139831": [
+              "1222701"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1222701"
         }
       ]
     },
@@ -6605,7 +6579,8 @@
           "sourceIds": {
             "checklistbank-139831": "1222698"
           },
-          "uuid": "604821ee-1427-4c84-a9a9-75f3cc73a9c7"
+          "uuid": "604821ee-1427-4c84-a9a9-75f3cc73a9c7",
+          "children": []
         },
         {
           "id": "SP_ANTICLIMAX_SOLOMONENSIS",
@@ -6617,7 +6592,8 @@
           "sourceIds": {
             "checklistbank-139831": "1222701"
           },
-          "uuid": "07939d41-e0a4-4c5f-b4ed-a79370a00041"
+          "uuid": "07939d41-e0a4-4c5f-b4ed-a79370a00041",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9187,11 +9163,14 @@
           "authorship": "K. M. De Jong & Coomans, 1988",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:532710",
-            "checklistbank-139831": "1222906"
+            "checklistbank-139831": [
+              "1222906"
+            ]
           },
           "children": [],
           "uuid": "55339275-bbab-569-849-8d82689f6a11ee",
-          "description": "Cyclostremiscus vanbruggeni is a tornidae species found in its native region."
+          "description": "Cyclostremiscus vanbruggeni is a tornidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:532710,checklistbank-139831:1222906"
         },
         {
           "id": "SP_CYCLOSTREMISCUS_SCHRAMMII_P_FISCHER_1857",
@@ -10163,18 +10142,6 @@
           },
           "uuid": "d85d7f80-2d3c-4164-8d96-f4a52c07ca22",
           "children": []
-        },
-        {
-          "id": "SP_CYCLOSTREMISCUS_VANBRUGGENI",
-          "name": "Cyclostremiscus vanbruggeni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cyclostremiscus",
-          "sourceIds": {
-            "checklistbank-139831": "1222906"
-          },
-          "uuid": "f326b71e-5dd8-4a2a-b4e0-c012759b016f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10355,9 +10322,11 @@
               "7SMV6"
             ],
             "checklistbank": "1419046",
-            "checklistbank-139831": "1419046"
+            "checklistbank-139831": [
+              "1419046"
+            ]
           },
-          "authorityIds": "col:7SMV6",
+          "authorityIds": "checklistbank:1419046,checklistbank-139831:1419046,col:7SMV6",
           "description": "Parviturboides monilifera is a tornidae species found in its native region."
         },
         {
@@ -10508,18 +10477,6 @@
           },
           "uuid": "61478948-16f2-4a3a-a41c-1e462d40fdfa",
           "children": []
-        },
-        {
-          "id": "SP_PARVITURBOIDES_MONILIFERA",
-          "name": "Parviturboides monilifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parviturboides",
-          "sourceIds": {
-            "checklistbank-139831": "1419046"
-          },
-          "uuid": "4d42642f-d4e6-4992-993d-7807d4c0f716"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12500,9 +12457,11 @@
               "8TH9W"
             ],
             "checklistbank": "1378059",
-            "checklistbank-139831": "1378059"
+            "checklistbank-139831": [
+              "1378059"
+            ]
           },
-          "authorityIds": "col:8TH9W",
+          "authorityIds": "checklistbank:1378059,checklistbank-139831:1378059,col:8TH9W",
           "description": "Pseudoliotia ocrinium is a tornidae species found in its native region."
         },
         {
@@ -12538,9 +12497,11 @@
               "8TJNB"
             ],
             "checklistbank": "1378061",
-            "checklistbank-139831": "1378061"
+            "checklistbank-139831": [
+              "1378061"
+            ]
           },
-          "authorityIds": "col:8TJNB",
+          "authorityIds": "checklistbank:1378061,checklistbank-139831:1378061,col:8TJNB",
           "description": "Pseudoliotia supremum is a tornidae species found in its native region."
         },
         {
@@ -13217,30 +13178,6 @@
           },
           "uuid": "0220a34d-c7f3-409b-8a24-9dbd3f235741",
           "children": []
-        },
-        {
-          "id": "SP_PSEUDOLIOTIA_OCRINIUM",
-          "name": "Pseudoliotia ocrinium",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudoliotia",
-          "sourceIds": {
-            "checklistbank-139831": "1378059"
-          },
-          "uuid": "45491274-642e-42b0-809a-d605e47a03f4"
-        },
-        {
-          "id": "SP_PSEUDOLIOTIA_SUPREMUM",
-          "name": "Pseudoliotia supremum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudoliotia",
-          "sourceIds": {
-            "checklistbank-139831": "1378061"
-          },
-          "uuid": "69160614-4f8a-4e2c-b80c-a666f5a7a238"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -18674,23 +18611,6 @@
           "description": "Circulus striatus is a tornidae species found in its native region."
         },
         {
-          "id": "SP_CIRCULUS_SUPRANITIDUS_WOOD_S_1848",
-          "name": "Circulus supranitidus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Circulus",
-          "authorship": "(Wood S., 1848)",
-          "sourceIds": {
-            "checklistbank": "58701",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:138701",
-            "checklistbank-1174": "txn:97653"
-          },
-          "children": [],
-          "uuid": "1cf56ca5-103c-526-8af-5a764af7f083f2",
-          "description": "Circulus supranitidus is a tornidae species found in its native region."
-        },
-        {
           "id": "SP_CIRCULUS_TRICARINATUS_WOOD_S_1848",
           "name": "Circulus tricarinatus",
           "rank": "SPECIES",
@@ -20127,7 +20047,7 @@
     }
   ],
   "genusCount": 74,
-  "speciesCount": 1155,
+  "speciesCount": 1157,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

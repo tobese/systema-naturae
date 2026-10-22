@@ -163,10 +163,15 @@
             "itis": [
               "72825"
             ],
-            "checklistbank": "103982",
-            "checklistbank-1174": "txn:342078"
+            "checklistbank": [
+              "103982",
+              "urn:lsid:marinespecies.org:taxname:160414"
+            ],
+            "checklistbank-1174": [
+              "txn:342078"
+            ]
           },
-          "authorityIds": "col:4XFGJ,itis:72825"
+          "authorityIds": "checklistbank:103982,checklistbank:urn:lsid:marinespecies.org:taxname:160414,checklistbank-1174:txn:342078,col:4XFGJ,itis:72825"
         },
         {
           "id": "SP_SIMNIALENA_BERMONTIANA_PETUCH_DROLSHAGEN_2011",
@@ -311,22 +316,6 @@
       "name": "\"Simnialena",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_SIMNIALENA_UNIPLICATA_G_B_SOWERBY_II_1849",
-          "name": "\"Simnialena uniplicata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Simnialena",
-          "authorship": "\"(G. B. Sowerby II, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:160414",
-            "checklistbank-1174": "txn:342078"
-          },
-          "children": [],
-          "uuid": "d00c39c8-6716-518-b41-40750fb57afb83",
-          "description": "\"Simnialena uniplicata\" is a ovulidae species found in its native region."
-        },
         {
           "id": "SP_SIMNIALENA_RUFA_G_B_SOWERBY_I_1833",
           "name": "Simnialena rufa",
@@ -999,11 +988,14 @@
           "authorship": "Simone & Cunha, 2012",
           "sourceIds": {
             "checklistbank": "103979",
-            "checklistbank-139831": "1222060"
+            "checklistbank-139831": [
+              "1222060"
+            ]
           },
           "children": [],
           "uuid": "53717354-badf-528-bf2-95af06679c2a3d",
-          "description": "Pseudosimnia lacrima is a ovulidae species found in its native region."
+          "description": "Pseudosimnia lacrima is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:103979,checklistbank-139831:1222060"
         },
         {
           "id": "SP_PSEUDOSIMNIA_WHITWORTHI_CATE_1973",
@@ -1090,11 +1082,14 @@
           "authorship": "Lorenz, 1987",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:430593",
-            "checklistbank-139831": "1222064"
+            "checklistbank-139831": [
+              "1222064"
+            ]
           },
           "children": [],
           "uuid": "b1fe7c60-57f1-5b5-a70-6e41cae56a8ced",
-          "description": "Pseudosimnia wieseorum is a ovulidae species found in its native region."
+          "description": "Pseudosimnia wieseorum is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:430593,checklistbank-139831:1222064"
         },
         {
           "id": "SP_PSEUDOSIMNIA_FLORIDA_KURODA_1958",
@@ -1580,30 +1575,6 @@
           },
           "uuid": "8283eaf8-6745-457e-aa07-0bb98f19bb91",
           "children": []
-        },
-        {
-          "id": "SP_PSEUDOSIMNIA_LACRIMA",
-          "name": "Pseudosimnia lacrima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudosimnia",
-          "sourceIds": {
-            "checklistbank-139831": "1222060"
-          },
-          "uuid": "295b2c81-5a7b-4113-9493-41171a140631"
-        },
-        {
-          "id": "SP_PSEUDOSIMNIA_WIESEORUM",
-          "name": "Pseudosimnia wieseorum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudosimnia",
-          "sourceIds": {
-            "checklistbank-139831": "1222064"
-          },
-          "uuid": "0ed8eee1-88b9-4145-abee-4bb440fc7de4"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3154,9 +3125,11 @@
               "VBN46"
             ],
             "checklistbank": "1669323",
-            "checklistbank-139831": "1669323"
+            "checklistbank-139831": [
+              "1669323"
+            ]
           },
-          "authorityIds": "col:VBN46",
+          "authorityIds": "checklistbank:1669323,checklistbank-139831:1669323,col:VBN46",
           "description": "Prosimnia eilatensis is a ovulidae species found in its native region."
         },
         {
@@ -3184,11 +3157,14 @@
           "authorship": "Cate",
           "sourceIds": {
             "checklistbank": "69fd0599-dad6-4afc-b769-6d1e148c030c",
-            "checklistbank-139831": "1103851"
+            "checklistbank-139831": [
+              "1103851"
+            ]
           },
           "children": [],
           "uuid": "6148af5d-bc44-5c6-92a-8638eec997e2b0",
-          "description": "Prosimnia draconis is a ovulidae species found in its native region."
+          "description": "Prosimnia draconis is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:69fd0599-dad6-4afc-b769-6d1e148c030c,checklistbank-139831:1103851"
         },
         {
           "id": "SP_PROSIMNIA_HEPCAE",
@@ -3284,30 +3260,6 @@
           "children": [],
           "uuid": "f7149337-01e7-598-801-6ffa9c8dd25e52",
           "description": "\"Prosimnia semperi\" is a ovulidae species found in its native region."
-        },
-        {
-          "id": "SP_PROSIMNIA_DRACONIS",
-          "name": "Prosimnia draconis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prosimnia",
-          "sourceIds": {
-            "checklistbank-139831": "1103851"
-          },
-          "uuid": "e32585fa-0180-41aa-ab03-5a44457d6074"
-        },
-        {
-          "id": "SP_PROSIMNIA_EILATENSIS",
-          "name": "Prosimnia eilatensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prosimnia",
-          "sourceIds": {
-            "checklistbank-139831": "1669323"
-          },
-          "uuid": "8f37de1a-f76e-4565-b6a6-1649e25fc63a"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6855,11 +6807,14 @@
           "authorship": "Cate, 1973",
           "sourceIds": {
             "checklistbank": "taicol: 83610",
-            "checklistbank-139831": "683161"
+            "checklistbank-139831": [
+              "683161"
+            ]
           },
           "children": [],
           "uuid": "5f5307e0-592d-514-abd-ea89749609fb44",
-          "description": "Phenacovolva rehderi is a ovulidae species found in its native region."
+          "description": "Phenacovolva rehderi is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:taicol: 83610,checklistbank-139831:683161"
         },
         {
           "id": "SP_PHENACOVOLVA_TOKIOI_CATE_1973",
@@ -7111,11 +7066,14 @@
           "authorship": "Cate",
           "sourceIds": {
             "checklistbank": "60fbade9-28ab-489a-bfcb-3586fe4f743e",
-            "checklistbank-139831": "1222149"
+            "checklistbank-139831": [
+              "1222149"
+            ]
           },
           "children": [],
           "uuid": "907eb32d-afa8-5c6-b68-2d8e6bf7f034ed",
-          "description": "Phenacovolva clenchi is a ovulidae species found in its native region."
+          "description": "Phenacovolva clenchi is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:60fbade9-28ab-489a-bfcb-3586fe4f743e,checklistbank-139831:1222149"
         },
         {
           "id": "SP_PHENACOVOLVA_NECTAREA_IREDALE",
@@ -7127,11 +7085,14 @@
           "authorship": "Iredale",
           "sourceIds": {
             "checklistbank": "94c3c1b6-b304-4ae1-8ad8-1cfdcddc303a",
-            "checklistbank-139831": "1099648"
+            "checklistbank-139831": [
+              "1099648"
+            ]
           },
           "children": [],
           "uuid": "0083dd94-63e0-59c-b82-b542fe991d4e8a",
-          "description": "Phenacovolva nectarea is a species of sea snail, a marine gastropod mollusc in the family Ovulidae, the ovulids, cowry allies or false cowries."
+          "description": "Phenacovolva nectarea is a species of sea snail, a marine gastropod mollusc in the family Ovulidae, the ovulids, cowry allies or false cowries.",
+          "authorityIds": "checklistbank:94c3c1b6-b304-4ae1-8ad8-1cfdcddc303a,checklistbank-139831:1099648"
         },
         {
           "id": "SP_PHENACOVOLVA_PSEUDOGRACILIS_CATE_AZUMA",
@@ -7143,11 +7104,14 @@
           "authorship": "Cate & Azuma",
           "sourceIds": {
             "checklistbank": "69de2d24-7607-444a-aeb3-e683978034e3",
-            "checklistbank-139831": "1100535"
+            "checklistbank-139831": [
+              "1100535"
+            ]
           },
           "children": [],
           "uuid": "318e6e7a-2c8a-50d-839-17945eac08ae6c",
-          "description": "Phenacovolva pseudogracilis is a ovulidae species found in its native region."
+          "description": "Phenacovolva pseudogracilis is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:69de2d24-7607-444a-aeb3-e683978034e3,checklistbank-139831:1100535"
         },
         {
           "id": "SP_PHENACOVOLVA_BIROSTRIS",
@@ -7495,54 +7459,6 @@
           },
           "uuid": "8c14b109-1541-45aa-ae42-030e1c559708",
           "children": []
-        },
-        {
-          "id": "SP_PHENACOVOLVA_REHDERI",
-          "name": "Phenacovolva rehderi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phenacovolva",
-          "sourceIds": {
-            "checklistbank-139831": "683161"
-          },
-          "uuid": "ebbe0dae-4545-4e4b-95a5-2b64b46ce562"
-        },
-        {
-          "id": "SP_PHENACOVOLVA_NECTAREA",
-          "name": "Phenacovolva nectarea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phenacovolva",
-          "sourceIds": {
-            "checklistbank-139831": "1099648"
-          },
-          "uuid": "79c9ee72-3595-4288-9aa2-dc2d9f6fea98"
-        },
-        {
-          "id": "SP_PHENACOVOLVA_PSEUDOGRACILIS",
-          "name": "Phenacovolva pseudogracilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phenacovolva",
-          "sourceIds": {
-            "checklistbank-139831": "1100535"
-          },
-          "uuid": "cc2dffe2-14b3-442e-9bb8-303d29d8ec73"
-        },
-        {
-          "id": "SP_PHENACOVOLVA_CLENCHI",
-          "name": "Phenacovolva clenchi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phenacovolva",
-          "sourceIds": {
-            "checklistbank-139831": "1222149"
-          },
-          "uuid": "adee8a1c-5d30-4930-9c49-634fd1ec14b6"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7670,9 +7586,17 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:430597"
             ],
-            "checklistbank-1174": "txn:61055"
+            "checklistbank-1174": [
+              "txn:61055"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:430597"
+            ],
+            "checklistbank-127379": [
+              "26f53080-c120-4498-a84d-3b381fd0b7bb"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:430597,col:3Y63R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:430597,checklistbank-1174:txn:61055,checklistbank-127379:26f53080-c120-4498-a84d-3b381fd0b7bb,checklistbank-2011:urn:lsid:marinespecies.org:taxname:430597,col:3Y63R",
           "authorship": "(A. Adams, 1855)"
         },
         {
@@ -7750,10 +7674,18 @@
             "col": [
               "7S2VY"
             ],
-            "checklistbank": "6c31c74f-7de1-4b64-9cff-36bcfde70f9e",
-            "checklistbank-1174": "txn:61056"
+            "checklistbank": [
+              "6c31c74f-7de1-4b64-9cff-36bcfde70f9e",
+              "urn:lsid:marinespecies.org:taxname:430596"
+            ],
+            "checklistbank-1174": [
+              "txn:61056"
+            ],
+            "checklistbank-127379": [
+              "a74d41c9-d56f-4dd7-8188-7745a26ccbc5"
+            ]
           },
-          "authorityIds": "col:7S2VY",
+          "authorityIds": "checklistbank:6c31c74f-7de1-4b64-9cff-36bcfde70f9e,checklistbank:urn:lsid:marinespecies.org:taxname:430596,checklistbank-1174:txn:61056,checklistbank-127379:a74d41c9-d56f-4dd7-8188-7745a26ccbc5,col:7S2VY",
           "authorship": "Sowerby,1828"
         },
         {
@@ -8023,39 +7955,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MARGOVULA_PYRIFORMIS_G_B_SOWERBY_I_1828",
-          "name": "\"Margovula pyriformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Margovula",
-          "authorship": "\"(G. B. Sowerby I, 1828)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:430596",
-            "checklistbank-1174": "txn:61056",
-            "checklistbank-127379": "a74d41c9-d56f-4dd7-8188-7745a26ccbc5"
-          },
-          "children": [],
-          "uuid": "553abc44-67bc-5bd-ad1-8b1a061a4bc7aa",
-          "description": "\"Margovula pyriformis\" is a ovulidae species found in its native region."
-        },
-        {
-          "id": "SP_MARGOVULA_BIMACULATA_A_ADAMS_1855",
-          "name": "Margovula bimaculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margovula",
-          "authorship": "(A. Adams, 1855)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:430597",
-            "checklistbank-1174": "txn:61055",
-            "checklistbank-127379": "26f53080-c120-4498-a84d-3b381fd0b7bb"
-          },
-          "uuid": "1d14d4aa-9cb6-45cd-a27f-bef2f64d5004",
-          "children": []
-        },
-        {
           "id": "SP_MARGOVULA_SOMALIENSIS_FEHSE_2001",
           "name": "Margovula somaliensis",
           "rank": "SPECIES",
@@ -8222,10 +8121,18 @@
             "col": [
               "4MGHK"
             ],
-            "checklistbank": "taicol: 85060",
-            "checklistbank-1174": "txn:61906"
+            "checklistbank": [
+              "taicol: 85060",
+              "urn:lsid:marinespecies.org:taxname:430582"
+            ],
+            "checklistbank-1174": [
+              "txn:61906"
+            ],
+            "checklistbank-127379": [
+              "cd8e44a8-9a67-4a82-8141-30df43585a9b"
+            ]
           },
-          "authorityIds": "col:4MGHK",
+          "authorityIds": "checklistbank:taicol: 85060,checklistbank:urn:lsid:marinespecies.org:taxname:430582,checklistbank-1174:txn:61906,checklistbank-127379:cd8e44a8-9a67-4a82-8141-30df43585a9b,col:4MGHK",
           "authorship": "(Sowerby, 1828)"
         },
         {
@@ -8518,23 +8425,6 @@
       "name": "\"Prionovolva",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PRIONOVOLVA_BREVIS_G_B_SOWERBY_I_1828",
-          "name": "\"Prionovolva brevis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prionovolva",
-          "authorship": "\"(G. B. Sowerby I, 1828)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:430582",
-            "checklistbank-1174": "txn:61906",
-            "checklistbank-127379": "cd8e44a8-9a67-4a82-8141-30df43585a9b"
-          },
-          "children": [],
-          "uuid": "1dd7ba7e-ce5f-5b3-81f-0187e7fefe5d65",
-          "description": "\"Prionovolva brevis\" is a ovulidae species found in its native region."
-        },
         {
           "id": "SP_PRIONOVOLVA_CHOSHIENSIS_C_N_CATE_1973",
           "name": "Prionovolva choshiensis",
@@ -9622,9 +9512,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cyphoma",
           "sourceIds": {
-            "checklistbank-139831": "292455"
+            "checklistbank-139831": [
+              "292455"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:292455"
         }
       ]
     },
@@ -9728,7 +9621,8 @@
           "sourceIds": {
             "checklistbank-139831": "292455"
           },
-          "uuid": "a4e0383a-c6be-4234-8b02-48cf9b2c4c7c"
+          "uuid": "a4e0383a-c6be-4234-8b02-48cf9b2c4c7c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10619,12 +10513,15 @@
           "authorship": "Lamarck",
           "sourceIds": {
             "checklistbank": "97f07a21-d22a-457d-af67-99f298aaac5b",
-            "checklistbank-139831": "394164"
+            "checklistbank-139831": [
+              "394164"
+            ]
           },
           "children": [],
           "uuid": "c09d4322-7967-5d2-ae1-14b37b45e36035",
           "commonName": "pinkmouth ovula",
-          "description": "Ovula costellata is a species of sea snail, a marine gastropod mollusc in the family Ovulidae, the ovulids, cowry allies or false cowries."
+          "description": "Ovula costellata is a species of sea snail, a marine gastropod mollusc in the family Ovulidae, the ovulids, cowry allies or false cowries.",
+          "authorityIds": "checklistbank:97f07a21-d22a-457d-af67-99f298aaac5b,checklistbank-139831:394164"
         },
         {
           "id": "SP_OVULA_ANTIQUATA",
@@ -10791,18 +10688,6 @@
           "children": [],
           "uuid": "bc8317b4-5c74-575-849-05945f3d904681",
           "description": "\"Ovula isibasii\" is a ovulidae species found in its native region."
-        },
-        {
-          "id": "SP_OVULA_COSTELLATA",
-          "name": "Ovula costellata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ovula",
-          "sourceIds": {
-            "checklistbank-139831": "394164"
-          },
-          "uuid": "9df42caa-141b-4906-8dcd-0faaa42c630b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11053,11 +10938,14 @@
           "authorship": "Iredale",
           "sourceIds": {
             "checklistbank": "0338fcd3-1bbe-416f-8bcb-fe392a37b071",
-            "checklistbank-139831": "1222159"
+            "checklistbank-139831": [
+              "1222159"
+            ]
           },
           "children": [],
           "uuid": "68b31401-621e-572-806-31173861227619",
-          "description": "Volva cumulata is a ovulidae species found in its native region."
+          "description": "Volva cumulata is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:0338fcd3-1bbe-416f-8bcb-fe392a37b071,checklistbank-139831:1222159"
         },
         {
           "id": "SP_VOLVA_KILBURNI",
@@ -11151,18 +11039,6 @@
           },
           "uuid": "9c3ad8ac-001a-43f6-ac6c-7a8572c40f8f",
           "children": []
-        },
-        {
-          "id": "SP_VOLVA_CUMULATA",
-          "name": "Volva cumulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Volva",
-          "sourceIds": {
-            "checklistbank-139831": "1222159"
-          },
-          "uuid": "13824a41-1496-4a3c-bc8c-772999ddf396"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11842,9 +11718,11 @@
               "7PT38"
             ],
             "checklistbank": "1104462",
-            "checklistbank-139831": "1104462"
+            "checklistbank-139831": [
+              "1104462"
+            ]
           },
-          "authorityIds": "col:7PT38",
+          "authorityIds": "checklistbank:1104462,checklistbank-139831:1104462,col:7PT38",
           "description": "Aclyvolva coarctata is a species of sea snail, a marine gastropod mollusk in the family Ovulidae, the ovulids, cowry allies or false cowries."
         },
         {
@@ -11872,11 +11750,14 @@
           "authorship": "X.T. Ma, 1986",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:578865",
-            "checklistbank-139831": "537185"
+            "checklistbank-139831": [
+              "537185"
+            ]
           },
           "children": [],
           "uuid": "c9b8a8c9-02b4-5a5-a57-13e0ad4f5bd84d",
-          "description": "Aclyvolva granularis is a ovulidae species found in its native region."
+          "description": "Aclyvolva granularis is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:578865,checklistbank-139831:537185"
         },
         {
           "id": "SP_ACLYVOLVA_NICOLAMASSIERAE_FEHSE_1999",
@@ -12003,30 +11884,6 @@
           "children": [],
           "uuid": "50764ba6-9ffd-53b-9cf-3332a9c93f1710",
           "description": "\"Aclyvolva lanceolata\" is a ovulidae species found in its native region."
-        },
-        {
-          "id": "SP_ACLYVOLVA_GRANULARIS",
-          "name": "Aclyvolva granularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aclyvolva",
-          "sourceIds": {
-            "checklistbank-139831": "537185"
-          },
-          "uuid": "beb0f6c8-ea5e-4eef-abda-7d9cc968ff18"
-        },
-        {
-          "id": "SP_ACLYVOLVA_COARCTATA",
-          "name": "Aclyvolva coarctata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aclyvolva",
-          "sourceIds": {
-            "checklistbank-139831": "1104462"
-          },
-          "uuid": "f7f24cd5-022e-40c5-9b6b-37460c02c212"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12570,11 +12427,14 @@
           "authorship": "Cate,1973",
           "sourceIds": {
             "checklistbank": "2df405e9-f408-40b4-a5e7-3cd74ee0cba3",
-            "checklistbank-139831": "1104219"
+            "checklistbank-139831": [
+              "1104219"
+            ]
           },
           "children": [],
           "uuid": "dfd158ca-e982-576-822-40742180c23a77",
-          "description": "Testudovolva orientis is a ovulidae species found in its native region."
+          "description": "Testudovolva orientis is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:2df405e9-f408-40b4-a5e7-3cd74ee0cba3,checklistbank-139831:1104219"
         },
         {
           "id": "SP_TESTUDOVOLVA_INTRICATA_CATE_1973",
@@ -12586,11 +12446,14 @@
           "authorship": "Cate, 1973",
           "sourceIds": {
             "checklistbank": "taicol: 89821",
-            "checklistbank-139831": "1222083"
+            "checklistbank-139831": [
+              "1222083"
+            ]
           },
           "children": [],
           "uuid": "edd15902-abd8-5d5-aa6-36000ef733699c",
-          "description": "Testudovolva intricata is a ovulidae species found in its native region."
+          "description": "Testudovolva intricata is a ovulidae species found in its native region.",
+          "authorityIds": "checklistbank:taicol: 89821,checklistbank-139831:1222083"
         }
       ]
     },
@@ -12669,30 +12532,6 @@
           },
           "uuid": "3ce353e5-739b-4e9f-a764-7969fd822eb3",
           "children": []
-        },
-        {
-          "id": "SP_TESTUDOVOLVA_ORIENTIS",
-          "name": "Testudovolva orientis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Testudovolva",
-          "sourceIds": {
-            "checklistbank-139831": "1104219"
-          },
-          "uuid": "4a67e5d1-389a-4e75-a088-04e468707b1a"
-        },
-        {
-          "id": "SP_TESTUDOVOLVA_INTRICATA",
-          "name": "Testudovolva intricata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Testudovolva",
-          "sourceIds": {
-            "checklistbank-139831": "1222083"
-          },
-          "uuid": "fb4dce71-2297-42c2-bf0c-53927f66ab76"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -18573,7 +18412,7 @@
     }
   ],
   "genusCount": 101,
-  "speciesCount": 1034,
+  "speciesCount": 1031,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -821,9 +821,14 @@
               "urn:lsid:marinespecies.org:taxname:419526"
             ],
             "gbif-backbone": "2301712",
-            "checklistbank-1174": "txn:116047"
+            "checklistbank-1174": [
+              "txn:116047"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:419526"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:419526,col:5TV9Z,itis:71969"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:419526,checklistbank-1174:txn:116047,checklistbank-2011:urn:lsid:marinespecies.org:taxname:419526,col:5TV9Z,gbif-backbone:2301712,itis:71969"
         },
         {
           "id": "SP_ALABA_INFLATA_A_ADAMS_1862",
@@ -1671,21 +1676,6 @@
           "children": []
         },
         {
-          "id": "SP_ALABA_INCERTA_A_D_ORBIGNY_1841",
-          "name": "Alaba incerta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alaba",
-          "authorship": "(A. d'Orbigny, 1841)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:419526",
-            "checklistbank-1174": "txn:116047"
-          },
-          "uuid": "4e433cd0-eb5b-42fc-b64b-c1471b584f1b",
-          "children": []
-        },
-        {
           "id": "SP_ALABA_PINNAE_KRAUSS_1848",
           "name": "Alaba pinnae",
           "rank": "SPECIES",
@@ -1841,7 +1831,8 @@
           "sourceIds": {
             "checklistbank-139831": "353779"
           },
-          "uuid": "5fe04e2c-93c5-4781-b800-a9c14a099a60"
+          "uuid": "5fe04e2c-93c5-4781-b800-a9c14a099a60",
+          "children": []
         },
         {
           "id": "SP_ALABA_PULCHRA",
@@ -1853,7 +1844,8 @@
           "sourceIds": {
             "checklistbank-139831": "1192241"
           },
-          "uuid": "be5fde37-ea25-4064-bd55-a84a97a97b86"
+          "uuid": "be5fde37-ea25-4064-bd55-a84a97a97b86",
+          "children": []
         },
         {
           "id": "SP_ALABA_VIBEX",
@@ -1865,7 +1857,8 @@
           "sourceIds": {
             "checklistbank-139831": "1216053"
           },
-          "uuid": "552da118-b357-4c52-8898-5d48418b2776"
+          "uuid": "552da118-b357-4c52-8898-5d48418b2776",
+          "children": []
         },
         {
           "id": "SP_ALABA_PUNCTOSTRIATA",
@@ -1877,7 +1870,8 @@
           "sourceIds": {
             "checklistbank-139831": "1216060"
           },
-          "uuid": "a57a1c43-cace-41bc-9c19-298eef35698c"
+          "uuid": "a57a1c43-cace-41bc-9c19-298eef35698c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2379,7 +2373,7 @@
     }
   ],
   "genusCount": 13,
-  "speciesCount": 125,
+  "speciesCount": 128,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

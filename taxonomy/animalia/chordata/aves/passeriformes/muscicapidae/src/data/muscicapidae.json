@@ -4402,11 +4402,16 @@
             "col": [
               "3WFWC"
             ],
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:102624",
-            "wikispecies": "Luscinia_svecica",
+            "checklistbank": [
+              "urn:lsid:dyntaxa.se:Taxon:102624",
+              "urn:lsid:marinespecies.org:taxname:1037315"
+            ],
+            "wikispecies": [
+              "Luscinia_svecica"
+            ],
             "gbif-backbone": "6090413"
           },
-          "authorityIds": "col:3WFWC,itis:179818,wikidata:Q26578"
+          "authorityIds": "checklistbank:urn:lsid:dyntaxa.se:Taxon:102624,checklistbank:urn:lsid:marinespecies.org:taxname:1037315,col:3WFWC,gbif-backbone:6090413,itis:179818,wikidata:Q26578,wikispecies:Luscinia_svecica"
         },
         {
           "id": "SP_LUSCINIA_PHAENICUROIDES",
@@ -4445,22 +4450,6 @@
           "children": [],
           "uuid": "381af029-f0e1-563-ba2-04d3c6bde620de",
           "description": "\"Luscinia luscinia\" is a muscicapidae species found in its native region."
-        },
-        {
-          "id": "SP_LUSCINIA_SVECICA_LINNAEUS_1758",
-          "name": "\"Luscinia svecica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Luscinia",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1037315",
-            "wikispecies": "Luscinia_svecica"
-          },
-          "children": [],
-          "uuid": "f2eaf598-9fba-50c-815-8ebe5f6e26d139",
-          "description": "\"Luscinia svecica\" is a muscicapidae species found in its native region."
         },
         {
           "id": "SP_LUSCINIA_MEGARHYNCHOS",
@@ -5628,9 +5617,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1484490"
             ],
-            "wikispecies": "Muscicapa_sibirica"
+            "wikispecies": [
+              "Muscicapa_sibirica"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1484490"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1484490,col:44Q66,itis:178666,wikidata:Q73578"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1484490,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1484490,col:44Q66,itis:178666,wikidata:Q73578,wikispecies:Muscicapa_sibirica"
         },
         {
           "id": "MUSCICAPA_SODHII",
@@ -5701,11 +5695,16 @@
             "col": [
               "44Q67"
             ],
-            "checklistbank": "1154",
-            "wikispecies": "Muscicapa_striata",
+            "checklistbank": [
+              "1154",
+              "urn:lsid:marinespecies.org:taxname:558563"
+            ],
+            "wikispecies": [
+              "Muscicapa_striata"
+            ],
             "gbif-backbone": "6093641"
           },
-          "authorityIds": "col:44Q67,itis:561250,wikidata:Q26607"
+          "authorityIds": "checklistbank:1154,checklistbank:urn:lsid:marinespecies.org:taxname:558563,col:44Q67,gbif-backbone:6093641,itis:561250,wikidata:Q26607,wikispecies:Muscicapa_striata"
         },
         {
           "id": "MUSCICAPA_TESSACOURBE",
@@ -6073,37 +6072,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MUSCICAPA_STRIATA_PALLAS_1764",
-          "name": "\"Muscicapa striata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Muscicapa",
-          "authorship": "\"(Pallas, 1764)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558563",
-            "wikispecies": "Muscicapa_striata"
-          },
-          "children": [],
-          "uuid": "529c4d12-6758-56e-933-cc98eb49e815c6",
-          "description": "\"Muscicapa striata\" is a muscicapidae species found in its native region."
-        },
-        {
-          "id": "SP_MUSCICAPA_SIBIRICA_GMELIN_1789",
-          "name": "Muscicapa sibirica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Muscicapa",
-          "authorship": "Gmelin, 1789",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1484490",
-            "wikispecies": "Muscicapa_sibirica"
-          },
-          "uuid": "aaa0e2f5-1908-4afb-90d7-a82ce2dc255a",
-          "children": []
-        },
-        {
           "id": "SP_MUSCICAPA_ADUSTA",
           "name": "Muscicapa adusta",
           "rank": "SPECIES",
@@ -6309,7 +6277,8 @@
           "sourceIds": {
             "checklistbank-170809": "22709207"
           },
-          "uuid": "3ced6bb0-c39d-4b15-ab2a-197c529263ca"
+          "uuid": "3ced6bb0-c39d-4b15-ab2a-197c529263ca",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7386,10 +7355,15 @@
             "col": [
               "6HWGB"
             ],
-            "checklistbank": "1045",
-            "wikispecies": "Ficedula_parva"
+            "checklistbank": [
+              "1045",
+              "urn:lsid:marinespecies.org:taxname:558556"
+            ],
+            "wikispecies": [
+              "Ficedula_parva"
+            ]
           },
-          "authorityIds": "col:6HWGB,itis:178675,wikidata:Q241499"
+          "authorityIds": "checklistbank:1045,checklistbank:urn:lsid:marinespecies.org:taxname:558556,col:6HWGB,itis:178675,wikidata:Q241499,wikispecies:Ficedula_parva"
         },
         {
           "id": "FICEDULA_PLATENAE",
@@ -7807,9 +7781,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1562649"
             ],
-            "wikispecies": "Ficedula_zanthopygia"
+            "wikispecies": [
+              "Ficedula_zanthopygia"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1562649"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1562649,col:6HWHK,itis:560095,wikidata:Q73574"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1562649,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1562649,col:6HWHK,itis:560095,wikidata:Q73574,wikispecies:Ficedula_zanthopygia"
         },
         {
           "id": "SP_FICEDULA_RUFICAUDA",
@@ -7935,22 +7914,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FICEDULA_PARVA_BECHSTEIN_1792",
-          "name": "\"Ficedula parva\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ficedula",
-          "authorship": "\"(Bechstein, 1792)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558556",
-            "wikispecies": "Ficedula_parva"
-          },
-          "children": [],
-          "uuid": "104f2a16-1b22-5e8-83e-cf83aa55b4cdf7",
-          "description": "\"Ficedula parva\" is a muscicapidae species found in its native region."
-        },
-        {
           "id": "SP_FICEDULA_HYPOLEUCA_PALLAS_1764",
           "name": "\"Ficedula hypoleuca\"",
           "rank": "SPECIES",
@@ -7964,21 +7927,6 @@
           "children": [],
           "uuid": "6354268d-18c9-528-b79-a1e34c9501ec32",
           "description": "\"Ficedula hypoleuca\" is a muscicapidae species found in its native region."
-        },
-        {
-          "id": "SP_FICEDULA_ZANTHOPYGIA_HAY_1845",
-          "name": "Ficedula zanthopygia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ficedula",
-          "authorship": "(Hay, 1845)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1562649",
-            "wikispecies": "Ficedula_zanthopygia"
-          },
-          "uuid": "d5da555c-1099-4f29-a862-89b111101f34",
-          "children": []
         },
         {
           "id": "SP_FICEDULA_ALBICILLA",
@@ -8368,7 +8316,8 @@
           "sourceIds": {
             "checklistbank-170809": "103769434"
           },
-          "uuid": "b558f436-8767-4099-9f95-c9aaf4fa3c83"
+          "uuid": "b558f436-8767-4099-9f95-c9aaf4fa3c83",
+          "children": []
         },
         {
           "id": "SP_FICEDULA_RUFICAUDA_SWAINSON_1838",
@@ -8381,7 +8330,8 @@
           "sourceIds": {
             "checklistbank-170809": "22709217"
           },
-          "uuid": "91285ae6-7470-4c1a-bc8a-6f7ece70add5"
+          "uuid": "91285ae6-7470-4c1a-bc8a-6f7ece70add5",
+          "children": []
         },
         {
           "id": "SP_FICEDULA_ALBICOLLIS_TEMMINCK_1815",
@@ -8394,7 +8344,8 @@
           "sourceIds": {
             "checklistbank-170809": "22709315"
           },
-          "uuid": "19704159-247e-4e71-8696-9ad923b94db9"
+          "uuid": "19704159-247e-4e71-8696-9ad923b94db9",
+          "children": []
         },
         {
           "id": "SP_FICEDULA_LUZONIENSIS_OGILVIE_GRANT_1894",
@@ -8407,7 +8358,8 @@
           "sourceIds": {
             "checklistbank-170809": "103769583"
           },
-          "uuid": "2f0d23e6-c7e0-4a00-8fd9-1ebce56eb21d"
+          "uuid": "2f0d23e6-c7e0-4a00-8fd9-1ebce56eb21d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11520,10 +11472,15 @@
             "itis": [
               "562037"
             ],
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:102994",
-            "wikispecies": "Phoenicurus_phoenicurus"
+            "checklistbank": [
+              "urn:lsid:dyntaxa.se:Taxon:102994",
+              "urn:lsid:marinespecies.org:taxname:558576"
+            ],
+            "wikispecies": [
+              "Phoenicurus_phoenicurus"
+            ]
           },
-          "authorityIds": "col:4GKQY,itis:562037,wikidata:Q26620"
+          "authorityIds": "checklistbank:urn:lsid:dyntaxa.se:Taxon:102994,checklistbank:urn:lsid:marinespecies.org:taxname:558576,col:4GKQY,itis:562037,wikidata:Q26620,wikispecies:Phoenicurus_phoenicurus"
         },
         {
           "id": "PHOENICURUS_SCHISTICEPS",
@@ -11623,22 +11580,6 @@
           "children": [],
           "uuid": "b4afd066-dfc3-5a4-a69-e49ddb97c506ce",
           "description": "\"Phoenicurus ochruros\" is a muscicapidae species found in its native region."
-        },
-        {
-          "id": "SP_PHOENICURUS_PHOENICURUS_LINNAEUS_1758",
-          "name": "\"Phoenicurus phoenicurus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phoenicurus",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558576",
-            "wikispecies": "Phoenicurus_phoenicurus"
-          },
-          "children": [],
-          "uuid": "98d7c089-05b7-5f2-81d-329738751a5347",
-          "description": "\"Phoenicurus phoenicurus\" is a muscicapidae species found in its native region."
         },
         {
           "id": "SP_PHOENICURUS_ALASCHANICUS",
@@ -11781,7 +11722,8 @@
           "sourceIds": {
             "checklistbank-170809": "22710087"
           },
-          "uuid": "41c2e3c1-c5c9-4ab1-9534-e03ba4b7dece"
+          "uuid": "41c2e3c1-c5c9-4ab1-9534-e03ba4b7dece",
+          "children": []
         },
         {
           "id": "SP_PHOENICURUS_BICOLOR_OGILVIE_GRANT_1894",
@@ -11794,7 +11736,8 @@
           "sourceIds": {
             "checklistbank-170809": "22710101"
           },
-          "uuid": "d23607e9-8e58-40bb-bbcf-f1e31660b568"
+          "uuid": "d23607e9-8e58-40bb-bbcf-f1e31660b568",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12958,7 +12901,8 @@
             "checklistbank-139831": "12820",
             "checklistbank-170809": "22710299"
           },
-          "uuid": "2c43a4a5-6299-4860-a701-80b9b22f7b4a"
+          "uuid": "2c43a4a5-6299-4860-a701-80b9b22f7b4a",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_LUGENS",
@@ -12971,7 +12915,8 @@
             "checklistbank-139831": "12821",
             "checklistbank-170809": "22730775"
           },
-          "uuid": "cd76946d-a3ff-42f0-8d05-e1732bcee0c9"
+          "uuid": "cd76946d-a3ff-42f0-8d05-e1732bcee0c9",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_FINSCHII",
@@ -12984,7 +12929,8 @@
             "checklistbank-139831": "12828",
             "checklistbank-170809": "22710292"
           },
-          "uuid": "be956041-781d-4187-bc02-bcf3cc246ca4"
+          "uuid": "be956041-781d-4187-bc02-bcf3cc246ca4",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_PLESCHANKA",
@@ -12997,7 +12943,8 @@
             "checklistbank-139831": "12830",
             "checklistbank-170809": "22710308"
           },
-          "uuid": "ccca94b9-186c-4e05-9818-8c015017d525"
+          "uuid": "ccca94b9-186c-4e05-9818-8c015017d525",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_PICATA",
@@ -13010,7 +12957,8 @@
             "checklistbank-139831": "12831",
             "checklistbank-170809": "22710295"
           },
-          "uuid": "9523d5a2-5acb-40c8-9a86-a2c139c1773f"
+          "uuid": "9523d5a2-5acb-40c8-9a86-a2c139c1773f",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_LEUCOPYGA",
@@ -13023,7 +12971,8 @@
             "checklistbank-139831": "12832",
             "checklistbank-170809": "22710238"
           },
-          "uuid": "b2ba6d81-d0e4-4d38-8b70-cbb662738abc"
+          "uuid": "b2ba6d81-d0e4-4d38-8b70-cbb662738abc",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_CYPRIACA",
@@ -13036,7 +12985,8 @@
             "checklistbank-139831": "12834",
             "checklistbank-170809": "22710312"
           },
-          "uuid": "fd4d4bcb-a59e-48e5-8805-bb7d63546d8a"
+          "uuid": "fd4d4bcb-a59e-48e5-8805-bb7d63546d8a",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_PHILLIPSI",
@@ -13049,7 +12999,8 @@
             "checklistbank-139831": "12836",
             "checklistbank-170809": "22710268"
           },
-          "uuid": "dda84b30-8136-40f4-aa6f-30665056cdfc"
+          "uuid": "dda84b30-8136-40f4-aa6f-30665056cdfc",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_ISABELLINA",
@@ -13062,7 +13013,8 @@
             "checklistbank-139831": "12837",
             "checklistbank-170809": "22710333"
           },
-          "uuid": "0887f8c3-76a5-4b30-ab28-0dc116169934"
+          "uuid": "0887f8c3-76a5-4b30-ab28-0dc116169934",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_LEUCURA",
@@ -13075,7 +13027,8 @@
             "checklistbank-139831": "12838",
             "checklistbank-170809": "22710259"
           },
-          "uuid": "ea58abeb-7080-4391-9ab1-30c0d8eeab2f"
+          "uuid": "ea58abeb-7080-4391-9ab1-30c0d8eeab2f",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_PILEATA",
@@ -13088,7 +13041,8 @@
             "checklistbank-139831": "12839",
             "checklistbank-170809": "22710329"
           },
-          "uuid": "3ca31210-b5e4-4909-bdff-83ac1572b125"
+          "uuid": "3ca31210-b5e4-4909-bdff-83ac1572b125",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_MONACHA",
@@ -13101,7 +13055,8 @@
             "checklistbank-139831": "12841",
             "checklistbank-170809": "22710244"
           },
-          "uuid": "ef281664-4a60-4bf3-9abb-a151cf90ab7e"
+          "uuid": "ef281664-4a60-4bf3-9abb-a151cf90ab7e",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_DESERTI",
@@ -13114,7 +13069,8 @@
             "checklistbank-139831": "12842",
             "checklistbank-170809": "22710325"
           },
-          "uuid": "075310ef-a5c0-4429-8557-f11ecd7a2a57"
+          "uuid": "075310ef-a5c0-4429-8557-f11ecd7a2a57",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_ALBONIGRA",
@@ -13127,7 +13083,8 @@
             "checklistbank-139831": "73115",
             "checklistbank-170809": "22710248"
           },
-          "uuid": "4e153a44-d0d8-4859-9185-996197877467"
+          "uuid": "4e153a44-d0d8-4859-9185-996197877467",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_CHRYSOPYGIA",
@@ -13140,7 +13097,8 @@
             "checklistbank-139831": "107387",
             "checklistbank-170809": "22734803"
           },
-          "uuid": "8855a178-8824-409e-be21-f43077a84162"
+          "uuid": "8855a178-8824-409e-be21-f43077a84162",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_LUGENTOIDES",
@@ -13153,7 +13111,8 @@
             "checklistbank-139831": "107388",
             "checklistbank-170809": "22710284"
           },
-          "uuid": "8b62c1c2-1ba2-438b-8984-55e6108e64b9"
+          "uuid": "8b62c1c2-1ba2-438b-8984-55e6108e64b9",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_BOTTAE",
@@ -13166,7 +13125,8 @@
             "checklistbank-139831": "144237",
             "checklistbank-170809": "103774053"
           },
-          "uuid": "6e5ceb29-ac2d-4d3d-9b28-01a1ef18cfa9"
+          "uuid": "6e5ceb29-ac2d-4d3d-9b28-01a1ef18cfa9",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_LUGUBRIS",
@@ -13179,7 +13139,8 @@
             "checklistbank-139831": "367672",
             "checklistbank-170809": "22710287"
           },
-          "uuid": "08242808-5cea-491b-bc85-0e74bce8824e"
+          "uuid": "08242808-5cea-491b-bc85-0e74bce8824e",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_XANTHOPRYMNA",
@@ -13192,7 +13153,8 @@
             "checklistbank-139831": "979835",
             "checklistbank-170809": "22735267"
           },
-          "uuid": "3106b0e3-0c80-45ad-98e4-84664f941279"
+          "uuid": "3106b0e3-0c80-45ad-98e4-84664f941279",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_ALBIFRONS",
@@ -13204,7 +13166,8 @@
           "sourceIds": {
             "checklistbank-139831": "980203"
           },
-          "uuid": "bf80197d-16a9-48ba-b880-d8e6fbcea746"
+          "uuid": "bf80197d-16a9-48ba-b880-d8e6fbcea746",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_FAMILIARIS",
@@ -13217,7 +13180,8 @@
             "checklistbank-139831": "980204",
             "checklistbank-170809": "22710367"
           },
-          "uuid": "892e2518-9af8-4cc9-a114-b3e57e156463"
+          "uuid": "892e2518-9af8-4cc9-a114-b3e57e156463",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_SCOTOCERCA",
@@ -13230,7 +13194,8 @@
             "checklistbank-139831": "980205",
             "checklistbank-170809": "22710371"
           },
-          "uuid": "ece9d18d-c00c-44cd-b29d-4d93c366b9cd"
+          "uuid": "ece9d18d-c00c-44cd-b29d-4d93c366b9cd",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_DUBIA",
@@ -13243,7 +13208,8 @@
             "checklistbank-139831": "980206",
             "checklistbank-170809": "22710380"
           },
-          "uuid": "baea980b-3671-4b86-a56f-3864d0479359"
+          "uuid": "baea980b-3671-4b86-a56f-3864d0479359",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_FUSCA",
@@ -13256,7 +13222,8 @@
             "checklistbank-139831": "980211",
             "checklistbank-170809": "22710376"
           },
-          "uuid": "000b9938-c85b-448c-a2de-1c79e8490b7b"
+          "uuid": "000b9938-c85b-448c-a2de-1c79e8490b7b",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_MELANURA",
@@ -13269,7 +13236,8 @@
             "checklistbank-139831": "980212",
             "checklistbank-170809": "22710385"
           },
-          "uuid": "135b443b-75ed-4585-aceb-e0770f566794"
+          "uuid": "135b443b-75ed-4585-aceb-e0770f566794",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_SEEBOHMI_DIXON_1882",
@@ -13282,7 +13250,8 @@
           "sourceIds": {
             "checklistbank-170809": "103773966"
           },
-          "uuid": "7cf4e7d7-565f-4438-a7b6-76c9b5d2464d"
+          "uuid": "7cf4e7d7-565f-4438-a7b6-76c9b5d2464d",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_FRENATA_HEUGLIN_1869",
@@ -13295,7 +13264,8 @@
           "sourceIds": {
             "checklistbank-170809": "103774137"
           },
-          "uuid": "10dd66d2-84cc-4b97-adb2-3ffe9ad8ee9e"
+          "uuid": "10dd66d2-84cc-4b97-adb2-3ffe9ad8ee9e",
+          "children": []
         },
         {
           "id": "SP_OENANTHE_HEUGLINII_FINSCH_HARTLAUB_1870",
@@ -13308,7 +13278,8 @@
           "sourceIds": {
             "checklistbank-170809": "22710348"
           },
-          "uuid": "9e98b4a0-314c-4fbe-bd91-84a78af7aeec"
+          "uuid": "9e98b4a0-314c-4fbe-bd91-84a78af7aeec",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -16625,29 +16596,6 @@
       "lineage": "muscicapidae"
     },
     {
-      "id": "GENUS_MEGALURUS",
-      "name": "Megalurus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MEGALURUS_PRYERI_SEEBOHM_1884",
-          "name": "Megalurus pryeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Megalurus",
-          "authorship": "Seebohm, 1884",
-          "sourceIds": {
-            "checklistbank": "17247"
-          },
-          "children": [],
-          "uuid": "9136e581-0a21-5d5-ab9-258eb32a1404c1"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "muscicapidae"
-    },
-    {
       "id": "GENUS_KITTACINCLA",
       "name": "Kittacincla",
       "rank": "GENUS",
@@ -16670,8 +16618,8 @@
       "lineage": "muscicapidae"
     }
   ],
-  "genusCount": 98,
-  "speciesCount": 674,
+  "genusCount": 97,
+  "speciesCount": 702,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

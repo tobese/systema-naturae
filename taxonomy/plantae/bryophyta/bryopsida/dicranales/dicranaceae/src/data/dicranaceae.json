@@ -3571,9 +3571,11 @@
             ],
             "checklistbank": "197454",
             "checklistbank-2008": "4779",
-            "checklistbank-139831": "161856"
+            "checklistbank-139831": [
+              "161856"
+            ]
           },
-          "authorityIds": "itis:16776",
+          "authorityIds": "checklistbank:197454,checklistbank-139831:161856,checklistbank-2008:4779,itis:16776",
           "commonName": "dicranum moss",
           "description": "Dicranum flagellare (dicranum moss) is a dicranaceae species found in its native region."
         },
@@ -4172,18 +4174,6 @@
           },
           "uuid": "020b78fe-f8c1-4ac9-9819-d064979e02c1",
           "children": []
-        },
-        {
-          "id": "SP_DICRANUM_FLAGELLARE",
-          "name": "Dicranum flagellare",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dicranum",
-          "sourceIds": {
-            "checklistbank-139831": "161856"
-          },
-          "uuid": "af79f74c-1265-4b4a-8a57-b45ca0185858"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7295,9 +7285,12 @@
           "uuid": "223bc1e6-96e5-54c-924-46a541c2bddfc0",
           "sourceIds": {
             "checklistbank": "400830",
-            "checklistbank-139831": "400830"
+            "checklistbank-139831": [
+              "400830"
+            ]
           },
-          "description": "Chorisodontium burrowsii is a dicranaceae species found in its native region."
+          "description": "Chorisodontium burrowsii is a dicranaceae species found in its native region.",
+          "authorityIds": "checklistbank:400830,checklistbank-139831:400830"
         },
         {
           "id": "SP_CHORISODONTIUM_FULVASTRUM_BESCH_BROTH_1924",
@@ -7422,18 +7415,6 @@
           "children": [],
           "uuid": "ecc3afbb-0643-500-8c0-468b39976f82f2",
           "description": "\"Chorisodontium aciphyllum\" is a dicranaceae species found in its native region."
-        },
-        {
-          "id": "SP_CHORISODONTIUM_BURROWSII",
-          "name": "Chorisodontium burrowsii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chorisodontium",
-          "sourceIds": {
-            "checklistbank-139831": "400830"
-          },
-          "uuid": "4a6f4e09-82d2-4806-81ee-585d82985ce5"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14112,21 +14093,6 @@
           "description": "Campylopus perichaetialis is a dicranaceae species found in its native region."
         },
         {
-          "id": "SP_CAMPYLOPUS_ROBILLARDEI_BESCHERELLE_1878",
-          "name": "Campylopus robillardei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "authorship": "Bescherelle, 1878",
-          "children": [],
-          "lineage": "Campylopus",
-          "uuid": "5478c179-7123-583-ab4-ed5ab3fe92d34b",
-          "description": "Campylopus robillardei is a dicranaceae species found in its native region.",
-          "sourceIds": {
-            "checklistbank-139831": "581698"
-          }
-        },
-        {
           "id": "SP_CAMPYLOPUS_AUSTRO_ALPINUS_PARIS_1894",
           "name": "Campylopus austro-alpinus",
           "rank": "SPECIES",
@@ -20393,7 +20359,7 @@
     }
   ],
   "genusCount": 88,
-  "speciesCount": 1106,
+  "speciesCount": 1105,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

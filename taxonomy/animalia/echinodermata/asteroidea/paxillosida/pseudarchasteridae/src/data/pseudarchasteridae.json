@@ -124,10 +124,15 @@
             "itis": [
               "990153"
             ],
-            "checklistbank": "Paragonaster_ctenipes",
-            "wikispecies": "Paragonaster_ctenipes"
+            "checklistbank": [
+              "Paragonaster_ctenipes",
+              "urn:lsid:marinespecies.org:taxname:224139"
+            ],
+            "wikispecies": [
+              "Paragonaster_ctenipes"
+            ]
           },
-          "authorityIds": "col:4CVZ6,itis:990153",
+          "authorityIds": "checklistbank:Paragonaster_ctenipes,checklistbank:urn:lsid:marinespecies.org:taxname:224139,col:4CVZ6,itis:990153,wikispecies:Paragonaster_ctenipes",
           "description": "Paragonaster ctenipes is a pseudarchasteridae species found in its native region."
         },
         {
@@ -318,22 +323,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PARAGONASTER_CTENIPES_MACAN_1938",
-          "name": "\"Paragonaster ctenipes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paragonaster",
-          "authorship": "\"Macan, 1938\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:224139",
-            "wikispecies": "Paragonaster_ctenipes"
-          },
-          "children": [],
-          "uuid": "9d4a3237-7c11-594-992-f90dfc99cd1358",
-          "description": "\"Paragonaster ctenipes is a pseudarchasteridae species found in its native region."
-        },
-        {
           "id": "SP_PARAGONASTER_STENOSTICHUS",
           "name": "Paragonaster stenostichus",
           "rank": "SPECIES",
@@ -356,7 +345,8 @@
           "sourceIds": {
             "checklistbank-139831": "293079"
           },
-          "uuid": "9bd958fd-713d-453b-adf0-1ab4bd3c515f"
+          "uuid": "9bd958fd-713d-453b-adf0-1ab4bd3c515f",
+          "children": []
         },
         {
           "id": "SP_PARAGONASTER_RIDGWAYI",
@@ -368,7 +358,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166149"
           },
-          "uuid": "3b3b83aa-a4a4-4dfd-b212-66fa671e6b2d"
+          "uuid": "3b3b83aa-a4a4-4dfd-b212-66fa671e6b2d",
+          "children": []
         },
         {
           "id": "SP_PARAGONASTER_TENUIRADIIS",
@@ -380,7 +371,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166151"
           },
-          "uuid": "b1a735bd-4b9e-47b5-954b-94a83402abdc"
+          "uuid": "b1a735bd-4b9e-47b5-954b-94a83402abdc",
+          "children": []
         },
         {
           "id": "SP_PARAGONASTER_HOEIMARUAE",
@@ -392,7 +384,8 @@
           "sourceIds": {
             "checklistbank-139831": "1566262"
           },
-          "uuid": "b846f6b5-af67-4d69-a612-25871700591e"
+          "uuid": "b846f6b5-af67-4d69-a612-25871700591e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1479,7 +1472,7 @@
       "lineage": "pseudarchasteridae"
     }
   ],
-  "speciesCount": 77,
+  "speciesCount": 76,
   "appSlug": "pseudarchasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Asteroidea",

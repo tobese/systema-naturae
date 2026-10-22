@@ -9289,10 +9289,18 @@
             "col": [
               "43Q9X"
             ],
-            "checklistbank": "221974",
-            "checklistbank-1174": "txn:89151"
+            "checklistbank": [
+              "221974",
+              "urn:lsid:marinespecies.org:taxname:590537"
+            ],
+            "checklistbank-1174": [
+              "txn:89151"
+            ],
+            "checklistbank-127379": [
+              "5d2d50e2-8cf2-41ff-8956-71dd37b1949a"
+            ]
           },
-          "authorityIds": "col:43Q9X",
+          "authorityIds": "checklistbank:221974,checklistbank:urn:lsid:marinespecies.org:taxname:590537,checklistbank-1174:txn:89151,checklistbank-127379:5d2d50e2-8cf2-41ff-8956-71dd37b1949a,col:43Q9X",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -18029,23 +18037,6 @@
           "description": "\"Mitra papalis\" is a mitridae species found in its native region."
         },
         {
-          "id": "SP_MITRA_MITRA_LINNAEUS_1758",
-          "name": "\"Mitra mitra\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mitra",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:590537",
-            "checklistbank-1174": "txn:89151",
-            "checklistbank-127379": "5d2d50e2-8cf2-41ff-8956-71dd37b1949a"
-          },
-          "children": [],
-          "uuid": "105d6585-9050-56d-a37-88a9422a749ee1",
-          "description": "\"Mitra mitra\" is a mitridae species found in its native region."
-        },
-        {
           "id": "SP_MITRA_STICTICA_LINK_1807",
           "name": "\"Mitra stictica\"",
           "rank": "SPECIES",
@@ -18282,7 +18273,8 @@
           "sourceIds": {
             "checklistbank-139831": "1090222"
           },
-          "uuid": "e1ffacf1-8767-4b81-8699-39327dc7c03c"
+          "uuid": "e1ffacf1-8767-4b81-8699-39327dc7c03c",
+          "children": []
         },
         {
           "id": "SP_MITRA_TURGIDA",
@@ -18294,7 +18286,8 @@
           "sourceIds": {
             "checklistbank-139831": "1387036"
           },
-          "uuid": "9a1dc736-66d4-4572-963f-f05ecc7ba890"
+          "uuid": "9a1dc736-66d4-4572-963f-f05ecc7ba890",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -18699,7 +18692,8 @@
           "sourceIds": {
             "checklistbank-139831": "1666440"
           },
-          "uuid": "908ea51b-c9cc-4047-a25d-f329af178daa"
+          "uuid": "908ea51b-c9cc-4047-a25d-f329af178daa",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -32914,7 +32908,7 @@
     }
   ],
   "genusCount": 91,
-  "speciesCount": 1928,
+  "speciesCount": 1930,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -528,12 +528,17 @@
             "wfo": [
               "wfo-0000382059"
             ],
-            "checklistbank": "175266",
+            "checklistbank": [
+              "175266",
+              "urn:lsid:marinespecies.org:taxname:1600215"
+            ],
             "checklistbank-2008": "447421",
             "gbif-backbone": "10929083",
-            "checklistbank-1174": "txn:494887"
+            "checklistbank-1174": [
+              "txn:494887"
+            ]
           },
-          "authorityIds": "col:486C9,itis:503977,wfo:wfo-0000382059",
+          "authorityIds": "checklistbank:175266,checklistbank:urn:lsid:marinespecies.org:taxname:1600215,checklistbank-1174:txn:494887,checklistbank-2008:447421,col:486C9,gbif-backbone:10929083,itis:503977,wfo:wfo-0000382059",
           "description": "Nymphaea lotus, the white Egyptian lotus, tiger lotus, white lotus, or Egyptian water-lily, is a flowering plant of the family Nymphaeaceae.",
           "commonName": "Water Lily",
           "continents": [
@@ -562,12 +567,20 @@
             "col": [
               "486DD"
             ],
-            "checklistbank": "Nymphaea_nouchali_Burmf",
+            "checklistbank": [
+              "Nymphaea_nouchali_Burmf",
+              "urn:lsid:marinespecies.org:taxname:1600203"
+            ],
             "checklistbank-2008": "448487",
             "gbif-backbone": "7326947",
-            "checklistbank-1174": "txn:456438"
+            "checklistbank-1174": [
+              "txn:456438"
+            ],
+            "checklistbank-1141": [
+              "611137b5-b826-5d32-9ac6-328710b9a75c"
+            ]
           },
-          "authorityIds": "col:486DD,itis:1237198,wfo:wfo-0000382053",
+          "authorityIds": "checklistbank:Nymphaea_nouchali_Burmf,checklistbank:urn:lsid:marinespecies.org:taxname:1600203,checklistbank-1141:611137b5-b826-5d32-9ac6-328710b9a75c,checklistbank-1174:txn:456438,checklistbank-2008:448487,col:486DD,gbif-backbone:7326947,itis:1237198,wfo:wfo-0000382053",
           "description": "Nymphaea nouchali, often known by its synonym Nymphaea stellata, or by common names blue lotus, star lotus, red water lily, dwarf aquarium lily, blue water lily, blue star water lily or manel flower, is a water lily of genus Nymphaea.",
           "commonName": "Blue Lotus"
         },
@@ -877,11 +890,16 @@
             "wfo": [
               "wfo-0000382123"
             ],
-            "checklistbank": "Nymphaea_pulchella_DC",
+            "checklistbank": [
+              "Nymphaea_pulchella_DC",
+              "urn:lsid:marinespecies.org:taxname:1600194"
+            ],
             "checklistbank-2008": "637534",
-            "checklistbank-1174": "txn:338190"
+            "checklistbank-1174": [
+              "txn:338190"
+            ]
           },
-          "authorityIds": "col:74CQS,wfo:wfo-0000382123",
+          "authorityIds": "checklistbank:Nymphaea_pulchella_DC,checklistbank:urn:lsid:marinespecies.org:taxname:1600194,checklistbank-1174:txn:338190,checklistbank-2008:637534,col:74CQS,wfo:wfo-0000382123",
           "description": "Nymphaea pulchella is a species of waterlily native to the regions spanning from Central and Southern Mexico to Brazil, as well as from the Bahamas to the Virgin Islands, including St.",
           "continents": [
             "North America",
@@ -3650,22 +3668,6 @@
           "description": "\"Nymphaea rubra\" is a nymphaeaceae species found in its native region."
         },
         {
-          "id": "SP_NYMPHAEA_PULCHELLA_DC",
-          "name": "\"Nymphaea pulchella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nymphaea",
-          "authorship": "DC.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1600194",
-            "checklistbank-1174": "txn:338190"
-          },
-          "children": [],
-          "uuid": "81b2cd7a-6480-5ea-8ce-efa1e79398d514",
-          "description": "\"Nymphaea pulchella\" is a nymphaeaceae species found in its native region."
-        },
-        {
           "id": "SP_NYMPHAEA_PUBESCENS_WILLD",
           "name": "\"Nymphaea pubescens\"",
           "rank": "SPECIES",
@@ -3758,23 +3760,6 @@
           "description": "\"Nymphaea novogranatensis\" is a nymphaeaceae species found in its native region."
         },
         {
-          "id": "SP_NYMPHAEA_NOUCHALI_BURM_F",
-          "name": "\"Nymphaea nouchali\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nymphaea",
-          "authorship": "Burm.f.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1600203",
-            "checklistbank-1141": "611137b5-b826-5d32-9ac6-328710b9a75c",
-            "checklistbank-1174": "txn:456438"
-          },
-          "children": [],
-          "uuid": "634a1ae9-259c-55a-bad-dfd3e8911e01f5",
-          "description": "\"Nymphaea nouchali\" is a nymphaeaceae species found in its native region."
-        },
-        {
           "id": "SP_NYMPHAEA_NOELAE_S_W_L_JACOBS_HELLQ",
           "name": "\"Nymphaea noelae\"",
           "rank": "SPECIES",
@@ -3863,22 +3848,6 @@
           "children": [],
           "uuid": "e95605bf-7cfd-54e-b57-b02d47fe74542c",
           "description": "\"Nymphaea macrosperma\" is a nymphaeaceae species found in its native region."
-        },
-        {
-          "id": "SP_NYMPHAEA_LOTUS_L",
-          "name": "\"Nymphaea lotus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nymphaea",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1600215",
-            "checklistbank-1174": "txn:494887"
-          },
-          "children": [],
-          "uuid": "8b944c70-22e3-509-bbe-d16499e681fa5a",
-          "description": "\"Nymphaea lotus\" is a nymphaeaceae species found in its native region."
         },
         {
           "id": "SP_NYMPHAEA_GUINEENSIS_SCHUMACH_THONN",
@@ -4108,7 +4077,8 @@
           "sourceIds": {
             "checklistbank-2000": "urn:lsid:ipni.org:names:281445-2"
           },
-          "uuid": "9a8c1e1c-7596-4855-92fb-a122f4058ef1"
+          "uuid": "9a8c1e1c-7596-4855-92fb-a122f4058ef1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5323,7 +5293,8 @@
           "sourceIds": {
             "checklistbank-139831": "707453"
           },
-          "uuid": "1fb7c006-8ef7-4081-9d12-93418d5d3253"
+          "uuid": "1fb7c006-8ef7-4081-9d12-93418d5d3253",
+          "children": []
         },
         {
           "id": "SP_NUPHAR_OGURAENSIS",
@@ -5335,7 +5306,8 @@
           "sourceIds": {
             "checklistbank-139831": "1030060"
           },
-          "uuid": "5c897ac9-ca3a-4e22-9d92-df51ef9786f8"
+          "uuid": "5c897ac9-ca3a-4e22-9d92-df51ef9786f8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

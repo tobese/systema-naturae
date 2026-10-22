@@ -190,15 +190,23 @@
           "lineage": "Carica",
           "authorship": "L.",
           "sourceIds": {
-            "checklistbank": "Carica_papaya_L",
-            "wikispecies": "Carica_papaya",
-            "checklistbank-2008": "447069"
+            "checklistbank": [
+              "Carica_papaya_L",
+              "urn:lsid:marinespecies.org:taxname:1491753"
+            ],
+            "wikispecies": [
+              "Carica_papaya"
+            ],
+            "checklistbank-2008": "447069",
+            "checklistbank-139831": [
+              "62811"
+            ]
           },
           "children": [],
           "uuid": "ab0bde40-15ee-5ea-8f0-0ddb9e0bf8a4ad",
           "commonName": "Papaw",
           "description": "Carica papaya (Papaw) is a caricaceae species found in its native region.",
-          "authorityIds": "checklistbank:Carica_papaya_L,checklistbank:urn:lsid:marinespecies.org:taxname:1491753,checklistbank-2008:447069,wikispecies:Carica_papaya"
+          "authorityIds": "checklistbank:Carica_papaya_L,checklistbank:urn:lsid:marinespecies.org:taxname:1491753,checklistbank-139831:62811,checklistbank-2008:447069,wikispecies:Carica_papaya"
         },
         {
           "id": "SP_CARICA_AUGUSTII_HARMS",
@@ -479,32 +487,6 @@
           "uuid": "e198093a-e981-591-b4e-d9ab78027ff3bc"
         }
       ]
-    },
-    {
-      "id": "GENUS_CARICA",
-      "name": "\"Carica",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CARICA_PAPAYA_LINNAEUS",
-          "name": "\"Carica papaya\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Carica",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1491753",
-            "wikispecies": "Carica_papaya",
-            "checklistbank-139831": "62811"
-          },
-          "children": [],
-          "uuid": "c6dcd0aa-c6b0-527-984-821246ec7399f1",
-          "description": "\"Carica papaya\" is a caricaceae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "caricaceae"
     },
     {
       "id": "GENUS_JARILLA",
@@ -2111,8 +2093,8 @@
       "lineage": "caricaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 106,
+  "genusCount": 8,
+  "speciesCount": 105,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

@@ -552,12 +552,17 @@
             "col": [
               "4GJPZ"
             ],
-            "checklistbank": "73341",
-            "wikispecies": "Phlyctis_argena",
+            "checklistbank": [
+              "73341",
+              "urn:lsid:marinespecies.org:taxname:426155"
+            ],
+            "wikispecies": [
+              "Phlyctis_argena"
+            ],
             "checklistbank-139831": "182631"
           },
           "uuid": "88481075-3fea-5a6-8ee-2a705e8524d283",
-          "authorityIds": "col:4GJPZ,gbif:8620875,itis:191950,mycobank:400371"
+          "authorityIds": "checklistbank:73341,checklistbank:urn:lsid:marinespecies.org:taxname:426155,checklistbank-139831:182631,col:4GJPZ,gbif:8620875,itis:191950,mycobank:400371,wikispecies:Phlyctis_argena"
         },
         {
           "id": "PHLYCTIS_ATOMELLA",
@@ -912,10 +917,12 @@
               "4GJQB"
             ],
             "checklistbank": "504616",
-            "checklistbank-139831": "504616"
+            "checklistbank-139831": [
+              "504616"
+            ]
           },
           "uuid": "4e0eec40-8956-5f6-ae3-8e0e78578939f3",
-          "authorityIds": "col:4GJQB,gbif:10768746,mycobank:822298"
+          "authorityIds": "checklistbank:504616,checklistbank-139831:504616,col:4GJQB,gbif:10768746,mycobank:822298"
         },
         {
           "id": "PHLYCTIS_PSOROMICA",
@@ -1706,9 +1713,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Phlyctis",
           "sourceIds": {
-            "checklistbank-139831": "404811"
+            "checklistbank-139831": [
+              "404811"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:404811"
         }
       ],
       "authorship": "(Wallroth) Flotow"
@@ -1718,22 +1728,6 @@
       "name": "\"Phlyctis",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PHLYCTIS_ARGENA_ACH_FLOT_1850",
-          "name": "\"Phlyctis argena\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phlyctis",
-          "authorship": "\"(Ach.) Flot., 1850\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426155",
-            "wikispecies": "Phlyctis_argena"
-          },
-          "children": [],
-          "uuid": "8c39fec1-398c-543-967-8aeba6119ea47d",
-          "description": "\"Phlyctis argena\" is a phlyctidaceae species found in its native region."
-        },
         {
           "id": "SP_PHLYCTIS_AGELAEA",
           "name": "Phlyctis agelaea",
@@ -1887,19 +1881,8 @@
           "sourceIds": {
             "checklistbank-139831": "404811"
           },
-          "uuid": "9306f281-90cf-43c8-a9f4-e1b96c6edaf0"
-        },
-        {
-          "id": "SP_PHLYCTIS_PETRAEA",
-          "name": "Phlyctis petraea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phlyctis",
-          "sourceIds": {
-            "checklistbank-139831": "504616"
-          },
-          "uuid": "28a6c7c6-b2d6-4b1d-b00d-811e17455dfa"
+          "uuid": "9306f281-90cf-43c8-a9f4-e1b96c6edaf0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

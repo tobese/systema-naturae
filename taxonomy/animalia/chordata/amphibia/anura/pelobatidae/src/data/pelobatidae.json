@@ -63,9 +63,14 @@
             ],
             "checklistbank": "752",
             "gbif-backbone": "2430565",
-            "checklistbank-1174": "txn:387462"
+            "checklistbank-1174": [
+              "txn:387462"
+            ],
+            "wikispecies": [
+              "Pelobates_cultripes"
+            ]
           },
-          "authorityIds": "col:76CZC,itis:664729,wikidata:Q1084912",
+          "authorityIds": "checklistbank:752,checklistbank-1174:txn:387462,col:76CZC,gbif-backbone:2430565,itis:664729,wikidata:Q1084912,wikispecies:Pelobates_cultripes",
           "authorship": "(Cuvier, 1829)"
         },
         {
@@ -111,10 +116,15 @@
             "col": [
               "76CZD"
             ],
-            "checklistbank": "753",
-            "wikispecies": "Pelobates_fuscus"
+            "checklistbank": [
+              "753",
+              "urn:lsid:marinespecies.org:taxname:1506630"
+            ],
+            "wikispecies": [
+              "Pelobates_fuscus"
+            ]
           },
-          "authorityIds": "col:76CZD,itis:664730,wikidata:Q616507",
+          "authorityIds": "checklistbank:753,checklistbank:urn:lsid:marinespecies.org:taxname:1506630,col:76CZD,itis:664730,wikidata:Q616507,wikispecies:Pelobates_fuscus",
           "authorship": "(Laurenti, 1768)"
         },
         {
@@ -189,9 +199,14 @@
             ],
             "checklistbank": "233777",
             "gbif-backbone": "2430564",
-            "checklistbank-1174": "txn:401238"
+            "checklistbank-1174": [
+              "txn:401238"
+            ],
+            "wikispecies": [
+              "Pelobates_varaldii"
+            ]
           },
-          "authorityIds": "col:76CZL,itis:664732,wikidata:Q1552418",
+          "authorityIds": "checklistbank:233777,checklistbank-1174:txn:401238,col:76CZL,gbif-backbone:2430564,itis:664732,wikidata:Q1552418,wikispecies:Pelobates_varaldii",
           "authorship": "Pasteur & Bons, 1959"
         },
         {
@@ -456,22 +471,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PELOBATES_FUSCUS_LAURENTI_1768",
-          "name": "\"Pelobates fuscus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pelobates",
-          "authorship": "\"(Laurenti, 1768)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1506630",
-            "wikispecies": "Pelobates_fuscus"
-          },
-          "children": [],
-          "uuid": "abca3c52-f41b-56b-b98-1f7244c920892f",
-          "description": "\"Pelobates fuscus\" is a pelobatidae species found in its native region."
-        },
-        {
           "id": "SP_PELOBATES_SYRIACUS_BOETTGER_1889",
           "name": "\"Pelobates syriacus\"",
           "rank": "SPECIES",
@@ -485,34 +484,6 @@
           "children": [],
           "uuid": "e108559b-5a87-5ee-b45-cf5b7a2632f4a7",
           "description": "\"Pelobates syriacus\" is a pelobatidae species found in its native region."
-        },
-        {
-          "id": "SP_PELOBATES_CULTRIPES",
-          "name": "Pelobates cultripes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pelobates",
-          "sourceIds": {
-            "wikispecies": "Pelobates_cultripes",
-            "checklistbank-1174": "txn:387462"
-          },
-          "uuid": "9903af9a-0237-477f-a9cb-6a9342ce2be9",
-          "children": []
-        },
-        {
-          "id": "SP_PELOBATES_VARALDII",
-          "name": "Pelobates varaldii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pelobates",
-          "sourceIds": {
-            "wikispecies": "Pelobates_varaldii",
-            "checklistbank-1174": "txn:401238"
-          },
-          "uuid": "37e855a7-37e3-4ae0-b6d4-5d68aa7ddf6a",
-          "children": []
         },
         {
           "id": "SP_PELOBATES_BALCANICUS",
@@ -551,7 +522,8 @@
           "sourceIds": {
             "checklistbank-139831": "733747"
           },
-          "uuid": "7acacbef-8f27-4c22-838f-f96e4bb2d8e8"
+          "uuid": "7acacbef-8f27-4c22-838f-f96e4bb2d8e8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1497,7 +1469,7 @@
     }
   ],
   "genusCount": 14,
-  "speciesCount": 82,
+  "speciesCount": 80,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

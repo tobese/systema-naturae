@@ -111,12 +111,18 @@
               "6ZZ7R"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:933765"
+              "urn:lsid:marinespecies.org:taxname:933765",
+              "urn:lsid:marinespecies.org:taxname:955093"
             ],
             "gbif-backbone": "9424372",
-            "checklistbank-1174": "txn:475703"
+            "checklistbank-1174": [
+              "txn:475703"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:933765"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933765,col:6ZZ7R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933765,checklistbank:urn:lsid:marinespecies.org:taxname:955093,checklistbank-1174:txn:475703,checklistbank-2011:urn:lsid:marinespecies.org:taxname:933765,col:6ZZ7R,gbif-backbone:9424372",
           "authorship": "(Clessin, 1877)"
         },
         {
@@ -675,9 +681,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:933766"
             ],
-            "checklistbank-1174": "txn:475979"
+            "checklistbank-1174": [
+              "txn:475979"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:933766"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933766,col:533FG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933766,checklistbank-1174:txn:475979,checklistbank-2011:urn:lsid:marinespecies.org:taxname:933766,col:533FG",
           "authorship": "(F. Sandberger, 1886)"
         },
         {
@@ -1167,23 +1178,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_STROBILOPS_COSTATUS_PRYSJAZHNJUK_1978",
-          "name": "\"Strobilops costatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Strobilops",
-          "authorship": "\"Prysjazhnjuk, 1978\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:955093",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933765",
-            "checklistbank-1174": "txn:475703"
-          },
-          "children": [],
-          "uuid": "00a53a82-3d9b-57f-879-60cfdac8397b70",
-          "description": "\"Strobilops costatus is a strobilopsidae species found in its native region."
-        },
-        {
           "id": "SP_STROBILOPS_STREBELI_L_PFEIFFER_1862",
           "name": "\"Strobilops strebeli",
           "rank": "SPECIES",
@@ -1226,21 +1220,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:593112"
           },
           "uuid": "162c7578-10f2-4d28-90d3-abf60a71c1d5",
-          "children": []
-        },
-        {
-          "id": "SP_STROBILOPS_TIARULA_F_SANDBERGER_1886",
-          "name": "Strobilops tiarula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Strobilops",
-          "authorship": "(F. Sandberger, 1886)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933766",
-            "checklistbank-1174": "txn:475979"
-          },
-          "uuid": "91811364-36bb-4924-8b02-68e8b397fa9a",
           "children": []
         },
         {
@@ -2299,7 +2278,8 @@
           "sourceIds": {
             "checklistbank-139831": "1097889"
           },
-          "uuid": "db210958-23b9-425b-9d4e-c59b91ae6160"
+          "uuid": "db210958-23b9-425b-9d4e-c59b91ae6160",
+          "children": []
         },
         {
           "id": "SP_EOSTROBILOPS_WURANICUS",
@@ -2311,7 +2291,8 @@
           "sourceIds": {
             "checklistbank-139831": "1490816"
           },
-          "uuid": "4c60e712-107c-4e04-9c39-85a7768937c6"
+          "uuid": "4c60e712-107c-4e04-9c39-85a7768937c6",
+          "children": []
         },
         {
           "id": "SP_EOSTROBILOPS_TAIWANICUS",
@@ -2323,7 +2304,8 @@
           "sourceIds": {
             "checklistbank-139831": "1524202"
           },
-          "uuid": "ded5c9ad-1fd6-4e30-a906-fe2d9dd681fd"
+          "uuid": "ded5c9ad-1fd6-4e30-a906-fe2d9dd681fd",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3253,7 +3235,7 @@
     }
   ],
   "genusCount": 15,
-  "speciesCount": 178,
+  "speciesCount": 176,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

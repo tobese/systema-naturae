@@ -89,11 +89,19 @@
             "itis": [
               "3147"
             ],
-            "checklistbank": "117667",
-            "checklistbank-1174": "txn:387105"
+            "checklistbank": [
+              "117667",
+              "urn:lsid:marinespecies.org:taxname:149066"
+            ],
+            "checklistbank-1174": [
+              "txn:387105"
+            ],
+            "checklistbank-139831": [
+              "484138"
+            ]
           },
           "uuid": "59d955d7-1481-583-919-f2d7255ed018a8",
-          "authorityIds": "gbif:7793619,itis:3147"
+          "authorityIds": "checklistbank:117667,checklistbank:urn:lsid:marinespecies.org:taxname:149066,checklistbank-1174:txn:387105,checklistbank-139831:484138,gbif:7793619,itis:3147"
         },
         {
           "id": "RHAPHONEIS_ANGULARIS",
@@ -1348,10 +1356,15 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:657971"
             ],
-            "checklistbank-1174": "txn:387109"
+            "checklistbank-1174": [
+              "txn:387109"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:657971"
+            ]
           },
           "uuid": "5378e859-3b38-533-a43-5c3886d33e6b5a",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:657971,gbif:7523042",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:657971,checklistbank-1174:txn:387109,checklistbank-2011:urn:lsid:marinespecies.org:taxname:657971,gbif:7523042",
           "authorship": "Grunow"
         },
         {
@@ -2800,23 +2813,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RHAPHONEIS_AMPHICEROS_EHRENBERG_EHRENBERG_1844",
-          "name": "\"Rhaphoneis amphiceros\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhaphoneis",
-          "authorship": "\"(Ehrenberg) Ehrenberg, 1844\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:149066",
-            "checklistbank-1174": "txn:387105",
-            "checklistbank-139831": "484138"
-          },
-          "children": [],
-          "uuid": "d642c5ca-6743-588-8f6-59fa5f3688885c",
-          "description": "\"Rhaphoneis amphiceros\" is a rhaphoneidaceae species found in its native region."
-        },
-        {
           "id": "SP_RHAPHONEIS_BELGICA_GRUNOW_1881",
           "name": "\"Rhaphoneis belgica\"",
           "rank": "SPECIES",
@@ -2913,21 +2909,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:648019"
           },
           "uuid": "0dff338f-7c37-48a9-848e-73a679ddfa76",
-          "children": []
-        },
-        {
-          "id": "SP_RHAPHONEIS_LANCETTULA_GRUNOW",
-          "name": "Rhaphoneis lancettula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhaphoneis",
-          "authorship": "Grunow",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:657971",
-            "checklistbank-1174": "txn:387109"
-          },
-          "uuid": "304edb1e-fae5-4cff-a98f-86324e727b1c",
           "children": []
         },
         {
@@ -4665,7 +4646,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 241,
+  "speciesCount": 239,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

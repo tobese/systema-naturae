@@ -2212,9 +2212,11 @@
               "7R8NR"
             ],
             "checklistbank": "1457937",
-            "checklistbank-139831": "1457937"
+            "checklistbank-139831": [
+              "1457937"
+            ]
           },
-          "authorityIds": "col:7R8NR",
+          "authorityIds": "checklistbank:1457937,checklistbank-139831:1457937,col:7R8NR",
           "description": "Euglandina irakita is a spiraxidae species found in its native region."
         },
         {
@@ -2578,8 +2580,11 @@
           "children": [],
           "uuid": "a852f2e4-f095-536-a94-9b319b6673a6ec",
           "sourceIds": {
-            "checklistbank-139831": "1048024"
-          }
+            "checklistbank-139831": [
+              "1048024"
+            ]
+          },
+          "authorityIds": "checklistbank-139831:1048024"
         },
         {
           "id": "SP_EUGLANDINA_CUCUTENSIS_PILSBRY_1939",
@@ -2617,9 +2622,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Euglandina",
           "sourceIds": {
-            "checklistbank-139831": "255387"
+            "checklistbank-139831": [
+              "255387"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:255387"
         }
       ]
     },
@@ -3157,31 +3165,8 @@
           "sourceIds": {
             "checklistbank-139831": "255387"
           },
-          "uuid": "df575642-f4d1-448c-8422-16a163f12c2d"
-        },
-        {
-          "id": "SP_EUGLANDINA_ECUADORIANA",
-          "name": "Euglandina ecuadoriana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euglandina",
-          "sourceIds": {
-            "checklistbank-139831": "1048024"
-          },
-          "uuid": "e00ee0e2-e60d-4f1c-85de-f6263173fdd2"
-        },
-        {
-          "id": "SP_EUGLANDINA_IRAKITA",
-          "name": "Euglandina irakita",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euglandina",
-          "sourceIds": {
-            "checklistbank-139831": "1457937"
-          },
-          "uuid": "6717b681-8257-41ec-a0f1-31d8e79e060f"
+          "uuid": "df575642-f4d1-448c-8422-16a163f12c2d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9722,8 +9707,11 @@
           "children": [],
           "uuid": "20d0a8d5-c0d6-5cc-b5a-8d408c9dd0d9b5",
           "sourceIds": {
-            "checklistbank-139831": "982264"
-          }
+            "checklistbank-139831": [
+              "982264"
+            ]
+          },
+          "authorityIds": "checklistbank-139831:982264"
         }
       ]
     },
@@ -9789,18 +9777,6 @@
           },
           "uuid": "1dc618b4-7b34-41ed-b41e-da68e12e9941",
           "children": []
-        },
-        {
-          "id": "SP_POIRETIA_ALGIRA",
-          "name": "Poiretia algira",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Poiretia",
-          "sourceIds": {
-            "checklistbank-139831": "982264"
-          },
-          "uuid": "abe4e540-b7a2-47b8-b55d-2e8bc287c695"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10990,7 +10966,7 @@
     }
   ],
   "genusCount": 31,
-  "speciesCount": 539,
+  "speciesCount": 540,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

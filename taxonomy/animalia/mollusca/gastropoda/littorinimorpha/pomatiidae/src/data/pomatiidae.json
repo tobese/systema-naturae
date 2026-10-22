@@ -1182,12 +1182,18 @@
               "4LQTB"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:934205"
+              "urn:lsid:marinespecies.org:taxname:934205",
+              "urn:lsid:marinespecies.org:taxname:934857"
             ],
             "gbif-backbone": "8955094",
-            "checklistbank-1174": "txn:475915"
+            "checklistbank-1174": [
+              "txn:475915"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:934205"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934205,col:4LQTB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934205,checklistbank:urn:lsid:marinespecies.org:taxname:934857,checklistbank-1174:txn:475915,checklistbank-2011:urn:lsid:marinespecies.org:taxname:934205,col:4LQTB,gbif-backbone:8955094",
           "authorship": "(Klein, 1853)"
         },
         {
@@ -2065,23 +2071,6 @@
           "children": [],
           "uuid": "2321ed93-d193-53c-b24-c16d3c331d8367",
           "description": "\"Pomatias antiquus is a pomatiidae species found in its native region."
-        },
-        {
-          "id": "SP_POMATIAS_CONICUS_OMNICKI_1902",
-          "name": "\"Pomatias conicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pomatias",
-          "authorship": "\"(Łomnicki, 1902)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934857",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:934205",
-            "checklistbank-1174": "txn:475915"
-          },
-          "children": [],
-          "uuid": "f8cd4ced-267f-57d-84b-7fbec623c09dc4",
-          "description": "\"Pomatias conicus is a pomatiidae species found in its native region."
         },
         {
           "id": "SP_POMATIAS_PRAECURRENS_SACCO_1886",
@@ -13818,7 +13807,7 @@
     }
   ],
   "genusCount": 55,
-  "speciesCount": 800,
+  "speciesCount": 799,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

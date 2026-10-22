@@ -5263,7 +5263,8 @@
           "sourceIds": {
             "checklistbank-139831": "1456723"
           },
-          "uuid": "2aebcca6-b398-4822-98dc-e5d810437a2a"
+          "uuid": "2aebcca6-b398-4822-98dc-e5d810437a2a",
+          "children": []
         },
         {
           "id": "SP_EPISTOMAROIDES_PUNCTULATA",
@@ -5275,7 +5276,8 @@
           "sourceIds": {
             "checklistbank-139831": "1628802"
           },
-          "uuid": "d5965ac8-dd37-4a75-b6b0-4aa800cf177a"
+          "uuid": "d5965ac8-dd37-4a75-b6b0-4aa800cf177a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6062,11 +6064,16 @@
             "col": [
               "5V6S6"
             ],
-            "checklistbank": "ott5671231",
-            "checklistbank-1174": "txn:355113"
+            "checklistbank": [
+              "ott5671231",
+              "urn:lsid:marinespecies.org:taxname:764142"
+            ],
+            "checklistbank-1174": [
+              "txn:355113"
+            ]
           },
           "uuid": "12552271-3a03-5ca-b69-c6a4f09f8b3d45",
-          "authorityIds": "col:5V6S6,gbif:7932945",
+          "authorityIds": "checklistbank:ott5671231,checklistbank:urn:lsid:marinespecies.org:taxname:764142,checklistbank-1174:txn:355113,col:5V6S6,gbif:7932945",
           "authorship": "Cushman and Hobson 1935"
         },
         {
@@ -6963,11 +6970,16 @@
             "col": [
               "7ZZR5"
             ],
-            "checklistbank": "txn:355114",
-            "checklistbank-1174": "txn:355114"
+            "checklistbank": [
+              "txn:355114",
+              "urn:lsid:marinespecies.org:taxname:904003"
+            ],
+            "checklistbank-1174": [
+              "txn:355114"
+            ]
           },
           "uuid": "f4ce970d-4bae-5d7-ad5-cacf035131aa85",
-          "authorityIds": "col:7ZZR5,gbif:8970233",
+          "authorityIds": "checklistbank:txn:355114,checklistbank:urn:lsid:marinespecies.org:taxname:904003,checklistbank-1174:txn:355114,col:7ZZR5,gbif:8970233",
           "authorship": "Cushman and Siegfus 1939"
         },
         {
@@ -10919,22 +10931,6 @@
           "description": "\"Anomalina deprimiformis\" is a anomalinidae species found in its native region."
         },
         {
-          "id": "SP_ANOMALINA_CALIFORNIENSIS_CUSHMAN_HOBSON_1935",
-          "name": "\"Anomalina californiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Anomalina",
-          "authorship": "\"Cushman & Hobson, 1935\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:764142",
-            "checklistbank-1174": "txn:355113"
-          },
-          "children": [],
-          "uuid": "7eeff56e-2ba9-53f-928-30611e8b505339",
-          "description": "\"Anomalina californiensis\" is a anomalinidae species found in its native region."
-        },
-        {
           "id": "SP_ANOMALINA_DIFFERENS_MCCULLOCH_1977",
           "name": "\"Anomalina differens\"",
           "rank": "SPECIES",
@@ -11638,22 +11634,6 @@
           "children": [],
           "uuid": "9ba8a4b8-0e7c-571-b25-cdbc708ca30c9c",
           "description": "\"Anomalina fukushimaensis\" is a anomalinidae species found in its native region."
-        },
-        {
-          "id": "SP_ANOMALINA_GARZAENSIS_CUSHMAN_SIEGFUS_1939",
-          "name": "\"Anomalina garzaensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Anomalina",
-          "authorship": "\"Cushman & Siegfus, 1939\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:904003",
-            "checklistbank-1174": "txn:355114"
-          },
-          "children": [],
-          "uuid": "3f3a73f0-f022-570-8a7-eac69a67624e50",
-          "description": "\"Anomalina garzaensis\" is a anomalinidae species found in its native region."
         },
         {
           "id": "SP_ANOMALINA_GIBBOSA_TERQUEM_1878",
@@ -15508,23 +15488,6 @@
           "description": "Cibicidoides cicatricosus is a anomalinidae species found in its native region."
         },
         {
-          "id": "SP_CIBICIDOIDES_UNGERIANUS",
-          "name": "Cibicidoides ungerianus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cibicidoides",
-          "sourceIds": {
-            "checklistbank": "ott904285",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1466360",
-            "checklistbank-1174": "txn:503914"
-          },
-          "children": [],
-          "authorship": "d'Orbigny, 1846",
-          "uuid": "af747bff-9049-5ff-b47-44b1ab8a15eb6d",
-          "description": "Cibicidoides ungerianus is a anomalinidae species found in its native region."
-        },
-        {
           "id": "SP_CIBICIDOIDES_LOBATULUS",
           "name": "Cibicidoides lobatulus",
           "rank": "SPECIES",
@@ -17605,7 +17568,7 @@
     }
   ],
   "genusCount": 35,
-  "speciesCount": 973,
+  "speciesCount": 970,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

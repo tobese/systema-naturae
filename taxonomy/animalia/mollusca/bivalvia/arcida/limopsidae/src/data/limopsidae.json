@@ -325,10 +325,15 @@
             "col": [
               "6QFNZ"
             ],
-            "checklistbank": "taicol: 77126",
-            "checklistbank-1174": "txn:101484"
+            "checklistbank": [
+              "taicol: 77126",
+              "urn:lsid:marinespecies.org:taxname:504571"
+            ],
+            "checklistbank-1174": [
+              "txn:101484"
+            ]
           },
-          "authorityIds": "col:6QFNZ",
+          "authorityIds": "checklistbank:taicol: 77126,checklistbank:urn:lsid:marinespecies.org:taxname:504571,checklistbank-1174:txn:101484,col:6QFNZ",
           "authorship": "Adams & Reeve, 1850"
         },
         {
@@ -840,9 +845,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1660077"
             ],
-            "checklistbank-1174": "txn:99823"
+            "checklistbank-1174": [
+              "txn:99823"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1660077"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1660077,col:BDB4R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1660077,checklistbank-1174:txn:99823,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1660077,col:BDB4R",
           "authorship": "(K. Martin, 1885)"
         },
         {
@@ -1085,9 +1095,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1442589"
             ],
-            "checklistbank-1174": "txn:116857"
+            "checklistbank-1174": [
+              "txn:116857"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1442589"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1442589,col:7RXP9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1442589,checklistbank-1174:txn:116857,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1442589,col:7RXP9",
           "authorship": "(G. B. Sowerby I, 1846)"
         },
         {
@@ -2283,9 +2298,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1596905"
             ],
-            "checklistbank-1174": "txn:93350"
+            "checklistbank-1174": [
+              "txn:93350"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1596905"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1596905,col:72FML",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1596905,checklistbank-1174:txn:93350,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1596905,col:72FML",
           "authorship": "(J. De C. Sowerby, 1824)"
         },
         {
@@ -4843,22 +4863,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LIMOPSIS_BELCHERI_A_ADAMS_REEVE_1850",
-          "name": "\"Limopsis belcheri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Limopsis",
-          "authorship": "\"(A. Adams & Reeve, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:504571",
-            "checklistbank-1174": "txn:101484"
-          },
-          "children": [],
-          "uuid": "5e8831c7-afb7-569-8a7-ead73b5b1198cc",
-          "description": "\"Limopsis belcheri\" is a limopsidae species found in its native region."
-        },
-        {
           "id": "SP_LIMOPSIS_LIMOPSIS_FRENEIX_1972",
           "name": "\"Limopsis (Limopsis)",
           "rank": "SPECIES",
@@ -4987,21 +4991,6 @@
           "children": []
         },
         {
-          "id": "SP_LIMOPSIS_INSOLITA_G_B_SOWERBY_I_1846",
-          "name": "Limopsis insolita",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Limopsis",
-          "authorship": "(G. B. Sowerby I, 1846)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1442589",
-            "checklistbank-1174": "txn:116857"
-          },
-          "uuid": "2d2bd46d-3bbc-49b3-bb96-3b9f0b8d581f",
-          "children": []
-        },
-        {
           "id": "SP_LIMOPSIS_GRANULATA_LAMARCK_1805",
           "name": "Limopsis granulata",
           "rank": "SPECIES",
@@ -5044,21 +5033,6 @@
           "children": []
         },
         {
-          "id": "SP_LIMOPSIS_SCALARIS_J_DE_C_SOWERBY_1824",
-          "name": "Limopsis scalaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Limopsis",
-          "authorship": "(J. De C. Sowerby, 1824)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1596905",
-            "checklistbank-1174": "txn:93350"
-          },
-          "uuid": "2c155d1b-9807-452d-a48d-56318a6bb0be",
-          "children": []
-        },
-        {
           "id": "SP_LIMOPSIS_PEROBLIQUA_K_MARTIN_1885",
           "name": "Limopsis perobliqua",
           "rank": "SPECIES",
@@ -5070,21 +5044,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1660075"
           },
           "uuid": "14f843b1-3b72-4972-8614-15f245178fd7",
-          "children": []
-        },
-        {
-          "id": "SP_LIMOPSIS_FENESTRATA_K_MARTIN_1885",
-          "name": "Limopsis fenestrata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Limopsis",
-          "authorship": "(K. Martin, 1885)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1660077",
-            "checklistbank-1174": "txn:99823"
-          },
-          "uuid": "667976ed-deeb-4863-b622-26292beedf66",
           "children": []
         },
         {
@@ -5266,7 +5225,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211092"
           },
-          "uuid": "1baf00eb-5b38-49cc-8f88-33e481a840d4"
+          "uuid": "1baf00eb-5b38-49cc-8f88-33e481a840d4",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_EUCOSMUS",
@@ -5278,7 +5238,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211101"
           },
-          "uuid": "962cd421-3a79-4f6c-8e09-96241c3709e9"
+          "uuid": "962cd421-3a79-4f6c-8e09-96241c3709e9",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_PENELEVIS",
@@ -5290,7 +5251,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211102"
           },
-          "uuid": "c00e6ba4-8ab8-4924-86bf-14d74f38f051"
+          "uuid": "c00e6ba4-8ab8-4924-86bf-14d74f38f051",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_VIXORNATA",
@@ -5302,7 +5264,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211103"
           },
-          "uuid": "0318c827-0840-411a-9258-21291c246353"
+          "uuid": "0318c827-0840-411a-9258-21291c246353",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_TENUIS",
@@ -5314,7 +5277,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211104"
           },
-          "uuid": "5b915fd5-3427-421e-8930-8f73f623e58e"
+          "uuid": "5b915fd5-3427-421e-8930-8f73f623e58e",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_TENISONI",
@@ -5326,7 +5290,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211105"
           },
-          "uuid": "006914b4-fc2a-49f6-ae16-8800d09aa066"
+          "uuid": "006914b4-fc2a-49f6-ae16-8800d09aa066",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_BRAZIERI",
@@ -5338,7 +5303,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211112"
           },
-          "uuid": "e000b23b-8379-427c-858e-8ed185e761e6"
+          "uuid": "e000b23b-8379-427c-858e-8ed185e761e6",
+          "children": []
         },
         {
           "id": "SP_LIMOPSIS_LORINGI",
@@ -5350,7 +5316,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211115"
           },
-          "uuid": "83353a02-25f2-4d3c-bbfa-97524f5023e6"
+          "uuid": "83353a02-25f2-4d3c-bbfa-97524f5023e6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6803,7 +6770,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 383,
+  "speciesCount": 387,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

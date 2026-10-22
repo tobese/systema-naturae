@@ -1204,11 +1204,22 @@
             "itis": [
               "562244"
             ],
-            "checklistbank": "179055",
-            "wikispecies": "Pitta_sordida",
-            "gbif-backbone": "2489527"
+            "checklistbank": [
+              "179055",
+              "urn:lsid:marinespecies.org:taxname:1034724"
+            ],
+            "wikispecies": [
+              "Pitta_sordida"
+            ],
+            "gbif-backbone": "2489527",
+            "checklistbank-139831": [
+              "14389"
+            ],
+            "checklistbank-170809": [
+              "103656903"
+            ]
           },
-          "authorityIds": "col:4JBYP,itis:562244,wikidata:Q1075282",
+          "authorityIds": "checklistbank:179055,checklistbank:urn:lsid:marinespecies.org:taxname:1034724,checklistbank-139831:14389,checklistbank-170809:103656903,col:4JBYP,gbif-backbone:2489527,itis:562244,wikidata:Q1075282,wikispecies:Pitta_sordida",
           "authorship": "(Statius Mller, 1776)"
         },
         {
@@ -1706,24 +1717,6 @@
       "name": "\"Pitta",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PITTA_SORDIDA_STATIUS_M_LLER_1776",
-          "name": "\"Pitta sordida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pitta",
-          "authorship": "\"(Statius Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034724",
-            "wikispecies": "Pitta_sordida",
-            "checklistbank-139831": "14389",
-            "checklistbank-170809": "103656903"
-          },
-          "children": [],
-          "uuid": "8260ca70-e0b3-5c6-9a5-6af222c7c1101d",
-          "description": "\"Pitta sordida\" is a pittidae species found in its native region."
-        },
         {
           "id": "SP_PITTA_ANERYTHRA",
           "name": "Pitta anerythra",
@@ -2507,7 +2500,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 117,
+  "speciesCount": 116,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

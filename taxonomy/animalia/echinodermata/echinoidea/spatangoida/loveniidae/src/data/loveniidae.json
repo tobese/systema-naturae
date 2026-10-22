@@ -309,7 +309,8 @@
           "sourceIds": {
             "checklistbank-139831": "354624"
           },
-          "uuid": "a1129dab-a183-4c32-961e-adeeb9296f81"
+          "uuid": "a1129dab-a183-4c32-961e-adeeb9296f81",
+          "children": []
         },
         {
           "id": "SP_BREYNIA_VREDENBURGI",
@@ -321,7 +322,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163259"
           },
-          "uuid": "a0977663-5668-41b7-9eab-c24847554a9f"
+          "uuid": "a0977663-5668-41b7-9eab-c24847554a9f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1224,10 +1226,15 @@
             "col": [
               "3W8GF"
             ],
-            "checklistbank": "ott3649713",
-            "wikispecies": "Lovenia_doederleini"
+            "checklistbank": [
+              "ott3649713",
+              "urn:lsid:marinespecies.org:taxname:513669"
+            ],
+            "wikispecies": [
+              "Lovenia_doederleini"
+            ]
           },
-          "authorityIds": "col:3W8GF",
+          "authorityIds": "checklistbank:ott3649713,checklistbank:urn:lsid:marinespecies.org:taxname:513669,col:3W8GF,wikispecies:Lovenia_doederleini",
           "children": [],
           "description": "Lovenia doederleini is a loveniidae species found in its native region."
         },
@@ -1558,22 +1565,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LOVENIA_DOEDERLEINI_MORTENSEN_1948",
-          "name": "\"Lovenia doederleini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lovenia",
-          "authorship": "\"Mortensen, 1948\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:513669",
-            "wikispecies": "Lovenia_doederleini"
-          },
-          "children": [],
-          "uuid": "5b90516f-54d1-57e-978-35a815512fea63",
-          "description": "\"Lovenia doederleini is a loveniidae species found in its native region."
-        },
-        {
           "id": "SP_LOVENIA_ELONGATA",
           "name": "Lovenia elongata",
           "rank": "SPECIES",
@@ -1652,7 +1643,8 @@
           "sourceIds": {
             "checklistbank-139831": "354627"
           },
-          "uuid": "cd20196d-e30f-4593-8563-be83f38a1ca0"
+          "uuid": "cd20196d-e30f-4593-8563-be83f38a1ca0",
+          "children": []
         },
         {
           "id": "SP_LOVENIA_TRIFORIS",
@@ -1664,7 +1656,8 @@
           "sourceIds": {
             "checklistbank-139831": "354628"
           },
-          "uuid": "cd9228dc-986a-47a2-9ee9-3a843863b9b6"
+          "uuid": "cd9228dc-986a-47a2-9ee9-3a843863b9b6",
+          "children": []
         },
         {
           "id": "SP_LOVENIA_CAMAROTA",
@@ -1676,7 +1669,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163242"
           },
-          "uuid": "6b44fd94-c385-4def-9fa1-bdbe7b8f5fdf"
+          "uuid": "6b44fd94-c385-4def-9fa1-bdbe7b8f5fdf",
+          "children": []
         },
         {
           "id": "SP_LOVENIA_LATA",
@@ -1688,7 +1682,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163243"
           },
-          "uuid": "900e9a72-fcbb-4e1b-85ca-c1dffbd5bd17"
+          "uuid": "900e9a72-fcbb-4e1b-85ca-c1dffbd5bd17",
+          "children": []
         },
         {
           "id": "SP_LOVENIA_GRISEA",
@@ -1700,7 +1695,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163246"
           },
-          "uuid": "b5814c2a-6ced-4180-a7db-ae1c4a09cde6"
+          "uuid": "b5814c2a-6ced-4180-a7db-ae1c4a09cde6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3191,7 +3187,7 @@
       "lineage": "loveniidae"
     }
   ],
-  "speciesCount": 178,
+  "speciesCount": 184,
   "appSlug": "loveniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

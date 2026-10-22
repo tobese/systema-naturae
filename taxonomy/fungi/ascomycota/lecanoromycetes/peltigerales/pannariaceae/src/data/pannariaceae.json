@@ -926,12 +926,17 @@
             "col": [
               "75MKW"
             ],
-            "checklistbank": "71282",
-            "wikispecies": "Pannaria_caespitosa",
+            "checklistbank": [
+              "71282",
+              "urn:lsid:marinespecies.org:taxname:1604910"
+            ],
+            "wikispecies": [
+              "Pannaria_caespitosa"
+            ],
             "gbif-backbone": "3424724"
           },
           "uuid": "76448f67-9af1-51b-977-cba4de29dc28ba",
-          "authorityIds": "col:75MKW,gbif:3424724,mycobank:474311"
+          "authorityIds": "checklistbank:71282,checklistbank:urn:lsid:marinespecies.org:taxname:1604910,col:75MKW,gbif:3424724,gbif-backbone:3424724,mycobank:474311,wikispecies:Pannaria_caespitosa"
         },
         {
           "id": "PANNARIA_CALOPHYLLA",
@@ -1843,13 +1848,21 @@
             "col": [
               "4CFVL"
             ],
-            "checklistbank": "71303",
-            "wikispecies": "Pannaria_hookeri",
+            "checklistbank": [
+              "71303",
+              "urn:lsid:marinespecies.org:taxname:1607441"
+            ],
+            "wikispecies": [
+              "Pannaria_hookeri"
+            ],
             "checklistbank-2008": "659250",
-            "gbif-backbone": "3424617"
+            "gbif-backbone": "3424617",
+            "checklistbank-139831": [
+              "226891"
+            ]
           },
           "uuid": "85033b82-6926-520-9b6-f18d0d40e297eb",
-          "authorityIds": "col:4CFVL,gbif:3424617,itis:191306,mycobank:396917"
+          "authorityIds": "checklistbank:71303,checklistbank:urn:lsid:marinespecies.org:taxname:1607441,checklistbank-139831:226891,checklistbank-2008:659250,col:4CFVL,gbif:3424617,gbif-backbone:3424617,itis:191306,mycobank:396917,wikispecies:Pannaria_hookeri"
         },
         {
           "id": "PANNARIA_HOWEANA",
@@ -5878,39 +5891,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PANNARIA_CAESPITOSA_P_M_J_RG_2000",
-          "name": "\"Pannaria caespitosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pannaria",
-          "authorship": "\"P.M. Jørg., 2000\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604910",
-            "wikispecies": "Pannaria_caespitosa"
-          },
-          "children": [],
-          "uuid": "300fde06-98de-5e4-876-28301ea9dd49b2",
-          "description": "\"Pannaria caespitosa\" is a pannariaceae species found in its native region."
-        },
-        {
-          "id": "SP_PANNARIA_HOOKERI_BORRER_NYL_1858",
-          "name": "\"Pannaria hookeri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pannaria",
-          "authorship": "\"(Borrer) Nyl., 1858\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607441",
-            "wikispecies": "Pannaria_hookeri",
-            "checklistbank-139831": "226891"
-          },
-          "children": [],
-          "uuid": "e24d54f7-ef98-513-ab7-bba095bf7e75a6",
-          "description": "\"Pannaria hookeri\" is a pannariaceae species found in its native region."
-        },
-        {
           "id": "SP_PANNARIA_CONOPLEA",
           "name": "Pannaria conoplea",
           "rank": "SPECIES",
@@ -6726,7 +6706,8 @@
           "sourceIds": {
             "checklistbank-139831": "69215"
           },
-          "uuid": "3916b830-b21a-4ce5-9d4e-146c7d722150"
+          "uuid": "3916b830-b21a-4ce5-9d4e-146c7d722150",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_PERFOSSA",
@@ -6738,7 +6719,8 @@
           "sourceIds": {
             "checklistbank-139831": "404521"
           },
-          "uuid": "eb0dd8ea-1cee-4a55-a48d-010121923b47"
+          "uuid": "eb0dd8ea-1cee-4a55-a48d-010121923b47",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_ATHROOPHYLLA",
@@ -6750,7 +6732,8 @@
           "sourceIds": {
             "checklistbank-139831": "425365"
           },
-          "uuid": "65d8bdd8-3209-4a0e-9186-179bcb28dd54"
+          "uuid": "65d8bdd8-3209-4a0e-9186-179bcb28dd54",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_AOTEAROANA",
@@ -6762,7 +6745,8 @@
           "sourceIds": {
             "checklistbank-139831": "555402"
           },
-          "uuid": "54ac6939-0b9e-4fd3-bf2a-ae5b0cd23864"
+          "uuid": "54ac6939-0b9e-4fd3-bf2a-ae5b0cd23864",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_GALLOWAYI",
@@ -6774,7 +6758,8 @@
           "sourceIds": {
             "checklistbank-139831": "555403"
           },
-          "uuid": "ed7e0990-1b7a-4d3b-8241-f8a6955e5cb9"
+          "uuid": "ed7e0990-1b7a-4d3b-8241-f8a6955e5cb9",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_LASIELLA",
@@ -6786,7 +6771,8 @@
           "sourceIds": {
             "checklistbank-139831": "855902"
           },
-          "uuid": "050cc178-a6df-467f-aa51-b48a8a5de78e"
+          "uuid": "050cc178-a6df-467f-aa51-b48a8a5de78e",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_PYXINOIDES",
@@ -6798,7 +6784,8 @@
           "sourceIds": {
             "checklistbank-139831": "1026555"
           },
-          "uuid": "b7a40ce2-3229-49da-8084-aaa71cbb1276"
+          "uuid": "b7a40ce2-3229-49da-8084-aaa71cbb1276",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_ALLORHIZA",
@@ -6810,7 +6797,8 @@
           "sourceIds": {
             "checklistbank-139831": "1075496"
           },
-          "uuid": "c74e92cf-f852-460b-8121-e3bca40efbcc"
+          "uuid": "c74e92cf-f852-460b-8121-e3bca40efbcc",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_PATAGONICA",
@@ -6822,7 +6810,8 @@
           "sourceIds": {
             "checklistbank-139831": "1349120"
           },
-          "uuid": "4a0bf32a-a08f-46de-ba13-8fab360ff1e9"
+          "uuid": "4a0bf32a-a08f-46de-ba13-8fab360ff1e9",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_LEPIDOPHORA",
@@ -6834,7 +6823,8 @@
           "sourceIds": {
             "checklistbank-139831": "1510356"
           },
-          "uuid": "1d7cff21-9afe-4569-8606-68c272e15aa0"
+          "uuid": "1d7cff21-9afe-4569-8606-68c272e15aa0",
+          "children": []
         },
         {
           "id": "SP_PANNARIA_OREGONENSIS",
@@ -6846,7 +6836,8 @@
           "sourceIds": {
             "checklistbank-139831": "1614340"
           },
-          "uuid": "47192578-b3c2-4e82-85c1-0c09ff8d055d"
+          "uuid": "47192578-b3c2-4e82-85c1-0c09ff8d055d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7046,11 +7037,19 @@
             "mycobank": [
               "402737"
             ],
-            "checklistbank": "71401",
-            "wikispecies": "Psoroma_buchananii"
+            "checklistbank": [
+              "71401",
+              "urn:lsid:marinespecies.org:taxname:1606328"
+            ],
+            "wikispecies": [
+              "Psoroma_buchananii"
+            ],
+            "checklistbank-139831": [
+              "405366"
+            ]
           },
           "uuid": "dd20ef53-8b9b-5f2-ba6-b0bfc66b7443fc",
-          "authorityIds": "gbif:3424926,mycobank:402737"
+          "authorityIds": "checklistbank:71401,checklistbank:urn:lsid:marinespecies.org:taxname:1606328,checklistbank-139831:405366,gbif:3424926,mycobank:402737,wikispecies:Psoroma_buchananii"
         },
         {
           "id": "PSOROMA_CALIGINOSUM",
@@ -7187,12 +7186,20 @@
             "col": [
               "4PLTZ"
             ],
-            "checklistbank": "71403",
-            "wikispecies": "Psoroma_cinnamomeum",
-            "gbif-backbone": "2601325"
+            "checklistbank": [
+              "71403",
+              "urn:lsid:marinespecies.org:taxname:1604807"
+            ],
+            "wikispecies": [
+              "Psoroma_cinnamomeum"
+            ],
+            "gbif-backbone": "2601325",
+            "checklistbank-139831": [
+              "463908"
+            ]
           },
           "uuid": "c55b876d-f342-510-845-6476827d2d1ea8",
-          "authorityIds": "col:4PLTZ,gbif:2601325,mycobank:402750"
+          "authorityIds": "checklistbank:71403,checklistbank:urn:lsid:marinespecies.org:taxname:1604807,checklistbank-139831:463908,col:4PLTZ,gbif:2601325,gbif-backbone:2601325,mycobank:402750,wikispecies:Psoroma_cinnamomeum"
         },
         {
           "id": "PSOROMA_CORALLOIDEUM",
@@ -7459,12 +7466,20 @@
             "col": [
               "78JZX"
             ],
-            "checklistbank": "71411",
-            "wikispecies": "Psoroma_fruticulosum",
-            "gbif-backbone": "2601321"
+            "checklistbank": [
+              "71411",
+              "urn:lsid:marinespecies.org:taxname:1604808"
+            ],
+            "wikispecies": [
+              "Psoroma_fruticulosum"
+            ],
+            "gbif-backbone": "2601321",
+            "checklistbank-139831": [
+              "408895"
+            ]
           },
           "uuid": "8a948645-0f4c-55c-906-cc59c7fce4be1c",
-          "authorityIds": "col:78JZX,gbif:2601321,mycobank:109222"
+          "authorityIds": "checklistbank:71411,checklistbank:urn:lsid:marinespecies.org:taxname:1604808,checklistbank-139831:408895,col:78JZX,gbif:2601321,gbif-backbone:2601321,mycobank:109222,wikispecies:Psoroma_fruticulosum"
         },
         {
           "id": "PSOROMA_FUEGENSIS",
@@ -7575,12 +7590,20 @@
             "itis": [
               "191463"
             ],
-            "checklistbank": "71415",
-            "wikispecies": "Psoroma_hypnorum",
-            "gbif-backbone": "10998654"
+            "checklistbank": [
+              "71415",
+              "urn:lsid:marinespecies.org:taxname:1606338"
+            ],
+            "wikispecies": [
+              "Psoroma_hypnorum"
+            ],
+            "gbif-backbone": "10998654",
+            "checklistbank-139831": [
+              "229263"
+            ]
           },
           "uuid": "fc5ac795-9b4e-508-b88-06af01883ea89e",
-          "authorityIds": "col:6WJP4,gbif:10998654,itis:191463,mycobank:402777"
+          "authorityIds": "checklistbank:71415,checklistbank:urn:lsid:marinespecies.org:taxname:1606338,checklistbank-139831:229263,col:6WJP4,gbif:10998654,gbif-backbone:10998654,itis:191463,mycobank:402777,wikispecies:Psoroma_hypnorum"
         },
         {
           "id": "PSOROMA_INFLATUM",
@@ -7888,11 +7911,16 @@
             "mycobank": [
               "437046"
             ],
-            "checklistbank": "ott3779511",
-            "wikispecies": "Psoroma_pannarioides"
+            "checklistbank": [
+              "ott3779511",
+              "urn:lsid:marinespecies.org:taxname:1604809"
+            ],
+            "wikispecies": [
+              "Psoroma_pannarioides"
+            ]
           },
           "uuid": "fb666fa2-f162-5a2-998-49077ac783657d",
-          "authorityIds": "gbif:3424899,mycobank:437046"
+          "authorityIds": "checklistbank:ott3779511,checklistbank:urn:lsid:marinespecies.org:taxname:1604809,gbif:3424899,mycobank:437046,wikispecies:Psoroma_pannarioides"
         },
         {
           "id": "PSOROMA_PHOLIDOTOIDES",
@@ -8140,11 +8168,19 @@
             "itis": [
               "191464"
             ],
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:229790",
-            "wikispecies": "Psoroma_tenue"
+            "checklistbank": [
+              "urn:lsid:dyntaxa.se:Taxon:229790",
+              "urn:lsid:marinespecies.org:taxname:1604811"
+            ],
+            "wikispecies": [
+              "Psoroma_tenue"
+            ],
+            "checklistbank-139831": [
+              "229264"
+            ]
           },
           "uuid": "62601121-088c-5c5-9c5-7ac2a7af4d0bbd",
-          "authorityIds": "gbif:6018298,itis:191464,mycobank:111867"
+          "authorityIds": "checklistbank:urn:lsid:dyntaxa.se:Taxon:229790,checklistbank:urn:lsid:marinespecies.org:taxname:1604811,checklistbank-139831:229264,gbif:6018298,itis:191464,mycobank:111867,wikispecies:Psoroma_tenue"
         },
         {
           "id": "PSOROMA_XANTHOMELANUM",
@@ -9183,56 +9219,6 @@
           "description": "\"Psoroma antarcticum\" is a pannariaceae species found in its native region."
         },
         {
-          "id": "SP_PSOROMA_CINNAMOMEUM_MALME_1925",
-          "name": "\"Psoroma cinnamomeum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psoroma",
-          "authorship": "\"Malme, 1925\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604807",
-            "wikispecies": "Psoroma_cinnamomeum",
-            "checklistbank-139831": "463908"
-          },
-          "children": [],
-          "uuid": "c634099c-2ff6-560-bf2-cad5d6db590ad2",
-          "description": "\"Psoroma cinnamomeum\" is a pannariaceae species found in its native region."
-        },
-        {
-          "id": "SP_PSOROMA_FRUTICULOSUM_P_JAMES_HENSSEN_1983",
-          "name": "\"Psoroma fruticulosum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psoroma",
-          "authorship": "\"P. James & Henssen, 1983\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604808",
-            "wikispecies": "Psoroma_fruticulosum",
-            "checklistbank-139831": "408895"
-          },
-          "children": [],
-          "uuid": "3df1d719-8a2e-511-81f-4c5eb33d403846",
-          "description": "\"Psoroma fruticulosum\" is a pannariaceae species found in its native region."
-        },
-        {
-          "id": "SP_PSOROMA_PANNARIOIDES_HENSSEN_1983",
-          "name": "\"Psoroma pannarioides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psoroma",
-          "authorship": "\"Henssen, 1983\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604809",
-            "wikispecies": "Psoroma_pannarioides"
-          },
-          "children": [],
-          "uuid": "c1b9f746-7f05-513-9f6-3d10f7de4ee318",
-          "description": "\"Psoroma pannarioides\" is a pannariaceae species found in its native region."
-        },
-        {
           "id": "SP_PSOROMA_SACCHARATUM_SCUTARI_CALVELO_1995",
           "name": "\"Psoroma saccharatum\"",
           "rank": "SPECIES",
@@ -9248,40 +9234,6 @@
           "description": "\"Psoroma saccharatum\" is a pannariaceae species found in its native region."
         },
         {
-          "id": "SP_PSOROMA_TENUE_HENSSEN_1981",
-          "name": "\"Psoroma tenue\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psoroma",
-          "authorship": "\"Henssen, 1981\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604811",
-            "wikispecies": "Psoroma_tenue",
-            "checklistbank-139831": "229264"
-          },
-          "children": [],
-          "uuid": "93dd8a21-340a-536-8c5-29d8c7ce669a3b",
-          "description": "\"Psoroma tenue\" is a pannariaceae species found in its native region."
-        },
-        {
-          "id": "SP_PSOROMA_BUCHANANII_C_KNIGHT_NYL_1886",
-          "name": "\"Psoroma buchananii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psoroma",
-          "authorship": "\"(C. Knight) Nyl., 1886\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606328",
-            "wikispecies": "Psoroma_buchananii",
-            "checklistbank-139831": "405366"
-          },
-          "children": [],
-          "uuid": "ead9fc8e-1e8a-544-835-2debf268551b5c",
-          "description": "\"Psoroma buchananii\" is a pannariaceae species found in its native region."
-        },
-        {
           "id": "SP_PSOROMA_CILIATUM_ACH_EX_NYL_1891",
           "name": "\"Psoroma ciliatum\"",
           "rank": "SPECIES",
@@ -9295,23 +9247,6 @@
           "children": [],
           "uuid": "7314200d-5aac-5d4-8f3-d9a17d9c97715e",
           "description": "\"Psoroma ciliatum\" is a pannariaceae species found in its native region."
-        },
-        {
-          "id": "SP_PSOROMA_HYPNORUM_VAHL_GRAY_1821",
-          "name": "\"Psoroma hypnorum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psoroma",
-          "authorship": "\"(Vahl) Gray, 1821\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606338",
-            "wikispecies": "Psoroma_hypnorum",
-            "checklistbank-139831": "229263"
-          },
-          "children": [],
-          "uuid": "47d8039a-f618-57c-b09-bb16d646ef441f",
-          "description": "\"Psoroma hypnorum\" is a pannariaceae species found in its native region."
         },
         {
           "id": "SP_PSOROMA_ORPHNINUM_HUE_P_M_J_RG_2014",
@@ -9520,7 +9455,8 @@
           "sourceIds": {
             "checklistbank-139831": "175389"
           },
-          "uuid": "a2cc3422-db03-499c-a8f3-ade0be206602"
+          "uuid": "a2cc3422-db03-499c-a8f3-ade0be206602",
+          "children": []
         },
         {
           "id": "SP_PSOROMA_CORALLOIDEUM",
@@ -9532,7 +9468,8 @@
           "sourceIds": {
             "checklistbank-139831": "405372"
           },
-          "uuid": "eef71b49-3ab8-4857-8437-68fcf618b549"
+          "uuid": "eef71b49-3ab8-4857-8437-68fcf618b549",
+          "children": []
         },
         {
           "id": "SP_PSOROMA_INFLATUM",
@@ -9544,7 +9481,8 @@
           "sourceIds": {
             "checklistbank-139831": "1285435"
           },
-          "uuid": "fb4180a6-2236-4373-a6ca-5cd1d44bdfe3"
+          "uuid": "fb4180a6-2236-4373-a6ca-5cd1d44bdfe3",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -13132,7 +13070,8 @@
           "sourceIds": {
             "checklistbank-139831": "404640"
           },
-          "uuid": "008ae696-11dd-44fa-862d-a86aca2b428f"
+          "uuid": "008ae696-11dd-44fa-862d-a86aca2b428f",
+          "children": []
         },
         {
           "id": "SP_PARMELIELLA_LACERATA",
@@ -13144,7 +13083,8 @@
           "sourceIds": {
             "checklistbank-139831": "596818"
           },
-          "uuid": "37081a54-7329-489f-b780-79a0076a55c1"
+          "uuid": "37081a54-7329-489f-b780-79a0076a55c1",
+          "children": []
         },
         {
           "id": "SP_PARMELIELLA_THRIPTOPHYLLA",
@@ -13156,7 +13096,8 @@
           "sourceIds": {
             "checklistbank-139831": "1347949"
           },
-          "uuid": "f1f817a0-4b91-4f9b-bf0f-c3731ec63c8f"
+          "uuid": "f1f817a0-4b91-4f9b-bf0f-c3731ec63c8f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14941,12 +14882,17 @@
             "col": [
               "6CGQN"
             ],
-            "checklistbank": "173425",
-            "wikispecies": "Degelia_subantarctica",
+            "checklistbank": [
+              "173425",
+              "urn:lsid:marinespecies.org:taxname:1604861"
+            ],
+            "wikispecies": [
+              "Degelia_subantarctica"
+            ],
             "gbif-backbone": "3425089"
           },
           "uuid": "a4373fd7-dbc1-579-80f-27d985ebab19ac",
-          "authorityIds": "col:6CGQN,gbif:3425089,mycobank:474444"
+          "authorityIds": "checklistbank:173425,checklistbank:urn:lsid:marinespecies.org:taxname:1604861,col:6CGQN,gbif:3425089,gbif-backbone:3425089,mycobank:474444,wikispecies:Degelia_subantarctica"
         },
         {
           "id": "DEGELIA_SUBCINCINNATA",
@@ -15146,22 +15092,6 @@
       "name": "\"Degelia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_DEGELIA_SUBANTARCTICA_VSTEDAL_2001",
-          "name": "\"Degelia subantarctica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Degelia",
-          "authorship": "\"Øvstedal, 2001\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604861",
-            "wikispecies": "Degelia_subantarctica"
-          },
-          "children": [],
-          "uuid": "2c282e83-8a25-549-85f-69435e04e474ac",
-          "description": "\"Degelia subantarctica\" is a pannariaceae species found in its native region."
-        },
         {
           "id": "SP_DEGELIA_CALCICOLA",
           "name": "Degelia calcicola",
@@ -16379,12 +16309,20 @@
             "col": [
               "6K4LK"
             ],
-            "checklistbank": "71249",
-            "wikispecies": "Fuscopannaria_praetermissa",
-            "gbif-backbone": "7915891"
+            "checklistbank": [
+              "71249",
+              "urn:lsid:marinespecies.org:taxname:1609747"
+            ],
+            "wikispecies": [
+              "Fuscopannaria_praetermissa"
+            ],
+            "gbif-backbone": "7915891",
+            "checklistbank-139831": [
+              "220265"
+            ]
           },
           "uuid": "f535766f-bc89-5c1-b34-4527e99e48e766",
-          "authorityIds": "col:6K4LK,gbif:7915891,mycobank:414886"
+          "authorityIds": "checklistbank:71249,checklistbank:urn:lsid:marinespecies.org:taxname:1609747,checklistbank-139831:220265,col:6K4LK,gbif:7915891,gbif-backbone:7915891,mycobank:414886,wikispecies:Fuscopannaria_praetermissa"
         },
         {
           "id": "FUSCOPANNARIA_PROTENSA",
@@ -16939,23 +16877,6 @@
       "name": "\"Fuscopannaria",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_FUSCOPANNARIA_PRAETERMISSA_NYL_P_M_J_RG_1994",
-          "name": "\"Fuscopannaria praetermissa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fuscopannaria",
-          "authorship": "\"(Nyl.) P.M. Jørg., 1994\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1609747",
-            "wikispecies": "Fuscopannaria_praetermissa",
-            "checklistbank-139831": "220265"
-          },
-          "children": [],
-          "uuid": "1df66fbc-1593-5b9-9df-4e4933b1f343dd",
-          "description": "\"Fuscopannaria praetermissa\" is a pannariaceae species found in its native region."
-        },
         {
           "id": "SP_FUSCOPANNARIA_FRULLANIAE",
           "name": "Fuscopannaria frullaniae",
@@ -17538,7 +17459,8 @@
           "sourceIds": {
             "checklistbank-139831": "1258746"
           },
-          "uuid": "4169302d-85c4-44d0-a9f2-5a4738733585"
+          "uuid": "4169302d-85c4-44d0-a9f2-5a4738733585",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -18052,12 +17974,17 @@
             "col": [
               "4N6HD"
             ],
-            "checklistbank": "71393",
-            "wikispecies": "Protopannaria_austro-orcadensis",
+            "checklistbank": [
+              "71393",
+              "urn:lsid:marinespecies.org:taxname:1607406"
+            ],
+            "wikispecies": [
+              "Protopannaria_austro-orcadensis"
+            ],
             "gbif-backbone": "3424991"
           },
           "uuid": "75e0aca4-3a67-52c-8aa-bc2e299baaee46",
-          "authorityIds": "col:4N6HD,gbif:3424991,mycobank:474143"
+          "authorityIds": "checklistbank:71393,checklistbank:urn:lsid:marinespecies.org:taxname:1607406,col:4N6HD,gbif:3424991,gbif-backbone:3424991,mycobank:474143,wikispecies:Protopannaria_austro-orcadensis"
         },
         {
           "id": "PROTOPANNARIA_AZORELLA",
@@ -18249,22 +18176,6 @@
       "name": "\"Protopannaria",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PROTOPANNARIA_AUSTRO_ORCADENSIS_VSTEDAL_P_M_J_RG_2001",
-          "name": "\"Protopannaria austro-orcadensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protopannaria",
-          "authorship": "\"(Øvstedal) P.M. Jørg., 2001\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607406",
-            "wikispecies": "Protopannaria_austro-orcadensis"
-          },
-          "children": [],
-          "uuid": "18cf2d95-badb-5df-a2b-6731cef2b8b4c6",
-          "description": "\"Protopannaria austro-orcadensis\" is a pannariaceae species found in its native region."
-        },
         {
           "id": "SP_PROTOPANNARIA_ALCICORNIS",
           "name": "Protopannaria alcicornis",
@@ -23596,7 +23507,7 @@
   ],
   "authorship": "Tuckerman",
   "genusCount": 74,
-  "speciesCount": 1123,
+  "speciesCount": 1112,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

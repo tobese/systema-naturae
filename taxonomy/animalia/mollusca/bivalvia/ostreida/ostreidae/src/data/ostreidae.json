@@ -10571,23 +10571,6 @@
           "description": "\"Ostrea (Alectryonia) is a ostreidae species found in its native region."
         },
         {
-          "id": "SP_OSTREA_CONTRACTA_J_A_GARDNER_1945",
-          "name": "\"Ostrea contracta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ostrea",
-          "authorship": "\"J. A. Gardner, 1945\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1860984",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1860983",
-            "checklistbank-1174": "txn:397641"
-          },
-          "children": [],
-          "uuid": "6a0588ca-a9f2-511-9d6-c2463c33ec24c8",
-          "description": "\"Ostrea contracta is a ostreidae species found in its native region."
-        },
-        {
           "id": "SP_OSTREA_MULTILIRATA_J_A_GARDNER_1935",
           "name": "\"Ostrea multilirata",
           "rank": "SPECIES",
@@ -11199,7 +11182,8 @@
           "sourceIds": {
             "checklistbank-139831": "226708"
           },
-          "uuid": "ac1b2964-a6c4-474a-b141-dbfb34622c2b"
+          "uuid": "ac1b2964-a6c4-474a-b141-dbfb34622c2b",
+          "children": []
         },
         {
           "id": "SP_OSTREA_ATHERSTONEI",
@@ -11211,7 +11195,8 @@
           "sourceIds": {
             "checklistbank-139831": "680371"
           },
-          "uuid": "c4e0f433-dae4-48ef-8784-84ce4a066141"
+          "uuid": "c4e0f433-dae4-48ef-8784-84ce4a066141",
+          "children": []
         },
         {
           "id": "SP_OSTREA_PUELCHANA",
@@ -11223,7 +11208,8 @@
           "sourceIds": {
             "checklistbank-139831": "704362"
           },
-          "uuid": "6d21d621-5282-496f-827b-d3ab10bf60f7"
+          "uuid": "6d21d621-5282-496f-827b-d3ab10bf60f7",
+          "children": []
         },
         {
           "id": "SP_OSTREA_STENTINA",
@@ -11235,7 +11221,8 @@
           "sourceIds": {
             "checklistbank-139831": "1106009"
           },
-          "uuid": "487dd31d-dd46-4c35-9e4b-fa6c37a7798d"
+          "uuid": "487dd31d-dd46-4c35-9e4b-fa6c37a7798d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11640,9 +11627,14 @@
               "urn:lsid:marinespecies.org:taxname:1598462"
             ],
             "gbif-backbone": "4951276",
-            "checklistbank-1174": "txn:122616"
+            "checklistbank-1174": [
+              "txn:122616"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1598462"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598462,col:9G9WG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598462,checklistbank-1174:txn:122616,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1598462,col:9G9WG,gbif-backbone:4951276",
           "authorship": "(A. d'Orbigny, 1839)"
         },
         {
@@ -12031,12 +12023,18 @@
               "V9TG3"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1860983"
+              "urn:lsid:marinespecies.org:taxname:1860983",
+              "urn:lsid:marinespecies.org:taxname:1860984"
             ],
             "gbif-backbone": "8885805",
-            "checklistbank-1174": "txn:397641"
+            "checklistbank-1174": [
+              "txn:397641"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1860983"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1860983,col:V9TG3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1860983,checklistbank:urn:lsid:marinespecies.org:taxname:1860984,checklistbank-1174:txn:397641,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1860983,col:V9TG3,gbif-backbone:8885805",
           "authorship": "Conrad, 1855"
         },
         {
@@ -12894,7 +12892,12 @@
           "authorship": "Thunberg",
           "sourceIds": {
             "checklistbank": "b2ddf304-76bb-4ff8-96a9-f9b190a9cd8b",
-            "checklistbank-1174": "txn:305594"
+            "checklistbank-1174": [
+              "txn:305594"
+            ],
+            "wikispecies": [
+              "Crassostrea_gigas"
+            ]
           },
           "children": [],
           "uuid": "b272c469-4f2e-551-94d-8d045e5337b0f8",
@@ -13162,35 +13165,6 @@
           "children": []
         },
         {
-          "id": "SP_CRASSOSTREA_PATAGONICA_A_D_ORBIGNY_1839",
-          "name": "Crassostrea patagonica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Crassostrea",
-          "authorship": "(A. d'Orbigny, 1839)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1598462",
-            "checklistbank-1174": "txn:122616"
-          },
-          "uuid": "fc79eda3-6df8-4404-bbfd-b1f91654a166",
-          "children": []
-        },
-        {
-          "id": "SP_CRASSOSTREA_GIGAS",
-          "name": "Crassostrea gigas",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Crassostrea",
-          "sourceIds": {
-            "wikispecies": "Crassostrea_gigas",
-            "checklistbank-1174": "txn:305594"
-          },
-          "uuid": "c50ac038-2ec3-4738-b9e1-f918c5c2e8ad",
-          "children": []
-        },
-        {
           "id": "SP_CRASSOSTREA_ALABAMIENSIS_LEA_1833",
           "name": "Crassostrea alabamiensis",
           "rank": "SPECIES",
@@ -13399,9 +13373,17 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:506713"
             ],
-            "checklistbank-1174": "txn:371658"
+            "checklistbank-1174": [
+              "txn:371658"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:506713"
+            ],
+            "checklistbank-127379": [
+              "5cdf5b88-bf1d-402b-b97b-f2cb40833c45"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506713,col:34LWV,itis:1268061"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506713,checklistbank-1174:txn:371658,checklistbank-127379:5cdf5b88-bf1d-402b-b97b-f2cb40833c45,checklistbank-2011:urn:lsid:marinespecies.org:taxname:506713,col:34LWV,itis:1268061"
         },
         {
           "id": "SP_DENDOSTREA_SENEGALENSIS",
@@ -13710,22 +13692,6 @@
           "children": []
         },
         {
-          "id": "SP_DENDOSTREA_SANDVICHENSIS_G_B_SOWERBY_II_1871",
-          "name": "Dendostrea sandvichensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dendostrea",
-          "authorship": "(G. B. Sowerby II, 1871)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:506713",
-            "checklistbank-1174": "txn:371658",
-            "checklistbank-127379": "5cdf5b88-bf1d-402b-b97b-f2cb40833c45"
-          },
-          "uuid": "5c3a5f29-2830-41fc-9123-dfeef51ac55d",
-          "children": []
-        },
-        {
           "id": "SP_DENDOSTREA_SENEGALENSIS_GMELIN_1791",
           "name": "Dendostrea senegalensis",
           "rank": "SPECIES",
@@ -13875,11 +13841,19 @@
             "itis": [
               "1268013"
             ],
-            "checklistbank": "10ff21b3-08e4-4483-badd-af5384d379c6",
+            "checklistbank": [
+              "10ff21b3-08e4-4483-badd-af5384d379c6",
+              "urn:lsid:marinespecies.org:taxname:397183"
+            ],
             "gbif-backbone": "4595317",
-            "checklistbank-1174": "txn:100226"
+            "checklistbank-1174": [
+              "txn:100226"
+            ],
+            "checklistbank-127379": [
+              "ff07641e-bd6d-4233-8676-5a381056d303"
+            ]
           },
-          "authorityIds": "col:6WYJ4,itis:1268013"
+          "authorityIds": "checklistbank:10ff21b3-08e4-4483-badd-af5384d379c6,checklistbank:urn:lsid:marinespecies.org:taxname:397183,checklistbank-1174:txn:100226,checklistbank-127379:ff07641e-bd6d-4233-8676-5a381056d303,col:6WYJ4,gbif-backbone:4595317,itis:1268013"
         },
         {
           "id": "SP_SACCOSTREA_KEGAKI_TORIGOE_INABA_1981",
@@ -13947,11 +13921,16 @@
             "itis": [
               "1268002"
             ],
-            "checklistbank": "23001e83-bacb-43cf-b759-8a8123131137",
+            "checklistbank": [
+              "23001e83-bacb-43cf-b759-8a8123131137",
+              "urn:lsid:marinespecies.org:taxname:819190"
+            ],
             "gbif-backbone": "5855433",
-            "checklistbank-1174": "txn:305592"
+            "checklistbank-1174": [
+              "txn:305592"
+            ]
           },
-          "authorityIds": "col:6WYJ6,itis:1268002"
+          "authorityIds": "checklistbank:23001e83-bacb-43cf-b759-8a8123131137,checklistbank:urn:lsid:marinespecies.org:taxname:819190,checklistbank-1174:txn:305592,col:6WYJ6,gbif-backbone:5855433,itis:1268002"
         },
         {
           "id": "SP_SACCOSTREA_MORDOIDES_Z_M_CUI_L_S_HU_C_LI_Z_ZHANG_X_M_GUO_H_Y_WANG_2021",
@@ -13998,9 +13977,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:506729"
             ],
-            "checklistbank-1174": "txn:94307"
+            "checklistbank-1174": [
+              "txn:94307"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:506729"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506729,col:78YJ6,itis:1268004"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506729,checklistbank-1174:txn:94307,checklistbank-2011:urn:lsid:marinespecies.org:taxname:506729,col:78YJ6,itis:1268004"
         },
         {
           "id": "SP_SACCOSTREA_SACCELLUS",
@@ -14327,23 +14311,6 @@
           "description": "\"Saccostrea cuccullata\" is a ostreidae species found in its native region."
         },
         {
-          "id": "SP_SACCOSTREA_GLOMERATA_A_A_GOULD_1850",
-          "name": "\"Saccostrea glomerata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Saccostrea",
-          "authorship": "\"(A. A. Gould, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:397183",
-            "checklistbank-1174": "txn:100226",
-            "checklistbank-127379": "ff07641e-bd6d-4233-8676-5a381056d303"
-          },
-          "children": [],
-          "uuid": "3955a559-1e0b-5f3-877-0f260e2742d0f8",
-          "description": "\"Saccostrea glomerata\" is a ostreidae species found in its native region."
-        },
-        {
           "id": "SP_SACCOSTREA_SCYPHOPHILLA_F_P_RON_LESUEUR_1807",
           "name": "\"Saccostrea scyphophilla\"",
           "rank": "SPECIES",
@@ -14374,37 +14341,6 @@
           "children": [],
           "uuid": "99f37013-95de-5c9-94a-973b8158ffbfa9",
           "description": "\"Saccostrea echinata\" is a ostreidae species found in its native region."
-        },
-        {
-          "id": "SP_SACCOSTREA_MORDAX_A_A_GOULD_1850",
-          "name": "\"Saccostrea mordax\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Saccostrea",
-          "authorship": "\"(A. A. Gould, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:819190",
-            "checklistbank-1174": "txn:305592"
-          },
-          "children": [],
-          "uuid": "12f8c8ff-e145-5f1-9a6-3f6ebc8069004d",
-          "description": "\"Saccostrea mordax\" is a ostreidae species found in its native region."
-        },
-        {
-          "id": "SP_SACCOSTREA_PALMULA_P_P_CARPENTER_1857",
-          "name": "Saccostrea palmula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Saccostrea",
-          "authorship": "(P. P. Carpenter, 1857)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:506729",
-            "checklistbank-1174": "txn:94307"
-          },
-          "uuid": "f1dad58d-1db8-41df-8cec-40a4cdd615fa",
-          "children": []
         },
         {
           "id": "SP_SACCOSTREA_MALABONENSIS_FAUSTINO_1932",
@@ -14899,10 +14835,18 @@
             "col": [
               "BM6K"
             ],
-            "checklistbank": "e9ceaf6a-3189-4d40-b14e-1d56455e42ae",
-            "checklistbank-1174": "txn:309883"
+            "checklistbank": [
+              "e9ceaf6a-3189-4d40-b14e-1d56455e42ae",
+              "urn:lsid:marinespecies.org:taxname:506699"
+            ],
+            "checklistbank-1174": [
+              "txn:309883"
+            ],
+            "checklistbank-127379": [
+              "034d3b27-455c-4810-af5e-b86b10a826b1"
+            ]
           },
-          "authorityIds": "col:BM6K,itis:1267968"
+          "authorityIds": "checklistbank:e9ceaf6a-3189-4d40-b14e-1d56455e42ae,checklistbank:urn:lsid:marinespecies.org:taxname:506699,checklistbank-1174:txn:309883,checklistbank-127379:034d3b27-455c-4810-af5e-b86b10a826b1,col:BM6K,itis:1267968"
         },
         {
           "id": "SP_ALECTRYONELLA_HALIOTIDAEA_LAMARCK_1819",
@@ -14935,32 +14879,6 @@
           "description": "Alectryonella crenulifera is a ostreidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_ALECTRYONELLA",
-      "name": "\"Alectryonella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ALECTRYONELLA_PLICATULA_GMELIN_1791",
-          "name": "\"Alectryonella plicatula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Alectryonella",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506699",
-            "checklistbank-1174": "txn:309883",
-            "checklistbank-127379": "034d3b27-455c-4810-af5e-b86b10a826b1"
-          },
-          "children": [],
-          "uuid": "1b73dea6-1a0a-550-889-5e32933ff69ff5",
-          "description": "\"Alectryonella plicatula\" is a ostreidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ostreidae"
     },
     {
       "id": "GENUS_CUBITOSTREA",
@@ -16012,9 +15930,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1656265"
             ],
-            "checklistbank-1174": "txn:100239"
+            "checklistbank-1174": [
+              "txn:100239"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1656265"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1656265,col:B8NG9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1656265,checklistbank-1174:txn:100239,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1656265,col:B8NG9",
           "authorship": "(K. Martin, 1922)"
         },
         {
@@ -17133,21 +17056,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1350163"
           },
           "uuid": "494a1dea-0c04-4c62-be78-dcc41b501dbc",
-          "children": []
-        },
-        {
-          "id": "SP_LOPHA_CHLAMYDOIDES_K_MARTIN_1922",
-          "name": "Lopha chlamydoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lopha",
-          "authorship": "(K. Martin, 1922)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1656265",
-            "checklistbank-1174": "txn:100239"
-          },
-          "uuid": "d12d53a4-0c18-4e55-ac4f-ce8dfe6be66c",
           "children": []
         },
         {
@@ -18428,7 +18336,8 @@
           "sourceIds": {
             "checklistbank-139831": "1613122"
           },
-          "uuid": "de203fd6-b664-471e-bdbf-a878c8d8e16f"
+          "uuid": "de203fd6-b664-471e-bdbf-a878c8d8e16f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -20632,8 +20541,8 @@
       "lineage": "ostreidae"
     }
   ],
-  "genusCount": 68,
-  "speciesCount": 1270,
+  "genusCount": 67,
+  "speciesCount": 1266,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

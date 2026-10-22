@@ -67,9 +67,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507358"
             ],
-            "checklistbank-1174": "txn:293333"
+            "checklistbank-1174": [
+              "txn:293333"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507358"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507358,col:54JP3,itis:81277"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507358,checklistbank-1174:txn:293333,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507358,col:54JP3,itis:81277"
         },
         {
           "id": "SP_TAGELUS_BOLIVARENSIS_CLARK_DURHAM_1946",
@@ -350,9 +355,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507359"
             ],
-            "checklistbank-1174": "txn:303390"
+            "checklistbank-1174": [
+              "txn:303390"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507359"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507359,col:54JPH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507359,checklistbank-1174:txn:303390,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507359,col:54JPH",
           "authorship": "(P. P. Carpenter, 1857)"
         },
         {
@@ -393,12 +403,15 @@
           "authorship": "(Lightfoot, 1786)",
           "sourceIds": {
             "checklistbank": "102955",
-            "checklistbank-139831": "71254"
+            "checklistbank-139831": [
+              "71254"
+            ]
           },
           "children": [],
           "uuid": "56bedf7e-c67d-5b3-a65-b4d2009c4d629e",
           "commonName": "stout tagelus",
-          "description": "Tagelus plebeius (stout tagelus) is a solecurtidae species found in its native region."
+          "description": "Tagelus plebeius (stout tagelus) is a solecurtidae species found in its native region.",
+          "authorityIds": "checklistbank:102955,checklistbank-139831:71254"
         },
         {
           "id": "SP_TAGELUS_BOLIVARENSIS_B_L_CLARK_1946",
@@ -541,9 +554,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Tagelus",
           "sourceIds": {
-            "checklistbank-139831": "560630"
+            "checklistbank-139831": [
+              "560630"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:560630"
         }
       ]
     },
@@ -579,36 +595,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:225506"
           },
           "uuid": "9a377d00-f632-466b-a806-d774fe5f3483",
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_AFFINIS_C_B_ADAMS_1852",
-          "name": "Tagelus affinis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tagelus",
-          "authorship": "(C. B. Adams, 1852)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507358",
-            "checklistbank-1174": "txn:293333"
-          },
-          "uuid": "29113ccc-a285-456e-9a5f-c8b8bf50dd86",
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_POLITUS_P_P_CARPENTER_1857",
-          "name": "Tagelus politus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tagelus",
-          "authorship": "(P. P. Carpenter, 1857)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507359",
-            "checklistbank-1174": "txn:303390"
-          },
-          "uuid": "a08ae159-7c8a-48a2-8ad4-5cf5e68f6dcc",
           "children": []
         },
         {
@@ -710,18 +696,6 @@
           "children": []
         },
         {
-          "id": "SP_TAGELUS_PLEBEIUS",
-          "name": "Tagelus plebeius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tagelus",
-          "sourceIds": {
-            "checklistbank-139831": "71254"
-          },
-          "uuid": "ef3edd35-91f3-479b-a80e-4c6ff523b7ec"
-        },
-        {
           "id": "SP_TAGELUS_LONGISINUATUS",
           "name": "Tagelus longisinuatus",
           "rank": "SPECIES",
@@ -731,7 +705,8 @@
           "sourceIds": {
             "checklistbank-139831": "560630"
           },
-          "uuid": "de8c6ca7-55b8-4436-acc6-01809ea56752"
+          "uuid": "de8c6ca7-55b8-4436-acc6-01809ea56752",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1849,10 +1824,15 @@
             "col": [
               "4Y5FC"
             ],
-            "checklistbank": "61544",
-            "checklistbank-1174": "txn:161393"
+            "checklistbank": [
+              "61544",
+              "urn:lsid:marinespecies.org:taxname:141544"
+            ],
+            "checklistbank-1174": [
+              "txn:161393"
+            ]
           },
-          "authorityIds": "col:4Y5FC",
+          "authorityIds": "checklistbank:61544,checklistbank:urn:lsid:marinespecies.org:taxname:141544,checklistbank-1174:txn:161393,col:4Y5FC",
           "authorship": "(Linné, 1758)"
         },
         {
@@ -2090,11 +2070,14 @@
           "authorship": "Kuroda et Habe,1961",
           "sourceIds": {
             "checklistbank": "167f9943-1356-42f9-8af4-c83d7666cb1a",
-            "checklistbank-139831": "1207636"
+            "checklistbank-139831": [
+              "1207636"
+            ]
           },
           "children": [],
           "uuid": "a7e4d447-a6d6-5b5-9c4-19e91d37ca7102",
-          "description": "Solecurtus consimilis is a solecurtidae species found in its native region."
+          "description": "Solecurtus consimilis is a solecurtidae species found in its native region.",
+          "authorityIds": "checklistbank:167f9943-1356-42f9-8af4-c83d7666cb1a,checklistbank-139831:1207636"
         },
         {
           "id": "SP_SOLECURTUS_WILSONI_TRYON_1870",
@@ -2151,12 +2134,15 @@
           "authorship": "A. d'Orbigny, 1853",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:420919",
-            "checklistbank-139831": "1207648"
+            "checklistbank-139831": [
+              "1207648"
+            ]
           },
           "children": [],
           "uuid": "fc3b1b3f-a1b1-5a9-b3b-0fcd846c506050",
           "commonName": "stubby solecurtus",
-          "description": "Solecurtus sanctaemarthae (stubby solecurtus) is a solecurtidae species found in its native region."
+          "description": "Solecurtus sanctaemarthae (stubby solecurtus) is a solecurtidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420919,checklistbank-139831:1207648"
         },
         {
           "id": "SP_SOLECURTUS_BENSONI_H_J_FINLAY_1924",
@@ -2303,11 +2289,14 @@
           "authorship": "Woolacott",
           "sourceIds": {
             "checklistbank": "00de110c-3048-4638-b7da-86cfabf911a2",
-            "checklistbank-139831": "1207644"
+            "checklistbank-139831": [
+              "1207644"
+            ]
           },
           "children": [],
           "uuid": "7bfb8193-adba-504-a68-1d71364df56c5c",
-          "description": "Solecurtus leone is a solecurtidae species found in its native region."
+          "description": "Solecurtus leone is a solecurtidae species found in its native region.",
+          "authorityIds": "checklistbank:00de110c-3048-4638-b7da-86cfabf911a2,checklistbank-139831:1207644"
         },
         {
           "id": "SP_SOLECURTUS_QUAERITUS_HUBER",
@@ -2319,11 +2308,14 @@
           "authorship": "Huber",
           "sourceIds": {
             "checklistbank": "de0a5cf1-91c2-4dfc-a1ff-48320680cc0d",
-            "checklistbank-139831": "1207639"
+            "checklistbank-139831": [
+              "1207639"
+            ]
           },
           "children": [],
           "uuid": "1f7f2ae9-f09b-561-ad9-f454442b937350",
-          "description": "Solecurtus quaeritus is a solecurtidae species found in its native region."
+          "description": "Solecurtus quaeritus is a solecurtidae species found in its native region.",
+          "authorityIds": "checklistbank:de0a5cf1-91c2-4dfc-a1ff-48320680cc0d,checklistbank-139831:1207639"
         },
         {
           "id": "SP_SOLECURTUS_SUBCANDIDUS_STURANY",
@@ -2335,11 +2327,14 @@
           "authorship": "Sturany",
           "sourceIds": {
             "checklistbank": "6f967d21-706c-4038-bdea-a0b7b5efd9da",
-            "checklistbank-139831": "1207640"
+            "checklistbank-139831": [
+              "1207640"
+            ]
           },
           "children": [],
           "uuid": "28c5abd1-8fbf-524-a3f-026d376add22c6",
-          "description": "Solecurtus subcandidus is a solecurtidae species found in its native region."
+          "description": "Solecurtus subcandidus is a solecurtidae species found in its native region.",
+          "authorityIds": "checklistbank:6f967d21-706c-4038-bdea-a0b7b5efd9da,checklistbank-139831:1207640"
         },
         {
           "id": "SP_SOLECURTUS_MARKUSHUBERI",
@@ -2573,22 +2568,6 @@
           "description": "\"Solecurtus scopula\" is a solecurtidae species found in its native region."
         },
         {
-          "id": "SP_SOLECURTUS_STRIGILATUS_LINNAEUS_1758",
-          "name": "\"Solecurtus strigilatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141544",
-            "checklistbank-1174": "txn:161393"
-          },
-          "children": [],
-          "uuid": "bd291b1c-a9c2-59d-b39-d4fe3de83cd184",
-          "description": "\"Solecurtus strigilatus\" is a solecurtidae species found in its native region."
-        },
-        {
           "id": "SP_SOLECURTUS_CUMINGIANUS_DUNKER_1862",
           "name": "\"Solecurtus cumingianus\"",
           "rank": "SPECIES",
@@ -2817,66 +2796,6 @@
           },
           "uuid": "d0803ad4-b27d-4fd1-bb57-a8e88bd0dd63",
           "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_CONSIMILIS",
-          "name": "Solecurtus consimilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solecurtus",
-          "sourceIds": {
-            "checklistbank-139831": "1207636"
-          },
-          "uuid": "106b14ee-f0cf-4e55-92bc-b9c3d72b90d6"
-        },
-        {
-          "id": "SP_SOLECURTUS_QUAERITUS",
-          "name": "Solecurtus quaeritus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solecurtus",
-          "sourceIds": {
-            "checklistbank-139831": "1207639"
-          },
-          "uuid": "0540f9db-fa60-4f7f-80e8-cb6a8f6b73da"
-        },
-        {
-          "id": "SP_SOLECURTUS_SUBCANDIDUS",
-          "name": "Solecurtus subcandidus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solecurtus",
-          "sourceIds": {
-            "checklistbank-139831": "1207640"
-          },
-          "uuid": "20d221ef-5009-4f18-b4cf-924bcec2177c"
-        },
-        {
-          "id": "SP_SOLECURTUS_LEONE",
-          "name": "Solecurtus leone",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solecurtus",
-          "sourceIds": {
-            "checklistbank-139831": "1207644"
-          },
-          "uuid": "7336801d-f477-4aef-a347-39037e9c01d8"
-        },
-        {
-          "id": "SP_SOLECURTUS_SANCTAEMARTHAE",
-          "name": "Solecurtus sanctaemarthae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solecurtus",
-          "sourceIds": {
-            "checklistbank-139831": "1207648"
-          },
-          "uuid": "4ccf92e6-ec89-40e7-9e61-1d51b259ba1c"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3341,7 +3260,7 @@
     }
   ],
   "genusCount": 17,
-  "speciesCount": 187,
+  "speciesCount": 185,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

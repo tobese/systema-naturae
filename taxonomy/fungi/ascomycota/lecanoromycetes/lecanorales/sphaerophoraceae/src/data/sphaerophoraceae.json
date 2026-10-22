@@ -1162,12 +1162,17 @@
             "col": [
               "4YRD4"
             ],
-            "checklistbank": "75321",
-            "wikispecies": "Sphaerophorus_globosus",
+            "checklistbank": [
+              "75321",
+              "urn:lsid:marinespecies.org:taxname:1607259"
+            ],
+            "wikispecies": [
+              "Sphaerophorus_globosus"
+            ],
             "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=405438"
           },
           "uuid": "bccc3ff8-1fa4-526-866-27cc173ec648b5",
-          "authorityIds": "col:4YRD4,gbif:5261338,mycobank:405438"
+          "authorityIds": "checklistbank:75321,checklistbank:urn:lsid:marinespecies.org:taxname:1607259,checklistbank-316361:https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=405438,col:4YRD4,gbif:5261338,mycobank:405438,wikispecies:Sphaerophorus_globosus"
         },
         {
           "id": "SPHAEROPHORUS_MEIOPHORUS",
@@ -1903,22 +1908,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SPHAEROPHORUS_GLOBOSUS_HUDS_VAIN_1903",
-          "name": "\"Sphaerophorus globosus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sphaerophorus",
-          "authorship": "\"(Huds.) Vain., 1903\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607259",
-            "wikispecies": "Sphaerophorus_globosus"
-          },
-          "children": [],
-          "uuid": "623c0efe-7d0e-5af-bc2-399ad258d63033",
-          "description": "\"Sphaerophorus globosus\" is a sphaerophoraceae species found in its native region."
-        },
-        {
           "id": "SP_SPHAEROPHORUS_POLYCLADUS_M_LL_ARG_M_LL_ARG_1888",
           "name": "\"Sphaerophorus polycladus\"",
           "rank": "SPECIES",
@@ -1995,7 +1984,8 @@
           "sourceIds": {
             "checklistbank-139831": "406126"
           },
-          "uuid": "5f4fb271-28b2-4bcd-babe-eb87baf64f3e"
+          "uuid": "5f4fb271-28b2-4bcd-babe-eb87baf64f3e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

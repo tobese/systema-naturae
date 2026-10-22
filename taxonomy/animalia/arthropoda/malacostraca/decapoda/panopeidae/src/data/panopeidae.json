@@ -476,11 +476,16 @@
             "col": [
               "BC4PC"
             ],
-            "checklistbank": "txn:404228",
+            "checklistbank": [
+              "txn:404228",
+              "urn:lsid:marinespecies.org:taxname:1611896"
+            ],
             "gbif-backbone": "11208739",
-            "checklistbank-1174": "txn:404228"
+            "checklistbank-1174": [
+              "txn:404228"
+            ]
           },
-          "authorityIds": "col:BC4PC",
+          "authorityIds": "checklistbank:txn:404228,checklistbank:urn:lsid:marinespecies.org:taxname:1611896,checklistbank-1174:txn:404228,col:BC4PC,gbif-backbone:11208739",
           "description": "Panopeus paucicarinatus is a panopeidae species found in its native region."
         },
         {
@@ -739,11 +744,16 @@
             "col": [
               "BC4PH"
             ],
-            "checklistbank": "ott6187372",
+            "checklistbank": [
+              "ott6187372",
+              "urn:lsid:marinespecies.org:taxname:1612183"
+            ],
             "gbif-backbone": "8598875",
-            "checklistbank-1174": "txn:225360"
+            "checklistbank-1174": [
+              "txn:225360"
+            ]
           },
-          "authorityIds": "col:BC4PH",
+          "authorityIds": "checklistbank:ott6187372,checklistbank:urn:lsid:marinespecies.org:taxname:1612183,checklistbank-1174:txn:225360,col:BC4PH,gbif-backbone:8598875",
           "description": "Panopeus veintensis is a panopeidae species found in its native region."
         },
         {
@@ -1391,38 +1401,6 @@
           "description": "\"Panopeus lacustris\" is a panopeidae species found in its native region."
         },
         {
-          "id": "SP_PANOPEUS_PAUCICARINATUS_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Panopeus paucicarinatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopeus",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611896",
-            "checklistbank-1174": "txn:404228"
-          },
-          "children": [],
-          "uuid": "4c040783-b0bc-5c6-97a-55bc988f2eee4d",
-          "description": "\"Panopeus paucicarinatus\" is a panopeidae species found in its native region."
-        },
-        {
-          "id": "SP_PANOPEUS_VEINTENSIS_VEGA_NYBORG_I_IN_I_VEGA_NYBORG_COUTI_O_HERN_NDEZ_MONZ_N_2008",
-          "name": "\"Panopeus veintensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopeus",
-          "authorship": "\"Vega & Nyborg <i>in</i> Vega, Nyborg, Coutiño & Hernández-Monzón, 2008\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1612183",
-            "checklistbank-1174": "txn:225360"
-          },
-          "children": [],
-          "uuid": "1bb9ad4c-81cd-5fd-807-86cff2ecf50094",
-          "description": "\"Panopeus veintensis\" is a panopeidae species found in its native region."
-        },
-        {
           "id": "SP_PANOPEUS_PIRAMIDENSIS_CASADIO_ET_AL_2005",
           "name": "Panopeus piramidensis",
           "rank": "SPECIES",
@@ -1740,7 +1718,8 @@
           "sourceIds": {
             "checklistbank-139831": "260417"
           },
-          "uuid": "59af7d86-ef3f-45aa-9bfd-abd623d01b7d"
+          "uuid": "59af7d86-ef3f-45aa-9bfd-abd623d01b7d",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_PURPUREUS",
@@ -1752,7 +1731,8 @@
           "sourceIds": {
             "checklistbank-139831": "295324"
           },
-          "uuid": "db2b4d21-2503-47f0-8a7a-3a9dbe6d0ec6"
+          "uuid": "db2b4d21-2503-47f0-8a7a-3a9dbe6d0ec6",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_SIMPSONI",
@@ -1764,7 +1744,8 @@
           "sourceIds": {
             "checklistbank-139831": "295326"
           },
-          "uuid": "ffffdfac-bcbd-4e69-85fb-f11a7fed749a"
+          "uuid": "ffffdfac-bcbd-4e69-85fb-f11a7fed749a",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_OBESUS",
@@ -1776,7 +1757,8 @@
           "sourceIds": {
             "checklistbank-139831": "295392"
           },
-          "uuid": "afc3a264-d71c-454f-8739-b586f59bcfa5"
+          "uuid": "afc3a264-d71c-454f-8739-b586f59bcfa5",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_AFRICANUS",
@@ -1788,7 +1770,8 @@
           "sourceIds": {
             "checklistbank-139831": "908942"
           },
-          "uuid": "41f576cd-72df-49b5-b5d3-138b1e06732e"
+          "uuid": "41f576cd-72df-49b5-b5d3-138b1e06732e",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_AMERICANUS",
@@ -1800,7 +1783,8 @@
           "sourceIds": {
             "checklistbank-139831": "916905"
           },
-          "uuid": "15e6e4e3-216e-43a6-b3c8-40948b1963e7"
+          "uuid": "15e6e4e3-216e-43a6-b3c8-40948b1963e7",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_AUSTROBESUS",
@@ -1812,7 +1796,8 @@
           "sourceIds": {
             "checklistbank-139831": "1375751"
           },
-          "uuid": "3f7951e4-67c9-452a-bb5b-0e098400e505"
+          "uuid": "3f7951e4-67c9-452a-bb5b-0e098400e505",
+          "children": []
         },
         {
           "id": "SP_PANOPEUS_MERIDIONALIS",
@@ -1824,7 +1809,8 @@
           "sourceIds": {
             "checklistbank-139831": "1474783"
           },
-          "uuid": "169d1794-df35-4912-9932-3f85cd2b8e4b"
+          "uuid": "169d1794-df35-4912-9932-3f85cd2b8e4b",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1905,10 +1891,15 @@
             "col": [
               "9F4XR"
             ],
-            "checklistbank": "txn:225333",
-            "checklistbank-1174": "txn:225333"
+            "checklistbank": [
+              "txn:225333",
+              "urn:lsid:marinespecies.org:taxname:1594356"
+            ],
+            "checklistbank-1174": [
+              "txn:225333"
+            ]
           },
-          "authorityIds": "col:9F4XR",
+          "authorityIds": "checklistbank:txn:225333,checklistbank:urn:lsid:marinespecies.org:taxname:1594356,checklistbank-1174:txn:225333,col:9F4XR",
           "description": "Laevicarcinus egerensis is a panopeidae species found in its native region."
         },
         {
@@ -1939,22 +1930,6 @@
       "name": "\"Laevicarcinus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LAEVICARCINUS_EGERENSIS_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Laevicarcinus egerensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Laevicarcinus",
-          "authorship": "\"Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1594356",
-            "checklistbank-1174": "txn:225333"
-          },
-          "children": [],
-          "uuid": "d324b9c5-ddbb-518-bba-98a1b256c910a5",
-          "description": "\"Laevicarcinus egerensis\" is a panopeidae species found in its native region."
-        },
         {
           "id": "SP_LAEVICARCINUS_DOCKERYI_BLOW_AND_MANNING_1996",
           "name": "Laevicarcinus dockeryi",
@@ -2864,11 +2839,16 @@
             "col": [
               "BBXSM"
             ],
-            "checklistbank": "ott6187347",
+            "checklistbank": [
+              "ott6187347",
+              "urn:lsid:marinespecies.org:taxname:1607057"
+            ],
             "gbif-backbone": "8446260",
-            "checklistbank-1174": "txn:225338"
+            "checklistbank-1174": [
+              "txn:225338"
+            ]
           },
-          "authorityIds": "col:BBXSM",
+          "authorityIds": "checklistbank:ott6187347,checklistbank:urn:lsid:marinespecies.org:taxname:1607057,checklistbank-1174:txn:225338,col:BBXSM,gbif-backbone:8446260",
           "description": "Lophopanopeus maculoides is a panopeidae species found in its native region."
         },
         {
@@ -3109,22 +3089,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LOPHOPANOPEUS_MACULOIDES_COLLINS_TODD_I_IN_I_TODD_COLLINS_2005",
-          "name": "\"Lophopanopeus maculoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lophopanopeus",
-          "authorship": "\"Collins & Todd <i>in</i> Todd & Collins, 2005\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607057",
-            "checklistbank-1174": "txn:225338"
-          },
-          "children": [],
-          "uuid": "9e961120-ad64-573-be2-c7f6393aef7fbb",
-          "description": "\"Lophopanopeus maculoides\" is a panopeidae species found in its native region."
-        },
-        {
           "id": "SP_LOPHOPANOPEUS_CORALLINUS_PORTELL_AND_COLLINS_2004",
           "name": "Lophopanopeus corallinus",
           "rank": "SPECIES",
@@ -3190,7 +3154,8 @@
           "sourceIds": {
             "checklistbank-139831": "50818"
           },
-          "uuid": "f0485d01-068e-4863-9e69-bea4e5eb791d"
+          "uuid": "f0485d01-068e-4863-9e69-bea4e5eb791d",
+          "children": []
         },
         {
           "id": "SP_LOPHOPANOPEUS_FRONTALIS",
@@ -3202,7 +3167,8 @@
           "sourceIds": {
             "checklistbank-139831": "295320"
           },
-          "uuid": "f246e502-08de-4654-8de8-a117301f2c68"
+          "uuid": "f246e502-08de-4654-8de8-a117301f2c68",
+          "children": []
         },
         {
           "id": "SP_LOPHOPANOPEUS_DIEGENSIS",
@@ -3214,7 +3180,8 @@
           "sourceIds": {
             "checklistbank-139831": "362377"
           },
-          "uuid": "82b1c263-9e8e-4ace-9611-2178fabb3dd6"
+          "uuid": "82b1c263-9e8e-4ace-9611-2178fabb3dd6",
+          "children": []
         },
         {
           "id": "SP_LOPHOPANOPEUS_HEATHII",
@@ -3226,7 +3193,8 @@
           "sourceIds": {
             "checklistbank-139831": "527559"
           },
-          "uuid": "671378cb-f33c-464a-8ec4-871651d9ede1"
+          "uuid": "671378cb-f33c-464a-8ec4-871651d9ede1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4637,7 +4605,7 @@
       "lineage": "Panopeidae"
     }
   ],
-  "speciesCount": 234,
+  "speciesCount": 242,
   "appSlug": "panopeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

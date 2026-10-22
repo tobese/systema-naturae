@@ -16284,7 +16284,12 @@
           "authorship": "\"Michaelsen, 1916\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1074550",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1073987"
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1073987"
+            ],
+            "gbif-backbone": [
+              "8722482"
+            ]
           },
           "children": [],
           "uuid": "eb980c6c-84f5-50f-9e3-cfb15596394eb9",
@@ -17102,21 +17107,6 @@
       "name": "Pheretima",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PHERETIMA_INFLATA_HORST_1893",
-          "name": "Pheretima inflata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pheretima",
-          "authorship": "(Horst, 1893)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1073987",
-            "gbif-backbone": "8722482"
-          },
-          "children": [],
-          "uuid": "58f9c82c-f440-59c-a57-9c9e9ba86f8afa"
-        },
         {
           "id": "SP_PHERETIMA_CALIFORNICA_KINBERG_1867",
           "name": "Pheretima californica",
@@ -25619,7 +25609,9 @@
           "authorship": "\"Michaelsen, 1916\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1074551",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1072018"
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1072018"
+            ]
           },
           "children": [],
           "uuid": "ffb73f54-69bf-508-ae7-a3c14db82ac299",
@@ -25903,10 +25895,13 @@
           "authorship": "Templeton, 1844",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1071207",
-            "checklistbank-139831": "909826"
+            "checklistbank-139831": [
+              "909826"
+            ]
           },
           "uuid": "cdfdc10e-e106-45b1-8d52-9a24d377cd3c",
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:909826,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1071207"
         },
         {
           "id": "SP_MEGASCOLEX_PHARETRATUS_ROSA_1894",
@@ -26402,10 +26397,13 @@
           "authorship": "Lee, 1952",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1073207",
-            "checklistbank-139831": "909825"
+            "checklistbank-139831": [
+              "909825"
+            ]
           },
           "uuid": "cdb3cb3f-0d17-4217-9d95-d1f0bd25c5be",
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:909825,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1073207"
         },
         {
           "id": "SP_MEGASCOLEX_MORTENSENI_MICHAELSEN_1924",
@@ -26670,20 +26668,6 @@
       "name": "Megascolex",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MEGASCOLEX_ZIETZI_MICHAELSEN_1907",
-          "name": "Megascolex zietzi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Megascolex",
-          "authorship": "Michaelsen, 1907",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1072018"
-          },
-          "children": [],
-          "uuid": "6ebc1cc2-26f0-575-89c-ac70b3b73ed53c"
-        },
         {
           "id": "SP_MEGASCOLEX_DIFFRINGENS_BAIRD_1869",
           "name": "Megascolex diffringens",
@@ -27674,30 +27658,6 @@
           },
           "children": [],
           "uuid": "1c0549b9-de15-4e94-a2fe-d5b293e8d045"
-        },
-        {
-          "id": "SP_MEGASCOLEX_NOVAEZEALANDIAE",
-          "name": "Megascolex novaezealandiae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Megascolex",
-          "sourceIds": {
-            "checklistbank-139831": "909825"
-          },
-          "uuid": "eef1dc00-22a7-454f-beee-9a85eff7fcbe"
-        },
-        {
-          "id": "SP_MEGASCOLEX_CAERULEUS",
-          "name": "Megascolex caeruleus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Megascolex",
-          "sourceIds": {
-            "checklistbank-139831": "909826"
-          },
-          "uuid": "2d76368d-1df6-4633-9c00-2f14743d72bf"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -27766,66 +27726,6 @@
       "name": "Metaphire",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_METAPHIRE_CALIFORNICA_KINBERG_1867",
-          "name": "Metaphire californica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Metaphire",
-          "authorship": "(Kinberg, 1867)",
-          "sourceIds": {
-            "checklistbank": "223354",
-            "checklistbank-139831": "1403321"
-          },
-          "children": [],
-          "uuid": "1880540f-f46b-5ab-94b-dd44cd0b56eb51"
-        },
-        {
-          "id": "SP_METAPHIRE_LUZONICA_PERRIER_1875",
-          "name": "Metaphire luzonica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Metaphire",
-          "authorship": "(Perrier, 1875)",
-          "sourceIds": {
-            "checklistbank": "223356"
-          },
-          "children": [],
-          "uuid": "e06b1170-3d18-576-933-c3013bda478137"
-        },
-        {
-          "id": "SP_METAPHIRE_POSTHUMA_VAILLANT_1868",
-          "name": "Metaphire posthuma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Metaphire",
-          "authorship": "(Vaillant, 1868)",
-          "sourceIds": {
-            "checklistbank": "223357",
-            "wikispecies": "Metaphire_posthuma",
-            "checklistbank-139831": "1403334"
-          },
-          "children": [],
-          "uuid": "ea857ebe-a30a-5d4-823-973f187cd74016"
-        },
-        {
-          "id": "SP_METAPHIRE_SCHMARDAE_HORST_1883",
-          "name": "Metaphire schmardae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Metaphire",
-          "authorship": "(Horst, 1883)",
-          "sourceIds": {
-            "checklistbank": "223358",
-            "checklistbank-139831": "765586"
-          },
-          "children": [],
-          "uuid": "28b7f5f1-7da3-569-8ed-d14322e6ae31a0"
-        },
         {
           "id": "SP_METAPHIRE_MATSUENSIS",
           "name": "Metaphire matsuensis",
@@ -29409,7 +29309,9 @@
           "authorship": "\"Fletcher, 1890\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1074600",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1072627"
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1072627"
+            ]
           },
           "children": [],
           "uuid": "50c63500-ea0e-524-879-12487e3fc17f97",
@@ -29763,10 +29665,13 @@
           "authorship": "(Fletcher, 1887)",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510692",
-            "checklistbank-139831": "1616697"
+            "checklistbank-139831": [
+              "1616697"
+            ]
           },
           "uuid": "13f9eaab-046e-4d04-ae53-b92f0f04fa5b",
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1616697,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1510692"
         },
         {
           "id": "SP_CRYPTODRILUS_JACKSONI_BEDDARD_1890",
@@ -29806,20 +29711,6 @@
       "name": "Cryptodrilus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CRYPTODRILUS_SACCARIUS_FLETCHER_1887",
-          "name": "Cryptodrilus saccarius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cryptodrilus",
-          "authorship": "Fletcher, 1887",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1072627"
-          },
-          "children": [],
-          "uuid": "ad6eedcc-f819-590-aac-70abfe2d0c7453"
-        },
         {
           "id": "SP_CRYPTODRILUS_INSULARIS_ROSA_1891",
           "name": "Cryptodrilus insularis",
@@ -30156,18 +30047,6 @@
           },
           "uuid": "cda5f761-da67-46d7-b3d0-224c82e96c01",
           "children": []
-        },
-        {
-          "id": "SP_CRYPTODRILUS_GRANDIS",
-          "name": "Cryptodrilus grandis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cryptodrilus",
-          "sourceIds": {
-            "checklistbank-139831": "1616697"
-          },
-          "uuid": "3dabb94c-4d23-454c-ada7-7f8f897c1322"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -40426,10 +40305,13 @@
           "authorship": "(Benham, 1906)",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1372039",
-            "checklistbank-139831": "635434"
+            "checklistbank-139831": [
+              "635434"
+            ]
           },
           "uuid": "907122d4-03e1-4931-95f9-560777deb416",
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:635434,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1372039"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -41664,18 +41546,6 @@
           },
           "uuid": "7bc6ef6f-d544-4de0-8444-8012fd23337f",
           "children": []
-        },
-        {
-          "id": "SP_SPENCERIELLA_GIGANTEA",
-          "name": "Spenceriella gigantea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spenceriella",
-          "sourceIds": {
-            "checklistbank-139831": "635434"
-          },
-          "uuid": "96529b03-0ad1-4be6-a68c-9d5c44d5054f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -73473,7 +73343,7 @@
     }
   ],
   "genusCount": 137,
-  "speciesCount": 4452,
+  "speciesCount": 4445,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

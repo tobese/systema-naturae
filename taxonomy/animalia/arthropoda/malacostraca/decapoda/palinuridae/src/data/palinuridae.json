@@ -163,10 +163,15 @@
             "col": [
               "853XM"
             ],
-            "checklistbank": "101091",
-            "wikispecies": "Panulirus_echinatus"
+            "checklistbank": [
+              "101091",
+              "urn:lsid:marinespecies.org:taxname:107705"
+            ],
+            "wikispecies": [
+              "Panulirus_echinatus"
+            ]
           },
-          "authorityIds": "col:853XM,itis:552971",
+          "authorityIds": "checklistbank:101091,checklistbank:urn:lsid:marinespecies.org:taxname:107705,col:853XM,itis:552971,wikispecies:Panulirus_echinatus",
           "commonName": "Brown Spiny Lobster",
           "description": "Panulirus echinatus, the brown spiny lobster, is a species of spiny lobster that lives on rocky reefs in the tropical western Atlantic Ocean and central Atlantic Islands."
         },
@@ -233,10 +238,18 @@
             "col": [
               "853XY"
             ],
-            "checklistbank": "taicol: 93413",
-            "wikispecies": "Panulirus_longipes"
+            "checklistbank": [
+              "taicol: 93413",
+              "urn:lsid:marinespecies.org:taxname:383007"
+            ],
+            "wikispecies": [
+              "Panulirus_longipes"
+            ],
+            "checklistbank-127379": [
+              "0647c375-b332-4ff4-85a4-c66c0673a889"
+            ]
           },
-          "authorityIds": "col:853XY,itis:552976",
+          "authorityIds": "checklistbank:taicol: 93413,checklistbank:urn:lsid:marinespecies.org:taxname:383007,checklistbank-127379:0647c375-b332-4ff4-85a4-c66c0673a889,col:853XY,itis:552976,wikispecies:Panulirus_longipes",
           "commonName": "Longlegged Spiny Lobster",
           "description": "Panulirus longipes, the longlegged spiny lobster, is a species of spiny lobster that lives on shallow rocky and coral reefs in the tropical Indo-Pacific region."
         },
@@ -372,10 +385,15 @@
             "col": [
               "853XV"
             ],
-            "checklistbank": "210948",
-            "wikispecies": "Panulirus_interruptus"
+            "checklistbank": [
+              "210948",
+              "urn:lsid:marinespecies.org:taxname:382898"
+            ],
+            "wikispecies": [
+              "Panulirus_interruptus"
+            ]
           },
-          "authorityIds": "col:853XV,itis:97650",
+          "authorityIds": "checklistbank:210948,checklistbank:urn:lsid:marinespecies.org:taxname:382898,col:853XV,itis:97650,wikispecies:Panulirus_interruptus",
           "commonName": "California Spiny Lobster",
           "description": "Panulirus interruptus (California Spiny Lobster) is a palinuridae species found in its native region."
         },
@@ -616,55 +634,6 @@
       "name": "\"Panulirus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PANULIRUS_ECHINATUS_SMITH_1869",
-          "name": "\"Panulirus echinatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panulirus",
-          "authorship": "\"Smith, 1869\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:107705",
-            "wikispecies": "Panulirus_echinatus"
-          },
-          "children": [],
-          "uuid": "fc01b558-fcce-5e7-8ad-4a0c37e9c4dceb",
-          "description": "\"Panulirus echinatus\" is a palinuridae species found in its native region."
-        },
-        {
-          "id": "SP_PANULIRUS_INTERRUPTUS_RANDALL_1840",
-          "name": "\"Panulirus interruptus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panulirus",
-          "authorship": "\"(Randall, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:382898",
-            "wikispecies": "Panulirus_interruptus"
-          },
-          "children": [],
-          "uuid": "c917d12a-5c94-53d-9bf-0976efeb55951a",
-          "description": "\"Panulirus interruptus\" is a palinuridae species found in its native region."
-        },
-        {
-          "id": "SP_PANULIRUS_LONGIPES_BORRADAILE_1900",
-          "name": "\"Panulirus longipes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panulirus",
-          "authorship": "\"Borradaile, 1900\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:383007",
-            "wikispecies": "Panulirus_longipes",
-            "checklistbank-127379": "0647c375-b332-4ff4-85a4-c66c0673a889"
-          },
-          "children": [],
-          "uuid": "15e4ff58-0186-53a-9b5-0be1eb15b2e1f0",
-          "description": "\"Panulirus longipes is a palinuridae species found in its native region."
-        },
         {
           "id": "SP_PANULIRUS_VERSICOLOR",
           "name": "Panulirus versicolor",
@@ -930,7 +899,8 @@
           "sourceIds": {
             "checklistbank-139831": "1224442"
           },
-          "uuid": "717b32fb-efe4-4ad3-ac66-4e01fcc7849f"
+          "uuid": "717b32fb-efe4-4ad3-ac66-4e01fcc7849f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1344,7 +1314,8 @@
           "sourceIds": {
             "checklistbank-139831": "111264"
           },
-          "uuid": "ba6c4bc7-8ea3-4113-abbc-f43bddfc9a36"
+          "uuid": "ba6c4bc7-8ea3-4113-abbc-f43bddfc9a36",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3265,7 +3236,8 @@
           "sourceIds": {
             "checklistbank-139831": "108290"
           },
-          "uuid": "6ba2105e-007a-4737-a961-38186db79583"
+          "uuid": "6ba2105e-007a-4737-a961-38186db79583",
+          "children": []
         },
         {
           "id": "SP_PALINUSTUS_WAGUENSIS",
@@ -3277,7 +3249,8 @@
           "sourceIds": {
             "checklistbank-139831": "108291"
           },
-          "uuid": "f744d3f0-7929-476f-b073-37c62d5c2140"
+          "uuid": "f744d3f0-7929-476f-b073-37c62d5c2140",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4623,7 +4596,7 @@
       "lineage": "palinuridae"
     }
   ],
-  "speciesCount": 250,
+  "speciesCount": 251,
   "appSlug": "palinuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

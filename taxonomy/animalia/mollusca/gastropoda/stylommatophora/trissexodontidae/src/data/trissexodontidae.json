@@ -191,7 +191,8 @@
           "sourceIds": {
             "checklistbank-139831": "1629663"
           },
-          "uuid": "18c9d19e-3577-47c7-b642-7058bf63ead6"
+          "uuid": "18c9d19e-3577-47c7-b642-7058bf63ead6",
+          "children": []
         },
         {
           "id": "SP_GASULLIA_COBOSI",
@@ -203,7 +204,8 @@
           "sourceIds": {
             "checklistbank-139831": "1671118"
           },
-          "uuid": "63ec46ce-acfb-462f-9e12-a99bd8eb6735"
+          "uuid": "63ec46ce-acfb-462f-9e12-a99bd8eb6735",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1006,7 +1008,8 @@
           "sourceIds": {
             "checklistbank-139831": "107393"
           },
-          "uuid": "27e4eb03-262c-4bce-8082-92c7ae081156"
+          "uuid": "27e4eb03-262c-4bce-8082-92c7ae081156",
+          "children": []
         },
         {
           "id": "SP_OESTOPHORA_MARIAE",
@@ -1018,7 +1021,8 @@
           "sourceIds": {
             "checklistbank-139831": "107395"
           },
-          "uuid": "57bece10-c00b-460e-bf18-1ed09c2f467e"
+          "uuid": "57bece10-c00b-460e-bf18-1ed09c2f467e",
+          "children": []
         },
         {
           "id": "SP_OESTOPHORA_PRIETOI",
@@ -1030,7 +1034,8 @@
           "sourceIds": {
             "checklistbank-139831": "107397"
           },
-          "uuid": "eee54977-c29c-4cc2-942a-276c47d3f794"
+          "uuid": "eee54977-c29c-4cc2-942a-276c47d3f794",
+          "children": []
         },
         {
           "id": "SP_OESTOPHORA_SILVAE",
@@ -1042,7 +1047,8 @@
           "sourceIds": {
             "checklistbank-139831": "107398"
           },
-          "uuid": "c4dda8ed-5186-41ae-96d6-e64326c30550"
+          "uuid": "c4dda8ed-5186-41ae-96d6-e64326c30550",
+          "children": []
         },
         {
           "id": "SP_OESTOPHORA_MAROCCANA",
@@ -1054,7 +1060,8 @@
           "sourceIds": {
             "checklistbank-139831": "1179848"
           },
-          "uuid": "f486ba9a-80d7-43b3-939b-1ba69d32577c"
+          "uuid": "f486ba9a-80d7-43b3-939b-1ba69d32577c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1570,10 +1577,15 @@
             "col": [
               "4M8LR"
             ],
-            "checklistbank": "txn:327982",
-            "checklistbank-1174": "txn:327982"
+            "checklistbank": [
+              "txn:327982",
+              "urn:lsid:marinespecies.org:taxname:934212"
+            ],
+            "checklistbank-1174": [
+              "txn:327982"
+            ]
           },
-          "authorityIds": "col:4M8LR",
+          "authorityIds": "checklistbank:txn:327982,checklistbank:urn:lsid:marinespecies.org:taxname:934212,checklistbank-1174:txn:327982,col:4M8LR",
           "authorship": "(Thomae 1845)"
         },
         {
@@ -1615,22 +1627,6 @@
           "children": [],
           "uuid": "70a8dad1-1e85-5b8-86f-e4d6844720efd9",
           "description": "\"Praeoestophorella petersi\" is a trissexodontidae species found in its native region."
-        },
-        {
-          "id": "SP_PRAEOESTOPHORELLA_PHACODES_THOM_1845",
-          "name": "\"Praeoestophorella phacodes\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Praeoestophorella",
-          "authorship": "\"(Thomä, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934212",
-            "checklistbank-1174": "txn:327982"
-          },
-          "children": [],
-          "uuid": "97d54581-1f74-590-82a-863455353f6c46",
-          "description": "\"Praeoestophorella phacodes\" is a trissexodontidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2099,7 +2095,7 @@
     }
   ],
   "genusCount": 30,
-  "speciesCount": 108,
+  "speciesCount": 107,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -6056,9 +6056,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:470928"
             ],
-            "checklistbank-1174": "txn:489508"
+            "checklistbank-1174": [
+              "txn:489508"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:470928"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470928,col:59K8W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470928,checklistbank-1174:txn:489508,checklistbank-2011:urn:lsid:marinespecies.org:taxname:470928,col:59K8W",
           "authorship": "(Gabb & Horn, 1862)"
         },
         {
@@ -6310,11 +6315,14 @@
           "authorship": "(Busk, 1875)",
           "sourceIds": {
             "checklistbank": "31762",
-            "checklistbank-139831": "1577453"
+            "checklistbank-139831": [
+              "1577453"
+            ]
           },
           "children": [],
           "uuid": "017aa315-32aa-5ac-922-464df8b45aec20",
-          "description": "Tubulipora notomale is a tubuliporidae species found in its native region."
+          "description": "Tubulipora notomale is a tubuliporidae species found in its native region.",
+          "authorityIds": "checklistbank:31762,checklistbank-139831:1577453"
         },
         {
           "id": "SP_TUBULIPORA_PLUMOSA_THOMSON_IN_HARMER_1898",
@@ -6447,11 +6455,14 @@
           "authorship": "MacGillivray",
           "sourceIds": {
             "checklistbank": "eecaaf66-ad53-4eda-bb7b-c2513dd3f4a4",
-            "checklistbank-139831": "195919"
+            "checklistbank-139831": [
+              "195919"
+            ]
           },
           "children": [],
           "uuid": "944ffdf5-63e6-5de-b2d-9a4effa7b849b7",
-          "description": "Tubulipora pulchra is a tubuliporidae species found in its native region."
+          "description": "Tubulipora pulchra is a tubuliporidae species found in its native region.",
+          "authorityIds": "checklistbank:eecaaf66-ad53-4eda-bb7b-c2513dd3f4a4,checklistbank-139831:195919"
         },
         {
           "id": "SP_TUBULIPORA_PYRIFORMIS_BUSK",
@@ -7598,9 +7609,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Tubulipora",
           "sourceIds": {
-            "checklistbank-139831": "567274"
+            "checklistbank-139831": [
+              "567274"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:567274"
         },
         {
           "id": "SP_TUBULIPORA_PACIFICA",
@@ -7610,9 +7624,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Tubulipora",
           "sourceIds": {
-            "checklistbank-139831": "952773"
+            "checklistbank-139831": [
+              "952773"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:952773"
         }
       ]
     },
@@ -7738,21 +7755,6 @@
           "children": []
         },
         {
-          "id": "SP_TUBULIPORA_TUBA_GABB_HORN_1862",
-          "name": "Tubulipora tuba",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tubulipora",
-          "authorship": "(Gabb & Horn, 1862)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:470928",
-            "checklistbank-1174": "txn:489508"
-          },
-          "uuid": "1bb60f31-f55e-4564-9f7c-64ea8227caea",
-          "children": []
-        },
-        {
           "id": "SP_TUBULIPORA_DISPOSITA_HUTTON_1873",
           "name": "Tubulipora disposita",
           "rank": "SPECIES",
@@ -7864,18 +7866,6 @@
           "children": []
         },
         {
-          "id": "SP_TUBULIPORA_PULCHRA",
-          "name": "Tubulipora pulchra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tubulipora",
-          "sourceIds": {
-            "checklistbank-139831": "195919"
-          },
-          "uuid": "e22b619b-35d6-4a30-a78d-9062f03554a0"
-        },
-        {
           "id": "SP_TUBULIPORA_CONFRACTA",
           "name": "Tubulipora confracta",
           "rank": "SPECIES",
@@ -7885,7 +7875,8 @@
           "sourceIds": {
             "checklistbank-139831": "567274"
           },
-          "uuid": "693576be-888c-4766-947d-449b3086dc75"
+          "uuid": "693576be-888c-4766-947d-449b3086dc75",
+          "children": []
         },
         {
           "id": "SP_TUBULIPORA_PACIFICA",
@@ -7897,19 +7888,8 @@
           "sourceIds": {
             "checklistbank-139831": "952773"
           },
-          "uuid": "15cc5fdf-d6c6-49bd-bc66-0344c007c07f"
-        },
-        {
-          "id": "SP_TUBULIPORA_NOTOMALE",
-          "name": "Tubulipora notomale",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tubulipora",
-          "sourceIds": {
-            "checklistbank-139831": "1577453"
-          },
-          "uuid": "308088c4-a4bd-4f84-9ef7-43741a69b7d2"
+          "uuid": "15cc5fdf-d6c6-49bd-bc66-0344c007c07f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9194,7 +9174,7 @@
     }
   ],
   "genusCount": 39,
-  "speciesCount": 504,
+  "speciesCount": 505,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

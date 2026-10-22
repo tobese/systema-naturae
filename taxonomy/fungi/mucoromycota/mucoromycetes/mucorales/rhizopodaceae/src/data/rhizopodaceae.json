@@ -460,11 +460,19 @@
             "col": [
               "4SDHF"
             ],
-            "checklistbank": "aea3665c-d66e-4f3b-b0ff-4ccd892c1f76",
-            "wikispecies": "Rhizopus_stolonifer"
+            "checklistbank": [
+              "aea3665c-d66e-4f3b-b0ff-4ccd892c1f76",
+              "urn:lsid:marinespecies.org:taxname:100578"
+            ],
+            "wikispecies": [
+              "Rhizopus_stolonifer"
+            ],
+            "checklistbank-139831": [
+              "245693"
+            ]
           },
           "uuid": "834c868e-9a3b-525-bb3-3e666a5466d245",
-          "authorityIds": "col:4SDHF,gbif:2558944,mycobank:119545",
+          "authorityIds": "checklistbank:aea3665c-d66e-4f3b-b0ff-4ccd892c1f76,checklistbank:urn:lsid:marinespecies.org:taxname:100578,checklistbank-139831:245693,col:4SDHF,gbif:2558944,mycobank:119545,wikispecies:Rhizopus_stolonifer",
           "children": []
         },
         {
@@ -1051,23 +1059,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RHIZOPUS_STOLONIFER_EHRENB_VUILL_1902",
-          "name": "\"Rhizopus stolonifer\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhizopus",
-          "authorship": "\"(Ehrenb.) Vuill., 1902\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100578",
-            "wikispecies": "Rhizopus_stolonifer",
-            "checklistbank-139831": "245693"
-          },
-          "children": [],
-          "uuid": "5a4ca2a5-de97-526-9f9-35f9ab3f0058ad",
-          "description": "\"Rhizopus stolonifer\" is a rhizopodaceae species found in its native region."
-        },
-        {
           "id": "SP_RHIZOPUS_NECANS_MASSEE_1897",
           "name": "\"Rhizopus necans\"",
           "rank": "SPECIES",
@@ -1236,24 +1227,6 @@
           "children": [],
           "uuid": "ea64ce4e-bb26-500-b25-cce68a81fa145b",
           "description": "Mucor stolonifer is a rhizopodaceae species found in its native region."
-        },
-        {
-          "id": "SP_MUCOR_MUCEDO_L_1763",
-          "name": "Mucor mucedo",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Mucor",
-          "authorship": "L., 1763",
-          "sourceIds": {
-            "checklistbank": "973174",
-            "checklistbank-1174": "txn:512942",
-            "checklistbank-139831": "383170"
-          },
-          "children": [],
-          "uuid": "1d23b422-b0b0-547-919-bc3187f19ca78e",
-          "commonName": "Common Pinmould",
-          "description": "Mucor mucedo, commonly known as the common pinmould, Commonly found on soil, dung, water, plants and moist foods, Mucor mucedo is a saprotrophic fungus found world-wide with 85 known strains."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1313,7 +1286,7 @@
   ],
   "authorship": "A.A. Jaczewski",
   "genusCount": 7,
-  "speciesCount": 72,
+  "speciesCount": 70,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

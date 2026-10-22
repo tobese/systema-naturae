@@ -2108,11 +2108,19 @@
             "itis": [
               "45163"
             ],
-            "checklistbank": "33656",
+            "checklistbank": [
+              "33656",
+              "urn:lsid:marinespecies.org:taxname:928754"
+            ],
             "gbif-backbone": "12260922",
-            "checklistbank-1174": "txn:477329"
+            "checklistbank-1174": [
+              "txn:477329"
+            ],
+            "checklistbank-139831": [
+              "1609695"
+            ]
           },
-          "authorityIds": "col:6KKD7,itis:45163",
+          "authorityIds": "checklistbank:33656,checklistbank:urn:lsid:marinespecies.org:taxname:928754,checklistbank-1174:txn:477329,checklistbank-139831:1609695,col:6KKD7,gbif-backbone:12260922,itis:45163",
           "children": [],
           "description": "Globulina gibba is a globulina species found in its native region."
         },
@@ -3535,23 +3543,6 @@
           "children": [],
           "uuid": "a4cd8f30-e289-5aa-acd-3a870868d42033",
           "description": "\"Globulina rotundata\" is a polymorphinidae species found in its native region."
-        },
-        {
-          "id": "SP_GLOBULINA_GIBBA_PO_ARYSKA_SZCZECHURA_1968",
-          "name": "\"Globulina gibba",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Globulina",
-          "authorship": "\"Pożaryska & Szczechura, 1968\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:928754",
-            "checklistbank-1174": "txn:477329",
-            "checklistbank-139831": "1609695"
-          },
-          "children": [],
-          "uuid": "be97b09f-40d5-56d-953-c08df3a3cc2c23",
-          "description": "\"Globulina gibba is a polymorphinidae species found in its native region."
         },
         {
           "id": "SP_GLOBULINA_MINUTA_BECK_1943",
@@ -11658,7 +11649,8 @@
           "sourceIds": {
             "checklistbank-139831": "1228043"
           },
-          "uuid": "3a229016-f9fb-4910-a976-b723aea8473d"
+          "uuid": "3a229016-f9fb-4910-a976-b723aea8473d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -19543,7 +19535,7 @@
       "lineage": "polymorphinidae"
     }
   ],
-  "speciesCount": 1052,
+  "speciesCount": 1051,
   "appSlug": "polymorphinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Nodosariata",

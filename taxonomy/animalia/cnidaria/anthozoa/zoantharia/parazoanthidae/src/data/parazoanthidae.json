@@ -433,9 +433,11 @@
               "CVYTH"
             ],
             "checklistbank": "1657838",
-            "checklistbank-139831": "1657838"
+            "checklistbank-139831": [
+              "1657838"
+            ]
           },
-          "authorityIds": "col:CVYTH",
+          "authorityIds": "checklistbank:1657838,checklistbank-139831:1657838,col:CVYTH",
           "description": "Parazoanthus brevitentacularis is a parazoanthidae species found in its native region."
         },
         {
@@ -453,9 +455,11 @@
               "CVYTG"
             ],
             "checklistbank": "1657836",
-            "checklistbank-139831": "1657836"
+            "checklistbank-139831": [
+              "1657836"
+            ]
           },
-          "authorityIds": "col:CVYTG",
+          "authorityIds": "checklistbank:1657836,checklistbank-139831:1657836,col:CVYTG",
           "description": "Parazoanthus franciscae is a parazoanthidae species found in its native region."
         },
         {
@@ -661,22 +665,6 @@
           "description": "Parazoanthus atlanticus is a parazoanthidae species found in its native region."
         },
         {
-          "id": "SP_PARAZOANTHUS_ANGUICOMUS_NORMAN_1868",
-          "name": "Parazoanthus anguicomus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parazoanthus",
-          "authorship": "(Norman, 1868)",
-          "sourceIds": {
-            "checklistbank": "363188",
-            "wikispecies": "Parazoanthus_anguicomus",
-            "checklistbank-139831": "542864"
-          },
-          "children": [],
-          "uuid": "c6138c6b-a3c0-527-a06-2fe1a9089c2ff7"
-        },
-        {
           "id": "SP_PARAZOANTHUS_PARASITICUS_DUCHASSAING_DE_FONBRESSIN_MICHELOTTI_1860",
           "name": "Parazoanthus parasiticus",
           "rank": "SPECIES",
@@ -715,8 +703,16 @@
           "lineage": "\"Parazoanthus",
           "authorship": "\"(Norman, 1869)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:101054",
-            "wikispecies": "Parazoanthus_anguicomus"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:101054",
+              "363188"
+            ],
+            "wikispecies": [
+              "Parazoanthus_anguicomus"
+            ],
+            "checklistbank-139831": [
+              "542864"
+            ]
           },
           "children": [],
           "uuid": "62fefd08-8ea0-559-aab-c6b000ecf33572",
@@ -767,30 +763,6 @@
           "children": [],
           "uuid": "02c411eb-c4ca-599-850-214bae4dc83e21",
           "description": "\"Parazoanthus axinellae is a parazoanthidae species found in its native region."
-        },
-        {
-          "id": "SP_PARAZOANTHUS_FRANCISCAE",
-          "name": "Parazoanthus franciscae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parazoanthus",
-          "sourceIds": {
-            "checklistbank-139831": "1657836"
-          },
-          "uuid": "adacd1cc-0d52-4b75-9bf6-b199018e8871"
-        },
-        {
-          "id": "SP_PARAZOANTHUS_BREVITENTACULARIS",
-          "name": "Parazoanthus brevitentacularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parazoanthus",
-          "sourceIds": {
-            "checklistbank-139831": "1657838"
-          },
-          "uuid": "528a75c3-ca73-40f7-9e31-ead41f70ae46"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3255,7 +3227,7 @@
     }
   ],
   "genusCount": 28,
-  "speciesCount": 180,
+  "speciesCount": 179,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

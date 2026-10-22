@@ -802,9 +802,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:456684"
             ],
-            "checklistbank-1174": "txn:346821"
+            "checklistbank-1174": [
+              "txn:346821"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:456684"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:456684,col:4W2RM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:456684,checklistbank-1174:txn:346821,checklistbank-2011:urn:lsid:marinespecies.org:taxname:456684,col:4W2RM",
           "authorship": "(Broderip & G. B. Sowerby I, 1829)"
         },
         {
@@ -1362,21 +1367,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:456679"
           },
           "uuid": "dfad269b-0e5b-470a-a96a-ca9cd3c3b743",
-          "children": []
-        },
-        {
-          "id": "SP_SCUTELLASTRA_MEXICANA_BRODERIP_G_B_SOWERBY_I_1829",
-          "name": "Scutellastra mexicana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Scutellastra",
-          "authorship": "(Broderip & G. B. Sowerby I, 1829)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:456684",
-            "checklistbank-1174": "txn:346821"
-          },
-          "uuid": "8dadf6e4-7623-46c2-b9d4-d7c42fd734a3",
           "children": []
         },
         {
@@ -5529,7 +5519,8 @@
           "sourceIds": {
             "checklistbank-139831": "1695294"
           },
-          "uuid": "55021974-fd42-4603-937f-fed8e574c50a"
+          "uuid": "55021974-fd42-4603-937f-fed8e574c50a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6105,7 +6096,7 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 372,
+  "speciesCount": 371,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

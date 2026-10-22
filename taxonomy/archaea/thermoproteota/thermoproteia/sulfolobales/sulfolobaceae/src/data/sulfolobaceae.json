@@ -587,12 +587,20 @@
             "itis": [
               "951929"
             ],
-            "checklistbank": "Sulfolobus_solfataricus",
-            "wikispecies": "Sulfolobus_solfataricus",
-            "gbif-backbone": "1000052"
+            "checklistbank": [
+              "Sulfolobus_solfataricus",
+              "urn:lsid:marinespecies.org:taxname:559460"
+            ],
+            "wikispecies": [
+              "Sulfolobus_solfataricus"
+            ],
+            "gbif-backbone": "1000052",
+            "checklistbank-139831": [
+              "939014"
+            ]
           },
           "uuid": "ec6f09cb-a842-5e0-a84-32624c3b843e10",
-          "authorityIds": "gbif:1000052,itis:951929",
+          "authorityIds": "checklistbank:Sulfolobus_solfataricus,checklistbank:urn:lsid:marinespecies.org:taxname:559460,checklistbank-139831:939014,gbif:1000052,gbif-backbone:1000052,itis:951929,wikispecies:Sulfolobus_solfataricus",
           "authorship": "Zillig et al., 1980"
         },
         {
@@ -779,23 +787,6 @@
       "name": "\"Sulfolobus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_SULFOLOBUS_SOLFATARICUS_ZILLIG_STETTER_WUNDERL_SCHULZ_PRIESS_SCHOLZ_1980",
-          "name": "\"Sulfolobus solfataricus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sulfolobus",
-          "authorship": "\"Zillig, Stetter, Wunderl, Schulz, Priess & Scholz, 1980\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559460",
-            "wikispecies": "Sulfolobus_solfataricus",
-            "checklistbank-139831": "939014"
-          },
-          "children": [],
-          "uuid": "0b3255c3-916a-5be-aa2-6995963ef78bd1",
-          "description": "\"Sulfolobus solfataricus\" is a sulfolobaceae species found in its native region."
-        },
         {
           "id": "SP_SULFOLOBUS_ACIDOCALDARIUS",
           "name": "Sulfolobus acidocaldarius",
@@ -1092,7 +1083,8 @@
           "sourceIds": {
             "checklistbank-139831": "939005"
           },
-          "uuid": "053e54d3-524d-4e46-942d-a2ffadc9f82b"
+          "uuid": "053e54d3-524d-4e46-942d-a2ffadc9f82b",
+          "children": []
         },
         {
           "id": "SP_METALLOSPHAERA_HAKONENSIS",
@@ -1104,7 +1096,8 @@
           "sourceIds": {
             "checklistbank-139831": "939007"
           },
-          "uuid": "13a449ee-f053-4a0e-ad4c-30afa4636158"
+          "uuid": "13a449ee-f053-4a0e-ad4c-30afa4636158",
+          "children": []
         },
         {
           "id": "SP_METALLOSPHAERA_PRUNAE",
@@ -1116,7 +1109,8 @@
           "sourceIds": {
             "checklistbank-139831": "939008"
           },
-          "uuid": "f56fe934-f947-41e4-8991-ff50feb936f3"
+          "uuid": "f56fe934-f947-41e4-8991-ff50feb936f3",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2042,7 +2036,7 @@
     }
   ],
   "genusCount": 22,
-  "speciesCount": 103,
+  "speciesCount": 102,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,

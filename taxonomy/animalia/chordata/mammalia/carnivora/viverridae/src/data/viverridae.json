@@ -1100,10 +1100,18 @@
             "col": [
               "5BMZX"
             ],
-            "checklistbank": "94196",
-            "wikispecies": "Viverricula_indica"
+            "checklistbank": [
+              "94196",
+              "urn:lsid:marinespecies.org:taxname:1597422"
+            ],
+            "wikispecies": [
+              "Viverricula_indica"
+            ],
+            "checklistbank-139831": [
+              "41618"
+            ]
           },
-          "authorityIds": "col:5BMZX,itis:728007",
+          "authorityIds": "checklistbank:94196,checklistbank:urn:lsid:marinespecies.org:taxname:1597422,checklistbank-139831:41618,col:5BMZX,itis:728007,wikispecies:Viverricula_indica",
           "commonName": "Rasse",
           "description": "Viverricula indica (Rasse) is a viverridae species found in its native region."
         },
@@ -1142,32 +1150,6 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Viverridae"
-    },
-    {
-      "id": "GENUS_VIVERRICULA",
-      "name": "\"Viverricula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_VIVERRICULA_INDICA_DESMAREST_1804",
-          "name": "\"Viverricula indica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Viverricula",
-          "authorship": "\"(Desmarest, 1804)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1597422",
-            "wikispecies": "Viverricula_indica",
-            "checklistbank-139831": "41618"
-          },
-          "children": [],
-          "uuid": "fac6815b-31c7-5ae-b0f-b358da3ad816f8",
-          "description": "\"Viverricula indica\" is a viverridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "viverridae"
     },
     {
       "id": "GENUS_ARCTICTIS",
@@ -2604,11 +2586,11 @@
       "lineage": "viverridae"
     }
   ],
-  "speciesCount": 129,
+  "speciesCount": 128,
   "appSlug": "viverridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 40,
+  "genusCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -34,10 +34,21 @@
             "itis": [
               "82334"
             ],
-            "checklistbank": "64800",
-            "wikispecies": "Spirula_spirula"
+            "checklistbank": [
+              "64800",
+              "urn:lsid:marinespecies.org:taxname:141548"
+            ],
+            "wikispecies": [
+              "Spirula_spirula"
+            ],
+            "checklistbank-127379": [
+              "c041c37c-3fc1-46a7-9d8b-6df2c89de952"
+            ],
+            "checklistbank-139831": [
+              "85107"
+            ]
           },
-          "authorityIds": "col:6ZCK6,itis:82334,wikidata:Q1509955",
+          "authorityIds": "checklistbank:64800,checklistbank:urn:lsid:marinespecies.org:taxname:141548,checklistbank-127379:c041c37c-3fc1-46a7-9d8b-6df2c89de952,checklistbank-139831:85107,col:6ZCK6,itis:82334,wikidata:Q1509955,wikispecies:Spirula_spirula",
           "authorship": "(Linnaeus, 1758)",
           "children": []
         },
@@ -118,33 +129,6 @@
       ]
     },
     {
-      "id": "GENUS_SPIRULA",
-      "name": "\"Spirula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SPIRULA_SPIRULA_LINNAEUS_1758",
-          "name": "\"Spirula spirula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spirula",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141548",
-            "wikispecies": "Spirula_spirula",
-            "checklistbank-127379": "c041c37c-3fc1-46a7-9d8b-6df2c89de952",
-            "checklistbank-139831": "85107"
-          },
-          "children": [],
-          "uuid": "dd1fb951-526d-5fc-a45-7637a934a7e2cb",
-          "description": "\"Spirula spirula\" is a spirulidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "spirulidae"
-    },
-    {
       "id": "GENUS_NAUTILUS",
       "name": "Nautilus",
       "rank": "GENUS",
@@ -180,6 +164,6 @@
     "checklistbank": "Spirulidae",
     "wikispecies": "Spirulidae"
   },
-  "genusCount": 3,
-  "speciesCount": 8
+  "genusCount": 2,
+  "speciesCount": 7
 }

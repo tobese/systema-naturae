@@ -474,9 +474,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:140734"
             ],
-            "checklistbank-1174": "txn:158641"
+            "checklistbank-1174": [
+              "txn:158641"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:140734"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:140734,col:39X2W,itis:81023"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:140734,checklistbank-1174:txn:158641,checklistbank-2011:urn:lsid:marinespecies.org:taxname:140734,col:39X2W,itis:81023"
         },
         {
           "id": "SP_ENSIS_MYRAE_S_S_BERRY_1954",
@@ -940,21 +945,6 @@
           "description": "\"Ensis siliqua\" is a pharidae species found in its native region."
         },
         {
-          "id": "SP_ENSIS_MINOR_CHENU_1843",
-          "name": "Ensis minor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ensis",
-          "authorship": "(Chenu, 1843)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:140734",
-            "checklistbank-1174": "txn:158641"
-          },
-          "uuid": "c4095c39-6e6a-4b20-bd11-70f0d8f3514b",
-          "children": []
-        },
-        {
           "id": "SP_ENSIS_GOREENSIS_CLESSIN_1888",
           "name": "Ensis goreensis",
           "rank": "SPECIES",
@@ -1048,7 +1038,8 @@
           "sourceIds": {
             "checklistbank-139831": "501078"
           },
-          "uuid": "e51f50b6-035d-4522-ab52-1b33219c4a74"
+          "uuid": "e51f50b6-035d-4522-ab52-1b33219c4a74",
+          "children": []
         },
         {
           "id": "SP_ENSIS_LEEI",
@@ -1060,7 +1051,8 @@
           "sourceIds": {
             "checklistbank-139831": "765132"
           },
-          "uuid": "3b621433-9d9f-4fc8-90c8-487c810e408f"
+          "uuid": "3b621433-9d9f-4fc8-90c8-487c810e408f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4072,7 +4064,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 217,
+  "speciesCount": 218,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -7031,11 +7031,19 @@
             "col": [
               "73W6C"
             ],
-            "checklistbank": "33697",
-            "checklistbank-1174": "txn:241433"
+            "checklistbank": [
+              "33697",
+              "urn:lsid:marinespecies.org:taxname:113697"
+            ],
+            "checklistbank-1174": [
+              "txn:241433"
+            ],
+            "checklistbank-139831": [
+              "532845"
+            ]
           },
           "uuid": "fe6a38d3-9992-58b-b2e-1e3e49a2eec051",
-          "authorityIds": "col:73W6C,gbif:7636891",
+          "authorityIds": "checklistbank:33697,checklistbank:urn:lsid:marinespecies.org:taxname:113697,checklistbank-1174:txn:241433,checklistbank-139831:532845,col:73W6C,gbif:7636891",
           "authorship": "(Rzehak, 1888)"
         },
         {
@@ -7220,23 +7228,6 @@
       "name": "\"Neoconorbina",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_NEOCONORBINA_TERQUEMI_RZEHAK_1888",
-          "name": "\"Neoconorbina terquemi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neoconorbina",
-          "authorship": "\"(Rzehak, 1888)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:113697",
-            "checklistbank-1174": "txn:241433",
-            "checklistbank-139831": "532845"
-          },
-          "children": [],
-          "uuid": "000b36ae-ad31-55d-99b-19d9234a4ba7f3",
-          "description": "\"Neoconorbina terquemi\" is a rosalinidae species found in its native region."
-        },
         {
           "id": "SP_NEOCONORBINA_CAVALLIENSIS_HAYWARD_GRENFELL_REID_HAYWARD_1999",
           "name": "\"Neoconorbina cavalliensis\"",
@@ -9860,7 +9851,8 @@
           "sourceIds": {
             "checklistbank-139831": "532831"
           },
-          "uuid": "cf1986bc-33aa-4ed5-83bc-bdeb06db9c12"
+          "uuid": "cf1986bc-33aa-4ed5-83bc-bdeb06db9c12",
+          "children": []
         },
         {
           "id": "SP_TRETOMPHALUS_CLARUS",
@@ -9872,7 +9864,8 @@
           "sourceIds": {
             "checklistbank-139831": "532833"
           },
-          "uuid": "929eb9fd-6dc9-4ded-ba24-74eb7b06723d"
+          "uuid": "929eb9fd-6dc9-4ded-ba24-74eb7b06723d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11034,7 +11027,7 @@
     }
   ],
   "genusCount": 53,
-  "speciesCount": 568,
+  "speciesCount": 567,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

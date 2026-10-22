@@ -414,10 +414,15 @@
             "itis": [
               "71297"
             ],
-            "checklistbank": "222507",
-            "checklistbank-1174": "txn:489560"
+            "checklistbank": [
+              "222507",
+              "urn:lsid:marinespecies.org:taxname:580449"
+            ],
+            "checklistbank-1174": [
+              "txn:489560"
+            ]
           },
-          "authorityIds": "col:54DC7,itis:71297"
+          "authorityIds": "checklistbank:222507,checklistbank:urn:lsid:marinespecies.org:taxname:580449,checklistbank-1174:txn:489560,col:54DC7,itis:71297"
         },
         {
           "id": "SP_TACHYRHYNCHUS_NOMURAI",
@@ -502,10 +507,15 @@
             "itis": [
               "568341"
             ],
-            "checklistbank": "222508",
-            "checklistbank-1174": "txn:96453"
+            "checklistbank": [
+              "222508",
+              "urn:lsid:marinespecies.org:taxname:156447"
+            ],
+            "checklistbank-1174": [
+              "txn:96453"
+            ]
           },
-          "authorityIds": "col:7BG4Y,itis:568341"
+          "authorityIds": "checklistbank:222508,checklistbank:urn:lsid:marinespecies.org:taxname:156447,checklistbank-1174:txn:96453,col:7BG4Y,itis:568341"
         },
         {
           "id": "SP_TACHYRHYNCHUS_STEARNSII_DALL_1919",
@@ -889,22 +899,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TACHYRHYNCHUS_RETICULATUS_MIGHELS_C_B_ADAMS_1842",
-          "name": "\"Tachyrhynchus reticulatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tachyrhynchus",
-          "authorship": "\"(Mighels & C. B. Adams, 1842)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:156447",
-            "checklistbank-1174": "txn:96453"
-          },
-          "children": [],
-          "uuid": "3dcda2f6-2672-538-bfc-b0ec3d830897c1",
-          "description": "\"Tachyrhynchus reticulatus\" is a turritellidae species found in its native region."
-        },
-        {
           "id": "SP_TACHYRHYNCHUS_EROSUS_COUTHOUY_1838",
           "name": "\"Tachyrhynchus erosus\"",
           "rank": "SPECIES",
@@ -918,22 +912,6 @@
           "children": [],
           "uuid": "9e9166a5-ac49-58e-948-17a87ecbe51bfb",
           "description": "\"Tachyrhynchus erosus\" is a turritellidae species found in its native region."
-        },
-        {
-          "id": "SP_TACHYRHYNCHUS_LACTEOLUS_P_P_CARPENTER_1864",
-          "name": "\"Tachyrhynchus lacteolus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tachyrhynchus",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:580449",
-            "checklistbank-1174": "txn:489560"
-          },
-          "children": [],
-          "uuid": "7e383f30-dcb5-5d0-915-e4fd68399ee153",
-          "description": "\"Tachyrhynchus lacteolus\" is a turritellidae species found in its native region."
         },
         {
           "id": "SP_TACHYRHYNCHUS_NOMURAI_OZAKI_1958",
@@ -1015,7 +993,8 @@
           "sourceIds": {
             "checklistbank-139831": "1215960"
           },
-          "uuid": "ec26ea50-ed3c-4d74-a612-6c8ba0a5ac63"
+          "uuid": "ec26ea50-ed3c-4d74-a612-6c8ba0a5ac63",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7325,10 +7304,15 @@
             "col": [
               "59QVQ"
             ],
-            "checklistbank": "222641",
-            "checklistbank-1174": "txn:248649"
+            "checklistbank": [
+              "222641",
+              "urn:lsid:marinespecies.org:taxname:419542"
+            ],
+            "checklistbank-1174": [
+              "txn:248649"
+            ]
           },
-          "authorityIds": "col:59QVQ,itis:71308"
+          "authorityIds": "checklistbank:222641,checklistbank:urn:lsid:marinespecies.org:taxname:419542,checklistbank-1174:txn:248649,col:59QVQ,itis:71308"
         },
         {
           "id": "SP_TURRITELLA_FASTIGIATA_A_ADAMS_REEVE_1849",
@@ -9358,12 +9342,18 @@
               "CR6BF"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1782399"
+              "urn:lsid:marinespecies.org:taxname:1782399",
+              "urn:lsid:marinespecies.org:taxname:1782407"
             ],
             "gbif-backbone": "8803151",
-            "checklistbank-1174": "txn:430042"
+            "checklistbank-1174": [
+              "txn:430042"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1782399"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1782399,col:CR6BF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1782399,checklistbank:urn:lsid:marinespecies.org:taxname:1782407,checklistbank-1174:txn:430042,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1782399,col:CR6BF,gbif-backbone:8803151",
           "authorship": "Stanton, 1896"
         },
         {
@@ -9983,9 +9973,14 @@
               "urn:lsid:marinespecies.org:taxname:1773920"
             ],
             "gbif-backbone": "5934269",
-            "checklistbank-1174": "txn:62700"
+            "checklistbank-1174": [
+              "txn:62700"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1773920"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773920,col:CN33S",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773920,checklistbank-1174:txn:62700,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1773920,col:CN33S,gbif-backbone:5934269",
           "authorship": "C. W. Johnson, 1898"
         },
         {
@@ -18590,39 +18585,6 @@
           "description": "\"Turritella ungulina\" is a turritellidae species found in its native region."
         },
         {
-          "id": "SP_TURRITELLA_EXOLETA_LINNAEUS_1758",
-          "name": "\"Turritella exoleta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Turritella",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:419542",
-            "checklistbank-1174": "txn:248649"
-          },
-          "children": [],
-          "uuid": "5c0461bb-0b6b-5c4-a96-c6eda0564bc002",
-          "description": "\"Turritella exoleta\" is a turritellidae species found in its native region."
-        },
-        {
-          "id": "SP_TURRITELLA_PACHECOENSIS_C_W_MERRIAM_1941",
-          "name": "\"Turritella pachecoensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Turritella",
-          "authorship": "\"C. W. Merriam, 1941\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782407",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1782399",
-            "checklistbank-1174": "txn:430042"
-          },
-          "children": [],
-          "uuid": "21d05923-6dbf-5fd-b02-5a125653dcdc02",
-          "description": "\"Turritella pachecoensis is a turritellidae species found in its native region."
-        },
-        {
           "id": "SP_TURRITELLA_CAELATURA_ROSSBACH_J_G_CARTER_1991",
           "name": "\"Turritella caelatura",
           "rank": "SPECIES",
@@ -18835,21 +18797,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1773918"
           },
           "uuid": "6305f957-68e4-4033-ba97-d35a530d15e2",
-          "children": []
-        },
-        {
-          "id": "SP_TURRITELLA_QUADRILIRA_C_W_JOHNSON_1898",
-          "name": "Turritella quadrilira",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Turritella",
-          "authorship": "C. W. Johnson, 1898",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1773920",
-            "checklistbank-1174": "txn:62700"
-          },
-          "uuid": "3e3ec8a3-cd3f-4aab-b2c5-38148980c519",
           "children": []
         },
         {
@@ -19422,7 +19369,8 @@
           "sourceIds": {
             "checklistbank-139831": "694603"
           },
-          "uuid": "1e2f8ceb-9c8b-4280-b8bf-f9e22547775d"
+          "uuid": "1e2f8ceb-9c8b-4280-b8bf-f9e22547775d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -22462,9 +22410,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:575645"
             ],
-            "checklistbank-1174": "txn:489558"
+            "checklistbank-1174": [
+              "txn:489558"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:575645"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:575645,col:5B3X9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:575645,checklistbank-1174:txn:489558,checklistbank-2011:urn:lsid:marinespecies.org:taxname:575645,col:5B3X9",
           "authorship": "(Broderip & G. B. Sowerby I, 1829)"
         },
         {
@@ -22590,9 +22543,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:160074"
             ],
-            "checklistbank-1174": "txn:109777"
+            "checklistbank-1174": [
+              "txn:109777"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:160074"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:160074,col:5B3XG,itis:71302"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:160074,checklistbank-1174:txn:109777,checklistbank-2011:urn:lsid:marinespecies.org:taxname:160074,col:5B3XG,itis:71302"
         },
         {
           "id": "SP_VERMICULARIA_TENUIS",
@@ -22976,36 +22934,6 @@
           "description": "\"Vermicularia lumbricalis\" is a turritellidae species found in its native region."
         },
         {
-          "id": "SP_VERMICULARIA_SPIRATA_R_A_PHILIPPI_1836",
-          "name": "Vermicularia spirata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vermicularia",
-          "authorship": "(R. A. Philippi, 1836)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:160074",
-            "checklistbank-1174": "txn:109777"
-          },
-          "uuid": "02a367eb-6c08-4bac-b2b6-ce267f7eb409",
-          "children": []
-        },
-        {
-          "id": "SP_VERMICULARIA_PELLUCIDA_BRODERIP_G_B_SOWERBY_I_1829",
-          "name": "Vermicularia pellucida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vermicularia",
-          "authorship": "(Broderip & G. B. Sowerby I, 1829)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:575645",
-            "checklistbank-1174": "txn:489558"
-          },
-          "uuid": "382af9a1-c4b8-4902-a36b-4704c2bbbcae",
-          "children": []
-        },
-        {
           "id": "SP_VERMICULARIA_MILLETI_DESHAYES_1850",
           "name": "Vermicularia milleti",
           "rank": "SPECIES",
@@ -23085,7 +23013,8 @@
           "sourceIds": {
             "checklistbank-139831": "1540563"
           },
-          "uuid": "d24002ae-da98-4efd-bb22-d8e6c93cd348"
+          "uuid": "d24002ae-da98-4efd-bb22-d8e6c93cd348",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -25390,12 +25319,18 @@
               "7RS85"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1468212"
+              "urn:lsid:marinespecies.org:taxname:1468212",
+              "urn:lsid:marinespecies.org:taxname:1849339"
             ],
             "gbif-backbone": "9491641",
-            "checklistbank-1174": "txn:120471"
+            "checklistbank-1174": [
+              "txn:120471"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1468212"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1468212,col:7RS85",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1468212,checklistbank:urn:lsid:marinespecies.org:taxname:1849339,checklistbank-1174:txn:120471,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1468212,col:7RS85,gbif-backbone:9491641",
           "authorship": "(Conrad, 1830)"
         },
         {
@@ -25793,23 +25728,6 @@
       "name": "\"Kapalmerella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_KAPALMERELLA_MORTONI_GOVONI_2025",
-          "name": "\"Kapalmerella mortoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kapalmerella",
-          "authorship": "\"Govoni, 2025\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1849339",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1468212",
-            "checklistbank-1174": "txn:120471"
-          },
-          "children": [],
-          "uuid": "6fe77fb9-6d56-58d-a73-8ddf9c06aa5ac8",
-          "description": "\"Kapalmerella mortoni is a turritellidae species found in its native region."
-        },
         {
           "id": "SP_KAPALMERELLA_DUMBLEI_HARRIS_1895",
           "name": "Kapalmerella dumblei",
@@ -30490,7 +30408,7 @@
     }
   ],
   "genusCount": 85,
-  "speciesCount": 1760,
+  "speciesCount": 1755,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

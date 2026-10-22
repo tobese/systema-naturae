@@ -68,9 +68,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1444705"
             ],
-            "checklistbank-1174": "txn:386334"
+            "checklistbank-1174": [
+              "txn:386334"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1444705"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1444705,col:865C3,wikidata:Q106991247",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1444705,checklistbank-1174:txn:386334,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1444705,col:865C3,wikidata:Q106991247",
           "authorship": "(Duncan, 1864)"
         },
         {
@@ -268,21 +273,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1416513"
           },
           "uuid": "ceccd0cf-406f-49cd-bb44-81f0c3296085",
-          "children": []
-        },
-        {
-          "id": "SP_TRACHYPHYLLIA_BILOBATA_DUNCAN_1864",
-          "name": "Trachyphyllia bilobata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Trachyphyllia",
-          "authorship": "(Duncan, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1444705",
-            "checklistbank-1174": "txn:386334"
-          },
-          "uuid": "6ec32996-3805-4c11-b466-c9241c7e84df",
           "children": []
         },
         {
@@ -710,11 +700,14 @@
           "authorship": "Nemenzo",
           "sourceIds": {
             "checklistbank": "2640878b-27c0-4d9b-b842-b3eed9acdd28",
-            "checklistbank-139831": "503541"
+            "checklistbank-139831": [
+              "503541"
+            ]
           },
           "children": [],
           "uuid": "70d4cabf-cc8b-5b4-9ad-2bfda020c00787",
-          "description": "Mycedium mancaoi is a merulinidae species found in its native region."
+          "description": "Mycedium mancaoi is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:2640878b-27c0-4d9b-b842-b3eed9acdd28,checklistbank-139831:503541"
         },
         {
           "id": "SP_MYCEDIUM_UMBRA",
@@ -796,18 +789,6 @@
           },
           "uuid": "5ea232de-dc84-4f43-ae45-46af60625e21",
           "children": []
-        },
-        {
-          "id": "SP_MYCEDIUM_MANCAOI",
-          "name": "Mycedium mancaoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mycedium",
-          "sourceIds": {
-            "checklistbank-139831": "503541"
-          },
-          "uuid": "b69203ad-85ab-47ca-8350-2b5fafd9ceee"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2172,12 +2153,15 @@
           "authorship": "Veron",
           "sourceIds": {
             "checklistbank": "15f0513f-b2e9-4024-82d5-3ceee718ce78",
-            "checklistbank-139831": "102993"
+            "checklistbank-139831": [
+              "102993"
+            ]
           },
           "children": [],
           "uuid": "8df991f8-14c0-5ce-964-922d576bf2a2b6",
           "commonName": "spine coral",
-          "description": "Hydnophora pilosa (spine coral) is a merulinidae species found in its native region."
+          "description": "Hydnophora pilosa (spine coral) is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:15f0513f-b2e9-4024-82d5-3ceee718ce78,checklistbank-139831:102993"
         },
         {
           "id": "SP_HYDNOPHORA_BONSAI",
@@ -2450,18 +2434,6 @@
           },
           "uuid": "1ba0946d-a1c7-4866-9c45-b8270f9a29dc",
           "children": []
-        },
-        {
-          "id": "SP_HYDNOPHORA_PILOSA",
-          "name": "Hydnophora pilosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hydnophora",
-          "sourceIds": {
-            "checklistbank-139831": "102993"
-          },
-          "uuid": "f87af489-d197-422d-8791-80783bdef4aa"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2496,10 +2468,18 @@
             "col": [
               "3ZWYY"
             ],
-            "checklistbank": "taicol: 78813",
-            "checklistbank-1174": "txn:149072"
+            "checklistbank": [
+              "taicol: 78813",
+              "urn:lsid:marinespecies.org:taxname:207407"
+            ],
+            "checklistbank-1174": [
+              "txn:149072"
+            ],
+            "checklistbank-127379": [
+              "9c9bf5a7-5e8c-4a0a-9f6d-605209d7efe3"
+            ]
           },
-          "authorityIds": "col:3ZWYY,itis:53435,wikidata:Q3942658"
+          "authorityIds": "checklistbank:taicol: 78813,checklistbank:urn:lsid:marinespecies.org:taxname:207407,checklistbank-1174:txn:149072,checklistbank-127379:9c9bf5a7-5e8c-4a0a-9f6d-605209d7efe3,col:3ZWYY,itis:53435,wikidata:Q3942658"
         },
         {
           "id": "SP_MERULINA_CYLINDRICA",
@@ -2750,12 +2730,15 @@
           "authorship": "Dana",
           "sourceIds": {
             "checklistbank": "f444de28-5626-4afe-b7e0-e9bb08e793e1",
-            "checklistbank-139831": "105607"
+            "checklistbank-139831": [
+              "105607"
+            ]
           },
           "children": [],
           "uuid": "f77ef71b-f17e-56d-b1b-e0f543318495ed",
           "commonName": "crispy crust coral",
-          "description": "Merulina scabricula (crispy crust coral) is a merulinidae species found in its native region."
+          "description": "Merulina scabricula (crispy crust coral) is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:f444de28-5626-4afe-b7e0-e9bb08e793e1,checklistbank-139831:105607"
         },
         {
           "id": "SP_MERULINA_SCHEERI",
@@ -2793,23 +2776,6 @@
       "name": "\"Merulina",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MERULINA_AMPLIATA_ELLIS_SOLANDER_1786",
-          "name": "\"Merulina ampliata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Merulina",
-          "authorship": "\"(Ellis & Solander, 1786)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207407",
-            "checklistbank-1174": "txn:149072",
-            "checklistbank-127379": "9c9bf5a7-5e8c-4a0a-9f6d-605209d7efe3"
-          },
-          "children": [],
-          "uuid": "4116eb90-62b1-5d6-ba4-398d05f606ac18",
-          "description": "\"Merulina ampliata\" is a merulinidae species found in its native region."
-        },
         {
           "id": "SP_MERULINA_TRIANGULARIS_VERON_PICHON_1980",
           "name": "Merulina triangularis",
@@ -2866,18 +2832,6 @@
           },
           "uuid": "64ffba54-86a4-4bc7-be14-0e04f27769f5",
           "children": []
-        },
-        {
-          "id": "SP_MERULINA_SCABRICULA",
-          "name": "Merulina scabricula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Merulina",
-          "sourceIds": {
-            "checklistbank-139831": "105607"
-          },
-          "uuid": "7f5841af-d648-4a89-b4f4-4f13eb9c8a76"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3035,10 +2989,15 @@
             "col": [
               "6HQYM"
             ],
-            "checklistbank": "taicol: 72878",
-            "checklistbank-1174": "txn:149040"
+            "checklistbank": [
+              "taicol: 72878",
+              "urn:lsid:marinespecies.org:taxname:207449"
+            ],
+            "checklistbank-1174": [
+              "txn:149040"
+            ]
           },
-          "authorityIds": "col:6HQYM,itis:53300,wikidata:Q3704784",
+          "authorityIds": "checklistbank:taicol: 72878,checklistbank:urn:lsid:marinespecies.org:taxname:207449,checklistbank-1174:txn:149040,col:6HQYM,itis:53300,wikidata:Q3704784",
           "authorship": "(Ellis & Solander, 1786)"
         },
         {
@@ -3526,10 +3485,15 @@
             "col": [
               "3DWPC"
             ],
-            "checklistbank": "taicol: 72885",
-            "checklistbank-1174": "txn:374382"
+            "checklistbank": [
+              "taicol: 72885",
+              "urn:lsid:marinespecies.org:taxname:1289661"
+            ],
+            "checklistbank-1174": [
+              "txn:374382"
+            ]
           },
-          "authorityIds": "col:3DWPC,wikidata:Q25382013",
+          "authorityIds": "checklistbank:taicol: 72885,checklistbank:urn:lsid:marinespecies.org:taxname:1289661,checklistbank-1174:txn:374382,col:3DWPC,wikidata:Q25382013",
           "authorship": "(Milne Edwards & Haime, 1849)"
         },
         {
@@ -4041,11 +4005,16 @@
             "col": [
               "3DWPW"
             ],
-            "checklistbank": "taicol: 72890",
+            "checklistbank": [
+              "taicol: 72890",
+              "urn:lsid:marinespecies.org:taxname:763525"
+            ],
             "gbif-backbone": "7615046",
-            "checklistbank-1174": "txn:149038"
+            "checklistbank-1174": [
+              "txn:149038"
+            ]
           },
-          "authorityIds": "col:3DWPW",
+          "authorityIds": "checklistbank:taicol: 72890,checklistbank:urn:lsid:marinespecies.org:taxname:763525,checklistbank-1174:txn:149038,col:3DWPW,gbif-backbone:7615046",
           "authorship": "(Milne Edwards & Haime, 1849)"
         },
         {
@@ -5031,12 +5000,15 @@
           "authorship": "Veron",
           "sourceIds": {
             "checklistbank": "e4c328eb-a177-4021-a46d-e96067636770",
-            "checklistbank-139831": "1711708"
+            "checklistbank-139831": [
+              "1711708"
+            ]
           },
           "children": [],
           "uuid": "802b2a6f-663c-5fc-8d3-77c82e2987ffea",
           "commonName": "larger star coral",
-          "description": "Favites paraflexuosus (larger star coral) is a merulinidae species found in its native region."
+          "description": "Favites paraflexuosus (larger star coral) is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:e4c328eb-a177-4021-a46d-e96067636770,checklistbank-139831:1711708"
         },
         {
           "id": "SP_FAVITES_ABDITUS_ELLIS_SOLANDER",
@@ -5316,9 +5288,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Favites",
           "sourceIds": {
-            "checklistbank-139831": "503663"
+            "checklistbank-139831": [
+              "503663"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:503663"
         }
       ]
     },
@@ -5341,22 +5316,6 @@
           "children": [],
           "uuid": "7133df63-9db6-57a-895-6daf40389a48ec",
           "description": "\"Favites pentagona\" is a merulinidae species found in its native region."
-        },
-        {
-          "id": "SP_FAVITES_ABDITA_ELLIS_SOLANDER_1786",
-          "name": "\"Favites abdita\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Favites",
-          "authorship": "\"(Ellis & Solander, 1786)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207449",
-            "checklistbank-1174": "txn:149040"
-          },
-          "children": [],
-          "uuid": "3c634f65-6dde-5a1-b94-71796e9e0af757",
-          "description": "\"Favites abdita\" is a merulinidae species found in its native region."
         },
         {
           "id": "SP_FAVITES_ACUTICOLLIS_ORTMANN_1889",
@@ -5387,38 +5346,6 @@
           "children": [],
           "uuid": "cbc9fa98-eedb-5c2-8f6-59e9acce55c3ef",
           "description": "\"Favites colemani\" is a merulinidae species found in its native region."
-        },
-        {
-          "id": "SP_FAVITES_VALENCIENNESII_MILNE_EDWARDS_HAIME_1848",
-          "name": "\"Favites valenciennesii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Favites",
-          "authorship": "\"(Milne Edwards & Haime, 1848)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:763525",
-            "checklistbank-1174": "txn:149038"
-          },
-          "children": [],
-          "uuid": "272392f7-439f-535-ae8-50047bfb024f0f",
-          "description": "\"Favites valenciennesii\" is a merulinidae species found in its native region."
-        },
-        {
-          "id": "SP_FAVITES_MAGNISTELLATA_MILNE_EDWARDS_HAIME_1849",
-          "name": "\"Favites magnistellata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Favites",
-          "authorship": "\"(Milne Edwards & Haime, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1289661",
-            "checklistbank-1174": "txn:374382"
-          },
-          "children": [],
-          "uuid": "e7be941b-5bfe-5b0-8d7-3fffb3ecd06a38",
-          "description": "\"Favites magnistellata\" is a merulinidae species found in its native region."
         },
         {
           "id": "SP_FAVITES_FAVOSA_ELLIS_SOLANDER_1786",
@@ -5696,19 +5623,8 @@
           "sourceIds": {
             "checklistbank-139831": "503663"
           },
-          "uuid": "011ee584-0677-4fde-a63e-f466500f91c2"
-        },
-        {
-          "id": "SP_FAVITES_PARAFLEXUOSUS",
-          "name": "Favites paraflexuosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Favites",
-          "sourceIds": {
-            "checklistbank-139831": "1711708"
-          },
-          "uuid": "dcbadab8-e444-4dc1-a920-f9ec2f0e252d"
+          "uuid": "011ee584-0677-4fde-a63e-f466500f91c2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8255,10 +8171,18 @@
             "col": [
               "4B8ST"
             ],
-            "checklistbank": "taicol: 81989",
-            "checklistbank-1174": "txn:177335"
+            "checklistbank": [
+              "taicol: 81989",
+              "urn:lsid:marinespecies.org:taxname:288394"
+            ],
+            "checklistbank-1174": [
+              "txn:177335"
+            ],
+            "checklistbank-127379": [
+              "6457cf54-f92f-4478-a2b7-220e499d795e"
+            ]
           },
-          "authorityIds": "col:4B8ST,itis:53329,wikidata:Q3943102",
+          "authorityIds": "checklistbank:taicol: 81989,checklistbank:urn:lsid:marinespecies.org:taxname:288394,checklistbank-1174:txn:177335,checklistbank-127379:6457cf54-f92f-4478-a2b7-220e499d795e,col:4B8ST,itis:53329,wikidata:Q3943102",
           "authorship": "(Veron, Pichon & Wijsman-Best, 1977)"
         },
         {
@@ -8508,23 +8432,6 @@
       "name": "\"Oulophyllia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_OULOPHYLLIA_BENNETTAE_VERON_PICHON_WIJSMAN_BEST_1977",
-          "name": "\"Oulophyllia bennettae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oulophyllia",
-          "authorship": "\"(Veron, Pichon & Wijsman-Best, 1977)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:288394",
-            "checklistbank-1174": "txn:177335",
-            "checklistbank-127379": "6457cf54-f92f-4478-a2b7-220e499d795e"
-          },
-          "children": [],
-          "uuid": "fdbde296-82dc-506-b3d-5bc186e3b8b569",
-          "description": "\"Oulophyllia bennettae\" is a merulinidae species found in its native region."
-        },
         {
           "id": "SP_OULOPHYLLIA_LEVIS_NEMENZO_1959",
           "name": "\"Oulophyllia levis\"",
@@ -10428,11 +10335,14 @@
           "authorship": "Nemenzo",
           "sourceIds": {
             "checklistbank": "3457d1cd-b090-41a5-b9a0-4f5707978b63",
-            "checklistbank-139831": "108998"
+            "checklistbank-139831": [
+              "108998"
+            ]
           },
           "children": [],
           "uuid": "65d136cc-8d6c-532-81e-c881f79361ade2",
-          "description": "Pectinia teres is a merulinidae species found in its native region."
+          "description": "Pectinia teres is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:3457d1cd-b090-41a5-b9a0-4f5707978b63,checklistbank-139831:108998"
         },
         {
           "id": "SP_PECTINIA_CRASSA",
@@ -10572,18 +10482,6 @@
           },
           "uuid": "4062317d-5c41-4d1e-af2a-f04e089f6857",
           "children": []
-        },
-        {
-          "id": "SP_PECTINIA_TERES",
-          "name": "Pectinia teres",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pectinia",
-          "sourceIds": {
-            "checklistbank-139831": "108998"
-          },
-          "uuid": "ee0d87cc-95b1-4211-9d49-4820888f2c55"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11316,9 +11214,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:288341"
             ],
-            "checklistbank-1174": "txn:185616"
+            "checklistbank-1174": [
+              "txn:185616"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:288341"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:288341,col:38JWG,itis:572098,wikidata:Q3945085",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:288341,checklistbank-1174:txn:185616,checklistbank-2011:urn:lsid:marinespecies.org:taxname:288341,col:38JWG,itis:572098,wikidata:Q3945085",
           "authorship": "(Milne Edwards & Haime, 1849)"
         },
         {
@@ -11345,9 +11248,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:207422"
             ],
-            "checklistbank-1174": "txn:386342"
+            "checklistbank-1174": [
+              "txn:386342"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:207422"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:207422,col:8L8VF,itis:572099,wikidata:Q3944685",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:207422,checklistbank-1174:txn:386342,checklistbank-2011:urn:lsid:marinespecies.org:taxname:207422,col:8L8VF,itis:572099,wikidata:Q3944685",
           "authorship": "(Ehrenberg, 1834)"
         },
         {
@@ -13512,12 +13420,15 @@
           "authorship": "(Martin, 1880)",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1805719",
-            "checklistbank-139831": "503557"
+            "checklistbank-139831": [
+              "503557"
+            ]
           },
           "children": [],
           "uuid": "3d6de589-87cd-5ce-86c-ee34c9a8ad6e58",
           "commonName": "hedgehog coral",
-          "description": "Echinopora irregularis (hedgehog coral) is a merulinidae species found in its native region."
+          "description": "Echinopora irregularis (hedgehog coral) is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1805719,checklistbank-139831:503557"
         },
         {
           "id": "SP_ECHINOPORA_MAMMILLATA_NEMENZO_1959",
@@ -13741,36 +13652,6 @@
           "description": "\"Echinopora mammiformis\" is a merulinidae species found in its native region."
         },
         {
-          "id": "SP_ECHINOPORA_FRUTICULOSA_EHRENBERG_1834",
-          "name": "Echinopora fruticulosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echinopora",
-          "authorship": "(Ehrenberg, 1834)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:207422",
-            "checklistbank-1174": "txn:386342"
-          },
-          "uuid": "fbf6da20-2b90-49a4-afd9-d48b80dec7f1",
-          "children": []
-        },
-        {
-          "id": "SP_ECHINOPORA_FORSKALIANA_MILNE_EDWARDS_HAIME_1849",
-          "name": "Echinopora forskaliana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echinopora",
-          "authorship": "(Milne Edwards & Haime, 1849)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:288341",
-            "checklistbank-1174": "txn:185616"
-          },
-          "uuid": "72b40ac0-9e9f-4c4c-87c9-c3d833ad2311",
-          "children": []
-        },
-        {
           "id": "SP_ECHINOPORA_TAYLORAE_VERON_2000",
           "name": "Echinopora taylorae",
           "rank": "SPECIES",
@@ -13797,18 +13678,6 @@
           },
           "uuid": "c5109c24-64fb-41e2-a1d8-66e6cef09933",
           "children": []
-        },
-        {
-          "id": "SP_ECHINOPORA_IRREGULARIS",
-          "name": "Echinopora irregularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echinopora",
-          "sourceIds": {
-            "checklistbank-139831": "503557"
-          },
-          "uuid": "f47a9b84-cce0-4612-98be-6111d86de8ab"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14486,11 +14355,14 @@
           "authorship": "Veron, 2000",
           "sourceIds": {
             "checklistbank": "taicol: 84371",
-            "checklistbank-139831": "503645"
+            "checklistbank-139831": [
+              "503645"
+            ]
           },
           "children": [],
           "uuid": "0cd1bf01-a97a-59a-8c3-4a1b9a05adbd4d",
-          "description": "Platygyra carnosus is a merulinidae species found in its native region."
+          "description": "Platygyra carnosus is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:taicol: 84371,checklistbank-139831:503645"
         },
         {
           "id": "SP_PLATYGYRA_RUSTICA_DANA_1846",
@@ -14517,12 +14389,15 @@
           "authorship": "Chevalier",
           "sourceIds": {
             "checklistbank": "1fcd3fae-0f64-4c7c-9616-0f024a1d859d",
-            "checklistbank-139831": "503647"
+            "checklistbank-139831": [
+              "503647"
+            ]
           },
           "children": [],
           "uuid": "79cb7d66-758d-506-946-96fb4fc60d6da5",
           "commonName": "lesser valley coral",
-          "description": "Platygyra pini (lesser valley coral) is a merulinidae species found in its native region."
+          "description": "Platygyra pini (lesser valley coral) is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:1fcd3fae-0f64-4c7c-9616-0f024a1d859d,checklistbank-139831:503647"
         },
         {
           "id": "SP_PLATYGYRA_RYUKYUENSIS_YABE_SUGIYAMA",
@@ -14551,12 +14426,15 @@
           "authorship": "Wijsman-Best",
           "sourceIds": {
             "checklistbank": "128f3899-6eb4-4b18-9354-e701e47bc2fa",
-            "checklistbank-139831": "503652"
+            "checklistbank-139831": [
+              "503652"
+            ]
           },
           "children": [],
           "uuid": "cc6460cf-8bcb-5b6-ae6-945624ae316863",
           "commonName": "lesser valley coral",
-          "description": "Platygyra verweyi (lesser valley coral) is a merulinidae species found in its native region."
+          "description": "Platygyra verweyi (lesser valley coral) is a merulinidae species found in its native region.",
+          "authorityIds": "checklistbank:128f3899-6eb4-4b18-9354-e701e47bc2fa,checklistbank-139831:503652"
         },
         {
           "id": "SP_PLATYGYRA_CONTORTA",
@@ -14685,9 +14563,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Platygyra",
           "sourceIds": {
-            "checklistbank-139831": "503644"
+            "checklistbank-139831": [
+              "503644"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:503644"
         }
       ]
     },
@@ -14791,43 +14672,8 @@
           "sourceIds": {
             "checklistbank-139831": "503644"
           },
-          "uuid": "409bfdf0-c0c4-4afa-ace5-578a0ea0a546"
-        },
-        {
-          "id": "SP_PLATYGYRA_CARNOSUS",
-          "name": "Platygyra carnosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Platygyra",
-          "sourceIds": {
-            "checklistbank-139831": "503645"
-          },
-          "uuid": "a94b68ae-d11c-45dd-812c-2cd295911623"
-        },
-        {
-          "id": "SP_PLATYGYRA_PINI",
-          "name": "Platygyra pini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Platygyra",
-          "sourceIds": {
-            "checklistbank-139831": "503647"
-          },
-          "uuid": "142af653-649e-4bfa-9c1f-a22790589be7"
-        },
-        {
-          "id": "SP_PLATYGYRA_VERWEYI",
-          "name": "Platygyra verweyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Platygyra",
-          "sourceIds": {
-            "checklistbank-139831": "503652"
-          },
-          "uuid": "6d9a6f94-5b0c-4885-8f06-3cb5eccf1a53"
+          "uuid": "409bfdf0-c0c4-4afa-ace5-578a0ea0a546",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -15974,10 +15820,18 @@
             "col": [
               "36QFB"
             ],
-            "checklistbank": "taicol: 70592",
-            "checklistbank-1174": "txn:83587"
+            "checklistbank": [
+              "taicol: 70592",
+              "urn:lsid:marinespecies.org:taxname:762753"
+            ],
+            "checklistbank-1174": [
+              "txn:83587"
+            ],
+            "checklistbank-127379": [
+              "8a500d14-4376-4645-a65a-c1e4b8970b98"
+            ]
           },
-          "authorityIds": "col:36QFB,wikidata:Q22683907",
+          "authorityIds": "checklistbank:taicol: 70592,checklistbank:urn:lsid:marinespecies.org:taxname:762753,checklistbank-1174:txn:83587,checklistbank-127379:8a500d14-4376-4645-a65a-c1e4b8970b98,col:36QFB,wikidata:Q22683907",
           "authorship": "(Milne Edwards & Haime, 1949)"
         },
         {
@@ -16072,10 +15926,18 @@
             "col": [
               "36QFF"
             ],
-            "checklistbank": "taicol: 70594",
-            "checklistbank-1174": "txn:177326"
+            "checklistbank": [
+              "taicol: 70594",
+              "urn:lsid:marinespecies.org:taxname:718748"
+            ],
+            "checklistbank-1174": [
+              "txn:177326"
+            ],
+            "checklistbank-127379": [
+              "11bcff1a-7682-4163-9a75-007c629a02c3"
+            ]
           },
-          "authorityIds": "col:36QFF,wikidata:Q13591706",
+          "authorityIds": "checklistbank:taicol: 70594,checklistbank:urn:lsid:marinespecies.org:taxname:718748,checklistbank-1174:txn:177326,checklistbank-127379:11bcff1a-7682-4163-9a75-007c629a02c3,col:36QFF,wikidata:Q13591706",
           "authorship": "(Forskål, 1775)"
         },
         {
@@ -16139,9 +16001,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:758224"
             ],
-            "checklistbank-1174": "txn:205167"
+            "checklistbank-1174": [
+              "txn:205167"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:758224"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:758224,col:36QFH,wikidata:Q22683911",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:758224,checklistbank-1174:txn:205167,checklistbank-2011:urn:lsid:marinespecies.org:taxname:758224,col:36QFH,wikidata:Q22683911",
           "authorship": "(Veron, Turak & DeVantier, 2000)"
         },
         {
@@ -16210,10 +16077,18 @@
             "col": [
               "36QFL"
             ],
-            "checklistbank": "taicol: 70597",
-            "checklistbank-1174": "txn:178874"
+            "checklistbank": [
+              "taicol: 70597",
+              "urn:lsid:marinespecies.org:taxname:758225"
+            ],
+            "checklistbank-1174": [
+              "txn:178874"
+            ],
+            "checklistbank-127379": [
+              "8679ae95-23e4-4237-8c3d-aad8500ed378"
+            ]
           },
-          "authorityIds": "col:36QFL,wikidata:Q22683914",
+          "authorityIds": "checklistbank:taicol: 70597,checklistbank:urn:lsid:marinespecies.org:taxname:758225,checklistbank-1174:txn:178874,checklistbank-127379:8679ae95-23e4-4237-8c3d-aad8500ed378,col:36QFL,wikidata:Q22683914",
           "authorship": "(Veron, Pichon & Wijsman-Best, 1977)"
         },
         {
@@ -16496,10 +16371,18 @@
             "col": [
               "36QFZ"
             ],
-            "checklistbank": "taicol: 70605",
-            "checklistbank-1174": "txn:205163"
+            "checklistbank": [
+              "taicol: 70605",
+              "urn:lsid:marinespecies.org:taxname:758232"
+            ],
+            "checklistbank-1174": [
+              "txn:205163"
+            ],
+            "checklistbank-127379": [
+              "aff93492-3446-465c-b53b-bd2fcb172251"
+            ]
           },
-          "authorityIds": "col:36QFZ,wikidata:Q22683924",
+          "authorityIds": "checklistbank:taicol: 70605,checklistbank:urn:lsid:marinespecies.org:taxname:758232,checklistbank-1174:txn:205163,checklistbank-127379:aff93492-3446-465c-b53b-bd2fcb172251,col:36QFZ,wikidata:Q22683924",
           "authorship": "(Moll & Best, 1984)"
         },
         {
@@ -16691,23 +16574,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DIPSASTRAEA_FAVUS_FORSK_L_1775",
-          "name": "\"Dipsastraea favus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipsastraea",
-          "authorship": "\"(Forskål, 1775)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:718748",
-            "checklistbank-1174": "txn:177326",
-            "checklistbank-127379": "11bcff1a-7682-4163-9a75-007c629a02c3"
-          },
-          "children": [],
-          "uuid": "70a14a12-9017-5e5-bbd-8afa2c482048ed",
-          "description": "\"Dipsastraea favus\" is a merulinidae species found in its native region."
-        },
-        {
           "id": "SP_DIPSASTRAEA_SPECIOSA_DANA_1846",
           "name": "\"Dipsastraea speciosa\"",
           "rank": "SPECIES",
@@ -16724,23 +16590,6 @@
           "description": "\"Dipsastraea speciosa\" is a merulinidae species found in its native region."
         },
         {
-          "id": "SP_DIPSASTRAEA_LIZARDENSIS_VERON_PICHON_WIJSMAN_BEST_1977",
-          "name": "\"Dipsastraea lizardensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipsastraea",
-          "authorship": "\"(Veron, Pichon & Wijsman-Best, 1977)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:758225",
-            "checklistbank-1174": "txn:178874",
-            "checklistbank-127379": "8679ae95-23e4-4237-8c3d-aad8500ed378"
-          },
-          "children": [],
-          "uuid": "009a9ff2-bf1d-5ab-a6f-d825bc688d3043",
-          "description": "\"Dipsastraea lizardensis\" is a merulinidae species found in its native region."
-        },
-        {
           "id": "SP_DIPSASTRAEA_VIETNAMENSIS_VERON_2000",
           "name": "\"Dipsastraea vietnamensis\"",
           "rank": "SPECIES",
@@ -16755,23 +16604,6 @@
           "children": [],
           "uuid": "363e568e-d500-59a-a48-c5c50baede43a9",
           "description": "\"Dipsastraea vietnamensis\" is a merulinidae species found in its native region."
-        },
-        {
-          "id": "SP_DIPSASTRAEA_VERONI_MOLL_BEST_1984",
-          "name": "\"Dipsastraea veroni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipsastraea",
-          "authorship": "\"(Moll & Best, 1984)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:758232",
-            "checklistbank-1174": "txn:205163",
-            "checklistbank-127379": "aff93492-3446-465c-b53b-bd2fcb172251"
-          },
-          "children": [],
-          "uuid": "e3842784-789e-579-bb8-54e6467884be23",
-          "description": "\"Dipsastraea veroni\" is a merulinidae species found in its native region."
         },
         {
           "id": "SP_DIPSASTRAEA_PALLIDA_DANA_1846",
@@ -16870,23 +16702,6 @@
           "description": "\"Dipsastraea matthaii\" is a merulinidae species found in its native region."
         },
         {
-          "id": "SP_DIPSASTRAEA_AMICORUM_MILNE_EDWARDS_HAIME_1849",
-          "name": "\"Dipsastraea amicorum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipsastraea",
-          "authorship": "\"(Milne Edwards & Haime, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:762753",
-            "checklistbank-1174": "txn:83587",
-            "checklistbank-127379": "8a500d14-4376-4645-a65a-c1e4b8970b98"
-          },
-          "children": [],
-          "uuid": "f420c060-71ae-5b4-88c-d5a9b155d97f8b",
-          "description": "\"Dipsastraea amicorum\" is a merulinidae species found in its native region."
-        },
-        {
           "id": "SP_DIPSASTRAEA_FAVIAFORMIS_VERON_2000",
           "name": "\"Dipsastraea faviaformis\"",
           "rank": "SPECIES",
@@ -16913,21 +16728,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:758223"
           },
           "uuid": "779f7251-a004-4764-b6c2-04dbe7402236",
-          "children": []
-        },
-        {
-          "id": "SP_DIPSASTRAEA_LACUNA_VERON_TURAK_DEVANTIER_2000",
-          "name": "Dipsastraea lacuna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dipsastraea",
-          "authorship": "(Veron, Turak & DeVantier, 2000)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:758224",
-            "checklistbank-1174": "txn:205167"
-          },
-          "uuid": "aad25b84-4447-4db1-ae22-c7fa7b6b8622",
           "children": []
         },
         {
@@ -18340,9 +18140,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:762418"
             ],
-            "checklistbank-1174": "txn:310885"
+            "checklistbank-1174": [
+              "txn:310885"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:762418"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:762418,col:J3P4,wikidata:Q22683461",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:762418,checklistbank-1174:txn:310885,checklistbank-2011:urn:lsid:marinespecies.org:taxname:762418,col:J3P4,wikidata:Q22683461",
           "authorship": "(Ellis & Solander, 1786)"
         },
         {
@@ -19061,21 +18866,6 @@
           "children": [],
           "uuid": "35197760-3c4f-514-bac-5653e2e77a0500",
           "description": "\"Astrea curta\" is a merulinidae species found in its native region."
-        },
-        {
-          "id": "SP_ASTREA_ROTULOSA_ELLIS_SOLANDER_1786",
-          "name": "Astrea rotulosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Astrea",
-          "authorship": "(Ellis & Solander, 1786)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:762418",
-            "checklistbank-1174": "txn:310885"
-          },
-          "uuid": "b1770710-5e0d-4d23-a419-b2786af45008",
-          "children": []
         },
         {
           "id": "SP_ASTREA_DEVANTIERI_VERON_2000",
@@ -25862,7 +25652,7 @@
     }
   ],
   "genusCount": 113,
-  "speciesCount": 1417,
+  "speciesCount": 1405,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

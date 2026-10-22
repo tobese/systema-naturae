@@ -2337,11 +2337,16 @@
           "children": [],
           "sourceIds": {
             "gbif": 3191643,
-            "checklistbank": "Actinoptychus_minutus",
-            "wikispecies": "Actinoptychus_minutus"
+            "checklistbank": [
+              "Actinoptychus_minutus",
+              "urn:lsid:marinespecies.org:taxname:656505"
+            ],
+            "wikispecies": [
+              "Actinoptychus_minutus"
+            ]
           },
           "uuid": "ace4c01b-ed64-5fb-aad-fc4f1a76965e7d",
-          "authorityIds": "gbif:3191643"
+          "authorityIds": "checklistbank:Actinoptychus_minutus,checklistbank:urn:lsid:marinespecies.org:taxname:656505,gbif:3191643,wikispecies:Actinoptychus_minutus"
         },
         {
           "id": "ACTINOPTYCHUS_MIRABILIS",
@@ -3510,10 +3515,15 @@
               "2620"
             ],
             "checklistbank": "taicol: 43050",
-            "checklistbank-1174": "txn:387049"
+            "checklistbank-1174": [
+              "txn:387049"
+            ],
+            "wikispecies": [
+              "Actinoptychus_senarius"
+            ]
           },
           "uuid": "2b4482f1-6e9f-54c-baf-f6ef79d5f23cbe",
-          "authorityIds": "gbif:3191636,itis:2620"
+          "authorityIds": "checklistbank:taicol: 43050,checklistbank-1174:txn:387049,gbif:3191636,itis:2620,wikispecies:Actinoptychus_senarius"
         },
         {
           "id": "ACTINOPTYCHUS_SEPARATUS",
@@ -3799,11 +3809,16 @@
             "itis": [
               "2621"
             ],
-            "checklistbank": "taicol: 44671",
-            "wikispecies": "Actinoptychus_splendens"
+            "checklistbank": [
+              "taicol: 44671",
+              "urn:lsid:marinespecies.org:taxname:148949"
+            ],
+            "wikispecies": [
+              "Actinoptychus_splendens"
+            ]
           },
           "uuid": "ffd39a3b-fcad-5bf-8f9-2d5a748e21db23",
-          "authorityIds": "gbif:3191631,itis:2621"
+          "authorityIds": "checklistbank:taicol: 44671,checklistbank:urn:lsid:marinespecies.org:taxname:148949,gbif:3191631,itis:2621,wikispecies:Actinoptychus_splendens"
         },
         {
           "id": "ACTINOPTYCHUS_STAUBII",
@@ -4553,12 +4568,19 @@
             "itis": [
               "202432"
             ],
-            "checklistbank": "taicol: 43053",
-            "wikispecies": "Actinoptychus_vulgaris",
-            "checklistbank-1174": "txn:387051"
+            "checklistbank": [
+              "taicol: 43053",
+              "urn:lsid:marinespecies.org:taxname:179166"
+            ],
+            "wikispecies": [
+              "Actinoptychus_vulgaris"
+            ],
+            "checklistbank-1174": [
+              "txn:387051"
+            ]
           },
           "uuid": "5e66851d-e0e4-5a5-b6e-c9912cd61773bd",
-          "authorityIds": "gbif:3191641,itis:202432"
+          "authorityIds": "checklistbank:taicol: 43053,checklistbank:urn:lsid:marinespecies.org:taxname:179166,checklistbank-1174:txn:387051,gbif:3191641,itis:202432,wikispecies:Actinoptychus_vulgaris"
         },
         {
           "id": "ACTINOPTYCHUS_WEISSFLOGII",
@@ -4753,39 +4775,6 @@
       "name": "\"Actinoptychus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ACTINOPTYCHUS_SPLENDENS_SHADBOLT_RALFS_EX_PRITCHARD_1861",
-          "name": "\"Actinoptychus splendens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinoptychus",
-          "authorship": "\"(Shadbolt) Ralfs ex Pritchard, 1861\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:148949",
-            "wikispecies": "Actinoptychus_splendens"
-          },
-          "children": [],
-          "uuid": "f9b63d99-d485-558-b62-3b4acf038c1737",
-          "description": "\"Actinoptychus splendens\" is a heliopeltaceae species found in its native region."
-        },
-        {
-          "id": "SP_ACTINOPTYCHUS_VULGARIS_SCHUMANN_1867",
-          "name": "\"Actinoptychus vulgaris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinoptychus",
-          "authorship": "\"Schumann, 1867\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:179166",
-            "wikispecies": "Actinoptychus_vulgaris",
-            "checklistbank-1174": "txn:387051"
-          },
-          "children": [],
-          "uuid": "42d572e2-0600-51b-827-060a27271ade1b",
-          "description": "\"Actinoptychus vulgaris\" is a heliopeltaceae species found in its native region."
-        },
         {
           "id": "SP_ACTINOPTYCHUS_ADRIATICUS_GRUNOW",
           "name": "\"Actinoptychus adriaticus\"",
@@ -5132,22 +5121,6 @@
           "description": "\"Actinoptychus truanii\" is a heliopeltaceae species found in its native region."
         },
         {
-          "id": "SP_ACTINOPTYCHUS_MINUTUS_GREVILLE",
-          "name": "\"Actinoptychus minutus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinoptychus",
-          "authorship": "Greville",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:656505",
-            "wikispecies": "Actinoptychus_minutus"
-          },
-          "children": [],
-          "uuid": "321ae962-fee6-5d4-9b8-39a52acaa15535",
-          "description": "\"Actinoptychus minutus\" is a heliopeltaceae species found in its native region."
-        },
-        {
           "id": "SP_ACTINOPTYCHUS_PULCHELLUS",
           "name": "\"Actinoptychus pulchellus\"",
           "rank": "SPECIES",
@@ -5190,20 +5163,6 @@
           "children": [],
           "uuid": "f150357d-f806-576-b9c-2839ed0ab3b97f",
           "description": "\"Actinoptychus simplex\" is a heliopeltaceae species found in its native region."
-        },
-        {
-          "id": "SP_ACTINOPTYCHUS_SENARIUS",
-          "name": "Actinoptychus senarius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Actinoptychus",
-          "sourceIds": {
-            "wikispecies": "Actinoptychus_senarius",
-            "checklistbank-1174": "txn:387049"
-          },
-          "uuid": "cb122da8-762a-430b-ac6a-dd4f8f8cf621",
-          "children": []
         },
         {
           "id": "SP_ACTINOPTYCHUS_TENUIS",
@@ -5268,7 +5227,8 @@
           "sourceIds": {
             "checklistbank-139831": "1608803"
           },
-          "uuid": "bf9817a4-77d4-4d08-9dc3-83260fd29eb0"
+          "uuid": "bf9817a4-77d4-4d08-9dc3-83260fd29eb0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5475,11 +5435,16 @@
           "children": [],
           "sourceIds": {
             "gbif": 7390508,
-            "checklistbank": "Trossulus_elegantulus",
-            "wikispecies": "Trossulus_elegantulus"
+            "checklistbank": [
+              "Trossulus_elegantulus",
+              "urn:lsid:marinespecies.org:taxname:620290"
+            ],
+            "wikispecies": [
+              "Trossulus_elegantulus"
+            ]
           },
           "uuid": "4f4afe25-eaea-579-b38-a0f7fa1b7d2986",
-          "authorityIds": "gbif:7390508"
+          "authorityIds": "checklistbank:Trossulus_elegantulus,checklistbank:urn:lsid:marinespecies.org:taxname:620290,gbif:7390508,wikispecies:Trossulus_elegantulus"
         },
         {
           "id": "TROSSULUS_JAVANICUS",
@@ -5528,22 +5493,6 @@
       "name": "\"Trossulus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TROSSULUS_ELEGANTULUS_E_GROVE_G_STURT_R_ROSS_P_A_SIMS_2002",
-          "name": "\"Trossulus elegantulus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trossulus",
-          "authorship": "\"(E.Grove & G.Sturt) R.Ross & P.A.Sims, 2002\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:620290",
-            "wikispecies": "Trossulus_elegantulus"
-          },
-          "children": [],
-          "uuid": "56cbb6f9-755a-5b6-ad0-8e47e0499d0c19",
-          "description": "\"Trossulus elegantulus\" is a heliopeltaceae species found in its native region."
-        },
         {
           "id": "SP_TROSSULUS_CALIFORNICUS",
           "name": "Trossulus californicus",
@@ -5957,7 +5906,7 @@
     }
   ],
   "genusCount": 15,
-  "speciesCount": 317,
+  "speciesCount": 313,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

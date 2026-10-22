@@ -6351,9 +6351,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Engina",
           "sourceIds": {
-            "checklistbank-139831": "1225832"
+            "checklistbank-139831": [
+              "1225832"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1225832"
         },
         {
           "id": "SP_ENGINA_OVATA",
@@ -6363,9 +6366,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Engina",
           "sourceIds": {
-            "checklistbank-139831": "1228211"
+            "checklistbank-139831": [
+              "1228211"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1228211"
         }
       ]
     },
@@ -6525,7 +6531,8 @@
           "sourceIds": {
             "checklistbank-139831": "1225832"
           },
-          "uuid": "c5eb6c84-1477-47bf-b85e-299512adf949"
+          "uuid": "c5eb6c84-1477-47bf-b85e-299512adf949",
+          "children": []
         },
         {
           "id": "SP_ENGINA_OVATA",
@@ -6537,7 +6544,8 @@
           "sourceIds": {
             "checklistbank-139831": "1228211"
           },
-          "uuid": "acd842d8-2cfa-4e86-bde5-05020496c887"
+          "uuid": "acd842d8-2cfa-4e86-bde5-05020496c887",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9263,9 +9271,11 @@
               "9X8BM"
             ],
             "checklistbank": "1445466",
-            "checklistbank-139831": "1445466"
+            "checklistbank-139831": [
+              "1445466"
+            ]
           },
-          "authorityIds": "col:9X8BM",
+          "authorityIds": "checklistbank:1445466,checklistbank-139831:1445466,col:9X8BM",
           "description": "Aplus coccineus is a pisaniidae species found in its native region."
         },
         {
@@ -9481,9 +9491,11 @@
               "VC979"
             ],
             "checklistbank": "1684494",
-            "checklistbank-139831": "1684494"
+            "checklistbank-139831": [
+              "1684494"
+            ]
           },
-          "authorityIds": "col:VC979",
+          "authorityIds": "checklistbank:1684494,checklistbank-139831:1684494,col:VC979",
           "description": "Aplus dissimilis is a pisaniidae species found in its native region."
         },
         {
@@ -9609,30 +9621,6 @@
           },
           "uuid": "c7d74d4e-7aa2-4158-8c1c-64d6164769ed",
           "children": []
-        },
-        {
-          "id": "SP_APLUS_COCCINEUS",
-          "name": "Aplus coccineus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aplus",
-          "sourceIds": {
-            "checklistbank-139831": "1445466"
-          },
-          "uuid": "e621e4c1-7601-454c-a33a-e79c1f54cd80"
-        },
-        {
-          "id": "SP_APLUS_DISSIMILIS",
-          "name": "Aplus dissimilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aplus",
-          "sourceIds": {
-            "checklistbank-139831": "1684494"
-          },
-          "uuid": "bd48a735-b163-48e8-ab40-4a7d5dfe1b00"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11092,7 +11080,7 @@
     }
   ],
   "genusCount": 59,
-  "speciesCount": 598,
+  "speciesCount": 600,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -377,10 +377,15 @@
             "col": [
               "4CBXG"
             ],
-            "checklistbank": "219218",
-            "checklistbank-1174": "txn:431907"
+            "checklistbank": [
+              "219218",
+              "urn:lsid:marinespecies.org:taxname:506817"
+            ],
+            "checklistbank-1174": [
+              "txn:431907"
+            ]
           },
-          "authorityIds": "col:4CBXG,itis:81891"
+          "authorityIds": "checklistbank:219218,checklistbank:urn:lsid:marinespecies.org:taxname:506817,checklistbank-1174:txn:431907,col:4CBXG,itis:81891"
         },
         {
           "id": "SP_PANDORA_FLEXUOSA_G_B_SOWERBY_I_1822",
@@ -1150,12 +1155,15 @@
           "authorship": "Leach in Ross, 1819",
           "sourceIds": {
             "checklistbank": "219220",
-            "checklistbank-139831": "193986"
+            "checklistbank-139831": [
+              "193986"
+            ]
           },
           "children": [],
           "uuid": "a7689ff6-638a-524-b31-e91e5c43b3d230",
           "commonName": "glacial pandora",
-          "description": "Pandora glacialis (glacial pandora) is a pandoridae species found in its native region."
+          "description": "Pandora glacialis (glacial pandora) is a pandoridae species found in its native region.",
+          "authorityIds": "checklistbank:219220,checklistbank-139831:193986"
         },
         {
           "id": "SP_PANDORA_ELONGATA_CARPENTER_1864",
@@ -1229,12 +1237,15 @@
           "authorship": "Boss & A. Merrill, 1965",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:421002",
-            "checklistbank-139831": "253262"
+            "checklistbank-139831": [
+              "253262"
+            ]
           },
           "children": [],
           "uuid": "01200636-6626-579-89c-10a06730804786",
           "commonName": "inflated pandora",
-          "description": "Pandora inflata (inflated pandora) is a pandoridae species found in its native region."
+          "description": "Pandora inflata (inflated pandora) is a pandoridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:421002,checklistbank-139831:253262"
         },
         {
           "id": "SP_PANDORA_WASHINGTONENSIS_C_E_WEAVER_1916",
@@ -1762,9 +1773,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pandora",
           "sourceIds": {
-            "checklistbank-139831": "906405"
+            "checklistbank-139831": [
+              "906405"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:906405"
         },
         {
           "id": "SP_PANDORA_PERANGUSTA",
@@ -1774,9 +1788,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pandora",
           "sourceIds": {
-            "checklistbank-139831": "906408"
+            "checklistbank-139831": [
+              "906408"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:906408"
         },
         {
           "id": "SP_PANDORA_PULCHELLA",
@@ -1786,9 +1803,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pandora",
           "sourceIds": {
-            "checklistbank-139831": "906409"
+            "checklistbank-139831": [
+              "906409"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:906409"
         },
         {
           "id": "SP_PANDORA_RACHAELAE",
@@ -1798,9 +1818,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pandora",
           "sourceIds": {
-            "checklistbank-139831": "906411"
+            "checklistbank-139831": [
+              "906411"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:906411"
         },
         {
           "id": "SP_PANDORA_RADIATA",
@@ -1810,9 +1833,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pandora",
           "sourceIds": {
-            "checklistbank-139831": "906412"
+            "checklistbank-139831": [
+              "906412"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:906412"
         }
       ]
     },
@@ -1850,22 +1876,6 @@
           "children": [],
           "uuid": "2f72d7c1-a106-512-91e-75f8f4eeba34cb",
           "description": "\"Pandora albida\" is a pandoridae species found in its native region."
-        },
-        {
-          "id": "SP_PANDORA_FILOSA_P_P_CARPENTER_1864",
-          "name": "\"Pandora filosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pandora",
-          "authorship": "\"P. P. Carpenter, 1864\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506817",
-            "checklistbank-1174": "txn:431907"
-          },
-          "children": [],
-          "uuid": "6f1b05d6-e600-5e3-b68-cddd9a67087005",
-          "description": "\"Pandora filosa\" is a pandoridae species found in its native region."
         },
         {
           "id": "SP_PANDORA_CARINATA_PRASHAD_1932",
@@ -2009,30 +2019,6 @@
           "children": []
         },
         {
-          "id": "SP_PANDORA_GLACIALIS",
-          "name": "Pandora glacialis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pandora",
-          "sourceIds": {
-            "checklistbank-139831": "193986"
-          },
-          "uuid": "eb4b2368-9822-43fa-a0ab-25f5c3ff5496"
-        },
-        {
-          "id": "SP_PANDORA_INFLATA",
-          "name": "Pandora inflata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pandora",
-          "sourceIds": {
-            "checklistbank-139831": "253262"
-          },
-          "uuid": "4ca0dce8-0cdb-4a41-b1f6-5507b382c515"
-        },
-        {
           "id": "SP_PANDORA_OBLONGA",
           "name": "Pandora oblonga",
           "rank": "SPECIES",
@@ -2042,7 +2028,8 @@
           "sourceIds": {
             "checklistbank-139831": "906405"
           },
-          "uuid": "ad0e93d5-9c2f-416e-986b-8595b2c05f85"
+          "uuid": "ad0e93d5-9c2f-416e-986b-8595b2c05f85",
+          "children": []
         },
         {
           "id": "SP_PANDORA_PERANGUSTA",
@@ -2054,7 +2041,8 @@
           "sourceIds": {
             "checklistbank-139831": "906408"
           },
-          "uuid": "50aa583f-ab50-4211-aca7-77bfaa455585"
+          "uuid": "50aa583f-ab50-4211-aca7-77bfaa455585",
+          "children": []
         },
         {
           "id": "SP_PANDORA_PULCHELLA",
@@ -2066,7 +2054,8 @@
           "sourceIds": {
             "checklistbank-139831": "906409"
           },
-          "uuid": "2b3aac60-91db-47ea-9ffd-3eacecab77b3"
+          "uuid": "2b3aac60-91db-47ea-9ffd-3eacecab77b3",
+          "children": []
         },
         {
           "id": "SP_PANDORA_RACHAELAE",
@@ -2078,7 +2067,8 @@
           "sourceIds": {
             "checklistbank-139831": "906411"
           },
-          "uuid": "5060d647-2f6d-444c-a3af-c9e4b6927416"
+          "uuid": "5060d647-2f6d-444c-a3af-c9e4b6927416",
+          "children": []
         },
         {
           "id": "SP_PANDORA_RADIATA",
@@ -2090,7 +2080,8 @@
           "sourceIds": {
             "checklistbank-139831": "906412"
           },
-          "uuid": "61a8ab56-6f57-46f7-a179-811239e9b5c5"
+          "uuid": "61a8ab56-6f57-46f7-a179-811239e9b5c5",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2121,10 +2112,15 @@
             "col": [
               "W5H2"
             ],
-            "checklistbank": "218553",
-            "checklistbank-1174": "txn:293325"
+            "checklistbank": [
+              "218553",
+              "urn:lsid:marinespecies.org:taxname:518801"
+            ],
+            "checklistbank-1174": [
+              "txn:293325"
+            ]
           },
-          "authorityIds": "col:W5H2",
+          "authorityIds": "checklistbank:218553,checklistbank:urn:lsid:marinespecies.org:taxname:518801,checklistbank-1174:txn:293325,col:W5H2",
           "authorship": "(Carpenter, 1856)"
         },
         {
@@ -2208,9 +2204,11 @@
               "W5H5"
             ],
             "checklistbank": "1588777",
-            "checklistbank-139831": "1588777"
+            "checklistbank-139831": [
+              "1588777"
+            ]
           },
-          "authorityIds": "col:W5H5",
+          "authorityIds": "checklistbank:1588777,checklistbank-139831:1588777,col:W5H5",
           "description": "Clidiophora dorsorectus is a pandoridae species found in its native region."
         },
         {
@@ -2235,22 +2233,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CLIDIOPHORA_CLAVICULATA_P_P_CARPENTER_1856",
-          "name": "\"Clidiophora claviculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Clidiophora",
-          "authorship": "\"(P. P. Carpenter, 1856)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:518801",
-            "checklistbank-1174": "txn:293325"
-          },
-          "children": [],
-          "uuid": "c9b63719-bead-5cb-bf0-68d77360a38fe3",
-          "description": "\"Clidiophora claviculata\" is a pandoridae species found in its native region."
-        },
-        {
           "id": "SP_CLIDIOPHORA_CORNUTA_C_B_ADAMS_1852",
           "name": "Clidiophora cornuta",
           "rank": "SPECIES",
@@ -2263,18 +2245,6 @@
           },
           "uuid": "20b8e1f1-3afc-4b69-9a1f-29b009407701",
           "children": []
-        },
-        {
-          "id": "SP_CLIDIOPHORA_DORSORECTUS",
-          "name": "Clidiophora dorsorectus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clidiophora",
-          "sourceIds": {
-            "checklistbank-139831": "1588777"
-          },
-          "uuid": "bb0c92ec-af08-4c8a-9add-b14f441e5bff"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2391,9 +2361,11 @@
               "6JNNQ"
             ],
             "checklistbank": "906660",
-            "checklistbank-139831": "906660"
+            "checklistbank-139831": [
+              "906660"
+            ]
           },
-          "authorityIds": "col:6JNNQ",
+          "authorityIds": "checklistbank:906660,checklistbank-139831:906660,col:6JNNQ",
           "description": "Frenamya patula is a pandoridae species found in its native region."
         },
         {
@@ -2429,9 +2401,11 @@
               "CKZVZ"
             ],
             "checklistbank": "1604888",
-            "checklistbank-139831": "1604888"
+            "checklistbank-139831": [
+              "1604888"
+            ]
           },
-          "authorityIds": "col:CKZVZ",
+          "authorityIds": "checklistbank:1604888,checklistbank-139831:1604888,col:CKZVZ",
           "description": "Frenamya similis is a pandoridae species found in its native region."
         },
         {
@@ -2449,9 +2423,11 @@
               "CL2NK"
             ],
             "checklistbank": "1604885",
-            "checklistbank-139831": "1604885"
+            "checklistbank-139831": [
+              "1604885"
+            ]
           },
-          "authorityIds": "col:CL2NK",
+          "authorityIds": "checklistbank:1604885,checklistbank-139831:1604885,col:CL2NK",
           "description": "Frenamya sinica is a pandoridae species found in its native region."
         },
         {
@@ -2487,9 +2463,11 @@
               "CL2P6"
             ],
             "checklistbank": "1604889",
-            "checklistbank-139831": "1604889"
+            "checklistbank-139831": [
+              "1604889"
+            ]
           },
-          "authorityIds": "col:CL2P6",
+          "authorityIds": "checklistbank:1604889,checklistbank-139831:1604889,col:CL2P6",
           "description": "Frenamya cumingii is a pandoridae species found in its native region."
         },
         {
@@ -2570,54 +2548,6 @@
           },
           "uuid": "8c7add50-fe68-4875-9738-1904586288c3",
           "children": []
-        },
-        {
-          "id": "SP_FRENAMYA_PATULA",
-          "name": "Frenamya patula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Frenamya",
-          "sourceIds": {
-            "checklistbank-139831": "906660"
-          },
-          "uuid": "ff22ee1c-4287-4ce8-b3ae-22eae6e26dfe"
-        },
-        {
-          "id": "SP_FRENAMYA_SINICA",
-          "name": "Frenamya sinica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Frenamya",
-          "sourceIds": {
-            "checklistbank-139831": "1604885"
-          },
-          "uuid": "0fff87cb-7c79-4269-98ca-536ba3f8df26"
-        },
-        {
-          "id": "SP_FRENAMYA_SIMILIS",
-          "name": "Frenamya similis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Frenamya",
-          "sourceIds": {
-            "checklistbank-139831": "1604888"
-          },
-          "uuid": "76626dd6-4207-4635-b6ac-21eaadc01409"
-        },
-        {
-          "id": "SP_FRENAMYA_CUMINGII",
-          "name": "Frenamya cumingii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Frenamya",
-          "sourceIds": {
-            "checklistbank-139831": "1604889"
-          },
-          "uuid": "c1582595-dded-4ec7-b2df-79ff97513b87"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2895,7 +2825,7 @@
     }
   ],
   "genusCount": 15,
-  "speciesCount": 152,
+  "speciesCount": 155,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

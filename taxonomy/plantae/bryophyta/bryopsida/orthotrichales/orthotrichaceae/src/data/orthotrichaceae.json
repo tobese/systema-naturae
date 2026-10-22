@@ -1647,9 +1647,12 @@
           "uuid": "406312c6-be2c-55b-bf6-ed6e93e9090331",
           "sourceIds": {
             "checklistbank": "406727",
-            "checklistbank-139831": "406727"
+            "checklistbank-139831": [
+              "406727"
+            ]
           },
-          "description": "Ulota laticiliata is a orthotrichaceae species found in its native region."
+          "description": "Ulota laticiliata is a orthotrichaceae species found in its native region.",
+          "authorityIds": "checklistbank:406727,checklistbank-139831:406727"
         },
         {
           "id": "SP_ULOTA_LOBBIANA_MITTEN_1859",
@@ -1693,9 +1696,12 @@
           "uuid": "63e5605c-9e83-53b-a40-ce3e4183b92f29",
           "sourceIds": {
             "checklistbank": "406722",
-            "checklistbank-139831": "406722"
+            "checklistbank-139831": [
+              "406722"
+            ]
           },
-          "description": "Ulota bellii is a orthotrichaceae species found in its native region."
+          "description": "Ulota bellii is a orthotrichaceae species found in its native region.",
+          "authorityIds": "checklistbank:406722,checklistbank-139831:406722"
         },
         {
           "id": "SP_ULOTA_BELLISSIMA_BESCHERELLE_1892",
@@ -1799,8 +1805,13 @@
           "uuid": "0492426f-030c-528-b22-ba0d0464ca236f",
           "commonName": "ulota moss",
           "sourceIds": {
-            "checklistbank": "197803",
-            "wikispecies": "Ulota_phyllantha"
+            "checklistbank": [
+              "197803",
+              "urn:lsid:marinespecies.org:taxname:147490"
+            ],
+            "wikispecies": [
+              "Ulota_phyllantha"
+            ]
           },
           "description": "Ulota phyllantha (ulota moss) is a orthotrichaceae species found in its native region.",
           "authorityIds": "checklistbank:197803,checklistbank:urn:lsid:marinespecies.org:taxname:147490,wikispecies:Ulota_phyllantha"
@@ -2022,9 +2033,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ulota",
           "sourceIds": {
-            "checklistbank-139831": "406712"
+            "checklistbank-139831": [
+              "406712"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:406712"
         },
         {
           "id": "SP_ULOTA_ANCEPS",
@@ -2034,9 +2048,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ulota",
           "sourceIds": {
-            "checklistbank-139831": "406717"
+            "checklistbank-139831": [
+              "406717"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:406717"
         },
         {
           "id": "SP_ULOTA_DIXONII",
@@ -2046,9 +2063,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ulota",
           "sourceIds": {
-            "checklistbank-139831": "406718"
+            "checklistbank-139831": [
+              "406718"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:406718"
         },
         {
           "id": "SP_ULOTA_BREVISETA",
@@ -2058,9 +2078,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ulota",
           "sourceIds": {
-            "checklistbank-139831": "406725"
+            "checklistbank-139831": [
+              "406725"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:406725"
         },
         {
           "id": "SP_ULOTA_NOVAE_SEELANDIAE",
@@ -2070,9 +2093,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ulota",
           "sourceIds": {
-            "checklistbank-139831": "406726"
+            "checklistbank-139831": [
+              "406726"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:406726"
         }
       ]
     },
@@ -2081,22 +2107,6 @@
       "name": "\"Ulota",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ULOTA_PHYLLANTHA_BRID_1819",
-          "name": "\"Ulota phyllantha\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ulota",
-          "authorship": "\"Brid., 1819\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:147490",
-            "wikispecies": "Ulota_phyllantha"
-          },
-          "children": [],
-          "uuid": "a23930dc-60f1-509-ab0-74d50dcc5b52a0",
-          "description": "\"Ulota phyllantha\" is a orthotrichaceae species found in its native region."
-        },
         {
           "id": "SP_ULOTA_RUFESCENS",
           "name": "Ulota rufescens",
@@ -2107,7 +2117,8 @@
           "sourceIds": {
             "checklistbank-139831": "406712"
           },
-          "uuid": "e00ab70a-daef-46ba-9473-bb19b8b13e90"
+          "uuid": "e00ab70a-daef-46ba-9473-bb19b8b13e90",
+          "children": []
         },
         {
           "id": "SP_ULOTA_ANCEPS",
@@ -2119,7 +2130,8 @@
           "sourceIds": {
             "checklistbank-139831": "406717"
           },
-          "uuid": "ea86e804-c123-42dc-9e05-80996285f078"
+          "uuid": "ea86e804-c123-42dc-9e05-80996285f078",
+          "children": []
         },
         {
           "id": "SP_ULOTA_DIXONII",
@@ -2131,19 +2143,8 @@
           "sourceIds": {
             "checklistbank-139831": "406718"
           },
-          "uuid": "3a7427f0-1371-4108-8e0f-5fa9ab19e8d5"
-        },
-        {
-          "id": "SP_ULOTA_BELLII",
-          "name": "Ulota bellii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ulota",
-          "sourceIds": {
-            "checklistbank-139831": "406722"
-          },
-          "uuid": "d7f1dfcd-7e4f-434d-ba8a-65d5b2aac1c3"
+          "uuid": "3a7427f0-1371-4108-8e0f-5fa9ab19e8d5",
+          "children": []
         },
         {
           "id": "SP_ULOTA_BREVISETA",
@@ -2155,7 +2156,8 @@
           "sourceIds": {
             "checklistbank-139831": "406725"
           },
-          "uuid": "31b2a87a-1a10-4a9a-996d-ad8062aec93b"
+          "uuid": "31b2a87a-1a10-4a9a-996d-ad8062aec93b",
+          "children": []
         },
         {
           "id": "SP_ULOTA_NOVAE_SEELANDIAE",
@@ -2167,19 +2169,8 @@
           "sourceIds": {
             "checklistbank-139831": "406726"
           },
-          "uuid": "5fdc9d96-c3bd-4ea6-bf8e-e8fec54389ea"
-        },
-        {
-          "id": "SP_ULOTA_LATICILIATA",
-          "name": "Ulota laticiliata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ulota",
-          "sourceIds": {
-            "checklistbank-139831": "406727"
-          },
-          "uuid": "f2e2449f-eada-4174-b4d8-7bd135fc8f54"
+          "uuid": "5fdc9d96-c3bd-4ea6-bf8e-e8fec54389ea",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -28672,9 +28663,12 @@
           "uuid": "b0cc6a18-1418-573-81c-8ea30ac0132699",
           "sourceIds": {
             "checklistbank": "403992",
-            "checklistbank-139831": "403992"
+            "checklistbank-139831": [
+              "403992"
+            ]
           },
-          "description": "Muelleriella aucklandica is a orthotrichaceae species found in its native region."
+          "description": "Muelleriella aucklandica is a orthotrichaceae species found in its native region.",
+          "authorityIds": "checklistbank:403992,checklistbank-139831:403992"
         },
         {
           "id": "SP_MUELLERIELLA_ANGUSTIFOLIA_DUS_N_1905",
@@ -28688,9 +28682,12 @@
           "uuid": "d9c2e8ad-7043-59d-989-e6c159f8829791",
           "sourceIds": {
             "checklistbank": "408944",
-            "checklistbank-139831": "408944"
+            "checklistbank-139831": [
+              "408944"
+            ]
           },
-          "description": "Muelleriella angustifolia is a orthotrichaceae species found in its native region."
+          "description": "Muelleriella angustifolia is a orthotrichaceae species found in its native region.",
+          "authorityIds": "checklistbank:408944,checklistbank-139831:408944"
         },
         {
           "id": "SP_MUELLERIELLA_CRASSIFOLIA_DUS_N_1905",
@@ -28737,10 +28734,13 @@
           "authorship": "(Mitt.) Vitt, 1980",
           "sourceIds": {
             "checklistbank-2008": "959187",
-            "checklistbank-139831": "1191566"
+            "checklistbank-139831": [
+              "1191566"
+            ]
           },
           "children": [],
-          "uuid": "8748700c-f0eb-5ae-880-a9306ba9258a71"
+          "uuid": "8748700c-f0eb-5ae-880-a9306ba9258a71",
+          "authorityIds": "checklistbank-139831:1191566,checklistbank-2008:959187"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -28765,42 +28765,6 @@
           "children": [],
           "uuid": "c18702e9-b672-51f-be3-96355b5e52eade",
           "description": "\"Muelleriella crassifolia\" is a orthotrichaceae species found in its native region."
-        },
-        {
-          "id": "SP_MUELLERIELLA_AUCKLANDICA",
-          "name": "Muelleriella aucklandica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Muelleriella",
-          "sourceIds": {
-            "checklistbank-139831": "403992"
-          },
-          "uuid": "867f952b-c86d-4bc6-90c6-cca9e6acbc66"
-        },
-        {
-          "id": "SP_MUELLERIELLA_ANGUSTIFOLIA",
-          "name": "Muelleriella angustifolia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Muelleriella",
-          "sourceIds": {
-            "checklistbank-139831": "408944"
-          },
-          "uuid": "ac5c9ca9-d595-4637-b6a3-1845bd0e6c9d"
-        },
-        {
-          "id": "SP_MUELLERIELLA_ATRATA",
-          "name": "Muelleriella atrata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Muelleriella",
-          "sourceIds": {
-            "checklistbank-139831": "1191566"
-          },
-          "uuid": "bcfbb5de-8c74-4f47-930f-635da8f5e7e8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -29146,7 +29110,7 @@
     }
   ],
   "genusCount": 52,
-  "speciesCount": 1420,
+  "speciesCount": 1424,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

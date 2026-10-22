@@ -368,11 +368,16 @@
           "children": [],
           "sourceIds": {
             "gbif": 8006102,
-            "checklistbank": "txn:387020",
-            "checklistbank-1174": "txn:387020"
+            "checklistbank": [
+              "txn:387020",
+              "urn:lsid:marinespecies.org:taxname:633762"
+            ],
+            "checklistbank-1174": [
+              "txn:387020"
+            ]
           },
           "uuid": "0f6364ef-a3a1-5ca-a43-bce99788963260",
-          "authorityIds": "gbif:8006102",
+          "authorityIds": "checklistbank:txn:387020,checklistbank:urn:lsid:marinespecies.org:taxname:633762,checklistbank-1174:txn:387020,gbif:8006102",
           "authorship": "Ehrenberg 1845"
         },
         {
@@ -1779,11 +1784,16 @@
             "itis": [
               "2374"
             ],
-            "checklistbank": "515487",
-            "checklistbank-1174": "txn:382619"
+            "checklistbank": [
+              "515487",
+              "urn:lsid:marinespecies.org:taxname:149631"
+            ],
+            "checklistbank-1174": [
+              "txn:382619"
+            ]
           },
           "uuid": "b180d45a-1b45-5d3-944-f044627a031f12",
-          "authorityIds": "gbif:8059383,itis:2374"
+          "authorityIds": "checklistbank:515487,checklistbank:urn:lsid:marinespecies.org:taxname:149631,checklistbank-1174:txn:382619,gbif:8059383,itis:2374"
         },
         {
           "id": "STEPHANOPYXIS_VASTA",
@@ -1908,22 +1918,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_STEPHANOPYXIS_TURRIS_GREVILLE_RALFS_1861",
-          "name": "\"Stephanopyxis turris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stephanopyxis",
-          "authorship": "\"(Greville) Ralfs, 1861\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:149631",
-            "checklistbank-1174": "txn:382619"
-          },
-          "children": [],
-          "uuid": "8ad34931-aca5-572-bb5-fa54aba08dc64e",
-          "description": "\"Stephanopyxis turris\" is a stephanopyxidaceae species found in its native region."
-        },
-        {
           "id": "SP_STEPHANOPYXIS_APPENDICULATA_EHRENBERG_EHRENBERG",
           "name": "\"Stephanopyxis appendiculata\"",
           "rank": "SPECIES",
@@ -1997,22 +1991,6 @@
           "children": [],
           "uuid": "e6349deb-f383-5c3-b5d-a40c6f2fd7ac3c",
           "description": "\"Stephanopyxis apiculata\" is a stephanopyxidaceae species found in its native region."
-        },
-        {
-          "id": "SP_STEPHANOPYXIS_CORONA_EHRENBERG_GRUNOW",
-          "name": "\"Stephanopyxis corona\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stephanopyxis",
-          "authorship": "\"(Ehrenberg) Grunow\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:633762",
-            "checklistbank-1174": "txn:387020"
-          },
-          "children": [],
-          "uuid": "bcf14315-8bc6-5bd-b02-1d4dfacd430c40",
-          "description": "\"Stephanopyxis corona\" is a stephanopyxidaceae species found in its native region."
         },
         {
           "id": "SP_STEPHANOPYXIS_FEROX_GREVILLE_J_RALFS",
@@ -2097,7 +2075,8 @@
           "sourceIds": {
             "checklistbank-139831": "488075"
           },
-          "uuid": "8f5ce7e7-55ee-469b-8584-84ce5b884e50"
+          "uuid": "8f5ce7e7-55ee-469b-8584-84ce5b884e50",
+          "children": []
         },
         {
           "id": "SP_STEPHANOPYXIS_MINUTUS",
@@ -2109,7 +2088,8 @@
           "sourceIds": {
             "checklistbank-139831": "970147"
           },
-          "uuid": "11518f4e-415d-4b65-8d91-2951ff132b41"
+          "uuid": "11518f4e-415d-4b65-8d91-2951ff132b41",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

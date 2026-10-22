@@ -3518,11 +3518,16 @@
             "col": [
               "82694"
             ],
-            "checklistbank": "txn:355091",
-            "checklistbank-1174": "txn:355091"
+            "checklistbank": [
+              "txn:355091",
+              "urn:lsid:marinespecies.org:taxname:899678"
+            ],
+            "checklistbank-1174": [
+              "txn:355091"
+            ]
           },
           "uuid": "627cc40e-7e4e-510-bd8-f9d64e47303ae5",
-          "authorityIds": "col:82694,gbif:9060217",
+          "authorityIds": "checklistbank:txn:355091,checklistbank:urn:lsid:marinespecies.org:taxname:899678,checklistbank-1174:txn:355091,col:82694,gbif:9060217",
           "authorship": "Cushman and Hobson 1935"
         },
         {
@@ -3862,11 +3867,16 @@
             "col": [
               "8269F"
             ],
-            "checklistbank": "txn:355092",
-            "checklistbank-1174": "txn:355092"
+            "checklistbank": [
+              "txn:355092",
+              "urn:lsid:marinespecies.org:taxname:901443"
+            ],
+            "checklistbank-1174": [
+              "txn:355092"
+            ]
           },
           "uuid": "d3d6cf9d-e562-501-ad0-e6d9c34eeb8731",
-          "authorityIds": "col:8269F,gbif:8771274",
+          "authorityIds": "checklistbank:txn:355092,checklistbank:urn:lsid:marinespecies.org:taxname:901443,checklistbank-1174:txn:355092,col:8269F,gbif:8771274",
           "authorship": "Cushman and Stone 1949"
         },
         {
@@ -7522,22 +7532,6 @@
           "description": "\"Cassidulina corbyi\" is a cassidulinidae species found in its native region."
         },
         {
-          "id": "SP_CASSIDULINA_CRASSIPUNCTATA_CUSHMAN_HOBSON_1935",
-          "name": "\"Cassidulina crassipunctata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cassidulina",
-          "authorship": "\"Cushman & Hobson, 1935\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:899678",
-            "checklistbank-1174": "txn:355091"
-          },
-          "children": [],
-          "uuid": "3833877b-9985-515-a9d-ff005d142e79ed",
-          "description": "\"Cassidulina crassipunctata\" is a cassidulinidae species found in its native region."
-        },
-        {
           "id": "SP_CASSIDULINA_CREPIDULA_KUWANO_1954",
           "name": "\"Cassidulina crepidula\"",
           "rank": "SPECIES",
@@ -7626,22 +7620,6 @@
           "children": [],
           "uuid": "52f98519-fc6d-579-8d0-f73b79e3abdaa0",
           "description": "\"Cassidulina devonica\" is a cassidulinidae species found in its native region."
-        },
-        {
-          "id": "SP_CASSIDULINA_DIVERSA_CUSHMAN_STONE_1949",
-          "name": "\"Cassidulina diversa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cassidulina",
-          "authorship": "\"Cushman & Stone, 1949\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:901443",
-            "checklistbank-1174": "txn:355092"
-          },
-          "children": [],
-          "uuid": "ff9e9978-a1ea-5ad-a42-4b57374bbdac87",
-          "description": "\"Cassidulina diversa\" is a cassidulinidae species found in its native region."
         },
         {
           "id": "SP_CASSIDULINA_DOMINICANA_BERM_DEZ_1949",
@@ -11444,7 +11422,8 @@
           "sourceIds": {
             "checklistbank-139831": "1425039"
           },
-          "uuid": "1d408830-acc7-4ea0-bcbf-9bdd804b461c"
+          "uuid": "1d408830-acc7-4ea0-bcbf-9bdd804b461c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -16549,7 +16528,7 @@
     }
   ],
   "genusCount": 68,
-  "speciesCount": 851,
+  "speciesCount": 849,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

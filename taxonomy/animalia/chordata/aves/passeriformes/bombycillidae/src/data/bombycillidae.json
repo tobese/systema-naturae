@@ -35,10 +35,18 @@
             "col": [
               "5WNQS"
             ],
-            "checklistbank": "3953",
-            "wikispecies": "Bombycilla_garrulus"
+            "checklistbank": [
+              "3953",
+              "urn:lsid:marinespecies.org:taxname:1484312"
+            ],
+            "wikispecies": [
+              "Bombycilla_garrulus"
+            ],
+            "checklistbank-139831": [
+              "7429"
+            ]
           },
-          "authorityIds": "col:5WNQS,itis:178529,wikidata:Q26135",
+          "authorityIds": "checklistbank:3953,checklistbank:urn:lsid:marinespecies.org:taxname:1484312,checklistbank-139831:7429,col:5WNQS,itis:178529,wikidata:Q26135,wikispecies:Bombycilla_garrulus",
           "authorship": "(Linnaeus, 1758)",
           "children": []
         },
@@ -125,23 +133,6 @@
           "description": "\"Bombycilla cedrorum\" is a bombycillidae species found in its native region."
         },
         {
-          "id": "SP_BOMBYCILLA_GARRULUS_LINNAEUS_1758",
-          "name": "\"Bombycilla garrulus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bombycilla",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484312",
-            "wikispecies": "Bombycilla_garrulus",
-            "checklistbank-139831": "7429"
-          },
-          "children": [],
-          "uuid": "850bdba9-a773-527-87c-10fa0598be2fd9",
-          "description": "\"Bombycilla garrulus\" is a bombycillidae species found in its native region."
-        },
-        {
           "id": "SP_BOMBYCILLA_JAPONICA_SIEBOLD_1824",
           "name": "Bombycilla japonica",
           "rank": "SPECIES",
@@ -152,7 +143,8 @@
           "sourceIds": {
             "checklistbank-170809": "22708150"
           },
-          "uuid": "38d3a5d8-2da4-4fbe-9fda-4c45556519c0"
+          "uuid": "38d3a5d8-2da4-4fbe-9fda-4c45556519c0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -372,5 +364,5 @@
     "wikispecies": "Bombycillidae"
   },
   "genusCount": 8,
-  "speciesCount": 16
+  "speciesCount": 15
 }

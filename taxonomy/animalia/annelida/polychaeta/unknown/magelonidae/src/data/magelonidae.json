@@ -1616,9 +1616,11 @@
               "67064"
             ],
             "checklistbank": "1578184",
-            "checklistbank-139831": "1578184"
+            "checklistbank-139831": [
+              "1578184"
+            ]
           },
-          "authorityIds": "col:CSH9S,itis:67064",
+          "authorityIds": "checklistbank:1578184,checklistbank-139831:1578184,col:CSH9S,itis:67064",
           "description": "Magelona minuta is a magelonidae species found in its native region."
         },
         {
@@ -1678,11 +1680,14 @@
           "authorship": "Jones",
           "sourceIds": {
             "checklistbank": "82d0886c-9770-4db4-a08d-0016c1a40c92",
-            "checklistbank-139831": "380236"
+            "checklistbank-139831": [
+              "380236"
+            ]
           },
           "children": [],
           "uuid": "8fb7eeb5-88fc-5cb-85a-cc9a55dde6e447",
-          "description": "Magelona dakini is a magelonidae species found in its native region."
+          "description": "Magelona dakini is a magelonidae species found in its native region.",
+          "authorityIds": "checklistbank:82d0886c-9770-4db4-a08d-0016c1a40c92,checklistbank-139831:380236"
         },
         {
           "id": "SP_MAGELONA_JONESI_HARTMANN_SCHR_DER",
@@ -1709,11 +1714,14 @@
           "authorship": "Hartman",
           "sourceIds": {
             "checklistbank": "5bfdcbda-8be3-4691-b5f9-fa429a645899",
-            "checklistbank-139831": "339239"
+            "checklistbank-139831": [
+              "339239"
+            ]
           },
           "children": [],
           "uuid": "3683cd31-9c37-5c4-812-3c66ddade653ab",
-          "description": "Magelona pitelkai is a magelonidae species found in its native region."
+          "description": "Magelona pitelkai is a magelonidae species found in its native region.",
+          "authorityIds": "checklistbank:5bfdcbda-8be3-4691-b5f9-fa429a645899,checklistbank-139831:339239"
         },
         {
           "id": "SP_MAGELONA_SACCULATA",
@@ -2592,9 +2600,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Magelona",
           "sourceIds": {
-            "checklistbank-139831": "1023032"
+            "checklistbank-139831": [
+              "1023032"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1023032"
         }
       ]
     },
@@ -2664,30 +2675,6 @@
           "description": "\"Magelona bizkaiensis\" is a magelonidae species found in its native region."
         },
         {
-          "id": "SP_MAGELONA_PITELKAI",
-          "name": "Magelona pitelkai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Magelona",
-          "sourceIds": {
-            "checklistbank-139831": "339239"
-          },
-          "uuid": "7ad195d4-4fa4-46ea-bcd9-8a0d536b9155"
-        },
-        {
-          "id": "SP_MAGELONA_DAKINI",
-          "name": "Magelona dakini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Magelona",
-          "sourceIds": {
-            "checklistbank-139831": "380236"
-          },
-          "uuid": "1d307e4e-4ce3-4f05-9a7c-6fa42e2b4497"
-        },
-        {
           "id": "SP_MAGELONA_ROSEA",
           "name": "Magelona rosea",
           "rank": "SPECIES",
@@ -2697,7 +2684,8 @@
           "sourceIds": {
             "checklistbank-139831": "1023032"
           },
-          "uuid": "62985d9b-71e3-449e-b3f8-26ed6e9710ff"
+          "uuid": "62985d9b-71e3-449e-b3f8-26ed6e9710ff",
+          "children": []
         },
         {
           "id": "SP_MAGELONA_PAPILLICORNIS",
@@ -2709,7 +2697,8 @@
           "sourceIds": {
             "checklistbank-139831": "1402191"
           },
-          "uuid": "3b3ddd8d-71dc-49ef-9b0d-d0f22ac25569"
+          "uuid": "3b3ddd8d-71dc-49ef-9b0d-d0f22ac25569",
+          "children": []
         },
         {
           "id": "SP_MAGELONA_WILSONI",
@@ -2721,19 +2710,8 @@
           "sourceIds": {
             "checklistbank-139831": "1402192"
           },
-          "uuid": "66897b61-0db5-4bd5-9864-efa5b9f187bd"
-        },
-        {
-          "id": "SP_MAGELONA_MINUTA",
-          "name": "Magelona minuta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Magelona",
-          "sourceIds": {
-            "checklistbank-139831": "1578184"
-          },
-          "uuid": "79c075cd-0cc4-4679-8678-e19f7b9491d6"
+          "uuid": "66897b61-0db5-4bd5-9864-efa5b9f187bd",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3103,7 +3081,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 171,
+  "speciesCount": 174,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

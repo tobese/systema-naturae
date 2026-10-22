@@ -18994,12 +18994,17 @@
             "itis": [
               "29393"
             ],
-            "checklistbank": "Hedera_helix_L",
+            "checklistbank": [
+              "Hedera_helix_L",
+              "urn:lsid:marinespecies.org:taxname:594778"
+            ],
             "checklistbank-2008": "100787",
             "gbif-backbone": "9787176",
-            "checklistbank-1174": "txn:455864"
+            "checklistbank-1174": [
+              "txn:455864"
+            ]
           },
-          "authorityIds": "col:6LH6Y,itis:29393,wfo:wfo-0000979730",
+          "authorityIds": "checklistbank:Hedera_helix_L,checklistbank:urn:lsid:marinespecies.org:taxname:594778,checklistbank-1174:txn:455864,checklistbank-2008:100787,col:6LH6Y,gbif-backbone:9787176,itis:29393,wfo:wfo-0000979730",
           "description": "thumb|Botanical illustration of H.",
           "commonName": "Ivy",
           "continents": [
@@ -19027,9 +19032,14 @@
               "3JZ6H"
             ],
             "checklistbank": "Hedera_nepalensis_KKoch",
-            "checklistbank-1174": "txn:455865"
+            "checklistbank-1174": [
+              "txn:455865"
+            ],
+            "checklistbank-2232": [
+              "96767"
+            ]
           },
-          "authorityIds": "col:3JZ6H,wfo:wfo-0000979847",
+          "authorityIds": "checklistbank:Hedera_nepalensis_KKoch,checklistbank-1174:txn:455865,checklistbank-2232:96767,col:3JZ6H,wfo:wfo-0000979847",
           "commonName": "Himalayan ivy",
           "authorship": "K.Koch",
           "description": "Hedera nepalensis (Himalayan ivy, chang chun teng) is a species of flowering plant in the family Araliaceae."
@@ -20075,22 +20085,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HEDERA_HELIX_L",
-          "name": "\"Hedera helix\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hedera",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:594778",
-            "checklistbank-1174": "txn:455864"
-          },
-          "children": [],
-          "uuid": "724de2b8-065f-5f7-81a-3a4c289b876a88",
-          "description": "\"Hedera helix\" is a araliaceae species found in its native region."
-        },
-        {
           "id": "SP_HEDERA_CREBRESCENS_M_B_NYEI_HIMMER_M_H_HN",
           "name": "Hedera crebrescens",
           "rank": "SPECIES",
@@ -20201,21 +20195,6 @@
             "checklistbank-2232": "96762"
           },
           "uuid": "84e8e421-7027-424d-a32b-ac7287b5d84f",
-          "children": []
-        },
-        {
-          "id": "SP_HEDERA_NEPALENSIS_K_KOCH",
-          "name": "Hedera nepalensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hedera",
-          "authorship": "K.Koch",
-          "sourceIds": {
-            "checklistbank-2232": "96767",
-            "checklistbank-1174": "txn:455865"
-          },
-          "uuid": "b664f29d-8897-41b1-94e2-4d9f86881323",
           "children": []
         },
         {
@@ -72378,7 +72357,7 @@
     }
   ],
   "genusCount": 107,
-  "speciesCount": 3908,
+  "speciesCount": 3906,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

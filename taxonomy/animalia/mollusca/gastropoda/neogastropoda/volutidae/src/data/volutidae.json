@@ -2448,9 +2448,14 @@
               "urn:lsid:marinespecies.org:taxname:383238"
             ],
             "gbif-backbone": "4367770",
-            "checklistbank-1174": "txn:86339"
+            "checklistbank-1174": [
+              "txn:86339"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:383238"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:383238,col:39M2L",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:383238,checklistbank-1174:txn:86339,checklistbank-2011:urn:lsid:marinespecies.org:taxname:383238,col:39M2L,gbif-backbone:4367770",
           "authorship": "(J. E. Gray, 1825)"
         },
         {
@@ -2848,21 +2853,6 @@
           "children": [],
           "uuid": "8385547c-0311-5cf-93f-bcd8dc0add83ee",
           "description": "\"Enaeta leonardhilli\" is a volutidae species found in its native region."
-        },
-        {
-          "id": "SP_ENAETA_BARNESII_J_E_GRAY_1825",
-          "name": "Enaeta barnesii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Enaeta",
-          "authorship": "(J. E. Gray, 1825)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:383238",
-            "checklistbank-1174": "txn:86339"
-          },
-          "uuid": "fa85d5cb-cfcb-416f-9b83-c2986444dee3",
-          "children": []
         },
         {
           "id": "SP_ENAETA_CUMINGII_BRODERIP_1832",
@@ -3954,12 +3944,18 @@
               "6JPZX"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:759238"
+              "urn:lsid:marinespecies.org:taxname:759238",
+              "urn:lsid:marinespecies.org:taxname:759239"
             ],
             "gbif-backbone": "4367449",
-            "checklistbank-1174": "txn:390980"
+            "checklistbank-1174": [
+              "txn:390980"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:759238"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:759238,col:6JPZX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:759238,checklistbank:urn:lsid:marinespecies.org:taxname:759239,checklistbank-1174:txn:390980,checklistbank-2011:urn:lsid:marinespecies.org:taxname:759238,col:6JPZX,gbif-backbone:4367449",
           "authorship": "(G. B. Sowerby I, 1844)"
         },
         {
@@ -4937,23 +4933,6 @@
           "children": [],
           "uuid": "8a94a684-730d-5c2-acb-73634070f74e02",
           "description": "\"Fulgoraria rupestris\" is a volutidae species found in its native region."
-        },
-        {
-          "id": "SP_FULGORARIA_MEGASPIRA_KURODA_T_HABE_1950",
-          "name": "\"Fulgoraria megaspira",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fulgoraria",
-          "authorship": "\"Kuroda & T. Habe, 1950\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:759239",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:759238",
-            "checklistbank-1174": "txn:390980"
-          },
-          "children": [],
-          "uuid": "6d572a3f-af24-587-a8b-ad446c9eb73c54",
-          "description": "\"Fulgoraria megaspira is a volutidae species found in its native region."
         },
         {
           "id": "SP_FULGORARIA_ALFORUM_THACH_2018",
@@ -6496,11 +6475,14 @@
           "authorship": "Wells & Morrison",
           "sourceIds": {
             "checklistbank": "99c8809a-5af2-4c65-959a-6153d6fa86fe",
-            "checklistbank-139831": "1643549"
+            "checklistbank-139831": [
+              "1643549"
+            ]
           },
           "children": [],
           "uuid": "2112e010-9a85-58a-bf3-9f7e86dacb5410",
-          "description": "Volutoconus calcarelliformis is a volutidae species found in its native region."
+          "description": "Volutoconus calcarelliformis is a volutidae species found in its native region.",
+          "authorityIds": "checklistbank:99c8809a-5af2-4c65-959a-6153d6fa86fe,checklistbank-139831:1643549"
         },
         {
           "id": "SP_VOLUTOCONUS_KEPPELENSIS_BAIL_LIMPUS",
@@ -6527,11 +6509,14 @@
           "authorship": "Bail & Limpus",
           "sourceIds": {
             "checklistbank": "bdca8dc4-36f8-4d3f-bb67-ba83d529300c",
-            "checklistbank-139831": "1472774"
+            "checklistbank-139831": [
+              "1472774"
+            ]
           },
           "children": [],
           "uuid": "61b6d94e-1c1c-59c-b64-798a970a8c197f",
-          "description": "Volutoconus multiformis is a volutidae species found in its native region."
+          "description": "Volutoconus multiformis is a volutidae species found in its native region.",
+          "authorityIds": "checklistbank:bdca8dc4-36f8-4d3f-bb67-ba83d529300c,checklistbank-139831:1472774"
         },
         {
           "id": "SP_VOLUTOCONUS_RALPHI_FINLAY_1930",
@@ -6644,30 +6629,6 @@
           },
           "uuid": "8103e1d9-f4d0-496c-bfb9-4460557ff7f7",
           "children": []
-        },
-        {
-          "id": "SP_VOLUTOCONUS_MULTIFORMIS",
-          "name": "Volutoconus multiformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Volutoconus",
-          "sourceIds": {
-            "checklistbank-139831": "1472774"
-          },
-          "uuid": "41acf3d4-72f0-4a5e-b06a-b6d57445adc5"
-        },
-        {
-          "id": "SP_VOLUTOCONUS_CALCARELLIFORMIS",
-          "name": "Volutoconus calcarelliformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Volutoconus",
-          "sourceIds": {
-            "checklistbank-139831": "1643549"
-          },
-          "uuid": "02444ae0-a075-4872-8d94-6698a41bd158"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7514,9 +7475,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:743397"
             ],
-            "checklistbank-1174": "txn:189236"
+            "checklistbank-1174": [
+              "txn:189236"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:743397"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:743397,col:9G5B7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:743397,checklistbank-1174:txn:189236,checklistbank-2011:urn:lsid:marinespecies.org:taxname:743397,col:9G5B7",
           "authorship": "(Lesson, 1833)"
         },
         {
@@ -8175,9 +8141,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1337906"
             ],
-            "checklistbank-1174": "txn:122753"
+            "checklistbank-1174": [
+              "txn:122753"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1337906"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1337906,col:7RZDB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1337906,checklistbank-1174:txn:122753,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1337906,col:7RZDB",
           "authorship": "(Lamarck, 1803)"
         },
         {
@@ -8281,9 +8252,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1633406"
             ],
-            "checklistbank-1174": "txn:113388"
+            "checklistbank-1174": [
+              "txn:113388"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1633406"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1633406,col:B235Y",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1633406,checklistbank-1174:txn:113388,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1633406,col:B235Y",
           "authorship": "(J. De C. Sowerby, 1840)"
         },
         {
@@ -8428,9 +8404,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:220955"
             ],
-            "checklistbank-1174": "txn:189242"
+            "checklistbank-1174": [
+              "txn:189242"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:220955"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:220955,col:3WTJK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:220955,checklistbank-1174:txn:189242,checklistbank-2011:urn:lsid:marinespecies.org:taxname:220955,col:3WTJK",
           "authorship": "(Swainson, 1821)"
         },
         {
@@ -8661,9 +8642,17 @@
               "urn:lsid:marinespecies.org:taxname:743471"
             ],
             "gbif-backbone": "4367804",
-            "checklistbank-1174": "txn:111229"
+            "checklistbank-1174": [
+              "txn:111229"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:743471"
+            ],
+            "checklistbank-127379": [
+              "86218433-40d9-4d9b-a732-d30a40804b50"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:743471,col:732Z7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:743471,checklistbank-1174:txn:111229,checklistbank-127379:86218433-40d9-4d9b-a732-d30a40804b50,checklistbank-2011:urn:lsid:marinespecies.org:taxname:743471,col:732Z7,gbif-backbone:4367804",
           "authorship": "(G. Perry, 1811)"
         },
         {
@@ -8801,9 +8790,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1465334"
             ],
-            "checklistbank-1174": "txn:86327"
+            "checklistbank-1174": [
+              "txn:86327"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1465334"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1465334,col:7RZDJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1465334,checklistbank-1174:txn:86327,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1465334,col:7RZDJ",
           "authorship": "(G. B. Sowerby I, 1850)"
         },
         {
@@ -9426,9 +9420,11 @@
               "8RX8Y"
             ],
             "checklistbank": "1515208",
-            "checklistbank-139831": "1515208"
+            "checklistbank-139831": [
+              "1515208"
+            ]
           },
-          "authorityIds": "col:8RX8Y",
+          "authorityIds": "checklistbank:1515208,checklistbank-139831:1515208,col:8RX8Y",
           "description": "Lyria grangeri is a volutidae species found in its native region."
         },
         {
@@ -10598,21 +10594,6 @@
           "description": "\"Lyria cassidula\" is a volutidae species found in its native region."
         },
         {
-          "id": "SP_LYRIA_LYRAEFORMIS_SWAINSON_1821",
-          "name": "Lyria lyraeformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "authorship": "(Swainson, 1821)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:220955",
-            "checklistbank-1174": "txn:189242"
-          },
-          "uuid": "ca25c562-bd5d-4801-9076-752e7d60dc1c",
-          "children": []
-        },
-        {
           "id": "SP_LYRIA_DELESSERTIANA_PETIT_DE_LA_SAUSSAYE_1842",
           "name": "Lyria delessertiana",
           "rank": "SPECIES",
@@ -10624,21 +10605,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:220956"
           },
           "uuid": "343c8bdf-e95d-418a-b088-1c8264bea2b5",
-          "children": []
-        },
-        {
-          "id": "SP_LYRIA_ANNA_LESSON_1833",
-          "name": "Lyria anna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "authorship": "(Lesson, 1833)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:743397",
-            "checklistbank-1174": "txn:189236"
-          },
-          "uuid": "52ad4d09-3fd9-4806-a454-d5a234ec7c34",
           "children": []
         },
         {
@@ -10683,22 +10649,6 @@
             "checklistbank-127379": "e6367fdd-f4e3-40e7-beaf-f277073081f6"
           },
           "uuid": "c167a428-e5a0-42b5-98f0-e5f336c85d99",
-          "children": []
-        },
-        {
-          "id": "SP_LYRIA_PATTERSONIA_G_PERRY_1811",
-          "name": "Lyria pattersonia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "authorship": "(G. Perry, 1811)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:743471",
-            "checklistbank-1174": "txn:111229",
-            "checklistbank-127379": "86218433-40d9-4d9b-a732-d30a40804b50"
-          },
-          "uuid": "e0cf31e8-71a2-4d57-9d3a-d4ec18d10f54",
           "children": []
         },
         {
@@ -10759,36 +10709,6 @@
           "children": []
         },
         {
-          "id": "SP_LYRIA_HARPULA_LAMARCK_1803",
-          "name": "Lyria harpula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "authorship": "(Lamarck, 1803)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1337906",
-            "checklistbank-1174": "txn:122753"
-          },
-          "uuid": "13e5b17d-bb87-43ee-a10d-902ac5079a98",
-          "children": []
-        },
-        {
-          "id": "SP_LYRIA_PULCHELLA_G_B_SOWERBY_I_1850",
-          "name": "Lyria pulchella",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "authorship": "(G. B. Sowerby I, 1850)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1465334",
-            "checklistbank-1174": "txn:86327"
-          },
-          "uuid": "606ab7b9-136c-4c9d-afe6-f5df4d33dc55",
-          "children": []
-        },
-        {
           "id": "SP_LYRIA_ARCHERI_ANGAS_1865",
           "name": "Lyria archeri",
           "rank": "SPECIES",
@@ -10842,21 +10762,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1571496"
           },
           "uuid": "a9d435c2-ecc1-4e94-a152-71740d8ca31e",
-          "children": []
-        },
-        {
-          "id": "SP_LYRIA_JUGOSA_J_DE_C_SOWERBY_1840",
-          "name": "Lyria jugosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "authorship": "(J. De C. Sowerby, 1840)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1633406",
-            "checklistbank-1174": "txn:113388"
-          },
-          "uuid": "f3c8bf46-e16f-4db9-a699-e18215a7d270",
           "children": []
         },
         {
@@ -10928,18 +10833,6 @@
           },
           "uuid": "143a9229-150f-4ac8-8d8e-9f6856701f4d",
           "children": []
-        },
-        {
-          "id": "SP_LYRIA_GRANGERI",
-          "name": "Lyria grangeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyria",
-          "sourceIds": {
-            "checklistbank-139831": "1515208"
-          },
-          "uuid": "9811b8d8-5641-4ac5-bb82-a0c1489763c3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -13743,9 +13636,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1457765"
             ],
-            "checklistbank-1174": "txn:116842"
+            "checklistbank-1174": [
+              "txn:116842"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1457765"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1457765,col:7SKW7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1457765,checklistbank-1174:txn:116842,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1457765,col:7SKW7",
           "authorship": "(R. A. Philippi, 1897)"
         },
         {
@@ -13857,9 +13755,11 @@
               "7SKW4"
             ],
             "checklistbank": "1347288",
-            "checklistbank-139831": "1347288"
+            "checklistbank-139831": [
+              "1347288"
+            ]
           },
-          "authorityIds": "col:7SKW4",
+          "authorityIds": "checklistbank:1347288,checklistbank-139831:1347288,col:7SKW4",
           "description": "Pachycymbiola ferussacii is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes."
         },
         {
@@ -13900,21 +13800,6 @@
           "description": "\"Pachycymbiola brasiliana\" is a volutidae species found in its native region."
         },
         {
-          "id": "SP_PACHYCYMBIOLA_VIDALI_R_A_PHILIPPI_1897",
-          "name": "Pachycymbiola vidali",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pachycymbiola",
-          "authorship": "(R. A. Philippi, 1897)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1457765",
-            "checklistbank-1174": "txn:116842"
-          },
-          "uuid": "910eb508-d6e2-4b5a-911b-bae83b6dbece",
-          "children": []
-        },
-        {
           "id": "SP_PACHYCYMBIOLA_AMEGHINOI_IHERING_1896",
           "name": "Pachycymbiola ameghinoi",
           "rank": "SPECIES",
@@ -13941,18 +13826,6 @@
           },
           "uuid": "96a14af7-3b47-4797-aa03-e24171cf9108",
           "children": []
-        },
-        {
-          "id": "SP_PACHYCYMBIOLA_FERUSSACII",
-          "name": "Pachycymbiola ferussacii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pachycymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "1347288"
-          },
-          "uuid": "eeffbd2d-82cc-468f-9167-00f865dbd5cf"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -19026,9 +18899,11 @@
               "V97H5"
             ],
             "checklistbank": "1700243",
-            "checklistbank-139831": "1700243"
+            "checklistbank-139831": [
+              "1700243"
+            ]
           },
-          "authorityIds": "col:V97H5",
+          "authorityIds": "checklistbank:1700243,checklistbank-139831:1700243,col:V97H5",
           "description": "Voluta caquetio is a volutidae species found in its native region."
         },
         {
@@ -19164,11 +19039,14 @@
           "authorship": "[Lightfoot], 1786",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:382547",
-            "checklistbank-139831": "716549"
+            "checklistbank-139831": [
+              "716549"
+            ]
           },
           "children": [],
           "uuid": "329d0aaf-8c57-5f4-b98-7896e5ae9bd2c0",
-          "description": "Voluta virescens, common name the green music volute, is a species of medium-sized sea snail, a marine gastropod mollusk in the family Volutidae, the volutes."
+          "description": "Voluta virescens, common name the green music volute, is a species of medium-sized sea snail, a marine gastropod mollusk in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:382547,checklistbank-139831:716549"
         },
         {
           "id": "SP_VOLUTA_CHOREA_R_DING_1798",
@@ -20809,30 +20687,6 @@
           },
           "uuid": "3c6c36dd-2a39-41f9-8c3a-6fb69ea422ff",
           "children": []
-        },
-        {
-          "id": "SP_VOLUTA_VIRESCENS",
-          "name": "Voluta virescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Voluta",
-          "sourceIds": {
-            "checklistbank-139831": "716549"
-          },
-          "uuid": "86d60b81-325b-4512-8a91-6e41f614fc8d"
-        },
-        {
-          "id": "SP_VOLUTA_CAQUETIO",
-          "name": "Voluta caquetio",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Voluta",
-          "sourceIds": {
-            "checklistbank-139831": "1700243"
-          },
-          "uuid": "dfdcef78-e473-4931-bc5c-3269a9ee52fb"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -21624,9 +21478,11 @@
               "7PZQW"
             ],
             "checklistbank": "1661667",
-            "checklistbank-139831": "1661667"
+            "checklistbank-139831": [
+              "1661667"
+            ]
           },
-          "authorityIds": "col:7PZQW",
+          "authorityIds": "checklistbank:1661667,checklistbank-139831:1661667,col:7PZQW",
           "description": "Amoria austellus is a volutidae species found in its native region."
         },
         {
@@ -21752,9 +21608,11 @@
               "KZH5T"
             ],
             "checklistbank": "1622739",
-            "checklistbank-139831": "1622739"
+            "checklistbank-139831": [
+              "1622739"
+            ]
           },
-          "authorityIds": "col:KZH5T",
+          "authorityIds": "checklistbank:1622739,checklistbank-139831:1622739,col:KZH5T",
           "description": "Amoria textilata is a volutidae species found in its native region."
         },
         {
@@ -21988,11 +21846,14 @@
           "authorship": "Wilson",
           "sourceIds": {
             "checklistbank": "87aeeb2d-65a0-4ef1-87b1-1c4eefbe9fe6",
-            "checklistbank-139831": "1670270"
+            "checklistbank-139831": [
+              "1670270"
+            ]
           },
           "children": [],
           "uuid": "bfd83897-5a26-502-b59-05c58906ec7b3b",
-          "description": "Amoria diamantina is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes."
+          "description": "Amoria diamantina is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:87aeeb2d-65a0-4ef1-87b1-1c4eefbe9fe6,checklistbank-139831:1670270"
         },
         {
           "id": "SP_AMORIA_GRAYI_LUDBROOK",
@@ -22065,11 +21926,14 @@
           "authorship": "van Pel & Moolenbeek",
           "sourceIds": {
             "checklistbank": "eb8f3630-0545-4c34-b12a-b5ac0e1488f7",
-            "checklistbank-139831": "973202"
+            "checklistbank-139831": [
+              "973202"
+            ]
           },
           "children": [],
           "uuid": "3ed120d6-4e1c-556-b79-185aca16372d98",
-          "description": "Amoria jansae is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes."
+          "description": "Amoria jansae is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:eb8f3630-0545-4c34-b12a-b5ac0e1488f7,checklistbank-139831:973202"
         },
         {
           "id": "SP_AMORIA_LINEOLA_BAIL_LIMPUS",
@@ -22507,54 +22371,6 @@
           },
           "uuid": "0c8b8cfa-afe0-4267-b1d8-00349afe6709",
           "children": []
-        },
-        {
-          "id": "SP_AMORIA_JANSAE",
-          "name": "Amoria jansae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amoria",
-          "sourceIds": {
-            "checklistbank-139831": "973202"
-          },
-          "uuid": "5cd4cc5c-5ce5-44fd-8b96-f9fae374ea74"
-        },
-        {
-          "id": "SP_AMORIA_TEXTILATA",
-          "name": "Amoria textilata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amoria",
-          "sourceIds": {
-            "checklistbank-139831": "1622739"
-          },
-          "uuid": "296da697-7aff-49a2-ac88-c00d172dd01a"
-        },
-        {
-          "id": "SP_AMORIA_AUSTELLUS",
-          "name": "Amoria austellus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amoria",
-          "sourceIds": {
-            "checklistbank-139831": "1661667"
-          },
-          "uuid": "f0a3083c-7be8-46c3-8f01-f5accd95329b"
-        },
-        {
-          "id": "SP_AMORIA_DIAMANTINA",
-          "name": "Amoria diamantina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amoria",
-          "sourceIds": {
-            "checklistbank-139831": "1670270"
-          },
-          "uuid": "fd158348-f8ad-4fc7-b03b-263d9d87ad68"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -22941,11 +22757,14 @@
           "authorship": "Morrison & Wells",
           "sourceIds": {
             "checklistbank": "0ec987d2-b9be-468a-be8b-c769114793e0",
-            "checklistbank-139831": "1655053"
+            "checklistbank-139831": [
+              "1655053"
+            ]
           },
           "children": [],
           "uuid": "2b94945c-334b-5d1-80e-9dd6c93f482c3c",
-          "description": "Melo ashmorensis is a volutidae species found in its native region."
+          "description": "Melo ashmorensis is a volutidae species found in its native region.",
+          "authorityIds": "checklistbank:0ec987d2-b9be-468a-be8b-c769114793e0,checklistbank-139831:1655053"
         },
         {
           "id": "SP_MELO_UMBILICATUS_BRODERIP",
@@ -22957,11 +22776,14 @@
           "authorship": "Broderip",
           "sourceIds": {
             "checklistbank": "3c5db27f-4a3b-4cbf-822b-9f4cfa07aa3e",
-            "checklistbank-139831": "370767"
+            "checklistbank-139831": [
+              "370767"
+            ]
           },
           "children": [],
           "uuid": "9f09da6e-2892-57a-b39-3b25975d06b0aa",
-          "description": "Melo umbilicatus, common name the heavy baler or umbilicate melon, is a very large sea snail, a marine gastropod mollusc in the family Volutidae, the volutes."
+          "description": "Melo umbilicatus, common name the heavy baler or umbilicate melon, is a very large sea snail, a marine gastropod mollusc in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:3c5db27f-4a3b-4cbf-822b-9f4cfa07aa3e,checklistbank-139831:370767"
         },
         {
           "id": "SP_MELO_MELO_LIGHTFOOT_1786",
@@ -22974,8 +22796,11 @@
           "children": [],
           "uuid": "064fb333-5815-503-a41-ad395e1609fd73",
           "sourceIds": {
-            "checklistbank-139831": "578436"
-          }
+            "checklistbank-139831": [
+              "578436"
+            ]
+          },
+          "authorityIds": "checklistbank-139831:578436"
         }
       ]
     },
@@ -23057,42 +22882,6 @@
           },
           "uuid": "2344d519-792d-444d-b584-18a6e288d42b",
           "children": []
-        },
-        {
-          "id": "SP_MELO_UMBILICATUS",
-          "name": "Melo umbilicatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melo",
-          "sourceIds": {
-            "checklistbank-139831": "370767"
-          },
-          "uuid": "008e4ac3-aa12-430e-b43b-54bd4239ad34"
-        },
-        {
-          "id": "SP_MELO_MELO",
-          "name": "Melo melo",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melo",
-          "sourceIds": {
-            "checklistbank-139831": "578436"
-          },
-          "uuid": "67508c18-eb02-4ea3-8014-241881ec4ce7"
-        },
-        {
-          "id": "SP_MELO_ASHMORENSIS",
-          "name": "Melo ashmorensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melo",
-          "sourceIds": {
-            "checklistbank-139831": "1655053"
-          },
-          "uuid": "7c82e789-8613-4d8f-819c-86d3c2ddaa30"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -24127,9 +23916,11 @@
               "KZJDG"
             ],
             "checklistbank": "1640050",
-            "checklistbank-139831": "1640050"
+            "checklistbank-139831": [
+              "1640050"
+            ]
           },
-          "authorityIds": "col:KZJDG",
+          "authorityIds": "checklistbank:1640050,checklistbank-139831:1640050,col:KZJDG",
           "description": "Cymbiola distructa is a volutidae species found in its native region."
         },
         {
@@ -24185,9 +23976,11 @@
               "CGMH4"
             ],
             "checklistbank": "1673483",
-            "checklistbank-139831": "1673483"
+            "checklistbank-139831": [
+              "1673483"
+            ]
           },
-          "authorityIds": "col:CGMH4",
+          "authorityIds": "checklistbank:1673483,checklistbank-139831:1673483,col:CGMH4",
           "description": "Cymbiola cooperi is a volutidae species found in its native region."
         },
         {
@@ -24265,12 +24058,15 @@
           "authorship": "(Lightfoot, 1786)",
           "sourceIds": {
             "checklistbank": "212364",
-            "checklistbank-139831": "541862"
+            "checklistbank-139831": [
+              "541862"
+            ]
           },
           "children": [],
           "uuid": "9ea91d45-92ea-5fa-ad2-fe411f4470a783",
           "commonName": "noble volute",
-          "description": "Cymbiola nobilis, the noble volute, is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes."
+          "description": "Cymbiola nobilis, the noble volute, is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:212364,checklistbank-139831:541862"
         },
         {
           "id": "SP_CYMBIOLA_IMPERIALIS_LIGHTFOOT_1786",
@@ -24282,12 +24078,15 @@
           "authorship": "([Lightfoot], 1786)",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:220952",
-            "checklistbank-139831": "519447"
+            "checklistbank-139831": [
+              "519447"
+            ]
           },
           "children": [],
           "uuid": "6fed5557-e208-595-8e6-359e8f9940246f",
           "commonName": "imperial volute",
-          "description": "Cymbiola imperialis, the imperial volute, is a species of sea snail, a marine gastropod mollusk of the genus Cymbiola in the family Volutidae, the volutes."
+          "description": "Cymbiola imperialis, the imperial volute, is a species of sea snail, a marine gastropod mollusk of the genus Cymbiola in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:220952,checklistbank-139831:519447"
         },
         {
           "id": "SP_CYMBIOLA_MARIAEMMA_J_E_GRAY_1858",
@@ -24329,11 +24128,14 @@
           "authorship": "Bail & Limpus",
           "sourceIds": {
             "checklistbank": "06cd2956-1849-40a5-9d14-ae6fce918caa",
-            "checklistbank-139831": "1702443"
+            "checklistbank-139831": [
+              "1702443"
+            ]
           },
           "children": [],
           "uuid": "c82bfc61-ab14-515-b40-faa97d4f56faf4",
-          "description": "Cymbiola kimbacki is a volutidae species found in its native region."
+          "description": "Cymbiola kimbacki is a volutidae species found in its native region.",
+          "authorityIds": "checklistbank:06cd2956-1849-40a5-9d14-ae6fce918caa,checklistbank-139831:1702443"
         },
         {
           "id": "SP_CYMBIOLA_BAILI_PRATI_RAYBAUDI",
@@ -24345,11 +24147,14 @@
           "authorship": "Prati & Raybaudi",
           "sourceIds": {
             "checklistbank": "e4060ad4-b565-4f7a-8c41-3921ab5e2cdf",
-            "checklistbank-139831": "1156732"
+            "checklistbank-139831": [
+              "1156732"
+            ]
           },
           "children": [],
           "uuid": "5ebb798f-d0c9-5a7-b31-7b0dd8290efc2f",
-          "description": "Cymbiola baili is a volutidae species found in its native region."
+          "description": "Cymbiola baili is a volutidae species found in its native region.",
+          "authorityIds": "checklistbank:e4060ad4-b565-4f7a-8c41-3921ab5e2cdf,checklistbank-139831:1156732"
         },
         {
           "id": "SP_CYMBIOLA_EXCELSIOR_BAIL_LIMPUS",
@@ -24376,11 +24181,14 @@
           "authorship": "Bail & Limpus",
           "sourceIds": {
             "checklistbank": "2219fb0f-df58-40a3-9028-34e2fa7c811f",
-            "checklistbank-139831": "1621107"
+            "checklistbank-139831": [
+              "1621107"
+            ]
           },
           "children": [],
           "uuid": "0cbf547c-a46b-584-b58-1469e442ba0798",
-          "description": "Cymbiola hughmorrisoni is a volutidae species found in its native region."
+          "description": "Cymbiola hughmorrisoni is a volutidae species found in its native region.",
+          "authorityIds": "checklistbank:2219fb0f-df58-40a3-9028-34e2fa7c811f,checklistbank-139831:1621107"
         },
         {
           "id": "SP_CYMBIOLA_MORETONENSIS",
@@ -24544,9 +24352,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cymbiola",
           "sourceIds": {
-            "checklistbank-139831": "1156731"
+            "checklistbank-139831": [
+              "1156731"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1156731"
         }
       ]
     },
@@ -24935,30 +24746,6 @@
           "children": []
         },
         {
-          "id": "SP_CYMBIOLA_IMPERIALIS",
-          "name": "Cymbiola imperialis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "519447"
-          },
-          "uuid": "54ba7f88-66f5-4778-88f2-8ea3a24db795"
-        },
-        {
-          "id": "SP_CYMBIOLA_NOBILIS",
-          "name": "Cymbiola nobilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "541862"
-          },
-          "uuid": "fe973b33-129a-43f4-b1bd-05c9ac4806e1"
-        },
-        {
           "id": "SP_CYMBIOLA_ALEXISALLARYI",
           "name": "Cymbiola alexisallaryi",
           "rank": "SPECIES",
@@ -24968,67 +24755,8 @@
           "sourceIds": {
             "checklistbank-139831": "1156731"
           },
-          "uuid": "fcdef451-212e-4b0f-b9f5-4bf83405bc0d"
-        },
-        {
-          "id": "SP_CYMBIOLA_BAILI",
-          "name": "Cymbiola baili",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "1156732"
-          },
-          "uuid": "535ba836-ec28-432f-88fb-cdded44a79b8"
-        },
-        {
-          "id": "SP_CYMBIOLA_HUGHMORRISONI",
-          "name": "Cymbiola hughmorrisoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "1621107"
-          },
-          "uuid": "e389fd91-d617-414e-9e13-cf495de64297"
-        },
-        {
-          "id": "SP_CYMBIOLA_DISTRUCTA",
-          "name": "Cymbiola distructa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "1640050"
-          },
-          "uuid": "a4e7214e-0182-4693-b4ff-6aadecca2999"
-        },
-        {
-          "id": "SP_CYMBIOLA_COOPERI",
-          "name": "Cymbiola cooperi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "1673483"
-          },
-          "uuid": "f847ed28-623c-40ca-84f3-210a11c056c2"
-        },
-        {
-          "id": "SP_CYMBIOLA_KIMBACKI",
-          "name": "Cymbiola kimbacki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbiola",
-          "sourceIds": {
-            "checklistbank-139831": "1702443"
-          },
-          "uuid": "f8bd78e0-0807-42dd-91e8-746504f6e663"
+          "uuid": "fcdef451-212e-4b0f-b9f5-4bf83405bc0d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -28679,12 +28407,15 @@
           "authorship": "(Lightfoot, 1786)",
           "sourceIds": {
             "checklistbank": "212366",
-            "checklistbank-139831": "489878"
+            "checklistbank-139831": [
+              "489878"
+            ]
           },
           "children": [],
           "uuid": "198d1764-630f-528-95c-c104737efc0e63",
           "commonName": "African neptune volute",
-          "description": "Cymbium pepo, commonly known as the African Neptune volute, is a species of sea snail, a marine gastropod mollusc in the family Volutidae, the volutes."
+          "description": "Cymbium pepo, commonly known as the African Neptune volute, is a species of sea snail, a marine gastropod mollusc in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:212366,checklistbank-139831:489878"
         },
         {
           "id": "SP_CYMBIUM_EOCENICUM_L_R_COX_1931",
@@ -28977,18 +28708,6 @@
           },
           "uuid": "55bae8f1-218f-4e7a-9a61-8d162e15fc1d",
           "children": []
-        },
-        {
-          "id": "SP_CYMBIUM_PEPO",
-          "name": "Cymbium pepo",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymbium",
-          "sourceIds": {
-            "checklistbank-139831": "489878"
-          },
-          "uuid": "6f0a56c1-1619-42db-b003-010dba265cf2"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -29491,11 +29210,14 @@
           "authorship": "(Lightfoot 1786)",
           "sourceIds": {
             "checklistbank": "txn:116762",
-            "checklistbank-139831": "367816"
+            "checklistbank-139831": [
+              "367816"
+            ]
           },
           "children": [],
           "uuid": "3cd33142-6368-5ba-965-715b57affec3e6",
-          "description": "Adelomelon ancilla is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes."
+          "description": "Adelomelon ancilla is a species of sea snail, a marine gastropod mollusk in the family Volutidae, the volutes.",
+          "authorityIds": "checklistbank:txn:116762,checklistbank-139831:367816"
         },
         {
           "id": "SP_ADELOMELON_RIOSI",
@@ -29505,9 +29227,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Adelomelon",
           "sourceIds": {
-            "checklistbank-139831": "367824"
+            "checklistbank-139831": [
+              "367824"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:367824"
         }
       ]
     },
@@ -29616,18 +29341,6 @@
           "children": []
         },
         {
-          "id": "SP_ADELOMELON_ANCILLA",
-          "name": "Adelomelon ancilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Adelomelon",
-          "sourceIds": {
-            "checklistbank-139831": "367816"
-          },
-          "uuid": "b7c4a7e6-79a8-416a-a133-93b6d76318a7"
-        },
-        {
           "id": "SP_ADELOMELON_RIOSI",
           "name": "Adelomelon riosi",
           "rank": "SPECIES",
@@ -29637,7 +29350,8 @@
           "sourceIds": {
             "checklistbank-139831": "367824"
           },
-          "uuid": "9670dea4-09a7-4aea-8fa9-c00afa83e2d1"
+          "uuid": "9670dea4-09a7-4aea-8fa9-c00afa83e2d1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -30138,11 +29852,16 @@
             "col": [
               "BCMDK"
             ],
-            "checklistbank": "txn:417322",
+            "checklistbank": [
+              "txn:417322",
+              "urn:lsid:marinespecies.org:taxname:1661131"
+            ],
             "gbif-backbone": "11114223",
-            "checklistbank-1174": "txn:417322"
+            "checklistbank-1174": [
+              "txn:417322"
+            ]
           },
-          "authorityIds": "col:BCMDK",
+          "authorityIds": "checklistbank:txn:417322,checklistbank:urn:lsid:marinespecies.org:taxname:1661131,checklistbank-1174:txn:417322,col:BCMDK,gbif-backbone:11114223",
           "description": "Caricella demissa is a volutidae species found in its native region."
         },
         {
@@ -30218,22 +29937,6 @@
       "name": "\"Caricella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CARICELLA_DEMISSA_GABB_1860",
-          "name": "\"Caricella demissa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Caricella",
-          "authorship": "\"(Gabb, 1860)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1661131",
-            "checklistbank-1174": "txn:417322"
-          },
-          "children": [],
-          "uuid": "59ceb496-7fe7-557-bcc-ab8a6cbf67568f",
-          "description": "\"Caricella demissa is a volutidae species found in its native region."
-        },
         {
           "id": "SP_CARICELLA_ISABELLAE_MAURY_1910",
           "name": "Caricella isabellae",
@@ -36760,7 +36463,7 @@
     }
   ],
   "genusCount": 163,
-  "speciesCount": 1990,
+  "speciesCount": 1982,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

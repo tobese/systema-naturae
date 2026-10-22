@@ -49,12 +49,21 @@
               "86FCJ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1410321"
+              "urn:lsid:marinespecies.org:taxname:1410321",
+              "urn:lsid:marinespecies.org:taxname:1414748"
             ],
             "gbif-backbone": "9049964",
-            "checklistbank-1174": "txn:425651"
+            "checklistbank-1174": [
+              "txn:425651"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1410321"
+            ],
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:1410321"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410321,col:86FCJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410321,checklistbank:urn:lsid:marinespecies.org:taxname:1414748,checklistbank-1081:urn:lsid:marinespecies.org:taxname:1410321,checklistbank-1174:txn:425651,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1410321,col:86FCJ,gbif-backbone:9049964",
           "authorship": "(d'Orbigny, 1853)"
         },
         {
@@ -157,24 +166,6 @@
       "name": "\"Cardioecia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CARDIOECIA_NEOCOMIENSIS_CANU_BASSLER_1926",
-          "name": "\"Cardioecia neocomiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cardioecia",
-          "authorship": "\"Canu & Bassler, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414748",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1410321",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1410321",
-            "checklistbank-1174": "txn:425651"
-          },
-          "children": [],
-          "uuid": "28c2a195-bf10-575-b7a-3ca9e4a67b11d1",
-          "description": "\"Cardioecia neocomiensis is a plagioeciidae species found in its native region."
-        },
         {
           "id": "SP_CARDIOECIA_MAGNIPORA_CANU_BASSLER_1922",
           "name": "Cardioecia magnipora",
@@ -6941,7 +6932,8 @@
           "sourceIds": {
             "checklistbank-139831": "1577456"
           },
-          "uuid": "979d5793-1dbe-4308-8f66-7cb7be2ff829"
+          "uuid": "979d5793-1dbe-4308-8f66-7cb7be2ff829",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

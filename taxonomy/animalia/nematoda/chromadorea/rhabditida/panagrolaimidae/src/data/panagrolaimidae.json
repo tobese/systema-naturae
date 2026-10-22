@@ -270,14 +270,22 @@
           "lineage": "Turbatrix",
           "authorship": "(Müller, 1783)",
           "sourceIds": {
-            "checklistbank": "248176",
-            "wikispecies": "Turbatrix_aceti"
+            "checklistbank": [
+              "248176",
+              "urn:lsid:marinespecies.org:taxname:1294680"
+            ],
+            "wikispecies": [
+              "Turbatrix_aceti"
+            ],
+            "checklistbank-139831": [
+              "514328"
+            ]
           },
           "children": [],
           "uuid": "37b1409d-6067-555-99c-9e1f1cf5416b99",
           "commonName": "Vinegar eelworm",
           "description": "Turbatrix aceti (vinegar eels, vinegar nematode, Anguillula aceti) are free-living nematodes that feed on a microbial culture called mother of vinegar (used to create vinegar) and may be found in unfiltered vinegar.",
-          "authorityIds": "checklistbank:248176,checklistbank:urn:lsid:marinespecies.org:taxname:1294680,wikispecies:Turbatrix_aceti"
+          "authorityIds": "checklistbank:248176,checklistbank:urn:lsid:marinespecies.org:taxname:1294680,checklistbank-139831:514328,wikispecies:Turbatrix_aceti"
         }
       ]
     },
@@ -286,23 +294,6 @@
       "name": "\"Turbatrix",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TURBATRIX_ACETI_M_LLER_1783_PETERS_1927",
-          "name": "\"Turbatrix aceti\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Turbatrix",
-          "authorship": "\"(Müller, 1783) Peters, 1927\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1294680",
-            "wikispecies": "Turbatrix_aceti",
-            "checklistbank-139831": "514328"
-          },
-          "children": [],
-          "uuid": "73e761d3-f841-5ab-b90-eba6e7d71effe9",
-          "description": "\"Turbatrix aceti\" is a panagrolaimidae species found in its native region."
-        },
         {
           "id": "SP_TURBATRIX_DRYOPHILUS_LEUCKART_1877",
           "name": "\"Turbatrix dryophilus\"",
@@ -2392,34 +2383,6 @@
           "children": [],
           "uuid": "0b85f231-1081-587-9c2-7c44a28aa045b9",
           "description": "Panagrolaimus hamomucronatus is a panagrolaimidae species found in its native region."
-        },
-        {
-          "id": "SP_PANAGROLAIMUS_FACETUS_MASSEY_1971",
-          "name": "Panagrolaimus facetus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Panagrolaimus",
-          "authorship": "(Massey, 1971)",
-          "sourceIds": {
-            "checklistbank": "248147"
-          },
-          "children": [],
-          "uuid": "81bd902b-f2b0-579-88c-358ed8885700da"
-        },
-        {
-          "id": "SP_PANAGROLAIMUS_RUFFOI_ANDR_SSY_1962",
-          "name": "Panagrolaimus ruffoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Panagrolaimus",
-          "authorship": "Andrássy, 1962",
-          "sourceIds": {
-            "checklistbank": "248159"
-          },
-          "children": [],
-          "uuid": "3d63efe7-1183-5ba-950-d231e6e1470bb2"
         }
       ]
     },
@@ -2527,7 +2490,8 @@
           "sourceIds": {
             "checklistbank-139831": "1139585"
           },
-          "uuid": "65452220-7ac1-40a1-ac29-3c00ec8ec59d"
+          "uuid": "65452220-7ac1-40a1-ac29-3c00ec8ec59d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4232,7 +4196,7 @@
     }
   ],
   "genusCount": 33,
-  "speciesCount": 245,
+  "speciesCount": 242,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

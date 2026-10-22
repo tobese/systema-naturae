@@ -744,11 +744,25 @@
             "col": [
               "32S2L"
             ],
-            "checklistbank": "Cycas_circinalis_L",
+            "checklistbank": [
+              "Cycas_circinalis_L",
+              "urn:lsid:marinespecies.org:taxname:1503926"
+            ],
             "gbif-backbone": "2683264",
-            "checklistbank-1174": "txn:512952"
+            "checklistbank-1174": [
+              "txn:512952"
+            ],
+            "checklistbank-2232": [
+              "383307"
+            ],
+            "checklistbank-1141": [
+              "64898975-3745-53c7-954a-a483ab0b646d"
+            ],
+            "checklistbank-2000": [
+              "urn:lsid:ipni.org:names:328822-2"
+            ]
           },
-          "authorityIds": "col:32S2L,itis:183259,wfo:wfo-0000631521"
+          "authorityIds": "checklistbank:Cycas_circinalis_L,checklistbank:urn:lsid:marinespecies.org:taxname:1503926,checklistbank-1141:64898975-3745-53c7-954a-a483ab0b646d,checklistbank-1174:txn:512952,checklistbank-2000:urn:lsid:ipni.org:names:328822-2,checklistbank-2232:383307,col:32S2L,gbif-backbone:2683264,itis:183259,wfo:wfo-0000631521"
         },
         {
           "id": "SP_CYCAS_CLIVICOLA",
@@ -3882,25 +3896,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CYCAS_CIRCINALIS_LINNAEUS",
-          "name": "\"Cycas circinalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cycas",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1503926",
-            "checklistbank-2232": "383307",
-            "checklistbank-1141": "64898975-3745-53c7-954a-a483ab0b646d",
-            "checklistbank-1174": "txn:512952",
-            "checklistbank-2000": "urn:lsid:ipni.org:names:328822-2"
-          },
-          "children": [],
-          "uuid": "3f2dea07-f55a-5a7-a6b-11de2d62a1b047",
-          "description": "\"Cycas circinalis\" is a cycadaceae species found in its native region."
-        },
-        {
           "id": "SP_CYCAS_NAYAGARHENSIS_RITA_SINGH_P_RADHA_KHURAIJAM",
           "name": "Cycas nayagarhensis",
           "rank": "SPECIES",
@@ -6962,7 +6957,7 @@
     }
   ],
   "genusCount": 33,
-  "speciesCount": 365,
+  "speciesCount": 364,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

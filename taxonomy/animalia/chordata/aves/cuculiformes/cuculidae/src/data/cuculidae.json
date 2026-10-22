@@ -2251,7 +2251,8 @@
           "sourceIds": {
             "checklistbank-170809": "22728160"
           },
-          "uuid": "9efaf301-a1bd-46a1-b879-7b1c96c38f58"
+          "uuid": "9efaf301-a1bd-46a1-b879-7b1c96c38f58",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4292,10 +4293,18 @@
             "col": [
               "4HPN8"
             ],
-            "checklistbank": "176505",
-            "wikispecies": "Piaya_cayana"
+            "checklistbank": [
+              "176505",
+              "urn:lsid:marinespecies.org:taxname:1562673"
+            ],
+            "wikispecies": [
+              "Piaya_cayana"
+            ],
+            "checklistbank-139831": [
+              "1758"
+            ]
           },
-          "authorityIds": "col:4HPN8,itis:554785,wikidata:Q1270495",
+          "authorityIds": "checklistbank:176505,checklistbank:urn:lsid:marinespecies.org:taxname:1562673,checklistbank-139831:1758,col:4HPN8,itis:554785,wikidata:Q1270495,wikispecies:Piaya_cayana",
           "authorship": "(Linnaeus, 1766)"
         },
         {
@@ -4400,11 +4409,19 @@
             "itis": [
               "554722"
             ],
-            "checklistbank": "176479",
-            "wikispecies": "Ceuthmochares_aereus",
-            "gbif-backbone": "6170303"
+            "checklistbank": [
+              "176479",
+              "urn:lsid:marinespecies.org:taxname:212683"
+            ],
+            "wikispecies": [
+              "Ceuthmochares_aereus"
+            ],
+            "gbif-backbone": "6170303",
+            "checklistbank-139831": [
+              "513601"
+            ]
           },
-          "authorityIds": "col:T78H,itis:554722,wikidata:Q1273372",
+          "authorityIds": "checklistbank:176479,checklistbank:urn:lsid:marinespecies.org:taxname:212683,checklistbank-139831:513601,col:T78H,gbif-backbone:6170303,itis:554722,wikidata:Q1273372,wikispecies:Ceuthmochares_aereus",
           "authorship": "(Vieillot, 1817)"
         },
         {
@@ -5802,23 +5819,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CEUTHMOCHARES_AEREUS_VIEILLOT_1817",
-          "name": "\"Ceuthmochares aereus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ceuthmochares",
-          "authorship": "\"(Vieillot, 1817)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212683",
-            "wikispecies": "Ceuthmochares_aereus",
-            "checklistbank-139831": "513601"
-          },
-          "children": [],
-          "uuid": "795e4b4d-878d-507-aa2-293efee7fbd2e7",
-          "description": "\"Ceuthmochares aereus\" is a cuculidae species found in its native region."
-        },
-        {
           "id": "SP_CEUTHMOCHARES_AUSTRALIS",
           "name": "Ceuthmochares australis",
           "rank": "SPECIES",
@@ -5841,23 +5841,6 @@
       "name": "\"Piaya",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PIAYA_CAYANA_LINNAEUS_1766",
-          "name": "\"Piaya cayana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Piaya",
-          "authorship": "\"(Linnaeus, 1766)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1562673",
-            "wikispecies": "Piaya_cayana",
-            "checklistbank-139831": "1758"
-          },
-          "children": [],
-          "uuid": "00a00c2f-e81e-5fc-82c-f29f454fa29f08",
-          "description": "\"Piaya cayana\" is a cuculidae species found in its native region."
-        },
         {
           "id": "SP_PIAYA_MELANOGASTER",
           "name": "Piaya melanogaster",
@@ -5883,7 +5866,8 @@
           "sourceIds": {
             "checklistbank-170809": "61419028"
           },
-          "uuid": "77679096-9703-46eb-988d-05e880e79ed1"
+          "uuid": "77679096-9703-46eb-988d-05e880e79ed1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6278,7 +6262,7 @@
     }
   ],
   "genusCount": 59,
-  "speciesCount": 275,
+  "speciesCount": 273,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

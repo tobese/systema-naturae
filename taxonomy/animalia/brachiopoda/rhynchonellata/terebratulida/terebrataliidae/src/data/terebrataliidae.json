@@ -296,10 +296,15 @@
             "col": [
               "7C44G"
             ],
-            "checklistbank": "txn:283097",
-            "checklistbank-1174": "txn:283097"
+            "checklistbank": [
+              "txn:283097",
+              "urn:lsid:marinespecies.org:taxname:235616"
+            ],
+            "checklistbank-1174": [
+              "txn:283097"
+            ]
           },
-          "authorityIds": "col:7C44G",
+          "authorityIds": "checklistbank:txn:283097,checklistbank:urn:lsid:marinespecies.org:taxname:235616,checklistbank-1174:txn:283097,col:7C44G",
           "authorship": "(Adams and Reeve 1850)"
         },
         {
@@ -707,22 +712,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TEREBRATALIA_COREANICA_ADAMS_REEVE_1850",
-          "name": "\"Terebratalia coreanica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Terebratalia",
-          "authorship": "\"(Adams & Reeve, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235616",
-            "checklistbank-1174": "txn:283097"
-          },
-          "children": [],
-          "uuid": "db93eb97-0a19-531-aef-dc6b0744fff074",
-          "description": "\"Terebratalia coreanica\" is a terebrataliidae species found in its native region."
-        },
-        {
           "id": "SP_TEREBRATALIA_GOULDI_DALL_IN_DAVIDSON_1871",
           "name": "\"Terebratalia gouldi\"",
           "rank": "SPECIES",
@@ -831,7 +820,8 @@
           "sourceIds": {
             "checklistbank-139831": "1490825"
           },
-          "uuid": "74cdbe73-81ed-4581-913d-c4ca97f8b9a7"
+          "uuid": "74cdbe73-81ed-4581-913d-c4ca97f8b9a7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

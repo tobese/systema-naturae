@@ -2762,9 +2762,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1569725"
             ],
-            "checklistbank-1174": "txn:161380"
+            "checklistbank-1174": [
+              "txn:161380"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1569725"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569725,col:8YJT5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569725,checklistbank-1174:txn:161380,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1569725,col:8YJT5",
           "authorship": "(Cossmann, 1886)"
         },
         {
@@ -4019,11 +4024,14 @@
           "authorship": "Cosel, 1989",
           "sourceIds": {
             "checklistbank": "60872",
-            "checklistbank-139831": "1207579"
+            "checklistbank-139831": [
+              "1207579"
+            ]
           },
           "children": [],
           "uuid": "6d382537-841a-549-a9a-c017c30a160704",
-          "description": "Gari pseudoweinkauffi is a psammobiidae species found in its native region."
+          "description": "Gari pseudoweinkauffi is a psammobiidae species found in its native region.",
+          "authorityIds": "checklistbank:60872,checklistbank-139831:1207579"
         },
         {
           "id": "SP_GARI_HOSOYAI_HABE_1958",
@@ -4245,11 +4253,14 @@
           "authorship": "Prashad",
           "sourceIds": {
             "checklistbank": "49039b6e-6fe6-46e1-a522-39f12e6c7242",
-            "checklistbank-139831": "1207590"
+            "checklistbank-139831": [
+              "1207590"
+            ]
           },
           "children": [],
           "uuid": "7dfb4db6-3878-5b0-af8-64618c35c9771b",
-          "description": "Gari sibogai is a psammobiidae species found in its native region."
+          "description": "Gari sibogai is a psammobiidae species found in its native region.",
+          "authorityIds": "checklistbank:49039b6e-6fe6-46e1-a522-39f12e6c7242,checklistbank-139831:1207590"
         },
         {
           "id": "SP_GARI_PUSILLA_BERTIN",
@@ -4261,11 +4272,14 @@
           "authorship": "Bertin",
           "sourceIds": {
             "checklistbank": "75815a23-2a86-4dce-8431-9cbd6cfaae5e",
-            "checklistbank-139831": "775793"
+            "checklistbank-139831": [
+              "775793"
+            ]
           },
           "children": [],
           "uuid": "930d1d6c-4c15-5c1-88e-06d78808c19370",
-          "description": "Gari pusilla is a psammobiidae species found in its native region."
+          "description": "Gari pusilla is a psammobiidae species found in its native region.",
+          "authorityIds": "checklistbank:75815a23-2a86-4dce-8431-9cbd6cfaae5e,checklistbank-139831:775793"
         },
         {
           "id": "SP_GARI_HELENAE",
@@ -4607,9 +4621,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Gari",
           "sourceIds": {
-            "checklistbank-139831": "1047704"
+            "checklistbank-139831": [
+              "1047704"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1047704"
         }
       ]
     },
@@ -5522,21 +5539,6 @@
           "children": []
         },
         {
-          "id": "SP_GARI_LOUSTAUAE_COSSMANN_1886",
-          "name": "Gari loustauae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gari",
-          "authorship": "(Cossmann, 1886)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1569725",
-            "checklistbank-1174": "txn:161380"
-          },
-          "uuid": "f975a3bc-6c1f-4620-b24a-fefb33f3935a",
-          "children": []
-        },
-        {
           "id": "SP_GARI_BAUDONI_DESHAYES_1857",
           "name": "Gari baudoni",
           "rank": "SPECIES",
@@ -5663,18 +5665,6 @@
           "children": []
         },
         {
-          "id": "SP_GARI_PUSILLA",
-          "name": "Gari pusilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gari",
-          "sourceIds": {
-            "checklistbank-139831": "775793"
-          },
-          "uuid": "87e06bfb-cc71-4143-af67-068a36c64f05"
-        },
-        {
           "id": "SP_GARI_PANAMENSIS",
           "name": "Gari panamensis",
           "rank": "SPECIES",
@@ -5684,31 +5674,8 @@
           "sourceIds": {
             "checklistbank-139831": "1047704"
           },
-          "uuid": "9c9ab006-8083-4ef7-9fca-5f91ca80191f"
-        },
-        {
-          "id": "SP_GARI_PSEUDOWEINKAUFFI",
-          "name": "Gari pseudoweinkauffi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gari",
-          "sourceIds": {
-            "checklistbank-139831": "1207579"
-          },
-          "uuid": "a87eb377-2321-49ad-bd5d-ca6297d5a188"
-        },
-        {
-          "id": "SP_GARI_SIBOGAI",
-          "name": "Gari sibogai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gari",
-          "sourceIds": {
-            "checklistbank-139831": "1207590"
-          },
-          "uuid": "00f02be0-4ab0-4012-abd5-36e24762fed3"
+          "uuid": "9c9ab006-8083-4ef7-9fca-5f91ca80191f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

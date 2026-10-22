@@ -1069,12 +1069,17 @@
             "itis": [
               "15587"
             ],
-            "checklistbank": "105446",
+            "checklistbank": [
+              "105446",
+              "urn:lsid:marinespecies.org:taxname:1629239"
+            ],
             "checklistbank-2008": "6182",
             "gbif-backbone": "8412153",
-            "checklistbank-1174": "txn:512631"
+            "checklistbank-1174": [
+              "txn:512631"
+            ]
           },
-          "authorityIds": "col:3Y2XL,itis:15587,wfo:wfo-0001196533"
+          "authorityIds": "checklistbank:105446,checklistbank:urn:lsid:marinespecies.org:taxname:1629239,checklistbank-1174:txn:512631,checklistbank-2008:6182,col:3Y2XL,gbif-backbone:8412153,itis:15587,wfo:wfo-0001196533"
         },
         {
           "id": "SP_MARCHANTIA_QUADRATA",
@@ -2573,22 +2578,6 @@
           "description": "\"Marchantia berteroana\" is a marchantiaceae species found in its native region."
         },
         {
-          "id": "SP_MARCHANTIA_POLYMORPHA_L",
-          "name": "\"Marchantia polymorpha\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Marchantia",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1629239",
-            "checklistbank-1174": "txn:512631"
-          },
-          "children": [],
-          "uuid": "f189d981-5b29-588-9a7-22369c132dbdbc",
-          "description": "\"Marchantia polymorpha\" is a marchantiaceae species found in its native region."
-        },
-        {
           "id": "SP_MARCHANTIA_LIGNITICA_BROWN_1962",
           "name": "Marchantia lignitica",
           "rank": "SPECIES",
@@ -2626,7 +2615,8 @@
           "sourceIds": {
             "checklistbank-139831": "273641"
           },
-          "uuid": "d0e28a0f-5a64-47bf-ad25-c16a7322ec3b"
+          "uuid": "d0e28a0f-5a64-47bf-ad25-c16a7322ec3b",
+          "children": []
         },
         {
           "id": "SP_MARCHANTIA_MIQUELIANA",
@@ -2638,7 +2628,8 @@
           "sourceIds": {
             "checklistbank-139831": "1550141"
           },
-          "uuid": "850b7060-f748-4ab5-a1c8-64fec0e60d5c"
+          "uuid": "850b7060-f748-4ab5-a1c8-64fec0e60d5c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3620,7 +3611,7 @@
     }
   ],
   "genusCount": 15,
-  "speciesCount": 177,
+  "speciesCount": 178,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

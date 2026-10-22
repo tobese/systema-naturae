@@ -907,9 +907,11 @@
               "7SK9T"
             ],
             "checklistbank": "873983",
-            "checklistbank-139831": "873983"
+            "checklistbank-139831": [
+              "873983"
+            ]
           },
-          "authorityIds": "col:7SK9T",
+          "authorityIds": "checklistbank:873983,checklistbank-139831:873983,col:7SK9T",
           "description": "Orthalicus prototypus is a orthalicidae species found in its native region."
         },
         {
@@ -1314,9 +1316,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Orthalicus",
           "sourceIds": {
-            "checklistbank-139831": "226629"
+            "checklistbank-139831": [
+              "226629"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:226629"
         }
       ]
     },
@@ -1665,19 +1670,8 @@
           "sourceIds": {
             "checklistbank-139831": "226629"
           },
-          "uuid": "70dfdc65-abed-4884-a9ac-cc48ed43e0d9"
-        },
-        {
-          "id": "SP_ORTHALICUS_PROTOTYPUS",
-          "name": "Orthalicus prototypus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Orthalicus",
-          "sourceIds": {
-            "checklistbank-139831": "873983"
-          },
-          "uuid": "2bbcf1f5-ced3-412d-bf52-7a6c53b7d3cc"
+          "uuid": "70dfdc65-abed-4884-a9ac-cc48ed43e0d9",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2782,9 +2776,11 @@
               "V7H4Z"
             ],
             "checklistbank": "903485",
-            "checklistbank-139831": "903485"
+            "checklistbank-139831": [
+              "903485"
+            ]
           },
-          "authorityIds": "col:V7H4Z",
+          "authorityIds": "checklistbank:903485,checklistbank-139831:903485,col:V7H4Z",
           "description": "Sultana adamsonii is a orthalicidae species found in its native region."
         },
         {
@@ -2802,9 +2798,11 @@
               "7T9W6"
             ],
             "checklistbank": "1513556",
-            "checklistbank-139831": "1513556"
+            "checklistbank-139831": [
+              "1513556"
+            ]
           },
-          "authorityIds": "col:7T9W6",
+          "authorityIds": "checklistbank:1513556,checklistbank-139831:1513556,col:7T9W6",
           "description": "Sultana hidalgoi is a orthalicidae species found in its native region."
         },
         {
@@ -3053,30 +3051,6 @@
           },
           "uuid": "d7cba8e2-e2ab-4448-8655-2000305c6bb8",
           "children": []
-        },
-        {
-          "id": "SP_SULTANA_ADAMSONII",
-          "name": "Sultana adamsonii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sultana",
-          "sourceIds": {
-            "checklistbank-139831": "903485"
-          },
-          "uuid": "e157d420-5dad-41d4-adcd-6f4aef9a6584"
-        },
-        {
-          "id": "SP_SULTANA_HIDALGOI",
-          "name": "Sultana hidalgoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sultana",
-          "sourceIds": {
-            "checklistbank-139831": "1513556"
-          },
-          "uuid": "bc29b53a-3d30-4df5-849b-d6fb79eea478"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6909,7 +6883,7 @@
     }
   ],
   "genusCount": 40,
-  "speciesCount": 391,
+  "speciesCount": 392,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

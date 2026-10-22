@@ -240,13 +240,18 @@
             "col": [
               "6K4HB"
             ],
-            "checklistbank": "173446",
-            "wikispecies": "Fuscidea_asbolodes",
+            "checklistbank": [
+              "173446",
+              "urn:lsid:marinespecies.org:taxname:1609752"
+            ],
+            "wikispecies": [
+              "Fuscidea_asbolodes"
+            ],
             "gbif-backbone": "2600733",
             "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=107502"
           },
           "uuid": "f839598f-cdc4-557-8e4-77dc094aa50469",
-          "authorityIds": "col:6K4HB,gbif:2600733,mycobank:107502"
+          "authorityIds": "checklistbank:173446,checklistbank:urn:lsid:marinespecies.org:taxname:1609752,checklistbank-316361:https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=107502,col:6K4HB,gbif:2600733,gbif-backbone:2600733,mycobank:107502,wikispecies:Fuscidea_asbolodes"
         },
         {
           "id": "FUSCIDEA_ASYNDETA",
@@ -1611,22 +1616,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FUSCIDEA_ASBOLODES_NYL_HERTEL_V_WIRTH_1984",
-          "name": "\"Fuscidea asbolodes\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fuscidea",
-          "authorship": "\"(Nyl.) Hertel & V. Wirth, 1984\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1609752",
-            "wikispecies": "Fuscidea_asbolodes"
-          },
-          "children": [],
-          "uuid": "53357919-6f0b-5db-876-607bdfd7a0694e",
-          "description": "\"Fuscidea asbolodes\" is a fuscideaceae species found in its native region."
-        },
-        {
           "id": "SP_FUSCIDEA_APPALACHENSIS",
           "name": "Fuscidea appalachensis",
           "rank": "SPECIES",
@@ -1961,7 +1950,8 @@
           "sourceIds": {
             "checklistbank-139831": "463980"
           },
-          "uuid": "4a6c3781-f31b-45ef-a16e-200c5c42ee5c"
+          "uuid": "4a6c3781-f31b-45ef-a16e-200c5c42ee5c",
+          "children": []
         },
         {
           "id": "SP_FUSCIDEA_ARCUATULA",
@@ -1973,7 +1963,8 @@
           "sourceIds": {
             "checklistbank-139831": "707333"
           },
-          "uuid": "cfc1f8d0-041a-48cb-b8b2-0b47cc0572d2"
+          "uuid": "cfc1f8d0-041a-48cb-b8b2-0b47cc0572d2",
+          "children": []
         },
         {
           "id": "SP_FUSCIDEA_TENEBRICA",
@@ -1985,7 +1976,8 @@
           "sourceIds": {
             "checklistbank-139831": "1048956"
           },
-          "uuid": "901fa1f1-64c0-4adb-b112-a14c91284f3d"
+          "uuid": "901fa1f1-64c0-4adb-b112-a14c91284f3d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3659,7 +3651,7 @@
   ],
   "authorship": "Hafellner",
   "genusCount": 23,
-  "speciesCount": 176,
+  "speciesCount": 178,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

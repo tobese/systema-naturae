@@ -448,10 +448,15 @@
             "col": [
               "BBXZM"
             ],
-            "checklistbank": "txn:404223",
-            "checklistbank-1174": "txn:404223"
+            "checklistbank": [
+              "txn:404223",
+              "urn:lsid:marinespecies.org:taxname:1611890"
+            ],
+            "checklistbank-1174": [
+              "txn:404223"
+            ]
           },
-          "authorityIds": "col:BBXZM",
+          "authorityIds": "checklistbank:txn:404223,checklistbank:urn:lsid:marinespecies.org:taxname:1611890,checklistbank-1174:txn:404223,col:BBXZM",
           "description": "Mesolambrus bragai is a parthenopidae species found in its native region."
         },
         {
@@ -519,22 +524,6 @@
       "name": "\"Mesolambrus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MESOLAMBRUS_BRAGAI_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Mesolambrus bragai\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mesolambrus",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611890",
-            "checklistbank-1174": "txn:404223"
-          },
-          "children": [],
-          "uuid": "cde1d9b5-3169-543-bc5-190d78d006ab1b",
-          "description": "\"Mesolambrus bragai\" is a parthenopidae species found in its native region."
-        },
         {
           "id": "SP_MESOLAMBRUS_DECLINATUS_MULLER_AND_COLLINS_1991",
           "name": "Mesolambrus declinatus",
@@ -2554,10 +2543,15 @@
             "col": [
               "BC5ZV"
             ],
-            "checklistbank": "txn:400802",
-            "checklistbank-1174": "txn:400802"
+            "checklistbank": [
+              "txn:400802",
+              "urn:lsid:marinespecies.org:taxname:1607051"
+            ],
+            "checklistbank-1174": [
+              "txn:400802"
+            ]
           },
-          "authorityIds": "col:BC5ZV",
+          "authorityIds": "checklistbank:txn:400802,checklistbank:urn:lsid:marinespecies.org:taxname:1607051,checklistbank-1174:txn:400802,col:BC5ZV",
           "description": "Platylambrus spinulatus is a parthenopidae species found in its native region."
         },
         {
@@ -2720,22 +2714,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PLATYLAMBRUS_SPINULATUS_COLLINS_TODD_I_IN_I_TODD_COLLINS_2005",
-          "name": "\"Platylambrus spinulatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Platylambrus",
-          "authorship": "\"Collins & Todd <i>in</i> Todd & Collins, 2005\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607051",
-            "checklistbank-1174": "txn:400802"
-          },
-          "children": [],
-          "uuid": "ca93a19a-7e1a-5d5-bd2-587c56be1cf390",
-          "description": "\"Platylambrus spinulatus\" is a parthenopidae species found in its native region."
-        },
-        {
           "id": "SP_PLATYLAMBRUS_GRANULATUS",
           "name": "Platylambrus granulatus",
           "rank": "SPECIES",
@@ -2745,7 +2723,8 @@
           "sourceIds": {
             "checklistbank-139831": "1251540"
           },
-          "uuid": "ab12b132-0579-4b8a-85a8-800a89946787"
+          "uuid": "ab12b132-0579-4b8a-85a8-800a89946787",
+          "children": []
         },
         {
           "id": "SP_PLATYLAMBRUS_SERRATUS",
@@ -2757,7 +2736,8 @@
           "sourceIds": {
             "checklistbank-139831": "1671492"
           },
-          "uuid": "65030a70-ede8-401f-a2dd-d1078d58da0c"
+          "uuid": "65030a70-ede8-401f-a2dd-d1078d58da0c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3135,7 +3115,8 @@
           "sourceIds": {
             "checklistbank-139831": "1248098"
           },
-          "uuid": "a91b25a7-8e9f-4bd1-91b2-253e9bd42e88"
+          "uuid": "a91b25a7-8e9f-4bd1-91b2-253e9bd42e88",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4872,20 +4853,6 @@
           "authorship": "Rathbun, 1906",
           "children": [],
           "uuid": "2adaa6f7-e89e-50b-883-a5facb89afb2b5"
-        },
-        {
-          "id": "SP_PARTHENOPE_EXPANSA_MIERS_1879",
-          "name": "Parthenope expansa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parthenope",
-          "authorship": "(Miers, 1879)",
-          "sourceIds": {
-            "checklistbank": "27365"
-          },
-          "children": [],
-          "uuid": "4670607d-5be9-5fc-aa5-28beef6af67826"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7172,7 +7139,7 @@
       "lineage": "parthenopidae"
     }
   ],
-  "speciesCount": 379,
+  "speciesCount": 376,
   "appSlug": "parthenopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

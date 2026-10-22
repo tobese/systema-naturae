@@ -566,11 +566,17 @@
           "authorship": "(Koren & Danielssen, 1880)",
           "sourceIds": {
             "checklistbank": "56059",
-            "checklistbank-139831": "1508125"
+            "checklistbank-139831": [
+              "1508125"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:136059"
+            ]
           },
           "children": [],
           "uuid": "8550f6bf-d963-569-837-dc5ecfa0b018cc",
-          "description": "Nephasoma lilljeborgi is a golfingiidae species found in its native region."
+          "description": "Nephasoma lilljeborgi is a golfingiidae species found in its native region.",
+          "authorityIds": "checklistbank:56059,checklistbank-139831:1508125,checklistbank-2011:urn:lsid:marinespecies.org:taxname:136059"
         },
         {
           "id": "SP_NEPHASOMA_MINUTA_KEFERSTEIN",
@@ -1920,9 +1926,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Themiste",
           "sourceIds": {
-            "checklistbank-139831": "1151145"
+            "checklistbank-139831": [
+              "1151145"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1151145"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3520,21 +3529,6 @@
           "children": []
         },
         {
-          "id": "SP_NEPHASOMA_LILLJEBORGI_DANIELSSEN_KOREN_1880",
-          "name": "Nephasoma lilljeborgi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nephasoma",
-          "authorship": "(Danielssen & Koren, 1880)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:136059",
-            "checklistbank-139831": "1508125"
-          },
-          "uuid": "4c655fd0-d102-421f-969b-eab87e81abe5",
-          "children": []
-        },
-        {
           "id": "SP_NEPHASOMA_MINUTUM_KEFERSTEIN_1862",
           "name": "Nephasoma minutum",
           "rank": "SPECIES",
@@ -3932,7 +3926,8 @@
           "sourceIds": {
             "checklistbank-139831": "1151145"
           },
-          "uuid": "e3ed8d40-f394-4ed0-a44f-91a5f87ac94a"
+          "uuid": "e3ed8d40-f394-4ed0-a44f-91a5f87ac94a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

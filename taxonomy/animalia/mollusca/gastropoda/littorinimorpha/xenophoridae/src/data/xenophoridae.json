@@ -329,9 +329,14 @@
               "urn:lsid:marinespecies.org:taxname:1570741"
             ],
             "gbif-backbone": "9072936",
-            "checklistbank-1174": "txn:396751"
+            "checklistbank-1174": [
+              "txn:396751"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1570741"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570741,col:8YK68",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570741,checklistbank-1174:txn:396751,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1570741,col:8YK68,gbif-backbone:9072936",
           "authorship": "(A. d'Orbigny, 1850)"
         },
         {
@@ -417,9 +422,17 @@
               "urn:lsid:marinespecies.org:taxname:743867"
             ],
             "gbif-backbone": "4610101",
-            "checklistbank-1174": "txn:114057"
+            "checklistbank-1174": [
+              "txn:114057"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:743867"
+            ],
+            "checklistbank-127379": [
+              "fad0e29c-2f11-41f6-8019-64b823c2f72b"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:743867,col:7FW8P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:743867,checklistbank-1174:txn:114057,checklistbank-127379:fad0e29c-2f11-41f6-8019-64b823c2f72b,checklistbank-2011:urn:lsid:marinespecies.org:taxname:743867,col:7FW8P,gbif-backbone:4610101",
           "authorship": "(R. B. Newton, 1905)"
         },
         {
@@ -2412,22 +2425,6 @@
           "children": []
         },
         {
-          "id": "SP_XENOPHORA_MEKRANENSIS_R_B_NEWTON_1905",
-          "name": "Xenophora mekranensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Xenophora",
-          "authorship": "(R. B. Newton, 1905)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:743867",
-            "checklistbank-1174": "txn:114057",
-            "checklistbank-127379": "fad0e29c-2f11-41f6-8019-64b823c2f72b"
-          },
-          "uuid": "fa09292e-eef1-4c3e-9a0e-2a527b51178e",
-          "children": []
-        },
-        {
           "id": "SP_XENOPHORA_PROGNATA_H_J_FINLAY_1926",
           "name": "Xenophora prognata",
           "rank": "SPECIES",
@@ -2453,21 +2450,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1570739"
           },
           "uuid": "e7bc27be-7924-454c-b4a7-7a650f05900b",
-          "children": []
-        },
-        {
-          "id": "SP_XENOPHORA_GRAVESIANA_A_D_ORBIGNY_1850",
-          "name": "Xenophora gravesiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Xenophora",
-          "authorship": "(A. d'Orbigny, 1850)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1570741",
-            "checklistbank-1174": "txn:396751"
-          },
-          "uuid": "097a5587-7d49-4bd7-bc9f-d05311909f1d",
           "children": []
         },
         {
@@ -2634,7 +2616,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220077"
           },
-          "uuid": "783d4026-4cb8-44ff-881c-5d2f9591af4d"
+          "uuid": "783d4026-4cb8-44ff-881c-5d2f9591af4d",
+          "children": []
         },
         {
           "id": "SP_XENOPHORA_REGULARIS",
@@ -2646,7 +2629,8 @@
           "sourceIds": {
             "checklistbank-139831": "1422627"
           },
-          "uuid": "9956b03a-2e7c-4f62-abeb-e244d28344b1"
+          "uuid": "9956b03a-2e7c-4f62-abeb-e244d28344b1",
+          "children": []
         },
         {
           "id": "SP_XENOPHORA_KONOI",
@@ -2658,7 +2642,8 @@
           "sourceIds": {
             "checklistbank-139831": "1428991"
           },
-          "uuid": "a673dd5f-eabb-458c-9126-66d199f51eac"
+          "uuid": "a673dd5f-eabb-458c-9126-66d199f51eac",
+          "children": []
         },
         {
           "id": "SP_XENOPHORA_MEDITERRANEA",
@@ -2670,7 +2655,8 @@
           "sourceIds": {
             "checklistbank-139831": "1513260"
           },
-          "uuid": "3f913a0f-978e-43c2-9a20-d96bd5d0a5e8"
+          "uuid": "3f913a0f-978e-43c2-9a20-d96bd5d0a5e8",
+          "children": []
         },
         {
           "id": "SP_XENOPHORA_KERMADECENSIS",
@@ -2682,7 +2668,8 @@
           "sourceIds": {
             "checklistbank-139831": "1604038"
           },
-          "uuid": "7535abd0-90e4-425a-9770-8f126273c55c"
+          "uuid": "7535abd0-90e4-425a-9770-8f126273c55c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3079,10 +3066,15 @@
             "col": [
               "4ZRMZ"
             ],
-            "checklistbank": "taicol: 88383",
-            "checklistbank-1174": "txn:121749"
+            "checklistbank": [
+              "taicol: 88383",
+              "urn:lsid:marinespecies.org:taxname:217332"
+            ],
+            "checklistbank-1174": [
+              "txn:121749"
+            ]
           },
-          "authorityIds": "col:4ZRMZ",
+          "authorityIds": "checklistbank:taicol: 88383,checklistbank:urn:lsid:marinespecies.org:taxname:217332,checklistbank-1174:txn:121749,col:4ZRMZ",
           "authorship": "(Linnaeus, 1767)"
         },
         {
@@ -3211,22 +3203,6 @@
       "name": "\"Stellaria",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_STELLARIA_SOLARIS_LINNAEUS_1764",
-          "name": "\"Stellaria solaris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stellaria",
-          "authorship": "\"(Linnaeus, 1764)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:217332",
-            "checklistbank-1174": "txn:121749"
-          },
-          "children": [],
-          "uuid": "43902cbe-62c4-52e-995-2bd013347a061f",
-          "description": "\"Stellaria solaris\" is a xenophoridae species found in its native region."
-        },
         {
           "id": "SP_STELLARIA_TESTIGERA_BRONN_1831",
           "name": "Stellaria testigera",
@@ -4084,7 +4060,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 231,
+  "speciesCount": 233,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

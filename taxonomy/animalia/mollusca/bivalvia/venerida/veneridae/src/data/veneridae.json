@@ -1189,11 +1189,14 @@
           "authorship": "Menke, 1829",
           "sourceIds": {
             "checklistbank": "687257",
-            "checklistbank-139831": "1044806"
+            "checklistbank-139831": [
+              "1044806"
+            ]
           },
           "children": [],
           "uuid": "50de118c-1e4e-5ad-8cf-435899963fe47c",
-          "description": "Petricola rugosa is a veneridae species found in its native region."
+          "description": "Petricola rugosa is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:687257,checklistbank-139831:1044806"
         },
         {
           "id": "SP_PETRICOLA_SERRATA_DESHAYES_1853",
@@ -1449,9 +1452,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Petricola",
           "sourceIds": {
-            "checklistbank-139831": "1209611"
+            "checklistbank-139831": [
+              "1209611"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1209611"
         }
       ]
     },
@@ -1590,18 +1596,6 @@
           "children": []
         },
         {
-          "id": "SP_PETRICOLA_RUGOSA",
-          "name": "Petricola rugosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Petricola",
-          "sourceIds": {
-            "checklistbank-139831": "1044806"
-          },
-          "uuid": "4fa3deb4-ef3c-45ee-a045-2b3f730dcb13"
-        },
-        {
           "id": "SP_PETRICOLA_HERTZANA",
           "name": "Petricola hertzana",
           "rank": "SPECIES",
@@ -1611,7 +1605,8 @@
           "sourceIds": {
             "checklistbank-139831": "1209611"
           },
-          "uuid": "b1702859-5914-4d8f-b1e0-044e79094b1c"
+          "uuid": "b1702859-5914-4d8f-b1e0-044e79094b1c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1974,10 +1969,18 @@
             "col": [
               "7CBLG"
             ],
-            "checklistbank": "219561",
-            "checklistbank-1174": "txn:328433"
+            "checklistbank": [
+              "219561",
+              "urn:lsid:marinespecies.org:taxname:216596"
+            ],
+            "checklistbank-1174": [
+              "txn:328433"
+            ],
+            "checklistbank-127379": [
+              "df259295-df8a-42bf-ac64-0759d9af98c7"
+            ]
           },
-          "authorityIds": "col:7CBLG",
+          "authorityIds": "checklistbank:219561,checklistbank:urn:lsid:marinespecies.org:taxname:216596,checklistbank-1174:txn:328433,checklistbank-127379:df259295-df8a-42bf-ac64-0759d9af98c7,col:7CBLG",
           "authorship": "(Adams & Reeve, 1850)"
         },
         {
@@ -2122,10 +2125,15 @@
             "col": [
               "7CBLP"
             ],
-            "checklistbank": "219562",
-            "checklistbank-1174": "txn:142202"
+            "checklistbank": [
+              "219562",
+              "urn:lsid:marinespecies.org:taxname:507933"
+            ],
+            "checklistbank-1174": [
+              "txn:142202"
+            ]
           },
-          "authorityIds": "col:7CBLP",
+          "authorityIds": "checklistbank:219562,checklistbank:urn:lsid:marinespecies.org:taxname:507933,checklistbank-1174:txn:142202,col:7CBLP",
           "authorship": "(G. B. Sowerby II, 1853)"
         },
         {
@@ -2913,23 +2921,6 @@
           "description": "\"Timoclea roemeriana\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_TIMOCLEA_COSTELLIFERA_A_ADAMS_REEVE_1850",
-          "name": "\"Timoclea costellifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Timoclea",
-          "authorship": "\"(A. Adams & Reeve, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:216596",
-            "checklistbank-1174": "txn:328433",
-            "checklistbank-127379": "df259295-df8a-42bf-ac64-0759d9af98c7"
-          },
-          "children": [],
-          "uuid": "4d2c0592-b5e8-599-9bd-250d08763cde07",
-          "description": "\"Timoclea costellifera\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_TIMOCLEA_MARICA_LINNAEUS_1758",
           "name": "\"Timoclea marica\"",
           "rank": "SPECIES",
@@ -3006,22 +2997,6 @@
           "children": [],
           "uuid": "5e3c542d-16f1-593-884-2052f04f221116",
           "description": "\"Timoclea arakana\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_TIMOCLEA_IMBRICATA_G_B_SOWERBY_II_1853",
-          "name": "\"Timoclea imbricata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Timoclea",
-          "authorship": "\"(G. B. Sowerby II, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507933",
-            "checklistbank-1174": "txn:142202"
-          },
-          "children": [],
-          "uuid": "25397ba0-8874-562-aa8-fe94a26d08af60",
-          "description": "\"Timoclea imbricata\" is a veneridae species found in its native region."
         },
         {
           "id": "SP_TIMOCLEA_SCABRA_HANLEY_1845",
@@ -3506,10 +3481,15 @@
             "col": [
               "6V5ZW"
             ],
-            "checklistbank": "219264",
-            "checklistbank-1174": "txn:109341"
+            "checklistbank": [
+              "219264",
+              "urn:lsid:marinespecies.org:taxname:420947"
+            ],
+            "checklistbank-1174": [
+              "txn:109341"
+            ]
           },
-          "authorityIds": "col:6V5ZW,itis:81573"
+          "authorityIds": "checklistbank:219264,checklistbank:urn:lsid:marinespecies.org:taxname:420947,checklistbank-1174:txn:109341,col:6V5ZW,itis:81573"
         },
         {
           "id": "SP_PERIGLYPTA_MULTICOSTATA",
@@ -3533,10 +3513,15 @@
             "col": [
               "76TZW"
             ],
-            "checklistbank": "219265",
-            "checklistbank-1174": "txn:161845"
+            "checklistbank": [
+              "219265",
+              "urn:lsid:marinespecies.org:taxname:708830"
+            ],
+            "checklistbank-1174": [
+              "txn:161845"
+            ]
           },
-          "authorityIds": "col:76TZW,itis:81575"
+          "authorityIds": "checklistbank:219265,checklistbank:urn:lsid:marinespecies.org:taxname:708830,checklistbank-1174:txn:161845,col:76TZW,itis:81575"
         },
         {
           "id": "SP_PERIGLYPTA_PUERPERA",
@@ -3556,10 +3541,15 @@
             "col": [
               "775ZW"
             ],
-            "checklistbank": "219266",
-            "checklistbank-1174": "txn:114280"
+            "checklistbank": [
+              "219266",
+              "urn:lsid:marinespecies.org:taxname:590802"
+            ],
+            "checklistbank-1174": [
+              "txn:114280"
+            ]
           },
-          "authorityIds": "col:775ZW",
+          "authorityIds": "checklistbank:219266,checklistbank:urn:lsid:marinespecies.org:taxname:590802,checklistbank-1174:txn:114280,col:775ZW",
           "authorship": "(Linnaeus, 1771)"
         },
         {
@@ -3868,54 +3858,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PERIGLYPTA_LISTERI_J_E_GRAY_1838",
-          "name": "\"Periglypta listeri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Periglypta",
-          "authorship": "\"(J. E. Gray, 1838)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420947",
-            "checklistbank-1174": "txn:109341"
-          },
-          "children": [],
-          "uuid": "27d493a9-ee02-5ea-9e6-4feb68d5d2d6a9",
-          "description": "\"Periglypta listeri\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_PERIGLYPTA_PUERPERA_LINNAEUS_1771",
-          "name": "\"Periglypta puerpera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Periglypta",
-          "authorship": "\"(Linnaeus, 1771)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:590802",
-            "checklistbank-1174": "txn:114280"
-          },
-          "children": [],
-          "uuid": "783ecd99-90e7-53e-bd6-d1fa8749bea286",
-          "description": "\"Periglypta puerpera\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_PERIGLYPTA_MULTICOSTATA_G_B_SOWERBY_I_1835",
-          "name": "\"Periglypta multicostata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Periglypta",
-          "authorship": "\"(G. B. Sowerby I, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:708830",
-            "checklistbank-1174": "txn:161845"
-          },
-          "children": [],
-          "uuid": "7d314506-9b78-562-bab-928ff40527b755",
-          "description": "\"Periglypta multicostata\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_PERIGLYPTA_RETICULATA_LINNAEUS_1758",
           "name": "\"Periglypta reticulata\"",
           "rank": "SPECIES",
@@ -4084,9 +4026,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507544"
             ],
-            "checklistbank-1174": "txn:248718"
+            "checklistbank-1174": [
+              "txn:248718"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507544"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507544,col:32TC8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507544,checklistbank-1174:txn:248718,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507544,col:32TC8",
           "authorship": "(Hanley, 1845)"
         },
         {
@@ -4283,21 +4230,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507543"
           },
           "uuid": "a2d313d3-8031-463b-8bd6-90b0ab234547",
-          "children": []
-        },
-        {
-          "id": "SP_CYCLINELLA_SUBQUADRATA_HANLEY_1845",
-          "name": "Cyclinella subquadrata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cyclinella",
-          "authorship": "(Hanley, 1845)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507544",
-            "checklistbank-1174": "txn:248718"
-          },
-          "uuid": "5c062cc2-1c52-4200-9cc8-5f518f004d2f",
           "children": []
         },
         {
@@ -4677,9 +4609,14 @@
               "urn:lsid:marinespecies.org:taxname:507763"
             ],
             "gbif-backbone": "5855833",
-            "checklistbank-1174": "txn:249461"
+            "checklistbank-1174": [
+              "txn:249461"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507763"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507763,col:3VDJY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507763,checklistbank-1174:txn:249461,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507763,col:3VDJY,gbif-backbone:5855833",
           "authorship": "(A. d'Orbigny, 1846)"
         },
         {
@@ -5264,21 +5201,6 @@
           "children": [],
           "uuid": "669da54c-2c61-563-ba5-91e033da5329aa",
           "description": "\"Lirophora obliterata\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_LIROPHORA_MARIAE_A_D_ORBIGNY_1846",
-          "name": "Lirophora mariae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lirophora",
-          "authorship": "(A. d'Orbigny, 1846)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507763",
-            "checklistbank-1174": "txn:249461"
-          },
-          "uuid": "be32b40b-e522-4d96-9946-240db1609184",
-          "children": []
         },
         {
           "id": "SP_LIROPHORA_DISCREPANS_G_B_SOWERBY_I_1835",
@@ -6735,11 +6657,16 @@
             "itis": [
               "81442"
             ],
-            "checklistbank": "103155",
+            "checklistbank": [
+              "103155",
+              "urn:lsid:marinespecies.org:taxname:420967"
+            ],
             "gbif-backbone": "2287680",
-            "checklistbank-1174": "txn:91158"
+            "checklistbank-1174": [
+              "txn:91158"
+            ]
           },
-          "authorityIds": "col:57XLT,itis:81442"
+          "authorityIds": "checklistbank:103155,checklistbank:urn:lsid:marinespecies.org:taxname:420967,checklistbank-1174:txn:91158,col:57XLT,gbif-backbone:2287680,itis:81442"
         },
         {
           "id": "SP_TRANSENNELLA_CULEBRANA",
@@ -6877,9 +6804,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507969"
             ],
-            "checklistbank-1174": "txn:293680"
+            "checklistbank-1174": [
+              "txn:293680"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507969"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507969,col:57XM3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507969,checklistbank-1174:txn:293680,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507969,col:57XM3",
           "authorship": "(P. P. Carpenter, 1864)"
         },
         {
@@ -7103,22 +7035,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TRANSENNELLA_CUBANIANA_A_D_ORBIGNY_1853",
-          "name": "\"Transennella cubaniana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Transennella",
-          "authorship": "\"(A. d'Orbigny, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420967",
-            "checklistbank-1174": "txn:91158"
-          },
-          "children": [],
-          "uuid": "0b3d70f8-3517-5e1-aeb-cbb7489c629af7",
-          "description": "\"Transennella cubaniana\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_TRANSENNELLA_PANNOSA_G_B_SOWERBY_I_1835",
           "name": "\"Transennella pannosa\"",
           "rank": "SPECIES",
@@ -7188,21 +7104,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507967"
           },
           "uuid": "c47e03f0-3d46-405e-b0fd-bf84aeedf381",
-          "children": []
-        },
-        {
-          "id": "SP_TRANSENNELLA_PUELLA_P_P_CARPENTER_1864",
-          "name": "Transennella puella",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Transennella",
-          "authorship": "(P. P. Carpenter, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507969",
-            "checklistbank-1174": "txn:293680"
-          },
-          "uuid": "f5e316e1-cbd3-4bc1-8d3f-cf344ce96629",
           "children": []
         },
         {
@@ -7643,37 +7544,17 @@
             "itis": [
               "567356"
             ],
-            "checklistbank": "219732",
-            "checklistbank-1174": "txn:167960"
+            "checklistbank": [
+              "219732",
+              "urn:lsid:marinespecies.org:taxname:507511"
+            ],
+            "checklistbank-1174": [
+              "txn:167960"
+            ]
           },
-          "authorityIds": "col:5XTF2,itis:567356"
+          "authorityIds": "checklistbank:219732,checklistbank:urn:lsid:marinespecies.org:taxname:507511,checklistbank-1174:txn:167960,col:5XTF2,itis:567356"
         }
       ]
-    },
-    {
-      "id": "GENUS_CHIONISTA",
-      "name": "\"Chionista",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHIONISTA_FLUCTIFRAGA_G_B_SOWERBY_II_1853",
-          "name": "\"Chionista fluctifraga\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chionista",
-          "authorship": "\"(G. B. Sowerby II, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507511",
-            "checklistbank-1174": "txn:167960"
-          },
-          "children": [],
-          "uuid": "03a2e894-7e67-56b-80c-d0bfdc81d57527",
-          "description": "\"Chionista fluctifraga\" is a veneridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "veneridae"
     },
     {
       "id": "GENUS_CLAUSINELLA",
@@ -9087,9 +8968,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507828"
             ],
-            "checklistbank-1174": "txn:293366"
+            "checklistbank-1174": [
+              "txn:293366"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507828"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507828,col:77MBG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507828,checklistbank-1174:txn:293366,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507828,col:77MBG",
           "authorship": "(C. B. Adams, 1852)"
         },
         {
@@ -9110,9 +8996,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1569768"
             ],
-            "checklistbank-1174": "txn:122389"
+            "checklistbank-1174": [
+              "txn:122389"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1569768"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569768,col:8YJYV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569768,checklistbank-1174:txn:122389,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1569768,col:8YJYV",
           "authorship": "(Lamarck, 1805)"
         },
         {
@@ -10576,9 +10467,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:225550"
             ],
-            "checklistbank-1174": "txn:162006"
+            "checklistbank-1174": [
+              "txn:162006"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:225550"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225550,col:77MC8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225550,checklistbank-1174:txn:162006,checklistbank-2011:urn:lsid:marinespecies.org:taxname:225550,col:77MC8",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -12082,11 +11978,14 @@
           "authorship": "Lamprell & Whitehead",
           "sourceIds": {
             "checklistbank": "7a696390-956c-4984-886c-5c99aee8a958",
-            "checklistbank-139831": "1209364"
+            "checklistbank-139831": [
+              "1209364"
+            ]
           },
           "children": [],
           "uuid": "ef71a787-3bd9-561-915-23a536de23f7d7",
-          "description": "Pitar trevori is a veneridae species found in its native region."
+          "description": "Pitar trevori is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:7a696390-956c-4984-886c-5c99aee8a958,checklistbank-139831:1209364"
         },
         {
           "id": "SP_PITAR_CURNOWAE_LAMPRELL_HEALY",
@@ -12098,11 +11997,14 @@
           "authorship": "Lamprell & Healy",
           "sourceIds": {
             "checklistbank": "8b7f27b7-355f-4641-8e09-a73216c59e78",
-            "checklistbank-139831": "1209366"
+            "checklistbank-139831": [
+              "1209366"
+            ]
           },
           "children": [],
           "uuid": "0b2e062a-e874-53e-8cd-63f19c4966f62c",
-          "description": "Pitar curnowae is a veneridae species found in its native region."
+          "description": "Pitar curnowae is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:8b7f27b7-355f-4641-8e09-a73216c59e78,checklistbank-139831:1209366"
         },
         {
           "id": "SP_PITAR_POTTERI_HEALY_LAMPRELL",
@@ -12114,11 +12016,14 @@
           "authorship": "Healy & Lamprell",
           "sourceIds": {
             "checklistbank": "3dbacbde-c8d6-4d64-aadb-2d9b55dc0f1f",
-            "checklistbank-139831": "1209365"
+            "checklistbank-139831": [
+              "1209365"
+            ]
           },
           "children": [],
           "uuid": "61da8234-aaa7-5d3-b10-304b08b4f0bddd",
-          "description": "Pitar potteri is a veneridae species found in its native region."
+          "description": "Pitar potteri is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:3dbacbde-c8d6-4d64-aadb-2d9b55dc0f1f,checklistbank-139831:1209365"
         },
         {
           "id": "SP_PITAR_QUEENSLANDICA_LAMPRELL_HEALY",
@@ -12145,11 +12050,14 @@
           "authorship": "Pilsbry",
           "sourceIds": {
             "checklistbank": "de70d42e-ac6c-4b32-8698-958b8879cab3",
-            "checklistbank-139831": "1209372"
+            "checklistbank-139831": [
+              "1209372"
+            ]
           },
           "children": [],
           "uuid": "1e108685-c2b9-550-89e-f152427dc995df",
-          "description": "Pitar sulfureus is a veneridae species found in its native region."
+          "description": "Pitar sulfureus is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:de70d42e-ac6c-4b32-8698-958b8879cab3,checklistbank-139831:1209372"
         },
         {
           "id": "SP_PITAR_THORNLEYAE_LAMPRELL_HEALY",
@@ -12161,11 +12069,14 @@
           "authorship": "Lamprell & Healy",
           "sourceIds": {
             "checklistbank": "e22edc1b-3afe-495c-a1c4-bb56f1d3657f",
-            "checklistbank-139831": "1209367"
+            "checklistbank-139831": [
+              "1209367"
+            ]
           },
           "children": [],
           "uuid": "b642de92-3342-566-ae7-3fc2ec3a70f477",
-          "description": "Pitar thornleyae is a veneridae species found in its native region."
+          "description": "Pitar thornleyae is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:e22edc1b-3afe-495c-a1c4-bb56f1d3657f,checklistbank-139831:1209367"
         },
         {
           "id": "SP_PITAR_BERRYI",
@@ -13130,21 +13041,6 @@
           "children": []
         },
         {
-          "id": "SP_PITAR_TUMENS_GMELIN_1791",
-          "name": "Pitar tumens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "authorship": "(Gmelin, 1791)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:225550",
-            "checklistbank-1174": "txn:162006"
-          },
-          "uuid": "785908ae-96fe-4550-93bd-b8583df9c2a6",
-          "children": []
-        },
-        {
           "id": "SP_PITAR_SUBPELLUCIDUS_G_B_SOWERBY_II_1851",
           "name": "Pitar subpellucidus",
           "rank": "SPECIES",
@@ -13228,21 +13124,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507827"
           },
           "uuid": "1c96aa08-c7da-46de-81ce-b58f46c805d8",
-          "children": []
-        },
-        {
-          "id": "SP_PITAR_CONSANGUINEUS_C_B_ADAMS_1852",
-          "name": "Pitar consanguineus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "authorship": "(C. B. Adams, 1852)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507828",
-            "checklistbank-1174": "txn:293366"
-          },
-          "uuid": "3e1b3396-a781-4de8-84b2-cf66e8b6ffb8",
           "children": []
         },
         {
@@ -13589,21 +13470,6 @@
           "children": []
         },
         {
-          "id": "SP_PITAR_CORBULINA_LAMARCK_1805",
-          "name": "Pitar corbulina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "authorship": "(Lamarck, 1805)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1569768",
-            "checklistbank-1174": "txn:122389"
-          },
-          "uuid": "f20be2fa-a617-4e40-bef2-037d081bd417",
-          "children": []
-        },
-        {
           "id": "SP_PITAR_LUNULARIA_DESHAYES_1825",
           "name": "Pitar lunularia",
           "rank": "SPECIES",
@@ -13784,66 +13650,6 @@
           },
           "uuid": "a9f13bf6-5cb1-4e2a-8f5d-4154800a459b",
           "children": []
-        },
-        {
-          "id": "SP_PITAR_TREVORI",
-          "name": "Pitar trevori",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "sourceIds": {
-            "checklistbank-139831": "1209364"
-          },
-          "uuid": "675bd531-35a9-47c8-8410-5bb7133f1542"
-        },
-        {
-          "id": "SP_PITAR_POTTERI",
-          "name": "Pitar potteri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "sourceIds": {
-            "checklistbank-139831": "1209365"
-          },
-          "uuid": "baa9de09-43fe-48ae-a1a3-d773c08e8d02"
-        },
-        {
-          "id": "SP_PITAR_CURNOWAE",
-          "name": "Pitar curnowae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "sourceIds": {
-            "checklistbank-139831": "1209366"
-          },
-          "uuid": "1b9bc82b-6407-4051-ac49-b8d434a8ac32"
-        },
-        {
-          "id": "SP_PITAR_THORNLEYAE",
-          "name": "Pitar thornleyae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "sourceIds": {
-            "checklistbank-139831": "1209367"
-          },
-          "uuid": "eda2f383-ea46-4f12-8243-b140aec567f7"
-        },
-        {
-          "id": "SP_PITAR_SULFUREUS",
-          "name": "Pitar sulfureus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pitar",
-          "sourceIds": {
-            "checklistbank-139831": "1209372"
-          },
-          "uuid": "296d4509-d77e-41a6-9df7-e15bb65b9f0b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -13878,10 +13684,15 @@
             "itis": [
               "205649"
             ],
-            "checklistbank": "61907",
-            "checklistbank-1174": "txn:116458"
+            "checklistbank": [
+              "61907",
+              "urn:lsid:marinespecies.org:taxname:141907"
+            ],
+            "checklistbank-1174": [
+              "txn:116458"
+            ]
           },
-          "authorityIds": "col:TLLP,itis:205649"
+          "authorityIds": "checklistbank:61907,checklistbank:urn:lsid:marinespecies.org:taxname:141907,checklistbank-1174:txn:116458,col:TLLP,itis:205649"
         },
         {
           "id": "SP_CHAMELEA_RADIATA",
@@ -14014,22 +13825,6 @@
       "name": "\"Chamelea",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CHAMELEA_GALLINA_LINNAEUS_1758",
-          "name": "\"Chamelea gallina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chamelea",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141907",
-            "checklistbank-1174": "txn:116458"
-          },
-          "children": [],
-          "uuid": "c6b3870c-e45d-5b8-a51-dd58e5f79ca1c8",
-          "description": "\"Chamelea gallina\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_CHAMELEA_STRIATULA_DA_COSTA_1778",
           "name": "\"Chamelea striatula\"",
@@ -14308,10 +14103,15 @@
             "col": [
               "6KHMB"
             ],
-            "checklistbank": "218812",
-            "checklistbank-1174": "txn:169260"
+            "checklistbank": [
+              "218812",
+              "urn:lsid:marinespecies.org:taxname:507672"
+            ],
+            "checklistbank-1174": [
+              "txn:169260"
+            ]
           },
-          "authorityIds": "col:6KHMB",
+          "authorityIds": "checklistbank:218812,checklistbank:urn:lsid:marinespecies.org:taxname:507672,checklistbank-1174:txn:169260,col:6KHMB",
           "authorship": "(Yates, 1890)"
         },
         {
@@ -14377,9 +14177,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507671"
             ],
-            "checklistbank-1174": "txn:293642"
+            "checklistbank-1174": [
+              "txn:293642"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507671"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507671,col:6KHLY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507671,checklistbank-1174:txn:293642,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507671,col:6KHLY",
           "authorship": "(A. E. Verrill, 1870)"
         },
         {
@@ -14891,22 +14696,6 @@
           "description": "\"Globivenus embrithes\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_GLOBIVENUS_FORDII_L_G_YATES_1890",
-          "name": "\"Globivenus fordii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Globivenus",
-          "authorship": "\"(L. G. Yates, 1890)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507672",
-            "checklistbank-1174": "txn:169260"
-          },
-          "children": [],
-          "uuid": "a8b29e11-5cf8-5cc-8fa-834af84e4b64b4",
-          "description": "\"Globivenus fordii\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_GLOBIVENUS_LISTEROIDES_FISCHER_PIETTE_TESTUD_1967",
           "name": "Globivenus listeroides",
           "rank": "SPECIES",
@@ -15074,21 +14863,6 @@
             "checklistbank-127379": "e1695c35-cf3d-4616-8655-28635b86fd91"
           },
           "uuid": "eefb7c90-719e-4d68-bfea-97a315fce041",
-          "children": []
-        },
-        {
-          "id": "SP_GLOBIVENUS_ISOCARDIA_A_E_VERRILL_1870",
-          "name": "Globivenus isocardia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Globivenus",
-          "authorship": "(A. E. Verrill, 1870)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507671",
-            "checklistbank-1174": "txn:293642"
-          },
-          "uuid": "c81e114a-6095-4fa9-9be7-e24d441c7d10",
           "children": []
         },
         {
@@ -21972,10 +21746,15 @@
             "col": [
               "579HQ"
             ],
-            "checklistbank": "219575",
-            "checklistbank-1174": "txn:161994"
+            "checklistbank": [
+              "219575",
+              "urn:lsid:marinespecies.org:taxname:225609"
+            ],
+            "checklistbank-1174": [
+              "txn:161994"
+            ]
           },
-          "authorityIds": "col:579HQ",
+          "authorityIds": "checklistbank:219575,checklistbank:urn:lsid:marinespecies.org:taxname:225609,checklistbank-1174:txn:161994,col:579HQ",
           "authorship": "(Linnaeus, 1771)"
         },
         {
@@ -22208,11 +21987,14 @@
           "authorship": "H. E. J. Biggs, 1969",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507961",
-            "checklistbank-139831": "1209583"
+            "checklistbank-139831": [
+              "1209583"
+            ]
           },
           "children": [],
           "uuid": "e278c1bb-b4dd-55c-be5-ee73e33cf0a73b",
-          "description": "Tivela mulawana is a veneridae species found in its native region."
+          "description": "Tivela mulawana is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507961,checklistbank-139831:1209583"
         },
         {
           "id": "SP_TIVELA_BRASILIANA_DALL_1902",
@@ -22411,22 +22193,6 @@
       "name": "\"Tivela",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TIVELA_TRIPLA_LINNAEUS_1771",
-          "name": "\"Tivela tripla\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tivela",
-          "authorship": "\"(Linnaeus, 1771)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225609",
-            "checklistbank-1174": "txn:161994"
-          },
-          "children": [],
-          "uuid": "54ed0d6c-fc87-5e7-8fd-c686a0ff213bf6",
-          "description": "\"Tivela tripla\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_TIVELA_STULTORUM_MAWE_1823",
           "name": "\"Tivela stultorum\"",
@@ -22745,18 +22511,6 @@
           },
           "uuid": "bcd097b8-bd18-42c5-9075-837c28c807d2",
           "children": []
-        },
-        {
-          "id": "SP_TIVELA_MULAWANA",
-          "name": "Tivela mulawana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tivela",
-          "sourceIds": {
-            "checklistbank-139831": "1209583"
-          },
-          "uuid": "7461db12-a6ef-46f7-81ed-21759c1af27a"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -22896,9 +22650,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507787"
             ],
-            "checklistbank-1174": "txn:325968"
+            "checklistbank-1174": [
+              "txn:325968"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507787"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507787,col:484KT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507787,checklistbank-1174:txn:325968,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507787,col:484KT",
           "authorship": "(P. P. Carpenter, 1857)"
         },
         {
@@ -22975,11 +22734,16 @@
             "col": [
               "484KW"
             ],
-            "checklistbank": "219206",
+            "checklistbank": [
+              "219206",
+              "urn:lsid:marinespecies.org:taxname:507789"
+            ],
             "gbif-backbone": "2287815",
-            "checklistbank-1174": "txn:167966"
+            "checklistbank-1174": [
+              "txn:167966"
+            ]
           },
-          "authorityIds": "col:484KW,itis:567986"
+          "authorityIds": "checklistbank:219206,checklistbank:urn:lsid:marinespecies.org:taxname:507789,checklistbank-1174:txn:167966,col:484KW,gbif-backbone:2287815,itis:567986"
         }
       ]
     },
@@ -23004,22 +22768,6 @@
           "description": "\"Nutricola lordi\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_NUTRICOLA_TANTILLA_A_A_GOULD_1853",
-          "name": "\"Nutricola tantilla\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nutricola",
-          "authorship": "\"(A. A. Gould, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507789",
-            "checklistbank-1174": "txn:167966"
-          },
-          "children": [],
-          "uuid": "5750843e-07c2-563-abc-8eb68d271e2d00",
-          "description": "\"Nutricola tantilla\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_NUTRICOLA_OVALIS_DALL_1902",
           "name": "\"Nutricola ovalis\"",
           "rank": "SPECIES",
@@ -23033,21 +22781,6 @@
           "children": [],
           "uuid": "1732ba7b-6a70-510-a9d-30dbaa9fc1b0cf",
           "description": "\"Nutricola ovalis\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_NUTRICOLA_HUMILIS_P_P_CARPENTER_1857",
-          "name": "Nutricola humilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nutricola",
-          "authorship": "(P. P. Carpenter, 1857)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507787",
-            "checklistbank-1174": "txn:325968"
-          },
-          "uuid": "4d0b91f6-1da8-490d-a02b-fed721bbcf60",
-          "children": []
         },
         {
           "id": "SP_NUTRICOLA_CYMATA_DALL_1913",
@@ -23787,11 +23520,14 @@
           "authorship": "A. W. B. Powell, 1955",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507925",
-            "checklistbank-139831": "397887"
+            "checklistbank-139831": [
+              "397887"
+            ]
           },
           "children": [],
           "uuid": "070f5d66-394e-5e5-aa1-dc0c2919c4ce65",
-          "description": "Tawera rosa is a veneridae species found in its native region."
+          "description": "Tawera rosa is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507925,checklistbank-139831:397887"
         },
         {
           "id": "SP_TAWERA_AUSTRALIANA_HUBER",
@@ -23803,11 +23539,14 @@
           "authorship": "Huber",
           "sourceIds": {
             "checklistbank": "a0c7ae7d-b8fb-4042-bd6d-e96d63865190",
-            "checklistbank-139831": "1209322"
+            "checklistbank-139831": [
+              "1209322"
+            ]
           },
           "children": [],
           "uuid": "51b61652-1939-512-a37-3effbf9fdfb3d1",
-          "description": "Tawera australiana is a veneridae species found in its native region."
+          "description": "Tawera australiana is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:a0c7ae7d-b8fb-4042-bd6d-e96d63865190,checklistbank-139831:1209322"
         },
         {
           "id": "SP_TAWERA_DUOBRUNNEA",
@@ -24136,30 +23875,6 @@
           },
           "uuid": "f8837b14-1da2-495c-af90-a0dbb9a321c7",
           "children": []
-        },
-        {
-          "id": "SP_TAWERA_ROSA",
-          "name": "Tawera rosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tawera",
-          "sourceIds": {
-            "checklistbank-139831": "397887"
-          },
-          "uuid": "04b0fdda-7634-4ea6-a69b-0e54571ba2ad"
-        },
-        {
-          "id": "SP_TAWERA_AUSTRALIANA",
-          "name": "Tawera australiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tawera",
-          "sourceIds": {
-            "checklistbank-139831": "1209322"
-          },
-          "uuid": "abccfcef-c191-4942-932e-33a12fa25c54"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -25309,9 +25024,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:216569"
             ],
-            "checklistbank-1174": "txn:402791"
+            "checklistbank-1174": [
+              "txn:402791"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:216569"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:216569,col:37G8F",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:216569,checklistbank-1174:txn:402791,checklistbank-2011:urn:lsid:marinespecies.org:taxname:216569,col:37G8F",
           "authorship": "(Dunker, 1849)"
         },
         {
@@ -26144,9 +25864,14 @@
               "urn:lsid:marinespecies.org:taxname:1739233"
             ],
             "gbif-backbone": "4949320",
-            "checklistbank-1174": "txn:145044"
+            "checklistbank-1174": [
+              "txn:145044"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1739233"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1739233,col:D6GL8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1739233,checklistbank-1174:txn:145044,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1739233,col:D6GL8,gbif-backbone:4949320",
           "authorship": "A. P. Brown & Pilsbry, 1913"
         },
         {
@@ -26293,10 +26018,15 @@
             "col": [
               "6DJXZ"
             ],
-            "checklistbank": "218707",
-            "checklistbank-1174": "txn:170362"
+            "checklistbank": [
+              "218707",
+              "urn:lsid:marinespecies.org:taxname:507571"
+            ],
+            "checklistbank-1174": [
+              "txn:170362"
+            ]
           },
-          "authorityIds": "col:6DJXZ",
+          "authorityIds": "checklistbank:218707,checklistbank:urn:lsid:marinespecies.org:taxname:507571,checklistbank-1174:txn:170362,col:6DJXZ",
           "authorship": "(Philippi, 1844)"
         },
         {
@@ -27707,9 +27437,14 @@
               "urn:lsid:marinespecies.org:taxname:1899790"
             ],
             "gbif-backbone": "4949323",
-            "checklistbank-1174": "txn:114256"
+            "checklistbank-1174": [
+              "txn:114256"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1899790"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1899790,col:VQ32W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1899790,checklistbank-1174:txn:114256,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1899790,col:VQ32W,gbif-backbone:4949323",
           "authorship": "Vredenburg, 1923"
         },
         {
@@ -27772,10 +27507,15 @@
             "col": [
               "6DK9K"
             ],
-            "checklistbank": "218713",
-            "checklistbank-1174": "txn:162081"
+            "checklistbank": [
+              "218713",
+              "urn:lsid:marinespecies.org:taxname:507563"
+            ],
+            "checklistbank-1174": [
+              "txn:162081"
+            ]
           },
-          "authorityIds": "col:6DK9K",
+          "authorityIds": "checklistbank:218713,checklistbank:urn:lsid:marinespecies.org:taxname:507563,checklistbank-1174:txn:162081,col:6DK9K",
           "authorship": "(Gray, 1838)"
         },
         {
@@ -28024,9 +27764,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1599789"
             ],
-            "checklistbank-1174": "txn:118768"
+            "checklistbank-1174": [
+              "txn:118768"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1599789"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599789,col:9GXT3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599789,checklistbank-1174:txn:118768,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1599789,col:9GXT3",
           "authorship": "(R. A. Philippi, 1887)"
         },
         {
@@ -28871,11 +28616,14 @@
           "authorship": "Adams,1855",
           "sourceIds": {
             "checklistbank": "a81fc11d-578f-44c6-89a3-3734e517dc3e",
-            "checklistbank-139831": "1209503"
+            "checklistbank-139831": [
+              "1209503"
+            ]
           },
           "children": [],
           "uuid": "41a4010d-ebda-532-a75-5ce2ef6b3ee94d",
-          "description": "Dosinia dilecta is a veneridae species found in its native region."
+          "description": "Dosinia dilecta is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:a81fc11d-578f-44c6-89a3-3734e517dc3e,checklistbank-139831:1209503"
         },
         {
           "id": "SP_DOSINIA_CAEULEA_REEVE_1850",
@@ -28902,11 +28650,14 @@
           "authorship": "Fischer-Piette, 1976",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507619",
-            "checklistbank-139831": "1209479"
+            "checklistbank-139831": [
+              "1209479"
+            ]
           },
           "children": [],
           "uuid": "f9540d96-6395-5de-9b3-ed545dec1a9ad1",
-          "description": "Dosinia tranquebarica is a veneridae species found in its native region."
+          "description": "Dosinia tranquebarica is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507619,checklistbank-139831:1209479"
         },
         {
           "id": "SP_DOSINIA_ABYSSICOLA_T_HABE_1961",
@@ -28918,11 +28669,14 @@
           "authorship": "T. Habe, 1961",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507621",
-            "checklistbank-139831": "1209489"
+            "checklistbank-139831": [
+              "1209489"
+            ]
           },
           "children": [],
           "uuid": "e31f8935-5f8f-541-b51-d1314e332f8852",
-          "description": "Dosinia abyssicola is a veneridae species found in its native region."
+          "description": "Dosinia abyssicola is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507621,checklistbank-139831:1209489"
         },
         {
           "id": "SP_DOSINIA_IWAKAWAI_OYAMA_T_HABE_1961",
@@ -28934,11 +28688,14 @@
           "authorship": "Oyama & T. Habe, 1961",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507629",
-            "checklistbank-139831": "1209480"
+            "checklistbank-139831": [
+              "1209480"
+            ]
           },
           "children": [],
           "uuid": "07d887ce-37dc-509-91e-958490f2d1f3c8",
-          "description": "Dosinia iwakawai is a veneridae species found in its native region."
+          "description": "Dosinia iwakawai is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507629,checklistbank-139831:1209480"
         },
         {
           "id": "SP_DOSINIA_MAGNA_F_W_HUTTON_1873",
@@ -29145,11 +28902,14 @@
           "authorship": "Römer",
           "sourceIds": {
             "checklistbank": "9210fd38-c32d-4f2b-be01-6ef77137d400",
-            "checklistbank-139831": "1209507"
+            "checklistbank-139831": [
+              "1209507"
+            ]
           },
           "children": [],
           "uuid": "da4e0be7-03a6-51a-a2d-c2f9ece25678ef",
-          "description": "Dosinia circularis is a veneridae species found in its native region."
+          "description": "Dosinia circularis is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:9210fd38-c32d-4f2b-be01-6ef77137d400,checklistbank-139831:1209507"
         },
         {
           "id": "SP_DOSINIA_CROCEA_DESHAYES",
@@ -29161,11 +28921,14 @@
           "authorship": "Deshayes",
           "sourceIds": {
             "checklistbank": "dfb7a7ff-9598-486b-8312-a27aad554b79",
-            "checklistbank-139831": "923576"
+            "checklistbank-139831": [
+              "923576"
+            ]
           },
           "children": [],
           "uuid": "3182f226-6415-588-987-858a9e794b7666",
-          "description": "Dosinia crocea is a veneridae species found in its native region."
+          "description": "Dosinia crocea is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:dfb7a7ff-9598-486b-8312-a27aad554b79,checklistbank-139831:923576"
         },
         {
           "id": "SP_DOSINIA_KASPIEWI_FISCHER_PIETTE_DELMAS",
@@ -29193,11 +28956,14 @@
           "authorship": "Fischer-Piette & Delmas",
           "sourceIds": {
             "checklistbank": "2e23a2cc-c3c2-499d-bf3d-bd7fc275aff0",
-            "checklistbank-139831": "1209486"
+            "checklistbank-139831": [
+              "1209486"
+            ]
           },
           "children": [],
           "uuid": "f934a3ce-5cae-548-af4-5599934e1c3ec2",
-          "description": "Dosinia lamyi is a veneridae species found in its native region."
+          "description": "Dosinia lamyi is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:2e23a2cc-c3c2-499d-bf3d-bd7fc275aff0,checklistbank-139831:1209486"
         },
         {
           "id": "SP_DOSINIA_QUEENSLANDICA_HEALY_LAMPRELL",
@@ -29209,11 +28975,14 @@
           "authorship": "Healy & Lamprell",
           "sourceIds": {
             "checklistbank": "9454e432-c963-4dbe-aad3-49f905008dd9",
-            "checklistbank-139831": "1209472"
+            "checklistbank-139831": [
+              "1209472"
+            ]
           },
           "children": [],
           "uuid": "e9b37df1-8f5a-50a-a49-f93412d97063bc",
-          "description": "Dosinia queenslandica is a veneridae species found in its native region."
+          "description": "Dosinia queenslandica is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:9454e432-c963-4dbe-aad3-49f905008dd9,checklistbank-139831:1209472"
         },
         {
           "id": "SP_DOSINIA_TENELLA_R_MER",
@@ -29225,11 +28994,14 @@
           "authorship": "Römer",
           "sourceIds": {
             "checklistbank": "c7888f3a-985b-4782-8b49-a39133b9ec09",
-            "checklistbank-139831": "1209506"
+            "checklistbank-139831": [
+              "1209506"
+            ]
           },
           "children": [],
           "uuid": "db77fa39-17c4-562-aa0-31e19d0a804bda",
-          "description": "Dosinia tenella is a veneridae species found in its native region."
+          "description": "Dosinia tenella is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:c7888f3a-985b-4782-8b49-a39133b9ec09,checklistbank-139831:1209506"
         },
         {
           "id": "SP_DOSINIA_VICTORIAE_GATLIFF_GABRIEL",
@@ -29241,11 +29013,14 @@
           "authorship": "Gatliff & Gabriel",
           "sourceIds": {
             "checklistbank": "50fb95e1-e51e-4aaa-b298-ba364978a9e5",
-            "checklistbank-139831": "935951"
+            "checklistbank-139831": [
+              "935951"
+            ]
           },
           "children": [],
           "uuid": "8e385521-6145-5b8-b9d-8e8f3b9f257105",
-          "description": "Dosinia victoriae is a veneridae species found in its native region."
+          "description": "Dosinia victoriae is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:50fb95e1-e51e-4aaa-b298-ba364978a9e5,checklistbank-139831:935951"
         },
         {
           "id": "SP_DOSINIA_CARPENTARIANA_LAMPRELL_HEALY",
@@ -29257,11 +29032,14 @@
           "authorship": "Lamprell & Healy",
           "sourceIds": {
             "checklistbank": "36662e2f-f6ac-44bf-9fab-99dd7d55dd06",
-            "checklistbank-139831": "1209473"
+            "checklistbank-139831": [
+              "1209473"
+            ]
           },
           "children": [],
           "uuid": "9c4a8680-861c-5bd-9e2-147a2f130f3dd4",
-          "description": "Dosinia carpentariana is a veneridae species found in its native region."
+          "description": "Dosinia carpentariana is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:36662e2f-f6ac-44bf-9fab-99dd7d55dd06,checklistbank-139831:1209473"
         },
         {
           "id": "SP_DOSINIA_CINGULIFERA_R_MER",
@@ -29273,11 +29051,14 @@
           "authorship": "Römer",
           "sourceIds": {
             "checklistbank": "15046a47-9eec-49a8-b869-71e2ff1e4ccd",
-            "checklistbank-139831": "1209513"
+            "checklistbank-139831": [
+              "1209513"
+            ]
           },
           "children": [],
           "uuid": "7049ef83-cdd7-555-8c3-499fafa8fa2bd1",
-          "description": "Dosinia cingulifera is a veneridae species found in its native region."
+          "description": "Dosinia cingulifera is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:15046a47-9eec-49a8-b869-71e2ff1e4ccd,checklistbank-139831:1209513"
         },
         {
           "id": "SP_DOSINIA_CUNNINGHAMI_HUBER",
@@ -29289,11 +29070,14 @@
           "authorship": "Huber",
           "sourceIds": {
             "checklistbank": "9dea05f8-4aed-41b4-b359-67c511dfac09",
-            "checklistbank-139831": "1209474"
+            "checklistbank-139831": [
+              "1209474"
+            ]
           },
           "children": [],
           "uuid": "9abc1e72-7e17-5e0-bda-5e2f767835dece",
-          "description": "Dosinia cunninghami is a veneridae species found in its native region."
+          "description": "Dosinia cunninghami is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:9dea05f8-4aed-41b4-b359-67c511dfac09,checklistbank-139831:1209474"
         },
         {
           "id": "SP_DOSINIA_DESHAYESII_A_ADAMS",
@@ -29305,11 +29089,14 @@
           "authorship": "A. Adams",
           "sourceIds": {
             "checklistbank": "afa17ee2-079e-4548-9efd-aa3b29d5101f",
-            "checklistbank-139831": "1209514"
+            "checklistbank-139831": [
+              "1209514"
+            ]
           },
           "children": [],
           "uuid": "ddedd3a9-83e4-59b-846-0d075502274249",
-          "description": "Dosinia deshayesii is a veneridae species found in its native region."
+          "description": "Dosinia deshayesii is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:afa17ee2-079e-4548-9efd-aa3b29d5101f,checklistbank-139831:1209514"
         },
         {
           "id": "SP_DOSINIA_AREOLATA_R_MER",
@@ -29321,11 +29108,14 @@
           "authorship": "Römer",
           "sourceIds": {
             "checklistbank": "850cc4c5-b165-4075-9ec9-c8b33f36603c",
-            "checklistbank-139831": "1209501"
+            "checklistbank-139831": [
+              "1209501"
+            ]
           },
           "children": [],
           "uuid": "ee1f7d06-814f-500-b57-6c41083aeb379e",
-          "description": "Dosinia areolata is a veneridae species found in its native region."
+          "description": "Dosinia areolata is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:850cc4c5-b165-4075-9ec9-c8b33f36603c,checklistbank-139831:1209501"
         },
         {
           "id": "SP_DOSINIA_GRATA_DESHAYES",
@@ -29337,11 +29127,14 @@
           "authorship": "Deshayes",
           "sourceIds": {
             "checklistbank": "03d8c414-c9b4-49c4-9ed1-e613c2200ebe",
-            "checklistbank-139831": "1192283"
+            "checklistbank-139831": [
+              "1192283"
+            ]
           },
           "children": [],
           "uuid": "3a70ac9d-6802-5b3-957-592422e73dc1a6",
-          "description": "Dosinia grata is a veneridae species found in its native region."
+          "description": "Dosinia grata is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:03d8c414-c9b4-49c4-9ed1-e613c2200ebe,checklistbank-139831:1192283"
         },
         {
           "id": "SP_DOSINIA_HERBARIORUM_FISCHER_PIETTE_DELMAS",
@@ -29353,11 +29146,14 @@
           "authorship": "Fischer-Piette & Delmas",
           "sourceIds": {
             "checklistbank": "991d8a3a-31ea-43c7-80b0-0ea5a3ba9744",
-            "checklistbank-139831": "1209493"
+            "checklistbank-139831": [
+              "1209493"
+            ]
           },
           "children": [],
           "uuid": "fc5c6044-29cd-59b-a06-13eadf1aff8bae",
-          "description": "Dosinia herbariorum is a veneridae species found in its native region."
+          "description": "Dosinia herbariorum is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:991d8a3a-31ea-43c7-80b0-0ea5a3ba9744,checklistbank-139831:1209493"
         },
         {
           "id": "SP_DOSINIA_CONGLOBATA_R_MER",
@@ -29369,11 +29165,14 @@
           "authorship": "Römer",
           "sourceIds": {
             "checklistbank": "259b162d-32ac-433d-8678-3e5ec5838aa2",
-            "checklistbank-139831": "1209512"
+            "checklistbank-139831": [
+              "1209512"
+            ]
           },
           "children": [],
           "uuid": "4c6ede7e-2512-50f-9fa-412932372185cb",
-          "description": "Dosinia conglobata is a veneridae species found in its native region."
+          "description": "Dosinia conglobata is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:259b162d-32ac-433d-8678-3e5ec5838aa2,checklistbank-139831:1209512"
         },
         {
           "id": "SP_DOSINIA_MIRA_SMITH",
@@ -29385,11 +29184,14 @@
           "authorship": "Smith",
           "sourceIds": {
             "checklistbank": "66802d2b-8be6-46e7-bed8-882ce662eebc",
-            "checklistbank-139831": "1209498"
+            "checklistbank-139831": [
+              "1209498"
+            ]
           },
           "children": [],
           "uuid": "903dd1c8-4916-5ab-906-d51237cb873351",
-          "description": "Dosinia mira is a veneridae species found in its native region."
+          "description": "Dosinia mira is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:66802d2b-8be6-46e7-bed8-882ce662eebc,checklistbank-139831:1209498"
         },
         {
           "id": "SP_DOSINIA_LEVISSIMA_FISCHER_PIETTE_DELMAS",
@@ -29401,11 +29203,14 @@
           "authorship": "Fischer-Piette & Delmas",
           "sourceIds": {
             "checklistbank": "e0b5d5e9-59c3-4612-bc01-cd5e6a429799",
-            "checklistbank-139831": "1209484"
+            "checklistbank-139831": [
+              "1209484"
+            ]
           },
           "children": [],
           "uuid": "343aa3a6-f7b3-5d6-92a-9f24c1d29e713e",
-          "description": "Dosinia levissima is a veneridae species found in its native region."
+          "description": "Dosinia levissima is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:e0b5d5e9-59c3-4612-bc01-cd5e6a429799,checklistbank-139831:1209484"
         },
         {
           "id": "SP_DOSINIA_LOCHI_HEALY_LAMPRELL",
@@ -29417,11 +29222,14 @@
           "authorship": "Healy & Lamprell",
           "sourceIds": {
             "checklistbank": "7e8d3851-f8d5-4d0f-bbd8-c9e482c2e755",
-            "checklistbank-139831": "1209477"
+            "checklistbank-139831": [
+              "1209477"
+            ]
           },
           "children": [],
           "uuid": "6193b776-8a48-56c-b49-ec532d37a16f0e",
-          "description": "Dosinia lochi is a veneridae species found in its native region."
+          "description": "Dosinia lochi is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:7e8d3851-f8d5-4d0f-bbd8-c9e482c2e755,checklistbank-139831:1209477"
         },
         {
           "id": "SP_DOSINIA_MAORIANA",
@@ -30167,38 +29975,6 @@
           "description": "\"Dosinia subrosea\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_DOSINIA_PONDEROSA_J_E_GRAY_1838",
-          "name": "\"Dosinia ponderosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dosinia",
-          "authorship": "\"(J. E. Gray, 1838)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507563",
-            "checklistbank-1174": "txn:162081"
-          },
-          "children": [],
-          "uuid": "ff553155-c9c4-544-949-4883ba924fd41c",
-          "description": "\"Dosinia ponderosa\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_DOSINIA_DUNKERI_R_A_PHILIPPI_1844",
-          "name": "\"Dosinia dunkeri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dosinia",
-          "authorship": "\"(R. A. Philippi, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507571",
-            "checklistbank-1174": "txn:170362"
-          },
-          "children": [],
-          "uuid": "0078e6f0-40e2-5ff-afb-57f8d68e7c32fc",
-          "description": "\"Dosinia dunkeri\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_DOSINIA_ANGULOSA_R_A_PHILIPPI_1847",
           "name": "\"Dosinia angulosa\"",
           "rank": "SPECIES",
@@ -30363,21 +30139,6 @@
           "children": [],
           "uuid": "dba0f607-69df-52f-92e-e8bf83249727a4",
           "description": "\"Dosinia japonica\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_DOSINIA_ALTA_DUNKER_1849",
-          "name": "Dosinia alta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "authorship": "(Dunker, 1849)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:216569",
-            "checklistbank-1174": "txn:402791"
-          },
-          "uuid": "2916b843-eb88-4fdd-9403-76cc4c5e6ea8",
-          "children": []
         },
         {
           "id": "SP_DOSINIA_PUBESCENS_R_A_PHILIPPI_1847",
@@ -30784,36 +30545,6 @@
           "children": []
         },
         {
-          "id": "SP_DOSINIA_SEMILAEVIS_R_A_PHILIPPI_1887",
-          "name": "Dosinia semilaevis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "authorship": "(R. A. Philippi, 1887)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599789",
-            "checklistbank-1174": "txn:118768"
-          },
-          "uuid": "264738e0-2031-4735-9e88-b918df576514",
-          "children": []
-        },
-        {
-          "id": "SP_DOSINIA_DELICATISSIMA_A_P_BROWN_PILSBRY_1913",
-          "name": "Dosinia delicatissima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "authorship": "A. P. Brown & Pilsbry, 1913",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1739233",
-            "checklistbank-1174": "txn:145044"
-          },
-          "uuid": "c7fd20a9-2ad4-49a9-a275-e39542b7cc95",
-          "children": []
-        },
-        {
           "id": "SP_DOSINIA_MARGARITANA_WIEDEY_1928",
           "name": "Dosinia margaritana",
           "rank": "SPECIES",
@@ -30867,21 +30598,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1841406"
           },
           "uuid": "8d824f21-27a1-4688-82cc-023de78e638e",
-          "children": []
-        },
-        {
-          "id": "SP_DOSINIA_PERALTA_VREDENBURG_1923",
-          "name": "Dosinia peralta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "authorship": "Vredenburg, 1923",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1899790",
-            "checklistbank-1174": "txn:114256"
-          },
-          "uuid": "ae5c7405-e626-49d9-a475-9e93af27ce4b",
           "children": []
         },
         {
@@ -30981,258 +30697,6 @@
           },
           "uuid": "98ec853e-4683-41cd-b670-0370b1de9d01",
           "children": []
-        },
-        {
-          "id": "SP_DOSINIA_CROCEA",
-          "name": "Dosinia crocea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "923576"
-          },
-          "uuid": "540d8159-a9e2-46bc-943e-bf575bd66bac"
-        },
-        {
-          "id": "SP_DOSINIA_VICTORIAE",
-          "name": "Dosinia victoriae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "935951"
-          },
-          "uuid": "1a9f37d7-b2f6-475e-8225-6c5c7824e1e1"
-        },
-        {
-          "id": "SP_DOSINIA_GRATA",
-          "name": "Dosinia grata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1192283"
-          },
-          "uuid": "6837b6ad-b162-4f8e-92a1-63a23e43a0eb"
-        },
-        {
-          "id": "SP_DOSINIA_QUEENSLANDICA",
-          "name": "Dosinia queenslandica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209472"
-          },
-          "uuid": "ec267179-992a-4456-a60a-25422c1e71fa"
-        },
-        {
-          "id": "SP_DOSINIA_CARPENTARIANA",
-          "name": "Dosinia carpentariana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209473"
-          },
-          "uuid": "348ac0d5-3b06-46fc-b6f6-dbefb4e7c3f2"
-        },
-        {
-          "id": "SP_DOSINIA_CUNNINGHAMI",
-          "name": "Dosinia cunninghami",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209474"
-          },
-          "uuid": "6bcecf10-bc45-4dab-a066-218744075e61"
-        },
-        {
-          "id": "SP_DOSINIA_LOCHI",
-          "name": "Dosinia lochi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209477"
-          },
-          "uuid": "5f89cb6c-8eed-4cc7-8d00-c6103eac48cf"
-        },
-        {
-          "id": "SP_DOSINIA_TRANQUEBARICA",
-          "name": "Dosinia tranquebarica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209479"
-          },
-          "uuid": "15a8408c-a38d-400c-8b80-e7f1fc3f31aa"
-        },
-        {
-          "id": "SP_DOSINIA_IWAKAWAI",
-          "name": "Dosinia iwakawai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209480"
-          },
-          "uuid": "4ce6019c-ffcc-4b97-8492-8bab9dd6af29"
-        },
-        {
-          "id": "SP_DOSINIA_LEVISSIMA",
-          "name": "Dosinia levissima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209484"
-          },
-          "uuid": "48254235-e904-4304-982c-4056c286bba6"
-        },
-        {
-          "id": "SP_DOSINIA_LAMYI",
-          "name": "Dosinia lamyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209486"
-          },
-          "uuid": "9e321bb5-5f39-42a5-9802-4bff0e26320f"
-        },
-        {
-          "id": "SP_DOSINIA_ABYSSICOLA",
-          "name": "Dosinia abyssicola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209489"
-          },
-          "uuid": "f2726eac-dc8d-4941-b021-971fc3d54ac6"
-        },
-        {
-          "id": "SP_DOSINIA_HERBARIORUM",
-          "name": "Dosinia herbariorum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209493"
-          },
-          "uuid": "f61e848b-3529-404c-9597-28a3e0b4bbb7"
-        },
-        {
-          "id": "SP_DOSINIA_MIRA",
-          "name": "Dosinia mira",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209498"
-          },
-          "uuid": "f75dddad-49dc-4393-b6bf-c063661f2ee8"
-        },
-        {
-          "id": "SP_DOSINIA_AREOLATA",
-          "name": "Dosinia areolata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209501"
-          },
-          "uuid": "e8f93d98-b3fb-44b0-8d11-9024f370c779"
-        },
-        {
-          "id": "SP_DOSINIA_DILECTA",
-          "name": "Dosinia dilecta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209503"
-          },
-          "uuid": "9686a2f1-7db4-4c97-9d47-46b9f6502d7d"
-        },
-        {
-          "id": "SP_DOSINIA_TENELLA",
-          "name": "Dosinia tenella",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209506"
-          },
-          "uuid": "d16a2d2a-f79d-4eda-ac8c-0ee38f4a2a3a"
-        },
-        {
-          "id": "SP_DOSINIA_CIRCULARIS",
-          "name": "Dosinia circularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209507"
-          },
-          "uuid": "0484354a-7e6b-4cc1-b1f9-60745d21cdc7"
-        },
-        {
-          "id": "SP_DOSINIA_CONGLOBATA",
-          "name": "Dosinia conglobata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209512"
-          },
-          "uuid": "3c3b4a7f-5eeb-4c41-9078-32835ec3776d"
-        },
-        {
-          "id": "SP_DOSINIA_CINGULIFERA",
-          "name": "Dosinia cingulifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209513"
-          },
-          "uuid": "70394809-c69b-486f-9cb6-ca2f1d0a9275"
-        },
-        {
-          "id": "SP_DOSINIA_DESHAYESII",
-          "name": "Dosinia deshayesii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dosinia",
-          "sourceIds": {
-            "checklistbank-139831": "1209514"
-          },
-          "uuid": "af823419-bc28-4dc1-ab0f-06b3db252b5f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -31316,10 +30780,15 @@
             "col": [
               "75QJF"
             ],
-            "checklistbank": "219240",
-            "checklistbank-1174": "txn:162146"
+            "checklistbank": [
+              "219240",
+              "urn:lsid:marinespecies.org:taxname:420946"
+            ],
+            "checklistbank-1174": [
+              "txn:162146"
+            ]
           },
-          "authorityIds": "col:75QJF,itis:81617"
+          "authorityIds": "checklistbank:219240,checklistbank:urn:lsid:marinespecies.org:taxname:420946,checklistbank-1174:txn:162146,col:75QJF,itis:81617"
         },
         {
           "id": "SP_PARASTARTE_CONCENTRICA_DALL_1889",
@@ -31337,31 +30806,6 @@
           "description": "Parastarte concentrica is a veneridae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_PARASTARTE",
-      "name": "\"Parastarte",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARASTARTE_TRIQUETRA_CONRAD_1846",
-          "name": "\"Parastarte triquetra\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parastarte",
-          "authorship": "\"(Conrad, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420946",
-            "checklistbank-1174": "txn:162146"
-          },
-          "children": [],
-          "uuid": "b20b113a-4415-51c-a9d-0cf04ae38c6eda",
-          "description": "\"Parastarte triquetra\" is a veneridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "veneridae"
     },
     {
       "id": "GENUS_BASSINA",
@@ -31404,11 +30848,19 @@
             "col": [
               "KVGL"
             ],
-            "checklistbank": "218419",
+            "checklistbank": [
+              "218419",
+              "urn:lsid:marinespecies.org:taxname:507388"
+            ],
             "gbif-backbone": "4590728",
-            "checklistbank-1174": "txn:59332"
+            "checklistbank-1174": [
+              "txn:59332"
+            ],
+            "checklistbank-127379": [
+              "774f4623-75c5-4541-8bf1-469413b1f02b"
+            ]
           },
-          "authorityIds": "col:KVGL",
+          "authorityIds": "checklistbank:218419,checklistbank:urn:lsid:marinespecies.org:taxname:507388,checklistbank-1174:txn:59332,checklistbank-127379:774f4623-75c5-4541-8bf1-469413b1f02b,col:KVGL,gbif-backbone:4590728",
           "authorship": "(Perry, 1811)"
         },
         {
@@ -31641,11 +31093,16 @@
             "col": [
               "KVGZ"
             ],
-            "checklistbank": "218420",
+            "checklistbank": [
+              "218420",
+              "urn:lsid:marinespecies.org:taxname:507389"
+            ],
             "gbif-backbone": "2287846",
-            "checklistbank-1174": "txn:58832"
+            "checklistbank-1174": [
+              "txn:58832"
+            ]
           },
-          "authorityIds": "col:KVGZ",
+          "authorityIds": "checklistbank:218420,checklistbank:urn:lsid:marinespecies.org:taxname:507389,checklistbank-1174:txn:58832,col:KVGZ,gbif-backbone:2287846",
           "authorship": "(Gray, 1835)"
         },
         {
@@ -31725,39 +31182,6 @@
       "name": "\"Bassina",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_BASSINA_DISJECTA_G_PERRY_1811",
-          "name": "\"Bassina disjecta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bassina",
-          "authorship": "\"(G. Perry, 1811)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507388",
-            "checklistbank-1174": "txn:59332",
-            "checklistbank-127379": "774f4623-75c5-4541-8bf1-469413b1f02b"
-          },
-          "children": [],
-          "uuid": "646f4b5e-9bad-5dc-9d1-b416e05f7aaee6",
-          "description": "\"Bassina disjecta\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_BASSINA_YATEI_J_E_GRAY_1835",
-          "name": "\"Bassina yatei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bassina",
-          "authorship": "\"(J. E. Gray, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507389",
-            "checklistbank-1174": "txn:58832"
-          },
-          "children": [],
-          "uuid": "1ddc4de9-4aae-519-bc4-6e34c3c0353244",
-          "description": "\"Bassina yatei\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_BASSINA_JACKSONII_E_A_SMITH_1885",
           "name": "Bassina jacksonii",
@@ -33358,11 +32782,14 @@
           "authorship": "Pilsbry, 1901, sensu Lamprell & Whitehead, 1992",
           "sourceIds": {
             "checklistbank": "695123",
-            "checklistbank-139831": "1139009"
+            "checklistbank-139831": [
+              "1139009"
+            ]
           },
           "children": [],
           "uuid": "81e7466d-f2f6-520-83b-903a846e6fcc37",
-          "description": "Tapes platyptycha is a veneridae species found in its native region."
+          "description": "Tapes platyptycha is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:695123,checklistbank-139831:1139009"
         },
         {
           "id": "SP_TAPES_GRUS_HOLMES_1858",
@@ -33389,11 +32816,14 @@
           "authorship": "Matsukuma",
           "sourceIds": {
             "checklistbank": "6488f987-007b-401a-93e5-9d7a36d57719",
-            "checklistbank-139831": "1196230"
+            "checklistbank-139831": [
+              "1196230"
+            ]
           },
           "children": [],
           "uuid": "24a3e052-38ce-544-929-bd6211938c876a",
-          "description": "Tapes sericeus is a veneridae species found in its native region."
+          "description": "Tapes sericeus is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:6488f987-007b-401a-93e5-9d7a36d57719,checklistbank-139831:1196230"
         },
         {
           "id": "SP_TAPES_NGOCAE",
@@ -33688,30 +33118,6 @@
           },
           "uuid": "d97769ba-e13d-4268-a7f5-5691c26918ff",
           "children": []
-        },
-        {
-          "id": "SP_TAPES_PLATYPTYCHA",
-          "name": "Tapes platyptycha",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tapes",
-          "sourceIds": {
-            "checklistbank-139831": "1139009"
-          },
-          "uuid": "ed5b0f0d-50bc-48fd-8326-cb01c4a4a0d1"
-        },
-        {
-          "id": "SP_TAPES_SERICEUS",
-          "name": "Tapes sericeus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tapes",
-          "sourceIds": {
-            "checklistbank-139831": "1196230"
-          },
-          "uuid": "a526d3c2-a3d7-4ed6-9a01-db19d78763ca"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -33809,9 +33215,11 @@
               "V588Q"
             ],
             "checklistbank": "1652007",
-            "checklistbank-139831": "1652007"
+            "checklistbank-139831": [
+              "1652007"
+            ]
           },
-          "authorityIds": "col:V588Q",
+          "authorityIds": "checklistbank:1652007,checklistbank-139831:1652007,col:V588Q",
           "description": "Ruditapes aspera is a veneridae species found in its native region."
         },
         {
@@ -33908,18 +33316,6 @@
           },
           "uuid": "16781eb8-5326-4624-bc96-19179588b21c",
           "children": []
-        },
-        {
-          "id": "SP_RUDITAPES_ASPERA",
-          "name": "Ruditapes aspera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ruditapes",
-          "sourceIds": {
-            "checklistbank-139831": "1652007"
-          },
-          "uuid": "63bfd87f-22ee-4d0f-8ab2-1aa4ad87b5ce"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -34275,10 +33671,18 @@
             "col": [
               "VYS3"
             ],
-            "checklistbank": "61910",
-            "checklistbank-1174": "txn:59753"
+            "checklistbank": [
+              "61910",
+              "urn:lsid:marinespecies.org:taxname:141910"
+            ],
+            "checklistbank-1174": [
+              "txn:59753"
+            ],
+            "checklistbank-127379": [
+              "bdcccff4-cf33-42da-a7ea-5091fb62ff35"
+            ]
           },
-          "authorityIds": "col:VYS3",
+          "authorityIds": "checklistbank:61910,checklistbank:urn:lsid:marinespecies.org:taxname:141910,checklistbank-1174:txn:59753,checklistbank-127379:bdcccff4-cf33-42da-a7ea-5091fb62ff35,col:VYS3",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -34492,23 +33896,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CLEMENTIA_PAPYRACEA_GMELIN_1791",
-          "name": "\"Clementia papyracea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Clementia",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141910",
-            "checklistbank-1174": "txn:59753",
-            "checklistbank-127379": "bdcccff4-cf33-42da-a7ea-5091fb62ff35"
-          },
-          "children": [],
-          "uuid": "a90cdcaf-0cb8-526-805-7128f6e82083dc",
-          "description": "\"Clementia papyracea\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_CLEMENTIA_ASIATICA_MELVILL_1899",
           "name": "Clementia asiatica",
           "rank": "SPECIES",
@@ -34585,11 +33972,16 @@
             "col": [
               "72HGQ"
             ],
-            "checklistbank": "61918",
+            "checklistbank": [
+              "61918",
+              "urn:lsid:marinespecies.org:taxname:141918"
+            ],
             "gbif-backbone": "4372701",
-            "checklistbank-1174": "txn:109693"
+            "checklistbank-1174": [
+              "txn:109693"
+            ]
           },
-          "authorityIds": "col:72HGQ",
+          "authorityIds": "checklistbank:61918,checklistbank:urn:lsid:marinespecies.org:taxname:141918,checklistbank-1174:txn:109693,col:72HGQ,gbif-backbone:4372701",
           "authorship": "(Gould, 1841)"
         },
         {
@@ -34694,31 +34086,6 @@
           "description": "Liocyma environmental is a veneridae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_LIOCYMA",
-      "name": "\"Liocyma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LIOCYMA_FLUCTUOSA_A_A_GOULD_1841",
-          "name": "\"Liocyma fluctuosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liocyma",
-          "authorship": "\"(A. A. Gould, 1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141918",
-            "checklistbank-1174": "txn:109693"
-          },
-          "children": [],
-          "uuid": "4a4935f2-fd7f-53a-bb2-9dc1b4b5588968",
-          "description": "\"Liocyma fluctuosa\" is a veneridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "veneridae"
     },
     {
       "id": "GENUS_VENERUPIS",
@@ -36977,11 +36344,14 @@
           "authorship": "Lai & Nien, 2008",
           "sourceIds": {
             "checklistbank": "taicol: 78782",
-            "checklistbank-139831": "1209592"
+            "checklistbank-139831": [
+              "1209592"
+            ]
           },
           "children": [],
           "uuid": "98242ccd-9465-5b4-a25-7834a482ce12d3",
-          "description": "Meretrix tigris is a veneridae species found in its native region."
+          "description": "Meretrix tigris is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:taicol: 78782,checklistbank-139831:1209592"
         },
         {
           "id": "SP_MERETRIX_TAIWANICA_HSIAO_CHUANG_2023",
@@ -36993,11 +36363,14 @@
           "authorship": "Hsiao & Chuang, 2023",
           "sourceIds": {
             "checklistbank": "taicol: 147761",
-            "checklistbank-139831": "1468650"
+            "checklistbank-139831": [
+              "1468650"
+            ]
           },
           "children": [],
           "uuid": "bf417416-9d1a-54c-ad7-1525c465b505c4",
-          "description": "Meretrix taiwanica is a species of clam indigenous to Taiwan and China."
+          "description": "Meretrix taiwanica is a species of clam indigenous to Taiwan and China.",
+          "authorityIds": "checklistbank:taicol: 147761,checklistbank-139831:1468650"
         },
         {
           "id": "SP_MERETRIX_CYRENOIDES_D_ARCHIAC_HAIME_1854",
@@ -37594,30 +36967,6 @@
           },
           "uuid": "dd129d4a-b0f3-41fb-90bb-91aeb6ad49e7",
           "children": []
-        },
-        {
-          "id": "SP_MERETRIX_TIGRIS",
-          "name": "Meretrix tigris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meretrix",
-          "sourceIds": {
-            "checklistbank-139831": "1209592"
-          },
-          "uuid": "32b51a93-6171-4005-941c-75f57346f9b0"
-        },
-        {
-          "id": "SP_MERETRIX_TAIWANICA",
-          "name": "Meretrix taiwanica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meretrix",
-          "sourceIds": {
-            "checklistbank-139831": "1468650"
-          },
-          "uuid": "1c6c677c-aa15-4643-a8ad-356526f44eca"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -37715,10 +37064,18 @@
             "col": [
               "6JWDG"
             ],
-            "checklistbank": "219967",
-            "checklistbank-1174": "txn:60418"
+            "checklistbank": [
+              "219967",
+              "urn:lsid:marinespecies.org:taxname:507649"
+            ],
+            "checklistbank-1174": [
+              "txn:60418"
+            ],
+            "checklistbank-127379": [
+              "707ce392-048c-47b7-b620-fce1a2921ae1"
+            ]
           },
-          "authorityIds": "col:6JWDG",
+          "authorityIds": "checklistbank:219967,checklistbank:urn:lsid:marinespecies.org:taxname:507649,checklistbank-1174:txn:60418,checklistbank-127379:707ce392-048c-47b7-b620-fce1a2921ae1,col:6JWDG",
           "authorship": "(G.B. Sowerby II, 1851)"
         },
         {
@@ -38380,23 +37737,6 @@
           "children": [],
           "uuid": "c803d383-b715-5ba-ba7-b1e4b8ce1e1e37",
           "description": "\"Gafrarium divaricatum\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_GAFRARIUM_AUSTRALE_G_B_SOWERBY_II_1851",
-          "name": "\"Gafrarium australe\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gafrarium",
-          "authorship": "\"(G. B. Sowerby II, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507649",
-            "checklistbank-1174": "txn:60418",
-            "checklistbank-127379": "707ce392-048c-47b7-b620-fce1a2921ae1"
-          },
-          "children": [],
-          "uuid": "3926b103-97b6-5f3-b11-176d863e4ef5a1",
-          "description": "\"Gafrarium australe\" is a veneridae species found in its native region."
         },
         {
           "id": "SP_GAFRARIUM_ALFREDENSE_BARTSCH_1915",
@@ -39237,11 +38577,14 @@
           "authorship": "Moolenbeek, Dekker & Meij",
           "sourceIds": {
             "checklistbank": "e35b3424-94e8-46af-ad5a-4872f4007da9",
-            "checklistbank-139831": "1209425"
+            "checklistbank-139831": [
+              "1209425"
+            ]
           },
           "children": [],
           "uuid": "bf7a36ab-b79a-5c2-a6c-034c51855ffa4f",
-          "description": "Lioconcha lamprelli is a veneridae species found in its native region."
+          "description": "Lioconcha lamprelli is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:e35b3424-94e8-46af-ad5a-4872f4007da9,checklistbank-139831:1209425"
         },
         {
           "id": "SP_LIOCONCHA_ANNETTAE_LAMPRELL_WHITEHEAD",
@@ -39253,11 +38596,14 @@
           "authorship": "Lamprell & Whitehead",
           "sourceIds": {
             "checklistbank": "47660bd1-15d0-46f2-b3a6-73a198b6531e",
-            "checklistbank-139831": "417369"
+            "checklistbank-139831": [
+              "417369"
+            ]
           },
           "children": [],
           "uuid": "69b34f6e-b9a3-57f-8dd-9d7ef00d976d1b",
-          "description": "Lioconcha annettae is a veneridae species found in its native region."
+          "description": "Lioconcha annettae is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:47660bd1-15d0-46f2-b3a6-73a198b6531e,checklistbank-139831:417369"
         },
         {
           "id": "SP_LIOCONCHA_BERTHAULTI_LAMPRELL_HEALY",
@@ -39269,11 +38615,14 @@
           "authorship": "Lamprell & Healy",
           "sourceIds": {
             "checklistbank": "060fadbd-1b91-4bc0-bb44-9ad8d76fff37",
-            "checklistbank-139831": "1209433"
+            "checklistbank-139831": [
+              "1209433"
+            ]
           },
           "children": [],
           "uuid": "f5f0cf55-3b13-5f7-a8d-080661a6cd916e",
-          "description": "Lioconcha berthaulti is a veneridae species found in its native region."
+          "description": "Lioconcha berthaulti is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:060fadbd-1b91-4bc0-bb44-9ad8d76fff37,checklistbank-139831:1209433"
         },
         {
           "id": "SP_LIOCONCHA_MACAULAYI_LAMPRELL_HEALY",
@@ -39285,11 +38634,14 @@
           "authorship": "Lamprell & Healy",
           "sourceIds": {
             "checklistbank": "9b9d1d12-c467-4133-b436-bf8a6a8a1cc8",
-            "checklistbank-139831": "1209434"
+            "checklistbank-139831": [
+              "1209434"
+            ]
           },
           "children": [],
           "uuid": "87623167-96e0-5b4-9cc-6776e2ab773f32",
-          "description": "Lioconcha macaulayi is a veneridae species found in its native region."
+          "description": "Lioconcha macaulayi is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:9b9d1d12-c467-4133-b436-bf8a6a8a1cc8,checklistbank-139831:1209434"
         },
         {
           "id": "SP_LIOCONCHA_SCHIOETTEI_LAMPRELL_HEALY",
@@ -39672,54 +39024,6 @@
           },
           "uuid": "bc1e7929-4707-49f8-9224-57d921df2121",
           "children": []
-        },
-        {
-          "id": "SP_LIOCONCHA_ANNETTAE",
-          "name": "Lioconcha annettae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lioconcha",
-          "sourceIds": {
-            "checklistbank-139831": "417369"
-          },
-          "uuid": "1b38e47e-b15b-4a21-9c0d-cd07e0867927"
-        },
-        {
-          "id": "SP_LIOCONCHA_LAMPRELLI",
-          "name": "Lioconcha lamprelli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lioconcha",
-          "sourceIds": {
-            "checklistbank-139831": "1209425"
-          },
-          "uuid": "ffe8aa4a-a48e-4586-a749-3484f60212eb"
-        },
-        {
-          "id": "SP_LIOCONCHA_BERTHAULTI",
-          "name": "Lioconcha berthaulti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lioconcha",
-          "sourceIds": {
-            "checklistbank-139831": "1209433"
-          },
-          "uuid": "12cef1f1-de86-42ff-be30-0c1f84b565d2"
-        },
-        {
-          "id": "SP_LIOCONCHA_MACAULAYI",
-          "name": "Lioconcha macaulayi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lioconcha",
-          "sourceIds": {
-            "checklistbank-139831": "1209434"
-          },
-          "uuid": "100ad482-5318-4fe4-9070-10f5c5fd51bb"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -40162,11 +39466,14 @@
           "authorship": "Cotton & Godfrey",
           "sourceIds": {
             "checklistbank": "a82d9b7c-746a-437e-af8c-181d61ee01aa",
-            "checklistbank-139831": "929687"
+            "checklistbank-139831": [
+              "929687"
+            ]
           },
           "children": [],
           "uuid": "d0b562df-88df-52a-b0a-c4129d5c46744b",
-          "description": "Placamen flindersi is a veneridae species found in its native region."
+          "description": "Placamen flindersi is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:a82d9b7c-746a-437e-af8c-181d61ee01aa,checklistbank-139831:929687"
         },
         {
           "id": "SP_PLACAMEN_CALOPHYLLA",
@@ -40439,18 +39746,6 @@
           },
           "uuid": "3a876dca-bd4a-4fa8-b920-7032b74339ec",
           "children": []
-        },
-        {
-          "id": "SP_PLACAMEN_FLINDERSI",
-          "name": "Placamen flindersi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Placamen",
-          "sourceIds": {
-            "checklistbank-139831": "929687"
-          },
-          "uuid": "2f097b4a-eca8-41b0-9b85-984592a67ef3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -40587,10 +39882,18 @@
             "col": [
               "3CCSG"
             ],
-            "checklistbank": "218754",
-            "checklistbank-1174": "txn:102969"
+            "checklistbank": [
+              "218754",
+              "urn:lsid:marinespecies.org:taxname:507642"
+            ],
+            "checklistbank-1174": [
+              "txn:102969"
+            ],
+            "checklistbank-127379": [
+              "d1a77892-c594-462c-955a-2a0f8d9b48fa"
+            ]
           },
-          "authorityIds": "col:3CCSG",
+          "authorityIds": "checklistbank:218754,checklistbank:urn:lsid:marinespecies.org:taxname:507642,checklistbank-1174:txn:102969,checklistbank-127379:d1a77892-c594-462c-955a-2a0f8d9b48fa,col:3CCSG",
           "authorship": "(G. B. Sowerby II, 1853)"
         },
         {
@@ -40741,23 +40044,6 @@
       "name": "\"Eumarcia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_EUMARCIA_FUMIGATA_G_B_SOWERBY_II_1853",
-          "name": "\"Eumarcia fumigata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eumarcia",
-          "authorship": "\"(G. B. Sowerby II, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507642",
-            "checklistbank-1174": "txn:102969",
-            "checklistbank-127379": "d1a77892-c594-462c-955a-2a0f8d9b48fa"
-          },
-          "children": [],
-          "uuid": "d45c81c4-e311-53d-b83-b138a349a8ee46",
-          "description": "\"Eumarcia fumigata\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_EUMARCIA_PAUPERCULA_HOLTEN_1802",
           "name": "Eumarcia paupercula",
@@ -42004,11 +41290,14 @@
           "authorship": "T. Habe, 1960",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507412",
-            "checklistbank-139831": "1209411"
+            "checklistbank-139831": [
+              "1209411"
+            ]
           },
           "children": [],
           "uuid": "cf9c4b46-7675-584-ae7-b8778f42b34baf",
-          "description": "Callista pilsbryi is a veneridae species found in its native region."
+          "description": "Callista pilsbryi is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507412,checklistbank-139831:1209411"
         },
         {
           "id": "SP_CALLISTA_RUDIS_POLI_1795",
@@ -42486,18 +41775,6 @@
           },
           "uuid": "752e2d85-202f-4afe-83ab-08a18a08537c",
           "children": []
-        },
-        {
-          "id": "SP_CALLISTA_PILSBRYI",
-          "name": "Callista pilsbryi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Callista",
-          "sourceIds": {
-            "checklistbank-139831": "1209411"
-          },
-          "uuid": "34a15842-57d4-45db-8fc4-bcca14ac2732"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -43638,11 +42915,14 @@
           "authorship": "Angas",
           "sourceIds": {
             "checklistbank": "abd5de36-5549-4a45-850d-475de315215c",
-            "checklistbank-139831": "1209468"
+            "checklistbank-139831": [
+              "1209468"
+            ]
           },
           "children": [],
           "uuid": "f11ac88b-78d2-55f-a19-45d96ef97c93a6",
-          "description": "Sunetta adelinae is a veneridae species found in its native region."
+          "description": "Sunetta adelinae is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:abd5de36-5549-4a45-850d-475de315215c,checklistbank-139831:1209468"
         },
         {
           "id": "SP_SUNETTA_CONCINNA",
@@ -43896,18 +43176,6 @@
           },
           "uuid": "8ed46cee-6d27-4461-8c9a-fc9d5010272a",
           "children": []
-        },
-        {
-          "id": "SP_SUNETTA_ADELINAE",
-          "name": "Sunetta adelinae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sunetta",
-          "sourceIds": {
-            "checklistbank-139831": "1209468"
-          },
-          "uuid": "2b70a2b2-2ca4-4a69-b6fa-85d67dc13961"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -44900,10 +44168,15 @@
             "col": [
               "5XTD5"
             ],
-            "checklistbank": "218529",
-            "checklistbank-1174": "txn:333081"
+            "checklistbank": [
+              "218529",
+              "urn:lsid:marinespecies.org:taxname:507507"
+            ],
+            "checklistbank-1174": [
+              "txn:333081"
+            ]
           },
-          "authorityIds": "col:5XTD5",
+          "authorityIds": "checklistbank:218529,checklistbank:urn:lsid:marinespecies.org:taxname:507507,checklistbank-1174:txn:333081,col:5XTD5",
           "authorship": "(Carpenter, 1857)"
         }
       ]
@@ -44913,22 +44186,6 @@
       "name": "\"Chioneryx",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CHIONERYX_SQUAMOSA_P_P_CARPENTER_1857",
-          "name": "\"Chioneryx squamosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chioneryx",
-          "authorship": "\"(P. P. Carpenter, 1857)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507507",
-            "checklistbank-1174": "txn:333081"
-          },
-          "children": [],
-          "uuid": "f705a36b-0746-560-980-b83a25a0ceebaa",
-          "description": "\"Chioneryx squamosa\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_CHIONERYX_CARDIOIDES_LAMARCK_1818",
           "name": "\"Chioneryx cardioides\"",
@@ -45450,10 +44707,18 @@
             "col": [
               "3R3RG"
             ],
-            "checklistbank": "218909",
-            "checklistbank-1174": "txn:60749"
+            "checklistbank": [
+              "218909",
+              "urn:lsid:marinespecies.org:taxname:826363"
+            ],
+            "checklistbank-1174": [
+              "txn:60749"
+            ],
+            "checklistbank-127379": [
+              "761a1120-fdc8-4cfd-85b6-fae8734d424f"
+            ]
           },
-          "authorityIds": "col:3R3RG",
+          "authorityIds": "checklistbank:218909,checklistbank:urn:lsid:marinespecies.org:taxname:826363,checklistbank-1174:txn:60749,checklistbank-127379:761a1120-fdc8-4cfd-85b6-fae8734d424f,col:3R3RG",
           "authorship": "(Lamy, 1935)"
         },
         {
@@ -45652,23 +44917,6 @@
           "children": [],
           "uuid": "29807c79-0c85-5a4-af2-f4715249749faa",
           "description": "\"Katelysia scalarina\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_KATELYSIA_RHYTIPHORA_E_LAMY_1935",
-          "name": "\"Katelysia rhytiphora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Katelysia",
-          "authorship": "\"(E. Lamy, 1935)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:826363",
-            "checklistbank-1174": "txn:60749",
-            "checklistbank-127379": "761a1120-fdc8-4cfd-85b6-fae8734d424f"
-          },
-          "children": [],
-          "uuid": "49e4d379-05a1-552-be8-8c2657318fddb1",
-          "description": "\"Katelysia rhytiphora\" is a veneridae species found in its native region."
         },
         {
           "id": "SP_KATELYSIA_PERONII_LAMARCK_1818",
@@ -46143,10 +45391,15 @@
             "itis": [
               "81570"
             ],
-            "checklistbank": "218837",
-            "checklistbank-1174": "txn:101134"
+            "checklistbank": [
+              "218837",
+              "urn:lsid:marinespecies.org:taxname:420939"
+            ],
+            "checklistbank-1174": [
+              "txn:101134"
+            ]
           },
-          "authorityIds": "col:3H4T8,itis:81570"
+          "authorityIds": "checklistbank:218837,checklistbank:urn:lsid:marinespecies.org:taxname:420939,checklistbank-1174:txn:101134,col:3H4T8,itis:81570"
         },
         {
           "id": "SP_GOULDIA_CIRCULARIS",
@@ -46204,9 +45457,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:420940"
             ],
-            "checklistbank-1174": "txn:248864"
+            "checklistbank-1174": [
+              "txn:248864"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:420940"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420940,col:3H4TT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420940,checklistbank-1174:txn:248864,checklistbank-2011:urn:lsid:marinespecies.org:taxname:420940,col:3H4TT",
           "authorship": "(Dall & C. T. Simpson, 1901)"
         },
         {
@@ -46537,37 +45795,6 @@
           "children": [],
           "uuid": "582ee9e6-b999-571-b00-a2e8b25ebe0d9d",
           "description": "\"Gouldia minima\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_GOULDIA_CERINA_C_B_ADAMS_1845",
-          "name": "\"Gouldia cerina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gouldia",
-          "authorship": "\"(C. B. Adams, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420939",
-            "checklistbank-1174": "txn:101134"
-          },
-          "children": [],
-          "uuid": "c8b2929e-9f85-50a-9b6-929f8e0439a3cf",
-          "description": "\"Gouldia cerina\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_GOULDIA_INSULARIS_DALL_C_T_SIMPSON_1901",
-          "name": "Gouldia insularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gouldia",
-          "authorship": "(Dall & C. T. Simpson, 1901)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:420940",
-            "checklistbank-1174": "txn:248864"
-          },
-          "uuid": "01f6f9d0-9bf2-433b-9e78-7a69dfb33147",
-          "children": []
         },
         {
           "id": "SP_GOULDIA_CIRCULARIS_DESHAYES_1857",
@@ -47523,9 +46750,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:708845"
             ],
-            "checklistbank-1174": "txn:162038"
+            "checklistbank-1174": [
+              "txn:162038"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:708845"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708845,col:3RZ2D",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708845,checklistbank-1174:txn:162038,checklistbank-2011:urn:lsid:marinespecies.org:taxname:708845,col:3RZ2D",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -47547,9 +46779,14 @@
               "urn:lsid:marinespecies.org:taxname:708853"
             ],
             "gbif-backbone": "8062269",
-            "checklistbank-1174": "txn:293648"
+            "checklistbank-1174": [
+              "txn:293648"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:708853"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708853,col:3RZ2F",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708853,checklistbank-1174:txn:293648,checklistbank-2011:urn:lsid:marinespecies.org:taxname:708853,col:3RZ2F,gbif-backbone:8062269",
           "authorship": "(A. d'Orbigny, 1846)"
         },
         {
@@ -47592,9 +46829,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:714771"
             ],
-            "checklistbank-1174": "txn:333204"
+            "checklistbank-1174": [
+              "txn:333204"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:714771"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:714771,col:3RZ2H",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:714771,checklistbank-1174:txn:333204,checklistbank-2011:urn:lsid:marinespecies.org:taxname:714771,col:3RZ2H",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -48356,21 +47598,6 @@
           "description": "\"Lamelliconcha circinata\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_LAMELLICONCHA_CONCINNA_G_B_SOWERBY_I_1835",
-          "name": "Lamelliconcha concinna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamelliconcha",
-          "authorship": "(G. B. Sowerby I, 1835)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708845",
-            "checklistbank-1174": "txn:162038"
-          },
-          "uuid": "351608c6-d68b-437c-8000-6e74a2548098",
-          "children": []
-        },
-        {
           "id": "SP_LAMELLICONCHA_ALTERNATA_BRODERIP_1835",
           "name": "Lamelliconcha alternata",
           "rank": "SPECIES",
@@ -48399,21 +47626,6 @@
           "children": []
         },
         {
-          "id": "SP_LAMELLICONCHA_PAYTENSIS_A_D_ORBIGNY_1846",
-          "name": "Lamelliconcha paytensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamelliconcha",
-          "authorship": "(A. d'Orbigny, 1846)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708853",
-            "checklistbank-1174": "txn:293648"
-          },
-          "uuid": "3407271b-fa1b-49eb-84be-d27cbf814fcb",
-          "children": []
-        },
-        {
           "id": "SP_LAMELLICONCHA_TORTUOSA_BRODERIP_1835",
           "name": "Lamelliconcha tortuosa",
           "rank": "SPECIES",
@@ -48425,21 +47637,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708855"
           },
           "uuid": "1bc24776-ea6b-4c11-99e3-2d2c1a478dc1",
-          "children": []
-        },
-        {
-          "id": "SP_LAMELLICONCHA_UNICOLOR_G_B_SOWERBY_I_1835",
-          "name": "Lamelliconcha unicolor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamelliconcha",
-          "authorship": "(G. B. Sowerby I, 1835)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:714771",
-            "checklistbank-1174": "txn:333204"
-          },
-          "uuid": "c88bb638-4133-484c-9c55-09874a6c9076",
           "children": []
         },
         {
@@ -51418,10 +50615,15 @@
             "col": [
               "66B3W"
             ],
-            "checklistbank": "103102",
-            "checklistbank-1174": "txn:101144"
+            "checklistbank": [
+              "103102",
+              "urn:lsid:marinespecies.org:taxname:507438"
+            ],
+            "checklistbank-1174": [
+              "txn:101144"
+            ]
           },
-          "authorityIds": "col:66B3W",
+          "authorityIds": "checklistbank:103102,checklistbank:urn:lsid:marinespecies.org:taxname:507438,checklistbank-1174:txn:101144,col:66B3W",
           "authorship": "(King & Broderip, 1832)"
         },
         {
@@ -51482,9 +50684,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1599612"
             ],
-            "checklistbank-1174": "txn:423755"
+            "checklistbank-1174": [
+              "txn:423755"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1599612"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599612,col:9GXQ6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599612,checklistbank-1174:txn:423755,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1599612,col:9GXQ6",
           "authorship": "(R. A. Philippi, 1887)"
         },
         {
@@ -51528,9 +50735,14 @@
               "urn:lsid:marinespecies.org:taxname:1599602"
             ],
             "gbif-backbone": "11141214",
-            "checklistbank-1174": "txn:423751"
+            "checklistbank-1174": [
+              "txn:423751"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1599602"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599602,col:C663J",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599602,checklistbank-1174:txn:423751,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1599602,col:C663J,gbif-backbone:11141214",
           "authorship": "(R. A. Philippi, 1857)"
         },
         {
@@ -51551,9 +50763,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1442592"
             ],
-            "checklistbank-1174": "txn:423752"
+            "checklistbank-1174": [
+              "txn:423752"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1442592"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1442592,col:7PZBJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1442592,checklistbank-1174:txn:423752,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1442592,col:7PZBJ",
           "authorship": "(G. B. Sowerby I, 1846)"
         },
         {
@@ -51574,9 +50791,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:594979"
             ],
-            "checklistbank-1174": "txn:423754"
+            "checklistbank-1174": [
+              "txn:423754"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:594979"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:594979,col:CQ7W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:594979,checklistbank-1174:txn:423754,checklistbank-2011:urn:lsid:marinespecies.org:taxname:594979,col:CQ7W",
           "authorship": "(R. A. Philippi, 1887)"
         },
         {
@@ -51631,52 +50853,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AMEGHINOMYA_ANTIQUA_P_P_KING_1832",
-          "name": "\"Ameghinomya antiqua\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ameghinomya",
-          "authorship": "\"(P. P. King, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507438",
-            "checklistbank-1174": "txn:101144"
-          },
-          "children": [],
-          "uuid": "87451020-2bb0-51c-85f-d0cd7c89d69eac",
-          "description": "\"Ameghinomya antiqua\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_AMEGHINOMYA_VOLCKMANNI_R_A_PHILIPPI_1887",
-          "name": "Ameghinomya volckmanni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameghinomya",
-          "authorship": "(R. A. Philippi, 1887)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:594979",
-            "checklistbank-1174": "txn:423754"
-          },
-          "uuid": "ebbb104c-0959-481c-a93c-b4e337da049d",
-          "children": []
-        },
-        {
-          "id": "SP_AMEGHINOMYA_MERIDIONALIS_G_B_SOWERBY_I_1846",
-          "name": "Ameghinomya meridionalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameghinomya",
-          "authorship": "(G. B. Sowerby I, 1846)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1442592",
-            "checklistbank-1174": "txn:423752"
-          },
-          "uuid": "918328bf-b6b4-4364-aff3-804ad17e9861",
-          "children": []
-        },
-        {
           "id": "SP_AMEGHINOMYA_COQUANDI_HUP_1854",
           "name": "Ameghinomya coquandi",
           "rank": "SPECIES",
@@ -51688,36 +50864,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1598259"
           },
           "uuid": "fdfb9e36-ebbf-4d5b-bb8f-0cb2a7ac54c8",
-          "children": []
-        },
-        {
-          "id": "SP_AMEGHINOMYA_DARWINI_R_A_PHILIPPI_1857",
-          "name": "Ameghinomya darwini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameghinomya",
-          "authorship": "(R. A. Philippi, 1857)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599602",
-            "checklistbank-1174": "txn:423751"
-          },
-          "uuid": "d0eee93e-b7ca-46fd-9a35-abbbb13222e0",
-          "children": []
-        },
-        {
-          "id": "SP_AMEGHINOMYA_CHILOENSIS_R_A_PHILIPPI_1887",
-          "name": "Ameghinomya chiloensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameghinomya",
-          "authorship": "(R. A. Philippi, 1887)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599612",
-            "checklistbank-1174": "txn:423755"
-          },
-          "uuid": "72e61f08-6e1a-4946-9779-fb01aaab64d1",
           "children": []
         },
         {
@@ -53833,10 +52979,15 @@
             "col": [
               "Y2SP"
             ],
-            "checklistbank": "218573",
-            "checklistbank-1174": "txn:444327"
+            "checklistbank": [
+              "218573",
+              "urn:lsid:marinespecies.org:taxname:507459"
+            ],
+            "checklistbank-1174": [
+              "txn:444327"
+            ]
           },
-          "authorityIds": "col:Y2SP,itis:81647",
+          "authorityIds": "checklistbank:218573,checklistbank:urn:lsid:marinespecies.org:taxname:507459,checklistbank-1174:txn:444327,col:Y2SP,itis:81647",
           "authorship": "(Carpenter, 1864)"
         },
         {
@@ -53869,31 +53020,6 @@
           "description": "Cooperella riosi is a veneridae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_COOPERELLA",
-      "name": "\"Cooperella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COOPERELLA_SUBDIAPHANA_P_P_CARPENTER_1864",
-          "name": "\"Cooperella subdiaphana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cooperella",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507459",
-            "checklistbank-1174": "txn:444327"
-          },
-          "children": [],
-          "uuid": "b5b677fc-d909-5c8-9b0-5d4aee8f07e5ea",
-          "description": "\"Cooperella subdiaphana\" is a veneridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "veneridae"
     },
     {
       "id": "GENUS_GEMMA",
@@ -54157,10 +53283,15 @@
             "itis": [
               "81537"
             ],
-            "checklistbank": "218521",
-            "checklistbank-1174": "txn:167959"
+            "checklistbank": [
+              "218521",
+              "urn:lsid:marinespecies.org:taxname:507499"
+            ],
+            "checklistbank-1174": [
+              "txn:167959"
+            ]
           },
-          "authorityIds": "col:69TRN,itis:81537"
+          "authorityIds": "checklistbank:218521,checklistbank:urn:lsid:marinespecies.org:taxname:507499,checklistbank-1174:txn:167959,col:69TRN,itis:81537"
         },
         {
           "id": "SP_CHIONE_CANCELLATA",
@@ -54901,10 +54032,15 @@
             "itis": [
               "81559"
             ],
-            "checklistbank": "218525",
-            "checklistbank-1174": "txn:167958"
+            "checklistbank": [
+              "218525",
+              "urn:lsid:marinespecies.org:taxname:507502"
+            ],
+            "checklistbank-1174": [
+              "txn:167958"
+            ]
           },
-          "authorityIds": "col:5Y5BX,itis:81559"
+          "authorityIds": "checklistbank:218525,checklistbank:urn:lsid:marinespecies.org:taxname:507502,checklistbank-1174:txn:167958,col:5Y5BX,itis:81559"
         },
         {
           "id": "SP_CHIONE_VEATCHIANA_MAURY_1912",
@@ -56002,22 +55138,6 @@
           "description": "\"Chione cancellata\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_CHIONE_CALIFORNIENSIS_BRODERIP_1835",
-          "name": "\"Chione californiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chione",
-          "authorship": "\"(Broderip, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507499",
-            "checklistbank-1174": "txn:167959"
-          },
-          "children": [],
-          "uuid": "baefc4e7-bf56-5d3-8f9-ac6c9b4df4bfdf",
-          "description": "\"Chione californiensis\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_CHIONE_COMPTA_BRODERIP_1835",
           "name": "\"Chione compta\"",
           "rank": "SPECIES",
@@ -56046,22 +55166,6 @@
           "children": [],
           "uuid": "be7de3f5-e037-52b-a82-c2602296d88099",
           "description": "\"Chione subimbricata\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_CHIONE_UNDATELLA_G_B_SOWERBY_I_1835",
-          "name": "\"Chione undatella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chione",
-          "authorship": "\"(G. B. Sowerby I, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507502",
-            "checklistbank-1174": "txn:167958"
-          },
-          "children": [],
-          "uuid": "75e60808-677e-51d-bd7-8aac8ba10771da",
-          "description": "\"Chione undatella\" is a veneridae species found in its native region."
         },
         {
           "id": "SP_CHIONE_ELEVATA_SAY_1822",
@@ -56680,10 +55784,18 @@
             "itis": [
               "205645"
             ],
-            "checklistbank": "61917",
-            "checklistbank-1174": "txn:142193"
+            "checklistbank": [
+              "61917",
+              "urn:lsid:marinespecies.org:taxname:141917"
+            ],
+            "checklistbank-1174": [
+              "txn:142193"
+            ],
+            "checklistbank-127379": [
+              "6210ce52-8335-4e3f-999e-92cd5721e0ac"
+            ]
           },
-          "authorityIds": "col:3Q2KJ,itis:205645"
+          "authorityIds": "checklistbank:61917,checklistbank:urn:lsid:marinespecies.org:taxname:141917,checklistbank-1174:txn:142193,checklistbank-127379:6210ce52-8335-4e3f-999e-92cd5721e0ac,col:3Q2KJ,itis:205645"
         },
         {
           "id": "SP_IRUS_ISHIBASHIANUS_KURODA_HABE_1952",
@@ -56864,23 +55976,6 @@
       "name": "\"Irus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_IRUS_IRUS_LINNAEUS_1758",
-          "name": "\"Irus irus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Irus",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141917",
-            "checklistbank-1174": "txn:142193",
-            "checklistbank-127379": "6210ce52-8335-4e3f-999e-92cd5721e0ac"
-          },
-          "children": [],
-          "uuid": "3a4ba0f2-6d37-5d8-869-553f3bae358b05",
-          "description": "\"Irus irus\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_IRUS_CUMINGII_DESHAYES_1854",
           "name": "\"Irus cumingii\"",
@@ -57276,9 +56371,17 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507518"
             ],
-            "checklistbank-1174": "txn:59722"
+            "checklistbank-1174": [
+              "txn:59722"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507518"
+            ],
+            "checklistbank-127379": [
+              "0a2ba789-b956-4c96-9ecc-aac3cf52066e"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507518,col:5YV8Y",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507518,checklistbank-1174:txn:59722,checklistbank-127379:0a2ba789-b956-4c96-9ecc-aac3cf52066e,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507518,col:5YV8Y",
           "authorship": "(Lamarck, 1818)"
         },
         {
@@ -58047,22 +57150,6 @@
           "children": []
         },
         {
-          "id": "SP_CIRCE_PLICATINA_LAMARCK_1818",
-          "name": "Circe plicatina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Circe",
-          "authorship": "(Lamarck, 1818)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507518",
-            "checklistbank-1174": "txn:59722",
-            "checklistbank-127379": "0a2ba789-b956-4c96-9ecc-aac3cf52066e"
-          },
-          "uuid": "e34bd100-058b-4ed9-b438-252aa58b2a0a",
-          "children": []
-        },
-        {
           "id": "SP_CIRCE_LIRATA_R_MER_1869",
           "name": "Circe lirata",
           "rank": "SPECIES",
@@ -58173,10 +57260,15 @@
             "col": [
               "5VK4X"
             ],
-            "checklistbank": "218329",
-            "checklistbank-1174": "txn:101014"
+            "checklistbank": [
+              "218329",
+              "urn:lsid:marinespecies.org:taxname:507479"
+            ],
+            "checklistbank-1174": [
+              "txn:101014"
+            ]
           },
-          "authorityIds": "col:5VK4X",
+          "authorityIds": "checklistbank:218329,checklistbank:urn:lsid:marinespecies.org:taxname:507479,checklistbank-1174:txn:101014,col:5VK4X",
           "authorship": "(Hanley, 1845)"
         },
         {
@@ -58716,12 +57808,15 @@
           "authorship": "Schumacher",
           "sourceIds": {
             "checklistbank": "0db05784-8115-4493-8e72-6b80db80f849",
-            "checklistbank-139831": "469615"
+            "checklistbank-139831": [
+              "469615"
+            ]
           },
           "children": [],
           "uuid": "6683ad0d-b582-509-8e9-1dc7065eed2948",
           "commonName": "lamellate venus clam",
-          "description": "Antigona lamellaris (lamellate venus clam) is a veneridae species found in its native region."
+          "description": "Antigona lamellaris (lamellate venus clam) is a veneridae species found in its native region.",
+          "authorityIds": "checklistbank:0db05784-8115-4493-8e72-6b80db80f849,checklistbank-139831:469615"
         },
         {
           "id": "SP_ANTIGONA_GRANOSA_SOWERBY_1840",
@@ -58801,22 +57896,6 @@
       "name": "\"Antigona",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ANTIGONA_CHEMNITZII_HANLEY_1845",
-          "name": "\"Antigona chemnitzii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Antigona",
-          "authorship": "\"(Hanley, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507479",
-            "checklistbank-1174": "txn:101014"
-          },
-          "children": [],
-          "uuid": "071ea4aa-4470-5b2-81b-1f6995873f6234",
-          "description": "\"Antigona chemnitzii\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_ANTIGONA_GLADSTONENSIS_ANGAS_1872",
           "name": "Antigona gladstonensis",
@@ -58988,18 +58067,6 @@
           },
           "uuid": "66ec827e-d855-4b15-9faa-ad766ed8b5dc",
           "children": []
-        },
-        {
-          "id": "SP_ANTIGONA_LAMELLARIS",
-          "name": "Antigona lamellaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Antigona",
-          "sourceIds": {
-            "checklistbank-139831": "469615"
-          },
-          "uuid": "42a38ecd-83ca-4e67-81b5-e8cae6c49e0d"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -59027,10 +58094,15 @@
             "col": [
               "RBQN8"
             ],
-            "checklistbank": "230e22bb-8946-4cb6-9ac1-92d24390d466",
-            "checklistbank-1174": "txn:101419"
+            "checklistbank": [
+              "230e22bb-8946-4cb6-9ac1-92d24390d466",
+              "urn:lsid:marinespecies.org:taxname:507800"
+            ],
+            "checklistbank-1174": [
+              "txn:101419"
+            ]
           },
-          "authorityIds": "col:RBQN8",
+          "authorityIds": "checklistbank:230e22bb-8946-4cb6-9ac1-92d24390d466,checklistbank:urn:lsid:marinespecies.org:taxname:507800,checklistbank-1174:txn:101419,col:RBQN8",
           "authorship": "(Philippi,1847)"
         },
         {
@@ -59440,11 +58512,16 @@
             "col": [
               "BF4CW"
             ],
-            "checklistbank": "244e1f63-ca7d-4129-bc36-12acd57dc868",
+            "checklistbank": [
+              "244e1f63-ca7d-4129-bc36-12acd57dc868",
+              "urn:lsid:marinespecies.org:taxname:1304459"
+            ],
             "gbif-backbone": "5729406",
-            "checklistbank-1174": "txn:101415"
+            "checklistbank-1174": [
+              "txn:101415"
+            ]
           },
-          "authorityIds": "col:BF4CW",
+          "authorityIds": "checklistbank:244e1f63-ca7d-4129-bc36-12acd57dc868,checklistbank:urn:lsid:marinespecies.org:taxname:1304459,checklistbank-1174:txn:101415,col:BF4CW,gbif-backbone:5729406",
           "authorship": "(Born,1778)"
         },
         {
@@ -59938,22 +59015,6 @@
           "description": "\"Paphia rotundata\" is a veneridae species found in its native region."
         },
         {
-          "id": "SP_PAPHIA_AMABILIS_R_A_PHILIPPI_1847",
-          "name": "\"Paphia amabilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paphia",
-          "authorship": "\"(R. A. Philippi, 1847)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507800",
-            "checklistbank-1174": "txn:101419"
-          },
-          "children": [],
-          "uuid": "7ff89564-fda9-5fa-953-12b34c474e98a7",
-          "description": "\"Paphia amabilis\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_PAPHIA_SEMIRUGATA_R_A_PHILIPPI_1847",
           "name": "\"Paphia semirugata\"",
           "rank": "SPECIES",
@@ -59998,22 +59059,6 @@
           "children": [],
           "uuid": "0d2f063b-3e69-571-a98-be2d761ea5fb65",
           "description": "\"Paphia lirata\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_PAPHIA_UNDULATA_THACH_2018",
-          "name": "\"Paphia undulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paphia",
-          "authorship": "\"Thach, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304459",
-            "checklistbank-1174": "txn:101415"
-          },
-          "children": [],
-          "uuid": "3185d0a4-33c4-562-8d3-43f52722705475",
-          "description": "\"Paphia undulata is a veneridae species found in its native region."
         },
         {
           "id": "SP_PAPHIA_INFLATA_DESHAYES_1853",
@@ -60918,10 +59963,15 @@
             "col": [
               "727C5"
             ],
-            "checklistbank": "218962",
-            "checklistbank-1174": "txn:162140"
+            "checklistbank": [
+              "218962",
+              "urn:lsid:marinespecies.org:taxname:507734"
+            ],
+            "checklistbank-1174": [
+              "txn:162140"
+            ]
           },
-          "authorityIds": "col:727C5",
+          "authorityIds": "checklistbank:218962,checklistbank:urn:lsid:marinespecies.org:taxname:507734,checklistbank-1174:txn:162140,col:727C5",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -60964,10 +60014,15 @@
             "col": [
               "6Q7C6"
             ],
-            "checklistbank": "218963",
-            "checklistbank-1174": "txn:333128"
+            "checklistbank": [
+              "218963",
+              "urn:lsid:marinespecies.org:taxname:507740"
+            ],
+            "checklistbank-1174": [
+              "txn:333128"
+            ]
           },
-          "authorityIds": "col:6Q7C6",
+          "authorityIds": "checklistbank:218963,checklistbank:urn:lsid:marinespecies.org:taxname:507740,checklistbank-1174:txn:333128,col:6Q7C6",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -61124,9 +60179,14 @@
               "urn:lsid:marinespecies.org:taxname:708783"
             ],
             "gbif-backbone": "7669362",
-            "checklistbank-1174": "txn:333134"
+            "checklistbank-1174": [
+              "txn:333134"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:708783"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708783,col:6PVBS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708783,checklistbank-1174:txn:333134,checklistbank-2011:urn:lsid:marinespecies.org:taxname:708783,col:6PVBS,gbif-backbone:7669362",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -61170,10 +60230,15 @@
             "col": [
               "6Q7C4"
             ],
-            "checklistbank": "218967",
-            "checklistbank-1174": "txn:333130"
+            "checklistbank": [
+              "218967",
+              "urn:lsid:marinespecies.org:taxname:507736"
+            ],
+            "checklistbank-1174": [
+              "txn:333130"
+            ]
           },
-          "authorityIds": "col:6Q7C4",
+          "authorityIds": "checklistbank:218967,checklistbank:urn:lsid:marinespecies.org:taxname:507736,checklistbank-1174:txn:333130,col:6Q7C4",
           "authorship": "(Carpenter, 1864)"
         },
         {
@@ -61216,9 +60281,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507749"
             ],
-            "checklistbank-1174": "txn:333132"
+            "checklistbank-1174": [
+              "txn:333132"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507749"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507749,col:727C4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507749,checklistbank-1174:txn:333132,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507749,col:727C4",
           "authorship": "(Pilsbry & H. N. Lowe, 1932)"
         },
         {
@@ -61490,38 +60560,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LEUKOMA_ASPERRIMA_G_B_SOWERBY_I_1835",
-          "name": "\"Leukoma asperrima\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leukoma",
-          "authorship": "\"(G. B. Sowerby I, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507734",
-            "checklistbank-1174": "txn:162140"
-          },
-          "children": [],
-          "uuid": "b16a8ce0-5dea-521-a63-2055fc7acd94e8",
-          "description": "\"Leukoma asperrima\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_LEUKOMA_LACINIATA_P_P_CARPENTER_1864",
-          "name": "\"Leukoma laciniata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leukoma",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507736",
-            "checklistbank-1174": "txn:333130"
-          },
-          "children": [],
-          "uuid": "ff484e16-4e53-591-8db-328db117dccb54",
-          "description": "\"Leukoma laciniata\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_LEUKOMA_STAMINEA_CONRAD_1837",
           "name": "\"Leukoma staminea\"",
           "rank": "SPECIES",
@@ -61535,22 +60573,6 @@
           "children": [],
           "uuid": "10f93c30-02ec-5fc-97f-829a6e2505dd99",
           "description": "\"Leukoma staminea\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_LEUKOMA_COLUMBIENSIS_G_B_SOWERBY_I_1835",
-          "name": "\"Leukoma columbiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leukoma",
-          "authorship": "\"(G. B. Sowerby I, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507740",
-            "checklistbank-1174": "txn:333128"
-          },
-          "children": [],
-          "uuid": "5ce3a11b-4a67-5ff-b2c-053cbd0232ae1e",
-          "description": "\"Leukoma columbiensis\" is a veneridae species found in its native region."
         },
         {
           "id": "SP_LEUKOMA_GRANULATA_GMELIN_1791",
@@ -61728,21 +60750,6 @@
           "children": []
         },
         {
-          "id": "SP_LEUKOMA_METODON_PILSBRY_H_N_LOWE_1932",
-          "name": "Leukoma metodon",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leukoma",
-          "authorship": "(Pilsbry & H. N. Lowe, 1932)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507749",
-            "checklistbank-1174": "txn:333132"
-          },
-          "uuid": "1d7a38aa-4a1d-463a-9d68-832b09505dce",
-          "children": []
-        },
-        {
           "id": "SP_LEUKOMA_BEILI_OLSSON_1961",
           "name": "Leukoma beili",
           "rank": "SPECIES",
@@ -61754,21 +60761,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708782"
           },
           "uuid": "71f5b65b-94c8-481d-9f25-44da1053ac02",
-          "children": []
-        },
-        {
-          "id": "SP_LEUKOMA_HISTRIONICA_G_B_SOWERBY_I_1835",
-          "name": "Leukoma histrionica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leukoma",
-          "authorship": "(G. B. Sowerby I, 1835)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708783",
-            "checklistbank-1174": "txn:333134"
-          },
-          "uuid": "9886fe35-f1ed-428c-8b0c-3e6735d2b702",
           "children": []
         },
         {
@@ -62032,9 +61024,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507514"
             ],
-            "checklistbank-1174": "txn:162091"
+            "checklistbank-1174": [
+              "txn:162091"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507514"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507514,col:5Y5HZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507514,checklistbank-1174:txn:162091,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507514,col:5Y5HZ",
           "authorship": "(R. A. Philippi, 1844)"
         },
         {
@@ -62099,9 +61096,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:708705"
             ],
-            "checklistbank-1174": "txn:333108"
+            "checklistbank-1174": [
+              "txn:333108"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:708705"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708705,col:5XTJM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708705,checklistbank-1174:txn:333108,checklistbank-2011:urn:lsid:marinespecies.org:taxname:708705,col:5XTJM",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -62122,10 +61124,15 @@
             "col": [
               "5Y5JM"
             ],
-            "checklistbank": "219734",
-            "checklistbank-1174": "txn:168002"
+            "checklistbank": [
+              "219734",
+              "urn:lsid:marinespecies.org:taxname:507512"
+            ],
+            "checklistbank-1174": [
+              "txn:168002"
+            ]
           },
-          "authorityIds": "col:5Y5JM",
+          "authorityIds": "checklistbank:219734,checklistbank:urn:lsid:marinespecies.org:taxname:507512,checklistbank-1174:txn:168002,col:5Y5JM",
           "authorship": "(Broderip & G. B. Sowerby I, 1829)"
         },
         {
@@ -62166,9 +61173,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:708707"
             ],
-            "checklistbank-1174": "txn:333112"
+            "checklistbank-1174": [
+              "txn:333112"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:708707"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708707,col:5XTJN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:708707,checklistbank-1174:txn:333112,checklistbank-2011:urn:lsid:marinespecies.org:taxname:708707,col:5XTJN",
           "authorship": "(P. P. Carpenter, 1864)"
         },
         {
@@ -62190,9 +61202,14 @@
               "urn:lsid:marinespecies.org:taxname:1598446"
             ],
             "gbif-backbone": "5932345",
-            "checklistbank-1174": "txn:122640"
+            "checklistbank-1174": [
+              "txn:122640"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1598446"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598446,col:9G9W6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598446,checklistbank-1174:txn:122640,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1598446,col:9G9W6,gbif-backbone:5932345",
           "authorship": "(A. d'Orbigny, 1839)"
         },
         {
@@ -62445,22 +61462,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CHIONOPSIS_GNIDIA_BRODERIP_G_B_SOWERBY_I_1829",
-          "name": "\"Chionopsis gnidia\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chionopsis",
-          "authorship": "\"(Broderip & G. B. Sowerby I, 1829)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507512",
-            "checklistbank-1174": "txn:168002"
-          },
-          "children": [],
-          "uuid": "a9bf817c-80e5-594-935-8d0a1a08f0e01d",
-          "description": "\"Chionopsis gnidia\" is a veneridae species found in its native region."
-        },
-        {
           "id": "SP_CHIONOPSIS_PULICARIA_BRODERIP_1835",
           "name": "\"Chionopsis pulicaria\"",
           "rank": "SPECIES",
@@ -62520,21 +61521,6 @@
           "children": []
         },
         {
-          "id": "SP_CHIONOPSIS_AMATHUSIA_R_A_PHILIPPI_1844",
-          "name": "Chionopsis amathusia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chionopsis",
-          "authorship": "(R. A. Philippi, 1844)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507514",
-            "checklistbank-1174": "txn:162091"
-          },
-          "uuid": "833c3633-b91a-49d6-9e52-46bf54319895",
-          "children": []
-        },
-        {
           "id": "SP_CHIONOPSIS_PINCHOTI_PILSBRY_OLSSON_1951",
           "name": "Chionopsis pinchoti",
           "rank": "SPECIES",
@@ -62546,51 +61532,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507515"
           },
           "uuid": "d2cd90ea-7364-4e4d-ae91-90458f6b863b",
-          "children": []
-        },
-        {
-          "id": "SP_CHIONOPSIS_CRENIFERA_G_B_SOWERBY_I_1835",
-          "name": "Chionopsis crenifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chionopsis",
-          "authorship": "(G. B. Sowerby I, 1835)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708705",
-            "checklistbank-1174": "txn:333108"
-          },
-          "uuid": "e22345b5-6317-4cbe-868a-84d540c5b044",
-          "children": []
-        },
-        {
-          "id": "SP_CHIONOPSIS_LILACINA_P_P_CARPENTER_1864",
-          "name": "Chionopsis lilacina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chionopsis",
-          "authorship": "(P. P. Carpenter, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:708707",
-            "checklistbank-1174": "txn:333112"
-          },
-          "uuid": "4d3fd1c6-4f55-468c-8977-29f31d073080",
-          "children": []
-        },
-        {
-          "id": "SP_CHIONOPSIS_MUNSTERII_A_D_ORBIGNY_1839",
-          "name": "Chionopsis munsterii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chionopsis",
-          "authorship": "(A. d'Orbigny, 1839)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1598446",
-            "checklistbank-1174": "txn:122640"
-          },
-          "uuid": "5fc1c676-8fb3-4b30-8700-3a91211fdba8",
           "children": []
         },
         {
@@ -62652,10 +61593,15 @@
             "col": [
               "3PG5W"
             ],
-            "checklistbank": "218877",
-            "checklistbank-1174": "txn:293664"
+            "checklistbank": [
+              "218877",
+              "urn:lsid:marinespecies.org:taxname:708781"
+            ],
+            "checklistbank-1174": [
+              "txn:293664"
+            ]
           },
-          "authorityIds": "col:3PG5W",
+          "authorityIds": "checklistbank:218877,checklistbank:urn:lsid:marinespecies.org:taxname:708781,checklistbank-1174:txn:293664,col:3PG5W",
           "authorship": "(W. Wood, 1828)"
         },
         {
@@ -62674,31 +61620,6 @@
           "description": "Iliochione callistoides is a veneridae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_ILIOCHIONE",
-      "name": "\"Iliochione",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ILIOCHIONE_SUBRUGOSA_W_WOOD_1828",
-          "name": "\"Iliochione subrugosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iliochione",
-          "authorship": "\"(W. Wood, 1828)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:708781",
-            "checklistbank-1174": "txn:293664"
-          },
-          "children": [],
-          "uuid": "10543191-409e-5bc-a0f-de53a9a27583b3",
-          "description": "\"Iliochione subrugosa\" is a veneridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "veneridae"
     },
     {
       "id": "GENUS_PSATHURA",
@@ -64738,9 +63659,11 @@
               "C5WBF"
             ],
             "checklistbank": "1578616",
-            "checklistbank-139831": "1578616"
+            "checklistbank-139831": [
+              "1578616"
+            ]
           },
-          "authorityIds": "col:C5WBF",
+          "authorityIds": "checklistbank:1578616,checklistbank-139831:1578616,col:C5WBF",
           "description": "Polititapes senescens is a veneridae species found in its native region."
         },
         {
@@ -64868,18 +63791,6 @@
           },
           "uuid": "6db0c9e7-9370-45d4-a5aa-a5779300df02",
           "children": []
-        },
-        {
-          "id": "SP_POLITITAPES_SENESCENS",
-          "name": "Polititapes senescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Polititapes",
-          "sourceIds": {
-            "checklistbank-139831": "1578616"
-          },
-          "uuid": "8fb9d9a6-3864-4604-a760-cb9adb135af4"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -66391,9 +65302,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507498"
             ],
-            "checklistbank-1174": "txn:333208"
+            "checklistbank-1174": [
+              "txn:333208"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507498"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507498,col:PW8D",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507498,checklistbank-1174:txn:333208,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507498,col:PW8D",
           "authorship": "(Hertlein & A. M. Strong, 1948)"
         }
       ]
@@ -66417,21 +65333,6 @@
           "children": [],
           "uuid": "b0d88299-b34e-590-a72-c5d43e876ea254",
           "description": "\"Callpita eucymata\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_CALLPITA_FRIZZELLI_HERTLEIN_A_M_STRONG_1948",
-          "name": "Callpita frizzelli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Callpita",
-          "authorship": "(Hertlein & A. M. Strong, 1948)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507498",
-            "checklistbank-1174": "txn:333208"
-          },
-          "uuid": "b4dddc4b-c2b3-4864-ad29-ab6aac841ba6",
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -66752,10 +65653,15 @@
             "col": [
               "3YWR3"
             ],
-            "checklistbank": "219093",
-            "checklistbank-1174": "txn:170336"
+            "checklistbank": [
+              "219093",
+              "urn:lsid:marinespecies.org:taxname:714775"
+            ],
+            "checklistbank-1174": [
+              "txn:170336"
+            ]
           },
-          "authorityIds": "col:3YWR3",
+          "authorityIds": "checklistbank:219093,checklistbank:urn:lsid:marinespecies.org:taxname:714775,checklistbank-1174:txn:170336,col:3YWR3",
           "authorship": "(G. B. Sowerby I, 1831)"
         },
         {
@@ -66799,10 +65705,15 @@
             "col": [
               "3YWR5"
             ],
-            "checklistbank": "219095",
-            "checklistbank-1174": "txn:167994"
+            "checklistbank": [
+              "219095",
+              "urn:lsid:marinespecies.org:taxname:714777"
+            ],
+            "checklistbank-1174": [
+              "txn:167994"
+            ]
           },
-          "authorityIds": "col:3YWR5",
+          "authorityIds": "checklistbank:219095,checklistbank:urn:lsid:marinespecies.org:taxname:714777,checklistbank-1174:txn:167994,col:3YWR5",
           "authorship": "(G. B. Sowerby I, 1835)"
         }
       ]
@@ -66812,38 +65723,6 @@
       "name": "\"Megapitaria",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MEGAPITARIA_AURANTIACA_G_B_SOWERBY_I_1831",
-          "name": "\"Megapitaria aurantiaca\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Megapitaria",
-          "authorship": "\"(G. B. Sowerby I, 1831)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:714775",
-            "checklistbank-1174": "txn:170336"
-          },
-          "children": [],
-          "uuid": "535a5293-8fd5-561-bfc-f6f7d359f6f4f9",
-          "description": "\"Megapitaria aurantiaca\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_MEGAPITARIA_SQUALIDA_G_B_SOWERBY_I_1835",
-          "name": "\"Megapitaria squalida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Megapitaria",
-          "authorship": "\"(G. B. Sowerby I, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:714777",
-            "checklistbank-1174": "txn:167994"
-          },
-          "children": [],
-          "uuid": "cb68cced-c0a1-5c3-ba9-f2a1eb1da4d6eb",
-          "description": "\"Megapitaria squalida\" is a veneridae species found in its native region."
-        },
         {
           "id": "SP_MEGAPITARIA_MACULATA_LINNAEUS_1758",
           "name": "\"Megapitaria maculata\"",
@@ -66965,9 +65844,11 @@
               "75S8F"
             ],
             "checklistbank": "1511174",
-            "checklistbank-139831": "1511174"
+            "checklistbank-139831": [
+              "1511174"
+            ]
           },
-          "authorityIds": "col:75S8F",
+          "authorityIds": "checklistbank:1511174,checklistbank-139831:1511174,col:75S8F",
           "description": "Paratapes textile is a veneridae species found in its native region."
         }
       ]
@@ -66992,18 +65873,6 @@
           "children": [],
           "uuid": "a7eb6d20-bfbf-5be-aa6-8421d1227de39b",
           "description": "\"Paratapes undulatus\" is a veneridae species found in its native region."
-        },
-        {
-          "id": "SP_PARATAPES_TEXTILE",
-          "name": "Paratapes textile",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paratapes",
-          "sourceIds": {
-            "checklistbank-139831": "1511174"
-          },
-          "uuid": "0666159d-abea-46ad-b18e-bfc8d746ffca"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -75903,8 +74772,8 @@
       "lineage": "veneridae"
     }
   ],
-  "genusCount": 344,
-  "speciesCount": 4243,
+  "genusCount": 339,
+  "speciesCount": 4178,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -2176,11 +2176,16 @@
             "itis": [
               "193941"
             ],
-            "checklistbank": "20397",
-            "wikispecies": "Lindra_inflata"
+            "checklistbank": [
+              "20397",
+              "urn:lsid:marinespecies.org:taxname:100397"
+            ],
+            "wikispecies": [
+              "Lindra_inflata"
+            ]
           },
           "uuid": "b464f4b1-d5b0-52e-8f4-14f846aaa8261c",
-          "authorityIds": "col:72G9C,gbif:5252596,itis:193941,mycobank:299825"
+          "authorityIds": "checklistbank:20397,checklistbank:urn:lsid:marinespecies.org:taxname:100397,col:72G9C,gbif:5252596,itis:193941,mycobank:299825,wikispecies:Lindra_inflata"
         },
         {
           "id": "LINDRA_OBTUSA",
@@ -2288,22 +2293,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LINDRA_INFLATA_I_M_WILSON_1956",
-          "name": "\"Lindra inflata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lindra",
-          "authorship": "\"I.M. Wilson, 1956\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100397",
-            "wikispecies": "Lindra_inflata"
-          },
-          "children": [],
-          "uuid": "3a24e36e-c33c-522-924-d748ba83372ad9",
-          "description": "\"Lindra inflata\" is a lulworthiaceae species found in its native region."
-        },
-        {
           "id": "SP_LINDRA_THALASSIAE_ORPURT_MEYERS_BORAL_SIMMS_1964",
           "name": "Lindra thalassiae",
           "rank": "SPECIES",
@@ -2357,7 +2346,8 @@
           "sourceIds": {
             "checklistbank-139831": "351406"
           },
-          "uuid": "d4dd1aec-e905-4a5c-a0c2-67e238aeb54e"
+          "uuid": "d4dd1aec-e905-4a5c-a0c2-67e238aeb54e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3295,7 +3285,7 @@
   ],
   "authorship": "Kohlmeyer, Spatafora & Volkmann-Kohlmeyer",
   "genusCount": 33,
-  "speciesCount": 145,
+  "speciesCount": 144,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

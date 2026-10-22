@@ -579,7 +579,8 @@
           "sourceIds": {
             "checklistbank-139831": "1354258"
           },
-          "uuid": "89aa8289-9a44-4729-8812-e49fd4c29a22"
+          "uuid": "89aa8289-9a44-4729-8812-e49fd4c29a22",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2196,11 +2197,19 @@
             "col": [
               "4Z8CH"
             ],
-            "checklistbank": "34226",
-            "checklistbank-1174": "txn:473845"
+            "checklistbank": [
+              "34226",
+              "urn:lsid:marinespecies.org:taxname:114226"
+            ],
+            "checklistbank-1174": [
+              "txn:473845"
+            ],
+            "checklistbank-139831": [
+              "1135599"
+            ]
           },
           "uuid": "ef192c2b-e494-56d-8e4-fd638761a48f4e",
-          "authorityIds": "col:4Z8CH,gbif:8023775,itis:44316",
+          "authorityIds": "checklistbank:34226,checklistbank:urn:lsid:marinespecies.org:taxname:114226,checklistbank-1174:txn:473845,checklistbank-139831:1135599,col:4Z8CH,gbif:8023775,itis:44316",
           "authorship": "(Parker & Jones, 1865)"
         },
         {
@@ -2353,11 +2362,16 @@
             "col": [
               "BHJY2"
             ],
-            "checklistbank": "txn:402474",
-            "checklistbank-1174": "txn:402474"
+            "checklistbank": [
+              "txn:402474",
+              "urn:lsid:marinespecies.org:taxname:1313675"
+            ],
+            "checklistbank-1174": [
+              "txn:402474"
+            ]
           },
           "uuid": "6246499a-e747-5a9-ac3-21f0c136c187dd",
-          "authorityIds": "col:BHJY2,gbif:9307410",
+          "authorityIds": "checklistbank:txn:402474,checklistbank:urn:lsid:marinespecies.org:taxname:1313675,checklistbank-1174:txn:402474,col:BHJY2,gbif:9307410",
           "authorship": "(d'Orbigny 1846)"
         },
         {
@@ -5976,23 +5990,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SPIROPLECTAMMINA_BIFORMIS_PARKER_JONES_1865",
-          "name": "\"Spiroplectammina biformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spiroplectammina",
-          "authorship": "\"(Parker & Jones, 1865)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:114226",
-            "checklistbank-1174": "txn:473845",
-            "checklistbank-139831": "1135599"
-          },
-          "children": [],
-          "uuid": "0f6d1dba-3bec-508-abe-84051754604c86",
-          "description": "\"Spiroplectammina biformis\" is a spiroplectamminidae species found in its native region."
-        },
-        {
           "id": "SP_SPIROPLECTAMMINA_TYPICA_LACROIX_1931",
           "name": "\"Spiroplectammina typica\"",
           "rank": "SPECIES",
@@ -8512,22 +8509,6 @@
           "children": [],
           "uuid": "7a9230f0-192d-52b-959-6432150eb96db2",
           "description": "\"Spiroplectammina sayyabi\" is a spiroplectamminidae species found in its native region."
-        },
-        {
-          "id": "SP_SPIROPLECTAMMINA_CARINATA_KACHARAVA_1977",
-          "name": "\"Spiroplectammina carinata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spiroplectammina",
-          "authorship": "\"Kacharava, 1977\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1313675",
-            "checklistbank-1174": "txn:402474"
-          },
-          "children": [],
-          "uuid": "b4028c4a-d97f-535-ad7-e423b6cc729961",
-          "description": "\"Spiroplectammina carinata is a spiroplectamminidae species found in its native region."
         },
         {
           "id": "SP_SPIROPLECTAMMINA_TERMINALIS_GORBUNOVA_SAIDOVA_1954",
@@ -13611,7 +13592,7 @@
     }
   ],
   "genusCount": 45,
-  "speciesCount": 715,
+  "speciesCount": 713,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

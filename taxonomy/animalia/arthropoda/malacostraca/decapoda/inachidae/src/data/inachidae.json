@@ -1676,11 +1676,16 @@
             "col": [
               "BBXK3"
             ],
-            "checklistbank": "txn:404222",
+            "checklistbank": [
+              "txn:404222",
+              "urn:lsid:marinespecies.org:taxname:1611889"
+            ],
             "gbif-backbone": "11135341",
-            "checklistbank-1174": "txn:404222"
+            "checklistbank-1174": [
+              "txn:404222"
+            ]
           },
-          "authorityIds": "col:BBXK3",
+          "authorityIds": "checklistbank:txn:404222,checklistbank:urn:lsid:marinespecies.org:taxname:1611889,checklistbank-1174:txn:404222,col:BBXK3,gbif-backbone:11135341",
           "description": "Inachus eocenicus is a inachidae species found in its native region."
         },
         {
@@ -1953,22 +1958,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_INACHUS_EOCENICUS_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Inachus eocenicus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Inachus",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611889",
-            "checklistbank-1174": "txn:404222"
-          },
-          "children": [],
-          "uuid": "eb2e3124-de7c-57c-a6b-a84faddb9bb827",
-          "description": "\"Inachus eocenicus\" is a inachidae species found in its native region."
-        },
-        {
           "id": "SP_INACHUS_LETHAEUS_SMIRNOV_1929",
           "name": "Inachus lethaeus",
           "rank": "SPECIES",
@@ -1992,7 +1981,8 @@
           "sourceIds": {
             "checklistbank-139831": "326067"
           },
-          "uuid": "e7b7c3ce-9f66-44d1-a41f-8fd987d9408d"
+          "uuid": "e7b7c3ce-9f66-44d1-a41f-8fd987d9408d",
+          "children": []
         },
         {
           "id": "SP_INACHUS_DORSETTENSIS",
@@ -2004,7 +1994,8 @@
           "sourceIds": {
             "checklistbank-139831": "552313"
           },
-          "uuid": "b9b20b98-1946-44ac-b378-7e4bdfd72f90"
+          "uuid": "b9b20b98-1946-44ac-b378-7e4bdfd72f90",
+          "children": []
         },
         {
           "id": "SP_INACHUS_COMMUNISSIMUS",
@@ -2016,7 +2007,8 @@
           "sourceIds": {
             "checklistbank-139831": "696632"
           },
-          "uuid": "9e18f231-af0f-42d2-ae43-2c4f66d152c5"
+          "uuid": "9e18f231-af0f-42d2-ae43-2c4f66d152c5",
+          "children": []
         },
         {
           "id": "SP_INACHUS_THORACICUS",
@@ -2028,7 +2020,8 @@
           "sourceIds": {
             "checklistbank-139831": "1043662"
           },
-          "uuid": "5c5d5ee7-4ba5-44c6-9d53-245ed78c7ccc"
+          "uuid": "5c5d5ee7-4ba5-44c6-9d53-245ed78c7ccc",
+          "children": []
         },
         {
           "id": "SP_INACHUS_LEPTOCHIRUS",
@@ -2040,7 +2033,8 @@
           "sourceIds": {
             "checklistbank-139831": "1402288"
           },
-          "uuid": "bdb0c822-d956-4e3d-bc36-818c313136cf"
+          "uuid": "bdb0c822-d956-4e3d-bc36-818c313136cf",
+          "children": []
         },
         {
           "id": "SP_INACHUS_AGUIARII",
@@ -2052,7 +2046,8 @@
           "sourceIds": {
             "checklistbank-139831": "1402289"
           },
-          "uuid": "564c119a-0267-4997-bc92-e0889f7d13d3"
+          "uuid": "564c119a-0267-4997-bc92-e0889f7d13d3",
+          "children": []
         },
         {
           "id": "SP_INACHUS_GUENTHERI",
@@ -2064,7 +2059,8 @@
           "sourceIds": {
             "checklistbank-139831": "1521089"
           },
-          "uuid": "6920e262-8866-4c25-b434-f504f6dea5e0"
+          "uuid": "6920e262-8866-4c25-b434-f504f6dea5e0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2660,7 +2656,8 @@
           "sourceIds": {
             "checklistbank-139831": "673948"
           },
-          "uuid": "b913b2bf-8f4d-460b-821f-ff1e7b739b6b"
+          "uuid": "b913b2bf-8f4d-460b-821f-ff1e7b739b6b",
+          "children": []
         },
         {
           "id": "SP_MACROPODIA_DEFLEXA",
@@ -2672,7 +2669,8 @@
           "sourceIds": {
             "checklistbank-139831": "783285"
           },
-          "uuid": "9b587793-80a8-4105-97e4-e86e3bee2d62"
+          "uuid": "9b587793-80a8-4105-97e4-e86e3bee2d62",
+          "children": []
         },
         {
           "id": "SP_MACROPODIA_CZERNJAWSKII",
@@ -2684,7 +2682,8 @@
           "sourceIds": {
             "checklistbank-139831": "1120947"
           },
-          "uuid": "77187707-f5a0-4b0d-9138-97a393cb5c61"
+          "uuid": "77187707-f5a0-4b0d-9138-97a393cb5c61",
+          "children": []
         },
         {
           "id": "SP_MACROPODIA_STRAELENI",
@@ -2696,7 +2695,8 @@
           "sourceIds": {
             "checklistbank-139831": "1649900"
           },
-          "uuid": "f15fdcb5-f544-449f-9727-aee1a863a03a"
+          "uuid": "f15fdcb5-f544-449f-9727-aee1a863a03a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4039,22 +4039,6 @@
           "children": [],
           "uuid": "d01c8ff5-7e62-5d1-aff-86ad6dacf81252",
           "description": "Pleistacantha sanctijohannis is a inachidae species found in its native region."
-        },
-        {
-          "id": "SP_PLEISTACANTHA_STILIPES_AHYONG_CHEN_AND_NG_2005",
-          "name": "Pleistacantha stilipes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleistacantha",
-          "authorship": "Ahyong, Chen and Ng,2005",
-          "sourceIds": {
-            "checklistbank": "9bef7c7e-be90-423b-aacb-79fab3cd3356",
-            "wikispecies": "Pleistacantha_stilipes"
-          },
-          "children": [],
-          "uuid": "c3ea11f4-42b7-515-83e-1be871422beb30",
-          "description": "Pleistacantha stilipes is a inachidae species found in its native region."
         },
         {
           "id": "SP_PLEISTACANTHA_CERVICORNIS_J_E_W_IHLE_AND_M_E_IHLE_LANDENBERG_1931",
@@ -5680,7 +5664,7 @@
       "lineage": "Inachidae"
     }
   ],
-  "speciesCount": 294,
+  "speciesCount": 303,
   "appSlug": "inachidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

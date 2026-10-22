@@ -2021,11 +2021,19 @@
             "itis": [
               "559279"
             ],
-            "checklistbank": "279555",
-            "wikispecies": "Cinclodes_taczanowskii",
-            "gbif-backbone": "2485068"
+            "checklistbank": [
+              "279555",
+              "urn:lsid:marinespecies.org:taxname:1674263"
+            ],
+            "wikispecies": [
+              "Cinclodes_taczanowskii"
+            ],
+            "gbif-backbone": "2485068",
+            "checklistbank-139831": [
+              "11389"
+            ]
           },
-          "authorityIds": "col:VDP5,itis:559279,wikidata:Q1036980",
+          "authorityIds": "checklistbank:279555,checklistbank:urn:lsid:marinespecies.org:taxname:1674263,checklistbank-139831:11389,col:VDP5,gbif-backbone:2485068,itis:559279,wikidata:Q1036980,wikispecies:Cinclodes_taczanowskii",
           "authorship": "Berlepsch & Stolzmann, 1892"
         },
         {
@@ -2058,23 +2066,6 @@
       "name": "\"Cinclodes",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CINCLODES_TACZANOWSKII_BERLEPSCH_SZTOLCMAN_1892",
-          "name": "\"Cinclodes taczanowskii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cinclodes",
-          "authorship": "\"Berlepsch & Sztolcman, 1892\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674263",
-            "wikispecies": "Cinclodes_taczanowskii",
-            "checklistbank-139831": "11389"
-          },
-          "children": [],
-          "uuid": "f6bfa616-0042-559-8ec-5ad392903524e7",
-          "description": "\"Cinclodes taczanowskii\" is a furnariidae species found in its native region."
-        },
         {
           "id": "SP_CINCLODES_ANTARCTICUS",
           "name": "Cinclodes antarcticus",
@@ -2282,7 +2273,8 @@
           "sourceIds": {
             "checklistbank-170809": "103670944"
           },
-          "uuid": "74b0cfd8-44c1-402c-be0a-feb4ceb37706"
+          "uuid": "74b0cfd8-44c1-402c-be0a-feb4ceb37706",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

@@ -6377,9 +6377,14 @@
               "urn:lsid:marinespecies.org:taxname:578931"
             ],
             "gbif-backbone": "2305334",
-            "checklistbank-1174": "txn:107380"
+            "checklistbank-1174": [
+              "txn:107380"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:578931"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:578931,col:CHYGB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:578931,checklistbank-1174:txn:107380,checklistbank-2011:urn:lsid:marinespecies.org:taxname:578931,col:CHYGB,gbif-backbone:2305334",
           "authorship": "(Kiener, 1839)"
         },
         {
@@ -13342,21 +13347,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:577702"
           },
           "uuid": "a8626cad-b6de-475e-98da-24c5644b0cd5",
-          "children": []
-        },
-        {
-          "id": "SP_CRASSISPIRA_BOTTAE_KIENER_1839",
-          "name": "Crassispira bottae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Crassispira",
-          "authorship": "(Kiener, 1839)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:578931",
-            "checklistbank-1174": "txn:107380"
-          },
-          "uuid": "cb698bc6-38a1-4ff8-be4b-329975f5ac6c",
           "children": []
         },
         {
@@ -20437,11 +20427,14 @@
           "authorship": "Wells",
           "sourceIds": {
             "checklistbank": "f6965f05-e202-4522-8a23-058bdc29fdc5",
-            "checklistbank-139831": "1243013"
+            "checklistbank-139831": [
+              "1243013"
+            ]
           },
           "children": [],
           "uuid": "cdd0e6b4-9d76-50c-91d-d123054b4588e2",
-          "description": "Inquisitor odhneri is a pseudomelatomidae species found in its native region."
+          "description": "Inquisitor odhneri is a pseudomelatomidae species found in its native region.",
+          "authorityIds": "checklistbank:f6965f05-e202-4522-8a23-058bdc29fdc5,checklistbank-139831:1243013"
         },
         {
           "id": "SP_INQUISITOR_SEXRADIATUS_ODHNER",
@@ -21534,18 +21527,6 @@
           },
           "uuid": "cf290d7d-d400-43c0-99da-276640b81c8f",
           "children": []
-        },
-        {
-          "id": "SP_INQUISITOR_ODHNERI",
-          "name": "Inquisitor odhneri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Inquisitor",
-          "sourceIds": {
-            "checklistbank-139831": "1243013"
-          },
-          "uuid": "129a18dd-1bc8-4539-b805-119378e84d74"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -22286,10 +22267,15 @@
             "col": [
               "F47LX"
             ],
-            "checklistbank": "txn:107401",
-            "checklistbank-1174": "txn:107401"
+            "checklistbank": [
+              "txn:107401",
+              "urn:lsid:marinespecies.org:taxname:1845702"
+            ],
+            "checklistbank-1174": [
+              "txn:107401"
+            ]
           },
-          "authorityIds": "col:F47LX",
+          "authorityIds": "checklistbank:txn:107401,checklistbank:urn:lsid:marinespecies.org:taxname:1845702,checklistbank-1174:txn:107401,col:F47LX",
           "description": "Carinodrillia elocata is a pseudomelatomidae species found in its native region."
         },
         {
@@ -22486,22 +22472,6 @@
       "name": "\"Carinodrillia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CARINODRILLIA_ELOCATA_WOODRING_1928",
-          "name": "\"Carinodrillia elocata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Carinodrillia",
-          "authorship": "\"Woodring, 1928\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1845702",
-            "checklistbank-1174": "txn:107401"
-          },
-          "children": [],
-          "uuid": "5c2c2020-a058-561-b93-38c74b112a017f",
-          "description": "\"Carinodrillia elocata is a pseudomelatomidae species found in its native region."
-        },
         {
           "id": "SP_CARINODRILLIA_ALBOANGULATA_E_A_SMITH_1882",
           "name": "Carinodrillia alboangulata",
@@ -29310,7 +29280,7 @@
     }
   ],
   "genusCount": 97,
-  "speciesCount": 1605,
+  "speciesCount": 1603,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

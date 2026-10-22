@@ -79,11 +79,19 @@
             "col": [
               "75SVV"
             ],
-            "checklistbank": "1182",
-            "wikispecies": "Parus_major_bokharensis",
-            "gbif-backbone": "6093475"
+            "checklistbank": [
+              "1182",
+              "urn:lsid:marinespecies.org:taxname:558568"
+            ],
+            "wikispecies": [
+              "Parus_major_bokharensis"
+            ],
+            "gbif-backbone": "6093475",
+            "checklistbank-139831": [
+              "203153"
+            ]
           },
-          "authorityIds": "col:75SVV,itis:561864,wikidata:Q25485",
+          "authorityIds": "checklistbank:1182,checklistbank:urn:lsid:marinespecies.org:taxname:558568,checklistbank-139831:203153,col:75SVV,gbif-backbone:6093475,itis:561864,wikidata:Q25485,wikispecies:Parus_major_bokharensis",
           "authorship": "Linnaeus 1758"
         },
         {
@@ -921,23 +929,6 @@
       "name": "\"Parus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PARUS_MAJOR_LINNAEUS_1758",
-          "name": "\"Parus major\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parus",
-          "authorship": "\"Linnaeus, 1758\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558568",
-            "wikispecies": "Parus_major_bokharensis",
-            "checklistbank-139831": "203153"
-          },
-          "children": [],
-          "uuid": "79c78c1d-a2a8-504-b06-1f0299e133a41d",
-          "description": "\"Parus major\" is a paridae species found in its native region."
-        },
         {
           "id": "SP_PARUS_MONTICOLUS",
           "name": "Parus monticolus",
@@ -3526,7 +3517,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 150,
+  "speciesCount": 149,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

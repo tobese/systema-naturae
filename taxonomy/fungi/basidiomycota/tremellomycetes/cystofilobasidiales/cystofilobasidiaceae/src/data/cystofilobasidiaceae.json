@@ -83,11 +83,19 @@
             "col": [
               "6BXTQ"
             ],
-            "checklistbank": "ott90112",
-            "wikispecies": "Cystofilobasidium_capitatum"
+            "checklistbank": [
+              "ott90112",
+              "urn:lsid:marinespecies.org:taxname:437666"
+            ],
+            "wikispecies": [
+              "Cystofilobasidium_capitatum"
+            ],
+            "checklistbank-139831": [
+              "1109562"
+            ]
           },
           "uuid": "5da04c30-0ef7-58f-ba4-4a4b15dfa47894",
-          "authorityIds": "col:6BXTQ,gbif:2518159,mycobank:106046",
+          "authorityIds": "checklistbank:ott90112,checklistbank:urn:lsid:marinespecies.org:taxname:437666,checklistbank-139831:1109562,col:6BXTQ,gbif:2518159,mycobank:106046,wikispecies:Cystofilobasidium_capitatum",
           "children": []
         },
         {
@@ -319,23 +327,6 @@
           "description": "\"Cystofilobasidium bisporidii\" is a cystofilobasidiaceae species found in its native region."
         },
         {
-          "id": "SP_CYSTOFILOBASIDIUM_CAPITATUM_FELL_I_L_HUNTER_TALLMAN_OBERW_BANDONI_1983",
-          "name": "\"Cystofilobasidium capitatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cystofilobasidium",
-          "authorship": "\"(Fell, I.L. Hunter & Tallman) Oberw. & Bandoni, 1983\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437666",
-            "wikispecies": "Cystofilobasidium_capitatum",
-            "checklistbank-139831": "1109562"
-          },
-          "children": [],
-          "uuid": "caac5e1d-e703-5e1-8d1-e1678554e8d11f",
-          "description": "\"Cystofilobasidium capitatum\" is a cystofilobasidiaceae species found in its native region."
-        },
-        {
           "id": "SP_CYSTOFILOBASIDIUM_MACERANS",
           "name": "Cystofilobasidium macerans",
           "rank": "SPECIES",
@@ -371,7 +362,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109558"
           },
-          "uuid": "d7159a17-e13d-44dd-94ef-45720b6e9964"
+          "uuid": "d7159a17-e13d-44dd-94ef-45720b6e9964",
+          "children": []
         },
         {
           "id": "SP_CYSTOFILOBASIDIUM_LARI_MARINI",
@@ -383,7 +375,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109560"
           },
-          "uuid": "f11e0b29-de25-4c41-afaf-7889788b360f"
+          "uuid": "f11e0b29-de25-4c41-afaf-7889788b360f",
+          "children": []
         },
         {
           "id": "SP_CYSTOFILOBASIDIUM_INFIRMOMINIATUM",
@@ -395,33 +388,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109563"
           },
-          "uuid": "621d5bb5-4715-4248-a645-23dbe52e9f4a"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cystofilobasidiaceae"
-    },
-    {
-      "id": "GENUS_MRAKIA",
-      "name": "Mrakia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MRAKIA_FRIGIDA_FELL_STATZELL_I_L_HUNTER_PHAFF_Y_YAMADA_KOMAG",
-          "name": "Mrakia frigida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mrakia",
-          "authorship": "(Fell, Statzell, I.L. Hunter & Phaff) Y. Yamada & Komag.",
-          "sourceIds": {
-            "checklistbank": "300219",
-            "wikispecies": "Mrakia_frigida",
-            "checklistbank-139831": "1110102"
-          },
-          "children": [],
-          "uuid": "09dbf183-6c9b-52f-a7b-956d7eae553436",
-          "description": "Mrakia frigida is a cystofilobasidiaceae species found in its native region."
+          "uuid": "621d5bb5-4715-4248-a645-23dbe52e9f4a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -636,8 +604,8 @@
     }
   ],
   "authorship": "K. Wells & Bandoni",
-  "genusCount": 10,
-  "speciesCount": 30,
+  "genusCount": 9,
+  "speciesCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

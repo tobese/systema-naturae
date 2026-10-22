@@ -740,9 +740,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:575677"
             ],
-            "checklistbank-1174": "txn:445951"
+            "checklistbank-1174": [
+              "txn:445951"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:575677"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:575677,col:34S3C,itis:71350"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:575677,checklistbank-1174:txn:445951,checklistbank-2011:urn:lsid:marinespecies.org:taxname:575677,col:34S3C,itis:71350"
         },
         {
           "id": "SP_DENDROPOMA_MARCHADI_KEEN_J_E_MORTON_1960",
@@ -1601,21 +1606,6 @@
           "children": []
         },
         {
-          "id": "SP_DENDROPOMA_LITUELLA_M_RCH_1861",
-          "name": "Dendropoma lituella",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dendropoma",
-          "authorship": "(Mörch, 1861)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:575677",
-            "checklistbank-1174": "txn:445951"
-          },
-          "uuid": "9193f59d-c1dc-4e7e-a9df-4accce61747f",
-          "children": []
-        },
-        {
           "id": "SP_DENDROPOMA_RASTRUM_M_RCH_1861",
           "name": "Dendropoma rastrum",
           "rank": "SPECIES",
@@ -1824,7 +1814,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220242"
           },
-          "uuid": "249a1434-d2b4-4768-a745-39231d2040d3"
+          "uuid": "249a1434-d2b4-4768-a745-39231d2040d3",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1939,9 +1930,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:580670"
             ],
-            "checklistbank-1174": "txn:444621"
+            "checklistbank-1174": [
+              "txn:444621"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:580670"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:580670,col:4FCK7,itis:71361"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:580670,checklistbank-1174:txn:444621,checklistbank-2011:urn:lsid:marinespecies.org:taxname:580670,col:4FCK7,itis:71361"
         },
         {
           "id": "SP_PETALOCONCHUS_COMPLICATUS_DALL_1908",
@@ -2271,10 +2267,15 @@
             "col": [
               "4FCKN"
             ],
-            "checklistbank": "103862",
-            "checklistbank-1174": "txn:478194"
+            "checklistbank": [
+              "103862",
+              "urn:lsid:marinespecies.org:taxname:419552"
+            ],
+            "checklistbank-1174": [
+              "txn:478194"
+            ]
           },
-          "authorityIds": "col:4FCKN",
+          "authorityIds": "checklistbank:103862,checklistbank:urn:lsid:marinespecies.org:taxname:419552,checklistbank-1174:txn:478194,col:4FCKN",
           "authorship": "(Olsson & Harbison, 1953)"
         },
         {
@@ -2481,10 +2482,15 @@
             "itis": [
               "71367"
             ],
-            "checklistbank": "103864",
-            "checklistbank-1174": "txn:397231"
+            "checklistbank": [
+              "103864",
+              "urn:lsid:marinespecies.org:taxname:419554"
+            ],
+            "checklistbank-1174": [
+              "txn:397231"
+            ]
           },
-          "authorityIds": "col:4FCKZ,itis:71367"
+          "authorityIds": "checklistbank:103864,checklistbank:urn:lsid:marinespecies.org:taxname:419554,checklistbank-1174:txn:397231,col:4FCKZ,itis:71367"
         },
         {
           "id": "SP_PETALOCONCHUS_PLATISOLENUS_SCUDERI_2025",
@@ -3020,38 +3026,6 @@
           "description": "\"Petaloconchus erectus\" is a vermetidae species found in its native region."
         },
         {
-          "id": "SP_PETALOCONCHUS_MCGINTYI_OLSSON_HARBISON_1953",
-          "name": "\"Petaloconchus mcgintyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Petaloconchus",
-          "authorship": "\"(Olsson & Harbison, 1953)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:419552",
-            "checklistbank-1174": "txn:478194"
-          },
-          "children": [],
-          "uuid": "2eed20a0-6ba0-5f2-867-9ac6e36bb0044b",
-          "description": "\"Petaloconchus mcgintyi\" is a vermetidae species found in its native region."
-        },
-        {
-          "id": "SP_PETALOCONCHUS_VARIANS_A_D_ORBIGNY_1839",
-          "name": "\"Petaloconchus varians\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Petaloconchus",
-          "authorship": "\"(A. d'Orbigny, 1839)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:419554",
-            "checklistbank-1174": "txn:397231"
-          },
-          "children": [],
-          "uuid": "26dcda40-5c4c-5ff-911-25748962a047f9",
-          "description": "\"Petaloconchus varians\" is a vermetidae species found in its native region."
-        },
-        {
           "id": "SP_PETALOCONCHUS_NIGRICANS_DALL_1884",
           "name": "Petaloconchus nigricans",
           "rank": "SPECIES",
@@ -3078,21 +3052,6 @@
             "checklistbank-127379": "931fd8a1-4e81-4fbb-9cd6-38b843a6e0ae"
           },
           "uuid": "83544f1d-3789-4937-af0e-61fd6956aa65",
-          "children": []
-        },
-        {
-          "id": "SP_PETALOCONCHUS_COMPACTUS_P_P_CARPENTER_1864",
-          "name": "Petaloconchus compactus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Petaloconchus",
-          "authorship": "(P. P. Carpenter, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:580670",
-            "checklistbank-1174": "txn:444621"
-          },
-          "uuid": "b0129cc2-f382-4996-a24f-4c6b50a5ef06",
           "children": []
         },
         {
@@ -3189,7 +3148,8 @@
           "sourceIds": {
             "checklistbank-139831": "292483"
           },
-          "uuid": "607ba2b1-589a-4720-ab87-8a5a2a15d3dd"
+          "uuid": "607ba2b1-589a-4720-ab87-8a5a2a15d3dd",
+          "children": []
         },
         {
           "id": "SP_PETALOCONCHUS_NERINAEOIDES",
@@ -3201,7 +3161,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220235"
           },
-          "uuid": "10dd2322-c122-4ea7-b4c4-854827f19591"
+          "uuid": "10dd2322-c122-4ea7-b4c4-854827f19591",
+          "children": []
         },
         {
           "id": "SP_PETALOCONCHUS_CEREUS",
@@ -3213,7 +3174,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220239"
           },
-          "uuid": "7277b70a-6801-4483-881c-9aa45a051de2"
+          "uuid": "7277b70a-6801-4483-881c-9aa45a051de2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5944,7 +5906,8 @@
           "sourceIds": {
             "checklistbank-139831": "634698"
           },
-          "uuid": "44569f93-e83c-4659-9662-3df2bbfec501"
+          "uuid": "44569f93-e83c-4659-9662-3df2bbfec501",
+          "children": []
         },
         {
           "id": "SP_VERMETUS_VITREUS",
@@ -5956,7 +5919,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220180"
           },
-          "uuid": "68ee10d0-86f8-4203-b96a-7852c08cd335"
+          "uuid": "68ee10d0-86f8-4203-b96a-7852c08cd335",
+          "children": []
         },
         {
           "id": "SP_VERMETUS_TURONIUS",
@@ -5968,7 +5932,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220191"
           },
-          "uuid": "4560a087-3e15-4ff8-8a29-884e012724cf"
+          "uuid": "4560a087-3e15-4ff8-8a29-884e012724cf",
+          "children": []
         },
         {
           "id": "SP_VERMETUS_DENTIFERUS",
@@ -5980,7 +5945,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220192"
           },
-          "uuid": "924921d7-e2a9-47a1-8c75-2f816ffc9492"
+          "uuid": "924921d7-e2a9-47a1-8c75-2f816ffc9492",
+          "children": []
         },
         {
           "id": "SP_VERMETUS_ANNULUS",
@@ -5992,7 +5958,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220194"
           },
-          "uuid": "3b5ee535-051b-4bb1-a64f-e89f08ea9bcc"
+          "uuid": "3b5ee535-051b-4bb1-a64f-e89f08ea9bcc",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6793,9 +6760,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:709499"
             ],
-            "checklistbank-1174": "txn:90504"
+            "checklistbank-1174": [
+              "txn:90504"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:709499"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:709499,col:56Q37",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:709499,checklistbank-1174:txn:90504,checklistbank-2011:urn:lsid:marinespecies.org:taxname:709499,col:56Q37",
           "authorship": "(P. P. Carpenter, 1857)"
         },
         {
@@ -7664,21 +7636,6 @@
           "children": []
         },
         {
-          "id": "SP_THYLACODES_SQUAMIGERUS_P_P_CARPENTER_1857",
-          "name": "Thylacodes squamigerus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thylacodes",
-          "authorship": "(P. P. Carpenter, 1857)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:709499",
-            "checklistbank-1174": "txn:90504"
-          },
-          "uuid": "64b9d82d-368b-4cd5-8538-4b1f138414c1",
-          "children": []
-        },
-        {
           "id": "SP_THYLACODES_VARIABILIS_M_G_HADFIELD_KAY_1972",
           "name": "Thylacodes variabilis",
           "rank": "SPECIES",
@@ -7929,7 +7886,8 @@
           "sourceIds": {
             "checklistbank-139831": "554842"
           },
-          "uuid": "041b5b87-7ea9-4cb8-b7de-ba550f18cae0"
+          "uuid": "041b5b87-7ea9-4cb8-b7de-ba550f18cae0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8051,7 +8009,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220281"
           },
-          "uuid": "dd9f1672-ee81-422f-8df2-a33b5404ec7d"
+          "uuid": "dd9f1672-ee81-422f-8df2-a33b5404ec7d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9664,7 +9623,7 @@
     }
   ],
   "genusCount": 37,
-  "speciesCount": 547,
+  "speciesCount": 553,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

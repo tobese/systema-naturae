@@ -1373,11 +1373,16 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8970635,
-            "checklistbank": "Balantidium_sigani",
-            "wikispecies": "Balantidium_sigani"
+            "checklistbank": [
+              "Balantidium_sigani",
+              "urn:lsid:marinespecies.org:taxname:814965"
+            ],
+            "wikispecies": [
+              "Balantidium_sigani"
+            ]
           },
           "uuid": "ab82e590-1b92-589-8aa-f4c912c10bbcc3",
-          "authorityIds": "gbif:8970635",
+          "authorityIds": "checklistbank:Balantidium_sigani,checklistbank:urn:lsid:marinespecies.org:taxname:814965,gbif:8970635,wikispecies:Balantidium_sigani",
           "children": []
         },
         {
@@ -1716,22 +1721,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BALANTIDIUM_SIGANI_DIAMANT_WILBERT_1985",
-          "name": "\"Balantidium sigani\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Balantidium",
-          "authorship": "\"Diamant & Wilbert, 1985\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:814965",
-            "wikispecies": "Balantidium_sigani"
-          },
-          "children": [],
-          "uuid": "6ea4569f-eee6-524-925-40dd6c4760fb23",
-          "description": "\"Balantidium sigani\" is a balantidiidae species found in its native region."
-        },
-        {
           "id": "SP_BALANTIDIUM_COLI_MALMSTEIN",
           "name": "Balantidium coli",
           "rank": "SPECIES",
@@ -1770,7 +1759,8 @@
           "sourceIds": {
             "checklistbank-139831": "1227563"
           },
-          "uuid": "a33e5156-740a-4dd4-a12e-45b90f4709ef"
+          "uuid": "a33e5156-740a-4dd4-a12e-45b90f4709ef",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1979,5 +1969,5 @@
     "wikispecies": "Balantidiidae"
   },
   "genusCount": 6,
-  "speciesCount": 90
+  "speciesCount": 89
 }

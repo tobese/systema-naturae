@@ -147,9 +147,11 @@
               "8S4PC"
             ],
             "checklistbank": "190473",
-            "checklistbank-139831": "190473"
+            "checklistbank-139831": [
+              "190473"
+            ]
           },
-          "authorityIds": "col:8S4PC,wfo:wfo-0000597932",
+          "authorityIds": "checklistbank:190473,checklistbank-139831:190473,col:8S4PC,wfo:wfo-0000597932",
           "description": "Ceriops australis, the yellow mangrove or smooth-fruited yellow mangrove, is a species of mangrove in the family Rhizophoraceae, native to tropical northern Australia and southern New Guinea."
         },
         {
@@ -235,9 +237,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ceriops",
           "sourceIds": {
-            "checklistbank-139831": "190476"
+            "checklistbank-139831": [
+              "190476"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:190476"
         }
       ]
     },
@@ -294,18 +299,6 @@
           "children": []
         },
         {
-          "id": "SP_CERIOPS_AUSTRALIS",
-          "name": "Ceriops australis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ceriops",
-          "sourceIds": {
-            "checklistbank-139831": "190473"
-          },
-          "uuid": "829942eb-c262-45ee-af8a-22856ee6b5cc"
-        },
-        {
           "id": "SP_CERIOPS_ZIPPELIANA",
           "name": "Ceriops zippeliana",
           "rank": "SPECIES",
@@ -315,7 +308,8 @@
           "sourceIds": {
             "checklistbank-139831": "190476"
           },
-          "uuid": "31309633-dc69-4ddd-88c9-49eecdfdc3c0"
+          "uuid": "31309633-dc69-4ddd-88c9-49eecdfdc3c0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3088,11 +3082,16 @@
             "wfo": [
               "wfo-0000460362"
             ],
-            "checklistbank": "Rhizophora_mangle_L",
+            "checklistbank": [
+              "Rhizophora_mangle_L",
+              "urn:lsid:marinespecies.org:taxname:235094"
+            ],
             "checklistbank-2008": "447470",
-            "checklistbank-1174": "txn:494178"
+            "checklistbank-1174": [
+              "txn:494178"
+            ]
           },
-          "authorityIds": "col:4SCV5,itis:27791,wfo:wfo-0000460362",
+          "authorityIds": "checklistbank:Rhizophora_mangle_L,checklistbank:urn:lsid:marinespecies.org:taxname:235094,checklistbank-1174:txn:494178,checklistbank-2008:447470,col:4SCV5,itis:27791,wfo:wfo-0000460362",
           "commonName": "mangrove",
           "continents": [
             "North America",
@@ -3542,22 +3541,6 @@
       "name": "\"Rhizophora",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_RHIZOPHORA_MANGLE_L",
-          "name": "\"Rhizophora mangle\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhizophora",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235094",
-            "checklistbank-1174": "txn:494178"
-          },
-          "children": [],
-          "uuid": "a001ff4b-99b1-50d-bbf-3610c82199ce06",
-          "description": "\"Rhizophora mangle\" is a rhizophoraceae species found in its native region."
-        },
         {
           "id": "SP_RHIZOPHORA_MUCRONATA_POIR",
           "name": "\"Rhizophora mucronata\"",
@@ -5858,11 +5841,19 @@
             "col": [
               "5X536"
             ],
-            "checklistbank": "Bruguiera_gymnorhiza_L_Lam",
+            "checklistbank": [
+              "Bruguiera_gymnorhiza_L_Lam",
+              "urn:lsid:marinespecies.org:taxname:235082"
+            ],
             "checklistbank-2008": "673481",
-            "checklistbank-1174": "txn:463108"
+            "checklistbank-1174": [
+              "txn:463108"
+            ],
+            "checklistbank-2232": [
+              "2684038"
+            ]
           },
-          "authorityIds": "col:5X536,itis:847569,wfo:wfo-0000572747",
+          "authorityIds": "checklistbank:Bruguiera_gymnorhiza_L_Lam,checklistbank:urn:lsid:marinespecies.org:taxname:235082,checklistbank-1174:txn:463108,checklistbank-2008:673481,checklistbank-2232:2684038,col:5X536,itis:847569,wfo:wfo-0000572747",
           "commonName": "red mangrove",
           "continents": [
             "North America"
@@ -5965,9 +5956,11 @@
               "wfo-0000572742"
             ],
             "checklistbank": "189944",
-            "checklistbank-139831": "189944"
+            "checklistbank-139831": [
+              "189944"
+            ]
           },
-          "authorityIds": "col:NFDV,wfo:wfo-0000572742",
+          "authorityIds": "checklistbank:189944,checklistbank-139831:189944,col:NFDV,wfo:wfo-0000572742",
           "description": "Bruguiera cylindrica is a small tree in the mangrove family Rhizophoraceae, native to tropical Asia and Australia."
         },
         {
@@ -6093,23 +6086,6 @@
           "description": "\"Bruguiera exaristata\" is a rhizophoraceae species found in its native region."
         },
         {
-          "id": "SP_BRUGUIERA_GYMNORHIZA_L_LAM",
-          "name": "\"Bruguiera gymnorhiza\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bruguiera",
-          "authorship": "\"(L.) Lam.\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235082",
-            "checklistbank-2232": "2684038",
-            "checklistbank-1174": "txn:463108"
-          },
-          "children": [],
-          "uuid": "418dbc7e-19bb-5d4-919-6a5cd8b7a72a8f",
-          "description": "\"Bruguiera gymnorhiza\" is a rhizophoraceae species found in its native region."
-        },
-        {
           "id": "SP_BRUGUIERA_PARVIFLORA_ROXB_WIGHT_ARN_EX_GRIFF",
           "name": "\"Bruguiera parviflora\"",
           "rank": "SPECIES",
@@ -6152,18 +6128,6 @@
           },
           "uuid": "8240b787-8b88-455d-956b-df8e3bd3051f",
           "children": []
-        },
-        {
-          "id": "SP_BRUGUIERA_CYLINDRICA",
-          "name": "Bruguiera cylindrica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bruguiera",
-          "sourceIds": {
-            "checklistbank-139831": "189944"
-          },
-          "uuid": "c16cd74e-f9da-4db3-be7d-8404d82b55b0"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6556,7 +6520,7 @@
     }
   ],
   "genusCount": 30,
-  "speciesCount": 350,
+  "speciesCount": 349,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

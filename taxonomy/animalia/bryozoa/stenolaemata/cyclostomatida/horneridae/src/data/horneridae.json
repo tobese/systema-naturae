@@ -745,9 +745,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:111722"
             ],
-            "checklistbank-1174": "txn:331164"
+            "checklistbank-1174": [
+              "txn:331164"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:111722"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:111722,col:3MPWM,itis:155754",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:111722,checklistbank-1174:txn:331164,checklistbank-2011:urn:lsid:marinespecies.org:taxname:111722,col:3MPWM,itis:155754",
           "authorship": "(Lamarck, 1816)"
         },
         {
@@ -2640,21 +2645,6 @@
           "description": "\"Hornera verrucosa is a horneridae species found in its native region."
         },
         {
-          "id": "SP_HORNERA_FRONDICULATA_LAMARCK_1816",
-          "name": "Hornera frondiculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hornera",
-          "authorship": "(Lamarck, 1816)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:111722",
-            "checklistbank-1174": "txn:331164"
-          },
-          "uuid": "d4cb223b-70e3-4cbf-be8f-49b523039d44",
-          "children": []
-        },
-        {
           "id": "SP_HORNERA_HYBRIDA_D_ARCHIAC_1847",
           "name": "Hornera hybrida",
           "rank": "SPECIES",
@@ -2762,7 +2752,8 @@
           "sourceIds": {
             "checklistbank-139831": "502011"
           },
-          "uuid": "3095deff-64d8-4a20-988c-910671817338"
+          "uuid": "3095deff-64d8-4a20-988c-910671817338",
+          "children": []
         },
         {
           "id": "SP_HORNERA_FOLIACEA",
@@ -2774,7 +2765,8 @@
           "sourceIds": {
             "checklistbank-139831": "502012"
           },
-          "uuid": "eeff825d-cd8f-4af0-951f-d3e918f5b881"
+          "uuid": "eeff825d-cd8f-4af0-951f-d3e918f5b881",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3111,7 +3103,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 172,
+  "speciesCount": 173,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

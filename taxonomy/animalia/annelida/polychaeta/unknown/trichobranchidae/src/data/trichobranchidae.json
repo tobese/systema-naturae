@@ -996,7 +996,8 @@
           "sourceIds": {
             "checklistbank-139831": "694053"
           },
-          "uuid": "d0fe5f48-220a-4fa4-be0f-d73e498250c4"
+          "uuid": "d0fe5f48-220a-4fa4-be0f-d73e498250c4",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3870,10 +3871,13 @@
           "authorship": "M. Sars, 1835",
           "sourceIds": {
             "checklistbank": "51573",
-            "checklistbank-139831": "397955"
+            "checklistbank-139831": [
+              "397955"
+            ]
           },
           "children": [],
-          "uuid": "eaf47c9d-0da7-558-ad8-de0a21db18bb9e"
+          "uuid": "eaf47c9d-0da7-558-ad8-de0a21db18bb9e",
+          "authorityIds": "checklistbank:51573,checklistbank-139831:397955"
         },
         {
           "id": "SP_TEREBELLIDES_EURYSTETHUS",
@@ -3883,9 +3887,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Terebellides",
           "sourceIds": {
-            "checklistbank-139831": "407882"
+            "checklistbank-139831": [
+              "407882"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:407882"
         },
         {
           "id": "SP_TEREBELLIDES_SHETLANDICA",
@@ -3895,9 +3902,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Terebellides",
           "sourceIds": {
-            "checklistbank-139831": "1672616"
+            "checklistbank-139831": [
+              "1672616"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1672616"
         }
       ]
     },
@@ -3967,18 +3977,6 @@
           "description": "\"Terebellides abyssalis\" is a trichobranchidae species found in its native region."
         },
         {
-          "id": "SP_TEREBELLIDES_STROEMII",
-          "name": "Terebellides stroemii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Terebellides",
-          "sourceIds": {
-            "checklistbank-139831": "397955"
-          },
-          "uuid": "54b9d601-e041-4012-916d-ac302a1fe930"
-        },
-        {
           "id": "SP_TEREBELLIDES_EURYSTETHUS",
           "name": "Terebellides eurystethus",
           "rank": "SPECIES",
@@ -3988,7 +3986,8 @@
           "sourceIds": {
             "checklistbank-139831": "407882"
           },
-          "uuid": "b63b56d5-e997-4ca8-8107-725214181fb9"
+          "uuid": "b63b56d5-e997-4ca8-8107-725214181fb9",
+          "children": []
         },
         {
           "id": "SP_TEREBELLIDES_SHETLANDICA",
@@ -4000,7 +3999,8 @@
           "sourceIds": {
             "checklistbank-139831": "1672616"
           },
-          "uuid": "9aa0297c-7743-47fe-b996-e0c7fe602a77"
+          "uuid": "9aa0297c-7743-47fe-b996-e0c7fe602a77",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4227,7 +4227,7 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 236,
+  "speciesCount": 239,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

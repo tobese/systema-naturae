@@ -745,12 +745,18 @@
               "7CHZS"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:141687"
+              "urn:lsid:marinespecies.org:taxname:141687",
+              "urn:lsid:marinespecies.org:taxname:1558216"
             ],
             "gbif-backbone": "2300446",
-            "checklistbank-1174": "txn:91196"
+            "checklistbank-1174": [
+              "txn:91196"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:141687"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:141687,col:7CHZS,itis:73144"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:141687,checklistbank:urn:lsid:marinespecies.org:taxname:1558216,checklistbank-1174:txn:91196,checklistbank-2011:urn:lsid:marinespecies.org:taxname:141687,col:7CHZS,gbif-backbone:2300446,itis:73144"
         },
         {
           "id": "SP_TONNA_HAWAIIENSIS_VOS_2007",
@@ -1613,23 +1619,6 @@
           "description": "\"Tonna tessellata\" is a tonnidae species found in its native region."
         },
         {
-          "id": "SP_TONNA_GALEA_T_COSSIGNANI_2022",
-          "name": "\"Tonna galea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tonna",
-          "authorship": "\"T. Cossignani, 2022\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1558216",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:141687",
-            "checklistbank-1174": "txn:91196"
-          },
-          "children": [],
-          "uuid": "9c05f94e-0597-5fc-976-508cb1e73635f9",
-          "description": "\"Tonna galea is a tonnidae species found in its native region."
-        },
-        {
           "id": "SP_TONNA_PENNATA_M_RCH_1853",
           "name": "Tonna pennata",
           "rank": "SPECIES",
@@ -1785,7 +1774,8 @@
           "sourceIds": {
             "checklistbank-139831": "398209"
           },
-          "uuid": "f457d103-6785-41bd-a0b2-c71a244c2e52"
+          "uuid": "f457d103-6785-41bd-a0b2-c71a244c2e52",
+          "children": []
         },
         {
           "id": "SP_TONNA_POPPEI",
@@ -1797,7 +1787,8 @@
           "sourceIds": {
             "checklistbank-139831": "976011"
           },
-          "uuid": "5796c58a-3766-4f10-a6ca-b03ac539503b"
+          "uuid": "5796c58a-3766-4f10-a6ca-b03ac539503b",
+          "children": []
         },
         {
           "id": "SP_TONNA_OENTOENGI",
@@ -1809,7 +1800,8 @@
           "sourceIds": {
             "checklistbank-139831": "1219612"
           },
-          "uuid": "c4adeef1-a951-43c2-8b51-d7f844a97029"
+          "uuid": "c4adeef1-a951-43c2-8b51-d7f844a97029",
+          "children": []
         },
         {
           "id": "SP_TONNA_ALANBEUI",
@@ -1821,7 +1813,8 @@
           "sourceIds": {
             "checklistbank-139831": "1219613"
           },
-          "uuid": "e23e0d4a-c7b9-4b95-8ade-d4dca3f24476"
+          "uuid": "e23e0d4a-c7b9-4b95-8ade-d4dca3f24476",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1886,9 +1879,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1484817"
             ],
-            "checklistbank-1174": "txn:250564"
+            "checklistbank-1174": [
+              "txn:250564"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1484817"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1484817,col:7S25R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1484817,checklistbank-1174:txn:250564,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1484817,col:7S25R",
           "authorship": "(Rutsch, 1934)"
         },
         {
@@ -2255,21 +2253,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:410241"
           },
           "uuid": "b4da204f-09b7-4432-ac71-a807b13c150c",
-          "children": []
-        },
-        {
-          "id": "SP_MALEA_DENSECOSTATA_RUTSCH_1934",
-          "name": "Malea densecostata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Malea",
-          "authorship": "(Rutsch, 1934)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1484817",
-            "checklistbank-1174": "txn:250564"
-          },
-          "uuid": "d15f7627-0a9d-435b-ad7d-16a703040fd0",
           "children": []
         }
       ],
@@ -3764,7 +3747,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 223,
+  "speciesCount": 221,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

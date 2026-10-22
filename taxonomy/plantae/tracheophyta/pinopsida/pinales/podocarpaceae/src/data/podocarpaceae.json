@@ -6055,10 +6055,18 @@
             "itis": [
               "822691"
             ],
-            "checklistbank": "https://id.biodiversity.org.au/node/apni/2892878",
-            "checklistbank-1174": "txn:316844"
+            "checklistbank": [
+              "https://id.biodiversity.org.au/node/apni/2892878",
+              "urn:lsid:marinespecies.org:taxname:1634492"
+            ],
+            "checklistbank-1174": [
+              "txn:316844"
+            ],
+            "checklistbank-1141": [
+              "d8d05c23-8828-54fe-9133-cce977585263"
+            ]
           },
-          "authorityIds": "col:6NT8V,itis:822691,wfo:wfo-0000444010"
+          "authorityIds": "checklistbank:https://id.biodiversity.org.au/node/apni/2892878,checklistbank:urn:lsid:marinespecies.org:taxname:1634492,checklistbank-1141:d8d05c23-8828-54fe-9133-cce977585263,checklistbank-1174:txn:316844,col:6NT8V,itis:822691,wfo:wfo-0000444010"
         },
         {
           "id": "SP_LAGAROSTROBOS_MARGINATUS_P_M_WELLS_R_S_HILL",
@@ -6097,23 +6105,6 @@
       "name": "\"Lagarostrobos",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LAGAROSTROBOS_FRANKLINII_HOOK_F_QUINN",
-          "name": "\"Lagarostrobos franklinii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lagarostrobos",
-          "authorship": "\"(Hook.f.) Quinn\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634492",
-            "checklistbank-1141": "d8d05c23-8828-54fe-9133-cce977585263",
-            "checklistbank-1174": "txn:316844"
-          },
-          "children": [],
-          "uuid": "965240d5-113d-52f-9d9-6bc83bcb78c0bb",
-          "description": "\"Lagarostrobos franklinii\" is a podocarpaceae species found in its native region."
-        },
         {
           "id": "SP_LAGAROSTROBOS_MARGINATUS_WELLS_AND_HILL_1989",
           "name": "Lagarostrobos marginatus",
@@ -6582,10 +6573,18 @@
             "col": [
               "4H5YP"
             ],
-            "checklistbank": "Phyllocladus_aspleniifolius_Labill_Hookf",
-            "checklistbank-1174": "txn:277358"
+            "checklistbank": [
+              "Phyllocladus_aspleniifolius_Labill_Hookf",
+              "urn:lsid:marinespecies.org:taxname:1634480"
+            ],
+            "checklistbank-1174": [
+              "txn:277358"
+            ],
+            "checklistbank-1141": [
+              "727a0146-980a-541d-9f12-c86a67004738"
+            ]
           },
-          "authorityIds": "col:4H5YP,wfo:wfo-0000481965"
+          "authorityIds": "checklistbank:Phyllocladus_aspleniifolius_Labill_Hookf,checklistbank:urn:lsid:marinespecies.org:taxname:1634480,checklistbank-1141:727a0146-980a-541d-9f12-c86a67004738,checklistbank-1174:txn:277358,col:4H5YP,wfo:wfo-0000481965"
         },
         {
           "id": "SP_PHYLLOCLADUS_HYPOPHYLLUS",
@@ -6828,23 +6827,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PHYLLOCLADUS_ASPLENIIFOLIUS_LABILL_HOOK_F",
-          "name": "\"Phyllocladus aspleniifolius\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phyllocladus",
-          "authorship": "\"(Labill.) Hook.f.\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634480",
-            "checklistbank-1141": "727a0146-980a-541d-9f12-c86a67004738",
-            "checklistbank-1174": "txn:277358"
-          },
-          "children": [],
-          "uuid": "90368964-07bc-5ee-93b-4eb79aa3fb8ffc",
-          "description": "\"Phyllocladus aspleniifolius\" is a podocarpaceae species found in its native region."
-        },
-        {
           "id": "SP_PHYLLOCLADUS_TOATOA_MOLLOY",
           "name": "Phyllocladus toatoa",
           "rank": "SPECIES",
@@ -6898,7 +6880,8 @@
           "sourceIds": {
             "checklistbank-2000": "urn:lsid:ipni.org:names:262596-1"
           },
-          "uuid": "91a741d7-8132-42c9-afbb-476a9b5e1ea3"
+          "uuid": "91a741d7-8132-42c9-afbb-476a9b5e1ea3",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14549,7 +14532,7 @@
     }
   ],
   "genusCount": 103,
-  "speciesCount": 768,
+  "speciesCount": 766,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

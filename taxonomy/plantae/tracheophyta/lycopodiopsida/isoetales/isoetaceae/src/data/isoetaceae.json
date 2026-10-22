@@ -3027,9 +3027,14 @@
             ],
             "checklistbank": "150229",
             "checklistbank-2008": "103843",
-            "checklistbank-1174": "txn:512247"
+            "checklistbank-1174": [
+              "txn:512247"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1415711"
+            ]
           },
-          "authorityIds": "col:3Q8Q4,itis:17131,wfo:wfo-0001108956"
+          "authorityIds": "checklistbank:150229,checklistbank-1174:txn:512247,checklistbank-2008:103843,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1415711,col:3Q8Q4,itis:17131,wfo:wfo-0001108956"
         },
         {
           "id": "SP_ISOETES_LAOSIENSIS",
@@ -7332,21 +7337,6 @@
           "description": "\"Isoetes echinospora\" is a isoetaceae species found in its native region."
         },
         {
-          "id": "SP_ISOETES_LACUSTRIS_L",
-          "name": "Isoetes lacustris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Isoetes",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1415711",
-            "checklistbank-1174": "txn:512247"
-          },
-          "uuid": "db81d8fc-4413-4caf-bf98-3162c7e91388",
-          "children": []
-        },
-        {
           "id": "SP_ISOETES_ABYSSINICA_CHIOV",
           "name": "Isoetes abyssinica",
           "rank": "SPECIES",
@@ -10339,7 +10329,8 @@
           "sourceIds": {
             "checklistbank-139831": "144238"
           },
-          "uuid": "46343073-fa44-460d-a9c5-af51fd2e264f"
+          "uuid": "46343073-fa44-460d-a9c5-af51fd2e264f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10746,7 +10737,7 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 577,
+  "speciesCount": 576,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

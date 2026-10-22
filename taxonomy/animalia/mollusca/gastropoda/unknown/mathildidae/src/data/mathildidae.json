@@ -1048,9 +1048,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1656248"
             ],
-            "checklistbank-1174": "txn:268907"
+            "checklistbank-1174": [
+              "txn:268907"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1656248"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1656248,col:B8NK6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1656248,checklistbank-1174:txn:268907,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1656248,col:B8NK6",
           "authorship": "(K. Martin, 1922)"
         },
         {
@@ -2806,21 +2811,6 @@
           "children": []
         },
         {
-          "id": "SP_MATHILDA_NJALINDUNGENSIS_K_MARTIN_1922",
-          "name": "Mathilda njalindungensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mathilda",
-          "authorship": "(K. Martin, 1922)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1656248",
-            "checklistbank-1174": "txn:268907"
-          },
-          "uuid": "3d4c1b3f-4bf6-409a-a35f-169cebc13380",
-          "children": []
-        },
-        {
           "id": "SP_MATHILDA_RETICULATA_JAMNICENKO_1987",
           "name": "Mathilda reticulata",
           "rank": "SPECIES",
@@ -2844,7 +2834,8 @@
           "sourceIds": {
             "checklistbank-139831": "253768"
           },
-          "uuid": "c47b5aea-cbbe-4022-98ce-9347d9b442a2"
+          "uuid": "c47b5aea-cbbe-4022-98ce-9347d9b442a2",
+          "children": []
         },
         {
           "id": "SP_MATHILDA_DECORATA",
@@ -2856,7 +2847,8 @@
           "sourceIds": {
             "checklistbank-139831": "392212"
           },
-          "uuid": "55d53bef-9406-46bf-8833-839fae3b4ec4"
+          "uuid": "55d53bef-9406-46bf-8833-839fae3b4ec4",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7471,7 +7463,7 @@
     }
   ],
   "genusCount": 46,
-  "speciesCount": 409,
+  "speciesCount": 410,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

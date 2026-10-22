@@ -264,9 +264,14 @@
               "urn:lsid:marinespecies.org:taxname:829808"
             ],
             "gbif-backbone": "7504278",
-            "checklistbank-1174": "txn:290712"
+            "checklistbank-1174": [
+              "txn:290712"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:829808"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:829808,col:464ZZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:829808,checklistbank-1174:txn:290712,checklistbank-2011:urn:lsid:marinespecies.org:taxname:829808,col:464ZZ,gbif-backbone:7504278",
           "authorship": "(F. W. Hutton, 1887)"
         },
         {
@@ -357,9 +362,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1442604"
             ],
-            "checklistbank-1174": "txn:99439"
+            "checklistbank-1174": [
+              "txn:99439"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1442604"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1442604,col:7S9YM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1442604,checklistbank-1174:txn:99439,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1442604,col:7S9YM",
           "authorship": "(G. B. Sowerby I, 1846)"
         },
         {
@@ -834,36 +844,6 @@
           "children": []
         },
         {
-          "id": "SP_NEILO_FUNICULATA_F_W_HUTTON_1887",
-          "name": "Neilo funiculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neilo",
-          "authorship": "(F. W. Hutton, 1887)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:829808",
-            "checklistbank-1174": "txn:290712"
-          },
-          "uuid": "9de711f7-0f46-4ca7-9437-13095ef38da0",
-          "children": []
-        },
-        {
-          "id": "SP_NEILO_ORNATA_G_B_SOWERBY_I_1846",
-          "name": "Neilo ornata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neilo",
-          "authorship": "(G. B. Sowerby I, 1846)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1442604",
-            "checklistbank-1174": "txn:99439"
-          },
-          "uuid": "d930622a-d617-4d1c-99e7-369cc8311901",
-          "children": []
-        },
-        {
           "id": "SP_NEILO_ROSSI_ZINSMEISTER_1984",
           "name": "Neilo rossi",
           "rank": "SPECIES",
@@ -943,7 +923,8 @@
           "sourceIds": {
             "checklistbank-139831": "393120"
           },
-          "uuid": "56b541a6-b8f0-4764-872e-6033c6c9f7dd"
+          "uuid": "56b541a6-b8f0-4764-872e-6033c6c9f7dd",
+          "children": []
         },
         {
           "id": "SP_NEILO_BISCULPTA",
@@ -955,7 +936,8 @@
           "sourceIds": {
             "checklistbank-139831": "1211743"
           },
-          "uuid": "e86c21ad-7650-4f23-9e34-15f24a788d6a"
+          "uuid": "e86c21ad-7650-4f23-9e34-15f24a788d6a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

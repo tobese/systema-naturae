@@ -580,20 +580,6 @@
           "uuid": "49f5733a-731a-518-9f5-38bdfeed8a2cdc"
         },
         {
-          "id": "SP_HYALINOECIA_EDWARDSI_ROULE_1906",
-          "name": "Hyalinoecia edwardsi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hyalinoecia",
-          "authorship": "Roule, 1906",
-          "sourceIds": {
-            "checklistbank": "50462"
-          },
-          "children": [],
-          "uuid": "6d4555fd-93c0-5c4-a72-f61e701dff256d"
-        },
-        {
           "id": "SP_HYALINOECIA_INCUBANS",
           "name": "Hyalinoecia incubans",
           "rank": "SPECIES",
@@ -601,9 +587,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hyalinoecia",
           "sourceIds": {
-            "checklistbank-139831": "390726"
+            "checklistbank-139831": [
+              "390726"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:390726"
         }
       ]
     },
@@ -681,7 +670,8 @@
           "sourceIds": {
             "checklistbank-139831": "390726"
           },
-          "uuid": "4c71c05b-d66a-486a-9906-24da447001ad"
+          "uuid": "4c71c05b-d66a-486a-9906-24da447001ad",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2133,9 +2123,11 @@
             ],
             "checklistbank": "943154",
             "checklistbank-2008": "943154",
-            "checklistbank-139831": "1569175"
+            "checklistbank-139831": [
+              "1569175"
+            ]
           },
-          "authorityIds": "itis:66170",
+          "authorityIds": "checklistbank:943154,checklistbank-139831:1569175,checklistbank-2008:943154,itis:66170",
           "description": "Onuphis quadricuspis is a onuphidae species found in its native region."
         },
         {
@@ -2267,8 +2259,13 @@
           "lineage": "Onuphis",
           "authorship": "Audouin & H.Milne-Edwards, 1833",
           "sourceIds": {
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:227179",
-            "wikispecies": "Onuphis_eremita",
+            "checklistbank": [
+              "urn:lsid:dyntaxa.se:Taxon:227179",
+              "urn:lsid:marinespecies.org:taxname:335573"
+            ],
+            "wikispecies": [
+              "Onuphis_eremita"
+            ],
             "checklistbank-139831": "679693"
           },
           "children": [],
@@ -2406,11 +2403,14 @@
           "authorship": "Augener",
           "sourceIds": {
             "checklistbank": "8bc5cda5-0652-4823-b981-7015a29d6c10",
-            "checklistbank-139831": "393870"
+            "checklistbank-139831": [
+              "393870"
+            ]
           },
           "children": [],
           "uuid": "d6af412a-94f6-500-a14-e7795d4fe808c9",
-          "description": "Onuphis aucklandensis is a onuphidae species found in its native region."
+          "description": "Onuphis aucklandensis is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:8bc5cda5-0652-4823-b981-7015a29d6c10,checklistbank-139831:393870"
         },
         {
           "id": "SP_ONUPHIS_HOLOBRANCHIATA_MARENZELLER",
@@ -2422,11 +2422,14 @@
           "authorship": "Marenzeller",
           "sourceIds": {
             "checklistbank": "09de7b43-efa6-4eea-b971-f9499ed148a3",
-            "checklistbank-139831": "679695"
+            "checklistbank-139831": [
+              "679695"
+            ]
           },
           "children": [],
           "uuid": "aacd6da4-f04a-56b-bdc-08a5f7d9394d40",
-          "description": "Onuphis holobranchiata is a onuphidae species found in its native region."
+          "description": "Onuphis holobranchiata is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:09de7b43-efa6-4eea-b971-f9499ed148a3,checklistbank-139831:679695"
         },
         {
           "id": "SP_ONUPHIS_SP",
@@ -2593,22 +2596,6 @@
           "description": "\"Onuphis iridescens\" is a onuphidae species found in its native region."
         },
         {
-          "id": "SP_ONUPHIS_EREMITA_HARTMAN_1951",
-          "name": "\"Onuphis eremita",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Onuphis",
-          "authorship": "\"Hartman, 1951\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:335573",
-            "wikispecies": "Onuphis_eremita"
-          },
-          "children": [],
-          "uuid": "7a63c11c-923c-5de-a85-1f9fe50a43f9d2",
-          "description": "\"Onuphis eremita is a onuphidae species found in its native region."
-        },
-        {
           "id": "SP_ONUPHIS_ELEGANS_JOHNSON_1901",
           "name": "Onuphis elegans",
           "rank": "SPECIES",
@@ -2705,42 +2692,6 @@
           },
           "uuid": "4738d3eb-77a6-4a63-b943-a1b80a5022af",
           "children": []
-        },
-        {
-          "id": "SP_ONUPHIS_AUCKLANDENSIS",
-          "name": "Onuphis aucklandensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onuphis",
-          "sourceIds": {
-            "checklistbank-139831": "393870"
-          },
-          "uuid": "03483afc-584b-4e9f-908d-8d930d069eff"
-        },
-        {
-          "id": "SP_ONUPHIS_HOLOBRANCHIATA",
-          "name": "Onuphis holobranchiata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onuphis",
-          "sourceIds": {
-            "checklistbank-139831": "679695"
-          },
-          "uuid": "c45b8842-1889-45c8-89d9-ab25f1af1115"
-        },
-        {
-          "id": "SP_ONUPHIS_QUADRICUSPIS",
-          "name": "Onuphis quadricuspis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onuphis",
-          "sourceIds": {
-            "checklistbank-139831": "1569175"
-          },
-          "uuid": "bc12ce16-1f36-4994-89da-e00969199000"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3944,11 +3895,14 @@
           "authorship": "Arvanitidis & Koukouras, 1997",
           "sourceIds": {
             "checklistbank": "50475",
-            "checklistbank-139831": "1578208"
+            "checklistbank-139831": [
+              "1578208"
+            ]
           },
           "children": [],
           "uuid": "b478b5a1-17a4-5be-ac5-d4f32f40d6ac26",
-          "description": "Paradiopatra calliopae is a onuphidae species found in its native region."
+          "description": "Paradiopatra calliopae is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:50475,checklistbank-139831:1578208"
         },
         {
           "id": "SP_PARADIOPATRA_BARRAZAI_DE_LE_N_GONZ_LEZ_RIVERA_ROMERO_2004",
@@ -4346,18 +4300,6 @@
           },
           "uuid": "6770d85b-8c2b-4fbe-9e1d-6151bd0ccfd4",
           "children": []
-        },
-        {
-          "id": "SP_PARADIOPATRA_CALLIOPAE",
-          "name": "Paradiopatra calliopae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paradiopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1578208"
-          },
-          "uuid": "89ec0354-f698-4929-9bac-71bbcb4581dd"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6037,11 +5979,14 @@
           "authorship": "Knox & Cameron",
           "sourceIds": {
             "checklistbank": "b4757b2a-e4c6-480b-9811-22b9ab5b492c",
-            "checklistbank-139831": "1553531"
+            "checklistbank-139831": [
+              "1553531"
+            ]
           },
           "children": [],
           "uuid": "96b6333b-6d17-54a-8e8-e8d8de194d7537",
-          "description": "Diopatra aciculata is a onuphidae species found in its native region."
+          "description": "Diopatra aciculata is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:b4757b2a-e4c6-480b-9811-22b9ab5b492c,checklistbank-139831:1553531"
         },
         {
           "id": "SP_DIOPATRA_ALBIMANDIBULATA_PAXTON",
@@ -6053,11 +5998,14 @@
           "authorship": "Paxton",
           "sourceIds": {
             "checklistbank": "42400a7e-5324-4e03-93c1-2f59683d854d",
-            "checklistbank-139831": "1553539"
+            "checklistbank-139831": [
+              "1553539"
+            ]
           },
           "children": [],
           "uuid": "3d30d8b5-a65a-55a-be8-8dadc333db8ee0",
-          "description": "Diopatra albimandibulata is a onuphidae species found in its native region."
+          "description": "Diopatra albimandibulata is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:42400a7e-5324-4e03-93c1-2f59683d854d,checklistbank-139831:1553539"
         },
         {
           "id": "SP_DIOPATRA_AMBOINENSIS_AUDOUIN_MILNE_EDWARDS",
@@ -6099,11 +6047,14 @@
           "authorship": "Paxton",
           "sourceIds": {
             "checklistbank": "634af343-331d-4ac5-8d71-bf98cd86a22e",
-            "checklistbank-139831": "1553537"
+            "checklistbank-139831": [
+              "1553537"
+            ]
           },
           "children": [],
           "uuid": "e1de653e-7c23-577-831-2e088ae549aec6",
-          "description": "Diopatra gigova is a onuphidae species found in its native region."
+          "description": "Diopatra gigova is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:634af343-331d-4ac5-8d71-bf98cd86a22e,checklistbank-139831:1553537"
         },
         {
           "id": "SP_DIOPATRA_HANLEYI_PAXTON",
@@ -6115,11 +6066,14 @@
           "authorship": "Paxton",
           "sourceIds": {
             "checklistbank": "d460e2c1-01c2-4ea4-922c-1a0d04830127",
-            "checklistbank-139831": "1553536"
+            "checklistbank-139831": [
+              "1553536"
+            ]
           },
           "children": [],
           "uuid": "cc9dbfac-c175-5f3-983-35ad624df865aa",
-          "description": "Diopatra hanleyi is a onuphidae species found in its native region."
+          "description": "Diopatra hanleyi is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:d460e2c1-01c2-4ea4-922c-1a0d04830127,checklistbank-139831:1553536"
         },
         {
           "id": "SP_DIOPATRA_LILLIPUTIANA_PAXTON",
@@ -6131,11 +6085,14 @@
           "authorship": "Paxton",
           "sourceIds": {
             "checklistbank": "74075956-9bd5-42ce-bcff-7de98b104d41",
-            "checklistbank-139831": "1553534"
+            "checklistbank-139831": [
+              "1553534"
+            ]
           },
           "children": [],
           "uuid": "8b7d809d-a60a-5c4-b72-d72e8816e70356",
-          "description": "Diopatra lilliputiana is a onuphidae species found in its native region."
+          "description": "Diopatra lilliputiana is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:74075956-9bd5-42ce-bcff-7de98b104d41,checklistbank-139831:1553534"
         },
         {
           "id": "SP_DIOPATRA_MACULATA_PAXTON",
@@ -6147,11 +6104,14 @@
           "authorship": "Paxton",
           "sourceIds": {
             "checklistbank": "b560920f-793c-4a57-9369-8a25ae7beed9",
-            "checklistbank-139831": "1553533"
+            "checklistbank-139831": [
+              "1553533"
+            ]
           },
           "children": [],
           "uuid": "118d25cd-2e7c-5a8-911-3763d9418bd765",
-          "description": "Diopatra maculata is a onuphidae species found in its native region."
+          "description": "Diopatra maculata is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:b560920f-793c-4a57-9369-8a25ae7beed9,checklistbank-139831:1553533"
         },
         {
           "id": "SP_DIOPATRA_OLIGOPECTINATA_PAXTON",
@@ -6163,11 +6123,14 @@
           "authorship": "Paxton",
           "sourceIds": {
             "checklistbank": "49a71d35-204e-4982-b378-45ee78f3fc47",
-            "checklistbank-139831": "1553540"
+            "checklistbank-139831": [
+              "1553540"
+            ]
           },
           "children": [],
           "uuid": "7f0c91dd-f2ce-500-80e-a8ec15864a02e3",
-          "description": "Diopatra oligopectinata is a onuphidae species found in its native region."
+          "description": "Diopatra oligopectinata is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:49a71d35-204e-4982-b378-45ee78f3fc47,checklistbank-139831:1553540"
         },
         {
           "id": "SP_DIOPATRA_NEAPOLITANA",
@@ -6482,9 +6445,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Diopatra",
           "sourceIds": {
-            "checklistbank-139831": "388648"
+            "checklistbank-139831": [
+              "388648"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:388648"
         },
         {
           "id": "SP_DIOPATRA_MAROCENSIS",
@@ -6494,9 +6460,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Diopatra",
           "sourceIds": {
-            "checklistbank-139831": "1244764"
+            "checklistbank-139831": [
+              "1244764"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1244764"
         },
         {
           "id": "SP_DIOPATRA_HUPFERIANA",
@@ -6695,7 +6664,8 @@
           "sourceIds": {
             "checklistbank-139831": "388648"
           },
-          "uuid": "90de4224-92f8-4289-98ad-38741226c244"
+          "uuid": "90de4224-92f8-4289-98ad-38741226c244",
+          "children": []
         },
         {
           "id": "SP_DIOPATRA_MAROCENSIS",
@@ -6707,91 +6677,8 @@
           "sourceIds": {
             "checklistbank-139831": "1244764"
           },
-          "uuid": "da04a663-323c-42be-b55e-84596cdaa134"
-        },
-        {
-          "id": "SP_DIOPATRA_ACICULATA",
-          "name": "Diopatra aciculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553531"
-          },
-          "uuid": "d2124e98-72fa-493b-97cf-6a22302c3bf9"
-        },
-        {
-          "id": "SP_DIOPATRA_MACULATA",
-          "name": "Diopatra maculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553533"
-          },
-          "uuid": "b78163cf-1f12-4aad-8e35-dcb6bab87cfb"
-        },
-        {
-          "id": "SP_DIOPATRA_LILLIPUTIANA",
-          "name": "Diopatra lilliputiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553534"
-          },
-          "uuid": "b957ebe4-e932-412a-b106-cebec577b4cf"
-        },
-        {
-          "id": "SP_DIOPATRA_HANLEYI",
-          "name": "Diopatra hanleyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553536"
-          },
-          "uuid": "63f52170-16ae-453a-aa70-722c8f981fc3"
-        },
-        {
-          "id": "SP_DIOPATRA_GIGOVA",
-          "name": "Diopatra gigova",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553537"
-          },
-          "uuid": "ec8ddb5b-064a-40a6-b809-24b78bd9ff71"
-        },
-        {
-          "id": "SP_DIOPATRA_ALBIMANDIBULATA",
-          "name": "Diopatra albimandibulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553539"
-          },
-          "uuid": "164a07eb-9af2-4ef6-9c77-df0111f07d3b"
-        },
-        {
-          "id": "SP_DIOPATRA_OLIGOPECTINATA",
-          "name": "Diopatra oligopectinata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diopatra",
-          "sourceIds": {
-            "checklistbank-139831": "1553540"
-          },
-          "uuid": "a617d7a1-bdb8-4154-b36d-2bf89d9000d6"
+          "uuid": "da04a663-323c-42be-b55e-84596cdaa134",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9747,9 +9634,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Rhamphobrachium",
           "sourceIds": {
-            "checklistbank-139831": "687447"
+            "checklistbank-139831": [
+              "687447"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:687447"
         }
       ]
     },
@@ -9826,7 +9716,8 @@
           "sourceIds": {
             "checklistbank-139831": "687447"
           },
-          "uuid": "79bf3c9f-817d-4cda-aa5c-2141463f9e72"
+          "uuid": "79bf3c9f-817d-4cda-aa5c-2141463f9e72",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11499,11 +11390,14 @@
           "authorship": "Kucheruk",
           "sourceIds": {
             "checklistbank": "a80e6682-01aa-4d12-b413-c3abe5e22a9e",
-            "checklistbank-139831": "393470"
+            "checklistbank-139831": [
+              "393470"
+            ]
           },
           "children": [],
           "uuid": "84d7b2a6-4f73-560-888-f81218b17dbeca",
-          "description": "Nothria abyssia is a onuphidae species found in its native region."
+          "description": "Nothria abyssia is a onuphidae species found in its native region.",
+          "authorityIds": "checklistbank:a80e6682-01aa-4d12-b413-c3abe5e22a9e,checklistbank-139831:393470"
         },
         {
           "id": "SP_NOTHRIA_SP",
@@ -11652,18 +11546,6 @@
           },
           "uuid": "b307cefd-ad0a-4739-81fe-2e4cd53d62c6",
           "children": []
-        },
-        {
-          "id": "SP_NOTHRIA_ABYSSIA",
-          "name": "Nothria abyssia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nothria",
-          "sourceIds": {
-            "checklistbank-139831": "393470"
-          },
-          "uuid": "274745c7-216c-4c9b-b7ed-1c7913ff4432"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12100,55 +11982,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Onuphidae"
-    },
-    {
-      "id": "GENUS_NOTHRYA",
-      "name": "Nothrya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NOTHRYA_HYPERBOREA_HANSEN_1882",
-          "name": "Nothrya hyperborea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nothrya",
-          "authorship": "(Hansen, 1882)",
-          "sourceIds": {
-            "checklistbank": "50469"
-          },
-          "children": [],
-          "uuid": "810efce0-b267-564-b3c-f63a837c242a4d"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "onuphidae"
-    },
-    {
-      "id": "GENUS_PARAHYALINOECIA",
-      "name": "Parahyalinoecia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARAHYALINOECIA_APALPATA_HARTMANN_SCHR_DER_1975",
-          "name": "Parahyalinoecia apalpata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parahyalinoecia",
-          "authorship": "Hartmann-Schröder, 1975",
-          "sourceIds": {
-            "checklistbank": "50481"
-          },
-          "children": [],
-          "uuid": "67f88754-0246-5ce-a6a-3cebfe20c021cb"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "onuphidae"
     }
   ],
-  "genusCount": 45,
+  "genusCount": 43,
   "speciesCount": 640,
   "sourceIds": {
     "gbif": {

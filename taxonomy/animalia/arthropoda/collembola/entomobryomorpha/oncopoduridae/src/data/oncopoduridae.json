@@ -556,11 +556,16 @@
             "col": [
               "74N4J"
             ],
-            "checklistbank": "ott5010012",
-            "wikispecies": "Oncopodura_hamata",
+            "checklistbank": [
+              "ott5010012",
+              "urn:lsid:marinespecies.org:taxname:1852848"
+            ],
+            "wikispecies": [
+              "Oncopodura_hamata"
+            ],
             "gbif-backbone": "2121924"
           },
-          "authorityIds": "col:74N4J,itis:99881",
+          "authorityIds": "checklistbank:ott5010012,checklistbank:urn:lsid:marinespecies.org:taxname:1852848,col:74N4J,gbif-backbone:2121924,itis:99881,wikispecies:Oncopodura_hamata",
           "children": [],
           "description": "Oncopodura hamata is a oncopoduridae species found in its native region."
         },
@@ -1294,22 +1299,6 @@
           "description": "\"Oncopodura gul\" is a oncopoduridae species found in its native region."
         },
         {
-          "id": "SP_ONCOPODURA_HAMATA_CARL_LEBEDINSKY_1905",
-          "name": "\"Oncopodura hamata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oncopodura",
-          "authorship": "\"Carl & Lebedinsky, 1905\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1852848",
-            "wikispecies": "Oncopodura_hamata"
-          },
-          "children": [],
-          "uuid": "c50f8c13-05b6-5cd-887-d413a8dcd6548b",
-          "description": "\"Oncopodura hamata\" is a oncopoduridae species found in its native region."
-        },
-        {
           "id": "SP_ONCOPODURA_HOFFI_CHRISTIANSEN_BELLINGER_1980",
           "name": "\"Oncopodura hoffi\"",
           "rank": "SPECIES",
@@ -1734,7 +1723,8 @@
           "sourceIds": {
             "checklistbank-139831": "226396"
           },
-          "uuid": "aaf92296-6ee4-4f84-8576-082a1c11f5e4"
+          "uuid": "aaf92296-6ee4-4f84-8576-082a1c11f5e4",
+          "children": []
         },
         {
           "id": "SP_ONCOPODURA_PRIETOI",
@@ -1746,7 +1736,8 @@
           "sourceIds": {
             "checklistbank-139831": "226402"
           },
-          "uuid": "26bf4cee-647d-403f-a460-7523260cda57"
+          "uuid": "26bf4cee-647d-403f-a460-7523260cda57",
+          "children": []
         },
         {
           "id": "SP_ONCOPODURA_ATOYACENSIS",
@@ -1758,7 +1749,8 @@
           "sourceIds": {
             "checklistbank-139831": "296610"
           },
-          "uuid": "51574eef-17c6-4f6d-8feb-3f6816acf741"
+          "uuid": "51574eef-17c6-4f6d-8feb-3f6816acf741",
+          "children": []
         },
         {
           "id": "SP_ONCOPODURA_CRASSICORNIS",
@@ -1770,7 +1762,8 @@
           "sourceIds": {
             "checklistbank-139831": "917151"
           },
-          "uuid": "9bd11d58-0f91-4544-9e4d-b0de9b3835f0"
+          "uuid": "9bd11d58-0f91-4544-9e4d-b0de9b3835f0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1794,43 +1787,25 @@
             "col": [
               "4XLBL"
             ],
-            "checklistbank": "Sinoncopodura_nana",
-            "wikispecies": "Sinoncopodura_nana",
-            "gbif-backbone": "9181125"
+            "checklistbank": [
+              "Sinoncopodura_nana",
+              "urn:lsid:marinespecies.org:taxname:1852879"
+            ],
+            "wikispecies": [
+              "Sinoncopodura_nana"
+            ],
+            "gbif-backbone": "9181125",
+            "checklistbank-139831": [
+              "1441106"
+            ]
           },
-          "authorityIds": "col:4XLBL",
+          "authorityIds": "checklistbank:Sinoncopodura_nana,checklistbank:urn:lsid:marinespecies.org:taxname:1852879,checklistbank-139831:1441106,col:4XLBL,gbif-backbone:9181125,wikispecies:Sinoncopodura_nana",
           "children": [],
           "description": "Sinoncopodura nana is a oncopoduridae species found in its native region."
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Oncopoduridae"
-    },
-    {
-      "id": "GENUS_SINONCOPODURA",
-      "name": "\"Sinoncopodura",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SINONCOPODURA_NANA_YU_ZHANG_DEHARVENG_2014",
-          "name": "\"Sinoncopodura nana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sinoncopodura",
-          "authorship": "\"Yu, Zhang & Deharveng, 2014\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1852879",
-            "wikispecies": "Sinoncopodura_nana",
-            "checklistbank-139831": "1441106"
-          },
-          "children": [],
-          "uuid": "e9ff0c2c-ae35-51e-ad0-f9ee8636de5bfd",
-          "description": "\"Sinoncopodura nana\" is a oncopoduridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "oncopoduridae"
     },
     {
       "id": "GENUS_HARLOMILLSIA",
@@ -1880,11 +1855,11 @@
       "lineage": "Oncopoduridae"
     }
   ],
-  "speciesCount": 105,
+  "speciesCount": 103,
   "appSlug": "oncopoduridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Collembola",
-  "genusCount": 5,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

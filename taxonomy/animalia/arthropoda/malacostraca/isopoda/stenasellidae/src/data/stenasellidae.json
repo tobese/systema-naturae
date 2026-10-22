@@ -1099,7 +1099,8 @@
           "sourceIds": {
             "checklistbank-139831": "634523"
           },
-          "uuid": "fa25c7ab-e96e-4c61-95f4-e2b64ec7c5a1"
+          "uuid": "fa25c7ab-e96e-4c61-95f4-e2b64ec7c5a1",
+          "children": []
         },
         {
           "id": "SP_STENASELLUS_STOCKI",
@@ -1111,7 +1112,8 @@
           "sourceIds": {
             "checklistbank-139831": "794964"
           },
-          "uuid": "370905a5-5dd0-4dd6-87de-06f8f8b633af"
+          "uuid": "370905a5-5dd0-4dd6-87de-06f8f8b633af",
+          "children": []
         },
         {
           "id": "SP_STENASELLUS_RACOVITZAI",
@@ -1123,7 +1125,8 @@
           "sourceIds": {
             "checklistbank-139831": "1456108"
           },
-          "uuid": "a06a9060-cd01-4b9f-aa83-243eacbcd67e"
+          "uuid": "a06a9060-cd01-4b9f-aa83-243eacbcd67e",
+          "children": []
         },
         {
           "id": "SP_STENASELLUS_NURAGICUS",
@@ -1135,7 +1138,8 @@
           "sourceIds": {
             "checklistbank-139831": "1649998"
           },
-          "uuid": "d6559174-e313-49b7-ab25-0a40a9aad0a7"
+          "uuid": "d6559174-e313-49b7-ab25-0a40a9aad0a7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1185,40 +1189,20 @@
             "itis": [
               "543322"
             ],
-            "checklistbank": "259223",
-            "wikispecies": "Balkanostenasellus_skopljensis"
+            "checklistbank": [
+              "259223",
+              "urn:lsid:marinespecies.org:taxname:264429"
+            ],
+            "wikispecies": [
+              "Balkanostenasellus_skopljensis"
+            ]
           },
-          "authorityIds": "col:KH9L,itis:543322",
+          "authorityIds": "checklistbank:259223,checklistbank:urn:lsid:marinespecies.org:taxname:264429,col:KH9L,itis:543322,wikispecies:Balkanostenasellus_skopljensis",
           "description": "Balkanostenasellus skopljensis is a stenasellidae species found in its native region."
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Stenasellidae"
-    },
-    {
-      "id": "GENUS_BALKANOSTENASELLUS",
-      "name": "\"Balkanostenasellus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BALKANOSTENASELLUS_SKOPLJENSIS_KARAMAN_1954",
-          "name": "\"Balkanostenasellus skopljensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Balkanostenasellus",
-          "authorship": "\"(Karaman, 1954)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:264429",
-            "wikispecies": "Balkanostenasellus_skopljensis"
-          },
-          "children": [],
-          "uuid": "57cc0b90-655e-57a-a41-94beed3139f693",
-          "description": "\"Balkanostenasellus skopljensis is a stenasellidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "stenasellidae"
     },
     {
       "id": "GENUS_PARASTENASELLUS",
@@ -2046,7 +2030,8 @@
           "sourceIds": {
             "checklistbank-139831": "526663"
           },
-          "uuid": "fd9fddd0-b4eb-463b-8464-d6bc31d0e12b"
+          "uuid": "fd9fddd0-b4eb-463b-8464-d6bc31d0e12b",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2081,11 +2066,11 @@
       "lineage": "stenasellidae"
     }
   ],
-  "speciesCount": 101,
+  "speciesCount": 100,
   "appSlug": "stenasellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 14,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -35,11 +35,19 @@
             "col": [
               "4N8CC"
             ],
-            "checklistbank": "3978",
-            "wikispecies": "Prunella_modularis",
-            "gbif-backbone": "6086202"
+            "checklistbank": [
+              "3978",
+              "urn:lsid:marinespecies.org:taxname:1534864"
+            ],
+            "wikispecies": [
+              "Prunella_modularis"
+            ],
+            "gbif-backbone": "6086202",
+            "checklistbank-139831": [
+              "13988"
+            ]
           },
-          "authorityIds": "col:4N8CC,itis:562489,wikidata:Q26698",
+          "authorityIds": "checklistbank:3978,checklistbank:urn:lsid:marinespecies.org:taxname:1534864,checklistbank-139831:13988,col:4N8CC,gbif-backbone:6086202,itis:562489,wikidata:Q26698,wikispecies:Prunella_modularis",
           "authorship": "(Linnaeus, 1758)",
           "children": []
         },
@@ -70,9 +78,17 @@
             ],
             "checklistbank": "3984",
             "gbif-backbone": "6086432",
-            "checklistbank-1174": "txn:368993"
+            "checklistbank-1174": [
+              "txn:368993"
+            ],
+            "wikispecies": [
+              "Prunella_collaris"
+            ],
+            "checklistbank-170809": [
+              "22718617"
+            ]
           },
-          "authorityIds": "col:4N8B4,itis:562483,wikidata:Q208334",
+          "authorityIds": "checklistbank:3984,checklistbank-1174:txn:368993,checklistbank-170809:22718617,col:4N8B4,gbif-backbone:6086432,itis:562483,wikidata:Q208334,wikispecies:Prunella_collaris",
           "authorship": "(Scopoli, 1769)",
           "children": []
         },
@@ -437,23 +453,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PRUNELLA_MODULARIS_LINNAEUS_1758",
-          "name": "\"Prunella modularis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prunella",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1534864",
-            "wikispecies": "Prunella_modularis",
-            "checklistbank-139831": "13988"
-          },
-          "children": [],
-          "uuid": "9b3c698c-8437-5de-a7c-3c720e196ce1e2",
-          "description": "\"Prunella modularis\" is a prunellidae species found in its native region."
-        },
-        {
           "id": "SP_PRUNELLA_ATROGULARIS",
           "name": "Prunella atrogularis",
           "rank": "SPECIES",
@@ -465,21 +464,6 @@
             "checklistbank-170809": "22718644"
           },
           "uuid": "26b0588b-68a1-4c66-a492-df7d01151486",
-          "children": []
-        },
-        {
-          "id": "SP_PRUNELLA_COLLARIS",
-          "name": "Prunella collaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prunella",
-          "sourceIds": {
-            "wikispecies": "Prunella_collaris",
-            "checklistbank-1174": "txn:368993",
-            "checklistbank-170809": "22718617"
-          },
-          "uuid": "1da14fcb-bbf8-414c-96e1-ebedc26f520c",
           "children": []
         },
         {
@@ -765,5 +749,5 @@
     "checklistbank-1174": "txn:368982"
   },
   "genusCount": 6,
-  "speciesCount": 33
+  "speciesCount": 31
 }

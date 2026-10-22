@@ -614,11 +614,22 @@
             "col": [
               "9JRLN"
             ],
-            "checklistbank": "32864",
-            "checklistbank-1174": "txn:241499"
+            "checklistbank": [
+              "32864",
+              "urn:lsid:marinespecies.org:taxname:112864"
+            ],
+            "checklistbank-1174": [
+              "txn:241499"
+            ],
+            "checklistbank-127379": [
+              "6eab13d6-f00c-4b72-8996-5026152b8ab1"
+            ],
+            "checklistbank-139831": [
+              "1514261"
+            ]
           },
           "uuid": "bfbc081a-03ba-595-897-972e4c04a655f8",
-          "authorityIds": "col:9JRLN,gbif:7818074",
+          "authorityIds": "checklistbank:32864,checklistbank:urn:lsid:marinespecies.org:taxname:112864,checklistbank-1174:txn:241499,checklistbank-127379:6eab13d6-f00c-4b72-8996-5026152b8ab1,checklistbank-139831:1514261,col:9JRLN,gbif:7818074",
           "authorship": "d'Orbigny in Guerin-Meneville, 1843"
         },
         {
@@ -1341,24 +1352,6 @@
           "children": [],
           "uuid": "06b3babc-7d4d-5e2-a79-5b4dec1a8e6d26",
           "description": "\"Amphistegina gibbosa\" is a amphisteginidae species found in its native region."
-        },
-        {
-          "id": "SP_AMPHISTEGINA_LESSONII_D_ORBIGNY_IN_DESHAYES_1830",
-          "name": "\"Amphistegina lessonii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Amphistegina",
-          "authorship": "\"d'Orbigny in Deshayes, 1830\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:112864",
-            "checklistbank-1174": "txn:241499",
-            "checklistbank-127379": "6eab13d6-f00c-4b72-8996-5026152b8ab1",
-            "checklistbank-139831": "1514261"
-          },
-          "children": [],
-          "uuid": "f08d7f84-1436-5ca-95a-167e7970f2095e",
-          "description": "\"Amphistegina lessonii\" is a amphisteginidae species found in its native region."
         },
         {
           "id": "SP_AMPHISTEGINA_PAPILLOSA_SAID_1949",
@@ -2310,7 +2303,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 120,
+  "speciesCount": 119,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

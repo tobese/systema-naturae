@@ -147,11 +147,22 @@
             "col": [
               "79WX9"
             ],
-            "checklistbank": "55140",
-            "wikispecies": "Schizophyllum_commune"
+            "checklistbank": [
+              "55140",
+              "urn:lsid:marinespecies.org:taxname:437835"
+            ],
+            "wikispecies": [
+              "Schizophyllum_commune"
+            ],
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60062686"
+            ],
+            "checklistbank-139831": [
+              "54573"
+            ]
           },
           "uuid": "39f2122d-fd93-513-89f-ecbb174671a9ea",
-          "authorityIds": "col:79WX9,gbif:5241128,mycobank:208403",
+          "authorityIds": "checklistbank:55140,checklistbank:urn:lsid:marinespecies.org:taxname:437835,checklistbank-139831:54573,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60062686,col:79WX9,gbif:5241128,mycobank:208403,wikispecies:Schizophyllum_commune",
           "children": []
         },
         {
@@ -495,24 +506,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SCHIZOPHYLLUM_COMMUNE_FR_1815",
-          "name": "\"Schizophyllum commune\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Schizophyllum",
-          "authorship": "\"Fr., 1815\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437835",
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60062686",
-            "wikispecies": "Schizophyllum_commune",
-            "checklistbank-139831": "54573"
-          },
-          "children": [],
-          "uuid": "aa67901f-cbf2-583-b17-1ddaada98c89e3",
-          "description": "\"Schizophyllum commune\" is a schizophyllaceae species found in its native region."
-        },
-        {
           "id": "SP_SCHIZOPHYLLUM_AMPLUM_L_V_NAKASONE_1996",
           "name": "\"Schizophyllum amplum\"",
           "rank": "SPECIES",
@@ -539,7 +532,8 @@
           "sourceIds": {
             "checklistbank-139831": "352358"
           },
-          "uuid": "52206480-c77c-4190-be11-c1271c98f6b1"
+          "uuid": "52206480-c77c-4190-be11-c1271c98f6b1",
+          "children": []
         },
         {
           "id": "SP_SCHIZOPHYLLUM_UMBRINUM",
@@ -551,7 +545,8 @@
           "sourceIds": {
             "checklistbank-139831": "352359"
           },
-          "uuid": "1928080a-692b-45d3-9ae9-d281dad57539"
+          "uuid": "1928080a-692b-45d3-9ae9-d281dad57539",
+          "children": []
         },
         {
           "id": "SP_SCHIZOPHYLLUM_MURRAYI",
@@ -563,7 +558,8 @@
           "sourceIds": {
             "checklistbank-139831": "1269527"
           },
-          "uuid": "9a05d02a-a9cb-4428-9455-94ac19aa6cf3"
+          "uuid": "9a05d02a-a9cb-4428-9455-94ac19aa6cf3",
+          "children": []
         },
         {
           "id": "SP_SCHIZOPHYLLUM_VARIABILE",
@@ -575,7 +571,8 @@
           "sourceIds": {
             "checklistbank-139831": "1269529"
           },
-          "uuid": "13961385-4580-4dff-aa24-c8f920896770"
+          "uuid": "13961385-4580-4dff-aa24-c8f920896770",
+          "children": []
         },
         {
           "id": "SP_SCHIZOPHYLLUM_LEPRIEURII",
@@ -587,7 +584,8 @@
           "sourceIds": {
             "checklistbank-139831": "1677003"
           },
-          "uuid": "ed247189-602f-4121-a982-7173af96b684"
+          "uuid": "ed247189-602f-4121-a982-7173af96b684",
+          "children": []
         },
         {
           "id": "SP_SCHIZOPHYLLUM_BRASILIENSE",
@@ -599,7 +597,8 @@
           "sourceIds": {
             "checklistbank-139831": "1677004"
           },
-          "uuid": "b1a82ab3-bce3-42ed-88c1-0c6a7ab4f820"
+          "uuid": "b1a82ab3-bce3-42ed-88c1-0c6a7ab4f820",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1751,7 +1750,7 @@
   ],
   "authorship": "Quélet",
   "genusCount": 28,
-  "speciesCount": 89,
+  "speciesCount": 88,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

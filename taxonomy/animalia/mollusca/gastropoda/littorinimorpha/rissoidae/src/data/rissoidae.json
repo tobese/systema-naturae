@@ -726,12 +726,17 @@
             "itis": [
               "71006"
             ],
-            "checklistbank": "61308",
+            "checklistbank": [
+              "61308",
+              "urn:lsid:marinespecies.org:taxname:141308"
+            ],
             "checklistbank-2008": "362998",
             "gbif-backbone": "2299464",
-            "checklistbank-1174": "txn:108865"
+            "checklistbank-1174": [
+              "txn:108865"
+            ]
           },
-          "authorityIds": "col:6SMVQ,itis:71006"
+          "authorityIds": "checklistbank:61308,checklistbank:urn:lsid:marinespecies.org:taxname:141308,checklistbank-1174:txn:108865,checklistbank-2008:362998,col:6SMVQ,gbif-backbone:2299464,itis:71006"
         },
         {
           "id": "SP_ONOBA_AEDICULA",
@@ -4719,22 +4724,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ONOBA_ACULEUS_A_A_GOULD_1841",
-          "name": "\"Onoba aculeus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Onoba",
-          "authorship": "\"(A. A. Gould, 1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141308",
-            "checklistbank-1174": "txn:108865"
-          },
-          "children": [],
-          "uuid": "c9f2ffe4-2359-593-807-19fd22f50fab04",
-          "description": "\"Onoba aculeus\" is a rissoidae species found in its native region."
-        },
-        {
           "id": "SP_ONOBA_GIANNINII_F_NORDSIECK_1974",
           "name": "\"Onoba gianninii\"",
           "rank": "SPECIES",
@@ -5655,7 +5644,8 @@
           "sourceIds": {
             "checklistbank-139831": "408889"
           },
-          "uuid": "a3f2b91b-73e2-45f1-928b-30f75c56c720"
+          "uuid": "a3f2b91b-73e2-45f1-928b-30f75c56c720",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8309,7 +8299,8 @@
           "sourceIds": {
             "checklistbank-139831": "1403380"
           },
-          "uuid": "254e23cd-82e9-458b-98a8-cbd89c840929"
+          "uuid": "254e23cd-82e9-458b-98a8-cbd89c840929",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9844,7 +9835,8 @@
           "sourceIds": {
             "checklistbank-139831": "1611856"
           },
-          "uuid": "203c4cdb-a099-4b58-8d9b-4b797f3c245b"
+          "uuid": "203c4cdb-a099-4b58-8d9b-4b797f3c245b",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12180,20 +12172,6 @@
           "children": [],
           "uuid": "05111282-dc71-5b8-854-ea59f4417a999f",
           "description": "Plagyostila senegalensis is a rissoidae species found in its native region."
-        },
-        {
-          "id": "SP_PLAGYOSTILA_ASTURIANA_FISCHER_P_IN_DE_FOLIN_1872",
-          "name": "Plagyostila asturiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plagyostila",
-          "authorship": "Fischer P. in de Folin, 1872",
-          "sourceIds": {
-            "checklistbank": "61325"
-          },
-          "children": [],
-          "uuid": "c33dc976-d8ad-5a2-a21-c470a2fe529b5d"
         }
       ]
     },
@@ -16773,9 +16751,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:867393"
             ],
-            "checklistbank-1174": "txn:337259"
+            "checklistbank-1174": [
+              "txn:337259"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:867393"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:867393,col:CBF3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:867393,checklistbank-1174:txn:337259,checklistbank-2011:urn:lsid:marinespecies.org:taxname:867393,col:CBF3",
           "authorship": "(A. W. Janssen, 1967)"
         },
         {
@@ -20058,9 +20041,14 @@
               "urn:lsid:marinespecies.org:taxname:744930"
             ],
             "gbif-backbone": "5935564",
-            "checklistbank-1174": "txn:114796"
+            "checklistbank-1174": [
+              "txn:114796"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:744930"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:744930,col:CBMP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:744930,checklistbank-1174:txn:114796,checklistbank-2011:urn:lsid:marinespecies.org:taxname:744930,col:CBMP,gbif-backbone:5935564",
           "authorship": "(A. d'Orbigny, 1852)"
         },
         {
@@ -20183,10 +20171,15 @@
             "col": [
               "CBMZ"
             ],
-            "checklistbank": "61222",
-            "checklistbank-1174": "txn:210028"
+            "checklistbank": [
+              "61222",
+              "urn:lsid:marinespecies.org:taxname:141222"
+            ],
+            "checklistbank-1174": [
+              "txn:210028"
+            ]
           },
-          "authorityIds": "col:CBMZ",
+          "authorityIds": "checklistbank:61222,checklistbank:urn:lsid:marinespecies.org:taxname:141222,checklistbank-1174:txn:210028,col:CBMZ",
           "authorship": "(Bucquoy, Dautzenberg & Dollfus, 1884)"
         },
         {
@@ -22956,9 +22949,14 @@
               "urn:lsid:marinespecies.org:taxname:872265"
             ],
             "gbif-backbone": "5935567",
-            "checklistbank-1174": "txn:112677"
+            "checklistbank-1174": [
+              "txn:112677"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:872265"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:872265,col:CPYSV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:872265,checklistbank-1174:txn:112677,checklistbank-2011:urn:lsid:marinespecies.org:taxname:872265,col:CPYSV,gbif-backbone:5935567",
           "authorship": "(Etheridge & A. Bell, 1893)"
         },
         {
@@ -29200,49 +29198,6 @@
           "uuid": "047dca37-89c0-53e-a43-a0eabfefe45b66"
         },
         {
-          "id": "SP_ALVANIA_LITORALIS_NORDSIECK_1972",
-          "name": "Alvania litoralis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alvania",
-          "authorship": "(Nordsieck, 1972)",
-          "sourceIds": {
-            "checklistbank": "61208"
-          },
-          "children": [],
-          "uuid": "17dd2cdf-e61d-509-a47-bb80a86c1e28ae"
-        },
-        {
-          "id": "SP_ALVANIA_MINUTA_GOLIKOV_FEDJAKOV_IN_SCARLATO_1987",
-          "name": "Alvania minuta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alvania",
-          "authorship": "(Golikov & Fedjakov in Scarlato, 1987)",
-          "sourceIds": {
-            "checklistbank": "61215",
-            "gbif-backbone": "9779076"
-          },
-          "children": [],
-          "uuid": "a1732f98-cd97-5fc-92f-5441acf9bf3be1"
-        },
-        {
-          "id": "SP_ALVANIA_PLATYCEPHALA_DAUTZENBERG_FISCHER_H_1896",
-          "name": "Alvania platycephala",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alvania",
-          "authorship": "Dautzenberg & Fischer H., 1896",
-          "sourceIds": {
-            "checklistbank": "61225"
-          },
-          "children": [],
-          "uuid": "50cffc80-d643-5b1-b33-fe054eaacbb12b"
-        },
-        {
           "id": "SP_ALVANIA_GONTSHAROVAE",
           "name": "Alvania gontsharovae",
           "rank": "SPECIES",
@@ -29749,22 +29704,6 @@
           "children": [],
           "uuid": "84fa9f54-ef5f-57d-b5d-954882b34b33cb",
           "description": "\"Alvania moniziana\" is a rissoidae species found in its native region."
-        },
-        {
-          "id": "SP_ALVANIA_PAGODULA_BUCQUOY_DAUTZENBERG_DOLLFUS_1884",
-          "name": "\"Alvania pagodula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Alvania",
-          "authorship": "\"(Bucquoy, Dautzenberg & Dollfus, 1884)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141222",
-            "checklistbank-1174": "txn:210028"
-          },
-          "children": [],
-          "uuid": "3bccfcec-93a9-51e-aeb-777b5820378465",
-          "description": "\"Alvania pagodula\" is a rissoidae species found in its native region."
         },
         {
           "id": "SP_ALVANIA_PARVULA_JEFFREYS_1884",
@@ -30668,21 +30607,6 @@
           "children": []
         },
         {
-          "id": "SP_ALVANIA_OCEANI_A_D_ORBIGNY_1852",
-          "name": "Alvania oceani",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alvania",
-          "authorship": "(A. d'Orbigny, 1852)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:744930",
-            "checklistbank-1174": "txn:114796"
-          },
-          "uuid": "aa805bcf-3a75-4a8f-b2ae-3f9e4aac25f1",
-          "children": []
-        },
-        {
           "id": "SP_ALVANIA_AKIBAI_YOKOYAMA_1926",
           "name": "Alvania akibai",
           "rank": "SPECIES",
@@ -30809,21 +30733,6 @@
           "children": []
         },
         {
-          "id": "SP_ALVANIA_DINGDENSIS_A_W_JANSSEN_1967",
-          "name": "Alvania dingdensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alvania",
-          "authorship": "(A. W. Janssen, 1967)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:867393",
-            "checklistbank-1174": "txn:337259"
-          },
-          "uuid": "93f71614-ee14-41b5-9aa0-70802787df0a",
-          "children": []
-        },
-        {
           "id": "SP_ALVANIA_CRATICULA_BRIART_CORNET_1887",
           "name": "Alvania craticula",
           "rank": "SPECIES",
@@ -30835,21 +30744,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:871502"
           },
           "uuid": "896c144e-5cdd-4b84-ae5d-d0e15493fee5",
-          "children": []
-        },
-        {
-          "id": "SP_ALVANIA_WHITLEYI_ETHERIDGE_A_BELL_1893",
-          "name": "Alvania whitleyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alvania",
-          "authorship": "(Etheridge & A. Bell, 1893)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:872265",
-            "checklistbank-1174": "txn:112677"
-          },
-          "uuid": "5c28d6ef-31e4-451a-8404-f767ed31adbb",
           "children": []
         },
         {
@@ -45860,7 +45754,8 @@
           "sourceIds": {
             "checklistbank-139831": "958433"
           },
-          "uuid": "15caf8d7-2708-4f98-baf7-a1a16270e61d"
+          "uuid": "15caf8d7-2708-4f98-baf7-a1a16270e61d",
+          "children": []
         },
         {
           "id": "SP_RISSOA_ALBUGO",
@@ -45872,7 +45767,8 @@
           "sourceIds": {
             "checklistbank-139831": "1265287"
           },
-          "uuid": "9319c7be-e9b4-4c84-8e7b-8a1a9c3aae69"
+          "uuid": "9319c7be-e9b4-4c84-8e7b-8a1a9c3aae69",
+          "children": []
         },
         {
           "id": "SP_RISSOA_MONODONTA",
@@ -45884,7 +45780,8 @@
           "sourceIds": {
             "checklistbank-139831": "1564293"
           },
-          "uuid": "f33672ef-4ff9-49fb-a63a-893a7969b110"
+          "uuid": "f33672ef-4ff9-49fb-a63a-893a7969b110",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -47548,7 +47445,8 @@
           "sourceIds": {
             "checklistbank-139831": "1600919"
           },
-          "uuid": "755d4a26-e695-43b0-ae3c-477008c3f8bb"
+          "uuid": "755d4a26-e695-43b0-ae3c-477008c3f8bb",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -55335,7 +55233,7 @@
     }
   ],
   "genusCount": 136,
-  "speciesCount": 3168,
+  "speciesCount": 3166,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

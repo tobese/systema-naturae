@@ -472,11 +472,16 @@
             "col": [
               "53C24"
             ],
-            "checklistbank": "ott7071591",
-            "wikispecies": "Styracaster_yapensis",
+            "checklistbank": [
+              "ott7071591",
+              "urn:lsid:marinespecies.org:taxname:1042605"
+            ],
+            "wikispecies": [
+              "Styracaster_yapensis"
+            ],
             "gbif-backbone": "9247315"
           },
-          "authorityIds": "col:53C24",
+          "authorityIds": "checklistbank:ott7071591,checklistbank:urn:lsid:marinespecies.org:taxname:1042605,col:53C24,gbif-backbone:9247315,wikispecies:Styracaster_yapensis",
           "description": "Styracaster yapensis is a porcellanasteridae species found in its native region."
         },
         {
@@ -577,22 +582,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_STYRACASTER_YAPENSIS_R_ZHANG_Y_ZHAO_B_LU_AND_C_WANG_2017",
-          "name": "\"Styracaster yapensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Styracaster",
-          "authorship": "\"R. Zhang, Y. Zhao, B. Lu, and C. Wang, 2017\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1042605",
-            "wikispecies": "Styracaster_yapensis"
-          },
-          "children": [],
-          "uuid": "d6e61f7f-3c15-58b-b7f-4fe63daa82f7ee",
-          "description": "\"Styracaster yapensis\" is a porcellanasteridae species found in its native region."
-        },
-        {
           "id": "SP_STYRACASTER_ARMATUS",
           "name": "Styracaster armatus",
           "rank": "SPECIES",
@@ -667,7 +656,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166124"
           },
-          "uuid": "16ad0fed-0270-4f9f-9dc2-a866fbd88fa0"
+          "uuid": "16ad0fed-0270-4f9f-9dc2-a866fbd88fa0",
+          "children": []
         },
         {
           "id": "SP_STYRACASTER_TRANSITVUS",
@@ -679,7 +669,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166132"
           },
-          "uuid": "fa2a3329-efe4-456a-b28e-1b0dc3f069a5"
+          "uuid": "fa2a3329-efe4-456a-b28e-1b0dc3f069a5",
+          "children": []
         },
         {
           "id": "SP_STYRACASTER_SIMPLIPAXILLATUS",
@@ -691,7 +682,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166133"
           },
-          "uuid": "8cc05219-d846-4b77-be5d-6b2a4feedc95"
+          "uuid": "8cc05219-d846-4b77-be5d-6b2a4feedc95",
+          "children": []
         },
         {
           "id": "SP_STYRACASTER_LONGISPINUS",
@@ -703,7 +695,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166134"
           },
-          "uuid": "aceb7856-86f3-4c75-9581-ce44e07b9a74"
+          "uuid": "aceb7856-86f3-4c75-9581-ce44e07b9a74",
+          "children": []
         },
         {
           "id": "SP_STYRACASTER_MONACANTHUS",
@@ -715,7 +708,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166135"
           },
-          "uuid": "3f35af4c-702a-4209-8b2f-6843ef01aec0"
+          "uuid": "3f35af4c-702a-4209-8b2f-6843ef01aec0",
+          "children": []
         },
         {
           "id": "SP_STYRACASTER_PAUCISPINUS",
@@ -727,7 +721,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166136"
           },
-          "uuid": "6e14665f-a729-4ab3-92d7-a10a78741487"
+          "uuid": "6e14665f-a729-4ab3-92d7-a10a78741487",
+          "children": []
         },
         {
           "id": "SP_STYRACASTER_ROBUSTUS",
@@ -739,7 +734,8 @@
           "sourceIds": {
             "checklistbank-139831": "1166137"
           },
-          "uuid": "1fb441c3-98c6-4b82-b026-644ac85dc771"
+          "uuid": "1fb441c3-98c6-4b82-b026-644ac85dc771",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1650,7 +1646,7 @@
       "lineage": "porcellanasteridae"
     }
   ],
-  "speciesCount": 84,
+  "speciesCount": 83,
   "appSlug": "porcellanasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Asteroidea",

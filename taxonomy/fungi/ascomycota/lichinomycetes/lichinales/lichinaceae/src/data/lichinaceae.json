@@ -4578,11 +4578,16 @@
             "col": [
               "4LY2R"
             ],
-            "checklistbank": "75622",
-            "wikispecies": "Porocyphus_coccodes"
+            "checklistbank": [
+              "75622",
+              "urn:lsid:marinespecies.org:taxname:1607413"
+            ],
+            "wikispecies": [
+              "Porocyphus_coccodes"
+            ]
           },
           "uuid": "db719005-fb82-5b9-a64-ff1091c0adfb13",
-          "authorityIds": "col:4LY2R,gbif:8300050,mycobank:402349"
+          "authorityIds": "checklistbank:75622,checklistbank:urn:lsid:marinespecies.org:taxname:1607413,col:4LY2R,gbif:8300050,mycobank:402349,wikispecies:Porocyphus_coccodes"
         },
         {
           "id": "POROCYPHUS_GROENLANDICUS",
@@ -5171,22 +5176,6 @@
       "name": "\"Porocyphus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_POROCYPHUS_COCCODES_FLOT_EX_K_RB_1855",
-          "name": "\"Porocyphus coccodes\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Porocyphus",
-          "authorship": "\"Flot. ex Körb., 1855\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607413",
-            "wikispecies": "Porocyphus_coccodes"
-          },
-          "children": [],
-          "uuid": "c29d2e0b-a300-5d9-9bf-16f45b35fa973f",
-          "description": "\"Porocyphus coccodes\" is a lichinaceae species found in its native region."
-        },
         {
           "id": "SP_POROCYPHUS_BYSSOIDES",
           "name": "Porocyphus byssoides",
@@ -7881,10 +7870,15 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:988666"
             ],
-            "wikispecies": "Lichina_antarctica"
+            "wikispecies": [
+              "Lichina_antarctica"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:988666"
+            ]
           },
           "uuid": "b8f2ea0f-21de-576-8d7-232e00f17fa8a6",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:988666,col:6PXQY,gbif:3477001,mycobank:394636"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:988666,checklistbank-2011:urn:lsid:marinespecies.org:taxname:988666,col:6PXQY,gbif:3477001,mycobank:394636,wikispecies:Lichina_antarctica"
         },
         {
           "id": "LICHINA_CONFINIS",
@@ -7910,13 +7904,18 @@
             "col": [
               "6PY2Y"
             ],
-            "checklistbank": "75564",
-            "wikispecies": "Lichina_confinis",
+            "checklistbank": [
+              "75564",
+              "urn:lsid:marinespecies.org:taxname:147721"
+            ],
+            "wikispecies": [
+              "Lichina_confinis"
+            ],
             "checklistbank-2008": "56329",
             "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=122242"
           },
           "uuid": "19771604-34ed-59f-8b7-91859fbc54f1ad",
-          "authorityIds": "col:6PY2Y,gbif:2587057,mycobank:122242"
+          "authorityIds": "checklistbank:75564,checklistbank:urn:lsid:marinespecies.org:taxname:147721,checklistbank-2008:56329,checklistbank-316361:https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=122242,col:6PY2Y,gbif:2587057,mycobank:122242,wikispecies:Lichina_confinis"
         },
         {
           "id": "LICHINA_INTERMEDIA",
@@ -8279,37 +8278,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LICHINA_CONFINIS_O_F_M_LLER_C_AGARDH_1821",
-          "name": "\"Lichina confinis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lichina",
-          "authorship": "\"(O.F. Müller) C. Agardh, 1821\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:147721",
-            "wikispecies": "Lichina_confinis"
-          },
-          "children": [],
-          "uuid": "b6e0da11-6aec-560-87f-d542882dc2ec60",
-          "description": "\"Lichina confinis\" is a lichinaceae species found in its native region."
-        },
-        {
-          "id": "SP_LICHINA_ANTARCTICA_CROMB_1876",
-          "name": "Lichina antarctica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lichina",
-          "authorship": "Cromb., 1876",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:988666",
-            "wikispecies": "Lichina_antarctica"
-          },
-          "uuid": "960f1006-ef9e-4d3b-a834-f0fdc998abdc",
-          "children": []
-        },
-        {
           "id": "SP_LICHINA_MINUTISSIMA",
           "name": "Lichina minutissima",
           "rank": "SPECIES",
@@ -8397,7 +8365,8 @@
           "sourceIds": {
             "checklistbank-139831": "574607"
           },
-          "uuid": "5dba2f59-628b-439a-852b-9db31f248ace"
+          "uuid": "5dba2f59-628b-439a-852b-9db31f248ace",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14791,7 +14760,8 @@
           "sourceIds": {
             "checklistbank-139831": "227326"
           },
-          "uuid": "27dc91d5-d2b4-4a73-9eae-422e9bd49156"
+          "uuid": "27dc91d5-d2b4-4a73-9eae-422e9bd49156",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -19391,7 +19361,7 @@
   ],
   "authorship": "Nylander",
   "genusCount": 122,
-  "speciesCount": 950,
+  "speciesCount": 949,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

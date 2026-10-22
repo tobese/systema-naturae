@@ -36,10 +36,18 @@
             "itis": [
               "174379"
             ],
-            "checklistbank": "ott857864",
-            "wikispecies": "Rhea_americana"
+            "checklistbank": [
+              "ott857864",
+              "urn:lsid:marinespecies.org:taxname:1566258"
+            ],
+            "wikispecies": [
+              "Rhea_americana"
+            ],
+            "checklistbank-139831": [
+              "20512"
+            ]
           },
-          "authorityIds": "col:4S5KY,itis:174379,wikidata:Q192044",
+          "authorityIds": "checklistbank:ott857864,checklistbank:urn:lsid:marinespecies.org:taxname:1566258,checklistbank-139831:20512,col:4S5KY,itis:174379,wikidata:Q192044,wikispecies:Rhea_americana",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -67,9 +75,17 @@
               "4S5KZ"
             ],
             "checklistbank": "8795",
-            "checklistbank-1174": "txn:372680"
+            "checklistbank-1174": [
+              "txn:372680"
+            ],
+            "wikispecies": [
+              "Rhea_pennata"
+            ],
+            "checklistbank-170809": [
+              "22678081"
+            ]
           },
-          "authorityIds": "col:4S5KZ,itis:553787,wikidata:Q733120",
+          "authorityIds": "checklistbank:8795,checklistbank-1174:txn:372680,checklistbank-170809:22678081,col:4S5KZ,itis:553787,wikidata:Q733120,wikispecies:Rhea_pennata",
           "authorship": "d'Orbigny, 1834"
         },
         {
@@ -194,38 +210,6 @@
       "name": "\"Rhea",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_RHEA_AMERICANA_LINNAEUS_1758",
-          "name": "\"Rhea americana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhea",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1566258",
-            "wikispecies": "Rhea_americana",
-            "checklistbank-139831": "20512"
-          },
-          "children": [],
-          "uuid": "299d52d9-ab29-598-a51-af42be68918b97",
-          "description": "\"Rhea americana\" is a rheidae species found in its native region."
-        },
-        {
-          "id": "SP_RHEA_PENNATA",
-          "name": "Rhea pennata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhea",
-          "sourceIds": {
-            "wikispecies": "Rhea_pennata",
-            "checklistbank-1174": "txn:372680",
-            "checklistbank-170809": "22678081"
-          },
-          "uuid": "66da077d-3d8f-4408-b150-7dbfbd658223",
-          "children": []
-        },
         {
           "id": "SP_RHEA_SUBPAMPEANA_MORENO_AND_MERCERAT_1891",
           "name": "Rhea subpampeana",
@@ -480,7 +464,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 25,
+  "speciesCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

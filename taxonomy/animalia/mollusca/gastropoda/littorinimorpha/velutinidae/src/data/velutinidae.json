@@ -225,10 +225,15 @@
             "itis": [
               "72715"
             ],
-            "checklistbank": "61902",
-            "checklistbank-1174": "txn:343719"
+            "checklistbank": [
+              "61902",
+              "urn:lsid:marinespecies.org:taxname:141902"
+            ],
+            "checklistbank-1174": [
+              "txn:343719"
+            ]
           },
-          "authorityIds": "col:7FM3G,itis:72715"
+          "authorityIds": "checklistbank:61902,checklistbank:urn:lsid:marinespecies.org:taxname:141902,checklistbank-1174:txn:343719,col:7FM3G,itis:72715"
         },
         {
           "id": "SP_VELUTINA_PULCHELLA_DERJUGIN_1950",
@@ -328,10 +333,15 @@
             "col": [
               "7FLPS"
             ],
-            "checklistbank": "61905",
-            "checklistbank-1174": "txn:343004"
+            "checklistbank": [
+              "61905",
+              "urn:lsid:marinespecies.org:taxname:141905"
+            ],
+            "checklistbank-1174": [
+              "txn:343004"
+            ]
           },
-          "authorityIds": "col:7FLPS,itis:72712"
+          "authorityIds": "checklistbank:61905,checklistbank:urn:lsid:marinespecies.org:taxname:141905,checklistbank-1174:txn:343004,col:7FLPS,itis:72712"
         },
         {
           "id": "SP_VELUTINA_VIRGATA_WOOD_1848",
@@ -854,9 +864,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Velutina",
           "sourceIds": {
-            "checklistbank-139831": "1046094"
+            "checklistbank-139831": [
+              "1046094"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1046094"
         }
       ]
     },
@@ -865,38 +878,6 @@
       "name": "\"Velutina",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_VELUTINA_PLICATILIS_O_F_M_LLER_1776",
-          "name": "\"Velutina plicatilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Velutina",
-          "authorship": "\"(O. F. Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141902",
-            "checklistbank-1174": "txn:343719"
-          },
-          "children": [],
-          "uuid": "a24c0f57-e9ca-538-b11-889879e4d42294",
-          "description": "\"Velutina plicatilis\" is a velutinidae species found in its native region."
-        },
-        {
-          "id": "SP_VELUTINA_VELUTINA_O_F_M_LLER_1776",
-          "name": "\"Velutina velutina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Velutina",
-          "authorship": "\"(O. F. Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141905",
-            "checklistbank-1174": "txn:343004"
-          },
-          "children": [],
-          "uuid": "7b560525-9f86-545-a8d-14045f18f2a94c",
-          "description": "\"Velutina velutina\" is a velutinidae species found in its native region."
-        },
         {
           "id": "SP_VELUTINA_CORIACEA_PALLAS_1788",
           "name": "Velutina coriacea",
@@ -921,7 +902,8 @@
           "sourceIds": {
             "checklistbank-139831": "1046094"
           },
-          "uuid": "513962a8-434e-4555-bd5d-e499c9939159"
+          "uuid": "513962a8-434e-4555-bd5d-e499c9939159",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1286,9 +1268,11 @@
               "7SJ4H"
             ],
             "checklistbank": "1222206",
-            "checklistbank-139831": "1222206"
+            "checklistbank-139831": [
+              "1222206"
+            ]
           },
-          "authorityIds": "col:7SJ4H",
+          "authorityIds": "checklistbank:1222206,checklistbank-139831:1222206,col:7SJ4H",
           "description": "Onchidiopsis gurjanovae is a velutinidae species found in its native region."
         },
         {
@@ -1514,9 +1498,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Onchidiopsis",
           "sourceIds": {
-            "checklistbank-139831": "171897"
+            "checklistbank-139831": [
+              "171897"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:171897"
         },
         {
           "id": "SP_ONCHIDIOPSIS_CARNEA",
@@ -1526,9 +1513,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Onchidiopsis",
           "sourceIds": {
-            "checklistbank-139831": "171898"
+            "checklistbank-139831": [
+              "171898"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:171898"
         }
       ]
     },
@@ -1562,7 +1552,8 @@
           "sourceIds": {
             "checklistbank-139831": "171897"
           },
-          "uuid": "3afb495c-05a7-4a60-9d6b-4af72c22496e"
+          "uuid": "3afb495c-05a7-4a60-9d6b-4af72c22496e",
+          "children": []
         },
         {
           "id": "SP_ONCHIDIOPSIS_CARNEA",
@@ -1574,19 +1565,8 @@
           "sourceIds": {
             "checklistbank-139831": "171898"
           },
-          "uuid": "f803cff1-92ef-4d76-be2f-ddb2e1b6b0d5"
-        },
-        {
-          "id": "SP_ONCHIDIOPSIS_GURJANOVAE",
-          "name": "Onchidiopsis gurjanovae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onchidiopsis",
-          "sourceIds": {
-            "checklistbank-139831": "1222206"
-          },
-          "uuid": "83fcf083-db01-42df-b25b-18cdb60b7f41"
+          "uuid": "f803cff1-92ef-4d76-be2f-ddb2e1b6b0d5",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1813,9 +1793,11 @@
               "BSCBN"
             ],
             "checklistbank": "1506816",
-            "checklistbank-139831": "1506816"
+            "checklistbank-139831": [
+              "1506816"
+            ]
           },
-          "authorityIds": "col:BSCBN",
+          "authorityIds": "checklistbank:1506816,checklistbank-139831:1506816,col:BSCBN",
           "description": "Marsenina pax is a velutinidae species found in its native region."
         },
         {
@@ -1828,12 +1810,15 @@
           "authorship": "L. M. Perry, 1939",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:419752",
-            "checklistbank-139831": "1222184"
+            "checklistbank-139831": [
+              "1222184"
+            ]
           },
           "children": [],
           "uuid": "a882de09-238b-504-a09-fc1454608d8226",
           "commonName": "rotund lamellaria",
-          "description": "Marsenina globosa (rotund lamellaria) is a velutinidae species found in its native region."
+          "description": "Marsenina globosa (rotund lamellaria) is a velutinidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:419752,checklistbank-139831:1222184"
         },
         {
           "id": "SP_MARSENINA_ZADEI",
@@ -1970,30 +1955,6 @@
           },
           "uuid": "c2df8a45-7e54-4690-9d9c-62835a50df39",
           "children": []
-        },
-        {
-          "id": "SP_MARSENINA_GLOBOSA",
-          "name": "Marsenina globosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Marsenina",
-          "sourceIds": {
-            "checklistbank-139831": "1222184"
-          },
-          "uuid": "0bad3c05-846b-4286-baf0-a186774ae279"
-        },
-        {
-          "id": "SP_MARSENINA_PAX",
-          "name": "Marsenina pax",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Marsenina",
-          "sourceIds": {
-            "checklistbank-139831": "1506816"
-          },
-          "uuid": "77a0ba62-7387-4296-ac75-e6adb2c016ab"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2047,9 +2008,11 @@
               "9X8CV"
             ],
             "checklistbank": "1446888",
-            "checklistbank-139831": "1446888"
+            "checklistbank-139831": [
+              "1446888"
+            ]
           },
-          "authorityIds": "col:9X8CV",
+          "authorityIds": "checklistbank:1446888,checklistbank-139831:1446888,col:9X8CV",
           "description": "Calyptoconcha capensis is a velutinidae species found in its native region."
         },
         {
@@ -2067,9 +2030,11 @@
               "9X87B"
             ],
             "checklistbank": "1446887",
-            "checklistbank-139831": "1446887"
+            "checklistbank-139831": [
+              "1446887"
+            ]
           },
-          "authorityIds": "col:9X87B",
+          "authorityIds": "checklistbank:1446887,checklistbank-139831:1446887,col:9X87B",
           "description": "Calyptoconcha branca is a velutinidae species found in its native region."
         }
       ]
@@ -2093,30 +2058,6 @@
           "children": [],
           "uuid": "aaf15453-4b63-570-85c-0969017ab61594",
           "description": "\"Calyptoconcha pellucida\" is a velutinidae species found in its native region."
-        },
-        {
-          "id": "SP_CALYPTOCONCHA_BRANCA",
-          "name": "Calyptoconcha branca",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calyptoconcha",
-          "sourceIds": {
-            "checklistbank-139831": "1446887"
-          },
-          "uuid": "e13fa44f-7293-4f99-a72e-fc91f3ee4496"
-        },
-        {
-          "id": "SP_CALYPTOCONCHA_CAPENSIS",
-          "name": "Calyptoconcha capensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calyptoconcha",
-          "sourceIds": {
-            "checklistbank-139831": "1446888"
-          },
-          "uuid": "ce3d93d1-b1f3-4c5a-8b65-ed0b883e2bd3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3339,10 +3280,15 @@
             "itis": [
               "72696"
             ],
-            "checklistbank": "60172",
-            "checklistbank-1174": "txn:343137"
+            "checklistbank": [
+              "60172",
+              "urn:lsid:marinespecies.org:taxname:140172"
+            ],
+            "checklistbank-1174": [
+              "txn:343137"
+            ]
           },
-          "authorityIds": "col:3RYYD,itis:72696"
+          "authorityIds": "checklistbank:60172,checklistbank:urn:lsid:marinespecies.org:taxname:140172,checklistbank-1174:txn:343137,col:3RYYD,itis:72696"
         },
         {
           "id": "SP_LAMELLARIA_LEUCOSPHAERA_SCHWENGEL_1942",
@@ -3419,9 +3365,11 @@
             ],
             "checklistbank": "1443795",
             "gbif-backbone": "11132090",
-            "checklistbank-139831": "1443795"
+            "checklistbank-139831": [
+              "1443795"
+            ]
           },
-          "authorityIds": "col:7RT47",
+          "authorityIds": "checklistbank:1443795,checklistbank-139831:1443795,col:7RT47,gbif-backbone:11132090",
           "description": "Lamellaria kiiensis is a velutinidae species found in its native region."
         },
         {
@@ -3457,9 +3405,11 @@
               "9X8BT"
             ],
             "checklistbank": "1445482",
-            "checklistbank-139831": "1445482"
+            "checklistbank-139831": [
+              "1445482"
+            ]
           },
-          "authorityIds": "col:9X8BT",
+          "authorityIds": "checklistbank:1445482,checklistbank-139831:1445482,col:9X8BT",
           "description": "Lamellaria fella is a velutinidae species found in its native region."
         },
         {
@@ -3974,22 +3924,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LAMELLARIA_LATENS_O_F_M_LLER_1776",
-          "name": "\"Lamellaria latens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lamellaria",
-          "authorship": "\"(O. F. Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140172",
-            "checklistbank-1174": "txn:343137"
-          },
-          "children": [],
-          "uuid": "7abceb3d-d243-509-8a4-e03c1f076d9b74",
-          "description": "\"Lamellaria latens\" is a velutinidae species found in its native region."
-        },
-        {
           "id": "SP_LAMELLARIA_BERGHI_DESHAYES_1863",
           "name": "Lamellaria berghi",
           "rank": "SPECIES",
@@ -4044,30 +3978,6 @@
           },
           "uuid": "e43f6d3d-3588-4645-8175-edbdbbf769e4",
           "children": []
-        },
-        {
-          "id": "SP_LAMELLARIA_KIIENSIS",
-          "name": "Lamellaria kiiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamellaria",
-          "sourceIds": {
-            "checklistbank-139831": "1443795"
-          },
-          "uuid": "91f3785a-c798-460e-a23d-b03e4b083e8b"
-        },
-        {
-          "id": "SP_LAMELLARIA_FELLA",
-          "name": "Lamellaria fella",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamellaria",
-          "sourceIds": {
-            "checklistbank-139831": "1445482"
-          },
-          "uuid": "b9556e8e-4a2b-4b69-9b35-cef631db714f"
         }
       ],
       "sourcedFrom": "checklistbank",

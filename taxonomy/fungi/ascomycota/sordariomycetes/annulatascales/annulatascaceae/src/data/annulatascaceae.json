@@ -698,11 +698,16 @@
             "col": [
               "K54H"
             ],
-            "checklistbank": "369503",
-            "wikispecies": "Ayria_appendiculata"
+            "checklistbank": [
+              "369503",
+              "urn:lsid:marinespecies.org:taxname:1456986"
+            ],
+            "wikispecies": [
+              "Ayria_appendiculata"
+            ]
           },
           "uuid": "09a44231-0dfa-587-838-8b38e890ae3120",
-          "authorityIds": "col:K54H,gbif:2569447,mycobank:369503"
+          "authorityIds": "checklistbank:369503,checklistbank:urn:lsid:marinespecies.org:taxname:1456986,col:K54H,gbif:2569447,mycobank:369503,wikispecies:Ayria_appendiculata"
         },
         {
           "id": "AYRIA_NUBISPORA",
@@ -734,31 +739,6 @@
       ],
       "authorship": "Fryar & K.D. Hyde",
       "speciesList": []
-    },
-    {
-      "id": "GENUS_AYRIA",
-      "name": "\"Ayria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AYRIA_APPENDICULATA_FRYAR_K_D_HYDE_2004",
-          "name": "\"Ayria appendiculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ayria",
-          "authorship": "\"Fryar & K.D. Hyde, 2004\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1456986",
-            "wikispecies": "Ayria_appendiculata"
-          },
-          "children": [],
-          "uuid": "f2189679-c223-5da-8bd-e52b85a95d3de2",
-          "description": "\"Ayria appendiculata\" is a annulatascaceae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "annulatascaceae"
     },
     {
       "id": "GENUS_FUSOIDISPORA",
@@ -1725,7 +1705,8 @@
           "sourceIds": {
             "checklistbank-139831": "1557269"
           },
-          "uuid": "3406326c-d9ef-43ba-a34f-159ca9de296e"
+          "uuid": "3406326c-d9ef-43ba-a34f-159ca9de296e",
+          "children": []
         },
         {
           "id": "SP_RHAMPHORIA_SEPARATA",
@@ -1737,7 +1718,8 @@
           "sourceIds": {
             "checklistbank-139831": "1557271"
           },
-          "uuid": "9170777e-482d-4329-99f7-74428261fe06"
+          "uuid": "9170777e-482d-4329-99f7-74428261fe06",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4255,8 +4237,8 @@
     }
   ],
   "authorship": "S.W. Wong, K.D. Hyde & E.B.G. Jones",
-  "genusCount": 55,
-  "speciesCount": 176,
+  "genusCount": 54,
+  "speciesCount": 177,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

@@ -35,11 +35,16 @@
             "col": [
               "WLZX"
             ],
-            "checklistbank": "ott3784051",
-            "wikispecies": "Coccotrema_antarcticum"
+            "checklistbank": [
+              "ott3784051",
+              "urn:lsid:marinespecies.org:taxname:988675"
+            ],
+            "wikispecies": [
+              "Coccotrema_antarcticum"
+            ]
           },
           "uuid": "d7387da8-ca6e-57c-809-2d20900b106a3a",
-          "authorityIds": "col:WLZX,gbif:3412759,mycobank:431444"
+          "authorityIds": "checklistbank:ott3784051,checklistbank:urn:lsid:marinespecies.org:taxname:988675,col:WLZX,gbif:3412759,mycobank:431444,wikispecies:Coccotrema_antarcticum"
         },
         {
           "id": "COCCOTREMA_CITRINESCENS",
@@ -180,12 +185,20 @@
             "col": [
               "WM24"
             ],
-            "checklistbank": "76297",
-            "wikispecies": "Coccotrema_cucurbitula",
-            "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=383101"
+            "checklistbank": [
+              "76297",
+              "urn:lsid:marinespecies.org:taxname:1607493"
+            ],
+            "wikispecies": [
+              "Coccotrema_cucurbitula"
+            ],
+            "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=383101",
+            "checklistbank-139831": [
+              "400929"
+            ]
           },
           "uuid": "11f43d05-fad6-5b6-9d7-0bf58523a31dc8",
-          "authorityIds": "col:WM24,gbif:3412764,mycobank:383101"
+          "authorityIds": "checklistbank:76297,checklistbank:urn:lsid:marinespecies.org:taxname:1607493,checklistbank-139831:400929,checklistbank-316361:https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=383101,col:WM24,gbif:3412764,mycobank:383101,wikispecies:Coccotrema_cucurbitula"
         },
         {
           "id": "COCCOTREMA_FERNANDEZIANUM",
@@ -546,39 +559,6 @@
       "name": "\"Coccotrema",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_COCCOTREMA_ANTARCTICUM_M_LL_ARG_1889",
-          "name": "\"Coccotrema antarcticum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coccotrema",
-          "authorship": "\"Müll. Arg., 1889\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988675",
-            "wikispecies": "Coccotrema_antarcticum"
-          },
-          "children": [],
-          "uuid": "57081136-a7e5-564-a0f-8348c527466aa5",
-          "description": "\"Coccotrema antarcticum\" is a coccotremataceae species found in its native region."
-        },
-        {
-          "id": "SP_COCCOTREMA_CUCURBITULA_MONT_M_LL_ARG_1889",
-          "name": "\"Coccotrema cucurbitula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coccotrema",
-          "authorship": "\"(Mont.) Müll. Arg., 1889\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607493",
-            "wikispecies": "Coccotrema_cucurbitula",
-            "checklistbank-139831": "400929"
-          },
-          "children": [],
-          "uuid": "eb8102cb-774e-5a3-aa7-899f9f7d1f137d",
-          "description": "\"Coccotrema cucurbitula\" is a coccotremataceae species found in its native region."
-        },
         {
           "id": "SP_COCCOTREMA_CITRINESCENS",
           "name": "Coccotrema citrinescens",
@@ -1247,7 +1227,7 @@
   ],
   "authorship": "Henssen",
   "genusCount": 10,
-  "speciesCount": 56,
+  "speciesCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

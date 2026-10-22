@@ -1261,7 +1261,8 @@
           "sourceIds": {
             "checklistbank-139831": "486027"
           },
-          "uuid": "e3cc8b5f-3574-4354-90bd-25b8c3794f44"
+          "uuid": "e3cc8b5f-3574-4354-90bd-25b8c3794f44",
+          "children": []
         },
         {
           "id": "SP_CENTROPYXIS_SPINOSA",
@@ -1273,7 +1274,8 @@
           "sourceIds": {
             "checklistbank-139831": "1118017"
           },
-          "uuid": "6f78d5ef-a5cc-4e05-b996-2e73e7a69bdc"
+          "uuid": "6f78d5ef-a5cc-4e05-b996-2e73e7a69bdc",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1316,11 +1318,19 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 4378378,
-            "checklistbank": "1098265",
-            "wikispecies": "Centropyxiella_elegans"
+            "checklistbank": [
+              "1098265",
+              "urn:lsid:marinespecies.org:taxname:136816"
+            ],
+            "wikispecies": [
+              "Centropyxiella_elegans"
+            ],
+            "checklistbank-139831": [
+              "1098265"
+            ]
           },
           "uuid": "d7dc1b4b-bafb-573-bda-dc3ea403dea0ac",
-          "authorityIds": "gbif:4378378",
+          "authorityIds": "checklistbank:1098265,checklistbank:urn:lsid:marinespecies.org:taxname:136816,checklistbank-139831:1098265,gbif:4378378,wikispecies:Centropyxiella_elegans",
           "children": []
         },
         {
@@ -1453,23 +1463,6 @@
           "children": [],
           "uuid": "209c4486-2f2d-57f-beb-65c2de2693b0d6",
           "description": "\"Centropyxiella arenaria\" is a centropyxidae species found in its native region."
-        },
-        {
-          "id": "SP_CENTROPYXIELLA_ELEGANS_VALKANOV_1970",
-          "name": "\"Centropyxiella elegans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Centropyxiella",
-          "authorship": "\"Valkanov, 1970\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:136816",
-            "wikispecies": "Centropyxiella_elegans",
-            "checklistbank-139831": "1098265"
-          },
-          "children": [],
-          "uuid": "ebddc9b2-c11e-513-94d-066627e716c217",
-          "description": "\"Centropyxiella elegans\" is a centropyxidae species found in its native region."
         },
         {
           "id": "SP_CENTROPYXIELLA_GIBBULA_VALKANOV_1970",
@@ -1863,5 +1856,5 @@
     "wikispecies": "Centropyxidae"
   },
   "genusCount": 12,
-  "speciesCount": 102
+  "speciesCount": 101
 }

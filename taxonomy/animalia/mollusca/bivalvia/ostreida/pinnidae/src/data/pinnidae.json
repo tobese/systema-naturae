@@ -29,9 +29,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1570223"
             ],
-            "checklistbank-1174": "txn:172513"
+            "checklistbank-1174": [
+              "txn:172513"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1570223"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570223,col:KZQGV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570223,checklistbank-1174:txn:172513,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1570223,col:KZQGV",
           "authorship": "(J. Sowerby, 1821)"
         },
         {
@@ -404,9 +409,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:507064"
             ],
-            "checklistbank-1174": "txn:249413"
+            "checklistbank-1174": [
+              "txn:249413"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:507064"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507064,col:JL6X",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507064,checklistbank-1174:txn:249413,checklistbank-2011:urn:lsid:marinespecies.org:taxname:507064,col:JL6X",
           "authorship": "(G. B. Sowerby I, 1835)"
         },
         {
@@ -655,10 +665,15 @@
             "col": [
               "JL79"
             ],
-            "checklistbank": "218377",
-            "checklistbank-1174": "txn:158633"
+            "checklistbank": [
+              "218377",
+              "urn:lsid:marinespecies.org:taxname:420741"
+            ],
+            "checklistbank-1174": [
+              "txn:158633"
+            ]
           },
-          "authorityIds": "col:JL79,itis:79581"
+          "authorityIds": "checklistbank:218377,checklistbank:urn:lsid:marinespecies.org:taxname:420741,checklistbank-1174:txn:158633,col:JL79,itis:79581"
         },
         {
           "id": "SP_ATRINA_SINUATA_T_R_WALLER_2005",
@@ -1503,11 +1518,14 @@
           "authorship": "([Lightfoot], 1786)",
           "sourceIds": {
             "checklistbank": "605780",
-            "checklistbank-139831": "214591"
+            "checklistbank-139831": [
+              "214591"
+            ]
           },
           "children": [],
           "uuid": "8b24838d-f16e-588-835-29f32c58fa1bc4",
-          "description": "Atrina rigida, commonly called the rigid pen shell, is a species of bivalve mollusc in the family Pinnidae."
+          "description": "Atrina rigida, commonly called the rigid pen shell, is a species of bivalve mollusc in the family Pinnidae.",
+          "authorityIds": "checklistbank:605780,checklistbank-139831:214591"
         },
         {
           "id": "SP_ATRINA_AEQUILATERA_MARTENS_1880",
@@ -1528,9 +1546,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Atrina",
           "sourceIds": {
-            "checklistbank-139831": "1210756"
+            "checklistbank-139831": [
+              "1210756"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:1210756"
         }
       ]
     },
@@ -1600,22 +1621,6 @@
           "children": [],
           "uuid": "ebeb5ac7-d397-56d-ae7-ae0b3ec46c1ab2",
           "description": "\"Atrina squamifera\" is a pinnidae species found in its native region."
-        },
-        {
-          "id": "SP_ATRINA_SERRATA_G_B_SOWERBY_I_1825",
-          "name": "\"Atrina serrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Atrina",
-          "authorship": "\"(G. B. Sowerby I, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420741",
-            "checklistbank-1174": "txn:158633"
-          },
-          "children": [],
-          "uuid": "8d8ebdd3-96ec-548-8ed-426fb746c48b75",
-          "description": "\"Atrina serrata\" is a pinnidae species found in its native region."
         },
         {
           "id": "SP_ATRINA_CHINENSIS_DESHAYES_1844",
@@ -1716,21 +1721,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507063"
           },
           "uuid": "36bcf1b4-eb13-476d-a199-d323486c4e3b",
-          "children": []
-        },
-        {
-          "id": "SP_ATRINA_MAURA_G_B_SOWERBY_I_1835",
-          "name": "Atrina maura",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Atrina",
-          "authorship": "(G. B. Sowerby I, 1835)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:507064",
-            "checklistbank-1174": "txn:249413"
-          },
-          "uuid": "9fb17c09-5b44-4cf0-b8e0-e8067059ae44",
           "children": []
         },
         {
@@ -1861,21 +1851,6 @@
           "children": []
         },
         {
-          "id": "SP_ATRINA_AFFINIS_J_SOWERBY_1821",
-          "name": "Atrina affinis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Atrina",
-          "authorship": "(J. Sowerby, 1821)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1570223",
-            "checklistbank-1174": "txn:172513"
-          },
-          "uuid": "eeabade9-f842-470a-8693-b3abc7b93145",
-          "children": []
-        },
-        {
           "id": "SP_ATRINA_CORDATA_PRITCHARD_1895",
           "name": "Atrina cordata",
           "rank": "SPECIES",
@@ -1932,18 +1907,6 @@
           "children": []
         },
         {
-          "id": "SP_ATRINA_RIGIDA",
-          "name": "Atrina rigida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Atrina",
-          "sourceIds": {
-            "checklistbank-139831": "214591"
-          },
-          "uuid": "11606093-f0e2-4c14-9474-fe5b2c5b83ec"
-        },
-        {
           "id": "SP_ATRINA_OLDROYDII",
           "name": "Atrina oldroydii",
           "rank": "SPECIES",
@@ -1953,7 +1916,8 @@
           "sourceIds": {
             "checklistbank-139831": "1210756"
           },
-          "uuid": "37d0035b-0d9c-46e7-aa99-4290c8de19a9"
+          "uuid": "37d0035b-0d9c-46e7-aa99-4290c8de19a9",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7355,7 +7319,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 432,
+  "speciesCount": 430,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

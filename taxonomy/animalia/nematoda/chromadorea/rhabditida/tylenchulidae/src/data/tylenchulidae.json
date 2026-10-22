@@ -3906,11 +3906,14 @@
           "authorship": "Linford in Linford, Oliveira & Ishii, 1949",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1425823",
-            "checklistbank-139831": "681882"
+            "checklistbank-139831": [
+              "681882"
+            ]
           },
           "children": [],
           "uuid": "c6b2f17a-dc16-534-8ba-df062aeb45cf3a",
-          "description": "Paratylenchus minutus is a tylenchulidae species found in its native region."
+          "description": "Paratylenchus minutus is a tylenchulidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1425823,checklistbank-139831:681882"
         },
         {
           "id": "SP_PARATYLENCHUS_BILINEATUS_BRZESKI_1995_BRZESKI_1998",
@@ -4027,11 +4030,14 @@
           "authorship": "(Raski, 1976) Siddiqi, 1986",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1425915",
-            "checklistbank-139831": "681887"
+            "checklistbank-139831": [
+              "681887"
+            ]
           },
           "children": [],
           "uuid": "dd00f3e8-ac80-5ec-99e-1b4e53be1c8158",
-          "description": "Paratylenchus teres is a tylenchulidae species found in its native region."
+          "description": "Paratylenchus teres is a tylenchulidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1425915,checklistbank-139831:681887"
         },
         {
           "id": "SP_PARATYLENCHUS_VERUS_BRZESKI_1995_BRZESKI_1998",
@@ -5400,9 +5406,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Paratylenchus",
           "sourceIds": {
-            "checklistbank-139831": "681888"
+            "checklistbank-139831": [
+              "681888"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:681888"
         },
         {
           "id": "SP_PARATYLENCHUS_VERUCULATUS",
@@ -5412,9 +5421,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Paratylenchus",
           "sourceIds": {
-            "checklistbank-139831": "681889"
+            "checklistbank-139831": [
+              "681889"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:681889"
         }
       ]
     },
@@ -5469,30 +5481,6 @@
           "description": "\"Paratylenchus (Paratylenchus) is a tylenchulidae species found in its native region."
         },
         {
-          "id": "SP_PARATYLENCHUS_MINUTUS",
-          "name": "Paratylenchus minutus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paratylenchus",
-          "sourceIds": {
-            "checklistbank-139831": "681882"
-          },
-          "uuid": "64d396b4-512e-4f5f-a2e0-1b1fdfec12fe"
-        },
-        {
-          "id": "SP_PARATYLENCHUS_TERES",
-          "name": "Paratylenchus teres",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paratylenchus",
-          "sourceIds": {
-            "checklistbank-139831": "681887"
-          },
-          "uuid": "4a4a4fae-17f1-414d-a6ac-a5abc057b0fc"
-        },
-        {
           "id": "SP_PARATYLENCHUS_VANDENBRANDEI",
           "name": "Paratylenchus vandenbrandei",
           "rank": "SPECIES",
@@ -5502,7 +5490,8 @@
           "sourceIds": {
             "checklistbank-139831": "681888"
           },
-          "uuid": "913b05b5-5709-4316-a330-8bdc37cb56af"
+          "uuid": "913b05b5-5709-4316-a330-8bdc37cb56af",
+          "children": []
         },
         {
           "id": "SP_PARATYLENCHUS_VERUCULATUS",
@@ -5514,7 +5503,8 @@
           "sourceIds": {
             "checklistbank-139831": "681889"
           },
-          "uuid": "907a372a-be30-4fb8-a563-6d665089aab1"
+          "uuid": "907a372a-be30-4fb8-a563-6d665089aab1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6234,7 +6224,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 352,
+  "speciesCount": 354,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -742,7 +742,8 @@
           "sourceIds": {
             "checklistbank-139831": "1665949"
           },
-          "uuid": "4185d3c0-4e8e-4f3c-bdc5-3f0445e4baaf"
+          "uuid": "4185d3c0-4e8e-4f3c-bdc5-3f0445e4baaf",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1109,12 +1110,18 @@
               "4N57L"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:933850"
+              "urn:lsid:marinespecies.org:taxname:933850",
+              "urn:lsid:marinespecies.org:taxname:933851"
             ],
             "gbif-backbone": "9361076",
-            "checklistbank-1174": "txn:327960"
+            "checklistbank-1174": [
+              "txn:327960"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:933850"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933850,col:4N57L",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933850,checklistbank:urn:lsid:marinespecies.org:taxname:933851,checklistbank-1174:txn:327960,checklistbank-2011:urn:lsid:marinespecies.org:taxname:933850,col:4N57L,gbif-backbone:9361076",
           "authorship": "(Thomä, 1845)"
         },
         {
@@ -1197,23 +1204,6 @@
       "name": "\"Protodrepanostoma",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PROTODREPANOSTOMA_INVOLUTUM_FALKNER_1986",
-          "name": "\"Protodrepanostoma involutum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protodrepanostoma",
-          "authorship": "\"Falkner, 1986\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:933851",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933850",
-            "checklistbank-1174": "txn:327960"
-          },
-          "children": [],
-          "uuid": "a3831490-9f71-5df-a7d-03b4c439e3a34a",
-          "description": "\"Protodrepanostoma involutum is a helicodontidae species found in its native region."
-        },
         {
           "id": "SP_PROTODREPANOSTOMA_HECKLEI_KLIKA_1891",
           "name": "Protodrepanostoma hecklei",
@@ -1567,7 +1557,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 79,
+  "speciesCount": 78,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

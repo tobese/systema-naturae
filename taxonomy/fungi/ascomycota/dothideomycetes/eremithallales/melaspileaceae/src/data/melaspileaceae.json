@@ -515,10 +515,15 @@
               "3ZCPG"
             ],
             "checklistbank": "76565",
-            "wikispecies": "Melaspilea_diplasiospora"
+            "wikispecies": [
+              "Melaspilea_diplasiospora"
+            ],
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60057412"
+            ]
           },
           "uuid": "5fd09773-9f05-5f7-bda-2965357966ab10",
-          "authorityIds": "col:3ZCPG,gbif:2592606,mycobank:395316"
+          "authorityIds": "checklistbank:76565,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60057412,col:3ZCPG,gbif:2592606,mycobank:395316,wikispecies:Melaspilea_diplasiospora"
         },
         {
           "id": "MELASPILEA_EMERGENS",
@@ -1037,11 +1042,22 @@
             "col": [
               "3ZCPY"
             ],
-            "checklistbank": "1223297",
-            "wikispecies": "Melaspilea_mangrovei"
+            "checklistbank": [
+              "1223297",
+              "urn:lsid:marinespecies.org:taxname:437735"
+            ],
+            "wikispecies": [
+              "Melaspilea_mangrovei"
+            ],
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60057413"
+            ],
+            "checklistbank-139831": [
+              "1223297"
+            ]
           },
           "uuid": "aa5f5b79-c6da-5ad-b4e-c0ee2629637ef0",
-          "authorityIds": "col:3ZCPY,gbif:3549860,mycobank:434462"
+          "authorityIds": "checklistbank:1223297,checklistbank:urn:lsid:marinespecies.org:taxname:437735,checklistbank-139831:1223297,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60057413,col:3ZCPY,gbif:3549860,mycobank:434462,wikispecies:Melaspilea_mangrovei"
         },
         {
           "id": "MELASPILEA_MESOPHLEBIA",
@@ -3037,39 +3053,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MELASPILEA_MANGROVEI_VRIJMOED_K_D_HYDE_E_B_G_JONES_1996",
-          "name": "\"Melaspilea mangrovei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melaspilea",
-          "authorship": "\"Vrijmoed, K.D. Hyde & E.B.G. Jones, 1996\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437735",
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057413",
-            "wikispecies": "Melaspilea_mangrovei",
-            "checklistbank-139831": "1223297"
-          },
-          "children": [],
-          "uuid": "b61bcab3-ce70-58f-ad2-32bde69886b1c0",
-          "description": "\"Melaspilea mangrovei\" is a melaspileaceae species found in its native region."
-        },
-        {
-          "id": "SP_MELASPILEA_DIPLASIOSPORA_NYL_M_LL_ARG",
-          "name": "Melaspilea diplasiospora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melaspilea",
-          "authorship": "(Nyl.) Müll.Arg.",
-          "sourceIds": {
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057412",
-            "wikispecies": "Melaspilea_diplasiospora"
-          },
-          "uuid": "76ce40d1-010c-4b78-a858-aa15913d866f",
-          "children": []
-        },
-        {
           "id": "SP_MELASPILEA_AMOTA",
           "name": "Melaspilea amota",
           "rank": "SPECIES",
@@ -4747,7 +4730,7 @@
   ],
   "authorship": "Walt. Watson",
   "genusCount": 21,
-  "speciesCount": 245,
+  "speciesCount": 243,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

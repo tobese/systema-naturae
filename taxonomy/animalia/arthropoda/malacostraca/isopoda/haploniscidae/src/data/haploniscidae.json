@@ -3435,10 +3435,15 @@
             "col": [
               "CJPY9"
             ],
-            "checklistbank": "Mastigoniscus_minimus",
-            "wikispecies": "Mastigoniscus_minimus"
+            "checklistbank": [
+              "Mastigoniscus_minimus",
+              "urn:lsid:marinespecies.org:taxname:1765479"
+            ],
+            "wikispecies": [
+              "Mastigoniscus_minimus"
+            ]
           },
-          "authorityIds": "col:CJPY9",
+          "authorityIds": "checklistbank:Mastigoniscus_minimus,checklistbank:urn:lsid:marinespecies.org:taxname:1765479,col:CJPY9,wikispecies:Mastigoniscus_minimus",
           "description": "Mastigoniscus minimus is a haploniscidae species found in its native region."
         },
         {
@@ -3640,22 +3645,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MASTIGONISCUS_MINIMUS_WENZ_KNAUBER_RIEHL_I_IN_I_SENCKENBERG_OCEAN_SPECIES_ALLIANCE_BRANDT_CHEN_ENGEL_ESQUETE_HORTON_JA_D_EWSKA_JOHANNSEN_KAISER_KIHARA_KNAUBER_KNIESZ_LANDSCHOFF_L_RZ_MACHADO_MART_NEZ_MU_OZ_RIEHL_SERPELL_STEVENS_SIGWART_TANDBERG_TATO_TSUDA_VON_INA_WATANABE_WENZ_WILLIAMS_2024",
-          "name": "\"Mastigoniscus minimus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mastigoniscus",
-          "authorship": "\"Wenz, Knauber & Riehl <i>in</i> Senckenberg Ocean Species Alliance, Brandt, Chen, Engel, Esquete, Horton, Jażdżewska, Johannsen, Kaiser, Kihara, Knauber, Kniesz, Landschoff, Lörz, Machado, Martínez-Muñoz, Riehl, Serpell-Stevens, Sigwart, Tandberg, Tato, Tsuda, Vončina, Watanabe, Wenz & Williams, 2024\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1765479",
-            "wikispecies": "Mastigoniscus_minimus"
-          },
-          "children": [],
-          "uuid": "b88cadb2-f502-53a-881-9be82f1b6abbd3",
-          "description": "\"Mastigoniscus minimus\" is a haploniscidae species found in its native region."
-        },
-        {
           "id": "SP_MASTIGONISCUS_CONCAVUS",
           "name": "Mastigoniscus concavus",
           "rank": "SPECIES",
@@ -3717,7 +3706,8 @@
           "sourceIds": {
             "checklistbank-139831": "950768"
           },
-          "uuid": "80b66d88-f120-4d8c-8280-6b06052f53d1"
+          "uuid": "80b66d88-f120-4d8c-8280-6b06052f53d1",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4306,7 +4296,7 @@
       "lineage": "haploniscidae"
     }
   ],
-  "speciesCount": 233,
+  "speciesCount": 232,
   "appSlug": "haploniscidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

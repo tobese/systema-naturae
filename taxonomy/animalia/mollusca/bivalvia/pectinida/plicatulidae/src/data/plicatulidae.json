@@ -1291,10 +1291,18 @@
             "col": [
               "4KFWV"
             ],
-            "checklistbank": "4b7acbd3-5662-4428-95d0-661dc9814a78",
-            "checklistbank-1174": "txn:155343"
+            "checklistbank": [
+              "4b7acbd3-5662-4428-95d0-661dc9814a78",
+              "urn:lsid:marinespecies.org:taxname:207847"
+            ],
+            "checklistbank-1174": [
+              "txn:155343"
+            ],
+            "checklistbank-127379": [
+              "3cd290df-8dd7-4bbc-80ec-1904520f7a92"
+            ]
           },
-          "authorityIds": "col:4KFWV",
+          "authorityIds": "checklistbank:4b7acbd3-5662-4428-95d0-661dc9814a78,checklistbank:urn:lsid:marinespecies.org:taxname:207847,checklistbank-1174:txn:155343,checklistbank-127379:3cd290df-8dd7-4bbc-80ec-1904520f7a92,col:4KFWV",
           "authorship": "(Linnaeus,1767)"
         },
         {
@@ -1377,9 +1385,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1660220"
             ],
-            "checklistbank-1174": "txn:99998"
+            "checklistbank-1174": [
+              "txn:99998"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1660220"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1660220,col:BDD54",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1660220,checklistbank-1174:txn:99998,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1660220,col:BDD54",
           "authorship": "(K. Martin, 1885)"
         },
         {
@@ -3784,23 +3797,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PLICATULA_PLICATA_LINNAEUS_1764",
-          "name": "\"Plicatula plicata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Plicatula",
-          "authorship": "\"(Linnaeus, 1764)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207847",
-            "checklistbank-1174": "txn:155343",
-            "checklistbank-127379": "3cd290df-8dd7-4bbc-80ec-1904520f7a92"
-          },
-          "children": [],
-          "uuid": "d255a538-8cf3-520-b60-de4b865b681cd2",
-          "description": "\"Plicatula plicata\" is a plicatulidae species found in its native region."
-        },
-        {
           "id": "SP_PLICATULA_FILAMENTOSA_O_MEYER_ALDRICH_1886",
           "name": "\"Plicatula filamentosa",
           "rank": "SPECIES",
@@ -3827,21 +3823,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1305555"
           },
           "uuid": "ed2dec76-371b-4822-bc22-f0e0a18c05dd",
-          "children": []
-        },
-        {
-          "id": "SP_PLICATULA_QUINQUEPLICATA_K_MARTIN_1885",
-          "name": "Plicatula quinqueplicata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plicatula",
-          "authorship": "(K. Martin, 1885)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1660220",
-            "checklistbank-1174": "txn:99998"
-          },
-          "uuid": "fd327b99-ab05-41c8-9206-798b4b96ab0c",
           "children": []
         },
         {
@@ -4022,7 +4003,8 @@
           "sourceIds": {
             "checklistbank-139831": "1114578"
           },
-          "uuid": "763542fd-5967-4e30-a68f-cbb85a1be588"
+          "uuid": "763542fd-5967-4e30-a68f-cbb85a1be588",
+          "children": []
         },
         {
           "id": "SP_PLICATULA_MURICATA",
@@ -4034,7 +4016,8 @@
           "sourceIds": {
             "checklistbank-139831": "1210391"
           },
-          "uuid": "ca0e6e5b-efa0-49bf-bc86-505d5c4b4fdf"
+          "uuid": "ca0e6e5b-efa0-49bf-bc86-505d5c4b4fdf",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",

@@ -109,10 +109,15 @@
             "col": [
               "4Z2Q8"
             ],
-            "checklistbank": "Sphyrna_couardi",
-            "wikispecies": "Sphyrna_couardi"
+            "checklistbank": [
+              "Sphyrna_couardi",
+              "urn:lsid:marinespecies.org:taxname:271378"
+            ],
+            "wikispecies": [
+              "Sphyrna_couardi"
+            ]
           },
-          "authorityIds": "col:4Z2Q8,itis:160523,wikidata:Q613798",
+          "authorityIds": "checklistbank:Sphyrna_couardi,checklistbank:urn:lsid:marinespecies.org:taxname:271378,col:4Z2Q8,itis:160523,wikidata:Q613798,wikispecies:Sphyrna_couardi",
           "authorship": "Cadenat, 1951"
         },
         {
@@ -785,22 +790,6 @@
           "description": "\"Sphyrna mokarran\" is a sphyrnidae species found in its native region."
         },
         {
-          "id": "SP_SPHYRNA_COUARDI_CADENAT_1951",
-          "name": "\"Sphyrna couardi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sphyrna",
-          "authorship": "\"Cadenat, 1951\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:271378",
-            "wikispecies": "Sphyrna_couardi"
-          },
-          "children": [],
-          "uuid": "63a0110b-2640-5a9-a42-7a752f16a2f8b6",
-          "description": "\"Sphyrna couardi\" is a sphyrnidae species found in its native region."
-        },
-        {
           "id": "SP_SPHYRNA_MAGNA_COPE_1868",
           "name": "Sphyrna magna",
           "rank": "SPECIES",
@@ -922,7 +911,8 @@
           "sourceIds": {
             "checklistbank-139831": "1303441"
           },
-          "uuid": "7bbc49c9-d3d0-4111-a773-44e6a4de1da1"
+          "uuid": "7bbc49c9-d3d0-4111-a773-44e6a4de1da1",
+          "children": []
         },
         {
           "id": "SP_SPHYRNA_ALLENI",
@@ -934,7 +924,8 @@
           "sourceIds": {
             "checklistbank-139831": "1577651"
           },
-          "uuid": "062892be-c2d9-460e-b7fa-d66b8c4548f6"
+          "uuid": "062892be-c2d9-460e-b7fa-d66b8c4548f6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -969,10 +960,18 @@
             "col": [
               "6HGWQ"
             ],
-            "checklistbank": "9a0e211e-75d5-4c01-a10c-c2737d61d92a",
-            "wikispecies": "Eusphyra_blochii"
+            "checklistbank": [
+              "9a0e211e-75d5-4c01-a10c-c2737d61d92a",
+              "urn:lsid:marinespecies.org:taxname:280757"
+            ],
+            "wikispecies": [
+              "Eusphyra_blochii"
+            ],
+            "checklistbank-127379": [
+              "9a0e211e-75d5-4c01-a10c-c2737d61d92a"
+            ]
           },
-          "authorityIds": "col:6HGWQ,itis:160527,wikidata:Q890336",
+          "authorityIds": "checklistbank:9a0e211e-75d5-4c01-a10c-c2737d61d92a,checklistbank:urn:lsid:marinespecies.org:taxname:280757,checklistbank-127379:9a0e211e-75d5-4c01-a10c-c2737d61d92a,col:6HGWQ,itis:160527,wikidata:Q890336,wikispecies:Eusphyra_blochii",
           "authorship": "Cuvier"
         },
         {
@@ -1002,23 +1001,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_EUSPHYRA_BLOCHII_CUVIER_1816",
-          "name": "\"Eusphyra blochii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eusphyra",
-          "authorship": "\"(Cuvier, 1816)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:280757",
-            "wikispecies": "Eusphyra_blochii",
-            "checklistbank-127379": "9a0e211e-75d5-4c01-a10c-c2737d61d92a"
-          },
-          "children": [],
-          "uuid": "6544fd37-3848-52e-ab1-2a88708a4367db",
-          "description": "\"Eusphyra blochii\" is a sphyrnidae species found in its native region."
-        },
-        {
           "id": "SP_EUSPHYRA_LATICEPS",
           "name": "Eusphyra laticeps",
           "rank": "SPECIES",
@@ -1028,7 +1010,8 @@
           "sourceIds": {
             "checklistbank-139831": "1303442"
           },
-          "uuid": "3e2ca750-7fbc-4c33-b6fa-6aa479502d29"
+          "uuid": "3e2ca750-7fbc-4c33-b6fa-6aa479502d29",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1398,7 +1381,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 72,
+  "speciesCount": 73,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

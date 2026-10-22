@@ -172,7 +172,8 @@
           "sourceIds": {
             "checklistbank-139831": "1557410"
           },
-          "uuid": "dd222641-5975-400f-bd5a-b4bc89d48a3b"
+          "uuid": "dd222641-5975-400f-bd5a-b4bc89d48a3b",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -554,36 +555,6 @@
           "children": [],
           "uuid": "311ada45-e2e9-5a3-89a-7081b7eb35c203",
           "description": "Iotroata paravaridens is a iotrochotidae species found in its native region."
-        },
-        {
-          "id": "SP_IOTROATA_OXEATA_LUNDBECK_1909",
-          "name": "Iotroata oxeata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Iotroata",
-          "authorship": "(Lundbeck,1909)",
-          "sourceIds": {
-            "checklistbank": "53841",
-            "wikispecies": "Iotroata_oxeata"
-          },
-          "children": [],
-          "uuid": "9eed2d34-0853-542-b0d-2ab7cb15cd99af"
-        },
-        {
-          "id": "SP_IOTROATA_SPINOSA_LUNDBECK_1905_AS_IOTROCHOTA",
-          "name": "Iotroata spinosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Iotroata",
-          "authorship": "(Lundbeck,1905 as Iotrochota)",
-          "sourceIds": {
-            "checklistbank": "53845",
-            "wikispecies": "Iotroata_spinosa"
-          },
-          "children": [],
-          "uuid": "85f0123a-c291-59b-baf-e0b8fb5d0459a0"
         }
       ]
     },
@@ -661,8 +632,13 @@
           "lineage": "\"Iotroata",
           "authorship": "\"(Lundbeck, 1905)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:133841",
-            "wikispecies": "Iotroata_oxeata"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:133841",
+              "53841"
+            ],
+            "wikispecies": [
+              "Iotroata_oxeata"
+            ]
           },
           "children": [],
           "uuid": "2ae81a59-7f24-5e1-855-f290548557f77a",
@@ -708,8 +684,13 @@
           "lineage": "\"Iotroata",
           "authorship": "\"(Lundbeck, 1905)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:133845",
-            "wikispecies": "Iotroata_spinosa"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:133845",
+              "53845"
+            ],
+            "wikispecies": [
+              "Iotroata_spinosa"
+            ]
           },
           "children": [],
           "uuid": "0061ccab-4109-595-9ab-b22e0b1066e6a4",
@@ -1703,7 +1684,7 @@
     }
   ],
   "genusCount": 15,
-  "speciesCount": 94,
+  "speciesCount": 92,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

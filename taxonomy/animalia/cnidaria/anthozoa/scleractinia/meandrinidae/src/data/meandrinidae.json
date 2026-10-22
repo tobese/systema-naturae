@@ -506,9 +506,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:430665"
             ],
-            "checklistbank-1174": "txn:178430"
+            "checklistbank-1174": [
+              "txn:178430"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:430665"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:430665,col:3YJL2,itis:53425,wikidata:Q57395661"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:430665,checklistbank-1174:txn:178430,checklistbank-2011:urn:lsid:marinespecies.org:taxname:430665,col:3YJL2,itis:53425,wikidata:Q57395661"
         },
         {
           "id": "SP_MEANDRINA_CEREBRUM",
@@ -1304,21 +1309,6 @@
           "children": []
         },
         {
-          "id": "SP_MEANDRINA_BRASILIENSIS_MILNE_EDWARDS_HAIME_1848",
-          "name": "Meandrina brasiliensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meandrina",
-          "authorship": "(Milne Edwards & Haime, 1848)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:430665",
-            "checklistbank-1174": "txn:178430"
-          },
-          "uuid": "1f0c3e13-8fc2-4eed-9693-cf89d80d792d",
-          "children": []
-        },
-        {
           "id": "SP_MEANDRINA_MEDLICOTTI_DUNCAN_1880",
           "name": "Meandrina medlicotti",
           "rank": "SPECIES",
@@ -1440,7 +1430,8 @@
           "sourceIds": {
             "checklistbank-139831": "105379"
           },
-          "uuid": "2a7a233e-ce0b-4893-a480-75e5036e6c41"
+          "uuid": "2a7a233e-ce0b-4893-a480-75e5036e6c41",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4834,7 +4825,7 @@
     }
   ],
   "genusCount": 41,
-  "speciesCount": 261,
+  "speciesCount": 260,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

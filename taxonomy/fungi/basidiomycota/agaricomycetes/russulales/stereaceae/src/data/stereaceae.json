@@ -6143,13 +6143,21 @@
             "col": [
               "6ZQZP"
             ],
-            "checklistbank": "57934",
-            "wikispecies": "Stereum_hirsutum",
+            "checklistbank": [
+              "57934",
+              "urn:lsid:marinespecies.org:taxname:1487476"
+            ],
+            "wikispecies": [
+              "Stereum_hirsutum"
+            ],
             "checklistbank-2029": "5d809809-9d4d-432a-b058-aa91f81f61c8",
-            "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=189826"
+            "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=189826",
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60064562"
+            ]
           },
           "uuid": "10a33b60-d6e7-52f-aee-84fee5aa22c2cb",
-          "authorityIds": "col:6ZQZP,gbif:2553128,mycobank:189826",
+          "authorityIds": "checklistbank:57934,checklistbank:urn:lsid:marinespecies.org:taxname:1487476,checklistbank-2029:5d809809-9d4d-432a-b058-aa91f81f61c8,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60064562,checklistbank-316361:https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=189826,col:6ZQZP,gbif:2553128,mycobank:189826,wikispecies:Stereum_hirsutum",
           "children": []
         },
         {
@@ -7559,11 +7567,16 @@
               "6ZQQ5"
             ],
             "checklistbank": "57936",
-            "wikispecies": "Stereum_rugosum",
-            "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=192347"
+            "wikispecies": [
+              "Stereum_rugosum"
+            ],
+            "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=192347",
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60064570"
+            ]
           },
           "uuid": "ddbe433d-8024-594-a4a-ac55e94029f39f",
-          "authorityIds": "col:6ZQQ5,gbif:2553117,mycobank:192347",
+          "authorityIds": "checklistbank:57936,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60064570,checklistbank-316361:https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=192347,col:6ZQQ5,gbif:2553117,mycobank:192347,wikispecies:Stereum_rugosum",
           "children": []
         },
         {
@@ -9169,23 +9182,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_STEREUM_HIRSUTUM_WILLD_PERS_1800",
-          "name": "\"Stereum hirsutum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stereum",
-          "authorship": "\"(Willd.) Pers., 1800\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1487476",
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60064562",
-            "wikispecies": "Stereum_hirsutum"
-          },
-          "children": [],
-          "uuid": "de910d01-c975-558-919-dfef22163b0f3c",
-          "description": "\"Stereum hirsutum\" is a stereaceae species found in its native region."
-        },
-        {
           "id": "SP_STEREUM_LOBATUM_KUNZE_EX_FR_FR_1838",
           "name": "\"Stereum lobatum\"",
           "rank": "SPECIES",
@@ -9401,21 +9397,6 @@
           "children": []
         },
         {
-          "id": "SP_STEREUM_RUGOSUM_PERS_FR",
-          "name": "Stereum rugosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stereum",
-          "authorship": "(Pers.) Fr.",
-          "sourceIds": {
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60064570",
-            "wikispecies": "Stereum_rugosum"
-          },
-          "uuid": "64a7cfa5-0900-4fdb-b286-540e8cd747fb",
-          "children": []
-        },
-        {
           "id": "SP_STEREUM_SANGUINOLENTUM_ALB_SCHWEIN_FR",
           "name": "Stereum sanguinolentum",
           "rank": "SPECIES",
@@ -9508,7 +9489,8 @@
           "sourceIds": {
             "checklistbank-139831": "118106"
           },
-          "uuid": "887b26a9-36ae-4ed9-a626-ff24a97f6d55"
+          "uuid": "887b26a9-36ae-4ed9-a626-ff24a97f6d55",
+          "children": []
         },
         {
           "id": "SP_STEREUM_COMPLICATUM",
@@ -9520,7 +9502,8 @@
           "sourceIds": {
             "checklistbank-139831": "196842"
           },
-          "uuid": "e82fa653-5433-43d6-b553-139cf7e81eee"
+          "uuid": "e82fa653-5433-43d6-b553-139cf7e81eee",
+          "children": []
         },
         {
           "id": "SP_STEREUM_FASCIATUM",
@@ -9532,7 +9515,8 @@
           "sourceIds": {
             "checklistbank-139831": "352456"
           },
-          "uuid": "2c925ce4-43da-45a5-ba31-b55b26adda65"
+          "uuid": "2c925ce4-43da-45a5-ba31-b55b26adda65",
+          "children": []
         },
         {
           "id": "SP_STEREUM_ILLUDENS",
@@ -9544,7 +9528,8 @@
           "sourceIds": {
             "checklistbank-139831": "384416"
           },
-          "uuid": "c92f0174-dade-45a8-afee-3141bc1d5d76"
+          "uuid": "c92f0174-dade-45a8-afee-3141bc1d5d76",
+          "children": []
         },
         {
           "id": "SP_STEREUM_VELLEREUM",
@@ -9556,7 +9541,8 @@
           "sourceIds": {
             "checklistbank-139831": "384418"
           },
-          "uuid": "25cc8e38-d319-4767-86da-91d8392d955a"
+          "uuid": "25cc8e38-d319-4767-86da-91d8392d955a",
+          "children": []
         },
         {
           "id": "SP_STEREUM_ANTARCTICUM",
@@ -9568,7 +9554,8 @@
           "sourceIds": {
             "checklistbank-139831": "895489"
           },
-          "uuid": "c193f801-9fcc-4248-aa12-bd9b85aa9207"
+          "uuid": "c193f801-9fcc-4248-aa12-bd9b85aa9207",
+          "children": []
         },
         {
           "id": "SP_STEREUM_GRESLEBINIAE",
@@ -9580,7 +9567,8 @@
           "sourceIds": {
             "checklistbank-139831": "923157"
           },
-          "uuid": "ba275b18-302a-4e7f-83f8-4a7bd264f309"
+          "uuid": "ba275b18-302a-4e7f-83f8-4a7bd264f309",
+          "children": []
         },
         {
           "id": "SP_STEREUM_ADNATUM",
@@ -9592,7 +9580,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109220"
           },
-          "uuid": "38b11867-a59d-45dd-845d-119799715f17"
+          "uuid": "38b11867-a59d-45dd-845d-119799715f17",
+          "children": []
         },
         {
           "id": "SP_STEREUM_TURGIDUM",
@@ -9604,7 +9593,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109223"
           },
-          "uuid": "9941e4a1-bd04-4036-bedd-4ff8bbc5f21f"
+          "uuid": "9941e4a1-bd04-4036-bedd-4ff8bbc5f21f",
+          "children": []
         },
         {
           "id": "SP_STEREUM_TOMENTOSUM",
@@ -9616,7 +9606,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109224"
           },
-          "uuid": "56090551-a1d6-4e8c-af05-646e4d4ac525"
+          "uuid": "56090551-a1d6-4e8c-af05-646e4d4ac525",
+          "children": []
         },
         {
           "id": "SP_STEREUM_RIMOSUM",
@@ -9628,7 +9619,8 @@
           "sourceIds": {
             "checklistbank-139831": "1109509"
           },
-          "uuid": "56b822a8-1c9d-4e5e-938f-ccae7d811b1e"
+          "uuid": "56b822a8-1c9d-4e5e-938f-ccae7d811b1e",
+          "children": []
         },
         {
           "id": "SP_STEREUM_INSIGNITUM",
@@ -9640,7 +9632,8 @@
           "sourceIds": {
             "checklistbank-139831": "1254633"
           },
-          "uuid": "ea282b92-46e0-40a6-840c-f6a451f4768b"
+          "uuid": "ea282b92-46e0-40a6-840c-f6a451f4768b",
+          "children": []
         },
         {
           "id": "SP_STEREUM_RUFOFULVUM",
@@ -9652,7 +9645,8 @@
           "sourceIds": {
             "checklistbank-139831": "1286234"
           },
-          "uuid": "a9fe1c06-be21-46e2-b294-9677e94f95c0"
+          "uuid": "a9fe1c06-be21-46e2-b294-9677e94f95c0",
+          "children": []
         },
         {
           "id": "SP_STEREUM_REFLEXULUM",
@@ -9664,7 +9658,8 @@
           "sourceIds": {
             "checklistbank-139831": "1437835"
           },
-          "uuid": "1890e8cd-444f-4668-815c-63ba8ee4e05b"
+          "uuid": "1890e8cd-444f-4668-815c-63ba8ee4e05b",
+          "children": []
         },
         {
           "id": "SP_STEREUM_BELLUM",
@@ -9676,7 +9671,8 @@
           "sourceIds": {
             "checklistbank-139831": "1516973"
           },
-          "uuid": "e49a3f91-8987-44d0-9978-a262bf7e7972"
+          "uuid": "e49a3f91-8987-44d0-9978-a262bf7e7972",
+          "children": []
         },
         {
           "id": "SP_STEREUM_PECULIARE",
@@ -9688,7 +9684,8 @@
           "sourceIds": {
             "checklistbank-139831": "1643452"
           },
-          "uuid": "10263ae4-fc03-49d0-a80c-82620e1b8db8"
+          "uuid": "10263ae4-fc03-49d0-a80c-82620e1b8db8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14155,7 +14152,7 @@
   ],
   "authorship": "Pilát",
   "genusCount": 57,
-  "speciesCount": 633,
+  "speciesCount": 647,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

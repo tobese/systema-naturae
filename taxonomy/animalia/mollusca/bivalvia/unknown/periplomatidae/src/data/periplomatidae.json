@@ -52,9 +52,14 @@
               "urn:lsid:marinespecies.org:taxname:1825600"
             ],
             "gbif-backbone": "8859855",
-            "checklistbank-1174": "txn:323645"
+            "checklistbank-1174": [
+              "txn:323645"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1825600"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1825600,col:V4S2W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1825600,checklistbank-1174:txn:323645,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1825600,col:V4S2W,gbif-backbone:8859855",
           "authorship": "B. L. Clark, 1925"
         },
         {
@@ -396,21 +401,6 @@
           "children": []
         },
         {
-          "id": "SP_COCHLODESMA_BAINBRIDGENSIS_B_L_CLARK_1925",
-          "name": "Cochlodesma bainbridgensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cochlodesma",
-          "authorship": "B. L. Clark, 1925",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1825600",
-            "checklistbank-1174": "txn:323645"
-          },
-          "uuid": "e6eef95b-9989-4e21-8269-09a79e151291",
-          "children": []
-        },
-        {
           "id": "SP_COCHLODESMA_TENERUM",
           "name": "Cochlodesma tenerum",
           "rank": "SPECIES",
@@ -420,7 +410,8 @@
           "sourceIds": {
             "checklistbank-139831": "1206736"
           },
-          "uuid": "5f746189-00c2-42b9-b902-9ead9f92b8c9"
+          "uuid": "5f746189-00c2-42b9-b902-9ead9f92b8c9",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3153,7 +3144,7 @@
     }
   ],
   "genusCount": 15,
-  "speciesCount": 178,
+  "speciesCount": 177,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

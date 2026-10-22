@@ -907,9 +907,11 @@
               "3XJS3"
             ],
             "checklistbank": "447552",
-            "checklistbank-139831": "447552"
+            "checklistbank-139831": [
+              "447552"
+            ]
           },
-          "authorityIds": "col:3XJS3",
+          "authorityIds": "checklistbank:447552,checklistbank-139831:447552,col:3XJS3",
           "commonName": "Common Spider Crab",
           "description": "Maja brachydactyla is a species of crab in the family Majidae."
         },
@@ -931,9 +933,14 @@
               "199962"
             ],
             "checklistbank": "326069",
-            "checklistbank-1174": "txn:223607"
+            "checklistbank-1174": [
+              "txn:223607"
+            ],
+            "wikispecies": [
+              "Maja_crispata"
+            ]
           },
-          "authorityIds": "col:99K4F,itis:199962",
+          "authorityIds": "checklistbank:326069,checklistbank-1174:txn:223607,col:99K4F,itis:199962,wikispecies:Maja_crispata",
           "description": "Maja crispata is a majidae species found in its native region."
         },
         {
@@ -1046,9 +1053,11 @@
               "3XJSR"
             ],
             "checklistbank": "324537",
-            "checklistbank-139831": "324537"
+            "checklistbank-139831": [
+              "324537"
+            ]
           },
-          "authorityIds": "col:3XJSR,itis:199961",
+          "authorityIds": "checklistbank:324537,checklistbank-139831:324537,col:3XJSR,itis:199961",
           "description": "Maja squinado (the European spider crab, spiny spider crab or spinous spider crab) is a species of migratory crab found in the Mediterranean Sea."
         },
         {
@@ -1416,20 +1425,6 @@
           "children": []
         },
         {
-          "id": "SP_MAJA_CRISPATA",
-          "name": "Maja crispata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Maja",
-          "sourceIds": {
-            "wikispecies": "Maja_crispata",
-            "checklistbank-1174": "txn:223607"
-          },
-          "uuid": "d6107d80-7de6-4d0b-8e6e-9368f48efe2a",
-          "children": []
-        },
-        {
           "id": "SP_MAJA_DOMINOLEUAE_HU_AND_TAO_1985",
           "name": "Maja dominoleuae",
           "rank": "SPECIES",
@@ -1456,30 +1451,6 @@
           },
           "uuid": "7bef7888-7c23-4d71-84ad-da61e613ff5f",
           "children": []
-        },
-        {
-          "id": "SP_MAJA_SQUINADO",
-          "name": "Maja squinado",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Maja",
-          "sourceIds": {
-            "checklistbank-139831": "324537"
-          },
-          "uuid": "bcf61086-37cf-434f-a98e-1f13c31518c4"
-        },
-        {
-          "id": "SP_MAJA_BRACHYDACTYLA",
-          "name": "Maja brachydactyla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Maja",
-          "sourceIds": {
-            "checklistbank-139831": "447552"
-          },
-          "uuid": "1eb78926-6e97-4477-80f2-f2140578ca77"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3390,9 +3361,11 @@
               "42MGH"
             ],
             "checklistbank": "1461859",
-            "checklistbank-139831": "1461859"
+            "checklistbank-139831": [
+              "1461859"
+            ]
           },
-          "authorityIds": "col:42MGH",
+          "authorityIds": "checklistbank:1461859,checklistbank-139831:1461859,col:42MGH",
           "description": "Micippa margaritifera is a majidae species found in its native region."
         },
         {
@@ -3428,11 +3401,16 @@
             "col": [
               "C2F27"
             ],
-            "checklistbank": "txn:223653",
+            "checklistbank": [
+              "txn:223653",
+              "urn:lsid:marinespecies.org:taxname:1669746"
+            ],
             "gbif-backbone": "8523180",
-            "checklistbank-1174": "txn:223653"
+            "checklistbank-1174": [
+              "txn:223653"
+            ]
           },
-          "authorityIds": "col:C2F27",
+          "authorityIds": "checklistbank:txn:223653,checklistbank:urn:lsid:marinespecies.org:taxname:1669746,checklistbank-1174:txn:223653,col:C2F27,gbif-backbone:8523180",
           "description": "Micippa hungarica is a majidae species found in its native region."
         },
         {
@@ -3603,22 +3581,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MICIPPA_HUNGARICA_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Micippa hungarica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Micippa",
-          "authorship": "\"(Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669746",
-            "checklistbank-1174": "txn:223653"
-          },
-          "children": [],
-          "uuid": "5d31aeb1-9a7e-58c-bf2-066f523012f04f",
-          "description": "\"Micippa hungarica\" is a majidae species found in its native region."
-        },
-        {
           "id": "SP_MICIPPA_ANNAMARIAE_GATT_AND_DE_ANGELI_2010",
           "name": "Micippa annamariae",
           "rank": "SPECIES",
@@ -3743,18 +3705,6 @@
           },
           "uuid": "522f87a7-2e96-4bff-b2d3-7e12b476046c",
           "children": []
-        },
-        {
-          "id": "SP_MICIPPA_MARGARITIFERA",
-          "name": "Micippa margaritifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Micippa",
-          "sourceIds": {
-            "checklistbank-139831": "1461859"
-          },
-          "uuid": "69794528-53e7-4397-8b54-bf3a219fe2ee"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4530,12 +4480,17 @@
             "col": [
               "3QK29"
             ],
-            "checklistbank": "472045",
+            "checklistbank": [
+              "472045",
+              "urn:lsid:marinespecies.org:taxname:442003"
+            ],
             "gbif-backbone": "2226564",
             "checklistbank-139831": "472045",
-            "checklistbank-1174": "txn:223594"
+            "checklistbank-1174": [
+              "txn:223594"
+            ]
           },
-          "authorityIds": "col:3QK29",
+          "authorityIds": "checklistbank:472045,checklistbank:urn:lsid:marinespecies.org:taxname:442003,checklistbank-1174:txn:223594,checklistbank-139831:472045,col:3QK29,gbif-backbone:2226564",
           "description": "Jacquinotia edwardsii is a majidae species found in its native region."
         },
         {
@@ -4555,31 +4510,6 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Majidae"
-    },
-    {
-      "id": "GENUS_JACQUINOTIA",
-      "name": "\"Jacquinotia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_JACQUINOTIA_EDWARDSII_JACQUINOT_I_IN_I_JACQUINOT_LUCAS_1853",
-          "name": "\"Jacquinotia edwardsii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Jacquinotia",
-          "authorship": "\"(Jacquinot <i>in</i> Jacquinot & Lucas, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:442003",
-            "checklistbank-1174": "txn:223594"
-          },
-          "children": [],
-          "uuid": "f2301a9a-61d6-56c-901-8008596c0cf3f4",
-          "description": "\"Jacquinotia edwardsii\" is a majidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "majidae"
     },
     {
       "id": "GENUS_ANACINETOPS",
@@ -5252,41 +5182,21 @@
             "col": [
               "BLQFG"
             ],
-            "checklistbank": "txn:223650",
+            "checklistbank": [
+              "txn:223650",
+              "urn:lsid:marinespecies.org:taxname:1669713"
+            ],
             "gbif-backbone": "12249203",
-            "checklistbank-1174": "txn:223650"
+            "checklistbank-1174": [
+              "txn:223650"
+            ]
           },
-          "authorityIds": "col:BLQFG",
+          "authorityIds": "checklistbank:txn:223650,checklistbank:urn:lsid:marinespecies.org:taxname:1669713,checklistbank-1174:txn:223650,col:BLQFG,gbif-backbone:12249203",
           "description": "Pisomaia tuberculata is a majidae species found in its native region."
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Majidae"
-    },
-    {
-      "id": "GENUS_PISOMAIA",
-      "name": "\"Pisomaia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PISOMAIA_TUBERCULATA_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Pisomaia tuberculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pisomaia",
-          "authorship": "\"Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669713",
-            "checklistbank-1174": "txn:223650"
-          },
-          "children": [],
-          "uuid": "ee36d636-858b-595-8f4-4706d652d454e5",
-          "description": "\"Pisomaia tuberculata\" is a majidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "majidae"
     },
     {
       "id": "GENUS_TERATOMAIA",
@@ -7524,11 +7434,11 @@
       "lineage": "majidae"
     }
   ],
-  "speciesCount": 382,
+  "speciesCount": 378,
   "appSlug": "majidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 98,
+  "genusCount": 96,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

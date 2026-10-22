@@ -1180,7 +1180,8 @@
           "sourceIds": {
             "checklistbank-139831": "1215722"
           },
-          "uuid": "c657f987-3af8-41f1-9370-02ff6f00b373"
+          "uuid": "c657f987-3af8-41f1-9370-02ff6f00b373",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1495,7 +1496,8 @@
           "sourceIds": {
             "checklistbank-139831": "1295554"
           },
-          "uuid": "4ef52323-5980-4ca1-b366-b146a4d9183c"
+          "uuid": "4ef52323-5980-4ca1-b366-b146a4d9183c",
+          "children": []
         },
         {
           "id": "SP_SUPPLANAXIS_PLANICOSTATUS",
@@ -1507,7 +1509,8 @@
           "sourceIds": {
             "checklistbank-139831": "1404718"
           },
-          "uuid": "aa36bdba-03eb-496b-a980-b72c2509b062"
+          "uuid": "aa36bdba-03eb-496b-a980-b72c2509b062",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1618,7 +1621,8 @@
           "sourceIds": {
             "checklistbank-139831": "1220833"
           },
-          "uuid": "d35221f1-f1e3-4dc1-a943-9c80b1544386"
+          "uuid": "d35221f1-f1e3-4dc1-a943-9c80b1544386",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2163,7 +2167,8 @@
           "sourceIds": {
             "checklistbank-139831": "1559682"
           },
-          "uuid": "29fab9f1-9be4-402f-b08d-8bb3d2d8a869"
+          "uuid": "29fab9f1-9be4-402f-b08d-8bb3d2d8a869",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2358,10 +2363,18 @@
             "itis": [
               "71903"
             ],
-            "checklistbank": "212759",
-            "checklistbank-1174": "txn:61801"
+            "checklistbank": [
+              "212759",
+              "urn:lsid:marinespecies.org:taxname:216719"
+            ],
+            "checklistbank-1174": [
+              "txn:61801"
+            ],
+            "checklistbank-127379": [
+              "d291913d-398e-41fc-8ee6-e2493720888b"
+            ]
           },
-          "authorityIds": "col:6VMWG,itis:71903"
+          "authorityIds": "checklistbank:212759,checklistbank:urn:lsid:marinespecies.org:taxname:216719,checklistbank-1174:txn:61801,checklistbank-127379:d291913d-398e-41fc-8ee6-e2493720888b,col:6VMWG,itis:71903"
         },
         {
           "id": "SP_PLANAXIS_SUTURALIS_E_A_SMITH_1872",
@@ -2749,32 +2762,6 @@
           "uuid": "821fafad-a355-59a-be5-97d4b6c298146c"
         }
       ]
-    },
-    {
-      "id": "GENUS_PLANAXIS",
-      "name": "\"Planaxis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLANAXIS_SULCATUS_BORN_1778",
-          "name": "\"Planaxis sulcatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Planaxis",
-          "authorship": "\"(Born, 1778)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:216719",
-            "checklistbank-1174": "txn:61801",
-            "checklistbank-127379": "d291913d-398e-41fc-8ee6-e2493720888b"
-          },
-          "children": [],
-          "uuid": "3f8d1380-4f30-5e3-b4e-a51a42dcef3e73",
-          "description": "\"Planaxis sulcatus\" is a planaxidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "planaxidae"
     },
     {
       "id": "GENUS_HALOTAPADA",
@@ -3704,8 +3691,8 @@
       "lineage": "planaxidae"
     }
   ],
-  "genusCount": 36,
-  "speciesCount": 205,
+  "genusCount": 35,
+  "speciesCount": 204,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

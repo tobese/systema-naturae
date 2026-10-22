@@ -502,11 +502,16 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1604841"
             ],
-            "wikispecies": "Arthothelium_evanescens",
-            "gbif-backbone": "3548406"
+            "wikispecies": [
+              "Arthothelium_evanescens"
+            ],
+            "gbif-backbone": "3548406",
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1604841"
+            ]
           },
           "uuid": "9b5885e0-6b18-532-87a-011610fedd9b78",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1604841,col:GXX6,gbif:3548406,mycobank:374202"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1604841,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1604841,col:GXX6,gbif:3548406,gbif-backbone:3548406,mycobank:374202,wikispecies:Arthothelium_evanescens"
         },
         {
           "id": "ARTHOTHELIUM_FEUERERI",
@@ -690,10 +695,12 @@
             ],
             "checklistbank": "526596",
             "gbif-backbone": "10787828",
-            "checklistbank-139831": "526596"
+            "checklistbank-139831": [
+              "526596"
+            ]
           },
           "uuid": "859970bd-2700-56a-be4-fc0a6c0f9914b9",
-          "authorityIds": "col:5W4NH,gbif:10787828,mycobank:817356"
+          "authorityIds": "checklistbank:526596,checklistbank-139831:526596,col:5W4NH,gbif:10787828,gbif-backbone:10787828,mycobank:817356"
         },
         {
           "id": "ARTHOTHELIUM_INFUSCATUM",
@@ -1375,13 +1382,18 @@
             "col": [
               "GXY7"
             ],
-            "checklistbank": "eb1e1e93-3b74-4033-a494-3bcf76816557",
-            "wikispecies": "Arthothelium_spectabile",
+            "checklistbank": [
+              "eb1e1e93-3b74-4033-a494-3bcf76816557",
+              "urn:lsid:marinespecies.org:taxname:1485272"
+            ],
+            "wikispecies": [
+              "Arthothelium_spectabile"
+            ],
             "gbif-backbone": "7255839",
             "checklistbank-139831": "214359"
           },
           "uuid": "4bfed50b-d13f-54a-b09-e9b9dc36c3f8a9",
-          "authorityIds": "col:GXY7,gbif:7255839,mycobank:245395"
+          "authorityIds": "checklistbank:eb1e1e93-3b74-4033-a494-3bcf76816557,checklistbank:urn:lsid:marinespecies.org:taxname:1485272,checklistbank-139831:214359,col:GXY7,gbif:7255839,gbif-backbone:7255839,mycobank:245395,wikispecies:Arthothelium_spectabile"
         },
         {
           "id": "ARTHOTHELIUM_SPILOMATOIDES",
@@ -1533,10 +1545,12 @@
             ],
             "checklistbank": "214361",
             "gbif-backbone": "3548417",
-            "checklistbank-139831": "214361"
+            "checklistbank-139831": [
+              "214361"
+            ]
           },
           "uuid": "cbd6828a-5bc4-594-b19-7acb13e46e72ab",
-          "authorityIds": "gbif:3548417,mycobank:377439"
+          "authorityIds": "checklistbank:214361,checklistbank-139831:214361,gbif:3548417,gbif-backbone:3548417,mycobank:377439"
         },
         {
           "id": "ARTHOTHELIUM_VELATIUS",
@@ -4000,11 +4014,14 @@
           "sourceIds": {
             "checklistbank": "4ef8a3ae-6a1e-490b-bd87-67b50b4f935e",
             "checklistbank-2008": "665398",
-            "checklistbank-139831": "1198834"
+            "checklistbank-139831": [
+              "1198834"
+            ]
           },
           "children": [],
           "uuid": "cfd47fba-50ee-550-8dd-abb097c7a4c2d0",
-          "description": "Arthothelium dispersum is a arthoniaceae species found in its native region."
+          "description": "Arthothelium dispersum is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:4ef8a3ae-6a1e-490b-bd87-67b50b4f935e,checklistbank-139831:1198834,checklistbank-2008:665398"
         },
         {
           "id": "SP_ARTHOTHELIUM_ILICINUM_TAYLOR_P_JAMES_1965",
@@ -4362,37 +4379,6 @@
       "name": "\"Arthothelium",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ARTHOTHELIUM_SPECTABILE_A_MASSAL_1852",
-          "name": "\"Arthothelium spectabile\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthothelium",
-          "authorship": "\"A. Massal., 1852\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1485272",
-            "wikispecies": "Arthothelium_spectabile"
-          },
-          "children": [],
-          "uuid": "7d554eb5-ffec-582-a0b-daae9746e35b4f",
-          "description": "\"Arthothelium spectabile\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHOTHELIUM_EVANESCENS_VSTEDAL_2001",
-          "name": "Arthothelium evanescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthothelium",
-          "authorship": "Øvstedal, 2001",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1604841",
-            "wikispecies": "Arthothelium_evanescens"
-          },
-          "uuid": "a5e2b91a-a339-4ed4-9f03-8a34754f6230",
-          "children": []
-        },
         {
           "id": "SP_ARTHOTHELIUM_ABNORME",
           "name": "Arthothelium abnorme",
@@ -4860,42 +4846,6 @@
           },
           "uuid": "eab61544-5ddb-4694-9a6e-267f4adfcfba",
           "children": []
-        },
-        {
-          "id": "SP_ARTHOTHELIUM_TAEDIOSUM",
-          "name": "Arthothelium taediosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthothelium",
-          "sourceIds": {
-            "checklistbank-139831": "214361"
-          },
-          "uuid": "ca44ef59-2cfa-495f-89e5-baa48ea711c2"
-        },
-        {
-          "id": "SP_ARTHOTHELIUM_HYMENIICOLA",
-          "name": "Arthothelium hymeniicola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthothelium",
-          "sourceIds": {
-            "checklistbank-139831": "526596"
-          },
-          "uuid": "aa69db57-8275-4bf7-9903-7a0f10292b50"
-        },
-        {
-          "id": "SP_ARTHOTHELIUM_DISPERSUM",
-          "name": "Arthothelium dispersum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthothelium",
-          "sourceIds": {
-            "checklistbank-139831": "1198834"
-          },
-          "uuid": "7eba9b80-9ae0-4903-b19c-c0c25119dd24"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6536,12 +6486,17 @@
             "mycobank": [
               "376418"
             ],
-            "checklistbank": "65508",
-            "wikispecies": "Arthonia_conferta",
+            "checklistbank": [
+              "65508",
+              "urn:lsid:marinespecies.org:taxname:1485267"
+            ],
+            "wikispecies": [
+              "Arthonia_conferta"
+            ],
             "checklistbank-139831": "214238"
           },
           "uuid": "491423d1-bd9c-581-a69-8233ada0480083",
-          "authorityIds": "gbif:3548765,mycobank:376418"
+          "authorityIds": "checklistbank:65508,checklistbank:urn:lsid:marinespecies.org:taxname:1485267,checklistbank-139831:214238,gbif:3548765,mycobank:376418,wikispecies:Arthonia_conferta"
         },
         {
           "id": "ARTHONIA_CONIOCRAEAE",
@@ -7844,14 +7799,19 @@
             "col": [
               "GXGJ"
             ],
-            "checklistbank": "65543",
-            "wikispecies": "Arthonia_fuscopurpurea",
+            "checklistbank": [
+              "65543",
+              "urn:lsid:marinespecies.org:taxname:1603925"
+            ],
+            "wikispecies": [
+              "Arthonia_fuscopurpurea"
+            ],
             "gbif-backbone": "2592668",
             "checklistbank-139831": "399661",
             "checklistbank-2029": "a162211b-9972-4d73-abe4-8f5bf6d5d461"
           },
           "uuid": "133d69a3-2eda-5bb-b20-35faae7867f5f9",
-          "authorityIds": "col:GXGJ,gbif:2592668,mycobank:120509"
+          "authorityIds": "checklistbank:65543,checklistbank:urn:lsid:marinespecies.org:taxname:1603925,checklistbank-139831:399661,checklistbank-2029:a162211b-9972-4d73-abe4-8f5bf6d5d461,col:GXGJ,gbif:2592668,gbif-backbone:2592668,mycobank:120509,wikispecies:Arthonia_fuscopurpurea"
         },
         {
           "id": "ARTHONIA_GALACTITELLA",
@@ -8067,12 +8027,17 @@
             "mycobank": [
               "376524"
             ],
-            "checklistbank": "65550",
-            "wikispecies": "Arthonia_glebosa",
+            "checklistbank": [
+              "65550",
+              "urn:lsid:marinespecies.org:taxname:1603927"
+            ],
+            "wikispecies": [
+              "Arthonia_glebosa"
+            ],
             "checklistbank-139831": "214258"
           },
           "uuid": "8dd25a48-8721-58d-94d-61101f23472827",
-          "authorityIds": "gbif:2592764,mycobank:376524"
+          "authorityIds": "checklistbank:65550,checklistbank:urn:lsid:marinespecies.org:taxname:1603927,checklistbank-139831:214258,gbif:2592764,mycobank:376524,wikispecies:Arthonia_glebosa"
         },
         {
           "id": "ARTHONIA_GRACILENTA",
@@ -8492,10 +8457,12 @@
             ],
             "checklistbank": "884855",
             "gbif-backbone": "10775713",
-            "checklistbank-139831": "884855"
+            "checklistbank-139831": [
+              "884855"
+            ]
           },
           "uuid": "0cbc8323-223b-5a6-88b-9160e88dd6782e",
-          "authorityIds": "col:GXH7,gbif:10775713,mycobank:818302"
+          "authorityIds": "checklistbank:884855,checklistbank-139831:884855,col:GXH7,gbif:10775713,gbif-backbone:10775713,mycobank:818302"
         },
         {
           "id": "ARTHONIA_HYPOBELA",
@@ -8750,12 +8717,17 @@
               "GXHL"
             ],
             "checklistbank": "65561",
-            "wikispecies": "Arthonia_intexta",
+            "wikispecies": [
+              "Arthonia_intexta"
+            ],
             "checklistbank-2008": "660362",
-            "checklistbank-139831": "214266"
+            "checklistbank-139831": "214266",
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60057396"
+            ]
           },
           "uuid": "38cbfa84-1a97-5cf-9c2-1a03150e03bec3",
-          "authorityIds": "col:GXHL,gbif:2592702,mycobank:364209"
+          "authorityIds": "checklistbank:65561,checklistbank-139831:214266,checklistbank-2008:660362,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60057396,col:GXHL,gbif:2592702,mycobank:364209,wikispecies:Arthonia_intexta"
         },
         {
           "id": "ARTHONIA_INVADENS",
@@ -10842,14 +10814,19 @@
             "col": [
               "GXKV"
             ],
-            "checklistbank": "65608",
-            "wikispecies": "Arthonia_phaeobaea",
+            "checklistbank": [
+              "65608",
+              "urn:lsid:marinespecies.org:taxname:147576"
+            ],
+            "wikispecies": [
+              "Arthonia_phaeobaea"
+            ],
             "checklistbank-2008": "660350",
             "gbif-backbone": "2592721",
             "checklistbank-139831": "205488"
           },
           "uuid": "a8ef1101-481e-506-8ea-0010d34f41b5e3",
-          "authorityIds": "col:GXKV,gbif:2592721,mycobank:376735"
+          "authorityIds": "checklistbank:65608,checklistbank:urn:lsid:marinespecies.org:taxname:147576,checklistbank-139831:205488,checklistbank-2008:660350,col:GXKV,gbif:2592721,gbif-backbone:2592721,mycobank:376735,wikispecies:Arthonia_phaeobaea"
         },
         {
           "id": "ARTHONIA_PHAEONEPHELA",
@@ -11147,12 +11124,17 @@
             "mycobank": [
               "376755"
             ],
-            "checklistbank": "65614",
-            "wikispecies": "Arthonia_polymorpha",
+            "checklistbank": [
+              "65614",
+              "urn:lsid:marinespecies.org:taxname:1485268"
+            ],
+            "wikispecies": [
+              "Arthonia_polymorpha"
+            ],
             "checklistbank-139831": "214290"
           },
           "uuid": "c6eb0d20-287d-524-887-0ae5484b91200b",
-          "authorityIds": "gbif:2592767,mycobank:376755"
+          "authorityIds": "checklistbank:65614,checklistbank:urn:lsid:marinespecies.org:taxname:1485268,checklistbank-139831:214290,gbif:2592767,mycobank:376755,wikispecies:Arthonia_polymorpha"
         },
         {
           "id": "ARTHONIA_PORTUENSIS",
@@ -11291,10 +11273,12 @@
             "checklistbank": "660348",
             "checklistbank-2008": "660348",
             "gbif-backbone": "7510245",
-            "checklistbank-139831": "1681148"
+            "checklistbank-139831": [
+              "1681148"
+            ]
           },
           "uuid": "3c76b0bc-a603-5cd-a8c-be9a28933c6ff4",
-          "authorityIds": "gbif:7510245,mycobank:516479"
+          "authorityIds": "checklistbank:660348,checklistbank-139831:1681148,checklistbank-2008:660348,gbif:7510245,gbif-backbone:7510245,mycobank:516479"
         },
         {
           "id": "ARTHONIA_PROTOPARMELIOPSIDIS",
@@ -11405,11 +11389,16 @@
               "GXLD"
             ],
             "checklistbank": "65618",
-            "wikispecies": "Arthonia_pseudocyphellariae",
-            "checklistbank-139831": "399676"
+            "wikispecies": [
+              "Arthonia_pseudocyphellariae"
+            ],
+            "checklistbank-139831": "399676",
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60057397"
+            ]
           },
           "uuid": "f6ceb633-e34a-5b2-bea-275d1a146e2062",
-          "authorityIds": "col:GXLD,gbif:3549034,mycobank:360210"
+          "authorityIds": "checklistbank:65618,checklistbank-139831:399676,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60057397,col:GXLD,gbif:3549034,mycobank:360210,wikispecies:Arthonia_pseudocyphellariae"
         },
         {
           "id": "ARTHONIA_PSEUDOSTROMATICA",
@@ -11435,10 +11424,12 @@
             ],
             "checklistbank": "1457743",
             "gbif-backbone": "10722507",
-            "checklistbank-139831": "1457743"
+            "checklistbank-139831": [
+              "1457743"
+            ]
           },
           "uuid": "a8299763-35fd-535-9b3-3d35d784f13e3f",
-          "authorityIds": "col:684NR,gbif:10722507,mycobank:819826"
+          "authorityIds": "checklistbank:1457743,checklistbank-139831:1457743,col:684NR,gbif:10722507,gbif-backbone:10722507,mycobank:819826"
         },
         {
           "id": "ARTHONIA_PSILOCLIYSTA",
@@ -11595,10 +11586,12 @@
             ],
             "checklistbank": "214293",
             "gbif-backbone": "2592726",
-            "checklistbank-139831": "214293"
+            "checklistbank-139831": [
+              "214293"
+            ]
           },
           "uuid": "7ed75f92-3aed-5ab-b31-8c8cf9d5dc0361",
-          "authorityIds": "col:GXLH,gbif:2592726,mycobank:121495"
+          "authorityIds": "checklistbank:214293,checklistbank-139831:214293,col:GXLH,gbif:2592726,gbif-backbone:2592726,mycobank:121495"
         },
         {
           "id": "ARTHONIA_PUNCTILLIFORMIS",
@@ -11910,13 +11903,18 @@
             "col": [
               "GXLW"
             ],
-            "checklistbank": "65633",
-            "wikispecies": "Arthonia_rubella",
+            "checklistbank": [
+              "65633",
+              "urn:lsid:marinespecies.org:taxname:1485270"
+            ],
+            "wikispecies": [
+              "Arthonia_rubella"
+            ],
             "gbif-backbone": "3548819",
             "checklistbank-139831": "214300"
           },
           "uuid": "a03e9ebe-f3ae-573-8ff-ddef2c298edc96",
-          "authorityIds": "col:GXLW,gbif:3548819,mycobank:119459"
+          "authorityIds": "checklistbank:65633,checklistbank:urn:lsid:marinespecies.org:taxname:1485270,checklistbank-139831:214300,col:GXLW,gbif:3548819,gbif-backbone:3548819,mycobank:119459,wikispecies:Arthonia_rubella"
         },
         {
           "id": "ARTHONIA_RUBROCINCTA",
@@ -11997,11 +11995,16 @@
             "mycobank": [
               "354575"
             ],
-            "checklistbank": "65634",
-            "wikispecies": "Arthonia_rufidula"
+            "checklistbank": [
+              "65634",
+              "urn:lsid:marinespecies.org:taxname:1603935"
+            ],
+            "wikispecies": [
+              "Arthonia_rufidula"
+            ]
           },
           "uuid": "166e425e-73e4-5c6-96b-1abe96cddc236a",
-          "authorityIds": "gbif:8471558,mycobank:354575"
+          "authorityIds": "checklistbank:65634,checklistbank:urn:lsid:marinespecies.org:taxname:1603935,gbif:8471558,mycobank:354575,wikispecies:Arthonia_rufidula"
         },
         {
           "id": "ARTHONIA_RUPICOLA",
@@ -12653,11 +12656,16 @@
             "mycobank": [
               "129191"
             ],
-            "checklistbank": "173365",
-            "wikispecies": "Arthonia_subantarctica"
+            "checklistbank": [
+              "173365",
+              "urn:lsid:marinespecies.org:taxname:1603938"
+            ],
+            "wikispecies": [
+              "Arthonia_subantarctica"
+            ]
           },
           "uuid": "98ba51f9-4eae-596-bed-6dcef0497ad9aa",
-          "authorityIds": "gbif:3548889,mycobank:129191"
+          "authorityIds": "checklistbank:173365,checklistbank:urn:lsid:marinespecies.org:taxname:1603938,gbif:3548889,mycobank:129191,wikispecies:Arthonia_subantarctica"
         },
         {
           "id": "ARTHONIA_SUBASTROIDELLA",
@@ -12737,11 +12745,16 @@
               "GXMN"
             ],
             "checklistbank": "1478166",
-            "wikispecies": "Arthonia_subconveniens",
-            "checklistbank-139831": "1478166"
+            "wikispecies": [
+              "Arthonia_subconveniens"
+            ],
+            "checklistbank-139831": "1478166",
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60057398"
+            ]
           },
           "uuid": "07a1dab8-12c0-5db-a16-f5332c2c2f0689",
-          "authorityIds": "col:GXMN,gbif:3549392,mycobank:144733"
+          "authorityIds": "checklistbank:1478166,checklistbank-139831:1478166,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60057398,col:GXMN,gbif:3549392,mycobank:144733,wikispecies:Arthonia_subconveniens"
         },
         {
           "id": "ARTHONIA_SUBDIFFUSA",
@@ -13389,10 +13402,12 @@
             ],
             "checklistbank": "1655742",
             "gbif-backbone": "10807905",
-            "checklistbank-139831": "1655742"
+            "checklistbank-139831": [
+              "1655742"
+            ]
           },
           "uuid": "e4a20620-0c86-590-bfa-d4b9fe634bd2f6",
-          "authorityIds": "col:GXN2,gbif:10807905,mycobank:822981"
+          "authorityIds": "checklistbank:1655742,checklistbank-139831:1655742,col:GXN2,gbif:10807905,gbif-backbone:10807905,mycobank:822981"
         },
         {
           "id": "ARTHONIA_THOZETIANA",
@@ -13532,10 +13547,12 @@
             "checklistbank": "660336",
             "checklistbank-2008": "660336",
             "gbif-backbone": "7561196",
-            "checklistbank-139831": "1395721"
+            "checklistbank-139831": [
+              "1395721"
+            ]
           },
           "uuid": "1c215927-9416-571-9e4-116d90251e7ff1",
-          "authorityIds": "col:GXN8,gbif:7561196,mycobank:808743"
+          "authorityIds": "checklistbank:660336,checklistbank-139831:1395721,checklistbank-2008:660336,col:GXN8,gbif:7561196,gbif-backbone:7561196,mycobank:808743"
         },
         {
           "id": "ARTHONIA_TRILOCULARIS",
@@ -23095,12 +23112,15 @@
           "sourceIds": {
             "checklistbank": "65499",
             "checklistbank-2008": "55650",
-            "checklistbank-139831": "214235"
+            "checklistbank-139831": [
+              "214235"
+            ]
           },
           "children": [],
           "uuid": "6bda6d88-4735-557-be4-2da28246892778",
           "commonName": "dot lichen",
-          "description": "Arthonia cinereopruinosa (dot lichen) is a arthoniaceae species found in its native region."
+          "description": "Arthonia cinereopruinosa (dot lichen) is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:65499,checklistbank-139831:214235,checklistbank-2008:55650"
         },
         {
           "id": "SP_ARTHONIA_CINNABARINULA_M_LL_ARG",
@@ -23143,13 +23163,16 @@
           "authorship": "(Schrader) Nyl.",
           "sourceIds": {
             "checklistbank": "65520",
-            "checklistbank-139831": "214244",
+            "checklistbank-139831": [
+              "214244"
+            ],
             "checklistbank-2029": "04239a76-cbbd-4f0c-9a0d-89d3e006d57b"
           },
           "children": [],
           "uuid": "ed28985f-326c-5ee-a7c-514f8e581d621a",
           "commonName": "dispersed dot lichen",
-          "description": "Arthonia dispersa (dispersed dot lichen) is a arthoniaceae species found in its native region."
+          "description": "Arthonia dispersa (dispersed dot lichen) is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:65520,checklistbank-139831:214244,checklistbank-2029:04239a76-cbbd-4f0c-9a0d-89d3e006d57b"
         },
         {
           "id": "SP_ARTHONIA_LIRELLANS_ALMQ",
@@ -23206,12 +23229,15 @@
           "authorship": "Anzi",
           "sourceIds": {
             "checklistbank": "65609",
-            "checklistbank-139831": "214286"
+            "checklistbank-139831": [
+              "214286"
+            ]
           },
           "children": [],
           "uuid": "30779489-b5df-53c-af3-43aa8b83e4e637",
           "commonName": "dot lichen",
-          "description": "Arthonia pinastri (dot lichen) is a arthoniaceae species found in its native region."
+          "description": "Arthonia pinastri (dot lichen) is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:65609,checklistbank-139831:214286"
         },
         {
           "id": "SP_ARTHONIA_PYRRHULA_NYL",
@@ -23287,11 +23313,14 @@
           "sourceIds": {
             "checklistbank": "119932",
             "checklistbank-2008": "665522",
-            "checklistbank-139831": "976728"
+            "checklistbank-139831": [
+              "976728"
+            ]
           },
           "children": [],
           "uuid": "5cb8f086-05c3-566-8a6-8f268be16d0129",
-          "description": "Arthonia galactinaria is a arthoniaceae species found in its native region."
+          "description": "Arthonia galactinaria is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:119932,checklistbank-139831:976728,checklistbank-2008:665522"
         },
         {
           "id": "SP_ARTHONIA_PARIETINARIA_HAFELLNER_A_FLEISCHHACKER",
@@ -23304,11 +23333,14 @@
           "sourceIds": {
             "checklistbank": "173345",
             "checklistbank-2008": "845025",
-            "checklistbank-139831": "882263"
+            "checklistbank-139831": [
+              "882263"
+            ]
           },
           "children": [],
           "uuid": "816bc28e-b26e-529-abe-6ee570aa4046d1",
-          "description": "Arthonia parietinaria is a arthoniaceae species found in its native region."
+          "description": "Arthonia parietinaria is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:173345,checklistbank-139831:882263,checklistbank-2008:845025"
         },
         {
           "id": "SP_ARTHONIA_SUBVARIANS_NYL",
@@ -23758,11 +23790,14 @@
           "authorship": "Nyl., 1863",
           "sourceIds": {
             "checklistbank": "1055277",
-            "checklistbank-139831": "1238741"
+            "checklistbank-139831": [
+              "1238741"
+            ]
           },
           "children": [],
           "uuid": "9a0f0959-3437-5e0-8e9-3184550e933399",
-          "description": "Arthonia distendens is a arthoniaceae species found in its native region."
+          "description": "Arthonia distendens is a arthoniaceae species found in its native region.",
+          "authorityIds": "checklistbank:1055277,checklistbank-139831:1238741"
         },
         {
           "id": "SP_ARTHONIA_SUBCYRTODES_WILLEY_1890",
@@ -24802,9 +24837,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Arthonia",
           "sourceIds": {
-            "checklistbank-139831": "462334"
+            "checklistbank-139831": [
+              "462334"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:462334"
         },
         {
           "id": "SP_ARTHONIA_FISSURINEA",
@@ -24814,9 +24852,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Arthonia",
           "sourceIds": {
-            "checklistbank-139831": "532057"
+            "checklistbank-139831": [
+              "532057"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:532057"
         }
       ],
       "authorship": "Acharius"
@@ -24826,134 +24867,6 @@
       "name": "\"Arthonia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ARTHONIA_PHAEOBAEA_J_M_NORMAN_J_M_NORMAN_1869",
-          "name": "\"Arthonia phaeobaea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"(J.M. Norman) J.M. Norman, 1869\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:147576",
-            "wikispecies": "Arthonia_phaeobaea"
-          },
-          "children": [],
-          "uuid": "f90c88e2-9758-571-bdc-20a47225c94cb1",
-          "description": "\"Arthonia phaeobaea\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_CONFERTA_F_E_NYL_1857",
-          "name": "\"Arthonia conferta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"(Fée) Nyl., 1857\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1485267",
-            "wikispecies": "Arthonia_conferta"
-          },
-          "children": [],
-          "uuid": "9282f4ac-15ee-590-8d5-54e4cb93ea999b",
-          "description": "\"Arthonia conferta\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_POLYMORPHA_ACH_1814",
-          "name": "\"Arthonia polymorpha\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"Ach., 1814\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1485268",
-            "wikispecies": "Arthonia_polymorpha"
-          },
-          "children": [],
-          "uuid": "85a563a8-913c-5bd-854-06ef38a2e41fa5",
-          "description": "\"Arthonia polymorpha\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_RUBELLA_F_E_NYL_1856",
-          "name": "\"Arthonia rubella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"(Fée) Nyl., 1856\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1485270",
-            "wikispecies": "Arthonia_rubella"
-          },
-          "children": [],
-          "uuid": "2e484b10-6a64-504-869-1908dc8faa0a87",
-          "description": "\"Arthonia rubella\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_FUSCOPURPUREA_TUL_R_SANT_1960",
-          "name": "\"Arthonia fuscopurpurea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"(Tul.) R. Sant., 1960\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603925",
-            "wikispecies": "Arthonia_fuscopurpurea"
-          },
-          "children": [],
-          "uuid": "9286547f-e22e-564-a56-0ce88911f1823e",
-          "description": "\"Arthonia fuscopurpurea\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_GLEBOSA_TUCK_1872",
-          "name": "\"Arthonia glebosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"Tuck., 1872\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603927",
-            "wikispecies": "Arthonia_glebosa"
-          },
-          "children": [],
-          "uuid": "eedbfaa0-5b23-57a-a2e-049047c3c939e3",
-          "description": "\"Arthonia glebosa\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_RUFIDULA_HUE_D_HAWKSW_R_SANT_VSTEDAL_1991",
-          "name": "\"Arthonia rufidula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"(Hue) D. Hawksw., R. Sant. & Øvstedal, 1991\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603935",
-            "wikispecies": "Arthonia_rufidula"
-          },
-          "children": [],
-          "uuid": "d8e57015-b5c8-5da-be3-67a8be42008511",
-          "description": "\"Arthonia rufidula\" is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_ARTHONIA_SUBANTARCTICA_VSTEDAL_1986",
-          "name": "\"Arthonia subantarctica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthonia",
-          "authorship": "\"Øvstedal, 1986\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603938",
-            "wikispecies": "Arthonia_subantarctica"
-          },
-          "children": [],
-          "uuid": "dfd2bc1c-9237-5ec-9a3-4e80db38d23fec",
-          "description": "\"Arthonia subantarctica\" is a arthoniaceae species found in its native region."
-        },
         {
           "id": "SP_ARTHONIA_ANJUTII_S_Y_KONDR_ALSTRUP",
           "name": "Arthonia anjutii",
@@ -24966,51 +24879,6 @@
             "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057395"
           },
           "uuid": "a39d1239-08eb-4f65-9f09-c076c03af9eb",
-          "children": []
-        },
-        {
-          "id": "SP_ARTHONIA_INTEXTA_ALMQ",
-          "name": "Arthonia intexta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "authorship": "Almq.",
-          "sourceIds": {
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057396",
-            "wikispecies": "Arthonia_intexta"
-          },
-          "uuid": "d1e4d9bc-ee27-4aef-bd3d-e4472474298f",
-          "children": []
-        },
-        {
-          "id": "SP_ARTHONIA_PSEUDOCYPHELLARIAE_WEDIN",
-          "name": "Arthonia pseudocyphellariae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "authorship": "Wedin",
-          "sourceIds": {
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057397",
-            "wikispecies": "Arthonia_pseudocyphellariae"
-          },
-          "uuid": "fffbc6d3-da38-45af-bbec-9c015645bd70",
-          "children": []
-        },
-        {
-          "id": "SP_ARTHONIA_SUBCONVENIENS_NYL",
-          "name": "Arthonia subconveniens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "authorship": "Nyl.",
-          "sourceIds": {
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057398",
-            "wikispecies": "Arthonia_subconveniens"
-          },
-          "uuid": "64c553cd-41ec-40ad-9fe3-6aca9dca186f",
           "children": []
         },
         {
@@ -28304,54 +28172,6 @@
           "children": []
         },
         {
-          "id": "SP_ARTHONIA_CINEREOPRUINOSA",
-          "name": "Arthonia cinereopruinosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "214235"
-          },
-          "uuid": "4e5d0ae4-873e-4d97-8311-6ed14432adf7"
-        },
-        {
-          "id": "SP_ARTHONIA_DISPERSA",
-          "name": "Arthonia dispersa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "214244"
-          },
-          "uuid": "4d5e6c57-daf1-4c5f-888b-0245855315fa"
-        },
-        {
-          "id": "SP_ARTHONIA_PINASTRI",
-          "name": "Arthonia pinastri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "214286"
-          },
-          "uuid": "9e73ddc7-97a6-4f29-90cd-2af2cf9e884a"
-        },
-        {
-          "id": "SP_ARTHONIA_PUNCTIFORMIS",
-          "name": "Arthonia punctiformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "214293"
-          },
-          "uuid": "caf0ea7d-a9b3-4721-a0fb-c63f39a46371"
-        },
-        {
           "id": "SP_ARTHONIA_MACROTHECA",
           "name": "Arthonia macrotheca",
           "rank": "SPECIES",
@@ -28361,7 +28181,8 @@
           "sourceIds": {
             "checklistbank-139831": "462334"
           },
-          "uuid": "d0f8fea7-67e6-4562-b310-2f11f4eb078c"
+          "uuid": "d0f8fea7-67e6-4562-b310-2f11f4eb078c",
+          "children": []
         },
         {
           "id": "SP_ARTHONIA_FISSURINEA",
@@ -28373,103 +28194,8 @@
           "sourceIds": {
             "checklistbank-139831": "532057"
           },
-          "uuid": "e6c87139-0969-4416-9aa3-e3ee8394d713"
-        },
-        {
-          "id": "SP_ARTHONIA_PARIETINARIA",
-          "name": "Arthonia parietinaria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "882263"
-          },
-          "uuid": "898554d9-0f4b-4fbe-ade2-10a4f9bbe4b0"
-        },
-        {
-          "id": "SP_ARTHONIA_HETERODERMIAE",
-          "name": "Arthonia heterodermiae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "884855"
-          },
-          "uuid": "e49e15a1-b107-4422-8917-8eceddad603a"
-        },
-        {
-          "id": "SP_ARTHONIA_GALACTINARIA",
-          "name": "Arthonia galactinaria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "976728"
-          },
-          "uuid": "7b777e3f-5786-471c-bea7-1d2dd104ffce"
-        },
-        {
-          "id": "SP_ARTHONIA_DISTENDENS",
-          "name": "Arthonia distendens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "1238741"
-          },
-          "uuid": "6fb2fbb8-efaa-43de-af4d-dcf5dfb3af6b"
-        },
-        {
-          "id": "SP_ARTHONIA_TRIFURCATA",
-          "name": "Arthonia trifurcata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "1395721"
-          },
-          "uuid": "c697fd81-14fe-402f-af31-f9d45f24d6cc"
-        },
-        {
-          "id": "SP_ARTHONIA_PSEUDOSTROMATICA",
-          "name": "Arthonia pseudostromatica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "1457743"
-          },
-          "uuid": "61653458-0eea-4a81-aa23-4fd6d4dbad33"
-        },
-        {
-          "id": "SP_ARTHONIA_THORIANA",
-          "name": "Arthonia thoriana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "1655742"
-          },
-          "uuid": "24f24ea2-782f-49f8-9475-4acfd45f7ffb"
-        },
-        {
-          "id": "SP_ARTHONIA_PROTOPARMELIOPSEOS",
-          "name": "Arthonia protoparmeliopseos",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthonia",
-          "sourceIds": {
-            "checklistbank-139831": "1681148"
-          },
-          "uuid": "71e20da4-3ce5-42d8-ab55-cfbe5bb47274"
+          "uuid": "e6c87139-0969-4416-9aa3-e3ee8394d713",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -39616,10 +39342,12 @@
             ],
             "checklistbank": "1230113",
             "gbif-backbone": "12179881",
-            "checklistbank-139831": "1230113"
+            "checklistbank-139831": [
+              "1230113"
+            ]
           },
           "uuid": "02d88e70-21ca-5e1-acc-0428daa96a453e",
-          "authorityIds": "col:B2SC9,gbif:12179881,mycobank:834135"
+          "authorityIds": "checklistbank:1230113,checklistbank-139831:1230113,col:B2SC9,gbif:12179881,gbif-backbone:12179881,mycobank:834135"
         },
         {
           "id": "BRYOSTIGMA_BIATORICOLA",
@@ -39893,10 +39621,12 @@
             ],
             "checklistbank": "144991",
             "gbif-backbone": "8673703",
-            "checklistbank-139831": "532069"
+            "checklistbank-139831": [
+              "532069"
+            ]
           },
           "uuid": "21378641-1220-572-87f-384dd8ce0ba492",
-          "authorityIds": "col:NJVT,gbif:8673703,mycobank:808769"
+          "authorityIds": "checklistbank:144991,checklistbank-139831:532069,col:NJVT,gbif:8673703,gbif-backbone:8673703,mycobank:808769"
         },
         {
           "id": "BRYOSTIGMA_NEGLECTULUM",
@@ -40114,30 +39844,6 @@
           },
           "uuid": "e3619fe5-8911-4a10-9923-23c9779f7692",
           "children": []
-        },
-        {
-          "id": "SP_BRYOSTIGMA_MUSCIGENUM",
-          "name": "Bryostigma muscigenum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bryostigma",
-          "sourceIds": {
-            "checklistbank-139831": "532069"
-          },
-          "uuid": "e1cd780f-8c6b-4454-9978-3a1e2f4b511e"
-        },
-        {
-          "id": "SP_BRYOSTIGMA_APOTHECIORUM",
-          "name": "Bryostigma apotheciorum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bryostigma",
-          "sourceIds": {
-            "checklistbank-139831": "1230113"
-          },
-          "uuid": "0eb0e6f2-2702-45fc-ade5-d13f080c5f32"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -42170,22 +41876,6 @@
           "children": [],
           "uuid": "5ed69cde-93f5-51c-966-9960d04406f297",
           "description": "Melaspilea subarenacea is a arthoniaceae species found in its native region."
-        },
-        {
-          "id": "SP_MELASPILEA_GRANITOPHILA_TH_FR_COPPINS_1989",
-          "name": "Melaspilea granitophila",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melaspilea",
-          "authorship": "(Th.Fr.) Coppins, 1989",
-          "sourceIds": {
-            "checklistbank": "659394",
-            "wikispecies": "Melaspilea_granitophila"
-          },
-          "children": [],
-          "uuid": "3d51e353-df0f-521-845-73cfe81e78a007",
-          "description": "Melaspilea granitophila is a arthoniaceae species found in its native region."
         },
         {
           "id": "SP_MELASPILEA_FARINACEA_H_OLIVIER_1906",
@@ -45851,7 +45541,7 @@
   ],
   "authorship": "Reichenbach",
   "genusCount": 116,
-  "speciesCount": 2330,
+  "speciesCount": 2318,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

@@ -2383,7 +2383,8 @@
           "sourceIds": {
             "checklistbank-139831": "1036516"
           },
-          "uuid": "89b3f727-a607-4d24-8831-ed21b68832bd"
+          "uuid": "89b3f727-a607-4d24-8831-ed21b68832bd",
+          "children": []
         },
         {
           "id": "SP_JAERA_FORSMANI",
@@ -2395,7 +2396,8 @@
           "sourceIds": {
             "checklistbank-139831": "1188791"
           },
-          "uuid": "09c4a7f8-a041-4e0b-a261-23292c15e272"
+          "uuid": "09c4a7f8-a041-4e0b-a261-23292c15e272",
+          "children": []
         },
         {
           "id": "SP_JAERA_CASPICA",
@@ -2407,7 +2409,8 @@
           "sourceIds": {
             "checklistbank-139831": "1603859"
           },
-          "uuid": "d375dca6-a9e8-4315-ae68-f6e642ebd1c8"
+          "uuid": "d375dca6-a9e8-4315-ae68-f6e642ebd1c8",
+          "children": []
         },
         {
           "id": "SP_JAERA_SYEI",
@@ -2419,7 +2422,8 @@
           "sourceIds": {
             "checklistbank-139831": "1603867"
           },
-          "uuid": "5992434f-91c1-4aa4-9468-a0fdff60a092"
+          "uuid": "5992434f-91c1-4aa4-9468-a0fdff60a092",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3723,9 +3727,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:264542"
             ],
-            "wikispecies": "Mackinia_japonica"
+            "wikispecies": [
+              "Mackinia_japonica"
+            ],
+            "checklistbank-139831": [
+              "1609193"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:264542,col:6QQKT,itis:545251",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:264542,checklistbank-139831:1609193,col:6QQKT,itis:545251,wikispecies:Mackinia_japonica",
           "description": "Mackinia japonica is a janiridae species found in its native region."
         },
         {
@@ -3782,22 +3791,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MACKINIA_JAPONICA_MATSUMOTO_1967",
-          "name": "\"Mackinia japonica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mackinia",
-          "authorship": "\"Matsumoto, 1967\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:264542",
-            "wikispecies": "Mackinia_japonica",
-            "checklistbank-139831": "1609193"
-          },
-          "children": [],
-          "uuid": "0a65fd36-817f-5c1-bf0-7968b09e28da19"
-        },
-        {
           "id": "SP_MACKINIA_CONTINENTALIS",
           "name": "Mackinia continentalis",
           "rank": "SPECIES",
@@ -3820,7 +3813,8 @@
           "sourceIds": {
             "checklistbank-139831": "1609195"
           },
-          "uuid": "8f2100d6-7976-48b3-ab80-71fa8e8227ff"
+          "uuid": "8f2100d6-7976-48b3-ab80-71fa8e8227ff",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5512,7 +5506,7 @@
       "lineage": "Janiridae"
     }
   ],
-  "speciesCount": 269,
+  "speciesCount": 268,
   "appSlug": "janiridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

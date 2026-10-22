@@ -671,10 +671,15 @@
             "col": [
               "6XBJJ"
             ],
-            "checklistbank": "txn:151210",
-            "checklistbank-1174": "txn:151210"
+            "checklistbank": [
+              "txn:151210",
+              "urn:lsid:marinespecies.org:taxname:1034519"
+            ],
+            "checklistbank-1174": [
+              "txn:151210"
+            ]
           },
-          "authorityIds": "col:6XBJJ",
+          "authorityIds": "checklistbank:txn:151210,checklistbank:urn:lsid:marinespecies.org:taxname:1034519,checklistbank-1174:txn:151210,col:6XBJJ",
           "authorship": "(Munster 1826)",
           "description": "Salenia scutigera is a saleniidae species found in its native region."
         },
@@ -710,10 +715,15 @@
             "col": [
               "BHHT5"
             ],
-            "checklistbank": "txn:377576",
-            "checklistbank-1174": "txn:377576"
+            "checklistbank": [
+              "txn:377576",
+              "urn:lsid:marinespecies.org:taxname:1034516"
+            ],
+            "checklistbank-1174": [
+              "txn:377576"
+            ]
           },
-          "authorityIds": "col:BHHT5",
+          "authorityIds": "checklistbank:txn:377576,checklistbank:urn:lsid:marinespecies.org:taxname:1034516,checklistbank-1174:txn:377576,col:BHHT5",
           "description": "Salenia sigillata is a saleniidae species found in its native region."
         },
         {
@@ -1565,38 +1575,6 @@
           "description": "\"Salenia (Pleurosalenia) is a saleniidae species found in its native region."
         },
         {
-          "id": "SP_SALENIA_SIGILLATA_GEYS_MACHALSKI_1992",
-          "name": "\"Salenia sigillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Salenia",
-          "authorship": "\"Geys & Machalski, 1992\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034516",
-            "checklistbank-1174": "txn:377576"
-          },
-          "children": [],
-          "uuid": "ca9cd74b-ec54-50b-a5d-522bed506c6394",
-          "description": "\"Salenia sigillata is a saleniidae species found in its native region."
-        },
-        {
-          "id": "SP_SALENIA_SCUTIGERA_SZ_R_NYI_1955A",
-          "name": "\"Salenia scutigera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Salenia",
-          "authorship": "\"Szörényi, 1955a\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034519",
-            "checklistbank-1174": "txn:151210"
-          },
-          "children": [],
-          "uuid": "3080232f-1986-5db-a56-a9e858dce22d3e",
-          "description": "\"Salenia scutigera is a saleniidae species found in its native region."
-        },
-        {
           "id": "SP_SALENIA_CASCADENSIS_LINDER_ET_AL_1988",
           "name": "Salenia cascadensis",
           "rank": "SPECIES",
@@ -2038,10 +2016,18 @@
             "col": [
               "6XBJW"
             ],
-            "checklistbank": "ott3650857",
-            "wikispecies": "Salenocidaris_miliaris"
+            "checklistbank": [
+              "ott3650857",
+              "urn:lsid:marinespecies.org:taxname:757719"
+            ],
+            "wikispecies": [
+              "Salenocidaris_miliaris"
+            ],
+            "checklistbank-139831": [
+              "195781"
+            ]
           },
-          "authorityIds": "col:6XBJW",
+          "authorityIds": "checklistbank:ott3650857,checklistbank:urn:lsid:marinespecies.org:taxname:757719,checklistbank-139831:195781,col:6XBJW,wikispecies:Salenocidaris_miliaris",
           "description": "Salenocidaris miliaris is a saleniidae species found in its native region."
         },
         {
@@ -2123,23 +2109,6 @@
           "description": "\"Salenocidaris hastigera is a saleniidae species found in its native region."
         },
         {
-          "id": "SP_SALENOCIDARIS_MILIARIS_MORTENSEN_1939",
-          "name": "\"Salenocidaris miliaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Salenocidaris",
-          "authorship": "\"Mortensen, 1939\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757719",
-            "wikispecies": "Salenocidaris_miliaris",
-            "checklistbank-139831": "195781"
-          },
-          "children": [],
-          "uuid": "0f4eb565-e00c-55f-94a-59aaf6d89ffe6f",
-          "description": "\"Salenocidaris miliaris is a saleniidae species found in its native region."
-        },
-        {
           "id": "SP_SALENOCIDARIS_VARISPINA",
           "name": "Salenocidaris varispina",
           "rank": "SPECIES",
@@ -2149,7 +2118,8 @@
           "sourceIds": {
             "checklistbank-139831": "255586"
           },
-          "uuid": "8523b86e-d3ad-40a6-8c29-9ed40dbf6ec1"
+          "uuid": "8523b86e-d3ad-40a6-8c29-9ed40dbf6ec1",
+          "children": []
         },
         {
           "id": "SP_SALENOCIDARIS_BRACHYGNATHA",
@@ -2161,7 +2131,8 @@
           "sourceIds": {
             "checklistbank-139831": "742187"
           },
-          "uuid": "96ac3156-f8f7-4641-b1e1-f122f33df756"
+          "uuid": "96ac3156-f8f7-4641-b1e1-f122f33df756",
+          "children": []
         },
         {
           "id": "SP_SALENOCIDARIS_PROFUNDI",
@@ -2173,7 +2144,8 @@
           "sourceIds": {
             "checklistbank-139831": "791525"
           },
-          "uuid": "333df5f2-2dc2-47db-a6a2-5bb920fc43b0"
+          "uuid": "333df5f2-2dc2-47db-a6a2-5bb920fc43b0",
+          "children": []
         },
         {
           "id": "SP_SALENOCIDARIS_INCRASSATA",
@@ -2185,7 +2157,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163071"
           },
-          "uuid": "5c314ca4-6fb3-474f-beb4-f32813810575"
+          "uuid": "5c314ca4-6fb3-474f-beb4-f32813810575",
+          "children": []
         },
         {
           "id": "SP_SALENOCIDARIS_NUDISPINA",
@@ -2197,7 +2170,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163072"
           },
-          "uuid": "42582613-6988-46e9-95b3-89c475b7fa11"
+          "uuid": "42582613-6988-46e9-95b3-89c475b7fa11",
+          "children": []
         },
         {
           "id": "SP_SALENOCIDARIS_PACIFICA",
@@ -2209,7 +2183,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163075"
           },
-          "uuid": "6ae32bdb-77a9-42bf-b986-2ef239cc9eed"
+          "uuid": "6ae32bdb-77a9-42bf-b986-2ef239cc9eed",
+          "children": []
         },
         {
           "id": "SP_SALENOCIDARIS_CRASSISPINA",
@@ -2221,7 +2196,8 @@
           "sourceIds": {
             "checklistbank-139831": "1163076"
           },
-          "uuid": "7a355045-be59-46db-8c7d-ccb6256735cd"
+          "uuid": "7a355045-be59-46db-8c7d-ccb6256735cd",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2789,7 +2765,7 @@
       "lineage": "saleniidae"
     }
   ],
-  "speciesCount": 162,
+  "speciesCount": 159,
   "appSlug": "saleniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

@@ -457,11 +457,19 @@
           "children": [],
           "sourceIds": {
             "gbif": 7405129,
-            "checklistbank": "ott4025217",
-            "wikispecies": "Pyxilla_johnsoniana"
+            "checklistbank": [
+              "ott4025217",
+              "urn:lsid:marinespecies.org:taxname:616732"
+            ],
+            "wikispecies": [
+              "Pyxilla_johnsoniana"
+            ],
+            "checklistbank-139831": [
+              "1271511"
+            ]
           },
           "uuid": "3d82efde-4168-548-913-91bf070b5d3bb8",
-          "authorityIds": "gbif:7405129"
+          "authorityIds": "checklistbank:ott4025217,checklistbank:urn:lsid:marinespecies.org:taxname:616732,checklistbank-139831:1271511,gbif:7405129,wikispecies:Pyxilla_johnsoniana"
         },
         {
           "id": "PYXILLA_LUNYACSEKII",
@@ -745,23 +753,6 @@
           "children": [],
           "uuid": "323eaeab-b94c-5f6-8e5-91b630a4cc4e72",
           "description": "\"Pyxilla baltica\" is a pyxillaceae species found in its native region."
-        },
-        {
-          "id": "SP_PYXILLA_JOHNSONIANA_GREVILLE",
-          "name": "\"Pyxilla johnsoniana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pyxilla",
-          "authorship": "Greville",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:616732",
-            "wikispecies": "Pyxilla_johnsoniana",
-            "checklistbank-139831": "1271511"
-          },
-          "children": [],
-          "uuid": "cb21c0df-2403-565-8a6-94e6fc3be6a61e",
-          "description": "\"Pyxilla johnsoniana\" is a pyxillaceae species found in its native region."
         },
         {
           "id": "SP_PYXILLA_GRACILIS",
@@ -1771,7 +1762,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 101,
+  "speciesCount": 100,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
