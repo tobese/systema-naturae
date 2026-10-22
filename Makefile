@@ -218,7 +218,7 @@ cache-gbif:
 docker:
 	docker build -t systema-naturae .
 
-SHELL := /bin/zsh
+SHELL := /bin/bash
 PATH := $(HOME)/.nvm/versions/node/v23.3.0/bin:/usr/local/bin:/opt/homebrew/bin:$(PATH)
 
 # One pass over the whole kingdom, not one per class. The old loop walked 11
