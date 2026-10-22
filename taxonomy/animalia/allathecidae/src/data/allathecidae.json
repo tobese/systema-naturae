@@ -3,7 +3,7 @@
   "name": "Allathecidae",
   "rank": "FAMILY",
   "appSlug": "allathecidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_LINEVITUS",
@@ -80,9 +80,23 @@
           "lineage": "Allatheca",
           "authorship": "Yang & He, 1984",
           "sourceIds": {
-            "gbif-backbone": "8695532"
+            "gbif-backbone": "8695532",
+            "checklistbank-1174": "txn:182280"
           },
           "children": []
+        },
+        {
+          "id": "SP_ALLATHECA_DEGEERI_HOLM_1893",
+          "name": "Allatheca degeeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allatheca",
+          "authorship": "(Holm 1893)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:104556"
+          },
+          "uuid": "a3edc383-00f1-4876-bee9-357f99393c63"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -153,6 +167,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "allathecidae"
+    },
+    {
+      "id": "GENUS_DOLIUTUS",
+      "name": "Doliutus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "allathecidae",
+      "children": [
+        {
+          "id": "SP_DOLIUTUS_INFLATUS_SYSSOIEV_1962",
+          "name": "Doliutus inflatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Doliutus",
+          "authorship": "(Syssoiev 1962)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:104574"
+          },
+          "uuid": "b455a043-3fa5-4c1b-adba-581216bd9a2c"
+        }
+      ]
     }
   ],
   "genusCount": 5
