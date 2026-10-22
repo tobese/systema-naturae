@@ -3,7 +3,7 @@
   "name": "Rentoniidae",
   "rank": "FAMILY",
   "appSlug": "rentoniidae",
-  "speciesCount": 10,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_RENTONIUM",
@@ -19,7 +19,8 @@
           "lineage": "Rentonium",
           "authorship": "Crowson, 1966",
           "sourceIds": {
-            "gbif-backbone": "6963464"
+            "gbif-backbone": "6963464",
+            "checklistbank-139831": "396322"
           },
           "children": []
         },
@@ -32,7 +33,8 @@
           "lineage": "Rentonium",
           "authorship": "Gimmel & Leschen, 2014",
           "sourceIds": {
-            "gbif-backbone": "8800717"
+            "gbif-backbone": "8800717",
+            "checklistbank-139831": "410933"
           },
           "children": []
         },
@@ -131,6 +133,18 @@
             "gbif-backbone": "6962995"
           },
           "children": []
+        },
+        {
+          "id": "SP_PARENTONIUM_MAGNUM",
+          "name": "Parentonium magnum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parentonium",
+          "sourceIds": {
+            "checklistbank-139831": "394547"
+          },
+          "uuid": "4cd3ee1e-a3b4-4e61-b66f-be0cd4a90f0f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -150,7 +164,8 @@
           "lineage": "Rentonellum",
           "authorship": "Crowson, 1966",
           "sourceIds": {
-            "gbif-backbone": "6963185"
+            "gbif-backbone": "6963185",
+            "checklistbank-139831": "396320"
           },
           "children": []
         }
@@ -172,13 +187,35 @@
           "lineage": "Rentonidium",
           "authorship": "Crowson, 1966",
           "sourceIds": {
-            "gbif-backbone": "6963463"
+            "gbif-backbone": "6963463",
+            "checklistbank-139831": "396321"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rentoniidae"
+    },
+    {
+      "id": "GENUS_AUSTRALIODES",
+      "name": "Australiodes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rentoniidae",
+      "children": [
+        {
+          "id": "SP_AUSTRALIODES_VESTITUS",
+          "name": "Australiodes vestitus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Australiodes",
+          "sourceIds": {
+            "checklistbank-139831": "386392"
+          },
+          "uuid": "aa637a06-90b1-4502-8648-dfe94f2c1039"
+        }
+      ]
     }
   ],
   "genusCount": 5
