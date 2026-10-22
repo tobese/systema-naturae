@@ -3,7 +3,7 @@
   "name": "Parabrodiidae",
   "rank": "FAMILY",
   "appSlug": "parabrodiidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_PIESBERGALA",
@@ -19,13 +19,36 @@
           "lineage": "Piesbergala",
           "authorship": "Brauckmann & Herd, 2002",
           "sourceIds": {
-            "gbif-backbone": "8594906"
+            "gbif-backbone": "8594906",
+            "checklistbank-1174": "txn:211756"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "parabrodiidae"
+    },
+    {
+      "id": "GENUS_PARABRODIA",
+      "name": "Parabrodia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "parabrodiidae",
+      "children": [
+        {
+          "id": "SP_PARABRODIA_CARBONARIA_CARPENTER_1934",
+          "name": "Parabrodia carbonaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parabrodia",
+          "authorship": "Carpenter 1934",
+          "sourceIds": {
+            "checklistbank-1174": "txn:211728"
+          },
+          "uuid": "83093e39-5502-4880-9179-a33073cd9122"
+        }
+      ]
     }
   ],
   "genusCount": 1
