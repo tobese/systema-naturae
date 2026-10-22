@@ -3,7 +3,7 @@
   "name": "Litophlebiidae",
   "rank": "FAMILY",
   "appSlug": "litophlebiidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_TRIASSOLITOPHLEBIA",
@@ -19,13 +19,36 @@
           "lineage": "Triassolitophlebia",
           "authorship": "Sinitshenkova & Aristov",
           "sourceIds": {
-            "gbif-backbone": "8580867"
+            "gbif-backbone": "8580867",
+            "checklistbank-1174": "txn:325138"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "litophlebiidae"
+    },
+    {
+      "id": "GENUS_LITOPHLEBIA",
+      "name": "Litophlebia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "litophlebiidae",
+      "children": [
+        {
+          "id": "SP_LITOPHLEBIA_OPTATA_RIEK_1976",
+          "name": "Litophlebia optata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litophlebia",
+          "authorship": "(Riek 1976)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:197277"
+          },
+          "uuid": "0aebd30e-0742-4feb-825a-f89d5bf50aa9"
+        }
+      ]
     }
   ],
   "genusCount": 1
