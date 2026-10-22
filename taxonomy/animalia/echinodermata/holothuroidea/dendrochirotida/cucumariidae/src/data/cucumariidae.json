@@ -1024,11 +1024,22 @@
             "itis": [
               "1078285"
             ],
-            "checklistbank": "f19ca50e-9f38-4168-9299-2feb1febfbac",
-            "wikispecies": "Colochirus_quadrangularis",
-            "gbif-backbone": "7188986"
+            "checklistbank": [
+              "f19ca50e-9f38-4168-9299-2feb1febfbac",
+              "urn:lsid:marinespecies.org:taxname:529405"
+            ],
+            "wikispecies": [
+              "Colochirus_quadrangularis"
+            ],
+            "gbif-backbone": "7188986",
+            "checklistbank-127379": [
+              "f19ca50e-9f38-4168-9299-2feb1febfbac"
+            ],
+            "checklistbank-139831": [
+              "348163"
+            ]
           },
-          "authorityIds": "col:X6Y3,itis:1078285",
+          "authorityIds": "checklistbank:f19ca50e-9f38-4168-9299-2feb1febfbac,checklistbank:urn:lsid:marinespecies.org:taxname:529405,checklistbank-127379:f19ca50e-9f38-4168-9299-2feb1febfbac,checklistbank-139831:348163,col:X6Y3,gbif-backbone:7188986,itis:1078285,wikispecies:Colochirus_quadrangularis",
           "description": "Colochirus quadrangularis, commonly known as the thorny sea cucumber, is a species of sea cucumber in the family Cucumariidae."
         },
         {
@@ -1399,10 +1410,18 @@
             "itis": [
               "158195"
             ],
-            "checklistbank": "192693",
-            "wikispecies": "Cucumaria_frondosa"
+            "checklistbank": [
+              "192693",
+              "urn:lsid:marinespecies.org:taxname:529406"
+            ],
+            "wikispecies": [
+              "Cucumaria_frondosa"
+            ],
+            "checklistbank-139831": [
+              "192693"
+            ]
           },
-          "authorityIds": "col:329HT,itis:158195",
+          "authorityIds": "checklistbank:192693,checklistbank:urn:lsid:marinespecies.org:taxname:529406,checklistbank-139831:192693,col:329HT,itis:158195,wikispecies:Cucumaria_frondosa",
           "commonName": "Orange-footed sea cucumber",
           "description": "Cucumaria frondosa (Orange-footed sea cucumber) is a cucumariidae species found in its native region."
         },
@@ -9494,7 +9513,8 @@
           "lineage": "Thyone",
           "authorship": "Reys, 1960",
           "sourceIds": {
-            "checklistbank": "44667"
+            "checklistbank": "44667",
+            "checklistbank-139831": "1162004"
           },
           "children": [],
           "uuid": "6ccf4211-5455-52d-add-7046097fb32285",
@@ -9509,7 +9529,8 @@
           "lineage": "Thyone",
           "authorship": "R. Perrier, 1898",
           "sourceIds": {
-            "checklistbank": "44671"
+            "checklistbank": "44671",
+            "checklistbank-139831": "255842"
           },
           "children": [],
           "uuid": "f4de381f-2187-5bb-b2e-508a379e2822cd",
@@ -9524,7 +9545,8 @@
           "lineage": "Thyone",
           "authorship": "Hérouard, 1890",
           "sourceIds": {
-            "checklistbank": "44676"
+            "checklistbank": "44676",
+            "checklistbank-139831": "950293"
           },
           "children": [],
           "uuid": "a133af82-d07b-5db-94c-09dc1f22ef5dd0",
@@ -10229,24 +10251,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_COLOCHIRUS_QUADRANGULARIS_PEARSON_1903",
-          "name": "\"Colochirus quadrangularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Colochirus",
-          "authorship": "\"(Pearson, 1903)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:529405",
-            "wikispecies": "Colochirus_quadrangularis",
-            "checklistbank-127379": "f19ca50e-9f38-4168-9299-2feb1febfbac",
-            "checklistbank-139831": "348163"
-          },
-          "children": [],
-          "uuid": "60bd48d9-3353-562-9ce-d728d1b4d178c6",
-          "description": "\"Colochirus quadrangularis is a cucumariidae species found in its native region."
-        },
-        {
           "id": "SP_COLOCHIRUS_ROBUSTUS",
           "name": "Colochirus robustus",
           "rank": "SPECIES",
@@ -10272,7 +10276,8 @@
             "checklistbank-127379": "4825f1a4-70d3-4857-8bce-4bd7d8f45753",
             "checklistbank-139831": "142918"
           },
-          "uuid": "e843967d-f8e2-4197-9c61-f7540289a451"
+          "uuid": "e843967d-f8e2-4197-9c61-f7540289a451",
+          "children": []
         },
         {
           "id": "SP_COLOCHIRUS_CYLINDRICUS",
@@ -10284,7 +10289,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161575"
           },
-          "uuid": "b323bb92-f308-46a2-b62a-45ac297b2654"
+          "uuid": "b323bb92-f308-46a2-b62a-45ac297b2654",
+          "children": []
         },
         {
           "id": "SP_COLOCHIRUS_PUSILLUS",
@@ -10296,7 +10302,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161576"
           },
-          "uuid": "a71130eb-7bb6-4456-a77b-a034f0c71812"
+          "uuid": "a71130eb-7bb6-4456-a77b-a034f0c71812",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10307,23 +10314,6 @@
       "name": "\"Cucumaria",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CUCUMARIA_FRONDOSA_SEMPER_1868",
-          "name": "\"Cucumaria frondosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cucumaria",
-          "authorship": "\"Semper, 1868\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:529406",
-            "wikispecies": "Cucumaria_frondosa",
-            "checklistbank-139831": "192693"
-          },
-          "children": [],
-          "uuid": "5fcf45bf-0f86-5ea-8dd-39575bf488d527",
-          "description": "\"Cucumaria frondosa is a cucumariidae species found in its native region."
-        },
         {
           "id": "SP_CUCUMARIA_KIRCHBERGII_LUDWIG_HEDING_1935",
           "name": "\"Cucumaria kirchbergii",
@@ -10461,7 +10451,8 @@
             "checklistbank-127379": "e21dec40-8907-4ecd-8c18-c0364c757ab0",
             "checklistbank-139831": "1161556"
           },
-          "uuid": "39c3b818-e277-4704-b147-88ad57ca76dd"
+          "uuid": "39c3b818-e277-4704-b147-88ad57ca76dd",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_MINIATA",
@@ -10473,7 +10464,8 @@
           "sourceIds": {
             "checklistbank-139831": "117695"
           },
-          "uuid": "afb77ccb-916b-40ce-ad5d-2da0f79b9358"
+          "uuid": "afb77ccb-916b-40ce-ad5d-2da0f79b9358",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PSEUDOCURATA",
@@ -10485,7 +10477,8 @@
           "sourceIds": {
             "checklistbank-139831": "123652"
           },
-          "uuid": "d8da994b-edc9-4a71-b9c7-40974f5e682b"
+          "uuid": "d8da994b-edc9-4a71-b9c7-40974f5e682b",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_CRAX",
@@ -10497,7 +10490,8 @@
           "sourceIds": {
             "checklistbank-139831": "255771"
           },
-          "uuid": "3f89cd45-39a6-4c52-8e0b-232ae997abe9"
+          "uuid": "3f89cd45-39a6-4c52-8e0b-232ae997abe9",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_FLAMMA",
@@ -10509,7 +10503,8 @@
           "sourceIds": {
             "checklistbank-139831": "255772"
           },
-          "uuid": "1e38945c-7a46-41d5-a70e-747b9e3ba55b"
+          "uuid": "1e38945c-7a46-41d5-a70e-747b9e3ba55b",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PIPERATA",
@@ -10521,7 +10516,8 @@
           "sourceIds": {
             "checklistbank-139831": "424353"
           },
-          "uuid": "dfffcdf2-11a5-4862-9250-350f13ef1d49"
+          "uuid": "dfffcdf2-11a5-4862-9250-350f13ef1d49",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_VEGAE",
@@ -10533,7 +10529,8 @@
           "sourceIds": {
             "checklistbank-139831": "447408"
           },
-          "uuid": "0ee39269-e4d9-426a-8a9a-932516043845"
+          "uuid": "0ee39269-e4d9-426a-8a9a-932516043845",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_SALMA",
@@ -10545,7 +10542,8 @@
           "sourceIds": {
             "checklistbank-139831": "485344"
           },
-          "uuid": "f1792709-6a69-4ba0-9a30-0405b4f1483c"
+          "uuid": "f1792709-6a69-4ba0-9a30-0405b4f1483c",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_OKHOTENSIS",
@@ -10557,7 +10555,8 @@
           "sourceIds": {
             "checklistbank-139831": "915244"
           },
-          "uuid": "36981ce9-a560-46a4-8207-ed6d0d6f4602"
+          "uuid": "36981ce9-a560-46a4-8207-ed6d0d6f4602",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PLANCIANA",
@@ -10569,7 +10568,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161529"
           },
-          "uuid": "5a497f5d-dad7-4e00-b94a-d38267950997"
+          "uuid": "5a497f5d-dad7-4e00-b94a-d38267950997",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_GEORGIANA",
@@ -10581,7 +10581,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161541"
           },
-          "uuid": "e1484398-39e4-4b4c-b466-368450c5b5ed"
+          "uuid": "e1484398-39e4-4b4c-b466-368450c5b5ed",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PUSILLA",
@@ -10593,7 +10594,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161542"
           },
-          "uuid": "3a95cc39-1970-4a44-8b89-c52b8a53f8f7"
+          "uuid": "3a95cc39-1970-4a44-8b89-c52b8a53f8f7",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_KOREAENSIS",
@@ -10605,7 +10607,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161543"
           },
-          "uuid": "348c5db1-dc0a-42d9-8d26-d76226a0269e"
+          "uuid": "348c5db1-dc0a-42d9-8d26-d76226a0269e",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_COMPRESSA",
@@ -10617,7 +10620,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161544"
           },
-          "uuid": "d7fab68f-b182-42e3-b6d0-00391c976e1c"
+          "uuid": "d7fab68f-b182-42e3-b6d0-00391c976e1c",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_MUNITA",
@@ -10629,7 +10633,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161545"
           },
-          "uuid": "1e33d2cf-3748-4bfc-999e-ad6117ff2e90"
+          "uuid": "1e33d2cf-3748-4bfc-999e-ad6117ff2e90",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_DURIUSCULA",
@@ -10641,7 +10646,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161546"
           },
-          "uuid": "9a579ff9-9f27-4edf-bc0b-f025693ceaa4"
+          "uuid": "9a579ff9-9f27-4edf-bc0b-f025693ceaa4",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_VILIS",
@@ -10653,7 +10659,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161547"
           },
-          "uuid": "d46a8fe8-b854-4606-8006-ec02b5551f9d"
+          "uuid": "d46a8fe8-b854-4606-8006-ec02b5551f9d",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_IRREGULARIS",
@@ -10665,7 +10672,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161548"
           },
-          "uuid": "dfa3a579-83be-46df-8cc1-e13842becda1"
+          "uuid": "dfa3a579-83be-46df-8cc1-e13842becda1",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PERFIDA",
@@ -10677,7 +10685,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161549"
           },
-          "uuid": "85d08381-1a2f-4c87-8fab-7fa7dd2d436c"
+          "uuid": "85d08381-1a2f-4c87-8fab-7fa7dd2d436c",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PERIPROCTA",
@@ -10689,7 +10698,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161550"
           },
-          "uuid": "584dfa07-a5cf-4ae1-9f93-f7bed4950117"
+          "uuid": "584dfa07-a5cf-4ae1-9f93-f7bed4950117",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PARASSIMILIS",
@@ -10701,7 +10711,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161554"
           },
-          "uuid": "b20f0540-09ab-474e-8b2b-a6355abb4d14"
+          "uuid": "b20f0540-09ab-474e-8b2b-a6355abb4d14",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_PARAGLACIALIS",
@@ -10713,7 +10724,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161555"
           },
-          "uuid": "de3a4361-8dd1-4986-878d-7a1c0d509b6e"
+          "uuid": "de3a4361-8dd1-4986-878d-7a1c0d509b6e",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_SACHALINICA",
@@ -10725,7 +10737,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161557"
           },
-          "uuid": "c8ad83ee-7d49-491b-aa8b-52f374251242"
+          "uuid": "c8ad83ee-7d49-491b-aa8b-52f374251242",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_VANEYI",
@@ -10737,7 +10750,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161558"
           },
-          "uuid": "c020f524-c834-4e73-ba73-9fae75366a7b"
+          "uuid": "c020f524-c834-4e73-ba73-9fae75366a7b",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_DILIGENS",
@@ -10749,7 +10763,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161559"
           },
-          "uuid": "11824c28-7579-4dc5-b672-f415bf904664"
+          "uuid": "11824c28-7579-4dc5-b672-f415bf904664",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_INSPERATA",
@@ -10761,7 +10776,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161560"
           },
-          "uuid": "e4617517-6e34-4625-bde3-a34e36b0f9e4"
+          "uuid": "e4617517-6e34-4625-bde3-a34e36b0f9e4",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_SAVELIJEVAE",
@@ -10773,7 +10789,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161562"
           },
-          "uuid": "ab6f52c2-b860-485c-abcb-a96e935e8e61"
+          "uuid": "ab6f52c2-b860-485c-abcb-a96e935e8e61",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_LAMBERTI",
@@ -10785,7 +10802,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161563"
           },
-          "uuid": "f4af9f52-a37a-4e21-9d68-fc8885647336"
+          "uuid": "f4af9f52-a37a-4e21-9d68-fc8885647336",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_LEVINI",
@@ -10797,7 +10815,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161564"
           },
-          "uuid": "1a7fe858-0118-42b0-9ec2-ad3d91a86826"
+          "uuid": "1a7fe858-0118-42b0-9ec2-ad3d91a86826",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_CONICOSPERMIUM",
@@ -10809,7 +10828,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161565"
           },
-          "uuid": "174f0aac-316a-438e-bf01-28764f2e26ff"
+          "uuid": "174f0aac-316a-438e-bf01-28764f2e26ff",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_FUSIFORMIS",
@@ -10821,7 +10841,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161566"
           },
-          "uuid": "8d4f4f00-1949-4987-abef-84045183a4d4"
+          "uuid": "8d4f4f00-1949-4987-abef-84045183a4d4",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_ANIVAENSIS",
@@ -10833,7 +10854,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161567"
           },
-          "uuid": "0d9b2dc5-dbb6-4ebb-8d02-b077fc6a80ff"
+          "uuid": "0d9b2dc5-dbb6-4ebb-8d02-b077fc6a80ff",
+          "children": []
         },
         {
           "id": "SP_CUCUMARIA_OBSCURA",
@@ -10845,7 +10867,8 @@
           "sourceIds": {
             "checklistbank-139831": "1161568"
           },
-          "uuid": "25d89099-9faf-4d1d-b3d3-9b1cf6186db6"
+          "uuid": "25d89099-9faf-4d1d-b3d3-9b1cf6186db6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11246,7 +11269,7 @@
       ]
     }
   ],
-  "speciesCount": 543,
+  "speciesCount": 541,
   "appSlug": "cucumariidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Holothuroidea",

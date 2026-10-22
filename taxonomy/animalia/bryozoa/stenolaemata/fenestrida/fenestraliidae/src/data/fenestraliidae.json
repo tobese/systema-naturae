@@ -240,10 +240,15 @@
             "col": [
               "869NH"
             ],
-            "checklistbank": "txn:168674",
-            "checklistbank-1174": "txn:168674"
+            "checklistbank": [
+              "txn:168674",
+              "urn:lsid:marinespecies.org:taxname:1414210"
+            ],
+            "checklistbank-1174": [
+              "txn:168674"
+            ]
           },
-          "authorityIds": "col:869NH",
+          "authorityIds": "checklistbank:txn:168674,checklistbank:urn:lsid:marinespecies.org:taxname:1414210,checklistbank-1174:txn:168674,col:869NH",
           "children": [],
           "authorship": "(Nikiforova 1940)"
         },
@@ -261,10 +266,15 @@
             "col": [
               "869NJ"
             ],
-            "checklistbank": "txn:193769",
-            "checklistbank-1174": "txn:193769"
+            "checklistbank": [
+              "txn:193769",
+              "urn:lsid:marinespecies.org:taxname:1414211"
+            ],
+            "checklistbank-1174": [
+              "txn:193769"
+            ]
           },
-          "authorityIds": "col:869NJ",
+          "authorityIds": "checklistbank:txn:193769,checklistbank:urn:lsid:marinespecies.org:taxname:1414211,checklistbank-1174:txn:193769,col:869NJ",
           "children": [],
           "authorship": "(Nikiforova 1940)"
         }
@@ -503,47 +513,6 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "fenestraliidae"
-    },
-    {
-      "id": "GENUS_TRIZNELLA",
-      "name": "\"Triznella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRIZNELLA_PERMIANA_NIKIFOROVA_1936",
-          "name": "\"Triznella permiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Triznella",
-          "authorship": "\"(Nikiforova, 1936)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414210",
-            "checklistbank-1174": "txn:168674"
-          },
-          "children": [],
-          "uuid": "1a405ef1-0ae3-55e-9c6-319f9ac3bf427a",
-          "description": "\"Triznella permiana\" is a fenestraliidae species found in its native region."
-        },
-        {
-          "id": "SP_TRIZNELLA_VIATKENSIS_NIKIFOROVA_1936",
-          "name": "\"Triznella viatkensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Triznella",
-          "authorship": "\"(Nikiforova, 1936)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414211",
-            "checklistbank-1174": "txn:193769"
-          },
-          "children": [],
-          "uuid": "d615a878-e9d0-5cb-b41-1286e55184e965",
-          "description": "\"Triznella viatkensis\" is a fenestraliidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "fenestraliidae"
     }
   ],
   "sourceIds": {
@@ -557,6 +526,6 @@
     "checklistbank": "txn:128799",
     "checklistbank-1174": "txn:128799"
   },
-  "genusCount": 6,
-  "speciesCount": 27
+  "genusCount": 5,
+  "speciesCount": 25
 }

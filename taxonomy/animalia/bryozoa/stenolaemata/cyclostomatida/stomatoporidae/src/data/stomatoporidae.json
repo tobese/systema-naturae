@@ -370,10 +370,18 @@
             "col": [
               "85YQZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413971",
-            "checklistbank-1174": "txn:167315"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1413971",
+              "urn:lsid:marinespecies.org:taxname:1415079"
+            ],
+            "checklistbank-1174": [
+              "txn:167315"
+            ],
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:1413971"
+            ]
           },
-          "authorityIds": "col:85YQZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413971,checklistbank:urn:lsid:marinespecies.org:taxname:1415079,checklistbank-1081:urn:lsid:marinespecies.org:taxname:1413971,checklistbank-1174:txn:167315,col:85YQZ",
           "children": [],
           "authorship": "(Lamouroux, 1821)"
         },
@@ -1712,20 +1720,6 @@
           "uuid": "87eef588-ce25-5ed-ad6-f7fcda519d2058"
         },
         {
-          "id": "SP_STOMATOPORA_SEMIERECTA_JULLIEN_IN_JULLIEN_CALVET_1903",
-          "name": "Stomatopora semierecta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stomatopora",
-          "authorship": "Jullien, in Jullien & Calvet, 1903",
-          "sourceIds": {
-            "checklistbank": "31747"
-          },
-          "children": [],
-          "uuid": "55f3de97-868f-5ea-b35-c083931a7ca49f"
-        },
-        {
           "id": "SP_STOMATOPORA_ANTIQUA",
           "name": "Stomatopora antiqua",
           "rank": "SPECIES",
@@ -2453,23 +2447,6 @@
           "description": "\"Stomatopora antiqua is a stomatoporidae species found in its native region."
         },
         {
-          "id": "SP_STOMATOPORA_DICHOTOMA_WOLFER_1913",
-          "name": "\"Stomatopora dichotoma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stomatopora",
-          "authorship": "\"Wolfer, 1913\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1415079",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1413971",
-            "checklistbank-1174": "txn:167315"
-          },
-          "children": [],
-          "uuid": "17d26871-1da4-5d7-902-5b53e3eb61e88b",
-          "description": "\"Stomatopora dichotoma is a stomatoporidae species found in its native region."
-        },
-        {
           "id": "SP_STOMATOPORA_GRANULATA_PERGENS_1890",
           "name": "\"Stomatopora granulata",
           "rank": "SPECIES",
@@ -2826,7 +2803,7 @@
     }
   ],
   "genusCount": 17,
-  "speciesCount": 146,
+  "speciesCount": 144,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -335,12 +335,15 @@
           "authorship": "\"(A. Adams, 1855)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:420516",
-            "checklistbank-139831": "253750"
+            "checklistbank-139831": [
+              "253750"
+            ]
           },
           "children": [],
           "uuid": "c661bc79-c2ba-55d-8b1-0e28e58c65013a",
           "description": "\"Mysouffa cumingii\" is a acteonidae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420516,checklistbank-139831:253750"
         },
         {
           "id": "SP_MYSOUFFA_TURRITA_R_B_WATSON_1883",
@@ -352,10 +355,13 @@
           "authorship": "(R. B. Watson, 1883)",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:420517",
-            "checklistbank-139831": "253751"
+            "checklistbank-139831": [
+              "253751"
+            ]
           },
           "uuid": "30da685f-b48c-4c18-a4ca-eb1b7d533008",
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:253751,checklistbank-2011:urn:lsid:marinespecies.org:taxname:420517"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3105,10 +3111,16 @@
           "authorship": "(Abbott, 1973)",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:716793",
-            "checklistbank-139831": "949158"
+            "checklistbank-139831": [
+              "949158"
+            ],
+            "gbif-backbone": [
+              "7615747"
+            ]
           },
           "uuid": "590ab935-3078-4fa9-a33d-848eeee8f358",
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank-139831:949158,checklistbank-2011:urn:lsid:marinespecies.org:taxname:716793,gbif-backbone:7615747"
         },
         {
           "id": "SP_PUNCTACTEON_VARIEGATUS_BRUGUI_RE_1789",
@@ -10068,19 +10080,6 @@
           },
           "uuid": "9bdf945d-035d-49ef-91a4-f0f8cef9cf13",
           "children": []
-        },
-        {
-          "id": "SP_PUPA_EDENTULA_DRAPARNAUD_1805",
-          "name": "Pupa edentula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pupa",
-          "authorship": "Draparnaud 1805",
-          "sourceIds": {
-            "checklistbank-1174": "txn:135983"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10518,21 +10517,6 @@
           "uuid": "098c5fb7-78e1-5c7-91c-c44ae6b1be14ae"
         },
         {
-          "id": "SP_PUNCTACTEON_ELOISEAE_R_T_ABBOTT_1973",
-          "name": "Punctacteon eloiseae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Punctacteon",
-          "authorship": "(R.T.Abbott, 1973)",
-          "sourceIds": {
-            "gbif-backbone": "7615747",
-            "checklistbank-139831": "949158"
-          },
-          "children": [],
-          "uuid": "327127d0-60ef-5e7-8ff-c4571d780963b1"
-        },
-        {
           "id": "SP_PUNCTACTEON_SAGAMIENSIS_KURODA_HABE_1971",
           "name": "Punctacteon sagamiensis",
           "rank": "SPECIES",
@@ -10687,43 +10671,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acteonidae"
-    },
-    {
-      "id": "GENUS_MYSOUFFA",
-      "name": "Mysouffa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MYSOUFFA_CUMINGII",
-          "name": "Mysouffa cumingii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mysouffa",
-          "sourceIds": {
-            "checklistbank-139831": "253750"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYSOUFFA_TURRITA",
-          "name": "Mysouffa turrita",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mysouffa",
-          "sourceIds": {
-            "checklistbank-139831": "253751"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acteonidae"
     }
   ],
-  "genusCount": 82,
-  "speciesCount": 634,
+  "genusCount": 81,
+  "speciesCount": 630,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

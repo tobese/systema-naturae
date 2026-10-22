@@ -82,10 +82,15 @@
             "col": [
               "9WXR7"
             ],
-            "checklistbank": "txn:306175",
-            "checklistbank-1174": "txn:306175"
+            "checklistbank": [
+              "txn:306175",
+              "urn:lsid:marinespecies.org:taxname:1616990"
+            ],
+            "checklistbank-1174": [
+              "txn:306175"
+            ]
           },
-          "authorityIds": "col:9WXR7",
+          "authorityIds": "checklistbank:txn:306175,checklistbank:urn:lsid:marinespecies.org:taxname:1616990,checklistbank-1174:txn:306175,col:9WXR7",
           "authorship": "(Goldfuss 1837)"
         },
         {
@@ -145,35 +150,10 @@
           "description": "Eoschizodus chemungensis is a eoschizodidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_EOSCHIZODUS",
-      "name": "\"Eoschizodus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EOSCHIZODUS_TRUNCATUS_G_A_GOLDFUSS_1837",
-          "name": "\"Eoschizodus truncatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eoschizodus",
-          "authorship": "\"(G. A. Goldfuss, 1837)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1616990",
-            "checklistbank-1174": "txn:306175"
-          },
-          "children": [],
-          "uuid": "99e67e42-5015-533-a89-e8219d23c351c6",
-          "description": "\"Eoschizodus truncatus\" is a eoschizodidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eoschizodidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 8,
+  "genusCount": 1,
+  "speciesCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

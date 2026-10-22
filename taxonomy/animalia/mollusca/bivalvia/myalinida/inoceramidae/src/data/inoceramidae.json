@@ -5983,9 +5983,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1246210"
             ],
-            "checklistbank-1174": "txn:268213"
+            "checklistbank-1174": [
+              "txn:268213"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1246210"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1246210,col:RR93",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1246210,checklistbank-1174:txn:268213,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1246210,col:RR93",
           "authorship": "(J. Böhm, 1907)"
         },
         {
@@ -8532,12 +8537,18 @@
               "ZBZR"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1252695"
+              "urn:lsid:marinespecies.org:taxname:1252695",
+              "urn:lsid:marinespecies.org:taxname:1252696"
             ],
             "gbif-backbone": "9733825",
-            "checklistbank-1174": "txn:380285"
+            "checklistbank-1174": [
+              "txn:380285"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1252695"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1252695,col:ZBZR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1252695,checklistbank:urn:lsid:marinespecies.org:taxname:1252696,checklistbank-1174:txn:380285,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1252695,col:ZBZR,gbif-backbone:9733825",
           "authorship": "(F. B. Meek, 1871)"
         },
         {
@@ -9747,23 +9758,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CREMNOCERAMUS_DEFORMIS_F_B_MEEK_1877",
-          "name": "\"Cremnoceramus deformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cremnoceramus",
-          "authorship": "\"(F. B. Meek, 1877)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1252696",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1252695",
-            "checklistbank-1174": "txn:380285"
-          },
-          "children": [],
-          "uuid": "2a50cfe1-41cd-5b2-a3f-6e5e5d260e093b",
-          "description": "\"Cremnoceramus deformis is a inoceramidae species found in its native region."
-        },
-        {
           "id": "SP_CREMNOCERAMUS_WALTERSDORFENSIS_HEINZ_1932",
           "name": "\"Cremnoceramus waltersdorfensis",
           "rank": "SPECIES",
@@ -9942,21 +9936,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1246209"
           },
           "uuid": "211f9a1e-0ae8-4de5-9a72-8ceee292d7b7",
-          "children": []
-        },
-        {
-          "id": "SP_CATACERAMUS_BALTICUS_J_B_HM_1907",
-          "name": "Cataceramus balticus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cataceramus",
-          "authorship": "(J. Böhm, 1907)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1246210",
-            "checklistbank-1174": "txn:268213"
-          },
-          "uuid": "5e8f0334-908e-4a64-942e-1aa88492e10f",
           "children": []
         },
         {
@@ -10623,7 +10602,7 @@
     }
   ],
   "genusCount": 51,
-  "speciesCount": 600,
+  "speciesCount": 598,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

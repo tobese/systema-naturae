@@ -1236,11 +1236,16 @@
             "col": [
               "83MLZ"
             ],
-            "checklistbank": "txn:382608",
-            "checklistbank-1174": "txn:382608"
+            "checklistbank": [
+              "txn:382608",
+              "urn:lsid:marinespecies.org:taxname:913466"
+            ],
+            "checklistbank-1174": [
+              "txn:382608"
+            ]
           },
           "uuid": "7d61d1c3-5bdf-599-980-d68e06e5f5bbbe",
-          "authorityIds": "col:83MLZ,gbif:9440002",
+          "authorityIds": "checklistbank:txn:382608,checklistbank:urn:lsid:marinespecies.org:taxname:913466,checklistbank-1174:txn:382608,col:83MLZ,gbif:9440002",
           "authorship": "Broennimann and Wirz 1962"
         },
         {
@@ -2127,22 +2132,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SIRTINA_ORBITOIDIFORMIS_BR_NNIMANN_WIRZ_1962",
-          "name": "\"Sirtina orbitoidiformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sirtina",
-          "authorship": "\"Brönnimann & Wirz, 1962\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:913466",
-            "checklistbank-1174": "txn:382608"
-          },
-          "children": [],
-          "uuid": "c1eabe20-d9bd-5c6-954-b2e07121931abd",
-          "description": "\"Sirtina orbitoidiformis\" is a lepidorbitoididae species found in its native region."
-        },
-        {
           "id": "SP_SIRTINA_ORNATA_RAHAGHI_1976",
           "name": "\"Sirtina ornata\"",
           "rank": "SPECIES",
@@ -2506,7 +2495,7 @@
     }
   ],
   "genusCount": 35,
-  "speciesCount": 117,
+  "speciesCount": 116,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

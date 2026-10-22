@@ -3390,21 +3390,6 @@
           "children": [],
           "uuid": "717a36be-927e-579-8cd-9cdf6783becbeb",
           "authorship": "(Ziegler, 1883)"
-        },
-        {
-          "id": "SP_RHIPIDOCOTYLE_GALEATA_RUDOLPHI_1819",
-          "name": "Rhipidocotyle galeata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhipidocotyle",
-          "authorship": "(Rudolphi, 1819)",
-          "sourceIds": {
-            "checklistbank": "29165",
-            "wikispecies": "Rhipidocotyle_galeata"
-          },
-          "children": [],
-          "uuid": "fee022ea-aebb-5d3-b2d-ca5c6a83e41174"
         }
       ]
     },
@@ -9972,34 +9957,6 @@
           "authorship": "(Van Beneden, 1870)",
           "children": [],
           "uuid": "37eaebcf-76a9-539-940-e74ba8cc3e89d6"
-        },
-        {
-          "id": "SP_PROSORHYNCHOIDES_ARCUATUS_LINTON_1900",
-          "name": "Prosorhynchoides arcuatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prosorhynchoides",
-          "authorship": "(Linton, 1900)",
-          "sourceIds": {
-            "checklistbank": "29160"
-          },
-          "children": [],
-          "uuid": "1449fa81-635b-59c-aa3-dea6eae0f4964e"
-        },
-        {
-          "id": "SP_PROSORHYNCHOIDES_GRACILESCENS_RUDOLPHI_1819",
-          "name": "Prosorhynchoides gracilescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prosorhynchoides",
-          "authorship": "(Rudolphi, 1819)",
-          "sourceIds": {
-            "checklistbank": "29161"
-          },
-          "children": [],
-          "uuid": "e7e279f2-d824-53b-abd-3f740dd35d397a"
         }
       ]
     },
@@ -16285,7 +16242,8 @@
           "sourceIds": {
             "checklistbank-127379": "cad16337-3932-4a5d-9c39-2ee8f00fb68b"
           },
-          "uuid": "fadb67c4-d0b7-4898-ad79-53374fd5085a"
+          "uuid": "fadb67c4-d0b7-4898-ad79-53374fd5085a",
+          "children": []
         },
         {
           "id": "SP_PROSORHYNCHOIDES_PRODUCTIOVALIS_LEBEDEV",
@@ -16298,7 +16256,8 @@
           "sourceIds": {
             "checklistbank-127379": "68cb7a98-3966-4f7f-9caa-1d0de64bdd4d"
           },
-          "uuid": "a898e89b-0e55-420c-be60-753b67b2451f"
+          "uuid": "a898e89b-0e55-420c-be60-753b67b2451f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -16381,7 +16340,8 @@
           "sourceIds": {
             "checklistbank-127379": "b5905080-93d1-4887-b96b-d642e6fcf977"
           },
-          "uuid": "3acfa70c-ea3c-439d-b0b2-c0cfe42c286f"
+          "uuid": "3acfa70c-ea3c-439d-b0b2-c0cfe42c286f",
+          "children": []
         },
         {
           "id": "SP_PROSORHYNCHUS_SQUAMATUS",
@@ -16393,7 +16353,8 @@
           "sourceIds": {
             "checklistbank-139831": "1398984"
           },
-          "uuid": "27945c04-8859-42eb-91ae-6f15a0425290"
+          "uuid": "27945c04-8859-42eb-91ae-6f15a0425290",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -16413,12 +16374,18 @@
           "lineage": "\"Rhipidocotyle",
           "authorship": "\"(Rudolphi, 1819) Eckmann, 1932\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:109165",
-            "wikispecies": "Rhipidocotyle_galeata"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:109165",
+              "29165"
+            ],
+            "wikispecies": [
+              "Rhipidocotyle_galeata"
+            ]
           },
           "children": [],
           "uuid": "6855900d-a69b-5f1-bcb-0f56d29ec92d61",
-          "description": "\"Rhipidocotyle galeata\" is a bucephalidae species found in its native region."
+          "description": "\"Rhipidocotyle galeata\" is a bucephalidae species found in its native region.",
+          "authorityIds": "checklistbank:29165,checklistbank:urn:lsid:marinespecies.org:taxname:109165,wikispecies:Rhipidocotyle_galeata"
         },
         {
           "id": "SP_RHIPIDOCOTYLE_PENTAGONUM_OZAKI_1924_ECKMANN_1932",
@@ -16548,7 +16515,7 @@
     }
   ],
   "genusCount": 47,
-  "speciesCount": 965,
+  "speciesCount": 962,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

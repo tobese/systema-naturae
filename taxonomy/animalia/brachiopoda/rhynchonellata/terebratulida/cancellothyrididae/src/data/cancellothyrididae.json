@@ -399,10 +399,15 @@
             "col": [
               "7BS6R"
             ],
-            "checklistbank": "txn:282983",
-            "checklistbank-1174": "txn:282983"
+            "checklistbank": [
+              "txn:282983",
+              "urn:lsid:marinespecies.org:taxname:225711"
+            ],
+            "checklistbank-1174": [
+              "txn:282983"
+            ]
           },
-          "authorityIds": "col:7BS6R",
+          "authorityIds": "checklistbank:txn:282983,checklistbank:urn:lsid:marinespecies.org:taxname:225711,checklistbank-1174:txn:282983,col:7BS6R",
           "authorship": "Adams and Reeve 1850"
         },
         {
@@ -1609,10 +1614,15 @@
             "itis": [
               "156802"
             ],
-            "checklistbank": "txn:282985",
-            "checklistbank-1174": "txn:282985"
+            "checklistbank": [
+              "txn:282985",
+              "urn:lsid:marinespecies.org:taxname:869001"
+            ],
+            "checklistbank-1174": [
+              "txn:282985"
+            ]
           },
-          "authorityIds": "col:B8VRJ,itis:156802"
+          "authorityIds": "checklistbank:txn:282985,checklistbank:urn:lsid:marinespecies.org:taxname:869001,checklistbank-1174:txn:282985,col:B8VRJ,itis:156802"
         },
         {
           "id": "SP_TEREBRATULINA_VALDIVIAE_BLOCHMANN_1908",
@@ -3648,22 +3658,6 @@
           "description": "\"Terebratulina septentrionalis\" is a cancellothyrididae species found in its native region."
         },
         {
-          "id": "SP_TEREBRATULINA_ABYSSICOLA_ADAMS_REEVE_1850",
-          "name": "\"Terebratulina abyssicola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Terebratulina",
-          "authorship": "\"(Adams & Reeve, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225711",
-            "checklistbank-1174": "txn:282983"
-          },
-          "children": [],
-          "uuid": "91cba2d5-5174-585-b08-c36fb8ad37f104",
-          "description": "\"Terebratulina abyssicola\" is a cancellothyrididae species found in its native region."
-        },
-        {
           "id": "SP_TEREBRATULINA_JAPONICA_SOWERBY_1846",
           "name": "\"Terebratulina japonica\"",
           "rank": "SPECIES",
@@ -3692,22 +3686,6 @@
           "children": [],
           "uuid": "b16e69c0-cbe5-567-80f-137272261bb439",
           "description": "\"Terebratulina unguicula\" is a cancellothyrididae species found in its native region."
-        },
-        {
-          "id": "SP_TEREBRATULINA_UNGUICULA_COOPER_1973",
-          "name": "\"Terebratulina unguicula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Terebratulina",
-          "authorship": "\"Cooper, 1973\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:869001",
-            "checklistbank-1174": "txn:282985"
-          },
-          "children": [],
-          "uuid": "8efb05f8-449b-589-9b5-1a79b86b82b6ca",
-          "description": "\"Terebratulina unguicula is a cancellothyrididae species found in its native region."
         },
         {
           "id": "SP_TEREBRATULINA_MANCHIONEALENSIS_HARPER_AND_DONOVAN_2007",
@@ -4115,7 +4093,7 @@
     }
   ],
   "genusCount": 25,
-  "speciesCount": 247,
+  "speciesCount": 245,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

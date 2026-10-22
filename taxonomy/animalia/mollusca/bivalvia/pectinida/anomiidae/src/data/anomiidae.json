@@ -349,10 +349,15 @@
             "itis": [
               "205561"
             ],
-            "checklistbank": "58751",
-            "checklistbank-1174": "txn:140556"
+            "checklistbank": [
+              "58751",
+              "urn:lsid:marinespecies.org:taxname:138751"
+            ],
+            "checklistbank-1174": [
+              "txn:140556"
+            ]
           },
-          "authorityIds": "col:4KQNZ,itis:205561"
+          "authorityIds": "checklistbank:58751,checklistbank:urn:lsid:marinespecies.org:taxname:138751,checklistbank-1174:txn:140556,col:4KQNZ,itis:205561"
         },
         {
           "id": "SP_PODODESMUS_PAUCICOSTATUS_BEU_1967",
@@ -790,9 +795,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:830088"
             ],
-            "checklistbank-1174": "txn:93535"
+            "checklistbank-1174": [
+              "txn:93535"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:830088"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:830088,col:75TN6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:830088,checklistbank-1174:txn:93535,checklistbank-2011:urn:lsid:marinespecies.org:taxname:830088,col:75TN6",
           "authorship": "(F. W. Hutton, 1885)"
         }
       ]
@@ -5970,22 +5980,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PODODESMUS_PATELLIFORMIS_LINNAEUS_1761",
-          "name": "\"Pododesmus patelliformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pododesmus",
-          "authorship": "\"(Linnaeus, 1761)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:138751",
-            "checklistbank-1174": "txn:140556"
-          },
-          "children": [],
-          "uuid": "f2a93875-151f-5fb-819-f0143bbda7f986",
-          "description": "\"Pododesmus patelliformis\" is a anomiidae species found in its native region."
-        },
-        {
           "id": "SP_PODODESMUS_SQUAMA_GMELIN_1791",
           "name": "\"Pododesmus squama\"",
           "rank": "SPECIES",
@@ -6119,21 +6113,6 @@
           "children": [],
           "uuid": "4ff4499a-3dbe-5fc-b92-9af1968b64b241",
           "description": "\"Patro australis\" is a anomiidae species found in its native region."
-        },
-        {
-          "id": "SP_PATRO_UNDATUS_F_W_HUTTON_1885",
-          "name": "Patro undatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Patro",
-          "authorship": "(F. W. Hutton, 1885)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:830088",
-            "checklistbank-1174": "txn:93535"
-          },
-          "uuid": "5c636225-48ee-467f-a446-7648dafd22a0",
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6158,29 +6137,6 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Anomiidae"
-    },
-    {
-      "id": "GENUS_ISONOMIA",
-      "name": "Isonomia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ISONOMIA_ALBERTI_DAUTZENBERG_FISCHER_H_1896",
-          "name": "Isonomia alberti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Isonomia",
-          "authorship": "(Dautzenberg & Fischer H., 1896)",
-          "sourceIds": {
-            "checklistbank": "58750"
-          },
-          "children": [],
-          "uuid": "065bddac-5c29-5eb-b6f-8c54e390f0f0ca"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "anomiidae"
     },
     {
       "id": "GENUS_PLACUNA",
@@ -6275,8 +6231,8 @@
       "lineage": "anomiidae"
     }
   ],
-  "genusCount": 30,
-  "speciesCount": 380,
+  "genusCount": 29,
+  "speciesCount": 377,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

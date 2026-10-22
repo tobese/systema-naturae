@@ -3998,20 +3998,6 @@
           "authorship": "R.B. Watson, 1879",
           "children": [],
           "uuid": "7edcdc9a-b620-546-ba6-b86790969708e2"
-        },
-        {
-          "id": "SP_SIPHONODENTALIUM_LOBATUM_SOWERBY_G_B_II_1860",
-          "name": "Siphonodentalium lobatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Siphonodentalium",
-          "authorship": "(Sowerby G.B. II, 1860)",
-          "sourceIds": {
-            "checklistbank": "60015"
-          },
-          "children": [],
-          "uuid": "22c65f0a-9520-5a7-9fe-376bd57ea30a11"
         }
       ]
     },
@@ -5035,10 +5021,15 @@
             "col": [
               "P7KN"
             ],
-            "checklistbank": "60007",
-            "checklistbank-1174": "txn:295423"
+            "checklistbank": [
+              "60007",
+              "urn:lsid:marinespecies.org:taxname:140007"
+            ],
+            "checklistbank-1174": [
+              "txn:295423"
+            ]
           },
-          "authorityIds": "col:P7KN",
+          "authorityIds": "checklistbank:60007,checklistbank:urn:lsid:marinespecies.org:taxname:140007,checklistbank-1174:txn:295423,col:P7KN",
           "authorship": "(Philippi, 1844)"
         },
         {
@@ -9451,22 +9442,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CADULUS_OVULUM_R_A_PHILIPPI_1844",
-          "name": "\"Cadulus ovulum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cadulus",
-          "authorship": "\"(R. A. Philippi, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140007",
-            "checklistbank-1174": "txn:295423"
-          },
-          "children": [],
-          "uuid": "05237dab-178a-527-8ec-d6498fb508cb89",
-          "description": "\"Cadulus ovulum\" is a gadilidae species found in its native region."
-        },
-        {
           "id": "SP_CADULUS_SUBFUSIFORMIS_M_SARS_1865",
           "name": "\"Cadulus subfusiformis\"",
           "rank": "SPECIES",
@@ -11437,7 +11412,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 667,
+  "speciesCount": 665,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

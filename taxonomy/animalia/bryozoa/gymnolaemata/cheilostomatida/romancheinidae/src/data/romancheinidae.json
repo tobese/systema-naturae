@@ -1794,9 +1794,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1411554"
             ],
-            "checklistbank-1174": "txn:338445"
+            "checklistbank-1174": [
+              "txn:338445"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1411554"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411554,col:867YJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411554,checklistbank-1174:txn:338445,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1411554,col:867YJ",
           "authorship": "(Milne Edwards, 1838)"
         },
         {
@@ -5263,20 +5268,6 @@
           "children": [],
           "uuid": "fe21355d-929e-58f-bbb-0965eca7c30741",
           "description": "Rhamphostomella scabra is a romancheinidae species found in its native region."
-        },
-        {
-          "id": "SP_RHAMPHOSTOMELLA_RADIATULA_HINCKS_1877",
-          "name": "Rhamphostomella radiatula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhamphostomella",
-          "authorship": "(Hincks, 1877)",
-          "sourceIds": {
-            "checklistbank": "31144"
-          },
-          "children": [],
-          "uuid": "8a1213d5-17a4-525-aa2-9fedcdc6609d97"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5923,20 +5914,6 @@
           },
           "children": [],
           "uuid": "ddd179bc-9e2a-510-b5d-100f15ae0b080f"
-        },
-        {
-          "id": "SP_ESCHARELLA_LONGICOLLIS_JULLIEN_1882",
-          "name": "Escharella longicollis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Escharella",
-          "authorship": "(Jullien, 1882)",
-          "sourceIds": {
-            "checklistbank": "31491"
-          },
-          "children": [],
-          "uuid": "844d8603-a4c8-5e6-a8b-379272a3d742bc"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7205,21 +7182,6 @@
           "children": []
         },
         {
-          "id": "SP_HIPPOPLEURIFERA_SEDGWICKI_MILNE_EDWARDS_1838",
-          "name": "Hippopleurifera sedgwicki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hippopleurifera",
-          "authorship": "(Milne Edwards, 1838)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1411554",
-            "checklistbank-1174": "txn:338445"
-          },
-          "uuid": "2614fb4f-e4f3-43b9-ba22-5327e4d28866",
-          "children": []
-        },
-        {
           "id": "SP_HIPPOPLEURIFERA_SEMICRISTATA_REUSS_1848",
           "name": "Hippopleurifera semicristata",
           "rank": "SPECIES",
@@ -7335,7 +7297,7 @@
     }
   ],
   "genusCount": 47,
-  "speciesCount": 397,
+  "speciesCount": 394,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

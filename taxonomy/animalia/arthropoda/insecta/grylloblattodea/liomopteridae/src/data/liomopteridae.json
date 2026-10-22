@@ -1208,9 +1208,14 @@
             "col": [
               "QF74L"
             ],
-            "checklistbank-1174": "txn:454233"
+            "checklistbank-1174": [
+              "txn:454233"
+            ],
+            "gbif-backbone": [
+              "11513267"
+            ]
           },
-          "authorityIds": "col:QF74L",
+          "authorityIds": "checklistbank-1174:txn:454233,col:QF74L,gbif-backbone:11513267",
           "description": "Liomopterites sperbersbachensis is a liomopteridae species found in its native region.",
           "children": []
         }
@@ -1335,9 +1340,14 @@
             "col": [
               "QF75R"
             ],
-            "checklistbank-1174": "txn:454231"
+            "checklistbank-1174": [
+              "txn:454231"
+            ],
+            "gbif-backbone": [
+              "11459505"
+            ]
           },
-          "authorityIds": "col:QF75R",
+          "authorityIds": "checklistbank-1174:txn:454231,col:QF75R,gbif-backbone:11459505",
           "description": "Liomopterum fuscatum is a liomopteridae species found in its native region.",
           "children": []
         },
@@ -2397,9 +2407,14 @@
             "col": [
               "TSVTG"
             ],
-            "checklistbank-1174": "txn:454232"
+            "checklistbank-1174": [
+              "txn:454232"
+            ],
+            "gbif-backbone": [
+              "11666008"
+            ]
           },
-          "authorityIds": "col:TSVTG",
+          "authorityIds": "checklistbank-1174:txn:454232,col:TSVTG,gbif-backbone:11666008",
           "description": "Uralioma thuringiensis is a liomopteridae species found in its native region.",
           "children": []
         }
@@ -2499,9 +2514,11 @@
             "col": [
               "MRV87"
             ],
-            "checklistbank-1174": "txn:459826"
+            "checklistbank-1174": [
+              "txn:459826"
+            ]
           },
-          "authorityIds": "col:MRV87",
+          "authorityIds": "checklistbank-1174:txn:459826,col:MRV87",
           "description": "Colubrosopterum karooensis is a liomopteridae species found in its native region.",
           "children": []
         }
@@ -2512,20 +2529,6 @@
       "name": "Liomopterites",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LIOMOPTERITES_SPERBERSBACHENSIS_CUI_BRAUNER_SCHNEIDER_B_THOUX_2022",
-          "name": "Liomopterites sperbersbachensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liomopterites",
-          "authorship": "Cui, Brauner, Schneider & Béthoux, 2022",
-          "sourceIds": {
-            "gbif-backbone": "11513267",
-            "checklistbank-1174": "txn:454233"
-          },
-          "children": []
-        },
         {
           "id": "SP_LIOMOPTERITES_ANNOSUS_ARISTOV_2004",
           "name": "Liomopterites annosus",
@@ -2764,20 +2767,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_URALIOMA_THURINGIENSIS_CUI_BRAUNER_SCHNEIDER_B_THOUX_2022",
-          "name": "Uralioma thuringiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Uralioma",
-          "authorship": "Cui, Brauner, Schneider & Béthoux, 2022",
-          "sourceIds": {
-            "gbif-backbone": "11666008",
-            "checklistbank-1174": "txn:454232"
-          },
-          "children": []
-        },
-        {
           "id": "SP_URALIOMA_VARIABILIS_STOROZHENKO_AND_ARISTOV_1999",
           "name": "Uralioma variabilis",
           "rank": "SPECIES",
@@ -2913,20 +2902,6 @@
       "name": "Liomopterum",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LIOMOPTERUM_FUSCATUM_CUI_BRAUNER_SCHNEIDER_B_THOUX_2022",
-          "name": "Liomopterum fuscatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liomopterum",
-          "authorship": "Cui, Brauner, Schneider & Béthoux, 2022",
-          "sourceIds": {
-            "gbif-backbone": "11459505",
-            "checklistbank-1174": "txn:454231"
-          },
-          "children": []
-        },
         {
           "id": "SP_LIOMOPTERUM_CONNEXUS_CAWOOD_NEL_2022",
           "name": "Liomopterum connexus",
@@ -3193,31 +3168,9 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_COLUBROSOPTERUM",
-      "name": "Colubrosopterum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COLUBROSOPTERUM_KAROOENSIS_CAWOOD_AND_NEL_2022",
-          "name": "Colubrosopterum karooensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Colubrosopterum",
-          "authorship": "Cawood and Nel 2022",
-          "sourceIds": {
-            "checklistbank-1174": "txn:459826"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "†liomopteridae"
     }
   ],
-  "speciesCount": 159,
+  "speciesCount": 155,
   "appSlug": "liomopteridae",
   "continents": [
     "Africa",
@@ -3225,7 +3178,7 @@
     "Europe",
     "North America"
   ],
-  "genusCount": 66,
+  "genusCount": 65,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

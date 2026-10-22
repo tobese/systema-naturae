@@ -78,9 +78,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:848051"
             ],
-            "checklistbank-1174": "txn:90930"
+            "checklistbank-1174": [
+              "txn:90930"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:848051"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848051,col:TDQM,itis:78958",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848051,checklistbank-1174:txn:90930,checklistbank-2011:urn:lsid:marinespecies.org:taxname:848051,col:TDQM,itis:78958",
           "authorship": "(Say, 1834)"
         },
         {
@@ -1162,21 +1167,6 @@
           "children": []
         },
         {
-          "id": "SP_CHAETOPLEURA_APICULATA_SAY_1834",
-          "name": "Chaetopleura apiculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chaetopleura",
-          "authorship": "(Say, 1834)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:848051",
-            "checklistbank-1174": "txn:90930"
-          },
-          "uuid": "009cbf47-6c65-4fcd-995c-7948db646825",
-          "children": []
-        },
-        {
           "id": "SP_CHAETOPLEURA_ASPERRIMA_A_A_GOULD_1852",
           "name": "Chaetopleura asperrima",
           "rank": "SPECIES",
@@ -1461,7 +1451,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 81,
+  "speciesCount": 80,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

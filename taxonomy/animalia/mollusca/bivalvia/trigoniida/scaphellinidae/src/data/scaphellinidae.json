@@ -45,10 +45,15 @@
             "col": [
               "9WXZN"
             ],
-            "checklistbank": "txn:125348",
-            "checklistbank-1174": "txn:125348"
+            "checklistbank": [
+              "txn:125348",
+              "urn:lsid:marinespecies.org:taxname:1616993"
+            ],
+            "checklistbank-1174": [
+              "txn:125348"
+            ]
           },
-          "authorityIds": "col:9WXZN",
+          "authorityIds": "checklistbank:txn:125348,checklistbank:urn:lsid:marinespecies.org:taxname:1616993,checklistbank-1174:txn:125348,col:9WXZN",
           "children": [],
           "authorship": "(Branson 1930)"
         },
@@ -88,31 +93,6 @@
           "description": "Scaphellina praeobscurus is a scaphellinidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_SCAPHELLINA",
-      "name": "\"Scaphellina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SCAPHELLINA_CONCINNA_C_C_BRANSON_1930",
-          "name": "\"Scaphellina concinna\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Scaphellina",
-          "authorship": "\"(C. C. Branson, 1930)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1616993",
-            "checklistbank-1174": "txn:125348"
-          },
-          "children": [],
-          "uuid": "8921d4b9-2438-544-ad0-5aa88625bc16e6",
-          "description": "\"Scaphellina concinna\" is a scaphellinidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "scaphellinidae"
     }
   ],
   "sourceIds": {
@@ -126,6 +106,6 @@
     "checklistbank": "txn:62188",
     "checklistbank-1174": "txn:62188"
   },
-  "genusCount": 2,
-  "speciesCount": 5
+  "genusCount": 1,
+  "speciesCount": 4
 }

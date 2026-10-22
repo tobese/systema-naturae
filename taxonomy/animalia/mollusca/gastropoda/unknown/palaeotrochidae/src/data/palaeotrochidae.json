@@ -256,11 +256,16 @@
             "col": [
               "F4NJ9"
             ],
-            "checklistbank": "txn:73712",
+            "checklistbank": [
+              "txn:73712",
+              "urn:lsid:marinespecies.org:taxname:1802635"
+            ],
             "gbif-backbone": "8668732",
-            "checklistbank-1174": "txn:73712"
+            "checklistbank-1174": [
+              "txn:73712"
+            ]
           },
-          "authorityIds": "col:F4NJ9",
+          "authorityIds": "checklistbank:txn:73712,checklistbank:urn:lsid:marinespecies.org:taxname:1802635,checklistbank-1174:txn:73712,col:F4NJ9,gbif-backbone:8668732",
           "authorship": "(Webster 1905)"
         },
         {
@@ -347,31 +352,6 @@
           "description": "Palaeotrochus kennettensis is a palaeotrochidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_FLOYDA",
-      "name": "\"Floyda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FLOYDA_CONCENTRICA_C_L_WEBSTER_1905",
-          "name": "\"Floyda concentrica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Floyda",
-          "authorship": "\"C. L. Webster, 1905\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1802635",
-            "checklistbank-1174": "txn:73712"
-          },
-          "children": [],
-          "uuid": "908fd5d4-8cf2-582-909-df3b52c0e05fdb",
-          "description": "\"Floyda concentrica\" is a palaeotrochidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "palaeotrochidae"
     },
     {
       "id": "GENUS_TURBO",
@@ -517,8 +497,8 @@
       "lineage": "palaeotrochidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 29,
+  "genusCount": 10,
+  "speciesCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

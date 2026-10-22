@@ -21,10 +21,15 @@
             "col": [
               "BW5MG"
             ],
-            "checklistbank": "txn:492906",
-            "checklistbank-1174": "txn:492906"
+            "checklistbank": [
+              "txn:492906",
+              "urn:lsid:marinespecies.org:taxname:1717670"
+            ],
+            "checklistbank-1174": [
+              "txn:492906"
+            ]
           },
-          "authorityIds": "col:BW5MG",
+          "authorityIds": "checklistbank:txn:492906,checklistbank:urn:lsid:marinespecies.org:taxname:1717670,checklistbank-1174:txn:492906,col:BW5MG",
           "children": [],
           "description": "Iberodorippe vinea is a telamonocarcinidae species found in its native region."
         }
@@ -225,31 +230,6 @@
       "lineage": "Telamonocarcinidae"
     },
     {
-      "id": "GENUS_IBERODORIPPE",
-      "name": "\"Iberodorippe",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_IBERODORIPPE_VINEA_OSS_VAN_BAKEL_ARTAL_I_IN_I_OSS_VAN_BAKEL_ARTAL_MORENO_BEDMAR_S_NCHEZ_BERISTAIN_BOVER_ARNAL_2023",
-          "name": "\"Iberodorippe vinea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iberodorippe",
-          "authorship": "\"Ossó, Van Bakel, Artal <i>in</i> Ossó, Van Bakel, Artal, Moreno-Bedmar, Sánchez-Beristain & Bover-Arnal, 2023\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1717670",
-            "checklistbank-1174": "txn:492906"
-          },
-          "children": [],
-          "uuid": "d2c04a62-9cd9-56f-b80-c1c56dadb2bf51",
-          "description": "\"Iberodorippe vinea\" is a telamonocarcinidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "telamonocarcinidae"
-    },
-    {
       "id": "GENUS_TEPEXICARCINUS",
       "name": "Tepexicarcinus",
       "rank": "GENUS",
@@ -274,11 +254,11 @@
       "lineage": "telamonocarcinidae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 11,
   "appSlug": "telamonocarcinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 6,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

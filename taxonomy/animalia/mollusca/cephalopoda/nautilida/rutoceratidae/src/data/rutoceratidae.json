@@ -144,10 +144,15 @@
             "col": [
               "BM3L5"
             ],
-            "checklistbank": "txn:314827",
-            "checklistbank-1174": "txn:314827"
+            "checklistbank": [
+              "txn:314827",
+              "urn:lsid:marinespecies.org:taxname:1669653"
+            ],
+            "checklistbank-1174": [
+              "txn:314827"
+            ]
           },
-          "authorityIds": "col:BM3L5",
+          "authorityIds": "checklistbank:txn:314827,checklistbank:urn:lsid:marinespecies.org:taxname:1669653,checklistbank-1174:txn:314827,col:BM3L5",
           "authorship": "(Shimanskiy 1967)"
         }
       ]
@@ -315,31 +320,6 @@
       "lineage": "Rutoceratidae"
     },
     {
-      "id": "GENUS_NAUTILAPHRACTUS",
-      "name": "\"Nautilaphractus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NAUTILAPHRACTUS_ADEMPTA_SHIMANSKY_1967",
-          "name": "\"Nautilaphractus adempta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nautilaphractus",
-          "authorship": "\"(Shimansky, 1967)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669653",
-            "checklistbank-1174": "txn:314827"
-          },
-          "children": [],
-          "uuid": "1ca8b096-cb3d-55c-bdd-c30e71714c5be0",
-          "description": "\"Nautilaphractus adempta\" is a rutoceratidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "rutoceratidae"
-    },
-    {
       "id": "GENUS_GYROCERAS",
       "name": "Gyroceras",
       "rank": "GENUS",
@@ -363,8 +343,8 @@
       "lineage": "rutoceratidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 16,
+  "genusCount": 10,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

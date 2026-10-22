@@ -23,11 +23,16 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8683693,
-            "checklistbank": "txn:277185",
-            "checklistbank-1174": "txn:277185"
+            "checklistbank": [
+              "txn:277185",
+              "urn:lsid:marinespecies.org:taxname:956731"
+            ],
+            "checklistbank-1174": [
+              "txn:277185"
+            ]
           },
           "uuid": "91d3f2ce-6ca6-583-8b3-59bed12096142e",
-          "authorityIds": "gbif:8683693",
+          "authorityIds": "checklistbank:txn:277185,checklistbank:urn:lsid:marinespecies.org:taxname:956731,checklistbank-1174:txn:277185,gbif:8683693",
           "children": [],
           "authorship": "Brideaux 1975"
         },
@@ -43,11 +48,16 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8518998,
-            "checklistbank": "txn:277186",
-            "checklistbank-1174": "txn:277186"
+            "checklistbank": [
+              "txn:277186",
+              "urn:lsid:marinespecies.org:taxname:956732"
+            ],
+            "checklistbank-1174": [
+              "txn:277186"
+            ]
           },
           "uuid": "6043c477-1bc3-5ea-86a-5267b3d71cd679",
-          "authorityIds": "gbif:8518998",
+          "authorityIds": "checklistbank:txn:277186,checklistbank:urn:lsid:marinespecies.org:taxname:956732,checklistbank-1174:txn:277186,gbif:8518998",
           "children": [],
           "authorship": "Brideaux 1975"
         },
@@ -63,11 +73,16 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8550986,
-            "checklistbank": "txn:276956",
-            "checklistbank-1174": "txn:276956"
+            "checklistbank": [
+              "txn:276956",
+              "urn:lsid:marinespecies.org:taxname:956733"
+            ],
+            "checklistbank-1174": [
+              "txn:276956"
+            ]
           },
           "uuid": "953a465f-a5d9-545-aac-98dc805eb60fed",
-          "authorityIds": "gbif:8550986",
+          "authorityIds": "checklistbank:txn:276956,checklistbank:urn:lsid:marinespecies.org:taxname:956733,checklistbank-1174:txn:276956,gbif:8550986",
           "children": [],
           "authorship": "Eisenack and Cookson 1960"
         },
@@ -539,54 +554,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BATIOLADINIUM_JAEGERI_ALBERTI_1961",
-          "name": "\"Batioladinium jaegeri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Batioladinium",
-          "authorship": "\"(Alberti, 1961)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:956731",
-            "checklistbank-1174": "txn:277185"
-          },
-          "children": [],
-          "uuid": "b25fcaaa-6ee2-5ad-a33-4680ed2c17f067",
-          "description": "\"Batioladinium jaegeri\" is a pareodiniaceae species found in its native region."
-        },
-        {
-          "id": "SP_BATIOLADINIUM_LONGICORNUTUM_ALBERTI_1961",
-          "name": "\"Batioladinium longicornutum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Batioladinium",
-          "authorship": "\"(Alberti, 1961)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:956732",
-            "checklistbank-1174": "txn:277186"
-          },
-          "children": [],
-          "uuid": "33cec9b5-96b6-528-a41-453803ef3029b8",
-          "description": "\"Batioladinium longicornutum\" is a pareodiniaceae species found in its native region."
-        },
-        {
-          "id": "SP_BATIOLADINIUM_MICROPODUM_EISENACK_COOKSON_1960",
-          "name": "\"Batioladinium micropodum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Batioladinium",
-          "authorship": "\"(Eisenack & Cookson, 1960)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:956733",
-            "checklistbank-1174": "txn:276956"
-          },
-          "children": [],
-          "uuid": "4a4319dc-b00a-5d7-99a-29e45982e4b32a",
-          "description": "\"Batioladinium micropodum\" is a pareodiniaceae species found in its native region."
-        },
-        {
           "id": "SP_BATIOLADINIUM_RADICULATUM_DAVEY_1982",
           "name": "Batioladinium radiculatum",
           "rank": "SPECIES",
@@ -645,5 +612,5 @@
     "checklistbank-1174": "txn:322363"
   },
   "genusCount": 12,
-  "speciesCount": 29
+  "speciesCount": 26
 }

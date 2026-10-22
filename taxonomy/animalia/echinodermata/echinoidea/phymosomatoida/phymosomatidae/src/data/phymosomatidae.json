@@ -700,10 +700,15 @@
             "col": [
               "33G76"
             ],
-            "checklistbank": "txn:144465",
-            "checklistbank-1174": "txn:144465"
+            "checklistbank": [
+              "txn:144465",
+              "urn:lsid:marinespecies.org:taxname:757644"
+            ],
+            "checklistbank-1174": [
+              "txn:144465"
+            ]
           },
-          "authorityIds": "col:33G76",
+          "authorityIds": "checklistbank:txn:144465,checklistbank:urn:lsid:marinespecies.org:taxname:757644,checklistbank-1174:txn:144465,col:33G76",
           "children": [],
           "authorship": "Maury 1925",
           "description": "Cyphosoma riograndensis is a phymosomatidae species found in its native region."
@@ -1224,22 +1229,6 @@
       "name": "\"Cyphosoma",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CYPHOSOMA_RIOGRANDENSIS_MAURY_1930",
-          "name": "\"Cyphosoma riograndensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cyphosoma",
-          "authorship": "\"Maury, 1930\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757644",
-            "checklistbank-1174": "txn:144465"
-          },
-          "children": [],
-          "uuid": "ccbdbb46-7e2a-571-9b1-cef5bce474d7da",
-          "description": "\"Cyphosoma riograndensis is a phymosomatidae species found in its native region."
-        },
         {
           "id": "SP_CYPHOSOMA_COPTOSOMA_B_HM_1891",
           "name": "\"Cyphosoma (Coptosoma)",
@@ -1914,7 +1903,7 @@
       "lineage": "phymosomatidae"
     }
   ],
-  "speciesCount": 106,
+  "speciesCount": 105,
   "appSlug": "phymosomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

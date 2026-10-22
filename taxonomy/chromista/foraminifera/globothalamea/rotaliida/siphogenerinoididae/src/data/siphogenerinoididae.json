@@ -2729,11 +2729,16 @@
             "col": [
               "83MFR"
             ],
-            "checklistbank": "txn:354879",
-            "checklistbank-1174": "txn:354879"
+            "checklistbank": [
+              "txn:354879",
+              "urn:lsid:marinespecies.org:taxname:1472005"
+            ],
+            "checklistbank-1174": [
+              "txn:354879"
+            ]
           },
           "uuid": "fda02fbe-ba72-508-9e5-c83b9bbe2312be",
-          "authorityIds": "col:83MFR,gbif:9028311",
+          "authorityIds": "checklistbank:txn:354879,checklistbank:urn:lsid:marinespecies.org:taxname:1472005,checklistbank-1174:txn:354879,col:83MFR,gbif:9028311",
           "authorship": "(Plummer 1926)"
         },
         {
@@ -8097,22 +8102,6 @@
           "children": [],
           "uuid": "d1e3e141-34bd-560-9b5-fc7b5edee0cf6e",
           "description": "\"Siphogenerinoides vasarhelyii\" is a siphogenerinoididae species found in its native region."
-        },
-        {
-          "id": "SP_SIPHOGENERINOIDES_ELEGANTA_PLUMMER_1927",
-          "name": "\"Siphogenerinoides eleganta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphogenerinoides",
-          "authorship": "\"(Plummer, 1927)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1472005",
-            "checklistbank-1174": "txn:354879"
-          },
-          "children": [],
-          "uuid": "e294baf5-84f4-5c4-8f1-6b8ce6ae6b16fb",
-          "description": "\"Siphogenerinoides eleganta\" is a siphogenerinoididae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9251,7 +9240,7 @@
     }
   ],
   "genusCount": 50,
-  "speciesCount": 475,
+  "speciesCount": 474,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

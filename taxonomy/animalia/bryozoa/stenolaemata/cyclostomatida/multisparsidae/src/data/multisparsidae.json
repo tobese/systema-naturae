@@ -481,10 +481,15 @@
             "col": [
               "8693Z"
             ],
-            "checklistbank": "txn:167331",
-            "checklistbank-1174": "txn:167331"
+            "checklistbank": [
+              "txn:167331",
+              "urn:lsid:marinespecies.org:taxname:1413442"
+            ],
+            "checklistbank-1174": [
+              "txn:167331"
+            ]
           },
-          "authorityIds": "col:8693Z",
+          "authorityIds": "checklistbank:txn:167331,checklistbank:urn:lsid:marinespecies.org:taxname:1413442,checklistbank-1174:txn:167331,col:8693Z",
           "children": [],
           "authorship": "(d'Orbigny 1852)"
         },
@@ -884,10 +889,15 @@
             "col": [
               "868LH"
             ],
-            "checklistbank": "txn:117605",
-            "checklistbank-1174": "txn:117605"
+            "checklistbank": [
+              "txn:117605",
+              "urn:lsid:marinespecies.org:taxname:1412748"
+            ],
+            "checklistbank-1174": [
+              "txn:117605"
+            ]
           },
-          "authorityIds": "col:868LH",
+          "authorityIds": "checklistbank:txn:117605,checklistbank:urn:lsid:marinespecies.org:taxname:1412748,checklistbank-1174:txn:117605,col:868LH",
           "children": [],
           "authorship": "(Cuffey and Ehleiter 1984)"
         }
@@ -1435,31 +1445,6 @@
       "lineage": "multisparsidae"
     },
     {
-      "id": "GENUS_PATULOPORA",
-      "name": "\"Patulopora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PATULOPORA_CUTLERI_CUFFEY_EHLEITER_1984",
-          "name": "\"Patulopora cutleri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Patulopora",
-          "authorship": "\"(Cuffey & Ehleiter, 1984)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412748",
-            "checklistbank-1174": "txn:117605"
-          },
-          "children": [],
-          "uuid": "cf21433e-144c-52c-841-d5eff579eefc97",
-          "description": "\"Patulopora cutleri\" is a multisparsidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "multisparsidae"
-    },
-    {
       "id": "GENUS_REPTOCLAUSA",
       "name": "\"Reptoclausa",
       "rank": "GENUS",
@@ -1547,22 +1532,6 @@
           "children": [],
           "uuid": "1dfaecfc-2e82-5ae-80d-7042fb31a96068",
           "description": "\"Reptomultisparsa hybensis\" is a multisparsidae species found in its native region."
-        },
-        {
-          "id": "SP_REPTOMULTISPARSA_INCRUSTANS_D_ORBIGNY_1850",
-          "name": "\"Reptomultisparsa incrustans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Reptomultisparsa",
-          "authorship": "\"(d'Orbigny, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413442",
-            "checklistbank-1174": "txn:167331"
-          },
-          "children": [],
-          "uuid": "9de60685-0e6f-54b-929-4b76c2fba38498",
-          "description": "\"Reptomultisparsa incrustans\" is a multisparsidae species found in its native region."
         },
         {
           "id": "SP_REPTOMULTISPARSA_MARGOPUNCTA_WAAGEN_1867",
@@ -1853,6 +1822,6 @@
     "checklistbank": "txn:117608",
     "checklistbank-1174": "txn:117608"
   },
-  "genusCount": 16,
-  "speciesCount": 96
+  "genusCount": 15,
+  "speciesCount": 94
 }

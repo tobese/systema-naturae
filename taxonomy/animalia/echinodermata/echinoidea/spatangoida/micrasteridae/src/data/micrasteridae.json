@@ -690,10 +690,15 @@
             "col": [
               "42QTJ"
             ],
-            "checklistbank": "txn:377009",
-            "checklistbank-1174": "txn:377009"
+            "checklistbank": [
+              "txn:377009",
+              "urn:lsid:marinespecies.org:taxname:1034549"
+            ],
+            "checklistbank-1174": [
+              "txn:377009"
+            ]
           },
-          "authorityIds": "col:42QTJ",
+          "authorityIds": "checklistbank:txn:377009,checklistbank:urn:lsid:marinespecies.org:taxname:1034549,checklistbank-1174:txn:377009,col:42QTJ",
           "children": [],
           "authorship": "(Leske 1778)",
           "description": "Micraster coranguinum is a micrasteridae species found in its native region."
@@ -1293,7 +1298,8 @@
             "col": [
               "32T28"
             ],
-            "checklistbank": "ott3650171"
+            "checklistbank": "ott3650171",
+            "checklistbank-139831": "774629"
           },
           "authorityIds": "col:32T28",
           "children": [],
@@ -1369,7 +1375,8 @@
               "32T27"
             ],
             "checklistbank": "ott3649989",
-            "wikispecies": "Cyclaster_recens"
+            "wikispecies": "Cyclaster_recens",
+            "checklistbank-139831": "1163260"
           },
           "authorityIds": "col:32T27",
           "children": [],
@@ -2287,22 +2294,6 @@
           "description": "\"Micraster (Isopneustes) is a micrasteridae species found in its native region."
         },
         {
-          "id": "SP_MICRASTER_CORANGUINUM_STOKES_1975",
-          "name": "\"Micraster coranguinum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Micraster",
-          "authorship": "\"Stokes, 1975\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034549",
-            "checklistbank-1174": "txn:377009"
-          },
-          "children": [],
-          "uuid": "bbf887d8-4d72-5c1-b88-524344f114a170",
-          "description": "\"Micraster coranguinum is a micrasteridae species found in its native region."
-        },
-        {
           "id": "SP_MICRASTER_SCHROEDERI_STOLLEY_1892",
           "name": "Micraster schroederi",
           "rank": "SPECIES",
@@ -2482,7 +2473,7 @@
       "lineage": "micrasteridae"
     }
   ],
-  "speciesCount": 136,
+  "speciesCount": 135,
   "appSlug": "micrasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

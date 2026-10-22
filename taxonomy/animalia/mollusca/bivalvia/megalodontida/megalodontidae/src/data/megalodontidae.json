@@ -640,12 +640,18 @@
               "7SB9T"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1418244"
+              "urn:lsid:marinespecies.org:taxname:1418244",
+              "urn:lsid:marinespecies.org:taxname:1481839"
             ],
             "gbif-backbone": "11846353",
-            "checklistbank-1174": "txn:392011"
+            "checklistbank-1174": [
+              "txn:392011"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1418244"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1418244,col:7SB9T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1418244,checklistbank:urn:lsid:marinespecies.org:taxname:1481839,checklistbank-1174:txn:392011,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1418244,col:7SB9T,gbif-backbone:11846353",
           "authorship": "(R. Hoernes, 1899)"
         },
         {
@@ -1599,11 +1605,17 @@
               "868DX"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1507403"
+              "urn:lsid:marinespecies.org:taxname:1507403",
+              "urn:lsid:marinespecies.org:taxname:1604419"
             ],
-            "checklistbank-1174": "txn:254367"
+            "checklistbank-1174": [
+              "txn:254367"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1507403"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1507403,col:868DX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1507403,checklistbank:urn:lsid:marinespecies.org:taxname:1604419,checklistbank-1174:txn:254367,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1507403,col:868DX",
           "authorship": "(Wulfen, 1793)"
         },
         {
@@ -1839,9 +1851,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1346710"
             ],
-            "checklistbank-1174": "txn:383647"
+            "checklistbank-1174": [
+              "txn:383647"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1346710"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1346710,col:9HG5L",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1346710,checklistbank-1174:txn:383647,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1346710,col:9HG5L",
           "authorship": "(R. Hoernes, 1876)"
         },
         {
@@ -2034,9 +2051,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1346715"
             ],
-            "checklistbank-1174": "txn:392137"
+            "checklistbank-1174": [
+              "txn:392137"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1346715"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1346715,col:7TDC5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1346715,checklistbank-1174:txn:392137,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1346715,col:7TDC5",
           "authorship": "(R. Hoernes, 1876)"
         }
       ]
@@ -2435,13 +2457,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Conchodon",
           "sourceIds": {
-            "checklistbank": "1438361",
-            "checklistbank-1174": "txn:383632"
+            "checklistbank": [
+              "1438361",
+              "urn:lsid:marinespecies.org:taxname:1605159"
+            ],
+            "checklistbank-1174": [
+              "txn:383632"
+            ]
           },
           "children": [],
           "authorship": "(Schafhäutl 1863)",
           "uuid": "220f0375-babb-526-836-f4970668e51728",
-          "description": "Conchodon infraliasicus is a megalodontidae species found in its native region."
+          "description": "Conchodon infraliasicus is a megalodontidae species found in its native region.",
+          "authorityIds": "checklistbank:1438361,checklistbank:urn:lsid:marinespecies.org:taxname:1605159,checklistbank-1174:txn:383632"
         }
       ]
     },
@@ -2661,36 +2689,6 @@
           "children": []
         },
         {
-          "id": "SP_TRIADOMEGALODON_DAMESI_R_HOERNES_1876",
-          "name": "Triadomegalodon damesi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Triadomegalodon",
-          "authorship": "(R. Hoernes, 1876)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1346710",
-            "checklistbank-1174": "txn:383647"
-          },
-          "uuid": "3277f6fb-25e7-4f6a-8ada-03bdd2852c14",
-          "children": []
-        },
-        {
-          "id": "SP_TRIADOMEGALODON_TOFANAE_R_HOERNES_1876",
-          "name": "Triadomegalodon tofanae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Triadomegalodon",
-          "authorship": "(R. Hoernes, 1876)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1346715",
-            "checklistbank-1174": "txn:392137"
-          },
-          "uuid": "950e05ed-97b9-43cd-bead-5e79768fceea",
-          "children": []
-        },
-        {
           "id": "SP_TRIADOMEGALODON_AMPEZZANUS_R_HOERNES_1880",
           "name": "Triadomegalodon ampezzanus",
           "rank": "SPECIES",
@@ -2825,40 +2823,6 @@
           "children": [],
           "uuid": "0d7b732b-0989-5dd-825-9bdddfaf2bc885",
           "description": "\"Neomegalodon complanatus is a megalodontidae species found in its native region."
-        },
-        {
-          "id": "SP_NEOMEGALODON_BOECKHI_FRECH_1904",
-          "name": "\"Neomegalodon boeckhi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neomegalodon",
-          "authorship": "\"(Frech, 1904)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1481839",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1418244",
-            "checklistbank-1174": "txn:392011"
-          },
-          "children": [],
-          "uuid": "a93dba08-4591-5b3-98f-85227b553f3bad",
-          "description": "\"Neomegalodon boeckhi is a megalodontidae species found in its native region."
-        },
-        {
-          "id": "SP_NEOMEGALODON_TRIQUETER_FIEDLER_1904",
-          "name": "\"Neomegalodon triqueter",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neomegalodon",
-          "authorship": "\"(Fiedler, 1904)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1604419",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1507403",
-            "checklistbank-1174": "txn:254367"
-          },
-          "children": [],
-          "uuid": "98f39ba3-cf71-5ec-a3f-522696c9add794",
-          "description": "\"Neomegalodon triqueter is a megalodontidae species found in its native region."
         },
         {
           "id": "SP_NEOMEGALODON_SECCOI_DI_STEFANO_1912",
@@ -3502,22 +3466,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CONCHODON_INFRALIASICUS_MENSINK_TICHY_1977",
-          "name": "\"Conchodon infraliasicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Conchodon",
-          "authorship": "\"Mensink & Tichy, 1977\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1605159",
-            "checklistbank-1174": "txn:383632"
-          },
-          "children": [],
-          "uuid": "bfc50bc0-8489-581-92f-5e2c6af11cae19",
-          "description": "\"Conchodon infraliasicus is a megalodontidae species found in its native region."
-        },
-        {
           "id": "SP_CONCHODON_INCURVATUS_ZAPFE_1964",
           "name": "Conchodon incurvatus",
           "rank": "SPECIES",
@@ -3922,7 +3870,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 218,
+  "speciesCount": 213,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

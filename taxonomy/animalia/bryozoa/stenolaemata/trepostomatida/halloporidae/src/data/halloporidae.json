@@ -450,11 +450,20 @@
               "867VL"
             ],
             "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411412",
+              "urn:lsid:marinespecies.org:taxname:1414887"
+            ],
+            "checklistbank-1174": [
+              "txn:317217"
+            ],
+            "checklistbank-2011": [
               "urn:lsid:marinespecies.org:taxname:1411412"
             ],
-            "checklistbank-1174": "txn:317217"
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:1411412"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411412,col:867VL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411412,checklistbank:urn:lsid:marinespecies.org:taxname:1414887,checklistbank-1081:urn:lsid:marinespecies.org:taxname:1411412,checklistbank-1174:txn:317217,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1411412,col:867VL",
           "authorship": "(Hall, 1852)",
           "children": []
         },
@@ -1840,9 +1849,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1412741"
             ],
-            "checklistbank-1174": "txn:317870"
+            "checklistbank-1174": [
+              "txn:317870"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1412741"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1412741,col:868LF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1412741,checklistbank-1174:txn:317870,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1412741,col:868LF",
           "authorship": "(d'Orbigny, 1850)",
           "children": []
         },
@@ -2800,24 +2814,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HALLOPORA_ELEGANTULA_BASSLER_1927",
-          "name": "\"Hallopora elegantula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hallopora",
-          "authorship": "\"Bassler, 1927\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414887",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1411412",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1411412",
-            "checklistbank-1174": "txn:317217"
-          },
-          "children": [],
-          "uuid": "6723ef60-c29a-53d-a1a-11b705383afc23",
-          "description": "\"Hallopora elegantula is a halloporidae species found in its native region."
-        },
-        {
           "id": "SP_HALLOPORA_ALASHENSIS_ASTROVA_1959",
           "name": "Hallopora alashensis",
           "rank": "SPECIES",
@@ -3169,21 +3165,6 @@
           "children": []
         },
         {
-          "id": "SP_PARVOHALLOPORA_RAMOSA_D_ORBIGNY_1850",
-          "name": "Parvohallopora ramosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parvohallopora",
-          "authorship": "(d'Orbigny, 1850)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1412741",
-            "checklistbank-1174": "txn:317870"
-          },
-          "uuid": "ecf57765-86e5-43af-964d-dcbcb532e713",
-          "children": []
-        },
-        {
           "id": "SP_PARVOHALLOPORA_SIGILLARIOIDES_NICHOLSON_1875",
           "name": "Parvohallopora sigillarioides",
           "rank": "SPECIES",
@@ -3435,7 +3416,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 178,
+  "speciesCount": 176,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

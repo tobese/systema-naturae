@@ -127,11 +127,16 @@
             "col": [
               "8FX23"
             ],
-            "checklistbank": "txn:382603",
-            "checklistbank-1174": "txn:382603"
+            "checklistbank": [
+              "txn:382603",
+              "urn:lsid:marinespecies.org:taxname:927422"
+            ],
+            "checklistbank-1174": [
+              "txn:382603"
+            ]
           },
           "uuid": "a5d5bc14-cb1d-544-8dc-643472e7e16448",
-          "authorityIds": "col:8FX23,gbif:11281054",
+          "authorityIds": "checklistbank:txn:382603,checklistbank:urn:lsid:marinespecies.org:taxname:927422,checklistbank-1174:txn:382603,col:8FX23,gbif:11281054",
           "authorship": "Schlumberger 1902"
         },
         {
@@ -1093,11 +1098,16 @@
             "col": [
               "BHBPX"
             ],
-            "checklistbank": "txn:399367",
-            "checklistbank-1174": "txn:399367"
+            "checklistbank": [
+              "txn:399367",
+              "urn:lsid:marinespecies.org:taxname:929703"
+            ],
+            "checklistbank-1174": [
+              "txn:399367"
+            ]
           },
           "uuid": "6c61e58e-44a0-5c9-9c1-49a5b6762a9cb8",
-          "authorityIds": "col:BHBPX,gbif:9092925",
+          "authorityIds": "checklistbank:txn:399367,checklistbank:urn:lsid:marinespecies.org:taxname:929703,checklistbank-1174:txn:399367,col:BHBPX,gbif:9092925",
           "authorship": "(d'Archiac 1837)"
         },
         {
@@ -1949,10 +1959,15 @@
             "col": [
               "8357Z"
             ],
-            "checklistbank": "txn:312443",
-            "checklistbank-1174": "txn:312443"
+            "checklistbank": [
+              "txn:312443",
+              "urn:lsid:marinespecies.org:taxname:927417"
+            ],
+            "checklistbank-1174": [
+              "txn:312443"
+            ]
           },
-          "authorityIds": "col:8357Z",
+          "authorityIds": "checklistbank:txn:312443,checklistbank:urn:lsid:marinespecies.org:taxname:927417,checklistbank-1174:txn:312443,col:8357Z",
           "description": "Orbitoides apiculata is a orbitoididae species found in its native region."
         }
       ]
@@ -3338,38 +3353,6 @@
           "description": "\"Orbitoides (Actinocyclina) is a orbitoididae species found in its native region."
         },
         {
-          "id": "SP_ORBITOIDES_APICULATA_K_HLER_1962",
-          "name": "\"Orbitoides apiculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Orbitoides",
-          "authorship": "\"Köhler, 1962\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:927417",
-            "checklistbank-1174": "txn:312443"
-          },
-          "children": [],
-          "uuid": "a8a8023e-ff13-5fd-88e-91bd9ff7e2d899",
-          "description": "\"Orbitoides apiculata is a orbitoididae species found in its native region."
-        },
-        {
-          "id": "SP_ORBITOIDES_APICULATUS_MERI_1974",
-          "name": "\"Orbitoides apiculatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Orbitoides",
-          "authorship": "\"Meriç, 1974\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:927422",
-            "checklistbank-1174": "txn:382603"
-          },
-          "children": [],
-          "uuid": "07bcbf1c-7e12-5a5-b77-49449d3f6091d7",
-          "description": "\"Orbitoides apiculatus is a orbitoididae species found in its native region."
-        },
-        {
           "id": "SP_ORBITOIDES_GENSACICUS_K_HLER_1962",
           "name": "\"Orbitoides gensacicus",
           "rank": "SPECIES",
@@ -3383,22 +3366,6 @@
           "children": [],
           "uuid": "a5b9ccf8-0696-5eb-908-21aaf6f70e3100",
           "description": "\"Orbitoides gensacicus is a orbitoididae species found in its native region."
-        },
-        {
-          "id": "SP_ORBITOIDES_MEDIA_PAPP_K_PPER_1953",
-          "name": "\"Orbitoides media",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Orbitoides",
-          "authorship": "\"Papp & Küpper, 1953\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:929703",
-            "checklistbank-1174": "txn:399367"
-          },
-          "children": [],
-          "uuid": "3bd7300e-3284-5f6-964-c7cc3925e3d4f7",
-          "description": "\"Orbitoides media is a orbitoididae species found in its native region."
         },
         {
           "id": "SP_ORBITOIDES_TISSOTI_MARKS_1962",
@@ -4631,7 +4598,7 @@
     }
   ],
   "genusCount": 27,
-  "speciesCount": 248,
+  "speciesCount": 245,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

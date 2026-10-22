@@ -832,11 +832,16 @@
             "col": [
               "9THQ8"
             ],
-            "checklistbank": "txn:404212",
+            "checklistbank": [
+              "txn:404212",
+              "urn:lsid:marinespecies.org:taxname:1611881"
+            ],
             "gbif-backbone": "11216202",
-            "checklistbank-1174": "txn:404212"
+            "checklistbank-1174": [
+              "txn:404212"
+            ]
           },
-          "authorityIds": "col:9THQ8",
+          "authorityIds": "checklistbank:txn:404212,checklistbank:urn:lsid:marinespecies.org:taxname:1611881,checklistbank-1174:txn:404212,col:9THQ8,gbif-backbone:11216202",
           "children": [],
           "description": "Guinotosia ornata is a etyidae species found in its native region."
         }
@@ -1016,22 +1021,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_GUINOTOSIA_ORNATA_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Guinotosia ornata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Guinotosia",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611881",
-            "checklistbank-1174": "txn:404212"
-          },
-          "children": [],
-          "uuid": "81039d5e-bb4a-50e-9f2-a18406bde1c2a5",
-          "description": "\"Guinotosia ornata\" is a etyidae species found in its native region."
-        },
-        {
           "id": "SP_GUINOTOSIA_TERTIARIA_BESCHIN_ET_AL_2007",
           "name": "Guinotosia tertiaria",
           "rank": "SPECIES",
@@ -1050,7 +1039,7 @@
       "lineage": "etyidae"
     }
   ],
-  "speciesCount": 55,
+  "speciesCount": 54,
   "appSlug": "etyidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

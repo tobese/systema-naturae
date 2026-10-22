@@ -3436,9 +3436,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:517278"
             ],
-            "checklistbank-1174": "txn:343066"
+            "checklistbank-1174": [
+              "txn:343066"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:517278"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:517278,col:6GCGT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:517278,checklistbank-1174:txn:343066,checklistbank-2011:urn:lsid:marinespecies.org:taxname:517278,col:6GCGT",
           "authorship": "(G. B. Sowerby II, 1859)"
         },
         {
@@ -5040,21 +5045,6 @@
           "children": []
         },
         {
-          "id": "SP_ERATOENA_NANA_G_B_SOWERBY_II_1859",
-          "name": "Eratoena nana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eratoena",
-          "authorship": "(G. B. Sowerby II, 1859)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:517278",
-            "checklistbank-1174": "txn:343066"
-          },
-          "uuid": "095ddd70-ce11-48fb-a10a-7496d0709a2e",
-          "children": []
-        },
-        {
           "id": "SP_ERATOENA_CORRUGATA_HINDS_1844",
           "name": "Eratoena corrugata",
           "rank": "SPECIES",
@@ -5442,7 +5432,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 290,
+  "speciesCount": 289,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

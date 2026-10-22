@@ -194,10 +194,15 @@
             "col": [
               "BHK68"
             ],
-            "checklistbank": "txn:301643",
-            "checklistbank-1174": "txn:301643"
+            "checklistbank": [
+              "txn:301643",
+              "urn:lsid:marinespecies.org:taxname:1665101"
+            ],
+            "checklistbank-1174": [
+              "txn:301643"
+            ]
           },
-          "authorityIds": "col:BHK68",
+          "authorityIds": "checklistbank:txn:301643,checklistbank:urn:lsid:marinespecies.org:taxname:1665101,checklistbank-1174:txn:301643,col:BHK68",
           "authorship": "(Leanza 1942)"
         },
         {
@@ -363,22 +368,6 @@
           "children": [],
           "uuid": "c5f46dd6-a976-5c1-815-457660b32914e2",
           "description": "\"Asoella confertoradiata\" is a hunanopectinidae species found in its native region."
-        },
-        {
-          "id": "SP_ASOELLA_ASAPHA_A_F_LEANZA_1942",
-          "name": "\"Asoella asapha\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Asoella",
-          "authorship": "\"(A. F. Leanza, 1942)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1665101",
-            "checklistbank-1174": "txn:301643"
-          },
-          "children": [],
-          "uuid": "30056b9c-ed08-5a8-aa4-aa3a130e006957",
-          "description": "\"Asoella asapha\" is a hunanopectinidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -629,7 +618,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 36,
+  "speciesCount": 35,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

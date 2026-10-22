@@ -916,12 +916,15 @@
           "authorship": "\"(Lukin, 1929)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1324487",
-            "checklistbank-139831": "971181"
+            "checklistbank-139831": [
+              "971181"
+            ]
           },
           "children": [],
           "uuid": "57b5ee84-c36e-5ca-aee-1951c2cc99abc2",
           "description": "\"Fadejewobdella quinqueannulata\" is a erpobdellidae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1324487,checklistbank-139831:971181"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1416,20 +1419,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DINA_ABSOLONI_JOHANSSON_1913",
-          "name": "Dina absoloni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dina",
-          "authorship": "Johansson, 1913",
-          "sourceIds": {
-            "checklistbank": "238432"
-          },
-          "children": [],
-          "uuid": "ddc5b5ff-0518-5b3-9e0-fa6eaab507c332"
-        },
-        {
           "id": "SP_DINA_APATHYI_GEDROYC_1916",
           "name": "Dina apathyi",
           "rank": "SPECIES",
@@ -1443,20 +1432,6 @@
           },
           "children": [],
           "uuid": "06cc22d8-607a-598-a38-e608210ee42216"
-        },
-        {
-          "id": "SP_DINA_ETURPSHEM_SKET_1989",
-          "name": "Dina eturpshem",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dina",
-          "authorship": "Sket, 1989",
-          "sourceIds": {
-            "checklistbank": "238434"
-          },
-          "children": [],
-          "uuid": "d6be9924-df4e-588-aaa-16096d43f60cea"
         },
         {
           "id": "SP_DINA_KRILATA_SKET_1989",
@@ -1588,22 +1563,6 @@
           },
           "children": [],
           "uuid": "0815388e-5d35-5b7-aa0-3cfe5100360036"
-        },
-        {
-          "id": "SP_DINA_STSCHEGOLEWI_LUKIN_EPSHTEIN_1960",
-          "name": "Dina stschegolewi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dina",
-          "authorship": "(Lukin & Epshtein, 1960)",
-          "sourceIds": {
-            "checklistbank": "238453",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1324408",
-            "gbif-backbone": "9196826"
-          },
-          "children": [],
-          "uuid": "e8477dcf-7168-579-8c0-0e6220a5bf785d"
         },
         {
           "id": "SP_DINA_SVILESTA_SKET_1989",
@@ -2295,31 +2254,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "erpobdellidae"
-    },
-    {
-      "id": "GENUS_FADEJEWOBDELLA",
-      "name": "Fadejewobdella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FADEJEWOBDELLA_QUINQUEANNULATA",
-          "name": "Fadejewobdella quinqueannulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Fadejewobdella",
-          "sourceIds": {
-            "checklistbank-139831": "971181"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "erpobdellidae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 138,
+  "genusCount": 22,
+  "speciesCount": 134,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1747,12 +1747,21 @@
           "lineage": "Dicrocoelium",
           "authorship": "(Rudolphi, 1819)",
           "sourceIds": {
-            "checklistbank": "241845",
-            "wikispecies": "Dicrocoelium_dendriticum"
+            "checklistbank": [
+              "241845",
+              "urn:lsid:marinespecies.org:taxname:1609837"
+            ],
+            "wikispecies": [
+              "Dicrocoelium_dendriticum"
+            ],
+            "checklistbank-139831": [
+              "417250"
+            ]
           },
           "children": [],
           "uuid": "e6078b0e-1999-522-af1-0045f982adc79c",
-          "description": "Dicrocoelium dendriticum, the lancet liver fluke, is a parasite fluke that tends to live in cattle or other grazing mammals."
+          "description": "Dicrocoelium dendriticum, the lancet liver fluke, is a parasite fluke that tends to live in cattle or other grazing mammals.",
+          "authorityIds": "checklistbank:241845,checklistbank:urn:lsid:marinespecies.org:taxname:1609837,checklistbank-139831:417250,wikispecies:Dicrocoelium_dendriticum"
         },
         {
           "id": "SP_DICROCOELIUM_MOSCHIFERI_OSHMARIN_IN_SKRJABIN_EVRAMOVA_1952",
@@ -6243,20 +6252,6 @@
           "description": "Lyperosomum tenori is a dicrocoeliidae species found in its native region."
         },
         {
-          "id": "SP_LYPEROSOMUM_CLATHRATUM_DESLONGCHAMPS_1824",
-          "name": "Lyperosomum clathratum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lyperosomum",
-          "authorship": "(Deslongchamps, 1824)",
-          "sourceIds": {
-            "checklistbank": "241859"
-          },
-          "children": [],
-          "uuid": "c87ff739-0c9c-52f-b0c-2d6689cb5c8198"
-        },
-        {
           "id": "SP_LYPEROSOMUM_SPEC_TRAVASSOS_TRAVASSOS",
           "name": "Lyperosomum spec",
           "rank": "SPECIES",
@@ -9039,34 +9034,6 @@
           "children": [],
           "uuid": "3d9e4574-f686-536-bd8-be51f626931997",
           "description": "Brachylecithum salebrosum is a dicrocoeliidae species found in its native region."
-        },
-        {
-          "id": "SP_BRACHYLECITHUM_ALAUDAE_LAYMAN_1926",
-          "name": "Brachylecithum alaudae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Brachylecithum",
-          "authorship": "(Layman, 1926)",
-          "sourceIds": {
-            "checklistbank": "241806"
-          },
-          "children": [],
-          "uuid": "15e3706f-e203-502-b0c-a33645dd4cea68"
-        },
-        {
-          "id": "SP_BRACHYLECITHUM_VANELLICOLA_LAYMAN_1922",
-          "name": "Brachylecithum vanellicola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Brachylecithum",
-          "authorship": "(Layman, 1922)",
-          "sourceIds": {
-            "checklistbank": "241837"
-          },
-          "children": [],
-          "uuid": "6310802a-a119-5d3-bd3-59e7e934bc323f"
         }
       ]
     },
@@ -11354,20 +11321,6 @@
           "children": [],
           "uuid": "4d5d8660-8428-53d-bc4-c817cafcbeae77",
           "description": "Brachydistomum sp. is a dicrocoeliidae species found in its native region."
-        },
-        {
-          "id": "SP_BRACHYDISTOMUM_SALEBROSUM_BRAUN_1901",
-          "name": "Brachydistomum salebrosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Brachydistomum",
-          "authorship": "(Braun, 1901)",
-          "sourceIds": {
-            "checklistbank": "241802"
-          },
-          "children": [],
-          "uuid": "02e9e51f-be41-522-98c-cef79001c85c87"
         }
       ]
     },
@@ -14971,23 +14924,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DICROCOELIUM_DENDRITICUM_RUDOLPHI_1819_LOOSS_1899",
-          "name": "\"Dicrocoelium dendriticum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dicrocoelium",
-          "authorship": "\"(Rudolphi, 1819) Looss, 1899\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1609837",
-            "wikispecies": "Dicrocoelium_dendriticum",
-            "checklistbank-139831": "417250"
-          },
-          "children": [],
-          "uuid": "990d29fa-d3d1-52e-899-677a8002f4fb4c",
-          "description": "\"Dicrocoelium dendriticum\" is a dicrocoeliidae species found in its native region."
-        },
-        {
           "id": "SP_DICROCOELIUM_LANCEATUM_ARTJUCH_IN_SKRJABIN_EVRAMOVA_1952",
           "name": "\"Dicrocoelium lanceatum",
           "rank": "SPECIES",
@@ -15397,7 +15333,8 @@
           "sourceIds": {
             "checklistbank-127379": "9c182937-c46d-4c1c-9939-05f195d90888"
           },
-          "uuid": "e1b32a2e-de1a-4741-93f9-0f1f3549bdda"
+          "uuid": "e1b32a2e-de1a-4741-93f9-0f1f3549bdda",
+          "children": []
         },
         {
           "id": "SP_BRACHYLECITHUM_MEGASTOMUM_JOHNSTON",
@@ -15410,7 +15347,8 @@
           "sourceIds": {
             "checklistbank-127379": "1f06866b-2f13-487b-9089-850dd091b215"
           },
-          "uuid": "cb6b9e3f-1d41-4670-aeb3-7a898ecd4c0d"
+          "uuid": "cb6b9e3f-1d41-4670-aeb3-7a898ecd4c0d",
+          "children": []
         },
         {
           "id": "SP_BRACHYLECITHUM_PARVUM_JOHNSTON",
@@ -15423,7 +15361,8 @@
           "sourceIds": {
             "checklistbank-127379": "a309f46e-9683-43d9-9114-9f3bea3a92a6"
           },
-          "uuid": "6a3fefcb-37f7-4a2b-adc4-9d4200a26263"
+          "uuid": "6a3fefcb-37f7-4a2b-adc4-9d4200a26263",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -15982,7 +15921,7 @@
     }
   ],
   "genusCount": 77,
-  "speciesCount": 890,
+  "speciesCount": 885,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

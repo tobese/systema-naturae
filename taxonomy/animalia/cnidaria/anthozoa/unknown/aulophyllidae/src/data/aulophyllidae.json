@@ -605,12 +605,18 @@
           "lineage": "Dibunophyllum",
           "authorship": "(M'Coy, 1849)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1813696",
-            "checklistbank-1174": "txn:173023"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1813696",
+              "urn:lsid:marinespecies.org:taxname:1827617"
+            ],
+            "checklistbank-1174": [
+              "txn:173023"
+            ]
           },
           "children": [],
           "uuid": "f7fdbff8-0f13-50e-995-87c9c09da7ed9c",
-          "description": "Dibunophyllum bipartitum is a aulophyllidae species found in its native region."
+          "description": "Dibunophyllum bipartitum is a aulophyllidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1813696,checklistbank:urn:lsid:marinespecies.org:taxname:1827617,checklistbank-1174:txn:173023"
         },
         {
           "id": "SP_DIBUNOPHYLLUM_HYSTRICOSUM_J_M_COCKE_1970",
@@ -1924,31 +1930,6 @@
       "lineage": "aulophyllidae"
     },
     {
-      "id": "GENUS_DIBUNOPHYLLUM",
-      "name": "\"Dibunophyllum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DIBUNOPHYLLUM_BIPARTITUM_MILNE_EDWARDS_HAIME_1851",
-          "name": "\"Dibunophyllum bipartitum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dibunophyllum",
-          "authorship": "\"(Milne Edwards & Haime, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1827617",
-            "checklistbank-1174": "txn:173023"
-          },
-          "children": [],
-          "uuid": "8b5a4045-f234-5fb-9db-0ba6eb128a6abf",
-          "description": "\"Dibunophyllum bipartitum is a aulophyllidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aulophyllidae"
-    },
-    {
       "id": "GENUS_HERITSCHIOIDES",
       "name": "Heritschioides",
       "rank": "GENUS",
@@ -2079,8 +2060,8 @@
       "lineage": "aulophyllidae"
     }
   ],
-  "genusCount": 29,
-  "speciesCount": 127,
+  "genusCount": 28,
+  "speciesCount": 126,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

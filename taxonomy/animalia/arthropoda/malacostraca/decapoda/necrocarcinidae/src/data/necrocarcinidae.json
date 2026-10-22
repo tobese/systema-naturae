@@ -108,10 +108,15 @@
             "col": [
               "V7G28"
             ],
-            "checklistbank": "txn:503602",
-            "checklistbank-1174": "txn:503602"
+            "checklistbank": [
+              "txn:503602",
+              "urn:lsid:marinespecies.org:taxname:1783183"
+            ],
+            "checklistbank-1174": [
+              "txn:503602"
+            ]
           },
-          "authorityIds": "col:V7G28",
+          "authorityIds": "checklistbank:txn:503602,checklistbank:urn:lsid:marinespecies.org:taxname:1783183,checklistbank-1174:txn:503602,col:V7G28",
           "children": [],
           "description": "Necrocarcinus sibiricus is a necrocarcinidae species found in its native region."
         },
@@ -148,10 +153,15 @@
             "col": [
               "BW5N4"
             ],
-            "checklistbank": "txn:492902",
-            "checklistbank-1174": "txn:492902"
+            "checklistbank": [
+              "txn:492902",
+              "urn:lsid:marinespecies.org:taxname:1717668"
+            ],
+            "checklistbank-1174": [
+              "txn:492902"
+            ]
           },
-          "authorityIds": "col:BW5N4",
+          "authorityIds": "checklistbank:txn:492902,checklistbank:urn:lsid:marinespecies.org:taxname:1717668,checklistbank-1174:txn:492902,col:BW5N4",
           "children": [],
           "description": "Necrocarcinus mariae is a necrocarcinidae species found in its native region."
         },
@@ -224,11 +234,16 @@
             "col": [
               "9WWZ7"
             ],
-            "checklistbank": "txn:221122",
+            "checklistbank": [
+              "txn:221122",
+              "urn:lsid:marinespecies.org:taxname:1675793"
+            ],
             "gbif-backbone": "8686106",
-            "checklistbank-1174": "txn:221122"
+            "checklistbank-1174": [
+              "txn:221122"
+            ]
           },
-          "authorityIds": "col:9WWZ7",
+          "authorityIds": "checklistbank:txn:221122,checklistbank:urn:lsid:marinespecies.org:taxname:1675793,checklistbank-1174:txn:221122,col:9WWZ7,gbif-backbone:8686106",
           "children": [],
           "description": "Necrocarcinus senonensis is a necrocarcinidae species found in its native region."
         },
@@ -591,54 +606,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NECROCARCINUS_SENONENSIS_SCHL_TER_I_IN_I_VON_DER_MARCK_SCHL_TER_1868",
-          "name": "\"Necrocarcinus senonensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Necrocarcinus",
-          "authorship": "\"Schlüter <i>in</i> von der Marck & Schlüter, 1868\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1675793",
-            "checklistbank-1174": "txn:221122"
-          },
-          "children": [],
-          "uuid": "fec6c960-9082-5ac-827-4cfdbd12a566b4",
-          "description": "\"Necrocarcinus senonensis\" is a necrocarcinidae species found in its native region."
-        },
-        {
-          "id": "SP_NECROCARCINUS_MARIAE_OSS_VAN_BAKEL_ARTAL_I_IN_I_OSS_VAN_BAKEL_ARTAL_MORENO_BEDMAR_S_NCHEZ_BERISTAIN_BOVER_ARNAL_2023",
-          "name": "\"Necrocarcinus mariae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Necrocarcinus",
-          "authorship": "\"Ossó, Van Bakel, Artal <i>in</i> Ossó, Van Bakel, Artal, Moreno-Bedmar, Sánchez-Beristain & Bover-Arnal, 2023\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1717668",
-            "checklistbank-1174": "txn:492902"
-          },
-          "children": [],
-          "uuid": "06297b72-c0a8-5b5-a49-986d60c8adc049",
-          "description": "\"Necrocarcinus mariae\" is a necrocarcinidae species found in its native region."
-        },
-        {
-          "id": "SP_NECROCARCINUS_SIBIRICUS_KO_OV_VESELSK_GA_PARI_HY_N_LUQUE_I_IN_I_KO_OV_VESELSK_ROGOV_GA_PARI_HY_N_IPPOLITOV_LUQUE_KO_K_2024",
-          "name": "\"Necrocarcinus sibiricus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Necrocarcinus",
-          "authorship": "\"Kočová Veselská, Gašparič, Hyžný & Luque <i>in</i> Kočová Veselská, Rogov, Gašparič, Hyžný, Ippolitov, Luque & Košťák, 2024\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1783183",
-            "checklistbank-1174": "txn:503602"
-          },
-          "children": [],
-          "uuid": "c91f2f23-e861-59f-965-2c6ee9bf5a1599",
-          "description": "\"Necrocarcinus sibiricus\" is a necrocarcinidae species found in its native region."
-        },
-        {
           "id": "SP_NECROCARCINUS_BODRAKENSIS_LEVITSKI_1974",
           "name": "Necrocarcinus bodrakensis",
           "rank": "SPECIES",
@@ -782,7 +749,7 @@
       "lineage": "necrocarcinidae"
     }
   ],
-  "speciesCount": 41,
+  "speciesCount": 38,
   "appSlug": "necrocarcinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

@@ -29,11 +29,16 @@
             "col": [
               "82YDJ"
             ],
-            "checklistbank": "txn:256608",
-            "checklistbank-1174": "txn:256608"
+            "checklistbank": [
+              "txn:256608",
+              "urn:lsid:marinespecies.org:taxname:900305"
+            ],
+            "checklistbank-1174": [
+              "txn:256608"
+            ]
           },
           "uuid": "5fb68628-5a06-55e-836-4f58043c722045",
-          "authorityIds": "col:82YDJ,gbif:8456622",
+          "authorityIds": "checklistbank:txn:256608,checklistbank:urn:lsid:marinespecies.org:taxname:900305,checklistbank-1174:txn:256608,col:82YDJ,gbif:8456622",
           "authorship": "Bronniman and Zaninetti 1971"
         },
         {
@@ -54,11 +59,16 @@
             "col": [
               "82YDK"
             ],
-            "checklistbank": "txn:256609",
-            "checklistbank-1174": "txn:256609"
+            "checklistbank": [
+              "txn:256609",
+              "urn:lsid:marinespecies.org:taxname:1246005"
+            ],
+            "checklistbank-1174": [
+              "txn:256609"
+            ]
           },
           "uuid": "a8c2d87c-4da0-557-a6b-256b5efd8d1cb6",
-          "authorityIds": "col:82YDK,gbif:8618440",
+          "authorityIds": "checklistbank:txn:256609,checklistbank:urn:lsid:marinespecies.org:taxname:1246005,checklistbank-1174:txn:256609,col:82YDK,gbif:8618440",
           "authorship": "Gale et al. 2012"
         }
       ]
@@ -791,47 +801,6 @@
       "lineage": "milioliporidae"
     },
     {
-      "id": "GENUS_MILIOLIPORA",
-      "name": "\"Miliolipora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MILIOLIPORA_CUVILLIERI_BR_NNIMANN_ZANINETTI_1971",
-          "name": "\"Miliolipora cuvillieri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Miliolipora",
-          "authorship": "\"Brönnimann & Zaninetti, 1971\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:900305",
-            "checklistbank-1174": "txn:256608"
-          },
-          "children": [],
-          "uuid": "56061a25-8c34-52b-afe-b263e50d173657",
-          "description": "\"Miliolipora cuvillieri\" is a milioliporidae species found in its native region."
-        },
-        {
-          "id": "SP_MILIOLIPORA_TAMARAE_GALE_RETTORI_MARTINI_2012",
-          "name": "\"Miliolipora tamarae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Miliolipora",
-          "authorship": "\"Gale, Rettori & Martini, 2012\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1246005",
-            "checklistbank-1174": "txn:256609"
-          },
-          "children": [],
-          "uuid": "8c8dd0e6-cd31-55b-9cb-a6f2cf6bfa4058",
-          "description": "\"Miliolipora tamarae\" is a milioliporidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "milioliporidae"
-    },
-    {
       "id": "GENUS_OPHTHALMIPORA",
       "name": "\"Ophthalmipora",
       "rank": "GENUS",
@@ -1195,8 +1164,8 @@
       "lineage": "milioliporidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 54,
+  "genusCount": 19,
+  "speciesCount": 52,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

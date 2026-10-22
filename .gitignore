@@ -56,6 +56,11 @@ portal/data/name-parse-shards/
 portal/data/name-parse-index.jsonl
 # pending-family worklist: a symlink to the external store, not repo data
 portal/data/pending-families.jsonl
+# dedupe-log.jsonl: same treatment -- an append-only machine log that hit
+# GitHub's 100MB hard limit on 2026-10-22 (112MB, 278k lines, 5 days of
+# dedupeSpeciesAcrossFamilies.py runs); moved to the external volume with
+# a symlink in its place, same as pending-families.jsonl above
+data/dedupe-log.jsonl
 portal/data/inat-common-names.jsonl
 portal/data/unified-taxonomy-plantae.json
 portal/data/unified-taxonomy-skeleton-plantae.json

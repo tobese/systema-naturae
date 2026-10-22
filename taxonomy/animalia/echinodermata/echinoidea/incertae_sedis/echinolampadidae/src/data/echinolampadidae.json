@@ -1662,10 +1662,18 @@
             "col": [
               "38J89"
             ],
-            "checklistbank": "ott3649547",
-            "checklistbank-1174": "txn:394752"
+            "checklistbank": [
+              "ott3649547",
+              "urn:lsid:marinespecies.org:taxname:569874"
+            ],
+            "checklistbank-1174": [
+              "txn:394752"
+            ],
+            "checklistbank-139831": [
+              "349434"
+            ]
           },
-          "authorityIds": "col:38J89",
+          "authorityIds": "checklistbank:ott3649547,checklistbank:urn:lsid:marinespecies.org:taxname:569874,checklistbank-1174:txn:394752,checklistbank-139831:349434,col:38J89",
           "description": "Echinolampas alexandri is a echinolampadidae species found in its native region."
         },
         {
@@ -3409,23 +3417,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ECHINOLAMPAS_ALEXANDRI_MORTENSEN_1948",
-          "name": "\"Echinolampas alexandri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Echinolampas",
-          "authorship": "\"Mortensen, 1948\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:569874",
-            "checklistbank-1174": "txn:394752",
-            "checklistbank-139831": "349434"
-          },
-          "children": [],
-          "uuid": "2e7c672c-aae0-5d3-895-4424ed0b5c5071",
-          "description": "\"Echinolampas alexandri is a echinolampadidae species found in its native region."
-        },
-        {
           "id": "SP_ECHINOLAMPAS_ISOLAMPAS_VENZO_1935",
           "name": "\"Echinolampas (Isolampas)",
           "rank": "SPECIES",
@@ -4147,7 +4138,7 @@
       "lineage": "echinolampadidae"
     }
   ],
-  "speciesCount": 243,
+  "speciesCount": 242,
   "appSlug": "echinolampadidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

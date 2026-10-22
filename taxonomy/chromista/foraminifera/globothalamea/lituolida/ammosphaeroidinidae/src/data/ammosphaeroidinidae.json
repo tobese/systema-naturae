@@ -2121,11 +2121,16 @@
             "col": [
               "82BP6"
             ],
-            "checklistbank": "ott6385772",
-            "checklistbank-1174": "txn:154039"
+            "checklistbank": [
+              "ott6385772",
+              "urn:lsid:marinespecies.org:taxname:1037125"
+            ],
+            "checklistbank-1174": [
+              "txn:154039"
+            ]
           },
           "uuid": "bd739cac-885f-510-825-bfc662aa4d374c",
-          "authorityIds": "col:82BP6,gbif:8455631",
+          "authorityIds": "checklistbank:ott6385772,checklistbank:urn:lsid:marinespecies.org:taxname:1037125,checklistbank-1174:txn:154039,col:82BP6,gbif:8455631",
           "authorship": "Gradstein and Kaminski 1997"
         }
       ]
@@ -5293,7 +5298,8 @@
           "lineage": "Adercotryma",
           "authorship": "Brönnimann & Whittaker, 1987",
           "sourceIds": {
-            "checklistbank": "66256"
+            "checklistbank": "66256",
+            "checklistbank-139831": "1182835"
           },
           "children": [],
           "uuid": "bc0d52a5-53db-5f0-803-1d467764e6ec81",
@@ -5308,7 +5314,8 @@
           "lineage": "Adercotryma",
           "authorship": "(Brady, 1878)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6001301"
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6001301",
+            "checklistbank-139831": "1182834"
           },
           "children": [],
           "uuid": "bcd43a21-a799-52d-9a5-b0e00f259affb7",
@@ -8000,22 +8007,6 @@
           "children": [],
           "uuid": "91c0d513-9702-50a-938-db7d7430b9264d",
           "description": "\"Cystammina argentea\" is a ammosphaeroidinidae species found in its native region."
-        },
-        {
-          "id": "SP_CYSTAMMINA_SVENI_GRADSTEIN_KAMINSKI_1997",
-          "name": "\"Cystammina sveni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cystammina",
-          "authorship": "\"Gradstein & Kaminski, 1997\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1037125",
-            "checklistbank-1174": "txn:154039"
-          },
-          "children": [],
-          "uuid": "fe613dcb-2969-572-a14-cb7273e9fb7f9f",
-          "description": "\"Cystammina sveni\" is a ammosphaeroidinidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8878,7 +8869,7 @@
     }
   ],
   "genusCount": 37,
-  "speciesCount": 460,
+  "speciesCount": 459,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

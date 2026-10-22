@@ -707,10 +707,18 @@
             "col": [
               "4D6TM"
             ],
-            "checklistbank": "82e5cf1f-50e1-4bdf-99d7-2da8d89d5e9d",
-            "checklistbank-1174": "txn:329726"
+            "checklistbank": [
+              "82e5cf1f-50e1-4bdf-99d7-2da8d89d5e9d",
+              "urn:lsid:marinespecies.org:taxname:471950"
+            ],
+            "checklistbank-1174": [
+              "txn:329726"
+            ],
+            "checklistbank-127379": [
+              "baa76de4-520c-40f7-bb78-7189b59c3454"
+            ]
           },
-          "authorityIds": "col:4D6TM",
+          "authorityIds": "checklistbank:82e5cf1f-50e1-4bdf-99d7-2da8d89d5e9d,checklistbank:urn:lsid:marinespecies.org:taxname:471950,checklistbank-1174:txn:329726,checklistbank-127379:baa76de4-520c-40f7-bb78-7189b59c3454,col:4D6TM",
           "children": [],
           "authorship": "(Canu & Bassler,1929)"
         },
@@ -1487,9 +1495,15 @@
           "children": [],
           "authorship": "(Canu & Bassler,1929)",
           "sourceIds": {
-            "checklistbank": "d4184120-cafa-4a92-8b0b-c26c1224a395",
-            "checklistbank-1174": "txn:329724"
-          }
+            "checklistbank": [
+              "d4184120-cafa-4a92-8b0b-c26c1224a395",
+              "urn:lsid:marinespecies.org:taxname:890356"
+            ],
+            "checklistbank-1174": [
+              "txn:329724"
+            ]
+          },
+          "authorityIds": "checklistbank:d4184120-cafa-4a92-8b0b-c26c1224a395,checklistbank:urn:lsid:marinespecies.org:taxname:890356,checklistbank-1174:txn:329724"
         },
         {
           "id": "SP_ANTROPORA_TRANSVERSA",
@@ -2016,22 +2030,6 @@
           "description": "\"Antropora minor\" is a antroporidae species found in its native region."
         },
         {
-          "id": "SP_ANTROPORA_SUBVESPERTILIO_CANU_BASSLER_1929",
-          "name": "\"Antropora subvespertilio\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Antropora",
-          "authorship": "\"(Canu & Bassler, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:890356",
-            "checklistbank-1174": "txn:329724"
-          },
-          "children": [],
-          "uuid": "883e6aec-81d6-572-b7b-e02af66e9031c2",
-          "description": "\"Antropora subvespertilio\" is a antroporidae species found in its native region."
-        },
-        {
           "id": "SP_ANTROPORA_COMPRESSA_OSBURN_1927",
           "name": "Antropora compressa",
           "rank": "SPECIES",
@@ -2354,32 +2352,6 @@
       "lineage": "antroporidae"
     },
     {
-      "id": "GENUS_PARANTROPORA",
-      "name": "\"Parantropora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARANTROPORA_LAGUNCULA_CANU_BASSLER_1929",
-          "name": "\"Parantropora laguncula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parantropora",
-          "authorship": "\"(Canu & Bassler, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:471950",
-            "checklistbank-1174": "txn:329726",
-            "checklistbank-127379": "baa76de4-520c-40f7-bb78-7189b59c3454"
-          },
-          "children": [],
-          "uuid": "d4282eae-1240-59e-b15-f026c909962ab9",
-          "description": "\"Parantropora laguncula\" is a antroporidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "antroporidae"
-    },
-    {
       "id": "GENUS_FLUSTRA",
       "name": "Flustra",
       "rank": "GENUS",
@@ -2400,8 +2372,8 @@
       "lineage": "Antroporidae"
     }
   ],
-  "speciesCount": 132,
-  "genusCount": 15,
+  "speciesCount": 130,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

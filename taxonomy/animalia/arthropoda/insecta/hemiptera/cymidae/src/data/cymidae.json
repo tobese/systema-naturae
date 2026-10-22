@@ -205,9 +205,15 @@
               "uuid": "9ce2cc17-7435-5fd-a83-b9fdd9a96d22f1",
               "sourceIds": {
                 "checklistbank": "d3b95cf9-501f-4fdb-9f55-b2e0742eb7e0",
-                "checklistbank-139831": "1443931"
+                "checklistbank-139831": [
+                  "1443931"
+                ],
+                "checklistbank-127379": [
+                  "d3b95cf9-501f-4fdb-9f55-b2e0742eb7e0"
+                ]
               },
-              "description": "Cymodema basicornis is a lygaeoidea > cymodema species found in its native region."
+              "description": "Cymodema basicornis is a lygaeoidea > cymodema species found in its native region.",
+              "authorityIds": "checklistbank:d3b95cf9-501f-4fdb-9f55-b2e0742eb7e0,checklistbank-127379:d3b95cf9-501f-4fdb-9f55-b2e0742eb7e0,checklistbank-139831:1443931"
             },
             {
               "id": "SP_CYMODEMA_BREVICEPS_STAL_1874",
@@ -223,10 +229,15 @@
                 "itis": [
                   "107720"
                 ],
-                "checklistbank": "489054",
-                "checklistbank-139831": "489054"
+                "checklistbank": [
+                  "489054",
+                  "urn:lsid:marinespecies.org:taxname:1488815"
+                ],
+                "checklistbank-139831": [
+                  "489054"
+                ]
               },
-              "authorityIds": "itis:107720",
+              "authorityIds": "checklistbank:489054,checklistbank:urn:lsid:marinespecies.org:taxname:1488815,checklistbank-139831:489054,itis:107720",
               "description": "Cymodema breviceps is a lygaeoidea > cymodema species found in its native region."
             },
             {
@@ -1161,33 +1172,6 @@
               },
               "children": [],
               "uuid": "deadeebc-e11b-501-b5a-89b4510e0762c8"
-            },
-            {
-              "id": "SP_CYMUS_CLAVICULUS_FALLEN_1807",
-              "name": "Cymus claviculus",
-              "rank": "SPECIES",
-              "subspeciesCount": 0,
-              "sourcedFrom": "checklistbank",
-              "lineage": "Cymus",
-              "authorship": "(Fallen, 1807)",
-              "sourceIds": {
-                "gbif-backbone": "9675934",
-                "checklistbank-139831": "554442"
-              },
-              "children": [],
-              "uuid": "25e45051-02bb-514-b6e-325e6a1cdd1bb8"
-            },
-            {
-              "id": "SP_CYMUS_REMANEI",
-              "name": "Cymus remanei",
-              "rank": "SPECIES",
-              "subspeciesCount": 0,
-              "sourcedFrom": "checklistbank",
-              "lineage": "Cymus",
-              "sourceIds": {
-                "checklistbank-139831": "1492579"
-              },
-              "children": []
             }
           ],
           "lineage": "Cyminae"
@@ -1681,37 +1665,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CYMODEMA_BREVICEPS_ST_L_1874",
-          "name": "\"Cymodema breviceps\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cymodema",
-          "authorship": "\"(Stål, 1874)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1488815",
-            "checklistbank-139831": "489054"
-          },
-          "children": [],
-          "uuid": "e7eec55e-260b-567-b2b-1d14f145162fa6",
-          "description": "\"Cymodema breviceps\" is a cymidae species found in its native region."
-        },
-        {
-          "id": "SP_CYMODEMA_BASICORNIS_MOTSCHULSKY",
-          "name": "Cymodema basicornis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cymodema",
-          "authorship": "Motschulsky",
-          "sourceIds": {
-            "checklistbank-127379": "d3b95cf9-501f-4fdb-9f55-b2e0742eb7e0",
-            "checklistbank-139831": "1443931"
-          },
-          "uuid": "a5b7fb3c-f8a9-48a3-8518-c9ea2fb2fc03",
-          "children": []
-        },
-        {
           "id": "SP_CYMODEMA_BARBERI",
           "name": "Cymodema barberi",
           "rank": "SPECIES",
@@ -1755,7 +1708,7 @@
       "lineage": "cymidae"
     }
   ],
-  "speciesCount": 84,
+  "speciesCount": 80,
   "appSlug": "cymidae",
   "lineage": "Lygaeoidea",
   "genusCount": 16,

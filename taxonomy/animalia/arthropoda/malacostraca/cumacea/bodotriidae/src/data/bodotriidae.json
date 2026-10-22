@@ -5558,11 +5558,19 @@
             "col": [
               "M8W5"
             ],
-            "checklistbank": "1402420",
-            "wikispecies": "Bodotria_arenosa",
-            "gbif-backbone": "6282933"
+            "checklistbank": [
+              "1402420",
+              "urn:lsid:marinespecies.org:taxname:181525"
+            ],
+            "wikispecies": [
+              "Bodotria_arenosa"
+            ],
+            "gbif-backbone": "6282933",
+            "checklistbank-139831": [
+              "1402420"
+            ]
           },
-          "authorityIds": "col:M8W5,itis:573793",
+          "authorityIds": "checklistbank:1402420,checklistbank:urn:lsid:marinespecies.org:taxname:181525,checklistbank-139831:1402420,col:M8W5,gbif-backbone:6282933,itis:573793,wikispecies:Bodotria_arenosa",
           "description": "Bodotria arenosa is a bodotriidae species found in its native region."
         },
         {
@@ -9465,23 +9473,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BODOTRIA_ARENOSA_STEUER_1936",
-          "name": "\"Bodotria arenosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bodotria",
-          "authorship": "\"(Steuer, 1936)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:181525",
-            "wikispecies": "Bodotria_arenosa",
-            "checklistbank-139831": "1402420"
-          },
-          "children": [],
-          "uuid": "d3e5d416-035b-5e8-a7c-450ce34d36cfff",
-          "description": "\"Bodotria arenosa is a bodotriidae species found in its native region."
-        },
-        {
           "id": "SP_BODOTRIA_SCORPIOIDES",
           "name": "Bodotria scorpioides",
           "rank": "SPECIES",
@@ -10104,7 +10095,8 @@
           "sourceIds": {
             "checklistbank-127379": "bf118217-4dfd-4fec-83d8-88f9aff4d93f"
           },
-          "uuid": "72432fdc-f2c1-4f0b-bffe-b42196164fa7"
+          "uuid": "72432fdc-f2c1-4f0b-bffe-b42196164fa7",
+          "children": []
         },
         {
           "id": "SP_BODOTRIA_ARMATA_TAFE_GREENWOOD",
@@ -10117,7 +10109,8 @@
           "sourceIds": {
             "checklistbank-127379": "0c09a0c2-8701-4f9d-819d-495545467f37"
           },
-          "uuid": "677652de-d1d1-4d01-81fc-28d3e709e2b2"
+          "uuid": "677652de-d1d1-4d01-81fc-28d3e709e2b2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10274,7 +10267,7 @@
       "lineage": "bodotriidae"
     }
   ],
-  "speciesCount": 530,
+  "speciesCount": 529,
   "appSlug": "bodotriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

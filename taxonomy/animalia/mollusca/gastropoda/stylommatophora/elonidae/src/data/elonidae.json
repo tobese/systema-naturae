@@ -439,11 +439,17 @@
               "4NTFV"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:933831"
+              "urn:lsid:marinespecies.org:taxname:933831",
+              "urn:lsid:marinespecies.org:taxname:951966"
             ],
-            "checklistbank-1174": "txn:327927"
+            "checklistbank-1174": [
+              "txn:327927"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:933831"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933831,col:4NTFV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933831,checklistbank:urn:lsid:marinespecies.org:taxname:951966,checklistbank-1174:txn:327927,checklistbank-2011:urn:lsid:marinespecies.org:taxname:933831,col:4NTFV",
           "authorship": "(Klein, 1853)"
         },
         {
@@ -921,11 +927,17 @@
               "3R9LR"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:933829"
+              "urn:lsid:marinespecies.org:taxname:933829",
+              "urn:lsid:marinespecies.org:taxname:1342662"
             ],
-            "checklistbank-1174": "txn:475647"
+            "checklistbank-1174": [
+              "txn:475647"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:933829"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933829,col:3R9LR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1342662,checklistbank:urn:lsid:marinespecies.org:taxname:933829,checklistbank-1174:txn:475647,checklistbank-2011:urn:lsid:marinespecies.org:taxname:933829,col:3R9LR",
           "authorship": "(Klein, 1846)"
         },
         {
@@ -1745,23 +1757,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_KLIKIA_GIENGENSIS_OMNICKI_1902",
-          "name": "\"Klikia giengensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Klikia",
-          "authorship": "\"(Łomnicki, 1902)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1342662",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933829",
-            "checklistbank-1174": "txn:475647"
-          },
-          "children": [],
-          "uuid": "cb9f36db-4033-5b4-b4b-4a848a6cb8712f",
-          "description": "\"Klikia giengensis is a elonidae species found in its native region."
-        },
-        {
           "id": "SP_KLIKIA_PRAEOSCULINA_K_MILLER_1907",
           "name": "Klikia praeosculina",
           "rank": "SPECIES",
@@ -1910,23 +1905,6 @@
       "name": "\"Pseudochloritis",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PSEUDOCHLORITIS_INCRASSATA_RAMBUR_1862",
-          "name": "\"Pseudochloritis incrassata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudochloritis",
-          "authorship": "\"(Rambur, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:951966",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933831",
-            "checklistbank-1174": "txn:327927"
-          },
-          "children": [],
-          "uuid": "dcada4b3-f0f2-585-b15-fbfffeec6dac29",
-          "description": "\"Pseudochloritis incrassata is a elonidae species found in its native region."
-        },
         {
           "id": "SP_PSEUDOCHLORITIS_SUBTILISTICTA_F_SANDBERGER_1875",
           "name": "Pseudochloritis subtilisticta",
@@ -2206,7 +2184,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 110,
+  "speciesCount": 108,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

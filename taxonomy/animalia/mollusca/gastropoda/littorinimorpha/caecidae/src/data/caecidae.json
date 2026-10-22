@@ -406,10 +406,15 @@
             "col": [
               "3Z375"
             ],
-            "checklistbank": "104882",
-            "checklistbank-1174": "txn:156529"
+            "checklistbank": [
+              "104882",
+              "urn:lsid:marinespecies.org:taxname:419602"
+            ],
+            "checklistbank-1174": [
+              "txn:156529"
+            ]
           },
-          "authorityIds": "col:3Z375",
+          "authorityIds": "checklistbank:104882,checklistbank:urn:lsid:marinespecies.org:taxname:419602,checklistbank-1174:txn:156529,col:3Z375",
           "authorship": "(Stimpson, 1851)"
         },
         {
@@ -9404,20 +9409,6 @@
           "uuid": "018cb422-506c-56e-809-468cc8aa3c899f"
         },
         {
-          "id": "SP_CAECUM_CLARKII_CARPENTER_1859",
-          "name": "Caecum clarkii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Caecum",
-          "authorship": "Carpenter, 1859",
-          "sourceIds": {
-            "checklistbank": "58948"
-          },
-          "children": [],
-          "uuid": "e53df4ed-42c1-50d-bc8-e97eef23499952"
-        },
-        {
           "id": "SP_CAECUM_ADAMSI",
           "name": "Caecum adamsi",
           "rank": "SPECIES",
@@ -12704,22 +12695,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MEIOCERAS_NITIDUM_W_STIMPSON_1851",
-          "name": "\"Meioceras nitidum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Meioceras",
-          "authorship": "\"(W. Stimpson, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:419602",
-            "checklistbank-1174": "txn:156529"
-          },
-          "children": [],
-          "uuid": "ac3d6cdb-fda9-5ba-835-57dcac73fcac26",
-          "description": "\"Meioceras nitidum\" is a caecidae species found in its native region."
-        },
-        {
           "id": "SP_MEIOCERAS_CONSTRICTUM_GABB_1873",
           "name": "Meioceras constrictum",
           "rank": "SPECIES",
@@ -12778,7 +12753,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 751,
+  "speciesCount": 749,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

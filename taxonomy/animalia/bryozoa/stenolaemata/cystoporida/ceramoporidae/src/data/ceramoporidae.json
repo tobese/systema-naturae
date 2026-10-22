@@ -2152,10 +2152,15 @@
             "col": [
               "867H5"
             ],
-            "checklistbank": "txn:316882",
-            "checklistbank-1174": "txn:316882"
+            "checklistbank": [
+              "txn:316882",
+              "urn:lsid:marinespecies.org:taxname:1411149"
+            ],
+            "checklistbank-1174": [
+              "txn:316882"
+            ]
           },
-          "authorityIds": "col:867H5",
+          "authorityIds": "checklistbank:txn:316882,checklistbank:urn:lsid:marinespecies.org:taxname:1411149,checklistbank-1174:txn:316882,col:867H5",
           "children": [],
           "authorship": "Quenstedt 1881"
         },
@@ -3086,22 +3091,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FAVOSITELLA_INTERPUNCTA_QUENSTEDT_1878",
-          "name": "\"Favositella interpuncta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Favositella",
-          "authorship": "\"(Quenstedt, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411149",
-            "checklistbank-1174": "txn:316882"
-          },
-          "children": [],
-          "uuid": "8c37e131-dcb1-579-a53-55d76054254dd3",
-          "description": "\"Favositella interpuncta\" is a ceramoporidae species found in its native region."
-        },
-        {
           "id": "SP_FAVOSITELLA_MIRABILIS_ASTROVA_1965",
           "name": "\"Favositella mirabilis\"",
           "rank": "SPECIES",
@@ -3441,5 +3430,5 @@
     "checklistbank-1174": "txn:268252"
   },
   "genusCount": 22,
-  "speciesCount": 178
+  "speciesCount": 177
 }

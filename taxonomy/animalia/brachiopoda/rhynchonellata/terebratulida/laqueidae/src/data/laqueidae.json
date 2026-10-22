@@ -55,10 +55,15 @@
             "col": [
               "3G4D8"
             ],
-            "checklistbank": "118938",
-            "checklistbank-1174": "txn:283076"
+            "checklistbank": [
+              "118938",
+              "urn:lsid:marinespecies.org:taxname:104059"
+            ],
+            "checklistbank-1174": [
+              "txn:283076"
+            ]
           },
-          "authorityIds": "col:3G4D8,itis:203253",
+          "authorityIds": "checklistbank:118938,checklistbank:urn:lsid:marinespecies.org:taxname:104059,checklistbank-1174:txn:283076,col:3G4D8,itis:203253",
           "authorship": "(Davidson, 1852)"
         }
       ]
@@ -560,7 +565,8 @@
           "lineage": "Laqueus",
           "authorship": "Dall, 1870",
           "sourceIds": {
-            "checklistbank": "213801"
+            "checklistbank": "213801",
+            "checklistbank-139831": "1685255"
           },
           "children": [],
           "uuid": "5b9cded2-b2d7-562-989-fd4c6f0a420842",
@@ -1639,22 +1645,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_GLACIARCULA_SPITZBERGENSIS_DAVIDSON_1852",
-          "name": "\"Glaciarcula spitzbergensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Glaciarcula",
-          "authorship": "\"(Davidson, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:104059",
-            "checklistbank-1174": "txn:283076"
-          },
-          "children": [],
-          "uuid": "7b943140-8352-5b4-936-e0502b63a99c47",
-          "description": "\"Glaciarcula spitzbergensis\" is a laqueidae species found in its native region."
-        },
-        {
           "id": "SP_GLACIARCULA_FRIELLEI_DAVIDSON_1878",
           "name": "Glaciarcula friellei",
           "rank": "SPECIES",
@@ -1862,7 +1852,7 @@
     }
   ],
   "genusCount": 28,
-  "speciesCount": 99,
+  "speciesCount": 98,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

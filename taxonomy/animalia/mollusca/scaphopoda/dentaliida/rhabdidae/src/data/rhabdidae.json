@@ -88,10 +88,15 @@
             "itis": [
               "82202"
             ],
-            "checklistbank": "txn:348900",
-            "checklistbank-1174": "txn:348900"
+            "checklistbank": [
+              "txn:348900",
+              "urn:lsid:marinespecies.org:taxname:344596"
+            ],
+            "checklistbank-1174": [
+              "txn:348900"
+            ]
           },
-          "authorityIds": "col:4RWKJ,itis:82202"
+          "authorityIds": "checklistbank:txn:348900,checklistbank:urn:lsid:marinespecies.org:taxname:344596,checklistbank-1174:txn:348900,col:4RWKJ,itis:82202"
         },
         {
           "id": "SP_RHABDUS_TOYAMAENSIS",
@@ -214,22 +219,6 @@
           "description": "\"Rhabdus perceptus\" is a rhabdidae species found in its native region."
         },
         {
-          "id": "SP_RHABDUS_RECTIUS_P_P_CARPENTER_1864",
-          "name": "\"Rhabdus rectius\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhabdus",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:344596",
-            "checklistbank-1174": "txn:348900"
-          },
-          "children": [],
-          "uuid": "ef6602e0-2b54-5bc-b7d-d4183f3f1a3e8c",
-          "description": "\"Rhabdus rectius\" is a rhabdidae species found in its native region."
-        },
-        {
           "id": "SP_RHABDUS_TOYAMAENSIS_KURODA_KIKUCHI_1933",
           "name": "\"Rhabdus toyamaensis\"",
           "rank": "SPECIES",
@@ -250,7 +239,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 13,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

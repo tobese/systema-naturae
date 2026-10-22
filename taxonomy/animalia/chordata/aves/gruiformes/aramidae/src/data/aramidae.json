@@ -37,10 +37,18 @@
             "col": [
               "G532"
             ],
-            "checklistbank": "441659",
-            "checklistbank-1174": "txn:368443"
+            "checklistbank": [
+              "441659",
+              "urn:lsid:marinespecies.org:taxname:422600"
+            ],
+            "checklistbank-1174": [
+              "txn:368443"
+            ],
+            "checklistbank-139831": [
+              "7"
+            ]
           },
-          "authorityIds": "col:G532,itis:176197,wikidata:Q725276",
+          "authorityIds": "checklistbank:441659,checklistbank:urn:lsid:marinespecies.org:taxname:422600,checklistbank-1174:txn:368443,checklistbank-139831:7,col:G532,itis:176197,wikidata:Q725276",
           "authorship": "(Linnaeus, 1766)",
           "children": []
         },
@@ -149,32 +157,6 @@
       "lineage": "aramidae"
     },
     {
-      "id": "GENUS_ARAMUS",
-      "name": "\"Aramus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ARAMUS_GUARAUNA_LINNAEUS_1766",
-          "name": "\"Aramus guarauna\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aramus",
-          "authorship": "\"(Linnaeus, 1766)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:422600",
-            "checklistbank-1174": "txn:368443",
-            "checklistbank-139831": "7"
-          },
-          "children": [],
-          "uuid": "501aca57-2c6a-5c5-aab-596f2314ff1d1e",
-          "description": "\"Aramus guarauna\" is a aramidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aramidae"
-    },
-    {
       "id": "GENUS_BADISTORNIS",
       "name": "Badistornis",
       "rank": "GENUS",
@@ -234,6 +216,6 @@
     "checklistbank": "txn:39505",
     "checklistbank-1174": "txn:39505"
   },
-  "genusCount": 7,
-  "speciesCount": 9
+  "genusCount": 6,
+  "speciesCount": 8
 }

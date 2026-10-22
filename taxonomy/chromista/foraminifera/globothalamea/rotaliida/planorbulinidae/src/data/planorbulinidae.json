@@ -209,11 +209,16 @@
             "col": [
               "8QDQL"
             ],
-            "checklistbank": "txn:516733",
-            "checklistbank-1174": "txn:516733"
+            "checklistbank": [
+              "txn:516733",
+              "urn:lsid:marinespecies.org:taxname:1539016"
+            ],
+            "checklistbank-1174": [
+              "txn:516733"
+            ]
           },
           "uuid": "5dbb6580-d3b6-50f-a9d-2711b06a0e83b3",
-          "authorityIds": "col:8QDQL,gbif:11370313",
+          "authorityIds": "checklistbank:txn:516733,checklistbank:urn:lsid:marinespecies.org:taxname:1539016,checklistbank-1174:txn:516733,col:8QDQL,gbif:11370313",
           "children": [],
           "authorship": "Marrson 1878"
         },
@@ -1842,7 +1847,8 @@
           "lineage": "\"Planorbulina",
           "authorship": "\"McCulloch, 1981\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:763218"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:763218",
+            "checklistbank-139831": "532806"
           },
           "children": [],
           "uuid": "3e77c852-e376-535-828-08b485564bb14e",
@@ -2207,22 +2213,6 @@
           "children": [],
           "uuid": "7c4f354b-44a9-502-a4a-3db602e65e2284",
           "description": "\"Planorbulina oblonga\" is a planorbulinidae species found in its native region."
-        },
-        {
-          "id": "SP_PLANORBULINA_CRETAE_MARSSON_1878",
-          "name": "\"Planorbulina cretae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Planorbulina",
-          "authorship": "\"(Marsson, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1539016",
-            "checklistbank-1174": "txn:516733"
-          },
-          "children": [],
-          "uuid": "81a8e597-4666-5a4-bcf-dac03acc2be144",
-          "description": "\"Planorbulina cretae\" is a planorbulinidae species found in its native region."
         },
         {
           "id": "SP_PLANORBULINA_LARVATA_PARKER_AND_JONES_1865",
@@ -2850,7 +2840,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 143,
+  "speciesCount": 142,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

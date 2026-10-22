@@ -1469,12 +1469,18 @@
               "7QJT5"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1464560"
+              "urn:lsid:marinespecies.org:taxname:1464560",
+              "urn:lsid:marinespecies.org:taxname:1848296"
             ],
             "gbif-backbone": "4963500",
-            "checklistbank-1174": "txn:59511"
+            "checklistbank-1174": [
+              "txn:59511"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1464560"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1464560,col:7QJT5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1464560,checklistbank:urn:lsid:marinespecies.org:taxname:1848296,checklistbank-1174:txn:59511,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1464560,col:7QJT5,gbif-backbone:4963500",
           "authorship": "(Conrad, 1833)"
         },
         {
@@ -3920,7 +3926,8 @@
             "col": [
               "7TBV8"
             ],
-            "checklistbank": "1406595"
+            "checklistbank": "1406595",
+            "checklistbank-139831": "1406595"
           },
           "authorityIds": "col:7TBV8",
           "description": "Tenuitibia martinii is a rostellariidae species found in its native region."
@@ -4767,23 +4774,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CALYPTRAPHORUS_VELATUS_K_VAN_W_PALMER_1937",
-          "name": "\"Calyptraphorus velatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Calyptraphorus",
-          "authorship": "\"K. van W. Palmer, 1937\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1848296",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1464560",
-            "checklistbank-1174": "txn:59511"
-          },
-          "children": [],
-          "uuid": "33853417-78ed-50d-bf7-94da0eaee13a41",
-          "description": "\"Calyptraphorus velatus is a rostellariidae species found in its native region."
-        },
-        {
           "id": "SP_CALYPTRAPHORUS_EWEKOROENSIS_ADEGOKE_1977",
           "name": "Calyptraphorus ewekoroensis",
           "rank": "SPECIES",
@@ -4989,7 +4979,7 @@
     }
   ],
   "genusCount": 29,
-  "speciesCount": 286,
+  "speciesCount": 285,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

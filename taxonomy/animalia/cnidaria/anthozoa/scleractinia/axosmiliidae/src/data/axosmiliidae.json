@@ -249,10 +249,15 @@
             "col": [
               "8639Q"
             ],
-            "checklistbank": "txn:140348",
-            "checklistbank-1174": "txn:140348"
+            "checklistbank": [
+              "txn:140348",
+              "urn:lsid:marinespecies.org:taxname:1437936"
+            ],
+            "checklistbank-1174": [
+              "txn:140348"
+            ]
           },
-          "authorityIds": "col:8639Q",
+          "authorityIds": "checklistbank:txn:140348,checklistbank:urn:lsid:marinespecies.org:taxname:1437936,checklistbank-1174:txn:140348,col:8639Q",
           "authorship": "(Michelin 1841)"
         },
         {
@@ -414,10 +419,15 @@
             "col": [
               "BKQ38"
             ],
-            "checklistbank": "txn:113737",
-            "checklistbank-1174": "txn:113737"
+            "checklistbank": [
+              "txn:113737",
+              "urn:lsid:marinespecies.org:taxname:1670270"
+            ],
+            "checklistbank-1174": [
+              "txn:113737"
+            ]
           },
-          "authorityIds": "col:BKQ38",
+          "authorityIds": "checklistbank:txn:113737,checklistbank:urn:lsid:marinespecies.org:taxname:1670270,checklistbank-1174:txn:113737,col:BKQ38",
           "authorship": "(Koby 1895)"
         },
         {
@@ -1971,22 +1981,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AXOSMILIA_EXTINCTORIUM_MICHELIN_1840",
-          "name": "\"Axosmilia extinctorium\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Axosmilia",
-          "authorship": "\"(Michelin, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1437936",
-            "checklistbank-1174": "txn:140348"
-          },
-          "children": [],
-          "uuid": "d071f2cf-7158-5e6-a37-21aa42dcf253ca",
-          "description": "\"Axosmilia extinctorium\" is a axosmiliidae species found in its native region."
-        },
-        {
           "id": "SP_AXOSMILIA_OUTITENSIS_L_BEAUVAIS_1986",
           "name": "\"Axosmilia outitensis\"",
           "rank": "SPECIES",
@@ -2167,22 +2161,6 @@
           "description": "\"Axosmilia truncata\" is a axosmiliidae species found in its native region."
         },
         {
-          "id": "SP_AXOSMILIA_RENEVIERI_KOBY_1896",
-          "name": "\"Axosmilia renevieri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Axosmilia",
-          "authorship": "\"(Koby, 1896)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1670270",
-            "checklistbank-1174": "txn:113737"
-          },
-          "children": [],
-          "uuid": "9e05e707-cafe-55f-abf-45373737c69e43",
-          "description": "\"Axosmilia renevieri\" is a axosmiliidae species found in its native region."
-        },
-        {
           "id": "SP_AXOSMILIA_STUTZI_KOBY_1896",
           "name": "\"Axosmilia stutzi\"",
           "rank": "SPECIES",
@@ -2293,7 +2271,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 134,
+  "speciesCount": 132,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

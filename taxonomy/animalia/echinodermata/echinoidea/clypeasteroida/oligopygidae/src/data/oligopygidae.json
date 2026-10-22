@@ -330,11 +330,16 @@
             "col": [
               "496WP"
             ],
-            "checklistbank": "txn:392070",
+            "checklistbank": [
+              "txn:392070",
+              "urn:lsid:marinespecies.org:taxname:757698"
+            ],
             "gbif-backbone": "8192175",
-            "checklistbank-1174": "txn:392070"
+            "checklistbank-1174": [
+              "txn:392070"
+            ]
           },
-          "authorityIds": "col:496WP",
+          "authorityIds": "checklistbank:txn:392070,checklistbank:urn:lsid:marinespecies.org:taxname:757698,checklistbank-1174:txn:392070,col:496WP,gbif-backbone:8192175",
           "children": [],
           "authorship": "Clark and Twitchell 1915",
           "description": "Oligopygus floridanus is a oligopygidae species found in its native region."
@@ -626,10 +631,15 @@
             "col": [
               "496WW"
             ],
-            "checklistbank": "txn:153614",
-            "checklistbank-1174": "txn:153614"
+            "checklistbank": [
+              "txn:153614",
+              "urn:lsid:marinespecies.org:taxname:757699"
+            ],
+            "checklistbank-1174": [
+              "txn:153614"
+            ]
           },
-          "authorityIds": "col:496WW",
+          "authorityIds": "checklistbank:txn:153614,checklistbank:urn:lsid:marinespecies.org:taxname:757699,checklistbank-1174:txn:153614,col:496WW",
           "children": [],
           "authorship": "Guppy 1866",
           "description": "Oligopygus ovumserpentis is a oligopygidae species found in its native region."
@@ -1057,38 +1067,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_OLIGOPYGUS_FLORIDANUS_PALMER_IN_S_NCHEZ_ROIG_1949",
-          "name": "\"Oligopygus floridanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oligopygus",
-          "authorship": "\"Palmer in Sánchez Roig, 1949\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757698",
-            "checklistbank-1174": "txn:392070"
-          },
-          "children": [],
-          "uuid": "77c28952-f28a-5d0-81a-afc3f53acf0287",
-          "description": "\"Oligopygus floridanus is a oligopygidae species found in its native region."
-        },
-        {
-          "id": "SP_OLIGOPYGUS_OVUMSERPENTIS_BRIGHTON_1926",
-          "name": "\"Oligopygus ovumserpentis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oligopygus",
-          "authorship": "\"Brighton, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757699",
-            "checklistbank-1174": "txn:153614"
-          },
-          "children": [],
-          "uuid": "6293fc0f-7d0f-5ac-9c8-7d0f22f37cae48",
-          "description": "\"Oligopygus ovumserpentis is a oligopygidae species found in its native region."
-        },
-        {
           "id": "SP_OLIGOPYGUS_ALVAREZI_LAMBERT_AND_SANCHEZ_ROIG_1924",
           "name": "Oligopygus alvarezi",
           "rank": "SPECIES",
@@ -1168,7 +1146,7 @@
       "lineage": "oligopygidae"
     }
   ],
-  "speciesCount": 62,
+  "speciesCount": 60,
   "appSlug": "oligopygidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

@@ -93,11 +93,18 @@
             "col": [
               "84DZ3"
             ],
-            "checklistbank": "txn:206611",
-            "wikispecies": "Urda_zelandica",
-            "checklistbank-1174": "txn:206611"
+            "checklistbank": [
+              "txn:206611",
+              "urn:lsid:marinespecies.org:taxname:1363250"
+            ],
+            "wikispecies": [
+              "Urda_zelandica"
+            ],
+            "checklistbank-1174": [
+              "txn:206611"
+            ]
           },
-          "authorityIds": "col:84DZ3",
+          "authorityIds": "checklistbank:txn:206611,checklistbank:urn:lsid:marinespecies.org:taxname:1363250,checklistbank-1174:txn:206611,col:84DZ3,wikispecies:Urda_zelandica",
           "children": [],
           "description": "Urda zelandica is a urdidae species found in its native region."
         },
@@ -210,23 +217,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_URDA_ZELANDICA_BUCKERIDGE_JOHNS_I_IN_I_GRANT_MACKIE_BUCKERIDGE_JOHNS_1996",
-          "name": "\"Urda zelandica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Urda",
-          "authorship": "\"Buckeridge & Johns <i>in</i> Grant-Mackie, Buckeridge & Johns, 1996\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1363250",
-            "wikispecies": "Urda_zelandica",
-            "checklistbank-1174": "txn:206611"
-          },
-          "children": [],
-          "uuid": "d1e80769-0b4d-57e-a92-5ea5749f6d4610",
-          "description": "\"Urda zelandica\" is a urdidae species found in its native region."
-        },
-        {
           "id": "SP_URDA_BUECHNERI_SCH_DEL_NAGLER_HY_NY_2023",
           "name": "\"Urda buechneri\"",
           "rank": "SPECIES",
@@ -246,7 +236,7 @@
       "lineage": "urdidae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 11,
   "appSlug": "urdidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

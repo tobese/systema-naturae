@@ -29,11 +29,16 @@
             "col": [
               "83SKS"
             ],
-            "checklistbank": "txn:430927",
-            "checklistbank-1174": "txn:430927"
+            "checklistbank": [
+              "txn:430927",
+              "urn:lsid:marinespecies.org:taxname:856681"
+            ],
+            "checklistbank-1174": [
+              "txn:430927"
+            ]
           },
           "uuid": "f414e1cc-1ca2-532-bd5-f01d3bf0951875",
-          "authorityIds": "col:83SKS,gbif:7898904",
+          "authorityIds": "checklistbank:txn:430927,checklistbank:urn:lsid:marinespecies.org:taxname:856681,checklistbank-1174:txn:430927,col:83SKS,gbif:7898904",
           "authorship": "Rigaud et al. 2015"
         },
         {
@@ -243,22 +248,6 @@
           "children": [],
           "uuid": "bd4d3d3a-bc40-5f2-956-50bf7a1cb12db8",
           "description": "\"Trochosiphonia stanleyi\" is a trochosiphoniidae species found in its native region."
-        },
-        {
-          "id": "SP_TROCHOSIPHONIA_JOSEPHI_RIGAUD_MARTINI_VACHARD_2015",
-          "name": "\"Trochosiphonia josephi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trochosiphonia",
-          "authorship": "\"Rigaud, Martini & Vachard, 2015\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:856681",
-            "checklistbank-1174": "txn:430927"
-          },
-          "children": [],
-          "uuid": "2451a530-3663-593-a41-f05b8362213b3b",
-          "description": "\"Trochosiphonia josephi\" is a trochosiphoniidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -368,7 +357,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 15,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

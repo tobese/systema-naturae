@@ -316,10 +316,15 @@
             "col": [
               "7T7WG"
             ],
-            "checklistbank": "txn:65532",
-            "checklistbank-1174": "txn:65532"
+            "checklistbank": [
+              "txn:65532",
+              "urn:lsid:marinespecies.org:taxname:1424553"
+            ],
+            "checklistbank-1174": [
+              "txn:65532"
+            ]
           },
-          "authorityIds": "col:7T7WG",
+          "authorityIds": "checklistbank:txn:65532,checklistbank:urn:lsid:marinespecies.org:taxname:1424553,checklistbank-1174:txn:65532,col:7T7WG",
           "authorship": "(He et al. 1984)"
         },
         {
@@ -679,31 +684,6 @@
       ]
     },
     {
-      "id": "GENUS_STENOTHECA",
-      "name": "\"Stenotheca",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STENOTHECA_DREPANOIDA_HE_PEI_1984",
-          "name": "\"Stenotheca drepanoida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenotheca",
-          "authorship": "\"(He & Pei, 1984)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1424553",
-            "checklistbank-1174": "txn:65532"
-          },
-          "children": [],
-          "uuid": "9dc47683-3ff2-5fc-ba7-c116217ead8e75",
-          "description": "\"Stenotheca drepanoida\" is a stenothecidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "stenothecidae"
-    },
-    {
       "id": "GENUS_AEQUICONUS",
       "name": "Aequiconus",
       "rank": "GENUS",
@@ -875,8 +855,8 @@
       "lineage": "stenothecidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 47,
+  "genusCount": 12,
+  "speciesCount": 46,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

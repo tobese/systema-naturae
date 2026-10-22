@@ -35,12 +35,22 @@
             "col": [
               "6BKKP"
             ],
-            "checklistbank": "ott534288",
-            "wikispecies": "Cryptobranchus_alleganiensis",
+            "checklistbank": [
+              "ott534288",
+              "urn:lsid:marinespecies.org:taxname:1498309"
+            ],
+            "wikispecies": [
+              "Cryptobranchus_alleganiensis"
+            ],
             "gbif-backbone": "2432031",
-            "checklistbank-1174": "txn:110600"
+            "checklistbank-1174": [
+              "txn:110600"
+            ],
+            "checklistbank-139831": [
+              "26804"
+            ]
           },
-          "authorityIds": "col:6BKKP,itis:173587,wikidata:Q369467",
+          "authorityIds": "checklistbank:ott534288,checklistbank:urn:lsid:marinespecies.org:taxname:1498309,checklistbank-1174:txn:110600,checklistbank-139831:26804,col:6BKKP,gbif-backbone:2432031,itis:173587,wikidata:Q369467,wikispecies:Cryptobranchus_alleganiensis",
           "authorship": "(Daudin, 1803)"
         },
         {
@@ -166,10 +176,18 @@
             "itis": [
               "202085"
             ],
-            "checklistbank": "ott424193",
-            "wikispecies": "Andrias_davidianus"
+            "checklistbank": [
+              "ott424193",
+              "urn:lsid:marinespecies.org:taxname:1398063"
+            ],
+            "wikispecies": [
+              "Andrias_davidianus"
+            ],
+            "checklistbank-139831": [
+              "26813"
+            ]
           },
-          "authorityIds": "col:DTJQ,itis:202085,wikidata:Q61312",
+          "authorityIds": "checklistbank:ott424193,checklistbank:urn:lsid:marinespecies.org:taxname:1398063,checklistbank-139831:26813,col:DTJQ,itis:202085,wikidata:Q61312,wikispecies:Andrias_davidianus",
           "authorship": "(Blanchard, 1871)"
         },
         {
@@ -317,23 +335,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ANDRIAS_DAVIDIANUS_BLANCHARD_1871",
-          "name": "\"Andrias davidianus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Andrias",
-          "authorship": "\"(Blanchard, 1871)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1398063",
-            "wikispecies": "Andrias_davidianus",
-            "checklistbank-139831": "26813"
-          },
-          "children": [],
-          "uuid": "0c55a098-fca2-5b5-aa6-51e2b83591e27b",
-          "description": "\"Andrias davidianus\" is a cryptobranchidae species found in its native region."
-        },
-        {
           "id": "SP_ANDRIAS_JAPONICUS_TEMMINCK_1836",
           "name": "\"Andrias japonicus\"",
           "rank": "SPECIES",
@@ -386,33 +387,6 @@
           },
           "uuid": "b9fd6124-c549-42d8-ae38-eaa25325212c",
           "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cryptobranchidae"
-    },
-    {
-      "id": "GENUS_CRYPTOBRANCHUS",
-      "name": "\"Cryptobranchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CRYPTOBRANCHUS_ALLEGANIENSIS_DAUDIN_1803",
-          "name": "\"Cryptobranchus alleganiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptobranchus",
-          "authorship": "\"(Daudin, 1803)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498309",
-            "wikispecies": "Cryptobranchus_alleganiensis",
-            "checklistbank-1174": "txn:110600",
-            "checklistbank-139831": "26804"
-          },
-          "children": [],
-          "uuid": "38f2eabe-88cf-59d-8ef-1b97f8a10400ea",
-          "description": "\"Cryptobranchus alleganiensis\" is a cryptobranchidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -552,8 +526,8 @@
       "lineage": "cryptobranchidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 27,
+  "genusCount": 8,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -351,10 +351,15 @@
             "col": [
               "3M2G9"
             ],
-            "checklistbank": "157785",
-            "checklistbank-1174": "txn:330354"
+            "checklistbank": [
+              "157785",
+              "urn:lsid:marinespecies.org:taxname:469861"
+            ],
+            "checklistbank-1174": [
+              "txn:330354"
+            ]
           },
-          "authorityIds": "col:3M2G9",
+          "authorityIds": "checklistbank:157785,checklistbank:urn:lsid:marinespecies.org:taxname:469861,checklistbank-1174:txn:330354,col:3M2G9",
           "authorship": "(Canu & Bassler, 1928)"
         },
         {
@@ -1260,22 +1265,6 @@
           "description": "\"Hippopodina tahitiensis\" is a hippopodinidae species found in its native region."
         },
         {
-          "id": "SP_HIPPOPODINA_PULCHERRIMA_CANU_BASSLER_1928",
-          "name": "\"Hippopodina pulcherrima\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hippopodina",
-          "authorship": "\"(Canu & Bassler, 1928)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:469861",
-            "checklistbank-1174": "txn:330354"
-          },
-          "children": [],
-          "uuid": "b41b1972-8c90-546-a8f-b7d151cf9ad4f5",
-          "description": "\"Hippopodina pulcherrima\" is a hippopodinidae species found in its native region."
-        },
-        {
           "id": "SP_HIPPOPODINA_FEEGEENSIS_KATAOKA_1961",
           "name": "\"Hippopodina feegeensis",
           "rank": "SPECIES",
@@ -1397,7 +1386,7 @@
     }
   ],
   "genusCount": 13,
-  "speciesCount": 77,
+  "speciesCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

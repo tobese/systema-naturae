@@ -1841,21 +1841,6 @@
           "description": "Amphilectus sp. is a esperiopsidae species found in its native region."
         },
         {
-          "id": "SP_AMPHILECTUS_RUGOSUS_THIELE",
-          "name": "Amphilectus rugosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amphilectus",
-          "authorship": "Thiele",
-          "sourceIds": {
-            "checklistbank": "fc810844-4d0f-426f-af32-d0792c688c15",
-            "wikispecies": "Amphilectus_rugosus"
-          },
-          "children": [],
-          "uuid": "4e0e50a8-967b-5d0-a1d-1620bac1db2238"
-        },
-        {
           "id": "SP_AMPHILECTUS_FLABELLATUS",
           "name": "Amphilectus flabellatus",
           "rank": "SPECIES",
@@ -3559,12 +3544,18 @@
           "lineage": "\"Amphilectus",
           "authorship": "\"(Thiele, 1905)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567223",
-            "wikispecies": "Amphilectus_rugosus"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:567223",
+              "fc810844-4d0f-426f-af32-d0792c688c15"
+            ],
+            "wikispecies": [
+              "Amphilectus_rugosus"
+            ]
           },
           "children": [],
           "uuid": "2ad7b8d5-3b91-5bb-9f2-de14ed2186327e",
-          "description": "\"Amphilectus rugosus\" is a esperiopsidae species found in its native region."
+          "description": "\"Amphilectus rugosus\" is a esperiopsidae species found in its native region.",
+          "authorityIds": "checklistbank:fc810844-4d0f-426f-af32-d0792c688c15,checklistbank:urn:lsid:marinespecies.org:taxname:567223,wikispecies:Amphilectus_rugosus"
         },
         {
           "id": "SP_AMPHILECTUS_LESLIEI_URIZ_1988",
@@ -3772,7 +3763,7 @@
     }
   ],
   "genusCount": 25,
-  "speciesCount": 215,
+  "speciesCount": 214,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

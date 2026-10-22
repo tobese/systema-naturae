@@ -2366,18 +2366,6 @@
           },
           "children": [],
           "uuid": "b6c13b69-fa59-55a-99e-6841807485c7c0"
-        },
-        {
-          "id": "SP_CAELATURA_RUSTICA",
-          "name": "Caelatura rustica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Caelatura",
-          "sourceIds": {
-            "checklistbank-139831": "292413"
-          },
-          "children": []
         }
       ]
     },
@@ -3842,11 +3830,14 @@
           "authorship": "\"(R. B. Watson, 1886)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:419577",
-            "checklistbank-139831": "292413"
+            "checklistbank-139831": [
+              "292413"
+            ]
           },
           "children": [],
           "uuid": "4e4bf07c-2a38-571-b82-280f252ce4b019",
-          "description": "\"Caelatura rustica\" is a barleeiidae species found in its native region."
+          "description": "\"Caelatura rustica\" is a barleeiidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:419577,checklistbank-139831:292413"
         },
         {
           "id": "SP_CAELATURA_PERNAMBUCENSIS_R_B_WATSON_1886",
@@ -3917,7 +3908,7 @@
     }
   ],
   "genusCount": 17,
-  "speciesCount": 211,
+  "speciesCount": 210,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

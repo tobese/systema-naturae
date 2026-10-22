@@ -608,9 +608,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:235379"
             ],
-            "checklistbank-1174": "txn:282809"
+            "checklistbank-1174": [
+              "txn:282809"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:235379"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:235379,col:6CZDM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:235379,checklistbank-1174:txn:282809,checklistbank-2011:urn:lsid:marinespecies.org:taxname:235379,col:6CZDM",
           "authorship": "(d'Orbigny, 1845)"
         },
         {
@@ -709,10 +714,15 @@
             "col": [
               "6CZDD"
             ],
-            "checklistbank": "3f1a515e-5f29-4d56-a05a-039e1446a8cd",
-            "checklistbank-1174": "txn:282813"
+            "checklistbank": [
+              "3f1a515e-5f29-4d56-a05a-039e1446a8cd",
+              "urn:lsid:marinespecies.org:taxname:235382"
+            ],
+            "checklistbank-1174": [
+              "txn:282813"
+            ]
           },
-          "authorityIds": "col:6CZDD",
+          "authorityIds": "checklistbank:3f1a515e-5f29-4d56-a05a-039e1446a8cd,checklistbank:urn:lsid:marinespecies.org:taxname:235382,checklistbank-1174:txn:282813,col:6CZDD",
           "authorship": "(Gould,1862)"
         },
         {
@@ -3304,37 +3314,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DISCRADISCA_STELLA_GOULD_1862",
-          "name": "\"Discradisca stella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Discradisca",
-          "authorship": "\"(Gould, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235382",
-            "checklistbank-1174": "txn:282813"
-          },
-          "children": [],
-          "uuid": "794774b3-8684-5ee-810-2afc7fc829e0dd",
-          "description": "\"Discradisca stella\" is a discinidae species found in its native region."
-        },
-        {
-          "id": "SP_DISCRADISCA_ANTILLARUM_D_ORBIGNY_1845",
-          "name": "Discradisca antillarum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discradisca",
-          "authorship": "(d'Orbigny, 1845)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:235379",
-            "checklistbank-1174": "txn:282809"
-          },
-          "uuid": "c9aebbeb-60a9-4630-b2a5-829e022899e7",
-          "children": []
-        },
-        {
           "id": "SP_DISCRADISCA_CUMINGII_BRODERIP_1833",
           "name": "Discradisca cumingii",
           "rank": "SPECIES",
@@ -3509,7 +3488,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 209,
+  "speciesCount": 207,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

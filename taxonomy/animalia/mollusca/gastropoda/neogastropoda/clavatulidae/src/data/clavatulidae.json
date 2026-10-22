@@ -8223,12 +8223,21 @@
               "59QHL"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:435108"
+              "urn:lsid:marinespecies.org:taxname:435108",
+              "urn:lsid:marinespecies.org:taxname:747248"
             ],
             "gbif-backbone": "6882616",
-            "checklistbank-1174": "txn:189280"
+            "checklistbank-1174": [
+              "txn:189280"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:435108"
+            ],
+            "checklistbank-127379": [
+              "a0b26772-2aef-4c97-9f80-96d6979850e7"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:435108,col:59QHL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:435108,checklistbank:urn:lsid:marinespecies.org:taxname:747248,checklistbank-1174:txn:189280,checklistbank-127379:a0b26772-2aef-4c97-9f80-96d6979850e7,checklistbank-2011:urn:lsid:marinespecies.org:taxname:435108,col:59QHL,gbif-backbone:6882616",
           "authorship": "(E. A. Smith, 1877)"
         },
         {
@@ -8432,12 +8441,18 @@
               "59QJ5"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:746168"
+              "urn:lsid:marinespecies.org:taxname:746168",
+              "urn:lsid:marinespecies.org:taxname:760573"
             ],
             "gbif-backbone": "8020106",
-            "checklistbank-1174": "txn:189273"
+            "checklistbank-1174": [
+              "txn:189273"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:746168"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:746168,col:59QJ5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:746168,checklistbank:urn:lsid:marinespecies.org:taxname:760573,checklistbank-1174:txn:189273,checklistbank-2011:urn:lsid:marinespecies.org:taxname:746168,col:59QJ5,gbif-backbone:8020106",
           "authorship": "(Dillwyn, 1817)"
         },
         {
@@ -9643,10 +9658,15 @@
             "col": [
               "CT9G4"
             ],
-            "checklistbank": "ott7952540",
-            "checklistbank-1174": "txn:384787"
+            "checklistbank": [
+              "ott7952540",
+              "urn:lsid:marinespecies.org:taxname:1786754"
+            ],
+            "checklistbank-1174": [
+              "txn:384787"
+            ]
           },
-          "authorityIds": "col:CT9G4",
+          "authorityIds": "checklistbank:ott7952540,checklistbank:urn:lsid:marinespecies.org:taxname:1786754,checklistbank-1174:txn:384787,col:CT9G4",
           "description": "Turricula piercei is a clavatulidae species found in its native region."
         },
         {
@@ -13613,41 +13633,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TURRICULA_NELLIAE_HEDLEY_1922",
-          "name": "\"Turricula nelliae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Turricula",
-          "authorship": "\"(Hedley, 1922)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:747248",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:435108",
-            "checklistbank-1174": "txn:189280",
-            "checklistbank-127379": "a0b26772-2aef-4c97-9f80-96d6979850e7"
-          },
-          "children": [],
-          "uuid": "5c0006a9-0b34-55b-86d-8f3df775107a20",
-          "description": "\"Turricula nelliae is a clavatulidae species found in its native region."
-        },
-        {
-          "id": "SP_TURRICULA_TORNATA_KIENER_1839",
-          "name": "\"Turricula tornata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Turricula",
-          "authorship": "\"(Kiener, 1839)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:760573",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:746168",
-            "checklistbank-1174": "txn:189273"
-          },
-          "children": [],
-          "uuid": "b6f31781-4b7e-551-ab5-6a92621eb50d7a",
-          "description": "\"Turricula tornata is a clavatulidae species found in its native region."
-        },
-        {
           "id": "SP_TURRICULA_JAVANA_K_MARTIN_1895",
           "name": "\"Turricula javana",
           "rank": "SPECIES",
@@ -13677,22 +13662,6 @@
           "children": [],
           "uuid": "c09878fd-72ae-55f-aec-91b6642deb278b",
           "description": "\"Turricula gembacana is a clavatulidae species found in its native region."
-        },
-        {
-          "id": "SP_TURRICULA_PIERCEI_ADEGOKE_1969",
-          "name": "\"Turricula piercei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Turricula",
-          "authorship": "\"Adegoke, 1969\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1786754",
-            "checklistbank-1174": "txn:384787"
-          },
-          "children": [],
-          "uuid": "478c03b8-995e-58c-bba-4f1c47beca3856",
-          "description": "\"Turricula piercei is a clavatulidae species found in its native region."
         },
         {
           "id": "SP_TURRICULA_CATENA_REEVE_1843",
@@ -14807,7 +14776,7 @@
     }
   ],
   "genusCount": 42,
-  "speciesCount": 845,
+  "speciesCount": 842,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

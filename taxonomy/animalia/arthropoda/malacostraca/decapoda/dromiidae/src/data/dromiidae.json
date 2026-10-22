@@ -416,11 +416,16 @@
             "col": [
               "BLLK6"
             ],
-            "checklistbank": "txn:220945",
+            "checklistbank": [
+              "txn:220945",
+              "urn:lsid:marinespecies.org:taxname:1669698"
+            ],
             "gbif-backbone": "9015448",
-            "checklistbank-1174": "txn:220945"
+            "checklistbank-1174": [
+              "txn:220945"
+            ]
           },
-          "authorityIds": "col:BLLK6",
+          "authorityIds": "checklistbank:txn:220945,checklistbank:urn:lsid:marinespecies.org:taxname:1669698,checklistbank-1174:txn:220945,col:BLLK6,gbif-backbone:9015448",
           "description": "Pseudodromilites pentagonalis is a dromiidae species found in its native region."
         },
         {
@@ -1788,20 +1793,6 @@
           "authorship": "Alcock, 1900",
           "children": [],
           "uuid": "896a5c08-810f-56a-8fd-a52b1fdfe8bb8a"
-        },
-        {
-          "id": "SP_DROMIA_SPINIROSTRIS_MIERS_1881",
-          "name": "Dromia spinirostris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dromia",
-          "authorship": "Miers, 1881",
-          "sourceIds": {
-            "checklistbank": "27259"
-          },
-          "children": [],
-          "uuid": "94cbd4fd-b1e0-593-ba4-895a47e577a2e0"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5623,22 +5614,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PSEUDODROMILITES_PENTAGONALIS_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Pseudodromilites pentagonalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudodromilites",
-          "authorship": "\"Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669698",
-            "checklistbank-1174": "txn:220945"
-          },
-          "children": [],
-          "uuid": "d7299d61-ca8c-588-9b6-d3d65727645f85",
-          "description": "\"Pseudodromilites pentagonalis\" is a dromiidae species found in its native region."
-        },
-        {
           "id": "SP_PSEUDODROMILITES_ARZIGNANENSIS_DE_ANGELI_AND_ALBERTI_2018",
           "name": "Pseudodromilites arzignanensis",
           "rank": "SPECIES",
@@ -5914,7 +5889,7 @@
       "lineage": "dromiidae"
     }
   ],
-  "speciesCount": 304,
+  "speciesCount": 302,
   "appSlug": "dromiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

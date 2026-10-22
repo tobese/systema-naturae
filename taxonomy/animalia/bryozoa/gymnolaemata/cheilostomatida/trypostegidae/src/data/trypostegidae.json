@@ -352,12 +352,21 @@
               "869NL"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1414246"
+              "urn:lsid:marinespecies.org:taxname:1414246",
+              "urn:lsid:marinespecies.org:taxname:1415251"
             ],
             "gbif-backbone": "9629887",
-            "checklistbank-1174": "txn:357072"
+            "checklistbank-1174": [
+              "txn:357072"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1414246"
+            ],
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:1414246"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1414246,col:869NL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1414246,checklistbank:urn:lsid:marinespecies.org:taxname:1415251,checklistbank-1081:urn:lsid:marinespecies.org:taxname:1414246,checklistbank-1174:txn:357072,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1414246,col:869NL,gbif-backbone:9629887",
           "authorship": "(Reuss, 1874)"
         },
         {
@@ -1369,24 +1378,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TRYPOSTEGA_RUGULOSA_CANU_LECOINTRE_1928",
-          "name": "\"Trypostega rugulosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trypostega",
-          "authorship": "\"(Canu & Lecointre, 1928)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1415251",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1414246",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1414246",
-            "checklistbank-1174": "txn:357072"
-          },
-          "children": [],
-          "uuid": "69279d31-bfad-562-8d9-b7f26d0e2c564a",
-          "description": "\"Trypostega rugulosa is a trypostegidae species found in its native region."
-        },
-        {
           "id": "SP_TRYPOSTEGA_CLAVICULATA_HINCKS_1884",
           "name": "Trypostega claviculata",
           "rank": "SPECIES",
@@ -1491,7 +1482,7 @@
     }
   ],
   "genusCount": 16,
-  "speciesCount": 73,
+  "speciesCount": 72,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

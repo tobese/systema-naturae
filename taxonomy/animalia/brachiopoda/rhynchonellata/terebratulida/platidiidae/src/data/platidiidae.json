@@ -422,10 +422,15 @@
             "col": [
               "66FCM"
             ],
-            "checklistbank": "txn:283148",
-            "checklistbank-1174": "txn:283148"
+            "checklistbank": [
+              "txn:283148",
+              "urn:lsid:marinespecies.org:taxname:235653"
+            ],
+            "checklistbank-1174": [
+              "txn:283148"
+            ]
           },
-          "authorityIds": "col:66FCM",
+          "authorityIds": "checklistbank:txn:283148,checklistbank:urn:lsid:marinespecies.org:taxname:235653,checklistbank-1174:txn:283148,col:66FCM",
           "authorship": "Philippi 1936"
         },
         {
@@ -1195,7 +1200,8 @@
           "lineage": "\"Platidia",
           "authorship": "\"(Scacchi & Philippi in Philippi, 1844)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:104066"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:104066",
+            "checklistbank-139831": "1173587"
           },
           "children": [],
           "uuid": "46fb0927-60ea-55b-9c0-4013a7afc29291",
@@ -1238,22 +1244,6 @@
       "name": "\"Amphithyris",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_AMPHITHYRIS_SEMINULA_PHILIPPI_1836",
-          "name": "\"Amphithyris seminula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Amphithyris",
-          "authorship": "\"(Philippi, 1836)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235653",
-            "checklistbank-1174": "txn:283148"
-          },
-          "children": [],
-          "uuid": "39d4324e-e2f4-590-ae0-8f160f95fb1a79",
-          "description": "\"Amphithyris seminula\" is a platidiidae species found in its native region."
-        },
         {
           "id": "SP_AMPHITHYRIS_CAVERNICOLA",
           "name": "Amphithyris cavernicola",
@@ -1472,7 +1462,7 @@
     }
   ],
   "genusCount": 25,
-  "speciesCount": 76,
+  "speciesCount": 75,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

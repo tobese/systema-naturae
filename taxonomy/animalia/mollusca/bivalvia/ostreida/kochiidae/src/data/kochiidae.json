@@ -39,10 +39,15 @@
             "col": [
               "BDRQ6"
             ],
-            "checklistbank": "txn:482234",
-            "checklistbank-1174": "txn:482234"
+            "checklistbank": [
+              "txn:482234",
+              "urn:lsid:marinespecies.org:taxname:1663407"
+            ],
+            "checklistbank-1174": [
+              "txn:482234"
+            ]
           },
-          "authorityIds": "col:BDRQ6",
+          "authorityIds": "checklistbank:txn:482234,checklistbank:urn:lsid:marinespecies.org:taxname:1663407,checklistbank-1174:txn:482234,col:BDRQ6",
           "children": [],
           "authorship": "(Koch 1881)"
         },
@@ -61,31 +66,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_KOCHIA",
-      "name": "\"Kochia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_KOCHIA_CAPULIFORMIS_C_KOCH_1881",
-          "name": "\"Kochia capuliformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kochia",
-          "authorship": "\"(C. Koch, 1881)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1663407",
-            "checklistbank-1174": "txn:482234"
-          },
-          "children": [],
-          "uuid": "b4689bb4-1c1e-57d-879-5bdc6668c201b0",
-          "description": "\"Kochia capuliformis\" is a kochiidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "kochiidae"
     }
   ],
   "sourceIds": {
@@ -99,6 +79,6 @@
     "checklistbank": "txn:60758",
     "checklistbank-1174": "txn:60758"
   },
-  "genusCount": 2,
-  "speciesCount": 4
+  "genusCount": 1,
+  "speciesCount": 3
 }

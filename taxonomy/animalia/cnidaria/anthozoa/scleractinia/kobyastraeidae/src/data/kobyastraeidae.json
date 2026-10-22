@@ -61,10 +61,15 @@
             "col": [
               "BD76J"
             ],
-            "checklistbank": "txn:151452",
-            "checklistbank-1174": "txn:151452"
+            "checklistbank": [
+              "txn:151452",
+              "urn:lsid:marinespecies.org:taxname:1662888"
+            ],
+            "checklistbank-1174": [
+              "txn:151452"
+            ]
           },
-          "authorityIds": "col:BD76J",
+          "authorityIds": "checklistbank:txn:151452,checklistbank:urn:lsid:marinespecies.org:taxname:1662888,checklistbank-1174:txn:151452,col:BD76J",
           "children": [],
           "authorship": "(Etallon and Thurmann 1864)"
         },
@@ -170,22 +175,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_KOBYASTRAEA_LOMONTIANA_ETALLON_1864",
-          "name": "\"Kobyastraea lomontiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kobyastraea",
-          "authorship": "\"(Etallon, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662888",
-            "checklistbank-1174": "txn:151452"
-          },
-          "children": [],
-          "uuid": "b7e8cbd0-9542-580-9f7-75e0d043066f8b",
-          "description": "\"Kobyastraea lomontiana\" is a kobyastraeidae species found in its native region."
-        },
-        {
           "id": "SP_KOBYASTRAEA_COQUANDI_TALLON_1864",
           "name": "\"Kobyastraea coquandi\"",
           "rank": "SPECIES",
@@ -278,5 +267,5 @@
     "checklistbank-1174": "txn:106833"
   },
   "genusCount": 4,
-  "speciesCount": 14
+  "speciesCount": 13
 }

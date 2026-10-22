@@ -1349,10 +1349,15 @@
             "col": [
               "CL84Z"
             ],
-            "checklistbank": "txn:508543",
-            "checklistbank-1174": "txn:508543"
+            "checklistbank": [
+              "txn:508543",
+              "urn:lsid:marinespecies.org:taxname:1774762"
+            ],
+            "checklistbank-1174": [
+              "txn:508543"
+            ]
           },
-          "authorityIds": "col:CL84Z",
+          "authorityIds": "checklistbank:txn:508543,checklistbank:urn:lsid:marinespecies.org:taxname:1774762,checklistbank-1174:txn:508543,col:CL84Z",
           "description": "Ancillotoechia gutta is a trigonirhynchiidae species found in its native region."
         },
         {
@@ -2459,31 +2464,6 @@
       "lineage": "trigonirhynchiidae"
     },
     {
-      "id": "GENUS_ANCILLOTOECHIA",
-      "name": "\"Ancillotoechia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ANCILLOTOECHIA_GUTTA_SMITH_1980",
-          "name": "\"Ancillotoechia gutta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ancillotoechia",
-          "authorship": "\"Smith, 1980\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1774762",
-            "checklistbank-1174": "txn:508543"
-          },
-          "children": [],
-          "uuid": "9bd9cf3b-74d5-504-942-c270879e209aa6",
-          "description": "\"Ancillotoechia gutta is a trigonirhynchiidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trigonirhynchiidae"
-    },
-    {
       "id": "GENUS_OLIGOPTYCHERHYNCHUS",
       "name": "Oligoptycherhynchus",
       "rank": "GENUS",
@@ -2941,8 +2921,8 @@
       "lineage": "trigonirhynchiidae"
     }
   ],
-  "genusCount": 45,
-  "speciesCount": 169,
+  "genusCount": 44,
+  "speciesCount": 168,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

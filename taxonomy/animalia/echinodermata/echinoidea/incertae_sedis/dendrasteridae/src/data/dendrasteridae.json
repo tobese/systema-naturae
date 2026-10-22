@@ -85,9 +85,14 @@
               "34M2G"
             ],
             "checklistbank": "ott3651304",
-            "checklistbank-1174": "txn:367254"
+            "checklistbank-1174": [
+              "txn:367254"
+            ],
+            "wikispecies": [
+              "Dendraster_excentricus"
+            ]
           },
-          "authorityIds": "col:34M2G,itis:158010",
+          "authorityIds": "checklistbank:ott3651304,checklistbank-1174:txn:367254,col:34M2G,itis:158010,wikispecies:Dendraster_excentricus",
           "commonName": "eccentric sand dollar sea urchin",
           "description": "Dendraster excentricus, also known as the eccentric sand dollar, sea-cake, biscuit-urchin, western sand dollar, or Pacific sand dollar, is a species of echinoderm in the family Dendrasteridae."
         },
@@ -105,10 +110,15 @@
             "col": [
               "34M2H"
             ],
-            "checklistbank": "txn:367258",
-            "checklistbank-1174": "txn:367258"
+            "checklistbank": [
+              "txn:367258",
+              "urn:lsid:marinespecies.org:taxname:757645"
+            ],
+            "checklistbank-1174": [
+              "txn:367258"
+            ]
           },
-          "authorityIds": "col:34M2H",
+          "authorityIds": "checklistbank:txn:367258,checklistbank:urn:lsid:marinespecies.org:taxname:757645,checklistbank-1174:txn:367258,col:34M2H",
           "description": "Dendraster gibbsii is an extinct species of echinoderm of the family Dendrasteridae."
         },
         {
@@ -554,36 +564,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DENDRASTER_GIBBSII_STEWART_IN_WOODRING_STEWART_RICHARDS_1940",
-          "name": "\"Dendraster gibbsii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dendraster",
-          "authorship": "\"Stewart in Woodring, Stewart & Richards, 1940\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757645",
-            "checklistbank-1174": "txn:367258"
-          },
-          "children": [],
-          "uuid": "8bd4a71e-656d-565-a99-b598907dba3d78",
-          "description": "\"Dendraster gibbsii is a dendrasteridae species found in its native region."
-        },
-        {
-          "id": "SP_DENDRASTER_EXCENTRICUS",
-          "name": "Dendraster excentricus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dendraster",
-          "sourceIds": {
-            "wikispecies": "Dendraster_excentricus",
-            "checklistbank-1174": "txn:367254"
-          },
-          "uuid": "7c69daf5-c2a5-43d4-ae15-c90d7d8aaefd",
-          "children": []
-        },
-        {
           "id": "SP_DENDRASTER_SULLIVANI_DURHAM_AND_MORGAN_1978",
           "name": "Dendraster sullivani",
           "rank": "SPECIES",
@@ -838,7 +818,7 @@
       "lineage": "dendrasteridae"
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 45,
   "appSlug": "dendrasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

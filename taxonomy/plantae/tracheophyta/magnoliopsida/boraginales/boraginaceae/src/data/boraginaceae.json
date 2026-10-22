@@ -5610,6 +5610,7 @@
           "sourceIds": {
             "checklistbank-139831": "770280"
           },
+          "uuid": "98b931e4-b817-4433-8997-df019393bf2a",
           "children": []
         }
       ]
@@ -7945,13 +7946,19 @@
           "authorship": "Guss.",
           "sourceIds": {
             "checklistbank": "162517",
-            "wikispecies": "Cynoglossum_nebrodense",
+            "wikispecies": [
+              "Cynoglossum_nebrodense"
+            ],
             "checklistbank-2008": "1002835",
-            "gbif-backbone": "7294995"
+            "gbif-backbone": "7294995",
+            "checklistbank-2232": [
+              "2913037"
+            ]
           },
           "children": [],
           "uuid": "04ed30d9-5cee-537-ad7-f6fc87ce5c2c70",
-          "description": "Cynoglossum nebrodense is a boraginaceae species found in its native region."
+          "description": "Cynoglossum nebrodense is a boraginaceae species found in its native region.",
+          "authorityIds": "checklistbank:162517,checklistbank-2008:1002835,checklistbank-2232:2913037,gbif-backbone:7294995,wikispecies:Cynoglossum_nebrodense"
         },
         {
           "id": "SP_CYNOGLOSSUM_ROTATUM_VELEN",
@@ -9046,11 +9053,17 @@
           "authorship": "(Sw. ex Lehm.) Thunb. ex Lehm.",
           "sourceIds": {
             "checklistbank": "Cynoglossum_javanicum_Sw_ex_Lehm_Thunb_ex_Lehm",
-            "wikispecies": "Cynoglossum_javanicum"
+            "wikispecies": [
+              "Cynoglossum_javanicum"
+            ],
+            "checklistbank-2232": [
+              "2752004"
+            ]
           },
           "children": [],
           "uuid": "313502fb-9fdc-5ae-a8d-8665c883f0842a",
-          "description": "Cynoglossum javanicum is a boraginaceae species found in its native region."
+          "description": "Cynoglossum javanicum is a boraginaceae species found in its native region.",
+          "authorityIds": "checklistbank:Cynoglossum_javanicum_Sw_ex_Lehm_Thunb_ex_Lehm,checklistbank-2232:2752004,wikispecies:Cynoglossum_javanicum"
         },
         {
           "id": "SP_CYNOGLOSSUM_TENERUM_BORNM_GREUTER_STIER",
@@ -10923,21 +10936,6 @@
           "children": []
         },
         {
-          "id": "SP_CYNOGLOSSUM_NEBRODENSE_SELVI_SUTOR",
-          "name": "Cynoglossum nebrodense",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cynoglossum",
-          "authorship": "Selvi & Sutorý",
-          "sourceIds": {
-            "checklistbank-2232": "2913037",
-            "wikispecies": "Cynoglossum_nebrodense"
-          },
-          "uuid": "537eafe5-2553-4d5f-a1c6-0c2fe4be4750",
-          "children": []
-        },
-        {
           "id": "SP_CYNOGLOSSUM_BAETICUM_SUTOR",
           "name": "Cynoglossum baeticum",
           "rank": "SPECIES",
@@ -11413,21 +11411,6 @@
           "children": []
         },
         {
-          "id": "SP_CYNOGLOSSUM_JAVANICUM_LEHM_A_DC",
-          "name": "Cynoglossum javanicum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cynoglossum",
-          "authorship": "(Lehm.) A.DC.",
-          "sourceIds": {
-            "checklistbank-2232": "2752004",
-            "wikispecies": "Cynoglossum_javanicum"
-          },
-          "uuid": "7acfb7a0-2bb6-4cde-bc19-9ae93b4d0b09",
-          "children": []
-        },
-        {
           "id": "SP_CYNOGLOSSUM_KANDAVANENSE_BORNM_GAUBA_AKHANI",
           "name": "Cynoglossum kandavanense",
           "rank": "SPECIES",
@@ -11852,6 +11835,42 @@
           },
           "uuid": "73da1c01-4737-493b-b08e-bdb202472bd1",
           "children": []
+        },
+        {
+          "id": "SP_CYNOGLOSSUM_PITARDIANUM",
+          "name": "Cynoglossum pitardianum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cynoglossum",
+          "sourceIds": {
+            "checklistbank-139831": "1186655"
+          },
+          "uuid": "443b0902-8ccb-4b80-b1a2-11910ea61f97"
+        },
+        {
+          "id": "SP_CYNOGLOSSUM_WATIERI",
+          "name": "Cynoglossum watieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cynoglossum",
+          "sourceIds": {
+            "checklistbank-139831": "1186656"
+          },
+          "uuid": "59c47471-18f1-4d9b-ace7-59c1a0245fbc"
+        },
+        {
+          "id": "SP_CYNOGLOSSUM_LEVANTICUM",
+          "name": "Cynoglossum levanticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cynoglossum",
+          "sourceIds": {
+            "checklistbank-139831": "1705221"
+          },
+          "uuid": "c8c21324-e401-4967-89db-fd330100b626"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -20891,49 +20910,6 @@
           "uuid": "c2f4f894-daa1-545-b28-95710cf8abf4d6"
         },
         {
-          "id": "SP_ONOSMA_TRIDENTINA_WETTST",
-          "name": "Onosma tridentina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onosma",
-          "authorship": "Wettst.",
-          "sourceIds": {
-            "checklistbank": "161827",
-            "wikispecies": "Onosma_tridentina"
-          },
-          "children": [],
-          "uuid": "e4e13d24-ba09-5b6-a1c-83330accc334f3"
-        },
-        {
-          "id": "SP_ONOSMA_PSEUDARENARIA_SCHUR",
-          "name": "Onosma pseudarenaria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onosma",
-          "authorship": "Schur",
-          "sourceIds": {
-            "checklistbank": "161828"
-          },
-          "children": [],
-          "uuid": "6074a17d-8061-59e-952-36cf06c356e25e"
-        },
-        {
-          "id": "SP_ONOSMA_BORYSTHENICA_KLOKOV_PRO_PARTE",
-          "name": "Onosma borysthenica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onosma",
-          "authorship": "Klokov pro parte",
-          "sourceIds": {
-            "checklistbank": "161925"
-          },
-          "children": [],
-          "uuid": "8fe4cfee-9035-513-b50-0be2ae0d523e0f"
-        },
-        {
           "id": "SP_ONOSMA_BISOTUNENSIS",
           "name": "Onosma bisotunensis",
           "rank": "SPECIES",
@@ -21008,6 +20984,7 @@
           "sourceIds": {
             "checklistbank-139831": "770620"
           },
+          "uuid": "79cc2a0e-23e5-4cae-8ad1-cb278307dc83",
           "children": []
         }
       ]
@@ -21795,6 +21772,7 @@
           "sourceIds": {
             "checklistbank-139831": "189218"
           },
+          "uuid": "b910b705-f211-4c16-8da9-2c26ba22faab",
           "children": []
         }
       ]
@@ -25080,48 +25058,6 @@
           "uuid": "050fb100-ddd7-5d6-bbd-9605a42af8132a"
         },
         {
-          "id": "SP_ECHIUM_MARIANUM_BOISS",
-          "name": "Echium marianum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echium",
-          "authorship": "Boiss.",
-          "sourceIds": {
-            "checklistbank": "162086"
-          },
-          "children": [],
-          "uuid": "c02bc8a5-7a95-556-ba4-512d7fc0fe5829"
-        },
-        {
-          "id": "SP_ECHIUM_PAVONIANUM_BOISS",
-          "name": "Echium pavonianum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echium",
-          "authorship": "Boiss.",
-          "sourceIds": {
-            "checklistbank": "162089"
-          },
-          "children": [],
-          "uuid": "2e8512ef-1e62-53b-9c0-12d6457d5d1492"
-        },
-        {
-          "id": "SP_ECHIUM_RUSSICUM_J_F_GMEL",
-          "name": "Echium russicum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echium",
-          "authorship": "J.F.Gmel.",
-          "sourceIds": {
-            "checklistbank": "162097"
-          },
-          "children": [],
-          "uuid": "a57c8973-2ba8-5d4-931-c24b2738ef5bd4"
-        },
-        {
           "id": "SP_ECHIUM_SIMSII_G_DON_EX_A_DC",
           "name": "Echium simsii",
           "rank": "SPECIES",
@@ -25271,6 +25207,7 @@
           "sourceIds": {
             "checklistbank-139831": "629025"
           },
+          "uuid": "af732845-e05c-4c43-aba9-8a167aa63f71",
           "children": []
         },
         {
@@ -25283,6 +25220,7 @@
           "sourceIds": {
             "checklistbank-139831": "769693"
           },
+          "uuid": "42c5a4ef-420e-434a-9325-8475a28d6daa",
           "children": []
         },
         {
@@ -25295,6 +25233,7 @@
           "sourceIds": {
             "checklistbank-139831": "769694"
           },
+          "uuid": "e03b8052-55d2-4b57-89ef-b05120f34544",
           "children": []
         },
         {
@@ -25307,6 +25246,7 @@
           "sourceIds": {
             "checklistbank-139831": "769695"
           },
+          "uuid": "4b1de839-ebd9-4dc5-8cc7-3fef64880ba2",
           "children": []
         },
         {
@@ -25319,6 +25259,7 @@
           "sourceIds": {
             "checklistbank-139831": "769701"
           },
+          "uuid": "715673b6-9733-4562-aa5a-e5bba6ced458",
           "children": []
         },
         {
@@ -25331,6 +25272,7 @@
           "sourceIds": {
             "checklistbank-139831": "769704"
           },
+          "uuid": "841ce9fe-1867-4f4d-8c69-03f3ee969dc1",
           "children": []
         },
         {
@@ -25343,6 +25285,7 @@
           "sourceIds": {
             "checklistbank-139831": "769710"
           },
+          "uuid": "9cc6ff91-ed4e-4607-8522-711f512cebc7",
           "children": []
         },
         {
@@ -25355,6 +25298,7 @@
           "sourceIds": {
             "checklistbank-139831": "769711"
           },
+          "uuid": "74241137-5104-4f29-8a13-956a76bc6aff",
           "children": []
         },
         {
@@ -25367,6 +25311,7 @@
           "sourceIds": {
             "checklistbank-139831": "769713"
           },
+          "uuid": "7ef8dfbb-5e4e-4b0e-bbde-26e75c2351e6",
           "children": []
         },
         {
@@ -25379,6 +25324,7 @@
           "sourceIds": {
             "checklistbank-139831": "769714"
           },
+          "uuid": "f412dd42-f741-4d1d-bc87-217bac18a2a5",
           "children": []
         }
       ]
@@ -27428,6 +27374,7 @@
           "sourceIds": {
             "checklistbank-139831": "769901"
           },
+          "uuid": "4aae5378-20df-4985-9dfd-1ff6d6149918",
           "children": []
         },
         {
@@ -27440,6 +27387,7 @@
           "sourceIds": {
             "checklistbank-139831": "769908"
           },
+          "uuid": "71815ad9-ae00-4ce0-8ffc-db2ff3910fb5",
           "children": []
         },
         {
@@ -27452,6 +27400,7 @@
           "sourceIds": {
             "checklistbank-139831": "769910"
           },
+          "uuid": "c1dec446-e3b2-451a-82c1-c11fa674b4d7",
           "children": []
         }
       ]
@@ -30559,20 +30508,6 @@
           "uuid": "4b284298-4dbe-5c7-99a-107228ef93174f"
         },
         {
-          "id": "SP_OMPHALODES_SCORPIOIDES_HAENKE_SCHRANK",
-          "name": "Omphalodes scorpioides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Omphalodes",
-          "authorship": "(Haenke) Schrank",
-          "sourceIds": {
-            "checklistbank": "161922"
-          },
-          "children": [],
-          "uuid": "6d4055d6-6ec7-5df-ac7-609431000f8166"
-        },
-        {
           "id": "SP_OMPHALODES_OMPHALOIDES_L_VOSS_1895",
           "name": "Omphalodes omphaloides",
           "rank": "SPECIES",
@@ -30610,6 +30545,7 @@
           "sourceIds": {
             "checklistbank-139831": "770609"
           },
+          "uuid": "06d5e3d0-0cc9-4fd4-95e3-217026ac5f4f",
           "children": []
         }
       ]
@@ -36299,6 +36235,558 @@
           },
           "uuid": "a059c0cf-ef74-4a04-ae17-9774270ac661",
           "children": []
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CONFINE",
+          "name": "Lithospermum confine",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "224009"
+          },
+          "uuid": "2fa4f6ba-684a-45e2-a9c9-7e65282274ef"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_MATAMORENSE",
+          "name": "Lithospermum matamorense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "224011"
+          },
+          "uuid": "689ccf84-7549-4d2c-b12e-40f0a7912c04"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_INDECORUM",
+          "name": "Lithospermum indecorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "276347"
+          },
+          "uuid": "7052b3fe-2bd7-4084-b32d-5af5acd7d939"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_JIMULCENSE",
+          "name": "Lithospermum jimulcense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "276348"
+          },
+          "uuid": "e5389a86-b81a-4e30-a2c9-1157acebc01b"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_OBLONGIFOLIUM",
+          "name": "Lithospermum oblongifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "276349"
+          },
+          "uuid": "3aae35f8-11f7-4f0c-876b-19c1266b6db2"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_OBOVATUM",
+          "name": "Lithospermum obovatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "276350"
+          },
+          "uuid": "4bc86220-261f-4d91-b4b1-4e050e59c565"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_BERLANDIERI",
+          "name": "Lithospermum berlandieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283178"
+          },
+          "uuid": "2c22352d-4bb9-40a3-bad1-fb484a188630"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CALCICOLA",
+          "name": "Lithospermum calcicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283179"
+          },
+          "uuid": "f2594871-14c7-4c2e-b06c-d2ec0fba5b9a"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_GUATEMALENSE",
+          "name": "Lithospermum guatemalense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283181"
+          },
+          "uuid": "45d8fa18-c51c-4eaf-ba45-766dd5901ee5"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_MUELLERI",
+          "name": "Lithospermum muelleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283183"
+          },
+          "uuid": "cc431b86-58c2-4662-9746-ad6603497851"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_NELSONII",
+          "name": "Lithospermum nelsonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283184"
+          },
+          "uuid": "ba1e7fb9-9691-498d-9249-dde7cccb7d93"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_PRINGLEI",
+          "name": "Lithospermum pringlei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283185"
+          },
+          "uuid": "e1771699-2216-454c-adc3-989bf7a7ed65"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_STRICTUM",
+          "name": "Lithospermum strictum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283186"
+          },
+          "uuid": "08b6b33a-8ca8-4a07-908c-9d12fa46310a"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CINERASCENS",
+          "name": "Lithospermum cinerascens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "283232"
+          },
+          "uuid": "a6e23aa1-39e6-4867-986d-02a97d6bc721"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_EXSERTUM",
+          "name": "Lithospermum exsertum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "292077"
+          },
+          "uuid": "9d1cb4b5-c6c3-46c8-be9b-d3fa3cce45cc"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_NOTATUM",
+          "name": "Lithospermum notatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "467195"
+          },
+          "uuid": "b3b67f3c-464c-4b60-aa90-f78bcf3e7c60"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_AFFINE",
+          "name": "Lithospermum affine",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "589291"
+          },
+          "uuid": "cfc18f4f-d640-42d1-97d3-1d379b2da20c"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_AFROMONTANUM",
+          "name": "Lithospermum afromontanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "589292"
+          },
+          "uuid": "6c0c17fb-cdfc-4cd3-a099-f99fa8f183de"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CINEREUM",
+          "name": "Lithospermum cinereum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "589293"
+          },
+          "uuid": "06b8a9d7-130e-42a3-937d-c090f0211345"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_DIVERSIFOLIUM",
+          "name": "Lithospermum diversifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "589294"
+          },
+          "uuid": "fb9ec9e1-8e2f-4286-87f7-44aeb6d03167"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_FLEXUOSUM",
+          "name": "Lithospermum flexuosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "589295"
+          },
+          "uuid": "194526f6-0680-448b-854b-cb8e0e536c9c"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_PAPILLOSUM",
+          "name": "Lithospermum papillosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "589297"
+          },
+          "uuid": "32cc42ca-d478-4927-a13c-71d58a05d396"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_HANCOCKIANUM",
+          "name": "Lithospermum hancockianum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "710672"
+          },
+          "uuid": "a2a112a4-ef41-424b-8fd5-b94f7907b61a"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_DODRANTALE",
+          "name": "Lithospermum dodrantale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765349"
+          },
+          "uuid": "597bb791-f1d9-48a1-a822-88f94d9a28ed"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_OAXACANUM",
+          "name": "Lithospermum oaxacanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765351"
+          },
+          "uuid": "cb14eb79-9002-4650-9570-afe1b477700a"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_UNICUM",
+          "name": "Lithospermum unicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765353"
+          },
+          "uuid": "5d61be73-9ba0-4959-a0fe-fb7145add48a"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_ALBUM",
+          "name": "Lithospermum album",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765355"
+          },
+          "uuid": "4beb3d6a-b6e9-491d-8be7-0beb02204f8f"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_BARBIGERUM",
+          "name": "Lithospermum barbigerum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765360"
+          },
+          "uuid": "9934191f-769a-4dcf-8da2-645c30f2d88d"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_BOLIVARIENSE",
+          "name": "Lithospermum bolivariense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765361"
+          },
+          "uuid": "6b521eb9-fbf3-463a-b301-b91e186e10c4"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CHIAPENSE",
+          "name": "Lithospermum chiapense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765362"
+          },
+          "uuid": "ff01cd8b-312c-473a-b268-f9c57861226b"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CUNEIFOLIUM",
+          "name": "Lithospermum cuneifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765364"
+          },
+          "uuid": "04759e78-f4ce-453c-b18d-4d308623d4bc"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_CUZCOENSE",
+          "name": "Lithospermum cuzcoense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765365"
+          },
+          "uuid": "21f0a096-52d8-4683-b9c0-4ed41007301a"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_FLAVUM",
+          "name": "Lithospermum flavum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765366"
+          },
+          "uuid": "e0b70ee3-9066-4257-8525-5a158f98dbb8"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_GAYANUM",
+          "name": "Lithospermum gayanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765367"
+          },
+          "uuid": "555b61f6-c8c6-4d8d-96ab-c60413d74da2"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_JOHNSTONII",
+          "name": "Lithospermum johnstonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765369"
+          },
+          "uuid": "55b1bf20-9a05-453e-a17e-27d27866e3ba"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_TRINERVIUM",
+          "name": "Lithospermum trinervium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765370"
+          },
+          "uuid": "10864ffb-d6b6-4781-83e1-8e4523415b9e"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_LEYMEBAMBENSE",
+          "name": "Lithospermum leymebambense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765371"
+          },
+          "uuid": "289ea8be-eaec-47b4-abac-4a6d48b7d707"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_LEONOTIS",
+          "name": "Lithospermum leonotis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765372"
+          },
+          "uuid": "ee9f1341-cc98-40ea-95ff-5c79cb1d89c3"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_MEDIALE",
+          "name": "Lithospermum mediale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765374"
+          },
+          "uuid": "a33326c8-6c80-4f4f-b7c6-28f67722f244"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_RODRIGUEZII",
+          "name": "Lithospermum rodriguezii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765376"
+          },
+          "uuid": "21181bdb-a5c8-435c-98e4-72abcc30a009"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_ROSEI",
+          "name": "Lithospermum rosei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765377"
+          },
+          "uuid": "187fdb77-1357-4fb6-a789-fe6d64047a65"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_TURNERI",
+          "name": "Lithospermum turneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "765378"
+          },
+          "uuid": "8bb031ce-0c4d-4992-b58d-7fcecb45ae76"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_REVOLUTUM",
+          "name": "Lithospermum revolutum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "770338"
+          },
+          "uuid": "dad15bdf-d4d8-4bda-a725-69c33471bce4"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_PINETORUM",
+          "name": "Lithospermum pinetorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "877224"
+          },
+          "uuid": "dd04d0de-808f-46ea-b567-b614b8adf035"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_ELENAE",
+          "name": "Lithospermum elenae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "921360"
+          },
+          "uuid": "d7350120-6155-4282-96b2-dc99946f214d"
+        },
+        {
+          "id": "SP_LITHOSPERMUM_SYLVESTRE",
+          "name": "Lithospermum sylvestre",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithospermum",
+          "sourceIds": {
+            "checklistbank-139831": "1622610"
+          },
+          "uuid": "ed2cfddb-1706-4df1-90b5-f6699bf3b15d"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -41809,6 +42297,7 @@
           "sourceIds": {
             "checklistbank-139831": "770890"
           },
+          "uuid": "425e6638-79af-406d-ac94-afea0848bdc5",
           "children": []
         }
       ]
@@ -46964,6 +47453,7 @@
           "sourceIds": {
             "checklistbank-139831": "769572"
           },
+          "uuid": "f63e3c32-6c6a-4840-91bd-0ebeca6a5777",
           "children": []
         },
         {
@@ -46976,6 +47466,7 @@
           "sourceIds": {
             "checklistbank-139831": "769582"
           },
+          "uuid": "b7edfbb1-a14a-4b61-b100-4846fdeede39",
           "children": []
         }
       ]
@@ -49731,6 +50222,7 @@
           "sourceIds": {
             "checklistbank-139831": "769770"
           },
+          "uuid": "6e236b4c-2899-481e-9bc1-58496ec0e075",
           "children": []
         },
         {
@@ -49743,6 +50235,7 @@
           "sourceIds": {
             "checklistbank-139831": "769772"
           },
+          "uuid": "f2e5e429-0e7e-4571-a534-606a63a5ebaf",
           "children": []
         },
         {
@@ -49755,6 +50248,7 @@
           "sourceIds": {
             "checklistbank-139831": "769774"
           },
+          "uuid": "c3a4b901-5c56-45c6-ac50-8bd864ca897c",
           "children": []
         },
         {
@@ -49767,6 +50261,7 @@
           "sourceIds": {
             "checklistbank-139831": "769785"
           },
+          "uuid": "a9312f12-0e21-4a79-a0e6-9ec15e369e90",
           "children": []
         },
         {
@@ -49779,6 +50274,7 @@
           "sourceIds": {
             "checklistbank-139831": "769788"
           },
+          "uuid": "6983339f-5239-43ed-8bbe-24c5150472fc",
           "children": []
         },
         {
@@ -49791,6 +50287,7 @@
           "sourceIds": {
             "checklistbank-139831": "769793"
           },
+          "uuid": "6fdeaeea-890b-4f51-ade7-22d8e84051c4",
           "children": []
         },
         {
@@ -49803,6 +50300,7 @@
           "sourceIds": {
             "checklistbank-139831": "769805"
           },
+          "uuid": "8fcddf4d-1438-4594-9908-11bb79b1ae17",
           "children": []
         },
         {
@@ -49815,6 +50313,7 @@
           "sourceIds": {
             "checklistbank-139831": "769809"
           },
+          "uuid": "e3136502-38f6-408b-b8f9-116b2d62149c",
           "children": []
         },
         {
@@ -49827,6 +50326,7 @@
           "sourceIds": {
             "checklistbank-139831": "769817"
           },
+          "uuid": "fc7a8857-1bf8-4d99-9b45-5bce1ab8e5e5",
           "children": []
         },
         {
@@ -49839,6 +50339,7 @@
           "sourceIds": {
             "checklistbank-139831": "769825"
           },
+          "uuid": "762f391d-a9f0-47c0-8cc3-578c3bf859ef",
           "children": []
         },
         {
@@ -49851,6 +50352,7 @@
           "sourceIds": {
             "checklistbank-139831": "769833"
           },
+          "uuid": "0b301d0f-3a8f-4930-ac55-400890197db1",
           "children": []
         }
       ]
@@ -50532,20 +51034,6 @@
           },
           "children": [],
           "uuid": "6f0495e6-6c2e-599-ace-6045ba03607ed5"
-        },
-        {
-          "id": "SP_SOLENANTHUS_BIEBERSTEINII_DC",
-          "name": "Solenanthus biebersteinii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solenanthus",
-          "authorship": "DC.",
-          "sourceIds": {
-            "checklistbank": "162279"
-          },
-          "children": [],
-          "uuid": "f9182dd5-6bf6-516-bf3-b9a2623dd406a1"
         },
         {
           "id": "SP_SOLENANTHUS_LANATUS",
@@ -53447,6 +53935,7 @@
           "sourceIds": {
             "checklistbank-139831": "769537"
           },
+          "uuid": "6b5bc8ee-b598-4495-ad8f-6423c1a6cc4d",
           "children": []
         }
       ]
@@ -55971,6 +56460,7 @@
           "sourceIds": {
             "checklistbank-139831": "769685"
           },
+          "uuid": "c78085c1-b06e-4a2b-8172-26bd3ea01423",
           "children": []
         },
         {
@@ -55983,6 +56473,7 @@
           "sourceIds": {
             "checklistbank-139831": "769686"
           },
+          "uuid": "cdcb682b-e039-495d-97d0-8941f8483522",
           "children": []
         },
         {
@@ -55995,6 +56486,7 @@
           "sourceIds": {
             "checklistbank-139831": "769692"
           },
+          "uuid": "849daed6-439f-4baf-9fc4-1e679d4b1a8d",
           "children": []
         }
       ]
@@ -56403,6 +56895,7 @@
           "sourceIds": {
             "checklistbank-139831": "769354"
           },
+          "uuid": "1ea0f8c3-3455-4075-86bb-f5fcfe150035",
           "children": []
         }
       ]
@@ -56857,6 +57350,7 @@
           "sourceIds": {
             "checklistbank-139831": "769663"
           },
+          "uuid": "70e79e37-5541-440c-9a43-acbcbdd780c2",
           "children": []
         },
         {
@@ -56869,6 +57363,7 @@
           "sourceIds": {
             "checklistbank-139831": "769665"
           },
+          "uuid": "096e0b0f-1106-47e3-b23f-f736c5023b60",
           "children": []
         },
         {
@@ -56881,6 +57376,7 @@
           "sourceIds": {
             "checklistbank-139831": "769667"
           },
+          "uuid": "2559dfcd-7e94-468d-b7c0-2fec2054a5c8",
           "children": []
         },
         {
@@ -56893,6 +57389,7 @@
           "sourceIds": {
             "checklistbank-139831": "769668"
           },
+          "uuid": "8ce469ee-17ef-4b69-bfe7-8efbe843a78d",
           "children": []
         },
         {
@@ -56905,6 +57402,7 @@
           "sourceIds": {
             "checklistbank-139831": "769672"
           },
+          "uuid": "ebe075e2-7207-4597-ba6c-37dcd45569ee",
           "children": []
         },
         {
@@ -56917,6 +57415,7 @@
           "sourceIds": {
             "checklistbank-139831": "769673"
           },
+          "uuid": "cf798e26-0297-4e15-b910-9124c756f793",
           "children": []
         },
         {
@@ -56929,6 +57428,7 @@
           "sourceIds": {
             "checklistbank-139831": "769674"
           },
+          "uuid": "70ed7edd-c410-449a-a5c3-19c6a0635f44",
           "children": []
         }
       ]
@@ -58650,6 +59150,7 @@
           "sourceIds": {
             "checklistbank-139831": "769157"
           },
+          "uuid": "5058aee7-23e9-4148-b3cb-e531694bc717",
           "children": []
         }
       ]
@@ -61850,6 +62351,7 @@
           "sourceIds": {
             "checklistbank-139831": "769600"
           },
+          "uuid": "a7bd3930-fd48-4dc2-b61a-54820ffb3948",
           "children": []
         }
       ]
@@ -62116,6 +62618,7 @@
           "sourceIds": {
             "checklistbank-139831": "769762"
           },
+          "uuid": "d58093bd-131f-4551-9052-ad47cba49218",
           "children": []
         }
       ]
@@ -63837,6 +64340,7 @@
           "sourceIds": {
             "checklistbank-139831": "769251"
           },
+          "uuid": "cdaabe71-43ba-45f3-afeb-ed4fff766235",
           "children": []
         }
       ]
@@ -64675,6 +65179,7 @@
           "sourceIds": {
             "checklistbank-139831": "769718"
           },
+          "uuid": "76c9c2fb-a82d-4dad-92da-b491b35e8478",
           "children": []
         },
         {
@@ -64735,6 +65240,7 @@
           "sourceIds": {
             "checklistbank-139831": "769727"
           },
+          "uuid": "bce7b03e-316c-42de-bdc4-bc91f4120b81",
           "children": []
         },
         {
@@ -64747,6 +65253,7 @@
           "sourceIds": {
             "checklistbank-139831": "769728"
           },
+          "uuid": "9db6cbe6-fd09-4f90-b2b2-68076bb289c8",
           "children": []
         },
         {
@@ -64783,6 +65290,7 @@
           "sourceIds": {
             "checklistbank-139831": "769734"
           },
+          "uuid": "bc536e16-7799-4ac5-97d9-e06766f72ab5",
           "children": []
         },
         {
@@ -64843,6 +65351,7 @@
           "sourceIds": {
             "checklistbank-139831": "769741"
           },
+          "uuid": "3d307b12-997a-4346-af1e-44203e6e649e",
           "children": []
         },
         {
@@ -64855,6 +65364,7 @@
           "sourceIds": {
             "checklistbank-139831": "769742"
           },
+          "uuid": "b28a614e-c13c-413f-93a0-9893c8490700",
           "children": []
         },
         {
@@ -64867,6 +65377,7 @@
           "sourceIds": {
             "checklistbank-139831": "769743"
           },
+          "uuid": "5b76c896-5d65-403b-96bf-b66fa2ae631b",
           "children": []
         },
         {
@@ -64891,6 +65402,7 @@
           "sourceIds": {
             "checklistbank-139831": "769746"
           },
+          "uuid": "334968df-cb11-465d-8fe0-7184f8326738",
           "children": []
         },
         {
@@ -64903,6 +65415,7 @@
           "sourceIds": {
             "checklistbank-139831": "769748"
           },
+          "uuid": "97662bb3-3d0a-48e9-a201-2395a126c8be",
           "children": []
         },
         {
@@ -64951,6 +65464,7 @@
           "sourceIds": {
             "checklistbank-139831": "769755"
           },
+          "uuid": "1a9342e4-abb6-48d3-a816-b86d0e3dccfd",
           "children": []
         },
         {
@@ -64975,6 +65489,7 @@
           "sourceIds": {
             "checklistbank-139831": "769759"
           },
+          "uuid": "e9f9b94a-5e85-4236-ad4d-fdfadd6605cd",
           "children": []
         },
         {
@@ -64987,6 +65502,7 @@
           "sourceIds": {
             "checklistbank-139831": "769760"
           },
+          "uuid": "d826ada0-304e-424f-a87c-f05d19cb8620",
           "children": []
         }
       ]
@@ -70212,14 +70728,20 @@
           "authorship": "(C.F. Schultz) Hyl. ex Nordh",
           "sourceIds": {
             "checklistbank": "4468",
-            "wikispecies": "Myosotis_laxa",
+            "wikispecies": [
+              "Myosotis_laxa"
+            ],
             "checklistbank-2008": "109042",
-            "gbif-backbone": "7807285"
+            "gbif-backbone": "7807285",
+            "checklistbank-2232": [
+              "2358174"
+            ]
           },
           "children": [],
           "uuid": "dbc1e1dc-a81e-5f9-b8f-786b949c02b210",
           "commonName": "Bay Forget-Me-Not",
-          "description": "Myosotis laxa is a species of flowering herb in the family Boraginaceae."
+          "description": "Myosotis laxa is a species of flowering herb in the family Boraginaceae.",
+          "authorityIds": "checklistbank:4468,checklistbank-2008:109042,checklistbank-2232:2358174,gbif-backbone:7807285,wikispecies:Myosotis_laxa"
         },
         {
           "id": "SP_MYOSOTIS_RETUSIFOLIA_R_AFONSO",
@@ -70310,13 +70832,19 @@
           "authorship": "auct. pro parte, non Boiss.",
           "sourceIds": {
             "checklistbank": "161969",
-            "wikispecies": "Myosotis_olympica",
+            "wikispecies": [
+              "Myosotis_olympica"
+            ],
             "checklistbank-2008": "619969",
-            "gbif-backbone": "8010496"
+            "gbif-backbone": "8010496",
+            "checklistbank-2232": [
+              "2358093"
+            ]
           },
           "children": [],
           "uuid": "ca09d8b3-f7dc-5ba-8e3-562028d53a01b9",
-          "description": "Myosotis olympica is a boraginaceae species found in its native region."
+          "description": "Myosotis olympica is a boraginaceae species found in its native region.",
+          "authorityIds": "checklistbank:161969,checklistbank-2008:619969,checklistbank-2232:2358093,gbif-backbone:8010496,wikispecies:Myosotis_olympica"
         },
         {
           "id": "SP_MYOSOTIS_NEMOROSA_BESSER",
@@ -70360,14 +70888,20 @@
           "authorship": "(Murb.) Greuter & Burdet",
           "sourceIds": {
             "checklistbank": "Myosotis_ramosissima_subsp_tubuliflora_Murb_Greuter__Burdet",
-            "wikispecies": "Myosotis_ramosissima",
+            "wikispecies": [
+              "Myosotis_ramosissima"
+            ],
             "checklistbank-2008": "109084",
-            "gbif-backbone": "7294856"
+            "gbif-backbone": "7294856",
+            "checklistbank-2232": [
+              "2358285"
+            ]
           },
           "children": [],
           "uuid": "d4c32da9-baf9-59f-895-466d996eafd77a",
           "commonName": "Early Forget-Me-Not",
-          "description": "Myosotis ramosissima, the early forget-me-not, is a flowering plant species in the family Boraginaceae."
+          "description": "Myosotis ramosissima, the early forget-me-not, is a flowering plant species in the family Boraginaceae.",
+          "authorityIds": "checklistbank:Myosotis_ramosissima_subsp_tubuliflora_Murb_Greuter__Burdet,checklistbank-2008:109084,checklistbank-2232:2358285,gbif-backbone:7294856,wikispecies:Myosotis_ramosissima"
         },
         {
           "id": "SP_MYOSOTIS_POPOVII_DOBROCZ",
@@ -70439,14 +70973,20 @@
           "authorship": "(Blaise & Kerguélen) Valdés",
           "sourceIds": {
             "checklistbank": "Myosotis_alpestris_subsp_pyrenaeorum_Blaise__Kerguélen_Valdés",
-            "wikispecies": "Myosotis_alpestris",
+            "wikispecies": [
+              "Myosotis_alpestris"
+            ],
             "checklistbank-2008": "108986",
-            "gbif-backbone": "7295191"
+            "gbif-backbone": "7295191",
+            "checklistbank-2232": [
+              "2357446"
+            ]
           },
           "children": [],
           "uuid": "48e3b409-98bd-563-9d5-5c7a4c49a2997a",
           "commonName": "Alpine Forget-Me-Not",
-          "description": "Myosotis alpestris or alpine forget-me-not is a herbaceous perennial plant in the flowering plant family Boraginaceae."
+          "description": "Myosotis alpestris or alpine forget-me-not is a herbaceous perennial plant in the flowering plant family Boraginaceae.",
+          "authorityIds": "checklistbank:Myosotis_alpestris_subsp_pyrenaeorum_Blaise__Kerguélen_Valdés,checklistbank-2008:108986,checklistbank-2232:2357446,gbif-backbone:7295191,wikispecies:Myosotis_alpestris"
         },
         {
           "id": "SP_MYOSOTIS_ELDERI_L_B_MOORE",
@@ -70473,11 +71013,17 @@
           "authorship": "(L.B.Moore) Meudt et al.",
           "sourceIds": {
             "checklistbank": "Myosotis_pottsiana_LBMoore_Meudt__al",
-            "wikispecies": "Myosotis_pottsiana"
+            "wikispecies": [
+              "Myosotis_pottsiana"
+            ],
+            "checklistbank-2232": [
+              "2997025"
+            ]
           },
           "children": [],
           "uuid": "dc50240f-dc3b-5ae-9f5-d80e6090396c7d",
-          "description": "Myosotis pottsiana is a species of flowering plant in the family Boraginaceae, endemic to the North Island of New Zealand."
+          "description": "Myosotis pottsiana is a species of flowering plant in the family Boraginaceae, endemic to the North Island of New Zealand.",
+          "authorityIds": "checklistbank:Myosotis_pottsiana_LBMoore_Meudt__al,checklistbank-2232:2997025,wikispecies:Myosotis_pottsiana"
         },
         {
           "id": "SP_MYOSOTIS_DYERAE_E_J_LOWE_EX_HOOK_F_P_D_SELL",
@@ -72063,12 +72609,18 @@
           "authorship": "(L.) Hill, 1764",
           "sourceIds": {
             "checklistbank": "108996",
-            "wikispecies": "Myosotis_arvensis",
-            "gbif-backbone": "7295175"
+            "wikispecies": [
+              "Myosotis_arvensis"
+            ],
+            "gbif-backbone": "7295175",
+            "checklistbank-2232": [
+              "2357149"
+            ]
           },
           "children": [],
           "description": "Myosotis arvensis or field forget-me-not is a herbaceous annual to short lived perennial flowering plant in the family Boraginaceae.",
-          "uuid": "b0ac9a4d-c0af-5b3-981-bd19cfe0033624"
+          "uuid": "b0ac9a4d-c0af-5b3-981-bd19cfe0033624",
+          "authorityIds": "checklistbank:108996,checklistbank-2232:2357149,gbif-backbone:7295175,wikispecies:Myosotis_arvensis"
         },
         {
           "id": "SP_MYOSOTIS_BALBISIANA_JORD_1852",
@@ -72080,10 +72632,16 @@
           "authorship": "Jord., 1852",
           "sourceIds": {
             "checklistbank": "109001",
-            "wikispecies": "Myosotis_balbisiana"
+            "wikispecies": [
+              "Myosotis_balbisiana"
+            ],
+            "checklistbank-2232": [
+              "2357128"
+            ]
           },
           "children": [],
-          "uuid": "024c00d1-34f5-5f3-ba3-2784ebd2e96b2b"
+          "uuid": "024c00d1-34f5-5f3-ba3-2784ebd2e96b2b",
+          "authorityIds": "checklistbank:109001,checklistbank-2232:2357128,wikispecies:Myosotis_balbisiana"
         },
         {
           "id": "SP_MYOSOTIS_CONGESTA_SHUTTLEW_1891",
@@ -72095,10 +72653,16 @@
           "authorship": "Shuttlew., 1891",
           "sourceIds": {
             "checklistbank": "109011",
-            "wikispecies": "Myosotis_congesta"
+            "wikispecies": [
+              "Myosotis_congesta"
+            ],
+            "checklistbank-2232": [
+              "2898466"
+            ]
           },
           "children": [],
-          "uuid": "0a0759b9-4d16-521-b04-92dc1abe6a2a91"
+          "uuid": "0a0759b9-4d16-521-b04-92dc1abe6a2a91",
+          "authorityIds": "checklistbank:109011,checklistbank-2232:2898466,wikispecies:Myosotis_congesta"
         },
         {
           "id": "SP_MYOSOTIS_DECUMBENS_HOST_1827",
@@ -72139,10 +72703,16 @@
           "authorship": "(J.Gay ex DC.) J.Gay ex Leresche & Levier, 1880",
           "sourceIds": {
             "checklistbank": "109101",
-            "wikispecies": "Myosotis_stolonifera"
+            "wikispecies": [
+              "Myosotis_stolonifera"
+            ],
+            "checklistbank-2232": [
+              "2358227"
+            ]
           },
           "children": [],
-          "uuid": "3c5aa47e-0e10-5c7-9d9-eba443ac01963f"
+          "uuid": "3c5aa47e-0e10-5c7-9d9-eba443ac01963f",
+          "authorityIds": "checklistbank:109101,checklistbank-2232:2358227,wikispecies:Myosotis_stolonifera"
         },
         {
           "id": "SP_MYOSOTIS_REHSTEINERI_HAUSM_WARTM_EX_REUT_1856",
@@ -72154,12 +72724,21 @@
           "authorship": "(Hausm.) Wartm. ex Reut., 1856",
           "sourceIds": {
             "checklistbank": "161481",
-            "wikispecies": "Myosotis_rehsteineri",
-            "gbif-backbone": "7930390"
+            "wikispecies": [
+              "Myosotis_rehsteineri"
+            ],
+            "gbif-backbone": "7930390",
+            "checklistbank-2232": [
+              "2358294"
+            ],
+            "checklistbank-1141": [
+              "20ba1a7d-78c8-5899-994c-e287e5553f83"
+            ]
           },
           "children": [],
           "description": "Myosotis rehsteineri is a species of flowering plant belonging to the family Boraginaceae.",
-          "uuid": "6f30ee26-69a3-536-a0b-e5ee12cebf3931"
+          "uuid": "6f30ee26-69a3-536-a0b-e5ee12cebf3931",
+          "authorityIds": "checklistbank:161481,checklistbank-1141:20ba1a7d-78c8-5899-994c-e287e5553f83,checklistbank-2232:2358294,gbif-backbone:7930390,wikispecies:Myosotis_rehsteineri"
         },
         {
           "id": "SP_MYOSOTIS_REFRACTA_BOISS_1839",
@@ -72171,11 +72750,17 @@
           "authorship": "Boiss., 1839",
           "sourceIds": {
             "checklistbank": "611002",
-            "wikispecies": "Myosotis_refracta",
-            "gbif-backbone": "7294851"
+            "wikispecies": [
+              "Myosotis_refracta"
+            ],
+            "gbif-backbone": "7294851",
+            "checklistbank-2232": [
+              "2358292"
+            ]
           },
           "children": [],
-          "uuid": "93138ace-d18d-589-adb-09b7777c26d2c9"
+          "uuid": "93138ace-d18d-589-adb-09b7777c26d2c9",
+          "authorityIds": "checklistbank:611002,checklistbank-2232:2358292,gbif-backbone:7294851,wikispecies:Myosotis_refracta"
         },
         {
           "id": "SP_MYOSOTIS_AMBIGENS_B_G_GRAU",
@@ -72247,20 +72832,6 @@
           },
           "children": [],
           "uuid": "2a0cc806-b4c2-586-bfe-580fc88fc3fea7"
-        },
-        {
-          "id": "SP_MYOSOTIS_MRKVICKANA_VELEN",
-          "name": "Myosotis mrkvickana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Velen.",
-          "sourceIds": {
-            "checklistbank": "162365"
-          },
-          "children": [],
-          "uuid": "e59017ce-3932-59f-870-050967255b6ec6"
         },
         {
           "id": "SP_MYOSOTIS_TINEOI",
@@ -72420,21 +72991,6 @@
             "checklistbank-1141": "c45e78c5-2838-5e15-9527-97622c12f5b6"
           },
           "uuid": "5a1f8aba-980a-4a25-afef-62eff0281814",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_BALBISIANA_JORD",
-          "name": "Myosotis balbisiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Jord.",
-          "sourceIds": {
-            "checklistbank-2232": "2357128",
-            "wikispecies": "Myosotis_balbisiana"
-          },
-          "uuid": "0b3b2de7-5678-47a8-9fa9-b6edad21fc1a",
           "children": []
         },
         {
@@ -72619,21 +73175,6 @@
             "checklistbank-1141": "3f2c817c-3d44-5431-9944-70e09ebd275e"
           },
           "uuid": "ed103d63-b563-4cf3-901c-b18147735738",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_ALPESTRIS_VELEN_STRID",
-          "name": "Myosotis alpestris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "(Velen.) Strid",
-          "sourceIds": {
-            "checklistbank-2232": "2357446",
-            "wikispecies": "Myosotis_alpestris"
-          },
-          "uuid": "f37ce5df-5406-47fd-8c74-a236c420d539",
           "children": []
         },
         {
@@ -73103,21 +73644,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOSOTIS_OLYMPICA_BOISS",
-          "name": "Myosotis olympica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Boiss.",
-          "sourceIds": {
-            "checklistbank-2232": "2358093",
-            "wikispecies": "Myosotis_olympica"
-          },
-          "uuid": "2ec48b04-7f57-4c2b-9ad2-5a7af74c2f42",
-          "children": []
-        },
-        {
           "id": "SP_MYOSOTIS_OREOPHILA_PETRIE",
           "name": "Myosotis oreophila",
           "rank": "SPECIES",
@@ -73230,21 +73756,6 @@
             "checklistbank-2232": "2358172"
           },
           "uuid": "15cb6d51-a750-41d5-ae57-676fb77be6b9",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_LAXA_LEHM",
-          "name": "Myosotis laxa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Lehm.",
-          "sourceIds": {
-            "checklistbank-2232": "2358174",
-            "wikispecies": "Myosotis_laxa"
-          },
-          "uuid": "6bced8a3-722c-4f95-aedb-90fd7559157b",
           "children": []
         },
         {
@@ -73404,21 +73915,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOSOTIS_STOLONIFERA_J_GAY_EX_DC_J_GAY_EX_LERESCHE_LEVIER",
-          "name": "Myosotis stolonifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "(J.Gay ex DC.) J.Gay ex Leresche & Levier",
-          "sourceIds": {
-            "checklistbank-2232": "2358227",
-            "wikispecies": "Myosotis_stolonifera"
-          },
-          "uuid": "6eda3c84-0eec-412f-a1a1-e6d2303b33c4",
-          "children": []
-        },
-        {
           "id": "SP_MYOSOTIS_SOLEIROLII_GODR",
           "name": "Myosotis soleirolii",
           "rank": "SPECIES",
@@ -73533,21 +74029,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOSOTIS_RAMOSISSIMA_ROCHEL_EX_SCHULT",
-          "name": "Myosotis ramosissima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Rochel ex Schult.",
-          "sourceIds": {
-            "checklistbank-2232": "2358285",
-            "wikispecies": "Myosotis_ramosissima"
-          },
-          "uuid": "2d0ee092-6be5-4a1b-94f6-694cbe44701c",
-          "children": []
-        },
-        {
           "id": "SP_MYOSOTIS_SEMIAMPLEXICAULIS_DC",
           "name": "Myosotis semiamplexicaulis",
           "rank": "SPECIES",
@@ -73559,37 +74040,6 @@
             "checklistbank-2232": "2358287"
           },
           "uuid": "04a08111-82da-4414-9b9f-18c2c43b8051",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_REFRACTA_BOISS",
-          "name": "Myosotis refracta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Boiss.",
-          "sourceIds": {
-            "checklistbank-2232": "2358292",
-            "wikispecies": "Myosotis_refracta"
-          },
-          "uuid": "9eb8fcc6-9895-47ba-a7d9-358964e8d35a",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_REHSTEINERI_HAUSM_WARTM_EX_REUT",
-          "name": "Myosotis rehsteineri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "(Hausm.) Wartm. ex Reut.",
-          "sourceIds": {
-            "checklistbank-2232": "2358294",
-            "wikispecies": "Myosotis_rehsteineri",
-            "checklistbank-1141": "20ba1a7d-78c8-5899-994c-e287e5553f83"
-          },
-          "uuid": "a74ca6f7-d422-4189-9755-12eb5e976bcc",
           "children": []
         },
         {
@@ -73763,21 +74213,6 @@
             "checklistbank-2232": "3015407"
           },
           "uuid": "3ea48fa4-1864-46a3-a686-208f924ac289",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_ARVENSIS_L_HILL",
-          "name": "Myosotis arvensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "(L.) Hill",
-          "sourceIds": {
-            "checklistbank-2232": "2357149",
-            "wikispecies": "Myosotis_arvensis"
-          },
-          "uuid": "e011b618-c8b6-4457-aee2-40a667b747c9",
           "children": []
         },
         {
@@ -73978,21 +74413,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOSOTIS_POTTSIANA_L_B_MOORE_MEUDT_PREBBLE_R_J_STANLEY_THORSEN",
-          "name": "Myosotis pottsiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "(L.B.Moore) Meudt, Prebble, R.J.Stanley & Thorsen",
-          "sourceIds": {
-            "checklistbank-2232": "2997025",
-            "wikispecies": "Myosotis_pottsiana"
-          },
-          "uuid": "617f4833-f283-4ba9-9c71-9773707f37bf",
-          "children": []
-        },
-        {
           "id": "SP_MYOSOTIS_KAZAKHSTANICA_O_D_NIKIF",
           "name": "Myosotis kazakhstanica",
           "rank": "SPECIES",
@@ -74032,21 +74452,6 @@
             "checklistbank-2232": "2896702"
           },
           "uuid": "1b13ceb0-f1f9-4a00-aec1-3f87080754c2",
-          "children": []
-        },
-        {
-          "id": "SP_MYOSOTIS_CONGESTA_SHUTTLEW",
-          "name": "Myosotis congesta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myosotis",
-          "authorship": "Shuttlew.",
-          "sourceIds": {
-            "checklistbank-2232": "2898466",
-            "wikispecies": "Myosotis_congesta"
-          },
-          "uuid": "dd512984-1685-420d-99dd-0c57cd56d8f0",
           "children": []
         },
         {
@@ -74434,6 +74839,30 @@
           },
           "uuid": "ba2df303-d197-4cf8-b173-e4a78a9a1e17",
           "children": []
+        },
+        {
+          "id": "SP_MYOSOTIS_GLAUCA",
+          "name": "Myosotis glauca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myosotis",
+          "sourceIds": {
+            "checklistbank-139831": "410559"
+          },
+          "uuid": "0cf01097-681d-417c-8aee-e9c26c5d6655"
+        },
+        {
+          "id": "SP_MYOSOTIS_PINETICOLA",
+          "name": "Myosotis pineticola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myosotis",
+          "sourceIds": {
+            "checklistbank-139831": "1046294"
+          },
+          "uuid": "af0c0b3b-f593-4f34-9058-230c02f7a262"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -76877,6 +77306,7 @@
           "sourceIds": {
             "checklistbank-139831": "769224"
           },
+          "uuid": "bf2537e8-f31a-4134-8589-6403a766c364",
           "children": []
         }
       ]
@@ -78220,21 +78650,6 @@
           "children": [],
           "description": "Pulmonaria saccharata, the Bethlehem lungwort or Bethlehem sage, is a species of flowering plant in the family Boraginaceae, native to France and Italy.",
           "uuid": "cf601cd8-28c1-58b-83a-24719117271854"
-        },
-        {
-          "id": "SP_PULMONARIA_VULGARIS_AUCT_PRO_PARTE",
-          "name": "Pulmonaria vulgaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pulmonaria",
-          "authorship": "auct. pro parte",
-          "sourceIds": {
-            "checklistbank": "161788",
-            "checklistbank-2008": "116431"
-          },
-          "children": [],
-          "uuid": "7c9e50f6-eaef-5b8-94c-db64d4435a16f2"
         },
         {
           "id": "SP_PULMONARIA_TUBEROSA_AUCT_NON_SCHRANK_1818",
@@ -80398,6 +80813,7 @@
           "sourceIds": {
             "checklistbank-139831": "165351"
           },
+          "uuid": "4dd71a50-6f94-451b-a9c4-22f564ceffa5",
           "children": []
         }
       ]
@@ -82462,6 +82878,7 @@
           "sourceIds": {
             "checklistbank-139831": "769159"
           },
+          "uuid": "920d7aba-5a7c-4918-931a-8b3ff75079e6",
           "children": []
         },
         {
@@ -82474,6 +82891,7 @@
           "sourceIds": {
             "checklistbank-139831": "769168"
           },
+          "uuid": "49e61b10-23d2-4f7c-9afa-38551daf127c",
           "children": []
         },
         {
@@ -82486,6 +82904,7 @@
           "sourceIds": {
             "checklistbank-139831": "769171"
           },
+          "uuid": "24d5b7ba-91bd-4ff1-b855-3c5de3b06d0f",
           "children": []
         },
         {
@@ -82498,6 +82917,7 @@
           "sourceIds": {
             "checklistbank-139831": "769173"
           },
+          "uuid": "ff981a3e-5cc4-4861-8587-8d3b7f2b5701",
           "children": []
         },
         {
@@ -82510,6 +82930,7 @@
           "sourceIds": {
             "checklistbank-139831": "769193"
           },
+          "uuid": "131cf492-32da-4cbc-afa9-cf29003f58a8",
           "children": []
         },
         {
@@ -82522,6 +82943,7 @@
           "sourceIds": {
             "checklistbank-139831": "769197"
           },
+          "uuid": "9258d7a6-984e-4005-887e-027bb1da72a9",
           "children": []
         }
       ]
@@ -85459,6 +85881,7 @@
           "sourceIds": {
             "checklistbank-139831": "769892"
           },
+          "uuid": "dacd28df-bbe3-4e5c-be4e-71e1cfb9a4e9",
           "children": []
         }
       ]
@@ -85684,20 +86107,6 @@
           },
           "children": [],
           "uuid": "ba04a79e-523d-5f8-9af-0761d5ea4f4d2a"
-        },
-        {
-          "id": "SP_LITHODORA_ROSMARINIFOLIA_TEN_I_M_JOHNST",
-          "name": "Lithodora rosmarinifolia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lithodora",
-          "authorship": "(Ten.) I.M.Johnst.",
-          "sourceIds": {
-            "checklistbank": "162009"
-          },
-          "children": [],
-          "uuid": "a8c538d1-cc7d-53b-b06-a5f7b883024fb6"
         }
       ]
     },
@@ -88600,6 +89009,7 @@
           "sourceIds": {
             "checklistbank-139831": "769315"
           },
+          "uuid": "e41f02e8-bde7-4356-91d8-ebafb6d57fa0",
           "children": []
         },
         {
@@ -88624,6 +89034,7 @@
           "sourceIds": {
             "checklistbank-139831": "769319"
           },
+          "uuid": "7a50eb97-8435-40f2-935d-5b69c44644bf",
           "children": []
         },
         {
@@ -88648,6 +89059,7 @@
           "sourceIds": {
             "checklistbank-139831": "769321"
           },
+          "uuid": "bbd2a640-fdbb-4dc9-8231-57a1b2ea684e",
           "children": []
         },
         {
@@ -88672,6 +89084,7 @@
           "sourceIds": {
             "checklistbank-139831": "769324"
           },
+          "uuid": "8ec9936e-04ef-4481-bc97-163d99983be6",
           "children": []
         },
         {
@@ -92388,6 +92801,7 @@
           "sourceIds": {
             "checklistbank-139831": "769875"
           },
+          "uuid": "8c5c8c05-aa84-424d-a5bd-a4d29b82b6e4",
           "children": []
         },
         {
@@ -92424,6 +92838,7 @@
           "sourceIds": {
             "checklistbank-139831": "769883"
           },
+          "uuid": "464bea71-d98f-4bf7-bc25-26050ec20279",
           "children": []
         },
         {
@@ -93368,6 +93783,7 @@
           "sourceIds": {
             "checklistbank-139831": "770541"
           },
+          "uuid": "ff671b74-2c54-4adb-8a3a-efb6001c860b",
           "children": []
         },
         {
@@ -93380,6 +93796,7 @@
           "sourceIds": {
             "checklistbank-139831": "770542"
           },
+          "uuid": "0e1238fd-9630-4192-9d5a-4e12194cacae",
           "children": []
         },
         {
@@ -93404,6 +93821,7 @@
           "sourceIds": {
             "checklistbank-139831": "770552"
           },
+          "uuid": "5dc6227b-6578-43b8-9be6-a1da802cdd48",
           "children": []
         },
         {
@@ -93634,6 +94052,7 @@
           "sourceIds": {
             "checklistbank-139831": "769921"
           },
+          "uuid": "6ef9d917-1d8f-4e53-8636-b2777130b042",
           "children": []
         },
         {
@@ -93658,6 +94077,7 @@
           "sourceIds": {
             "checklistbank-139831": "769926"
           },
+          "uuid": "c53325b3-71b0-4a44-a5da-e8c879a0e2b3",
           "children": []
         },
         {
@@ -97115,21 +97535,6 @@
           "uuid": "63ad2b3e-51f1-574-b9d-d3caa83eb41807"
         },
         {
-          "id": "SP_HELIOTROPIUM_SUAVEOLENS_M_BIEB",
-          "name": "Heliotropium suaveolens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Heliotropium",
-          "authorship": "M.Bieb.",
-          "sourceIds": {
-            "checklistbank": "162041",
-            "checklistbank-2232": "3265116"
-          },
-          "children": [],
-          "uuid": "ae166c67-53bc-54b-aee-d767149169947f"
-        },
-        {
           "id": "SP_HELIOTROPIUM_KRAUSEANUM",
           "name": "Heliotropium krauseanum",
           "rank": "SPECIES",
@@ -97368,6 +97773,7 @@
           "sourceIds": {
             "checklistbank-139831": "769945"
           },
+          "uuid": "966ec261-f022-40c0-bfbb-ff739f84e5b0",
           "children": []
         },
         {
@@ -97380,6 +97786,7 @@
           "sourceIds": {
             "checklistbank-139831": "769946"
           },
+          "uuid": "d78124b9-829a-48de-abd4-f6679bddd294",
           "children": []
         },
         {
@@ -97392,6 +97799,7 @@
           "sourceIds": {
             "checklistbank-139831": "769949"
           },
+          "uuid": "27e5cb8c-1acf-4cfe-bb9a-0db21b5547e5",
           "children": []
         },
         {
@@ -97404,6 +97812,7 @@
           "sourceIds": {
             "checklistbank-139831": "769950"
           },
+          "uuid": "7a953b26-3d76-4b4e-8b8d-ea4a980e6ec0",
           "children": []
         },
         {
@@ -97416,6 +97825,7 @@
           "sourceIds": {
             "checklistbank-139831": "769952"
           },
+          "uuid": "4b8e4032-6d80-4027-bf84-ceea2dab4d71",
           "children": []
         },
         {
@@ -97452,6 +97862,7 @@
           "sourceIds": {
             "checklistbank-139831": "769964"
           },
+          "uuid": "9a3146a8-9b12-4a18-b102-51f035a64558",
           "children": []
         },
         {
@@ -97476,6 +97887,7 @@
           "sourceIds": {
             "checklistbank-139831": "769967"
           },
+          "uuid": "bc876b0d-5480-46c5-8aa0-a4081ca0de65",
           "children": []
         },
         {
@@ -97488,6 +97900,7 @@
           "sourceIds": {
             "checklistbank-139831": "769968"
           },
+          "uuid": "0b6b5ca2-2c22-4a46-bec3-b3d8da58c745",
           "children": []
         },
         {
@@ -97500,6 +97913,7 @@
           "sourceIds": {
             "checklistbank-139831": "769969"
           },
+          "uuid": "73971a05-9572-4e71-92c6-4d1fa79b8285",
           "children": []
         },
         {
@@ -97548,6 +97962,7 @@
           "sourceIds": {
             "checklistbank-139831": "769985"
           },
+          "uuid": "1da39bd5-e301-4d8f-9781-73725a9fdeb4",
           "children": []
         },
         {
@@ -97572,6 +97987,7 @@
           "sourceIds": {
             "checklistbank-139831": "769990"
           },
+          "uuid": "56869cd0-4458-48f4-8fed-0e9ea797712f",
           "children": []
         },
         {
@@ -97644,6 +98060,7 @@
           "sourceIds": {
             "checklistbank-139831": "770007"
           },
+          "uuid": "a65c464f-706d-4be0-a209-64dde9295d4c",
           "children": []
         },
         {
@@ -97668,6 +98085,7 @@
           "sourceIds": {
             "checklistbank-139831": "770020"
           },
+          "uuid": "67bc6f59-6749-45d7-95c2-fa5807bf3564",
           "children": []
         },
         {
@@ -97728,6 +98146,7 @@
           "sourceIds": {
             "checklistbank-139831": "770044"
           },
+          "uuid": "c0941e2f-28fb-4f45-99a2-4b80e66967a8",
           "children": []
         },
         {
@@ -97740,6 +98159,7 @@
           "sourceIds": {
             "checklistbank-139831": "770045"
           },
+          "uuid": "81ef5207-f5b1-4bfd-94f6-7f2005159fd0",
           "children": []
         },
         {
@@ -97752,6 +98172,7 @@
           "sourceIds": {
             "checklistbank-139831": "770046"
           },
+          "uuid": "2a4801c4-f929-4c6b-ba7c-b196b1eecb27",
           "children": []
         },
         {
@@ -97836,6 +98257,7 @@
           "sourceIds": {
             "checklistbank-139831": "770062"
           },
+          "uuid": "9e4fae12-a5b7-40d9-9517-a0042e092630",
           "children": []
         },
         {
@@ -97884,6 +98306,7 @@
           "sourceIds": {
             "checklistbank-139831": "770070"
           },
+          "uuid": "9127bfeb-2528-4cd6-bf83-6c05244dd258",
           "children": []
         },
         {
@@ -97896,6 +98319,7 @@
           "sourceIds": {
             "checklistbank-139831": "770074"
           },
+          "uuid": "46497819-614c-437a-9c78-32f4bedd45cc",
           "children": []
         },
         {
@@ -97908,6 +98332,7 @@
           "sourceIds": {
             "checklistbank-139831": "770076"
           },
+          "uuid": "f99decf9-af39-4250-97e9-4f61556c7611",
           "children": []
         },
         {
@@ -97932,6 +98357,7 @@
           "sourceIds": {
             "checklistbank-139831": "770081"
           },
+          "uuid": "7cf47a73-620c-45ea-9e90-ca9e5b0ec413",
           "children": []
         },
         {
@@ -97980,6 +98406,7 @@
           "sourceIds": {
             "checklistbank-139831": "770088"
           },
+          "uuid": "36fa06c3-f349-4b07-a795-fff5471afc6f",
           "children": []
         },
         {
@@ -97992,6 +98419,7 @@
           "sourceIds": {
             "checklistbank-139831": "770091"
           },
+          "uuid": "d15d57e3-1e11-4a8d-b76a-f208b119719b",
           "children": []
         },
         {
@@ -98016,6 +98444,7 @@
           "sourceIds": {
             "checklistbank-139831": "770093"
           },
+          "uuid": "b40a1a59-be86-4a2b-b01b-a6bee691a52a",
           "children": []
         },
         {
@@ -98040,6 +98469,7 @@
           "sourceIds": {
             "checklistbank-139831": "770095"
           },
+          "uuid": "92ed8829-d158-4b4f-a516-8480b404fa53",
           "children": []
         },
         {
@@ -98052,6 +98482,7 @@
           "sourceIds": {
             "checklistbank-139831": "770097"
           },
+          "uuid": "52c1ead7-4f54-48f5-942d-e39259a1b363",
           "children": []
         },
         {
@@ -98076,6 +98507,7 @@
           "sourceIds": {
             "checklistbank-139831": "770100"
           },
+          "uuid": "cfd45850-3241-4a68-9705-b900d815ae0a",
           "children": []
         },
         {
@@ -98136,6 +98568,7 @@
           "sourceIds": {
             "checklistbank-139831": "770110"
           },
+          "uuid": "c2891333-6c1f-4dac-b3ae-c4e7668043cb",
           "children": []
         },
         {
@@ -98196,6 +98629,7 @@
           "sourceIds": {
             "checklistbank-139831": "770124"
           },
+          "uuid": "1dd62d57-b728-4529-b4a4-ac12a6b2bdd9",
           "children": []
         },
         {
@@ -98208,6 +98642,7 @@
           "sourceIds": {
             "checklistbank-139831": "770126"
           },
+          "uuid": "170959aa-9c8f-4629-af48-1f4b702de95e",
           "children": []
         },
         {
@@ -98232,6 +98667,7 @@
           "sourceIds": {
             "checklistbank-139831": "770133"
           },
+          "uuid": "2d1ea5dd-e8ac-4a1d-bca0-9ce1959bb9f9",
           "children": []
         },
         {
@@ -98328,6 +98764,7 @@
           "sourceIds": {
             "checklistbank-139831": "770154"
           },
+          "uuid": "76411ad5-6cfe-423e-b03d-79901318d767",
           "children": []
         },
         {
@@ -98436,6 +98873,7 @@
           "sourceIds": {
             "checklistbank-139831": "770167"
           },
+          "uuid": "049b5c69-4dc6-418d-85f2-46e54297b432",
           "children": []
         },
         {
@@ -98448,6 +98886,7 @@
           "sourceIds": {
             "checklistbank-139831": "770168"
           },
+          "uuid": "5f64e739-8e9b-4989-b4c1-75124eeea05c",
           "children": []
         },
         {
@@ -98472,6 +98911,7 @@
           "sourceIds": {
             "checklistbank-139831": "770172"
           },
+          "uuid": "45a5d5e5-96fa-49b5-b53a-2270ad347bc9",
           "children": []
         },
         {
@@ -98544,6 +98984,7 @@
           "sourceIds": {
             "checklistbank-139831": "770184"
           },
+          "uuid": "86352982-acef-43c3-9f7e-890552854603",
           "children": []
         },
         {
@@ -98556,6 +98997,7 @@
           "sourceIds": {
             "checklistbank-139831": "770185"
           },
+          "uuid": "5317c826-6c96-49d6-874e-b3f44732ae88",
           "children": []
         },
         {
@@ -98644,20 +99086,6 @@
           "children": [],
           "uuid": "930ec5c6-e895-5c8-911-6b5660a279a956",
           "description": "Procopiana insularis is a boraginaceae species found in its native region."
-        },
-        {
-          "id": "SP_PROCOPIANA_CIRCINALIS_RUNEMARK_PAWLLL",
-          "name": "Procopiana circinalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Procopiana",
-          "authorship": "(Runemark) Pawlll.",
-          "sourceIds": {
-            "checklistbank": "161836"
-          },
-          "children": [],
-          "uuid": "db8b2a6e-e30d-5b3-904-95645f91b55dff"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -101165,6 +101593,7 @@
           "sourceIds": {
             "checklistbank-139831": "190875"
           },
+          "uuid": "79f643ed-161a-49c5-a18d-62241ef045e9",
           "children": []
         },
         {
@@ -101309,6 +101738,7 @@
           "sourceIds": {
             "checklistbank-139831": "769366"
           },
+          "uuid": "e3c0a6a0-cc61-46c7-bb89-46c34c96e480",
           "children": []
         },
         {
@@ -101333,6 +101763,7 @@
           "sourceIds": {
             "checklistbank-139831": "769368"
           },
+          "uuid": "090f0ec7-1c10-44bb-9fc5-421a404c4806",
           "children": []
         },
         {
@@ -101357,6 +101788,7 @@
           "sourceIds": {
             "checklistbank-139831": "769377"
           },
+          "uuid": "a8d69e44-9859-440a-a6af-49ce3b5dccec",
           "children": []
         },
         {
@@ -101369,6 +101801,7 @@
           "sourceIds": {
             "checklistbank-139831": "769379"
           },
+          "uuid": "7579ef89-8202-4a42-ad48-07c11a9157ab",
           "children": []
         },
         {
@@ -101429,6 +101862,7 @@
           "sourceIds": {
             "checklistbank-139831": "769388"
           },
+          "uuid": "8f976a23-4381-4cab-871b-4a3a8f0edeab",
           "children": []
         },
         {
@@ -101441,6 +101875,7 @@
           "sourceIds": {
             "checklistbank-139831": "769390"
           },
+          "uuid": "a12e8963-d802-4626-a75f-e70bd061be26",
           "children": []
         },
         {
@@ -101501,6 +101936,7 @@
           "sourceIds": {
             "checklistbank-139831": "769400"
           },
+          "uuid": "b82415c6-d1c7-4c19-9e67-a4bd4769374c",
           "children": []
         },
         {
@@ -101573,6 +102009,7 @@
           "sourceIds": {
             "checklistbank-139831": "769409"
           },
+          "uuid": "a9ffaea0-ce86-4f1b-913e-4132622f42f5",
           "children": []
         },
         {
@@ -101585,6 +102022,7 @@
           "sourceIds": {
             "checklistbank-139831": "769410"
           },
+          "uuid": "ad61f00d-e162-4415-bcfb-abdef2887338",
           "children": []
         },
         {
@@ -101633,6 +102071,7 @@
           "sourceIds": {
             "checklistbank-139831": "769426"
           },
+          "uuid": "d0647392-b6ce-4ffb-834c-778e52363c0a",
           "children": []
         },
         {
@@ -101657,6 +102096,7 @@
           "sourceIds": {
             "checklistbank-139831": "769432"
           },
+          "uuid": "43cdda4d-cc99-47b6-8e69-f2bd547c7ad5",
           "children": []
         },
         {
@@ -101825,6 +102265,7 @@
           "sourceIds": {
             "checklistbank-139831": "769458"
           },
+          "uuid": "f60466e2-5085-4c83-a7ee-94360c7e0dc2",
           "children": []
         },
         {
@@ -101837,6 +102278,7 @@
           "sourceIds": {
             "checklistbank-139831": "769460"
           },
+          "uuid": "b0ebe391-a531-400d-b66e-db9ad399a5e5",
           "children": []
         },
         {
@@ -101849,6 +102291,7 @@
           "sourceIds": {
             "checklistbank-139831": "769461"
           },
+          "uuid": "07bbe00d-e822-4066-9f3e-697b9d7e5371",
           "children": []
         },
         {
@@ -101993,6 +102436,7 @@
           "sourceIds": {
             "checklistbank-139831": "769489"
           },
+          "uuid": "4129245d-6972-43d2-b234-9a838eccf61f",
           "children": []
         },
         {
@@ -102101,6 +102545,7 @@
           "sourceIds": {
             "checklistbank-139831": "769503"
           },
+          "uuid": "7754159f-9006-43da-8967-fd32ab5f2037",
           "children": []
         },
         {
@@ -102209,6 +102654,7 @@
           "sourceIds": {
             "checklistbank-139831": "769520"
           },
+          "uuid": "3930f2ea-8e1d-4ebd-8afe-959e27991393",
           "children": []
         },
         {
@@ -102245,6 +102691,7 @@
           "sourceIds": {
             "checklistbank-139831": "769525"
           },
+          "uuid": "10250a01-6671-449a-9fd9-18720ce3cb1b",
           "children": []
         },
         {
@@ -102269,6 +102716,7 @@
           "sourceIds": {
             "checklistbank-139831": "769528"
           },
+          "uuid": "f1d0ae46-b41c-4b51-bfe1-c2c38455c8c0",
           "children": []
         },
         {
@@ -102281,6 +102729,7 @@
           "sourceIds": {
             "checklistbank-139831": "769529"
           },
+          "uuid": "6476e9ae-1769-4007-b593-706b2f23447d",
           "children": []
         }
       ],
@@ -106098,6 +106547,7 @@
           "sourceIds": {
             "checklistbank-139831": "78503"
           },
+          "uuid": "5e53f9e2-c862-47a9-8fd0-a2e49fd7c6e2",
           "children": []
         },
         {
@@ -106194,6 +106644,7 @@
           "sourceIds": {
             "checklistbank-139831": "166574"
           },
+          "uuid": "3ae8eba1-8f63-486a-9b9e-f4fd84adb49b",
           "children": []
         },
         {
@@ -106230,6 +106681,7 @@
           "sourceIds": {
             "checklistbank-139831": "166589"
           },
+          "uuid": "93154731-383b-4a2c-8966-e7c7a9cd2916",
           "children": []
         },
         {
@@ -106254,6 +106706,7 @@
           "sourceIds": {
             "checklistbank-139831": "166601"
           },
+          "uuid": "1156ac72-ee48-46bb-9f24-7df771e0c4b0",
           "children": []
         },
         {
@@ -106314,6 +106767,7 @@
           "sourceIds": {
             "checklistbank-139831": "770947"
           },
+          "uuid": "5f193aff-3234-4986-97eb-2d4be11d9412",
           "children": []
         },
         {
@@ -106326,6 +106780,7 @@
           "sourceIds": {
             "checklistbank-139831": "770949"
           },
+          "uuid": "d52378a2-02be-4d95-be04-073df61b07c5",
           "children": []
         },
         {
@@ -106362,6 +106817,7 @@
           "sourceIds": {
             "checklistbank-139831": "770957"
           },
+          "uuid": "b448027e-7a41-406c-bd51-3bfb52125f78",
           "children": []
         }
       ],
@@ -110435,52 +110891,6 @@
       "lineage": "boraginaceae"
     },
     {
-      "id": "GENUS_ELIZALDIA",
-      "name": "Elizaldia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ELIZALDIA_CALYCINA_ROEM_SCHULT_MAIRE",
-          "name": "Elizaldia calycina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Elizaldia",
-          "authorship": "(Roem. & Schult.) Maire",
-          "sourceIds": {
-            "checklistbank": "162109"
-          },
-          "children": [],
-          "uuid": "f7e8d141-2489-58e-bf3-4717b8a46189cc"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "boraginaceae"
-    },
-    {
-      "id": "GENUS_MACROTOMIA",
-      "name": "Macrotomia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MACROTOMIA_DENSIFLORA_LEDEB_EX_NORDM_J_F_MACBR",
-          "name": "Macrotomia densiflora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Macrotomia",
-          "authorship": "(Ledeb. ex Nordm.) J.F.Macbr.",
-          "sourceIds": {
-            "checklistbank": "162412"
-          },
-          "children": [],
-          "uuid": "796d3c37-c1f4-597-9fe-7c98cd345a6844"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "boraginaceae"
-    },
-    {
       "id": "GENUS_TRIGONOCARYUM",
       "name": "Trigonocaryum",
       "rank": "GENUS",
@@ -110599,6 +111009,8 @@
       "id": "GENUS_TRICARDIA",
       "name": "Tricardia",
       "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "boraginaceae",
       "children": [
         {
           "id": "SP_TRICARDIA_WATSONII",
@@ -110612,14 +111024,14 @@
           },
           "children": []
         }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "boraginaceae"
+      ]
     },
     {
       "id": "GENUS_NOGALIA",
       "name": "Nogalia",
       "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "boraginaceae",
       "children": [
         {
           "id": "SP_NOGALIA_DREPANOPHYLLA",
@@ -110633,13 +111045,11 @@
           },
           "children": []
         }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "boraginaceae"
+      ]
     }
   ],
   "genusCount": 223,
-  "speciesCount": 5893,
+  "speciesCount": 6281,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

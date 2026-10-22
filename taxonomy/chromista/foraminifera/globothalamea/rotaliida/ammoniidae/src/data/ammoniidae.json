@@ -473,12 +473,18 @@
               "45831"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:112849"
+              "urn:lsid:marinespecies.org:taxname:112849",
+              "urn:lsid:marinespecies.org:taxname:927555"
             ],
-            "wikispecies": "Ammonia_beccarii"
+            "wikispecies": [
+              "Ammonia_beccarii"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:112849"
+            ]
           },
           "uuid": "69de8983-f4a2-5ac-96a-e3146d65cf096a",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:112849,col:CTRJ,gbif:8287848,itis:45831",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:112849,checklistbank:urn:lsid:marinespecies.org:taxname:927555,checklistbank-2011:urn:lsid:marinespecies.org:taxname:112849,col:CTRJ,gbif:8287848,itis:45831,wikispecies:Ammonia_beccarii",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -4421,7 +4427,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:595611"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:595611"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:595611",
+            "checklistbank-139831": "994717"
           },
           "uuid": "4aba190e-69ad-554-9cd-24eb50b0ab0487",
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:595611,col:4TG5M,gbif:8395141",
@@ -5687,23 +5694,6 @@
       "name": "\"Ammonia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_AMMONIA_BECCARII_KIM_1965",
-          "name": "\"Ammonia beccarii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ammonia",
-          "authorship": "\"Kim, 1965\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:927555",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:112849",
-            "wikispecies": "Ammonia_beccarii"
-          },
-          "children": [],
-          "uuid": "d46c5fcc-b4d0-591-832-55202802e08f10",
-          "description": "\"Ammonia beccarii is a ammoniidae species found in its native region."
-        },
         {
           "id": "SP_AMMONIA_JAPONICA_SEROVA_1978",
           "name": "\"Ammonia japonica",
@@ -7239,7 +7229,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 355,
+  "speciesCount": 354,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

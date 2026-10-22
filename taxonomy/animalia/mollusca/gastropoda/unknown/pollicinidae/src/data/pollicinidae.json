@@ -26,10 +26,15 @@
             "col": [
               "7SS9X"
             ],
-            "checklistbank": "txn:147751",
-            "checklistbank-1174": "txn:147751"
+            "checklistbank": [
+              "txn:147751",
+              "urn:lsid:marinespecies.org:taxname:1425756"
+            ],
+            "checklistbank-1174": [
+              "txn:147751"
+            ]
           },
-          "authorityIds": "col:7SS9X",
+          "authorityIds": "checklistbank:txn:147751,checklistbank:urn:lsid:marinespecies.org:taxname:1425756,checklistbank-1174:txn:147751,col:7SS9X",
           "authorship": "(d'Eichwald 1860)"
         },
         {
@@ -95,22 +100,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_POLLICINA_CORNICULUM_EICHWALD_1860",
-          "name": "\"Pollicina corniculum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pollicina",
-          "authorship": "\"(Eichwald, 1860)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1425756",
-            "checklistbank-1174": "txn:147751"
-          },
-          "children": [],
-          "uuid": "0c729b6e-ee70-56d-82a-319ae539b15441",
-          "description": "\"Pollicina corniculum\" is a pollicinidae species found in its native region."
-        },
-        {
           "id": "SP_POLLICINA_ANNULATA_HOLZAPFEL_1895",
           "name": "Pollicina annulata",
           "rank": "SPECIES",
@@ -130,7 +119,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 6,
+  "speciesCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -28,11 +28,16 @@
             "col": [
               "82Z65"
             ],
-            "checklistbank": "txn:423168",
-            "checklistbank-1174": "txn:423168"
+            "checklistbank": [
+              "txn:423168",
+              "urn:lsid:marinespecies.org:taxname:1045209"
+            ],
+            "checklistbank-1174": [
+              "txn:423168"
+            ]
           },
           "uuid": "ea08d45c-37a3-54a-b75-cce753355da0d7",
-          "authorityIds": "col:82Z65,gbif:9583609",
+          "authorityIds": "checklistbank:txn:423168,checklistbank:urn:lsid:marinespecies.org:taxname:1045209,checklistbank-1174:txn:423168,col:82Z65,gbif:9583609",
           "children": [],
           "authorship": "Arnaud-Vanneau and Peybernes 1978"
         },
@@ -156,22 +161,6 @@
           "description": "\"Nautiloculina oolithica\" is a nautiloculinidae species found in its native region."
         },
         {
-          "id": "SP_NAUTILOCULINA_BRONNIMANNI_ARNAUD_VANNEAU_PEYBERN_S_1978",
-          "name": "\"Nautiloculina bronnimanni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nautiloculina",
-          "authorship": "\"Arnaud-Vanneau & Peybernès, 1978\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1045209",
-            "checklistbank-1174": "txn:423168"
-          },
-          "children": [],
-          "uuid": "1601b503-92a5-507-b0b-2bd0ad679f5801",
-          "description": "\"Nautiloculina bronnimanni\" is a nautiloculinidae species found in its native region."
-        },
-        {
           "id": "SP_NAUTILOCULINA_CRETACEA_PEYBERN_S_IN_ARNAUD_VANNEAU_PEYBERN_S_1978",
           "name": "\"Nautiloculina cretacea\"",
           "rank": "SPECIES",
@@ -242,5 +231,5 @@
     "checklistbank-1174": "txn:112192"
   },
   "genusCount": 4,
-  "speciesCount": 10
+  "speciesCount": 9
 }

@@ -1585,18 +1585,6 @@
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386151,col:3Q5BH",
           "authorship": "(Leloup, 1953)"
-        },
-        {
-          "id": "SP_ISCHNOPLAX_PECTINATA",
-          "name": "Ischnoplax pectinata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ischnoplax",
-          "sourceIds": {
-            "checklistbank-139831": "790340"
-          },
-          "children": []
         }
       ]
     },
@@ -1711,31 +1699,6 @@
           "children": [],
           "uuid": "256bddff-5ab8-55e-aa1-99a231f5a11477",
           "description": "Nuttallina californica, the California spiny chiton, is a species of chiton in the genus Nuttallina native to the coasts of California and Baja California."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "callistoplacidae"
-    },
-    {
-      "id": "GENUS_ISCHNOCHITON",
-      "name": "Ischnochiton",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ISCHNOCHITON_PECTINATUS_G_B_SOWERBY_II_1840",
-          "name": "Ischnochiton pectinatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ischnochiton",
-          "authorship": "(G.B. Sowerby II, 1840)",
-          "sourceIds": {
-            "checklistbank": "605997",
-            "checklistbank-1174": "txn:293959"
-          },
-          "children": [],
-          "uuid": "967d2163-f0fd-524-a21-5c530fad1bd9b1",
-          "description": "Ischnochiton pectinatus is a callistoplacidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1907,11 +1870,14 @@
           "authorship": "\"(G. B. Sowerby II, 1840)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:386152",
-            "checklistbank-139831": "790340"
+            "checklistbank-139831": [
+              "790340"
+            ]
           },
           "children": [],
           "uuid": "cb446fb6-298e-513-b9a-3c75baf3261e3d",
-          "description": "\"Ischnoplax pectinata\" is a callistoplacidae species found in its native region."
+          "description": "\"Ischnoplax pectinata\" is a callistoplacidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386152,checklistbank-139831:790340"
         },
         {
           "id": "SP_ISCHNOPLAX_INCURVATA_LELOUP_1953",
@@ -1956,8 +1922,8 @@
       "lineage": "callistoplacidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 106,
+  "genusCount": 14,
+  "speciesCount": 104,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -958,9 +958,14 @@
               "urn:lsid:marinespecies.org:taxname:1821101"
             ],
             "gbif-backbone": "8531589",
-            "checklistbank-1174": "txn:170002"
+            "checklistbank-1174": [
+              "txn:170002"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1821101"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1821101,col:L2JG4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1821101,checklistbank-1174:txn:170002,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1821101,col:L2JG4,gbif-backbone:8531589",
           "authorship": "(J. de C. Sowerby, 1824)"
         },
         {
@@ -6381,21 +6386,6 @@
           "children": []
         },
         {
-          "id": "SP_PARALLELODON_RUDIS_J_DE_C_SOWERBY_1824",
-          "name": "Parallelodon rudis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parallelodon",
-          "authorship": "(J. de C. Sowerby, 1824)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1821101",
-            "checklistbank-1174": "txn:170002"
-          },
-          "uuid": "b0b48e8d-ed92-4e7b-88cf-0a902964c1ff",
-          "children": []
-        },
-        {
           "id": "SP_PARALLELODON_OBSOLETUS_MEEK_1871",
           "name": "Parallelodon obsoletus",
           "rank": "SPECIES",
@@ -7145,7 +7135,7 @@
     }
   ],
   "genusCount": 34,
-  "speciesCount": 403,
+  "speciesCount": 402,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

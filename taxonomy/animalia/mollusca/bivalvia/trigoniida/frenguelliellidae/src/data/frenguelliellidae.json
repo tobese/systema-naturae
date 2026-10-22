@@ -293,10 +293,15 @@
             "col": [
               "8V3CK"
             ],
-            "checklistbank": "txn:508662",
-            "checklistbank-1174": "txn:508662"
+            "checklistbank": [
+              "txn:508662",
+              "urn:lsid:marinespecies.org:taxname:1555529"
+            ],
+            "checklistbank-1174": [
+              "txn:508662"
+            ]
           },
-          "authorityIds": "col:8V3CK",
+          "authorityIds": "checklistbank:txn:508662,checklistbank:urn:lsid:marinespecies.org:taxname:1555529,checklistbank-1174:txn:508662,col:8V3CK",
           "children": [],
           "authorship": "(Echevarría et al. 2021)"
         },
@@ -444,22 +449,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TERRYPOULTONIELLA_JAWORSKII_ECHEVARR_A_S_E_DAMBORENEA_MANCE_IDO_2021",
-          "name": "\"Terrypoultoniella jaworskii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Terrypoultoniella",
-          "authorship": "\"(Echevarría, S. E. Damborenea & Manceñido, 2021)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1555529",
-            "checklistbank-1174": "txn:508662"
-          },
-          "children": [],
-          "uuid": "59a23a24-9bb8-578-b32-6dcd41dac71693",
-          "description": "\"Terrypoultoniella jaworskii\" is a frenguelliellidae species found in its native region."
-        },
-        {
           "id": "SP_TERRYPOULTONIELLA_MALLADAE_CHOFFAT_1885",
           "name": "\"Terrypoultoniella malladae\"",
           "rank": "SPECIES",
@@ -491,5 +480,5 @@
     "checklistbank-1174": "txn:165259"
   },
   "genusCount": 9,
-  "speciesCount": 22
+  "speciesCount": 21
 }

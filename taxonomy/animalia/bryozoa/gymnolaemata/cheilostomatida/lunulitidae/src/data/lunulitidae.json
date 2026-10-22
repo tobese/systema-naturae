@@ -582,9 +582,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1411915"
             ],
-            "checklistbank-1174": "txn:60981"
+            "checklistbank-1174": [
+              "txn:60981"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1411915"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411915,col:8684B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411915,checklistbank-1174:txn:60981,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1411915,col:8684B",
           "authorship": "(Canu & Bassler, 1920)"
         },
         {
@@ -2606,21 +2611,6 @@
           "children": []
         },
         {
-          "id": "SP_LUNULITES_LIGULATA_CANU_BASSLER_1920",
-          "name": "Lunulites ligulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lunulites",
-          "authorship": "(Canu & Bassler, 1920)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1411915",
-            "checklistbank-1174": "txn:60981"
-          },
-          "uuid": "add79c08-2c80-47b1-afae-27aa913fa997",
-          "children": []
-        },
-        {
           "id": "SP_LUNULITES_OVALIS_D_ORBIGNY_1852",
           "name": "Lunulites ovalis",
           "rank": "SPECIES",
@@ -2790,7 +2780,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 149,
+  "speciesCount": 148,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

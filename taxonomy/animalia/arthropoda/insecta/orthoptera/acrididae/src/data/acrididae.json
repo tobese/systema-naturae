@@ -57024,10 +57024,18 @@
                     "col": [
                       "CVPY4"
                     ],
-                    "checklistbank": "69736",
-                    "wikispecies": "Schistocerca_americana"
+                    "checklistbank": [
+                      "69736",
+                      "urn:lsid:marinespecies.org:taxname:1490153"
+                    ],
+                    "wikispecies": [
+                      "Schistocerca_americana"
+                    ],
+                    "checklistbank-139831": [
+                      "69736"
+                    ]
                   },
-                  "authorityIds": "col:CVPY4,itis:102225",
+                  "authorityIds": "checklistbank:69736,checklistbank:urn:lsid:marinespecies.org:taxname:1490153,checklistbank-139831:69736,col:CVPY4,itis:102225,wikispecies:Schistocerca_americana",
                   "description": "Schistocerca americana (American Bird Locust) is a caelifera > acridoidea > schistocerca species found in Europe and North America regions.",
                   "speciesList": []
                 },
@@ -201509,7 +201517,8 @@
           "lineage": "Gryllus",
           "authorship": "Charpentier, 1825",
           "sourceIds": {
-            "checklistbank-2008": "65908"
+            "checklistbank-2008": "65908",
+            "checklistbank-139831": "1257804"
           },
           "children": [],
           "uuid": "4cf382ec-5639-5ef-a8b-3130b26e694ad9"
@@ -209602,24 +209611,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SCHISTOCERCA_AMERICANA_DRURY_1773",
-          "name": "\"Schistocerca americana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Schistocerca",
-          "authorship": "\"(Drury, 1773)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1490153",
-            "wikispecies": "Schistocerca_americana",
-            "checklistbank-139831": "69736"
-          },
-          "children": [],
-          "uuid": "5608c4f0-b64e-56f-9dd-e02df67debac4f",
-          "description": "\"Schistocerca americana\" is a acrididae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_SCHISTOCERCA_GREGARIA_FORSKAL_1775",
           "name": "\"Schistocerca gregaria\"",
           "rank": "SPECIES",
@@ -210275,29 +210266,6 @@
       "lineage": "Acrididae"
     },
     {
-      "id": "GENUS_CHORTIPPHUS",
-      "name": "Chortipphus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHORTIPPHUS_ACROLEUCUS_M_LLER_1924",
-          "name": "Chortipphus acroleucus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chortipphus",
-          "authorship": "(Müller, 1924)",
-          "sourceIds": {
-            "checklistbank": "17185"
-          },
-          "children": [],
-          "uuid": "8fcdf978-e3ea-5f2-86d-bbc078e645b586"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acrididae"
-    },
-    {
       "id": "GENUS_STAURORHECTUS",
       "name": "Staurorhectus",
       "rank": "GENUS",
@@ -210488,7 +210456,7 @@
       "lineage": "acrididae"
     }
   ],
-  "speciesCount": 8517,
+  "speciesCount": 8515,
   "appSlug": "acrididae",
   "lineage": "Caelifera > Acridoidea",
   "continents": [
@@ -210499,7 +210467,7 @@
     "North America",
     "South America"
   ],
-  "genusCount": 1540,
+  "genusCount": 1539,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

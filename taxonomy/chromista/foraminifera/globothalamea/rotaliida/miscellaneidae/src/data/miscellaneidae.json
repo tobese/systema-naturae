@@ -319,11 +319,16 @@
             "col": [
               "83C5L"
             ],
-            "checklistbank": "txn:428038",
-            "checklistbank-1174": "txn:428038"
+            "checklistbank": [
+              "txn:428038",
+              "urn:lsid:marinespecies.org:taxname:1075317"
+            ],
+            "checklistbank-1174": [
+              "txn:428038"
+            ]
           },
           "uuid": "9b33394b-32cb-50e-863-d62c449d1f7c2c",
-          "authorityIds": "col:83C5L,gbif:9680897",
+          "authorityIds": "checklistbank:txn:428038,checklistbank:urn:lsid:marinespecies.org:taxname:1075317,checklistbank-1174:txn:428038,col:83C5L,gbif:9680897",
           "authorship": "(Inan 1998)"
         }
       ]
@@ -419,11 +424,16 @@
             "col": [
               "8QDPT"
             ],
-            "checklistbank": "txn:429745",
-            "checklistbank-1174": "txn:429745"
+            "checklistbank": [
+              "txn:429745",
+              "urn:lsid:marinespecies.org:taxname:1539177"
+            ],
+            "checklistbank-1174": [
+              "txn:429745"
+            ]
           },
           "uuid": "91e69f69-77e7-5f6-b0e-76c1c931f90dd9",
-          "authorityIds": "col:8QDPT,gbif:11177323",
+          "authorityIds": "checklistbank:txn:429745,checklistbank:urn:lsid:marinespecies.org:taxname:1539177,checklistbank-1174:txn:429745,col:8QDPT,gbif:11177323",
           "authorship": "Hottinger 2009"
         },
         {
@@ -813,47 +823,6 @@
           "children": [],
           "uuid": "89fbdb90-e8a5-54c-9ad-45bc56aa4900cb",
           "description": "\"Miscellanites minutus\" is a miscellaneidae species found in its native region."
-        },
-        {
-          "id": "SP_MISCELLANITES_PRIMITIVUS_RAHAGHI_1983",
-          "name": "\"Miscellanites primitivus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Miscellanites",
-          "authorship": "\"(Rahaghi, 1983)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1539177",
-            "checklistbank-1174": "txn:429745"
-          },
-          "children": [],
-          "uuid": "b775f8c4-482d-599-b10-ac02f1c174fe39",
-          "description": "\"Miscellanites primitivus\" is a miscellaneidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "miscellaneidae"
-    },
-    {
-      "id": "GENUS_PSEUDOCUVILLIERINA",
-      "name": "\"Pseudocuvillierina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOCUVILLIERINA_SIRELI_INAN_1988",
-          "name": "\"Pseudocuvillierina sireli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudocuvillierina",
-          "authorship": "\"(Inan, 1988)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1075317",
-            "checklistbank-1174": "txn:428038"
-          },
-          "children": [],
-          "uuid": "f5e59be4-1025-545-87b-c3589412e4750c",
-          "description": "\"Pseudocuvillierina sireli\" is a miscellaneidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -908,8 +877,8 @@
       "lineage": "miscellaneidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 43,
+  "genusCount": 11,
+  "speciesCount": 41,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

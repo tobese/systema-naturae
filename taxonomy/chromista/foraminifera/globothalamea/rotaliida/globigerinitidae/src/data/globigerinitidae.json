@@ -51,11 +51,16 @@
             "col": [
               "83PDF"
             ],
-            "checklistbank": "ott8019097",
-            "checklistbank-1174": "txn:508353"
+            "checklistbank": [
+              "ott8019097",
+              "urn:lsid:marinespecies.org:taxname:1026205"
+            ],
+            "checklistbank-1174": [
+              "txn:508353"
+            ]
           },
           "uuid": "cf5b253b-85e3-5ae-904-50f54528d5ab4e",
-          "authorityIds": "col:83PDF,gbif:9295369",
+          "authorityIds": "checklistbank:ott8019097,checklistbank:urn:lsid:marinespecies.org:taxname:1026205,checklistbank-1174:txn:508353,col:83PDF,gbif:9295369",
           "authorship": "(Bermudez 1961)"
         },
         {
@@ -76,11 +81,16 @@
             "col": [
               "83PDG"
             ],
-            "checklistbank": "Tenuitella_gemma",
-            "wikispecies": "Tenuitella_gemma"
+            "checklistbank": [
+              "Tenuitella_gemma",
+              "urn:lsid:marinespecies.org:taxname:735157"
+            ],
+            "wikispecies": [
+              "Tenuitella_gemma"
+            ]
           },
           "uuid": "90d880d5-a8aa-50e-afb-0a5655b07f93a2",
-          "authorityIds": "col:83PDG,gbif:8220276"
+          "authorityIds": "checklistbank:Tenuitella_gemma,checklistbank:urn:lsid:marinespecies.org:taxname:735157,col:83PDG,gbif:8220276,wikispecies:Tenuitella_gemma"
         },
         {
           "id": "TENUITELLA_INSOLITA",
@@ -400,11 +410,16 @@
             "col": [
               "82MG3"
             ],
-            "checklistbank": "txn:508622",
-            "checklistbank-1174": "txn:508622"
+            "checklistbank": [
+              "txn:508622",
+              "urn:lsid:marinespecies.org:taxname:914409"
+            ],
+            "checklistbank-1174": [
+              "txn:508622"
+            ]
           },
           "uuid": "b4cb0d1c-8abf-539-953-fca5c562fa62e1",
-          "authorityIds": "col:82MG3,gbif:9024553",
+          "authorityIds": "checklistbank:txn:508622,checklistbank:urn:lsid:marinespecies.org:taxname:914409,checklistbank-1174:txn:508622,col:82MG3,gbif:9024553",
           "authorship": "Loeblich and Tappan 1957"
         },
         {
@@ -535,11 +550,16 @@
             "col": [
               "82CYJ"
             ],
-            "checklistbank": "ott8019093",
-            "wikispecies": "Dipsidripella_hodisensis"
+            "checklistbank": [
+              "ott8019093",
+              "urn:lsid:marinespecies.org:taxname:1037859"
+            ],
+            "wikispecies": [
+              "Dipsidripella_hodisensis"
+            ]
           },
           "uuid": "af3a78e0-5b9e-5ac-b89-a8a4d0fb337804",
-          "authorityIds": "col:82CYJ,gbif:9522703"
+          "authorityIds": "checklistbank:ott8019093,checklistbank:urn:lsid:marinespecies.org:taxname:1037859,col:82CYJ,gbif:9522703,wikispecies:Dipsidripella_hodisensis"
         },
         {
           "id": "DIPSIDRIPELLA_LIQIANYUI",
@@ -911,22 +931,6 @@
           "description": "\"Globigerinita minuta\" is a globigerinitidae species found in its native region."
         },
         {
-          "id": "SP_GLOBIGERINITA_PARKERAE_LOEBLICH_TAPPAN_1957",
-          "name": "\"Globigerinita parkerae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Globigerinita",
-          "authorship": "\"Loeblich & Tappan, 1957\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:914409",
-            "checklistbank-1174": "txn:508622"
-          },
-          "children": [],
-          "uuid": "97a646de-ad7a-521-99d-70cb657637e459",
-          "description": "\"Globigerinita parkerae\" is a globigerinitidae species found in its native region."
-        },
-        {
           "id": "SP_GLOBIGERINITA_PSEUDOHARAINGAE_WANG_HE_LU_1988",
           "name": "\"Globigerinita pseudoharaingae\"",
           "rank": "SPECIES",
@@ -950,22 +954,6 @@
       "name": "\"Tenuitella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TENUITELLA_GEMMA_JENKINS_1966",
-          "name": "\"Tenuitella gemma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tenuitella",
-          "authorship": "\"(Jenkins, 1966)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:735157",
-            "wikispecies": "Tenuitella_gemma"
-          },
-          "children": [],
-          "uuid": "673bc5ad-0c70-568-b01-8f63198c2c1d14",
-          "description": "\"Tenuitella gemma\" is a globigerinitidae species found in its native region."
-        },
         {
           "id": "SP_TENUITELLA_INSOLITA_JENKINS_1966",
           "name": "\"Tenuitella insolita\"",
@@ -995,22 +983,6 @@
           "children": [],
           "uuid": "9f00028c-74a1-5ed-ad7-633017a8fdad86",
           "description": "\"Tenuitella munda\" is a globigerinitidae species found in its native region."
-        },
-        {
-          "id": "SP_TENUITELLA_CLEMENCIAE_BERM_DEZ_1961",
-          "name": "\"Tenuitella clemenciae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tenuitella",
-          "authorship": "\"(Bermúdez, 1961)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1026205",
-            "checklistbank-1174": "txn:508353"
-          },
-          "children": [],
-          "uuid": "ce8d68d9-ee02-5be-b6a-352a18d9cefdde",
-          "description": "\"Tenuitella clemenciae\" is a globigerinitidae species found in its native region."
         },
         {
           "id": "SP_TENUITELLA_PATEFACTA_LI_1987",
@@ -1155,22 +1127,6 @@
           "children": [],
           "uuid": "b8ccd01b-ba40-5bc-8da-7e24421aae1c7c",
           "description": "\"Dipsidripella liqianyui\" is a globigerinitidae species found in its native region."
-        },
-        {
-          "id": "SP_DIPSIDRIPELLA_HODISENSIS_BROTEA_1995",
-          "name": "\"Dipsidripella hodisensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipsidripella",
-          "authorship": "\"Brotea, 1995\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1037859",
-            "wikispecies": "Dipsidripella_hodisensis"
-          },
-          "children": [],
-          "uuid": "fc7b0d18-6006-571-a65-2b3f4ef1686558",
-          "description": "\"Dipsidripella hodisensis\" is a globigerinitidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1334,7 +1290,7 @@
     }
   ],
   "genusCount": 16,
-  "speciesCount": 65,
+  "speciesCount": 61,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

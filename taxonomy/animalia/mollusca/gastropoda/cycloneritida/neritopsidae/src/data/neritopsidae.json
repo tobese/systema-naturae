@@ -278,9 +278,14 @@
               "urn:lsid:marinespecies.org:taxname:1752052"
             ],
             "gbif-backbone": "8694240",
-            "checklistbank-1174": "txn:280017"
+            "checklistbank-1174": [
+              "txn:280017"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1752052"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752052,col:CDS9N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752052,checklistbank-1174:txn:280017,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1752052,col:CDS9N,gbif-backbone:8694240",
           "authorship": "M. Hörnes, 1853"
         },
         {
@@ -302,9 +307,14 @@
               "urn:lsid:marinespecies.org:taxname:1752081"
             ],
             "gbif-backbone": "8509621",
-            "checklistbank-1174": "txn:280019"
+            "checklistbank-1174": [
+              "txn:280019"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1752081"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752081,col:CDS9P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752081,checklistbank-1174:txn:280019,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1752081,col:CDS9P,gbif-backbone:8509621",
           "authorship": "A. De Toni, 1912"
         },
         {
@@ -556,12 +566,21 @@
               "4765T"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:216265"
+              "urn:lsid:marinespecies.org:taxname:216265",
+              "urn:lsid:marinespecies.org:taxname:1830979"
             ],
             "gbif-backbone": "4369901",
-            "checklistbank-1174": "txn:91866"
+            "checklistbank-1174": [
+              "txn:91866"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:216265"
+            ],
+            "checklistbank-127379": [
+              "35f72a70-83d9-49d2-9b29-a114e5861452"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:216265,col:4765T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1830979,checklistbank:urn:lsid:marinespecies.org:taxname:216265,checklistbank-1174:txn:91866,checklistbank-127379:35f72a70-83d9-49d2-9b29-a114e5861452,checklistbank-2011:urn:lsid:marinespecies.org:taxname:216265,col:4765T,gbif-backbone:4369901",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -3045,54 +3064,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NERITOPSIS_RADULA_SACCO_1896",
-          "name": "\"Neritopsis radula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neritopsis",
-          "authorship": "\"Sacco, 1896\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1830979",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:216265",
-            "checklistbank-1174": "txn:91866",
-            "checklistbank-127379": "35f72a70-83d9-49d2-9b29-a114e5861452"
-          },
-          "children": [],
-          "uuid": "afcbec8c-e85a-519-803-05a556ac3cb6cb",
-          "description": "\"Neritopsis radula is a neritopsidae species found in its native region."
-        },
-        {
-          "id": "SP_NERITOPSIS_ELEGANTISSIMA_M_H_RNES_1853",
-          "name": "Neritopsis elegantissima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neritopsis",
-          "authorship": "M. Hörnes, 1853",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1752052",
-            "checklistbank-1174": "txn:280017"
-          },
-          "uuid": "5ad7bb4e-192c-446a-8b67-a6729bd39be8",
-          "children": []
-        },
-        {
-          "id": "SP_NERITOPSIS_FABIANII_A_DE_TONI_1912",
-          "name": "Neritopsis fabianii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neritopsis",
-          "authorship": "A. De Toni, 1912",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1752081",
-            "checklistbank-1174": "txn:280019"
-          },
-          "uuid": "4e90bb55-1441-4bf8-bc72-320625e418b1",
-          "children": []
-        },
-        {
           "id": "SP_NERITOPSIS_ATLANTICA_SARASUA_1973",
           "name": "Neritopsis atlantica",
           "rank": "SPECIES",
@@ -3380,7 +3351,7 @@
     }
   ],
   "genusCount": 41,
-  "speciesCount": 191,
+  "speciesCount": 188,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

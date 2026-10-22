@@ -1090,9 +1090,14 @@
             "col": [
               "RG54X"
             ],
-            "checklistbank-1174": "txn:454230"
+            "checklistbank-1174": [
+              "txn:454230"
+            ],
+            "gbif-backbone": [
+              "11846013"
+            ]
           },
-          "authorityIds": "col:RG54X",
+          "authorityIds": "checklistbank-1174:txn:454230,col:RG54X,gbif-backbone:11846013",
           "description": "Pictoborella clara is a lemmatophoridae species found in its native region.",
           "children": []
         },
@@ -1143,20 +1148,6 @@
       "name": "Pictoborella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PICTOBORELLA_CLARA_CUI_BRAUNER_SCHNEIDER_B_THOUX_2022",
-          "name": "Pictoborella clara",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pictoborella",
-          "authorship": "Cui, Brauner, Schneider & Béthoux, 2022",
-          "sourceIds": {
-            "gbif-backbone": "11846013",
-            "checklistbank-1174": "txn:454230"
-          },
-          "children": []
-        },
         {
           "id": "SP_PICTOBORELLA_GERMANICA_PROKOP_ET_AL_2012",
           "name": "Pictoborella germanica",
@@ -1425,7 +1416,7 @@
       ]
     }
   ],
-  "speciesCount": 73,
+  "speciesCount": 72,
   "appSlug": "lemmatophoridae",
   "continents": [
     "Asia",

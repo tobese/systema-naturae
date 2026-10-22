@@ -1407,14 +1407,23 @@
           "lineage": "Farrea",
           "authorship": "Bowerbank",
           "sourceIds": {
-            "checklistbank": "adfa0ebb-f852-48a1-ae61-09cba76c526e",
-            "wikispecies": "Farrea_occa",
-            "gbif-backbone": "6154308"
+            "checklistbank": [
+              "adfa0ebb-f852-48a1-ae61-09cba76c526e",
+              "urn:lsid:marinespecies.org:taxname:171752"
+            ],
+            "wikispecies": [
+              "Farrea_occa"
+            ],
+            "gbif-backbone": "6154308",
+            "checklistbank-139831": [
+              "459739"
+            ]
           },
           "children": [],
           "uuid": "f97357f5-6d13-532-9a0-3b7c95abb83686",
           "commonName": "reversed glass sponge",
-          "description": "Farrea occa is a species of glass sponge in the family Farreidae."
+          "description": "Farrea occa is a species of glass sponge in the family Farreidae.",
+          "authorityIds": "checklistbank:adfa0ebb-f852-48a1-ae61-09cba76c526e,checklistbank:urn:lsid:marinespecies.org:taxname:171752,checklistbank-139831:459739,gbif-backbone:6154308,wikispecies:Farrea_occa"
         },
         {
           "id": "SP_FARREA_RITCHIEAE_TABACHNICK_FROMONT",
@@ -2127,23 +2136,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FARREA_OCCA_WILSON_1904",
-          "name": "\"Farrea occa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Farrea",
-          "authorship": "\"Wilson, 1904\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:171752",
-            "wikispecies": "Farrea_occa",
-            "checklistbank-139831": "459739"
-          },
-          "children": [],
-          "uuid": "68d583f4-e74b-54e-8c9-2bb7d415272e4a",
-          "description": "\"Farrea occa is a farreidae species found in its native region."
-        },
-        {
           "id": "SP_FARREA_WOODWARDI_KENT_1870",
           "name": "\"Farrea woodwardi\"",
           "rank": "SPECIES",
@@ -2292,7 +2284,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 134,
+  "speciesCount": 133,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -59,10 +59,15 @@
             "col": [
               "9WWXP"
             ],
-            "checklistbank": "txn:245699",
-            "checklistbank-1174": "txn:245699"
+            "checklistbank": [
+              "txn:245699",
+              "urn:lsid:marinespecies.org:taxname:1550951"
+            ],
+            "checklistbank-1174": [
+              "txn:245699"
+            ]
           },
-          "authorityIds": "col:9WWXP",
+          "authorityIds": "checklistbank:txn:245699,checklistbank:urn:lsid:marinespecies.org:taxname:1550951,checklistbank-1174:txn:245699,col:9WWXP",
           "children": [],
           "authorship": "(Cox 1878)"
         },
@@ -240,10 +245,15 @@
             "col": [
               "B2372"
             ],
-            "checklistbank": "txn:258221",
-            "checklistbank-1174": "txn:258221"
+            "checklistbank": [
+              "txn:258221",
+              "urn:lsid:marinespecies.org:taxname:1633002"
+            ],
+            "checklistbank-1174": [
+              "txn:258221"
+            ]
           },
-          "authorityIds": "col:B2372",
+          "authorityIds": "checklistbank:txn:258221,checklistbank:urn:lsid:marinespecies.org:taxname:1633002,checklistbank-1174:txn:258221,col:B2372",
           "children": [],
           "authorship": "(Smith 1927)"
         },
@@ -2363,22 +2373,6 @@
           "description": "\"Otapiria marshalli\" is a monotidae species found in its native region."
         },
         {
-          "id": "SP_OTAPIRIA_DISSIMILIS_J_C_COX_1878",
-          "name": "\"Otapiria dissimilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Otapiria",
-          "authorship": "\"(J. C. Cox, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1550951",
-            "checklistbank-1174": "txn:245699"
-          },
-          "children": [],
-          "uuid": "356f8c4d-c3f0-5fb-80a-bae66a009d6dbd",
-          "description": "\"Otapiria dissimilis\" is a monotidae species found in its native region."
-        },
-        {
           "id": "SP_OTAPIRIA_DUBIA_ICHIKAWA_1954",
           "name": "Otapiria dubia",
           "rank": "SPECIES",
@@ -2927,22 +2921,6 @@
           "description": "\"Monotis salinaria\" is a monotidae species found in its native region."
         },
         {
-          "id": "SP_MONOTIS_ALASKANA_J_P_SMITH_1927",
-          "name": "\"Monotis alaskana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Monotis",
-          "authorship": "\"J. P. Smith, 1927\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1633002",
-            "checklistbank-1174": "txn:258221"
-          },
-          "children": [],
-          "uuid": "70f131ac-a51d-5bc-acc-57702408b9d348",
-          "description": "\"Monotis alaskana\" is a monotidae species found in its native region."
-        },
-        {
           "id": "SP_MONOTIS_PINENSIS_WESTERMANN_1962",
           "name": "Monotis pinensis",
           "rank": "SPECIES",
@@ -3136,5 +3114,5 @@
     "checklistbank-1174": "txn:61189"
   },
   "genusCount": 21,
-  "speciesCount": 189
+  "speciesCount": 187
 }

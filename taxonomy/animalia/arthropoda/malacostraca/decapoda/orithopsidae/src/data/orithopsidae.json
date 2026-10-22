@@ -135,11 +135,16 @@
             "col": [
               "BDD3T"
             ],
-            "checklistbank": "txn:400789",
+            "checklistbank": [
+              "txn:400789",
+              "urn:lsid:marinespecies.org:taxname:1659715"
+            ],
             "gbif-backbone": "11203695",
-            "checklistbank-1174": "txn:400789"
+            "checklistbank-1174": [
+              "txn:400789"
+            ]
           },
-          "authorityIds": "col:BDD3T",
+          "authorityIds": "checklistbank:txn:400789,checklistbank:urn:lsid:marinespecies.org:taxname:1659715,checklistbank-1174:txn:400789,col:BDD3T,gbif-backbone:11203695",
           "children": [],
           "description": "Planocarcinus johnjagti is a orithopsidae species found in its native region."
         },
@@ -483,11 +488,16 @@
             "col": [
               "BW3WX"
             ],
-            "checklistbank": "txn:226174",
+            "checklistbank": [
+              "txn:226174",
+              "urn:lsid:marinespecies.org:taxname:1717829"
+            ],
             "gbif-backbone": "11638913",
-            "checklistbank-1174": "txn:226174"
+            "checklistbank-1174": [
+              "txn:226174"
+            ]
           },
-          "authorityIds": "col:BW3WX",
+          "authorityIds": "checklistbank:txn:226174,checklistbank:urn:lsid:marinespecies.org:taxname:1717829,checklistbank-1174:txn:226174,col:BW3WX,gbif-backbone:11638913",
           "children": [],
           "description": "Paradoxilissopsa transiens is a orithopsidae species found in its native region."
         }
@@ -657,56 +667,6 @@
       "lineage": "orithopsidae"
     },
     {
-      "id": "GENUS_PLANOCARCINUS",
-      "name": "\"Planocarcinus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLANOCARCINUS_JOHNJAGTI_BERM_DEZ_G_MEZ_CRUZ_VEGA_I_IN_I_BERM_DEZ_G_MEZ_CRUZ_HY_N_MORENO_BEDMAR_BARRAG_N_S_NCHEZ_VEGA_2013",
-          "name": "\"Planocarcinus johnjagti\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Planocarcinus",
-          "authorship": "\"Bermúdez, Gómez-Cruz & Vega <i>in</i> Bermúdez, Gómez-Cruz, Hyžný, Moreno-Bedmar, Barragán, Sánchez & Vega, 2013\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1659715",
-            "checklistbank-1174": "txn:400789"
-          },
-          "children": [],
-          "uuid": "45364f7f-3708-529-ab3-f5498c8dbc02ab",
-          "description": "\"Planocarcinus johnjagti\" is a orithopsidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "orithopsidae"
-    },
-    {
-      "id": "GENUS_PARADOXILISSOPSA",
-      "name": "\"Paradoxilissopsa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARADOXILISSOPSA_TRANSIENS_FRITSCH_I_IN_I_FRITSCH_KAFKA_1887",
-          "name": "\"Paradoxilissopsa transiens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paradoxilissopsa",
-          "authorship": "\"(Fritsch <i>in</i> Fritsch & Kafka, 1887)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1717829",
-            "checklistbank-1174": "txn:226174"
-          },
-          "children": [],
-          "uuid": "eb5ffb68-24a7-5a0-8b2-b77cd69f10d288",
-          "description": "\"Paradoxilissopsa transiens\" is a orithopsidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "orithopsidae"
-    },
-    {
       "id": "GENUS_LISSOPSIS",
       "name": "Lissopsis",
       "rank": "GENUS",
@@ -755,11 +715,11 @@
       "lineage": "orithopsidae"
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 29,
   "appSlug": "orithopsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 21,
+  "genusCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

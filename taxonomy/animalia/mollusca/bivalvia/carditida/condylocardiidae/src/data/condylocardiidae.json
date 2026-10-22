@@ -371,9 +371,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:504988"
             ],
-            "checklistbank-1174": "txn:293315"
+            "checklistbank-1174": [
+              "txn:293315"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:504988"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:504988,col:5ZRNR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:504988,checklistbank-1174:txn:293315,checklistbank-2011:urn:lsid:marinespecies.org:taxname:504988,col:5ZRNR",
           "authorship": "(Mörch, 1861)"
         },
         {
@@ -468,11 +473,20 @@
               "5ZRNN"
             ],
             "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:504989",
+              "urn:lsid:marinespecies.org:taxname:546171"
+            ],
+            "checklistbank-1174": [
+              "txn:62074"
+            ],
+            "checklistbank-2011": [
               "urn:lsid:marinespecies.org:taxname:504989"
             ],
-            "checklistbank-1174": "txn:62074"
+            "checklistbank-127379": [
+              "23d1c2ee-6c6b-403c-9835-e9bcfd06eff6"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:504989,col:5ZRNN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:504989,checklistbank:urn:lsid:marinespecies.org:taxname:546171,checklistbank-1174:txn:62074,checklistbank-127379:23d1c2ee-6c6b-403c-9835-e9bcfd06eff6,checklistbank-2011:urn:lsid:marinespecies.org:taxname:504989,col:5ZRNN",
           "authorship": "(Tate & May, 1900)"
         },
         {
@@ -3410,39 +3424,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CONDYLOCARDIA_PECTINATA_A_W_B_POWELL_1933",
-          "name": "\"Condylocardia pectinata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Condylocardia",
-          "authorship": "\"A. W. B. Powell, 1933\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:546171",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:504989",
-            "checklistbank-1174": "txn:62074",
-            "checklistbank-127379": "23d1c2ee-6c6b-403c-9835-e9bcfd06eff6"
-          },
-          "children": [],
-          "uuid": "e1e7ad1e-113c-5d4-85d-7a68639a8abb86",
-          "description": "\"Condylocardia pectinata is a condylocardiidae species found in its native region."
-        },
-        {
-          "id": "SP_CONDYLOCARDIA_HIPPOPUS_M_RCH_1861",
-          "name": "Condylocardia hippopus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Condylocardia",
-          "authorship": "(Mörch, 1861)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:504988",
-            "checklistbank-1174": "txn:293315"
-          },
-          "uuid": "c6f44350-675d-45f7-92c0-2ab90a41120f",
-          "children": []
-        },
-        {
           "id": "SP_CONDYLOCARDIA_ATOMUS_DESHAYES_1858",
           "name": "Condylocardia atomus",
           "rank": "SPECIES",
@@ -3591,7 +3572,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 199,
+  "speciesCount": 197,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1203,12 +1203,18 @@
           "lineage": "Methanofollis",
           "authorship": "Wu et al. 2005",
           "sourceIds": {
-            "checklistbank": "taicol: 97159",
-            "wikispecies": "Methanofollis_formosanus"
+            "checklistbank": [
+              "taicol: 97159",
+              "urn:lsid:marinespecies.org:taxname:573682"
+            ],
+            "wikispecies": [
+              "Methanofollis_formosanus"
+            ]
           },
           "children": [],
           "uuid": "61ea42a6-039b-596-b26-514a95b6094fec",
-          "description": "Methanofollis formosanus is a methanomicrobiaceae species found in its native region."
+          "description": "Methanofollis formosanus is a methanomicrobiaceae species found in its native region.",
+          "authorityIds": "checklistbank:taicol: 97159,checklistbank:urn:lsid:marinespecies.org:taxname:573682,wikispecies:Methanofollis_formosanus"
         },
         {
           "id": "SP_METHANOFOLLIS_SP",
@@ -1785,22 +1791,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_METHANOFOLLIS_FORMOSANUS_WU_CHEN_LAI_2005",
-          "name": "\"Methanofollis formosanus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Methanofollis",
-          "authorship": "\"Wu, Chen & Lai, 2005\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:573682",
-            "wikispecies": "Methanofollis_formosanus"
-          },
-          "children": [],
-          "uuid": "af94963e-3581-5dc-9cd-5e6332b7ecc0f1",
-          "description": "\"Methanofollis formosanus\" is a methanomicrobiaceae species found in its native region."
-        },
-        {
           "id": "SP_METHANOFOLLIS_AQUAEMARIS",
           "name": "Methanofollis aquaemaris",
           "rank": "SPECIES",
@@ -1902,7 +1892,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 102,
+  "speciesCount": 101,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,

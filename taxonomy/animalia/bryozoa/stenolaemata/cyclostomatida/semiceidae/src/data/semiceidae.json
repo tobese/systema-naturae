@@ -142,10 +142,15 @@
             "col": [
               "86J8R"
             ],
-            "checklistbank": "txn:439109",
-            "checklistbank-1174": "txn:439109"
+            "checklistbank": [
+              "txn:439109",
+              "urn:lsid:marinespecies.org:taxname:1411231"
+            ],
+            "checklistbank-1174": [
+              "txn:439109"
+            ]
           },
-          "authorityIds": "col:86J8R",
+          "authorityIds": "checklistbank:txn:439109,checklistbank:urn:lsid:marinespecies.org:taxname:1411231,checklistbank-1174:txn:439109,col:86J8R",
           "children": [],
           "authorship": "(Roemer 1841)"
         },
@@ -254,22 +259,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FILICEA_SERIATA_R_MER_1840_1841",
-          "name": "\"Filicea seriata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Filicea",
-          "authorship": "\"(Römer, 1840-1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411231",
-            "checklistbank-1174": "txn:439109"
-          },
-          "children": [],
-          "uuid": "c0bdbf66-0093-53f-ab7-2a94efeb2cc0a0",
-          "description": "\"Filicea seriata\" is a semiceidae species found in its native region."
-        },
-        {
           "id": "SP_FILICEA_VELATA_VON_HAGENOW_1839",
           "name": "\"Filicea velata\"",
           "rank": "SPECIES",
@@ -301,5 +290,5 @@
     "checklistbank-1174": "txn:425654"
   },
   "genusCount": 6,
-  "speciesCount": 12
+  "speciesCount": 11
 }

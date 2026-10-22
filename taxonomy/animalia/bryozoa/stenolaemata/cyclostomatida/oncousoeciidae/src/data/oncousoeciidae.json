@@ -3110,12 +3110,21 @@
               "86QHS"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1413158"
+              "urn:lsid:marinespecies.org:taxname:1413158",
+              "urn:lsid:marinespecies.org:taxname:1414991"
             ],
             "gbif-backbone": "10893967",
-            "checklistbank-1174": "txn:439016"
+            "checklistbank-1174": [
+              "txn:439016"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1413158"
+            ],
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:1413158"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413158,col:86QHS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413158,checklistbank:urn:lsid:marinespecies.org:taxname:1414991,checklistbank-1081:urn:lsid:marinespecies.org:taxname:1413158,checklistbank-1174:txn:439016,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1413158,col:86QHS,gbif-backbone:10893967",
           "authorship": "(Römer, 1840)"
         },
         {
@@ -5724,24 +5733,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PROBOSCINA_CRASSA_GREGORY_1899",
-          "name": "\"Proboscina crassa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Proboscina",
-          "authorship": "\"Gregory, 1899\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414991",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1413158",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1413158",
-            "checklistbank-1174": "txn:439016"
-          },
-          "children": [],
-          "uuid": "0f43fb83-57d0-5c6-8c0-fc15d7458c80c2",
-          "description": "\"Proboscina crassa is a oncousoeciidae species found in its native region."
-        },
-        {
           "id": "SP_PROBOSCINA_BOHEMICA_VINE_1893",
           "name": "\"Proboscina bohemica",
           "rank": "SPECIES",
@@ -6245,7 +6236,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 342,
+  "speciesCount": 341,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

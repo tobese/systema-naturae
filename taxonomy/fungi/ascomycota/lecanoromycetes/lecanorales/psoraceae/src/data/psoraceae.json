@@ -1181,6 +1181,7 @@
           "sourceIds": {
             "checklistbank-139831": "175299"
           },
+          "uuid": "036220f2-758b-4d05-8e0d-cd4ca22865e6",
           "children": []
         }
       ],
@@ -5966,12 +5967,17 @@
             "col": [
               "4PM8F"
             ],
-            "checklistbank": "74456",
-            "wikispecies": "Psorula_rufonigra",
+            "checklistbank": [
+              "74456",
+              "urn:lsid:marinespecies.org:taxname:1607347"
+            ],
+            "wikispecies": [
+              "Psorula_rufonigra"
+            ],
             "checklistbank-139831": "175362"
           },
           "uuid": "ef8c3c45-77e4-574-b9b-867bfa2c526632",
-          "authorityIds": "col:4PM8F,gbif:5471205,mycobank:124692"
+          "authorityIds": "checklistbank:74456,checklistbank:urn:lsid:marinespecies.org:taxname:1607347,checklistbank-139831:175362,col:4PM8F,gbif:5471205,mycobank:124692,wikispecies:Psorula_rufonigra"
         },
         {
           "id": "SP_PSORULA_SCOTOPHOLIS",
@@ -5989,6 +5995,31 @@
         }
       ],
       "authorship": "Gotth. Schneider"
+    },
+    {
+      "id": "GENUS_PSORULA",
+      "name": "\"Psorula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSORULA_RUFONIGRA_TUCK_GOTTH_SCHNEID_1980",
+          "name": "\"Psorula rufonigra\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Psorula",
+          "authorship": "\"(Tuck.) Gotth. Schneid., 1980\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607347",
+            "wikispecies": "Psorula_rufonigra"
+          },
+          "children": [],
+          "uuid": "6bf7cd2c-668b-539-bb2-743b05d2461f45",
+          "description": "\"Psorula rufonigra\" is a psoraceae species found in its native region."
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoraceae"
     },
     {
       "id": "GENUS_BRIANARIA",
@@ -7404,36 +7435,11 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psoraceae"
-    },
-    {
-      "id": "GENUS_PSORULA",
-      "name": "\"Psorula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSORULA_RUFONIGRA_TUCK_GOTTH_SCHNEID_1980",
-          "name": "\"Psorula rufonigra\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psorula",
-          "authorship": "\"(Tuck.) Gotth. Schneid., 1980\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1607347",
-            "wikispecies": "Psorula_rufonigra"
-          },
-          "children": [],
-          "uuid": "6bf7cd2c-668b-539-bb2-743b05d2461f45",
-          "description": "\"Psorula rufonigra\" is a psoraceae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "psoraceae"
     }
   ],
   "authorship": "Zahlbruckner",
-  "genusCount": 24,
-  "speciesCount": 363,
+  "genusCount": 23,
+  "speciesCount": 362,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

@@ -1378,9 +1378,14 @@
               "urn:lsid:marinespecies.org:taxname:1767961"
             ],
             "gbif-backbone": "4950561",
-            "checklistbank-1174": "txn:109952"
+            "checklistbank-1174": [
+              "txn:109952"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1767961"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1767961,col:C5XXF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1767961,checklistbank-1174:txn:109952,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1767961,col:C5XXF,gbif-backbone:4950561",
           "authorship": "Conrad, 1873"
         },
         {
@@ -2700,12 +2705,18 @@
               "V7HFJ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1836906"
+              "urn:lsid:marinespecies.org:taxname:1836906",
+              "urn:lsid:marinespecies.org:taxname:1837441"
             ],
             "gbif-backbone": "4950545",
-            "checklistbank-1174": "txn:59898"
+            "checklistbank-1174": [
+              "txn:59898"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1836906"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1836906,col:V7HFJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1836906,checklistbank:urn:lsid:marinespecies.org:taxname:1837441,checklistbank-1174:txn:59898,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1836906,col:V7HFJ,gbif-backbone:4950545",
           "authorship": "S. G. Morton, 1834"
         },
         {
@@ -9355,9 +9366,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:884202"
             ],
-            "checklistbank-1174": "txn:160901"
+            "checklistbank-1174": [
+              "txn:160901"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:884202"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:884202,col:3MY7T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:884202,checklistbank-1174:txn:160901,checklistbank-2011:urn:lsid:marinespecies.org:taxname:884202,col:3MY7T",
           "authorship": "(G. B. Sowerby I, 1832)"
         },
         {
@@ -11554,23 +11570,6 @@
           "description": "\"Crassatella (Rochella) is a crassatellidae species found in its native region."
         },
         {
-          "id": "SP_CRASSATELLA_VADOSA_STEPHENSON_1941",
-          "name": "\"Crassatella vadosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Crassatella",
-          "authorship": "\"Stephenson, 1941\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1837441",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1836906",
-            "checklistbank-1174": "txn:59898"
-          },
-          "children": [],
-          "uuid": "f00ee282-334f-547-897-093293b332a5d8",
-          "description": "\"Crassatella vadosa is a crassatellidae species found in its native region."
-        },
-        {
           "id": "SP_CRASSATELLA_UVASANA_GABB_1864",
           "name": "\"Crassatella uvasana",
           "rank": "SPECIES",
@@ -11625,21 +11624,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1606725"
           },
           "uuid": "2265179e-ddc1-4ea3-ac61-065c5922040e",
-          "children": []
-        },
-        {
-          "id": "SP_CRASSATELLA_CAROLINENSIS_CONRAD_1873",
-          "name": "Crassatella carolinensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Crassatella",
-          "authorship": "Conrad, 1873",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1767961",
-            "checklistbank-1174": "txn:109952"
-          },
-          "uuid": "7c4f4ecc-188f-49e8-b62b-06cd8c64c4b2",
           "children": []
         },
         {
@@ -12079,21 +12063,6 @@
           "description": "\"Hybolophus aviaguensis is a crassatellidae species found in its native region."
         },
         {
-          "id": "SP_HYBOLOPHUS_GIBBOSUS_G_B_SOWERBY_I_1832",
-          "name": "Hybolophus gibbosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hybolophus",
-          "authorship": "(G. B. Sowerby I, 1832)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:884202",
-            "checklistbank-1174": "txn:160901"
-          },
-          "uuid": "cff8d8c1-8896-4681-9b2d-c746a0119ac2",
-          "children": []
-        },
-        {
           "id": "SP_HYBOLOPHUS_NELSONI_GRZYBOWSKI_1899",
           "name": "Hybolophus nelsoni",
           "rank": "SPECIES",
@@ -12400,7 +12369,7 @@
     }
   ],
   "genusCount": 50,
-  "speciesCount": 694,
+  "speciesCount": 691,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

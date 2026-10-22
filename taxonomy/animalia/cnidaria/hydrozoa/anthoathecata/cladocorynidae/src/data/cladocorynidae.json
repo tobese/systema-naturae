@@ -73,11 +73,22 @@
             "col": [
               "VNZS"
             ],
-            "checklistbank": "7133",
-            "wikispecies": "Cladocoryne_floccosa"
+            "checklistbank": [
+              "7133",
+              "urn:lsid:marinespecies.org:taxname:117424"
+            ],
+            "wikispecies": [
+              "Cladocoryne_floccosa"
+            ],
+            "checklistbank-127379": [
+              "c2bf2a9c-e744-4542-a9c9-ea319ba5bfa0"
+            ],
+            "checklistbank-139831": [
+              "195486"
+            ]
           },
           "uuid": "ea02a0ce-5559-5a1-945-43818c4530cbed",
-          "authorityIds": "col:VNZS,gbif:2266064,itis:49445,wikidata:Q3321377"
+          "authorityIds": "checklistbank:7133,checklistbank:urn:lsid:marinespecies.org:taxname:117424,checklistbank-127379:c2bf2a9c-e744-4542-a9c9-ea319ba5bfa0,checklistbank-139831:195486,col:VNZS,gbif:2266064,itis:49445,wikidata:Q3321377,wikispecies:Cladocoryne_floccosa"
         },
         {
           "id": "CLADOCORYNE_HADDONI",
@@ -284,24 +295,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CLADOCORYNE_FLOCCOSA_ROTCH_1871",
-          "name": "\"Cladocoryne floccosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cladocoryne",
-          "authorship": "\"Rotch, 1871\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:117424",
-            "wikispecies": "Cladocoryne_floccosa",
-            "checklistbank-127379": "c2bf2a9c-e744-4542-a9c9-ea319ba5bfa0",
-            "checklistbank-139831": "195486"
-          },
-          "children": [],
-          "uuid": "a64ff366-ebf1-560-a46-f4a4c32348801a",
-          "description": "\"Cladocoryne floccosa\" is a cladocorynidae species found in its native region."
-        },
-        {
           "id": "SP_CLADOCORYNE_HADDONI_KIRKPATRICK_1890",
           "name": "\"Cladocoryne haddoni\"",
           "rank": "SPECIES",
@@ -373,7 +366,8 @@
           "sourceIds": {
             "checklistbank-139831": "1643925"
           },
-          "uuid": "dc560da9-6024-456a-83ae-1748cc2e4b30"
+          "uuid": "dc560da9-6024-456a-83ae-1748cc2e4b30",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -444,7 +438,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 19,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

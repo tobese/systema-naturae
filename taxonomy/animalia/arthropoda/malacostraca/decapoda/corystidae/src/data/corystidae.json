@@ -59,11 +59,16 @@
             "col": [
               "BKT6C"
             ],
-            "checklistbank": "txn:224426",
+            "checklistbank": [
+              "txn:224426",
+              "urn:lsid:marinespecies.org:taxname:1669710"
+            ],
             "gbif-backbone": "8548870",
-            "checklistbank-1174": "txn:224426"
+            "checklistbank-1174": [
+              "txn:224426"
+            ]
           },
-          "authorityIds": "col:BKT6C",
+          "authorityIds": "checklistbank:txn:224426,checklistbank:urn:lsid:marinespecies.org:taxname:1669710,checklistbank-1174:txn:224426,col:BKT6C,gbif-backbone:8548870",
           "description": "Corystites latifrons is a corystidae species found in its native region."
         }
       ],
@@ -771,22 +776,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CORYSTITES_LATIFRONS_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Corystites latifrons\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Corystites",
-          "authorship": "\"(Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669710",
-            "checklistbank-1174": "txn:224426"
-          },
-          "children": [],
-          "uuid": "14ae31b6-116c-587-a91-4bedf9d1af6eae",
-          "description": "\"Corystites latifrons\" is a corystidae species found in its native region."
-        },
-        {
           "id": "SP_CORYSTITES_VICETINUS_DE_ANGELI_ET_AL_2010",
           "name": "Corystites vicetinus",
           "rank": "SPECIES",
@@ -892,7 +881,7 @@
       "lineage": "corystidae"
     }
   ],
-  "speciesCount": 41,
+  "speciesCount": 40,
   "appSlug": "corystidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

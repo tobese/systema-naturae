@@ -212,10 +212,18 @@
             "col": [
               "358M3"
             ],
-            "checklistbank": "527083",
-            "checklistbank-1174": "txn:106556"
+            "checklistbank": [
+              "527083",
+              "urn:lsid:marinespecies.org:taxname:211927"
+            ],
+            "checklistbank-1174": [
+              "txn:106556"
+            ],
+            "checklistbank-127379": [
+              "67e505b4-fdca-4866-9c10-0c1d6a7396ad"
+            ]
           },
-          "authorityIds": "col:358M3",
+          "authorityIds": "checklistbank:527083,checklistbank:urn:lsid:marinespecies.org:taxname:211927,checklistbank-1174:txn:106556,checklistbank-127379:67e505b4-fdca-4866-9c10-0c1d6a7396ad,col:358M3",
           "authorship": "(R.A. Philippi, 1849)"
         },
         {
@@ -993,23 +1001,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DIALA_SEMISTRIATA_R_A_PHILIPPI_1849",
-          "name": "\"Diala semistriata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diala",
-          "authorship": "\"(R. A. Philippi, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:211927",
-            "checklistbank-1174": "txn:106556",
-            "checklistbank-127379": "67e505b4-fdca-4866-9c10-0c1d6a7396ad"
-          },
-          "children": [],
-          "uuid": "fc3f2403-11ad-583-946-532e345a306ceb",
-          "description": "\"Diala semistriata\" is a dialidae species found in its native region."
-        },
-        {
           "id": "SP_DIALA_ALBUGO_R_B_WATSON_1886",
           "name": "\"Diala albugo\"",
           "rank": "SPECIES",
@@ -1161,7 +1152,7 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 65,
+  "speciesCount": 64,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

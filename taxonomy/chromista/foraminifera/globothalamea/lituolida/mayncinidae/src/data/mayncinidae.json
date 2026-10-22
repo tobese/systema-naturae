@@ -338,11 +338,16 @@
             "col": [
               "82XTX"
             ],
-            "checklistbank": "txn:423171",
-            "checklistbank-1174": "txn:423171"
+            "checklistbank": [
+              "txn:423171",
+              "urn:lsid:marinespecies.org:taxname:1325681"
+            ],
+            "checklistbank-1174": [
+              "txn:423171"
+            ]
           },
           "uuid": "881782d8-2934-594-a73-f889993d06fbff",
-          "authorityIds": "col:82XTX,gbif:10534796",
+          "authorityIds": "checklistbank:txn:423171,checklistbank:urn:lsid:marinespecies.org:taxname:1325681,checklistbank-1174:txn:423171,col:82XTX,gbif:10534796",
           "authorship": "Laug et al. 1980"
         },
         {
@@ -1181,22 +1186,6 @@
           "children": [],
           "uuid": "4fdd4e05-c99a-530-89e-defb067bed20f2",
           "description": "\"Mayncina gediki\" is a mayncinidae species found in its native region."
-        },
-        {
-          "id": "SP_MAYNCINA_BULGARICA_LAUG_PEYBERN_S_REY_1980",
-          "name": "\"Mayncina bulgarica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mayncina",
-          "authorship": "\"Laug, Peybernès & Rey, 1980\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1325681",
-            "checklistbank-1174": "txn:423171"
-          },
-          "children": [],
-          "uuid": "a96852d2-95ba-589-8dc-435ead6d96e88d",
-          "description": "\"Mayncina bulgarica\" is a mayncinidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1204,7 +1193,7 @@
     }
   ],
   "genusCount": 26,
-  "speciesCount": 52,
+  "speciesCount": 51,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

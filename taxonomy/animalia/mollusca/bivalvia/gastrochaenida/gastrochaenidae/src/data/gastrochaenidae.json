@@ -1396,10 +1396,15 @@
             "itis": [
               "81759"
             ],
-            "checklistbank": "102791",
-            "checklistbank-1174": "txn:416609"
+            "checklistbank": [
+              "102791",
+              "urn:lsid:marinespecies.org:taxname:420987"
+            ],
+            "checklistbank-1174": [
+              "txn:416609"
+            ]
           },
-          "authorityIds": "col:4YHQ2,itis:81759"
+          "authorityIds": "checklistbank:102791,checklistbank:urn:lsid:marinespecies.org:taxname:420987,checklistbank-1174:txn:416609,col:4YHQ2,itis:81759"
         },
         {
           "id": "SP_SPENGLERIA_SPENGLERI",
@@ -2722,22 +2727,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SPENGLERIA_ROSTRATA_L_SPENGLER_1793",
-          "name": "\"Spengleria rostrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spengleria",
-          "authorship": "\"(L. Spengler, 1793)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420987",
-            "checklistbank-1174": "txn:416609"
-          },
-          "children": [],
-          "uuid": "944848a2-b60f-541-b0a-534c8400de4554",
-          "description": "\"Spengleria rostrata\" is a gastrochaenidae species found in its native region."
-        },
-        {
           "id": "SP_SPENGLERIA_MYTILOIDES_LAMARCK_1818",
           "name": "Spengleria mytiloides",
           "rank": "SPECIES",
@@ -2838,7 +2827,7 @@
     }
   ],
   "genusCount": 22,
-  "speciesCount": 158,
+  "speciesCount": 157,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

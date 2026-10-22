@@ -983,9 +983,14 @@
               "urn:lsid:marinespecies.org:taxname:832249"
             ],
             "gbif-backbone": "7582642",
-            "checklistbank-1174": "txn:340041"
+            "checklistbank-1174": [
+              "txn:340041"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:832249"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832249,col:7QKG3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832249,checklistbank-1174:txn:340041,checklistbank-2011:urn:lsid:marinespecies.org:taxname:832249,col:7QKG3,gbif-backbone:7582642",
           "authorship": "(F. W. Hutton, 1873)"
         },
         {
@@ -8542,21 +8547,6 @@
           "children": []
         },
         {
-          "id": "SP_CAPULUS_UNCINATUS_F_W_HUTTON_1873",
-          "name": "Capulus uncinatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Capulus",
-          "authorship": "(F. W. Hutton, 1873)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:832249",
-            "checklistbank-1174": "txn:340041"
-          },
-          "uuid": "623bd4ed-0543-4d1b-a703-0a6e0687b9b1",
-          "children": []
-        },
-        {
           "id": "SP_CAPULUS_PARTIMSINUOSUS_S_V_WOOD_1848",
           "name": "Capulus partimsinuosus",
           "rank": "SPECIES",
@@ -9282,7 +9272,7 @@
     }
   ],
   "genusCount": 56,
-  "speciesCount": 517,
+  "speciesCount": 516,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

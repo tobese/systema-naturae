@@ -271,12 +271,18 @@
               "CJTWZ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1771969"
+              "urn:lsid:marinespecies.org:taxname:1771969",
+              "urn:lsid:marinespecies.org:taxname:1773565"
             ],
             "gbif-backbone": "4864899",
-            "checklistbank-1174": "txn:184927"
+            "checklistbank-1174": [
+              "txn:184927"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1771969"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1771969,col:CJTWZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1771969,checklistbank:urn:lsid:marinespecies.org:taxname:1773565,checklistbank-1174:txn:184927,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1771969,col:CJTWZ,gbif-backbone:4864899",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -2521,32 +2527,6 @@
       "lineage": "atrypidae"
     },
     {
-      "id": "GENUS_ATRYPA",
-      "name": "\"Atrypa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ATRYPA_RETICULARIS_SAVAGE_1970",
-          "name": "\"Atrypa reticularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Atrypa",
-          "authorship": "\"Savage, 1970\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773565",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1771969",
-            "checklistbank-1174": "txn:184927"
-          },
-          "children": [],
-          "uuid": "8257f280-1f8b-540-9cf-d93e30b7527d86",
-          "description": "\"Atrypa reticularis is a atrypidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "atrypidae"
-    },
-    {
       "id": "GENUS_CATATRYPA",
       "name": "Catatrypa",
       "rank": "GENUS",
@@ -2702,8 +2682,8 @@
       "lineage": "atrypidae"
     }
   ],
-  "genusCount": 43,
-  "speciesCount": 148,
+  "genusCount": 42,
+  "speciesCount": 147,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

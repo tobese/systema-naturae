@@ -130,10 +130,15 @@
             "col": [
               "7SZTR"
             ],
-            "checklistbank": "txn:278680",
-            "checklistbank-1174": "txn:278680"
+            "checklistbank": [
+              "txn:278680",
+              "urn:lsid:marinespecies.org:taxname:1450297"
+            ],
+            "checklistbank-1174": [
+              "txn:278680"
+            ]
           },
-          "authorityIds": "col:7SZTR",
+          "authorityIds": "checklistbank:txn:278680,checklistbank:urn:lsid:marinespecies.org:taxname:1450297,checklistbank-1174:txn:278680,col:7SZTR",
           "authorship": "(Sowerby 1825)"
         },
         {
@@ -1801,22 +1806,6 @@
           "children": [],
           "uuid": "eeb3a03d-26af-53f-a2a-2685a201d3bd95",
           "description": "\"Rhabdocolpus scalariformis\" is a procerithiidae species found in its native region."
-        },
-        {
-          "id": "SP_RHABDOCOLPUS_MURICATUM_J_DE_C_SOWERBY_1825",
-          "name": "\"Rhabdocolpus muricatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhabdocolpus",
-          "authorship": "\"(J. De C. Sowerby, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1450297",
-            "checklistbank-1174": "txn:278680"
-          },
-          "children": [],
-          "uuid": "517338dd-3421-5c0-a5d-1276807b2e6dd1",
-          "description": "\"Rhabdocolpus muricatum\" is a procerithiidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2221,7 +2210,7 @@
     }
   ],
   "genusCount": 26,
-  "speciesCount": 126,
+  "speciesCount": 125,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

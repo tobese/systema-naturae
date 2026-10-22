@@ -25,10 +25,15 @@
             "col": [
               "866B4"
             ],
-            "checklistbank": "txn:169995",
-            "checklistbank-1174": "txn:169995"
+            "checklistbank": [
+              "txn:169995",
+              "urn:lsid:marinespecies.org:taxname:1410435"
+            ],
+            "checklistbank-1174": [
+              "txn:169995"
+            ]
           },
-          "authorityIds": "col:866B4",
+          "authorityIds": "checklistbank:txn:169995,checklistbank:urn:lsid:marinespecies.org:taxname:1410435,checklistbank-1174:txn:169995,col:866B4",
           "children": [],
           "authorship": "Lamoureux 1821"
         },
@@ -78,10 +83,15 @@
             "col": [
               "86FMR"
             ],
-            "checklistbank": "txn:438429",
-            "checklistbank-1174": "txn:438429"
+            "checklistbank": [
+              "txn:438429",
+              "urn:lsid:marinespecies.org:taxname:1410436"
+            ],
+            "checklistbank-1174": [
+              "txn:438429"
+            ]
           },
-          "authorityIds": "col:86FMR",
+          "authorityIds": "checklistbank:txn:438429,checklistbank:urn:lsid:marinespecies.org:taxname:1410436,checklistbank-1174:txn:438429,col:86FMR",
           "children": [],
           "authorship": "(Roemer 1841)"
         },
@@ -317,38 +327,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CERIOCAVA_CORYMBOSA_LAMOUROUX_1821",
-          "name": "\"Ceriocava corymbosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ceriocava",
-          "authorship": "\"(Lamouroux, 1821)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410435",
-            "checklistbank-1174": "txn:169995"
-          },
-          "children": [],
-          "uuid": "447a01ed-8614-5ab-837-92721fe2621293",
-          "description": "\"Ceriocava corymbosa\" is a cavidae species found in its native region."
-        },
-        {
-          "id": "SP_CERIOCAVA_INCRUSTATA_ROEMER_1996",
-          "name": "\"Ceriocava incrustata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ceriocava",
-          "authorship": "\"(Roemer, 1996)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410436",
-            "checklistbank-1174": "txn:438429"
-          },
-          "children": [],
-          "uuid": "d627d0ce-26c1-511-9c7-5c431fc660d909",
-          "description": "\"Ceriocava incrustata\" is a cavidae species found in its native region."
-        },
-        {
           "id": "SP_CERIOCAVA_MURICATA_GOLDFUSS_1836",
           "name": "\"Ceriocava muricata\"",
           "rank": "SPECIES",
@@ -434,5 +412,5 @@
     "checklistbank-1174": "txn:169994"
   },
   "genusCount": 6,
-  "speciesCount": 21
+  "speciesCount": 19
 }

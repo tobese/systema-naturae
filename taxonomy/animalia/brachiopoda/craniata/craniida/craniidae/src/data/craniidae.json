@@ -92,10 +92,15 @@
             "col": [
               "6SCVB"
             ],
-            "checklistbank": "529999",
-            "checklistbank-1174": "txn:282832"
+            "checklistbank": [
+              "529999",
+              "urn:lsid:marinespecies.org:taxname:235385"
+            ],
+            "checklistbank-1174": [
+              "txn:282832"
+            ]
           },
-          "authorityIds": "col:6SCVB",
+          "authorityIds": "checklistbank:529999,checklistbank:urn:lsid:marinespecies.org:taxname:235385,checklistbank-1174:txn:282832,col:6SCVB",
           "authorship": "(O.F. Müller, 1776)"
         },
         {
@@ -3762,22 +3767,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NOVOCRANIA_ANOMALA_M_LLER_1776",
-          "name": "\"Novocrania anomala\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Novocrania",
-          "authorship": "\"(Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235385",
-            "checklistbank-1174": "txn:282832"
-          },
-          "children": [],
-          "uuid": "e1ac1377-9e90-5d0-8d3-82dee58b953b20",
-          "description": "\"Novocrania anomala\" is a craniidae species found in its native region."
-        },
-        {
           "id": "SP_NOVOCRANIA_TURBINATA_POLI_1795",
           "name": "\"Novocrania turbinata\"",
           "rank": "SPECIES",
@@ -4099,7 +4088,7 @@
     }
   ],
   "genusCount": 31,
-  "speciesCount": 244,
+  "speciesCount": 243,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

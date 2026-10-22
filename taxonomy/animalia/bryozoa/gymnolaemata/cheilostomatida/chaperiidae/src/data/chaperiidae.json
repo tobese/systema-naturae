@@ -2028,10 +2028,18 @@
             "col": [
               "TMCG"
             ],
-            "checklistbank": "0a979881-22da-42a6-bd70-889fdefdec12",
-            "checklistbank-1174": "txn:328832"
+            "checklistbank": [
+              "0a979881-22da-42a6-bd70-889fdefdec12",
+              "urn:lsid:marinespecies.org:taxname:467654"
+            ],
+            "checklistbank-1174": [
+              "txn:328832"
+            ],
+            "checklistbank-127379": [
+              "72782a2e-f33c-4243-9cb1-8eb57bbc802e"
+            ]
           },
-          "authorityIds": "col:TMCG,itis:155977"
+          "authorityIds": "checklistbank:0a979881-22da-42a6-bd70-889fdefdec12,checklistbank:urn:lsid:marinespecies.org:taxname:467654,checklistbank-1174:txn:328832,checklistbank-127379:72782a2e-f33c-4243-9cb1-8eb57bbc802e,col:TMCG,itis:155977"
         },
         {
           "id": "SP_CHAPERIA_ALBISPINA",
@@ -3747,23 +3755,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CHAPERIA_ACANTHINA_LAMOUROUX_1825",
-          "name": "\"Chaperia acanthina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chaperia",
-          "authorship": "\"(Lamouroux, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467654",
-            "checklistbank-1174": "txn:328832",
-            "checklistbank-127379": "72782a2e-f33c-4243-9cb1-8eb57bbc802e"
-          },
-          "children": [],
-          "uuid": "a00614ca-ff00-5a8-8a7-d88f8e28dfc3eb",
-          "description": "\"Chaperia acanthina\" is a chaperiidae species found in its native region."
-        },
-        {
           "id": "SP_CHAPERIA_ALBISPINA_MACGILLIVRAY_1882",
           "name": "Chaperia albispina",
           "rank": "SPECIES",
@@ -3926,7 +3917,7 @@
     }
   ],
   "genusCount": 17,
-  "speciesCount": 218,
+  "speciesCount": 217,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

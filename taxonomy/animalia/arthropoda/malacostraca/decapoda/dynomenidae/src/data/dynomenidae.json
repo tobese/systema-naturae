@@ -41,11 +41,16 @@
             "col": [
               "9THQV"
             ],
-            "checklistbank": "txn:404210",
+            "checklistbank": [
+              "txn:404210",
+              "urn:lsid:marinespecies.org:taxname:1611877"
+            ],
             "gbif-backbone": "11189465",
-            "checklistbank-1174": "txn:404210"
+            "checklistbank-1174": [
+              "txn:404210"
+            ]
           },
-          "authorityIds": "col:9THQV",
+          "authorityIds": "checklistbank:txn:404210,checklistbank:urn:lsid:marinespecies.org:taxname:1611877,checklistbank-1174:txn:404210,col:9THQV,gbif-backbone:11189465",
           "description": "Kromtitis tergospinosus is a dynomenidae species found in its native region."
         },
         {
@@ -774,9 +779,17 @@
               "660447"
             ],
             "checklistbank": "596759",
-            "checklistbank-1174": "txn:220960"
+            "checklistbank-1174": [
+              "txn:220960"
+            ],
+            "wikispecies": [
+              "Dynomene_praedator"
+            ],
+            "checklistbank-127379": [
+              "acdefe95-ddc3-43a9-aedd-87a241adca07"
+            ]
           },
-          "authorityIds": "col:6DPYS,itis:660447",
+          "authorityIds": "checklistbank:596759,checklistbank-1174:txn:220960,checklistbank-127379:acdefe95-ddc3-43a9-aedd-87a241adca07,col:6DPYS,itis:660447,wikispecies:Dynomene_praedator",
           "description": "Dynomene praedator is a dynomenidae species found in its native region."
         },
         {
@@ -872,12 +885,25 @@
             "itis": [
               "660445"
             ],
-            "checklistbank": "taicol: 71067",
-            "wikispecies": "Dynomene_hispida",
+            "checklistbank": [
+              "taicol: 71067",
+              "urn:lsid:marinespecies.org:taxname:209477"
+            ],
+            "wikispecies": [
+              "Dynomene_hispida"
+            ],
             "gbif-backbone": "2221859",
-            "checklistbank-1174": "txn:220958"
+            "checklistbank-1174": [
+              "txn:220958"
+            ],
+            "checklistbank-127379": [
+              "4b4a484a-00b0-40c0-bef8-2ab304e0568c"
+            ],
+            "checklistbank-139831": [
+              "1359381"
+            ]
           },
-          "authorityIds": "col:6DPYR,itis:660445",
+          "authorityIds": "checklistbank:taicol: 71067,checklistbank:urn:lsid:marinespecies.org:taxname:209477,checklistbank-1174:txn:220958,checklistbank-127379:4b4a484a-00b0-40c0-bef8-2ab304e0568c,checklistbank-139831:1359381,col:6DPYR,gbif-backbone:2221859,itis:660445,wikispecies:Dynomene_hispida",
           "description": "Dynomene hispida is a dynomenidae species found in its native region."
         },
         {
@@ -1594,25 +1620,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DYNOMENE_HISPIDA_LATREILLE_I_IN_I_MILBERT_1812",
-          "name": "\"Dynomene hispida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dynomene",
-          "authorship": "\"(Latreille <i>in</i> Milbert, 1812)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:209477",
-            "wikispecies": "Dynomene_hispida",
-            "checklistbank-1174": "txn:220958",
-            "checklistbank-127379": "4b4a484a-00b0-40c0-bef8-2ab304e0568c",
-            "checklistbank-139831": "1359381"
-          },
-          "children": [],
-          "uuid": "42aa359d-4d59-581-af3-4bad71d3a57a37",
-          "description": "\"Dynomene hispida\" is a dynomenidae species found in its native region."
-        },
-        {
           "id": "SP_DYNOMENE_FILHOLI",
           "name": "Dynomene filholi",
           "rank": "SPECIES",
@@ -1637,21 +1644,6 @@
             "checklistbank-127379": "6fd98258-1d79-4c5b-a307-a55255eab7b6"
           },
           "uuid": "a5e98177-f94e-49e3-a6a3-2d7f327b4bd4",
-          "children": []
-        },
-        {
-          "id": "SP_DYNOMENE_PRAEDATOR",
-          "name": "Dynomene praedator",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dynomene",
-          "sourceIds": {
-            "wikispecies": "Dynomene_praedator",
-            "checklistbank-1174": "txn:220960",
-            "checklistbank-127379": "acdefe95-ddc3-43a9-aedd-87a241adca07"
-          },
-          "uuid": "d5076fe6-f944-43bc-8567-70d583ece04e",
           "children": []
         },
         {
@@ -1733,22 +1725,6 @@
       "name": "\"Kromtitis",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_KROMTITIS_TERGOSPINOSUS_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Kromtitis tergospinosus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kromtitis",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611877",
-            "checklistbank-1174": "txn:404210"
-          },
-          "children": [],
-          "uuid": "f0443d49-4736-50a-98e-31de32a25d3ea5",
-          "description": "\"Kromtitis tergospinosus\" is a dynomenidae species found in its native region."
-        },
         {
           "id": "SP_KROMTITIS_BICUSPIDATUS_BESCHIN_ET_AL_2009",
           "name": "Kromtitis bicuspidatus",
@@ -2024,7 +2000,7 @@
       "lineage": "dynomenidae"
     }
   ],
-  "speciesCount": 104,
+  "speciesCount": 101,
   "appSlug": "dynomenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

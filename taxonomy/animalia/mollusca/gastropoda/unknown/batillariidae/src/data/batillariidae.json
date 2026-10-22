@@ -176,9 +176,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1658025"
             ],
-            "checklistbank-1174": "txn:117116"
+            "checklistbank-1174": [
+              "txn:117116"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1658025"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658025,col:B8J9T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658025,checklistbank-1174:txn:117116,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1658025,col:B8J9T",
           "authorship": "(K. Martin, 1879)"
         },
         {
@@ -3438,21 +3443,6 @@
           },
           "uuid": "e296ea21-375c-4f8d-944a-c4b47010f6e6",
           "children": []
-        },
-        {
-          "id": "SP_BATILLARIA_HERKLOTSI_K_MARTIN_1879",
-          "name": "Batillaria herklotsi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Batillaria",
-          "authorship": "(K. Martin, 1879)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658025",
-            "checklistbank-1174": "txn:117116"
-          },
-          "uuid": "8a702fd0-71fd-4966-b545-82fd9add3aa2",
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3618,7 +3608,7 @@
     }
   ],
   "genusCount": 20,
-  "speciesCount": 193,
+  "speciesCount": 192,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

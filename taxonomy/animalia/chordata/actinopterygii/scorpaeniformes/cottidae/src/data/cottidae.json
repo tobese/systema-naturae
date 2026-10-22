@@ -2443,11 +2443,14 @@
           "authorship": "\"Girard, 1854\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:254345",
-            "checklistbank-139831": "49163"
+            "checklistbank-139831": [
+              "49163"
+            ]
           },
           "children": [],
           "uuid": "471674f6-a848-581-8d0-b370fabc1ce336",
-          "description": "\"Leptocottus armatus\" is a cottidae species found in its native region."
+          "description": "\"Leptocottus armatus\" is a cottidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:254345,checklistbank-139831:49163"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3538,11 +3541,14 @@
           "authorship": "\"Heckel, 1837\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:283028",
-            "checklistbank-139831": "612143"
+            "checklistbank-139831": [
+              "612143"
+            ]
           },
           "children": [],
           "uuid": "351d2f7f-c46e-54e-bd9-d8de5b0816a429",
-          "description": "\"Trachidermus fasciatus\" is a cottidae species found in its native region."
+          "description": "\"Trachidermus fasciatus\" is a cottidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:283028,checklistbank-139831:612143"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4178,11 +4184,14 @@
           "authorship": "\"(Dybowski, 1869)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1020672",
-            "checklistbank-139831": "612103"
+            "checklistbank-139831": [
+              "612103"
+            ]
           },
           "children": [],
           "uuid": "1908a314-44e6-579-afd-6b5ca1f6381140",
-          "description": "\"Mesocottus haitej\" is a cottidae species found in its native region."
+          "description": "\"Mesocottus haitej\" is a cottidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1020672,checklistbank-139831:612103"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4850,7 +4859,8 @@
             ],
             "itis": [
               "167367"
-            ]
+            ],
+            "checklistbank-139831": "232594"
           },
           "authorityIds": "col:56SS7,itis:167367",
           "commonName": "sponge sculpin",
@@ -4881,7 +4891,8 @@
             ],
             "itis": [
               "643765"
-            ]
+            ],
+            "checklistbank-139831": "214088"
           },
           "authorityIds": "col:G9QM,itis:643765",
           "commonName": "scaled sculpin",
@@ -5829,19 +5840,6 @@
           },
           "children": [],
           "uuid": "fd3b0b00-1397-558-a9e-1da01d14700943"
-        },
-        {
-          "id": "SP_ARTEDIELLUS_ATLANTICUS_JORDAN_AND_EVERMANN_1898",
-          "name": "Artediellus atlanticus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Artediellus",
-          "authorship": "Jordan and Evermann 1898",
-          "sourceIds": {
-            "checklistbank-1174": "txn:391782"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -7967,7 +7965,8 @@
           "lineage": "Icelus",
           "authorship": "Lindberg & Andriashev, 1938",
           "sourceIds": {
-            "gbif-backbone": "9214858"
+            "gbif-backbone": "9214858",
+            "checklistbank-139831": "222151"
           },
           "children": [],
           "uuid": "7e1a21c3-d5de-58a-8f8-0a6bdd65a79dd7"
@@ -8552,7 +8551,10 @@
           "lineage": "Stelgistrum",
           "authorship": "Gilbert & Burke, 1912",
           "children": [],
-          "uuid": "e81ee80d-149d-596-979-88bd33f2abeed3"
+          "uuid": "e81ee80d-149d-596-979-88bd33f2abeed3",
+          "sourceIds": {
+            "checklistbank-139831": "113113"
+          }
         },
         {
           "id": "SP_STELGISTRUM_STEJNEGERI_JORDAN_GILBERT_1898",
@@ -8636,7 +8638,8 @@
           "lineage": "Enophrys",
           "authorship": "(Pallas, 1788)",
           "sourceIds": {
-            "checklistbank": "124432"
+            "checklistbank": "124432",
+            "checklistbank-139831": "219189"
           },
           "children": [],
           "uuid": "01c92bf5-6501-588-a34-8561111d47d8fb"
@@ -8930,19 +8933,6 @@
           },
           "children": [],
           "uuid": "b82137ae-8dcf-52e-b28-8e628ee6bb879b"
-        },
-        {
-          "id": "SP_ICELINUS_BURCHAMI_EVERMANN_AND_GOLDBOROUGH_1907",
-          "name": "Icelinus burchami",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Icelinus",
-          "authorship": "Evermann and Goldborough 1907",
-          "sourceIds": {
-            "checklistbank-1174": "txn:395092"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9053,73 +9043,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cottidae"
-    },
-    {
-      "id": "GENUS_LEPTOCOTTUS",
-      "name": "Leptocottus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPTOCOTTUS_ARMATUS",
-          "name": "Leptocottus armatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leptocottus",
-          "sourceIds": {
-            "checklistbank-139831": "49163"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cottidae"
-    },
-    {
-      "id": "GENUS_MESOCOTTUS",
-      "name": "Mesocottus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MESOCOTTUS_HAITEJ",
-          "name": "Mesocottus haitej",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mesocottus",
-          "sourceIds": {
-            "checklistbank-139831": "612103"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cottidae"
-    },
-    {
-      "id": "GENUS_TRACHIDERMUS",
-      "name": "Trachidermus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRACHIDERMUS_FASCIATUS",
-          "name": "Trachidermus fasciatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Trachidermus",
-          "sourceIds": {
-            "checklistbank-139831": "612143"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cottidae"
     }
   ],
-  "genusCount": 128,
-  "speciesCount": 519,
+  "genusCount": 125,
+  "speciesCount": 514,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

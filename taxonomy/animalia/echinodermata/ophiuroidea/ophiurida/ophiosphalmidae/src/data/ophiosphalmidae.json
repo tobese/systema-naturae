@@ -63,7 +63,8 @@
               "49ZPW"
             ],
             "checklistbank": "Ophiosphalma_elegans",
-            "wikispecies": "Ophiosphalma_elegans"
+            "wikispecies": "Ophiosphalma_elegans",
+            "checklistbank-139831": "1170344"
           },
           "authorityIds": "col:49ZPW",
           "description": "Ophiosphalma elegans is a ophiosphalmidae species found in its native region."
@@ -141,7 +142,8 @@
               "49ZQ5"
             ],
             "checklistbank": "Ophiosphalma_laqueatum",
-            "wikispecies": "Ophiosphalma_laqueatum"
+            "wikispecies": "Ophiosphalma_laqueatum",
+            "checklistbank-139831": "1170343"
           },
           "authorityIds": "col:49ZQ5",
           "description": "Ophiosphalma laqueatum is a ophiosphalmidae species found in its native region."
@@ -331,7 +333,8 @@
               "49ZPQ"
             ],
             "checklistbank": "Ophiosphalma_armigerum",
-            "wikispecies": "Ophiosphalma_armigerum"
+            "wikispecies": "Ophiosphalma_armigerum",
+            "checklistbank-139831": "255857"
           },
           "authorityIds": "col:49ZPQ",
           "description": "Ophiosphalma armigerum is a ophiosphalmidae species found in its native region."
@@ -878,10 +881,15 @@
             "col": [
               "BF9TJ"
             ],
-            "checklistbank": "Ophiomusium_fimbriatum",
-            "wikispecies": "Ophiomusium_fimbriatum"
+            "checklistbank": [
+              "Ophiomusium_fimbriatum",
+              "urn:lsid:marinespecies.org:taxname:243842"
+            ],
+            "wikispecies": [
+              "Ophiomusium_fimbriatum"
+            ]
           },
-          "authorityIds": "col:BF9TJ",
+          "authorityIds": "checklistbank:Ophiomusium_fimbriatum,checklistbank:urn:lsid:marinespecies.org:taxname:243842,col:BF9TJ,wikispecies:Ophiomusium_fimbriatum",
           "description": "Ophiomusium fimbriatum is a ophiosphalmidae species found in its native region."
         },
         {
@@ -1353,22 +1361,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_OPHIOMUSIUM_FIMBRIATUM_HERTZ_1927",
-          "name": "\"Ophiomusium fimbriatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ophiomusium",
-          "authorship": "\"Hertz, 1927\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:243842",
-            "wikispecies": "Ophiomusium_fimbriatum"
-          },
-          "children": [],
-          "uuid": "48ce4ad3-01ae-53b-af3-39d2cf83c66c72",
-          "description": "\"Ophiomusium fimbriatum is a ophiosphalmidae species found in its native region."
-        },
-        {
           "id": "SP_OPHIOMUSIUM_EBURNEUM_LJUNGMAN_1872",
           "name": "\"Ophiomusium eburneum",
           "rank": "SPECIES",
@@ -1486,7 +1478,7 @@
       "lineage": "ophiosphalmidae"
     }
   ],
-  "speciesCount": 83,
+  "speciesCount": 82,
   "appSlug": "ophiosphalmidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Ophiuroidea",

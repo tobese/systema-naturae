@@ -355,10 +355,15 @@
             "col": [
               "86PJZ"
             ],
-            "checklistbank": "txn:438420",
-            "checklistbank-1174": "txn:438420"
+            "checklistbank": [
+              "txn:438420",
+              "urn:lsid:marinespecies.org:taxname:1412860"
+            ],
+            "checklistbank-1174": [
+              "txn:438420"
+            ]
           },
-          "authorityIds": "col:86PJZ",
+          "authorityIds": "checklistbank:txn:438420,checklistbank:urn:lsid:marinespecies.org:taxname:1412860,checklistbank-1174:txn:438420,col:86PJZ",
           "authorship": "(Roemer 1841)"
         },
         {
@@ -644,10 +649,15 @@
             "col": [
               "868N2"
             ],
-            "checklistbank": "txn:364762",
-            "checklistbank-1174": "txn:364762"
+            "checklistbank": [
+              "txn:364762",
+              "urn:lsid:marinespecies.org:taxname:1412871"
+            ],
+            "checklistbank-1174": [
+              "txn:364762"
+            ]
           },
-          "authorityIds": "col:868N2",
+          "authorityIds": "checklistbank:txn:364762,checklistbank:urn:lsid:marinespecies.org:taxname:1412871,checklistbank-1174:txn:364762,col:868N2",
           "authorship": "(Roemer 1840)"
         }
       ]
@@ -1308,22 +1318,6 @@
           "description": "\"Petalopora cicatrix\" is a petaloporidae species found in its native region."
         },
         {
-          "id": "SP_PETALOPORA_CONCINNA_R_MER_1840",
-          "name": "\"Petalopora concinna\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Petalopora",
-          "authorship": "\"(Römer, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412860",
-            "checklistbank-1174": "txn:438420"
-          },
-          "children": [],
-          "uuid": "7286a810-5b1e-516-891-082f47cad79341",
-          "description": "\"Petalopora concinna\" is a petaloporidae species found in its native region."
-        },
-        {
           "id": "SP_PETALOPORA_CONSIMILIS_ULRICH_1882",
           "name": "\"Petalopora consimilis\"",
           "rank": "SPECIES",
@@ -1474,22 +1468,6 @@
           "description": "\"Petalopora marssoni\" is a petaloporidae species found in its native region."
         },
         {
-          "id": "SP_PETALOPORA_PULCHELLA_R_MER_1840",
-          "name": "\"Petalopora pulchella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Petalopora",
-          "authorship": "\"(Römer, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412871",
-            "checklistbank-1174": "txn:364762"
-          },
-          "children": [],
-          "uuid": "014e67c1-a09a-56b-a8f-ef40dbe9e7f291",
-          "description": "\"Petalopora pulchella\" is a petaloporidae species found in its native region."
-        },
-        {
           "id": "SP_PETALOPORA_COSTATA_VON_HAGENOW_1851",
           "name": "\"Petalopora costata",
           "rank": "SPECIES",
@@ -1612,7 +1590,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 81,
+  "speciesCount": 79,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

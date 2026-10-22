@@ -65,11 +65,16 @@
           "children": [],
           "sourceIds": {
             "gbif": 8149220,
-            "checklistbank": "Tricystis_planctonis",
-            "wikispecies": "Tricystis_planctonis"
+            "checklistbank": [
+              "Tricystis_planctonis",
+              "urn:lsid:marinespecies.org:taxname:563259"
+            ],
+            "wikispecies": [
+              "Tricystis_planctonis"
+            ]
           },
           "uuid": "47b4245c-01e9-5d2-80d-a3af7d5d83256b",
-          "authorityIds": "gbif:8149220"
+          "authorityIds": "checklistbank:Tricystis_planctonis,checklistbank:urn:lsid:marinespecies.org:taxname:563259,gbif:8149220,wikispecies:Tricystis_planctonis"
         }
       ]
     },
@@ -1726,31 +1731,6 @@
       "lineage": "actinocephalidae"
     },
     {
-      "id": "GENUS_TRICYSTIS",
-      "name": "\"Tricystis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRICYSTIS_PLANCTONIS_HAMON_1951",
-          "name": "\"Tricystis planctonis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tricystis",
-          "authorship": "\"Hamon, 1951\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:563259",
-            "wikispecies": "Tricystis_planctonis"
-          },
-          "children": [],
-          "uuid": "83af040c-0524-5ca-9f9-e215984b92cd68",
-          "description": "\"Tricystis planctonis\" is a actinocephalidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "actinocephalidae"
-    },
-    {
       "id": "GENUS_THALICOLA",
       "name": "\"Thalicola",
       "rank": "GENUS",
@@ -2070,8 +2050,8 @@
       "lineage": "actinocephalidae"
     }
   ],
-  "genusCount": 55,
-  "speciesCount": 95,
+  "genusCount": 54,
+  "speciesCount": 94,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

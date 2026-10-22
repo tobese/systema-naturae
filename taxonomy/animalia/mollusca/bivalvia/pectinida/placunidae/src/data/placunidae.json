@@ -77,10 +77,15 @@
             "col": [
               "6VNFB"
             ],
-            "checklistbank": "txn:61788",
-            "checklistbank-1174": "txn:61788"
+            "checklistbank": [
+              "txn:61788",
+              "urn:lsid:marinespecies.org:taxname:504273"
+            ],
+            "checklistbank-1174": [
+              "txn:61788"
+            ]
           },
-          "authorityIds": "col:6VNFB",
+          "authorityIds": "checklistbank:txn:61788,checklistbank:urn:lsid:marinespecies.org:taxname:504273,checklistbank-1174:txn:61788,col:6VNFB",
           "authorship": "Gray 1849"
         },
         {
@@ -360,22 +365,6 @@
           "description": "\"Placuna placenta\" is a placunidae species found in its native region."
         },
         {
-          "id": "SP_PLACUNA_LINCOLNII_J_E_GRAY_1849",
-          "name": "\"Placuna lincolnii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Placuna",
-          "authorship": "\"(J. E. Gray, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:504273",
-            "checklistbank-1174": "txn:61788"
-          },
-          "children": [],
-          "uuid": "4b2a5fdd-6528-5bc-af5-b38c8fb08c4b24",
-          "description": "\"Placuna lincolnii\" is a placunidae species found in its native region."
-        },
-        {
           "id": "SP_PLACUNA_EPHIPPIUM_PHILIPSSON_1788",
           "name": "\"Placuna ephippium\"",
           "rank": "SPECIES",
@@ -420,6 +409,30 @@
           },
           "uuid": "054b3014-ce9c-4787-a080-061330da60af",
           "children": []
+        },
+        {
+          "id": "SP_PLACUNA_VITREAM",
+          "name": "Placuna vitream",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Placuna",
+          "sourceIds": {
+            "checklistbank-139831": "1589522"
+          },
+          "uuid": "a6171fdf-635c-4409-acf7-37af31c54c4b"
+        },
+        {
+          "id": "SP_PLACUNA_AESTUARIA",
+          "name": "Placuna aestuaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Placuna",
+          "sourceIds": {
+            "checklistbank-139831": "1589524"
+          },
+          "uuid": "1fcad869-761c-403b-b8f2-1609cffdae41"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -427,7 +440,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 24,
+  "speciesCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

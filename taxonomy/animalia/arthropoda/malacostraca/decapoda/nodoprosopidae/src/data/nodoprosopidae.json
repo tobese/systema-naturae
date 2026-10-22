@@ -21,11 +21,16 @@
             "col": [
               "9ZP67"
             ],
-            "checklistbank": "txn:235216",
+            "checklistbank": [
+              "txn:235216",
+              "urn:lsid:marinespecies.org:taxname:1632443"
+            ],
             "gbif-backbone": "8506967",
-            "checklistbank-1174": "txn:235216"
+            "checklistbank-1174": [
+              "txn:235216"
+            ]
           },
-          "authorityIds": "col:9ZP67",
+          "authorityIds": "checklistbank:txn:235216,checklistbank:urn:lsid:marinespecies.org:taxname:1632443,checklistbank-1174:txn:235216,col:9ZP67,gbif-backbone:8506967",
           "children": [],
           "description": "Nodoprosopon echinorum is a nodoprosopidae species found in its native region."
         },
@@ -78,10 +83,15 @@
             "col": [
               "BDCNH"
             ],
-            "checklistbank": "txn:147684",
-            "checklistbank-1174": "txn:147684"
+            "checklistbank": [
+              "txn:147684",
+              "urn:lsid:marinespecies.org:taxname:1659658"
+            ],
+            "checklistbank-1174": [
+              "txn:147684"
+            ]
           },
-          "authorityIds": "col:BDCNH",
+          "authorityIds": "checklistbank:txn:147684,checklistbank:urn:lsid:marinespecies.org:taxname:1659658,checklistbank-1174:txn:147684,col:BDCNH",
           "children": [],
           "description": "Nodoprosopon ornatum is a nodoprosopidae species found in its native region."
         },
@@ -195,47 +205,6 @@
       "lineage": "Nodoprosopidae"
     },
     {
-      "id": "GENUS_NODOPROSOPON",
-      "name": "\"Nodoprosopon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NODOPROSOPON_ECHINORUM_COLLINS_I_IN_I_COLLINS_WIERZBOWSKI_1985",
-          "name": "\"Nodoprosopon echinorum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nodoprosopon",
-          "authorship": "\"Collins <i>in</i> Collins & Wierzbowski, 1985\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1632443",
-            "checklistbank-1174": "txn:235216"
-          },
-          "children": [],
-          "uuid": "d7544c66-f7a5-5d7-bf2-74babeb5808d69",
-          "description": "\"Nodoprosopon echinorum\" is a nodoprosopidae species found in its native region."
-        },
-        {
-          "id": "SP_NODOPROSOPON_ORNATUM_PATRULIUS_1966",
-          "name": "\"Nodoprosopon ornatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nodoprosopon",
-          "authorship": "\"Patrulius, 1966\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1659658",
-            "checklistbank-1174": "txn:147684"
-          },
-          "children": [],
-          "uuid": "bbb7ec2c-5b23-555-a4f-9fd909babe4fe0",
-          "description": "\"Nodoprosopon ornatum is a nodoprosopidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "nodoprosopidae"
-    },
-    {
       "id": "GENUS_PROSOPON",
       "name": "Prosopon",
       "rank": "GENUS",
@@ -287,11 +256,11 @@
       "lineage": "nodoprosopidae"
     }
   ],
-  "speciesCount": 16,
+  "speciesCount": 14,
   "appSlug": "nodoprosopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 3,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

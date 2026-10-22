@@ -2813,11 +2813,16 @@
             "col": [
               "82QKP"
             ],
-            "checklistbank": "txn:423192",
-            "checklistbank-1174": "txn:423192"
+            "checklistbank": [
+              "txn:423192",
+              "urn:lsid:marinespecies.org:taxname:916011"
+            ],
+            "checklistbank-1174": [
+              "txn:423192"
+            ]
           },
           "uuid": "a17db829-5830-595-878-f7fef531acaf4c",
-          "authorityIds": "col:82QKP,gbif:9041117",
+          "authorityIds": "checklistbank:txn:423192,checklistbank:urn:lsid:marinespecies.org:taxname:916011,checklistbank-1174:txn:423192,col:82QKP,gbif:9041117",
           "authorship": "Bartenstein and Brand 1949"
         },
         {
@@ -4855,7 +4860,8 @@
           "lineage": "\"Cornuspiramia",
           "authorship": "\"(Cushman, 1922)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417771"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:417771",
+            "checklistbank-139831": "532648"
           },
           "children": [],
           "uuid": "c6493970-8015-5ab-a97-a9e77083bbb22c",
@@ -6014,22 +6020,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HECHTINA_PRAEANTIQUA_BARTENSTEIN_BRAND_1949",
-          "name": "\"Hechtina praeantiqua\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hechtina",
-          "authorship": "\"Bartenstein & Brand, 1949\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:916011",
-            "checklistbank-1174": "txn:423192"
-          },
-          "children": [],
-          "uuid": "0468447a-35e5-5a5-830-543f1cc19d6b85",
-          "description": "\"Hechtina praeantiqua\" is a nubeculariidae species found in its native region."
-        },
-        {
           "id": "SP_HECHTINA_VAGIFORMIS_BULYNNIKOVA_1986",
           "name": "\"Hechtina vagiformis\"",
           "rank": "SPECIES",
@@ -6389,7 +6379,7 @@
     }
   ],
   "genusCount": 55,
-  "speciesCount": 317,
+  "speciesCount": 316,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

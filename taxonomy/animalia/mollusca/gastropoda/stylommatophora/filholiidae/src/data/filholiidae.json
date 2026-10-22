@@ -1347,10 +1347,15 @@
             "col": [
               "58ZV4"
             ],
-            "checklistbank": "txn:475668",
-            "checklistbank-1174": "txn:475668"
+            "checklistbank": [
+              "txn:475668",
+              "urn:lsid:marinespecies.org:taxname:934146"
+            ],
+            "checklistbank-1174": [
+              "txn:475668"
+            ]
           },
-          "authorityIds": "col:58ZV4",
+          "authorityIds": "checklistbank:txn:475668,checklistbank:urn:lsid:marinespecies.org:taxname:934146,checklistbank-1174:txn:475668,col:58ZV4",
           "authorship": "(Sandberger 1875)"
         },
         {
@@ -1758,22 +1763,6 @@
           "children": [],
           "uuid": "b2d17736-60d5-5ad-9fe-fcd575a72c0335",
           "description": "\"Triptychia randeckiana\" is a filholiidae species found in its native region."
-        },
-        {
-          "id": "SP_TRIPTYCHIA_SUEVICA_F_SANDBERGER_1875",
-          "name": "\"Triptychia suevica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Triptychia",
-          "authorship": "\"(F. Sandberger, 1875)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934146",
-            "checklistbank-1174": "txn:475668"
-          },
-          "children": [],
-          "uuid": "39aef7d0-c92e-52e-a85-2609530b020b2a",
-          "description": "\"Triptychia suevica\" is a filholiidae species found in its native region."
         },
         {
           "id": "SP_TRIPTYCHIA_ULMENSIS_F_SANDBERGER_1875",
@@ -2195,7 +2184,7 @@
     }
   ],
   "genusCount": 4,
-  "speciesCount": 119,
+  "speciesCount": 118,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

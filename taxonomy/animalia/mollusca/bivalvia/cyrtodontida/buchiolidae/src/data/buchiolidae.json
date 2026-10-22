@@ -53,10 +53,15 @@
             "col": [
               "BDKD8"
             ],
-            "checklistbank": "txn:515548",
-            "checklistbank-1174": "txn:515548"
+            "checklistbank": [
+              "txn:515548",
+              "urn:lsid:marinespecies.org:taxname:1659686"
+            ],
+            "checklistbank-1174": [
+              "txn:515548"
+            ]
           },
-          "authorityIds": "col:BDKD8",
+          "authorityIds": "checklistbank:txn:515548,checklistbank:urn:lsid:marinespecies.org:taxname:1659686,checklistbank-1174:txn:515548,col:BDKD8",
           "children": [],
           "authorship": "(von Buch 1832)"
         },
@@ -156,31 +161,6 @@
           "description": "Glyptohallicardia mucronata is a buchiolidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_BUCHIOLA",
-      "name": "\"Buchiola",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BUCHIOLA_RETROSTRIATA_BUCH_1832",
-          "name": "\"Buchiola retrostriata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Buchiola",
-          "authorship": "\"(Buch, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1659686",
-            "checklistbank-1174": "txn:515548"
-          },
-          "children": [],
-          "uuid": "71d32247-7632-5b6-95d-eb701efd450d45",
-          "description": "\"Buchiola retrostriata\" is a buchiolidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "buchiolidae"
     },
     {
       "id": "GENUS_COSTACUTIA",
@@ -320,6 +300,6 @@
     "checklistbank": "txn:103418",
     "checklistbank-1174": "txn:103418"
   },
-  "genusCount": 7,
-  "speciesCount": 16
+  "genusCount": 6,
+  "speciesCount": 15
 }

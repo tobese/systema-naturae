@@ -1043,11 +1043,16 @@
             "col": [
               "3TQST"
             ],
-            "checklistbank": "Leptolegnia_baltica",
-            "wikispecies": "Leptolegnia_baltica"
+            "checklistbank": [
+              "Leptolegnia_baltica",
+              "urn:lsid:marinespecies.org:taxname:172171"
+            ],
+            "wikispecies": [
+              "Leptolegnia_baltica"
+            ]
           },
           "uuid": "8270f332-8661-505-856-bf8eb08f046020",
-          "authorityIds": "col:3TQST,gbif:3276170,mycobank:282726",
+          "authorityIds": "checklistbank:Leptolegnia_baltica,checklistbank:urn:lsid:marinespecies.org:taxname:172171,col:3TQST,gbif:3276170,mycobank:282726,wikispecies:Leptolegnia_baltica",
           "children": []
         },
         {
@@ -1205,11 +1210,16 @@
             "itis": [
               "13890"
             ],
-            "checklistbank": "Leptolegnia_marina",
-            "wikispecies": "Leptolegnia_marina"
+            "checklistbank": [
+              "Leptolegnia_marina",
+              "urn:lsid:marinespecies.org:taxname:172172"
+            ],
+            "wikispecies": [
+              "Leptolegnia_marina"
+            ]
           },
           "uuid": "312460a4-807c-5b5-84f-4c6e59cc8c29c5",
-          "authorityIds": "gbif:3203313,itis:13890,mycobank:299538",
+          "authorityIds": "checklistbank:Leptolegnia_marina,checklistbank:urn:lsid:marinespecies.org:taxname:172172,gbif:3203313,itis:13890,mycobank:299538,wikispecies:Leptolegnia_marina",
           "children": []
         },
         {
@@ -1438,47 +1448,6 @@
       ]
     },
     {
-      "id": "GENUS_LEPTOLEGNIA",
-      "name": "\"Leptolegnia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPTOLEGNIA_BALTICA_H_HNK_VALLIN_1953",
-          "name": "\"Leptolegnia baltica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptolegnia",
-          "authorship": "\"Höhnk & Vallin, 1953\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172171",
-            "wikispecies": "Leptolegnia_baltica"
-          },
-          "children": [],
-          "uuid": "d3b17005-5ee4-565-8e1-e5d4cd9be9170c",
-          "description": "\"Leptolegnia baltica\" is a leptolegniaceae species found in its native region."
-        },
-        {
-          "id": "SP_LEPTOLEGNIA_MARINA_D_ATKINS_1954",
-          "name": "\"Leptolegnia marina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptolegnia",
-          "authorship": "\"(D. Atkins, 1954)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172172",
-            "wikispecies": "Leptolegnia_marina"
-          },
-          "children": [],
-          "uuid": "c2b26031-3963-517-b5e-6c0aadbc29eff2",
-          "description": "\"Leptolegnia marina\" is a leptolegniaceae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "leptolegniaceae"
-    },
-    {
       "id": "GENUS_APHANOMYCES",
       "name": "\"Aphanomyces",
       "rank": "GENUS",
@@ -1585,6 +1554,6 @@
     "checklistbank": "Leptolegniaceae",
     "wikispecies": "Leptolegniaceae"
   },
-  "genusCount": 6,
-  "speciesCount": 62
+  "genusCount": 5,
+  "speciesCount": 60
 }

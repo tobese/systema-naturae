@@ -4231,10 +4231,15 @@
               "878107"
             ],
             "checklistbank": "94521a3f-fa06-4e0d-abd1-d96a984e56f9",
-            "checklistbank-139831": "825705"
+            "checklistbank-139831": [
+              "825705"
+            ],
+            "checklistbank-127379": [
+              "94521a3f-fa06-4e0d-abd1-d96a984e56f9"
+            ]
           },
           "uuid": "2e1ad98b-51bc-5f3-97c-f9c63b54fea9c1",
-          "authorityIds": "col:34ZP3,gbif:2143021,itis:878107",
+          "authorityIds": "checklistbank:94521a3f-fa06-4e0d-abd1-d96a984e56f9,checklistbank-127379:94521a3f-fa06-4e0d-abd1-d96a984e56f9,checklistbank-139831:825705,col:34ZP3,gbif:2143021,itis:878107",
           "continents": [
             "Australia"
           ],
@@ -4310,10 +4315,15 @@
               "34ZNT"
             ],
             "checklistbank": "2dbe7a5b-fe9f-401e-a4ce-3c91a98846e6",
-            "checklistbank-139831": "831981"
+            "checklistbank-139831": [
+              "831981"
+            ],
+            "checklistbank-127379": [
+              "2dbe7a5b-fe9f-401e-a4ce-3c91a98846e6"
+            ]
           },
           "uuid": "c1abeb79-5935-540-a91-2fcf0b20719b5d",
-          "authorityIds": "col:34ZNT,gbif:9529471",
+          "authorityIds": "checklistbank:2dbe7a5b-fe9f-401e-a4ce-3c91a98846e6,checklistbank-127379:2dbe7a5b-fe9f-401e-a4ce-3c91a98846e6,checklistbank-139831:831981,col:34ZNT,gbif:9529471",
           "continents": [
             "Australia"
           ],
@@ -4476,11 +4486,16 @@
             "col": [
               "34ZNV"
             ],
-            "checklistbank": "661686",
-            "checklistbank-139831": "661686"
+            "checklistbank": [
+              "661686",
+              "urn:lsid:marinespecies.org:taxname:509855"
+            ],
+            "checklistbank-139831": [
+              "661686"
+            ]
           },
           "uuid": "7d2c2f1b-b52e-52d-85c-b21c22d90ac91b",
-          "authorityIds": "col:34ZNV,gbif:2143010,itis:878101",
+          "authorityIds": "checklistbank:661686,checklistbank:urn:lsid:marinespecies.org:taxname:509855,checklistbank-139831:661686,col:34ZNV,gbif:2143010,itis:878101",
           "continents": [
             "Africa"
           ],
@@ -11747,22 +11762,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DESIS_FORMIDABILIS_PICKARD_CAMBRIDGE_1890",
-          "name": "\"Desis formidabilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Desis",
-          "authorship": "\"(Pickard-Cambridge, 1890)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:509855",
-            "checklistbank-139831": "661686"
-          },
-          "children": [],
-          "uuid": "b9f58124-5abc-50e-a94-ced61ca5c5c4a0",
-          "description": "\"Desis formidabilis\" is a desidae species found in its native region."
-        },
-        {
           "id": "SP_DESIS_MARINA",
           "name": "Desis marina",
           "rank": "SPECIES",
@@ -11773,21 +11772,6 @@
             "wikispecies": "Desis_marina"
           },
           "uuid": "6923b939-cf7a-4a49-8a77-34b8a3c1905d",
-          "children": []
-        },
-        {
-          "id": "SP_DESIS_BOBMARLEYI_BAEHR_RAVEN_HARMS",
-          "name": "Desis bobmarleyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Desis",
-          "authorship": "Baehr, Raven & Harms",
-          "sourceIds": {
-            "checklistbank-127379": "2dbe7a5b-fe9f-401e-a4ce-3c91a98846e6",
-            "checklistbank-139831": "831981"
-          },
-          "uuid": "719bf15c-9a3a-42a8-a63a-94edb71e545c",
           "children": []
         },
         {
@@ -11802,21 +11786,6 @@
             "checklistbank-127379": "ec92f8fb-c1c0-4572-8d24-2be0b3a6163b"
           },
           "uuid": "bdfa5e12-d77e-4cfd-aeeb-c270674b8804",
-          "children": []
-        },
-        {
-          "id": "SP_DESIS_KENYONAE_POCOCK",
-          "name": "Desis kenyonae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Desis",
-          "authorship": "Pocock",
-          "sourceIds": {
-            "checklistbank-127379": "94521a3f-fa06-4e0d-abd1-d96a984e56f9",
-            "checklistbank-139831": "825705"
-          },
-          "uuid": "ef857f2a-304e-4565-84e3-efd3f07d1f25",
           "children": []
         },
         {
@@ -12300,46 +12269,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "desidae"
-    },
-    {
-      "id": "GENUS_MARPLESIA",
-      "name": "Marplesia",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "desidae",
-      "children": [
-        {
-          "id": "SP_MARPLESIA_POHARA",
-          "name": "Marplesia pohara",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Marplesia",
-          "sourceIds": {
-            "checklistbank-139831": "392192"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MARPLESIA_DUGDALEI",
-          "name": "Marplesia dugdalei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Marplesia",
-          "sourceIds": {
-            "checklistbank-139831": "392193"
-          },
-          "children": []
-        }
-      ]
     }
   ],
-  "speciesCount": 491,
+  "speciesCount": 486,
   "appSlug": "desidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 90,
+  "genusCount": 89,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1049,9 +1049,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:933772"
             ],
-            "checklistbank-1174": "txn:476024"
+            "checklistbank-1174": [
+              "txn:476024"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:933772"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933772,col:3FDCN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933772,checklistbank-1174:txn:476024,checklistbank-2011:urn:lsid:marinespecies.org:taxname:933772,col:3FDCN",
           "authorship": "(Wenz, 1921)"
         },
         {
@@ -10429,21 +10434,6 @@
           "children": []
         },
         {
-          "id": "SP_GASTROCOPTA_EDLAUERI_WENZ_1921",
-          "name": "Gastrocopta edlaueri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gastrocopta",
-          "authorship": "(Wenz, 1921)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933772",
-            "checklistbank-1174": "txn:476024"
-          },
-          "uuid": "a2b359c9-88a2-4eb7-9c58-71568747fd74",
-          "children": []
-        },
-        {
           "id": "SP_GASTROCOPTA_ACUMINATA_KLEIN_1846",
           "name": "Gastrocopta acuminata",
           "rank": "SPECIES",
@@ -11260,7 +11250,7 @@
     }
   ],
   "genusCount": 31,
-  "speciesCount": 639,
+  "speciesCount": 638,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

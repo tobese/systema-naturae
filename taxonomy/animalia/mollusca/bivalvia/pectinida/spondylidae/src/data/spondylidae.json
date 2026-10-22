@@ -185,9 +185,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1638334"
             ],
-            "checklistbank-1174": "txn:155201"
+            "checklistbank-1174": [
+              "txn:155201"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1638334"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1638334,col:B5FBR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1638334,checklistbank-1174:txn:155201,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1638334,col:B5FBR",
           "authorship": "(C. W. Cooke, 1919)"
         },
         {
@@ -1077,9 +1082,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1638335"
             ],
-            "checklistbank-1174": "txn:109732"
+            "checklistbank-1174": [
+              "txn:109732"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1638335"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1638335,col:B5FC6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1638335,checklistbank-1174:txn:109732,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1638335,col:B5FC6",
           "authorship": "(S. G. Morton, 1834)"
         },
         {
@@ -3503,9 +3513,14 @@
               "urn:lsid:marinespecies.org:taxname:1638343"
             ],
             "gbif-backbone": "8652336",
-            "checklistbank-1174": "txn:317814"
+            "checklistbank-1174": [
+              "txn:317814"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1638343"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1638343,col:B5FCV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1638343,checklistbank-1174:txn:317814,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1638343,col:B5FCV,gbif-backbone:8652336",
           "authorship": "(E. L. Packard, 1922)"
         },
         {
@@ -4570,14 +4585,20 @@
           "lineage": "Spondylus",
           "authorship": "Linné, 1758",
           "sourceIds": {
-            "checklistbank": "61549",
-            "wikispecies": "Spondylus_gaederopus",
+            "checklistbank": [
+              "61549",
+              "urn:lsid:marinespecies.org:taxname:1673953"
+            ],
+            "wikispecies": [
+              "Spondylus_gaederopus"
+            ],
             "checklistbank-139831": "326346"
           },
           "children": [],
           "uuid": "067c89f1-ee19-58f-bd8-713042bfd71b99",
           "commonName": "thorny oyster",
-          "description": "Spondylus gaederopus is a species of marine bivalve mollusc, a thorny oyster in the family Spondylidae."
+          "description": "Spondylus gaederopus is a species of marine bivalve mollusc, a thorny oyster in the family Spondylidae.",
+          "authorityIds": "checklistbank:61549,checklistbank:urn:lsid:marinespecies.org:taxname:1673953,checklistbank-139831:326346,wikispecies:Spondylus_gaederopus"
         },
         {
           "id": "SP_SPONDYLUS_GUSSONII_COSTA_O_G_1829",
@@ -7779,302 +7800,6 @@
       ]
     },
     {
-      "id": "GENUS_PRAESPONDYLOPECTEN",
-      "name": "Praespondylopecten",
-      "rank": "GENUS",
-      "description": "Praespondylopecten — a genus of bivalvias.",
-      "lineage": "Praespondylopecten",
-      "children": [
-        {
-          "id": "SP_PRAESPONDYLOPECTEN_BESNOSSOWI_ROMANOV_1987",
-          "name": "Praespondylopecten besnossowi Romanov, 1987",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Praespondylopecten",
-          "subspeciesCount": 0,
-          "description": "Praespondylopecten besnossowi Romanov, 1987 is a spondylidae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "1da624b0-f533-578-809-6806727570bd48",
-          "sourceIds": {
-            "col": [
-              "BHYNW"
-            ]
-          },
-          "authorityIds": "col:BHYNW"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_SPONDYLOPECTEN",
-      "name": "Spondylopecten",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SPONDYLOPECTEN_MAGANENSIS_ZESASHVILI_1963",
-          "name": "Spondylopecten maganensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Zesashvili, 1963",
-          "children": [],
-          "lineage": "Spondylopecten",
-          "uuid": "ac6cbc17-8c90-50c-961-fe448a67dc8ae5",
-          "sourceIds": {
-            "col": [
-              "CHMN5"
-            ]
-          },
-          "authorityIds": "col:CHMN5",
-          "description": "Spondylopecten maganensis is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_MULTICOSTATUS_PCHELINTSEV_1931",
-          "name": "Spondylopecten multicostatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Pchelintsev, 1931",
-          "children": [],
-          "lineage": "Spondylopecten",
-          "uuid": "f8007cc6-cda0-500-8db-02289288b52b57",
-          "sourceIds": {
-            "col": [
-              "CHN2L"
-            ]
-          },
-          "authorityIds": "col:CHN2L",
-          "description": "Spondylopecten multicostatus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_KJAPASENSIS_GASANOV_1961",
-          "name": "Spondylopecten kjapasensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Gasanov, 1961",
-          "children": [],
-          "lineage": "Spondylopecten",
-          "uuid": "2449aa59-883f-5d1-b99-05d23fa7d7842c",
-          "sourceIds": {
-            "col": [
-              "CHMTM"
-            ]
-          },
-          "authorityIds": "col:CHMTM",
-          "description": "Spondylopecten kjapasensis is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_SAMEBAENSE_KAKHADZE_1942",
-          "name": "Spondylopecten samebaense",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Kakhadze, 1942",
-          "children": [],
-          "lineage": "Spondylopecten",
-          "uuid": "c5d0b6d8-eb24-508-9e7-870949ed10d2f9",
-          "sourceIds": {
-            "col": [
-              "CHMXM"
-            ]
-          },
-          "authorityIds": "col:CHMXM",
-          "description": "Spondylopecten samebaense is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_KOJKOLENSIS_GASANOV_1961",
-          "name": "Spondylopecten kojkolensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Gasanov, 1961",
-          "children": [],
-          "lineage": "Spondylopecten",
-          "uuid": "8cab4d5c-101e-547-a1b-f0b1eb01fa93fe",
-          "sourceIds": {
-            "col": [
-              "CHN9N"
-            ]
-          },
-          "authorityIds": "col:CHN9N",
-          "description": "Spondylopecten kojkolensis is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_AEQUATUS_F_A_QUENSTEDT_1857",
-          "name": "Spondylopecten aequatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "(F. A. Quenstedt, 1857)",
-          "children": [],
-          "lineage": "Spondylopecten",
-          "uuid": "aa7ed7c4-a132-5b2-bb3-59be33d3e2d665",
-          "sourceIds": {
-            "col": [
-              "C62XL"
-            ]
-          },
-          "authorityIds": "col:C62XL",
-          "description": "Spondylopecten aequatus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_CARDINATUS_F_A_QUENSTEDT_1857",
-          "name": "Spondylopecten cardinatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(F. A. Quenstedt, 1857)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638327"
-          },
-          "children": [],
-          "uuid": "484e30db-cc42-5c8-bcf-e1a5d8fe512cfa",
-          "description": "Spondylopecten cardinatus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_ERINACEUS_BUVIGNIER_1852",
-          "name": "Spondylopecten erinaceus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(Buvignier, 1852)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638328"
-          },
-          "children": [],
-          "uuid": "b0d34b65-cfdd-58c-8cb-243f7c4ed69c8f",
-          "description": "Spondylopecten erinaceus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_GLOBOSUS_F_A_QUENSTEDT_1843",
-          "name": "Spondylopecten globosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(F. A. Quenstedt, 1843)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638329"
-          },
-          "children": [],
-          "uuid": "4812c4e7-49f5-55d-a23-1574a7e6c89ed2",
-          "description": "Spondylopecten globosus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_MOREANUS_BUVIGNIER_1852",
-          "name": "Spondylopecten moreanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(Buvignier, 1852)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638330"
-          },
-          "children": [],
-          "uuid": "6057455f-9483-5ab-8b2-a122100436f2fe",
-          "description": "Spondylopecten moreanus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_PALINURUS_A_D_ORBIGNY_1850",
-          "name": "Spondylopecten palinurus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(A. d'Orbigny, 1850)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638331"
-          },
-          "children": [],
-          "uuid": "fb0747c5-2730-58c-b1e-b8d8642be5ee58",
-          "description": "Spondylopecten palinurus is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_STOLICZKAI_L_R_COX_1952",
-          "name": "Spondylopecten stoliczkai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(L. R. Cox, 1952)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638332"
-          },
-          "children": [],
-          "uuid": "e8e838b8-50f1-5c6-b85-7ff8f3d66b5351",
-          "description": "Spondylopecten stoliczkai is a spondylidae species found in its native region."
-        },
-        {
-          "id": "SP_SPONDYLOPECTEN_SUBPUNCTATUS_M_NSTER_1833",
-          "name": "Spondylopecten subpunctatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylopecten",
-          "authorship": "(Münster, 1833)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638333"
-          },
-          "children": [],
-          "uuid": "14f24a0f-b584-519-891-499c608aaa0145",
-          "description": "Spondylopecten subpunctatus is a spondylidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Spondylidae"
-    },
-    {
-      "id": "GENUS_PLESIOPECTEN",
-      "name": "Plesiopecten",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLESIOPECTEN_SUBSPINOSUS_SCHLOTHEIM_1820",
-          "name": "Plesiopecten subspinosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plesiopecten",
-          "authorship": "(Schlotheim, 1820)",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638251"
-          },
-          "children": [],
-          "uuid": "0385083c-06b7-5b1-a95-25f036c9019125",
-          "description": "Plesiopecten subspinosus is a spondylidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "spondylidae"
-    },
-    {
-      "id": "GENUS_ELTOPERA",
-      "name": "Eltopera",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ELTOPERA_SANGUINEA",
-          "name": "Eltopera sanguinea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eltopera",
-          "sourceIds": {
-            "checklistbank": "ott404621"
-          },
-          "children": [],
-          "uuid": "fcbd8f11-9839-571-9ad-2eb9419fc9445e",
-          "description": "Eltopera sanguinea is a spondylidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "spondylidae"
-    },
-    {
       "id": "GENUS_SPONDYLUS",
       "name": "\"Spondylus",
       "rank": "GENUS",
@@ -8110,22 +7835,6 @@
           "description": "\"Spondylus chipolanus is a spondylidae species found in its native region."
         },
         {
-          "id": "SP_SPONDYLUS_GAEDEROPUS_MICHELOTTI_1847",
-          "name": "\"Spondylus gaederopus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spondylus",
-          "authorship": "\"Michelotti, 1847\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1673953",
-            "wikispecies": "Spondylus_gaederopus"
-          },
-          "children": [],
-          "uuid": "b2e353fb-5912-51c-88b-8a43b2e7aad1f6",
-          "description": "\"Spondylus gaederopus is a spondylidae species found in its native region."
-        },
-        {
           "id": "SP_SPONDYLUS_SPONDYLOIDES_TATE_1882",
           "name": "Spondylus spondyloides",
           "rank": "SPECIES",
@@ -8137,36 +7846,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1632782"
           },
           "uuid": "069cdd9e-f763-4192-9087-9d1bfb5bf726",
-          "children": []
-        },
-        {
-          "id": "SP_SPONDYLUS_ARATUS_C_W_COOKE_1919",
-          "name": "Spondylus aratus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylus",
-          "authorship": "(C. W. Cooke, 1919)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1638334",
-            "checklistbank-1174": "txn:155201"
-          },
-          "uuid": "b244d0e0-1911-4b09-9c21-f99e560a46af",
-          "children": []
-        },
-        {
-          "id": "SP_SPONDYLUS_DUMOSUS_S_G_MORTON_1834",
-          "name": "Spondylus dumosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylus",
-          "authorship": "(S. G. Morton, 1834)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1638335",
-            "checklistbank-1174": "txn:109732"
-          },
-          "uuid": "d27abb70-6e41-459f-9a43-c6bd461799e0",
           "children": []
         },
         {
@@ -8237,21 +7916,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1638342"
           },
           "uuid": "ab1b0052-cc90-48af-8eb0-75d3a33c3a5e",
-          "children": []
-        },
-        {
-          "id": "SP_SPONDYLUS_SUBNODOSUS_E_L_PACKARD_1922",
-          "name": "Spondylus subnodosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spondylus",
-          "authorship": "(E. L. Packard, 1922)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1638343",
-            "checklistbank-1174": "txn:317814"
-          },
-          "uuid": "41ebe306-cd0a-45a2-98d6-22c7b84ff0c8",
           "children": []
         },
         {
@@ -8617,6 +8281,602 @@
           },
           "uuid": "cdc99796-b3fa-43a0-95ca-72bd1e17f969",
           "children": []
+        },
+        {
+          "id": "SP_SPONDYLUS_SQUAMOSUS",
+          "name": "Spondylus squamosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "497788"
+          },
+          "uuid": "baf2b255-169f-4718-8ca6-8cf7ddcd9b9c"
+        },
+        {
+          "id": "SP_SPONDYLUS_TENELLUS",
+          "name": "Spondylus tenellus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "624121"
+          },
+          "uuid": "569dfcb3-3b54-40df-81f9-7bda183c58ef"
+        },
+        {
+          "id": "SP_SPONDYLUS_OCCIDENS",
+          "name": "Spondylus occidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "624124"
+          },
+          "uuid": "8169c463-40ac-4e0a-bb7f-e3a2c675e7be"
+        },
+        {
+          "id": "SP_SPONDYLUS_SPINOSUS",
+          "name": "Spondylus spinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "765091"
+          },
+          "uuid": "f8c8a180-abb4-4809-89fe-f93f2cb18d75"
+        },
+        {
+          "id": "SP_SPONDYLUS_CANDIDUS",
+          "name": "Spondylus candidus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "861737"
+          },
+          "uuid": "f6bd123a-ab68-46f7-94c4-c53b6a9751a1"
+        },
+        {
+          "id": "SP_SPONDYLUS_VERSICOLOR",
+          "name": "Spondylus versicolor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "886840"
+          },
+          "uuid": "626f3a51-f08a-40fb-a55b-a537c9596061"
+        },
+        {
+          "id": "SP_SPONDYLUS_VARIEGATUS",
+          "name": "Spondylus variegatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "992319"
+          },
+          "uuid": "b8bd7bcc-8da8-46b7-8f64-5c12d8712c4d"
+        },
+        {
+          "id": "SP_SPONDYLUS_CRASSICOSTA",
+          "name": "Spondylus crassicosta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1028750"
+          },
+          "uuid": "606f9df8-9dd3-4082-8d30-2d750c813ca8"
+        },
+        {
+          "id": "SP_SPONDYLUS_ANACANTHUS",
+          "name": "Spondylus anacanthus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1127335"
+          },
+          "uuid": "629c0eda-551b-49a5-93dc-0c2187c255be"
+        },
+        {
+          "id": "SP_SPONDYLUS_PRONERI",
+          "name": "Spondylus proneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210694"
+          },
+          "uuid": "4a899433-1213-4825-b25d-34478241387c"
+        },
+        {
+          "id": "SP_SPONDYLUS_RIPPINGALEI",
+          "name": "Spondylus rippingalei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210695"
+          },
+          "uuid": "253e1a7f-c300-4977-984a-956faed066b3"
+        },
+        {
+          "id": "SP_SPONDYLUS_TENUITAS",
+          "name": "Spondylus tenuitas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210698"
+          },
+          "uuid": "149774c6-4d0b-44d4-bf45-456d4be02139"
+        },
+        {
+          "id": "SP_SPONDYLUS_CLARKSONI",
+          "name": "Spondylus clarksoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210699"
+          },
+          "uuid": "53ee1a80-ad24-4a03-8d06-67d93cf6ec45"
+        },
+        {
+          "id": "SP_SPONDYLUS_MAESTRATII",
+          "name": "Spondylus maestratii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210701"
+          },
+          "uuid": "98b4a518-1908-4f92-b229-ae1578df0bf6"
+        },
+        {
+          "id": "SP_SPONDYLUS_HEIDKEAE",
+          "name": "Spondylus heidkeae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210702"
+          },
+          "uuid": "db9c4d10-f3ed-4371-b1bb-6ca3dc10c04a"
+        },
+        {
+          "id": "SP_SPONDYLUS_DEFORGESI",
+          "name": "Spondylus deforgesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210704"
+          },
+          "uuid": "075f8f76-517e-4e7a-8b80-2c076fe07d12"
+        },
+        {
+          "id": "SP_SPONDYLUS_EASTAE",
+          "name": "Spondylus eastae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210706"
+          },
+          "uuid": "774f867f-796e-437f-afc7-202c8341706d"
+        },
+        {
+          "id": "SP_SPONDYLUS_OCELLATUS",
+          "name": "Spondylus ocellatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210717"
+          },
+          "uuid": "ddee6b66-ddfe-4d2c-87fb-1eed2612c4b4"
+        },
+        {
+          "id": "SP_SPONDYLUS_VIRGINEUS",
+          "name": "Spondylus virgineus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210718"
+          },
+          "uuid": "66dc33d0-a558-4566-af12-40cce08a48f0"
+        },
+        {
+          "id": "SP_SPONDYLUS_ASPERRIMUS",
+          "name": "Spondylus asperrimus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210724"
+          },
+          "uuid": "60c8e35f-ecfb-441a-ab90-f79e2e0390b7"
+        },
+        {
+          "id": "SP_SPONDYLUS_LINGUAFELIS",
+          "name": "Spondylus linguafelis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210725"
+          },
+          "uuid": "77f76b13-570f-47a1-b9c4-10102a7c9daf"
+        },
+        {
+          "id": "SP_SPONDYLUS_BUTLERI",
+          "name": "Spondylus butleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210727"
+          },
+          "uuid": "0b41af80-8e66-4933-aedb-fc8747d306bc"
+        },
+        {
+          "id": "SP_SPONDYLUS_ZONALIS",
+          "name": "Spondylus zonalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210730"
+          },
+          "uuid": "c8c1d040-fbdc-4e8e-b3d5-aa3cd8cfb284"
+        },
+        {
+          "id": "SP_SPONDYLUS_GUSSONII",
+          "name": "Spondylus gussonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210731"
+          },
+          "uuid": "bd14bf38-d9b8-442a-9e51-1055f149739f"
+        },
+        {
+          "id": "SP_SPONDYLUS_FOLIACEUS",
+          "name": "Spondylus foliaceus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylus",
+          "sourceIds": {
+            "checklistbank-139831": "1210733"
+          },
+          "uuid": "cfa3d156-2fb6-4f80-bed4-ab755f9ea39f"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spondylidae"
+    },
+    {
+      "id": "GENUS_PRAESPONDYLOPECTEN",
+      "name": "Praespondylopecten",
+      "rank": "GENUS",
+      "description": "Praespondylopecten — a genus of bivalvias.",
+      "lineage": "Praespondylopecten",
+      "children": [
+        {
+          "id": "SP_PRAESPONDYLOPECTEN_BESNOSSOWI_ROMANOV_1987",
+          "name": "Praespondylopecten besnossowi Romanov, 1987",
+          "rank": "SPECIES",
+          "commonName": "",
+          "lineage": "Praespondylopecten",
+          "subspeciesCount": 0,
+          "description": "Praespondylopecten besnossowi Romanov, 1987 is a spondylidae species found in its native region.",
+          "sourcedFrom": "none",
+          "children": [],
+          "uuid": "1da624b0-f533-578-809-6806727570bd48",
+          "sourceIds": {
+            "col": [
+              "BHYNW"
+            ]
+          },
+          "authorityIds": "col:BHYNW"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SPONDYLOPECTEN",
+      "name": "Spondylopecten",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPONDYLOPECTEN_MAGANENSIS_ZESASHVILI_1963",
+          "name": "Spondylopecten maganensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "catalogue of life",
+          "authorship": "Zesashvili, 1963",
+          "children": [],
+          "lineage": "Spondylopecten",
+          "uuid": "ac6cbc17-8c90-50c-961-fe448a67dc8ae5",
+          "sourceIds": {
+            "col": [
+              "CHMN5"
+            ]
+          },
+          "authorityIds": "col:CHMN5",
+          "description": "Spondylopecten maganensis is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_MULTICOSTATUS_PCHELINTSEV_1931",
+          "name": "Spondylopecten multicostatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "catalogue of life",
+          "authorship": "Pchelintsev, 1931",
+          "children": [],
+          "lineage": "Spondylopecten",
+          "uuid": "f8007cc6-cda0-500-8db-02289288b52b57",
+          "sourceIds": {
+            "col": [
+              "CHN2L"
+            ]
+          },
+          "authorityIds": "col:CHN2L",
+          "description": "Spondylopecten multicostatus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_KJAPASENSIS_GASANOV_1961",
+          "name": "Spondylopecten kjapasensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "catalogue of life",
+          "authorship": "Gasanov, 1961",
+          "children": [],
+          "lineage": "Spondylopecten",
+          "uuid": "2449aa59-883f-5d1-b99-05d23fa7d7842c",
+          "sourceIds": {
+            "col": [
+              "CHMTM"
+            ]
+          },
+          "authorityIds": "col:CHMTM",
+          "description": "Spondylopecten kjapasensis is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_SAMEBAENSE_KAKHADZE_1942",
+          "name": "Spondylopecten samebaense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "catalogue of life",
+          "authorship": "Kakhadze, 1942",
+          "children": [],
+          "lineage": "Spondylopecten",
+          "uuid": "c5d0b6d8-eb24-508-9e7-870949ed10d2f9",
+          "sourceIds": {
+            "col": [
+              "CHMXM"
+            ]
+          },
+          "authorityIds": "col:CHMXM",
+          "description": "Spondylopecten samebaense is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_KOJKOLENSIS_GASANOV_1961",
+          "name": "Spondylopecten kojkolensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "catalogue of life",
+          "authorship": "Gasanov, 1961",
+          "children": [],
+          "lineage": "Spondylopecten",
+          "uuid": "8cab4d5c-101e-547-a1b-f0b1eb01fa93fe",
+          "sourceIds": {
+            "col": [
+              "CHN9N"
+            ]
+          },
+          "authorityIds": "col:CHN9N",
+          "description": "Spondylopecten kojkolensis is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_AEQUATUS_F_A_QUENSTEDT_1857",
+          "name": "Spondylopecten aequatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "catalogue of life",
+          "authorship": "(F. A. Quenstedt, 1857)",
+          "children": [],
+          "lineage": "Spondylopecten",
+          "uuid": "aa7ed7c4-a132-5b2-bb3-59be33d3e2d665",
+          "sourceIds": {
+            "col": [
+              "C62XL"
+            ]
+          },
+          "authorityIds": "col:C62XL",
+          "description": "Spondylopecten aequatus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_CARDINATUS_F_A_QUENSTEDT_1857",
+          "name": "Spondylopecten cardinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(F. A. Quenstedt, 1857)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638327"
+          },
+          "children": [],
+          "uuid": "484e30db-cc42-5c8-bcf-e1a5d8fe512cfa",
+          "description": "Spondylopecten cardinatus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_ERINACEUS_BUVIGNIER_1852",
+          "name": "Spondylopecten erinaceus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(Buvignier, 1852)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638328"
+          },
+          "children": [],
+          "uuid": "b0d34b65-cfdd-58c-8cb-243f7c4ed69c8f",
+          "description": "Spondylopecten erinaceus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_GLOBOSUS_F_A_QUENSTEDT_1843",
+          "name": "Spondylopecten globosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(F. A. Quenstedt, 1843)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638329"
+          },
+          "children": [],
+          "uuid": "4812c4e7-49f5-55d-a23-1574a7e6c89ed2",
+          "description": "Spondylopecten globosus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_MOREANUS_BUVIGNIER_1852",
+          "name": "Spondylopecten moreanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(Buvignier, 1852)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638330"
+          },
+          "children": [],
+          "uuid": "6057455f-9483-5ab-8b2-a122100436f2fe",
+          "description": "Spondylopecten moreanus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_PALINURUS_A_D_ORBIGNY_1850",
+          "name": "Spondylopecten palinurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(A. d'Orbigny, 1850)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638331"
+          },
+          "children": [],
+          "uuid": "fb0747c5-2730-58c-b1e-b8d8642be5ee58",
+          "description": "Spondylopecten palinurus is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_STOLICZKAI_L_R_COX_1952",
+          "name": "Spondylopecten stoliczkai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(L. R. Cox, 1952)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638332"
+          },
+          "children": [],
+          "uuid": "e8e838b8-50f1-5c6-b85-7ff8f3d66b5351",
+          "description": "Spondylopecten stoliczkai is a spondylidae species found in its native region."
+        },
+        {
+          "id": "SP_SPONDYLOPECTEN_SUBPUNCTATUS_M_NSTER_1833",
+          "name": "Spondylopecten subpunctatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylopecten",
+          "authorship": "(Münster, 1833)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638333"
+          },
+          "children": [],
+          "uuid": "14f24a0f-b584-519-891-499c608aaa0145",
+          "description": "Spondylopecten subpunctatus is a spondylidae species found in its native region."
+        }
+      ],
+      "sourcedFrom": "catalogue of life",
+      "lineage": "Spondylidae"
+    },
+    {
+      "id": "GENUS_PLESIOPECTEN",
+      "name": "Plesiopecten",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLESIOPECTEN_SUBSPINOSUS_SCHLOTHEIM_1820",
+          "name": "Plesiopecten subspinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plesiopecten",
+          "authorship": "(Schlotheim, 1820)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1638251"
+          },
+          "children": [],
+          "uuid": "0385083c-06b7-5b1-a95-25f036c9019125",
+          "description": "Plesiopecten subspinosus is a spondylidae species found in its native region."
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spondylidae"
+    },
+    {
+      "id": "GENUS_ELTOPERA",
+      "name": "Eltopera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ELTOPERA_SANGUINEA",
+          "name": "Eltopera sanguinea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eltopera",
+          "sourceIds": {
+            "checklistbank": "ott404621"
+          },
+          "children": [],
+          "uuid": "fcbd8f11-9839-571-9ad-2eb9419fc9445e",
+          "description": "Eltopera sanguinea is a spondylidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8624,7 +8884,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 519,
+  "speciesCount": 515,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

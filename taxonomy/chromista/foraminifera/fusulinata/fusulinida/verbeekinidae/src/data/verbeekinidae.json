@@ -672,10 +672,15 @@
             "col": [
               "83C7K"
             ],
-            "checklistbank": "txn:237176",
-            "checklistbank-1174": "txn:237176"
+            "checklistbank": [
+              "txn:237176",
+              "urn:lsid:marinespecies.org:taxname:1045769"
+            ],
+            "checklistbank-1174": [
+              "txn:237176"
+            ]
           },
-          "authorityIds": "col:83C7K",
+          "authorityIds": "checklistbank:txn:237176,checklistbank:urn:lsid:marinespecies.org:taxname:1045769,checklistbank-1174:txn:237176,col:83C7K",
           "children": [],
           "description": "Pseudodoliolina ozawai is a pseudodoliolina species found in its native region."
         },
@@ -2281,22 +2286,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PSEUDODOLIOLINA_OZAWAI_MIKLUKHO_MAKLAY_1959",
-          "name": "\"Pseudodoliolina ozawai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudodoliolina",
-          "authorship": "\"Miklukho-Maklay, 1959\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1045769",
-            "checklistbank-1174": "txn:237176"
-          },
-          "children": [],
-          "uuid": "2a30221d-03fa-5bf-b5a-ab83f207b324aa",
-          "description": "\"Pseudodoliolina ozawai is a verbeekinidae species found in its native region."
-        },
-        {
           "id": "SP_PSEUDODOLIOLINA_ELONGATA_NIKITINA_1984",
           "name": "\"Pseudodoliolina elongata",
           "rank": "SPECIES",
@@ -2447,7 +2436,7 @@
       "lineage": "verbeekinidae"
     }
   ],
-  "speciesCount": 134,
+  "speciesCount": 133,
   "appSlug": "verbeekinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",

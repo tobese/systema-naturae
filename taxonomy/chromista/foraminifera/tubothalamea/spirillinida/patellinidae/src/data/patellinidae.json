@@ -793,11 +793,16 @@
             "col": [
               "837RL"
             ],
-            "checklistbank": "txn:477829",
-            "checklistbank-1174": "txn:477829"
+            "checklistbank": [
+              "txn:477829",
+              "urn:lsid:marinespecies.org:taxname:921317"
+            ],
+            "checklistbank-1174": [
+              "txn:477829"
+            ]
           },
           "uuid": "a6718c61-e52a-5cd-aef-da814aee58692c",
-          "authorityIds": "col:837RL,gbif:8973082",
+          "authorityIds": "checklistbank:txn:477829,checklistbank:urn:lsid:marinespecies.org:taxname:921317,checklistbank-1174:txn:477829,col:837RL,gbif:8973082",
           "children": [],
           "authorship": "Cushman and Alexander 1930"
         },
@@ -1607,22 +1612,6 @@
           "description": "\"Patellina puncata\" is a patellinidae species found in its native region."
         },
         {
-          "id": "SP_PATELLINA_SUBCRETACEA_CUSHMAN_ALEXANDER_1930",
-          "name": "\"Patellina subcretacea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Patellina",
-          "authorship": "\"Cushman & Alexander, 1930\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:921317",
-            "checklistbank-1174": "txn:477829"
-          },
-          "children": [],
-          "uuid": "418d662c-2eb6-55b-bf5-089dd7aff858ab",
-          "description": "\"Patellina subcretacea\" is a patellinidae species found in its native region."
-        },
-        {
           "id": "SP_PATELLINA_VITREA_EBENSBERGER_1962",
           "name": "\"Patellina vitrea\"",
           "rank": "SPECIES",
@@ -1885,5 +1874,5 @@
     "checklistbank-1174": "txn:155921"
   },
   "genusCount": 13,
-  "speciesCount": 94
+  "speciesCount": 93
 }

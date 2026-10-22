@@ -63,7 +63,8 @@
           "lineage": "Dunocyathus",
           "authorship": "Cairns",
           "sourceIds": {
-            "checklistbank": "7ee57ef7-3629-4229-9484-915b664835d1"
+            "checklistbank": "7ee57ef7-3629-4229-9484-915b664835d1",
+            "checklistbank-139831": "1093176"
           },
           "children": [],
           "uuid": "0e011bc4-bdff-5cd-83f-47bb41044994ea",
@@ -1541,9 +1542,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1416858"
             ],
-            "checklistbank-1174": "txn:152384"
+            "checklistbank-1174": [
+              "txn:152384"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1416858"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1416858,col:8653K,wikidata:Q105938685",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1416858,checklistbank-1174:txn:152384,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1416858,col:8653K,wikidata:Q105938685",
           "authorship": "(Michelin, 1844)"
         },
         {
@@ -7278,21 +7284,6 @@
           "children": []
         },
         {
-          "id": "SP_SPHENOTROCHUS_MIXTUS_MICHELIN_1844",
-          "name": "Sphenotrochus mixtus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sphenotrochus",
-          "authorship": "(Michelin, 1844)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1416858",
-            "checklistbank-1174": "txn:152384"
-          },
-          "uuid": "72044615-83d7-4c6a-b9da-93de9b6a2727",
-          "children": []
-        },
-        {
           "id": "SP_SPHENOTROCHUS_SEMIGRANOSUS_MICHELIN_1844",
           "name": "Sphenotrochus semigranosus",
           "rank": "SPECIES",
@@ -7635,7 +7626,7 @@
     }
   ],
   "genusCount": 52,
-  "speciesCount": 382,
+  "speciesCount": 381,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

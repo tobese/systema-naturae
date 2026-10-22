@@ -11778,18 +11778,6 @@
           },
           "children": [],
           "uuid": "c87e1812-9117-5cb-a53-5b239383c464ec"
-        },
-        {
-          "id": "SP_OBELISCUS_CARPHODES",
-          "name": "Obeliscus carphodes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Obeliscus",
-          "sourceIds": {
-            "checklistbank-139831": "1252763"
-          },
-          "children": []
         }
       ]
     },
@@ -14998,12 +14986,18 @@
               "72B7G"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1293824"
+              "urn:lsid:marinespecies.org:taxname:1293824",
+              "urn:lsid:marinespecies.org:taxname:1316038"
             ],
             "gbif-backbone": "10034604",
-            "checklistbank-1174": "txn:380457"
+            "checklistbank-1174": [
+              "txn:380457"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1293824"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1293824,col:72B7G",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1293824,checklistbank:urn:lsid:marinespecies.org:taxname:1316038,checklistbank-1174:txn:380457,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1293824,col:72B7G,gbif-backbone:10034604",
           "authorship": "(E. A. Smith, 1880)"
         },
         {
@@ -24224,11 +24218,16 @@
             "col": [
               "7Q9R2"
             ],
-            "checklistbank": "1649355",
+            "checklistbank": [
+              "1649355",
+              "urn:lsid:marinespecies.org:taxname:1494723"
+            ],
             "gbif-backbone": "11145403",
-            "checklistbank-139831": "1649355"
+            "checklistbank-139831": [
+              "1649355"
+            ]
           },
-          "authorityIds": "col:7Q9R2",
+          "authorityIds": "checklistbank:1649355,checklistbank:urn:lsid:marinespecies.org:taxname:1494723,checklistbank-139831:1649355,col:7Q9R2,gbif-backbone:11145403",
           "description": "Bacillum orthoceras is a achatinidae species found in its native region."
         },
         {
@@ -37766,10 +37765,15 @@
             "col": [
               "7STTJ"
             ],
-            "checklistbank": "1420493",
-            "checklistbank-139831": "1420493"
+            "checklistbank": [
+              "1420493",
+              "urn:lsid:marinespecies.org:taxname:1499904"
+            ],
+            "checklistbank-139831": [
+              "1420493"
+            ]
           },
-          "authorityIds": "col:7STTJ",
+          "authorityIds": "checklistbank:1420493,checklistbank:urn:lsid:marinespecies.org:taxname:1499904,checklistbank-139831:1420493,col:7STTJ",
           "description": "Pseudobalea dominicensis is a achatinidae species found in its native region."
         },
         {
@@ -40131,11 +40135,14 @@
           "authorship": "\"(L. Pfeiffer, 1855)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1433210",
-            "checklistbank-139831": "1252763"
+            "checklistbank-139831": [
+              "1252763"
+            ]
           },
           "children": [],
           "uuid": "0add52b5-d683-5c3-92c-41bece1400c9e5",
-          "description": "\"Obeliscus carphodes\" is a achatinidae species found in its native region."
+          "description": "\"Obeliscus carphodes\" is a achatinidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1433210,checklistbank-139831:1252763"
         },
         {
           "id": "SP_OBELISCUS_SUBULIFORMIS_MORICAND_1836",
@@ -42181,23 +42188,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LIMICOLARIA_MARTENSIANA_E_VON_MARTENS_1897",
-          "name": "\"Limicolaria martensiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Limicolaria",
-          "authorship": "\"E. von Martens, 1897\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1316038",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1293824",
-            "checklistbank-1174": "txn:380457"
-          },
-          "children": [],
-          "uuid": "91bd7a45-b3ca-5cc-aa2-c146ca6fe0b7a3",
-          "description": "\"Limicolaria martensiana is a achatinidae species found in its native region."
-        },
-        {
           "id": "SP_LIMICOLARIA_TURRIS_PILSBRY_1919",
           "name": "\"Limicolaria turris",
           "rank": "SPECIES",
@@ -42637,22 +42627,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BACILLUM_ORTHOCERAS_PILSBRY_1906",
-          "name": "\"Bacillum orthoceras",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bacillum",
-          "authorship": "\"Pilsbry, 1906\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1494723",
-            "checklistbank-139831": "1649355"
-          },
-          "children": [],
-          "uuid": "3d7342b7-a818-5f3-ab0-81651496be5271",
-          "description": "\"Bacillum orthoceras is a achatinidae species found in its native region."
-        },
-        {
           "id": "SP_BACILLUM_OBTUSUM_W_T_BLANFORD_1869",
           "name": "Bacillum obtusum",
           "rank": "SPECIES",
@@ -42924,22 +42898,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PSEUDOBALEA_DOMINICENSIS_L_PFEIFFER_1856",
-          "name": "\"Pseudobalea dominicensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudobalea",
-          "authorship": "\"(L. Pfeiffer, 1856)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1499904",
-            "checklistbank-139831": "1420493"
-          },
-          "children": [],
-          "uuid": "c7b4a4fe-0ad6-5f1-a2a-e443f99ca63a1c",
-          "description": "\"Pseudobalea dominicensis is a achatinidae species found in its native region."
-        },
-        {
           "id": "SP_PSEUDOBALEA_LATA",
           "name": "Pseudobalea lata",
           "rank": "SPECIES",
@@ -43095,7 +43053,7 @@
     }
   ],
   "genusCount": 148,
-  "speciesCount": 2351,
+  "speciesCount": 2347,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

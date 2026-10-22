@@ -1424,11 +1424,16 @@
             "col": [
               "9X8P6"
             ],
-            "checklistbank": "txn:474491",
-            "checklistbank-1174": "txn:474491"
+            "checklistbank": [
+              "txn:474491",
+              "urn:lsid:marinespecies.org:taxname:1618490"
+            ],
+            "checklistbank-1174": [
+              "txn:474491"
+            ]
           },
           "uuid": "1a82a3f1-ed21-5f6-985-e5bae6a41e6dbb",
-          "authorityIds": "col:9X8P6,gbif:12259491",
+          "authorityIds": "checklistbank:txn:474491,checklistbank:urn:lsid:marinespecies.org:taxname:1618490,checklistbank-1174:txn:474491,col:9X8P6,gbif:12259491",
           "authorship": "Robinson and Cunningham 2022"
         }
       ]
@@ -1660,7 +1665,8 @@
           "lineage": "\"Acervulina",
           "authorship": "\"Schultze, 1854\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:112827"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:112827",
+            "checklistbank-139831": "1634601"
           },
           "children": [],
           "uuid": "f88ffdec-3601-5b6-843-8cf13fa226240a",
@@ -2137,7 +2143,8 @@
           "lineage": "\"Planogypsina",
           "authorship": "\"(Chapman, 1901)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417983"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:417983",
+            "checklistbank-139831": "532802"
           },
           "children": [],
           "uuid": "2abea1fb-66a4-545-aeb-6b26fa2a4b0234",
@@ -2477,35 +2484,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acervulinidae"
-    },
-    {
-      "id": "GENUS_GLOBOGYPSINOIDES",
-      "name": "\"Globogypsinoides",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GLOBOGYPSINOIDES_BROWARDENSIS_ROBINSON_CUNNINGHAM_2022",
-          "name": "\"Globogypsinoides browardensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Globogypsinoides",
-          "authorship": "\"Robinson & Cunningham, 2022\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1618490",
-            "checklistbank-1174": "txn:474491"
-          },
-          "children": [],
-          "uuid": "734b8981-b3a2-53e-ad7-2ecb432b14bddf",
-          "description": "\"Globogypsinoides browardensis\" is a acervulinidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acervulinidae"
     }
   ],
-  "genusCount": 39,
-  "speciesCount": 115,
+  "genusCount": 38,
+  "speciesCount": 114,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

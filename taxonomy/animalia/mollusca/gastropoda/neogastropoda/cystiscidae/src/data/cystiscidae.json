@@ -10355,9 +10355,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:580977"
             ],
-            "checklistbank-1174": "txn:412360"
+            "checklistbank-1174": [
+              "txn:412360"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:580977"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:580977,col:3FZCC,itis:567630"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:580977,checklistbank-1174:txn:412360,checklistbank-2011:urn:lsid:marinespecies.org:taxname:580977,col:3FZCC,itis:567630"
         },
         {
           "id": "SP_GIBBERULA_SUEZIENSIS",
@@ -19026,21 +19031,6 @@
           "children": []
         },
         {
-          "id": "SP_GIBBERULA_SUBTRIGONA_P_P_CARPENTER_1864",
-          "name": "Gibberula subtrigona",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gibberula",
-          "authorship": "(P. P. Carpenter, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:580977",
-            "checklistbank-1174": "txn:412360"
-          },
-          "uuid": "6ca4d555-846e-4a3c-8d13-c6787f936e25",
-          "children": []
-        },
-        {
           "id": "SP_GIBBERULA_DULCIS_E_A_SMITH_1904",
           "name": "Gibberula dulcis",
           "rank": "SPECIES",
@@ -19494,7 +19484,7 @@
     }
   ],
   "genusCount": 29,
-  "speciesCount": 1100,
+  "speciesCount": 1099,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

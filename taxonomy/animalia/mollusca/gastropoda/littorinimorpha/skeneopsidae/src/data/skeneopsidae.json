@@ -33,10 +33,15 @@
             "col": [
               "6Z3YK"
             ],
-            "checklistbank": "62219",
-            "checklistbank-1174": "txn:113102"
+            "checklistbank": [
+              "62219",
+              "urn:lsid:marinespecies.org:taxname:141539"
+            ],
+            "checklistbank-1174": [
+              "txn:113102"
+            ]
           },
-          "authorityIds": "col:6Z3YK,itis:71217"
+          "authorityIds": "checklistbank:62219,checklistbank:urn:lsid:marinespecies.org:taxname:141539,checklistbank-1174:txn:113102,col:6Z3YK,itis:71217"
         },
         {
           "id": "SP_SKENEOPSIS_SULTANARUM_GOFAS_1983",
@@ -224,31 +229,6 @@
       "lineage": "skeneopsidae"
     },
     {
-      "id": "GENUS_SKENEOPSIS",
-      "name": "\"Skeneopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SKENEOPSIS_PLANORBIS_O_FABRICIUS_1780",
-          "name": "\"Skeneopsis planorbis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Skeneopsis",
-          "authorship": "\"(O. Fabricius, 1780)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141539",
-            "checklistbank-1174": "txn:113102"
-          },
-          "children": [],
-          "uuid": "f6c2ae5f-9fbb-504-979-fb1dee1105b007",
-          "description": "\"Skeneopsis planorbis\" is a skeneopsidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "skeneopsidae"
-    },
-    {
       "id": "GENUS_STARKEYNA",
       "name": "\"Starkeyna",
       "rank": "GENUS",
@@ -273,8 +253,8 @@
       "lineage": "skeneopsidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 13,
+  "genusCount": 5,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

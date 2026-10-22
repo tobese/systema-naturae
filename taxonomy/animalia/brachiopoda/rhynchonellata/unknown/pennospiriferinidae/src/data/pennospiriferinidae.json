@@ -27,10 +27,15 @@
             "col": [
               "CTV94"
             ],
-            "checklistbank": "txn:387647",
-            "checklistbank-1174": "txn:387647"
+            "checklistbank": [
+              "txn:387647",
+              "urn:lsid:marinespecies.org:taxname:1801538"
+            ],
+            "checklistbank-1174": [
+              "txn:387647"
+            ]
           },
-          "authorityIds": "col:CTV94",
+          "authorityIds": "checklistbank:txn:387647,checklistbank:urn:lsid:marinespecies.org:taxname:1801538,checklistbank-1174:txn:387647,col:CTV94",
           "authorship": "(Trechmann 1917)"
         },
         {
@@ -673,22 +678,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CALLOSPIRIFERINA_KAWHIANA_TRECHMANN_1918",
-          "name": "\"Callospiriferina kawhiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Callospiriferina",
-          "authorship": "\"(Trechmann, 1918)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1801538",
-            "checklistbank-1174": "txn:387647"
-          },
-          "children": [],
-          "uuid": "c0a33aa7-a476-51d-bec-6871ee115d0285",
-          "description": "\"Callospiriferina kawhiana\" is a pennospiriferinidae species found in its native region."
-        },
-        {
           "id": "SP_CALLOSPIRIFERINA_ONGLEYI_MARWICK_1953",
           "name": "\"Callospiriferina ongleyi\"",
           "rank": "SPECIES",
@@ -923,7 +912,7 @@
     }
   ],
   "genusCount": 13,
-  "speciesCount": 54,
+  "speciesCount": 53,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -94,9 +94,14 @@
               "6G4PM"
             ],
             "checklistbank": "txn:495864",
-            "checklistbank-1174": "txn:495864"
+            "checklistbank-1174": [
+              "txn:495864"
+            ],
+            "checklistbank-1108": [
+              "urn:lsid:marinespecies.org:taxname:1349570"
+            ]
           },
-          "authorityIds": "col:6G4PM",
+          "authorityIds": "checklistbank:txn:495864,checklistbank-1108:urn:lsid:marinespecies.org:taxname:1349570,checklistbank-1174:txn:495864,col:6G4PM",
           "children": [],
           "description": "Epilobocera cubensis is a epiloboceridae species found in its native region."
         },
@@ -193,21 +198,6 @@
           "description": "\"Epilobocera gilmanii is a epiloboceridae species found in its native region."
         },
         {
-          "id": "SP_EPILOBOCERA_CUBENSIS_CAPOLONGO_PRETZMANN_2002",
-          "name": "Epilobocera cubensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Epilobocera",
-          "authorship": "Capolongo & Pretzmann, 2002",
-          "sourceIds": {
-            "checklistbank-1108": "urn:lsid:marinespecies.org:taxname:1349570",
-            "checklistbank-1174": "txn:495864"
-          },
-          "uuid": "6a8abc16-6bab-43d5-875f-d10bfec43629",
-          "children": []
-        },
-        {
           "id": "SP_EPILOBOCERA_GERTRAUDAE",
           "name": "Epilobocera gertraudae",
           "rank": "SPECIES",
@@ -225,7 +215,7 @@
       "lineage": "epiloboceridae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 11,
   "appSlug": "epiloboceridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

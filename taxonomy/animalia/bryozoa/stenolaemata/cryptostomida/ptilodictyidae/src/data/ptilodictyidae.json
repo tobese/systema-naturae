@@ -964,10 +964,15 @@
             "col": [
               "868Z4"
             ],
-            "checklistbank": "txn:316917",
-            "checklistbank-1174": "txn:316917"
+            "checklistbank": [
+              "txn:316917",
+              "urn:lsid:marinespecies.org:taxname:1413268"
+            ],
+            "checklistbank-1174": [
+              "txn:316917"
+            ]
           },
-          "authorityIds": "col:868Z4",
+          "authorityIds": "checklistbank:txn:316917,checklistbank:urn:lsid:marinespecies.org:taxname:1413268,checklistbank-1174:txn:316917,col:868Z4",
           "children": [],
           "authorship": "(Goldfuss 1829)"
         },
@@ -2811,22 +2816,6 @@
           "description": "\"Ptilodictya gigantea\" is a ptilodictyidae species found in its native region."
         },
         {
-          "id": "SP_PTILODICTYA_LANCEOLATA_GOLDFUSS_1826",
-          "name": "\"Ptilodictya lanceolata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ptilodictya",
-          "authorship": "\"(Goldfuss, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413268",
-            "checklistbank-1174": "txn:316917"
-          },
-          "children": [],
-          "uuid": "732ea948-89fd-5d2-a33-f8c1b484945b5b",
-          "description": "\"Ptilodictya lanceolata\" is a ptilodictyidae species found in its native region."
-        },
-        {
           "id": "SP_PTILODICTYA_NEBULOSA_HALL_1874",
           "name": "\"Ptilodictya nebulosa\"",
           "rank": "SPECIES",
@@ -2959,5 +2948,5 @@
     "checklistbank-1174": "txn:317879"
   },
   "genusCount": 22,
-  "speciesCount": 153
+  "speciesCount": 152
 }

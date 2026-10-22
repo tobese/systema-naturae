@@ -65,11 +65,16 @@
             "col": [
               "34S82"
             ],
-            "checklistbank": "txn:164844",
+            "checklistbank": [
+              "txn:164844",
+              "urn:lsid:marinespecies.org:taxname:1067187"
+            ],
             "gbif-backbone": "8472016",
-            "checklistbank-1174": "txn:164844"
+            "checklistbank-1174": [
+              "txn:164844"
+            ]
           },
-          "authorityIds": "col:34S82",
+          "authorityIds": "checklistbank:txn:164844,checklistbank:urn:lsid:marinespecies.org:taxname:1067187,checklistbank-1174:txn:164844,col:34S82,gbif-backbone:8472016",
           "authorship": "(Dawson 1860)"
         },
         {
@@ -132,22 +137,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DENDROPUPA_VETUSTA_J_W_DAWSON_1855",
-          "name": "\"Dendropupa vetusta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dendropupa",
-          "authorship": "\"(J. W. Dawson, 1855)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1067187",
-            "checklistbank-1174": "txn:164844"
-          },
-          "children": [],
-          "uuid": "ffb64c20-0122-57b-b44-26d9a29f081f09",
-          "description": "\"Dendropupa vetusta\" is a dendropupidae species found in its native region."
-        },
-        {
           "id": "SP_DENDROPUPA_PRIMAEVA_MATTHEW_1895",
           "name": "\"Dendropupa primaeva\"",
           "rank": "SPECIES",
@@ -183,7 +172,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 9,
+  "speciesCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

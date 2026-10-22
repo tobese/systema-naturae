@@ -392,12 +392,18 @@
           "lineage": "Plectroninia",
           "authorship": "Kirkpatrick",
           "sourceIds": {
-            "checklistbank": "dc76d0bc-a057-48a6-95a8-7252ef040fa9",
-            "wikispecies": "Plectroninia_hindei"
+            "checklistbank": [
+              "dc76d0bc-a057-48a6-95a8-7252ef040fa9",
+              "urn:lsid:marinespecies.org:taxname:164630"
+            ],
+            "wikispecies": [
+              "Plectroninia_hindei"
+            ]
           },
           "children": [],
           "uuid": "7c917bcb-f506-51d-bbd-51e67b22378aa0",
-          "description": "Plectroninia hindei is a minchinellidae species found in its native region."
+          "description": "Plectroninia hindei is a minchinellidae species found in its native region.",
+          "authorityIds": "checklistbank:dc76d0bc-a057-48a6-95a8-7252ef040fa9,checklistbank:urn:lsid:marinespecies.org:taxname:164630,wikispecies:Plectroninia_hindei"
         },
         {
           "id": "SP_PLECTRONINIA_NEOCALEDONIENSE_VACELET",
@@ -821,31 +827,6 @@
       "lineage": "minchinellidae"
     },
     {
-      "id": "GENUS_PLECTRONINIA",
-      "name": "\"Plectroninia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLECTRONINIA_HINDEI_VACELET_1967",
-          "name": "\"Plectroninia hindei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Plectroninia",
-          "authorship": "\"Vacelet, 1967\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:164630",
-            "wikispecies": "Plectroninia_hindei"
-          },
-          "children": [],
-          "uuid": "dbe364d6-54af-521-8a8-4f9ae517230c4f",
-          "description": "\"Plectroninia hindei is a minchinellidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "minchinellidae"
-    },
-    {
       "id": "GENUS_POROSPHAERA",
       "name": "Porosphaera",
       "rank": "GENUS",
@@ -915,8 +896,8 @@
       "lineage": "minchinellidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 49,
+  "genusCount": 10,
+  "speciesCount": 48,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

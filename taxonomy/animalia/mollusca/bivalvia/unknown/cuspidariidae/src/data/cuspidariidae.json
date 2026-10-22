@@ -3147,10 +3147,18 @@
             "col": [
               "6C2WR"
             ],
-            "checklistbank": "218627",
-            "checklistbank-1174": "txn:98233"
+            "checklistbank": [
+              "218627",
+              "urn:lsid:marinespecies.org:taxname:407817"
+            ],
+            "checklistbank-1174": [
+              "txn:98233"
+            ],
+            "checklistbank-127379": [
+              "58f2fc4a-d68d-4d9a-bee0-cf6b72bd4f6f"
+            ]
           },
-          "authorityIds": "col:6C2WR",
+          "authorityIds": "checklistbank:218627,checklistbank:urn:lsid:marinespecies.org:taxname:407817,checklistbank-1174:txn:98233,checklistbank-127379:58f2fc4a-d68d-4d9a-bee0-cf6b72bd4f6f,col:6C2WR",
           "authorship": "(Tenison Woods, 1878)"
         },
         {
@@ -7330,10 +7338,15 @@
             "col": [
               "R5JM"
             ],
-            "checklistbank": "59433",
-            "checklistbank-1174": "txn:134771"
+            "checklistbank": [
+              "59433",
+              "urn:lsid:marinespecies.org:taxname:139433"
+            ],
+            "checklistbank-1174": [
+              "txn:134771"
+            ]
           },
-          "authorityIds": "col:R5JM,itis:82025"
+          "authorityIds": "checklistbank:59433,checklistbank:urn:lsid:marinespecies.org:taxname:139433,checklistbank-1174:txn:134771,col:R5JM,itis:82025"
         },
         {
           "id": "SP_CARDIOMYA_DIDYMA",
@@ -7799,10 +7812,15 @@
             "itis": [
               "82022"
             ],
-            "checklistbank": "218475",
-            "checklistbank-1174": "txn:134769"
+            "checklistbank": [
+              "218475",
+              "urn:lsid:marinespecies.org:taxname:408480"
+            ],
+            "checklistbank-1174": [
+              "txn:134769"
+            ]
           },
-          "authorityIds": "col:R5KG,itis:82022"
+          "authorityIds": "checklistbank:218475,checklistbank:urn:lsid:marinespecies.org:taxname:408480,checklistbank-1174:txn:134769,col:R5KG,itis:82022"
         },
         {
           "id": "SP_CARDIOMYA_PAVASCOTTI_HICKMAN_2014",
@@ -7844,9 +7862,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:408482"
             ],
-            "checklistbank-1174": "txn:315290"
+            "checklistbank-1174": [
+              "txn:315290"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:408482"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:408482,col:9G4BW,itis:82016"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:408482,checklistbank-1174:txn:315290,checklistbank-2011:urn:lsid:marinespecies.org:taxname:408482,col:9G4BW,itis:82016"
         },
         {
           "id": "SP_CARDIOMYA_PERROSTRATA",
@@ -11553,22 +11576,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CARDIOMYA_COSTELLATA_DESHAYES_1835",
-          "name": "\"Cardiomya costellata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cardiomya",
-          "authorship": "\"(Deshayes, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139433",
-            "checklistbank-1174": "txn:134771"
-          },
-          "children": [],
-          "uuid": "bb296cae-0531-53a-919-a0cc20ed4f7389",
-          "description": "\"Cardiomya costellata\" is a cuspidariidae species found in its native region."
-        },
-        {
           "id": "SP_CARDIOMYA_STRIATA_JEFFREYS_1876",
           "name": "\"Cardiomya striata\"",
           "rank": "SPECIES",
@@ -11642,22 +11649,6 @@
           "children": [],
           "uuid": "287d9444-451c-5a1-8ab-7520738b33e84c",
           "description": "\"Cardiomya gouldiana\" is a cuspidariidae species found in its native region."
-        },
-        {
-          "id": "SP_CARDIOMYA_ORNATISSIMA_A_D_ORBIGNY_1853",
-          "name": "\"Cardiomya ornatissima\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cardiomya",
-          "authorship": "\"(A. d'Orbigny, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:408480",
-            "checklistbank-1174": "txn:134769"
-          },
-          "children": [],
-          "uuid": "204fde27-b120-59c-8b9-8afd28ff08981f",
-          "description": "\"Cardiomya ornatissima\" is a cuspidariidae species found in its native region."
         },
         {
           "id": "SP_CARDIOMYA_RETICULATA_KURODA_1948",
@@ -11958,21 +11949,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:408479"
           },
           "uuid": "0f5dd6c4-586d-4931-a0e3-75e5fcd2a1b0",
-          "children": []
-        },
-        {
-          "id": "SP_CARDIOMYA_PECTINATA_P_P_CARPENTER_1864",
-          "name": "Cardiomya pectinata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cardiomya",
-          "authorship": "(P. P. Carpenter, 1864)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:408482",
-            "checklistbank-1174": "txn:315290"
-          },
-          "uuid": "f072a88e-8d17-49e5-972b-ea49b11c47af",
           "children": []
         },
         {
@@ -12462,23 +12438,6 @@
           "children": [],
           "uuid": "49dbba61-f5cc-55f-914-33d75dbb50c13a",
           "description": "\"Cuspidaria kerguelensis\" is a cuspidariidae species found in its native region."
-        },
-        {
-          "id": "SP_CUSPIDARIA_LATESULCATA_TENISON_WOODS_1878",
-          "name": "\"Cuspidaria latesulcata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cuspidaria",
-          "authorship": "\"(Tenison Woods, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407817",
-            "checklistbank-1174": "txn:98233",
-            "checklistbank-127379": "58f2fc4a-d68d-4d9a-bee0-cf6b72bd4f6f"
-          },
-          "children": [],
-          "uuid": "1e80ff40-aba7-57c-b03-2ecd553351cd46",
-          "description": "\"Cuspidaria latesulcata\" is a cuspidariidae species found in its native region."
         },
         {
           "id": "SP_CUSPIDARIA_NASUTA_A_ADAMS_1864",
@@ -13766,7 +13725,7 @@
     }
   ],
   "genusCount": 40,
-  "speciesCount": 783,
+  "speciesCount": 779,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

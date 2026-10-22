@@ -464,7 +464,8 @@
             "col": [
               "834JB"
             ],
-            "checklistbank": "536440"
+            "checklistbank": "536440",
+            "checklistbank-139831": "536440"
           },
           "uuid": "431f2cb3-3e56-570-a99-7d1621e06d665d",
           "authorityIds": "col:834JB,gbif:9715017"
@@ -601,7 +602,8 @@
             "col": [
               "834JK"
             ],
-            "checklistbank": "525112"
+            "checklistbank": "525112",
+            "checklistbank-139831": "525112"
           },
           "uuid": "3e1476a8-f1b1-559-81f-f4668f80eac824",
           "authorityIds": "col:834JK,gbif:8399282"
@@ -646,7 +648,8 @@
             "col": [
               "834JM"
             ],
-            "checklistbank": "536437"
+            "checklistbank": "536437",
+            "checklistbank-139831": "536437"
           },
           "uuid": "d6b1f5ef-aeea-58f-996-5ed95b1d3f3314",
           "authorityIds": "col:834JM,gbif:10781097"
@@ -808,7 +811,8 @@
             "col": [
               "83CCC"
             ],
-            "checklistbank": "1239638"
+            "checklistbank": "1239638",
+            "checklistbank-139831": "1239638"
           },
           "uuid": "0eb36535-4d55-506-ad2-1a655ecf6be30f",
           "authorityIds": "col:83CCC,gbif:7912387"
@@ -1119,11 +1123,16 @@
             "col": [
               "H4B8"
             ],
-            "checklistbank": "702652",
-            "checklistbank-1174": "txn:241495"
+            "checklistbank": [
+              "702652",
+              "urn:lsid:marinespecies.org:taxname:417993"
+            ],
+            "checklistbank-1174": [
+              "txn:241495"
+            ]
           },
           "uuid": "bcc28104-5bcb-5ce-9ef-ee46dbe09e5a67",
-          "authorityIds": "col:H4B8,gbif:8024744",
+          "authorityIds": "checklistbank:702652,checklistbank:urn:lsid:marinespecies.org:taxname:417993,checklistbank-1174:txn:241495,col:H4B8,gbif:8024744",
           "authorship": "(Heron-Allen & Earland, 1915)"
         }
       ]
@@ -1826,31 +1835,6 @@
       "lineage": "epistomariidae"
     },
     {
-      "id": "GENUS_ASANONELLA",
-      "name": "\"Asanonella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ASANONELLA_TUBULIFERA_HERON_ALLEN_EARLAND_1915",
-          "name": "\"Asanonella tubulifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Asanonella",
-          "authorship": "\"(Heron-Allen & Earland, 1915)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417993",
-            "checklistbank-1174": "txn:241495"
-          },
-          "children": [],
-          "uuid": "a5a64a93-da7e-53f-9d6-bd46ecf5307e54",
-          "description": "\"Asanonella tubulifera\" is a epistomariidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "epistomariidae"
-    },
-    {
       "id": "GENUS_PALMERINELLA",
       "name": "\"Palmerinella",
       "rank": "GENUS",
@@ -2352,8 +2336,8 @@
       "lineage": "epistomariidae"
     }
   ],
-  "genusCount": 27,
-  "speciesCount": 110,
+  "genusCount": 26,
+  "speciesCount": 109,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

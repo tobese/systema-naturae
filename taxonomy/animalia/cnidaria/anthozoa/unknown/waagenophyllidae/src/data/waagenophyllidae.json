@@ -907,10 +907,15 @@
               "urn:lsid:marinespecies.org:taxname:1815667"
             ],
             "gbif-backbone": "4884156",
-            "checklistbank-1174": "txn:188774"
+            "checklistbank-1174": [
+              "txn:188774"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1815667"
+            ]
           },
           "children": [],
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1815667"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1815667,checklistbank-1174:txn:188774,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1815667,gbif-backbone:4884156"
         },
         {
           "id": "SP_WAAGENOPHYLLUM_OKINAWENSE_HAIKAWA_ISHIBASHI_1981",
@@ -8360,21 +8365,6 @@
           "children": []
         },
         {
-          "id": "SP_WAAGENOPHYLLUM_NOVAEZELANDIAE_YAMAGIWA_1962",
-          "name": "Waagenophyllum novaezelandiae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Waagenophyllum",
-          "authorship": "Yamagiwa, 1962",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1815667",
-            "checklistbank-1174": "txn:188774"
-          },
-          "uuid": "d5a6b55b-5062-43bb-b5e0-4e6dcd8402f2",
-          "children": []
-        },
-        {
           "id": "SP_WAAGENOPHYLLUM_INDICUM_WAAGEN_AND_WENTZEL_1886",
           "name": "Waagenophyllum indicum",
           "rank": "SPECIES",
@@ -9515,7 +9505,7 @@
     }
   ],
   "genusCount": 59,
-  "speciesCount": 617,
+  "speciesCount": 616,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

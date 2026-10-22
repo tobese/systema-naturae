@@ -63,10 +63,15 @@
             "col": [
               "8673V"
             ],
-            "checklistbank": "txn:141190",
-            "checklistbank-1174": "txn:141190"
+            "checklistbank": [
+              "txn:141190",
+              "urn:lsid:marinespecies.org:taxname:1410550"
+            ],
+            "checklistbank-1174": [
+              "txn:141190"
+            ]
           },
-          "authorityIds": "col:8673V",
+          "authorityIds": "checklistbank:txn:141190,checklistbank:urn:lsid:marinespecies.org:taxname:1410550,checklistbank-1174:txn:141190,col:8673V",
           "children": [],
           "authorship": "(Condra and Elias 1944)"
         },
@@ -84,10 +89,15 @@
             "col": [
               "8673W"
             ],
-            "checklistbank": "txn:141192",
-            "checklistbank-1174": "txn:141192"
+            "checklistbank": [
+              "txn:141192",
+              "urn:lsid:marinespecies.org:taxname:1410551"
+            ],
+            "checklistbank-1174": [
+              "txn:141192"
+            ]
           },
-          "authorityIds": "col:8673W",
+          "authorityIds": "checklistbank:txn:141192,checklistbank:urn:lsid:marinespecies.org:taxname:1410551,checklistbank-1174:txn:141192,col:8673W",
           "children": [],
           "authorship": "(Condra and Elias 1944)"
         }
@@ -436,38 +446,6 @@
           "children": [],
           "uuid": "82669d84-0d77-5af-830-6ca4d7dafc3298",
           "description": "\"Condranema carbonarium\" is a vinellidae species found in its native region."
-        },
-        {
-          "id": "SP_CONDRANEMA_MAGNA_CONDRA_ELIAS_1944",
-          "name": "\"Condranema magna\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Condranema",
-          "authorship": "\"(Condra & Elias, 1944)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410550",
-            "checklistbank-1174": "txn:141190"
-          },
-          "children": [],
-          "uuid": "b2cd4adf-4ad4-518-869-d5f09fd944b9a7",
-          "description": "\"Condranema magna\" is a vinellidae species found in its native region."
-        },
-        {
-          "id": "SP_CONDRANEMA_PARVULA_CONDRA_ELIAS_1944",
-          "name": "\"Condranema parvula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Condranema",
-          "authorship": "\"(Condra & Elias, 1944)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410551",
-            "checklistbank-1174": "txn:141192"
-          },
-          "children": [],
-          "uuid": "70c56e6c-85cc-5fb-ac3-2e0cb9146ac25e",
-          "description": "\"Condranema parvula\" is a vinellidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -557,5 +535,5 @@
     "checklistbank-1174": "txn:118662"
   },
   "genusCount": 9,
-  "speciesCount": 28
+  "speciesCount": 26
 }

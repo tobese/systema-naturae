@@ -266,11 +266,16 @@
             "col": [
               "BBTRW"
             ],
-            "checklistbank": "txn:149504",
+            "checklistbank": [
+              "txn:149504",
+              "urn:lsid:marinespecies.org:taxname:1612967"
+            ],
             "gbif-backbone": "4945595",
-            "checklistbank-1174": "txn:149504"
+            "checklistbank-1174": [
+              "txn:149504"
+            ]
           },
-          "authorityIds": "col:BBTRW",
+          "authorityIds": "checklistbank:txn:149504,checklistbank:urn:lsid:marinespecies.org:taxname:1612967,checklistbank-1174:txn:149504,col:BBTRW,gbif-backbone:4945595",
           "children": [],
           "description": "Costacopluma senegalensis is a retroplumidae species found in its native region."
         },
@@ -474,7 +479,8 @@
             "col": [
               "6X49F"
             ],
-            "checklistbank": "ott4668808"
+            "checklistbank": "ott4668808",
+            "checklistbank-139831": "1595115"
           },
           "authorityIds": "col:6X49F",
           "children": [],
@@ -761,10 +767,15 @@
             "col": [
               "C34YM"
             ],
-            "checklistbank": "txn:224156",
-            "checklistbank-1174": "txn:224156"
+            "checklistbank": [
+              "txn:224156",
+              "urn:lsid:marinespecies.org:taxname:1728849"
+            ],
+            "checklistbank-1174": [
+              "txn:224156"
+            ]
           },
-          "authorityIds": "col:C34YM",
+          "authorityIds": "checklistbank:txn:224156,checklistbank:urn:lsid:marinespecies.org:taxname:1728849,checklistbank-1174:txn:224156,col:C34YM",
           "children": [],
           "description": "Loerenthoplumopsa carinata is a retroplumidae species found in its native region."
         }
@@ -952,22 +963,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_COSTACOPLUMA_SENEGALENSIS_REMY_I_IN_I_GORODISKI_REMY_1959",
-          "name": "\"Costacopluma senegalensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Costacopluma",
-          "authorship": "\"(Remy <i>in</i> Gorodiski & Remy, 1959)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1612967",
-            "checklistbank-1174": "txn:149504"
-          },
-          "children": [],
-          "uuid": "8f5d0ee9-ee24-513-8c0-59320323421480",
-          "description": "\"Costacopluma senegalensis\" is a retroplumidae species found in its native region."
-        },
-        {
           "id": "SP_COSTACOPLUMA_BIFIDA_COLLINS_ET_AL_1994",
           "name": "Costacopluma bifida",
           "rank": "SPECIES",
@@ -1140,31 +1135,6 @@
       "lineage": "retroplumidae"
     },
     {
-      "id": "GENUS_LOERENTHOPLUMOPSA",
-      "name": "\"Loerenthoplumopsa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LOERENTHOPLUMOPSA_CARINATA_BEURLEN_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Loerenthoplumopsa carinata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Loerenthoplumopsa",
-          "authorship": "\"(Beurlen <i>in</i> Lőrenthey & Beurlen, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1728849",
-            "checklistbank-1174": "txn:224156"
-          },
-          "children": [],
-          "uuid": "014ae00f-02bc-586-bff-27d720422b817b",
-          "description": "\"Loerenthoplumopsa carinata\" is a retroplumidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "retroplumidae"
-    },
-    {
       "id": "GENUS_ARCHAEOPUS",
       "name": "Archaeopus",
       "rank": "GENUS",
@@ -1310,11 +1280,11 @@
       "lineage": "retroplumidae"
     }
   ],
-  "speciesCount": 67,
+  "speciesCount": 65,
   "appSlug": "retroplumidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 16,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

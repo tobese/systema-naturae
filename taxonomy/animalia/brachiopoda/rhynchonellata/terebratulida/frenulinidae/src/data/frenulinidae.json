@@ -357,10 +357,15 @@
             "col": [
               "6JNR2"
             ],
-            "checklistbank": "705741",
-            "checklistbank-1174": "txn:283079"
+            "checklistbank": [
+              "705741",
+              "urn:lsid:marinespecies.org:taxname:235604"
+            ],
+            "checklistbank-1174": [
+              "txn:283079"
+            ]
           },
-          "authorityIds": "col:6JNR2,itis:203291",
+          "authorityIds": "checklistbank:705741,checklistbank:urn:lsid:marinespecies.org:taxname:235604,checklistbank-1174:txn:283079,col:6JNR2,itis:203291",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -531,13 +536,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pictothyris",
           "sourceIds": {
-            "checklistbank": "ott2932569",
-            "checklistbank-1174": "txn:283089"
+            "checklistbank": [
+              "ott2932569",
+              "urn:lsid:marinespecies.org:taxname:1754185"
+            ],
+            "checklistbank-1174": [
+              "txn:283089"
+            ]
           },
           "children": [],
           "authorship": "Yabe and Hatai 1936",
           "uuid": "36031acc-690c-51e-896-8e46957d42da32",
-          "description": "Pictothyris elegans is a frenulinidae species found in its native region."
+          "description": "Pictothyris elegans is a frenulinidae species found in its native region.",
+          "authorityIds": "checklistbank:ott2932569,checklistbank:urn:lsid:marinespecies.org:taxname:1754185,checklistbank-1174:txn:283089"
         },
         {
           "id": "SP_PICTOTHYRIS_LAQUAEFORMIS",
@@ -622,31 +633,6 @@
       "lineage": "frenulinidae"
     },
     {
-      "id": "GENUS_FRENULINA",
-      "name": "\"Frenulina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FRENULINA_SANGUINOLENTA_GMELIN_1791",
-          "name": "\"Frenulina sanguinolenta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Frenulina",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235604",
-            "checklistbank-1174": "txn:283079"
-          },
-          "children": [],
-          "uuid": "ab4dd1fa-30c3-51a-ba5-f05219368a361d",
-          "description": "\"Frenulina sanguinolenta\" is a frenulinidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "frenulinidae"
-    },
-    {
       "id": "GENUS_JOLONICA",
       "name": "\"Jolonica",
       "rank": "GENUS",
@@ -719,22 +705,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PICTOTHYRIS_ELEGANS_YABE_HATAI_1941",
-          "name": "\"Pictothyris elegans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pictothyris",
-          "authorship": "\"Yabe & Hatai, 1941\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1754185",
-            "checklistbank-1174": "txn:283089"
-          },
-          "children": [],
-          "uuid": "eb3931f1-a4c1-512-ab4-5402dc6fc0ea66",
-          "description": "\"Pictothyris elegans is a frenulinidae species found in its native region."
-        },
-        {
           "id": "SP_PICTOTHYRIS_LAQUAEFORMIS_YABE_AND_HATAI_1936",
           "name": "Pictothyris laquaeformis",
           "rank": "SPECIES",
@@ -777,8 +747,8 @@
       "lineage": "frenulinidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 40,
+  "genusCount": 9,
+  "speciesCount": 38,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

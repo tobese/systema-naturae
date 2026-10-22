@@ -487,10 +487,15 @@
             "col": [
               "3S47H"
             ],
-            "checklistbank": "Lamprocyclas_maritalis",
-            "wikispecies": "Lamprocyclas_maritalis"
+            "checklistbank": [
+              "Lamprocyclas_maritalis",
+              "urn:lsid:marinespecies.org:taxname:413019"
+            ],
+            "wikispecies": [
+              "Lamprocyclas_maritalis"
+            ]
           },
-          "authorityIds": "col:3S47H",
+          "authorityIds": "checklistbank:Lamprocyclas_maritalis,checklistbank:urn:lsid:marinespecies.org:taxname:413019,col:3S47H,wikispecies:Lamprocyclas_maritalis",
           "description": "Lamprocyclas maritalis is a lamprocyclas species found in its native region."
         },
         {
@@ -1218,22 +1223,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LAMPROCYCLAS_MARITALIS_NIGRINI_1968",
-          "name": "\"Lamprocyclas maritalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lamprocyclas",
-          "authorship": "\"Nigrini, 1968\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:413019",
-            "wikispecies": "Lamprocyclas_maritalis"
-          },
-          "children": [],
-          "uuid": "fb8335b4-3999-507-b25-10fca50992e173",
-          "description": "\"Lamprocyclas maritalis is a pterocorythidae species found in its native region."
-        },
-        {
           "id": "SP_LAMPROCYCLAS_JUNONIS",
           "name": "Lamprocyclas junonis",
           "rank": "SPECIES",
@@ -1275,7 +1264,7 @@
       "lineage": "pterocorythidae"
     }
   ],
-  "speciesCount": 79,
+  "speciesCount": 78,
   "appSlug": "pterocorythidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Radiozoa > Polycystina",

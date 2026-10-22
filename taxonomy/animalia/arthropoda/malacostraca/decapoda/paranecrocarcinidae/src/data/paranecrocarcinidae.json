@@ -324,10 +324,15 @@
             "col": [
               "CN6J9"
             ],
-            "checklistbank": "txn:500103",
-            "checklistbank-1174": "txn:500103"
+            "checklistbank": [
+              "txn:500103",
+              "urn:lsid:marinespecies.org:taxname:1777369"
+            ],
+            "checklistbank-1174": [
+              "txn:500103"
+            ]
           },
-          "authorityIds": "col:CN6J9",
+          "authorityIds": "checklistbank:txn:500103,checklistbank:urn:lsid:marinespecies.org:taxname:1777369,checklistbank-1174:txn:500103,col:CN6J9",
           "children": [],
           "description": "Paranecrocarcinus xivertensis is a paranecrocarcinidae species found in its native region."
         },
@@ -497,22 +502,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PARANECROCARCINUS_XIVERTENSIS_OSS_CHARBONNIER_HY_N_VAN_BAKEL_DEVILLEZ_I_IN_I_OSS_CHARBONNIER_HY_N_VAN_BAKEL_DEVILLEZ_BOVER_ARNAL_MORENO_BEDMAR_2024",
-          "name": "\"Paranecrocarcinus xivertensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paranecrocarcinus",
-          "authorship": "\"Ossó, Charbonnier, Hyžný, Van Bakel & Devillez <i>in</i> Ossó, Charbonnier, Hyžný, Van Bakel, Devillez, Bover-Arnal & Moreno Bedmar, 2024\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1777369",
-            "checklistbank-1174": "txn:500103"
-          },
-          "children": [],
-          "uuid": "f8161625-2533-5da-bb1-6c2101df87808f",
-          "description": "\"Paranecrocarcinus xivertensis\" is a paranecrocarcinidae species found in its native region."
-        },
-        {
           "id": "SP_PARANECROCARCINUS_BALLA_VAN_BAKEL_ET_AL_2012",
           "name": "Paranecrocarcinus balla",
           "rank": "SPECIES",
@@ -531,7 +520,7 @@
       "lineage": "paranecrocarcinidae"
     }
   ],
-  "speciesCount": 27,
+  "speciesCount": 26,
   "appSlug": "paranecrocarcinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

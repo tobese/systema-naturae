@@ -2074,10 +2074,15 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:901004"
             ],
-            "checklistbank-1174": "txn:350320"
+            "checklistbank-1174": [
+              "txn:350320"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:901004"
+            ]
           },
           "uuid": "6611154d-b0b6-580-89d-0bfc9c40b7e91f",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:901004,col:83JDZ,gbif:9469449",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:901004,checklistbank-1174:txn:350320,checklistbank-2011:urn:lsid:marinespecies.org:taxname:901004,col:83JDZ,gbif:9469449",
           "authorship": "Münster, 1838"
         },
         {
@@ -6602,12 +6607,18 @@
               "83JNC"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:919947"
+              "urn:lsid:marinespecies.org:taxname:919947",
+              "urn:lsid:marinespecies.org:taxname:930972"
             ],
-            "checklistbank-1174": "txn:501273"
+            "checklistbank-1174": [
+              "txn:501273"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:919947"
+            ]
           },
           "uuid": "6d314a1a-c5f1-564-848-2f16961335d903",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:919947,col:83JNC,col:83JND,gbif:9274784",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:919947,checklistbank:urn:lsid:marinespecies.org:taxname:930972,checklistbank-1174:txn:501273,checklistbank-2011:urn:lsid:marinespecies.org:taxname:919947,col:83JNC,col:83JND,gbif:9274784",
           "authorship": "Bandy, 1949"
         },
         {
@@ -12788,7 +12799,8 @@
           "lineage": "Ammonia",
           "authorship": "Haynes, 1973",
           "sourceIds": {
-            "checklistbank": "32845"
+            "checklistbank": "32845",
+            "checklistbank-139831": "1494965"
           },
           "children": [],
           "uuid": "0a1a7ce7-0a15-5ce-a71-95ffd5045ce77c",
@@ -12818,7 +12830,8 @@
           "lineage": "Ammonia",
           "authorship": "(Hofker, 1951)",
           "sourceIds": {
-            "checklistbank": "32847"
+            "checklistbank": "32847",
+            "checklistbank-139831": "1454955"
           },
           "children": [],
           "uuid": "8a60ce59-8927-536-ae6-18202a97aae075",
@@ -12833,7 +12846,8 @@
           "lineage": "Ammonia",
           "authorship": "(Linné, 1758)",
           "sourceIds": {
-            "checklistbank": "32849"
+            "checklistbank": "32849",
+            "checklistbank-139831": "994704"
           },
           "children": [],
           "uuid": "4b34663f-4cbd-531-96b-75fc6c5b581235",
@@ -12953,7 +12967,8 @@
           "lineage": "Ammonia",
           "authorship": "(Cushman, 1926)",
           "sourceIds": {
-            "checklistbank": "32857"
+            "checklistbank": "32857",
+            "checklistbank-139831": "348125"
           },
           "children": [],
           "uuid": "b504be3f-39e0-5e1-942-598f73d44e76cd",
@@ -14760,23 +14775,6 @@
           "description": "\"Rotalia fallax is a rotaliidae species found in its native region."
         },
         {
-          "id": "SP_ROTALIA_SIMILIS_KHALILOV_1967",
-          "name": "\"Rotalia similis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rotalia",
-          "authorship": "\"Khalilov, 1967\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:930972",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:919947",
-            "checklistbank-1174": "txn:501273"
-          },
-          "children": [],
-          "uuid": "06c0904e-eaf5-5b3-a70-95204513e380c7",
-          "description": "\"Rotalia similis is a rotaliidae species found in its native region."
-        },
-        {
           "id": "SP_ROTALIA_GARVEYENSIS_NATLAND_1938",
           "name": "Rotalia garveyensis",
           "rank": "SPECIES",
@@ -15754,21 +15752,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:900954"
           },
           "uuid": "ee1b34b0-c9f2-41e3-a9b9-652d452d6130",
-          "children": []
-        },
-        {
-          "id": "SP_ROTALIA_DEPRESSA_M_NSTER_1838",
-          "name": "Rotalia depressa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rotalia",
-          "authorship": "Münster, 1838",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:901004",
-            "checklistbank-1174": "txn:350320"
-          },
-          "uuid": "881f343f-422d-493d-bfb3-76a05ac64a68",
           "children": []
         },
         {
@@ -18601,7 +18584,7 @@
     }
   ],
   "genusCount": 57,
-  "speciesCount": 899,
+  "speciesCount": 897,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

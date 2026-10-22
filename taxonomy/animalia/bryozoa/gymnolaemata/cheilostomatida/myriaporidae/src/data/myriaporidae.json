@@ -105,10 +105,15 @@
             "col": [
               "868CQ"
             ],
-            "checklistbank": "txn:329082",
-            "checklistbank-1174": "txn:329082"
+            "checklistbank": [
+              "txn:329082",
+              "urn:lsid:marinespecies.org:taxname:1412305"
+            ],
+            "checklistbank-1174": [
+              "txn:329082"
+            ]
           },
-          "authorityIds": "col:868CQ",
+          "authorityIds": "checklistbank:txn:329082,checklistbank:urn:lsid:marinespecies.org:taxname:1412305,checklistbank-1174:txn:329082,col:868CQ",
           "children": [],
           "authorship": "(Canu and Bassler 1935)"
         },
@@ -713,22 +718,6 @@
           "children": [],
           "uuid": "75769156-5f24-5ce-96f-144bc7db73cf4b",
           "description": "\"Myriapora beyrichi\" is a myriaporidae species found in its native region."
-        },
-        {
-          "id": "SP_MYRIAPORA_OPERCULATA_CANU_BASSLER_1935",
-          "name": "\"Myriapora operculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Myriapora",
-          "authorship": "\"(Canu & Bassler, 1935)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412305",
-            "checklistbank-1174": "txn:329082"
-          },
-          "children": [],
-          "uuid": "c572d081-ba2f-597-a54-d1165d612384c1",
-          "description": "\"Myriapora operculata\" is a myriaporidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -808,6 +797,18 @@
           "children": [],
           "uuid": "d8396008-ea00-55a-87c-162a948406d11a",
           "description": "\"Leieschara subgracilis\" is a myriaporidae species found in its native region."
+        },
+        {
+          "id": "SP_LEIESCHARA_COARCTATA",
+          "name": "Leieschara coarctata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leieschara",
+          "sourceIds": {
+            "checklistbank-139831": "1225067"
+          },
+          "uuid": "43307481-da48-4550-bad9-bde9c919f025"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -839,7 +840,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 44,
+  "speciesCount": 43,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

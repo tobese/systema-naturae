@@ -401,9 +401,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1473823"
             ],
-            "checklistbank-1174": "txn:304455"
+            "checklistbank-1174": [
+              "txn:304455"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1473823"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1473823,col:7TDP3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1473823,checklistbank-1174:txn:304455,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1473823,col:7TDP3",
           "authorship": "(Gredler, 1863)"
         },
         {
@@ -1155,21 +1160,6 @@
           "description": "\"Trigonodus problematicus is a trigonodidae species found in its native region."
         },
         {
-          "id": "SP_TRIGONODUS_RABLENSIS_GREDLER_1863",
-          "name": "Trigonodus rablensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Trigonodus",
-          "authorship": "(Gredler, 1863)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1473823",
-            "checklistbank-1174": "txn:304455"
-          },
-          "uuid": "a054c160-6f14-47c7-8829-53fc31f6cb9e",
-          "children": []
-        },
-        {
           "id": "SP_TRIGONODUS_SANDBERGERI_VON_ALBERTI_1864",
           "name": "Trigonodus sandbergeri",
           "rank": "SPECIES",
@@ -1189,7 +1179,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 73,
+  "speciesCount": 72,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

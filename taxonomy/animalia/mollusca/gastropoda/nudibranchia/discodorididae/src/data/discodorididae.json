@@ -1761,18 +1761,6 @@
           },
           "uuid": "f02dd210-0d1b-4b38-a0ea-954fd5aed111",
           "children": []
-        },
-        {
-          "id": "SP_ROSTANGA_RUBRA",
-          "name": "Rostanga rubra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rostanga",
-          "sourceIds": {
-            "checklistbank-139831": "489150"
-          },
-          "children": []
         }
       ]
     },
@@ -3534,22 +3522,6 @@
           "description": "Halgerda elegans is a discodorididae species found in its native region."
         },
         {
-          "id": "SP_HALGERDA_GRAPHICA_BASEDOW_HEDLEY_1903",
-          "name": "Halgerda graphica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Halgerda",
-          "authorship": "Basedow & Hedley, 1903",
-          "sourceIds": {
-            "checklistbank": "taicol: 74224",
-            "checklistbank-139831": "807429"
-          },
-          "children": [],
-          "uuid": "8be52879-49a5-5eb-b9f-b76c9ce105e934",
-          "description": "Halgerda graphica is a discodorididae species found in its native region."
-        },
-        {
           "id": "SP_HALGERDA_APICULATA_ALDER_HANCOCK_1864",
           "name": "Halgerda apiculata",
           "rank": "SPECIES",
@@ -4106,18 +4078,6 @@
             "checklistbank-139831": "504254"
           },
           "uuid": "4e323d2a-d0f2-4625-be0a-d8e9f41dfb41",
-          "children": []
-        },
-        {
-          "id": "SP_HALGERDA_BATANGAS",
-          "name": "Halgerda batangas",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Halgerda",
-          "sourceIds": {
-            "checklistbank-139831": "125934"
-          },
           "children": []
         }
       ]
@@ -8516,35 +8476,6 @@
           "authorship": "Bergh, 1905",
           "children": [],
           "uuid": "7b32e9c7-6d4f-5fa-a7d-e06125e3b842b6"
-        },
-        {
-          "id": "SP_DISCODORIS_CONCINNA_ALDER_HANCOCK_1864",
-          "name": "Discodoris concinna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discodoris",
-          "authorship": "(Alder & Hancock, 1864)",
-          "sourceIds": {
-            "checklistbank": "59562"
-          },
-          "children": [],
-          "uuid": "79f3e7a3-1b53-568-a68-2211757ec6a772"
-        },
-        {
-          "id": "SP_DISCODORIS_STELLIFERA_IHERING_IN_VAYSSI_RE_1904",
-          "name": "Discodoris stellifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discodoris",
-          "authorship": "(Ihering in Vayssière, 1904)",
-          "sourceIds": {
-            "checklistbank": "59575",
-            "checklistbank-139831": "492588"
-          },
-          "children": [],
-          "uuid": "e1aa6895-79bb-555-b07-3305470d308633"
         },
         {
           "id": "SP_DISCODORIS_ZIBETHINA_BERGH_1878",
@@ -14060,12 +13991,18 @@
           "lineage": "\"Discodoris",
           "authorship": "\"(Vayssière, 1903)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139575",
-            "checklistbank-139831": "492588"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:139575",
+              "59575"
+            ],
+            "checklistbank-139831": [
+              "492588"
+            ]
           },
           "children": [],
           "uuid": "87e3c0a4-cee2-538-b63-95a7a66ea88a93",
-          "description": "\"Discodoris stellifera\" is a discodorididae species found in its native region."
+          "description": "\"Discodoris stellifera\" is a discodorididae species found in its native region.",
+          "authorityIds": "checklistbank:59575,checklistbank:urn:lsid:marinespecies.org:taxname:139575,checklistbank-139831:492588"
         },
         {
           "id": "SP_DISCODORIS_SAUVAGEI_ROCHEBRUNE_1882",
@@ -15665,7 +15602,7 @@
     }
   ],
   "genusCount": 61,
-  "speciesCount": 901,
+  "speciesCount": 896,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

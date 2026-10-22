@@ -1465,11 +1465,16 @@
             "col": [
               "828D2"
             ],
-            "checklistbank": "txn:413218",
+            "checklistbank": [
+              "txn:413218",
+              "urn:lsid:marinespecies.org:taxname:1150363"
+            ],
             "gbif-backbone": "9731662",
-            "checklistbank-1174": "txn:413218"
+            "checklistbank-1174": [
+              "txn:413218"
+            ]
           },
-          "authorityIds": "col:828D2",
+          "authorityIds": "checklistbank:txn:413218,checklistbank:urn:lsid:marinespecies.org:taxname:1150363,checklistbank-1174:txn:413218,col:828D2,gbif-backbone:9731662",
           "children": [],
           "description": "Codonofusiella paradoxica is a codonofusiella species found in its native region."
         },
@@ -4697,22 +4702,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CODONOFUSIELLA_PARADOXICA_LIN_1977",
-          "name": "\"Codonofusiella paradoxica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Codonofusiella",
-          "authorship": "\"Lin, 1977\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1150363",
-            "checklistbank-1174": "txn:413218"
-          },
-          "children": [],
-          "uuid": "ec5c07ab-5791-56a-ae3-e19d317ff21eec",
-          "description": "\"Codonofusiella paradoxica is a boultoniidae species found in its native region."
-        },
-        {
           "id": "SP_CODONOFUSIELLA_LANTSCHICHITES_WILDE_RUDINE_2000",
           "name": "\"Codonofusiella (Lantschichites)",
           "rank": "SPECIES",
@@ -4974,7 +4963,7 @@
       "lineage": "boultoniidae"
     }
   ],
-  "speciesCount": 269,
+  "speciesCount": 268,
   "appSlug": "boultoniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",

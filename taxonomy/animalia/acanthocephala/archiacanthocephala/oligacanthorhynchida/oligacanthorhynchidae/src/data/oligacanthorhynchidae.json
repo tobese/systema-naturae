@@ -735,34 +735,6 @@
           "description": "Oncicola sp. is a oligacanthorhynchidae species found in its native region."
         },
         {
-          "id": "SP_ONCICOLA_CANIS_KAUPP_1909",
-          "name": "Oncicola canis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oncicola",
-          "authorship": "(Kaupp, 1909)",
-          "sourceIds": {
-            "checklistbank": "219195"
-          },
-          "children": [],
-          "uuid": "47746233-6a48-52e-876-b848a37d42a2d9"
-        },
-        {
-          "id": "SP_ONCICOLA_MICHAELSENI_MEYER_1933",
-          "name": "Oncicola michaelseni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oncicola",
-          "authorship": "Meyer, 1933",
-          "sourceIds": {
-            "checklistbank": "219196"
-          },
-          "children": [],
-          "uuid": "8fd4557d-2b4f-5e4-aa1-be2b1f1fb5cd38"
-        },
-        {
           "id": "SP_ONCICOLA_ONCICOLA",
           "name": "Oncicola oncicola",
           "rank": "SPECIES",
@@ -1921,91 +1893,6 @@
           "children": [],
           "uuid": "e77e20e4-a834-57d-b0d-b4246534d4b7ac",
           "description": "Oligacanthorhynchus oligacanthoides is a oligacanthorhynchidae species found in its native region."
-        },
-        {
-          "id": "SP_OLIGACANTHORHYNCHUS_SPIRA_DIESING_1851",
-          "name": "Oligacanthorhynchus spira",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oligacanthorhynchus",
-          "authorship": "(Diesing, 1851)",
-          "sourceIds": {
-            "checklistbank": "1076756",
-            "wikispecies": "Oligacanthorhynchus_spira"
-          },
-          "children": [],
-          "uuid": "a9012c04-9209-5b8-864-a3e883083fb0f7"
-        },
-        {
-          "id": "SP_OLIGACANTHORHYNCHUS_CITILLI_RUDOLPHI_1806",
-          "name": "Oligacanthorhynchus citilli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oligacanthorhynchus",
-          "authorship": "(Rudolphi, 1806)",
-          "sourceIds": {
-            "checklistbank": "219189"
-          },
-          "children": [],
-          "uuid": "40265c03-f9fd-502-8e1-94ef9417581a4f"
-        },
-        {
-          "id": "SP_OLIGACANTHORHYNCHUS_COMPRESSUS_RUDOLPHI_1802",
-          "name": "Oligacanthorhynchus compressus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oligacanthorhynchus",
-          "authorship": "(Rudolphi, 1802)",
-          "sourceIds": {
-            "checklistbank": "219190"
-          },
-          "children": [],
-          "uuid": "1bb9ba0d-a372-5e2-b82-31ae14a9460f9a"
-        },
-        {
-          "id": "SP_OLIGACANTHORHYNCHUS_LAGENAEFORMIS_WESTRUMB_1821",
-          "name": "Oligacanthorhynchus lagenaeformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oligacanthorhynchus",
-          "authorship": "(Westrumb, 1821)",
-          "sourceIds": {
-            "checklistbank": "219192"
-          },
-          "children": [],
-          "uuid": "1b7d68ce-f7ef-5bf-933-cf7fc93c1b5a24"
-        },
-        {
-          "id": "SP_OLIGACANTHORHYNCHUS_OLIGACANTHUS_RUDOLPHI_1819",
-          "name": "Oligacanthorhynchus oligacanthus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oligacanthorhynchus",
-          "authorship": "(Rudolphi, 1819)",
-          "sourceIds": {
-            "checklistbank": "219193"
-          },
-          "children": [],
-          "uuid": "b49915de-08d6-5db-a9e-027c4eb6a25239"
-        },
-        {
-          "id": "SP_OLIGACANTHORHYNCHUS_RICINOIDES_RUDOLPHI_1808",
-          "name": "Oligacanthorhynchus ricinoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oligacanthorhynchus",
-          "authorship": "(Rudolphi, 1808)",
-          "sourceIds": {
-            "checklistbank": "219194"
-          },
-          "children": [],
-          "uuid": "7cdef8ec-96a0-57c-935-cfefff3d6d1752"
         },
         {
           "id": "SP_OLIGACANTHORHYNCHUS_AENIGMA",
@@ -3522,12 +3409,18 @@
           "lineage": "\"Oligacanthorhynchus",
           "authorship": "\"(Diesing, 1861)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671117",
-            "wikispecies": "Oligacanthorhynchus_spira"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671117",
+              "1076756"
+            ],
+            "wikispecies": [
+              "Oligacanthorhynchus_spira"
+            ]
           },
           "children": [],
           "uuid": "59937942-fc73-52d-ba2-70dd36753c83ff",
-          "description": "\"Oligacanthorhynchus spira\" is a oligacanthorhynchidae species found in its native region."
+          "description": "\"Oligacanthorhynchus spira\" is a oligacanthorhynchidae species found in its native region.",
+          "authorityIds": "checklistbank:1076756,checklistbank:urn:lsid:marinespecies.org:taxname:1671117,wikispecies:Oligacanthorhynchus_spira"
         },
         {
           "id": "SP_OLIGACANTHORHYNCHUS_MICROCEPHALUS_RUDOLPHI_1819_SCHMIDT_1972",
@@ -3666,7 +3559,7 @@
     }
   ],
   "genusCount": 20,
-  "speciesCount": 197,
+  "speciesCount": 189,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

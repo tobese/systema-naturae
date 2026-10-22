@@ -475,9 +475,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1410847"
             ],
-            "checklistbank-1174": "txn:438380"
+            "checklistbank-1174": [
+              "txn:438380"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1410847"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410847,col:86GQ3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410847,checklistbank-1174:txn:438380,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1410847,col:86GQ3",
           "authorship": "(Römer, 1841)"
         },
         {
@@ -6929,21 +6934,6 @@
           "children": []
         },
         {
-          "id": "SP_DISPORELLA_CONFLUENS_R_MER_1841",
-          "name": "Disporella confluens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Disporella",
-          "authorship": "(Römer, 1841)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1410847",
-            "checklistbank-1174": "txn:438380"
-          },
-          "uuid": "956e5988-c7f5-493c-93f7-06208c5db81c",
-          "children": []
-        },
-        {
           "id": "SP_DISPORELLA_CORONULA_REUSS_1848",
           "name": "Disporella coronula",
           "rank": "SPECIES",
@@ -7329,7 +7319,7 @@
     }
   ],
   "genusCount": 39,
-  "speciesCount": 414,
+  "speciesCount": 413,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

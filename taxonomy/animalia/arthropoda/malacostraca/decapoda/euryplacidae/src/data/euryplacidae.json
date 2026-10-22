@@ -318,10 +318,15 @@
             "col": [
               "9F4QP"
             ],
-            "checklistbank": "txn:225797",
-            "checklistbank-1174": "txn:225797"
+            "checklistbank": [
+              "txn:225797",
+              "urn:lsid:marinespecies.org:taxname:1594388"
+            ],
+            "checklistbank-1174": [
+              "txn:225797"
+            ]
           },
-          "authorityIds": "col:9F4QP",
+          "authorityIds": "checklistbank:txn:225797,checklistbank:urn:lsid:marinespecies.org:taxname:1594388,checklistbank-1174:txn:225797,col:9F4QP",
           "children": [],
           "description": "Corallicarcinus spinosus is a euryplacidae species found in its native region."
         },
@@ -1648,22 +1653,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CORALLICARCINUS_SPINOSUS_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Corallicarcinus spinosus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Corallicarcinus",
-          "authorship": "\"(Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1594388",
-            "checklistbank-1174": "txn:225797"
-          },
-          "children": [],
-          "uuid": "cf8f8032-dd74-5d8-bda-b31275d9da769b",
-          "description": "\"Corallicarcinus spinosus\" is a euryplacidae species found in its native region."
-        },
-        {
           "id": "SP_CORALLICARCINUS_PLANUS_MULLER_AND_COLLINS_1991",
           "name": "Corallicarcinus planus",
           "rank": "SPECIES",
@@ -1835,7 +1824,7 @@
       "lineage": "euryplacidae"
     }
   ],
-  "speciesCount": 84,
+  "speciesCount": 83,
   "appSlug": "euryplacidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

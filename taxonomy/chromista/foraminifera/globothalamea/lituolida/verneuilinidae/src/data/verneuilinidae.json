@@ -2987,11 +2987,16 @@
             "col": [
               "82L6N"
             ],
-            "checklistbank": "txn:412546",
-            "checklistbank-1174": "txn:412546"
+            "checklistbank": [
+              "txn:412546",
+              "urn:lsid:marinespecies.org:taxname:905554"
+            ],
+            "checklistbank-1174": [
+              "txn:412546"
+            ]
           },
           "uuid": "028ce131-7679-56c-b7f-d0182ba12cb8c2",
-          "authorityIds": "col:82L6N,gbif:6123482",
+          "authorityIds": "checklistbank:txn:412546,checklistbank:urn:lsid:marinespecies.org:taxname:905554,checklistbank-1174:txn:412546,col:82L6N,gbif:6123482",
           "authorship": "Huang et al. 2019"
         },
         {
@@ -11198,11 +11203,16 @@
             "col": [
               "83VP5"
             ],
-            "checklistbank": "txn:423022",
-            "checklistbank-1174": "txn:423022"
+            "checklistbank": [
+              "txn:423022",
+              "urn:lsid:marinespecies.org:taxname:1472168"
+            ],
+            "checklistbank-1174": [
+              "txn:423022"
+            ]
           },
           "uuid": "a4c8db6d-13b2-5d7-944-eabef3b009fcc5",
-          "authorityIds": "col:83VP5,gbif:11220836",
+          "authorityIds": "checklistbank:txn:423022,checklistbank:urn:lsid:marinespecies.org:taxname:1472168,checklistbank-1174:txn:423022,col:83VP5,gbif:11220836",
           "authorship": "Mjatliuk 1939"
         },
         {
@@ -14930,22 +14940,6 @@
           "children": [],
           "uuid": "5b117510-0c10-55a-aae-cfeb2675c8c910",
           "description": "\"Gaudryina hawkinsi\" is a verneuilinidae species found in its native region."
-        },
-        {
-          "id": "SP_GAUDRYINA_HAYASAKAI_CHANG_1954",
-          "name": "\"Gaudryina hayasakai\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gaudryina",
-          "authorship": "\"Chang, 1954\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:905554",
-            "checklistbank-1174": "txn:412546"
-          },
-          "children": [],
-          "uuid": "8b9acae0-b92c-5b1-a46-c0a4cb82d54b34",
-          "description": "\"Gaudryina hayasakai\" is a verneuilinidae species found in its native region."
         },
         {
           "id": "SP_GAUDRYINA_HEDBERGI_CUSHMAN_1947",
@@ -20737,22 +20731,6 @@
           "description": "\"Verneuilinoides liasinus\" is a verneuilinidae species found in its native region."
         },
         {
-          "id": "SP_VERNEUILINOIDES_NEOCOMIENSIS_MYATLYUK_1939",
-          "name": "\"Verneuilinoides neocomiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Verneuilinoides",
-          "authorship": "\"(Myatlyuk, 1939)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1472168",
-            "checklistbank-1174": "txn:423022"
-          },
-          "children": [],
-          "uuid": "1bc08713-5432-51a-b75-51a25401ae8708",
-          "description": "\"Verneuilinoides neocomiensis\" is a verneuilinidae species found in its native region."
-        },
-        {
           "id": "SP_VERNEUILINOIDES_POLONICUS_CUSHMAN_G_A_EWSKI_1949",
           "name": "\"Verneuilinoides polonicus\"",
           "rank": "SPECIES",
@@ -21832,7 +21810,7 @@
     }
   ],
   "genusCount": 42,
-  "speciesCount": 1172,
+  "speciesCount": 1170,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

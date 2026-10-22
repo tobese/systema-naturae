@@ -573,36 +573,6 @@
           "children": [],
           "uuid": "bea2447a-0d04-5af-943-514d61616dde1a",
           "description": "Aetea sp. is a aeteidae species found in its native region."
-        },
-        {
-          "id": "SP_AETEA_ANGUINA_LINNAEUS",
-          "name": "Aetea anguina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aetea",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "39e09b81-ad58-4c70-b47d-cc4ac1fe4cc3",
-            "wikispecies": "Aetea_anguina"
-          },
-          "children": [],
-          "uuid": "4da9858c-e271-59d-865-df4ec060f61e43"
-        },
-        {
-          "id": "SP_AETEA_TRUNCATA_LANDSBOROUGH",
-          "name": "Aetea truncata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aetea",
-          "authorship": "Landsborough",
-          "sourceIds": {
-            "checklistbank": "36de2b25-408d-47de-96ae-f64356468958",
-            "wikispecies": "Aetea_truncata"
-          },
-          "children": [],
-          "uuid": "a9dadccf-842f-571-be3-4754898f42ad3b"
         }
       ]
     },
@@ -729,13 +699,19 @@
           "lineage": "\"Aetea",
           "authorship": "\"(Linnaeus, 1758)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111062",
-            "wikispecies": "Aetea_anguina",
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:111062",
+              "39e09b81-ad58-4c70-b47d-cc4ac1fe4cc3"
+            ],
+            "wikispecies": [
+              "Aetea_anguina"
+            ],
             "checklistbank-139831": "196152"
           },
           "children": [],
           "uuid": "c0485160-450e-5bc-9bb-1bdd85949dc49b",
-          "description": "\"Aetea anguina\" is a aeteidae species found in its native region."
+          "description": "\"Aetea anguina\" is a aeteidae species found in its native region.",
+          "authorityIds": "checklistbank:39e09b81-ad58-4c70-b47d-cc4ac1fe4cc3,checklistbank:urn:lsid:marinespecies.org:taxname:111062,checklistbank-139831:196152,wikispecies:Aetea_anguina"
         },
         {
           "id": "SP_AETEA_LONGICOLLIS_JULLIEN_1903",
@@ -776,13 +752,19 @@
           "lineage": "\"Aetea",
           "authorship": "\"(Landsborough, 1852)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111067",
-            "wikispecies": "Aetea_truncata",
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:111067",
+              "36de2b25-408d-47de-96ae-f64356468958"
+            ],
+            "wikispecies": [
+              "Aetea_truncata"
+            ],
             "checklistbank-139831": "196150"
           },
           "children": [],
           "uuid": "5b7c9d4d-00f7-51a-a2a-bb6de232b8d2bf",
-          "description": "\"Aetea truncata\" is a aeteidae species found in its native region."
+          "description": "\"Aetea truncata\" is a aeteidae species found in its native region.",
+          "authorityIds": "checklistbank:36de2b25-408d-47de-96ae-f64356468958,checklistbank:urn:lsid:marinespecies.org:taxname:111067,checklistbank-139831:196150,wikispecies:Aetea_truncata"
         },
         {
           "id": "SP_AETEA_DILATATA_BUSK_1851",
@@ -811,7 +793,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:509965"
           },
-          "uuid": "f71c33aa-1cee-463c-ae3a-8e1c17d2fcb5"
+          "uuid": "f71c33aa-1cee-463c-ae3a-8e1c17d2fcb5",
+          "children": []
         },
         {
           "id": "SP_AETEA_CURTA",
@@ -823,7 +806,8 @@
           "sourceIds": {
             "checklistbank-139831": "1448798"
           },
-          "uuid": "effa77c6-fe77-4e9a-9473-32efed48f970"
+          "uuid": "effa77c6-fe77-4e9a-9473-32efed48f970",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -855,7 +839,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 48,
+  "speciesCount": 46,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -3055,9 +3055,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:934026"
             ],
-            "checklistbank-1174": "txn:476098"
+            "checklistbank-1174": [
+              "txn:476098"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:934026"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934026,col:3H7LR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934026,checklistbank-1174:txn:476098,checklistbank-2011:urn:lsid:marinespecies.org:taxname:934026,col:3H7LR",
           "authorship": "(Gottschick & Wenz, 1919)"
         },
         {
@@ -7197,21 +7202,6 @@
           "children": []
         },
         {
-          "id": "SP_GRANARIA_GROSSECOSTATA_GOTTSCHICK_WENZ_1919",
-          "name": "Granaria grossecostata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Granaria",
-          "authorship": "(Gottschick & Wenz, 1919)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:934026",
-            "checklistbank-1174": "txn:476098"
-          },
-          "uuid": "dc5f3ae6-348b-4cd0-b60b-d93da5635ac8",
-          "children": []
-        },
-        {
           "id": "SP_GRANARIA_COSTATA_LUEGER_1981",
           "name": "Granaria costata",
           "rank": "SPECIES",
@@ -8314,7 +8304,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 504,
+  "speciesCount": 503,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

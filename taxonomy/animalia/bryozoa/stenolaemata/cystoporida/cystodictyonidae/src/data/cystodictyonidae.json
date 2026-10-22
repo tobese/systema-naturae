@@ -2997,10 +2997,15 @@
             "col": [
               "869RK"
             ],
-            "checklistbank": "txn:268266",
-            "checklistbank-1174": "txn:268266"
+            "checklistbank": [
+              "txn:268266",
+              "urn:lsid:marinespecies.org:taxname:1414394"
+            ],
+            "checklistbank-1174": [
+              "txn:268266"
+            ]
           },
-          "authorityIds": "col:869RK",
+          "authorityIds": "checklistbank:txn:268266,checklistbank:urn:lsid:marinespecies.org:taxname:1414394,checklistbank-1174:txn:268266,col:869RK",
           "authorship": "(Yang et al. 1979)"
         },
         {
@@ -4114,22 +4119,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_WYSEJACKSONELLA_ELLIPSOIDES_YANG_LU_ZHOU_1979",
-          "name": "\"Wysejacksonella ellipsoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Wysejacksonella",
-          "authorship": "\"(Yang, Lu & Zhou, 1979)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414394",
-            "checklistbank-1174": "txn:268266"
-          },
-          "children": [],
-          "uuid": "3ae64b26-9291-58c-a4d-bd7f51bce52d17",
-          "description": "\"Wysejacksonella ellipsoides\" is a cystodictyonidae species found in its native region."
-        },
-        {
           "id": "SP_WYSEJACKSONELLA_EXITABULATA_XIA_1991",
           "name": "\"Wysejacksonella exitabulata\"",
           "rank": "SPECIES",
@@ -4150,7 +4139,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 217,
+  "speciesCount": 216,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

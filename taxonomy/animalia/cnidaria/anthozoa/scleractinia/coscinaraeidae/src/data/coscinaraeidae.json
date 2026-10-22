@@ -172,10 +172,15 @@
             "col": [
               "YTB2"
             ],
-            "checklistbank": "taicol: 68897",
-            "checklistbank-1174": "txn:178442"
+            "checklistbank": [
+              "taicol: 68897",
+              "urn:lsid:marinespecies.org:taxname:207255"
+            ],
+            "checklistbank-1174": [
+              "txn:178442"
+            ]
           },
-          "authorityIds": "col:YTB2,itis:53101,wikidata:Q3948816",
+          "authorityIds": "checklistbank:taicol: 68897,checklistbank:urn:lsid:marinespecies.org:taxname:207255,checklistbank-1174:txn:178442,col:YTB2,itis:53101,wikidata:Q3948816",
           "authorship": "(Forskål, 1775)",
           "children": []
         },
@@ -529,22 +534,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_COSCINARAEA_MONILE_FORSK_L_1775",
-          "name": "\"Coscinaraea monile\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coscinaraea",
-          "authorship": "\"(Forskål, 1775)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207255",
-            "checklistbank-1174": "txn:178442"
-          },
-          "children": [],
-          "uuid": "e94e3f6d-3bb3-546-b78-33ad7edacbad15",
-          "description": "\"Coscinaraea monile\" is a coscinaraeidae species found in its native region."
-        },
-        {
           "id": "SP_COSCINARAEA_COLUMNA_DANA",
           "name": "Coscinaraea columna",
           "rank": "SPECIES",
@@ -617,7 +606,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 33,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

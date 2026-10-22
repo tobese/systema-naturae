@@ -345,9 +345,14 @@
               "57GNK"
             ],
             "checklistbank": "Torreya_jackii_Chun",
-            "checklistbank-1174": "txn:444525"
+            "checklistbank-1174": [
+              "txn:444525"
+            ],
+            "checklistbank-2232": [
+              "379347"
+            ]
           },
-          "authorityIds": "col:57GNK,wfo:wfo-0000454927"
+          "authorityIds": "checklistbank:Torreya_jackii_Chun,checklistbank-1174:txn:444525,checklistbank-2232:379347,col:57GNK,wfo:wfo-0000454927"
         },
         {
           "id": "SP_TORREYA_NUCIFERA",
@@ -613,12 +618,17 @@
             "itis": [
               "194883"
             ],
-            "checklistbank": "Taxus_baccata_L",
+            "checklistbank": [
+              "Taxus_baccata_L",
+              "urn:lsid:marinespecies.org:taxname:1634526"
+            ],
             "checklistbank-2008": "125816",
             "gbif-backbone": "10770667",
-            "checklistbank-1174": "txn:453628"
+            "checklistbank-1174": [
+              "txn:453628"
+            ]
           },
-          "authorityIds": "col:5527N,itis:194883,wfo:wfo-0000408637"
+          "authorityIds": "checklistbank:Taxus_baccata_L,checklistbank:urn:lsid:marinespecies.org:taxname:1634526,checklistbank-1174:txn:453628,checklistbank-2008:125816,col:5527N,gbif-backbone:10770667,itis:194883,wfo:wfo-0000408637"
         },
         {
           "id": "SP_TAXUS_BREVIFOLIA",
@@ -1982,22 +1992,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TAXUS_BACCATA_L",
-          "name": "\"Taxus baccata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Taxus",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634526",
-            "checklistbank-1174": "txn:453628"
-          },
-          "children": [],
-          "uuid": "a108d229-1add-5bb-835-0e241c3928382c",
-          "description": "\"Taxus baccata\" is a taxaceae species found in its native region."
-        },
-        {
           "id": "SP_TAXUS_QINLINGENSIS_Y_F_WEN_X_T_WU",
           "name": "Taxus qinlingensis",
           "rank": "SPECIES",
@@ -2223,7 +2217,8 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1634532",
             "checklistbank-2232": "382185",
-            "checklistbank-1141": "ecb7b106-34a2-596f-ab05-347de151d851"
+            "checklistbank-1141": "ecb7b106-34a2-596f-ab05-347de151d851",
+            "checklistbank-2000": "urn:lsid:ipni.org:names:828260-1"
           },
           "children": [],
           "uuid": "7399d4d9-6bcb-51f-981-449c4c25f13ab3",
@@ -2335,7 +2330,8 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1634534",
             "checklistbank-2232": "378639",
-            "checklistbank-1141": "ec584619-442e-5b32-b9da-38bed8e03056"
+            "checklistbank-1141": "ec584619-442e-5b32-b9da-38bed8e03056",
+            "checklistbank-2000": "urn:lsid:ipni.org:names:264000-1"
           },
           "children": [],
           "uuid": "816f3ec1-a05a-5fb-947-d6a6305907e617",
@@ -2395,21 +2391,6 @@
             "checklistbank-2232": "379346"
           },
           "uuid": "0c73a28a-b19e-4e0e-90b3-53d308bba320",
-          "children": []
-        },
-        {
-          "id": "SP_TORREYA_JACKII_CHUN",
-          "name": "Torreya jackii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Torreya",
-          "authorship": "Chun",
-          "sourceIds": {
-            "checklistbank-2232": "379347",
-            "checklistbank-1174": "txn:444525"
-          },
-          "uuid": "03cf0c51-5b49-4d43-a0fe-a6ef7280bfe4",
           "children": []
         },
         {
@@ -4750,7 +4731,7 @@
     }
   ],
   "genusCount": 61,
-  "speciesCount": 264,
+  "speciesCount": 262,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

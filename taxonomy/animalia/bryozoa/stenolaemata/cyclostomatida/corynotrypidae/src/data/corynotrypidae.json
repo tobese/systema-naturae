@@ -281,10 +281,15 @@
             "col": [
               "8674S"
             ],
-            "checklistbank": "txn:316780",
-            "checklistbank-1174": "txn:316780"
+            "checklistbank": [
+              "txn:316780",
+              "urn:lsid:marinespecies.org:taxname:1410584"
+            ],
+            "checklistbank-1174": [
+              "txn:316780"
+            ]
           },
-          "authorityIds": "col:8674S",
+          "authorityIds": "checklistbank:txn:316780,checklistbank:urn:lsid:marinespecies.org:taxname:1410584,checklistbank-1174:txn:316780,col:8674S",
           "children": [],
           "authorship": "(Nicholson 1875)"
         },
@@ -856,22 +861,6 @@
           "description": "\"Corynotrypa elongata\" is a corynotrypidae species found in its native region."
         },
         {
-          "id": "SP_CORYNOTRYPA_INFLATA_HALL_1847",
-          "name": "\"Corynotrypa inflata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Corynotrypa",
-          "authorship": "\"(Hall, 1847)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410584",
-            "checklistbank-1174": "txn:316780"
-          },
-          "children": [],
-          "uuid": "8e46913f-0561-5b0-81a-73c63702b20c78",
-          "description": "\"Corynotrypa inflata\" is a corynotrypidae species found in its native region."
-        },
-        {
           "id": "SP_CORYNOTRYPA_TURGIDA_ULRICH_1890",
           "name": "\"Corynotrypa turgida\"",
           "rank": "SPECIES",
@@ -1010,5 +999,5 @@
     "checklistbank-1174": "txn:317869"
   },
   "genusCount": 7,
-  "speciesCount": 52
+  "speciesCount": 51
 }

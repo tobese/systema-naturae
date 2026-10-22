@@ -276,10 +276,15 @@
             "col": [
               "83BH6"
             ],
-            "checklistbank": "txn:239061",
-            "checklistbank-1174": "txn:239061"
+            "checklistbank": [
+              "txn:239061",
+              "urn:lsid:marinespecies.org:taxname:1334739"
+            ],
+            "checklistbank-1174": [
+              "txn:239061"
+            ]
           },
-          "authorityIds": "col:83BH6",
+          "authorityIds": "checklistbank:txn:239061,checklistbank:urn:lsid:marinespecies.org:taxname:1334739,checklistbank-1174:txn:239061,col:83BH6",
           "children": [],
           "description": "Profusulinella parva is a profusulinella species found in its native region."
         },
@@ -3746,22 +3751,6 @@
           "description": "\"Profusulinella convoluta is a profusulinellidae species found in its native region."
         },
         {
-          "id": "SP_PROFUSULINELLA_PARVA_IVANOVA_2000",
-          "name": "\"Profusulinella parva",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Profusulinella",
-          "authorship": "\"Ivanova, 2000\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1334739",
-            "checklistbank-1174": "txn:239061"
-          },
-          "children": [],
-          "uuid": "f9af1c8d-1eda-5c9-9d3-a77ff07ab300ca",
-          "description": "\"Profusulinella parva is a profusulinellidae species found in its native region."
-        },
-        {
           "id": "SP_PROFUSULINELLA_DEPRATINA_LEVEN_DAVYDOV_GORGIJ_2006",
           "name": "\"Profusulinella (Depratina)",
           "rank": "SPECIES",
@@ -3940,7 +3929,7 @@
       "lineage": "profusulinellidae"
     }
   ],
-  "speciesCount": 217,
+  "speciesCount": 216,
   "appSlug": "profusulinellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",

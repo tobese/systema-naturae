@@ -910,10 +910,15 @@
             "col": [
               "6DBFW"
             ],
-            "checklistbank": "txn:475861",
-            "checklistbank-1174": "txn:475861"
+            "checklistbank": [
+              "txn:475861",
+              "urn:lsid:marinespecies.org:taxname:954367"
+            ],
+            "checklistbank-1174": [
+              "txn:475861"
+            ]
           },
-          "authorityIds": "col:6DBFW",
+          "authorityIds": "checklistbank:txn:475861,checklistbank:urn:lsid:marinespecies.org:taxname:954367,checklistbank-1174:txn:475861,col:6DBFW",
           "authorship": "(Sandberger 1872)"
         },
         {
@@ -2716,22 +2721,6 @@
           "description": "\"Discus euglyphoides\" is a discidae species found in its native region."
         },
         {
-          "id": "SP_DISCUS_SOLARIOIDES_F_SANDBERGER_1872",
-          "name": "\"Discus solarioides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Discus",
-          "authorship": "\"(F. Sandberger, 1872)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:954367",
-            "checklistbank-1174": "txn:475861"
-          },
-          "children": [],
-          "uuid": "325d3bdf-91f3-588-af7-b55aec5c4536b0",
-          "description": "\"Discus solarioides\" is a discidae species found in its native region."
-        },
-        {
           "id": "SP_DISCUS_LATEUMBILICATUS_SACCO_1886",
           "name": "\"Discus lateumbilicatus\"",
           "rank": "SPECIES",
@@ -3693,7 +3682,7 @@
     }
   ],
   "genusCount": 18,
-  "speciesCount": 203,
+  "speciesCount": 202,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1122,11 +1122,16 @@
             "col": [
               "835Z9"
             ],
-            "checklistbank": "txn:386292",
-            "checklistbank-1174": "txn:386292"
+            "checklistbank": [
+              "txn:386292",
+              "urn:lsid:marinespecies.org:taxname:1053068"
+            ],
+            "checklistbank-1174": [
+              "txn:386292"
+            ]
           },
           "uuid": "0e990ca6-b4f7-5ff-bf6-de915633185b5e",
-          "authorityIds": "col:835Z9,gbif:9816172",
+          "authorityIds": "checklistbank:txn:386292,checklistbank:urn:lsid:marinespecies.org:taxname:1053068,checklistbank-1174:txn:386292,col:835Z9,gbif:9816172",
           "children": [],
           "authorship": "(Guembel 1862)"
         },
@@ -1919,22 +1924,6 @@
           "description": "\"Paalzowella sarykiensis\" is a placentulinidae species found in its native region."
         },
         {
-          "id": "SP_PAALZOWELLA_TURBINELLA_G_MBEL_1862",
-          "name": "\"Paalzowella turbinella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paalzowella",
-          "authorship": "\"(Gümbel, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1053068",
-            "checklistbank-1174": "txn:386292"
-          },
-          "children": [],
-          "uuid": "7c92ed49-bf04-5d7-b9b-ae82ef20222218",
-          "description": "\"Paalzowella turbinella\" is a placentulinidae species found in its native region."
-        },
-        {
           "id": "SP_PAALZOWELLA_CONOIDALIS_LEVCHUK_2009",
           "name": "\"Paalzowella conoidalis\"",
           "rank": "SPECIES",
@@ -2257,5 +2246,5 @@
     "checklistbank-1174": "txn:279578"
   },
   "genusCount": 22,
-  "speciesCount": 110
+  "speciesCount": 109
 }

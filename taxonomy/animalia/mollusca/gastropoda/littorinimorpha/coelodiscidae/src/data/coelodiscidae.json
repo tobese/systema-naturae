@@ -26,10 +26,15 @@
             "col": [
               "B22LP"
             ],
-            "checklistbank": "txn:278185",
-            "checklistbank-1174": "txn:278185"
+            "checklistbank": [
+              "txn:278185",
+              "urn:lsid:marinespecies.org:taxname:1611355"
+            ],
+            "checklistbank-1174": [
+              "txn:278185"
+            ]
           },
-          "authorityIds": "col:B22LP",
+          "authorityIds": "checklistbank:txn:278185,checklistbank:urn:lsid:marinespecies.org:taxname:1611355,checklistbank-1174:txn:278185,col:B22LP",
           "authorship": "(Schubler 1833)"
         },
         {
@@ -51,35 +56,10 @@
           "description": "Coelodiscus fluegeli is a coelodiscidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_COELODISCUS",
-      "name": "\"Coelodiscus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COELODISCUS_MINUTUS_ZIETEN_1832",
-          "name": "\"Coelodiscus minutus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coelodiscus",
-          "authorship": "\"(Zieten, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611355",
-            "checklistbank-1174": "txn:278185"
-          },
-          "children": [],
-          "uuid": "aff8619e-fd9a-5bb-8e3-9613847434d284",
-          "description": "\"Coelodiscus minutus\" is a coelodiscidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "coelodiscidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 3,
+  "genusCount": 1,
+  "speciesCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

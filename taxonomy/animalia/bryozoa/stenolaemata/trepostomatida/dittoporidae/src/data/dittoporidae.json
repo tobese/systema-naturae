@@ -155,10 +155,15 @@
             "col": [
               "867WK"
             ],
-            "checklistbank": "txn:317195",
-            "checklistbank-1174": "txn:317195"
+            "checklistbank": [
+              "txn:317195",
+              "urn:lsid:marinespecies.org:taxname:1411452"
+            ],
+            "checklistbank-1174": [
+              "txn:317195"
+            ]
           },
-          "authorityIds": "col:867WK",
+          "authorityIds": "checklistbank:txn:317195,checklistbank:urn:lsid:marinespecies.org:taxname:1411452,checklistbank-1174:txn:317195,col:867WK",
           "children": [],
           "authorship": "(Ulrich 1893)"
         },
@@ -1147,22 +1152,6 @@
           "description": "\"Hemiphragma imperfectum\" is a dittoporidae species found in its native region."
         },
         {
-          "id": "SP_HEMIPHRAGMA_IRRASUM_ULRICH_1886",
-          "name": "\"Hemiphragma irrasum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hemiphragma",
-          "authorship": "\"(Ulrich, 1886)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411452",
-            "checklistbank-1174": "txn:317195"
-          },
-          "children": [],
-          "uuid": "e3cc2d85-49fe-5a5-9ed-3c2ff04326bf6c",
-          "description": "\"Hemiphragma irrasum\" is a dittoporidae species found in its native region."
-        },
-        {
           "id": "SP_HEMIPHRAGMA_OTTAWAENSE_FOORD_1883",
           "name": "\"Hemiphragma ottawaense\"",
           "rank": "SPECIES",
@@ -1281,5 +1270,5 @@
     "checklistbank-1174": "txn:365836"
   },
   "genusCount": 14,
-  "speciesCount": 63
+  "speciesCount": 62
 }

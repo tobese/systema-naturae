@@ -956,11 +956,16 @@
             "col": [
               "4SRXP"
             ],
-            "checklistbank": "txn:393117",
+            "checklistbank": [
+              "txn:393117",
+              "urn:lsid:marinespecies.org:taxname:1034536"
+            ],
             "gbif-backbone": "9084357",
-            "checklistbank-1174": "txn:393117"
+            "checklistbank-1174": [
+              "txn:393117"
+            ]
           },
-          "authorityIds": "col:4SRXP",
+          "authorityIds": "checklistbank:txn:393117,checklistbank:urn:lsid:marinespecies.org:taxname:1034536,checklistbank-1174:txn:393117,col:4SRXP,gbif-backbone:9084357",
           "children": [],
           "authorship": "Bouvé 1846",
           "description": "Rhyncholampas gouldii is a cassidulidae species found in its native region."
@@ -1016,9 +1021,14 @@
               "4SRXR"
             ],
             "checklistbank": "195810",
-            "checklistbank-1174": "txn:392591"
+            "checklistbank-1174": [
+              "txn:392591"
+            ],
+            "wikispecies": [
+              "Rhyncholampas_pacificus"
+            ]
           },
-          "authorityIds": "col:4SRXR",
+          "authorityIds": "checklistbank:195810,checklistbank-1174:txn:392591,col:4SRXR,wikispecies:Rhyncholampas_pacificus",
           "children": [],
           "description": "Rhyncholampas pacificus is a cassidulidae species found in its native region."
         },
@@ -1678,36 +1688,6 @@
           "description": "\"Rhyncholampas (Galerolampas) is a cassidulidae species found in its native region."
         },
         {
-          "id": "SP_RHYNCHOLAMPAS_GOULDII_KIER_1997",
-          "name": "\"Rhyncholampas gouldii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhyncholampas",
-          "authorship": "\"Kier, 1997\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034536",
-            "checklistbank-1174": "txn:393117"
-          },
-          "children": [],
-          "uuid": "f5715db9-dcdb-5c0-904-015020033ac4e7",
-          "description": "\"Rhyncholampas gouldii is a cassidulidae species found in its native region."
-        },
-        {
-          "id": "SP_RHYNCHOLAMPAS_PACIFICUS",
-          "name": "Rhyncholampas pacificus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhyncholampas",
-          "sourceIds": {
-            "wikispecies": "Rhyncholampas_pacificus",
-            "checklistbank-1174": "txn:392591"
-          },
-          "uuid": "49431063-3777-4bda-853e-119a4aea8fc3",
-          "children": []
-        },
-        {
           "id": "SP_RHYNCHOLAMPAS_RODRIGUEZI_LAMBERT_AND_SANCHEZ_ROIG_1926",
           "name": "Rhyncholampas rodriguezi",
           "rank": "SPECIES",
@@ -2184,7 +2164,7 @@
       "lineage": "cassidulidae"
     }
   ],
-  "speciesCount": 125,
+  "speciesCount": 123,
   "appSlug": "cassidulidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

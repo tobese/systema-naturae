@@ -1851,21 +1851,6 @@
           "description": "Amphoriscus semoni is a amphoriscidae species found in its native region."
         },
         {
-          "id": "SP_AMPHORISCUS_OVIPARUS_HAECKEL_1870_AS_SYCALTIS_AND_SYCURUS",
-          "name": "Amphoriscus oviparus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amphoriscus",
-          "authorship": "(Haeckel, 1870 as Sycaltis and Sycurus)",
-          "sourceIds": {
-            "checklistbank": "52164",
-            "wikispecies": "Amphoriscus_oviparus"
-          },
-          "children": [],
-          "uuid": "4a5d7ac9-5e27-5ce-922-6b298604a638f1"
-        },
-        {
           "id": "SP_AMPHORISCUS_URNA",
           "name": "Amphoriscus urna",
           "rank": "SPECIES",
@@ -2073,12 +2058,18 @@
           "lineage": "\"Amphoriscus",
           "authorship": "\"(Haeckel, 1872)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:132164",
-            "wikispecies": "Amphoriscus_oviparus"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:132164",
+              "52164"
+            ],
+            "wikispecies": [
+              "Amphoriscus_oviparus"
+            ]
           },
           "children": [],
           "uuid": "31d5e7af-4075-581-a76-4153f851e3cabe",
-          "description": "\"Amphoriscus oviparus\" is a amphoriscidae species found in its native region."
+          "description": "\"Amphoriscus oviparus\" is a amphoriscidae species found in its native region.",
+          "authorityIds": "checklistbank:52164,checklistbank:urn:lsid:marinespecies.org:taxname:132164,wikispecies:Amphoriscus_oviparus"
         },
         {
           "id": "SP_AMPHORISCUS_CHRYSALIS_SCHMIDT_1864",
@@ -2487,7 +2478,7 @@
     }
   ],
   "genusCount": 10,
-  "speciesCount": 141,
+  "speciesCount": 140,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

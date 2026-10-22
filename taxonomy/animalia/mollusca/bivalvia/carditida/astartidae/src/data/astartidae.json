@@ -1448,10 +1448,15 @@
             "col": [
               "HN42"
             ],
-            "checklistbank": "58820",
-            "checklistbank-1174": "txn:91396"
+            "checklistbank": [
+              "58820",
+              "urn:lsid:marinespecies.org:taxname:138820"
+            ],
+            "checklistbank-1174": [
+              "txn:91396"
+            ]
           },
-          "authorityIds": "col:HN42,itis:80804"
+          "authorityIds": "checklistbank:58820,checklistbank:urn:lsid:marinespecies.org:taxname:138820,checklistbank-1174:txn:91396,col:HN42,itis:80804"
         },
         {
           "id": "SP_ASTARTE_CUNEIFORMIS_CONRAD_1840",
@@ -2969,9 +2974,14 @@
               "urn:lsid:marinespecies.org:taxname:1818650"
             ],
             "gbif-backbone": "5932710",
-            "checklistbank-1174": "txn:99284"
+            "checklistbank-1174": [
+              "txn:99284"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1818650"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1818650,col:F3V2P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1818650,checklistbank-1174:txn:99284,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1818650,col:F3V2P,gbif-backbone:5932710",
           "authorship": "J. A. Gardner, 1943"
         },
         {
@@ -11945,22 +11955,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ASTARTE_CRENATA_J_E_GRAY_1824",
-          "name": "\"Astarte crenata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Astarte",
-          "authorship": "\"(J. E. Gray, 1824)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:138820",
-            "checklistbank-1174": "txn:91396"
-          },
-          "children": [],
-          "uuid": "77a0f922-59db-561-ba6-0f94802f83c1fe",
-          "description": "\"Astarte crenata\" is a astartidae species found in its native region."
-        },
-        {
           "id": "SP_ASTARTE_SULCATA_DA_COSTA_1778",
           "name": "\"Astarte sulcata\"",
           "rank": "SPECIES",
@@ -12043,21 +12037,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1735870"
           },
           "uuid": "089d3caa-9f50-4c37-b22c-2c938917c47b",
-          "children": []
-        },
-        {
-          "id": "SP_ASTARTE_RAPPAHANNOCKENSIS_J_A_GARDNER_1943",
-          "name": "Astarte rappahannockensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Astarte",
-          "authorship": "J. A. Gardner, 1943",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1818650",
-            "checklistbank-1174": "txn:99284"
-          },
-          "uuid": "dab01b4f-f5e7-4958-b8c1-cca0c2ba10b4",
           "children": []
         },
         {
@@ -12985,7 +12964,7 @@
     }
   ],
   "genusCount": 68,
-  "speciesCount": 789,
+  "speciesCount": 787,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

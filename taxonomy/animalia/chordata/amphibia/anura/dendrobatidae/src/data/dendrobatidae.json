@@ -5950,10 +5950,18 @@
             "col": [
               "34M8X"
             ],
-            "checklistbank": "ott780559",
-            "wikispecies": "Dendrobates_leucomelas"
+            "checklistbank": [
+              "ott780559",
+              "urn:lsid:marinespecies.org:taxname:1750660"
+            ],
+            "wikispecies": [
+              "Dendrobates_leucomelas"
+            ],
+            "checklistbank-139831": [
+              "21150"
+            ]
           },
-          "authorityIds": "col:34M8X,itis:662249,wikidata:Q615690",
+          "authorityIds": "checklistbank:ott780559,checklistbank:urn:lsid:marinespecies.org:taxname:1750660,checklistbank-139831:21150,col:34M8X,itis:662249,wikidata:Q615690,wikispecies:Dendrobates_leucomelas",
           "authorship": "Steindachner, 1864"
         },
         {
@@ -9568,23 +9576,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DENDROBATES_LEUCOMELAS_STEINDACHNER_1864",
-          "name": "\"Dendrobates leucomelas\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dendrobates",
-          "authorship": "\"Steindachner, 1864\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750660",
-            "wikispecies": "Dendrobates_leucomelas",
-            "checklistbank-139831": "21150"
-          },
-          "children": [],
-          "uuid": "9ded80a0-e314-5c3-8e3-ce6865b371cbc2",
-          "description": "\"Dendrobates leucomelas\" is a dendrobatidae species found in its native region."
-        },
-        {
           "id": "SP_DENDROBATES_TINCTORIUS",
           "name": "Dendrobates tinctorius",
           "rank": "SPECIES",
@@ -9642,7 +9633,7 @@
     }
   ],
   "genusCount": 26,
-  "speciesCount": 445,
+  "speciesCount": 444,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

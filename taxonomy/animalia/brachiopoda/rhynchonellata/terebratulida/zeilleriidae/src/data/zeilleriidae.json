@@ -107,10 +107,15 @@
             "col": [
               "3WX3F"
             ],
-            "checklistbank": "841528",
-            "checklistbank-1174": "txn:283040"
+            "checklistbank": [
+              "841528",
+              "urn:lsid:marinespecies.org:taxname:104062"
+            ],
+            "checklistbank-1174": [
+              "txn:283040"
+            ]
           },
-          "authorityIds": "col:3WX3F,itis:203297",
+          "authorityIds": "checklistbank:841528,checklistbank:urn:lsid:marinespecies.org:taxname:104062,checklistbank-1174:txn:283040,col:3WX3F,itis:203297",
           "authorship": "(O.F. Müller, 1776)"
         },
         {
@@ -6700,22 +6705,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MACANDREVIA_CRANIUM_O_F_M_LLER_1776",
-          "name": "\"Macandrevia cranium\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Macandrevia",
-          "authorship": "\"(O. F. Müller, 1776)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:104062",
-            "checklistbank-1174": "txn:283040"
-          },
-          "children": [],
-          "uuid": "b84d6e40-4d6a-5dd-872-6cc2a14b0d34fc",
-          "description": "\"Macandrevia cranium\" is a zeilleriidae species found in its native region."
-        },
-        {
           "id": "SP_MACANDREVIA_TENERA_JEFFREYS_1876",
           "name": "\"Macandrevia tenera\"",
           "rank": "SPECIES",
@@ -7173,7 +7162,7 @@
     }
   ],
   "genusCount": 60,
-  "speciesCount": 440,
+  "speciesCount": 439,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

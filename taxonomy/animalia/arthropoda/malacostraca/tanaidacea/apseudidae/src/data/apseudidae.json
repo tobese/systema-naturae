@@ -1100,10 +1100,15 @@
             "itis": [
               "91967"
             ],
-            "checklistbank": "56308",
-            "wikispecies": "Leviapseudes_segonzaci"
+            "checklistbank": [
+              "56308",
+              "urn:lsid:marinespecies.org:taxname:247778"
+            ],
+            "wikispecies": [
+              "Leviapseudes_segonzaci"
+            ]
           },
-          "authorityIds": "col:727JB,itis:91967",
+          "authorityIds": "checklistbank:56308,checklistbank:urn:lsid:marinespecies.org:taxname:247778,col:727JB,itis:91967,wikispecies:Leviapseudes_segonzaci",
           "description": "Leviapseudes segonzaci is a apseudidae species found in its native region."
         },
         {
@@ -1818,10 +1823,18 @@
             "col": [
               "FY6N"
             ],
-            "checklistbank": "295903",
-            "wikispecies": "Apseudes_spinosus"
+            "checklistbank": [
+              "295903",
+              "urn:lsid:marinespecies.org:taxname:136589"
+            ],
+            "wikispecies": [
+              "Apseudes_spinosus"
+            ],
+            "checklistbank-139831": [
+              "295903"
+            ]
           },
-          "authorityIds": "col:FY6N,itis:91250",
+          "authorityIds": "checklistbank:295903,checklistbank:urn:lsid:marinespecies.org:taxname:136589,checklistbank-139831:295903,col:FY6N,itis:91250,wikispecies:Apseudes_spinosus",
           "description": "Apseudes spinosus is a apseudidae species found in its native region."
         },
         {
@@ -5440,10 +5453,15 @@
             "col": [
               "BGHVQ"
             ],
-            "checklistbank": "ott2988675",
-            "wikispecies": "Langapseudes_tuberculatus"
+            "checklistbank": [
+              "ott2988675",
+              "urn:lsid:marinespecies.org:taxname:247776"
+            ],
+            "wikispecies": [
+              "Langapseudes_tuberculatus"
+            ]
           },
-          "authorityIds": "col:BGHVQ",
+          "authorityIds": "checklistbank:ott2988675,checklistbank:urn:lsid:marinespecies.org:taxname:247776,col:BGHVQ,wikispecies:Langapseudes_tuberculatus",
           "description": "Langapseudes tuberculatus is a apseudidae species found in its native region."
         }
       ],
@@ -5759,23 +5777,6 @@
       "name": "\"Apseudes",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_APSEUDES_SPINOSUS_BONNIER_1896",
-          "name": "\"Apseudes spinosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Apseudes",
-          "authorship": "\"(Bonnier, 1896)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:136589",
-            "wikispecies": "Apseudes_spinosus",
-            "checklistbank-139831": "295903"
-          },
-          "children": [],
-          "uuid": "9a948b4b-4abf-565-bf1-ed03c4800276cd",
-          "description": "\"Apseudes spinosus is a apseudidae species found in its native region."
-        },
         {
           "id": "SP_APSEUDES_SPECTABILIS",
           "name": "Apseudes spectabilis",
@@ -6139,7 +6140,8 @@
           "sourceIds": {
             "checklistbank-127379": "3b0baf87-495a-4841-9e2d-01aa81dcd4c7"
           },
-          "uuid": "0d165f08-00ac-4dde-989a-584799426fd9"
+          "uuid": "0d165f08-00ac-4dde-989a-584799426fd9",
+          "children": []
         },
         {
           "id": "SP_APSEUDES_ABDITOSPINA_B_A_EWICZ_PASZKOWYCZ_BAMBER",
@@ -6152,7 +6154,8 @@
           "sourceIds": {
             "checklistbank-127379": "ab60e175-9bea-4d83-a13a-5fe138add036"
           },
-          "uuid": "02dd9ced-e88f-4a9c-bc18-43622218fb9d"
+          "uuid": "02dd9ced-e88f-4a9c-bc18-43622218fb9d",
+          "children": []
         },
         {
           "id": "SP_APSEUDES_POOREI_B_A_EWICZ_PASZKOWYCZ_BAMBER",
@@ -6165,7 +6168,8 @@
           "sourceIds": {
             "checklistbank-127379": "cb82afe8-39c2-4dc0-ae3e-a072367e4e51"
           },
-          "uuid": "1dae1501-0396-430e-b95f-1c1019e26c9f"
+          "uuid": "1dae1501-0396-430e-b95f-1c1019e26c9f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6263,51 +6267,10 @@
       "lineage": "apseudidae"
     },
     {
-      "id": "GENUS_LANGAPSEUDES",
-      "name": "\"Langapseudes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LANGAPSEUDES_TUBERCULATUS_BACESCU_1987",
-          "name": "\"Langapseudes tuberculatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Langapseudes",
-          "authorship": "\"Bacescu, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:247776",
-            "wikispecies": "Langapseudes_tuberculatus"
-          },
-          "children": [],
-          "uuid": "5cf42223-1dc2-57a-aaa-8fed48e7f260c0",
-          "description": "\"Langapseudes tuberculatus is a apseudidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "apseudidae"
-    },
-    {
       "id": "GENUS_LEVIAPSEUDES",
       "name": "\"Leviapseudes",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LEVIAPSEUDES_SEGONZACI_BACESCU_1984",
-          "name": "\"Leviapseudes segonzaci",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leviapseudes",
-          "authorship": "\"Bacescu, 1984\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:247778",
-            "wikispecies": "Leviapseudes_segonzaci"
-          },
-          "children": [],
-          "uuid": "b90b9347-3fd2-540-a60-bf957cad3dfde9",
-          "description": "\"Leviapseudes segonzaci is a apseudidae species found in its native region."
-        },
         {
           "id": "SP_LEVIAPSEUDES_ZENKEVITCHIOIDES",
           "name": "Leviapseudes zenkevitchioides",
@@ -6627,11 +6590,11 @@
       "lineage": "Apseudidae"
     }
   ],
-  "speciesCount": 352,
+  "speciesCount": 349,
   "appSlug": "apseudidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 40,
+  "genusCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -117,11 +117,16 @@
             "col": [
               "VPH4X"
             ],
-            "checklistbank": "txn:144845",
+            "checklistbank": [
+              "txn:144845",
+              "urn:lsid:marinespecies.org:taxname:1895161"
+            ],
             "gbif-backbone": "4950686",
-            "checklistbank-1174": "txn:144845"
+            "checklistbank-1174": [
+              "txn:144845"
+            ]
           },
-          "authorityIds": "col:VPH4X",
+          "authorityIds": "checklistbank:txn:144845,checklistbank:urn:lsid:marinespecies.org:taxname:1895161,checklistbank-1174:txn:144845,col:VPH4X,gbif-backbone:4950686",
           "authorship": "(Sowerby 1838)"
         },
         {
@@ -1263,22 +1268,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MEGADESMUS_GLOBOSUS_J_DE_C_SOWERBY_1839",
-          "name": "\"Megadesmus globosus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Megadesmus",
-          "authorship": "\"J. De C. Sowerby, 1839\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1895161",
-            "checklistbank-1174": "txn:144845"
-          },
-          "children": [],
-          "uuid": "505f4044-f4ca-501-a80-7c26cf63781bc9",
-          "description": "\"Megadesmus globosus\" is a megadesmidae species found in its native region."
-        },
-        {
           "id": "SP_MEGADESMUS_GLOBLOSUS_SOWERBY_1838",
           "name": "Megadesmus globlosus",
           "rank": "SPECIES",
@@ -1855,7 +1844,7 @@
     }
   ],
   "genusCount": 39,
-  "speciesCount": 105,
+  "speciesCount": 104,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

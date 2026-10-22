@@ -203,10 +203,15 @@
             "itis": [
               "203204"
             ],
-            "checklistbank": "841518",
-            "checklistbank-1174": "txn:282863"
+            "checklistbank": [
+              "841518",
+              "urn:lsid:marinespecies.org:taxname:104053"
+            ],
+            "checklistbank-1174": [
+              "txn:282863"
+            ]
           },
-          "authorityIds": "col:3M4XN,itis:203204",
+          "authorityIds": "checklistbank:841518,checklistbank:urn:lsid:marinespecies.org:taxname:104053,checklistbank-1174:txn:282863,col:3M4XN,itis:203204",
           "authorship": "(Fischer in Davidson, 1886)"
         },
         {
@@ -382,10 +387,15 @@
             "col": [
               "6JP6W"
             ],
-            "checklistbank": "txn:282855",
-            "checklistbank-1174": "txn:282855"
+            "checklistbank": [
+              "txn:282855",
+              "urn:lsid:marinespecies.org:taxname:235424"
+            ],
+            "checklistbank-1174": [
+              "txn:282855"
+            ]
           },
-          "authorityIds": "col:6JP6W",
+          "authorityIds": "checklistbank:txn:282855,checklistbank:urn:lsid:marinespecies.org:taxname:235424,checklistbank-1174:txn:282855,col:6JP6W",
           "authorship": "(Yabe and Hatai 1934)"
         },
         {
@@ -583,31 +593,6 @@
       "lineage": "frieleiidae"
     },
     {
-      "id": "GENUS_HISPANIRHYNCHIA",
-      "name": "\"Hispanirhynchia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HISPANIRHYNCHIA_CORNEA_FISCHER_IN_DAVIDSON_1886",
-          "name": "\"Hispanirhynchia cornea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hispanirhynchia",
-          "authorship": "\"(Fischer in Davidson, 1886)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:104053",
-            "checklistbank-1174": "txn:282863"
-          },
-          "children": [],
-          "uuid": "75be39b6-1ad5-5ed-b13-ac4e36a92c5bf7",
-          "description": "\"Hispanirhynchia cornea\" is a frieleiidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "frieleiidae"
-    },
-    {
       "id": "GENUS_GRAMMETARIA",
       "name": "\"Grammetaria",
       "rank": "GENUS",
@@ -626,31 +611,6 @@
           "children": [],
           "uuid": "af0879e8-290f-512-b02-8490b48a10580c",
           "description": "\"Grammetaria bartschi\" is a frieleiidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "frieleiidae"
-    },
-    {
-      "id": "GENUS_FRIELEIA",
-      "name": "\"Frieleia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FRIELEIA_PELLUCIDA_YABE_HATAI_1934",
-          "name": "\"Frieleia pellucida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Frieleia",
-          "authorship": "\"(Yabe & Hatai, 1934)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235424",
-            "checklistbank-1174": "txn:282855"
-          },
-          "children": [],
-          "uuid": "489e211e-f44e-51d-860-880e7ff1c07fcd",
-          "description": "\"Frieleia pellucida\" is a frieleiidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -778,8 +738,8 @@
       "lineage": "frieleiidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 35,
+  "genusCount": 17,
+  "speciesCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

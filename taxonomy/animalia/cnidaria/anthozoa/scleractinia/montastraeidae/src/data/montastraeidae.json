@@ -487,10 +487,15 @@
             "col": [
               "85VFX"
             ],
-            "checklistbank": "txn:509394",
-            "checklistbank-1174": "txn:509394"
+            "checklistbank": [
+              "txn:509394",
+              "urn:lsid:marinespecies.org:taxname:1371143"
+            ],
+            "checklistbank-1174": [
+              "txn:509394"
+            ]
           },
-          "authorityIds": "col:85VFX,wikidata:Q105926042",
+          "authorityIds": "checklistbank:txn:509394,checklistbank:urn:lsid:marinespecies.org:taxname:1371143,checklistbank-1174:txn:509394,col:85VFX,wikidata:Q105926042",
           "authorship": "Khameiss et al. 2023"
         },
         {
@@ -2909,22 +2914,6 @@
           "description": "\"Montastraea endothecata\" is a montastraeidae species found in its native region."
         },
         {
-          "id": "SP_MONTASTRAEA_PELOUAENSIS_CHEVALIER_1954",
-          "name": "\"Montastraea pelouaensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Montastraea",
-          "authorship": "\"(Chevalier, 1954)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1371143",
-            "checklistbank-1174": "txn:509394"
-          },
-          "children": [],
-          "uuid": "ae16086c-33ec-5e7-958-07bc48c6f26dc7",
-          "description": "\"Montastraea pelouaensis\" is a montastraeidae species found in its native region."
-        },
-        {
           "id": "SP_MONTASTRAEA_BREVIS_DUNCAN_1864",
           "name": "\"Montastraea brevis\"",
           "rank": "SPECIES",
@@ -3166,7 +3155,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 187,
+  "speciesCount": 186,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

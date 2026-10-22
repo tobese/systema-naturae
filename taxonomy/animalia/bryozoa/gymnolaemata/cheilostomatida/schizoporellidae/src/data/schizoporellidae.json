@@ -3317,10 +3317,15 @@
             "itis": [
               "156294"
             ],
-            "checklistbank": "31538",
-            "checklistbank-1174": "txn:338455"
+            "checklistbank": [
+              "31538",
+              "urn:lsid:marinespecies.org:taxname:1415220"
+            ],
+            "checklistbank-1174": [
+              "txn:338455"
+            ]
           },
-          "authorityIds": "col:4VCFN,itis:156294"
+          "authorityIds": "checklistbank:31538,checklistbank:urn:lsid:marinespecies.org:taxname:1415220,checklistbank-1174:txn:338455,col:4VCFN,itis:156294"
         },
         {
           "id": "SP_SCHIZOPORELLA_VARIABILIS_MAPLESTONE_1902",
@@ -8836,7 +8841,8 @@
           "lineage": "\"Schizoporella",
           "authorship": "\"(Reuss, 1848)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111537"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:111537",
+            "checklistbank-139831": "1400457"
           },
           "children": [],
           "uuid": "8a9d26f8-78af-578-8d3-e25cc229c335bd",
@@ -8948,22 +8954,6 @@
           "children": [],
           "uuid": "2f9022d9-c5a8-523-955-ccbadf2398c5a6",
           "description": "\"Schizoporella sulcata is a schizoporellidae species found in its native region."
-        },
-        {
-          "id": "SP_SCHIZOPORELLA_UNICORNIS_DUVERGIER_1924",
-          "name": "\"Schizoporella unicornis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Schizoporella",
-          "authorship": "\"(Duvergier, 1924)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1415220",
-            "checklistbank-1174": "txn:338455"
-          },
-          "children": [],
-          "uuid": "6d1118ce-bcec-596-b70-2c6acf64a75041",
-          "description": "\"Schizoporella unicornis is a schizoporellidae species found in its native region."
         },
         {
           "id": "SP_SCHIZOPORELLA_KIIENSIS_OKADA_MAWATARI_1938",
@@ -9557,7 +9547,7 @@
     }
   ],
   "genusCount": 39,
-  "speciesCount": 537,
+  "speciesCount": 536,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

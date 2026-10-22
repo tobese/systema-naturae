@@ -189,10 +189,15 @@
             "itis": [
               "18400"
             ],
-            "checklistbank": "Nelumbo_nucifera_Gaertn",
-            "checklistbank-1174": "txn:456352"
+            "checklistbank": [
+              "Nelumbo_nucifera_Gaertn",
+              "urn:lsid:marinespecies.org:taxname:1600092"
+            ],
+            "checklistbank-1174": [
+              "txn:456352"
+            ]
           },
-          "authorityIds": "col:465R5,itis:18400,wfo:wfo-0000382378",
+          "authorityIds": "checklistbank:Nelumbo_nucifera_Gaertn,checklistbank:urn:lsid:marinespecies.org:taxname:1600092,checklistbank-1174:txn:456352,col:465R5,itis:18400,wfo:wfo-0000382378",
           "description": "Nelumbo nucifera, also known as Padma (Sanskrit: पद्म, romanized: Padma, lit.",
           "commonName": "lotus",
           "continents": [
@@ -549,22 +554,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NELUMBO_NUCIFERA_GAERTN",
-          "name": "\"Nelumbo nucifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nelumbo",
-          "authorship": "Gaertn.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1600092",
-            "checklistbank-1174": "txn:456352"
-          },
-          "children": [],
-          "uuid": "61f68bcc-1f68-5cb-b39-8f6c916dbe3f3a",
-          "description": "\"Nelumbo nucifera\" is a nelumbonaceae species found in its native region."
-        },
-        {
           "id": "SP_NELUMBO_LUTEA",
           "name": "Nelumbo lutea",
           "rank": "SPECIES",
@@ -658,7 +647,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 39,
+  "speciesCount": 38,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

@@ -1095,9 +1095,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:492991"
             ],
-            "checklistbank-1174": "txn:390459"
+            "checklistbank-1174": [
+              "txn:390459"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:492991"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:492991,col:DJCF,itis:567222"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:492991,checklistbank-1174:txn:390459,checklistbank-2011:urn:lsid:marinespecies.org:taxname:492991,col:DJCF,itis:567222"
         },
         {
           "id": "SP_ANATOMA_MAXIMA",
@@ -3354,21 +3359,6 @@
           "children": []
         },
         {
-          "id": "SP_ANATOMA_LYRA_S_S_BERRY_1947",
-          "name": "Anatoma lyra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Anatoma",
-          "authorship": "(S. S. Berry, 1947)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:492991",
-            "checklistbank-1174": "txn:390459"
-          },
-          "uuid": "843dad0a-1ce4-4273-b40c-ac9f220bb220",
-          "children": []
-        },
-        {
           "id": "SP_ANATOMA_REGIA_MESTAYER_1916",
           "name": "Anatoma regia",
           "rank": "SPECIES",
@@ -4309,7 +4299,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 247,
+  "speciesCount": 246,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -2016,11 +2016,22 @@
             "itis": [
               "49104"
             ],
-            "checklistbank": "37555",
-            "wikispecies": "Eudendrium_ramosum"
+            "checklistbank": [
+              "37555",
+              "urn:lsid:marinespecies.org:taxname:117555"
+            ],
+            "wikispecies": [
+              "Eudendrium_ramosum"
+            ],
+            "checklistbank-127379": [
+              "f89539c8-d13a-45cc-9fed-02149181d797"
+            ],
+            "checklistbank-139831": [
+              "203799"
+            ]
           },
           "uuid": "06f6de1b-0959-5a9-a44-6160750d3f5661",
-          "authorityIds": "col:3BZKT,gbif:2266150,itis:49104,wikidata:Q2463124"
+          "authorityIds": "checklistbank:37555,checklistbank:urn:lsid:marinespecies.org:taxname:117555,checklistbank-127379:f89539c8-d13a-45cc-9fed-02149181d797,checklistbank-139831:203799,col:3BZKT,gbif:2266150,itis:49104,wikidata:Q2463124,wikispecies:Eudendrium_ramosum"
         },
         {
           "id": "EUDENDRIUM_RITCHEI",
@@ -2628,34 +2639,6 @@
           "authorship": "Congdon, 1906",
           "children": [],
           "uuid": "a727e68f-6c3f-573-bcc-ac17ca3d28ba51"
-        },
-        {
-          "id": "SP_EUDENDRIUM_MOTZKOSSOWSKAE_PICARD_1951",
-          "name": "Eudendrium motzkossowskae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eudendrium",
-          "authorship": "Picard, 1951",
-          "sourceIds": {
-            "checklistbank": "37551"
-          },
-          "children": [],
-          "uuid": "397de7bc-6eca-5dd-bb7-520bebf3199d0b"
-        },
-        {
-          "id": "SP_EUDENDRIUM_TENELLUM_ALLMAN_1877",
-          "name": "Eudendrium tenellum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eudendrium",
-          "authorship": "Allman, 1877",
-          "sourceIds": {
-            "checklistbank": "37557"
-          },
-          "children": [],
-          "uuid": "7b3a9e01-9497-581-a9b-da8d1af34cde61"
         }
       ]
     },
@@ -2928,24 +2911,6 @@
           "children": [],
           "uuid": "bde7ad12-a62d-55c-a0a-183f2b602a8b59",
           "description": "\"Eudendrium rameum\" is a eudendriidae species found in its native region."
-        },
-        {
-          "id": "SP_EUDENDRIUM_RAMOSUM_LINNAEUS_1758",
-          "name": "\"Eudendrium ramosum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eudendrium",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:117555",
-            "wikispecies": "Eudendrium_ramosum",
-            "checklistbank-127379": "f89539c8-d13a-45cc-9fed-02149181d797",
-            "checklistbank-139831": "203799"
-          },
-          "children": [],
-          "uuid": "715867e9-d27c-51a-bc3-0133a0362f3308",
-          "description": "\"Eudendrium ramosum\" is a eudendriidae species found in its native region."
         },
         {
           "id": "SP_EUDENDRIUM_VAGINATUM_ALLMAN_1863",
@@ -3930,7 +3895,8 @@
           "sourceIds": {
             "checklistbank-139831": "1651442"
           },
-          "uuid": "84f2301b-321f-406f-82ed-380fc43d293a"
+          "uuid": "84f2301b-321f-406f-82ed-380fc43d293a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3967,7 +3933,8 @@
           "sourceIds": {
             "checklistbank-139831": "1032437"
           },
-          "uuid": "41a4f922-eeb8-46f5-9354-abd0d231c307"
+          "uuid": "41a4f922-eeb8-46f5-9354-abd0d231c307",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3995,7 +3962,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 188,
+  "speciesCount": 185,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

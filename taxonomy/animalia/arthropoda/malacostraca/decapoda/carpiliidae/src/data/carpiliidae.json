@@ -452,11 +452,16 @@
             "col": [
               "BRCHB"
             ],
-            "checklistbank": "txn:225108",
+            "checklistbank": [
+              "txn:225108",
+              "urn:lsid:marinespecies.org:taxname:1673776"
+            ],
             "gbif-backbone": "8464868",
-            "checklistbank-1174": "txn:225108"
+            "checklistbank-1174": [
+              "txn:225108"
+            ]
           },
-          "authorityIds": "col:BRCHB",
+          "authorityIds": "checklistbank:txn:225108,checklistbank:urn:lsid:marinespecies.org:taxname:1673776,checklistbank-1174:txn:225108,col:BRCHB,gbif-backbone:8464868",
           "children": [],
           "description": "Ocalina straeleni is a carpiliidae species found in its native region."
         },
@@ -520,11 +525,16 @@
             "col": [
               "BBSLX"
             ],
-            "checklistbank": "txn:404226",
+            "checklistbank": [
+              "txn:404226",
+              "urn:lsid:marinespecies.org:taxname:1611895"
+            ],
             "gbif-backbone": "11149206",
-            "checklistbank-1174": "txn:404226"
+            "checklistbank-1174": [
+              "txn:404226"
+            ]
           },
-          "authorityIds": "col:BBSLX",
+          "authorityIds": "checklistbank:txn:404226,checklistbank:urn:lsid:marinespecies.org:taxname:1611895,checklistbank-1174:txn:404226,col:BBSLX,gbif-backbone:11149206",
           "children": [],
           "description": "Bryocarpilius stratensis is a carpiliidae species found in its native region."
         },
@@ -1428,22 +1438,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BRYOCARPILIUS_STRATENSIS_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Bryocarpilius stratensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bryocarpilius",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611895",
-            "checklistbank-1174": "txn:404226"
-          },
-          "children": [],
-          "uuid": "a70bb179-78c6-5b1-a58-81f2af3fcce3d7",
-          "description": "\"Bryocarpilius stratensis\" is a carpiliidae species found in its native region."
-        },
-        {
           "id": "SP_BRYOCARPILIUS_APSIDORSALIS_FELDMANN_ET_AL_2011",
           "name": "Bryocarpilius apsidorsalis",
           "rank": "SPECIES",
@@ -1480,22 +1474,6 @@
       "name": "\"Ocalina",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_OCALINA_STRAELENI_REMY_I_IN_I_REMY_TESSIER_1954",
-          "name": "\"Ocalina straeleni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ocalina",
-          "authorship": "\"(Remy <i>in</i> Remy & Tessier, 1954)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1673776",
-            "checklistbank-1174": "txn:225108"
-          },
-          "children": [],
-          "uuid": "bbf6e1a5-5d98-5a6-ae0-09ecda1f7e57b3",
-          "description": "\"Ocalina straeleni\" is a carpiliidae species found in its native region."
-        },
         {
           "id": "SP_OCALINA_HALDIXONI_COLLINS_AND_DONOVAN_2006",
           "name": "Ocalina haldixoni",
@@ -1543,7 +1521,7 @@
       "lineage": "carpiliidae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 74,
   "appSlug": "carpiliidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

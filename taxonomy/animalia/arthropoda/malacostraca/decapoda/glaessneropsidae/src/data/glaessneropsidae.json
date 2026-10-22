@@ -414,10 +414,15 @@
             "col": [
               "9ZQ4R"
             ],
-            "checklistbank": "txn:147669",
-            "checklistbank-1174": "txn:147669"
+            "checklistbank": [
+              "txn:147669",
+              "urn:lsid:marinespecies.org:taxname:1632449"
+            ],
+            "checklistbank-1174": [
+              "txn:147669"
+            ]
           },
-          "authorityIds": "col:9ZQ4R",
+          "authorityIds": "checklistbank:txn:147669,checklistbank:urn:lsid:marinespecies.org:taxname:1632449,checklistbank-1174:txn:147669,col:9ZQ4R",
           "children": [],
           "description": "Verrucarcinus ordinatus is a glaessneropsidae species found in its native region."
         }
@@ -625,22 +630,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_VERRUCARCINUS_ORDINATUS_COLLINS_I_IN_I_COLLINS_WIERZBOWSKI_1985",
-          "name": "\"Verrucarcinus ordinatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Verrucarcinus",
-          "authorship": "\"(Collins <i>in</i> Collins & Wierzbowski, 1985)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1632449",
-            "checklistbank-1174": "txn:147669"
-          },
-          "children": [],
-          "uuid": "89ae6501-cd28-562-a5f-50437d25d870fc",
-          "description": "\"Verrucarcinus ordinatus\" is a glaessneropsidae species found in its native region."
-        },
-        {
           "id": "SP_VERRUCARCINUS_MARSAE_VAN_BAKEL_AND_GUINOT_2023",
           "name": "Verrucarcinus marsae",
           "rank": "SPECIES",
@@ -683,7 +672,7 @@
       "lineage": "glaessneropsidae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 31,
   "appSlug": "glaessneropsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

@@ -2130,12 +2130,18 @@
           "lineage": "Protocotyle",
           "authorship": "(Cerfontaine, 1899)",
           "sourceIds": {
-            "checklistbank": "39704",
-            "wikispecies": "Protocotyle_grisea"
+            "checklistbank": [
+              "39704",
+              "urn:lsid:marinespecies.org:taxname:119704"
+            ],
+            "wikispecies": [
+              "Protocotyle_grisea"
+            ]
           },
           "children": [],
           "uuid": "37fd4338-e9df-5b8-b54-a61401431c93f9",
-          "description": "Protocotyle grisea is a hexabothriidae species found in its native region."
+          "description": "Protocotyle grisea is a hexabothriidae species found in its native region.",
+          "authorityIds": "checklistbank:39704,checklistbank:urn:lsid:marinespecies.org:taxname:119704,wikispecies:Protocotyle_grisea"
         },
         {
           "id": "SP_PROTOCOTYLE_TASCHENBERGI",
@@ -3463,31 +3469,6 @@
       "lineage": "hexabothriidae"
     },
     {
-      "id": "GENUS_PROTOCOTYLE",
-      "name": "\"Protocotyle",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROTOCOTYLE_GRISEA_CERFONTAINE_1899_EUZET_MAILLARD_1974",
-          "name": "\"Protocotyle grisea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protocotyle",
-          "authorship": "\"(Cerfontaine, 1899) Euzet & Maillard, 1974\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:119704",
-            "wikispecies": "Protocotyle_grisea"
-          },
-          "children": [],
-          "uuid": "9559c7bf-6581-5d7-9a5-3961582df38b6c",
-          "description": "\"Protocotyle grisea\" is a hexabothriidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hexabothriidae"
-    },
-    {
       "id": "GENUS_RAJONCHOCOTYLE",
       "name": "\"Rajonchocotyle",
       "rank": "GENUS",
@@ -3581,8 +3562,8 @@
       "lineage": "hexabothriidae"
     }
   ],
-  "genusCount": 32,
-  "speciesCount": 196,
+  "genusCount": 31,
+  "speciesCount": 195,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

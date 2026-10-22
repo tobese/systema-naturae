@@ -342,10 +342,15 @@
             "col": [
               "J473"
             ],
-            "checklistbank": "txn:391026",
-            "checklistbank-1174": "txn:391026"
+            "checklistbank": [
+              "txn:391026",
+              "urn:lsid:marinespecies.org:taxname:757606"
+            ],
+            "checklistbank-1174": [
+              "txn:391026"
+            ]
           },
-          "authorityIds": "col:J473",
+          "authorityIds": "checklistbank:txn:391026,checklistbank:urn:lsid:marinespecies.org:taxname:757606,checklistbank-1174:txn:391026,col:J473",
           "children": [],
           "description": "Astrodapsis brewerianus is a echinarachniidae species found in its native region."
         },
@@ -1165,10 +1170,18 @@
             "col": [
               "38FS4"
             ],
-            "checklistbank": "ott3651072",
-            "wikispecies": "Echinarachnius_parma"
+            "checklistbank": [
+              "ott3651072",
+              "urn:lsid:marinespecies.org:taxname:513714"
+            ],
+            "wikispecies": [
+              "Echinarachnius_parma"
+            ],
+            "checklistbank-139831": [
+              "192690"
+            ]
           },
-          "authorityIds": "col:38FS4,itis:158016",
+          "authorityIds": "checklistbank:ott3651072,checklistbank:urn:lsid:marinespecies.org:taxname:513714,checklistbank-139831:192690,col:38FS4,itis:158016,wikispecies:Echinarachnius_parma",
           "commonName": "Common Sand Dollar",
           "children": [],
           "description": "Echinarachnius parma, the common sand dollar, is a species of sand dollar native to the Northern Hemisphere."
@@ -1858,23 +1871,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ECHINARACHNIUS_PARMA_H_L_CLARK_1914",
-          "name": "\"Echinarachnius parma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Echinarachnius",
-          "authorship": "\"H.L. Clark, 1914\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:513714",
-            "wikispecies": "Echinarachnius_parma",
-            "checklistbank-139831": "192690"
-          },
-          "children": [],
-          "uuid": "8fe06b58-18e6-5e9-a8d-a4d4b49353f575",
-          "description": "\"Echinarachnius parma is a echinarachniidae species found in its native region."
-        },
-        {
           "id": "SP_ECHINARACHNIUS_KEWIA_NISIYAMA_1940_1941",
           "name": "\"Echinarachnius (Kewia)",
           "rank": "SPECIES",
@@ -1955,22 +1951,6 @@
           "children": [],
           "uuid": "2ee015ff-540b-533-b93-ab4a5556c74177",
           "description": "\"Astrodapsis cierboensis is a echinarachniidae species found in its native region."
-        },
-        {
-          "id": "SP_ASTRODAPSIS_BREWERIANUS_GRANT_EATON_IN_EATON_GRANT_ALLEN_1941",
-          "name": "\"Astrodapsis brewerianus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Astrodapsis",
-          "authorship": "\"Grant & Eaton in Eaton, Grant & Allen, 1941\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757606",
-            "checklistbank-1174": "txn:391026"
-          },
-          "children": [],
-          "uuid": "9985aaf6-a975-5f1-a1e-1b8f06b9f92bfe",
-          "description": "\"Astrodapsis brewerianus is a echinarachniidae species found in its native region."
         },
         {
           "id": "SP_ASTRODAPSIS_DIABLOENSIS_GRANT_EATON_IN_EATON_GRANT_ALLEN_1941",
@@ -2125,7 +2105,7 @@
       "lineage": "echinarachniidae"
     }
   ],
-  "speciesCount": 116,
+  "speciesCount": 114,
   "appSlug": "echinarachniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

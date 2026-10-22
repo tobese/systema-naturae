@@ -77,10 +77,15 @@
             "col": [
               "BLKVG"
             ],
-            "checklistbank": "txn:224412",
-            "checklistbank-1174": "txn:224412"
+            "checklistbank": [
+              "txn:224412",
+              "urn:lsid:marinespecies.org:taxname:1669756"
+            ],
+            "checklistbank-1174": [
+              "txn:224412"
+            ]
           },
-          "authorityIds": "col:BLKVG",
+          "authorityIds": "checklistbank:txn:224412,checklistbank:urn:lsid:marinespecies.org:taxname:1669756,checklistbank-1174:txn:224412,col:BLKVG",
           "children": [],
           "description": "Montezumella elegans is a montezumellidae species found in its native region."
         },
@@ -335,22 +340,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MONTEZUMELLA_ELEGANS_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Montezumella elegans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Montezumella",
-          "authorship": "\"(Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669756",
-            "checklistbank-1174": "txn:224412"
-          },
-          "children": [],
-          "uuid": "2da3b344-eed9-579-96f-6e91703f11f70b",
-          "description": "\"Montezumella elegans\" is a montezumellidae species found in its native region."
-        },
-        {
           "id": "SP_MONTEZUMELLA_AMENOSI_VIA_1959",
           "name": "Montezumella amenosi",
           "rank": "SPECIES",
@@ -439,7 +428,7 @@
       "lineage": "montezumellidae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 21,
   "appSlug": "montezumellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

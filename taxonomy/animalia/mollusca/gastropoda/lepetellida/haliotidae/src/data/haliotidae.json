@@ -2308,13 +2308,19 @@
           "lineage": "Haliotis",
           "authorship": "Linné, 1758",
           "sourceIds": {
-            "checklistbank": "60059",
-            "wikispecies": "Haliotis_tuberculata"
+            "checklistbank": [
+              "60059",
+              "urn:lsid:marinespecies.org:taxname:146456"
+            ],
+            "wikispecies": [
+              "Haliotis_tuberculata"
+            ]
           },
           "children": [],
           "uuid": "e36a9a59-87f0-528-adb-e0d3567f68bae2",
           "commonName": "ormer",
-          "description": "Haliotis tuberculata (ormer) is a haliotidae species found in its native region."
+          "description": "Haliotis tuberculata (ormer) is a haliotidae species found in its native region.",
+          "authorityIds": "checklistbank:60059,checklistbank:urn:lsid:marinespecies.org:taxname:146456,wikispecies:Haliotis_tuberculata"
         },
         {
           "id": "SP_HALIOTIS_FULGENS_PHILIPPI_1845",
@@ -3198,14 +3204,20 @@
           "sourcedFrom": "wikipedia",
           "lineage": "Haliotis",
           "sourceIds": {
-            "checklistbank": "56678",
-            "checklistbank-1174": "txn:486419"
+            "checklistbank": [
+              "56678",
+              "urn:lsid:marinespecies.org:taxname:445309"
+            ],
+            "checklistbank-1174": [
+              "txn:486419"
+            ]
           },
           "children": [],
           "authorship": "Wood, 1828",
           "uuid": "9fd490f9-47d8-59a-890-89a3f14a9d2292",
           "commonName": "pink abalone",
-          "description": "The pink abalone, scientific name Haliotis corrugata, is a species of large edible sea snail, a marine gastropod mollusk in the family Haliotidae, the abalone."
+          "description": "The pink abalone, scientific name Haliotis corrugata, is a species of large edible sea snail, a marine gastropod mollusk in the family Haliotidae, the abalone.",
+          "authorityIds": "checklistbank:56678,checklistbank:urn:lsid:marinespecies.org:taxname:445309,checklistbank-1174:txn:486419"
         },
         {
           "id": "SP_HALIOTIS_SORENSENI",
@@ -3845,84 +3857,10 @@
       ]
     },
     {
-      "id": "GENUS_SANHALIOTIS",
-      "name": "Sanhaliotis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SANHALIOTIS_DISSONA_IREDALE_1929",
-          "name": "Sanhaliotis dissona",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sanhaliotis",
-          "authorship": "Iredale, 1929",
-          "sourceIds": {
-            "checklistbank": "691788"
-          },
-          "children": [],
-          "uuid": "f0001006-ac33-540-8cf-d6fdc5e1d24238",
-          "description": "Sanhaliotis dissona is a haliotidae species found in its native region."
-        },
-        {
-          "id": "SP_SANHALIOTIS_ALIENA_IREDALE_1929",
-          "name": "Sanhaliotis aliena",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sanhaliotis",
-          "authorship": "Iredale, 1929",
-          "children": [],
-          "uuid": "fc5a3fa9-f358-5ad-90c-596b5be867ab18"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "haliotidae"
-    },
-    {
-      "id": "GENUS_HALIOTIDAE",
-      "name": "Haliotidae",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HALIOTIDAE_SP",
-          "name": "Haliotidae sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Haliotidae",
-          "sourceIds": {
-            "checklistbank": "2858020"
-          },
-          "children": [],
-          "uuid": "c80ce3df-9281-596-9d7-7aedb06c0e8ff8",
-          "description": "Haliotidae sp. is a haliotidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "haliotidae"
-    },
-    {
       "id": "GENUS_HALIOTIS",
       "name": "\"Haliotis",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_HALIOTIS_TUBERCULATA_REEVE_1846",
-          "name": "\"Haliotis tuberculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Haliotis",
-          "authorship": "\"Reeve, 1846\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:146456",
-            "wikispecies": "Haliotis_tuberculata"
-          },
-          "children": [],
-          "uuid": "ac99a680-03c7-5a5-9c1-5f944667f885db",
-          "description": "\"Haliotis tuberculata is a haliotidae species found in its native region."
-        },
         {
           "id": "SP_HALIOTIS_DISCUS_INO_1953",
           "name": "\"Haliotis discus",
@@ -3937,22 +3875,6 @@
           "children": [],
           "uuid": "6737b0c4-beca-547-9d9-0973e4357683ad",
           "description": "\"Haliotis discus is a haliotidae species found in its native region."
-        },
-        {
-          "id": "SP_HALIOTIS_CORRUGATA_TALMADGE_1966",
-          "name": "\"Haliotis corrugata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Haliotis",
-          "authorship": "\"Talmadge, 1966\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:445309",
-            "checklistbank-1174": "txn:486419"
-          },
-          "children": [],
-          "uuid": "bb00d7c1-800f-57f-908-4f224766cc2f50",
-          "description": "\"Haliotis corrugata is a haliotidae species found in its native region."
         },
         {
           "id": "SP_HALIOTIS_JACNENSIS_OWEN_2012",
@@ -4176,6 +4098,244 @@
           },
           "uuid": "6601110a-13ba-4fe8-b577-4c29f22aac7b",
           "children": []
+        },
+        {
+          "id": "SP_HALIOTIS_FULGENS",
+          "name": "Haliotis fulgens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "56653"
+          },
+          "uuid": "f7cf8a88-fd91-492b-ab08-16d630f8a1cb"
+        },
+        {
+          "id": "SP_HALIOTIS_DALLI",
+          "name": "Haliotis dalli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "328461"
+          },
+          "uuid": "978962b8-340e-4706-a3b3-a56d6bd2ea95"
+        },
+        {
+          "id": "SP_HALIOTIS_RUBRA",
+          "name": "Haliotis rubra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "353709"
+          },
+          "uuid": "badf649a-4e45-4c6b-9377-4f84001bce09"
+        },
+        {
+          "id": "SP_HALIOTIS_DIVERSICOLOR",
+          "name": "Haliotis diversicolor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "484286"
+          },
+          "uuid": "b3534970-80c1-4ea0-a25e-4cf25a4ab7aa"
+        },
+        {
+          "id": "SP_HALIOTIS_RUBIGINOSA",
+          "name": "Haliotis rubiginosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "488973"
+          },
+          "uuid": "56961c79-dfd4-47fe-abe0-06897baf1681"
+        },
+        {
+          "id": "SP_HALIOTIS_COCCORADIATA",
+          "name": "Haliotis coccoradiata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "560581"
+          },
+          "uuid": "7ad3267d-2bb5-4fce-890b-90121f009116"
+        },
+        {
+          "id": "SP_HALIOTIS_BRAZIERI",
+          "name": "Haliotis brazieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "861108"
+          },
+          "uuid": "770c4108-e7b6-4579-a477-c08edb754488"
+        },
+        {
+          "id": "SP_HALIOTIS_ELEGANS",
+          "name": "Haliotis elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "962533"
+          },
+          "uuid": "d9daf09a-e9e0-4625-a341-8ec5e728361d"
+        },
+        {
+          "id": "SP_HALIOTIS_SEMIPLICATA",
+          "name": "Haliotis semiplicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "962535"
+          },
+          "uuid": "2ccd1c1a-77bd-4a40-9ad0-6c09697fcbfb"
+        },
+        {
+          "id": "SP_HALIOTIS_CLATHRATA",
+          "name": "Haliotis clathrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "1203252"
+          },
+          "uuid": "e837f36f-bdac-410a-94be-6639c904cd73"
+        },
+        {
+          "id": "SP_HALIOTIS_ARABIENSIS",
+          "name": "Haliotis arabiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "1212748"
+          },
+          "uuid": "f371c0e1-3bf1-4085-9d8b-ce6ba9f04ace"
+        },
+        {
+          "id": "SP_HALIOTIS_DROGINI",
+          "name": "Haliotis drogini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "1212750"
+          },
+          "uuid": "86d98168-eb3a-41c3-a598-a99e77051cbf"
+        },
+        {
+          "id": "SP_HALIOTIS_FATUI",
+          "name": "Haliotis fatui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "1212751"
+          },
+          "uuid": "a1622c80-e7d7-4b4a-b933-df28f56de24f"
+        },
+        {
+          "id": "SP_HALIOTIS_SUPERTEXTA",
+          "name": "Haliotis supertexta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "1359761"
+          },
+          "uuid": "fdd88944-46be-4e8a-93e4-945f434657cc"
+        },
+        {
+          "id": "SP_HALIOTIS_PIRIMOANA",
+          "name": "Haliotis pirimoana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotis",
+          "sourceIds": {
+            "checklistbank-139831": "1571451"
+          },
+          "uuid": "41a71912-092f-40ce-a3d9-9cd29ab2a456"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haliotidae"
+    },
+    {
+      "id": "GENUS_SANHALIOTIS",
+      "name": "Sanhaliotis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SANHALIOTIS_DISSONA_IREDALE_1929",
+          "name": "Sanhaliotis dissona",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sanhaliotis",
+          "authorship": "Iredale, 1929",
+          "sourceIds": {
+            "checklistbank": "691788"
+          },
+          "children": [],
+          "uuid": "f0001006-ac33-540-8cf-d6fdc5e1d24238",
+          "description": "Sanhaliotis dissona is a haliotidae species found in its native region."
+        },
+        {
+          "id": "SP_SANHALIOTIS_ALIENA_IREDALE_1929",
+          "name": "Sanhaliotis aliena",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sanhaliotis",
+          "authorship": "Iredale, 1929",
+          "children": [],
+          "uuid": "fc5a3fa9-f358-5ad-90c-596b5be867ab18"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haliotidae"
+    },
+    {
+      "id": "GENUS_HALIOTIDAE",
+      "name": "Haliotidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALIOTIDAE_SP",
+          "name": "Haliotidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haliotidae",
+          "sourceIds": {
+            "checklistbank": "2858020"
+          },
+          "children": [],
+          "uuid": "c80ce3df-9281-596-9d7-7aedb06c0e8ff8",
+          "description": "Haliotidae sp. is a haliotidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4207,7 +4367,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 236,
+  "speciesCount": 234,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

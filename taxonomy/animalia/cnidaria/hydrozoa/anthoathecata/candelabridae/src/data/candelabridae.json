@@ -175,11 +175,16 @@
             "col": [
               "6HM9P"
             ],
-            "checklistbank": "ott3681961",
-            "wikispecies": "Fabulosus_kurilensis"
+            "checklistbank": [
+              "ott3681961",
+              "urn:lsid:marinespecies.org:taxname:289946"
+            ],
+            "wikispecies": [
+              "Fabulosus_kurilensis"
+            ]
           },
           "uuid": "55eb5fea-be19-598-ad4-c2289ef53ad27b",
-          "authorityIds": "col:6HM9P,gbif:2266089,wikidata:Q2242028",
+          "authorityIds": "checklistbank:ott3681961,checklistbank:urn:lsid:marinespecies.org:taxname:289946,col:6HM9P,gbif:2266089,wikidata:Q2242028,wikispecies:Fabulosus_kurilensis",
           "children": [],
           "authorship": "Stepanjants, Sheiko & Napara, 1990"
         }
@@ -604,62 +609,6 @@
           "children": [],
           "uuid": "c874caa3-2a2d-55d-a6f-e1771b030256db",
           "description": "Candelabrum sp. is a candelabridae species found in its native region."
-        },
-        {
-          "id": "SP_CANDELABRUM_COCKSII_VIGURS_1849",
-          "name": "Candelabrum cocksii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Candelabrum",
-          "authorship": "(Vigurs, 1849)",
-          "sourceIds": {
-            "checklistbank": "37417"
-          },
-          "children": [],
-          "uuid": "e4a97b3b-845d-50c-97c-2f48fc4ad1b781"
-        },
-        {
-          "id": "SP_CANDELABRUM_MINUTUM_BONNEVIE_1898",
-          "name": "Candelabrum minutum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Candelabrum",
-          "authorship": "(Bonnevie, 1898)",
-          "sourceIds": {
-            "checklistbank": "37418"
-          },
-          "children": [],
-          "uuid": "ed92267d-87b9-55d-94f-76d3868c3ee1ac"
-        },
-        {
-          "id": "SP_CANDELABRUM_MITRA_BONNEVIE_1898",
-          "name": "Candelabrum mitra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Candelabrum",
-          "authorship": "(Bonnevie, 1898)",
-          "sourceIds": {
-            "checklistbank": "37419"
-          },
-          "children": [],
-          "uuid": "1e5b52aa-2a86-5c9-934-2af7f64a2c69e9"
-        },
-        {
-          "id": "SP_CANDELABRUM_VERRUCOSUM_BONNEVIE_1898",
-          "name": "Candelabrum verrucosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Candelabrum",
-          "authorship": "(Bonnevie, 1898)",
-          "sourceIds": {
-            "checklistbank": "37422"
-          },
-          "children": [],
-          "uuid": "20b25b72-3e75-5a1-9a8-4e493e59ad3a60"
         }
       ]
     },
@@ -1098,31 +1047,6 @@
       "lineage": "candelabridae"
     },
     {
-      "id": "GENUS_FABULOSUS",
-      "name": "\"Fabulosus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FABULOSUS_KURILENSIS_STEPANJANTS_SHEIKO_NAPARA_1990",
-          "name": "\"Fabulosus kurilensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fabulosus",
-          "authorship": "\"Stepanjants, Sheiko & Napara, 1990\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:289946",
-            "wikispecies": "Fabulosus_kurilensis"
-          },
-          "children": [],
-          "uuid": "f3135dcd-451c-5ca-a86-17a0691a505e38",
-          "description": "\"Fabulosus kurilensis\" is a candelabridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "candelabridae"
-    },
-    {
       "id": "GENUS_ARUM",
       "name": "Arum",
       "rank": "GENUS",
@@ -1143,8 +1067,8 @@
       "lineage": "Candelabridae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 54,
+  "genusCount": 8,
+  "speciesCount": 49,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1492,11 +1492,16 @@
             "itis": [
               "74345"
             ],
-            "checklistbank": "220918",
+            "checklistbank": [
+              "220918",
+              "urn:lsid:marinespecies.org:taxname:464624"
+            ],
             "gbif-backbone": "2303109",
-            "checklistbank-1174": "txn:362615"
+            "checklistbank-1174": [
+              "txn:362615"
+            ]
           },
-          "authorityIds": "col:654VP,itis:74345"
+          "authorityIds": "checklistbank:220918,checklistbank:urn:lsid:marinespecies.org:taxname:464624,checklistbank-1174:txn:362615,col:654VP,gbif-backbone:2303109,itis:74345"
         },
         {
           "id": "SP_ADMETE_HAINI_NUMANAMI_1996",
@@ -1847,10 +1852,15 @@
             "itis": [
               "205086"
             ],
-            "checklistbank": "58969",
-            "checklistbank-1174": "txn:108647"
+            "checklistbank": [
+              "58969",
+              "urn:lsid:marinespecies.org:taxname:138969"
+            ],
+            "checklistbank-1174": [
+              "txn:108647"
+            ]
           },
-          "authorityIds": "col:CN88X,itis:205086"
+          "authorityIds": "checklistbank:58969,checklistbank:urn:lsid:marinespecies.org:taxname:138969,checklistbank-1174:txn:108647,col:CN88X,itis:205086"
         },
         {
           "id": "SP_ADMETE_WATANABEI_SHIKAMA_1962",
@@ -20768,9 +20778,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1492930"
             ],
-            "checklistbank-1174": "txn:107270"
+            "checklistbank-1174": [
+              "txn:107270"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1492930"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1492930,col:8665Z",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1492930,checklistbank-1174:txn:107270,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1492930,col:8665Z",
           "authorship": "(Toula, 1909)"
         },
         {
@@ -20853,10 +20868,15 @@
             "col": [
               "68KGT"
             ],
-            "checklistbank": "212204",
-            "checklistbank-1174": "txn:107707"
+            "checklistbank": [
+              "212204",
+              "urn:lsid:marinespecies.org:taxname:341245"
+            ],
+            "checklistbank-1174": [
+              "txn:107707"
+            ]
           },
-          "authorityIds": "col:68KGT",
+          "authorityIds": "checklistbank:212204,checklistbank:urn:lsid:marinespecies.org:taxname:341245,checklistbank-1174:txn:107707,col:68KGT",
           "authorship": "(G. B. Sowerby I, 1833)"
         },
         {
@@ -32861,38 +32881,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ADMETE_VIRIDULA_O_FABRICIUS_1780",
-          "name": "\"Admete viridula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Admete",
-          "authorship": "\"(O. Fabricius, 1780)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:138969",
-            "checklistbank-1174": "txn:108647"
-          },
-          "children": [],
-          "uuid": "95164c7e-ece1-59c-b9b-fbabde30ea1645",
-          "description": "\"Admete viridula\" is a cancellariidae species found in its native region."
-        },
-        {
-          "id": "SP_ADMETE_GRACILIOR_P_P_CARPENTER_1869",
-          "name": "\"Admete gracilior\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Admete",
-          "authorship": "\"(P. P. Carpenter, 1869)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:464624",
-            "checklistbank-1174": "txn:362615"
-          },
-          "children": [],
-          "uuid": "a6c8160e-b54c-5ee-818-89ff986f1b08ca",
-          "description": "\"Admete gracilior\" is a cancellariidae species found in its native region."
-        },
-        {
           "id": "SP_ADMETE_CALIFORNICA_DALL_1908",
           "name": "Admete californica",
           "rank": "SPECIES",
@@ -33928,22 +33916,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BIVETIELLA_SIMILIS_G_B_SOWERBY_I_1833",
-          "name": "\"Bivetiella similis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bivetiella",
-          "authorship": "\"(G. B. Sowerby I, 1833)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341245",
-            "checklistbank-1174": "txn:107707"
-          },
-          "children": [],
-          "uuid": "27fc5406-5225-5ae-993-db6cf1cef884d7",
-          "description": "\"Bivetiella similis\" is a cancellariidae species found in its native region."
-        },
-        {
           "id": "SP_BIVETIELLA_CANCELLATA_LINNAEUS_1767",
           "name": "Bivetiella cancellata",
           "rank": "SPECIES",
@@ -33969,21 +33941,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:513933"
           },
           "uuid": "e1b5fde9-4f1e-4860-838a-a49a0cb35121",
-          "children": []
-        },
-        {
-          "id": "SP_BIVETIELLA_DARIENA_TOULA_1909",
-          "name": "Bivetiella dariena",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bivetiella",
-          "authorship": "(Toula, 1909)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1492930",
-            "checklistbank-1174": "txn:107270"
-          },
-          "uuid": "fb2c7a2e-2b8b-4bbb-8d96-8c54d8d72de9",
           "children": []
         },
         {
@@ -34517,7 +34474,7 @@
     }
   ],
   "genusCount": 117,
-  "speciesCount": 1899,
+  "speciesCount": 1895,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

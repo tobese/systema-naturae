@@ -478,9 +478,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1664760"
             ],
-            "checklistbank-1174": "txn:97624"
+            "checklistbank-1174": [
+              "txn:97624"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1664760"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1664760,col:BFXXN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1664760,checklistbank-1174:txn:97624,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1664760,col:BFXXN",
           "authorship": "(G. C. Martin, 1904)"
         },
         {
@@ -630,9 +635,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1646687"
             ],
-            "checklistbank-1174": "txn:113701"
+            "checklistbank-1174": [
+              "txn:113701"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1646687"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1646687,col:B7JRL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1646687,checklistbank-1174:txn:113701,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1646687,col:B7JRL",
           "authorship": "(K. Martin, 1899)"
         },
         {
@@ -673,12 +683,18 @@
               "6HYD5"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:414662"
+              "urn:lsid:marinespecies.org:taxname:414662",
+              "urn:lsid:marinespecies.org:taxname:414664"
             ],
             "gbif-backbone": "6491459",
-            "checklistbank-1174": "txn:147911"
+            "checklistbank-1174": [
+              "txn:147911"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:414662"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:414662,col:6HYD5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:414662,checklistbank:urn:lsid:marinespecies.org:taxname:414664,checklistbank-1174:txn:147911,checklistbank-2011:urn:lsid:marinespecies.org:taxname:414662,col:6HYD5,gbif-backbone:6491459",
           "authorship": "(Say, 1822)"
         },
         {
@@ -755,9 +771,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1030596"
             ],
-            "checklistbank-1174": "txn:107659"
+            "checklistbank-1174": [
+              "txn:107659"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1030596"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1030596,col:6HYFD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1030596,checklistbank-1174:txn:107659,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1030596,col:6HYFD",
           "authorship": "(B. Smith, 1907)"
         },
         {
@@ -1273,10 +1294,15 @@
             "col": [
               "CS3Q9"
             ],
-            "checklistbank": "txn:123267",
-            "checklistbank-1174": "txn:123267"
+            "checklistbank": [
+              "txn:123267",
+              "urn:lsid:marinespecies.org:taxname:1872917"
+            ],
+            "checklistbank-1174": [
+              "txn:123267"
+            ]
           },
-          "authorityIds": "col:CS3Q9",
+          "authorityIds": "checklistbank:txn:123267,checklistbank:urn:lsid:marinespecies.org:taxname:1872917,checklistbank-1174:txn:123267,col:CS3Q9",
           "description": "Ficus nexilis is a ficidae species found in its native region."
         },
         {
@@ -4644,23 +4670,6 @@
           "description": "\"Ficus gracilis\" is a ficidae species found in its native region."
         },
         {
-          "id": "SP_FICUS_PAPYRATIA_PETUCH_1988",
-          "name": "\"Ficus papyratia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ficus",
-          "authorship": "\"Petuch, 1988\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:414664",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:414662",
-            "checklistbank-1174": "txn:147911"
-          },
-          "children": [],
-          "uuid": "859abdfe-4aad-5a1-b0e-c8c0568f7dfa2a",
-          "description": "\"Ficus papyratia is a ficidae species found in its native region."
-        },
-        {
           "id": "SP_FICUS_FILOSA_G_B_SOWERBY_III_1892",
           "name": "\"Ficus filosa\"",
           "rank": "SPECIES",
@@ -4675,22 +4684,6 @@
           "children": [],
           "uuid": "4d9541e3-459b-5b0-a72-ab58a104329d08",
           "description": "\"Ficus filosa\" is a ficidae species found in its native region."
-        },
-        {
-          "id": "SP_FICUS_NEXILIS_GURDON_2026",
-          "name": "\"Ficus nexilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ficus",
-          "authorship": "\"Gurdon, 2026\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1872917",
-            "checklistbank-1174": "txn:123267"
-          },
-          "children": [],
-          "uuid": "74b65d1b-877f-5ba-a99-4cac406418bfa3",
-          "description": "\"Ficus nexilis is a ficidae species found in its native region."
         },
         {
           "id": "SP_FICUS_FICUS_LINNAEUS_1758",
@@ -4748,21 +4741,6 @@
             "checklistbank-127379": "d8eb3a2e-6b3b-4c1b-a34a-5b886fa051f2"
           },
           "uuid": "88219435-c791-4c8f-9e94-f1e8997c247a",
-          "children": []
-        },
-        {
-          "id": "SP_FICUS_PILSBRYI_B_SMITH_1907",
-          "name": "Ficus pilsbryi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ficus",
-          "authorship": "(B. Smith, 1907)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1030596",
-            "checklistbank-1174": "txn:107659"
-          },
-          "uuid": "8ab5044a-bb0d-490e-9d19-4cb4a730f94f",
           "children": []
         },
         {
@@ -4850,21 +4828,6 @@
           "children": []
         },
         {
-          "id": "SP_FICUS_PAMOTANENSIS_K_MARTIN_1899",
-          "name": "Ficus pamotanensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ficus",
-          "authorship": "(K. Martin, 1899)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1646687",
-            "checklistbank-1174": "txn:113701"
-          },
-          "uuid": "d67ecb27-5a52-4ac3-abbd-b7de20307a76",
-          "children": []
-        },
-        {
           "id": "SP_FICUS_ALTISPIRA_PRITCHARD_1896",
           "name": "Ficus altispira",
           "rank": "SPECIES",
@@ -4876,21 +4839,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1650080"
           },
           "uuid": "4995db62-9e20-4864-9bc4-707dafe4bbf7",
-          "children": []
-        },
-        {
-          "id": "SP_FICUS_HARRISI_G_C_MARTIN_1904",
-          "name": "Ficus harrisi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ficus",
-          "authorship": "(G. C. Martin, 1904)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1664760",
-            "checklistbank-1174": "txn:97624"
-          },
-          "uuid": "aa1ad9af-fc9f-477f-9df6-7bdf87032118",
           "children": []
         },
         {
@@ -5296,7 +5244,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 309,
+  "speciesCount": 304,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

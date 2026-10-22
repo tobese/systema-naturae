@@ -1628,10 +1628,15 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1445375"
             ],
-            "checklistbank-1174": "txn:386268"
+            "checklistbank-1174": [
+              "txn:386268"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1445375"
+            ]
           },
           "uuid": "a7bf3390-b225-5f8-ac0-48621718b64812",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1445375,col:828S2,gbif:10867689",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1445375,checklistbank-1174:txn:386268,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1445375,col:828S2,gbif:10867689",
           "authorship": "(Terquem & Berthelin, 1875)"
         },
         {
@@ -2273,10 +2278,15 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1253106"
             ],
-            "checklistbank-1174": "txn:386269"
+            "checklistbank-1174": [
+              "txn:386269"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1253106"
+            ]
           },
           "uuid": "42e6da75-7c0e-5ca-94b-e573eeb979b053",
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1253106,col:828SR,gbif:9663971",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1253106,checklistbank-1174:txn:386269,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1253106,col:828SR,gbif:9663971",
           "authorship": "Danich, 1971"
         },
         {
@@ -10133,7 +10143,8 @@
           "lineage": "\"Cornuspira",
           "authorship": "\"(Reuss, 1850)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:112488"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:112488",
+            "checklistbank-139831": "1224449"
           },
           "children": [],
           "uuid": "bddb6e39-0938-54c-b5a-ba8fb06d19adbb",
@@ -10149,7 +10160,8 @@
           "authorship": "\"Schultze, 1854\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:112489",
-            "checklistbank-127379": "3dc61f34-4e5b-442e-afea-5e67a31c0844"
+            "checklistbank-127379": "3dc61f34-4e5b-442e-afea-5e67a31c0844",
+            "checklistbank-139831": "532848"
           },
           "children": [],
           "uuid": "cc23ac51-d27b-578-bf8-d682eddd8ac925",
@@ -10234,7 +10246,8 @@
           "lineage": "Cornuspira",
           "authorship": "Uchio, 1960",
           "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:522135"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:522135",
+            "checklistbank-139831": "1230217"
           },
           "uuid": "2a35e624-a5a3-4123-8aa0-5d7d05af7b6e",
           "children": []
@@ -11094,21 +11107,6 @@
           "children": []
         },
         {
-          "id": "SP_CORNUSPIRA_TUBICOMPRIMATA_DANICH_1971",
-          "name": "Cornuspira tubicomprimata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cornuspira",
-          "authorship": "Danich, 1971",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1253106",
-            "checklistbank-1174": "txn:386269"
-          },
-          "uuid": "79ff3ab8-4522-46af-a843-76e3cf93a3e9",
-          "children": []
-        },
-        {
           "id": "SP_CORNUSPIRA_ROTUNDITUBIFERA_DANICH_1971",
           "name": "Cornuspira rotunditubifera",
           "rank": "SPECIES",
@@ -11263,21 +11261,6 @@
           "children": []
         },
         {
-          "id": "SP_CORNUSPIRA_ORBICULA_TERQUEM_BERTHELIN_1875",
-          "name": "Cornuspira orbicula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cornuspira",
-          "authorship": "(Terquem & Berthelin, 1875)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1445375",
-            "checklistbank-1174": "txn:386268"
-          },
-          "uuid": "e174995c-c7b3-4b8a-82b5-b92e3eba24a6",
-          "children": []
-        },
-        {
           "id": "SP_CORNUSPIRA_PLICATA_C_J_EK_1848",
           "name": "Cornuspira plicata",
           "rank": "SPECIES",
@@ -11379,7 +11362,8 @@
           "lineage": "\"Cornuspirella",
           "authorship": "\"(Heron-Allen & Earland, 1913)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:112490"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:112490",
+            "checklistbank-139831": "1634599"
           },
           "children": [],
           "uuid": "913077d0-7dff-534-b16-7fb21df3b4959e",
@@ -11673,7 +11657,7 @@
     }
   ],
   "genusCount": 66,
-  "speciesCount": 540,
+  "speciesCount": 538,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

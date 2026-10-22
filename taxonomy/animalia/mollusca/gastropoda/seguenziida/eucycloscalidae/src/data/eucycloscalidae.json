@@ -26,10 +26,15 @@
             "col": [
               "9XP5Q"
             ],
-            "checklistbank": "txn:253204",
-            "checklistbank-1174": "txn:253204"
+            "checklistbank": [
+              "txn:253204",
+              "urn:lsid:marinespecies.org:taxname:865752"
+            ],
+            "checklistbank-1174": [
+              "txn:253204"
+            ]
           },
-          "authorityIds": "col:9XP5Q",
+          "authorityIds": "checklistbank:txn:253204,checklistbank:urn:lsid:marinespecies.org:taxname:865752,checklistbank-1174:txn:253204,col:9XP5Q",
           "authorship": "(Benz 1832)"
         }
       ]
@@ -830,31 +835,6 @@
       "lineage": "Eucycloscalidae"
     },
     {
-      "id": "GENUS_MARLOFFSTEINIA",
-      "name": "\"Marloffsteinia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MARLOFFSTEINIA_CYCLOSTOMA_ZIETEN_1832",
-          "name": "\"Marloffsteinia cyclostoma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Marloffsteinia",
-          "authorship": "\"(Zieten, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:865752",
-            "checklistbank-1174": "txn:253204"
-          },
-          "children": [],
-          "uuid": "41717897-cd60-58f-bce-3fdd96b3bec4fb",
-          "description": "\"Marloffsteinia cyclostoma\" is a eucycloscalidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eucycloscalidae"
-    },
-    {
       "id": "GENUS_TROCHUS",
       "name": "Trochus",
       "rank": "GENUS",
@@ -900,21 +880,6 @@
           },
           "children": [],
           "uuid": "b2497a12-4172-5d1-be2-fef8508a638341"
-        },
-        {
-          "id": "SP_TROCHUS_BISERTUS_PHILLIPS_1829",
-          "name": "Trochus bisertus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Trochus",
-          "authorship": "(Phillips, 1829)",
-          "sourceIds": {
-            "gbif-backbone": "8643160",
-            "checklistbank-1174": "txn:269348"
-          },
-          "children": [],
-          "uuid": "985a0cdd-d454-5cf-993-66b4bb363cc62e"
         },
         {
           "id": "SP_TROCHUS_GAUDRYANUS_D_ORBIGNY_1852",
@@ -1310,8 +1275,8 @@
       "lineage": "eucycloscalidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 81,
+  "genusCount": 16,
+  "speciesCount": 79,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -157,10 +157,15 @@
             "col": [
               "BBWC9"
             ],
-            "checklistbank": "txn:404225",
-            "checklistbank-1174": "txn:404225"
+            "checklistbank": [
+              "txn:404225",
+              "urn:lsid:marinespecies.org:taxname:1611892"
+            ],
+            "checklistbank-1174": [
+              "txn:404225"
+            ]
           },
-          "authorityIds": "col:BBWC9",
+          "authorityIds": "checklistbank:txn:404225,checklistbank:urn:lsid:marinespecies.org:taxname:1611892,checklistbank-1174:txn:404225,col:BBWC9",
           "children": [],
           "description": "Daira pseudovulgaris is a dairidae species found in its native region."
         },
@@ -177,10 +182,15 @@
             "col": [
               "BBWC7"
             ],
-            "checklistbank": "txn:404224",
-            "checklistbank-1174": "txn:404224"
+            "checklistbank": [
+              "txn:404224",
+              "urn:lsid:marinespecies.org:taxname:1611891"
+            ],
+            "checklistbank-1174": [
+              "txn:404224"
+            ]
           },
-          "authorityIds": "col:BBWC7",
+          "authorityIds": "checklistbank:txn:404224,checklistbank:urn:lsid:marinespecies.org:taxname:1611891,checklistbank-1174:txn:404224,col:BBWC7",
           "children": [],
           "description": "Daira iugata is a dairidae species found in its native region."
         },
@@ -381,38 +391,6 @@
       "name": "\"Daira",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_DAIRA_IUGATA_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Daira iugata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Daira",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611891",
-            "checklistbank-1174": "txn:404224"
-          },
-          "children": [],
-          "uuid": "4a54cb20-1dc8-555-b61-e77357860e3ac2",
-          "description": "\"Daira iugata\" is a dairidae species found in its native region."
-        },
-        {
-          "id": "SP_DAIRA_PSEUDOVULGARIS_BESCHIN_BUSULINI_TESSIER_I_IN_I_BESCHIN_BUSULINI_FORNACIARI_PAPAZZONI_TESSIER_2018",
-          "name": "\"Daira pseudovulgaris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Daira",
-          "authorship": "\"Beschin, Busulini & Tessier <i>in</i> Beschin, Busulini, Fornaciari, Papazzoni & Tessier, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611892",
-            "checklistbank-1174": "txn:404225"
-          },
-          "children": [],
-          "uuid": "91572d92-42a5-582-b08-d7f71155d6b86b",
-          "description": "\"Daira pseudovulgaris\" is a dairidae species found in its native region."
-        },
         {
           "id": "SP_DAIRA_CORONATA_BESCHIN_ET_AL_2005",
           "name": "Daira coronata",
@@ -634,7 +612,7 @@
       "lineage": "dairidae"
     }
   ],
-  "speciesCount": 36,
+  "speciesCount": 34,
   "appSlug": "dairidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

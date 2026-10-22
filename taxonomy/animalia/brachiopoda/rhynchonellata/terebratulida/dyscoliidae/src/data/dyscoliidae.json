@@ -27,10 +27,15 @@
             "col": [
               "9KW5"
             ],
-            "checklistbank": "841537",
-            "checklistbank-1174": "txn:282968"
+            "checklistbank": [
+              "841537",
+              "urn:lsid:marinespecies.org:taxname:235517"
+            ],
+            "checklistbank-1174": [
+              "txn:282968"
+            ]
           },
-          "authorityIds": "col:9KW5",
+          "authorityIds": "checklistbank:841537,checklistbank:urn:lsid:marinespecies.org:taxname:235517,checklistbank-1174:txn:282968,col:9KW5",
           "authorship": "(d'Hondt, 1976)"
         }
       ]
@@ -69,10 +74,15 @@
             "col": [
               "7G8S8"
             ],
-            "checklistbank": "838028",
-            "checklistbank-1174": "txn:282970"
+            "checklistbank": [
+              "838028",
+              "urn:lsid:marinespecies.org:taxname:235518"
+            ],
+            "checklistbank-1174": [
+              "txn:282970"
+            ]
           },
-          "authorityIds": "col:7G8S8",
+          "authorityIds": "checklistbank:838028,checklistbank:urn:lsid:marinespecies.org:taxname:235518,checklistbank-1174:txn:282970,col:7G8S8",
           "authorship": "(Cooper, 1973)"
         },
         {
@@ -1001,51 +1011,10 @@
       "lineage": "dyscoliidae"
     },
     {
-      "id": "GENUS_ACROBELESIA",
-      "name": "\"Acrobelesia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ACROBELESIA_COOPERI_D_HONDT_1976",
-          "name": "\"Acrobelesia cooperi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Acrobelesia",
-          "authorship": "\"(d'Hondt, 1976)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235517",
-            "checklistbank-1174": "txn:282968"
-          },
-          "children": [],
-          "uuid": "dce66bfb-c971-589-80c-6c252c943a209d",
-          "description": "\"Acrobelesia cooperi\" is a dyscoliidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "dyscoliidae"
-    },
-    {
       "id": "GENUS_XENOBROCHUS",
       "name": "\"Xenobrochus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_XENOBROCHUS_AFRICANUS_COOPER_1973",
-          "name": "\"Xenobrochus africanus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Xenobrochus",
-          "authorship": "\"(Cooper, 1973)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235518",
-            "checklistbank-1174": "txn:282970"
-          },
-          "children": [],
-          "uuid": "651b68f2-9d8b-542-b00-548b1b7eb46c0f",
-          "description": "\"Xenobrochus africanus\" is a dyscoliidae species found in its native region."
-        },
         {
           "id": "SP_XENOBROCHUS_TRANSLUCIDUS_DALL_1920",
           "name": "\"Xenobrochus translucidus\"",
@@ -1119,8 +1088,8 @@
       "lineage": "dyscoliidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 58,
+  "genusCount": 19,
+  "speciesCount": 56,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

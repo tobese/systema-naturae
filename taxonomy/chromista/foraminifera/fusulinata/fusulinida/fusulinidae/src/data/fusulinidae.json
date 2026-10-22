@@ -5273,11 +5273,16 @@
             "col": [
               "BFY6S"
             ],
-            "checklistbank": "txn:242275",
+            "checklistbank": [
+              "txn:242275",
+              "urn:lsid:marinespecies.org:taxname:1246131"
+            ],
             "gbif-backbone": "9701451",
-            "checklistbank-1174": "txn:242275"
+            "checklistbank-1174": [
+              "txn:242275"
+            ]
           },
-          "authorityIds": "col:BFY6S",
+          "authorityIds": "checklistbank:txn:242275,checklistbank:urn:lsid:marinespecies.org:taxname:1246131,checklistbank-1174:txn:242275,col:BFY6S,gbif-backbone:9701451",
           "children": [],
           "description": "Fusulina donbassica is a fusulina species found in its native region."
         },
@@ -9233,10 +9238,15 @@
             "col": [
               "83FY8"
             ],
-            "checklistbank": "txn:242278",
-            "checklistbank-1174": "txn:242278"
+            "checklistbank": [
+              "txn:242278",
+              "urn:lsid:marinespecies.org:taxname:1214403"
+            ],
+            "checklistbank-1174": [
+              "txn:242278"
+            ]
           },
-          "authorityIds": "col:83FY8",
+          "authorityIds": "checklistbank:txn:242278,checklistbank:urn:lsid:marinespecies.org:taxname:1214403,checklistbank-1174:txn:242278,col:83FY8",
           "children": [],
           "description": "Quasifusulinoides fusiformis is a quasifusulinoides species found in its native region."
         },
@@ -10207,22 +10217,6 @@
           "description": "\"Fusulina (Quasifusulinoides) is a fusulinidae species found in its native region."
         },
         {
-          "id": "SP_FUSULINA_DONBASSICA_BENSH_1972",
-          "name": "\"Fusulina donbassica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fusulina",
-          "authorship": "\"Bensh, 1972\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1246131",
-            "checklistbank-1174": "txn:242275"
-          },
-          "children": [],
-          "uuid": "53216db2-7ddd-549-96c-2e6352e27ffbec",
-          "description": "\"Fusulina donbassica is a fusulinidae species found in its native region."
-        },
-        {
           "id": "SP_FUSULINA_MOSQUENSIS_ZHANG_XIA_1985",
           "name": "\"Fusulina mosquensis",
           "rank": "SPECIES",
@@ -10260,22 +10254,6 @@
       "name": "\"Quasifusulinoides",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_QUASIFUSULINOIDES_FUSIFORMIS_ROZOVSKAYA_1975",
-          "name": "\"Quasifusulinoides fusiformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Quasifusulinoides",
-          "authorship": "\"Rozovskaya, 1975\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1214403",
-            "checklistbank-1174": "txn:242278"
-          },
-          "children": [],
-          "uuid": "b2a0fa11-7a13-502-9c1-81eef31735103f",
-          "description": "\"Quasifusulinoides fusiformis is a fusulinidae species found in its native region."
-        },
         {
           "id": "SP_QUASIFUSULINOIDES_QUASIFUSULINOIDES_RAUSER_CHERNOUSOVA_1951",
           "name": "Quasifusulinoides quasifusulinoides",
@@ -11353,7 +11331,7 @@
       "lineage": "fusulinidae"
     }
   ],
-  "speciesCount": 645,
+  "speciesCount": 643,
   "appSlug": "fusulinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",

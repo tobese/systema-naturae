@@ -39,10 +39,15 @@
             "col": [
               "8683S"
             ],
-            "checklistbank": "txn:129882",
-            "checklistbank-1174": "txn:129882"
+            "checklistbank": [
+              "txn:129882",
+              "urn:lsid:marinespecies.org:taxname:1411864"
+            ],
+            "checklistbank-1174": [
+              "txn:129882"
+            ]
           },
-          "authorityIds": "col:8683S",
+          "authorityIds": "checklistbank:txn:129882,checklistbank:urn:lsid:marinespecies.org:taxname:1411864,checklistbank-1174:txn:129882,col:8683S",
           "children": [],
           "authorship": "(Etheridge 1926)"
         },
@@ -207,31 +212,6 @@
           "uuid": "679e6e5a-4013-501-a25-b944de104340a4"
         }
       ]
-    },
-    {
-      "id": "GENUS_LIGULOCLEMA",
-      "name": "\"Liguloclema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LIGULOCLEMA_MERIDIANUS_ETHERIDGE_JR_1926",
-          "name": "\"Liguloclema meridianus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liguloclema",
-          "authorship": "\"(Etheridge, Jr, 1926)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411864",
-            "checklistbank-1174": "txn:129882"
-          },
-          "children": [],
-          "uuid": "e4552acc-a9f4-50c-a07-99fb274db9ee2d",
-          "description": "\"Liguloclema meridianus\" is a etherellidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "etherellidae"
     }
   ],
   "sourceIds": {
@@ -245,6 +225,6 @@
     "checklistbank": "txn:129884",
     "checklistbank-1174": "txn:129884"
   },
-  "genusCount": 3,
-  "speciesCount": 11
+  "genusCount": 2,
+  "speciesCount": 10
 }

@@ -28,11 +28,16 @@
             "col": [
               "826DH"
             ],
-            "checklistbank": "txn:82215",
-            "checklistbank-1174": "txn:82215"
+            "checklistbank": [
+              "txn:82215",
+              "urn:lsid:marinespecies.org:taxname:735270"
+            ],
+            "checklistbank-1174": [
+              "txn:82215"
+            ]
           },
           "uuid": "0d047e21-8690-585-bd8-f65d6d50e81dd6",
-          "authorityIds": "col:826DH,gbif:7854970",
+          "authorityIds": "checklistbank:txn:82215,checklistbank:urn:lsid:marinespecies.org:taxname:735270,checklistbank-1174:txn:82215,col:826DH,gbif:7854970",
           "children": [],
           "authorship": "(Cushman and Ponton 1932)"
         },
@@ -75,11 +80,16 @@
             "col": [
               "826DL"
             ],
-            "checklistbank": "txn:507367",
-            "checklistbank-1174": "txn:507367"
+            "checklistbank": [
+              "txn:507367",
+              "urn:lsid:marinespecies.org:taxname:1038772"
+            ],
+            "checklistbank-1174": [
+              "txn:507367"
+            ]
           },
           "uuid": "ddff409a-01a5-58b-be1-c61912ecbdc048",
-          "authorityIds": "col:826DL,gbif:9411540",
+          "authorityIds": "checklistbank:txn:507367,checklistbank:urn:lsid:marinespecies.org:taxname:1038772,checklistbank-1174:txn:507367,col:826DL,gbif:9411540",
           "children": [],
           "authorship": "(Bermudez and Seiglie 1967)"
         },
@@ -203,22 +213,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CASSIGERINELLA_CHIPOLENSIS_CUSHMAN_PONTON_1932",
-          "name": "\"Cassigerinella chipolensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cassigerinella",
-          "authorship": "\"(Cushman & Ponton, 1932)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:735270",
-            "checklistbank-1174": "txn:82215"
-          },
-          "children": [],
-          "uuid": "85f222a2-423d-522-b6f-0e784f29559975",
-          "description": "\"Cassigerinella chipolensis\" is a cassigerinellidae species found in its native region."
-        },
-        {
           "id": "SP_CASSIGERINELLA_EOCAENICA_CORDEY_1968",
           "name": "\"Cassigerinella eocaenica\"",
           "rank": "SPECIES",
@@ -262,22 +256,6 @@
           "children": [],
           "uuid": "6241100b-0a05-5d4-a45-16505d6332b943",
           "description": "\"Cassigerinella spinata\" is a cassigerinellidae species found in its native region."
-        },
-        {
-          "id": "SP_CASSIGERINELLA_MARTINEZPICOI_BERMUDEZ_SEIGLIE_EM_SAITO_1977",
-          "name": "\"Cassigerinella martinezpicoi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cassigerinella",
-          "authorship": "\"(Bermudez & Seiglie) em. Saito, 1977\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1038772",
-            "checklistbank-1174": "txn:507367"
-          },
-          "children": [],
-          "uuid": "b2a3f28b-eb5b-551-8e2-337aa9a852bc3c",
-          "description": "\"Cassigerinella martinezpicoi\" is a cassigerinellidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -335,5 +313,5 @@
     "checklistbank-1174": "txn:495362"
   },
   "genusCount": 4,
-  "speciesCount": 15
+  "speciesCount": 13
 }

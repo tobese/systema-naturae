@@ -21,10 +21,15 @@
             "col": [
               "ZF9K"
             ],
-            "checklistbank": "txn:280930",
-            "checklistbank-1174": "txn:280930"
+            "checklistbank": [
+              "txn:280930",
+              "urn:lsid:marinespecies.org:taxname:1854268"
+            ],
+            "checklistbank-1174": [
+              "txn:280930"
+            ]
           },
-          "authorityIds": "col:ZF9K",
+          "authorityIds": "checklistbank:txn:280930,checklistbank:urn:lsid:marinespecies.org:taxname:1854268,checklistbank-1174:txn:280930,col:ZF9K",
           "children": [],
           "description": "Cretacentomobrya burma is a praentomobryidae species found in its native region."
         }
@@ -50,73 +55,28 @@
             "col": [
               "4M8LP"
             ],
-            "checklistbank": "txn:280928",
-            "checklistbank-1174": "txn:280928"
+            "checklistbank": [
+              "txn:280928",
+              "urn:lsid:marinespecies.org:taxname:1854267"
+            ],
+            "checklistbank-1174": [
+              "txn:280928"
+            ]
           },
-          "authorityIds": "col:4M8LP",
+          "authorityIds": "checklistbank:txn:280928,checklistbank:urn:lsid:marinespecies.org:taxname:1854267,checklistbank-1174:txn:280928,col:4M8LP",
           "children": [],
           "description": "Praentomobrya avita is a praentomobryidae species found in its native region."
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Praentomobryidae"
-    },
-    {
-      "id": "GENUS_PRAENTOMOBRYA",
-      "name": "\"Praentomobrya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PRAENTOMOBRYA_AVITA_CHRISTIANSEN_NASCIMBENE_2006",
-          "name": "\"Praentomobrya avita\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Praentomobrya",
-          "authorship": "\"Christiansen & Nascimbene, 2006\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1854267",
-            "checklistbank-1174": "txn:280928"
-          },
-          "children": [],
-          "uuid": "345d0542-14e5-558-84e-cfa6f840699584",
-          "description": "\"Praentomobrya avita\" is a praentomobryidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "praentomobryidae"
-    },
-    {
-      "id": "GENUS_CRETACENTOMOBRYA",
-      "name": "\"Cretacentomobrya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CRETACENTOMOBRYA_BURMA_CHRISTIANSEN_NASCIMBENE_2006",
-          "name": "\"Cretacentomobrya burma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cretacentomobrya",
-          "authorship": "\"Christiansen & Nascimbene, 2006\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1854268",
-            "checklistbank-1174": "txn:280930"
-          },
-          "children": [],
-          "uuid": "8d3c97b2-10d9-59a-a9e-e6ad20be18f4f3",
-          "description": "\"Cretacentomobrya burma\" is a praentomobryidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "praentomobryidae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 2,
   "appSlug": "praentomobryidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Collembola",
-  "genusCount": 4,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -242,10 +242,15 @@
             "col": [
               "869PR"
             ],
-            "checklistbank": "txn:338440",
-            "checklistbank-1174": "txn:338440"
+            "checklistbank": [
+              "txn:338440",
+              "urn:lsid:marinespecies.org:taxname:1414296"
+            ],
+            "checklistbank-1174": [
+              "txn:338440"
+            ]
           },
-          "authorityIds": "col:869PR",
+          "authorityIds": "checklistbank:txn:338440,checklistbank:urn:lsid:marinespecies.org:taxname:1414296,checklistbank-1174:txn:338440,col:869PR",
           "authorship": "(Reuss 1848)"
         },
         {
@@ -708,20 +713,6 @@
           },
           "authorityIds": "col:4M2XF",
           "authorship": "(Smitt, 1868)"
-        },
-        {
-          "id": "SP_POSTERULA_SARSI_SMITT_1868",
-          "name": "Posterula sarsi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Posterula",
-          "authorship": "(Smitt, 1868)",
-          "sourceIds": {
-            "checklistbank": "31584"
-          },
-          "children": [],
-          "uuid": "dc5d9cdf-126a-5a5-9e9-5a02f5f3bb01f9"
         }
       ]
     },
@@ -2727,22 +2718,6 @@
           "description": "\"Umbonula endlicheri\" is a umbonulidae species found in its native region."
         },
         {
-          "id": "SP_UMBONULA_MACROCHEILA_REUSS_1847",
-          "name": "\"Umbonula macrocheila\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Umbonula",
-          "authorship": "\"(Reuss, 1847)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414296",
-            "checklistbank-1174": "txn:338440"
-          },
-          "children": [],
-          "uuid": "3dd6c606-3444-544-a86-a7cfe447827b25",
-          "description": "\"Umbonula macrocheila\" is a umbonulidae species found in its native region."
-        },
-        {
           "id": "SP_UMBONULA_SPINOSA_PROCH_ZKA_1893",
           "name": "\"Umbonula spinosa\"",
           "rank": "SPECIES",
@@ -2996,7 +2971,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 162,
+  "speciesCount": 160,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -539,11 +539,19 @@
             "col": [
               "5X2SK"
             ],
-            "checklistbank": "ott533861",
+            "checklistbank": [
+              "ott533861",
+              "urn:lsid:marinespecies.org:taxname:738053"
+            ],
             "gbif-backbone": "7916974",
-            "checklistbank-1174": "txn:395794"
+            "checklistbank-1174": [
+              "txn:395794"
+            ],
+            "checklistbank-139831": [
+              "293032"
+            ]
           },
-          "authorityIds": "col:5X2SK,itis:158111",
+          "authorityIds": "checklistbank:ott533861,checklistbank:urn:lsid:marinespecies.org:taxname:738053,checklistbank-1174:txn:395794,checklistbank-139831:293032,col:5X2SK,gbif-backbone:7916974,itis:158111",
           "commonName": "Atlantic heart sea urchin",
           "description": "Brissopsis atlantica is a species of sea urchin of the family Brissidae."
         },
@@ -4784,23 +4792,6 @@
           "description": "\"Brissopsis lyrifera is a brissidae species found in its native region."
         },
         {
-          "id": "SP_BRISSOPSIS_ATLANTICA_MORTENSEN_1913",
-          "name": "\"Brissopsis atlantica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Brissopsis",
-          "authorship": "\"Mortensen, 1913\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:738053",
-            "checklistbank-1174": "txn:395794",
-            "checklistbank-139831": "293032"
-          },
-          "children": [],
-          "uuid": "30aff1ba-7a10-591-b1e-7525f333f4eafc",
-          "description": "\"Brissopsis atlantica is a brissidae species found in its native region."
-        },
-        {
           "id": "SP_BRISSOPSIS_LUZONICA_NISIYAMA_1968",
           "name": "\"Brissopsis luzonica",
           "rank": "SPECIES",
@@ -6230,7 +6221,7 @@
       "lineage": "brissidae"
     }
   ],
-  "speciesCount": 362,
+  "speciesCount": 361,
   "appSlug": "brissidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",

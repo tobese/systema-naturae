@@ -471,10 +471,15 @@
             "col": [
               "CTKBW"
             ],
-            "checklistbank": "txn:387644",
-            "checklistbank-1174": "txn:387644"
+            "checklistbank": [
+              "txn:387644",
+              "urn:lsid:marinespecies.org:taxname:1791025"
+            ],
+            "checklistbank-1174": [
+              "txn:387644"
+            ]
           },
-          "authorityIds": "col:CTKBW",
+          "authorityIds": "checklistbank:txn:387644,checklistbank:urn:lsid:marinespecies.org:taxname:1791025,checklistbank-1174:txn:387644,col:CTKBW",
           "description": "Rastelligera diomedea is a rastelligeridae species found in its native region."
         },
         {
@@ -537,22 +542,6 @@
       "name": "\"Rastelligera",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_RASTELLIGERA_DIOMEDEA_CAMPBELL_1968",
-          "name": "\"Rastelligera diomedea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rastelligera",
-          "authorship": "\"Campbell, 1968\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1791025",
-            "checklistbank-1174": "txn:387644"
-          },
-          "children": [],
-          "uuid": "e62fedc7-75eb-560-aff-122224bd2f0d9d",
-          "description": "\"Rastelligera diomedea is a rastelligeridae species found in its native region."
-        },
         {
           "id": "SP_RASTELLIGERA_ELONGATA_HECTOR_1913",
           "name": "Rastelligera elongata",
@@ -652,7 +641,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 36,
+  "speciesCount": 35,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -949,10 +949,15 @@
             "col": [
               "BW3PV"
             ],
-            "checklistbank": "txn:403488",
-            "checklistbank-1174": "txn:403488"
+            "checklistbank": [
+              "txn:403488",
+              "urn:lsid:marinespecies.org:taxname:1717821"
+            ],
+            "checklistbank-1174": [
+              "txn:403488"
+            ]
           },
-          "authorityIds": "col:BW3PV",
+          "authorityIds": "checklistbank:txn:403488,checklistbank:urn:lsid:marinespecies.org:taxname:1717821,checklistbank-1174:txn:403488,col:BW3PV",
           "children": [],
           "description": "Hemioon callianassarum is a lyreididae species found in its native region."
         },
@@ -1384,10 +1389,15 @@
             "col": [
               "BTQ7K"
             ],
-            "checklistbank": "txn:402193",
-            "checklistbank-1174": "txn:402193"
+            "checklistbank": [
+              "txn:402193",
+              "urn:lsid:marinespecies.org:taxname:1675796"
+            ],
+            "checklistbank-1174": [
+              "txn:402193"
+            ]
           },
-          "authorityIds": "col:BTQ7K",
+          "authorityIds": "checklistbank:txn:402193,checklistbank:urn:lsid:marinespecies.org:taxname:1675796,checklistbank-1174:txn:402193,col:BTQ7K",
           "children": [],
           "description": "Bournelyreidus laevis is a lyreididae species found in its native region."
         },
@@ -1740,22 +1750,6 @@
           "description": "\"Bournelyreidus shiranui\" is a lyreididae species found in its native region."
         },
         {
-          "id": "SP_BOURNELYREIDUS_LAEVIS_SCHL_TER_I_IN_I_VON_DER_MARCK_SCHL_TER_1868",
-          "name": "\"Bournelyreidus laevis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bournelyreidus",
-          "authorship": "\"(Schlüter <i>in</i> von der Marck & Schlüter, 1868)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1675796",
-            "checklistbank-1174": "txn:402193"
-          },
-          "children": [],
-          "uuid": "6921ee5b-caaa-5fa-a02-5563704ff00418",
-          "description": "\"Bournelyreidus laevis\" is a lyreididae species found in its native region."
-        },
-        {
           "id": "SP_BOURNELYREIDUS_EYSUNESENSIS_COLLINS_AND_WIENBERG_RASMUSSEN_1992",
           "name": "Bournelyreidus eysunesensis",
           "rank": "SPECIES",
@@ -1810,31 +1804,6 @@
           },
           "uuid": "b0c36bdd-f145-4529-a6e1-1bfa384b0b8d",
           "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lyreididae"
-    },
-    {
-      "id": "GENUS_HEMIOON",
-      "name": "\"Hemioon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HEMIOON_CALLIANASSARUM_FRITSCH_I_IN_I_FRITSCH_KAFKA_1887",
-          "name": "\"Hemioon callianassarum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hemioon",
-          "authorship": "\"(Fritsch <i>in</i> Fritsch & Kafka, 1887)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1717821",
-            "checklistbank-1174": "txn:403488"
-          },
-          "children": [],
-          "uuid": "e9033767-cd41-55f-9ad-a8c5010800a846",
-          "description": "\"Hemioon callianassarum\" is a lyreididae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1927,11 +1896,11 @@
       "lineage": "lyreididae"
     }
   ],
-  "speciesCount": 98,
+  "speciesCount": 96,
   "appSlug": "lyreididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 24,
+  "genusCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

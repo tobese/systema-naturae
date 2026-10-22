@@ -486,9 +486,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1523563"
             ],
-            "checklistbank-1174": "txn:511999"
+            "checklistbank-1174": [
+              "txn:511999"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1523563"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1523563"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1523563,checklistbank-1174:txn:511999,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1523563"
         },
         {
           "id": "SP_OSMUNDA_HERBACEA",
@@ -645,10 +650,15 @@
             "itis": [
               "17218"
             ],
-            "checklistbank": "Osmunda_regalis_subsp_spectabilis_Willd_ÁLöve__DLöve",
-            "checklistbank-1174": "txn:511998"
+            "checklistbank": [
+              "Osmunda_regalis_subsp_spectabilis_Willd_ÁLöve__DLöve",
+              "urn:lsid:marinespecies.org:taxname:1492652"
+            ],
+            "checklistbank-1174": [
+              "txn:511998"
+            ]
           },
-          "authorityIds": "col:6TBXB,itis:17218,wfo:wfo-0001109067"
+          "authorityIds": "checklistbank:Osmunda_regalis_subsp_spectabilis_Willd_ÁLöve__DLöve,checklistbank:urn:lsid:marinespecies.org:taxname:1492652,checklistbank-1174:txn:511998,col:6TBXB,itis:17218,wfo:wfo-0001109067"
         },
         {
           "id": "SP_OSMUNDA_SPECTABILIS",
@@ -676,9 +686,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1523574"
             ],
-            "checklistbank-1174": "txn:450669"
+            "checklistbank-1174": [
+              "txn:450669"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1523574"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1523574,col:6TBXD,wfo:wfo-0001110612"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1523574,checklistbank-1174:txn:450669,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1523574,col:6TBXD,wfo:wfo-0001110612"
         },
         {
           "id": "SP_OSMUNDA_VACHELLII",
@@ -1644,7 +1659,8 @@
             "wfo": [
               "wfo-0000147825"
             ],
-            "checklistbank": "1414818"
+            "checklistbank": "1414818",
+            "checklistbank-139831": "1414818"
           },
           "authorityIds": "col:4K72V,wfo:wfo-0000147825",
           "description": "Plenasium vachellii is a fern in the family Osmundaceae."
@@ -1768,7 +1784,8 @@
             "itis": [
               "1215040"
             ],
-            "checklistbank": "895688"
+            "checklistbank": "895688",
+            "checklistbank-139831": "895688"
           },
           "authorityIds": "col:VWQM,itis:1215040,wfo:wfo-1000067200",
           "commonName": "interrupted fern",
@@ -2126,22 +2143,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_OSMUNDA_REGALIS_L",
-          "name": "\"Osmunda regalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Osmunda",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1492652",
-            "checklistbank-1174": "txn:511998"
-          },
-          "children": [],
-          "uuid": "c4d2236a-7f98-511-8eb-8825cce3fa444a",
-          "description": "\"Osmunda regalis\" is a osmundaceae species found in its native region."
-        },
-        {
           "id": "SP_OSMUNDA_ANGUSTIFOLIA_CHING",
           "name": "\"Osmunda angustifolia\"",
           "rank": "SPECIES",
@@ -2262,21 +2263,6 @@
           "description": "\"Osmunda vachellii\" is a osmundaceae species found in its native region."
         },
         {
-          "id": "SP_OSMUNDA_CLAYTONIANA_L",
-          "name": "Osmunda claytoniana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Osmunda",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1523563",
-            "checklistbank-1174": "txn:511999"
-          },
-          "uuid": "80fe381e-7eee-4cc2-90c8-a3d41c461b60",
-          "children": []
-        },
-        {
           "id": "SP_OSMUNDA_PILOSA_WALL_EX_GREV_HOOK",
           "name": "Osmunda pilosa",
           "rank": "SPECIES",
@@ -2288,21 +2274,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1523573"
           },
           "uuid": "3b08f27a-47e8-4609-ad29-a4b0d4bbf99d",
-          "children": []
-        },
-        {
-          "id": "SP_OSMUNDA_SPECTABILIS_WILLD",
-          "name": "Osmunda spectabilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Osmunda",
-          "authorship": "Willd.",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1523574",
-            "checklistbank-1174": "txn:450669"
-          },
-          "uuid": "dbaad706-17bd-420c-94b0-618b49910fd3",
           "children": []
         },
         {
@@ -4740,7 +4711,7 @@
     }
   ],
   "genusCount": 53,
-  "speciesCount": 276,
+  "speciesCount": 273,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

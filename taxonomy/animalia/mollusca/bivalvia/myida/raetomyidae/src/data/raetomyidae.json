@@ -24,40 +24,20 @@
             "col": [
               "9THLB"
             ],
-            "checklistbank": "txn:135180",
-            "checklistbank-1174": "txn:135180"
+            "checklistbank": [
+              "txn:135180",
+              "urn:lsid:marinespecies.org:taxname:1610382"
+            ],
+            "checklistbank-1174": [
+              "txn:135180"
+            ]
           },
-          "authorityIds": "col:9THLB",
+          "authorityIds": "checklistbank:txn:135180,checklistbank:urn:lsid:marinespecies.org:taxname:1610382,checklistbank-1174:txn:135180,col:9THLB",
           "uuid": "e48e205a-4ec2-56c-b11-46f610cc41e30b",
           "children": [],
           "authorship": "(Woods 1922)"
         }
       ]
-    },
-    {
-      "id": "GENUS_AMOTAPUS",
-      "name": "\"Amotapus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AMOTAPUS_ARBOLENSIS_H_WOODS_1922",
-          "name": "\"Amotapus arbolensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Amotapus",
-          "authorship": "\"(H. Woods, 1922)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610382",
-            "checklistbank-1174": "txn:135180"
-          },
-          "children": [],
-          "uuid": "d544d98d-d68f-592-a44-39ee6c8b04225d",
-          "description": "\"Amotapus arbolensis\" is a raetomyidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "raetomyidae"
     }
   ],
   "sourceIds": {
@@ -71,6 +51,6 @@
     "checklistbank": "txn:62081",
     "checklistbank-1174": "txn:62081"
   },
-  "genusCount": 2,
-  "speciesCount": 2
+  "genusCount": 1,
+  "speciesCount": 1
 }

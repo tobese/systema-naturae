@@ -499,10 +499,15 @@
             "col": [
               "CLV2H"
             ],
-            "checklistbank": "txn:508536",
-            "checklistbank-1174": "txn:508536"
+            "checklistbank": [
+              "txn:508536",
+              "urn:lsid:marinespecies.org:taxname:1774735"
+            ],
+            "checklistbank-1174": [
+              "txn:508536"
+            ]
           },
-          "authorityIds": "col:CLV2H",
+          "authorityIds": "checklistbank:txn:508536,checklistbank:urn:lsid:marinespecies.org:taxname:1774735,checklistbank-1174:txn:508536,col:CLV2H",
           "description": "Gypidula pelagica is a gypidulidae species found in its native region."
         },
         {
@@ -1041,31 +1046,6 @@
       "lineage": "gypidulidae"
     },
     {
-      "id": "GENUS_GYPIDULA",
-      "name": "\"Gypidula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GYPIDULA_PELAGICA_SMITH_1980",
-          "name": "\"Gypidula pelagica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gypidula",
-          "authorship": "\"Smith, 1980\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1774735",
-            "checklistbank-1174": "txn:508536"
-          },
-          "children": [],
-          "uuid": "f2ad3982-5e37-5af-8a3-0d1b61ac3ca989",
-          "description": "\"Gypidula pelagica is a gypidulidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "gypidulidae"
-    },
-    {
       "id": "GENUS_GYPIDULINA",
       "name": "Gypidulina",
       "rank": "GENUS",
@@ -1182,8 +1162,8 @@
       "lineage": "gypidulidae"
     }
   ],
-  "genusCount": 24,
-  "speciesCount": 59,
+  "genusCount": 23,
+  "speciesCount": 58,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

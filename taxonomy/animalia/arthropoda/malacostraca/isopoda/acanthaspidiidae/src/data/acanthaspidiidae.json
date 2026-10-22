@@ -723,10 +723,15 @@
             "col": [
               "CG3MF"
             ],
-            "checklistbank": "Mexicope_maletensis",
-            "wikispecies": "Mexicope_maletensis"
+            "checklistbank": [
+              "Mexicope_maletensis",
+              "urn:lsid:marinespecies.org:taxname:1757246"
+            ],
+            "wikispecies": [
+              "Mexicope_maletensis"
+            ]
           },
-          "authorityIds": "col:CG3MF",
+          "authorityIds": "checklistbank:Mexicope_maletensis,checklistbank:urn:lsid:marinespecies.org:taxname:1757246,col:CG3MF,wikispecies:Mexicope_maletensis",
           "description": "Mexicope maletensis is a acanthaspidiidae species found in its native region."
         },
         {
@@ -1229,22 +1234,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MEXICOPE_MALETENSIS_RIEHL_SCHIENBEIN_I_IN_I_RIEHL_SCHIENBEIN_MIFSUD_2024",
-          "name": "\"Mexicope maletensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mexicope",
-          "authorship": "\"Riehl & Schienbein <i>in</i> Riehl, Schienbein & Mifsud, 2024\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1757246",
-            "wikispecies": "Mexicope_maletensis"
-          },
-          "children": [],
-          "uuid": "3a1248e4-089a-52d-b0c-d9454c0a1567b6",
-          "description": "\"Mexicope maletensis\" is a acanthaspidiidae species found in its native region."
-        },
-        {
           "id": "SP_MEXICOPE_WESTRALIA",
           "name": "Mexicope westralia",
           "rank": "SPECIES",
@@ -1281,14 +1270,15 @@
           "sourceIds": {
             "checklistbank-139831": "1090311"
           },
-          "uuid": "27077d39-bf2a-499f-bf79-5763859143c8"
+          "uuid": "27077d39-bf2a-499f-bf79-5763859143c8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acanthaspidiidae"
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 67,
   "appSlug": "acanthaspidiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

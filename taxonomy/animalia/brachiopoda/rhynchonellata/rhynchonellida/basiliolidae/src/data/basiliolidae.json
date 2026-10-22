@@ -139,10 +139,15 @@
             "col": [
               "5WCXZ"
             ],
-            "checklistbank": "837994",
-            "checklistbank-1174": "txn:213970"
+            "checklistbank": [
+              "837994",
+              "urn:lsid:marinespecies.org:taxname:235410"
+            ],
+            "checklistbank-1174": [
+              "txn:213970"
+            ]
           },
-          "authorityIds": "col:5WCXZ",
+          "authorityIds": "checklistbank:837994,checklistbank:urn:lsid:marinespecies.org:taxname:235410,checklistbank-1174:txn:213970,col:5WCXZ",
           "authorship": "(Gould, 1862)"
         },
         {
@@ -3716,22 +3721,6 @@
           "children": [],
           "uuid": "870b2416-f281-5e4-9aa-652efc3df2ab0b",
           "description": "\"Basiliola beecheri\" is a basiliolidae species found in its native region."
-        },
-        {
-          "id": "SP_BASILIOLA_LUCIDA_GOULD_1862",
-          "name": "\"Basiliola lucida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Basiliola",
-          "authorship": "\"(Gould, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235410",
-            "checklistbank-1174": "txn:213970"
-          },
-          "children": [],
-          "uuid": "9ced197f-693e-5e3-bcd-eee2bf12554f77",
-          "description": "\"Basiliola lucida\" is a basiliolidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4037,7 +4026,7 @@
     }
   ],
   "genusCount": 42,
-  "speciesCount": 249,
+  "speciesCount": 248,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

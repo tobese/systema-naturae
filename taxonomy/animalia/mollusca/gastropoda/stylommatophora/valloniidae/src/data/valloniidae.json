@@ -997,10 +997,15 @@
             "col": [
               "7FDLW"
             ],
-            "checklistbank": "286426",
-            "checklistbank-1174": "txn:509647"
+            "checklistbank": [
+              "286426",
+              "urn:lsid:marinespecies.org:taxname:819969"
+            ],
+            "checklistbank-1174": [
+              "txn:509647"
+            ]
           },
-          "authorityIds": "col:7FDLW,itis:76865"
+          "authorityIds": "checklistbank:286426,checklistbank:urn:lsid:marinespecies.org:taxname:819969,checklistbank-1174:txn:509647,col:7FDLW,itis:76865"
         },
         {
           "id": "SP_VALLONIA_COSTOHIMALA_GERBER_B_SSNECK_2009",
@@ -1499,10 +1504,15 @@
             "col": [
               "7FDN6"
             ],
-            "checklistbank": "286440",
-            "checklistbank-1174": "txn:509649"
+            "checklistbank": [
+              "286440",
+              "urn:lsid:marinespecies.org:taxname:875635"
+            ],
+            "checklistbank-1174": [
+              "txn:509649"
+            ]
           },
-          "authorityIds": "col:7FDN6,itis:76871"
+          "authorityIds": "checklistbank:286440,checklistbank:urn:lsid:marinespecies.org:taxname:875635,checklistbank-1174:txn:509649,col:7FDN6,itis:76871"
         },
         {
           "id": "SP_VALLONIA_PULCHELLULA",
@@ -3497,7 +3507,8 @@
             "col": [
               "6WN6K"
             ],
-            "checklistbank": "1669543"
+            "checklistbank": "1669543",
+            "checklistbank-139831": "1669543"
           },
           "authorityIds": "col:6WN6K",
           "description": "Ptychopatula dioscoricola is a valloniidae species found in its native region."
@@ -3516,7 +3527,8 @@
             "col": [
               "7SVZV"
             ],
-            "checklistbank": "1669542"
+            "checklistbank": "1669542",
+            "checklistbank-139831": "1669542"
           },
           "authorityIds": "col:7SVZV",
           "description": "Ptychopatula orcella is a valloniidae species found in its native region."
@@ -3535,7 +3547,8 @@
             "col": [
               "VBM7B"
             ],
-            "checklistbank": "1669539"
+            "checklistbank": "1669539",
+            "checklistbank-139831": "1669539"
           },
           "authorityIds": "col:VBM7B",
           "description": "Ptychopatula comicolensis is a valloniidae species found in its native region."
@@ -3608,7 +3621,8 @@
             "col": [
               "VBMD2"
             ],
-            "checklistbank": "1669538"
+            "checklistbank": "1669538",
+            "checklistbank-139831": "1669538"
           },
           "authorityIds": "col:VBMD2",
           "description": "Ptychopatula mediamericanum is a valloniidae species found in its native region."
@@ -3627,7 +3641,8 @@
             "col": [
               "7SVZS"
             ],
-            "checklistbank": "1669534"
+            "checklistbank": "1669534",
+            "checklistbank-139831": "1669534"
           },
           "authorityIds": "col:7SVZS",
           "description": "Ptychopatula bailyi is a valloniidae species found in its native region."
@@ -4211,38 +4226,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_VALLONIA_COSTATA_O_F_M_LLER_1774",
-          "name": "\"Vallonia costata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vallonia",
-          "authorship": "\"(O. F. Müller, 1774)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:819969",
-            "checklistbank-1174": "txn:509647"
-          },
-          "children": [],
-          "uuid": "8a7ed6ab-88ca-55d-89b-50ef306c796f4b",
-          "description": "\"Vallonia costata\" is a valloniidae species found in its native region."
-        },
-        {
-          "id": "SP_VALLONIA_PULCHELLA_O_F_M_LLER_1774",
-          "name": "\"Vallonia pulchella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vallonia",
-          "authorship": "\"(O. F. Müller, 1774)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:875635",
-            "checklistbank-1174": "txn:509649"
-          },
-          "children": [],
-          "uuid": "032de2d5-9d9a-540-b5e-04973d1f70ac99",
-          "description": "\"Vallonia pulchella\" is a valloniidae species found in its native region."
-        },
-        {
           "id": "SP_VALLONIA_LADACENSIS_VON_M_LLENDORFF_1899",
           "name": "\"Vallonia ladacensis",
           "rank": "SPECIES",
@@ -4747,33 +4730,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "valloniidae"
-    },
-    {
-      "id": "GENUS_SPELAEODISCUS",
-      "name": "Spelaeodiscus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SPELAEODISCUS_TATRICUS_HAZAY_1883",
-          "name": "Spelaeodiscus tatricus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Spelaeodiscus",
-          "authorship": "Hazay, 1883",
-          "sourceIds": {
-            "checklistbank": "17638"
-          },
-          "children": [],
-          "uuid": "40c3802e-1243-545-b51-ba9ffc72d68c00"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "valloniidae"
     }
   ],
-  "genusCount": 25,
-  "speciesCount": 258,
+  "genusCount": 24,
+  "speciesCount": 255,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -361,11 +361,16 @@
             "col": [
               "8T6DN"
             ],
-            "checklistbank": "1038933",
-            "checklistbank-1174": "txn:241453"
+            "checklistbank": [
+              "1038933",
+              "urn:lsid:marinespecies.org:taxname:1550424"
+            ],
+            "checklistbank-1174": [
+              "txn:241453"
+            ]
           },
           "uuid": "2b6f7341-320e-5e9-916-e117462a343d22",
-          "authorityIds": "col:8T6DN,gbif:8680782",
+          "authorityIds": "checklistbank:1038933,checklistbank:urn:lsid:marinespecies.org:taxname:1550424,checklistbank-1174:txn:241453,col:8T6DN,gbif:8680782",
           "authorship": "(d'Orbigny in Fornasini, 1908)"
         },
         {
@@ -1446,22 +1451,6 @@
           "description": "\"Elongobula grata\" is a buliminoididae species found in its native region."
         },
         {
-          "id": "SP_ELONGOBULA_MADAGASCARIENSIS_D_ORBIGNY_IN_FORNASINI_1908",
-          "name": "\"Elongobula madagascariensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Elongobula",
-          "authorship": "\"(d'Orbigny in Fornasini, 1908)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1550424",
-            "checklistbank-1174": "txn:241453"
-          },
-          "children": [],
-          "uuid": "74fba3a6-7e04-520-9d4-8f1ce688d323d5",
-          "description": "\"Elongobula madagascariensis\" is a buliminoididae species found in its native region."
-        },
-        {
           "id": "SP_ELONGOBULA_MISSILIS_VELLA_1963",
           "name": "\"Elongobula missilis\"",
           "rank": "SPECIES",
@@ -1825,7 +1814,7 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 94,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

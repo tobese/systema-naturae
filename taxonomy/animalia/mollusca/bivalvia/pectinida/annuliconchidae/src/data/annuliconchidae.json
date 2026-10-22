@@ -40,11 +40,16 @@
             "col": [
               "BCHBP"
             ],
-            "checklistbank": "txn:110540",
+            "checklistbank": [
+              "txn:110540",
+              "urn:lsid:marinespecies.org:taxname:1659347"
+            ],
             "gbif-backbone": "4982481",
-            "checklistbank-1174": "txn:110540"
+            "checklistbank-1174": [
+              "txn:110540"
+            ]
           },
-          "authorityIds": "col:BCHBP",
+          "authorityIds": "checklistbank:txn:110540,checklistbank:urn:lsid:marinespecies.org:taxname:1659347,checklistbank-1174:txn:110540,col:BCHBP,gbif-backbone:4982481",
           "authorship": "(Meek and Worthen 1860)"
         },
         {
@@ -259,31 +264,6 @@
       "lineage": "Annuliconchidae"
     },
     {
-      "id": "GENUS_ANNULICONCHA",
-      "name": "\"Annuliconcha",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ANNULICONCHA_INTERLINEATA_F_B_MEEK_WORTHEN_1861",
-          "name": "\"Annuliconcha interlineata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Annuliconcha",
-          "authorship": "\"(F. B. Meek & Worthen, 1861)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1659347",
-            "checklistbank-1174": "txn:110540"
-          },
-          "children": [],
-          "uuid": "0af741c5-8af0-5e4-bbf-0751b489e1ed93",
-          "description": "\"Annuliconcha interlineata\" is a annuliconchidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "annuliconchidae"
-    },
-    {
       "id": "GENUS_AVICULOPECTEN",
       "name": "Aviculopecten",
       "rank": "GENUS",
@@ -344,8 +324,8 @@
       "lineage": "annuliconchidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 19,
+  "genusCount": 5,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

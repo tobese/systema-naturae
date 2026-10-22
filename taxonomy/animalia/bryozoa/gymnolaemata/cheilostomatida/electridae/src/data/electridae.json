@@ -1839,9 +1839,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:153806"
             ],
-            "checklistbank-1174": "txn:151260"
+            "checklistbank-1174": [
+              "txn:151260"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:153806"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:153806,col:XRGG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:153806,checklistbank-1174:txn:151260,checklistbank-2011:urn:lsid:marinespecies.org:taxname:153806,col:XRGG",
           "authorship": "(Audouin, 1826)"
         },
         {
@@ -3717,10 +3722,18 @@
             "col": [
               "CS258"
             ],
-            "checklistbank": "31355",
-            "checklistbank-1174": "txn:329787"
+            "checklistbank": [
+              "31355",
+              "urn:lsid:marinespecies.org:taxname:1789435"
+            ],
+            "checklistbank-1174": [
+              "txn:329787"
+            ],
+            "checklistbank-127379": [
+              "f4dbf56e-29d7-45e5-9b97-9ff4e5590e27"
+            ]
           },
-          "authorityIds": "col:CS258,itis:155868"
+          "authorityIds": "checklistbank:31355,checklistbank:urn:lsid:marinespecies.org:taxname:1789435,checklistbank-1174:txn:329787,checklistbank-127379:f4dbf56e-29d7-45e5-9b97-9ff4e5590e27,col:CS258,itis:155868"
         },
         {
           "id": "SP_ELECTRA_POSIDONIAE_GAUTIER_1954",
@@ -6459,23 +6472,6 @@
           "description": "\"Electra flagellum is a electridae species found in its native region."
         },
         {
-          "id": "SP_ELECTRA_PILOSA_LINNAEUS_1761",
-          "name": "\"Electra pilosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Electra",
-          "authorship": "\"(Linnaeus, 1761)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1789435",
-            "checklistbank-1174": "txn:329787",
-            "checklistbank-127379": "f4dbf56e-29d7-45e5-9b97-9ff4e5590e27"
-          },
-          "children": [],
-          "uuid": "21f21100-70a8-51b-b78-bd726fe057acca",
-          "description": "\"Electra pilosa\" is a electridae species found in its native region."
-        },
-        {
           "id": "SP_ELECTRA_LONGISPINA_CALVET_1904",
           "name": "Electra longispina",
           "rank": "SPECIES",
@@ -6775,21 +6771,6 @@
           "children": [],
           "uuid": "198be851-ae1f-59c-9f9-f326caf2a3f63d",
           "description": "\"Conopeum wilcoxianicum is a electridae species found in its native region."
-        },
-        {
-          "id": "SP_CONOPEUM_LACROIXII_AUDOUIN_1826",
-          "name": "Conopeum lacroixii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Conopeum",
-          "authorship": "(Audouin, 1826)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:153806",
-            "checklistbank-1174": "txn:151260"
-          },
-          "uuid": "a3bd1d1c-035d-4012-b4f3-42c4178a69f2",
-          "children": []
         },
         {
           "id": "SP_CONOPEUM_TENUISSIMUM_CANU_1908",
@@ -7131,7 +7112,7 @@
     }
   ],
   "genusCount": 47,
-  "speciesCount": 378,
+  "speciesCount": 376,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

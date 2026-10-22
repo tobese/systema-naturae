@@ -385,10 +385,18 @@
             "col": [
               "479NX"
             ],
-            "checklistbank": "34808a8e-5c6f-442e-950f-3310e9b67757",
-            "wikispecies": "Netrostoma_setouchianum"
+            "checklistbank": [
+              "34808a8e-5c6f-442e-950f-3310e9b67757",
+              "urn:lsid:marinespecies.org:taxname:290472"
+            ],
+            "wikispecies": [
+              "Netrostoma_setouchianum"
+            ],
+            "checklistbank-139831": [
+              "885612"
+            ]
           },
-          "authorityIds": "col:479NX,itis:51798,wikidata:Q2269106"
+          "authorityIds": "checklistbank:34808a8e-5c6f-442e-950f-3310e9b67757,checklistbank:urn:lsid:marinespecies.org:taxname:290472,checklistbank-139831:885612,col:479NX,itis:51798,wikidata:Q2269106,wikispecies:Netrostoma_setouchianum"
         },
         {
           "id": "SP_NETROSTOMA_TYPHLODENDRIUM_SCHULTZE_1898",
@@ -1576,20 +1584,6 @@
           "children": [],
           "uuid": "1d8cee56-3617-5de-9db-af7d33d3f71aea",
           "authorship": "Sitnikova, 1975"
-        },
-        {
-          "id": "SP_TRITEGEUS_BIFIDATUS_NICOLET_1855",
-          "name": "Tritegeus bifidatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tritegeus",
-          "authorship": "(Nicolet, 1855)",
-          "sourceIds": {
-            "checklistbank": "220985"
-          },
-          "children": [],
-          "uuid": "39485ab5-1a21-56b-835-145b9e3a6292d0"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2360,7 +2354,8 @@
           "sourceIds": {
             "checklistbank-127379": "f9f2da1d-1234-471e-b7d1-7b3848d7aa2f"
           },
-          "uuid": "00f408d2-e067-4f4b-98c1-a069b5fb0c76"
+          "uuid": "00f408d2-e067-4f4b-98c1-a069b5fb0c76",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2403,23 +2398,6 @@
           "children": [],
           "uuid": "cb869616-129e-5e7-bc2-9e60123b4bc8bd",
           "description": "\"Netrostoma dumokuroa\" is a cepheidae species found in its native region."
-        },
-        {
-          "id": "SP_NETROSTOMA_SETOUCHIANUM_KISHINOUYE_1902",
-          "name": "\"Netrostoma setouchianum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Netrostoma",
-          "authorship": "\"(Kishinouye, 1902)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:290472",
-            "wikispecies": "Netrostoma_setouchianum",
-            "checklistbank-139831": "885612"
-          },
-          "children": [],
-          "uuid": "cf6126ce-e325-5e8-89a-b425f926108ce0",
-          "description": "\"Netrostoma setouchianum\" is a cepheidae species found in its native region."
         },
         {
           "id": "SP_NETROSTOMA_NUDA_GERSHWIN_ZEIDLER_2008",
@@ -2541,7 +2519,7 @@
     }
   ],
   "genusCount": 29,
-  "speciesCount": 145,
+  "speciesCount": 143,
   "sourceIds": {
     "checklistbank": "Cepheidae_Agassiz",
     "wikispecies": "Cepheidae_Agassiz"

@@ -171,10 +171,15 @@
             "col": [
               "78S66"
             ],
-            "checklistbank": "txn:120109",
-            "checklistbank-1174": "txn:120109"
+            "checklistbank": [
+              "txn:120109",
+              "urn:lsid:marinespecies.org:taxname:505751"
+            ],
+            "checklistbank-1174": [
+              "txn:120109"
+            ]
           },
-          "authorityIds": "col:78S66,itis:80975",
+          "authorityIds": "checklistbank:txn:120109,checklistbank:urn:lsid:marinespecies.org:taxname:505751,checklistbank-1174:txn:120109,col:78S66,itis:80975",
           "authorship": "(Gould 1851)"
         },
         {
@@ -342,10 +347,15 @@
             "col": [
               "DJ3G"
             ],
-            "checklistbank": "606194",
-            "checklistbank-1174": "txn:91140"
+            "checklistbank": [
+              "606194",
+              "urn:lsid:marinespecies.org:taxname:420849"
+            ],
+            "checklistbank-1174": [
+              "txn:91140"
+            ]
           },
-          "authorityIds": "col:DJ3G,itis:80965",
+          "authorityIds": "checklistbank:606194,checklistbank:urn:lsid:marinespecies.org:taxname:420849,checklistbank-1174:txn:91140,col:DJ3G,itis:80965",
           "authorship": "(Spengler, 1802)"
         },
         {
@@ -913,22 +923,6 @@
           "description": "\"Raeta plicatella\" is a anatinellidae species found in its native region."
         },
         {
-          "id": "SP_RAETA_UNDULATA_A_A_GOULD_1851",
-          "name": "\"Raeta undulata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Raeta",
-          "authorship": "\"(A. A. Gould, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505751",
-            "checklistbank-1174": "txn:120109"
-          },
-          "children": [],
-          "uuid": "2bad3aae-ed7a-527-b4f-aa11924283a778",
-          "description": "\"Raeta undulata\" is a anatinellidae species found in its native region."
-        },
-        {
           "id": "SP_RAETA_PELLICULA_REEVE_1854",
           "name": "\"Raeta pellicula\"",
           "rank": "SPECIES",
@@ -967,22 +961,6 @@
       "name": "\"Anatina",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ANATINA_ANATINA_L_SPENGLER_1802",
-          "name": "\"Anatina anatina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Anatina",
-          "authorship": "\"(L. Spengler, 1802)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420849",
-            "checklistbank-1174": "txn:91140"
-          },
-          "children": [],
-          "uuid": "d319832a-a1a3-5d6-9e3-3cdeb8a5c89e58",
-          "description": "\"Anatina anatina\" is a anatinellidae species found in its native region."
-        },
         {
           "id": "SP_ANATINA_CYPRINUS_W_WOOD_1828",
           "name": "\"Anatina cyprinus\"",
@@ -1138,7 +1116,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 66,
+  "speciesCount": 64,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

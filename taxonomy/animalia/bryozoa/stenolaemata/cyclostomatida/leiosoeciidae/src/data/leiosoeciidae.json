@@ -25,10 +25,15 @@
             "col": [
               "86CS7"
             ],
-            "checklistbank": "txn:439086",
-            "checklistbank-1174": "txn:439086"
+            "checklistbank": [
+              "txn:439086",
+              "urn:lsid:marinespecies.org:taxname:1410861"
+            ],
+            "checklistbank-1174": [
+              "txn:439086"
+            ]
           },
-          "authorityIds": "col:86CS7",
+          "authorityIds": "checklistbank:txn:439086,checklistbank:urn:lsid:marinespecies.org:taxname:1410861,checklistbank-1174:txn:439086,col:86CS7",
           "children": [],
           "authorship": "(Goldfuss 1826)"
         },
@@ -236,22 +241,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DITAXIA_ANOMALOPORA_GOLDFUSS_1827",
-          "name": "\"Ditaxia anomalopora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ditaxia",
-          "authorship": "\"(Goldfuss, 1827)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410861",
-            "checklistbank-1174": "txn:439086"
-          },
-          "children": [],
-          "uuid": "d42a0ce7-b4f1-56c-a6b-6bea464b26ffe0",
-          "description": "\"Ditaxia anomalopora\" is a leiosoeciidae species found in its native region."
-        },
-        {
           "id": "SP_DITAXIA_RAMOSA_D_ORBIGNY_1854",
           "name": "\"Ditaxia ramosa\"",
           "rank": "SPECIES",
@@ -307,5 +296,5 @@
     "checklistbank-1174": "txn:458062"
   },
   "genusCount": 5,
-  "speciesCount": 13
+  "speciesCount": 12
 }

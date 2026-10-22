@@ -6018,10 +6018,15 @@
             "col": [
               "8TNY6"
             ],
-            "checklistbank": "104692",
-            "checklistbank-1174": "txn:114552"
+            "checklistbank": [
+              "104692",
+              "urn:lsid:marinespecies.org:taxname:533094"
+            ],
+            "checklistbank-1174": [
+              "txn:114552"
+            ]
           },
-          "authorityIds": "col:8TNY6",
+          "authorityIds": "checklistbank:104692,checklistbank:urn:lsid:marinespecies.org:taxname:533094,checklistbank-1174:txn:114552,col:8TNY6",
           "authorship": "(Cristofori & Jan, 1832)"
         },
         {
@@ -6109,9 +6114,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1054946"
             ],
-            "checklistbank-1174": "txn:479241"
+            "checklistbank-1174": [
+              "txn:479241"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1054946"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1054946,col:42W8H",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1054946,checklistbank-1174:txn:479241,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1054946,col:42W8H",
           "authorship": "(Cossmann, 1889)"
         },
         {
@@ -15101,9 +15111,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1845055"
             ],
-            "checklistbank-1174": "txn:59878"
+            "checklistbank-1174": [
+              "txn:59878"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1845055"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1845055,col:V9B5W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1845055,checklistbank-1174:txn:59878,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1845055,col:V9B5W",
           "authorship": "(Vaughan, 1896)"
         },
         {
@@ -18226,22 +18241,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MICRODRILLIA_CRISPATA_DE_CRISTOFORI_JAN_1832",
-          "name": "\"Microdrillia crispata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Microdrillia",
-          "authorship": "\"(De Cristofori & Jan, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:533094",
-            "checklistbank-1174": "txn:114552"
-          },
-          "children": [],
-          "uuid": "5ae9c47f-9e6d-5d9-8e2-5c0aa1e8d2566c",
-          "description": "\"Microdrillia crispata\" is a borsoniidae species found in its native region."
-        },
-        {
           "id": "SP_MICRODRILLIA_BREVIS_MACNEIL_1984",
           "name": "\"Microdrillia brevis",
           "rank": "SPECIES",
@@ -18384,21 +18383,6 @@
             "checklistbank-127379": "c3bc0df3-1c8c-457f-a8fe-c263d79d1602"
           },
           "uuid": "c7a8e05a-dd9a-465b-b0ca-1f2839977624",
-          "children": []
-        },
-        {
-          "id": "SP_MICRODRILLIA_MEYERI_COSSMANN_1889",
-          "name": "Microdrillia meyeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microdrillia",
-          "authorship": "(Cossmann, 1889)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1054946",
-            "checklistbank-1174": "txn:479241"
-          },
-          "uuid": "443e3f3b-bb7f-43bc-aa3f-9237f07f25e9",
           "children": []
         },
         {
@@ -18546,21 +18530,6 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:831619"
           },
           "uuid": "25a4fa1a-8dc3-4b60-b371-ad3d27c7e339",
-          "children": []
-        },
-        {
-          "id": "SP_CORDIERIA_LUDOVICIANA_VAUGHAN_1896",
-          "name": "Cordieria ludoviciana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cordieria",
-          "authorship": "(Vaughan, 1896)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1845055",
-            "checklistbank-1174": "txn:59878"
-          },
-          "uuid": "d3a8fcd3-cd86-4731-9e35-277187094bdb",
           "children": []
         }
       ],
@@ -18954,7 +18923,7 @@
     }
   ],
   "genusCount": 66,
-  "speciesCount": 1006,
+  "speciesCount": 1003,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -44,10 +44,15 @@
             "col": [
               "B7LZ4"
             ],
-            "checklistbank": "txn:383224",
-            "checklistbank-1174": "txn:383224"
+            "checklistbank": [
+              "txn:383224",
+              "urn:lsid:marinespecies.org:taxname:1647408"
+            ],
+            "checklistbank-1174": [
+              "txn:383224"
+            ]
           },
-          "authorityIds": "col:B7LZ4",
+          "authorityIds": "checklistbank:txn:383224,checklistbank:urn:lsid:marinespecies.org:taxname:1647408,checklistbank-1174:txn:383224,col:B7LZ4",
           "children": [],
           "authorship": "(Newton et al. 1987)"
         },
@@ -657,22 +662,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PROMYSIDIELLA_CORDILLERANA_C_R_NEWTON_1987",
-          "name": "\"Promysidiella cordillerana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Promysidiella",
-          "authorship": "\"(C. R. Newton, 1987)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1647408",
-            "checklistbank-1174": "txn:383224"
-          },
-          "children": [],
-          "uuid": "8de3fa82-b7a8-525-a64-62b3c6616a4602",
-          "description": "\"Promysidiella cordillerana\" is a mysidiellidae species found in its native region."
-        },
-        {
           "id": "SP_PROMYSIDIELLA_AMERICANA_K_RNER_1937",
           "name": "\"Promysidiella americana\"",
           "rank": "SPECIES",
@@ -828,5 +817,5 @@
     "checklistbank-1174": "txn:61245"
   },
   "genusCount": 13,
-  "speciesCount": 44
+  "speciesCount": 43
 }

@@ -26,10 +26,15 @@
             "col": [
               "7QBLN"
             ],
-            "checklistbank": "txn:488878",
-            "checklistbank-1174": "txn:488878"
+            "checklistbank": [
+              "txn:488878",
+              "urn:lsid:marinespecies.org:taxname:1471247"
+            ],
+            "checklistbank-1174": [
+              "txn:488878"
+            ]
           },
-          "authorityIds": "col:7QBLN",
+          "authorityIds": "checklistbank:txn:488878,checklistbank:urn:lsid:marinespecies.org:taxname:1471247,checklistbank-1174:txn:488878,col:7QBLN",
           "authorship": "(Sowerby 1814)"
         },
         {
@@ -109,35 +114,10 @@
           "description": "Freboldia fluitans is a bellerophinidae species found in its native region."
         }
       ]
-    },
-    {
-      "id": "GENUS_BELLEROPHINA",
-      "name": "\"Bellerophina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BELLEROPHINA_MINUTA_J_SOWERBY_1814",
-          "name": "\"Bellerophina minuta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bellerophina",
-          "authorship": "\"(J. Sowerby, 1814)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1471247",
-            "checklistbank-1174": "txn:488878"
-          },
-          "children": [],
-          "uuid": "2e9adaea-1281-53a-88e-2037faebb8c809",
-          "description": "\"Bellerophina minuta\" is a bellerophinidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "bellerophinidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 6,
+  "genusCount": 2,
+  "speciesCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

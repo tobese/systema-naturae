@@ -1098,10 +1098,15 @@
             "col": [
               "7WFP8"
             ],
-            "checklistbank": "txn:395837",
-            "checklistbank-1174": "txn:395837"
+            "checklistbank": [
+              "txn:395837",
+              "urn:lsid:marinespecies.org:taxname:757565"
+            ],
+            "checklistbank-1174": [
+              "txn:395837"
+            ]
           },
-          "authorityIds": "col:7WFP8",
+          "authorityIds": "checklistbank:txn:395837,checklistbank:urn:lsid:marinespecies.org:taxname:757565,checklistbank-1174:txn:395837,col:7WFP8",
           "children": [],
           "description": "Gymnocidaris pustulosa is a hemicidaridae species found in its native region."
         },
@@ -1485,31 +1490,6 @@
       "lineage": "hemicidaridae"
     },
     {
-      "id": "GENUS_GYMNOCIDARIS",
-      "name": "\"Gymnocidaris",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GYMNOCIDARIS_PUSTULOSA_MERCIER_1932",
-          "name": "\"Gymnocidaris pustulosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gymnocidaris",
-          "authorship": "\"Mercier, 1932\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757565",
-            "checklistbank-1174": "txn:395837"
-          },
-          "children": [],
-          "uuid": "b5451f35-53fa-581-a46-e922f02b3b711d",
-          "description": "\"Gymnocidaris pustulosa is a hemicidaridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hemicidaridae"
-    },
-    {
       "id": "GENUS_SPHEROTIARIS",
       "name": "\"Spherotiaris",
       "rank": "GENUS",
@@ -1582,11 +1562,11 @@
       "lineage": "hemicidaridae"
     }
   ],
-  "speciesCount": 84,
+  "speciesCount": 83,
   "appSlug": "hemicidaridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",
-  "genusCount": 15,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

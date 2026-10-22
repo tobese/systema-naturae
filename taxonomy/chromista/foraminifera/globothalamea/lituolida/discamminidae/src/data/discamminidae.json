@@ -483,11 +483,16 @@
             "col": [
               "82CYL"
             ],
-            "checklistbank": "txn:351873",
-            "checklistbank-1174": "txn:351873"
+            "checklistbank": [
+              "txn:351873",
+              "urn:lsid:marinespecies.org:taxname:902448"
+            ],
+            "checklistbank-1174": [
+              "txn:351873"
+            ]
           },
           "uuid": "ad5b9ab1-f465-543-933-8e20c966e19bb9",
-          "authorityIds": "col:82CYL,gbif:8861467",
+          "authorityIds": "checklistbank:txn:351873,checklistbank:urn:lsid:marinespecies.org:taxname:902448,checklistbank-1174:txn:351873,col:82CYL,gbif:8861467",
           "authorship": "Mllory 1959"
         },
         {
@@ -637,7 +642,8 @@
           "lineage": "\"Ammoscalaria",
           "authorship": "\"(Williamson, 1858)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:113918"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:113918",
+            "checklistbank-139831": "1539803"
           },
           "children": [],
           "uuid": "ac53c20a-4f14-558-a8f-2be12529ec7099",
@@ -833,22 +839,6 @@
           "description": "\"Discammina compressa\" is a discamminidae species found in its native region."
         },
         {
-          "id": "SP_DISCAMMINA_EOCENICA_MALLORY_1959",
-          "name": "\"Discammina eocenica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Discammina",
-          "authorship": "\"Mallory, 1959\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:902448",
-            "checklistbank-1174": "txn:351873"
-          },
-          "children": [],
-          "uuid": "790673b6-aa21-5b2-bea-04323b216b9826",
-          "description": "\"Discammina eocenica\" is a discamminidae species found in its native region."
-        },
-        {
           "id": "SP_DISCAMMINA_MAKAROVENSIS_TURENKO_1987",
           "name": "\"Discammina makarovensis\"",
           "rank": "SPECIES",
@@ -947,7 +937,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 45,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

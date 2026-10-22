@@ -4619,10 +4619,15 @@
             "itis": [
               "683776"
             ],
-            "checklistbank": "47969",
-            "wikispecies": "Cythere_lutea"
+            "checklistbank": [
+              "47969",
+              "urn:lsid:marinespecies.org:taxname:874427"
+            ],
+            "wikispecies": [
+              "Cythere_lutea"
+            ]
           },
-          "authorityIds": "col:33QKM,itis:683776",
+          "authorityIds": "checklistbank:47969,checklistbank:urn:lsid:marinespecies.org:taxname:874427,col:33QKM,itis:683776,wikispecies:Cythere_lutea",
           "description": "Cythere lutea is a cytheridae species found in its native region."
         },
         {
@@ -16716,21 +16721,6 @@
           "description": "Cythereis luzangaziensis is a cytheridae species found in its native region."
         },
         {
-          "id": "SP_CYTHEREIS_SCULPTILIS",
-          "name": "Cythereis sculptilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythereis",
-          "sourceIds": {
-            "checklistbank": "ott5770679",
-            "checklistbank-1174": "txn:365560"
-          },
-          "children": [],
-          "uuid": "439eb12d-ceda-572-b77-4155d1d625f841",
-          "description": "Cythereis sculptilis is a cytheridae species found in its native region."
-        },
-        {
           "id": "SP_CYTHEREIS_ORELLIANA",
           "name": "Cythereis orelliana",
           "rank": "SPECIES",
@@ -19389,20 +19379,6 @@
           "children": [],
           "uuid": "be9adc5c-78b3-5d9-9a8-0cfcaf0dfd4cd3",
           "description": "Cythereis vaughani is a cytheridae species found in its native region."
-        },
-        {
-          "id": "SP_CYTHEREIS_POLYGONATA_ROME_1942",
-          "name": "Cythereis polygonata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythereis",
-          "authorship": "Rome, 1942",
-          "sourceIds": {
-            "checklistbank": "47971"
-          },
-          "children": [],
-          "uuid": "d7ab1258-80d3-504-982-71552d9f7f03b3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -19598,22 +19574,6 @@
           "children": [],
           "uuid": "c5d7843e-564a-56c-869-10ec607e215bdb",
           "description": "\"Cythere oblonga is a cytheridae species found in its native region."
-        },
-        {
-          "id": "SP_CYTHERE_LUTEA_HANAI_1959",
-          "name": "\"Cythere lutea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cythere",
-          "authorship": "\"Hanai, 1959\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:874427",
-            "wikispecies": "Cythere_lutea"
-          },
-          "children": [],
-          "uuid": "6661c0ac-8718-5ee-81b-b7d605f51cb7c7",
-          "description": "\"Cythere lutea is a cytheridae species found in its native region."
         },
         {
           "id": "SP_CYTHERE_VALENTINEI_BRADY_1880",
@@ -20334,30 +20294,6 @@
       "lineage": "Cytheridae"
     },
     {
-      "id": "GENUS_COBANCYTHERE",
-      "name": "Cobancythere",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COBANCYTHERE_HARTMANNI_G_W_MUELLER_1894",
-          "name": "Cobancythere hartmanni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cobancythere",
-          "authorship": "G.W. Mueller, 1894",
-          "sourceIds": {
-            "checklistbank": "47968",
-            "gbif-backbone": "4336320"
-          },
-          "children": [],
-          "uuid": "87b6dcbb-f48e-584-801-14cd80b8ee563b"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cytheridae"
-    },
-    {
       "id": "GENUS_ANOMOCYTHERIDEA",
       "name": "Anomocytheridea",
       "rank": "GENUS",
@@ -20418,11 +20354,11 @@
       "lineage": "cytheridae"
     }
   ],
-  "speciesCount": 1169,
+  "speciesCount": 1165,
   "appSlug": "cytheridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 82,
+  "genusCount": 81,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

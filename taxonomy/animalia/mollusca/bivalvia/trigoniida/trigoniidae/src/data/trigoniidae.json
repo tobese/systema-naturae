@@ -440,7 +440,8 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507373",
             "checklistbank-1174": "txn:61346",
-            "checklistbank-127379": "ba77b5c5-f1e1-4e20-981a-98bfdeaff595"
+            "checklistbank-127379": "ba77b5c5-f1e1-4e20-981a-98bfdeaff595",
+            "checklistbank-139831": "1210357"
           },
           "children": [],
           "uuid": "abb581ca-763b-597-b69-28de919d241668",
@@ -455,7 +456,8 @@
           "lineage": "Neotrigonia",
           "authorship": "Morrison",
           "sourceIds": {
-            "checklistbank": "2179fd1e-8d2d-4585-a80c-2cb81ec6ec89"
+            "checklistbank": "2179fd1e-8d2d-4585-a80c-2cb81ec6ec89",
+            "checklistbank-139831": "1210356"
           },
           "children": [],
           "uuid": "40115633-a9d6-5de-982-408ace49688b75",
@@ -470,7 +472,8 @@
           "lineage": "Neotrigonia",
           "authorship": "Iredale",
           "sourceIds": {
-            "checklistbank": "8da82760-c9cb-410a-a34c-07ad44f4b4a0"
+            "checklistbank": "8da82760-c9cb-410a-a34c-07ad44f4b4a0",
+            "checklistbank-139831": "1210358"
           },
           "children": [],
           "uuid": "ed4a5e09-7e14-527-a89-6e2964a29c6b2f",
@@ -562,11 +565,17 @@
               "7SKYY"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1334075"
+              "urn:lsid:marinespecies.org:taxname:1334075",
+              "urn:lsid:marinespecies.org:taxname:1334077"
             ],
-            "checklistbank-1174": "txn:132387"
+            "checklistbank-1174": [
+              "txn:132387"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1334075"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1334075,col:7SKYY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1334075,checklistbank:urn:lsid:marinespecies.org:taxname:1334077,checklistbank-1174:txn:132387,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1334075,col:7SKYY",
           "authorship": "(A. d'Orbigny, 1841)"
         },
         {
@@ -12502,32 +12511,6 @@
       "lineage": "Trigoniidae"
     },
     {
-      "id": "GENUS_PACITRIGONIA",
-      "name": "\"Pacitrigonia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PACITRIGONIA_HANETIANA_C_A_FLEMING_1987",
-          "name": "\"Pacitrigonia hanetiana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pacitrigonia",
-          "authorship": "\"C. A. Fleming, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1334077",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1334075",
-            "checklistbank-1174": "txn:132387"
-          },
-          "children": [],
-          "uuid": "e0e7ec2c-5e1c-577-9e6-64a2a858cf2a5e",
-          "description": "\"Pacitrigonia hanetiana is a trigoniidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trigoniidae"
-    },
-    {
       "id": "GENUS_LYROSCHIZODUS",
       "name": "Lyroschizodus",
       "rank": "GENUS",
@@ -13592,8 +13575,8 @@
       "lineage": "trigoniidae"
     }
   ],
-  "genusCount": 62,
-  "speciesCount": 832,
+  "genusCount": 61,
+  "speciesCount": 831,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

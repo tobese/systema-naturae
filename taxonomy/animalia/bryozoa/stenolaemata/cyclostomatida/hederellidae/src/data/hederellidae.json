@@ -64,10 +64,15 @@
             "col": [
               "86K55"
             ],
-            "checklistbank": "txn:377040",
-            "checklistbank-1174": "txn:377040"
+            "checklistbank": [
+              "txn:377040",
+              "urn:lsid:marinespecies.org:taxname:1411442"
+            ],
+            "checklistbank-1174": [
+              "txn:377040"
+            ]
           },
-          "authorityIds": "col:86K55",
+          "authorityIds": "checklistbank:txn:377040,checklistbank:urn:lsid:marinespecies.org:taxname:1411442,checklistbank-1174:txn:377040,col:86K55",
           "children": [],
           "authorship": "Nicholson 1887"
         },
@@ -353,22 +358,6 @@
           "description": "\"Hederella (Rhenanerella) is a hederellidae species found in its native region."
         },
         {
-          "id": "SP_HEDERELLA_CANADENSIS_NICHOLSON_1874",
-          "name": "\"Hederella canadensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hederella",
-          "authorship": "\"(Nicholson, 1874)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411442",
-            "checklistbank-1174": "txn:377040"
-          },
-          "children": [],
-          "uuid": "9815c752-11de-5a0-8d6-57dca67fea0bc6",
-          "description": "\"Hederella canadensis\" is a hederellidae species found in its native region."
-        },
-        {
           "id": "SP_HEDERELLA_AEQUIDISTANS_BASSLER_1939",
           "name": "Hederella aequidistans",
           "rank": "SPECIES",
@@ -567,5 +556,5 @@
     "checklistbank-1174": "txn:191788"
   },
   "genusCount": 3,
-  "speciesCount": 37
+  "speciesCount": 36
 }

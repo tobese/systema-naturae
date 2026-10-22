@@ -39,10 +39,15 @@
             "col": [
               "BXL8T"
             ],
-            "checklistbank": "txn:225190",
-            "checklistbank-1174": "txn:225190"
+            "checklistbank": [
+              "txn:225190",
+              "urn:lsid:marinespecies.org:taxname:1723862"
+            ],
+            "checklistbank-1174": [
+              "txn:225190"
+            ]
           },
-          "authorityIds": "col:BXL8T",
+          "authorityIds": "checklistbank:txn:225190,checklistbank:urn:lsid:marinespecies.org:taxname:1723862,checklistbank-1174:txn:225190,col:BXL8T",
           "children": [],
           "description": "Zanthopsis dufouri is a zanthopsidae species found in its native region."
         },
@@ -596,11 +601,16 @@
             "col": [
               "BXD6Y"
             ],
-            "checklistbank": "txn:225168",
+            "checklistbank": [
+              "txn:225168",
+              "urn:lsid:marinespecies.org:taxname:1723867"
+            ],
             "gbif-backbone": "8599839",
-            "checklistbank-1174": "txn:225168"
+            "checklistbank-1174": [
+              "txn:225168"
+            ]
           },
-          "authorityIds": "col:BXD6Y",
+          "authorityIds": "checklistbank:txn:225168,checklistbank:urn:lsid:marinespecies.org:taxname:1723867,checklistbank-1174:txn:225168,col:BXD6Y,gbif-backbone:8599839",
           "children": [],
           "description": "Harpactocarcinus macrodactylus is a zanthopsidae species found in its native region."
         },
@@ -975,11 +985,16 @@
             "col": [
               "BXG6X"
             ],
-            "checklistbank": "txn:225182",
+            "checklistbank": [
+              "txn:225182",
+              "urn:lsid:marinespecies.org:taxname:1723757"
+            ],
             "gbif-backbone": "8648860",
-            "checklistbank-1174": "txn:225182"
+            "checklistbank-1174": [
+              "txn:225182"
+            ]
           },
-          "authorityIds": "col:BXG6X",
+          "authorityIds": "checklistbank:txn:225182,checklistbank:urn:lsid:marinespecies.org:taxname:1723757,checklistbank-1174:txn:225182,col:BXG6X,gbif-backbone:8648860",
           "children": [],
           "description": "Neozanthopsis achalzicus is a zanthopsidae species found in its native region."
         },
@@ -1210,22 +1225,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NEOZANTHOPSIS_ACHALZICUS_BITTNER_I_IN_I_ABICH_1882",
-          "name": "\"Neozanthopsis achalzicus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neozanthopsis",
-          "authorship": "\"(Bittner <i>in</i> Abich, 1882)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1723757",
-            "checklistbank-1174": "txn:225182"
-          },
-          "children": [],
-          "uuid": "741fd2da-3355-537-b7c-f909fe5f390522",
-          "description": "\"Neozanthopsis achalzicus\" is a zanthopsidae species found in its native region."
-        },
-        {
           "id": "SP_NEOZANTHOPSIS_TRIDENTATA_VON_MEYER_1862",
           "name": "Neozanthopsis tridentata",
           "rank": "SPECIES",
@@ -1249,22 +1248,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ZANTHOPSIS_DUFOURI_H_MILNE_EDWARDS_I_IN_I_D_ARCHIAC_1850",
-          "name": "\"Zanthopsis dufouri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Zanthopsis",
-          "authorship": "\"(H. Milne Edwards <i>in</i> d'Archiac, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1723862",
-            "checklistbank-1174": "txn:225190"
-          },
-          "children": [],
-          "uuid": "9398bda6-e7e5-5e1-b2d-5da0da5179141c",
-          "description": "\"Zanthopsis dufouri\" is a zanthopsidae species found in its native region."
-        },
-        {
           "id": "SP_ZANTHOPSIS_LEACHII_DESMAREST_1822",
           "name": "Zanthopsis leachii",
           "rank": "SPECIES",
@@ -1287,22 +1270,6 @@
       "name": "\"Harpactocarcinus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_HARPACTOCARCINUS_MACRODACTYLUS_H_MILNE_EDWARDS_I_IN_I_D_ARCHIAC_1850",
-          "name": "\"Harpactocarcinus macrodactylus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Harpactocarcinus",
-          "authorship": "\"(H. Milne Edwards <i>in</i> d'Archiac, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1723867",
-            "checklistbank-1174": "txn:225168"
-          },
-          "children": [],
-          "uuid": "64095028-4898-58d-b19-39ee49c5daaffc",
-          "description": "\"Harpactocarcinus macrodactylus\" is a zanthopsidae species found in its native region."
-        },
         {
           "id": "SP_HARPACTOCARCINUS_DALMATIUS_SCHWEITZER_ET_AL_2007",
           "name": "Harpactocarcinus dalmatius",
@@ -1494,7 +1461,7 @@
       "lineage": "zanthopsidae"
     }
   ],
-  "speciesCount": 81,
+  "speciesCount": 78,
   "appSlug": "zanthopsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

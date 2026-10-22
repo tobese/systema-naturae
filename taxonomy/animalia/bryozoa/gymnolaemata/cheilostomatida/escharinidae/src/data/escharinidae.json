@@ -239,11 +239,22 @@
             "itis": [
               "206760"
             ],
-            "checklistbank": "31516",
+            "checklistbank": [
+              "31516",
+              "urn:lsid:marinespecies.org:taxname:472714"
+            ],
             "gbif-backbone": "1007539",
-            "checklistbank-1174": "txn:338461"
+            "checklistbank-1174": [
+              "txn:338461"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:111516"
+            ],
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:111516"
+            ]
           },
-          "authorityIds": "col:3BGNP,itis:206760",
+          "authorityIds": "checklistbank:31516,checklistbank:urn:lsid:marinespecies.org:taxname:472714,checklistbank-1081:urn:lsid:marinespecies.org:taxname:111516,checklistbank-1174:txn:338461,checklistbank-2011:urn:lsid:marinespecies.org:taxname:111516,col:3BGNP,gbif-backbone:1007539,itis:206760",
           "authorship": "(Audouin, 1826)"
         },
         {
@@ -4305,24 +4316,6 @@
           "description": "\"Escharina johnstoni\" is a escharinidae species found in its native region."
         },
         {
-          "id": "SP_ESCHARINA_DUTERTREI_ROBERTSON_1921",
-          "name": "\"Escharina dutertrei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Escharina",
-          "authorship": "\"(Robertson, 1921)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472714",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:111516",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:111516",
-            "checklistbank-1174": "txn:338461"
-          },
-          "children": [],
-          "uuid": "7ae110b2-dd49-524-ba2-7099f08a1d3fd7",
-          "description": "\"Escharina dutertrei is a escharinidae species found in its native region."
-        },
-        {
           "id": "SP_ESCHARINA_ACUMINATA_HINCKS_1881",
           "name": "Escharina acuminata",
           "rank": "SPECIES",
@@ -4708,7 +4701,7 @@
     }
   ],
   "genusCount": 23,
-  "speciesCount": 269,
+  "speciesCount": 268,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

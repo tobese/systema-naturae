@@ -346,12 +346,18 @@
           "authorship": "\"Jakobi, 1956\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1671953",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:233960"
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:233960"
+            ],
+            "gbif-backbone": [
+              "12238340"
+            ]
           },
           "children": [],
           "uuid": "ac055825-a0e0-539-89d-69590b16e2bccf",
           "description": "\"Nitocra fragilis is a ameiridae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671953,checklistbank-2011:urn:lsid:marinespecies.org:taxname:233960,gbif-backbone:12238340"
         },
         {
           "id": "SP_NITOCRA_MINOR_WELLS_1967",
@@ -363,12 +369,15 @@
           "authorship": "\"Wells, 1967\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1672609",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1672608"
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1672608"
+            ]
           },
           "children": [],
           "uuid": "9da77b36-d5d1-5f7-918-98ca53a30b11a0",
           "description": "\"Nitocra minor is a ameiridae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1672609,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1672608"
         },
         {
           "id": "SP_NITOCRA_PLATYPUS_CHAPPUIS_1930",
@@ -3067,21 +3076,6 @@
           "children": [],
           "uuid": "bdafdfc9-4c4e-5b9-bbf-9ddcdf8a98bc57",
           "speciesList": []
-        },
-        {
-          "id": "SP_AMEIROPSIS_MINOR_SARS_G_O_1920",
-          "name": "Ameiropsis minor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "worms",
-          "lineage": "Ameiropsis",
-          "authorship": "(Sars G.O., 1920)",
-          "children": [],
-          "speciesList": [],
-          "sourceIds": {
-            "checklistbank": "35532"
-          },
-          "uuid": "ab03c914-9117-5fc-bd1-ad35ae36916124"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3641,20 +3635,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_LEPTOMESOCHRA_NICHOLLSI_NOODT_1955",
-          "name": "Leptomesochra nichollsi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leptomesochra",
-          "authorship": "Noodt, 1955",
-          "sourceIds": {
-            "checklistbank": "35556"
-          },
-          "children": [],
-          "uuid": "093f4907-9607-52e-957-08b192f81b7520"
-        },
-        {
           "id": "SP_LEPTOMESOCHRA_DIAZI_KUNZ_KUNZ_1973",
           "name": "Leptomesochra diazi",
           "rank": "SPECIES",
@@ -3862,21 +3842,6 @@
           "authorityIds": "col:4ZX4F",
           "description": "Stenocopia sarsi is a stenocopia species found in its native region.",
           "speciesList": []
-        },
-        {
-          "id": "SP_STENOCOPIA_SPINOSA_SCOTT_T_1892",
-          "name": "Stenocopia spinosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "worms",
-          "lineage": "Stenocopia",
-          "authorship": "(Scott T., 1892)",
-          "children": [],
-          "speciesList": [],
-          "sourceIds": {
-            "checklistbank": "35624"
-          },
-          "uuid": "0700675b-3403-52c-a36-ca8dd5e7463113"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5997,21 +5962,6 @@
           "uuid": "c7622244-0e33-5c4-af8-e2e48f06190dd7"
         },
         {
-          "id": "SP_NITOKRA_FRAGILIS_NITOKRA_FRAGILIS",
-          "name": "Nitokra fragilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitokra",
-          "authorship": "Nitokra fragilis",
-          "children": [],
-          "sourceIds": {
-            "checklistbank": "35568",
-            "gbif-backbone": "7260138"
-          },
-          "uuid": "cb41cbf4-59fc-57e-b37-bb64f4740792bc"
-        },
-        {
           "id": "SP_NITOKRA_BALNEARIA_POR_1964",
           "name": "Nitokra balnearia",
           "rank": "SPECIES",
@@ -6038,51 +5988,6 @@
           },
           "children": [],
           "uuid": "080086c4-c4fd-5ea-9b6-ac08cd99b9c512"
-        },
-        {
-          "id": "SP_NITOKRA_DIVARICATA_CHAPPUIS_1923",
-          "name": "Nitokra divaricata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitokra",
-          "authorship": "Chappuis, 1923",
-          "sourceIds": {
-            "checklistbank": "35564",
-            "checklistbank-2008": "320196",
-            "gbif-backbone": "7260142"
-          },
-          "children": [],
-          "uuid": "58e9c8f6-1894-56a-b4e-47d3b3160151a5"
-        },
-        {
-          "id": "SP_NITOKRA_ELONGATA_MARCUS_1968",
-          "name": "Nitokra elongata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitokra",
-          "authorship": "Marcus, 1968",
-          "sourceIds": {
-            "checklistbank": "35566"
-          },
-          "children": [],
-          "uuid": "fd7b4c2d-6e44-572-a42-516f18cf645cc6"
-        },
-        {
-          "id": "SP_NITOKRA_PUSILLA_SARS_1911",
-          "name": "Nitokra pusilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitokra",
-          "authorship": "Sars, 1911",
-          "sourceIds": {
-            "checklistbank": "35574",
-            "gbif-backbone": "7260139"
-          },
-          "children": [],
-          "uuid": "6ec6f297-c04c-5d9-b85-4b7a0db44653c7"
         },
         {
           "id": "SP_NITOKRA_MINOR_WELLS_1967",
@@ -7262,94 +7167,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NITOCRELLA_SLOVENICA",
-          "name": "Nitocrella slovenica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "sourceIds": {
-            "checklistbank": "17045",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:359594",
-            "gbif-backbone": "2111887"
-          },
-          "children": [],
-          "authorship": "Petkovski, 1959",
-          "uuid": "cf92440c-d994-58b-ad2-dde48f95459801"
-        },
-        {
-          "id": "SP_NITOCRELLA_STOCHI",
-          "name": "Nitocrella stochi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "sourceIds": {
-            "checklistbank": "17046",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:353841",
-            "gbif-backbone": "4317103"
-          },
-          "children": [],
-          "authorship": "Pesce & Galassi, 1986",
-          "uuid": "3f4293d4-3b45-53c-9df-17f02b618c317f"
-        },
-        {
-          "id": "SP_NITOCRELLA_ACHAIAE_PESCE_1981",
-          "name": "Nitocrella achaiae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Pesce, 1981",
-          "sourceIds": {
-            "checklistbank": "258448"
-          },
-          "children": [],
-          "uuid": "a3faec6e-f8da-565-9e9-6fe2ef4cb0a08a"
-        },
-        {
-          "id": "SP_NITOCRELLA_BEATRICIS_COTTARELLI_BRUNO_1993",
-          "name": "Nitocrella beatricis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Cottarelli & Bruno, 1993",
-          "sourceIds": {
-            "checklistbank": "258449"
-          },
-          "children": [],
-          "uuid": "a112332c-4d09-5cb-b16-c6d415e45e8562"
-        },
-        {
-          "id": "SP_NITOCRELLA_CALCARIPES_DAMIAN_BOTOSANEANU_1954",
-          "name": "Nitocrella calcaripes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Damian & Botosaneanu, 1954",
-          "sourceIds": {
-            "checklistbank": "258450"
-          },
-          "children": [],
-          "uuid": "4f687b07-54e5-5e6-8ce-26f051ac65aaa2"
-        },
-        {
-          "id": "SP_NITOCRELLA_CHAPPUISI_KIEFER_1926",
-          "name": "Nitocrella chappuisi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Kiefer, 1926",
-          "sourceIds": {
-            "checklistbank": "258451"
-          },
-          "children": [],
-          "uuid": "7d668881-b642-51a-ba8-6624b82ec7b3b3"
-        },
-        {
           "id": "SP_NITOCRELLA_DELAYI_ROUCH_1970",
           "name": "Nitocrella delayi",
           "rank": "SPECIES",
@@ -7363,237 +7180,6 @@
           },
           "children": [],
           "uuid": "79b129d0-1284-57e-835-367269fa72ebf2"
-        },
-        {
-          "id": "SP_NITOCRELLA_DUSSARTI_CHAPPUIS_ROUCH_1959",
-          "name": "Nitocrella dussarti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Chappuis & Rouch, 1959",
-          "sourceIds": {
-            "checklistbank": "258453"
-          },
-          "children": [],
-          "uuid": "9d4252d3-915b-57a-8ae-2d4a4eaef60c80"
-        },
-        {
-          "id": "SP_NITOCRELLA_FEDELITAE_PESCE_1985",
-          "name": "Nitocrella fedelitae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Pesce, 1985",
-          "sourceIds": {
-            "checklistbank": "258454"
-          },
-          "children": [],
-          "uuid": "e2eb395c-9aac-569-996-64ee3742c9e773"
-        },
-        {
-          "id": "SP_NITOCRELLA_GRACILIS_CHAPPUIS_1955",
-          "name": "Nitocrella gracilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Chappuis, 1955",
-          "sourceIds": {
-            "checklistbank": "258455"
-          },
-          "children": [],
-          "uuid": "ba8af192-a4b6-561-894-be9f4e55f7d1ca"
-        },
-        {
-          "id": "SP_NITOCRELLA_HIRTA_CHAPPUIS_1923",
-          "name": "Nitocrella hirta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Chappuis, 1923",
-          "sourceIds": {
-            "checklistbank": "258456",
-            "wikispecies": "Nitocrella_hirta",
-            "checklistbank-2008": "1038184",
-            "gbif-backbone": "2111851"
-          },
-          "children": [],
-          "uuid": "29ad6c98-101b-52f-914-2acc56ac02011d"
-        },
-        {
-          "id": "SP_NITOCRELLA_HOFMILLERI_BREHM_1953",
-          "name": "Nitocrella hofmilleri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Brehm, 1953",
-          "sourceIds": {
-            "checklistbank": "258460",
-            "checklistbank-139831": "1588789"
-          },
-          "children": [],
-          "uuid": "6f5c129e-0897-54c-827-0360b36a5c3578"
-        },
-        {
-          "id": "SP_NITOCRELLA_JUTURNA_COTTARELLI_1975",
-          "name": "Nitocrella juturna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Cottarelli, 1975",
-          "sourceIds": {
-            "checklistbank": "258461"
-          },
-          "children": [],
-          "uuid": "faa9bef0-a06f-5c9-aba-874c21a37d7acd"
-        },
-        {
-          "id": "SP_NITOCRELLA_KOSSWIGI_NOODT_1954",
-          "name": "Nitocrella kosswigi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Noodt, 1954",
-          "sourceIds": {
-            "checklistbank": "258462"
-          },
-          "children": [],
-          "uuid": "77879c65-522e-5e7-8ef-3fc7e5553cb9a5"
-        },
-        {
-          "id": "SP_NITOCRELLA_KUNZEI_GALASSI_DE_LAURENTIS_1997",
-          "name": "Nitocrella kunzei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Galassi & De Laurentis, 1997",
-          "sourceIds": {
-            "checklistbank": "258463"
-          },
-          "children": [],
-          "uuid": "e7c9dd4e-827e-573-81a-35563ebb6051d7"
-        },
-        {
-          "id": "SP_NITOCRELLA_LONGA_KARANOVIC_2000",
-          "name": "Nitocrella longa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Karanovic, 2000",
-          "sourceIds": {
-            "checklistbank": "258464"
-          },
-          "children": [],
-          "uuid": "03ec28c7-ba5a-54c-897-9857a44de9a234"
-        },
-        {
-          "id": "SP_NITOCRELLA_MAGGII_PESCE_1983",
-          "name": "Nitocrella maggii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Pesce, 1983",
-          "sourceIds": {
-            "checklistbank": "258465"
-          },
-          "children": [],
-          "uuid": "3aace349-e716-568-8d6-e66817c6671a34"
-        },
-        {
-          "id": "SP_NITOCRELLA_MORETTII_PESCE_1984",
-          "name": "Nitocrella morettii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Pesce, 1984",
-          "sourceIds": {
-            "checklistbank": "258466"
-          },
-          "children": [],
-          "uuid": "485dc85d-447a-531-ba2-faff1e1fee95e7"
-        },
-        {
-          "id": "SP_NITOCRELLA_NEUTRA_KIEFER_1933",
-          "name": "Nitocrella neutra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Kiefer, 1933",
-          "sourceIds": {
-            "checklistbank": "258467"
-          },
-          "children": [],
-          "uuid": "98c83ebe-b49e-548-bef-b70cfcf835e089"
-        },
-        {
-          "id": "SP_NITOCRELLA_OMEGA_HERTZOG_1936",
-          "name": "Nitocrella omega",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Hertzog, 1936",
-          "sourceIds": {
-            "checklistbank": "258468"
-          },
-          "children": [],
-          "uuid": "6fb42294-89ce-5c1-beb-c107993e75ae99"
-        },
-        {
-          "id": "SP_NITOCRELLA_PESCEI_GALASSI_DE_LAURENTIS_1997",
-          "name": "Nitocrella pescei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Galassi & De Laurentis, 1997",
-          "sourceIds": {
-            "checklistbank": "258469",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:361528",
-            "gbif-backbone": "4317096"
-          },
-          "children": [],
-          "uuid": "1006cd6d-35fb-5ee-98c-1f60d009124be6"
-        },
-        {
-          "id": "SP_NITOCRELLA_PSAMMOPHILA_CHAPPUIS_1955",
-          "name": "Nitocrella psammophila",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Chappuis, 1955",
-          "sourceIds": {
-            "checklistbank": "258470",
-            "gbif-backbone": "2111857"
-          },
-          "children": [],
-          "uuid": "b18360c5-467e-53b-98d-6ceb5206aefdfd"
-        },
-        {
-          "id": "SP_NITOCRELLA_REDUCTA_SCH_FER_1936",
-          "name": "Nitocrella reducta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "(Schäfer, 1936)",
-          "sourceIds": {
-            "checklistbank": "258471"
-          },
-          "children": [],
-          "uuid": "1538c31e-1571-53a-abd-523b70a32c7f3d"
         },
         {
           "id": "SP_NITOCRELLA_RHODIENSIS_PESCE_1983",
@@ -7610,34 +7196,6 @@
           "uuid": "3f6396c9-670c-546-b5a-e8e8a0668c6178"
         },
         {
-          "id": "SP_NITOCRELLA_SKIRENSIS_PESCE_1981",
-          "name": "Nitocrella skirensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Pesce, 1981",
-          "sourceIds": {
-            "checklistbank": "258475"
-          },
-          "children": [],
-          "uuid": "84268b5b-5da4-54e-beb-d6c2cc12abd702"
-        },
-        {
-          "id": "SP_NITOCRELLA_SPINULOSA_APOSTOLOV_1991",
-          "name": "Nitocrella spinulosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Apostolov, 1991",
-          "sourceIds": {
-            "checklistbank": "258477"
-          },
-          "children": [],
-          "uuid": "4332c4b4-db6b-584-aa1-897d035aaa4a13"
-        },
-        {
           "id": "SP_NITOCRELLA_STAMMERI_CHAPPUIS_1938",
           "name": "Nitocrella stammeri",
           "rank": "SPECIES",
@@ -7650,50 +7208,6 @@
           },
           "children": [],
           "uuid": "be0168f4-aaed-5a5-bbc-a1a881aa8699fe"
-        },
-        {
-          "id": "SP_NITOCRELLA_TONSA_MICHAILOVA_NEIKOVA_1965",
-          "name": "Nitocrella tonsa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Michailova-Neikova, 1965",
-          "sourceIds": {
-            "checklistbank": "258480",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:353844",
-            "gbif-backbone": "2111859"
-          },
-          "children": [],
-          "uuid": "fa9a7fb6-bd52-55e-aeb-b55a467cdbd392"
-        },
-        {
-          "id": "SP_NITOCRELLA_TIROLENSIS_KIEFER_1963",
-          "name": "Nitocrella tirolensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Kiefer, 1963",
-          "sourceIds": {
-            "checklistbank": "258481"
-          },
-          "children": [],
-          "uuid": "df3a5a9e-0c14-5da-868-c807daf59af88d"
-        },
-        {
-          "id": "SP_NITOCRELLA_VASCONICA_CHAPPUIS_1937",
-          "name": "Nitocrella vasconica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocrella",
-          "authorship": "Chappuis, 1937",
-          "sourceIds": {
-            "checklistbank": "258482"
-          },
-          "children": [],
-          "uuid": "5a17a0e9-c370-559-827-487052729210a1"
         },
         {
           "id": "SP_NITOCRELLA_KARANOVICI",
@@ -8262,36 +7776,6 @@
           "uuid": "b3291263-6ae7-5b2-be6-f1152af6005d9b"
         },
         {
-          "id": "SP_AMEIRA_DIVAGANS_NICHOLLS_1939",
-          "name": "Ameira divagans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "Nicholls, 1939",
-          "sourceIds": {
-            "checklistbank": "35513"
-          },
-          "children": [],
-          "uuid": "4fc5ca67-b534-597-aec-782fc7361b179b"
-        },
-        {
-          "id": "SP_AMEIRA_EXIGUA_T_SCOTT_1894",
-          "name": "Ameira exigua",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "T Scott, 1894",
-          "sourceIds": {
-            "checklistbank": "35514",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115514",
-            "gbif-backbone": "2111677"
-          },
-          "children": [],
-          "uuid": "e75daab8-53fb-5f6-861-f98eb5c8d4059c"
-        },
-        {
           "id": "SP_AMEIRA_FAROERENSIS_SCHRIEVER_1982",
           "name": "Ameira faroerensis",
           "rank": "SPECIES",
@@ -8320,20 +7804,6 @@
           "uuid": "e50cc06f-4ef0-52a-917-ae6d024dd4cb7d"
         },
         {
-          "id": "SP_AMEIRA_LONGIPES_BOECK_1865",
-          "name": "Ameira longipes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "Boeck, 1865",
-          "sourceIds": {
-            "checklistbank": "35517"
-          },
-          "children": [],
-          "uuid": "d7c37b2c-8311-54e-9c2-be8c9b79c338ad"
-        },
-        {
           "id": "SP_AMEIRA_LUSITANICA_GALHANO_1970",
           "name": "Ameira lusitanica",
           "rank": "SPECIES",
@@ -8346,20 +7816,6 @@
           },
           "children": [],
           "uuid": "e921eadf-89fc-50b-a8d-e62e781acae00f"
-        },
-        {
-          "id": "SP_AMEIRA_MINUTA_BOECK_1865",
-          "name": "Ameira minuta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "Boeck, 1865",
-          "sourceIds": {
-            "checklistbank": "35519"
-          },
-          "children": [],
-          "uuid": "e1916700-d7ff-5de-81f-caed3a206688bc"
         },
         {
           "id": "SP_AMEIRA_PARASCOTTI_CHISLENKO_1977",
@@ -8404,23 +7860,6 @@
           "uuid": "b3b6172b-2ca0-510-a57-84780f15f0b944"
         },
         {
-          "id": "SP_AMEIRA_PUSILLA_T_SCOTT_1903",
-          "name": "Ameira pusilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "T Scott, 1903",
-          "sourceIds": {
-            "checklistbank": "35523",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115523",
-            "checklistbank-2008": "366953",
-            "gbif-backbone": "2111688"
-          },
-          "children": [],
-          "uuid": "fd453fff-b5c8-53f-bba-254e49a3faecc0"
-        },
-        {
           "id": "SP_AMEIRA_REDUCTA_PETKOVSKI_1954",
           "name": "Ameira reducta",
           "rank": "SPECIES",
@@ -8433,53 +7872,6 @@
           },
           "children": [],
           "uuid": "e9723f20-43c9-553-975-377e20a0987374"
-        },
-        {
-          "id": "SP_AMEIRA_SCOTTI_SARS_1911",
-          "name": "Ameira scotti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "Sars, 1911",
-          "sourceIds": {
-            "checklistbank": "35525",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115525",
-            "checklistbank-2008": "366954",
-            "gbif-backbone": "2111682"
-          },
-          "children": [],
-          "uuid": "e5096856-f4d4-5bb-bfd-13baf0a804d3bb"
-        },
-        {
-          "id": "SP_AMEIRA_SPECIOSA_MONARD_1935",
-          "name": "Ameira speciosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "Monard, 1935",
-          "sourceIds": {
-            "checklistbank": "35526"
-          },
-          "children": [],
-          "uuid": "f922e423-563f-512-8cd-c3d5da965fa879"
-        },
-        {
-          "id": "SP_AMEIRA_TENUICORNIS_T_SCOTT_1902",
-          "name": "Ameira tenuicornis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameira",
-          "authorship": "T Scott, 1902",
-          "sourceIds": {
-            "checklistbank": "35527",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115527",
-            "gbif-backbone": "2111690"
-          },
-          "children": [],
-          "uuid": "301eef43-e94f-502-aa4-ded0f676b94a56"
         },
         {
           "id": "SP_AMEIRA_USITATA_KLIE_1950B",
@@ -9010,20 +8402,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AMEIROPSYLLUS_ARIANUS_MONARD_1928",
-          "name": "Ameiropsyllus arianus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ameiropsyllus",
-          "authorship": "(Monard, 1928)",
-          "sourceIds": {
-            "checklistbank": "35535"
-          },
-          "children": [],
-          "uuid": "45dafb2e-bcd9-536-b3d-8c810cad9c0c91"
-        },
-        {
           "id": "SP_AMEIROPSYLLUS_MONARDI_BODIN_1979",
           "name": "Ameiropsyllus monardi",
           "rank": "SPECIES",
@@ -9061,177 +8439,6 @@
       "name": "Parapseudoleptomesochra",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_POLYCHAETA_NOODT_1952",
-          "name": "Parapseudoleptomesochra polychaeta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "(Noodt, 1952)",
-          "sourceIds": {
-            "checklistbank": "35580"
-          },
-          "children": [],
-          "uuid": "c0e3ad1e-126a-569-b24-3c89db7b01128e"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_ALMOHADENSIS_ROUCH_1986",
-          "name": "Parapseudoleptomesochra almohadensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258488"
-          },
-          "children": [],
-          "uuid": "4e4eb8b3-0f97-590-981-6c57fcd5142579"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_ALMORAVIDENSIS_ROUCH_1986",
-          "name": "Parapseudoleptomesochra almoravidensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258489"
-          },
-          "children": [],
-          "uuid": "2b4698cc-c2f9-5fe-b9e-f18952e97166fe"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_BAETICOLA_ROUCH_1986",
-          "name": "Parapseudoleptomesochra baeticola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258490"
-          },
-          "children": [],
-          "uuid": "9d8ae136-473b-59a-bcc-5a7094e10c4b9b"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_BALNERIA_ROUCH_1986",
-          "name": "Parapseudoleptomesochra balneria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258491"
-          },
-          "children": [],
-          "uuid": "1fc53f48-c688-5ae-af5-5479a7f97ba923"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_FERNANDEZI_ROUCH_1986",
-          "name": "Parapseudoleptomesochra fernandezi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258492"
-          },
-          "children": [],
-          "uuid": "f50f3720-08cb-57a-ab8-1b81e06f5457fa"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_GUADALHORCENSIS_ROUCH_1986",
-          "name": "Parapseudoleptomesochra guadalhorcensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258493"
-          },
-          "children": [],
-          "uuid": "c6fe2a20-4a4e-523-b5f-72eb0f1e79a645"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_HELLENICA_PESCE_1981",
-          "name": "Parapseudoleptomesochra hellenica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Pesce, 1981",
-          "sourceIds": {
-            "checklistbank": "258494"
-          },
-          "children": [],
-          "uuid": "b96b6a35-3134-50d-af1-dd03b046a25878"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_ITALICA_PESCE_PETKOVSKI_1980",
-          "name": "Parapseudoleptomesochra italica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Pesce & Petkovski, 1980",
-          "sourceIds": {
-            "checklistbank": "258495",
-            "checklistbank-139831": "1139572"
-          },
-          "children": [],
-          "uuid": "65264193-adc1-510-851-1ea80ea079efb8"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_MINORICAE_CHAPPUIS_ROUCH_1960",
-          "name": "Parapseudoleptomesochra minoricae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "(Chappuis & Rouch, 1960)",
-          "sourceIds": {
-            "checklistbank": "258496",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:361035",
-            "gbif-backbone": "4317016"
-          },
-          "children": [],
-          "uuid": "5331d789-05a5-50f-bae-620c948e7b47ec"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_OMMEYADENSIS_ROUCH_1986",
-          "name": "Parapseudoleptomesochra ommeyadensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "Rouch, 1986",
-          "sourceIds": {
-            "checklistbank": "258497"
-          },
-          "children": [],
-          "uuid": "7bf2a6f3-4f0f-525-b0c-e8c9a0a16b0509"
-        },
-        {
-          "id": "SP_PARAPSEUDOLEPTOMESOCHRA_SUBTERRANEA_CHAPPUIS_1928",
-          "name": "Parapseudoleptomesochra subterranea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapseudoleptomesochra",
-          "authorship": "(Chappuis, 1928)",
-          "sourceIds": {
-            "checklistbank": "258499"
-          },
-          "children": [],
-          "uuid": "7b070410-eebe-5fa-a81-2ac0316808f5a4"
-        },
         {
           "id": "SP_PARAPSEUDOLEPTOMESOCHRA_ATTIREI_DUMONT_1984",
           "name": "Parapseudoleptomesochra attirei",
@@ -9525,36 +8732,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PROAMEIRA_ARENICOLA_LANG_1935",
-          "name": "Proameira arenicola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proameira",
-          "authorship": "(Lang, 1935)",
-          "sourceIds": {
-            "checklistbank": "35586"
-          },
-          "children": [],
-          "uuid": "9981be24-50d4-583-97b-f3edc387bc7f2c"
-        },
-        {
-          "id": "SP_PROAMEIRA_DUBIA_SARS_1920",
-          "name": "Proameira dubia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proameira",
-          "authorship": "(Sars, 1920)",
-          "sourceIds": {
-            "checklistbank": "35587",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115587",
-            "gbif-backbone": "2111903"
-          },
-          "children": [],
-          "uuid": "a9658d4e-b9ea-5bf-950-1a00ba7d786cb7"
-        },
-        {
           "id": "SP_PROAMEIRA_ECHINIPES_SOYER_1975",
           "name": "Proameira echinipes",
           "rank": "SPECIES",
@@ -9567,62 +8744,6 @@
           },
           "children": [],
           "uuid": "daa504de-c7b2-564-b9b-b882e10f462cfa"
-        },
-        {
-          "id": "SP_PROAMEIRA_HIDDENSOENSIS_SCH_FER_1936",
-          "name": "Proameira hiddensoensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proameira",
-          "authorship": "(Schäfer, 1936)",
-          "sourceIds": {
-            "checklistbank": "35589"
-          },
-          "children": [],
-          "uuid": "1c95858b-7525-5dd-9c9-abf7a6e06a08bd"
-        },
-        {
-          "id": "SP_PROAMEIRA_PHAEDRA_MONARD_1935",
-          "name": "Proameira phaedra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proameira",
-          "authorship": "(Monard, 1935)",
-          "sourceIds": {
-            "checklistbank": "35590"
-          },
-          "children": [],
-          "uuid": "36c5d76e-96e9-5f4-861-6a266d767bf4c7"
-        },
-        {
-          "id": "SP_PROAMEIRA_PSAMMOPHILA_WELLS_1963",
-          "name": "Proameira psammophila",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proameira",
-          "authorship": "Wells, 1963",
-          "sourceIds": {
-            "checklistbank": "35591"
-          },
-          "children": [],
-          "uuid": "5c076d7c-8dbc-559-ba6-aaad6d295cbc3b"
-        },
-        {
-          "id": "SP_PROAMEIRA_SIGNATA_POR_1964",
-          "name": "Proameira signata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proameira",
-          "authorship": "Por, 1964",
-          "sourceIds": {
-            "checklistbank": "35592"
-          },
-          "children": [],
-          "uuid": "32e6e96f-3dc2-5ef-88e-50dae13a432a14"
         },
         {
           "id": "SP_PROAMEIRA_SIMPLEX_NORMAN_T_SCOTT_1905",
@@ -9678,34 +8799,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PSEUDAMEIRA_ANTENNULATA_SCHRIEVER_1984",
-          "name": "Pseudameira antennulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudameira",
-          "authorship": "Schriever, 1984",
-          "sourceIds": {
-            "checklistbank": "35595"
-          },
-          "children": [],
-          "uuid": "97ac4592-8eb3-5e3-8e8-20dda4561c044e"
-        },
-        {
-          "id": "SP_PSEUDAMEIRA_BREVISETA_KLIE_1950",
-          "name": "Pseudameira breviseta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudameira",
-          "authorship": "Klie, 1950",
-          "sourceIds": {
-            "checklistbank": "35596"
-          },
-          "children": [],
-          "uuid": "d1161a24-b1d8-5b4-aad-72e82ba05e0291"
-        },
-        {
           "id": "SP_PSEUDAMEIRA_CRASSICORNIS_SARS_1911",
           "name": "Pseudameira crassicornis",
           "rank": "SPECIES",
@@ -9722,52 +8815,6 @@
           },
           "children": [],
           "uuid": "e54dbd05-0335-5cf-bcb-2a3574051f347a"
-        },
-        {
-          "id": "SP_PSEUDAMEIRA_FURCATA_SARS_1911",
-          "name": "Pseudameira furcata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudameira",
-          "authorship": "Sars, 1911",
-          "sourceIds": {
-            "checklistbank": "35598",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115598",
-            "gbif-backbone": "2111913"
-          },
-          "children": [],
-          "uuid": "99a4432a-e7ac-5d7-b17-471d227cdfaf2e"
-        },
-        {
-          "id": "SP_PSEUDAMEIRA_GRACILIS_SARS_1920",
-          "name": "Pseudameira gracilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudameira",
-          "authorship": "Sars, 1920",
-          "sourceIds": {
-            "checklistbank": "35599",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:115599",
-            "gbif-backbone": "8328510"
-          },
-          "children": [],
-          "uuid": "8d15a11d-7184-524-876-6a7bc7cbe649cc"
-        },
-        {
-          "id": "SP_PSEUDAMEIRA_LIMICOLA_SOYER_1975",
-          "name": "Pseudameira limicola",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudameira",
-          "authorship": "Soyer, 1975",
-          "sourceIds": {
-            "checklistbank": "35600"
-          },
-          "children": [],
-          "uuid": "4c037bef-60c3-508-826-935d674115474e"
         },
         {
           "id": "SP_PSEUDAMEIRA_MINUTISSIMA_MONARD_1928",
@@ -9935,62 +8982,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_STYGONITOCRELLA_DUBIA_CHAPPUIS_1937",
-          "name": "Stygonitocrella dubia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stygonitocrella",
-          "authorship": "(Chappuis, 1937)",
-          "sourceIds": {
-            "checklistbank": "258506"
-          },
-          "children": [],
-          "uuid": "5c868d0d-fabe-50e-96d-4f6405d52a308c"
-        },
-        {
-          "id": "SP_STYGONITOCRELLA_GUADALFENSIS_ROUCH_1985",
-          "name": "Stygonitocrella guadalfensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stygonitocrella",
-          "authorship": "Rouch, 1985",
-          "sourceIds": {
-            "checklistbank": "258507"
-          },
-          "children": [],
-          "uuid": "76e06346-58cb-503-be2-7ae73a51d3cb45"
-        },
-        {
-          "id": "SP_STYGONITOCRELLA_KARAMANI_PETKOVSKI_1959",
-          "name": "Stygonitocrella karamani",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stygonitocrella",
-          "authorship": "(Petkovski, 1959)",
-          "sourceIds": {
-            "checklistbank": "258508"
-          },
-          "children": [],
-          "uuid": "2f330058-d872-5fb-950-ae3e0dac95e914"
-        },
-        {
-          "id": "SP_STYGONITOCRELLA_PETKOVSKII_PESCE_1985",
-          "name": "Stygonitocrella petkovskii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stygonitocrella",
-          "authorship": "Pesce, 1985",
-          "sourceIds": {
-            "checklistbank": "258509"
-          },
-          "children": [],
-          "uuid": "11aeb73a-ced4-559-828-6c286fc150a364"
-        },
-        {
           "id": "SP_STYGONITOCRELLA_SEQUOYAHI_REID_HUNT_STANLEY_2003",
           "name": "Stygonitocrella sequoyahi",
           "rank": "SPECIES",
@@ -10043,7 +9034,8 @@
           "sourceIds": {
             "checklistbank-127379": "f3a9660e-e336-48ed-a943-1507c6f21cff"
           },
-          "uuid": "af85b36f-590e-412f-bb87-48a8db191784"
+          "uuid": "af85b36f-590e-412f-bb87-48a8db191784",
+          "children": []
         },
         {
           "id": "SP_STYGONITOCRELLA_TRISPINOSA_KARANOVIC",
@@ -10056,7 +9048,8 @@
           "sourceIds": {
             "checklistbank-127379": "e61dc354-4d2a-426e-8011-c44581ec72f2"
           },
-          "uuid": "a514ed03-fb27-439e-ba48-940f79f42fac"
+          "uuid": "a514ed03-fb27-439e-ba48-940f79f42fac",
+          "children": []
         },
         {
           "id": "SP_STYGONITOCRELLA_UNISPINOSA_KARANOVIC",
@@ -10069,7 +9062,8 @@
           "sourceIds": {
             "checklistbank-127379": "63cd4011-9f61-4c05-b22d-6ed75eef00f0"
           },
-          "uuid": "4bcc849b-a39f-4a87-bbca-86c9807a15d4"
+          "uuid": "4bcc849b-a39f-4a87-bbca-86c9807a15d4",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10080,35 +9074,6 @@
       "name": "Nitocra",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_NITOCRA_FRAGILIS_SARS_G_O_1905",
-          "name": "Nitocra fragilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocra",
-          "authorship": "Sars G.O., 1905",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:233960",
-            "gbif-backbone": "12238340"
-          },
-          "children": [],
-          "uuid": "0f920326-5d22-581-b93-bdbdcab4774c55"
-        },
-        {
-          "id": "SP_NITOCRA_MINOR_WILLEY_1930",
-          "name": "Nitocra minor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nitocra",
-          "authorship": "Willey, 1930",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1672608"
-          },
-          "children": [],
-          "uuid": "ce51d9c6-d002-5c9-a47-d060931f5c9865"
-        },
         {
           "id": "SP_NITOCRA_SPINIPES_BOECK_1865",
           "name": "Nitocra spinipes",
@@ -10176,7 +9141,8 @@
           "sourceIds": {
             "checklistbank-127379": "e21c7d2b-c9a5-42d0-9a64-95ae1a899062"
           },
-          "uuid": "3a75873b-bceb-4a65-b10d-426d3279c522"
+          "uuid": "3a75873b-bceb-4a65-b10d-426d3279c522",
+          "children": []
         },
         {
           "id": "SP_NITOCRA_AFFINIS_GURNEY",
@@ -10189,7 +9155,8 @@
           "sourceIds": {
             "checklistbank-127379": "32e9635c-f3ae-49be-a79f-97f4641fe8dc"
           },
-          "uuid": "2d6e6549-33cc-4b35-a31b-37ab892364cd"
+          "uuid": "2d6e6549-33cc-4b35-a31b-37ab892364cd",
+          "children": []
         },
         {
           "id": "SP_NITOCRA_HUMPHREYSI_KARANOVIC_PESCE",
@@ -10202,7 +9169,8 @@
           "sourceIds": {
             "checklistbank-127379": "f2ff017e-3b2d-4b2f-9ae6-8b93262f4a65"
           },
-          "uuid": "991b2eeb-45f7-4b42-b174-ab25eef1ca44"
+          "uuid": "991b2eeb-45f7-4b42-b174-ab25eef1ca44",
+          "children": []
         },
         {
           "id": "SP_NITOCRA_LACUSTRIS_SCHMANKEVITSCH",
@@ -10215,7 +9183,8 @@
           "sourceIds": {
             "checklistbank-127379": "7ebd1842-99f5-42a4-9c1c-061410bf4a66"
           },
-          "uuid": "28b914c7-c985-41e6-abc9-c78614363b8d"
+          "uuid": "28b914c7-c985-41e6-abc9-c78614363b8d",
+          "children": []
         },
         {
           "id": "SP_NITOCRA_YEELIRRIE_KARANOVIC_EBERHARD_COOPER_GUZIK",
@@ -10228,14 +9197,15 @@
           "sourceIds": {
             "checklistbank-127379": "3ea33711-0be2-419d-8ae9-ce266f6a2b16"
           },
-          "uuid": "938e9df5-c349-451a-9e01-571a7853d236"
+          "uuid": "938e9df5-c349-451a-9e01-571a7853d236",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ameiridae"
     }
   ],
-  "speciesCount": 579,
+  "speciesCount": 507,
   "appSlug": "ameiridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",

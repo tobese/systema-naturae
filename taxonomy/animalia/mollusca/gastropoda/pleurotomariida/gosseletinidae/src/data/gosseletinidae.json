@@ -611,11 +611,16 @@
             "col": [
               "F4HLY"
             ],
-            "checklistbank": "txn:73819",
+            "checklistbank": [
+              "txn:73819",
+              "urn:lsid:marinespecies.org:taxname:1894498"
+            ],
             "gbif-backbone": "7348022",
-            "checklistbank-1174": "txn:73819"
+            "checklistbank-1174": [
+              "txn:73819"
+            ]
           },
-          "authorityIds": "col:F4HLY",
+          "authorityIds": "checklistbank:txn:73819,checklistbank:urn:lsid:marinespecies.org:taxname:1894498,checklistbank-1174:txn:73819,col:F4HLY,gbif-backbone:7348022",
           "description": "Euryzone delphinuloides is a gosseletinidae species found in its native region."
         },
         {
@@ -10152,22 +10157,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_EURYZONE_DELPHINULOIDES_HEIDELBERGER_AMLER_2002",
-          "name": "\"Euryzone delphinuloides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Euryzone",
-          "authorship": "\"Heidelberger & Amler, 2002\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1894498",
-            "checklistbank-1174": "txn:73819"
-          },
-          "children": [],
-          "uuid": "4e87dd16-63b6-5a1-a75-16de1161fdf16e",
-          "description": "\"Euryzone delphinuloides is a gosseletinidae species found in its native region."
-        },
-        {
           "id": "SP_EURYZONE_NATICAEFORMIS_SANDBERGER_AND_SANDBERGER_1853",
           "name": "Euryzone naticaeformis",
           "rank": "SPECIES",
@@ -15372,7 +15361,7 @@
     }
   ],
   "genusCount": 166,
-  "speciesCount": 902,
+  "speciesCount": 901,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

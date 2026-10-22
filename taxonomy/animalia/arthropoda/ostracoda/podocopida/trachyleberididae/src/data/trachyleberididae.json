@@ -1181,9 +1181,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:792276"
             ],
-            "checklistbank-1174": "txn:347416"
+            "checklistbank-1174": [
+              "txn:347416"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:792276"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:792276,col:85WXD,col:KZCMC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:792276,checklistbank-1174:txn:347416,checklistbank-2011:urn:lsid:marinespecies.org:taxname:792276,col:85WXD,col:KZCMC",
           "description": "Phacorhabdotus simplex is a trachyleberididae species found in its native region."
         },
         {
@@ -31421,10 +31426,15 @@
             "col": [
               "85XYJ"
             ],
-            "checklistbank": "ott5772745",
-            "checklistbank-1174": "txn:398761"
+            "checklistbank": [
+              "ott5772745",
+              "urn:lsid:marinespecies.org:taxname:810456"
+            ],
+            "checklistbank-1174": [
+              "txn:398761"
+            ]
           },
-          "authorityIds": "col:85XYJ",
+          "authorityIds": "checklistbank:ott5772745,checklistbank:urn:lsid:marinespecies.org:taxname:810456,checklistbank-1174:txn:398761,col:85XYJ",
           "description": "Ruggieria tetraptera is a trachyleberididae species found in its native region."
         },
         {
@@ -37513,7 +37523,8 @@
           "sourceIds": {
             "col": [
               "5YNHN"
-            ]
+            ],
+            "checklistbank-139831": "1003654"
           },
           "authorityIds": "col:5YNHN",
           "description": "Chrysocythere keiji is a trachyleberididae species found in its native region."
@@ -43007,7 +43018,8 @@
           "sourceIds": {
             "itis": [
               "684140"
-            ]
+            ],
+            "checklistbank-139831": "1341521"
           },
           "authorityIds": "itis:684140",
           "description": "Puriana floridana is a trachyleberididae species found in its native region."
@@ -43025,7 +43037,8 @@
           "sourceIds": {
             "itis": [
               "684141"
-            ]
+            ],
+            "checklistbank-139831": "1341522"
           },
           "authorityIds": "itis:684141",
           "description": "Puriana krutaki is a trachyleberididae species found in its native region."
@@ -45749,7 +45762,8 @@
           "authorship": "\"Hartmann, 1978\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:808242",
-            "checklistbank-127379": "5ae2f597-9653-4ded-a51c-4c8d4798ca51"
+            "checklistbank-127379": "5ae2f597-9653-4ded-a51c-4c8d4798ca51",
+            "checklistbank-139831": "994698"
           },
           "children": [],
           "uuid": "8b2df699-c704-5b5-b64-774359a21466c3",
@@ -46134,21 +46148,6 @@
           "description": "\"Phacorhabdotus (Praephacorhabdotus) is a trachyleberididae species found in its native region."
         },
         {
-          "id": "SP_PHACORHABDOTUS_SIMPLEX_HAZEL_PAULSON_1964",
-          "name": "Phacorhabdotus simplex",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phacorhabdotus",
-          "authorship": "Hazel & Paulson, 1964",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:792276",
-            "checklistbank-1174": "txn:347416"
-          },
-          "uuid": "b5ae0f59-6047-4590-a028-cff378f0d77c",
-          "children": []
-        },
-        {
           "id": "SP_PHACORHABDOTUS_FLABELLICARINUS_YAMAGUCHI_ET_AL_2017",
           "name": "Phacorhabdotus flabellicarinus",
           "rank": "SPECIES",
@@ -46266,22 +46265,6 @@
           "children": [],
           "uuid": "9a1f41a7-1aff-59e-8f2-73f26b3e0baae9",
           "description": "\"Ruggieria (Keijella) is a trachyleberididae species found in its native region."
-        },
-        {
-          "id": "SP_RUGGIERIA_TETRAPTERA_SEGUENZA_1880_RUGGIERI_1962",
-          "name": "\"Ruggieria tetraptera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ruggieria",
-          "authorship": "\"(Seguenza, 1880) Ruggieri, 1962\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:810456",
-            "checklistbank-1174": "txn:398761"
-          },
-          "children": [],
-          "uuid": "83e61f87-5cd8-5d3-96a-a5697e0068d243",
-          "description": "\"Ruggieria tetraptera is a trachyleberididae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -47428,7 +47411,7 @@
       "lineage": "trachyleberididae"
     }
   ],
-  "speciesCount": 2540,
+  "speciesCount": 2538,
   "appSlug": "trachyleberididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",

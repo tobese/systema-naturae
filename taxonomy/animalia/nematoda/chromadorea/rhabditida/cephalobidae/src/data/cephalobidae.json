@@ -404,12 +404,18 @@
           "lineage": "Cervidellus",
           "authorship": "(Thorne, 1925)",
           "sourceIds": {
-            "checklistbank": "248978",
-            "wikispecies": "Cervidellus_cervus"
+            "checklistbank": [
+              "248978",
+              "urn:lsid:marinespecies.org:taxname:1294356"
+            ],
+            "wikispecies": [
+              "Cervidellus_cervus"
+            ]
           },
           "children": [],
           "uuid": "3fca77f5-13f9-5a8-9e0-09955ec978047e",
-          "description": "Cervidellus cervus is a cephalobidae species found in its native region."
+          "description": "Cervidellus cervus is a cephalobidae species found in its native region.",
+          "authorityIds": "checklistbank:248978,checklistbank:urn:lsid:marinespecies.org:taxname:1294356,wikispecies:Cervidellus_cervus"
         },
         {
           "id": "SP_CERVIDELLUS_RARUS_NESTEROV_1969",
@@ -7154,12 +7160,21 @@
           "lineage": "Zeldia",
           "authorship": "(Thorne, 1925)",
           "sourceIds": {
-            "checklistbank": "249042",
-            "wikispecies": "Zeldia_punctata"
+            "checklistbank": [
+              "249042",
+              "urn:lsid:marinespecies.org:taxname:1319274"
+            ],
+            "wikispecies": [
+              "Zeldia_punctata"
+            ],
+            "checklistbank-139831": [
+              "510659"
+            ]
           },
           "children": [],
           "uuid": "3ff0ff5f-27ab-51a-88c-63eca212d07a49",
-          "description": "Zeldia punctata is a cephalobidae species found in its native region."
+          "description": "Zeldia punctata is a cephalobidae species found in its native region.",
+          "authorityIds": "checklistbank:249042,checklistbank:urn:lsid:marinespecies.org:taxname:1319274,checklistbank-139831:510659,wikispecies:Zeldia_punctata"
         },
         {
           "id": "SP_ZELDIA_PUNCTULATA_THORNE_1925_THORNE_1937",
@@ -12037,22 +12052,6 @@
           "description": "\"Cervidellus vexilliger\" is a cephalobidae species found in its native region."
         },
         {
-          "id": "SP_CERVIDELLUS_CERVUS_THORNE_1925_THORNE_1937",
-          "name": "\"Cervidellus cervus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cervidellus",
-          "authorship": "\"(Thorne, 1925) Thorne, 1937\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1294356",
-            "wikispecies": "Cervidellus_cervus"
-          },
-          "children": [],
-          "uuid": "845d8b3b-9796-529-bce-a74045d7060101",
-          "description": "\"Cervidellus cervus\" is a cephalobidae species found in its native region."
-        },
-        {
           "id": "SP_CERVIDELLUS_RARUS_NESTEROV_1969_BOSTR_M_DE_LEY_1996",
           "name": "\"Cervidellus rarus\"",
           "rank": "SPECIES",
@@ -12513,7 +12512,8 @@
           "sourceIds": {
             "checklistbank-139831": "510658"
           },
-          "uuid": "6d80c7a0-6888-4e69-91b0-83ea97703b86"
+          "uuid": "6d80c7a0-6888-4e69-91b0-83ea97703b86",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12644,36 +12644,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cephalobidae"
-    },
-    {
-      "id": "GENUS_ZELDIA",
-      "name": "\"Zeldia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ZELDIA_PUNCTATA_THORNE_1925_THORNE_1937",
-          "name": "\"Zeldia punctata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Zeldia",
-          "authorship": "\"(Thorne, 1925) Thorne, 1937\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1319274",
-            "wikispecies": "Zeldia_punctata",
-            "checklistbank-139831": "510659"
-          },
-          "children": [],
-          "uuid": "ac9665c1-a6fe-5e4-95c-8e8f9254ee9879",
-          "description": "\"Zeldia punctata\" is a cephalobidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cephalobidae"
     }
   ],
-  "genusCount": 52,
-  "speciesCount": 757,
+  "genusCount": 51,
+  "speciesCount": 755,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -722,10 +722,15 @@
             "col": [
               "4MC3L"
             ],
-            "checklistbank": "3212397",
-            "checklistbank-1174": "txn:250789"
+            "checklistbank": [
+              "3212397",
+              "urn:lsid:marinespecies.org:taxname:476542"
+            ],
+            "checklistbank-1174": [
+              "txn:250789"
+            ]
           },
-          "authorityIds": "col:4MC3L",
+          "authorityIds": "checklistbank:3212397,checklistbank:urn:lsid:marinespecies.org:taxname:476542,checklistbank-1174:txn:250789,col:4MC3L",
           "authorship": "(King, 1832)"
         },
         {
@@ -819,10 +824,15 @@
             "col": [
               "9G9TR"
             ],
-            "checklistbank": "txn:250808",
-            "checklistbank-1174": "txn:250808"
+            "checklistbank": [
+              "txn:250808",
+              "urn:lsid:marinespecies.org:taxname:1598886"
+            ],
+            "checklistbank-1174": [
+              "txn:250808"
+            ]
           },
-          "authorityIds": "col:9G9TR",
+          "authorityIds": "checklistbank:txn:250808,checklistbank:urn:lsid:marinespecies.org:taxname:1598886,checklistbank-1174:txn:250808,col:9G9TR",
           "authorship": "(Sowerby 1846)"
         }
       ]
@@ -4273,22 +4283,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PRIENE_SCABRUM_P_P_KING_1832",
-          "name": "\"Priene scabrum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Priene",
-          "authorship": "\"(P. P. King, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:476542",
-            "checklistbank-1174": "txn:250789"
-          },
-          "children": [],
-          "uuid": "cf74488b-a59f-542-ba7-0a7e6ff74d750b",
-          "description": "\"Priene scabrum\" is a ranellidae species found in its native region."
-        },
-        {
           "id": "SP_PRIENE_OREGONENSIS_ARNOLD_1907",
           "name": "Priene oregonensis",
           "rank": "SPECIES",
@@ -4311,22 +4305,6 @@
       "name": "\"Ameranella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_AMERANELLA_VERRUCULOSA_G_B_SOWERBY_I_1846",
-          "name": "\"Ameranella verruculosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ameranella",
-          "authorship": "\"(G. B. Sowerby I, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598886",
-            "checklistbank-1174": "txn:250808"
-          },
-          "children": [],
-          "uuid": "04d2c039-45a5-543-aee-9d50ac14dd59f4",
-          "description": "\"Ameranella verruculosa\" is a ranellidae species found in its native region."
-        },
         {
           "id": "SP_AMERANELLA_KEWI_DICKERSON_1915",
           "name": "\"Ameranella kewi\"",
@@ -5051,7 +5029,7 @@
     }
   ],
   "genusCount": 48,
-  "speciesCount": 304,
+  "speciesCount": 302,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

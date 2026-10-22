@@ -111,11 +111,16 @@
             "col": [
               "828NN"
             ],
-            "checklistbank": "txn:154037",
-            "checklistbank-1174": "txn:154037"
+            "checklistbank": [
+              "txn:154037",
+              "urn:lsid:marinespecies.org:taxname:1037124"
+            ],
+            "checklistbank-1174": [
+              "txn:154037"
+            ]
           },
           "uuid": "fdda01e9-56f7-561-8c2-c6b106f15ca39d",
-          "authorityIds": "col:828NN,gbif:8701189",
+          "authorityIds": "checklistbank:txn:154037,checklistbank:urn:lsid:marinespecies.org:taxname:1037124,checklistbank-1174:txn:154037,col:828NN,gbif:8701189",
           "children": [],
           "authorship": "Gradstein and Kaminski 1997"
         },
@@ -238,22 +243,6 @@
           "children": [],
           "uuid": "c7b12dc2-4ebd-55d-966-f42db99dd3e4fa",
           "description": "\"Conotrochammina kennetti\" is a conotrochamminidae species found in its native region."
-        },
-        {
-          "id": "SP_CONOTROCHAMMINA_VOERINGENSIS_GRADSTEIN_KAMINSKI_1997",
-          "name": "\"Conotrochammina voeringensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Conotrochammina",
-          "authorship": "\"Gradstein & Kaminski, 1997\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1037124",
-            "checklistbank-1174": "txn:154037"
-          },
-          "children": [],
-          "uuid": "ace08d90-36ef-56c-94c-977e47b719dc8b",
-          "description": "\"Conotrochammina voeringensis\" is a conotrochamminidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -296,5 +285,5 @@
     "checklistbank-1174": "txn:154036"
   },
   "genusCount": 4,
-  "speciesCount": 13
+  "speciesCount": 12
 }

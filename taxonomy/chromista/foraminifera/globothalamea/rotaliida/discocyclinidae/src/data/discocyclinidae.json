@@ -235,11 +235,16 @@
             "col": [
               "8TGGZ"
             ],
-            "checklistbank": "txn:517600",
-            "checklistbank-1174": "txn:517600"
+            "checklistbank": [
+              "txn:517600",
+              "urn:lsid:marinespecies.org:taxname:1042250"
+            ],
+            "checklistbank-1174": [
+              "txn:517600"
+            ]
           },
           "uuid": "2d75669b-f5fa-5a6-81d-b1e1caca6ab185",
-          "authorityIds": "col:8TGGZ,gbif:11532329",
+          "authorityIds": "checklistbank:txn:517600,checklistbank:urn:lsid:marinespecies.org:taxname:1042250,checklistbank-1174:txn:517600,col:8TGGZ,gbif:11532329",
           "authorship": "wan der Weijden 1940"
         },
         {
@@ -1631,11 +1636,16 @@
             "col": [
               "82D4V"
             ],
-            "checklistbank": "txn:516734",
-            "checklistbank-1174": "txn:516734"
+            "checklistbank": [
+              "txn:516734",
+              "urn:lsid:marinespecies.org:taxname:1042272"
+            ],
+            "checklistbank-1174": [
+              "txn:516734"
+            ]
           },
           "uuid": "19079814-d44c-56b-916-8243ea6c438c0e",
-          "authorityIds": "col:82D4V,gbif:8890550",
+          "authorityIds": "checklistbank:txn:516734,checklistbank:urn:lsid:marinespecies.org:taxname:1042272,checklistbank-1174:txn:516734,col:82D4V,gbif:8890550",
           "authorship": "Douville 1922"
         },
         {
@@ -4199,22 +4209,6 @@
           "description": "\"Discocyclina spliti is a discocyclinidae species found in its native region."
         },
         {
-          "id": "SP_DISCOCYCLINA_AUGUSTAE_LESS_1987",
-          "name": "\"Discocyclina augustae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Discocyclina",
-          "authorship": "\"Less, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1042250",
-            "checklistbank-1174": "txn:517600"
-          },
-          "children": [],
-          "uuid": "3fcfffe6-8567-50c-860-81ed387262350b",
-          "description": "\"Discocyclina augustae is a discocyclinidae species found in its native region."
-        },
-        {
           "id": "SP_DISCOCYCLINA_KNESSAE_LESS_1987",
           "name": "\"Discocyclina knessae\"",
           "rank": "SPECIES",
@@ -4393,22 +4387,6 @@
           "children": [],
           "uuid": "451742e6-7c1b-565-81c-2852d3d78b96f5",
           "description": "\"Discocyclina pulcra is a discocyclinidae species found in its native region."
-        },
-        {
-          "id": "SP_DISCOCYCLINA_SEUNESI_LESS_ZCAN_2007",
-          "name": "\"Discocyclina seunesi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Discocyclina",
-          "authorship": "\"Less & Özcan, 2007\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1042272",
-            "checklistbank-1174": "txn:516734"
-          },
-          "children": [],
-          "uuid": "63e601fe-aa3f-5c0-87d-0986c05cf2b2de",
-          "description": "\"Discocyclina seunesi is a discocyclinidae species found in its native region."
         },
         {
           "id": "SP_DISCOCYCLINA_DISCOCYCLINA_DOUVILL_1916_EM_RAO_1944",
@@ -6223,7 +6201,7 @@
     }
   ],
   "genusCount": 18,
-  "speciesCount": 341,
+  "speciesCount": 339,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -596,10 +596,15 @@
             "col": [
               "94LTP"
             ],
-            "checklistbank": "txn:398215",
-            "checklistbank-1174": "txn:398215"
+            "checklistbank": [
+              "txn:398215",
+              "urn:lsid:marinespecies.org:taxname:1579463"
+            ],
+            "checklistbank-1174": [
+              "txn:398215"
+            ]
           },
-          "authorityIds": "col:94LTP",
+          "authorityIds": "checklistbank:txn:398215,checklistbank:urn:lsid:marinespecies.org:taxname:1579463,checklistbank-1174:txn:398215,col:94LTP",
           "authorship": "(Agassiz 1900)"
         },
         {
@@ -650,10 +655,15 @@
             "col": [
               "94LTQ"
             ],
-            "checklistbank": "txn:398208",
-            "checklistbank-1174": "txn:398208"
+            "checklistbank": [
+              "txn:398208",
+              "urn:lsid:marinespecies.org:taxname:1579459"
+            ],
+            "checklistbank-1174": [
+              "txn:398208"
+            ]
           },
-          "authorityIds": "col:94LTQ",
+          "authorityIds": "checklistbank:txn:398208,checklistbank:urn:lsid:marinespecies.org:taxname:1579459,checklistbank-1174:txn:398208,col:94LTQ",
           "authorship": "(Credner 1900)"
         },
         {
@@ -1954,10 +1964,15 @@
             "col": [
               "9H4SZ"
             ],
-            "checklistbank": "txn:515148",
-            "checklistbank-1174": "txn:515148"
+            "checklistbank": [
+              "txn:515148",
+              "urn:lsid:marinespecies.org:taxname:1599975"
+            ],
+            "checklistbank-1174": [
+              "txn:515148"
+            ]
           },
-          "authorityIds": "col:9H4SZ",
+          "authorityIds": "checklistbank:txn:515148,checklistbank:urn:lsid:marinespecies.org:taxname:1599975,checklistbank-1174:txn:515148,col:9H4SZ",
           "authorship": "(Chiplonkar and Badve 1973)"
         },
         {
@@ -2442,10 +2457,15 @@
             "col": [
               "7T48V"
             ],
-            "checklistbank": "txn:398226",
-            "checklistbank-1174": "txn:398226"
+            "checklistbank": [
+              "txn:398226",
+              "urn:lsid:marinespecies.org:taxname:1338671"
+            ],
+            "checklistbank-1174": [
+              "txn:398226"
+            ]
           },
-          "authorityIds": "col:7T48V",
+          "authorityIds": "checklistbank:txn:398226,checklistbank:urn:lsid:marinespecies.org:taxname:1338671,checklistbank-1174:txn:398226,col:7T48V",
           "authorship": "(Lamarck 1900)"
         },
         {
@@ -3218,38 +3238,6 @@
           "description": "\"Myophorella alina\" is a myophorellidae species found in its native region."
         },
         {
-          "id": "SP_MYOPHORELLA_CLIVOSA_CREDNER_1863",
-          "name": "\"Myophorella clivosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Myophorella",
-          "authorship": "\"(Credner, 1863)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1579459",
-            "checklistbank-1174": "txn:398208"
-          },
-          "children": [],
-          "uuid": "fc6ef3d0-9fc4-56f-947-95e2198632f652",
-          "description": "\"Myophorella clivosa\" is a myophorellidae species found in its native region."
-        },
-        {
-          "id": "SP_MYOPHORELLA_CLATHRATA_AGASSIZ_1840",
-          "name": "\"Myophorella clathrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Myophorella",
-          "authorship": "\"(Agassiz, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1579463",
-            "checklistbank-1174": "txn:398215"
-          },
-          "children": [],
-          "uuid": "62643662-5675-54c-95a-34f0bbcd4c6228",
-          "description": "\"Myophorella clathrata\" is a myophorellidae species found in its native region."
-        },
-        {
           "id": "SP_MYOPHORELLA_INTERMEDIA_FAHRENKOHL_1844",
           "name": "\"Myophorella intermedia\"",
           "rank": "SPECIES",
@@ -3653,31 +3641,6 @@
       "lineage": "myophorellidae"
     },
     {
-      "id": "GENUS_SCAPHOTRIGONIA",
-      "name": "\"Scaphotrigonia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SCAPHOTRIGONIA_NAVIS_LAMARCK_1819",
-          "name": "\"Scaphotrigonia navis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Scaphotrigonia",
-          "authorship": "\"(Lamarck, 1819)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338671",
-            "checklistbank-1174": "txn:398226"
-          },
-          "children": [],
-          "uuid": "f5d01ec1-dca8-578-a8d-9bf3aeced67afa",
-          "description": "\"Scaphotrigonia navis\" is a myophorellidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myophorellidae"
-    },
-    {
       "id": "GENUS_MOERICKELLA",
       "name": "\"Moerickella",
       "rank": "GENUS",
@@ -3736,22 +3699,6 @@
       "name": "\"Jhabotrigonia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_JHABOTRIGONIA_SINUICOSTATA_CHIPLONKAR_BADVE_1973",
-          "name": "\"Jhabotrigonia sinuicostata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Jhabotrigonia",
-          "authorship": "\"(Chiplonkar & Badve, 1973)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599975",
-            "checklistbank-1174": "txn:515148"
-          },
-          "children": [],
-          "uuid": "c7f306ef-0cd3-508-b12-96c4565514d684",
-          "description": "\"Jhabotrigonia sinuicostata\" is a myophorellidae species found in its native region."
-        },
         {
           "id": "SP_JHABOTRIGONIA_FLEXICOSTATA_CHIPLONKAR_AND_BADVE_1973",
           "name": "Jhabotrigonia flexicostata",
@@ -4581,8 +4528,8 @@
       "lineage": "myophorellidae"
     }
   ],
-  "genusCount": 42,
-  "speciesCount": 258,
+  "genusCount": 41,
+  "speciesCount": 254,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

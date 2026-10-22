@@ -576,9 +576,14 @@
                 "col": [
                   "STGQV"
                 ],
-                "checklistbank-1174": "txn:432989"
+                "checklistbank-1174": [
+                  "txn:432989"
+                ],
+                "gbif-backbone": [
+                  "11169287"
+                ]
               },
-              "authorityIds": "col:STGQV",
+              "authorityIds": "checklistbank-1174:txn:432989,col:STGQV,gbif-backbone:11169287",
               "description": "Shurabia creta is a geinitziidae species found in its native region.",
               "children": []
             },
@@ -1035,20 +1040,6 @@
           "authorship": "Aristov et al., 2009",
           "sourceIds": {
             "gbif-backbone": "8612412"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SHURABIA_CRETA_ARISTOV_D_S_2020",
-          "name": "Shurabia creta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Shurabia",
-          "authorship": "Aristov D.S., 2020",
-          "sourceIds": {
-            "gbif-backbone": "11169287",
-            "checklistbank-1174": "txn:432989"
           },
           "children": []
         },
@@ -1575,7 +1566,7 @@
       ]
     }
   ],
-  "speciesCount": 90,
+  "speciesCount": 89,
   "appSlug": "geinitziidae",
   "continents": [
     "Europe"
