@@ -3,7 +3,7 @@
   "name": "Weigeltisauridae",
   "rank": "FAMILY",
   "appSlug": "weigeltisauridae",
-  "speciesCount": 6,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_COELUROSAURAVUS",
@@ -85,7 +85,8 @@
           "lineage": "Rautiania",
           "authorship": "Bulanov & Sennikov, 2006",
           "sourceIds": {
-            "gbif-backbone": "4968384"
+            "gbif-backbone": "4968384",
+            "checklistbank-1174": "txn:138326"
           },
           "children": []
         },
@@ -98,7 +99,8 @@
           "lineage": "Rautiania",
           "authorship": "Bulanov & Sennikov, 2006",
           "sourceIds": {
-            "gbif-backbone": "4968383"
+            "gbif-backbone": "4968383",
+            "checklistbank-1174": "txn:138327"
           },
           "children": []
         }
@@ -120,13 +122,36 @@
           "lineage": "Glaurung",
           "authorship": "Bulanov & Sennikov, 2015",
           "sourceIds": {
-            "gbif-backbone": "11197055"
+            "gbif-backbone": "11197055",
+            "checklistbank-1174": "txn:376053"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "weigeltisauridae"
+    },
+    {
+      "id": "GENUS_WEIGELTISAURUS",
+      "name": "Weigeltisaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "weigeltisauridae",
+      "children": [
+        {
+          "id": "SP_WEIGELTISAURUS_JAEKELI_WEIGELT_1930",
+          "name": "Weigeltisaurus jaekeli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Weigeltisaurus",
+          "authorship": "(Weigelt 1930)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:138000"
+          },
+          "uuid": "45f5a7c1-cb55-4a70-9f6d-c12a5f817e94"
+        }
+      ]
     }
   ],
   "genusCount": 5
