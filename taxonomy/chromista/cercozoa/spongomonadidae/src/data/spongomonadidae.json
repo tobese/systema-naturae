@@ -3,7 +3,7 @@
   "name": "Spongomonadidae",
   "rank": "FAMILY",
   "appSlug": "spongomonadidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_SPONGOMONAS",
@@ -33,14 +33,60 @@
           "lineage": "Spongomonas",
           "authorship": "F.Stein",
           "sourceIds": {
-            "gbif-backbone": "7960678"
+            "gbif-backbone": "7960678",
+            "checklistbank-139831": "1613811"
           },
           "children": [],
           "uuid": "9692b26d-3cb3-54d-9de-5afde4afe63e9b"
+        },
+        {
+          "id": "SP_SPONGOMONAS_SPLENDIDA",
+          "name": "Spongomonas splendida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongomonas",
+          "sourceIds": {
+            "checklistbank-139831": "1026626"
+          },
+          "uuid": "2c8cbcd8-d6b6-446b-a175-cafa46362590"
+        },
+        {
+          "id": "SP_SPONGOMONAS_INTESTINALIS",
+          "name": "Spongomonas intestinalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongomonas",
+          "sourceIds": {
+            "checklistbank-139831": "1435847"
+          },
+          "uuid": "4d5ea7c3-40ff-4437-8d92-329a7a6069d2"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spongomonadidae"
+    },
+    {
+      "id": "GENUS_RHIPIDODENDRON",
+      "name": "Rhipidodendron",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "spongomonadidae",
+      "children": [
+        {
+          "id": "SP_RHIPIDODENDRON_HUXLEYI",
+          "name": "Rhipidodendron huxleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhipidodendron",
+          "sourceIds": {
+            "checklistbank-139831": "1026633"
+          },
+          "uuid": "833030a6-b5ed-4596-b6b5-5a11f7d71ef3"
+        }
+      ]
     }
   ],
   "genusCount": 1
