@@ -3,7 +3,7 @@
   "name": "Chaetosomatidae",
   "rank": "FAMILY",
   "appSlug": "chaetosomatidae",
-  "speciesCount": 1,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_CHAETOSOMA",
@@ -19,13 +19,68 @@
           "lineage": "Chaetosoma",
           "authorship": "Westwood, 1851",
           "sourceIds": {
-            "gbif-backbone": "7008779"
+            "gbif-backbone": "7008779",
+            "checklistbank-139831": "387411"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHAETOSOMA_COLOSSA",
+          "name": "Chaetosoma colossa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetosoma",
+          "sourceIds": {
+            "checklistbank-139831": "387392"
+          },
+          "uuid": "c722af1b-d37c-4c1f-a2a2-5a857666dd39"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chaetosomatidae"
+    },
+    {
+      "id": "GENUS_CHAETOSOMODES",
+      "name": "Chaetosomodes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaetosomatidae",
+      "children": [
+        {
+          "id": "SP_CHAETOSOMODES_HALLI",
+          "name": "Chaetosomodes halli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetosomodes",
+          "sourceIds": {
+            "checklistbank-139831": "387416"
+          },
+          "uuid": "519126e5-4730-4bd1-aa25-35be24dbaee8"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_METAXINA",
+      "name": "Metaxina",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaetosomatidae",
+      "children": [
+        {
+          "id": "SP_METAXINA_ORNATA",
+          "name": "Metaxina ornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metaxina",
+          "sourceIds": {
+            "checklistbank-139831": "780876"
+          },
+          "uuid": "2bf75a18-0e5e-4bd3-b398-33ffec4be20b"
+        }
+      ]
     }
   ],
   "genusCount": 1
