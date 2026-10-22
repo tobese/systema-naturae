@@ -3,7 +3,7 @@
   "name": "Camuropiscidae",
   "rank": "FAMILY",
   "appSlug": "camuropiscidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_CAMUROPISCIS",
@@ -19,7 +19,8 @@
           "lineage": "Camuropiscis",
           "authorship": "Dennis & Miles, 1979",
           "sourceIds": {
-            "gbif-backbone": "8481768"
+            "gbif-backbone": "8481768",
+            "checklistbank-1174": "txn:326163"
           },
           "children": []
         },
@@ -32,14 +33,78 @@
           "lineage": "Camuropiscis",
           "authorship": "Dennis & Miles, 1979",
           "sourceIds": {
-            "gbif-backbone": "8590179"
+            "gbif-backbone": "8590179",
+            "checklistbank-1174": "txn:326162"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "camuropiscidae"
+    },
+    {
+      "id": "GENUS_INCISOSCUTUM",
+      "name": "Incisoscutum",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "camuropiscidae",
+      "children": [
+        {
+          "id": "SP_INCISOSCUTUM_SARAHAE_LONG_1994",
+          "name": "Incisoscutum sarahae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Incisoscutum",
+          "authorship": "(Long 1994)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:326160"
+          },
+          "uuid": "71ebbc26-72cd-49a4-8274-42035a032343",
+          "children": []
+        },
+        {
+          "id": "SP_INCISOSCUTUM_RITCHIEI_DENNIS_AND_MILES_1981",
+          "name": "Incisoscutum ritchiei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Incisoscutum",
+          "authorship": "DENNIS and MILES 1981",
+          "sourceIds": {
+            "checklistbank-1174": "txn:419391"
+          },
+          "uuid": "164c9f43-e637-47e4-8c58-6331e4bd5842",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_FALLACOSTEUS",
+      "name": "Fallacosteus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "camuropiscidae",
+      "children": [
+        {
+          "id": "SP_FALLACOSTEUS_TURNERI_LONG_1990",
+          "name": "Fallacosteus turneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fallacosteus",
+          "authorship": "Long 1990",
+          "sourceIds": {
+            "checklistbank-1174": "txn:504401"
+          },
+          "uuid": "6324c8f2-b30b-439b-9ee0-60bb103a35e8",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:326155"
+  }
 }

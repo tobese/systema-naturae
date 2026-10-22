@@ -3,7 +3,7 @@
   "name": "Mimotonidae",
   "rank": "FAMILY",
   "appSlug": "mimotonidae",
-  "speciesCount": 6,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_MIMOTONA",
@@ -45,7 +45,8 @@
           "lineage": "Mimotona",
           "authorship": "Dashzeveg & Russell, 1988",
           "sourceIds": {
-            "gbif-backbone": "8599073"
+            "gbif-backbone": "8599073",
+            "checklistbank-1174": "txn:247216"
           },
           "children": []
         }
@@ -102,14 +103,62 @@
           "lineage": "Mimolagus",
           "authorship": "Fostowicz-Frelik, Li, Mao, Meng & Wang, 2015",
           "sourceIds": {
-            "gbif-backbone": "8563123"
+            "gbif-backbone": "8563123",
+            "checklistbank-1174": "txn:332229"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mimotonidae"
+    },
+    {
+      "id": "GENUS_AMAR",
+      "name": "Amar",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mimotonidae",
+      "children": [
+        {
+          "id": "SP_AMAR_ALEATOR_DASHZEVEG_AND_RUSSELL_1988",
+          "name": "Amar aleator",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amar",
+          "authorship": "Dashzeveg and Russell 1988",
+          "sourceIds": {
+            "checklistbank-1174": "txn:247213"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GOMPHOS",
+      "name": "Gomphos",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mimotonidae",
+      "children": [
+        {
+          "id": "SP_GOMPHOS_SHEVYREVAE_MENG_AND_KRAATZ_2009",
+          "name": "Gomphos shevyrevae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphos",
+          "authorship": "Meng and Kraatz 2009",
+          "sourceIds": {
+            "checklistbank-1174": "txn:332230"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:41363"
+  }
 }

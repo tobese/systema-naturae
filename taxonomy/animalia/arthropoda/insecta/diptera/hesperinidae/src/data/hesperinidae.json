@@ -3,7 +3,7 @@
   "name": "Hesperinidae",
   "rank": "FAMILY",
   "appSlug": "hesperinidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_HESPERINUS",
@@ -19,7 +19,32 @@
           "lineage": "Hesperinus",
           "authorship": "Papp & Krivosheina, 2009",
           "sourceIds": {
-            "gbif-backbone": "10172147"
+            "gbif-backbone": "10172147",
+            "wikispecies": "Hesperinus_ninae"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HESPERINUS_BREVIFRONS",
+          "name": "Hesperinus brevifrons",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hesperinus",
+          "sourceIds": {
+            "checklistbank-139831": "1349608"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HESPERINUS_GRAECUS",
+          "name": "Hesperinus graecus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hesperinus",
+          "sourceIds": {
+            "wikispecies": "Hesperinus_graecus"
           },
           "children": []
         }
@@ -28,5 +53,8 @@
       "lineage": "hesperinidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 1,
+  "sourceIds": {
+    "wikispecies": "Hesperinidae"
+  }
 }

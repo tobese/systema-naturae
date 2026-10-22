@@ -3,7 +3,7 @@
   "name": "Eugaleaspididae",
   "rank": "FAMILY",
   "appSlug": "eugaleaspididae",
-  "speciesCount": 8,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_NOCHELASPIS",
@@ -21,6 +21,20 @@
           "sourceIds": {
             "gbif-backbone": "8616340"
           },
+          "children": []
+        },
+        {
+          "id": "SP_NOCHELASPIS_MAEANDRINE_ZHU_1992",
+          "name": "Nochelaspis maeandrine",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nochelaspis",
+          "authorship": "Zhu 1992",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502767"
+          },
+          "uuid": "2e4038d6-9aff-4756-ad27-b81c8a9d5167",
           "children": []
         }
       ],
@@ -41,7 +55,8 @@
           "lineage": "Yunnanogaleaspis",
           "authorship": "Pan & Wang, 1980",
           "sourceIds": {
-            "gbif-backbone": "8612700"
+            "gbif-backbone": "8612700",
+            "checklistbank-1174": "txn:321374"
           },
           "children": []
         }
@@ -144,7 +159,61 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eugaleaspididae"
+    },
+    {
+      "id": "GENUS_DUNYU",
+      "name": "Dunyu",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eugaleaspididae",
+      "children": [
+        {
+          "id": "SP_DUNYU_LONGIFORUS_ZHU_ET_AL_2012",
+          "name": "Dunyu longiforus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dunyu",
+          "authorship": "Zhu et al. 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501845"
+          },
+          "uuid": "01186498-e02f-4f63-bc0c-d6c3cab1cff4",
+          "children": []
+        },
+        {
+          "id": "SP_DUNYU_XIUSHANENSIS_ZHU_ET_AL_2012",
+          "name": "Dunyu xiushanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dunyu",
+          "authorship": "Zhu et al. 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502049"
+          },
+          "uuid": "2d246207-dd41-4c59-8485-82ddd318b83e",
+          "children": []
+        },
+        {
+          "id": "SP_DUNYU_TIANLU_LI_ET_AL_2024",
+          "name": "Dunyu tianlu",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dunyu",
+          "authorship": "Li et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:505009"
+          },
+          "uuid": "0ccfc779-b952-47cf-b37b-fea174c962b4",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:321288"
+  }
 }

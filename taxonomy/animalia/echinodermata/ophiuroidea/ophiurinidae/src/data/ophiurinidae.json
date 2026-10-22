@@ -3,7 +3,7 @@
   "name": "Ophiurinidae",
   "rank": "FAMILY",
   "appSlug": "ophiurinidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_STEPHANOUROPSIS",
@@ -19,7 +19,8 @@
           "lineage": "Stephanouropsis",
           "authorship": "Calzada & Gutiérrez, 1988",
           "sourceIds": {
-            "gbif-backbone": "4975705"
+            "gbif-backbone": "4975705",
+            "checklistbank-1174": "txn:103935"
           },
           "children": []
         }
@@ -70,7 +71,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ophiurinidae"
+    },
+    {
+      "id": "GENUS_SYNTOMOSPINA",
+      "name": "Syntomospina",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ophiurinidae",
+      "children": [
+        {
+          "id": "SP_SYNTOMOSPINA_KUEHNI_MORRIS_ET_AL_1973",
+          "name": "Syntomospina kuehni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syntomospina",
+          "authorship": "Morris et al. 1973",
+          "sourceIds": {
+            "checklistbank-1174": "txn:169927"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:103936"
+  }
 }

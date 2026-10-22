@@ -3,7 +3,7 @@
   "name": "Cyclaxyridae",
   "rank": "FAMILY",
   "appSlug": "cyclaxyridae",
-  "speciesCount": 4,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_CYCLAXYRA",
@@ -20,6 +20,44 @@
           "authorship": "(Wu, 2018)",
           "sourceIds": {
             "gbif-backbone": "11145039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLAXYRA_JELINEKI",
+          "name": "Cyclaxyra jelineki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclaxyra",
+          "sourceIds": {
+            "checklistbank-139831": "388228"
+          },
+          "uuid": "ed69fa96-44eb-4da9-8de8-7138e9d194a4",
+          "children": []
+        },
+        {
+          "id": "SP_CYCLAXYRA_POLITULA",
+          "name": "Cyclaxyra politula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclaxyra",
+          "sourceIds": {
+            "checklistbank-139831": "388229"
+          },
+          "uuid": "e645dc27-8696-4607-b759-3651bbefd109",
+          "children": []
+        },
+        {
+          "id": "SP_CYCLAXYRA_IMPRESSA",
+          "name": "Cyclaxyra impressa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclaxyra",
+          "sourceIds": {
+            "wikispecies": "Cyclaxyra_impressa"
           },
           "children": []
         }
@@ -54,7 +92,8 @@
           "lineage": "Neolitochropus",
           "authorship": "(Lyubarsky & Perkovsky, 2011)",
           "sourceIds": {
-            "gbif-backbone": "10896083"
+            "gbif-backbone": "10896083",
+            "checklistbank-1174": "txn:258227"
           },
           "children": []
         }
@@ -83,7 +122,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyclaxyridae"
+    },
+    {
+      "id": "GENUS_ELECTROXYRA",
+      "name": "Electroxyra",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclaxyridae",
+      "children": [
+        {
+          "id": "SP_ELECTROXYRA_CRETACEA_WU_2018",
+          "name": "Electroxyra cretacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Electroxyra",
+          "authorship": "(Wu 2018)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:371086"
+          },
+          "uuid": "12fa2f50-0f94-4dfe-b050-b96476bb998c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Cyclaxyridae",
+    "checklistbank-1174": "txn:371085"
+  }
 }

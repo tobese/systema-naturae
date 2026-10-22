@@ -3,7 +3,7 @@
   "name": "Rhabdodontidae",
   "rank": "FAMILY",
   "appSlug": "rhabdodontidae",
-  "speciesCount": 7,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_IGUANODON",
@@ -98,7 +98,20 @@
           "lineage": "Zalmoxes",
           "authorship": "Weishampel et al., 2003",
           "sourceIds": {
-            "gbif-backbone": "4965869"
+            "gbif-backbone": "4965869",
+            "wikispecies": "Zalmoxes_shqiperorum"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZALMOXES_ROBUSTUS",
+          "name": "Zalmoxes robustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zalmoxes",
+          "sourceIds": {
+            "wikispecies": "Zalmoxes_robustus"
           },
           "children": []
         }
@@ -149,7 +162,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhabdodontidae"
+    },
+    {
+      "id": "GENUS_MUTTABURRASAURUS",
+      "name": "Muttaburrasaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MUTTABURRASAURUS_LANGDONI",
+          "name": "Muttaburrasaurus langdoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muttaburrasaurus",
+          "sourceIds": {
+            "checklistbank-139831": "1517517"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhabdodontidae"
     }
   ],
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "wikispecies": "Rhabdodontidae"
+  }
 }

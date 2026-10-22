@@ -3,7 +3,7 @@
   "name": "Thalassemydidae",
   "rank": "FAMILY",
   "appSlug": "thalassemydidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_CHANGISAURUS",
@@ -98,7 +98,29 @@
           "lineage": "Pelobatochelys",
           "authorship": "Seeley, 1875",
           "sourceIds": {
-            "gbif-backbone": "9061850"
+            "gbif-backbone": "9061850",
+            "checklistbank-1174": "txn:364012"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassemydidae"
+    },
+    {
+      "id": "GENUS_THALASSEMYS",
+      "name": "Thalassemys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THALASSEMYS_CARVA",
+          "name": "Thalassemys carva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassemys",
+          "sourceIds": {
+            "wikispecies": "Thalassemys_carva"
           },
           "children": []
         }
@@ -107,5 +129,9 @@
       "lineage": "thalassemydidae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "wikispecies": "Thalassemydidae",
+    "checklistbank-1174": "txn:65907"
+  }
 }

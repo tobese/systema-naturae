@@ -3,7 +3,7 @@
   "name": "Sandcoleidae",
   "rank": "FAMILY",
   "appSlug": "sandcoleidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_ANNEAVIS",
@@ -19,7 +19,8 @@
           "lineage": "Anneavis",
           "authorship": "Houde & Olson, 1992",
           "sourceIds": {
-            "gbif-backbone": "9136510"
+            "gbif-backbone": "9136510",
+            "checklistbank-1174": "txn:433249"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Sandcoleus",
           "authorship": "Houde & Olson, 1992",
           "sourceIds": {
-            "gbif-backbone": "8914218"
+            "gbif-backbone": "8914218",
+            "checklistbank-1174": "txn:417360"
           },
           "children": []
         }
@@ -63,14 +65,62 @@
           "lineage": "Tsidiiyazhi",
           "authorship": "Ksepka, Stidham & Williamson, 2017",
           "sourceIds": {
-            "gbif-backbone": "9280062"
+            "gbif-backbone": "9280062",
+            "checklistbank-1174": "txn:356984"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sandcoleidae"
+    },
+    {
+      "id": "GENUS_EOBUCCO",
+      "name": "Eobucco",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sandcoleidae",
+      "children": [
+        {
+          "id": "SP_EOBUCCO_BRODKORBI_FEDUCCIA_AND_MARTIN_1976",
+          "name": "Eobucco brodkorbi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eobucco",
+          "authorship": "Feduccia and Martin 1976",
+          "sourceIds": {
+            "checklistbank-1174": "txn:124681"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EOGLAUCIDIUM",
+      "name": "Eoglaucidium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sandcoleidae",
+      "children": [
+        {
+          "id": "SP_EOGLAUCIDIUM_PALIAS_FISCHER_1987",
+          "name": "Eoglaucidium palias",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoglaucidium",
+          "authorship": "Fischer 1987",
+          "sourceIds": {
+            "checklistbank-1174": "txn:403865"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:99114"
+  }
 }

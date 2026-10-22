@@ -176,7 +176,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Megalonyx",
           "sourceIds": {
-            "checklistbank": "194815"
+            "checklistbank": "194815",
+            "checklistbank-1174": "txn:48050"
           },
           "children": [],
           "authorship": "Desmarest, 1822",
@@ -192,7 +193,8 @@
           "lineage": "Megalonyx",
           "sourceIds": {
             "checklistbank": "317755",
-            "gbif-backbone": "5931808"
+            "gbif-backbone": "5931808",
+            "checklistbank-1174": "txn:48028"
           },
           "children": [],
           "authorship": "Hirschfeld and Webb 1968",
@@ -208,7 +210,8 @@
           "lineage": "Megalonyx",
           "sourceIds": {
             "checklistbank": "317756",
-            "gbif-backbone": "5931805"
+            "gbif-backbone": "5931805",
+            "checklistbank-1174": "txn:48030"
           },
           "children": [],
           "authorship": "Webb and Perrigo 1985",
@@ -443,7 +446,8 @@
           "authorship": "McPhee, White & Woods, 2000",
           "sourceIds": {
             "checklistbank": "2546656",
-            "gbif-backbone": "9217067"
+            "gbif-backbone": "9217067",
+            "checklistbank-1174": "txn:439654"
           },
           "children": [],
           "uuid": "286df3a4-aa42-5a7-8f1-693634b99e7be5",
@@ -526,7 +530,8 @@
           "authorship": "McPhee, White & Woods, 2000",
           "sourceIds": {
             "checklistbank": "2546657",
-            "gbif-backbone": "8733694"
+            "gbif-backbone": "8733694",
+            "checklistbank-1174": "txn:439662"
           },
           "children": [],
           "uuid": "b0a86919-40d1-574-bfc-65de59e537a5b8",
@@ -2943,13 +2948,36 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "megalonychidae"
+    },
+    {
+      "id": "GENUS_SINCLAIRIA",
+      "name": "Sinclairia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "megalonychidae",
+      "children": [
+        {
+          "id": "SP_SINCLAIRIA_OREGONIANA_AMEGHINO_1912",
+          "name": "Sinclairia oregoniana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sinclairia",
+          "authorship": "Ameghino 1912",
+          "sourceIds": {
+            "checklistbank-1174": "txn:51583"
+          },
+          "uuid": "89f5464b-4f76-4648-99cb-61cce3b1539b",
+          "children": []
+        }
+      ]
     }
   ],
-  "speciesCount": 160,
+  "speciesCount": 161,
   "appSlug": "megalonychidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 59,
+  "genusCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2958,6 +2986,7 @@
       "orderKey": 1494,
       "familyKey": 6160
     },
-    "checklistbank": "txn:43596"
+    "checklistbank": "txn:43596",
+    "checklistbank-1174": "txn:43596"
   }
 }

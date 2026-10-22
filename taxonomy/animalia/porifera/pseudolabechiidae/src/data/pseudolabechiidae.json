@@ -3,7 +3,7 @@
   "name": "Pseudolabechiidae",
   "rank": "FAMILY",
   "appSlug": "pseudolabechiidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PLUMATALINIA",
@@ -54,14 +54,55 @@
           "lineage": "Desmostroma",
           "authorship": "Bolshakova & Ulitina, 1985",
           "sourceIds": {
-            "gbif-backbone": "4980076"
+            "gbif-backbone": "4980076",
+            "checklistbank-1174": "txn:119781"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pseudolabechiidae"
+    },
+    {
+      "id": "GENUS_PACHYSTROMA",
+      "name": "Pachystroma",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudolabechiidae",
+      "children": [
+        {
+          "id": "SP_PACHYSTROMA_BRICKENSE_NESTOR_ET_AL_2010",
+          "name": "Pachystroma brickense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachystroma",
+          "authorship": "Nestor et al. 2010",
+          "sourceIds": {
+            "checklistbank-1174": "txn:193137"
+          },
+          "uuid": "be7c6d4c-1224-462c-9371-4f79013da2be",
+          "children": []
+        },
+        {
+          "id": "SP_PACHYSTROMA_SALUM_NESTOR_ET_AL_2010",
+          "name": "Pachystroma salum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachystroma",
+          "authorship": "Nestor et al. 2010",
+          "sourceIds": {
+            "checklistbank-1174": "txn:193138"
+          },
+          "uuid": "d76febc3-037a-4dfa-9f2f-5cddf7d3c80c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:108067"
+  }
 }

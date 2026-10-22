@@ -3,7 +3,7 @@
   "name": "Micropternodontidae",
   "rank": "FAMILY",
   "appSlug": "micropternodontidae",
-  "speciesCount": 6,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_KENTROGOMPHIOS",
@@ -54,7 +54,8 @@
           "lineage": "Micropternodus",
           "authorship": "Stirton & Rensberger, 1964",
           "sourceIds": {
-            "gbif-backbone": "4971670"
+            "gbif-backbone": "4971670",
+            "checklistbank-1174": "txn:48540"
           },
           "children": []
         },
@@ -69,6 +70,20 @@
           "sourceIds": {
             "gbif-backbone": "4971669"
           },
+          "children": []
+        },
+        {
+          "id": "SP_MICROPTERNODUS_STROPHENSIS_WHITE_1954",
+          "name": "Micropternodus strophensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micropternodus",
+          "authorship": "(White 1954)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:47438"
+          },
+          "uuid": "5d72b153-692e-4139-99a6-d5c76b50a178",
           "children": []
         }
       ],
@@ -118,7 +133,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "micropternodontidae"
+    },
+    {
+      "id": "GENUS_CLINOPTERNODUS",
+      "name": "Clinopternodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "micropternodontidae",
+      "children": [
+        {
+          "id": "SP_CLINOPTERNODUS_GRACILIS_CLARK_1936",
+          "name": "Clinopternodus gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clinopternodus",
+          "authorship": "(Clark 1936)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:45179"
+          },
+          "uuid": "4f55ad31-46f8-43e1-9d86-e30f501ff677",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:40507"
+  }
 }

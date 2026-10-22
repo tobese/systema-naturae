@@ -3,7 +3,7 @@
   "name": "Tinodontidae",
   "rank": "FAMILY",
   "appSlug": "tinodontidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_BONDESIUS",
@@ -63,7 +63,9 @@
           "lineage": "Tinodon",
           "authorship": "Ensom & Sigogneau-Russell, 2000",
           "sourceIds": {
-            "gbif-backbone": "8673566"
+            "gbif-backbone": "8673566",
+            "checklistbank-1174": "txn:212336",
+            "wikispecies": "Tinodon_micron"
           },
           "children": []
         },
@@ -76,8 +78,23 @@
           "lineage": "Tinodon",
           "authorship": "Marsh, 1879",
           "sourceIds": {
-            "gbif-backbone": "4968793"
+            "gbif-backbone": "4968793",
+            "wikispecies": "Tinodon_bellus"
           },
+          "children": []
+        },
+        {
+          "id": "SP_TINODON_LEPIDUS_MARSH_1879",
+          "name": "Tinodon lepidus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tinodon",
+          "authorship": "Marsh 1879",
+          "sourceIds": {
+            "checklistbank-1174": "txn:69255"
+          },
+          "uuid": "12eb10b9-20ee-43d8-a0f4-89c21431498d",
           "children": []
         }
       ],
@@ -107,5 +124,9 @@
       "lineage": "tinodontidae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Tinodontidae",
+    "checklistbank-1174": "txn:39867"
+  }
 }

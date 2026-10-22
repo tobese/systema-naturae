@@ -3,7 +3,7 @@
   "name": "Derwentiidae",
   "rank": "FAMILY",
   "appSlug": "derwentiidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_ACERASTEA",
@@ -19,14 +19,41 @@
           "lineage": "Acerastea",
           "authorship": "Warren & Hutchinson, 1987",
           "sourceIds": {
-            "gbif-backbone": "8552356"
+            "gbif-backbone": "8552356",
+            "checklistbank-1174": "txn:251282"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "derwentiidae"
+    },
+    {
+      "id": "GENUS_REWANA",
+      "name": "Rewana",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "derwentiidae",
+      "children": [
+        {
+          "id": "SP_REWANA_MYRIADENS_WARREN_AND_BLACK_1985",
+          "name": "Rewana myriadens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rewana",
+          "authorship": "(Warren and Black 1985)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:251270"
+          },
+          "uuid": "22700680-1530-4212-90a9-d00667768469",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:251268"
+  }
 }

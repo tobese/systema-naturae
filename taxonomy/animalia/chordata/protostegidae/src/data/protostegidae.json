@@ -3,7 +3,7 @@
   "name": "Protostegidae",
   "rank": "FAMILY",
   "appSlug": "protostegidae",
-  "speciesCount": 13,
+  "speciesCount": 18,
   "children": [
     {
       "id": "GENUS_ARCHELON",
@@ -19,7 +19,8 @@
           "lineage": "Archelon",
           "authorship": "Wieland, 1896",
           "sourceIds": {
-            "gbif-backbone": "4965003"
+            "gbif-backbone": "4965003",
+            "wikispecies": "Archelon_ischyros"
           },
           "children": []
         },
@@ -54,7 +55,8 @@
           "lineage": "Terlinguachelys",
           "authorship": "Lehman & Tomlinson, 2004",
           "sourceIds": {
-            "gbif-backbone": "4964993"
+            "gbif-backbone": "4964993",
+            "checklistbank-1174": "txn:150512"
           },
           "children": []
         }
@@ -181,7 +183,8 @@
           "lineage": "Bouliachelys",
           "authorship": "Kear & Lee, 2006",
           "sourceIds": {
-            "gbif-backbone": "8591689"
+            "gbif-backbone": "8591689",
+            "checklistbank-1174": "txn:239570"
           },
           "children": []
         }
@@ -254,7 +257,125 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protostegidae"
+    },
+    {
+      "id": "GENUS_CHELOSPHARGIS",
+      "name": "Chelosphargis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostegidae",
+      "children": [
+        {
+          "id": "SP_CHELOSPHARGIS_ADVENA_HAY_1908",
+          "name": "Chelosphargis advena",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelosphargis",
+          "authorship": "(Hay 1908)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:125123"
+          },
+          "uuid": "73dc4dd4-696f-4a42-8b5e-471bc9cedca7",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RHINOCHELYS",
+      "name": "Rhinochelys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostegidae",
+      "children": [
+        {
+          "id": "SP_RHINOCHELYS_PULCHRICEPS_OWEN_1842",
+          "name": "Rhinochelys pulchriceps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhinochelys",
+          "authorship": "(Owen 1842)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:156268"
+          },
+          "uuid": "88def56c-4e7b-4761-a37b-ec1bd17ca6f7",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NOTOCHELONE",
+      "name": "Notochelone",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostegidae",
+      "children": [
+        {
+          "id": "SP_NOTOCHELONE_COSTATA_OWEN_1882",
+          "name": "Notochelone costata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Notochelone",
+          "authorship": "(Owen 1882)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:235268"
+          },
+          "uuid": "56462a11-620b-483c-95d6-1da2453d1d5a",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MICROSTEGA",
+      "name": "Microstega",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostegidae",
+      "children": [
+        {
+          "id": "SP_MICROSTEGA_COPEI_WIELAND_1909",
+          "name": "Microstega copei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microstega",
+          "authorship": "(Wieland 1909)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:128032"
+          },
+          "uuid": "349e80ea-d838-4fb1-9fa0-3e68fde42974",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DESMATOCHELYS",
+      "name": "Desmatochelys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESMATOCHELYS_PADILLAI_CADENA_AND_PARHAM_2015",
+          "name": "Desmatochelys padillai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desmatochelys",
+          "authorship": "Cadena and Parham 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:353086"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostegidae"
     }
   ],
-  "genusCount": 9
+  "genusCount": 14,
+  "sourceIds": {
+    "wikispecies": "Protostegidae",
+    "checklistbank-1174": "txn:37689"
+  }
 }

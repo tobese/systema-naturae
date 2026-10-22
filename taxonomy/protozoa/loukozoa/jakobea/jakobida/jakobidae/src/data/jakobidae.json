@@ -3,7 +3,7 @@
   "name": "Jakobidae",
   "rank": "FAMILY",
   "appSlug": "jakobidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_JAKOBA",
@@ -19,7 +19,8 @@
           "lineage": "Jakoba",
           "authorship": "(Ruinen, 1938)",
           "sourceIds": {
-            "gbif-backbone": "3210519"
+            "gbif-backbone": "3210519",
+            "checklistbank-2008": "959129"
           },
           "children": [],
           "uuid": "63555c93-9245-5b9-a05-4f627663132ec6"
@@ -27,7 +28,29 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "jakobidae"
+    },
+    {
+      "id": "GENUS_CRYPTOBIA",
+      "name": "Cryptobia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTOBIA_LIBERA_J_RUINEN_1938",
+          "name": "Cryptobia libera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptobia",
+          "authorship": "J.Ruinen, 1938",
+          "sourceIds": {
+            "checklistbank-2008": "959130"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "jakobidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

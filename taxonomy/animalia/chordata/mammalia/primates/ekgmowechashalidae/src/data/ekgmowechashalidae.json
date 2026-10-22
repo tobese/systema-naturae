@@ -3,7 +3,7 @@
   "name": "Ekgmowechashalidae",
   "rank": "FAMILY",
   "appSlug": "ekgmowechashalidae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_HALLELEMUR",
@@ -111,7 +111,8 @@
           "lineage": "Gatanthropus",
           "authorship": "Ni, Li, Li & Beard, 2016",
           "sourceIds": {
-            "gbif-backbone": "8535156"
+            "gbif-backbone": "8535156",
+            "checklistbank-1174": "txn:343085"
           },
           "children": []
         }
@@ -180,11 +181,53 @@
             "gbif-backbone": "4974783"
           },
           "children": []
+        },
+        {
+          "id": "SP_EKGMOWECHASHALA_ZANCANELLAI_SAMUELS_ET_AL_2015",
+          "name": "Ekgmowechashala zancanellai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ekgmowechashala",
+          "authorship": "Samuels et al. 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:462010"
+          },
+          "uuid": "0cd129d7-92f5-47d1-a17a-de96b3cdbb70",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ekgmowechashalidae"
+    },
+    {
+      "id": "GENUS_PALAEOHODITES",
+      "name": "Palaeohodites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ekgmowechashalidae",
+      "children": [
+        {
+          "id": "SP_PALAEOHODITES_NADUENSIS_RUST_ET_AL_2023",
+          "name": "Palaeohodites naduensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeohodites",
+          "authorship": "Rust et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:479016",
+            "wikispecies": "Palaeohodites_naduensis"
+          },
+          "uuid": "1fb179b0-1eae-485f-b6ca-e138d7041c4e",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "wikispecies": "Ekgmowechashalidae",
+    "checklistbank-1174": "txn:91568"
+  }
 }

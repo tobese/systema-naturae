@@ -3,7 +3,7 @@
   "name": "Massospondylidae",
   "rank": "FAMILY",
   "appSlug": "massospondylidae",
-  "speciesCount": 10,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_NGWEVU",
@@ -19,7 +19,8 @@
           "lineage": "Ngwevu",
           "authorship": "Chapelle, Barrett, Botha & Choiniere, 2019",
           "sourceIds": {
-            "gbif-backbone": "10454533"
+            "gbif-backbone": "10454533",
+            "checklistbank-1174": "txn:391216"
           },
           "children": []
         }
@@ -177,7 +178,8 @@
           "lineage": "Glacialisaurus",
           "authorship": "Smith & Pol, 2007",
           "sourceIds": {
-            "gbif-backbone": "4967195"
+            "gbif-backbone": "4967195",
+            "checklistbank-1174": "txn:117150"
           },
           "children": []
         }
@@ -199,14 +201,64 @@
           "lineage": "Leyesaurus",
           "authorship": "Apaldetti, Martínez, Alcober & Pol, 2011",
           "sourceIds": {
-            "gbif-backbone": "8444080"
+            "gbif-backbone": "8444080",
+            "checklistbank-1174": "txn:242729"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "massospondylidae"
+    },
+    {
+      "id": "GENUS_LUFENGOSAURUS",
+      "name": "Lufengosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "massospondylidae",
+      "children": [
+        {
+          "id": "SP_LUFENGOSAURUS_MAGNUS_YOUNG_1941",
+          "name": "Lufengosaurus magnus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lufengosaurus",
+          "authorship": "Young 1941",
+          "sourceIds": {
+            "checklistbank-1174": "txn:64306"
+          },
+          "uuid": "f86ff21c-3940-41fa-af1e-4a0ab61e8d97",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_COLORADISAURUS",
+      "name": "Coloradisaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "massospondylidae",
+      "children": [
+        {
+          "id": "SP_COLORADISAURUS_BREVIS_BONAPARTE_1978",
+          "name": "Coloradisaurus brevis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coloradisaurus",
+          "authorship": "(Bonaparte 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:66680"
+          },
+          "uuid": "fa972c74-9e37-418b-b3f8-ae3572c3c544",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 8
+  "genusCount": 10,
+  "sourceIds": {
+    "checklistbank-1174": "txn:56621"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Paurodontidae",
   "rank": "FAMILY",
   "appSlug": "paurodontidae",
-  "speciesCount": 9,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_ARAEODON",
@@ -107,7 +107,8 @@
           "lineage": "Dorsetodon",
           "authorship": "Ensom & Sigogneau-Russell, 1998",
           "sourceIds": {
-            "gbif-backbone": "8533283"
+            "gbif-backbone": "8533283",
+            "checklistbank-1174": "txn:212367"
           },
           "children": []
         }
@@ -129,7 +130,8 @@
           "lineage": "Foxraptor",
           "authorship": "Bakker & Carpenter, 1990",
           "sourceIds": {
-            "gbif-backbone": "4968796"
+            "gbif-backbone": "4968796",
+            "checklistbank-1174": "txn:57646"
           },
           "children": []
         }
@@ -193,7 +195,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paurodontidae"
+    },
+    {
+      "id": "GENUS_TATHIODON",
+      "name": "Tathiodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "paurodontidae",
+      "children": [
+        {
+          "id": "SP_TATHIODON_AGILIS_SIMPSON_1927",
+          "name": "Tathiodon agilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tathiodon",
+          "authorship": "(Simpson 1927)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:57729"
+          },
+          "uuid": "b7140339-c08a-4972-abdc-6522091c7709",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 8
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:39885"
+  }
 }

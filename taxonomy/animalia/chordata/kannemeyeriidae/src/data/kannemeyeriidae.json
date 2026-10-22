@@ -3,7 +3,7 @@
   "name": "Kannemeyeriidae",
   "rank": "FAMILY",
   "appSlug": "kannemeyeriidae",
-  "speciesCount": 28,
+  "speciesCount": 33,
   "children": [
     {
       "id": "GENUS_ANGONISAURUS",
@@ -286,7 +286,8 @@
           "lineage": "Placerias",
           "authorship": "Lucas, 1904",
           "sourceIds": {
-            "gbif-backbone": "8543834"
+            "gbif-backbone": "8543834",
+            "wikispecies": "Placerias_hesternus"
           },
           "children": []
         }
@@ -321,7 +322,8 @@
           "lineage": "Kannemeyeria",
           "authorship": "Kammerer & Ordoñez, 2021",
           "sourceIds": {
-            "gbif-backbone": "11133055"
+            "gbif-backbone": "11133055",
+            "checklistbank-1174": "txn:439704"
           },
           "children": []
         },
@@ -336,6 +338,20 @@
           "sourceIds": {
             "gbif-backbone": "8703432"
           },
+          "children": []
+        },
+        {
+          "id": "SP_KANNEMEYERIA_SIMOCEPHALA_WEITHOFER_1888",
+          "name": "Kannemeyeria simocephala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kannemeyeria",
+          "authorship": "(Weithofer 1888)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:56863"
+          },
+          "uuid": "b2dc1575-1996-48af-bcb3-49f49188aeff",
           "children": []
         }
       ],
@@ -391,7 +407,8 @@
           "lineage": "Acratophorus",
           "authorship": "Kammerer & Ordoñez, 2021",
           "sourceIds": {
-            "gbif-backbone": "11120792"
+            "gbif-backbone": "11120792",
+            "checklistbank-1174": "txn:439703"
           },
           "children": []
         }
@@ -503,7 +520,94 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "kannemeyeriidae"
+    },
+    {
+      "id": "GENUS_RHADIODROMUS",
+      "name": "Rhadiodromus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kannemeyeriidae",
+      "children": [
+        {
+          "id": "SP_RHADIODROMUS_KLIMOVI_EFREMOV_1940",
+          "name": "Rhadiodromus klimovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhadiodromus",
+          "authorship": "(Efremov 1940)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:141742"
+          },
+          "uuid": "5178f911-f5af-4e66-a3ae-593516f703da",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DOLICHURANUS",
+      "name": "Dolichuranus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kannemeyeriidae",
+      "children": [
+        {
+          "id": "SP_DOLICHURANUS_LATIROSTRIS_CROZIER_1970",
+          "name": "Dolichuranus latirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolichuranus",
+          "authorship": "(Crozier 1970)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:172486"
+          },
+          "uuid": "3d5837d5-b871-41ea-9cc9-f297e80b04ed",
+          "children": []
+        },
+        {
+          "id": "SP_DOLICHURANUS_PRIMAEVUS_KEYSER_1973",
+          "name": "Dolichuranus primaevus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolichuranus",
+          "authorship": "Keyser 1973",
+          "sourceIds": {
+            "checklistbank-1174": "txn:172547"
+          },
+          "uuid": "96119d62-1e95-46c3-8313-c5ddd76fae9d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_XIYUKANNEMEYERIA",
+      "name": "Xiyukannemeyeria",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kannemeyeriidae",
+      "children": [
+        {
+          "id": "SP_XIYUKANNEMEYERIA_BREVIROSTRIS_SUN_1978",
+          "name": "Xiyukannemeyeria brevirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xiyukannemeyeria",
+          "authorship": "(Sun 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:265924"
+          },
+          "uuid": "ddb1b691-4f47-4493-8be9-311bfce967dd",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 15
+  "genusCount": 18,
+  "sourceIds": {
+    "wikispecies": "Kannemeyeriidae",
+    "checklistbank-1174": "txn:39022"
+  }
 }

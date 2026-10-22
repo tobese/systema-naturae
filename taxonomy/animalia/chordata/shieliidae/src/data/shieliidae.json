@@ -3,7 +3,7 @@
   "name": "Shieliidae",
   "rank": "FAMILY",
   "appSlug": "shieliidae",
-  "speciesCount": 1,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_NETHERTONODUS",
@@ -19,14 +19,80 @@
           "lineage": "Nethertonodus",
           "authorship": "Märss & Miller, 2004",
           "sourceIds": {
-            "gbif-backbone": "8493178"
+            "gbif-backbone": "8493178",
+            "checklistbank-1174": "txn:342261"
           },
+          "children": []
+        },
+        {
+          "id": "SP_NETHERTONODUS_LAADJALAENSIS_MA_RSS_2006",
+          "name": "Nethertonodus laadjalaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nethertonodus",
+          "authorship": "Märss 2006",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502433"
+          },
+          "uuid": "614e10b5-394b-4313-8e16-574f47189e53",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "shieliidae"
+    },
+    {
+      "id": "GENUS_SHIELIA",
+      "name": "Shielia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "shieliidae",
+      "children": [
+        {
+          "id": "SP_SHIELIA_MULTISPINATA_MARSS_AND_KARATAJUTE_TALIMAA_2002",
+          "name": "Shielia multispinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Shielia",
+          "authorship": "Marss and Karatajute-Talimaa 2002",
+          "sourceIds": {
+            "checklistbank-1174": "txn:150132"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SHIELIA_PARCA_MA_RSS_ET_AL_2002",
+          "name": "Shielia parca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Shielia",
+          "authorship": "Märss et al. 2002",
+          "sourceIds": {
+            "checklistbank-1174": "txn:225609"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SHIELIA_GIBBA_MA_RSS_ET_AL_2002",
+          "name": "Shielia gibba",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Shielia",
+          "authorship": "Märss et al. 2002",
+          "sourceIds": {
+            "checklistbank-1174": "txn:225611"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:342262"
+  }
 }

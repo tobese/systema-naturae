@@ -3,7 +3,7 @@
   "name": "Megalograptidae",
   "rank": "FAMILY",
   "appSlug": "megalograptidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PENTECOPTERUS",
@@ -19,7 +19,8 @@
           "lineage": "Pentecopterus",
           "authorship": "Lamsdell, Briggs, Liu, Witzke & McKay, 2015",
           "sourceIds": {
-            "gbif-backbone": "9511328"
+            "gbif-backbone": "9511328",
+            "checklistbank-1174": "txn:455271"
           },
           "children": []
         }
@@ -41,7 +42,56 @@
           "lineage": "Echinognathus",
           "authorship": "Walcott, 1882",
           "sourceIds": {
-            "gbif-backbone": "8927450"
+            "gbif-backbone": "8927450",
+            "wikispecies": "Echinognathus_clevelandi"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "megalograptidae"
+    },
+    {
+      "id": "GENUS_MEGALOGRAPTUS",
+      "name": "Megalograptus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEGALOGRAPTUS_OHIOENSIS_CASTER_AND_KJELLESVIG_WAERING_1964",
+          "name": "Megalograptus ohioensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalograptus",
+          "authorship": "Caster and Kjellesvig-Waering 1964",
+          "sourceIds": {
+            "checklistbank-1174": "txn:396479"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEGALOGRAPTUS_SHIDELERI_CASTER_AND_KJELLESVIG_WAERING_1964",
+          "name": "Megalograptus shideleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalograptus",
+          "authorship": "Caster and Kjellesvig-Waering 1964",
+          "sourceIds": {
+            "checklistbank-1174": "txn:396480"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEGALOGRAPTUS_WILLIAMSAE_CASTER_AND_KJELLESVIG_WAERING_1964",
+          "name": "Megalograptus williamsae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalograptus",
+          "authorship": "Caster and Kjellesvig-Waering 1964",
+          "sourceIds": {
+            "checklistbank-1174": "txn:396481"
           },
           "children": []
         }
@@ -50,5 +100,9 @@
       "lineage": "megalograptidae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Megalograptidae",
+    "checklistbank-1174": "txn:420280"
+  }
 }

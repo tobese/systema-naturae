@@ -3,7 +3,7 @@
   "name": "Lycopteridae",
   "rank": "FAMILY",
   "appSlug": "lycopteridae",
-  "speciesCount": 9,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_CHANGICHTHYS",
@@ -76,7 +76,8 @@
           "lineage": "Yungkangichthys",
           "authorship": "Chang & Chou, 1974",
           "sourceIds": {
-            "gbif-backbone": "8598385"
+            "gbif-backbone": "8598385",
+            "checklistbank-1174": "txn:269466"
           },
           "children": []
         }
@@ -157,7 +158,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lycopteridae"
+    },
+    {
+      "id": "GENUS_LYCOPTERA",
+      "name": "Lycoptera",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lycopteridae",
+      "children": [
+        {
+          "id": "SP_LYCOPTERA_SANKEYUSHUENSIS_MA_AND_SUN_1988",
+          "name": "Lycoptera sankeyushuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lycoptera",
+          "authorship": "Ma and Sun 1988",
+          "sourceIds": {
+            "checklistbank-1174": "txn:197688"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:197684"
+  }
 }

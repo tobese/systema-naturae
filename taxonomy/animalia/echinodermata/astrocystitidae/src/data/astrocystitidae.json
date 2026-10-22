@@ -3,7 +3,7 @@
   "name": "Astrocystitidae",
   "rank": "FAMILY",
   "appSlug": "astrocystitidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_POROSUBLASTUS",
@@ -19,14 +19,55 @@
           "lineage": "Porosublastus",
           "authorship": "Sprinkle & Sumrall, 2015",
           "sourceIds": {
-            "gbif-backbone": "9555885"
+            "gbif-backbone": "9555885",
+            "checklistbank-1174": "txn:345558"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "astrocystitidae"
+    },
+    {
+      "id": "GENUS_CAMBROBLASTUS",
+      "name": "Cambroblastus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "astrocystitidae",
+      "children": [
+        {
+          "id": "SP_CAMBROBLASTUS_ENUBILATUS_SMITH_AND_JELL_1990",
+          "name": "Cambroblastus enubilatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cambroblastus",
+          "authorship": "Smith and Jell 1990",
+          "sourceIds": {
+            "checklistbank-1174": "txn:377448"
+          },
+          "uuid": "da6fe2ec-fff2-4633-982c-eae82ae5f442",
+          "children": []
+        },
+        {
+          "id": "SP_CAMBROBLASTUS_GUOLENSIS_ZHU_ET_AL_2014",
+          "name": "Cambroblastus guolensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cambroblastus",
+          "authorship": "Zhu et al. 2014",
+          "sourceIds": {
+            "checklistbank-1174": "txn:377450"
+          },
+          "uuid": "0e5cd533-b544-46bc-b7f9-3fff41f874c5",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:345560"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Distobatidae",
   "rank": "FAMILY",
   "appSlug": "distobatidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_DISTOBATUS",
@@ -41,7 +41,8 @@
           "lineage": "Tribodus",
           "authorship": "Brito & Ferreira, 1989",
           "sourceIds": {
-            "gbif-backbone": "8604577"
+            "gbif-backbone": "8604577",
+            "checklistbank-1174": "txn:269985"
           },
           "children": []
         }
@@ -92,6 +93,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "distobatidae"
+    },
+    {
+      "id": "GENUS_GLICKMANODUS",
+      "name": "Glickmanodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "distobatidae",
+      "children": [
+        {
+          "id": "SP_GLICKMANODUS_RARUS_NESSOV_ET_AL_1997",
+          "name": "Glickmanodus rarus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glickmanodus",
+          "authorship": "Nessov et al. 1997",
+          "sourceIds": {
+            "checklistbank-1174": "txn:213920"
+          },
+          "uuid": "a36d701d-cc54-4450-b141-ffc54c59c240"
+        }
+      ]
     }
   ],
   "genusCount": 4

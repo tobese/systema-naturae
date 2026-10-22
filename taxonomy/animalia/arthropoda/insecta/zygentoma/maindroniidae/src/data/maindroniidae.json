@@ -3,7 +3,7 @@
   "name": "Maindroniidae",
   "rank": "FAMILY",
   "appSlug": "maindroniidae",
-  "speciesCount": 2,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_MAINDRONIA",
@@ -19,7 +19,8 @@
           "lineage": "Maindronia",
           "authorship": "Smith & Molero-Baltanás, 2020",
           "sourceIds": {
-            "gbif-backbone": "11172896"
+            "gbif-backbone": "11172896",
+            "wikispecies": "Maindronia_bashagardensis"
           },
           "children": []
         },
@@ -35,11 +36,80 @@
             "gbif-backbone": "9435474"
           },
           "children": []
+        },
+        {
+          "id": "SP_MAINDRONIA_BEIERI",
+          "name": "Maindronia beieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Maindronia",
+          "sourceIds": {
+            "checklistbank-139831": "1159921"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MAINDRONIA_NEOTROPICALIS",
+          "name": "Maindronia neotropicalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Maindronia",
+          "sourceIds": {
+            "checklistbank-139831": "1498039"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "maindroniidae"
+    },
+    {
+      "id": "GENUS_ATACAMUS",
+      "name": "Atacamus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ATACAMUS_NEOTROPICALIS",
+          "name": "Atacamus neotropicalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atacamus",
+          "sourceIds": {
+            "checklistbank-139831": "1681731"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "maindroniidae"
+    },
+    {
+      "id": "GENUS_PERUATACAMUS",
+      "name": "Peruatacamus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERUATACAMUS_ATUNPACHA",
+          "name": "Peruatacamus atunpacha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peruatacamus",
+          "sourceIds": {
+            "checklistbank-139831": "1681733"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "maindroniidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Maindroniidae"
+  }
 }

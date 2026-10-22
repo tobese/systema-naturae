@@ -3,7 +3,7 @@
   "name": "Rhynchodemidae",
   "rank": "FAMILY",
   "appSlug": "rhynchodemidae",
-  "speciesCount": 6,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_DESMORHYNCHUS",
@@ -19,7 +19,8 @@
           "lineage": "Desmorhynchus",
           "authorship": "Beauchamp, 1930",
           "sourceIds": {
-            "gbif-backbone": "6476629"
+            "gbif-backbone": "6476629",
+            "checklistbank-1193": "urn:lsid:marinespecies.org:taxname:484435"
           },
           "children": []
         },
@@ -31,7 +32,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Desmorhynchus",
           "sourceIds": {
-            "gbif-backbone": "7260797"
+            "gbif-backbone": "7260797",
+            "checklistbank-1193": "urn:lsid:marinespecies.org:taxname:484432"
           },
           "children": []
         },
@@ -90,7 +92,29 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhynchodemidae"
+    },
+    {
+      "id": "GENUS_MICROPLANA",
+      "name": "Microplana",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROPLANA_TERRESTRIS_M_LLER_1774",
+          "name": "Microplana terrestris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microplana",
+          "authorship": "(Müller, 1774)",
+          "sourceIds": {
+            "checklistbank-2029": "f1822af8-c79d-4d4f-9dff-f275a77287d0"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhynchodemidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

@@ -3,7 +3,7 @@
   "name": "Huananaspidae",
   "rank": "FAMILY",
   "appSlug": "huananaspidae",
-  "speciesCount": 9,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_MACROTHYRASPIS",
@@ -89,7 +89,8 @@
           "lineage": "Lungmenshanaspis",
           "authorship": "Pan & Wang, 1975",
           "sourceIds": {
-            "gbif-backbone": "8529658"
+            "gbif-backbone": "8529658",
+            "checklistbank-1174": "txn:321419"
           },
           "children": []
         }
@@ -114,6 +115,20 @@
             "gbif-backbone": "8500481"
           },
           "children": []
+        },
+        {
+          "id": "SP_ASIASPIS_LIANGI_ZHANG_ET_AL_2023",
+          "name": "Asiaspis liangi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asiaspis",
+          "authorship": "Zhang et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502312"
+          },
+          "uuid": "3a69e16d-f6d0-4754-b630-fdd2215b5e17",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -133,7 +148,8 @@
           "lineage": "Qingmenaspis",
           "authorship": "Pan & Wang, 1981",
           "sourceIds": {
-            "gbif-backbone": "8540142"
+            "gbif-backbone": "8540142",
+            "checklistbank-1174": "txn:321421"
           },
           "children": []
         }
@@ -155,7 +171,8 @@
           "lineage": "Sinoszechuanaspis",
           "authorship": "Pan & Wang, 1978",
           "sourceIds": {
-            "gbif-backbone": "8455158"
+            "gbif-backbone": "8455158",
+            "checklistbank-1174": "txn:321416"
           },
           "children": []
         },
@@ -168,14 +185,64 @@
           "lineage": "Sinoszechuanaspis",
           "authorship": "Pan & Wang, 1975",
           "sourceIds": {
-            "gbif-backbone": "8620099"
+            "gbif-backbone": "8620099",
+            "checklistbank-1174": "txn:321415"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "huananaspidae"
+    },
+    {
+      "id": "GENUS_STEPHASPIS",
+      "name": "Stephaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "huananaspidae",
+      "children": [
+        {
+          "id": "SP_STEPHASPIS_DIPTERIGA_GAI_AND_ZHU_2007",
+          "name": "Stephaspis dipteriga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephaspis",
+          "authorship": "Gai and Zhu 2007",
+          "sourceIds": {
+            "checklistbank-1174": "txn:328971"
+          },
+          "uuid": "44f817bc-e453-44f8-9d68-7c3193408d0d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_HUANANASPIS",
+      "name": "Huananaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "huananaspidae",
+      "children": [
+        {
+          "id": "SP_HUANANASPIS_CUPIDO_ZHANG_ET_AL_2023",
+          "name": "Huananaspis cupido",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Huananaspis",
+          "authorship": "Zhang et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502311"
+          },
+          "uuid": "82385e8e-739e-4202-bacb-72c3a9fb5416",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:321330"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Sinolepidae",
   "rank": "FAMILY",
   "appSlug": "sinolepidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_SINOLEPIS",
@@ -19,7 +19,8 @@
           "lineage": "Sinolepis",
           "authorship": "Liu & P'am, 1958",
           "sourceIds": {
-            "gbif-backbone": "11207786"
+            "gbif-backbone": "11207786",
+            "checklistbank-1174": "txn:421379"
           },
           "children": []
         },
@@ -32,14 +33,78 @@
           "lineage": "Sinolepis",
           "authorship": "Liu & P'an, 1958",
           "sourceIds": {
-            "gbif-backbone": "11151206"
+            "gbif-backbone": "11151206",
+            "checklistbank-1174": "txn:421378"
           },
+          "children": []
+        },
+        {
+          "id": "SP_SINOLEPIS_SZEI_PAN_ET_AL_1987",
+          "name": "Sinolepis szei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sinolepis",
+          "authorship": "Pan et al. 1987",
+          "sourceIds": {
+            "checklistbank-1174": "txn:503169"
+          },
+          "uuid": "34426408-16ff-478b-a6ed-69774524fba1",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sinolepidae"
+    },
+    {
+      "id": "GENUS_GRENFELLASPIS",
+      "name": "Grenfellaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sinolepidae",
+      "children": [
+        {
+          "id": "SP_GRENFELLASPIS_BRANAGANI_RITCHIE_ET_AL_1992",
+          "name": "Grenfellaspis branagani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Grenfellaspis",
+          "authorship": "Ritchie et al. 1992",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501765"
+          },
+          "uuid": "554ad58b-df14-422d-996f-daae83528d70",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DAYAOSHANIA",
+      "name": "Dayaoshania",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sinolepidae",
+      "children": [
+        {
+          "id": "SP_DAYAOSHANIA_YOUNGI_RITCHIE_ET_AL_1992",
+          "name": "Dayaoshania youngi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dayaoshania",
+          "authorship": "Ritchie et al. 1992",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501768"
+          },
+          "uuid": "af8418dc-494f-4474-bdc9-73120ad07165",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:368267"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Zygodactylidae",
   "rank": "FAMILY",
   "appSlug": "zygodactylidae",
-  "speciesCount": 12,
+  "speciesCount": 15,
   "children": [
     {
       "id": "GENUS_PRIMOSCENS",
@@ -19,8 +19,23 @@
           "lineage": "Primoscens",
           "authorship": "Harrison & Walker, 1977",
           "sourceIds": {
-            "gbif-backbone": "11119089"
+            "gbif-backbone": "11119089",
+            "checklistbank-1174": "txn:429923"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PRIMOSCENS_CAROLINAE_MAYR_AND_KITCHENER_2022",
+          "name": "Primoscens carolinae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Primoscens",
+          "authorship": "Mayr and Kitchener 2022",
+          "sourceIds": {
+            "checklistbank-1174": "txn:479359"
+          },
+          "uuid": "de8eb0d3-e869-4d80-becf-13e1824159d9",
           "children": []
         }
       ],
@@ -205,7 +220,47 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zygodactylidae"
+    },
+    {
+      "id": "GENUS_QUERCYPSITTA",
+      "name": "Quercypsitta",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "zygodactylidae",
+      "children": [
+        {
+          "id": "SP_QUERCYPSITTA_SUDREI_MOURER_CHAUVIRE_1992",
+          "name": "Quercypsitta sudrei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Quercypsitta",
+          "authorship": "Mourer-Chauvire 1992",
+          "sourceIds": {
+            "checklistbank-1174": "txn:400280"
+          },
+          "uuid": "843e8156-b653-4bf2-aa2b-6ab45dc07778",
+          "children": []
+        },
+        {
+          "id": "SP_QUERCYPSITTA_IVANI_MOURER_CHAUVIRE_1992",
+          "name": "Quercypsitta ivani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Quercypsitta",
+          "authorship": "Mourer-Chauvire 1992",
+          "sourceIds": {
+            "checklistbank-1174": "txn:400281"
+          },
+          "uuid": "7189fafb-c9cb-4c32-a6f2-61ed0610bcbd",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:39362"
+  }
 }

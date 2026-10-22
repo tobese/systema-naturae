@@ -3,7 +3,7 @@
   "name": "Gobiconodontidae",
   "rank": "FAMILY",
   "appSlug": "gobiconodontidae",
-  "speciesCount": 4,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_HANGJINIA",
@@ -19,7 +19,8 @@
           "lineage": "Hangjinia",
           "authorship": "Godefroit & Guo, 1999",
           "sourceIds": {
-            "gbif-backbone": "4975213"
+            "gbif-backbone": "4975213",
+            "checklistbank-1174": "txn:57346"
           },
           "children": []
         }
@@ -92,7 +93,59 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gobiconodontidae"
+    },
+    {
+      "id": "GENUS_GOBICONODON",
+      "name": "Gobiconodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gobiconodontidae",
+      "children": [
+        {
+          "id": "SP_GOBICONODON_HOBURENSIS_TROFIMOV_1978",
+          "name": "Gobiconodon hoburensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gobiconodon",
+          "authorship": "(Trofimov 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:140285"
+          },
+          "uuid": "2d726ed7-7580-4db2-a0c8-6650fd441b9d",
+          "children": []
+        },
+        {
+          "id": "SP_GOBICONODON_OSTROMI_JENKINS_AND_SCHAFF_1988",
+          "name": "Gobiconodon ostromi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gobiconodon",
+          "authorship": "Jenkins and Schaff 1988",
+          "sourceIds": {
+            "checklistbank-1174": "txn:46675"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOBICONODON_BATHONIENSIS_BUTLER_AND_SIGOGNEAU_RUSSEL_2016",
+          "name": "Gobiconodon bathoniensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gobiconodon",
+          "authorship": "Butler and Sigogneau-Russel 2016",
+          "sourceIds": {
+            "checklistbank-1174": "txn:347499"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:67668"
+  }
 }

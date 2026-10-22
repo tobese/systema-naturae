@@ -3,7 +3,7 @@
   "name": "Australiphemeridae",
   "rank": "FAMILY",
   "appSlug": "australiphemeridae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_NANOPHEMERA",
@@ -19,7 +19,8 @@
           "lineage": "Nanophemera",
           "authorship": "McCafferty & Santiago-Blay, 2008",
           "sourceIds": {
-            "gbif-backbone": "8459428"
+            "gbif-backbone": "8459428",
+            "checklistbank-1174": "txn:222100"
           },
           "children": []
         }
@@ -92,7 +93,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "australiphemeridae"
+    },
+    {
+      "id": "GENUS_CREPOTAMANTHUS",
+      "name": "Crepotamanthus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "australiphemeridae",
+      "children": [
+        {
+          "id": "SP_CREPOTAMANTHUS_SPINITARSUS_ZHENG_AND_CHEN_2023",
+          "name": "Crepotamanthus spinitarsus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crepotamanthus",
+          "authorship": "Zheng and Chen 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:469418"
+          },
+          "uuid": "eb082a5f-2ed9-40cd-a760-44cbf2802b28",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:190717"
+  }
 }

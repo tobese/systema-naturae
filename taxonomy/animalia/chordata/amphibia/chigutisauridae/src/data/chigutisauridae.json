@@ -3,7 +3,7 @@
   "name": "Chigutisauridae",
   "rank": "FAMILY",
   "appSlug": "chigutisauridae",
-  "speciesCount": 8,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_SIDEROPS",
@@ -19,7 +19,8 @@
           "lineage": "Siderops",
           "authorship": "Warren & Hutchinson, 1983",
           "sourceIds": {
-            "gbif-backbone": "4815767"
+            "gbif-backbone": "4815767",
+            "checklistbank-1174": "txn:251254"
           },
           "children": []
         }
@@ -110,6 +111,34 @@
             "gbif-backbone": "8705907"
           },
           "children": []
+        },
+        {
+          "id": "SP_PELOROCEPHALUS_TENAX_RUSCONI_1949",
+          "name": "Pelorocephalus tenax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelorocephalus",
+          "authorship": "(Rusconi 1949)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:251475"
+          },
+          "uuid": "5b572816-3a8e-4445-9841-0fa35ad315ed",
+          "children": []
+        },
+        {
+          "id": "SP_PELOROCEPHALUS_CACHEUTENSIS_RUSCONI_1953",
+          "name": "Pelorocephalus cacheutensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelorocephalus",
+          "authorship": "(Rusconi 1953)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:251477"
+          },
+          "uuid": "1b272bc3-ba34-41fe-b194-1505d42676d7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -171,7 +200,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chigutisauridae"
+    },
+    {
+      "id": "GENUS_ARENAERPETON",
+      "name": "Arenaerpeton",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chigutisauridae",
+      "children": [
+        {
+          "id": "SP_ARENAERPETON_SUPINATUS_HART_ET_AL_2023",
+          "name": "Arenaerpeton supinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arenaerpeton",
+          "authorship": "Hart et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:479382"
+          },
+          "uuid": "e8c15822-4b3d-4ab7-822e-d609f0cc072a",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:37158"
+  }
 }

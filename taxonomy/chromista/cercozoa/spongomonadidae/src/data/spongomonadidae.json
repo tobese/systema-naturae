@@ -3,7 +3,7 @@
   "name": "Spongomonadidae",
   "rank": "FAMILY",
   "appSlug": "spongomonadidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_SPONGOMONAS",
@@ -33,15 +33,61 @@
           "lineage": "Spongomonas",
           "authorship": "F.Stein",
           "sourceIds": {
-            "gbif-backbone": "7960678"
+            "gbif-backbone": "7960678",
+            "checklistbank-139831": "1613811"
           },
           "children": [],
           "uuid": "9692b26d-3cb3-54d-9de-5afde4afe63e9b"
+        },
+        {
+          "id": "SP_SPONGOMONAS_SPLENDIDA",
+          "name": "Spongomonas splendida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongomonas",
+          "sourceIds": {
+            "checklistbank-139831": "1026626"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPONGOMONAS_INTESTINALIS",
+          "name": "Spongomonas intestinalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongomonas",
+          "sourceIds": {
+            "checklistbank-139831": "1435847"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spongomonadidae"
+    },
+    {
+      "id": "GENUS_RHIPIDODENDRON",
+      "name": "Rhipidodendron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHIPIDODENDRON_HUXLEYI",
+          "name": "Rhipidodendron huxleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhipidodendron",
+          "sourceIds": {
+            "checklistbank-139831": "1026633"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spongomonadidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

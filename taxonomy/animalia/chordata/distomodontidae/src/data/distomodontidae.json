@@ -3,7 +3,7 @@
   "name": "Distomodontidae",
   "rank": "FAMILY",
   "appSlug": "distomodontidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_JOHNOGNATHUS",
@@ -54,14 +54,55 @@
           "lineage": "Distomodus",
           "authorship": "Branson & Branson, 1947",
           "sourceIds": {
-            "gbif-backbone": "9284035"
+            "gbif-backbone": "9284035",
+            "checklistbank-1174": "txn:344776"
           },
+          "children": []
+        },
+        {
+          "id": "SP_DISTOMODUS_STAUROGNATHOIDES_WALLISER_1964",
+          "name": "Distomodus staurognathoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Distomodus",
+          "authorship": "(Walliser 1964)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344779"
+          },
+          "uuid": "f0762982-3673-44e2-b585-6c77bcc61d60",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "distomodontidae"
+    },
+    {
+      "id": "GENUS_CORYSSOGNATHUS",
+      "name": "Coryssognathus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "distomodontidae",
+      "children": [
+        {
+          "id": "SP_CORYSSOGNATHUS_DUBIUS_WANG_1980",
+          "name": "Coryssognathus dubius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryssognathus",
+          "authorship": "(Wang 1980)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344773"
+          },
+          "uuid": "a5a1ef5d-2de1-4c0e-90da-d6741ad84f37",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:393135"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Messelasturidae",
   "rank": "FAMILY",
   "appSlug": "messelasturidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TYNSKYA",
@@ -22,11 +22,50 @@
             "gbif-backbone": "8593885"
           },
           "children": []
+        },
+        {
+          "id": "SP_TYNSKYA_WALTONENSIS_MAYR_2021",
+          "name": "Tynskya waltonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tynskya",
+          "authorship": "Mayr 2021",
+          "sourceIds": {
+            "checklistbank-1174": "txn:488863"
+          },
+          "uuid": "1ad346e2-20c3-4a31-aba8-d606ac63cd24",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "messelasturidae"
+    },
+    {
+      "id": "GENUS_MESSELASTUR",
+      "name": "Messelastur",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "messelasturidae",
+      "children": [
+        {
+          "id": "SP_MESSELASTUR_GRATULATOR_PETERS_1994",
+          "name": "Messelastur gratulator",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Messelastur",
+          "authorship": "Peters 1994",
+          "sourceIds": {
+            "checklistbank-1174": "txn:137232"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:206144"
+  }
 }

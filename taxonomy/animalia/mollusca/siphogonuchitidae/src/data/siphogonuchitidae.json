@@ -3,7 +3,7 @@
   "name": "Siphogonuchitidae",
   "rank": "FAMILY",
   "appSlug": "siphogonuchitidae",
-  "speciesCount": 12,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_DREPANOCHITES",
@@ -120,7 +120,8 @@
           "lineage": "Siphogonuchites",
           "authorship": "Qian & Yin, 1984",
           "sourceIds": {
-            "gbif-backbone": "8439151"
+            "gbif-backbone": "8439151",
+            "checklistbank-1174": "txn:184220"
           },
           "children": []
         },
@@ -159,7 +160,8 @@
           "lineage": "Siphogonuchites",
           "authorship": "Qian & Yin, 1984",
           "sourceIds": {
-            "gbif-backbone": "8641540"
+            "gbif-backbone": "8641540",
+            "checklistbank-1174": "txn:184221"
           },
           "children": []
         },
@@ -174,6 +176,20 @@
           "sourceIds": {
             "gbif-backbone": "8557581"
           },
+          "children": []
+        },
+        {
+          "id": "SP_SIPHOGONUCHITES_SUBREMUALIS_BOKOVA_1985",
+          "name": "Siphogonuchites subremualis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphogonuchites",
+          "authorship": "(Bokova 1985)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:481904"
+          },
+          "uuid": "529a6695-d580-4b12-9142-c4980b97933d",
           "children": []
         }
       ],
@@ -194,7 +210,8 @@
           "lineage": "Calvapilosa",
           "authorship": "Vinther, Parry, Briggs & Van Roy, 2017",
           "sourceIds": {
-            "gbif-backbone": "9072382"
+            "gbif-backbone": "9072382",
+            "checklistbank-1174": "txn:350431"
           },
           "children": []
         }
@@ -223,7 +240,70 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "siphogonuchitidae"
+    },
+    {
+      "id": "GENUS_TIANZHUSHANIA",
+      "name": "Tianzhushania",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "siphogonuchitidae",
+      "children": [
+        {
+          "id": "SP_TIANZHUSHANIA_LONGA_QIAN_ET_AL_1979",
+          "name": "Tianzhushania longa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tianzhushania",
+          "authorship": "Qian et al. 1979",
+          "sourceIds": {
+            "checklistbank-1174": "txn:182622"
+          },
+          "uuid": "3354c7c8-6d10-4d0d-84ee-aacc0a80b99b",
+          "children": []
+        },
+        {
+          "id": "SP_TIANZHUSHANIA_OBESA_QIAN_ET_AL_1979",
+          "name": "Tianzhushania obesa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tianzhushania",
+          "authorship": "Qian et al. 1979",
+          "sourceIds": {
+            "checklistbank-1174": "txn:182623"
+          },
+          "uuid": "a3041182-146b-42d9-9e0d-5ca8b9fa7b05",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DABASHANITES",
+      "name": "Dabashanites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "siphogonuchitidae",
+      "children": [
+        {
+          "id": "SP_DABASHANITES_MIRUS_CHEN_1979",
+          "name": "Dabashanites mirus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dabashanites",
+          "authorship": "Chen 1979",
+          "sourceIds": {
+            "checklistbank-1174": "txn:183696"
+          },
+          "uuid": "d53f6d45-120b-4535-bd23-142bbad949fb",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:182827"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Brachystelechidae",
   "rank": "FAMILY",
   "appSlug": "brachystelechidae",
-  "speciesCount": 7,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_QUASICAECILIA",
@@ -92,6 +92,20 @@
             "gbif-backbone": "8577380"
           },
           "children": []
+        },
+        {
+          "id": "SP_BATROPETES_FRITSCHIA_GEINITZ_AND_DEICHM_LLER_1882",
+          "name": "Batropetes fritschia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Batropetes",
+          "authorship": "(Geinitz and Deichmüller 1882)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:137988"
+          },
+          "uuid": "9557aed5-c29b-4269-9319-a7c7719d646a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -111,7 +125,8 @@
           "lineage": "Carrolla",
           "authorship": "Langston & Olson, 1986",
           "sourceIds": {
-            "gbif-backbone": "8570932"
+            "gbif-backbone": "8570932",
+            "checklistbank-1174": "txn:227004"
           },
           "children": []
         }
@@ -133,14 +148,41 @@
           "lineage": "Diabloroter",
           "authorship": "Mann & Maddin, 2019",
           "sourceIds": {
-            "gbif-backbone": "11130164"
+            "gbif-backbone": "11130164",
+            "checklistbank-1174": "txn:387344"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "brachystelechidae"
+    },
+    {
+      "id": "GENUS_BROMERPETON",
+      "name": "Bromerpeton",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachystelechidae",
+      "children": [
+        {
+          "id": "SP_BROMERPETON_SUBCOLOSSUS_MACDOUGALL_ET_AL_2024",
+          "name": "Bromerpeton subcolossus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bromerpeton",
+          "authorship": "MacDougall et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:485526"
+          },
+          "uuid": "df6b0426-22ad-4e64-9ea5-246a90d4193f",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:37314"
+  }
 }

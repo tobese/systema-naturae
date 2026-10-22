@@ -3,7 +3,7 @@
   "name": "Erythrosuchidae",
   "rank": "FAMILY",
   "appSlug": "erythrosuchidae",
-  "speciesCount": 10,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_GUCHENGOSUCHUS",
@@ -111,7 +111,8 @@
           "lineage": "Garjainia",
           "authorship": "Gower, Hancox, Botha-Brink, Sennikov & Butler, 2014",
           "sourceIds": {
-            "gbif-backbone": "8968605"
+            "gbif-backbone": "8968605",
+            "checklistbank-1174": "txn:347457"
           },
           "children": []
         }
@@ -197,7 +198,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "erythrosuchidae"
+    },
+    {
+      "id": "GENUS_URALOSAURUS",
+      "name": "Uralosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "erythrosuchidae",
+      "children": [
+        {
+          "id": "SP_URALOSAURUS_MAGNUS_OCHEV_1980",
+          "name": "Uralosaurus magnus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uralosaurus",
+          "authorship": "(Ochev 1980)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:169948"
+          },
+          "uuid": "38e32248-1dd8-4edc-bf36-9f0eb659633c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:38225"
+  }
 }

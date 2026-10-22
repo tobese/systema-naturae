@@ -3,7 +3,7 @@
   "name": "Microcarididae",
   "rank": "FAMILY",
   "appSlug": "microcarididae",
-  "speciesCount": 4,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_THYLACOCEPHALUS",
@@ -41,7 +41,8 @@
           "lineage": "Atropicaris",
           "authorship": "Arduini & Brasca, 1984",
           "sourceIds": {
-            "gbif-backbone": "11890091"
+            "gbif-backbone": "11890091",
+            "checklistbank-1174": "txn:446567"
           },
           "children": []
         }
@@ -83,7 +84,84 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "microcarididae"
+    },
+    {
+      "id": "GENUS_PARISICARIS",
+      "name": "Parisicaris",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "microcarididae",
+      "children": [
+        {
+          "id": "SP_PARISICARIS_TRIASSICA_CHARBONNIER_2019",
+          "name": "Parisicaris triassica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parisicaris",
+          "authorship": "(Charbonnier 2019)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:388248"
+          },
+          "uuid": "c5d78b02-7615-4f61-b8ff-bb88745cff58",
+          "children": []
+        },
+        {
+          "id": "SP_PARISICARIS_NAOYAI_EHIRO_AND_KANO_2024",
+          "name": "Parisicaris naoyai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parisicaris",
+          "authorship": "Ehiro and Kano 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:504636"
+          },
+          "uuid": "f0d6417d-7eab-484f-869e-53a7247fba23",
+          "children": []
+        },
+        {
+          "id": "SP_PARISICARIS_RECTILINEATUS_JI_ET_AL_2021",
+          "name": "Parisicaris rectilineatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parisicaris",
+          "authorship": "(Ji et al. 2021)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:500377"
+          },
+          "uuid": "7a1fbfa8-49b8-40e1-8a1f-11c2a721502e",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_FERRECARIS",
+      "name": "Ferrecaris",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "microcarididae",
+      "children": [
+        {
+          "id": "SP_FERRECARIS_MAGRANSI_CALZADA_AND_MANE_1993",
+          "name": "Ferrecaris magransi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ferrecaris",
+          "authorship": "Calzada and Mane 1993",
+          "sourceIds": {
+            "checklistbank-1174": "txn:446568"
+          },
+          "uuid": "bd1f3a49-9c51-43f3-94ea-90267e41455a",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:329809"
+  }
 }

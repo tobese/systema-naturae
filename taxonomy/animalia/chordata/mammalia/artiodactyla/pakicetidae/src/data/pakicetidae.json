@@ -3,7 +3,7 @@
   "name": "Pakicetidae",
   "rank": "FAMILY",
   "appSlug": "pakicetidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_NALACETUS",
@@ -19,7 +19,8 @@
           "lineage": "Nalacetus",
           "authorship": "Thewissen & Hussain, 1998",
           "sourceIds": {
-            "gbif-backbone": "4970839"
+            "gbif-backbone": "4970839",
+            "checklistbank-1174": "txn:63098"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Himalayacetus",
           "authorship": "Bajpai & Gingerich, 1998",
           "sourceIds": {
-            "gbif-backbone": "4971318"
+            "gbif-backbone": "4971318",
+            "wikispecies": "Himalayacetus_subathuensis"
           },
           "children": []
         }
@@ -63,14 +65,56 @@
           "lineage": "Ichthyolestes",
           "authorship": "Dehm & Oettingen-Spielberg, 1958",
           "sourceIds": {
-            "gbif-backbone": "4970842"
+            "gbif-backbone": "4970842",
+            "checklistbank-1174": "txn:62974"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pakicetidae"
+    },
+    {
+      "id": "GENUS_PAKICETUS",
+      "name": "Pakicetus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pakicetidae",
+      "children": [
+        {
+          "id": "SP_PAKICETUS_INACHUS_GINGERICH_AND_RUSSELL_1981",
+          "name": "Pakicetus inachus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pakicetus",
+          "authorship": "Gingerich and Russell 1981",
+          "sourceIds": {
+            "checklistbank-1174": "txn:53310"
+          },
+          "uuid": "e3a9ddc4-bb5e-4be6-9b71-4d97b9e5e95d",
+          "children": []
+        },
+        {
+          "id": "SP_PAKICETUS_ATTOCKI_WEST_1980",
+          "name": "Pakicetus attocki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pakicetus",
+          "authorship": "(West 1980)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:53311"
+          },
+          "uuid": "f40a2ed1-abaf-4c9a-acc6-0c2c434d0397",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Pakicetidae",
+    "checklistbank-1174": "txn:63147"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Electrotomidae",
   "rank": "FAMILY",
   "appSlug": "electrotomidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_ELECTROTOMA",
@@ -19,8 +19,24 @@
           "lineage": "Electrotoma",
           "authorship": "Rasnitsyn, 1977",
           "sourceIds": {
-            "gbif-backbone": "8708568"
+            "gbif-backbone": "8708568",
+            "wikispecies": "Electrotoma_succini"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ELECTROTOMA_KOPYLOVI_RASNITSYN_AND_MANUKYAN_2023",
+          "name": "Electrotoma kopylovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Electrotoma",
+          "authorship": "Rasnitsyn and Manukyan 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:477292",
+            "wikispecies": "Electrotoma_kopylovi"
+          },
+          "uuid": "b652bf51-4c4a-40fa-b683-39c862771390",
           "children": []
         }
       ],
@@ -28,5 +44,8 @@
       "lineage": "electrotomidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 1,
+  "sourceIds": {
+    "wikispecies": "Electrotomidae"
+  }
 }

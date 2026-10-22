@@ -3,7 +3,7 @@
   "name": "Eutypomyidae",
   "rank": "FAMILY",
   "appSlug": "eutypomyidae",
-  "speciesCount": 14,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_JANIMUS",
@@ -132,7 +132,8 @@
           "lineage": "Eutypomys",
           "authorship": "Wood & Konizeski, 1965",
           "sourceIds": {
-            "gbif-backbone": "4973706"
+            "gbif-backbone": "4973706",
+            "checklistbank-1174": "txn:46478"
           },
           "children": []
         },
@@ -183,6 +184,20 @@
             "gbif-backbone": "4973699"
           },
           "children": []
+        },
+        {
+          "id": "SP_MICROEUTYPOMYS_TILLIEI_STORER_1988",
+          "name": "Microeutypomys tilliei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microeutypomys",
+          "authorship": "(Storer 1988)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:46482"
+          },
+          "uuid": "ae197320-b3dd-4850-97f1-eb58e7568703",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -231,7 +246,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eutypomyidae"
+    },
+    {
+      "id": "GENUS_ALLOTYPOMYS",
+      "name": "Allotypomys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eutypomyidae",
+      "children": [
+        {
+          "id": "SP_ALLOTYPOMYS_PICTUS_KORTH_AND_SAMUELS_2015",
+          "name": "Allotypomys pictus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allotypomys",
+          "authorship": "Korth and Samuels 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:466975"
+          },
+          "uuid": "37cd6dd9-cef1-4df9-ad6c-6aa1be3e9268",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:41565"
+  }
 }

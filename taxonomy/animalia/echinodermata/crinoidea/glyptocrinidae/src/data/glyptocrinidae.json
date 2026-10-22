@@ -3,7 +3,7 @@
   "name": "Glyptocrinidae",
   "rank": "FAMILY",
   "appSlug": "glyptocrinidae",
-  "speciesCount": 9,
+  "speciesCount": 14,
   "children": [
     {
       "id": "GENUS_GLYPTOCRINUS",
@@ -32,7 +32,8 @@
           "lineage": "Glyptocrinus",
           "authorship": "Kallmeyer & Ausich, 2015",
           "sourceIds": {
-            "gbif-backbone": "9071424"
+            "gbif-backbone": "9071424",
+            "checklistbank-1174": "txn:346765"
           },
           "children": []
         },
@@ -67,7 +68,8 @@
           "lineage": "Celtocrinus",
           "authorship": "Donovan & Cope, 1989",
           "sourceIds": {
-            "gbif-backbone": "9812354"
+            "gbif-backbone": "9812354",
+            "checklistbank-1174": "txn:365831"
           },
           "children": []
         }
@@ -91,6 +93,34 @@
           "sourceIds": {
             "gbif-backbone": "11204619"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ABLUDOGLYPTOCRINUS_CHARLTONI_KOLATA_1975",
+          "name": "Abludoglyptocrinus charltoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abludoglyptocrinus",
+          "authorship": "(Kolata 1975)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:515432"
+          },
+          "uuid": "62b062ff-5c23-4d7f-b9b3-3b750df8fd6a",
+          "children": []
+        },
+        {
+          "id": "SP_ABLUDOGLYPTOCRINUS_ORNATUS_BILLINGS_1857",
+          "name": "Abludoglyptocrinus ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abludoglyptocrinus",
+          "authorship": "(Billings 1857)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344837"
+          },
+          "uuid": "d1004d2a-2a3b-46d5-a627-b6149b2c445a",
           "children": []
         }
       ],
@@ -153,11 +183,65 @@
             "gbif-backbone": "11201963"
           },
           "children": []
+        },
+        {
+          "id": "SP_PERIGLYPTOCRINUS_PRISCUS_BILLINGS_1857",
+          "name": "Periglyptocrinus priscus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Periglyptocrinus",
+          "authorship": "(Billings 1857)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344833"
+          },
+          "uuid": "1937fa5c-ff60-4101-96d5-288c6f9a54fa",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "glyptocrinidae"
+    },
+    {
+      "id": "GENUS_PYCNOCRINUS",
+      "name": "Pycnocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "glyptocrinidae",
+      "children": [
+        {
+          "id": "SP_PYCNOCRINUS_MOHONKENSIS_BROWER_ET_AL_2024",
+          "name": "Pycnocrinus mohonkensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pycnocrinus",
+          "authorship": "Brower et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:499966"
+          },
+          "uuid": "c6e6fcf2-b12a-42d7-9df5-c28398576ce0",
+          "children": []
+        },
+        {
+          "id": "SP_PYCNOCRINUS_DYERI_MEEK_1872",
+          "name": "Pycnocrinus dyeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pycnocrinus",
+          "authorship": "(Meek 1872)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:499972"
+          },
+          "uuid": "138ee0f2-c29a-4d05-979c-765493f0be83",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:372322"
+  }
 }

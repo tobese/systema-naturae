@@ -3,7 +3,7 @@
   "name": "Cricocosmiidae",
   "rank": "FAMILY",
   "appSlug": "cricocosmiidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_TABELLISCOLEX",
@@ -54,14 +54,41 @@
           "lineage": "Cricocosmia",
           "authorship": "Hou & Sun, 1988",
           "sourceIds": {
-            "gbif-backbone": "6880816"
+            "gbif-backbone": "6880816",
+            "checklistbank-1174": "txn:304675"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cricocosmiidae"
+    },
+    {
+      "id": "GENUS_TYLOTITES",
+      "name": "Tylotites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cricocosmiidae",
+      "children": [
+        {
+          "id": "SP_TYLOTITES_PETIOLARIS_LUO_AND_HU_1999",
+          "name": "Tylotites petiolaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tylotites",
+          "authorship": "Luo and Hu 1999",
+          "sourceIds": {
+            "checklistbank-1174": "txn:304669"
+          },
+          "uuid": "70917876-d330-4e75-b8d9-e04a627984f4",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:304670"
+  }
 }

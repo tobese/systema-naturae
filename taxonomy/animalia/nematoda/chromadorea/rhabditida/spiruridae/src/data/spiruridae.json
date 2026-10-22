@@ -968,7 +968,8 @@
           "sourceIds": {
             "checklistbank-2302": "urn:lsid:marinespecies.org:taxname:1729231"
           },
-          "uuid": "95f998ab-cd50-444c-a2a7-b280b9e21144"
+          "uuid": "95f998ab-cd50-444c-a2a7-b280b9e21144",
+          "children": []
         },
         {
           "id": "SP_SPIRURA_DENTATA_M_NNIG_1938",
@@ -981,7 +982,22 @@
           "sourceIds": {
             "checklistbank-2302": "urn:lsid:marinespecies.org:taxname:1763408"
           },
-          "uuid": "48981c5b-3804-40b2-92ef-ab508e99a818"
+          "uuid": "48981c5b-3804-40b2-92ef-ab508e99a818",
+          "children": []
+        },
+        {
+          "id": "SP_SPIRURA_AURANGABADENSIS_ALI_LOVEKAR",
+          "name": "Spirura aurangabadensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirura",
+          "authorship": "Ali & Lovekar",
+          "sourceIds": {
+            "checklistbank-127379": "9e15e4c3-1ff6-4fbe-b097-d170bfb53334"
+          },
+          "uuid": "6c960c46-c348-4735-8a90-29473c7e5d17",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1025,10 +1041,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spiruridae"
+    },
+    {
+      "id": "GENUS_MASTOPHORUS",
+      "name": "Mastophorus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MASTOPHORUS_MURIS",
+          "name": "Mastophorus muris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mastophorus",
+          "sourceIds": {
+            "checklistbank-139831": "1643423"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spiruridae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 61,
+  "genusCount": 15,
+  "speciesCount": 63,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

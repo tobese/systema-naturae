@@ -3,7 +3,7 @@
   "name": "Rhombodontidae",
   "rank": "FAMILY",
   "appSlug": "rhombodontidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_RHOMBODUS",
@@ -19,7 +19,8 @@
           "lineage": "Rhombodus",
           "authorship": "Kriwet, Soler-Gijón & López-Martínez, 2007",
           "sourceIds": {
-            "gbif-backbone": "4964443"
+            "gbif-backbone": "4964443",
+            "checklistbank-1174": "txn:111385"
           },
           "children": []
         },
@@ -84,7 +85,8 @@
           "lineage": "Rhombodus",
           "authorship": "Noubhani & Cappetta, 1994",
           "sourceIds": {
-            "gbif-backbone": "4964444"
+            "gbif-backbone": "4964444",
+            "checklistbank-1174": "txn:111392"
           },
           "children": []
         },
@@ -99,6 +101,20 @@
           "sourceIds": {
             "gbif-backbone": "4964441"
           },
+          "children": []
+        },
+        {
+          "id": "SP_RHOMBODUS_LEVIS_CAPPETTA_AND_CASE_1975",
+          "name": "Rhombodus levis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhombodus",
+          "authorship": "Cappetta and Case 1975",
+          "sourceIds": {
+            "checklistbank-1174": "txn:117686"
+          },
+          "uuid": "7fb3b85e-372f-4a7b-9581-26c386307c88",
           "children": []
         }
       ],
@@ -126,7 +142,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhombodontidae"
+    },
+    {
+      "id": "GENUS_PLANODENS",
+      "name": "Planodens",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhombodontidae",
+      "children": [
+        {
+          "id": "SP_PLANODENS_WUQICUS_LI_1997",
+          "name": "Planodens wuqicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planodens",
+          "authorship": "Li 1997",
+          "sourceIds": {
+            "checklistbank-1174": "txn:518391"
+          },
+          "uuid": "cdd7f6f5-e818-4f1f-b937-1c61f474b091",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:111382"
+  }
 }

@@ -823,7 +823,8 @@
               "wfo-0001196532"
             ],
             "checklistbank": "189567",
-            "checklistbank-2008": "6181"
+            "checklistbank-2008": "6181",
+            "checklistbank-2029": "e97b32ee-fbdf-49e0-b341-05580104991b"
           },
           "authorityIds": "col:3Y2XC,itis:15586,wfo:wfo-0001196532"
         },
@@ -1070,7 +1071,8 @@
             ],
             "checklistbank": "105446",
             "checklistbank-2008": "6182",
-            "gbif-backbone": "8412153"
+            "gbif-backbone": "8412153",
+            "checklistbank-1174": "txn:512631"
           },
           "authorityIds": "col:3Y2XL,itis:15587,wfo:wfo-0001196533"
         },
@@ -2576,7 +2578,8 @@
               "1109735"
             ],
             "checklistbank": "txn:56088",
-            "gbif-backbone": "4941961"
+            "gbif-backbone": "4941961",
+            "checklistbank-1174": "txn:56088"
           },
           "authorityIds": "col:3Y2YB,itis:1109735",
           "authorship": "Brown and Robison 1976"
@@ -2600,7 +2603,8 @@
               "3Y2YC"
             ],
             "checklistbank": "txn:410718",
-            "gbif-backbone": "7470068"
+            "gbif-backbone": "7470068",
+            "checklistbank-1174": "txn:410718"
           },
           "authorityIds": "col:3Y2YC,itis:1109736",
           "authorship": "Lundblad 1954"
@@ -3038,7 +3042,8 @@
               "735XX"
             ],
             "checklistbank": "txn:410720",
-            "gbif-backbone": "7954714"
+            "gbif-backbone": "7954714",
+            "checklistbank-1174": "txn:410720"
           },
           "authorityIds": "col:735XX,itis:1109753",
           "authorship": "Brongniart 1849"
@@ -3059,7 +3064,8 @@
               "9THR7"
             ],
             "checklistbank": "txn:410721",
-            "gbif-backbone": "11145176"
+            "gbif-backbone": "11145176",
+            "checklistbank-1174": "txn:410721"
           },
           "authorityIds": "col:9THR7",
           "authorship": "Saporta 1865"
@@ -3488,11 +3494,40 @@
           "lineage": "\"Marchantia",
           "authorship": "L.",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1629239"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1629239",
+            "checklistbank-1174": "txn:512631"
           },
           "children": [],
           "uuid": "f189d981-5b29-588-9a7-22369c132dbdbc",
           "description": "\"Marchantia polymorpha\" is a marchantiaceae species found in its native region."
+        },
+        {
+          "id": "SP_MARCHANTIA_LIGNITICA_BROWN_1962",
+          "name": "Marchantia lignitica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marchantia",
+          "authorship": "Brown 1962",
+          "sourceIds": {
+            "checklistbank-1174": "txn:337905"
+          },
+          "uuid": "9e08aaac-5ad6-48f7-a75f-5a53831f65ac",
+          "children": []
+        },
+        {
+          "id": "SP_MARCHANTIA_CHENOPODA_LINNAEUS_1753",
+          "name": "Marchantia chenopoda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marchantia",
+          "authorship": "Linnaeus 1753",
+          "sourceIds": {
+            "checklistbank-1174": "txn:512632"
+          },
+          "uuid": "e7f9b2c0-eb83-4449-b5fb-05da9f853403",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3536,10 +3571,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "marchantiaceae"
+    },
+    {
+      "id": "GENUS_DUMORTIERA",
+      "name": "Dumortiera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DUMORTIERA_HIRSUTA_SW_NEES",
+          "name": "Dumortiera hirsuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dumortiera",
+          "authorship": "(Sw.) Nees",
+          "sourceIds": {
+            "checklistbank-2029": "76e02d07-cf62-47a5-8f1b-a52a7325fa16"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "marchantiaceae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 174,
+  "genusCount": 15,
+  "speciesCount": 177,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -3548,6 +3605,7 @@
       "orderKey": 376,
       "familyKey": 6110
     },
-    "checklistbank": "txn:56090"
+    "checklistbank": "txn:56090",
+    "checklistbank-1174": "txn:56090"
   }
 }

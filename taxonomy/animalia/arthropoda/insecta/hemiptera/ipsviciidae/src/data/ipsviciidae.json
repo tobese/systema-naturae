@@ -3,7 +3,7 @@
   "name": "Ipsviciidae",
   "rank": "FAMILY",
   "appSlug": "ipsviciidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_STRIVICIA",
@@ -43,6 +43,20 @@
           "sourceIds": {
             "gbif-backbone": "8550020"
           },
+          "children": []
+        },
+        {
+          "id": "SP_IPSVICIOPSIS_LANGENBERGENSIS_BARTH_ET_AL_2011",
+          "name": "Ipsviciopsis langenbergensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ipsviciopsis",
+          "authorship": "(Barth et al. 2011)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:215463"
+          },
+          "uuid": "3605c5a0-78a3-4561-9ed1-25bddc07714b",
           "children": []
         }
       ],
@@ -120,7 +134,8 @@
           "lineage": "Shaanxioscarta",
           "authorship": "Linnaeus, 1982",
           "sourceIds": {
-            "gbif-backbone": "8502439"
+            "gbif-backbone": "8502439",
+            "checklistbank-1174": "txn:289739"
           },
           "children": []
         }
@@ -142,7 +157,8 @@
           "lineage": "Doryscarta",
           "authorship": "Linnaeus, 1982",
           "sourceIds": {
-            "gbif-backbone": "8549557"
+            "gbif-backbone": "8549557",
+            "checklistbank-1174": "txn:273992"
           },
           "children": []
         }
@@ -171,7 +187,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ipsviciidae"
+    },
+    {
+      "id": "GENUS_SOLITIVICIA",
+      "name": "Solitivicia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ipsviciidae",
+      "children": [
+        {
+          "id": "SP_SOLITIVICIA_REDUCTA_CRISCIONE_VASTANO_AND_GRIMALDI_2025",
+          "name": "Solitivicia reducta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solitivicia",
+          "authorship": "Criscione-Vastano and Grimaldi 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509515"
+          },
+          "uuid": "401b156a-1ea1-4120-b65c-dbc1897e89a1",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:189985"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Gephyrostegidae",
   "rank": "FAMILY",
   "appSlug": "gephyrostegidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_BRUKTERERPETON",
@@ -19,7 +19,8 @@
           "lineage": "Bruktererpeton",
           "authorship": "Boy & Bandel, 1973",
           "sourceIds": {
-            "gbif-backbone": "8571569"
+            "gbif-backbone": "8571569",
+            "checklistbank-1174": "txn:229314"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Gephyrostegus",
           "authorship": "Brough & Brough, 1967",
           "sourceIds": {
-            "gbif-backbone": "4975483"
+            "gbif-backbone": "4975483",
+            "checklistbank-1174": "txn:137954"
           },
           "children": []
         },
@@ -83,7 +85,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gephyrostegidae"
+    },
+    {
+      "id": "GENUS_EUSAUROPLEURA",
+      "name": "Eusauropleura",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gephyrostegidae",
+      "children": [
+        {
+          "id": "SP_EUSAUROPLEURA_DIGITATA_COPE_1868",
+          "name": "Eusauropleura digitata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eusauropleura",
+          "authorship": "(Cope 1868)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:139230"
+          },
+          "uuid": "8411f3bf-5e1c-4e90-97ce-50a7315890ce",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:37202"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Caecitellidae",
   "rank": "FAMILY",
   "appSlug": "caecitellidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_CAECITELLUS",
@@ -19,7 +19,8 @@
           "lineage": "Caecitellus",
           "authorship": "(Griessm.) D.J.Patt. et al.",
           "sourceIds": {
-            "gbif-backbone": "3202397"
+            "gbif-backbone": "3202397",
+            "checklistbank-2008": "952321"
           },
           "children": [],
           "uuid": "dc19607f-f07b-588-9c9-18bcfe732bb3e9"
@@ -27,7 +28,29 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "caecitellidae"
+    },
+    {
+      "id": "GENUS_BODO",
+      "name": "Bodo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BODO_PARVULUS_GRIESSMANN_1913",
+          "name": "Bodo parvulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bodo",
+          "authorship": "Griessmann, 1913",
+          "sourceIds": {
+            "checklistbank-2008": "952322"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caecitellidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

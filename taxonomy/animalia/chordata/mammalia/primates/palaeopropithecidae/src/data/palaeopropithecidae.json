@@ -3,7 +3,7 @@
   "name": "Palaeopropithecidae",
   "rank": "FAMILY",
   "appSlug": "palaeopropithecidae",
-  "speciesCount": 4,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_ARCHAEOINDRIS",
@@ -20,6 +20,18 @@
           "authorship": "Standing, 1909",
           "sourceIds": {
             "gbif-backbone": "4827337"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARCHAEOINDRIS_FONTOYNONTI",
+          "name": "Archaeoindris fontoynonti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeoindris",
+          "sourceIds": {
+            "checklistbank-139831": "1079248"
           },
           "children": []
         }
@@ -41,7 +53,9 @@
           "lineage": "Palaeopropithecus",
           "authorship": "Grandidier, 1899",
           "sourceIds": {
-            "gbif-backbone": "11156876"
+            "gbif-backbone": "11156876",
+            "checklistbank-139831": "477088",
+            "wikispecies": "Palaeopropithecus_maximus"
           },
           "children": []
         },
@@ -54,7 +68,22 @@
           "lineage": "Palaeopropithecus",
           "authorship": "G.Grandidier, 1899",
           "sourceIds": {
-            "gbif-backbone": "5786534"
+            "gbif-backbone": "5786534",
+            "checklistbank-1174": "txn:384308",
+            "checklistbank-139831": "74830",
+            "wikispecies": "Palaeopropithecus_ingens"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALAEOPROPITHECUS_KELYUS",
+          "name": "Palaeopropithecus kelyus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeopropithecus",
+          "sourceIds": {
+            "wikispecies": "Palaeopropithecus_kelyus"
           },
           "children": []
         }
@@ -76,7 +105,53 @@
           "lineage": "Babakotia",
           "authorship": "Godfrey et al., 1990",
           "sourceIds": {
-            "gbif-backbone": "11149938"
+            "gbif-backbone": "11149938",
+            "wikispecies": "Babakotia_radofilai"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeopropithecidae"
+    },
+    {
+      "id": "GENUS_MESOPROPITHECUS",
+      "name": "Mesopropithecus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MESOPROPITHECUS_PITHECOIDES",
+          "name": "Mesopropithecus pithecoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesopropithecus",
+          "sourceIds": {
+            "wikispecies": "Mesopropithecus_pithecoides"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOPROPITHECUS_GLOBICEPS",
+          "name": "Mesopropithecus globiceps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesopropithecus",
+          "sourceIds": {
+            "wikispecies": "Mesopropithecus_globiceps"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOPROPITHECUS_DOLICHOBRACHION",
+          "name": "Mesopropithecus dolichobrachion",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesopropithecus",
+          "sourceIds": {
+            "wikispecies": "Mesopropithecus_dolichobrachion"
           },
           "children": []
         }
@@ -85,5 +160,9 @@
       "lineage": "palaeopropithecidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Palaeopropithecidae",
+    "checklistbank-1174": "txn:40789"
+  }
 }

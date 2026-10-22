@@ -3,7 +3,7 @@
   "name": "Protorothyrididae",
   "rank": "FAMILY",
   "appSlug": "protorothyrididae",
-  "speciesCount": 11,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_PROTOROTHYRIS",
@@ -21,6 +21,20 @@
           "sourceIds": {
             "gbif-backbone": "4968525"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOROTHYRIS_MORANI_ROMER_1952",
+          "name": "Protorothyris morani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protorothyris",
+          "authorship": "(Romer 1952)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:137220"
+          },
+          "uuid": "d80eb431-0bff-406c-a316-86cbed7bff92",
           "children": []
         }
       ],
@@ -124,7 +138,8 @@
           "lineage": "Coelostegus",
           "authorship": "Carroll & Baird, 1972",
           "sourceIds": {
-            "gbif-backbone": "4968528"
+            "gbif-backbone": "4968528",
+            "checklistbank-1174": "txn:137953"
           },
           "children": []
         }
@@ -190,7 +205,8 @@
           "lineage": "Brouffia",
           "authorship": "Carroll & Baird, 1972",
           "sourceIds": {
-            "gbif-backbone": "4968522"
+            "gbif-backbone": "4968522",
+            "checklistbank-1174": "txn:137952"
           },
           "children": []
         }
@@ -219,7 +235,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protorothyrididae"
+    },
+    {
+      "id": "GENUS_ANTHRACODROMEUS",
+      "name": "Anthracodromeus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "protorothyrididae",
+      "children": [
+        {
+          "id": "SP_ANTHRACODROMEUS_LONGIPES_COPE_1875",
+          "name": "Anthracodromeus longipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anthracodromeus",
+          "authorship": "(Cope 1875)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:137949"
+          },
+          "uuid": "4e8c9276-ceea-4881-8655-31b10ea29bf7",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 8
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:37486"
+  }
 }

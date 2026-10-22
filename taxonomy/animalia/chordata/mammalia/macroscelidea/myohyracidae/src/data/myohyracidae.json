@@ -3,7 +3,7 @@
   "name": "Myohyracidae",
   "rank": "FAMILY",
   "appSlug": "myohyracidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_MYOHYRAX",
@@ -19,7 +19,8 @@
           "lineage": "Myohyrax",
           "authorship": "Andrews, 1914",
           "sourceIds": {
-            "gbif-backbone": "9333500"
+            "gbif-backbone": "9333500",
+            "wikispecies": "Myohyrax_oswaldi"
           },
           "children": []
         }
@@ -48,7 +49,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myohyracidae"
+    },
+    {
+      "id": "GENUS_PROMYOHYRAX",
+      "name": "Promyohyrax",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "myohyracidae",
+      "children": [
+        {
+          "id": "SP_PROMYOHYRAX_NAMIBIENSIS_SENUT_AND_PICKFORD_2021",
+          "name": "Promyohyrax namibiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Promyohyrax",
+          "authorship": "Senut and Pickford 2021",
+          "sourceIds": {
+            "checklistbank-1174": "txn:438166"
+          },
+          "uuid": "7ce43012-a732-4991-9fee-9ff0463bedaa",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Myohyracidae"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Agassizocrinidae",
   "rank": "FAMILY",
   "appSlug": "agassizocrinidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_PARAGASSIZOCRINUS",
@@ -19,7 +19,8 @@
           "lineage": "Paragassizocrinus",
           "authorship": "Strimple & Knapp, 1966",
           "sourceIds": {
-            "gbif-backbone": "8588505"
+            "gbif-backbone": "8588505",
+            "checklistbank-1174": "txn:227267"
           },
           "children": []
         }
@@ -48,7 +49,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "agassizocrinidae"
+    },
+    {
+      "id": "GENUS_BELASHOVICRINUS",
+      "name": "Belashovicrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "agassizocrinidae",
+      "children": [
+        {
+          "id": "SP_BELASHOVICRINUS_ELENAE_YAKOVLEV_1930",
+          "name": "Belashovicrinus elenae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Belashovicrinus",
+          "authorship": "(Yakovlev 1930)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:152005"
+          },
+          "uuid": "c879afac-22ff-48a2-a1cf-7aacfdf7a370",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:152003"
+  }
 }

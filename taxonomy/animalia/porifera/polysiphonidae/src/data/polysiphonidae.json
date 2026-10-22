@@ -3,7 +3,7 @@
   "name": "Polysiphonidae",
   "rank": "FAMILY",
   "appSlug": "polysiphonidae",
-  "speciesCount": 4,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_ZARDINIA",
@@ -19,7 +19,8 @@
           "lineage": "Zardinia",
           "authorship": "Senowbari-Daryan & Schäfer, 1983",
           "sourceIds": {
-            "gbif-backbone": "8580647"
+            "gbif-backbone": "8580647",
+            "checklistbank-1174": "txn:201035"
           },
           "children": []
         },
@@ -65,7 +66,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polysiphonidae"
+    },
+    {
+      "id": "GENUS_POLYSIPHON",
+      "name": "Polysiphon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "polysiphonidae",
+      "children": [
+        {
+          "id": "SP_POLYSIPHON_MIRABILIS_GIRTY_1909",
+          "name": "Polysiphon mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polysiphon",
+          "authorship": "Girty 1909",
+          "sourceIds": {
+            "checklistbank-1174": "txn:184337"
+          },
+          "uuid": "d20090d5-df8f-469c-bf62-e4d0b2e2c659",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ARBUSCULANA",
+      "name": "Arbusculana",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "polysiphonidae",
+      "children": [
+        {
+          "id": "SP_ARBUSCULANA_CONTORTIPLICATA_PARONA_1933",
+          "name": "Arbusculana contortiplicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arbusculana",
+          "authorship": "(Parona 1933)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:465502"
+          },
+          "uuid": "6322d536-9c70-4722-9931-cdbdffb2e9ca",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:70247"
+  }
 }

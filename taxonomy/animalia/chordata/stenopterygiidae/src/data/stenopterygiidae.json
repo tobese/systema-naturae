@@ -3,7 +3,7 @@
   "name": "Stenopterygiidae",
   "rank": "FAMILY",
   "appSlug": "stenopterygiidae",
-  "speciesCount": 14,
+  "speciesCount": 15,
   "children": [
     {
       "id": "GENUS_HAUFFIOPTERYX",
@@ -67,7 +67,8 @@
           "lineage": "Stenopterygius",
           "authorship": "Quenstedt, 1858",
           "sourceIds": {
-            "gbif-backbone": "8554325"
+            "gbif-backbone": "8554325",
+            "wikispecies": "Stenopterygius_quadriscissus"
           },
           "children": []
         },
@@ -213,7 +214,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stenopterygiidae"
+    },
+    {
+      "id": "GENUS_MAGNIPTERYGIUS",
+      "name": "Magnipterygius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MAGNIPTERYGIUS_HUENEI",
+          "name": "Magnipterygius huenei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Magnipterygius",
+          "sourceIds": {
+            "wikispecies": "Magnipterygius_huenei"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stenopterygiidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Stenopterygiidae"
+  }
 }

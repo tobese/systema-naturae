@@ -3,7 +3,7 @@
   "name": "Cordylodontidae",
   "rank": "FAMILY",
   "appSlug": "cordylodontidae",
-  "speciesCount": 10,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_PROCONODONTUS",
@@ -102,7 +102,8 @@
           "lineage": "Cordylodus",
           "authorship": "Druce & Jones, 1971",
           "sourceIds": {
-            "gbif-backbone": "4841709"
+            "gbif-backbone": "4841709",
+            "checklistbank-1174": "txn:394252"
           },
           "children": []
         },
@@ -161,7 +162,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cordylodontidae"
+    },
+    {
+      "id": "GENUS_EOCONODONTUS",
+      "name": "Eoconodontus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cordylodontidae",
+      "children": [
+        {
+          "id": "SP_EOCONODONTUS_NOTCHPEAKENSIS_MILLER_1969",
+          "name": "Eoconodontus notchpeakensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoconodontus",
+          "authorship": "(Miller 1969)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:393442"
+          },
+          "uuid": "bff1e0d8-fb32-44b2-b39c-7936684e7131",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_IAPETOGNATHUS",
+      "name": "Iapetognathus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cordylodontidae",
+      "children": [
+        {
+          "id": "SP_IAPETOGNATHUS_AENGENSIS_LINDSTR_M_1955",
+          "name": "Iapetognathus aengensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Iapetognathus",
+          "authorship": "(Lindström 1955)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:394981"
+          },
+          "uuid": "aa9fc346-5f06-418e-a78c-58d848f97401",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:434547"
+  }
 }

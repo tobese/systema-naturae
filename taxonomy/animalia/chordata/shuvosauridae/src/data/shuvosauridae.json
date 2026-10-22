@@ -3,7 +3,7 @@
   "name": "Shuvosauridae",
   "rank": "FAMILY",
   "appSlug": "shuvosauridae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_SHUVOSAURUS",
@@ -41,14 +41,41 @@
           "lineage": "Effigia",
           "authorship": "Nesbitt & Norell, 2006",
           "sourceIds": {
-            "gbif-backbone": "4967756"
+            "gbif-backbone": "4967756",
+            "checklistbank-1174": "txn:70615"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "shuvosauridae"
+    },
+    {
+      "id": "GENUS_SILLOSUCHUS",
+      "name": "Sillosuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "shuvosauridae",
+      "children": [
+        {
+          "id": "SP_SILLOSUCHUS_LONGICERVIX_ALCOBER_AND_PARRISH_1997",
+          "name": "Sillosuchus longicervix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sillosuchus",
+          "authorship": "Alcober and Parrish 1997",
+          "sourceIds": {
+            "checklistbank-1174": "txn:149850"
+          },
+          "uuid": "6ac237b2-9840-4235-918b-9834d5d2322d",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:90275"
+  }
 }

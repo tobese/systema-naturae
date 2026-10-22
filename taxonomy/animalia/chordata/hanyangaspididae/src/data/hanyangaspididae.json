@@ -3,7 +3,7 @@
   "name": "Hanyangaspididae",
   "rank": "FAMILY",
   "appSlug": "hanyangaspididae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_NANJIANGASPIS",
@@ -54,14 +54,55 @@
           "lineage": "Hanyangaspis",
           "authorship": "Pan & Liu, 1975",
           "sourceIds": {
-            "gbif-backbone": "8696919"
+            "gbif-backbone": "8696919",
+            "checklistbank-1174": "txn:321341"
           },
+          "children": []
+        },
+        {
+          "id": "SP_HANYANGASPIS_CHAOHUENSIS_WANG_ET_AL_1980",
+          "name": "Hanyangaspis chaohuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanyangaspis",
+          "authorship": "Wang et al. 1980",
+          "sourceIds": {
+            "checklistbank-1174": "txn:321342"
+          },
+          "uuid": "0bc38f44-ef69-4233-8352-3f73761ccba1",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hanyangaspididae"
+    },
+    {
+      "id": "GENUS_HONGSHANASPIS",
+      "name": "Hongshanaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hanyangaspididae",
+      "children": [
+        {
+          "id": "SP_HONGSHANASPIS_INEXPECTATUS_LIU_ET_AL_2021",
+          "name": "Hongshanaspis inexpectatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hongshanaspis",
+          "authorship": "Liu et al. 2021",
+          "sourceIds": {
+            "checklistbank-1174": "txn:504868"
+          },
+          "uuid": "65685758-e52f-4230-a7b2-b37b6d98057c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:321271"
+  }
 }

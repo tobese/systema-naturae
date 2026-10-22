@@ -47,7 +47,9 @@
             "col": [
               "8TTX"
             ],
-            "checklistbank": "7254"
+            "checklistbank": "7254",
+            "checklistbank-1174": "txn:428449",
+            "checklistbank-139831": "7254"
           },
           "authorityIds": "col:8TTX,itis:558372,wikidata:Q646366",
           "authorship": "(Sparrman, 1787)"
@@ -92,7 +94,8 @@
               "5C99N"
             ],
             "checklistbank": "7263",
-            "wikispecies": "Xenicus_gilviventris"
+            "wikispecies": "Xenicus_gilviventris",
+            "checklistbank-139831": "7263"
           },
           "authorityIds": "col:5C99N,itis:563708,wikidata:Q135589",
           "authorship": "Pelzeln, 1867"
@@ -123,7 +126,8 @@
               "563709"
             ],
             "checklistbank": "7258",
-            "wikispecies": "Xenicus_longipes"
+            "wikispecies": "Xenicus_longipes",
+            "checklistbank-139831": "7258"
           },
           "authorityIds": "col:5C99P,itis:563709,wikidata:Q135443",
           "authorship": "(Gmelin, 1789)"
@@ -193,7 +197,9 @@
             "col": [
               "DD8YR"
             ],
-            "checklistbank": "7262"
+            "checklistbank": "7262",
+            "checklistbank-1174": "txn:428455",
+            "checklistbank-139831": "7262"
           },
           "authorityIds": "col:DD8YR,itis:1260403,wikidata:Q21955209",
           "authorship": "Rothschild, 1894"
@@ -216,7 +222,8 @@
           "uuid": "5b9a72a9-41fd-517-84f-77e1f6ab444a00",
           "authorship": "Millener, 1988",
           "sourceIds": {
-            "checklistbank": "1860150"
+            "checklistbank": "1860150",
+            "checklistbank-1174": "txn:428453"
           },
           "description": "Pachyplichas yaldwyni is a acanthisittidae species found in its native region."
         },
@@ -255,17 +262,40 @@
           "uuid": "4b29ae9c-1e0d-5db-98f-266529d25281c5",
           "authorship": "Worthy et al. 2010",
           "sourceIds": {
-            "checklistbank": "txn:166855"
+            "checklistbank": "txn:166855",
+            "checklistbank-1174": "txn:166855"
           },
           "description": "Kuiornis indicator is a acanthisittidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Acanthisittidae"
+    },
+    {
+      "id": "GENUS_DENDROSCANSOR",
+      "name": "Dendroscansor",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "acanthisittidae",
+      "children": [
+        {
+          "id": "SP_DENDROSCANSOR_DECURVIROSTRIS",
+          "name": "Dendroscansor decurvirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dendroscansor",
+          "sourceIds": {
+            "checklistbank-139831": "774643"
+          },
+          "uuid": "a075ca82-b643-4913-a4b8-c05e990d9cb8",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 9,
+  "genusCount": 6,
+  "speciesCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -275,6 +305,7 @@
       "familyKey": 7098
     },
     "checklistbank": "Acanthisittidae",
-    "wikispecies": "Acanthisittidae"
+    "wikispecies": "Acanthisittidae",
+    "checklistbank-1174": "txn:166853"
   }
 }

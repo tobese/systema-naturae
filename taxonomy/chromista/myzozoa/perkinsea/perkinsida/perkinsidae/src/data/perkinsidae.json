@@ -3,7 +3,7 @@
   "name": "Perkinsidae",
   "rank": "FAMILY",
   "appSlug": "perkinsidae",
-  "speciesCount": 4,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_PARVILUCIFERA",
@@ -56,7 +56,8 @@
           "lineage": "Perkinsus",
           "authorship": "R.J.G.Lester & G.H.G.Davis",
           "sourceIds": {
-            "gbif-backbone": "7458066"
+            "gbif-backbone": "7458066",
+            "checklistbank-2008": "670193"
           },
           "children": [],
           "uuid": "45a80db8-4275-568-8d4-43f83877be7d9c"
@@ -70,15 +71,72 @@
           "lineage": "Perkinsus",
           "authorship": "McLaughlin, Tall, Shaheen, El Sayed & Faisal, 2000",
           "sourceIds": {
-            "gbif-backbone": "8866712"
+            "gbif-backbone": "8866712",
+            "wikispecies": "Perkinsus_chesapeaki"
           },
           "children": [],
           "uuid": "407b80aa-1d7c-506-83c-0fd3929c19c2f6"
+        },
+        {
+          "id": "SP_PERKINSUS_OLSENI_LESTER_DAVIS",
+          "name": "Perkinsus olseni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Perkinsus",
+          "authorship": "Lester & Davis",
+          "sourceIds": {
+            "checklistbank-127379": "9a4785d3-a835-4e93-a973-4d5cb6896dd3",
+            "checklistbank-2008": "542764"
+          },
+          "uuid": "b3aa43cb-641c-4b13-93ee-933af96d64ca",
+          "children": []
+        },
+        {
+          "id": "SP_PERKINSUS_ATLANTICUS_AZEVEDO_1989",
+          "name": "Perkinsus atlanticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Perkinsus",
+          "authorship": "Azevedo, 1989",
+          "sourceIds": {
+            "checklistbank-2008": "376182"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PERKINSUS_ANDREWSI_COSS_ROBLEDO_RUIZ_VASTA_2001",
+          "name": "Perkinsus andrewsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Perkinsus",
+          "authorship": "Coss, Robledo, Ruiz & Vasta, 2001",
+          "sourceIds": {
+            "checklistbank-2008": "837400"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PERKINSUS_MARINUS",
+          "name": "Perkinsus marinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Perkinsus",
+          "sourceIds": {
+            "wikispecies": "Perkinsus_marinus"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "perkinsidae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 2,
+  "sourceIds": {
+    "wikispecies": "Perkinsidae"
+  }
 }

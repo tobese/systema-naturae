@@ -3,7 +3,7 @@
   "name": "Presbyornithidae",
   "rank": "FAMILY",
   "appSlug": "presbyornithidae",
-  "speciesCount": 12,
+  "speciesCount": 14,
   "children": [
     {
       "id": "GENUS_TELMABATES",
@@ -54,7 +54,8 @@
           "lineage": "Wilaru",
           "authorship": "De Pietri, Scofield, Zelenkov, Boles & Worthy, 2020",
           "sourceIds": {
-            "gbif-backbone": "9578079"
+            "gbif-backbone": "9578079",
+            "checklistbank-1174": "txn:348726"
           },
           "children": []
         },
@@ -124,7 +125,8 @@
           "lineage": "Presbyornis",
           "authorship": "Kurochkin & Dyke, 2010",
           "sourceIds": {
-            "gbif-backbone": "8485691"
+            "gbif-backbone": "8485691",
+            "checklistbank-1174": "txn:199947"
           },
           "children": []
         },
@@ -139,6 +141,20 @@
           "sourceIds": {
             "gbif-backbone": "4966412"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PRESBYORNIS_RECURVIROSTRUS_HARDY_1959",
+          "name": "Presbyornis recurvirostrus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Presbyornis",
+          "authorship": "(Hardy 1959)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:57587"
+          },
+          "uuid": "d4c78bf5-8f9c-40d7-873a-fd1534ccf0e9",
           "children": []
         }
       ],
@@ -232,7 +248,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "presbyornithidae"
+    },
+    {
+      "id": "GENUS_MURGONORNIS",
+      "name": "Murgonornis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "presbyornithidae",
+      "children": [
+        {
+          "id": "SP_MURGONORNIS_ARCHERI_WORTHY_ET_AL_2023",
+          "name": "Murgonornis archeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murgonornis",
+          "authorship": "Worthy et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:477961"
+          },
+          "uuid": "abf75624-6d93-4a41-9b2f-f9ee33d815d2",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 8
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:39621"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Thanerocleridae",
   "rank": "FAMILY",
   "appSlug": "thanerocleridae",
-  "speciesCount": 12,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_ZENODOSUS",
@@ -19,7 +19,8 @@
           "lineage": "Zenodosus",
           "authorship": "(Say, 1835)",
           "sourceIds": {
-            "gbif-backbone": "7662480"
+            "gbif-backbone": "7662480",
+            "checklistbank-139831": "178534"
           },
           "children": []
         }
@@ -67,7 +68,9 @@
           "lineage": "Thaneroclerus",
           "authorship": "(Lefebvre, 1835)",
           "sourceIds": {
-            "gbif-backbone": "4449499"
+            "gbif-backbone": "4449499",
+            "checklistbank-139831": "693141",
+            "checklistbank-2008": "307293"
           },
           "children": []
         }
@@ -89,7 +92,20 @@
           "lineage": "Isoclerus",
           "authorship": "Kolibac, 1992",
           "sourceIds": {
-            "gbif-backbone": "5737448"
+            "gbif-backbone": "5737448",
+            "checklistbank-139831": "1709179"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ISOCLERUS_ELONGATUS",
+          "name": "Isoclerus elongatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Isoclerus",
+          "sourceIds": {
+            "checklistbank-139831": "1599183"
           },
           "children": []
         }
@@ -133,7 +149,8 @@
           "lineage": "Thanerosus",
           "authorship": "Peris & Kolibáč, 2022",
           "sourceIds": {
-            "gbif-backbone": "11749385"
+            "gbif-backbone": "11749385",
+            "checklistbank-1174": "txn:455899"
           },
           "children": []
         }
@@ -155,7 +172,20 @@
           "lineage": "Neoclerus",
           "authorship": "Lewis, 1892",
           "sourceIds": {
-            "gbif-backbone": "6131837"
+            "gbif-backbone": "6131837",
+            "checklistbank-139831": "1279914"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOCLERUS_NANUS",
+          "name": "Neoclerus nanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoclerus",
+          "sourceIds": {
+            "checklistbank-139831": "1539946"
           },
           "children": []
         }
@@ -177,7 +207,8 @@
           "lineage": "Cretozenodosus",
           "authorship": "Cai & Huang, 2018",
           "sourceIds": {
-            "gbif-backbone": "9666236"
+            "gbif-backbone": "9666236",
+            "checklistbank-1174": "txn:366469"
           },
           "children": []
         }
@@ -221,7 +252,8 @@
           "lineage": "Archaeozenodosus",
           "authorship": "Yu & Kolibáč, 2017",
           "sourceIds": {
-            "gbif-backbone": "9322477"
+            "gbif-backbone": "9322477",
+            "checklistbank-1174": "txn:361969"
           },
           "children": []
         }
@@ -243,7 +275,43 @@
           "lineage": "Mesozenodosus",
           "authorship": "Tihelka, Cheng, Huang, Perrichot & Cai, 2020",
           "sourceIds": {
-            "gbif-backbone": "11165429"
+            "gbif-backbone": "11165429",
+            "checklistbank-1174": "txn:466813"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thanerocleridae"
+    },
+    {
+      "id": "GENUS_CLERUS",
+      "name": "Clerus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLERUS_BUQUET_LEF_BVRE_1835",
+          "name": "Clerus buquet",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clerus",
+          "authorship": "Lefèbvre, 1835",
+          "sourceIds": {
+            "checklistbank-2008": "774916"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CLERUS_BUQUETI_LEF_BVRE_1835",
+          "name": "Clerus buqueti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clerus",
+          "authorship": "Lefèbvre, 1835",
+          "sourceIds": {
+            "checklistbank-2008": "985884"
           },
           "children": []
         }
@@ -252,5 +320,8 @@
       "lineage": "thanerocleridae"
     }
   ],
-  "genusCount": 10
+  "genusCount": 11,
+  "sourceIds": {
+    "checklistbank-1174": "txn:318732"
+  }
 }

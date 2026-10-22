@@ -108,6 +108,20 @@
           "authorityIds": "col:VR2C3",
           "description": "Strigulla cuculiophoris is a idelinellidae species found in its native region.",
           "children": []
+        },
+        {
+          "id": "SP_STRIGULLA_CUCULIOPHORA_ARISTOV_2002",
+          "name": "Strigulla cuculiophora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Strigulla",
+          "authorship": "(Aristov 2002)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:175640"
+          },
+          "uuid": "cfd95863-d564-47c5-8dd0-13751784c3c9",
+          "children": []
         }
       ]
     },
@@ -129,7 +143,8 @@
           "sourceIds": {
             "col": [
               "VQZXP"
-            ]
+            ],
+            "checklistbank-1174": "txn:218850"
           },
           "authorityIds": "col:VQZXP",
           "description": "Rasstriga americana is a idelinellidae species found in its native region.",
@@ -155,7 +170,8 @@
           "sourceIds": {
             "col": [
               "V9WLC"
-            ]
+            ],
+            "checklistbank-1174": "txn:218848"
           },
           "authorityIds": "col:V9WLC",
           "description": "Scutistriga scutata is a idelinellidae species found in its native region.",
@@ -199,7 +215,52 @@
           "lineage": "Cucullistriga",
           "authorship": "Aristov & Rasnitsyn, 2012",
           "sourceIds": {
-            "gbif-backbone": "8490805"
+            "gbif-backbone": "8490805",
+            "checklistbank-1174": "txn:218846"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "†idelinellidae"
+    },
+    {
+      "id": "GENUS_SCUTISTRIGA",
+      "name": "Scutistriga",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCUTISTRIGA_SCUTATA_ARISTOV_AND_RASNITSYN_2012",
+          "name": "Scutistriga scutata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scutistriga",
+          "authorship": "Aristov and Rasnitsyn 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:218848"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "†idelinellidae"
+    },
+    {
+      "id": "GENUS_RASSTRIGA",
+      "name": "Rasstriga",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RASSTRIGA_AMERICANA_ARISTOV_AND_RASNITSYN_2012",
+          "name": "Rasstriga americana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rasstriga",
+          "authorship": "Aristov and Rasnitsyn 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:218850"
           },
           "children": []
         }
@@ -208,12 +269,12 @@
       "lineage": "†idelinellidae"
     }
   ],
-  "speciesCount": 8,
+  "speciesCount": 11,
   "appSlug": "idelinellidae",
   "continents": [
     "Europe"
   ],
-  "genusCount": 8,
+  "genusCount": 10,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -222,6 +283,7 @@
       "classKey": 216,
       "orderKey": 585,
       "familyKey": 8286790
-    }
+    },
+    "checklistbank-1174": "txn:176268"
   }
 }

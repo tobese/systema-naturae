@@ -3,7 +3,7 @@
   "name": "Entomozoidae",
   "rank": "FAMILY",
   "appSlug": "entomozoidae",
-  "speciesCount": 14,
+  "speciesCount": 19,
   "children": [
     {
       "id": "GENUS_RICHTERINA",
@@ -44,7 +44,8 @@
           "lineage": "Richterina",
           "authorship": "Honigstein & Rosenfeld, 2005",
           "sourceIds": {
-            "gbif-backbone": "8444855"
+            "gbif-backbone": "8444855",
+            "checklistbank-1174": "txn:186061"
           },
           "children": []
         },
@@ -72,6 +73,20 @@
           "sourceIds": {
             "gbif-backbone": "8016402"
           },
+          "children": []
+        },
+        {
+          "id": "SP_RICHTERINA_STRIATULA_RICHTER_1848",
+          "name": "Richterina striatula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Richterina",
+          "authorship": "(Richter 1848)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:184066"
+          },
+          "uuid": "c4c5e703-f9d4-42e8-bce7-1a27aaebdfee",
           "children": []
         }
       ],
@@ -248,7 +263,80 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "entomozoidae"
+    },
+    {
+      "id": "GENUS_ENTOMIS",
+      "name": "Entomis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENTOMIS_CORDUROIDES_GRABAU_1926_BASSLER_KELLETT_1934",
+          "name": "Entomis corduroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomis",
+          "authorship": "(Grabau, 1926) Bassler & Kellett, 1934",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:782525"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENTOMIS_JONESI_KONINCK_1878",
+          "name": "Entomis jonesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomis",
+          "authorship": "Koninck, 1878",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:782537"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENTOMIS_OBSCURA_JONES_KIRKBY_BRADY_1884",
+          "name": "Entomis obscura",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomis",
+          "authorship": "Jones, Kirkby & Brady, 1884",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:782543"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entomozoidae"
+    },
+    {
+      "id": "GENUS_ENTOMOPRIMITIA",
+      "name": "Entomoprimitia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENTOMOPRIMITIA_KINDLEI_LETHIERS_1981",
+          "name": "Entomoprimitia kindlei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomoprimitia",
+          "authorship": "Lethiers, 1981",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:782578"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entomozoidae"
     }
   ],
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:169424"
+  }
 }

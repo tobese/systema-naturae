@@ -3,7 +3,7 @@
   "name": "Sagenocrinitidae",
   "rank": "FAMILY",
   "appSlug": "sagenocrinitidae",
-  "speciesCount": 4,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_TRAMPIDOCRINUS",
@@ -19,7 +19,8 @@
           "lineage": "Trampidocrinus",
           "authorship": "Lane & Webster, 1966",
           "sourceIds": {
-            "gbif-backbone": "4976401"
+            "gbif-backbone": "4976401",
+            "checklistbank-1174": "txn:123563"
           },
           "children": []
         },
@@ -32,7 +33,8 @@
           "lineage": "Trampidocrinus",
           "authorship": "Lane & Webster, 1966",
           "sourceIds": {
-            "gbif-backbone": "4976400"
+            "gbif-backbone": "4976400",
+            "checklistbank-1174": "txn:123562"
           },
           "children": []
         }
@@ -83,7 +85,47 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sagenocrinitidae"
+    },
+    {
+      "id": "GENUS_MERISTOCRINUS",
+      "name": "Meristocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sagenocrinitidae",
+      "children": [
+        {
+          "id": "SP_MERISTOCRINUS_INTERBRACHIATUS_ANGELIN_1878",
+          "name": "Meristocrinus interbrachiatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meristocrinus",
+          "authorship": "(Angelin 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:203979"
+          },
+          "uuid": "32c4c3cd-af17-47e5-855e-802df2349f84",
+          "children": []
+        },
+        {
+          "id": "SP_MERISTOCRINUS_ORBIGNYI_M_COY_1850",
+          "name": "Meristocrinus orbignyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meristocrinus",
+          "authorship": "(M'Coy 1850)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:203981"
+          },
+          "uuid": "b15392a4-7cd2-4d77-a7db-25a39ea1af4d",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:123564"
+  }
 }

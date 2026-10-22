@@ -3,7 +3,7 @@
   "name": "Anthracobunidae",
   "rank": "FAMILY",
   "appSlug": "anthracobunidae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_JOZARIA",
@@ -19,7 +19,8 @@
           "lineage": "Jozaria",
           "authorship": "Wells & Gingerich, 1983",
           "sourceIds": {
-            "gbif-backbone": "4968987"
+            "gbif-backbone": "4968987",
+            "checklistbank-1174": "txn:66813"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Obergfellia",
           "authorship": "Cooper, Seiffert, Clementz, Madar, Bajpai & Thewissen, 2014",
           "sourceIds": {
-            "gbif-backbone": "8460833"
+            "gbif-backbone": "8460833",
+            "checklistbank-1174": "txn:309288"
           },
           "children": []
         }
@@ -131,7 +133,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anthracobunidae"
+    },
+    {
+      "id": "GENUS_ISHATHERIUM",
+      "name": "Ishatherium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "anthracobunidae",
+      "children": [
+        {
+          "id": "SP_ISHATHERIUM_SUBATHUENSIS_SAHNI_AND_KUMAR_1980",
+          "name": "Ishatherium subathuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ishatherium",
+          "authorship": "Sahni and Kumar 1980",
+          "sourceIds": {
+            "checklistbank-1174": "txn:67463"
+          },
+          "uuid": "dc302089-0825-48f8-a1f1-f9852d59ca43",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:43232"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Microdispidae",
   "rank": "FAMILY",
   "appSlug": "microdispidae",
-  "speciesCount": 19,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_SCARABADANIA",
@@ -63,7 +63,8 @@
           "lineage": "Promicrodispus",
           "authorship": "Khaustov & Minor, 2020",
           "sourceIds": {
-            "gbif-backbone": "10878223"
+            "gbif-backbone": "10878223",
+            "checklistbank-139831": "1045779"
           },
           "children": []
         }
@@ -214,6 +215,33 @@
             "gbif-backbone": "6135144"
           },
           "children": []
+        },
+        {
+          "id": "SP_MICRODISPUS_LAMBI_KRCZAL",
+          "name": "Microdispus lambi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microdispus",
+          "authorship": "Krczal",
+          "sourceIds": {
+            "checklistbank-127379": "13131297-4b2b-4ae9-8866-076e7554449b"
+          },
+          "uuid": "1cff7149-1dcc-4fe3-a36d-56d452e33860",
+          "children": []
+        },
+        {
+          "id": "SP_MICRODISPUS_SETOSUS_EVANS_1952",
+          "name": "Microdispus setosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microdispus",
+          "authorship": "(Evans, 1952)",
+          "sourceIds": {
+            "checklistbank-2008": "989435"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -268,7 +296,8 @@
           "lineage": "Phyllodispus",
           "authorship": "Khaustov & Minor, 2020",
           "sourceIds": {
-            "gbif-backbone": "10769804"
+            "gbif-backbone": "10769804",
+            "checklistbank-139831": "1045777"
           },
           "children": []
         },
@@ -281,7 +310,8 @@
           "lineage": "Phyllodispus",
           "authorship": "Khaustov & Minor, 2016",
           "sourceIds": {
-            "gbif-backbone": "9217263"
+            "gbif-backbone": "9217263",
+            "checklistbank-139831": "487479"
           },
           "children": []
         }
@@ -304,6 +334,18 @@
           "authorship": "(Evans, 1952)",
           "sourceIds": {
             "gbif-backbone": "11921641"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOMICRODISPUS_MONTANUS",
+          "name": "Pseudomicrodispus montanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudomicrodispus",
+          "sourceIds": {
+            "checklistbank-139831": "1046682"
           },
           "children": []
         }
@@ -332,7 +374,141 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "microdispidae"
+    },
+    {
+      "id": "GENUS_DOLICHODISPUS",
+      "name": "Dolichodispus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DOLICHODISPUS_ANGUSTUS",
+          "name": "Dolichodispus angustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolichodispus",
+          "sourceIds": {
+            "checklistbank-139831": "487472"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microdispidae"
+    },
+    {
+      "id": "GENUS_PARAPHYLLODISPUS",
+      "name": "Paraphyllodispus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAPHYLLODISPUS_VULGARIS",
+          "name": "Paraphyllodispus vulgaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraphyllodispus",
+          "sourceIds": {
+            "checklistbank-139831": "487477"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microdispidae"
+    },
+    {
+      "id": "GENUS_PREMICRODISPUS",
+      "name": "Premicrodispus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PREMICRODISPUS_NOVAEZEALANDICUS",
+          "name": "Premicrodispus novaezealandicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Premicrodispus",
+          "sourceIds": {
+            "checklistbank-139831": "1046677"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PREMICRODISPUS_SECUNDUS",
+          "name": "Premicrodispus secundus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Premicrodispus",
+          "sourceIds": {
+            "checklistbank-139831": "1046678"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PREMICRODISPUS_PUNCTATUS",
+          "name": "Premicrodispus punctatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Premicrodispus",
+          "sourceIds": {
+            "wikispecies": "Premicrodispus_punctatus"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microdispidae"
+    },
+    {
+      "id": "GENUS_DIVERSIPES",
+      "name": "Diversipes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIVERSIPES_SETOSUS_EVANS_1952",
+          "name": "Diversipes setosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diversipes",
+          "authorship": "Evans, 1952",
+          "sourceIds": {
+            "checklistbank-2008": "989436"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microdispidae"
+    },
+    {
+      "id": "GENUS_PYGMEPHORUS",
+      "name": "Pygmephorus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PYGMEPHORUS_KASZABI_MAHUNKA_1964",
+          "name": "Pygmephorus kaszabi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pygmephorus",
+          "authorship": "Mahunka, 1964",
+          "sourceIds": {
+            "checklistbank-2008": "989452"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microdispidae"
     }
   ],
-  "genusCount": 9
+  "genusCount": 14,
+  "sourceIds": {
+    "wikispecies": "Microdispidae"
+  }
 }

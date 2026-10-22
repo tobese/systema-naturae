@@ -284,7 +284,8 @@
           "authorship": "Willmann, 1939",
           "sourceIds": {
             "gbif": 2193956,
-            "checklistbank": "917042"
+            "checklistbank": "917042",
+            "checklistbank-139831": "917042"
           },
           "uuid": "14f7e296-0415-5d0-ab7-6fde33cf788fb8",
           "authorityIds": "gbif:2193956",
@@ -1163,7 +1164,8 @@
           "authorship": "Aoki, 1959",
           "sourceIds": {
             "gbif": 2194004,
-            "checklistbank": "1699791"
+            "checklistbank": "1699791",
+            "checklistbank-139831": "1699791"
           },
           "uuid": "9273776f-2419-5f0-b98-34671927ac1b5c",
           "authorityIds": "gbif:2194004",
@@ -1868,7 +1870,8 @@
           "lineage": "Liacarus",
           "authorship": "(C. L. Koch, 1840)",
           "sourceIds": {
-            "checklistbank": "221661"
+            "checklistbank": "221661",
+            "checklistbank-139831": "1160113"
           },
           "children": [],
           "uuid": "0e5b9a1a-7efb-561-a1d-578b1e340322d4",
@@ -2465,7 +2468,8 @@
           "lineage": "Liacarus",
           "authorship": "(P.Balogh, 1984)",
           "sourceIds": {
-            "gbif-backbone": "2193912"
+            "gbif-backbone": "2193912",
+            "checklistbank-139831": "262861"
           },
           "children": [],
           "uuid": "ca786db2-9b6d-539-9c5-8a464d5537c7e4"
@@ -2479,7 +2483,8 @@
           "lineage": "Liacarus",
           "authorship": "(Weigmann, 1976)",
           "sourceIds": {
-            "gbif-backbone": "2193970"
+            "gbif-backbone": "2193970",
+            "checklistbank-139831": "1190617"
           },
           "children": [],
           "uuid": "b620611d-55ad-576-8d4-8cf80bb9a04c7f"
@@ -2775,7 +2780,8 @@
           "sourceIds": {
             "gbif": 2193897,
             "checklistbank": "221624",
-            "gbif-backbone": "11860078"
+            "gbif-backbone": "11860078",
+            "checklistbank-139831": "1583470"
           },
           "uuid": "81ed3f3a-86df-5f9-a70-6fdd6313680579",
           "authorityIds": "gbif:2193897",
@@ -3125,6 +3131,18 @@
           },
           "children": [],
           "uuid": "b5ba59f3-2be4-5c3-b7b-afaaab0e3926e7"
+        },
+        {
+          "id": "SP_DORYCRANOSUS_ACUTIDENS",
+          "name": "Dorycranosus acutidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dorycranosus",
+          "sourceIds": {
+            "checklistbank-139831": "568374"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3344,13 +3362,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "liacaridae"
+    },
+    {
+      "id": "GENUS_FURCOPPIA",
+      "name": "Furcoppia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FURCOPPIA_HAUSERI",
+          "name": "Furcoppia hauseri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Furcoppia",
+          "sourceIds": {
+            "checklistbank-139831": "262860"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "liacaridae"
     }
   ],
-  "speciesCount": 197,
+  "speciesCount": 199,
   "appSlug": "liacaridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 13,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

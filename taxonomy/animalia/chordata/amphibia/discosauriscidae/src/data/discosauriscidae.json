@@ -3,7 +3,7 @@
   "name": "Discosauriscidae",
   "rank": "FAMILY",
   "appSlug": "discosauriscidae",
-  "speciesCount": 16,
+  "speciesCount": 17,
   "children": [
     {
       "id": "GENUS_ARCHEGOSAURUS",
@@ -255,7 +255,8 @@
           "lineage": "Utegenia",
           "authorship": "Kuznetsov & Ivakhnenko, 1981",
           "sourceIds": {
-            "gbif-backbone": "9623690"
+            "gbif-backbone": "9623690",
+            "checklistbank-1174": "txn:346161"
           },
           "children": []
         }
@@ -284,6 +285,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "discosauriscidae"
+    },
+    {
+      "id": "GENUS_ARIEKANERPETON",
+      "name": "Ariekanerpeton",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "discosauriscidae",
+      "children": [
+        {
+          "id": "SP_ARIEKANERPETON_SIGALOVI_TATARINOV_1968",
+          "name": "Ariekanerpeton sigalovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ariekanerpeton",
+          "authorship": "(Tatarinov 1968)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:320957"
+          },
+          "uuid": "d570948b-17bf-4e3b-b76f-e268840ab545"
+        }
+      ]
     }
   ],
   "genusCount": 8

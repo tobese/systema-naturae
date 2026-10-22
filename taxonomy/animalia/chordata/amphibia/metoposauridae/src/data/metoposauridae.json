@@ -3,7 +3,7 @@
   "name": "Metoposauridae",
   "rank": "FAMILY",
   "appSlug": "metoposauridae",
-  "speciesCount": 16,
+  "speciesCount": 21,
   "children": [
     {
       "id": "GENUS_METOPOSAURUS",
@@ -58,7 +58,8 @@
           "lineage": "Metoposaurus",
           "authorship": "Brusatte, Butler, Mateus & Steyer, 2015",
           "sourceIds": {
-            "gbif-backbone": "8518670"
+            "gbif-backbone": "8518670",
+            "checklistbank-1174": "txn:317464"
           },
           "children": []
         },
@@ -99,6 +100,34 @@
           "sourceIds": {
             "gbif-backbone": "11795451"
           },
+          "children": []
+        },
+        {
+          "id": "SP_METOPOSAURUS_DIAGNOSTICUS_MEYER_1842",
+          "name": "Metoposaurus diagnosticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metoposaurus",
+          "authorship": "(Meyer 1842)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:157511"
+          },
+          "uuid": "289ec517-0bda-4b08-8dfa-310eb3b26301",
+          "children": []
+        },
+        {
+          "id": "SP_METOPOSAURUS_BAKERI_CASE_1931",
+          "name": "Metoposaurus bakeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metoposaurus",
+          "authorship": "(Case 1931)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:159204"
+          },
+          "uuid": "e44da828-bfec-40ec-bc7d-1751efdc6df9",
           "children": []
         }
       ],
@@ -293,7 +322,81 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "metoposauridae"
+    },
+    {
+      "id": "GENUS_DUTUITOSAURUS",
+      "name": "Dutuitosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "metoposauridae",
+      "children": [
+        {
+          "id": "SP_DUTUITOSAURUS_OUAZZOUI_DUTUIT_1972",
+          "name": "Dutuitosaurus ouazzoui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dutuitosaurus",
+          "authorship": "(Dutuit 1972)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:64936",
+            "wikispecies": "Dutuitosaurus_ouazzoui"
+          },
+          "uuid": "82e4cd85-28cf-4e3d-80f1-b8e1ab040e02",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PANTHASAURUS",
+      "name": "Panthasaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "metoposauridae",
+      "children": [
+        {
+          "id": "SP_PANTHASAURUS_MALERIENSIS_CHOWDHURY_1965",
+          "name": "Panthasaurus maleriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panthasaurus",
+          "authorship": "(Chowdhury 1965)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:251933"
+          },
+          "uuid": "3eb58b85-12c4-407e-9b8b-4a44f62bbd71",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NEGEVODUS",
+      "name": "Negevodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "metoposauridae",
+      "children": [
+        {
+          "id": "SP_NEGEVODUS_RAMONENSIS_MAZIN_1986",
+          "name": "Negevodus ramonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Negevodus",
+          "authorship": "Mazin 1986",
+          "sourceIds": {
+            "checklistbank-1174": "txn:500933"
+          },
+          "uuid": "ee088997-fc63-4eff-8ec6-dfdeb544291e",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 9
+  "genusCount": 12,
+  "sourceIds": {
+    "wikispecies": "Metoposauridae",
+    "checklistbank-1174": "txn:37162"
+  }
 }

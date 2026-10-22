@@ -3,7 +3,7 @@
   "name": "Vulcanodontidae",
   "rank": "FAMILY",
   "appSlug": "vulcanodontidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TAZOUDASAURUS",
@@ -41,7 +41,29 @@
           "lineage": "Vulcanodon",
           "authorship": "Raath, 1972",
           "sourceIds": {
-            "gbif-backbone": "4967297"
+            "gbif-backbone": "4967297",
+            "wikispecies": "Vulcanodon_karibaensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vulcanodontidae"
+    },
+    {
+      "id": "GENUS_BARAPASAURUS",
+      "name": "Barapasaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARAPASAURUS_TAGOREI",
+          "name": "Barapasaurus tagorei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barapasaurus",
+          "sourceIds": {
+            "wikispecies": "Barapasaurus_tagorei"
           },
           "children": []
         }
@@ -50,5 +72,8 @@
       "lineage": "vulcanodontidae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Vulcanodontidae"
+  }
 }

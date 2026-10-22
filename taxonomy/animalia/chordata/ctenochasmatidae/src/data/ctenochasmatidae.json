@@ -3,7 +3,7 @@
   "name": "Ctenochasmatidae",
   "rank": "FAMILY",
   "appSlug": "ctenochasmatidae",
-  "speciesCount": 14,
+  "speciesCount": 17,
   "children": [
     {
       "id": "GENUS_CTENOCHASMA",
@@ -46,6 +46,18 @@
           "authorship": "Meyer, 1851",
           "sourceIds": {
             "gbif-backbone": "8625191"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOCHASMA_ELEGANS",
+          "name": "Ctenochasma elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenochasma",
+          "sourceIds": {
+            "wikispecies": "Ctenochasma_elegans"
           },
           "children": []
         }
@@ -102,7 +114,8 @@
           "lineage": "Gnathosaurus",
           "authorship": "Meyer, 1833",
           "sourceIds": {
-            "gbif-backbone": "8586616"
+            "gbif-backbone": "8586616",
+            "wikispecies": "Gnathosaurus_subulatus"
           },
           "children": []
         }
@@ -124,7 +137,8 @@
           "lineage": "Cathayopterus",
           "authorship": "Wang & Zhou, 2006",
           "sourceIds": {
-            "gbif-backbone": "4965528"
+            "gbif-backbone": "4965528",
+            "checklistbank-1174": "txn:138760"
           },
           "children": []
         }
@@ -168,7 +182,8 @@
           "lineage": "Pterofiltrus",
           "authorship": "Jiang & Wang, 2011",
           "sourceIds": {
-            "gbif-backbone": "8591968"
+            "gbif-backbone": "8591968",
+            "checklistbank-1174": "txn:322722"
           },
           "children": []
         }
@@ -278,7 +293,52 @@
           "lineage": "Tacuadactylus",
           "authorship": "Soto & Montenegro, 2021",
           "sourceIds": {
-            "gbif-backbone": "11492595"
+            "gbif-backbone": "11492595",
+            "checklistbank-1174": "txn:455711"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenochasmatidae"
+    },
+    {
+      "id": "GENUS_BALAENOGNATHUS",
+      "name": "Balaenognathus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenochasmatidae",
+      "children": [
+        {
+          "id": "SP_BALAENOGNATHUS_MAEUSERI_MARTILL_ET_AL_2023",
+          "name": "Balaenognathus maeuseri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Balaenognathus",
+          "authorship": "Martill et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:477223"
+          },
+          "uuid": "255354ac-fcf5-4ed6-b0be-cb40c481ab12",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EOSIPTERUS",
+      "name": "Eosipterus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOSIPTERUS_YANGI",
+          "name": "Eosipterus yangi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eosipterus",
+          "sourceIds": {
+            "wikispecies": "Eosipterus_yangi"
           },
           "children": []
         }
@@ -287,5 +347,9 @@
       "lineage": "ctenochasmatidae"
     }
   ],
-  "genusCount": 11
+  "genusCount": 13,
+  "sourceIds": {
+    "wikispecies": "Ctenochasmatidae",
+    "checklistbank-1174": "txn:38484"
+  }
 }

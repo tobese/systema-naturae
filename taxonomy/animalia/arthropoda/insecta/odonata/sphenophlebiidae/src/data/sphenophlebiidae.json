@@ -3,7 +3,7 @@
   "name": "Sphenophlebiidae",
   "rank": "FAMILY",
   "appSlug": "sphenophlebiidae",
-  "speciesCount": 6,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_SPHENOPHLEBIA",
@@ -54,7 +54,8 @@
           "lineage": "Mesoepiophlebia",
           "authorship": "Nel & Henrotay, 1993",
           "sourceIds": {
-            "gbif-backbone": "8460457"
+            "gbif-backbone": "8460457",
+            "checklistbank-1174": "txn:180025"
           },
           "children": []
         }
@@ -120,14 +121,41 @@
           "lineage": "Proeuthemis",
           "authorship": "Nel & Jarzembowski, 1996",
           "sourceIds": {
-            "gbif-backbone": "8614077"
+            "gbif-backbone": "8614077",
+            "checklistbank-1174": "txn:188930"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphenophlebiidae"
+    },
+    {
+      "id": "GENUS_EUPHAEOPSIS",
+      "name": "Euphaeopsis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphenophlebiidae",
+      "children": [
+        {
+          "id": "SP_EUPHAEOPSIS_MULTINERVIS_HAGEN_1862",
+          "name": "Euphaeopsis multinervis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euphaeopsis",
+          "authorship": "(Hagen 1862)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:178847"
+          },
+          "uuid": "6976ee2f-ecc5-410b-b35c-a54c4360139d",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:188916"
+  }
 }

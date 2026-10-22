@@ -3,7 +3,7 @@
   "name": "Proscorpiidae",
   "rank": "FAMILY",
   "appSlug": "proscorpiidae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_PSEUDARCHAEOCTONUS",
@@ -98,7 +98,8 @@
           "lineage": "Waeringoscorpio",
           "authorship": "Poschmann, Dunlop, Kamenz & Scholtz, 2008",
           "sourceIds": {
-            "gbif-backbone": "8506803"
+            "gbif-backbone": "8506803",
+            "checklistbank-1174": "txn:293760"
           },
           "children": []
         }
@@ -149,7 +150,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "proscorpiidae"
+    },
+    {
+      "id": "GENUS_ARCHAEOCTONUS",
+      "name": "Archaeoctonus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "proscorpiidae",
+      "children": [
+        {
+          "id": "SP_ARCHAEOCTONUS_GLABER_PEACH_1883",
+          "name": "Archaeoctonus glaber",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeoctonus",
+          "authorship": "(Peach 1883)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272576"
+          },
+          "uuid": "415f1c7d-65da-4d22-a2f2-2b9d840cdd3b",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-1174": "txn:272297"
+  }
 }

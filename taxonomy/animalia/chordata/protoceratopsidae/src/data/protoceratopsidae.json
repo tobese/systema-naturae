@@ -3,7 +3,7 @@
   "name": "Protoceratopsidae",
   "rank": "FAMILY",
   "appSlug": "protoceratopsidae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_BAGACERATOPS",
@@ -19,7 +19,9 @@
           "lineage": "Bagaceratops",
           "authorship": "Maryanska & Osmólska, 1975",
           "sourceIds": {
-            "gbif-backbone": "4965778"
+            "gbif-backbone": "4965778",
+            "checklistbank-1174": "txn:52826",
+            "wikispecies": "Bagaceratops_rozhdestvenskyi"
           },
           "children": []
         }
@@ -76,7 +78,9 @@
           "lineage": "Protoceratops",
           "authorship": "Granger & Gregory, 1923",
           "sourceIds": {
-            "gbif-backbone": "4823256"
+            "gbif-backbone": "4823256",
+            "checklistbank-1174": "txn:52824",
+            "wikispecies": "Protoceratops_andrewsi"
           },
           "children": []
         },
@@ -89,7 +93,8 @@
           "lineage": "Protoceratops",
           "authorship": "Lambert, Godefroit, Li, Shang & Dong, 2001",
           "sourceIds": {
-            "gbif-backbone": "4965788"
+            "gbif-backbone": "4965788",
+            "checklistbank-1174": "txn:57342"
           },
           "children": []
         }
@@ -140,7 +145,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protoceratopsidae"
+    },
+    {
+      "id": "GENUS_BREVICERATOPS",
+      "name": "Breviceratops",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "protoceratopsidae",
+      "children": [
+        {
+          "id": "SP_BREVICERATOPS_KOZLOWSKII_MARYANSKA_AND_OSM_LSKA_1975",
+          "name": "Breviceratops kozlowskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Breviceratops",
+          "authorship": "(Maryanska and Osmólska 1975)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:58854"
+          },
+          "uuid": "d7aabaaa-d44c-4b54-9a19-aa71d3c10367",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Protoceratopsidae",
+    "checklistbank-1174": "txn:38845"
+  }
 }

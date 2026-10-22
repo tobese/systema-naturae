@@ -3,7 +3,7 @@
   "name": "Morganucodontidae",
   "rank": "FAMILY",
   "appSlug": "morganucodontidae",
-  "speciesCount": 14,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_KOTATHERIUM",
@@ -133,7 +133,8 @@
           "lineage": "Morganucodon",
           "authorship": "Butler & Sigogneau-Russel, 2016",
           "sourceIds": {
-            "gbif-backbone": "9593772"
+            "gbif-backbone": "9593772",
+            "checklistbank-1174": "txn:347491"
           },
           "children": []
         },
@@ -159,8 +160,24 @@
           "lineage": "Morganucodon",
           "authorship": "Kuhne, 1949",
           "sourceIds": {
-            "gbif-backbone": "8438925"
+            "gbif-backbone": "8438925",
+            "checklistbank-1174": "txn:203396",
+            "wikispecies": "Morganucodon_watsoni"
           },
+          "children": []
+        },
+        {
+          "id": "SP_MORGANUCODON_HEIKUOPENGENSIS_YOUNG_1978",
+          "name": "Morganucodon heikuopengensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morganucodon",
+          "authorship": "(Young 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:203401"
+          },
+          "uuid": "c201f05e-fa5c-45fb-81b5-dde722e2ae3c",
           "children": []
         }
       ],
@@ -203,7 +220,8 @@
           "lineage": "Gondwanadon",
           "authorship": "Datta & Das, 1996",
           "sourceIds": {
-            "gbif-backbone": "8460503"
+            "gbif-backbone": "8460503",
+            "checklistbank-1174": "txn:172418"
           },
           "children": []
         }
@@ -267,7 +285,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "morganucodontidae"
+    },
+    {
+      "id": "GENUS_PAIKASIGUDODON",
+      "name": "Paikasigudodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "morganucodontidae",
+      "children": [
+        {
+          "id": "SP_PAIKASIGUDODON_YADAGIRII_PRASAD_AND_MANHAS_1997",
+          "name": "Paikasigudodon yadagirii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paikasigudodon",
+          "authorship": "(Prasad and Manhas 1997)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:242246"
+          },
+          "uuid": "a4643607-86c4-4de2-960d-a45946378a12",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 9
+  "genusCount": 10,
+  "sourceIds": {
+    "wikispecies": "Morganucodontidae",
+    "checklistbank-1174": "txn:39748"
+  }
 }

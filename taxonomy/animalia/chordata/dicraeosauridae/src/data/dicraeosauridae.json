@@ -3,7 +3,7 @@
   "name": "Dicraeosauridae",
   "rank": "FAMILY",
   "appSlug": "dicraeosauridae",
-  "speciesCount": 8,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_AMARGATITANIS",
@@ -85,7 +85,8 @@
           "lineage": "Brachytrachelopan",
           "authorship": "Rauhut et al., 2005",
           "sourceIds": {
-            "gbif-backbone": "4967473"
+            "gbif-backbone": "4967473",
+            "wikispecies": "Brachytrachelopan_mesai"
           },
           "children": []
         }
@@ -180,7 +181,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dicraeosauridae"
+    },
+    {
+      "id": "GENUS_THAROSAURUS",
+      "name": "Tharosaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAROSAURUS_INDICUS",
+          "name": "Tharosaurus indicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tharosaurus",
+          "sourceIds": {
+            "wikispecies": "Tharosaurus_indicus"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dicraeosauridae"
     }
   ],
-  "genusCount": 8
+  "genusCount": 9,
+  "sourceIds": {
+    "wikispecies": "Dicraeosauridae"
+  }
 }

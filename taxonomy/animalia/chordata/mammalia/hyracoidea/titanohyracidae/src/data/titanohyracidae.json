@@ -3,7 +3,7 @@
   "name": "Titanohyracidae",
   "rank": "FAMILY",
   "appSlug": "titanohyracidae",
-  "speciesCount": 1,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_RUPESTROHYRAX",
@@ -19,7 +19,125 @@
           "lineage": "Rupestrohyrax",
           "authorship": "Pickford, 2015",
           "sourceIds": {
-            "gbif-backbone": "9347940"
+            "gbif-backbone": "9347940",
+            "wikispecies": "Rupestrohyrax_palustris"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "titanohyracidae"
+    },
+    {
+      "id": "GENUS_TITANOHYRAX",
+      "name": "Titanohyrax",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "titanohyracidae",
+      "children": [
+        {
+          "id": "SP_TITANOHYRAX_ULTIMUS",
+          "name": "Titanohyrax ultimus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Titanohyrax",
+          "sourceIds": {
+            "wikispecies": "Titanohyrax_ultimus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TITANOHYRAX_MONGEREAUI",
+          "name": "Titanohyrax mongereaui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Titanohyrax",
+          "sourceIds": {
+            "wikispecies": "Titanohyrax_mongereaui"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TITANOHYRAX_ANGUSTIDENS_RASMUSSEN_AND_SIMONS_1988",
+          "name": "Titanohyrax angustidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Titanohyrax",
+          "authorship": "Rasmussen and Simons 1988",
+          "sourceIds": {
+            "checklistbank-1174": "txn:100744"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TITANOHYRAX_TANTULUS_COURT_AND_HARTENBERGER_1992",
+          "name": "Titanohyrax tantulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Titanohyrax",
+          "authorship": "Court and Hartenberger 1992",
+          "sourceIds": {
+            "checklistbank-1174": "txn:143677"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_AFROHYRAX",
+      "name": "Afrohyrax",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "titanohyracidae",
+      "children": [
+        {
+          "id": "SP_AFROHYRAX_CHAMPIONI_ARAMBOURG_1933",
+          "name": "Afrohyrax championi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Afrohyrax",
+          "authorship": "(Arambourg 1933)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:143637",
+            "wikispecies": "Afrohyrax_championi"
+          },
+          "uuid": "1e9fe0b6-8429-42f2-862d-a66122ef8eac",
+          "children": []
+        },
+        {
+          "id": "SP_AFROHYRAX_NAMIBENSIS",
+          "name": "Afrohyrax namibensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Afrohyrax",
+          "sourceIds": {
+            "wikispecies": "Afrohyrax_namibensis"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ANTILOHYRAX",
+      "name": "Antilohyrax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTILOHYRAX_PECTIDENS_RASMUSSEN_AND_SIMONS_2000",
+          "name": "Antilohyrax pectidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Antilohyrax",
+          "authorship": "Rasmussen and Simons 2000",
+          "sourceIds": {
+            "checklistbank-1174": "txn:143675"
           },
           "children": []
         }
@@ -28,5 +146,9 @@
       "lineage": "titanohyracidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Titanohyracidae",
+    "checklistbank-1174": "txn:143672"
+  }
 }

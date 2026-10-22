@@ -3,7 +3,7 @@
   "name": "Megaraptoridae",
   "rank": "FAMILY",
   "appSlug": "megaraptoridae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_MURUSRAPTOR",
@@ -19,7 +19,8 @@
           "lineage": "Murusraptor",
           "authorship": "Coria & Currie, 2016",
           "sourceIds": {
-            "gbif-backbone": "9622279"
+            "gbif-backbone": "9622279",
+            "checklistbank-1174": "txn:345445"
           },
           "children": []
         }
@@ -63,7 +64,8 @@
           "lineage": "Australovenator",
           "authorship": "Hocknull, White, Tischler, Cook, Calleja, Sloan & Elliott, 2009",
           "sourceIds": {
-            "gbif-backbone": "4967043"
+            "gbif-backbone": "4967043",
+            "checklistbank-1174": "txn:148973"
           },
           "children": []
         }
@@ -158,7 +160,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "megaraptoridae"
+    },
+    {
+      "id": "GENUS_JOAQUINRAPTOR",
+      "name": "Joaquinraptor",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "megaraptoridae",
+      "children": [
+        {
+          "id": "SP_JOAQUINRAPTOR_CASALI_IBIRICU_ET_AL_2025",
+          "name": "Joaquinraptor casali",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Joaquinraptor",
+          "authorship": "Ibiricu et al. 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:514972"
+          },
+          "uuid": "dd16d649-44a5-4067-a6fa-a53ed307102b",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:322713"
+  }
 }

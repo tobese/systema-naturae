@@ -3,7 +3,7 @@
   "name": "Phenacolophidae",
   "rank": "FAMILY",
   "appSlug": "phenacolophidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_SANSHUILOPHUS",
@@ -85,14 +85,41 @@
           "lineage": "Phenacolophus",
           "authorship": "Matthew & Granger, 1925",
           "sourceIds": {
-            "gbif-backbone": "8521627"
+            "gbif-backbone": "8521627",
+            "checklistbank-1174": "txn:247226"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phenacolophidae"
+    },
+    {
+      "id": "GENUS_MINCHENELLA",
+      "name": "Minchenella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "phenacolophidae",
+      "children": [
+        {
+          "id": "SP_MINCHENELLA_GRANDIS_ZHANG_1978",
+          "name": "Minchenella grandis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Minchenella",
+          "authorship": "(Zhang 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:54364"
+          },
+          "uuid": "25a37960-1c6b-4cb2-853c-d64b88b1a7dd",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:42301"
+  }
 }

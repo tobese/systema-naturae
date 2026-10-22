@@ -3,7 +3,7 @@
   "name": "Calcancoridae",
   "rank": "FAMILY",
   "appSlug": "calcancoridae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_CALCANCOROIDEA",
@@ -19,14 +19,55 @@
           "lineage": "Calcancoroidea",
           "authorship": "Frizzell & Exline, 1955",
           "sourceIds": {
-            "gbif-backbone": "8587058"
+            "gbif-backbone": "8587058",
+            "checklistbank-1174": "txn:164873"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calcancoridae"
+    },
+    {
+      "id": "GENUS_COSTIGERITES",
+      "name": "Costigerites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcancoridae",
+      "children": [
+        {
+          "id": "SP_COSTIGERITES_PIVETEAUI_DEFLANDRE_RIGAUD_1962",
+          "name": "Costigerites piveteaui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Costigerites",
+          "authorship": "Deflandre-Rigaud 1962",
+          "sourceIds": {
+            "checklistbank-1174": "txn:164701"
+          },
+          "uuid": "e21f6162-80b2-4194-9a18-9389f683ce24",
+          "children": []
+        },
+        {
+          "id": "SP_COSTIGERITES_INDICUS_SOODAN_1991",
+          "name": "Costigerites indicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Costigerites",
+          "authorship": "Soodan 1991",
+          "sourceIds": {
+            "checklistbank-1174": "txn:247671"
+          },
+          "uuid": "77be6cd9-6f9c-4c9d-8259-b434502bf807",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:162215"
+  }
 }

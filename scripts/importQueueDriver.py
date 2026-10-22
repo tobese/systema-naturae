@@ -4,12 +4,29 @@
 Drives the split pipeline end-to-end for every source sitting at
 stage `downloaded` in data/source-queue.json:
 
-    1. transformColChecklist.py <archive> <slug> --apply
-       -> writes work/<slug>/transformed.jsonl (+ meta sidecar)
+    0. licence gate -- an NC licence goes straight to blocked, no archive
+       work spent on it (see docs/dataset-inbox.md's AlgaeBase entry)
+    1. transformColChecklist.py <archive> <slug> --apply (stage: triaging)
+       -> writes work/<slug>/transformed.jsonl (+ meta sidecar); its
+          printed routing stats are recorded as `triaged`, then the row
+          is auto-promoted to `queued` -- this is the one pass that also
+          serves as the dry run, since route_species() prints the same
+          offered/held/staged/refused numbers with or without --apply
     2. importTransformed.py <slug> with IMPORTWRITE_URL=http://q-bert:8089
+       (stage: applying)
        -> POSTs each (family, genus) to importwrite, flushes per family,
           appends to data/import-log.jsonl
     3. sourceQueue.py set --key <slug> --stage applied --added N --merged M ...
+
+A source that needs a human call before any of this -- bacteria/virus
+carry-through, a synthetic tree, a reader-format gap, a duplicate of an
+already-decided source -- should never reach `downloaded` in the first
+place: sourceQueue.py's `add()` refuses to register a key the manifest
+already has a verdict for, and `triageNext.py`'s own candidate listing
+filters the same way. Found 2026-10-22: a bulk add that bypassed both
+left 33 ungated `downloaded` entries, including GTDB (on hold by policy)
+and six already-taken sources, that this driver would have blindly
+applied.
 
 Run once (processes all downloaded sources, then exits) or loop with --loop.
 
@@ -202,7 +219,26 @@ def main() -> int:
 
         print(f"\n== {key} — {title}", flush=True)
 
-        # Step 1: transform
+        # Licence gate, before spending any time on the archive: an NC
+        # licence needs a standing-policy call this project has declined
+        # twice already (one documented exception, iNaturalist), not a
+        # per-source default. Checked against the row's own `licence`
+        # field (set at `add` time) rather than re-fetching it, so this
+        # has no cost for the common open-licence case.
+        licence = (entry.get("licence") or "").lower()
+        if re.search(r"\bnc\b", re.sub(r"[\s-]+", " ", licence)):
+            set_stage(q, key, "blocked",
+                      reason=f"CC BY-NC licence ({licence or 'nc'}) -- needs a policy "
+                             f"decision, this project holds one documented NC exception "
+                             f"already (iNaturalist), see docs/dataset-inbox.md")
+            print(f"  {key}: blocked — NC licence", flush=True)
+            continue
+
+        # Stage 1: triage. transformColChecklist.py prints the full routing
+        # stats (offered/held/staged/refused) whether or not --apply is
+        # passed, so running it with --apply does double duty as both the
+        # triage dry run and the real transform -- no second pass needed.
+        set_stage(q, key, "triaging")
         rc, transform_out = run(
             ["python3", os.path.join(SCRIPT_DIR, "transformColChecklist.py"), archive, key, "--apply"],
             "transform",
@@ -231,7 +267,29 @@ def main() -> int:
             print(f"  {key}: applied — nothing to do (all already held)", flush=True)
             continue
 
+        # Record the triage numbers route_species() already printed, then
+        # auto-promote: open licence and a real transformed.jsonl written is
+        # the "safe to apply automatically" case this driver handles. A
+        # dataset that needs a human call (bacteria/virus carry-through, a
+        # synthetic tree, a reader-format gap) is kept out of `downloaded`
+        # in the first place -- see data/source-queue.json's blocked/declined
+        # entries and sourceQueue.py add()'s manifest check.
+        def _num(pattern):
+            m = re.search(pattern, transform_out)
+            return int(m.group(1).replace(",", "")) if m else None
+        triaged = {
+            "offered": _num(r"offered:\s*([\d,]+)"),
+            "alreadyHeld": _num(r"already held \(skipped\):\s*([\d,]+)"),
+            "staged": _num(r"staged:\s*([\d,]+)"),
+            "refused": _num(r"REFUSED \(would need a new family\):\s*([\d,]+)"),
+        }
+        offered, refused = triaged["offered"], triaged["refused"]
+        triaged["refusalRate"] = round(refused / offered, 4) if offered and refused is not None else None
+        set_stage(q, key, "triaged", triaged=triaged)
+        set_stage(q, key, "queued")
+
         # Step 2: apply via importwrite
+        set_stage(q, key, "applying")
         env = dict(os.environ, IMPORTWRITE_URL=IMPORTWRITE_URL)
         rc, out = run(
             ["python3", os.path.join(SCRIPT_DIR, "importTransformed.py"), key],
@@ -239,7 +297,8 @@ def main() -> int:
             env=env,
         )
         if rc != 0:
-            print(f"  {key}: apply FAILED (rc={rc}), leaving at downloaded", flush=True)
+            print(f"  {key}: apply FAILED (rc={rc}), leaving at queued", flush=True)
+            set_stage(q, key, "queued")
             continue
 
         # Parse summary from importTransformed output (well-formed lines):

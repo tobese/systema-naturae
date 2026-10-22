@@ -3,7 +3,7 @@
   "name": "Desmostylidae",
   "rank": "FAMILY",
   "appSlug": "desmostylidae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_OUNALASHKASTYLUS",
@@ -19,7 +19,8 @@
           "lineage": "Ounalashkastylus",
           "authorship": "Chiba, Fiorillo, Jacobs, Kimura, Kobayashi, Kohno, Nishida, Polcyn & Tanaka, 2015",
           "sourceIds": {
-            "gbif-backbone": "8565994"
+            "gbif-backbone": "8565994",
+            "checklistbank-1174": "txn:329743"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Desmostylus",
           "authorship": "Marsh, 1888",
           "sourceIds": {
-            "gbif-backbone": "4968815"
+            "gbif-backbone": "4968815",
+            "wikispecies": "Desmostylus_hesperus"
           },
           "children": []
         },
@@ -54,7 +56,9 @@
           "lineage": "Desmostylus",
           "authorship": "(Tokunaga & Iwasaki, 1914)",
           "sourceIds": {
-            "gbif-backbone": "8582269"
+            "gbif-backbone": "8582269",
+            "checklistbank-1174": "txn:72053",
+            "wikispecies": "Desmostylus_japonicus"
           },
           "children": []
         },
@@ -140,7 +144,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "desmostylidae"
+    },
+    {
+      "id": "GENUS_CORNWALLIUS",
+      "name": "Cornwallius",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "desmostylidae",
+      "children": [
+        {
+          "id": "SP_CORNWALLIUS_SOOKENSIS_CORNWALL_1922",
+          "name": "Cornwallius sookensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornwallius",
+          "authorship": "(Cornwall 1922)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:72051"
+          },
+          "uuid": "1419e9fe-e239-48b4-b5b1-5e36a0eaeb0c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Desmostylidae",
+    "checklistbank-1174": "txn:43291"
+  }
 }

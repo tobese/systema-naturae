@@ -3,7 +3,7 @@
   "name": "Gelocidae",
   "rank": "FAMILY",
   "appSlug": "gelocidae",
-  "speciesCount": 15,
+  "speciesCount": 17,
   "children": [
     {
       "id": "GENUS_GELOCUS",
@@ -45,7 +45,8 @@
           "lineage": "Gelocus",
           "authorship": "Brunet & Jehenne, 1976",
           "sourceIds": {
-            "gbif-backbone": "9560871"
+            "gbif-backbone": "9560871",
+            "checklistbank-1174": "txn:349728"
           },
           "children": []
         },
@@ -157,6 +158,20 @@
             "gbif-backbone": "8693423"
           },
           "children": []
+        },
+        {
+          "id": "SP_FLORIDAMERYX_KLAUSI_FRICK_1937",
+          "name": "Floridameryx klausi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Floridameryx",
+          "authorship": "(Frick 1937)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:51161"
+          },
+          "uuid": "874eba7d-a038-4899-84dd-80d54ede2019",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -262,7 +277,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gelocidae"
+    },
+    {
+      "id": "GENUS_PSEUDOGELOCUS",
+      "name": "Pseudogelocus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gelocidae",
+      "children": [
+        {
+          "id": "SP_PSEUDOGELOCUS_MONGOLICUS_VISLOBOKOVA_AND_DAXNER_H_CK_2002",
+          "name": "Pseudogelocus mongolicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudogelocus",
+          "authorship": "Vislobokova and Daxner-Höck 2002",
+          "sourceIds": {
+            "checklistbank-1174": "txn:347104"
+          },
+          "uuid": "03e4395d-45d9-4674-a39f-84370cc5f7ab",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:42616"
+  }
 }

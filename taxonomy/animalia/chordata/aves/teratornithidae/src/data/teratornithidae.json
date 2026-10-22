@@ -3,7 +3,7 @@
   "name": "Teratornithidae",
   "rank": "FAMILY",
   "appSlug": "teratornithidae",
-  "speciesCount": 4,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_TERATORNIS",
@@ -19,8 +19,23 @@
           "lineage": "Teratornis",
           "authorship": "Miller, 1909",
           "sourceIds": {
-            "gbif-backbone": "4966744"
+            "gbif-backbone": "4966744",
+            "wikispecies": "Teratornis_merriami"
           },
+          "children": []
+        },
+        {
+          "id": "SP_TERATORNIS_WOODBURNENSIS_CAMPBELL_AND_STENGER_2002",
+          "name": "Teratornis woodburnensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teratornis",
+          "authorship": "Campbell and Stenger 2002",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501746"
+          },
+          "uuid": "347d2fb0-8345-4e45-b944-68e8f8d8e095",
           "children": []
         }
       ],
@@ -92,7 +107,80 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "teratornithidae"
+    },
+    {
+      "id": "GENUS_TAUBATORNIS",
+      "name": "Taubatornis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "teratornithidae",
+      "children": [
+        {
+          "id": "SP_TAUBATORNIS_CAMPBELLI",
+          "name": "Taubatornis campbelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taubatornis",
+          "sourceIds": {
+            "wikispecies": "Taubatornis_campbelli",
+            "checklistbank-1174": "txn:137168"
+          },
+          "children": [],
+          "authorship": "Olson and Alvarenga 2002"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_AIOLORNIS",
+      "name": "Aiolornis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "teratornithidae",
+      "children": [
+        {
+          "id": "SP_AIOLORNIS_INCREDIBILIS_HOWARD_1952",
+          "name": "Aiolornis incredibilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aiolornis",
+          "authorship": "(Howard 1952)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:137172"
+          },
+          "uuid": "eaa32915-cf31-4019-9590-e46e826be8bc",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ARGENTAVIS",
+      "name": "Argentavis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "teratornithidae",
+      "children": [
+        {
+          "id": "SP_ARGENTAVIS_MAGNIFICENS",
+          "name": "Argentavis magnificens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Argentavis",
+          "sourceIds": {
+            "wikispecies": "Argentavis_magnificens",
+            "checklistbank-1174": "txn:137174"
+          },
+          "children": [],
+          "authorship": "Campbell and Tonni 1980"
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 7,
+  "sourceIds": {
+    "wikispecies": "Teratornithidae",
+    "checklistbank-1174": "txn:39643"
+  }
 }

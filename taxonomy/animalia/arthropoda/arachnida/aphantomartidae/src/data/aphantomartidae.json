@@ -3,7 +3,7 @@
   "name": "Aphantomartidae",
   "rank": "FAMILY",
   "appSlug": "aphantomartidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_DOUBRAVATARBUS",
@@ -41,14 +41,55 @@
           "lineage": "Alkenia",
           "authorship": "Størmer, 1968",
           "sourceIds": {
-            "gbif-backbone": "8998724"
+            "gbif-backbone": "8998724",
+            "checklistbank-1174": "txn:293923"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aphantomartidae"
+    },
+    {
+      "id": "GENUS_APHANTOMARTUS",
+      "name": "Aphantomartus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aphantomartidae",
+      "children": [
+        {
+          "id": "SP_APHANTOMARTUS_PUSTULATUS_SCUDDER_1884",
+          "name": "Aphantomartus pustulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphantomartus",
+          "authorship": "(Scudder 1884)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272656"
+          },
+          "uuid": "f582530a-6afd-446d-9454-ddf0ed2b0410",
+          "children": []
+        },
+        {
+          "id": "SP_APHANTOMARTUS_ILFELDICUS_SCHARF_1924",
+          "name": "Aphantomartus ilfeldicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphantomartus",
+          "authorship": "(Scharf 1924)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:293927"
+          },
+          "uuid": "862b774f-114b-4f1a-bbb9-1e5fecc8a7c7",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:272620"
+  }
 }

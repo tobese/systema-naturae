@@ -3,7 +3,7 @@
   "name": "Rentoniidae",
   "rank": "FAMILY",
   "appSlug": "rentoniidae",
-  "speciesCount": 10,
+  "speciesCount": 14,
   "children": [
     {
       "id": "GENUS_RENTONIUM",
@@ -19,7 +19,9 @@
           "lineage": "Rentonium",
           "authorship": "Crowson, 1966",
           "sourceIds": {
-            "gbif-backbone": "6963464"
+            "gbif-backbone": "6963464",
+            "checklistbank-139831": "396322",
+            "wikispecies": "Rentonium_daldiniae"
           },
           "children": []
         },
@@ -32,7 +34,9 @@
           "lineage": "Rentonium",
           "authorship": "Gimmel & Leschen, 2014",
           "sourceIds": {
-            "gbif-backbone": "8800717"
+            "gbif-backbone": "8800717",
+            "checklistbank-139831": "410933",
+            "wikispecies": "Rentonium_bicolor"
           },
           "children": []
         },
@@ -45,7 +49,8 @@
           "lineage": "Rentonium",
           "authorship": "Crowson, 1970",
           "sourceIds": {
-            "gbif-backbone": "6963465"
+            "gbif-backbone": "6963465",
+            "wikispecies": "Rentonium_chilense"
           },
           "children": []
         },
@@ -80,7 +85,8 @@
           "lineage": "Globorentonium",
           "authorship": "Lawrence & Ślipiński, 2013",
           "sourceIds": {
-            "gbif-backbone": "8612293"
+            "gbif-backbone": "8612293",
+            "wikispecies": "Globorentonium_globulum"
           },
           "children": []
         },
@@ -93,7 +99,8 @@
           "lineage": "Globorentonium",
           "authorship": "Lawrence & Ślipiński, 2013",
           "sourceIds": {
-            "gbif-backbone": "8585627"
+            "gbif-backbone": "8585627",
+            "wikispecies": "Globorentonium_lescheni"
           },
           "children": []
         },
@@ -106,7 +113,8 @@
           "lineage": "Globorentonium",
           "authorship": "Lawrence & Ślipiński, 2013",
           "sourceIds": {
-            "gbif-backbone": "8485974"
+            "gbif-backbone": "8485974",
+            "wikispecies": "Globorentonium_plaumanni"
           },
           "children": []
         }
@@ -128,7 +136,20 @@
           "lineage": "Parentonium",
           "authorship": "Crowson, 1970",
           "sourceIds": {
-            "gbif-backbone": "6962995"
+            "gbif-backbone": "6962995",
+            "wikispecies": "Parentonium_australicum"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARENTONIUM_MAGNUM",
+          "name": "Parentonium magnum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parentonium",
+          "sourceIds": {
+            "checklistbank-139831": "394547"
           },
           "children": []
         }
@@ -150,7 +171,21 @@
           "lineage": "Rentonellum",
           "authorship": "Crowson, 1966",
           "sourceIds": {
-            "gbif-backbone": "6963185"
+            "gbif-backbone": "6963185",
+            "checklistbank-139831": "396320",
+            "wikispecies": "Rentonellum_apterum"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RENTONELLUM_LOEBLI",
+          "name": "Rentonellum loebli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rentonellum",
+          "sourceIds": {
+            "wikispecies": "Rentonellum_loebli"
           },
           "children": []
         }
@@ -172,7 +207,41 @@
           "lineage": "Rentonidium",
           "authorship": "Crowson, 1966",
           "sourceIds": {
-            "gbif-backbone": "6963463"
+            "gbif-backbone": "6963463",
+            "checklistbank-139831": "396321"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RENTONIDIUM_COSTIVENTRE",
+          "name": "Rentonidium costiventre",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rentonidium",
+          "sourceIds": {
+            "wikispecies": "Rentonidium_costiventre"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rentoniidae"
+    },
+    {
+      "id": "GENUS_AUSTRALIODES",
+      "name": "Australiodes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AUSTRALIODES_VESTITUS",
+          "name": "Australiodes vestitus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Australiodes",
+          "sourceIds": {
+            "checklistbank-139831": "386392"
           },
           "children": []
         }
@@ -181,5 +250,8 @@
       "lineage": "rentoniidae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Rentoniidae"
+  }
 }

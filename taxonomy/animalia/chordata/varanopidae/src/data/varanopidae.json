@@ -3,7 +3,7 @@
   "name": "Varanopidae",
   "rank": "FAMILY",
   "appSlug": "varanopidae",
-  "speciesCount": 11,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_RUTHIROMIA",
@@ -19,7 +19,8 @@
           "lineage": "Ruthiromia",
           "authorship": "Eberth & Brinkman, 1983",
           "sourceIds": {
-            "gbif-backbone": "4975466"
+            "gbif-backbone": "4975466",
+            "checklistbank-1174": "txn:122322"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Pyozia",
           "authorship": "Anderson & Reisz, 2004",
           "sourceIds": {
-            "gbif-backbone": "4975465"
+            "gbif-backbone": "4975465",
+            "checklistbank-1174": "txn:140623"
           },
           "children": []
         }
@@ -63,7 +65,8 @@
           "lineage": "Archaeovenator",
           "authorship": "Reisz & Dilkes, 2003",
           "sourceIds": {
-            "gbif-backbone": "4975464"
+            "gbif-backbone": "4975464",
+            "checklistbank-1174": "txn:138746"
           },
           "children": []
         }
@@ -237,7 +240,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "varanopidae"
+    },
+    {
+      "id": "GENUS_AEROSAURUS",
+      "name": "Aerosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "varanopidae",
+      "children": [
+        {
+          "id": "SP_AEROSAURUS_WELLESI_LANGSTON_AND_REISZ_1981",
+          "name": "Aerosaurus wellesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aerosaurus",
+          "authorship": "Langston and Reisz 1981",
+          "sourceIds": {
+            "checklistbank-1174": "txn:122318"
+          },
+          "uuid": "39d3208e-fc49-4bfe-b63a-7a2337ed19ab",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_VARANOPS",
+      "name": "Varanops",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "varanopidae",
+      "children": [
+        {
+          "id": "SP_VARANOPS_BREVIROSTRIS_WILLISTON_1911",
+          "name": "Varanops brevirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Varanops",
+          "authorship": "(Williston 1911)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:122316"
+          },
+          "uuid": "a7df01a6-c58c-440e-abb4-d95464252d2b",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 10
+  "genusCount": 12,
+  "sourceIds": {
+    "checklistbank-1174": "txn:95329"
+  }
 }

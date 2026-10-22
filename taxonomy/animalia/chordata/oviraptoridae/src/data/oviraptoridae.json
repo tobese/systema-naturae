@@ -3,7 +3,7 @@
   "name": "Oviraptoridae",
   "rank": "FAMILY",
   "appSlug": "oviraptoridae",
-  "speciesCount": 22,
+  "speciesCount": 26,
   "children": [
     {
       "id": "GENUS_HUANANSAURUS",
@@ -41,7 +41,8 @@
           "lineage": "Gobiraptor",
           "authorship": "Lee, Lee, Chinsamy, Lü, Barsbold & Tsogtbaatar, 2019",
           "sourceIds": {
-            "gbif-backbone": "9826836"
+            "gbif-backbone": "9826836",
+            "checklistbank-1174": "txn:381604"
           },
           "children": []
         }
@@ -107,7 +108,8 @@
           "lineage": "Citipati",
           "authorship": "Clark, 2001",
           "sourceIds": {
-            "gbif-backbone": "4966300"
+            "gbif-backbone": "4966300",
+            "checklistbank-1174": "txn:57024"
           },
           "children": []
         }
@@ -129,7 +131,8 @@
           "lineage": "Oksoko",
           "authorship": "Funston, Tsogtbaatar, Tsogtbaatar, Kobayashi, Sullivan & Currie, 2020",
           "sourceIds": {
-            "gbif-backbone": "11159062"
+            "gbif-backbone": "11159062",
+            "checklistbank-1174": "txn:430729"
           },
           "children": []
         }
@@ -173,7 +176,8 @@
           "lineage": "Shixinggia",
           "authorship": "Lü & Zhang, 2005",
           "sourceIds": {
-            "gbif-backbone": "4966296"
+            "gbif-backbone": "4966296",
+            "checklistbank-1174": "txn:87638"
           },
           "children": []
         }
@@ -286,6 +290,20 @@
             "gbif-backbone": "4966301"
           },
           "children": []
+        },
+        {
+          "id": "SP_HEYUANNIA_YANSHINI_BARSBOLD_1981",
+          "name": "Heyuannia yanshini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heyuannia",
+          "authorship": "(Barsbold 1981)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:57022"
+          },
+          "uuid": "4d7f0f33-9229-41eb-a1df-ceac355d9bf2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -305,7 +323,8 @@
           "lineage": "Machairasaurus",
           "authorship": "Longrich et al., 2010",
           "sourceIds": {
-            "gbif-backbone": "8594320"
+            "gbif-backbone": "8594320",
+            "wikispecies": "Machairasaurus_leptonychus"
           },
           "children": []
         }
@@ -327,7 +346,9 @@
           "lineage": "Banji",
           "authorship": "Xu & Han, 2010",
           "sourceIds": {
-            "gbif-backbone": "8495527"
+            "gbif-backbone": "8495527",
+            "checklistbank-1174": "txn:172315",
+            "wikispecies": "Banji_long"
           },
           "children": []
         }
@@ -384,7 +405,8 @@
           "lineage": "Ganzhousaurus",
           "authorship": "Wang et al., 2013",
           "sourceIds": {
-            "gbif-backbone": "8687242"
+            "gbif-backbone": "8687242",
+            "wikispecies": "Ganzhousaurus_nankangensis"
           },
           "children": []
         }
@@ -479,7 +501,79 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oviraptoridae"
+    },
+    {
+      "id": "GENUS_RINCHENIA",
+      "name": "Rinchenia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oviraptoridae",
+      "children": [
+        {
+          "id": "SP_RINCHENIA_MONGOLIENSIS_BARSBOLD_1986",
+          "name": "Rinchenia mongoliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rinchenia",
+          "authorship": "(Barsbold 1986)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:57021",
+            "wikispecies": "Rinchenia_mongoliensis"
+          },
+          "uuid": "ed8ac601-84f2-43e4-88b8-120fa132c605",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NEMEGTOMAIA",
+      "name": "Nemegtomaia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oviraptoridae",
+      "children": [
+        {
+          "id": "SP_NEMEGTOMAIA_BARSBOLDI_L_ET_AL_2004",
+          "name": "Nemegtomaia barsboldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nemegtomaia",
+          "authorship": "(Lü et al. 2004)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:68044"
+          },
+          "uuid": "7d3b56ec-6e07-41d8-8023-d200fe5a6ea5",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GIGANTORAPTOR",
+      "name": "Gigantoraptor",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GIGANTORAPTOR_ERLIANENSIS",
+          "name": "Gigantoraptor erlianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gigantoraptor",
+          "sourceIds": {
+            "wikispecies": "Gigantoraptor_erlianensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oviraptoridae"
     }
   ],
-  "genusCount": 21
+  "genusCount": 24,
+  "sourceIds": {
+    "wikispecies": "Oviraptoridae",
+    "checklistbank-1174": "txn:38557"
+  }
 }

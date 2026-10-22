@@ -14489,7 +14489,8 @@
               "4FG3B"
             ],
             "checklistbank": "67400",
-            "checklistbank-2008": "856433"
+            "checklistbank-2008": "856433",
+            "checklistbank-2029": "b49932ab-960c-4832-97b2-3fa54421f7c4"
           },
           "uuid": "d13cceaa-472b-541-97e-d09d2de6080a47",
           "authorityIds": "col:4FG3B,gbif:5256009,mycobank:183113"
@@ -16387,7 +16388,8 @@
               "4FG62"
             ],
             "checklistbank": "67408",
-            "checklistbank-2008": "49081"
+            "checklistbank-2008": "49081",
+            "checklistbank-2029": "acc95654-08c7-478a-9f57-da5b4fe6c6d3"
           },
           "uuid": "078155f3-3ea5-53f-a67-98d216724e800c",
           "authorityIds": "col:4FG62,gbif:5256036,mycobank:121332"
@@ -30264,11 +30266,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Leptotrochila",
           "sourceIds": {
-            "checklistbank": "ott4042117"
+            "checklistbank": "ott4042117",
+            "checklistbank-2029": "8dc990b3-fab8-445e-ad83-e5422c6de786"
           },
           "children": [],
           "uuid": "7a20ca11-034c-59e-ac8-88bc020d85bf09",
-          "description": "Leptotrochila verrucosa is a dermateaceae species found in its native region."
+          "description": "Leptotrochila verrucosa is a dermateaceae species found in its native region.",
+          "authorship": "(Wallr.) Schüepp"
         },
         {
           "id": "SP_LEPTOTROCHILA_MEDICAGINIS",
@@ -31849,7 +31853,8 @@
           "lineage": "Mollisia",
           "authorship": "P.Karst., 1871",
           "sourceIds": {
-            "checklistbank": "856913"
+            "checklistbank": "856913",
+            "checklistbank-2029": "0d160fac-5b37-4f99-8e67-be4783da9978"
           },
           "children": [],
           "uuid": "17b7025c-1464-558-af7-da4944d5334b37",
@@ -33393,11 +33398,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Mollisia",
           "sourceIds": {
-            "checklistbank": "ott1038267"
+            "checklistbank": "ott1038267",
+            "checklistbank-2029": "3eadf35f-075c-492a-aa3d-5afeefc83b7a"
           },
           "children": [],
           "uuid": "70cccea8-d8b7-54d-9de-721e387b524e4f",
-          "description": "Mollisia dextrinospora is a dermateaceae species found in its native region."
+          "description": "Mollisia dextrinospora is a dermateaceae species found in its native region.",
+          "authorship": "Korf"
         },
         {
           "id": "SP_MOLLISIA_CAESPITOSULA",
@@ -36511,6 +36518,19 @@
           },
           "children": [],
           "uuid": "1bf1af43-8645-536-88d-a0706880699672"
+        },
+        {
+          "id": "SP_MOLLISIA_TRABINCOLA_REHM",
+          "name": "Mollisia trabincola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mollisia",
+          "authorship": "Rehm",
+          "sourceIds": {
+            "checklistbank-2029": "40558c6c-7a1b-45b8-83ba-739992431f15"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -67777,11 +67797,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dermateaceae"
+    },
+    {
+      "id": "GENUS_PILIDIUM",
+      "name": "Pilidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PILIDIUM_ACERINUM_ALB_SCHWEIN_KUNZE",
+          "name": "Pilidium acerinum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pilidium",
+          "authorship": "(Alb. & Schwein.) Kunze",
+          "sourceIds": {
+            "checklistbank-2029": "b621bef2-b85a-4e95-80eb-bee341c74ac4"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermateaceae"
     }
   ],
   "authorship": "Fries",
-  "genusCount": 241,
-  "speciesCount": 4080,
+  "genusCount": 242,
+  "speciesCount": 4082,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

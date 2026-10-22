@@ -3,7 +3,7 @@
   "name": "Xenusiidae",
   "rank": "FAMILY",
   "appSlug": "xenusiidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_XENUSION",
@@ -19,7 +19,8 @@
           "lineage": "Xenusion",
           "authorship": "Pompeckj, 1907",
           "sourceIds": {
-            "gbif-backbone": "8642214"
+            "gbif-backbone": "8642214",
+            "wikispecies": "Xenusion_auerswaldae"
           },
           "children": []
         }
@@ -48,7 +49,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "xenusiidae"
+    },
+    {
+      "id": "GENUS_JIANSHANOPODIA",
+      "name": "Jianshanopodia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "xenusiidae",
+      "children": [
+        {
+          "id": "SP_JIANSHANOPODIA_DECORA_LIU_ET_AL_2006",
+          "name": "Jianshanopodia decora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jianshanopodia",
+          "authorship": "Liu et al. 2006",
+          "sourceIds": {
+            "checklistbank-1174": "txn:490849"
+          },
+          "uuid": "e6bcdfc9-0e64-4760-a47f-e1ab55c72198",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Xenusiidae"
+  }
 }

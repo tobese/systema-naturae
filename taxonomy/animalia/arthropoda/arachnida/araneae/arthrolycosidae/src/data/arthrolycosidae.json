@@ -3,7 +3,7 @@
   "name": "Arthrolycosidae",
   "rank": "FAMILY",
   "appSlug": "arthrolycosidae",
-  "speciesCount": 5,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_ARTHROLYCOSA",
@@ -45,7 +45,8 @@
           "lineage": "Arthrolycosa",
           "authorship": "Harger, 1874",
           "sourceIds": {
-            "gbif-backbone": "6899119"
+            "gbif-backbone": "6899119",
+            "wikispecies": "Arthrolycosa_antiqua"
           },
           "children": []
         },
@@ -57,7 +58,21 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Arthrolycosa",
           "sourceIds": {
-            "gbif-backbone": "12186174"
+            "gbif-backbone": "12186174",
+            "checklistbank-1174": "txn:477126"
+          },
+          "children": [],
+          "authorship": "Dunlop 2023"
+        },
+        {
+          "id": "SP_ARTHROLYCOSA_DANIELSI",
+          "name": "Arthrolycosa danielsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arthrolycosa",
+          "sourceIds": {
+            "wikispecies": "Arthrolycosa_danielsi"
           },
           "children": []
         }
@@ -79,14 +94,70 @@
           "lineage": "Eocteniza",
           "authorship": "Pocock, 1911",
           "sourceIds": {
-            "gbif-backbone": "6899121"
+            "gbif-backbone": "6899121",
+            "wikispecies": "Eocteniza_silvicola"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "arthrolycosidae"
+    },
+    {
+      "id": "GENUS_PROTOLYCOSA",
+      "name": "Protolycosa",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "arthrolycosidae",
+      "children": [
+        {
+          "id": "SP_PROTOLYCOSA_ANTHRACOPHYLA_ROEMER_1866",
+          "name": "Protolycosa anthracophyla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protolycosa",
+          "authorship": "Roemer 1866",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272208"
+          },
+          "uuid": "84d9c254-222f-459d-a60b-b06606fad900",
+          "children": []
+        },
+        {
+          "id": "SP_PROTOLYCOSA_CEBENNENSIS_LAURENTIAUX_VIEIRA_AND_LAURENTIAUX_1963",
+          "name": "Protolycosa cebennensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protolycosa",
+          "authorship": "Laurentiaux-Vieira and Laurentiaux 1963",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272975"
+          },
+          "uuid": "ba3e8e0e-868f-4d54-996c-169b0936537e",
+          "children": []
+        },
+        {
+          "id": "SP_PROTOLYCOSA_DANIELSI_PETRUNKEVITCH_1913",
+          "name": "Protolycosa danielsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protolycosa",
+          "authorship": "(Petrunkevitch 1913)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272669"
+          },
+          "uuid": "842e2bd1-7806-4bde-90e1-d6d05636d65c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Arthrolycosidae",
+    "checklistbank-1174": "txn:244991"
+  }
 }

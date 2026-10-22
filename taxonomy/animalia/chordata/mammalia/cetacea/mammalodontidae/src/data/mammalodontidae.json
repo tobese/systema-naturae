@@ -3,7 +3,7 @@
   "name": "Mammalodontidae",
   "rank": "FAMILY",
   "appSlug": "mammalodontidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_JANJUCETUS",
@@ -22,10 +22,45 @@
             "gbif-backbone": "4970863"
           },
           "children": []
+        },
+        {
+          "id": "SP_JANJUCETUS_DULLARDI_DUNCAN_ET_AL_2025",
+          "name": "Janjucetus dullardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Janjucetus",
+          "authorship": "Duncan et al. 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:513816"
+          },
+          "uuid": "43dd9caa-b289-4100-bd9a-0c5f247cfdba"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mammalodontidae"
+    },
+    {
+      "id": "GENUS_MAMMALODON",
+      "name": "Mammalodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mammalodontidae",
+      "children": [
+        {
+          "id": "SP_MAMMALODON_HAKATARAMEA_FORDYCE_AND_MARX_2016",
+          "name": "Mammalodon hakataramea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mammalodon",
+          "authorship": "Fordyce and Marx 2016",
+          "sourceIds": {
+            "checklistbank-1174": "txn:345694"
+          },
+          "uuid": "e363edca-ec5a-4342-abc0-24d2374e4c0c"
+        }
+      ]
     }
   ],
   "genusCount": 1

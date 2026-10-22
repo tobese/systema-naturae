@@ -3,7 +3,7 @@
   "name": "Akidnognathidae",
   "rank": "FAMILY",
   "appSlug": "akidnognathidae",
-  "speciesCount": 6,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_NOTAELURODON",
@@ -63,7 +63,8 @@
           "lineage": "Shiguaignathus",
           "authorship": "Liu & Abdala, 2017",
           "sourceIds": {
-            "gbif-backbone": "9239146"
+            "gbif-backbone": "9239146",
+            "checklistbank-1174": "txn:363956"
           },
           "children": []
         }
@@ -129,14 +130,41 @@
           "lineage": "Jiufengia",
           "authorship": "Liu & Abdala, 2019",
           "sourceIds": {
-            "gbif-backbone": "10224304"
+            "gbif-backbone": "10224304",
+            "checklistbank-1174": "txn:453758"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "akidnognathidae"
+    },
+    {
+      "id": "GENUS_OLIVIEROSUCHUS",
+      "name": "Olivierosuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "akidnognathidae",
+      "children": [
+        {
+          "id": "SP_OLIVIEROSUCHUS_PARRINGTONI_BRINK_1965",
+          "name": "Olivierosuchus parringtoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Olivierosuchus",
+          "authorship": "(Brink 1965)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:173040"
+          },
+          "uuid": "79addd51-f5b7-4653-b736-c70c4f1fb95e",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-1174": "txn:95360"
+  }
 }

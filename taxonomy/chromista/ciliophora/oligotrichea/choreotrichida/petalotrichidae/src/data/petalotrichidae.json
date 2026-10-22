@@ -3,7 +3,7 @@
   "name": "Petalotrichidae",
   "rank": "FAMILY",
   "appSlug": "petalotrichidae",
-  "speciesCount": 1,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_PARAPETALOTRICHA",
@@ -27,7 +27,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "petalotrichidae"
+    },
+    {
+      "id": "GENUS_CRATERELLA",
+      "name": "Craterella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "petalotrichidae",
+      "children": [
+        {
+          "id": "SP_CRATERELLA_APERTA_MARSHALL",
+          "name": "Craterella aperta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Craterella",
+          "authorship": "Marshall",
+          "sourceIds": {
+            "checklistbank-127379": "a9226451-3954-4de0-9d2c-f2176f884b80"
+          },
+          "uuid": "0ab0fe52-4a74-4d57-b3ec-afff61fc5043",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PETALOTRICHA",
+      "name": "Petalotricha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PETALOTRICHA_SERRATA_KOFOID_CAMPBELL_1929",
+          "name": "Petalotricha serrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petalotricha",
+          "authorship": "Kofoid & Campbell, 1929",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:427497"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PETALOTRICHA_KOFOIDI_OSORIO_TAFALL_1941",
+          "name": "Petalotricha kofoidi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petalotricha",
+          "authorship": "Osorio-Tafall, 1941",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1838010"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "petalotrichidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 3
 }

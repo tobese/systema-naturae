@@ -3,7 +3,7 @@
   "name": "Mesephemeridae",
   "rank": "FAMILY",
   "appSlug": "mesephemeridae",
-  "speciesCount": 5,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_PALINEPHEMERA",
@@ -19,7 +19,8 @@
           "lineage": "Palinephemera",
           "authorship": "Linnaeus, 1986",
           "sourceIds": {
-            "gbif-backbone": "6932719"
+            "gbif-backbone": "6932719",
+            "checklistbank-1174": "txn:291257"
           },
           "children": []
         }
@@ -107,14 +108,69 @@
           "lineage": "Montralia",
           "authorship": "Vía & Calzada, 1987",
           "sourceIds": {
-            "gbif-backbone": "6932715"
+            "gbif-backbone": "6932715",
+            "checklistbank-1174": "txn:280496"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mesephemeridae"
+    },
+    {
+      "id": "GENUS_MESEPHEMERA",
+      "name": "Mesephemera",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesephemeridae",
+      "children": [
+        {
+          "id": "SP_MESEPHEMERA_PROCERA_HAGEN_1862",
+          "name": "Mesephemera procera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesephemera",
+          "authorship": "(Hagen 1862)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:257998"
+          },
+          "uuid": "27110409-6c39-4034-8a88-e8edaa27615f",
+          "children": []
+        },
+        {
+          "id": "SP_MESEPHEMERA_LITHOPHILA_GERMAR_1842",
+          "name": "Mesephemera lithophila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesephemera",
+          "authorship": "(Germar 1842)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:258013"
+          },
+          "uuid": "7edab315-54dd-4ff9-997d-28aefd83836f",
+          "children": []
+        },
+        {
+          "id": "SP_MESEPHEMERA_PRISCA_GERMAR_1839",
+          "name": "Mesephemera prisca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesephemera",
+          "authorship": "(Germar 1839)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:258019"
+          },
+          "uuid": "85bdc8c9-f4d8-4fc8-8ab3-0a5df132b869",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:194004"
+  }
 }

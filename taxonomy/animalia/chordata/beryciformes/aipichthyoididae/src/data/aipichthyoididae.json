@@ -3,7 +3,7 @@
   "name": "Aipichthyoididae",
   "rank": "FAMILY",
   "appSlug": "aipichthyoididae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_ZOQUEICHTHYS",
@@ -19,14 +19,55 @@
           "lineage": "Zoqueichthys",
           "authorship": "Alvarado-Ortega & Than-Marchese, 2012",
           "sourceIds": {
-            "gbif-backbone": "11129075"
+            "gbif-backbone": "11129075",
+            "checklistbank-1174": "txn:439139"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aipichthyoididae"
+    },
+    {
+      "id": "GENUS_AIPICHTHYOIDES",
+      "name": "Aipichthyoides",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aipichthyoididae",
+      "children": [
+        {
+          "id": "SP_AIPICHTHYOIDES_GALEATUS_GAYET_1980",
+          "name": "Aipichthyoides galeatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aipichthyoides",
+          "authorship": "Gayet 1980",
+          "sourceIds": {
+            "checklistbank-1174": "txn:441046"
+          },
+          "uuid": "5b7d9682-4c7e-47e9-8f7a-6efe16cf06fb",
+          "children": []
+        },
+        {
+          "id": "SP_AIPICHTHYOIDES_FORMOSUS_GAYET_1980",
+          "name": "Aipichthyoides formosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aipichthyoides",
+          "authorship": "Gayet 1980",
+          "sourceIds": {
+            "checklistbank-1174": "txn:441048"
+          },
+          "uuid": "8074ae94-2084-4419-aaf2-980412f3d6ef",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:439132"
+  }
 }

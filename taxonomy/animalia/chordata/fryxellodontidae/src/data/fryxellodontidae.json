@@ -3,7 +3,7 @@
   "name": "Fryxellodontidae",
   "rank": "FAMILY",
   "appSlug": "fryxellodontidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_POLONODUS",
@@ -41,7 +41,8 @@
           "lineage": "Kallidontus",
           "authorship": "Pyle & Barnes, 2002",
           "sourceIds": {
-            "gbif-backbone": "8654886"
+            "gbif-backbone": "8654886",
+            "checklistbank-1174": "txn:340375"
           },
           "children": []
         },
@@ -54,7 +55,8 @@
           "lineage": "Kallidontus",
           "authorship": "Pyle & Barnes, 2002",
           "sourceIds": {
-            "gbif-backbone": "8545160"
+            "gbif-backbone": "8545160",
+            "checklistbank-1174": "txn:340376"
           },
           "children": []
         },
@@ -67,14 +69,41 @@
           "lineage": "Kallidontus",
           "authorship": "Zeballo & Albanesi, 2013",
           "sourceIds": {
-            "gbif-backbone": "11129647"
+            "gbif-backbone": "11129647",
+            "checklistbank-1174": "txn:394255"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "fryxellodontidae"
+    },
+    {
+      "id": "GENUS_DZIKODUS",
+      "name": "Dzikodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "fryxellodontidae",
+      "children": [
+        {
+          "id": "SP_DZIKODUS_TABLEPOINTENSIS_STOUGE_1984",
+          "name": "Dzikodus tablepointensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dzikodus",
+          "authorship": "(Stouge 1984)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:420035"
+          },
+          "uuid": "978b93ef-ea4e-4767-ac47-8f45407ff731",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:394253"
+  }
 }

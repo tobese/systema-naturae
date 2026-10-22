@@ -3,7 +3,7 @@
   "name": "Triaplidae",
   "rank": "FAMILY",
   "appSlug": "triaplidae",
-  "speciesCount": 7,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_MESAPLUS",
@@ -41,8 +41,24 @@
           "lineage": "Tomiaplus",
           "authorship": "Ponomarenko, 2021",
           "sourceIds": {
-            "gbif-backbone": "11897312"
+            "gbif-backbone": "11897312",
+            "wikispecies": "Tomiaplus_minimus"
           },
+          "children": []
+        },
+        {
+          "id": "SP_TOMIAPLUS_SIBIRICUS_VOLKOV_2013",
+          "name": "Tomiaplus sibiricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tomiaplus",
+          "authorship": "(Volkov 2013)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:257422",
+            "wikispecies": "Tomiaplus_sibiricus"
+          },
+          "uuid": "feae7872-075e-4f38-a9d2-1a86a54610cf",
           "children": []
         }
       ],
@@ -76,7 +92,8 @@
           "lineage": "Triaplus",
           "authorship": "Ponomarenko, 1977",
           "sourceIds": {
-            "gbif-backbone": "6943858"
+            "gbif-backbone": "6943858",
+            "wikispecies": "Triaplus_macroplatus"
           },
           "children": []
         },
@@ -89,7 +106,8 @@
           "lineage": "Triaplus",
           "authorship": "Ponomarenko, 1977",
           "sourceIds": {
-            "gbif-backbone": "6943857"
+            "gbif-backbone": "6943857",
+            "wikispecies": "Triaplus_laticoxa"
           },
           "children": []
         }
@@ -140,7 +158,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "triaplidae"
+    },
+    {
+      "id": "GENUS_TUNGUSKAGYRUS",
+      "name": "Tunguskagyrus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TUNGUSKAGYRUS_PLANUS",
+          "name": "Tunguskagyrus planus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tunguskagyrus",
+          "sourceIds": {
+            "wikispecies": "Tunguskagyrus_planus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TUNGUSKAGYRUS_YANI",
+          "name": "Tunguskagyrus yani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tunguskagyrus",
+          "sourceIds": {
+            "wikispecies": "Tunguskagyrus_yani"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "triaplidae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Triaplidae"
+  }
 }

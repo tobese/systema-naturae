@@ -3,7 +3,7 @@
   "name": "Pseudobeaconiidae",
   "rank": "FAMILY",
   "appSlug": "pseudobeaconiidae",
-  "speciesCount": 4,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_PSEUDOBEACONIA",
@@ -45,8 +45,23 @@
           "lineage": "Pseudobeaconia",
           "authorship": "López-Arbarello & Zavattieri, 2008",
           "sourceIds": {
-            "gbif-backbone": "8518197"
+            "gbif-backbone": "8518197",
+            "checklistbank-1174": "txn:202053"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOBEACONIA_CUYANA_BORDAS_1944",
+          "name": "Pseudobeaconia cuyana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudobeaconia",
+          "authorship": "(Bordas 1944)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:266443"
+          },
+          "uuid": "4dd6ec50-b936-4a08-84d8-c7e97dbdfebb",
           "children": []
         }
       ],
@@ -74,7 +89,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pseudobeaconiidae"
+    },
+    {
+      "id": "GENUS_MENDOCINICHTHYS",
+      "name": "Mendocinichthys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudobeaconiidae",
+      "children": [
+        {
+          "id": "SP_MENDOCINICHTHYS_BREVIS_BORDAS_1944",
+          "name": "Mendocinichthys brevis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mendocinichthys",
+          "authorship": "(Bordas 1944)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:265893"
+          },
+          "uuid": "8f43d5bf-e9bb-44e4-806a-0e5af46ec30d",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:203322"
+  }
 }

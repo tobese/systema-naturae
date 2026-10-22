@@ -3,7 +3,7 @@
   "name": "Ceratosauridae",
   "rank": "FAMILY",
   "appSlug": "ceratosauridae",
-  "speciesCount": 6,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_SARCOSAURUS",
@@ -98,7 +98,32 @@
           "lineage": "Ceratosaurus",
           "authorship": "Marsh, 1884",
           "sourceIds": {
-            "gbif-backbone": "4966184"
+            "gbif-backbone": "4966184",
+            "wikispecies": "Ceratosaurus_nasicornis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOSAURUS_DENTISULCATUS",
+          "name": "Ceratosaurus dentisulcatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratosaurus",
+          "sourceIds": {
+            "wikispecies": "Ceratosaurus_dentisulcatus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOSAURUS_MAGNICORNIS",
+          "name": "Ceratosaurus magnicornis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratosaurus",
+          "sourceIds": {
+            "wikispecies": "Ceratosaurus_magnicornis"
           },
           "children": []
         }
@@ -127,7 +152,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ceratosauridae"
+    },
+    {
+      "id": "GENUS_BERBEROSAURUS",
+      "name": "Berberosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ceratosauridae",
+      "children": [
+        {
+          "id": "SP_BERBEROSAURUS_LIASSICUS_ALLAIN_ET_AL_2007",
+          "name": "Berberosaurus liassicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Berberosaurus",
+          "authorship": "Allain et al. 2007",
+          "sourceIds": {
+            "checklistbank-1174": "txn:109009"
+          },
+          "uuid": "32e4b12f-5761-4902-8545-6adb38c67e66",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Ceratosauridae"
+  }
 }

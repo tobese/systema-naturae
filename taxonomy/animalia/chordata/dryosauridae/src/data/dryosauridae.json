@@ -3,7 +3,7 @@
   "name": "Dryosauridae",
   "rank": "FAMILY",
   "appSlug": "dryosauridae",
-  "speciesCount": 11,
+  "speciesCount": 15,
   "children": [
     {
       "id": "GENUS_DRYOSAURUS",
@@ -32,7 +32,8 @@
           "lineage": "Dryosaurus",
           "authorship": "Carpenter & Galton, 2018",
           "sourceIds": {
-            "gbif-backbone": "11170768"
+            "gbif-backbone": "11170768",
+            "checklistbank-1174": "txn:434094"
           },
           "children": []
         },
@@ -47,6 +48,20 @@
           "sourceIds": {
             "gbif-backbone": "9281247"
           },
+          "children": []
+        },
+        {
+          "id": "SP_DRYOSAURUS_ALTUS_MARSH_1878",
+          "name": "Dryosaurus altus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dryosaurus",
+          "authorship": "(Marsh 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:52882"
+          },
+          "uuid": "95ae7d5b-62d1-4c14-9630-d1fa35e6858b",
           "children": []
         }
       ],
@@ -202,6 +217,20 @@
             "gbif-backbone": "4965854"
           },
           "children": []
+        },
+        {
+          "id": "SP_VALDOSAURUS_CANALICULATUS_GALTON_1975",
+          "name": "Valdosaurus canaliculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valdosaurus",
+          "authorship": "(Galton 1975)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:52885"
+          },
+          "uuid": "324d3f9d-b20c-405b-bbe5-22408df5a692",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -228,7 +257,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dryosauridae"
+    },
+    {
+      "id": "GENUS_CALLOVOSAURUS",
+      "name": "Callovosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dryosauridae",
+      "children": [
+        {
+          "id": "SP_CALLOVOSAURUS_LEEDSI_LYDEKKER_1889",
+          "name": "Callovosaurus leedsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callovosaurus",
+          "authorship": "(Lydekker 1889)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:64515"
+          },
+          "uuid": "7ce6d741-fb39-4474-914a-02df5d8e85fb",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ELRHAZOSAURUS",
+      "name": "Elrhazosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dryosauridae",
+      "children": [
+        {
+          "id": "SP_ELRHAZOSAURUS_NIGERIENSIS_GALTON_AND_TAQUET_1982",
+          "name": "Elrhazosaurus nigeriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elrhazosaurus",
+          "authorship": "(Galton and Taquet 1982)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:64647"
+          },
+          "uuid": "71f0a68c-95f0-4832-b272-9d693663dce4",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 9
+  "genusCount": 11,
+  "sourceIds": {
+    "checklistbank-1174": "txn:38730"
+  }
 }

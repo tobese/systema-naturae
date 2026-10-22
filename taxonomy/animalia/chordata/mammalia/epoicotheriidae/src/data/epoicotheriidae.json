@@ -3,7 +3,7 @@
   "name": "Epoicotheriidae",
   "rank": "FAMILY",
   "appSlug": "epoicotheriidae",
-  "speciesCount": 8,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_TETRAPASSALUS",
@@ -155,14 +155,106 @@
           "lineage": "Auroratherium",
           "authorship": "Tong & Wang, 1997",
           "sourceIds": {
-            "gbif-backbone": "4950969"
+            "gbif-backbone": "4950969",
+            "checklistbank-1174": "txn:136833"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "epoicotheriidae"
+    },
+    {
+      "id": "GENUS_EPOICOTHERIUM",
+      "name": "Epoicotherium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "epoicotheriidae",
+      "children": [
+        {
+          "id": "SP_EPOICOTHERIUM_UNICUM_DOUGLASS_1905",
+          "name": "Epoicotherium unicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epoicotherium",
+          "authorship": "(Douglass 1905)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:52722"
+          },
+          "uuid": "91b24f3f-1df3-4fbb-9bdd-e98252ec53fb",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TUBULODON",
+      "name": "Tubulodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "epoicotheriidae",
+      "children": [
+        {
+          "id": "SP_TUBULODON_ATOPUM_ROSE_ET_AL_1978",
+          "name": "Tubulodon atopum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulodon",
+          "authorship": "(Rose et al. 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:43907"
+          },
+          "uuid": "c7b684f5-ef65-49e9-a0e8-69a1f91acc3d",
+          "children": []
+        },
+        {
+          "id": "SP_TUBULODON_PEARCEI_GAZIN_1952",
+          "name": "Tubulodon pearcei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulodon",
+          "authorship": "(Gazin 1952)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:50106"
+          },
+          "uuid": "4c38cacc-8cfd-473d-a2f3-a5534f7d378e",
+          "children": []
+        },
+        {
+          "id": "SP_TUBULODON_TAYLORI_JEPSEN_1932",
+          "name": "Tubulodon taylori",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulodon",
+          "authorship": "Jepsen 1932",
+          "sourceIds": {
+            "checklistbank-1174": "txn:52534"
+          },
+          "uuid": "787b93fb-7188-4bb7-90a4-cba8af059330",
+          "children": []
+        },
+        {
+          "id": "SP_TUBULODON_WOODI_GUTHRIE_1967",
+          "name": "Tubulodon woodi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulodon",
+          "authorship": "(Guthrie 1967)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:49611"
+          },
+          "uuid": "afd1ed28-8d40-42f9-8fb9-08cf4e4f257d",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:43669"
+  }
 }

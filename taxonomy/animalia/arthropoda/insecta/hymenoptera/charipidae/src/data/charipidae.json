@@ -3,7 +3,7 @@
   "name": "Charipidae",
   "rank": "FAMILY",
   "appSlug": "charipidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_PROTOCHARIPS",
@@ -26,6 +26,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "charipidae"
+    },
+    {
+      "id": "GENUS_CHARIPS",
+      "name": "Charips",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "charipidae",
+      "children": [
+        {
+          "id": "SP_CHARIPS_DOLICHOCERUS_CAM",
+          "name": "Charips dolichocerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Charips",
+          "authorship": "Cam.",
+          "sourceIds": {
+            "checklistbank-124661": "152579"
+          },
+          "uuid": "104588a2-c9de-4cf1-ab36-23222fa03dfb"
+        },
+        {
+          "id": "SP_CHARIPS_ANCYLICERUS_CAMERON",
+          "name": "Charips ancylicerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Charips",
+          "authorship": "Cameron",
+          "sourceIds": {
+            "checklistbank-124661": "154641"
+          },
+          "uuid": "e14c4e21-4ecb-4eac-aab4-9e7eec27b4f8"
+        }
+      ]
     }
   ],
   "genusCount": 1

@@ -3,7 +3,7 @@
   "name": "Arthromygalidae",
   "rank": "FAMILY",
   "appSlug": "arthromygalidae",
-  "speciesCount": 10,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_PALAEOCTENIZA",
@@ -19,7 +19,8 @@
           "lineage": "Palaeocteniza",
           "authorship": "Hirst, 1923",
           "sourceIds": {
-            "gbif-backbone": "6898966"
+            "gbif-backbone": "6898966",
+            "wikispecies": "Palaeocteniza_crassipes"
           },
           "children": []
         }
@@ -67,7 +68,8 @@
           "lineage": "Protolycosa",
           "authorship": "Roemer, 1866",
           "sourceIds": {
-            "gbif-backbone": "6898961"
+            "gbif-backbone": "6898961",
+            "wikispecies": "Protolycosa_anthracophila"
           },
           "children": []
         }
@@ -111,7 +113,8 @@
           "lineage": "Rakovnicia",
           "authorship": "Kušta, 1885",
           "sourceIds": {
-            "gbif-backbone": "6898960"
+            "gbif-backbone": "6898960",
+            "wikispecies": "Rakovnicia_antiqua"
           },
           "children": []
         }
@@ -133,7 +136,8 @@
           "lineage": "Protocteniza",
           "authorship": "Petrunkevitch, 1949",
           "sourceIds": {
-            "gbif-backbone": "6898964"
+            "gbif-backbone": "6898964",
+            "wikispecies": "Protocteniza_britannica"
           },
           "children": []
         }
@@ -155,7 +159,8 @@
           "lineage": "Eolycosa",
           "authorship": "(Kušta, 1886)",
           "sourceIds": {
-            "gbif-backbone": "6898963"
+            "gbif-backbone": "6898963",
+            "wikispecies": "Eolycosa_lorenzi"
           },
           "children": []
         }
@@ -177,8 +182,23 @@
           "lineage": "Geralycosa",
           "authorship": "Kušta, 1889",
           "sourceIds": {
-            "gbif-backbone": "6898965"
+            "gbif-backbone": "6898965",
+            "wikispecies": "Geralycosa_fritschi"
           },
+          "children": []
+        },
+        {
+          "id": "SP_GERALYCOSA_FRICII_KU_TA_1889",
+          "name": "Geralycosa fricii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geralycosa",
+          "authorship": "Kušta 1889",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272160"
+          },
+          "uuid": "0edad79e-e8f4-48a6-bdb3-f074bb6ca7c7",
           "children": []
         }
       ],
@@ -199,7 +219,50 @@
           "lineage": "Palaranea",
           "authorship": "Frič, 1873",
           "sourceIds": {
-            "gbif-backbone": "6898959"
+            "gbif-backbone": "6898959",
+            "wikispecies": "Palaranea_borassifoliae"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arthromygalidae"
+    },
+    {
+      "id": "GENUS_ARTHROMYGALE",
+      "name": "Arthromygale",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARTHROMYGALE_FORTIS",
+          "name": "Arthromygale fortis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arthromygale",
+          "sourceIds": {
+            "wikispecies": "Arthromygale_fortis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arthromygalidae"
+    },
+    {
+      "id": "GENUS_KUSTARIA",
+      "name": "Kustaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KUSTARIA_CARBONARIA",
+          "name": "Kustaria carbonaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kustaria",
+          "sourceIds": {
+            "wikispecies": "Kustaria_carbonaria"
           },
           "children": []
         }
@@ -208,5 +271,8 @@
       "lineage": "arthromygalidae"
     }
   ],
-  "genusCount": 8
+  "genusCount": 10,
+  "sourceIds": {
+    "wikispecies": "Arthromygalidae"
+  }
 }

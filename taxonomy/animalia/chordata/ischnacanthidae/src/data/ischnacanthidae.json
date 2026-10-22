@@ -3,7 +3,7 @@
   "name": "Ischnacanthidae",
   "rank": "FAMILY",
   "appSlug": "ischnacanthidae",
-  "speciesCount": 21,
+  "speciesCount": 30,
   "children": [
     {
       "id": "GENUS_ISCHNACANTHUS",
@@ -60,6 +60,20 @@
           "sourceIds": {
             "gbif-backbone": "11198695"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ISCHNACANTHUS_GRACILIS_EGERTON_1861",
+          "name": "Ischnacanthus gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ischnacanthus",
+          "authorship": "(Egerton 1861)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:258986"
+          },
+          "uuid": "e846e038-6cc2-4091-bd73-5e99911f4fdd",
           "children": []
         }
       ],
@@ -172,8 +186,23 @@
           "lineage": "Apateacanthus",
           "authorship": "Hussakof & Bryant, 1919",
           "sourceIds": {
-            "gbif-backbone": "11170691"
+            "gbif-backbone": "11170691",
+            "checklistbank-1174": "txn:421663"
           },
+          "children": []
+        },
+        {
+          "id": "SP_APATEACANTHUS_VETUSTUS_CLARKE_1885",
+          "name": "Apateacanthus vetustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apateacanthus",
+          "authorship": "(Clarke 1885)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:259144"
+          },
+          "uuid": "2e582142-b985-4bb7-a306-25b0ea6cee68",
           "children": []
         }
       ],
@@ -218,6 +247,20 @@
           "sourceIds": {
             "gbif-backbone": "9187742"
           },
+          "children": []
+        },
+        {
+          "id": "SP_URANIACANTHUS_CURTUS_POWRIE_1870",
+          "name": "Uraniacanthus curtus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uraniacanthus",
+          "authorship": "Powrie 1870",
+          "sourceIds": {
+            "checklistbank-1174": "txn:503615"
+          },
+          "uuid": "9c440935-0f82-4a4d-aef3-dbe9dd528268",
           "children": []
         }
       ],
@@ -330,8 +373,51 @@
           "lineage": "Acanthodopsis",
           "authorship": "Hancock & Atthey, 1868",
           "sourceIds": {
-            "gbif-backbone": "8616855"
+            "gbif-backbone": "8616855",
+            "checklistbank-1174": "txn:258881"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHODOPSIS_ACUTA_WELLBURN_1902",
+          "name": "Acanthodopsis acuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthodopsis",
+          "authorship": "Wellburn 1902",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501942"
+          },
+          "uuid": "64a4d268-6cc8-43bc-a14c-cc1ec9acd68d",
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHODOPSIS_SUMMITI_WELLBURN_1902",
+          "name": "Acanthodopsis summiti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthodopsis",
+          "authorship": "Wellburn 1902",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501943"
+          },
+          "uuid": "0c452ad5-fde4-4ecb-bf21-8f39762d21d6",
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHODOPSIS_RUSSELLI_BURROW_2004",
+          "name": "Acanthodopsis russelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthodopsis",
+          "authorship": "Burrow 2004",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501944"
+          },
+          "uuid": "22c2f847-ebdc-40e7-a52f-27ddcd1fe0c8",
           "children": []
         }
       ],
@@ -394,7 +480,79 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ischnacanthidae"
+    },
+    {
+      "id": "GENUS_ROHONILEPIS",
+      "name": "Rohonilepis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ischnacanthidae",
+      "children": [
+        {
+          "id": "SP_ROHONILEPIS_BREVIORNATUS_VALIUKEVICIUS_2004",
+          "name": "Rohonilepis breviornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rohonilepis",
+          "authorship": "Valiukevicius 2004",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501968"
+          },
+          "uuid": "4f20af6a-74e0-47b7-895e-3f907a904e67",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CACHEACANTHUS",
+      "name": "Cacheacanthus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ischnacanthidae",
+      "children": [
+        {
+          "id": "SP_CACHEACANTHUS_UTAHENSIS_BURROW_2007",
+          "name": "Cacheacanthus utahensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cacheacanthus",
+          "authorship": "Burrow 2007",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501994"
+          },
+          "uuid": "86a14539-5e8b-4750-b342-33b04d60aa4b",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ARCTICACANTHUS",
+      "name": "Arcticacanthus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ischnacanthidae",
+      "children": [
+        {
+          "id": "SP_ARCTICACANTHUS_BICOSTATUS_VALIUKEVICIUS_2003",
+          "name": "Arcticacanthus bicostatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arcticacanthus",
+          "authorship": "Valiukevicius 2003",
+          "sourceIds": {
+            "checklistbank-1174": "txn:504457"
+          },
+          "uuid": "69fbe576-8d29-4b0c-a3aa-dbec6891d3e1",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 13
+  "genusCount": 16,
+  "sourceIds": {
+    "checklistbank-1174": "txn:352370"
+  }
 }

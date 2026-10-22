@@ -3,7 +3,7 @@
   "name": "Leptocleididae",
   "rank": "FAMILY",
   "appSlug": "leptocleididae",
-  "speciesCount": 3,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_NICHOLLSSAURA",
@@ -19,7 +19,8 @@
           "lineage": "Nichollssaura",
           "authorship": "Druckenmiller & Russell, 2009",
           "sourceIds": {
-            "gbif-backbone": "8632608"
+            "gbif-backbone": "8632608",
+            "checklistbank-1174": "txn:168667"
           },
           "children": []
         }
@@ -70,7 +71,70 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "leptocleididae"
+    },
+    {
+      "id": "GENUS_LEPTOCLEIDUS",
+      "name": "Leptocleidus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptocleididae",
+      "children": [
+        {
+          "id": "SP_LEPTOCLEIDUS_CAPENSIS_ANDREWS_1911",
+          "name": "Leptocleidus capensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptocleidus",
+          "authorship": "(Andrews 1911)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:100069"
+          },
+          "uuid": "36238faa-47d9-49bf-a9cd-04715c633ca7",
+          "children": []
+        },
+        {
+          "id": "SP_LEPTOCLEIDUS_CLEMAI_CRUICKSHANK_AND_LONG_1997",
+          "name": "Leptocleidus clemai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptocleidus",
+          "authorship": "Cruickshank and Long 1997",
+          "sourceIds": {
+            "checklistbank-1174": "txn:187109"
+          },
+          "uuid": "bc85c56f-2c54-4d71-bac7-41f2acf6292d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_HASTANECTES",
+      "name": "Hastanectes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptocleididae",
+      "children": [
+        {
+          "id": "SP_HASTANECTES_VALDENSIS_LYDEKKER_1889",
+          "name": "Hastanectes valdensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hastanectes",
+          "authorship": "(Lydekker 1889)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:201041"
+          },
+          "uuid": "50de1553-021d-44fc-bf07-83a6120f9a81",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:174765"
+  }
 }

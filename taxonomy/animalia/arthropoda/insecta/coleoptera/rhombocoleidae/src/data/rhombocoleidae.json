@@ -3,7 +3,7 @@
   "name": "Rhombocoleidae",
   "rank": "FAMILY",
   "appSlug": "rhombocoleidae",
-  "speciesCount": 24,
+  "speciesCount": 27,
   "children": [
     {
       "id": "GENUS_KARAKANOCOLEUS",
@@ -71,7 +71,8 @@
           "lineage": "Karakanocoleus",
           "authorship": "Ponomarenko, 2004",
           "sourceIds": {
-            "gbif-backbone": "8481763"
+            "gbif-backbone": "8481763",
+            "wikispecies": "Karakanocoleus_europeus"
           },
           "children": []
         },
@@ -84,7 +85,20 @@
           "lineage": "Karakanocoleus",
           "authorship": "Rohdendorf, 1961",
           "sourceIds": {
-            "gbif-backbone": "6966992"
+            "gbif-backbone": "6966992",
+            "wikispecies": "Karakanocoleus_major"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KARAKANOCOLEUS_VENJUKOVI",
+          "name": "Karakanocoleus venjukovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Karakanocoleus",
+          "sourceIds": {
+            "wikispecies": "Karakanocoleus_venjukovi"
           },
           "children": []
         }
@@ -119,7 +133,8 @@
           "lineage": "Erunakicupes",
           "authorship": "Rohdendorf, 1961",
           "sourceIds": {
-            "gbif-backbone": "8510283"
+            "gbif-backbone": "8510283",
+            "wikispecies": "Erunakicupes_fomitshevi"
           },
           "children": []
         },
@@ -171,7 +186,8 @@
           "lineage": "Erunakicupes",
           "authorship": "Rohdendorf, 1961",
           "sourceIds": {
-            "gbif-backbone": "6967001"
+            "gbif-backbone": "6967001",
+            "wikispecies": "Erunakicupes_kryshtofovichi"
           },
           "children": []
         },
@@ -184,7 +200,20 @@
           "lineage": "Erunakicupes",
           "authorship": "Rohdendorf, 1961",
           "sourceIds": {
-            "gbif-backbone": "6967005"
+            "gbif-backbone": "6967005",
+            "wikispecies": "Erunakicupes_schmalhauseni"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ERUNAKICUPES_OBRUTSHEVI",
+          "name": "Erunakicupes obrutshevi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Erunakicupes",
+          "sourceIds": {
+            "wikispecies": "Erunakicupes_obrutshevi"
           },
           "children": []
         }
@@ -228,7 +257,8 @@
           "lineage": "Sinorhombocoleus",
           "authorship": "Tan & Ren, 2009",
           "sourceIds": {
-            "gbif-backbone": "8604486"
+            "gbif-backbone": "8604486",
+            "checklistbank-1174": "txn:312584"
           },
           "children": []
         }
@@ -263,7 +293,8 @@
           "lineage": "Rhombocoleus",
           "authorship": "Rohdendorf, 1961",
           "sourceIds": {
-            "gbif-backbone": "6966999"
+            "gbif-backbone": "6966999",
+            "wikispecies": "Rhombocoleus_andreae"
           },
           "children": []
         }
@@ -311,7 +342,8 @@
           "lineage": "Rhombocoleites",
           "authorship": "Ponomarenko & Mostovski, 2005",
           "sourceIds": {
-            "gbif-backbone": "8507426"
+            "gbif-backbone": "8507426",
+            "checklistbank-1174": "txn:232652"
           },
           "children": []
         }
@@ -397,7 +429,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhombocoleidae"
+    },
+    {
+      "id": "GENUS_ROSSOCOLEUS",
+      "name": "Rossocoleus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhombocoleidae",
+      "children": [
+        {
+          "id": "SP_ROSSOCOLEUS_ELLIPTICUS_MARTYNOV_1937",
+          "name": "Rossocoleus ellipticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rossocoleus",
+          "authorship": "(Martynov 1937)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:199234",
+            "wikispecies": "Rossocoleus_ellipticus"
+          },
+          "uuid": "6c6ed6c9-6286-48d9-a0e2-b148c00bca63",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 9
+  "genusCount": 10,
+  "sourceIds": {
+    "wikispecies": "Rhombocoleidae",
+    "checklistbank-1174": "txn:153498"
+  }
 }

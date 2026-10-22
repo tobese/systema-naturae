@@ -3,7 +3,7 @@
   "name": "Zerconidae",
   "rank": "FAMILY",
   "appSlug": "zerconidae",
-  "speciesCount": 214,
+  "speciesCount": 218,
   "children": [
     {
       "id": "GENUS_ROTUNDOZERCON",
@@ -54,7 +54,8 @@
           "lineage": "Boreozercon",
           "authorship": "Díaz-Aguilar & Ujvári, 2010",
           "sourceIds": {
-            "gbif-backbone": "7605835"
+            "gbif-backbone": "7605835",
+            "wikispecies": "Boreozercon_emendi"
           },
           "children": []
         }
@@ -255,7 +256,8 @@
           "lineage": "Zercon",
           "authorship": "Urhan & Ekiz, 2002",
           "sourceIds": {
-            "gbif-backbone": "6891535"
+            "gbif-backbone": "6891535",
+            "wikispecies": "Zercon_delicatus"
           },
           "children": []
         },
@@ -827,7 +829,8 @@
           "lineage": "Zercon",
           "authorship": "C.L.Koch, 1841",
           "sourceIds": {
-            "gbif-backbone": "7603706"
+            "gbif-backbone": "7603706",
+            "checklistbank-139831": "1226440"
           },
           "children": []
         },
@@ -1646,7 +1649,8 @@
           "lineage": "Zercon",
           "authorship": "Urhan, 2008",
           "sourceIds": {
-            "gbif-backbone": "8598451"
+            "gbif-backbone": "8598451",
+            "wikispecies": "Zercon_anatolicus"
           },
           "children": []
         },
@@ -1958,7 +1962,8 @@
           "lineage": "Zercon",
           "authorship": "Blaszak, 1985",
           "sourceIds": {
-            "gbif-backbone": "6891525"
+            "gbif-backbone": "6891525",
+            "checklistbank-139831": "807502"
           },
           "children": []
         },
@@ -2102,6 +2107,30 @@
           "authorship": "Berlese, 1920",
           "sourceIds": {
             "gbif-backbone": "4548190"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZERCON_KACKARICUS",
+          "name": "Zercon kackaricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zercon",
+          "sourceIds": {
+            "wikispecies": "Zercon_kackaricus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZERCON_BERCZIKI",
+          "name": "Zercon bercziki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zercon",
+          "sourceIds": {
+            "wikispecies": "Zercon_bercziki"
           },
           "children": []
         }
@@ -2270,7 +2299,8 @@
           "lineage": "Zerconella",
           "authorship": "Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "7520956"
+            "gbif-backbone": "7520956",
+            "wikispecies": "Zerconella_lobata"
           },
           "children": []
         },
@@ -2802,7 +2832,8 @@
           "lineage": "Mixozercon",
           "authorship": "Diaz-Aguilar & Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "8417605"
+            "gbif-backbone": "8417605",
+            "wikispecies": "Mixozercon_borealis"
           },
           "children": []
         },
@@ -2828,7 +2859,8 @@
           "lineage": "Mixozercon",
           "authorship": "Diaz-Aguilar & Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "7582628"
+            "gbif-backbone": "7582628",
+            "wikispecies": "Mixozercon_jasoniana"
           },
           "children": []
         },
@@ -2841,7 +2873,8 @@
           "lineage": "Mixozercon",
           "authorship": "Diaz-Aguilar & Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "8091439"
+            "gbif-backbone": "8091439",
+            "wikispecies": "Mixozercon_albertaensis"
           },
           "children": []
         },
@@ -2935,7 +2968,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zerconidae"
+    },
+    {
+      "id": "GENUS_MACROZERCON",
+      "name": "Macrozercon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACROZERCON_PRAECIPUUS",
+          "name": "Macrozercon praecipuus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrozercon",
+          "sourceIds": {
+            "checklistbank-139831": "1625843"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zerconidae"
+    },
+    {
+      "id": "GENUS_BLASZAKIELLA",
+      "name": "Blaszakiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BLASZAKIELLA_AMERICANA",
+          "name": "Blaszakiella americana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blaszakiella",
+          "sourceIds": {
+            "wikispecies": "Blaszakiella_americana"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zerconidae"
     }
   ],
-  "genusCount": 17
+  "genusCount": 19,
+  "sourceIds": {
+    "wikispecies": "Zerconidae"
+  }
 }

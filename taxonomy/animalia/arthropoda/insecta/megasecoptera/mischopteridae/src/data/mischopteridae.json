@@ -3,7 +3,7 @@
   "name": "Mischopteridae",
   "rank": "FAMILY",
   "appSlug": "mischopteridae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_MISCHOPTERA",
@@ -19,8 +19,23 @@
           "lineage": "Mischoptera",
           "authorship": "Carpenter & Richardson, 1968",
           "sourceIds": {
-            "gbif-backbone": "8504367"
+            "gbif-backbone": "8504367",
+            "checklistbank-1174": "txn:305792"
           },
+          "children": []
+        },
+        {
+          "id": "SP_MISCHOPTERA_NIGRA_BRONGNIART_1885",
+          "name": "Mischoptera nigra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mischoptera",
+          "authorship": "(Brongniart 1885)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:175839"
+          },
+          "uuid": "d42042af-052a-41c1-bf3b-7b30e047b287",
           "children": []
         }
       ],
@@ -61,7 +76,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mischopteridae"
+    },
+    {
+      "id": "GENUS_PSILOTHORAX",
+      "name": "Psilothorax",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mischopteridae",
+      "children": [
+        {
+          "id": "SP_PSILOTHORAX_LONGICAUDA_BRONGNIART_1894",
+          "name": "Psilothorax longicauda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilothorax",
+          "authorship": "(Brongniart 1894)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:175842"
+          },
+          "uuid": "198601b2-3aca-4855-b64b-3e03453adaa3",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:175836"
+  }
 }

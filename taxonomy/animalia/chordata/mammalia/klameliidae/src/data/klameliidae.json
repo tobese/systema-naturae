@@ -3,7 +3,7 @@
   "name": "Klameliidae",
   "rank": "FAMILY",
   "appSlug": "klameliidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_FERGANODON",
@@ -19,14 +19,40 @@
           "lineage": "Ferganodon",
           "authorship": "Martin & Averianov, 2007",
           "sourceIds": {
-            "gbif-backbone": "8499858"
+            "gbif-backbone": "8499858",
+            "checklistbank-1174": "txn:257523"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "klameliidae"
+    },
+    {
+      "id": "GENUS_KLAMELIA",
+      "name": "Klamelia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "klameliidae",
+      "children": [
+        {
+          "id": "SP_KLAMELIA_ZHAOPENGI_CHOW_AND_RICH_1984",
+          "name": "Klamelia zhaopengi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Klamelia",
+          "authorship": "Chow and Rich 1984",
+          "sourceIds": {
+            "checklistbank-1174": "txn:140286"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:257522"
+  }
 }

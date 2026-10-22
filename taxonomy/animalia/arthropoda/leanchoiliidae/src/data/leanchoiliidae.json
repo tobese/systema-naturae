@@ -3,7 +3,7 @@
   "name": "Leanchoiliidae",
   "rank": "FAMILY",
   "appSlug": "leanchoiliidae",
-  "speciesCount": 5,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_ALALCOMENAEUS",
@@ -21,6 +21,21 @@
           "sourceIds": {
             "gbif-backbone": "9465550"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ALALCOMENAEUS_CAMBRICUS_SIMONETTA_1970",
+          "name": "Alalcomenaeus cambricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alalcomenaeus",
+          "authorship": "Simonetta 1970",
+          "sourceIds": {
+            "checklistbank-1174": "txn:490855",
+            "wikispecies": "Alalcomenaeus_cambricus"
+          },
+          "uuid": "dca97aa1-0731-49fd-8d9a-d0e5bd96cf13",
           "children": []
         }
       ],
@@ -67,8 +82,23 @@
           "lineage": "Leanchoilia",
           "authorship": "Briggs & Robison, 1984",
           "sourceIds": {
-            "gbif-backbone": "4946348"
+            "gbif-backbone": "4946348",
+            "checklistbank-1174": "txn:121049"
           },
+          "children": []
+        },
+        {
+          "id": "SP_LEANCHOILIA_ILLECEBROSA_HOU_1987",
+          "name": "Leanchoilia illecebrosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leanchoilia",
+          "authorship": "(Hou 1987)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:167481"
+          },
+          "uuid": "e8a1bbfc-1286-4f15-a15e-00370c8aebea",
           "children": []
         }
       ],
@@ -89,14 +119,65 @@
           "lineage": "Oestokerkus",
           "authorship": "Edgecombe et al., 2011",
           "sourceIds": {
-            "gbif-backbone": "9267978"
+            "gbif-backbone": "9267978",
+            "wikispecies": "Oestokerkus_megacholix"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "leanchoiliidae"
+    },
+    {
+      "id": "GENUS_KANOSHOIA",
+      "name": "Kanoshoia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "leanchoiliidae",
+      "children": [
+        {
+          "id": "SP_KANOSHOIA_RECTIFRONS_LEROSEY_AUBRIL_ET_AL_2020",
+          "name": "Kanoshoia rectifrons",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kanoshoia",
+          "authorship": "Lerosey-Aubril et al. 2020",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474704"
+          },
+          "uuid": "f3c7fb2f-c759-4ad9-8283-ed3588e34794",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LOMANKUS",
+      "name": "Lomankus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "leanchoiliidae",
+      "children": [
+        {
+          "id": "SP_LOMANKUS_EDGECOMBEI_PARRY_ET_AL_2024",
+          "name": "Lomankus edgecombei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lomankus",
+          "authorship": "Parry et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501256"
+          },
+          "uuid": "e8abfee0-a20a-41f3-a67d-c76b77e06e4e",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "wikispecies": "Leanchoiliidae",
+    "checklistbank-1174": "txn:358332"
+  }
 }

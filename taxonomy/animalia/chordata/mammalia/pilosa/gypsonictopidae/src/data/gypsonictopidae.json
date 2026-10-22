@@ -3,7 +3,7 @@
   "name": "Gypsonictopidae",
   "rank": "FAMILY",
   "appSlug": "gypsonictopidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_GYPSONICTOPS",
@@ -19,7 +19,8 @@
           "lineage": "Gypsonictops",
           "authorship": "Rigby & Wolberg, 1987",
           "sourceIds": {
-            "gbif-backbone": "4972203"
+            "gbif-backbone": "4972203",
+            "checklistbank-1174": "txn:46753"
           },
           "children": []
         },
@@ -65,7 +66,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gypsonictopidae"
+    },
+    {
+      "id": "GENUS_SIKUOMYS",
+      "name": "Sikuomys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gypsonictopidae",
+      "children": [
+        {
+          "id": "SP_SIKUOMYS_MIKROS_EBERLE_ET_AL_2023",
+          "name": "Sikuomys mikros",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sikuomys",
+          "authorship": "Eberle et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:476371"
+          },
+          "uuid": "8557736d-51ca-4068-8aaf-d208c98bfd04",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:40254"
+  }
 }

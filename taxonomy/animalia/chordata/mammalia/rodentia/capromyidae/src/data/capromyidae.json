@@ -3,7 +3,7 @@
   "name": "Capromyidae",
   "rank": "FAMILY",
   "appSlug": "capromyidae",
-  "speciesCount": 7,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_CAPROMYS",
@@ -33,6 +33,32 @@
           "authorship": "(Varona, 1983)",
           "sourceIds": {
             "gbif-backbone": "4263070"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CAPROMYS_ACEVEDO_BORROTO_P_EZ_ET_AL_2012",
+          "name": "Capromys acevedo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Capromys",
+          "authorship": "Borroto-Páez et al. 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:492251"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CAPROMYS_LATUS_VARONA_AND_ARREDONDO_1979",
+          "name": "Capromys latus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Capromys",
+          "authorship": "Varona and Arredondo 1979",
+          "sourceIds": {
+            "checklistbank-1174": "txn:492422"
           },
           "children": []
         }
@@ -76,7 +102,8 @@
           "lineage": "Geocapromys",
           "authorship": "(J.Fischer, 1829)",
           "sourceIds": {
-            "gbif-backbone": "4828181"
+            "gbif-backbone": "4828181",
+            "checklistbank-1174": "txn:492424"
           },
           "children": []
         },
@@ -133,14 +160,41 @@
           "lineage": "Zazamys",
           "authorship": "MacPhee & Iturralde-Vinent, 1995",
           "sourceIds": {
-            "gbif-backbone": "4972806"
+            "gbif-backbone": "4972806",
+            "checklistbank-1174": "txn:64837"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "capromyidae"
+    },
+    {
+      "id": "GENUS_MESOCAPROMYS",
+      "name": "Mesocapromys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "capromyidae",
+      "children": [
+        {
+          "id": "SP_MESOCAPROMYS_KRAGLIEVICHI_VARONA_AND_ARREDONDO_1979",
+          "name": "Mesocapromys kraglievichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocapromys",
+          "authorship": "Varona and Arredondo 1979",
+          "sourceIds": {
+            "checklistbank-1174": "txn:492268"
+          },
+          "uuid": "a0e8cee4-1f0a-4cdb-986b-3cd6b4770118",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:42070"
+  }
 }

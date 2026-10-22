@@ -42,7 +42,10 @@
           "lineage": "Procerodes",
           "authorship": "(Strøm, 1768)",
           "children": [],
-          "uuid": "cd1c2dfd-abc0-53f-909-ea29340f2be653"
+          "uuid": "cd1c2dfd-abc0-53f-909-ea29340f2be653",
+          "sourceIds": {
+            "checklistbank-139831": "923938"
+          }
         },
         {
           "id": "SP_PROCERODES_DAHLI_MARCUS_MARCUS_1959",
@@ -119,7 +122,10 @@
           "lineage": "Procerodes",
           "authorship": "(Bohmig, 1902)",
           "children": [],
-          "uuid": "735ee462-1fa9-5f6-bc9-b07d90a899faca"
+          "uuid": "735ee462-1fa9-5f6-bc9-b07d90a899faca",
+          "sourceIds": {
+            "checklistbank-139831": "1400166"
+          }
         },
         {
           "id": "SP_PROCERODES_PLEBEIUS_SCHMIDT_1861",
@@ -142,7 +148,8 @@
           "authorship": "(Schmidt, 1862)",
           "children": [],
           "sourceIds": {
-            "gbif-backbone": "8935703"
+            "gbif-backbone": "8935703",
+            "checklistbank-139831": "1006175"
           },
           "uuid": "9f42890c-e2ff-5ae-a28-390d91b2019d61"
         },
@@ -200,6 +207,34 @@
           "authorship": "(Ørsted, 1843)",
           "children": [],
           "uuid": "d2af2aed-88e6-55a-89b-67dfa4b857f05b"
+        },
+        {
+          "id": "SP_PROCERODES_VARIABLIS_B_HMIG",
+          "name": "Procerodes variablis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Procerodes",
+          "authorship": "Böhmig",
+          "sourceIds": {
+            "checklistbank-127379": "c5443525-478e-468a-b83f-6e65f05516fc"
+          },
+          "uuid": "e39764f0-b482-459f-be80-356baad8bc37",
+          "children": []
+        },
+        {
+          "id": "SP_PROCERODES_TRIGONOCEPHALA_IJIMA_KABURAKI",
+          "name": "Procerodes trigonocephala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Procerodes",
+          "authorship": "Ijima & Kaburaki",
+          "sourceIds": {
+            "checklistbank-127379": "887588f4-3c50-4a85-af1a-e15f8eed1568"
+          },
+          "uuid": "c3e5def8-49ad-4f46-804c-45a982b9f40e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -388,11 +423,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "procerodidae"
+    },
+    {
+      "id": "GENUS_FOVIELLA",
+      "name": "Foviella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FOVIELLA_AFFINIS",
+          "name": "Foviella affinis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Foviella",
+          "sourceIds": {
+            "checklistbank-139831": "1635036"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "procerodidae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 31,
   "appSlug": "procerodidae",
   "sourcedFrom": "checklistbank",
   "lineage": "Platyhelminthes",
-  "genusCount": 7
+  "genusCount": 8
 }

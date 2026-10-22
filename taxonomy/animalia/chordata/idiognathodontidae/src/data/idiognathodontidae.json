@@ -3,7 +3,7 @@
   "name": "Idiognathodontidae",
   "rank": "FAMILY",
   "appSlug": "idiognathodontidae",
-  "speciesCount": 56,
+  "speciesCount": 58,
   "children": [
     {
       "id": "GENUS_PROTOGNATHODUS",
@@ -45,8 +45,23 @@
           "lineage": "Protognathodus",
           "authorship": "Ziegler & Leuteritz, 1970",
           "sourceIds": {
-            "gbif-backbone": "8573536"
+            "gbif-backbone": "8573536",
+            "checklistbank-1174": "txn:322057"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOGNATHODUS_KOCKELI_BISCHOFF_1957",
+          "name": "Protognathodus kockeli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protognathodus",
+          "authorship": "(Bischoff 1957)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:322055"
+          },
+          "uuid": "09672a03-4a71-42ee-9181-fcc991ede80f",
           "children": []
         }
       ],
@@ -768,7 +783,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "idiognathodontidae"
+    },
+    {
+      "id": "GENUS_IDIOGNATHOIDES",
+      "name": "Idiognathoides",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "idiognathodontidae",
+      "children": [
+        {
+          "id": "SP_IDIOGNATHOIDES_SULCATUS_HIGGINS_AND_BOUCKAERT_1968",
+          "name": "Idiognathoides sulcatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Idiognathoides",
+          "authorship": "Higgins and Bouckaert 1968",
+          "sourceIds": {
+            "checklistbank-1174": "txn:454051"
+          },
+          "uuid": "d5be589c-185e-4050-9843-1afcce65d653",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:322052"
+  }
 }

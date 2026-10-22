@@ -3,7 +3,7 @@
   "name": "Eryopidae",
   "rank": "FAMILY",
   "appSlug": "eryopidae",
-  "speciesCount": 13,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_CLAMOROSAURUS",
@@ -111,8 +111,37 @@
           "lineage": "Eryops",
           "authorship": "Cope, 1877",
           "sourceIds": {
-            "gbif-backbone": "5936423"
+            "gbif-backbone": "5936423",
+            "wikispecies": "Eryops_megacephalus"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ERYOPS_GRANDIS_MARSH_1878",
+          "name": "Eryops grandis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eryops",
+          "authorship": "(Marsh 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:345657"
+          },
+          "uuid": "c2fcccfa-3efa-4df4-88a3-86830b86634e",
+          "children": []
+        },
+        {
+          "id": "SP_ERYOPS_ERYTHROLITICUS_COPE_1878",
+          "name": "Eryops erythroliticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eryops",
+          "authorship": "(Cope 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:391924"
+          },
+          "uuid": "40a49d90-443d-45d8-a596-bfb294e216db",
           "children": []
         }
       ],
@@ -236,7 +265,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eryopidae"
+    },
+    {
+      "id": "GENUS_STENOKRANIO",
+      "name": "Stenokranio",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eryopidae",
+      "children": [
+        {
+          "id": "SP_STENOKRANIO_BOLDI_WERNEBURG_ET_AL_2024",
+          "name": "Stenokranio boldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenokranio",
+          "authorship": "Werneburg et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:481301"
+          },
+          "uuid": "de1de382-3248-4167-8435-fc60508423c9",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 8,
+  "sourceIds": {
+    "wikispecies": "Eryopidae"
+  }
 }

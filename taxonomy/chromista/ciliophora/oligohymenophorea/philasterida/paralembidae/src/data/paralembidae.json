@@ -3,7 +3,7 @@
   "name": "Paralembidae",
   "rank": "FAMILY",
   "appSlug": "paralembidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PARALEMBUS",
@@ -19,7 +19,8 @@
           "lineage": "Paralembus",
           "authorship": "Kahl",
           "sourceIds": {
-            "gbif-backbone": "8296758"
+            "gbif-backbone": "8296758",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:427061"
           },
           "children": [],
           "uuid": "2fb61a4a-e5c4-5aa-8d7-b8f501a38ce4d6"
@@ -55,7 +56,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paralembidae"
+    },
+    {
+      "id": "GENUS_ANOPHRYS",
+      "name": "Anophrys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOPHRYS_SARCOPHAGA",
+          "name": "Anophrys sarcophaga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anophrys",
+          "sourceIds": {
+            "checklistbank-139831": "765012",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:427058"
+          },
+          "children": [],
+          "authorship": "Cohn, 1866"
+        },
+        {
+          "id": "SP_ANOPHRYS_ARENICOLA_FERNANDEZ_LEBORANS_1986",
+          "name": "Anophrys arenicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anophrys",
+          "authorship": "Fernandez-Leborans, 1986",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:427057"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paralembidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

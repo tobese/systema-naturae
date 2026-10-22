@@ -3,7 +3,7 @@
   "name": "Triplogyniidae",
   "rank": "FAMILY",
   "appSlug": "triplogyniidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_FUNKOTRIPLOGYNIUM",
@@ -19,7 +19,8 @@
           "lineage": "Funkotriplogynium",
           "authorship": "Seeman & Walter, 1997",
           "sourceIds": {
-            "gbif-backbone": "4663756"
+            "gbif-backbone": "4663756",
+            "checklistbank-127379": "5d814fea-7761-448a-9938-d49595dd354e"
           },
           "children": []
         },
@@ -39,7 +40,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "triplogyniidae"
+    },
+    {
+      "id": "GENUS_EUZERCON",
+      "name": "Euzercon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUZERCON_OVULUM_BERLESE_1904",
+          "name": "Euzercon ovulum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euzercon",
+          "authorship": "Berlese, 1904",
+          "sourceIds": {
+            "checklistbank-2008": "645681"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "triplogyniidae"
+    },
+    {
+      "id": "GENUS_TRIPLOGYNIUM",
+      "name": "Triplogynium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIPLOGYNIUM_KRANTZI",
+          "name": "Triplogynium krantzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triplogynium",
+          "sourceIds": {
+            "wikispecies": "Triplogynium_krantzi"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "triplogyniidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Triplogyniidae"
+  }
 }

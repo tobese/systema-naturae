@@ -3,7 +3,7 @@
   "name": "Amphilemuridae",
   "rank": "FAMILY",
   "appSlug": "amphilemuridae",
-  "speciesCount": 19,
+  "speciesCount": 25,
   "children": [
     {
       "id": "GENUS_PHOLIDOCERCUS",
@@ -19,7 +19,8 @@
           "lineage": "Pholidocercus",
           "authorship": "von Koenigswald & Storch, 1983",
           "sourceIds": {
-            "gbif-backbone": "4971634"
+            "gbif-backbone": "4971634",
+            "checklistbank-1174": "txn:130273"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Hylomysoides",
           "authorship": "Tong & Wang, 2006",
           "sourceIds": {
-            "gbif-backbone": "9536378"
+            "gbif-backbone": "9536378",
+            "checklistbank-1174": "txn:348339"
           },
           "children": []
         }
@@ -85,7 +87,8 @@
           "lineage": "Qilulestes",
           "authorship": "Tong & Wang, 2006",
           "sourceIds": {
-            "gbif-backbone": "9542662"
+            "gbif-backbone": "9542662",
+            "checklistbank-1174": "txn:348341"
           },
           "children": []
         }
@@ -199,7 +202,8 @@
           "lineage": "Zionodon",
           "authorship": "Dunn & Rasmussen, 2009",
           "sourceIds": {
-            "gbif-backbone": "8647829"
+            "gbif-backbone": "8647829",
+            "checklistbank-1174": "txn:160783"
           },
           "children": []
         },
@@ -212,7 +216,8 @@
           "lineage": "Zionodon",
           "authorship": "Dunn & Rasmussen, 2009",
           "sourceIds": {
-            "gbif-backbone": "8444497"
+            "gbif-backbone": "8444497",
+            "checklistbank-1174": "txn:160784"
           },
           "children": []
         }
@@ -247,7 +252,8 @@
           "lineage": "Macrocranion",
           "authorship": "Weitzel, 1949",
           "sourceIds": {
-            "gbif-backbone": "4971643"
+            "gbif-backbone": "4971643",
+            "wikispecies": "Macrocranion_tupaiodon"
           },
           "children": []
         },
@@ -286,8 +292,37 @@
           "lineage": "Macrocranion",
           "authorship": "(Krishtalka & Setoguchi, 1977)",
           "sourceIds": {
-            "gbif-backbone": "4971641"
+            "gbif-backbone": "4971641",
+            "checklistbank-1174": "txn:47848"
           },
+          "children": []
+        },
+        {
+          "id": "SP_MACROCRANION_NITENS_MATTHEW_1918",
+          "name": "Macrocranion nitens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrocranion",
+          "authorship": "(Matthew 1918)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:46103"
+          },
+          "uuid": "71623167-2b60-4063-9d61-d748e685aeb2",
+          "children": []
+        },
+        {
+          "id": "SP_MACROCRANION_VANDEBROEKI_QUINET_1964",
+          "name": "Macrocranion vandebroeki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrocranion",
+          "authorship": "(Quinet 1964)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:130264"
+          },
+          "uuid": "37a919d5-1118-40eb-a815-2568894276c6",
           "children": []
         }
       ],
@@ -352,14 +387,93 @@
           "lineage": "Colpocherus",
           "authorship": "Beard & Dawson, 2009",
           "sourceIds": {
-            "gbif-backbone": "8581872"
+            "gbif-backbone": "8581872",
+            "checklistbank-1174": "txn:159152"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amphilemuridae"
+    },
+    {
+      "id": "GENUS_ANKYLODON",
+      "name": "Ankylodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphilemuridae",
+      "children": [
+        {
+          "id": "SP_ANKYLODON_ANNECTENS_PATTERSON_AND_MCGREW_1937",
+          "name": "Ankylodon annectens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankylodon",
+          "authorship": "Patterson and McGrew 1937",
+          "sourceIds": {
+            "checklistbank-1174": "txn:44112"
+          },
+          "uuid": "b28a2087-ef4e-4e3b-9cfb-cf14248796a3",
+          "children": []
+        },
+        {
+          "id": "SP_ANKYLODON_PROGRESSUS_GALBREATH_1953",
+          "name": "Ankylodon progressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankylodon",
+          "authorship": "Galbreath 1953",
+          "sourceIds": {
+            "checklistbank-1174": "txn:44113"
+          },
+          "uuid": "24dba8e4-b7c3-49f0-8360-6817eb95a6a6",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ALSATICOPITHECUS",
+      "name": "Alsaticopithecus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphilemuridae",
+      "children": [
+        {
+          "id": "SP_ALSATICOPITHECUS_LEEMANI_H_RZELER_1947",
+          "name": "Alsaticopithecus leemani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alsaticopithecus",
+          "authorship": "Hürzeler 1947",
+          "sourceIds": {
+            "checklistbank-1174": "txn:100580"
+          },
+          "uuid": "1397bada-519f-4c69-8a17-c58c4c01008f",
+          "children": []
+        },
+        {
+          "id": "SP_ALSATICOPITHECUS_LEEMANNI_H_RZELER_1947",
+          "name": "Alsaticopithecus leemanni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alsaticopithecus",
+          "authorship": "Hürzeler 1947",
+          "sourceIds": {
+            "checklistbank-1174": "txn:130272"
+          },
+          "uuid": "94529660-7c16-4472-a05d-8919867270e8",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 12
+  "genusCount": 14,
+  "sourceIds": {
+    "wikispecies": "Amphilemuridae",
+    "checklistbank-1174": "txn:40360"
+  }
 }

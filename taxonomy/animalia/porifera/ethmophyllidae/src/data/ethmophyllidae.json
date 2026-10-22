@@ -3,7 +3,7 @@
   "name": "Ethmophyllidae",
   "rank": "FAMILY",
   "appSlug": "ethmophyllidae",
-  "speciesCount": 6,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_ETHMOPHYLLUM",
@@ -58,7 +58,8 @@
           "lineage": "Ethmophyllum",
           "authorship": "Okuneva & Repina, 1973",
           "sourceIds": {
-            "gbif-backbone": "4982413"
+            "gbif-backbone": "4982413",
+            "checklistbank-1174": "txn:123344"
           },
           "children": []
         },
@@ -91,7 +92,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ethmophyllidae"
+    },
+    {
+      "id": "GENUS_CORDILLERACYATHUS",
+      "name": "Cordilleracyathus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ethmophyllidae",
+      "children": [
+        {
+          "id": "SP_CORDILLERACYATHUS_BLUSSONI_HANDFIELD_1971",
+          "name": "Cordilleracyathus blussoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cordilleracyathus",
+          "authorship": "Handfield 1971",
+          "sourceIds": {
+            "checklistbank-1174": "txn:65193"
+          },
+          "uuid": "bfa3dfdb-5cf2-462b-a678-23d6d3860b32",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:462970"
+  }
 }

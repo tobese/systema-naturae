@@ -3,7 +3,7 @@
   "name": "Onychodontidae",
   "rank": "FAMILY",
   "appSlug": "onychodontidae",
-  "speciesCount": 8,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_ONYCHODUS",
@@ -19,7 +19,8 @@
           "lineage": "Onychodus",
           "authorship": "Mann, 2017",
           "sourceIds": {
-            "gbif-backbone": "9417733"
+            "gbif-backbone": "9417733",
+            "checklistbank-1174": "txn:375510"
           },
           "children": []
         },
@@ -80,7 +81,8 @@
           "lineage": "Luckeus",
           "authorship": "Young & Schultze, 2005",
           "sourceIds": {
-            "gbif-backbone": "11158386"
+            "gbif-backbone": "11158386",
+            "checklistbank-1174": "txn:377292"
           },
           "children": []
         }
@@ -102,7 +104,8 @@
           "lineage": "Qingmenodus",
           "authorship": "Lu & Zhu, 2010",
           "sourceIds": {
-            "gbif-backbone": "11180457"
+            "gbif-backbone": "11180457",
+            "checklistbank-1174": "txn:377673"
           },
           "children": []
         }
@@ -144,7 +147,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "onychodontidae"
+    },
+    {
+      "id": "GENUS_GROSSIUS",
+      "name": "Grossius",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "onychodontidae",
+      "children": [
+        {
+          "id": "SP_GROSSIUS_ARAGONENSIS_SCHULTZE_1973",
+          "name": "Grossius aragonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Grossius",
+          "authorship": "Schultze 1973",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502106"
+          },
+          "uuid": "6f0020e4-ba60-4650-9e99-95683c4c0e93",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:227396"
+  }
 }

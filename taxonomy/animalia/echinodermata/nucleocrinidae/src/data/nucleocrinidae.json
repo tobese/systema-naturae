@@ -3,7 +3,7 @@
   "name": "Nucleocrinidae",
   "rank": "FAMILY",
   "appSlug": "nucleocrinidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_NUCLEOCRINUS",
@@ -32,14 +32,78 @@
           "lineage": "Nucleocrinus",
           "authorship": "Barris, 1920",
           "sourceIds": {
-            "gbif-backbone": "8553535"
+            "gbif-backbone": "8553535",
+            "checklistbank-1174": "txn:212968"
           },
+          "children": []
+        },
+        {
+          "id": "SP_NUCLEOCRINUS_ELEGANS_CONRAD_1842",
+          "name": "Nucleocrinus elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nucleocrinus",
+          "authorship": "Conrad 1842",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474184"
+          },
+          "uuid": "fabec903-fd8e-4699-9914-1a971f0c2fab",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nucleocrinidae"
+    },
+    {
+      "id": "GENUS_ELAEACRINUS",
+      "name": "Elaeacrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "nucleocrinidae",
+      "children": [
+        {
+          "id": "SP_ELAEACRINUS_VERNEUILI_TROOST_1841",
+          "name": "Elaeacrinus verneuili",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaeacrinus",
+          "authorship": "(Troost 1841)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474145"
+          },
+          "uuid": "ddc01a9e-f3a5-4823-adf7-f268502a0f4d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PLACOBLASTUS",
+      "name": "Placoblastus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "nucleocrinidae",
+      "children": [
+        {
+          "id": "SP_PLACOBLASTUS_OBOVATUS_BARRIS_1883",
+          "name": "Placoblastus obovatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Placoblastus",
+          "authorship": "(Barris 1883)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474264"
+          },
+          "uuid": "b40d33c0-4159-4204-9fd6-0f3f0aa41d99",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:215832"
+  }
 }

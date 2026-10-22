@@ -3,7 +3,7 @@
   "name": "Chortoglyphidae",
   "rank": "FAMILY",
   "appSlug": "chortoglyphidae",
-  "speciesCount": 1,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_CHORTOGLYPHUS",
@@ -19,14 +19,69 @@
           "lineage": "Chortoglyphus",
           "authorship": "(Troupeau, 1879)",
           "sourceIds": {
-            "gbif-backbone": "2181910"
+            "gbif-backbone": "2181910",
+            "checklistbank-127379": "390637e0-4b70-4eb4-941e-a34445eef175",
+            "checklistbank-139831": "297352",
+            "wikispecies": "Chortoglyphus_arcuatus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHORTOGLYPHUS_LONGIOR",
+          "name": "Chortoglyphus longior",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chortoglyphus",
+          "sourceIds": {
+            "wikispecies": "Chortoglyphus_longior"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chortoglyphidae"
+    },
+    {
+      "id": "GENUS_ALABIDOPUS",
+      "name": "Alabidopus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chortoglyphidae",
+      "children": [
+        {
+          "id": "SP_ALABIDOPUS_HYDROMYS_FAIN",
+          "name": "Alabidopus hydromys",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alabidopus",
+          "authorship": "Fain",
+          "sourceIds": {
+            "checklistbank-127379": "e6eda77a-941e-4b4c-91c5-f9212b106488"
+          },
+          "uuid": "4fd20ee9-596e-4cd2-ade4-32481e22dd87",
+          "children": []
+        },
+        {
+          "id": "SP_ALABIDOPUS_MURIS_LUKOSCHUS_JANSSEN_DUIJGHUIJSEN_FAIN",
+          "name": "Alabidopus muris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alabidopus",
+          "authorship": "Lukoschus, Janssen Duijghuijsen & Fain",
+          "sourceIds": {
+            "checklistbank-127379": "425fc996-631a-4b4d-96d5-f509fbfe6f06"
+          },
+          "uuid": "f166674d-eb98-42b1-9254-8025b544f155",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "wikispecies": "Chortoglyphidae"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Chroniosuchidae",
   "rank": "FAMILY",
   "appSlug": "chroniosuchidae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_MADYGENERPETON",
@@ -54,7 +54,8 @@
           "lineage": "Chroniosuchus",
           "authorship": "Vjushkov, 1957",
           "sourceIds": {
-            "gbif-backbone": "8562140"
+            "gbif-backbone": "8562140",
+            "wikispecies": "Chroniosuchus_paradoxus"
           },
           "children": []
         },
@@ -69,6 +70,20 @@
           "sourceIds": {
             "gbif-backbone": "8643339"
           },
+          "children": []
+        },
+        {
+          "id": "SP_CHRONIOSUCHUS_LICHAREVI_RIABININ_1962",
+          "name": "Chroniosuchus licharevi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroniosuchus",
+          "authorship": "(Riabinin 1962)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:321011"
+          },
+          "uuid": "6b3b5a72-c66a-47e3-baa0-ab54c1764252",
           "children": []
         }
       ],
@@ -89,7 +104,8 @@
           "lineage": "Jugosuchus",
           "authorship": "(Riabinin, 1962)",
           "sourceIds": {
-            "gbif-backbone": "9633141"
+            "gbif-backbone": "9633141",
+            "wikispecies": "Jugosuchus_licharevi"
           },
           "children": []
         }
@@ -111,7 +127,8 @@
           "lineage": "Uralerpeton",
           "authorship": "Golubev, 1998",
           "sourceIds": {
-            "gbif-backbone": "4975496"
+            "gbif-backbone": "4975496",
+            "wikispecies": "Uralerpeton_tverdochlebovae"
           },
           "children": []
         }
@@ -133,7 +150,8 @@
           "lineage": "Suchonica",
           "authorship": "Golubev, 1999",
           "sourceIds": {
-            "gbif-backbone": "9276717"
+            "gbif-backbone": "9276717",
+            "wikispecies": "Suchonica_vladimiri"
           },
           "children": []
         }
@@ -155,7 +173,8 @@
           "lineage": "Chroniosaurus",
           "authorship": "Golubev, 1998",
           "sourceIds": {
-            "gbif-backbone": "9437440"
+            "gbif-backbone": "9437440",
+            "wikispecies": "Chroniosaurus_levis"
           },
           "children": []
         },
@@ -168,14 +187,42 @@
           "lineage": "Chroniosaurus",
           "authorship": "Tverdochlebova, 1972",
           "sourceIds": {
-            "gbif-backbone": "8611791"
+            "gbif-backbone": "8611791",
+            "wikispecies": "Chroniosaurus_dongusensis"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chroniosuchidae"
+    },
+    {
+      "id": "GENUS_JARILINUS",
+      "name": "Jarilinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chroniosuchidae",
+      "children": [
+        {
+          "id": "SP_JARILINUS_MIRABILIS_VJUSCHKOV_1957",
+          "name": "Jarilinus mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jarilinus",
+          "authorship": "(Vjuschkov 1957)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:321010",
+            "wikispecies": "Jarilinus_mirabilis"
+          },
+          "uuid": "83458c69-d971-44c6-b0c7-7fa53accd50c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "wikispecies": "Chroniosuchidae"
+  }
 }

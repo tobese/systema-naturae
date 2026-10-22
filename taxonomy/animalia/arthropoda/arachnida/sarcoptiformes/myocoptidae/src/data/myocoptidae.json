@@ -3,7 +3,7 @@
   "name": "Myocoptidae",
   "rank": "FAMILY",
   "appSlug": "myocoptidae",
-  "speciesCount": 20,
+  "speciesCount": 27,
   "children": [
     {
       "id": "GENUS_SCIUROCOPTES",
@@ -128,7 +128,49 @@
           "lineage": "Myocoptes",
           "authorship": "(Koch, 1844)",
           "sourceIds": {
-            "gbif-backbone": "2181930"
+            "gbif-backbone": "2181930",
+            "checklistbank-127379": "037bb3e6-481c-4b81-81de-b6890eed2463",
+            "checklistbank-139831": "262892",
+            "checklistbank-2008": "885084",
+            "wikispecies": "Myocoptes_musculinus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYOCOPTES_QUEENSLANDICUS_FAIN",
+          "name": "Myocoptes queenslandicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myocoptes",
+          "authorship": "Fain",
+          "sourceIds": {
+            "checklistbank-127379": "f0c2a456-7c6e-429b-b296-bc64ed31d2ea"
+          },
+          "uuid": "d950dddb-b53b-459f-881a-cac81bfa42c2",
+          "children": []
+        },
+        {
+          "id": "SP_MYOCOPTES_LEPIDOTUS",
+          "name": "Myocoptes lepidotus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myocoptes",
+          "sourceIds": {
+            "checklistbank-139831": "676805"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYOCOPTES_RATTUS",
+          "name": "Myocoptes rattus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myocoptes",
+          "sourceIds": {
+            "checklistbank-139831": "676806"
           },
           "children": []
         }
@@ -228,7 +270,20 @@
           "lineage": "Trichoecius",
           "authorship": "(Van Eyndhoven, 1946)",
           "sourceIds": {
-            "gbif-backbone": "9299325"
+            "gbif-backbone": "9299325",
+            "checklistbank-127379": "1e35ec87-31c8-403d-95af-eb9be20b06ee"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRICHOECIUS_HOLLIDAYI",
+          "name": "Trichoecius hollidayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichoecius",
+          "sourceIds": {
+            "checklistbank-139831": "694075"
           },
           "children": []
         }
@@ -318,7 +373,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myocoptidae"
+    },
+    {
+      "id": "GENUS_SARCOPTES",
+      "name": "Sarcoptes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SARCOPTES_MUSCULINUS_C_L_KOCH_1844",
+          "name": "Sarcoptes musculinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcoptes",
+          "authorship": "C.L. Koch, 1844",
+          "sourceIds": {
+            "checklistbank-2008": "885117"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "myocoptidae"
+    },
+    {
+      "id": "GENUS_DROMICIOCOPTES",
+      "name": "Dromiciocoptes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DROMICIOCOPTES_CAENOLESTES",
+          "name": "Dromiciocoptes caenolestes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dromiciocoptes",
+          "sourceIds": {
+            "wikispecies": "Dromiciocoptes_caenolestes"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DROMICIOCOPTES_MARMOSOPS",
+          "name": "Dromiciocoptes marmosops",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dromiciocoptes",
+          "sourceIds": {
+            "wikispecies": "Dromiciocoptes_marmosops"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "myocoptidae"
     }
   ],
-  "genusCount": 6
+  "genusCount": 8,
+  "sourceIds": {
+    "wikispecies": "Myocoptidae"
+  }
 }

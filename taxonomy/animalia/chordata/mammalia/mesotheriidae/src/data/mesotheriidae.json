@@ -3,7 +3,7 @@
   "name": "Mesotheriidae",
   "rank": "FAMILY",
   "appSlug": "mesotheriidae",
-  "speciesCount": 28,
+  "speciesCount": 37,
   "children": [
     {
       "id": "GENUS_TYPOTHERIOPSIS",
@@ -19,7 +19,8 @@
           "lineage": "Typotheriopsis",
           "authorship": "Cabrera & Kraglievich, 1931",
           "sourceIds": {
-            "gbif-backbone": "11188198"
+            "gbif-backbone": "11188198",
+            "checklistbank-1174": "txn:387575"
           },
           "children": []
         },
@@ -237,7 +238,8 @@
           "lineage": "Pseudotypotherium",
           "authorship": "Moreno & Mercerat, 1891",
           "sourceIds": {
-            "gbif-backbone": "11180594"
+            "gbif-backbone": "11180594",
+            "checklistbank-1174": "txn:394650"
           },
           "children": []
         },
@@ -252,6 +254,34 @@
           "sourceIds": {
             "gbif-backbone": "11178302"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOTYPOTHERIUM_EXIGUUM_AMEGHINO_1887",
+          "name": "Pseudotypotherium exiguum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudotypotherium",
+          "authorship": "Ameghino 1887",
+          "sourceIds": {
+            "checklistbank-1174": "txn:476566"
+          },
+          "uuid": "0c9fef94-a0d5-415c-85e4-f42200079d03",
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOTYPOTHERIUM_CARLESI_ROVERETO_1914",
+          "name": "Pseudotypotherium carlesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudotypotherium",
+          "authorship": "Rovereto 1914",
+          "sourceIds": {
+            "checklistbank-1174": "txn:484672"
+          },
+          "uuid": "31dc4c3d-56b6-4a88-8e7e-428b8653291a",
           "children": []
         }
       ],
@@ -469,14 +499,143 @@
           "lineage": "Hypsitherium",
           "authorship": "Anaya & MacFadden, 1995",
           "sourceIds": {
-            "gbif-backbone": "8705671"
+            "gbif-backbone": "8705671",
+            "checklistbank-1174": "txn:297024"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mesotheriidae"
+    },
+    {
+      "id": "GENUS_TYPOTHERIUM",
+      "name": "Typotherium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesotheriidae",
+      "children": [
+        {
+          "id": "SP_TYPOTHERIUM_INSIGNE_AMEGHINO_1887",
+          "name": "Typotherium insigne",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typotherium",
+          "authorship": "Ameghino 1887",
+          "sourceIds": {
+            "checklistbank-1174": "txn:240045"
+          },
+          "uuid": "a9473b84-e9c9-4e0a-80f0-ce14bc8187f7",
+          "children": []
+        },
+        {
+          "id": "SP_TYPOTHERIUM_EXTENSUM_ROVERETO_1914",
+          "name": "Typotherium extensum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typotherium",
+          "authorship": "Rovereto 1914",
+          "sourceIds": {
+            "checklistbank-1174": "txn:484530"
+          },
+          "uuid": "b5e62c24-2eed-4dda-9ff3-443f725c3804",
+          "children": []
+        },
+        {
+          "id": "SP_TYPOTHERIUM_STRICTUM_ROVERETO_1914",
+          "name": "Typotherium strictum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typotherium",
+          "authorship": "Rovereto 1914",
+          "sourceIds": {
+            "checklistbank-1174": "txn:484531"
+          },
+          "uuid": "6b2eb87e-ff8a-453c-8962-a38f44524c04",
+          "children": []
+        },
+        {
+          "id": "SP_TYPOTHERIUM_ROBUSTUM_AMEGHINO_1905",
+          "name": "Typotherium robustum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typotherium",
+          "authorship": "Ameghino 1905",
+          "sourceIds": {
+            "checklistbank-1174": "txn:484532"
+          },
+          "uuid": "82ba6da5-85eb-4419-bb9f-f867335a8382",
+          "children": []
+        },
+        {
+          "id": "SP_TYPOTHERIUM_SUBINSIGNE_ROVERETO_1914",
+          "name": "Typotherium subinsigne",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typotherium",
+          "authorship": "Rovereto 1914",
+          "sourceIds": {
+            "checklistbank-1174": "txn:484671"
+          },
+          "uuid": "4fcdeda9-9dae-4415-a5e4-4a8dc204213c",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RUSCONITHERIUM",
+      "name": "Rusconitherium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesotheriidae",
+      "children": [
+        {
+          "id": "SP_RUSCONITHERIUM_MENDOCENSE_SIMPSON_AND_MINOPRIO_1949",
+          "name": "Rusconitherium mendocense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rusconitherium",
+          "authorship": "(Simpson and Minoprio 1949)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:55437"
+          },
+          "uuid": "3feadbff-dc1c-4209-b20f-a43038e05547",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EUTYPOTHERIUM",
+      "name": "Eutypotherium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesotheriidae",
+      "children": [
+        {
+          "id": "SP_EUTYPOTHERIUM_LEHMANNITSCHEI_ROTH_1901",
+          "name": "Eutypotherium lehmannitschei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eutypotherium",
+          "authorship": "Roth 1901",
+          "sourceIds": {
+            "checklistbank-1174": "txn:472678"
+          },
+          "uuid": "a94569a7-0314-4a8a-bb7d-a7974449b630",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 12
+  "genusCount": 15,
+  "sourceIds": {
+    "checklistbank-1174": "txn:43424"
+  }
 }

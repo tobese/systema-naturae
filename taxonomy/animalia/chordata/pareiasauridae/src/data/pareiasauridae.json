@@ -3,7 +3,7 @@
   "name": "Pareiasauridae",
   "rank": "FAMILY",
   "appSlug": "pareiasauridae",
-  "speciesCount": 16,
+  "speciesCount": 19,
   "children": [
     {
       "id": "GENUS_ELGINIA",
@@ -175,6 +175,20 @@
             "gbif-backbone": "8563053"
           },
           "children": []
+        },
+        {
+          "id": "SP_SCUTOSAURUS_KARPINSKII_AMALITZKY_1922",
+          "name": "Scutosaurus karpinskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scutosaurus",
+          "authorship": "(Amalitzky 1922)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:159704"
+          },
+          "uuid": "1e2ce783-802d-44cb-8f61-f7109876865c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -304,14 +318,64 @@
           "lineage": "Shihtienfenia",
           "authorship": "Young & Yeh, 1963",
           "sourceIds": {
-            "gbif-backbone": "8494430"
+            "gbif-backbone": "8494430",
+            "checklistbank-1174": "txn:161939"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pareiasauridae"
+    },
+    {
+      "id": "GENUS_PROVELOSAURUS",
+      "name": "Provelosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pareiasauridae",
+      "children": [
+        {
+          "id": "SP_PROVELOSAURUS_AMERICANUS_ARA_JO_1985",
+          "name": "Provelosaurus americanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Provelosaurus",
+          "authorship": "(Araújo 1985)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:138977"
+          },
+          "uuid": "219913eb-83b5-4c06-8e5f-2764ddb28922",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DELTAVJATIA",
+      "name": "Deltavjatia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pareiasauridae",
+      "children": [
+        {
+          "id": "SP_DELTAVJATIA_ROSSICUS_HARTMANN_WEINBERG_1937",
+          "name": "Deltavjatia rossicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deltavjatia",
+          "authorship": "(Hartmann-Weinberg 1937)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:53171"
+          },
+          "uuid": "60dc69eb-a495-431b-bc48-d716e97528ac",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 11
+  "genusCount": 13,
+  "sourceIds": {
+    "checklistbank-1174": "txn:37557"
+  }
 }

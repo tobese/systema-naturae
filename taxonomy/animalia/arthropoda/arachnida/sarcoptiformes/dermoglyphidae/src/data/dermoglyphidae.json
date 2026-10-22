@@ -3,7 +3,7 @@
   "name": "Dermoglyphidae",
   "rank": "FAMILY",
   "appSlug": "dermoglyphidae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_PARALGES",
@@ -19,7 +19,8 @@
           "lineage": "Paralges",
           "authorship": "Gaud, 1973",
           "sourceIds": {
-            "gbif-backbone": "4547386"
+            "gbif-backbone": "4547386",
+            "checklistbank-139831": "1049630"
           },
           "children": []
         },
@@ -32,8 +33,22 @@
           "lineage": "Paralges",
           "authorship": "(Gaud, 1961)",
           "sourceIds": {
-            "gbif-backbone": "4547384"
+            "gbif-backbone": "4547384",
+            "checklistbank-139831": "1049632"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PARALGES_PACHYCNEMIS",
+          "name": "Paralges pachycnemis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralges",
+          "sourceIds": {
+            "checklistbank-139831": "1049629"
+          },
+          "uuid": "2e8d225f-3e6e-4c59-9b08-8bfc5d548098",
           "children": []
         }
       ],
@@ -106,7 +121,9 @@
           "lineage": "Dermoglyphus",
           "authorship": "Mégnin, 1877",
           "sourceIds": {
-            "gbif-backbone": "4547379"
+            "gbif-backbone": "4547379",
+            "checklistbank-139831": "297371",
+            "checklistbank-2008": "221075"
           },
           "children": []
         }
@@ -157,7 +174,29 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dermoglyphidae"
+    },
+    {
+      "id": "GENUS_DERMOLEICHUS",
+      "name": "Dermoleichus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DERMOLEICHUS_ELONGATUS_M_GNIN_IN_ROBIN_M_GNIN_1877",
+          "name": "Dermoleichus elongatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermoleichus",
+          "authorship": "Mégnin in Robin & Mégnin, 1877",
+          "sourceIds": {
+            "checklistbank-2008": "953569"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermoglyphidae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 5
 }

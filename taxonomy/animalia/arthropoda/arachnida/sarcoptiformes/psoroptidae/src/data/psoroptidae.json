@@ -3,7 +3,7 @@
   "name": "Psoroptidae",
   "rank": "FAMILY",
   "appSlug": "psoroptidae",
-  "speciesCount": 19,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_CAPARINIA",
@@ -32,7 +32,21 @@
           "lineage": "Caparinia",
           "authorship": "(Michael, 1889)",
           "sourceIds": {
-            "gbif-backbone": "2181894"
+            "gbif-backbone": "2181894",
+            "checklistbank-139831": "387146",
+            "wikispecies": "Caparinia_tripilis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CAPARINIA_ICTONYTIS",
+          "name": "Caparinia ictonytis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caparinia",
+          "sourceIds": {
+            "checklistbank-139831": "655383"
           },
           "children": []
         }
@@ -54,7 +68,8 @@
           "lineage": "Chorioptes",
           "authorship": "(Gerlach)",
           "sourceIds": {
-            "gbif-backbone": "10695252"
+            "gbif-backbone": "10695252",
+            "checklistbank-139831": "297469"
           },
           "children": []
         },
@@ -67,7 +82,8 @@
           "lineage": "Chorioptes",
           "authorship": "(Zurn, 1874)",
           "sourceIds": {
-            "gbif-backbone": "11198398"
+            "gbif-backbone": "11198398",
+            "checklistbank-139831": "297468"
           },
           "children": []
         },
@@ -80,7 +96,8 @@
           "lineage": "Chorioptes",
           "authorship": "(Delafond, 1854)",
           "sourceIds": {
-            "gbif-backbone": "6900125"
+            "gbif-backbone": "6900125",
+            "checklistbank-139831": "297467"
           },
           "children": []
         },
@@ -104,9 +121,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chorioptes",
           "sourceIds": {
-            "gbif-backbone": "10286454"
+            "gbif-backbone": "10286454",
+            "checklistbank-2008": "1052563"
           },
-          "children": []
+          "children": [],
+          "authorship": "Hirst, 1924"
         },
         {
           "id": "SP_CHORIOPTES_BOVIS_HERING_1845",
@@ -117,7 +136,22 @@
           "lineage": "Chorioptes",
           "authorship": "(Hering, 1845)",
           "sourceIds": {
-            "gbif-backbone": "2181890"
+            "gbif-backbone": "2181890",
+            "checklistbank-127379": "8bd50fc6-8e4e-47ae-a9a6-8683d49f072a",
+            "checklistbank-139831": "297466",
+            "wikispecies": "Chorioptes_bovis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHORIOPTES_OVIS",
+          "name": "Chorioptes ovis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chorioptes",
+          "sourceIds": {
+            "checklistbank-139831": "262954"
           },
           "children": []
         }
@@ -152,7 +186,9 @@
           "lineage": "Psoroptes",
           "authorship": "(Viborg, 1813)",
           "sourceIds": {
-            "gbif-backbone": "2181886"
+            "gbif-backbone": "2181886",
+            "checklistbank-139831": "395950",
+            "wikispecies": "Psoroptes_ovis"
           },
           "children": []
         },
@@ -165,7 +201,47 @@
           "lineage": "Psoroptes",
           "authorship": "(Hering, 1838)",
           "sourceIds": {
-            "gbif-backbone": "10520655"
+            "gbif-backbone": "10520655",
+            "checklistbank-139831": "297847"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSOROPTES_CUNICULI_DELAFOND",
+          "name": "Psoroptes cuniculi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psoroptes",
+          "authorship": "Delafond",
+          "sourceIds": {
+            "checklistbank-127379": "c3400fcb-0243-49e5-9b82-e7bbfbcec462",
+            "checklistbank-139831": "395951"
+          },
+          "uuid": "ec550291-7138-46b9-92d5-bcacb34dd2ca",
+          "children": []
+        },
+        {
+          "id": "SP_PSOROPTES_NATALENSIS",
+          "name": "Psoroptes natalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psoroptes",
+          "sourceIds": {
+            "checklistbank-139831": "395952"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSOROPTES_PIENAARI",
+          "name": "Psoroptes pienaari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psoroptes",
+          "sourceIds": {
+            "checklistbank-139831": "686561"
           },
           "children": []
         }
@@ -280,7 +356,10 @@
           "lineage": "Otodectes",
           "authorship": "(Hering, 1838)",
           "sourceIds": {
-            "gbif-backbone": "2181892"
+            "gbif-backbone": "2181892",
+            "checklistbank-127379": "7aa816a2-caee-43e3-8440-35848d8f6128",
+            "checklistbank-139831": "262955",
+            "wikispecies": "Otodectes_cynotis"
           },
           "children": []
         }
@@ -309,7 +388,95 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psoroptidae"
+    },
+    {
+      "id": "GENUS_ACAROPTES",
+      "name": "Acaroptes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoroptidae",
+      "children": [
+        {
+          "id": "SP_ACAROPTES_VOMBATUS_WOMERSLEY",
+          "name": "Acaroptes vombatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acaroptes",
+          "authorship": "Womersley",
+          "sourceIds": {
+            "checklistbank-127379": "1dc355dc-28ff-4526-b9f1-6dd2a996327e"
+          },
+          "uuid": "3ef67c01-4dd2-4384-802d-41de5eb97653",
+          "children": []
+        },
+        {
+          "id": "SP_ACAROPTES_WOMERSLEYI_FAIN",
+          "name": "Acaroptes womersleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acaroptes",
+          "authorship": "Fain",
+          "sourceIds": {
+            "checklistbank-127379": "5a7b8450-7f8b-4417-8ea0-bfdf9d9cd0dc"
+          },
+          "uuid": "d0b8f4db-8cb3-45a7-b9e7-92ac00a52e30",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SARCOPTES",
+      "name": "Sarcoptes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SARCOPTES_CYNOTIS_HERING_1838",
+          "name": "Sarcoptes cynotis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcoptes",
+          "authorship": "Hering, 1838",
+          "sourceIds": {
+            "checklistbank-2008": "939803"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SARCOPTES_EQUI_HERING_1838",
+          "name": "Sarcoptes equi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcoptes",
+          "authorship": "Hering, 1838",
+          "sourceIds": {
+            "checklistbank-2008": "939804"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SARCOPTES_BOVIS_HERING_1845",
+          "name": "Sarcoptes bovis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcoptes",
+          "authorship": "Hering, 1845",
+          "sourceIds": {
+            "checklistbank-2008": "1052565"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoroptidae"
     }
   ],
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "wikispecies": "Psoroptidae"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Hyattoceratidae",
   "rank": "FAMILY",
   "appSlug": "hyattoceratidae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_HYATTOCERAS",
@@ -100,6 +100,20 @@
             "gbif-backbone": "8688076"
           },
           "children": []
+        },
+        {
+          "id": "SP_HYATTOCERAS_COMPRESSUS_LIANG_1981",
+          "name": "Hyattoceras compressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyattoceras",
+          "authorship": "(Liang 1981)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:277786"
+          },
+          "uuid": "d85a7875-a1d0-42a8-902f-4fd90b740144",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -119,7 +133,8 @@
           "lineage": "Eohyattoceras",
           "authorship": "Glenister & Furnish, 1987",
           "sourceIds": {
-            "gbif-backbone": "8697011"
+            "gbif-backbone": "8697011",
+            "checklistbank-1174": "txn:245752"
           },
           "children": []
         },
@@ -139,7 +154,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hyattoceratidae"
+    },
+    {
+      "id": "GENUS_LEEITES",
+      "name": "Leeites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hyattoceratidae",
+      "children": [
+        {
+          "id": "SP_LEEITES_LEEI_GLENISTER_AND_FURNISH_1987",
+          "name": "Leeites leei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leeites",
+          "authorship": "(Glenister and Furnish 1987)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:184311"
+          },
+          "uuid": "7c20fffd-7989-449e-8e53-b5e6f93f9c78",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:93139"
+  }
 }

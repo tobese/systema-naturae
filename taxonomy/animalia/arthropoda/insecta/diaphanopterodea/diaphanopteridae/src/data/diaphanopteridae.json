@@ -3,7 +3,7 @@
   "name": "Diaphanopteridae",
   "rank": "FAMILY",
   "appSlug": "diaphanopteridae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_CARRIZODIAPHANOPTERA",
@@ -19,7 +19,8 @@
           "lineage": "Carrizodiaphanoptera",
           "authorship": "Prokop & Kukalová-Peck, 2017",
           "sourceIds": {
-            "gbif-backbone": "9525055"
+            "gbif-backbone": "9525055",
+            "checklistbank-1174": "txn:363126"
           },
           "children": []
         }
@@ -48,7 +49,70 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "diaphanopteridae"
+    },
+    {
+      "id": "GENUS_DIAPHANOPTERA",
+      "name": "Diaphanoptera",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "diaphanopteridae",
+      "children": [
+        {
+          "id": "SP_DIAPHANOPTERA_MUNIERI_BRONGNIART_1894",
+          "name": "Diaphanoptera munieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diaphanoptera",
+          "authorship": "Brongniart 1894",
+          "sourceIds": {
+            "checklistbank-1174": "txn:175881"
+          },
+          "uuid": "6ba84706-5d21-4cc3-b198-cbc7070a3a3c",
+          "children": []
+        },
+        {
+          "id": "SP_DIAPHANOPTERA_VETUSTA_BRONGNIART_1894",
+          "name": "Diaphanoptera vetusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diaphanoptera",
+          "authorship": "Brongniart 1894",
+          "sourceIds": {
+            "checklistbank-1174": "txn:175882"
+          },
+          "uuid": "089f3f4d-e35f-4569-9335-e0a874ef50f3",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PHILIASPTILON",
+      "name": "Philiasptilon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "diaphanopteridae",
+      "children": [
+        {
+          "id": "SP_PHILIASPTILON_MACULOSUM_ZALESSKY_1931",
+          "name": "Philiasptilon maculosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Philiasptilon",
+          "authorship": "Zalessky 1931",
+          "sourceIds": {
+            "checklistbank-1174": "txn:221204"
+          },
+          "uuid": "f3c06a31-e321-41bf-85f2-50dd02e92791",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:175877"
+  }
 }

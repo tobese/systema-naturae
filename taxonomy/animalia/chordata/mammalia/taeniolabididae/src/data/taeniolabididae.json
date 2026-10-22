@@ -3,7 +3,7 @@
   "name": "Taeniolabididae",
   "rank": "FAMILY",
   "appSlug": "taeniolabididae",
-  "speciesCount": 31,
+  "speciesCount": 34,
   "children": [
     {
       "id": "GENUS_SPHENOPSALIS",
@@ -41,7 +41,8 @@
           "lineage": "Kimbetopsalis",
           "authorship": "Williamson et al., 2016",
           "sourceIds": {
-            "gbif-backbone": "8676842"
+            "gbif-backbone": "8676842",
+            "wikispecies": "Kimbetopsalis_simmonsae"
           },
           "children": []
         }
@@ -89,8 +90,24 @@
           "lineage": "Taeniolabis",
           "authorship": "Simmons, 1987",
           "sourceIds": {
-            "gbif-backbone": "4968703"
+            "gbif-backbone": "4968703",
+            "wikispecies": "Taeniolabis_lamberti"
           },
+          "children": []
+        },
+        {
+          "id": "SP_TAENIOLABIS_TAOENSIS_COPE_1882",
+          "name": "Taeniolabis taoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taeniolabis",
+          "authorship": "(Cope 1882)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:50644",
+            "wikispecies": "Taeniolabis_taoensis"
+          },
+          "uuid": "d30cee12-116c-4faa-9832-a8698123bd09",
           "children": []
         }
       ],
@@ -113,6 +130,20 @@
           "sourceIds": {
             "gbif-backbone": "8605512"
           },
+          "children": []
+        },
+        {
+          "id": "SP_POLYMASTODON_SELENODUS_OSBORN_AND_EARLE_1895",
+          "name": "Polymastodon selenodus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polymastodon",
+          "authorship": "Osborn and Earle 1895",
+          "sourceIds": {
+            "checklistbank-1174": "txn:50643"
+          },
+          "uuid": "c14beb3c-e80e-4ce7-8453-5d3902797af3",
           "children": []
         }
       ],
@@ -159,7 +190,8 @@
           "lineage": "Catopsalis",
           "authorship": "Scott, Weil & Theodor, 2018",
           "sourceIds": {
-            "gbif-backbone": "9625677"
+            "gbif-backbone": "9625677",
+            "checklistbank-1174": "txn:372265"
           },
           "children": []
         },
@@ -515,7 +547,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "taeniolabididae"
+    },
+    {
+      "id": "GENUS_VALENOPSALIS",
+      "name": "Valenopsalis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "taeniolabididae",
+      "children": [
+        {
+          "id": "SP_VALENOPSALIS_JOYNERI_SLOAN_AND_VAN_VALEN_1965",
+          "name": "Valenopsalis joyneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valenopsalis",
+          "authorship": "(Sloan and Van Valen 1965)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:44971"
+          },
+          "uuid": "51fb7902-1ecd-4765-a5f7-07f4d310a59b",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 12
+  "genusCount": 13,
+  "sourceIds": {
+    "wikispecies": "Taeniolabididae",
+    "checklistbank-1174": "txn:39828"
+  }
 }

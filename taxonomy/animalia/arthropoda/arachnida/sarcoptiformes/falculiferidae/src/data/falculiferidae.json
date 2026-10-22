@@ -3,7 +3,7 @@
   "name": "Falculiferidae",
   "rank": "FAMILY",
   "appSlug": "falculiferidae",
-  "speciesCount": 21,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_HYPERASPIDACARUS",
@@ -19,8 +19,22 @@
           "lineage": "Hyperaspidacarus",
           "authorship": "Atyeo & Smith, 1984",
           "sourceIds": {
-            "gbif-backbone": "6902204"
+            "gbif-backbone": "6902204",
+            "checklistbank-139831": "297388"
           },
+          "children": []
+        },
+        {
+          "id": "SP_HYPERASPIDACARUS_ABBREVIATUS",
+          "name": "Hyperaspidacarus abbreviatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyperaspidacarus",
+          "sourceIds": {
+            "checklistbank-139831": "297387"
+          },
+          "uuid": "50d8b2eb-56e3-4f10-b24b-d8f3f22d4629",
           "children": []
         }
       ],
@@ -40,9 +54,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Byersalges",
           "sourceIds": {
-            "gbif-backbone": "6902199"
+            "gbif-backbone": "6902199",
+            "checklistbank-2008": "1017959"
           },
-          "children": []
+          "children": [],
+          "authorship": "(?erný, 1975)"
         },
         {
           "id": "SP_BYERSALGES_PHYLLOPHORUS_GAUD_BARR_1988",
@@ -89,6 +105,19 @@
           "authorship": "Gaud & Barré, 1988",
           "sourceIds": {
             "gbif-backbone": "6902221"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTEROPHAGOIDES_TALPACOTI_ERN_1975",
+          "name": "Pterophagoides talpacoti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterophagoides",
+          "authorship": "?erný, 1975",
+          "sourceIds": {
+            "checklistbank-2008": "1017960"
           },
           "children": []
         }
@@ -154,7 +183,10 @@
           "lineage": "Pterophagus",
           "authorship": "Mégnin, 1877",
           "sourceIds": {
-            "gbif-backbone": "4547280"
+            "gbif-backbone": "4547280",
+            "checklistbank-127379": "4af78c42-07dc-42ae-9572-ab8e30c8479d",
+            "checklistbank-139831": "410149",
+            "wikispecies": "Pterophagus_strictus"
           },
           "children": []
         },
@@ -215,7 +247,8 @@
           "lineage": "Falculifer",
           "authorship": "Gaud & Barré, 1992",
           "sourceIds": {
-            "gbif-backbone": "6902227"
+            "gbif-backbone": "6902227",
+            "checklistbank-139831": "262833"
           },
           "children": []
         },
@@ -241,8 +274,24 @@
           "lineage": "Falculifer",
           "authorship": "(Buchholz, 1869)",
           "sourceIds": {
-            "gbif-backbone": "2181973"
+            "gbif-backbone": "2181973",
+            "checklistbank-127379": "6731db55-0483-440d-81e9-6df093f40c5b",
+            "checklistbank-139831": "408651",
+            "wikispecies": "Falculifer_rostratus"
           },
+          "children": []
+        },
+        {
+          "id": "SP_FALCULIFER_CAPENSIS",
+          "name": "Falculifer capensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falculifer",
+          "sourceIds": {
+            "checklistbank-139831": "666408"
+          },
+          "uuid": "25dd04db-2fcb-4b63-b4f4-666818501d71",
           "children": []
         }
       ],
@@ -298,7 +347,8 @@
           "lineage": "Psittophagus",
           "authorship": "Mironov, 2003",
           "sourceIds": {
-            "gbif-backbone": "12221952"
+            "gbif-backbone": "12221952",
+            "checklistbank-127379": "b9e3c334-7e5d-4e6a-9e6d-9f1454fc3e96"
           },
           "children": []
         },
@@ -311,7 +361,8 @@
           "lineage": "Psittophagus",
           "authorship": "Mironov, 2003",
           "sourceIds": {
-            "gbif-backbone": "6902219"
+            "gbif-backbone": "6902219",
+            "checklistbank-127379": "02553960-def1-4d94-b162-b45c1dcf237c"
           },
           "children": []
         },
@@ -324,7 +375,8 @@
           "lineage": "Psittophagus",
           "authorship": "(Megnin & Trouessart, 1884)",
           "sourceIds": {
-            "gbif-backbone": "4651960"
+            "gbif-backbone": "4651960",
+            "checklistbank-127379": "e8338c51-e620-4ea9-a4f1-4104fdca40df"
           },
           "children": []
         },
@@ -350,7 +402,109 @@
           "lineage": "Psittophagus",
           "authorship": "(Megnin & Trouessart, 1884)",
           "sourceIds": {
-            "gbif-backbone": "4651961"
+            "gbif-backbone": "4651961",
+            "checklistbank-127379": "5cbe3e3d-b16f-4ac2-88be-a0e7b712c5b9"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "falculiferidae"
+    },
+    {
+      "id": "GENUS_HEMIPHAGACARUS",
+      "name": "Hemiphagacarus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "falculiferidae",
+      "children": [
+        {
+          "id": "SP_HEMIPHAGACARUS_SPINOSUS",
+          "name": "Hemiphagacarus spinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemiphagacarus",
+          "sourceIds": {
+            "checklistbank-139831": "507527"
+          },
+          "uuid": "d8ac4d33-4a49-40da-82e0-1f9151e2c7e3",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PTEROLICHUS",
+      "name": "Pterolichus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PTEROLICHUS_FALCIGERUS_M_GNIN_IN_ROBIN_M_GNIN_1877",
+          "name": "Pterolichus falcigerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterolichus",
+          "authorship": "Mégnin in Robin & Mégnin, 1877",
+          "sourceIds": {
+            "checklistbank-2008": "392987"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "falculiferidae"
+    },
+    {
+      "id": "GENUS_DERMALEICHUS",
+      "name": "Dermaleichus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DERMALEICHUS_ROSTRATUS_BUCHHOLZ_1869",
+          "name": "Dermaleichus rostratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermaleichus",
+          "authorship": "Buchholz, 1869",
+          "sourceIds": {
+            "checklistbank-2008": "953590"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "falculiferidae"
+    },
+    {
+      "id": "GENUS_CHEILOCERAS",
+      "name": "Cheiloceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHEILOCERAS_SERRULATUM_ATYEO_GAUD_1978",
+          "name": "Cheiloceras serrulatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheiloceras",
+          "authorship": "Atyeo & Gaud, 1978",
+          "sourceIds": {
+            "checklistbank-2008": "1017875"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHEILOCERAS_TAURUS_TROUESSART_1899",
+          "name": "Cheiloceras taurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheiloceras",
+          "authorship": "Trouessart, 1899",
+          "sourceIds": {
+            "checklistbank-2008": "1018468"
           },
           "children": []
         }
@@ -359,5 +513,8 @@
       "lineage": "falculiferidae"
     }
   ],
-  "genusCount": 9
+  "genusCount": 13,
+  "sourceIds": {
+    "wikispecies": "Falculiferidae"
+  }
 }

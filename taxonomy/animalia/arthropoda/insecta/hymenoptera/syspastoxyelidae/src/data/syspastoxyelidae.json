@@ -3,7 +3,7 @@
   "name": "Syspastoxyelidae",
   "rank": "FAMILY",
   "appSlug": "syspastoxyelidae",
-  "speciesCount": 7,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_SYSPASTOXYELA",
@@ -45,7 +45,8 @@
           "lineage": "Syspastoxyela",
           "authorship": "Engel & Huang, 2016",
           "sourceIds": {
-            "gbif-backbone": "8555963"
+            "gbif-backbone": "8555963",
+            "checklistbank-1174": "txn:334407"
           },
           "children": []
         }
@@ -69,6 +70,20 @@
           "sourceIds": {
             "gbif-backbone": "11137170"
           },
+          "children": []
+        },
+        {
+          "id": "SP_STRIAEXYELA_SIMPLA_WANG_ET_AL_2021",
+          "name": "Striaexyela simpla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Striaexyela",
+          "authorship": "(Wang et al. 2021)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:440938"
+          },
+          "uuid": "c4aecac8-9704-4fff-998a-99b4ae2c39d0",
           "children": []
         }
       ],
@@ -111,7 +126,8 @@
           "lineage": "Grandixyela",
           "authorship": "Zheng, Kopylov, Zhang, Zhang, Qin, Chen & Zhang, 2021",
           "sourceIds": {
-            "gbif-backbone": "11639994"
+            "gbif-backbone": "11639994",
+            "checklistbank-1174": "txn:469134"
           },
           "children": []
         }
@@ -133,14 +149,64 @@
           "lineage": "Burmoxyela",
           "authorship": "Zheng & Rasnitsyn, 2021",
           "sourceIds": {
-            "gbif-backbone": "11181869"
+            "gbif-backbone": "11181869",
+            "checklistbank-1174": "txn:441526"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "syspastoxyelidae"
+    },
+    {
+      "id": "GENUS_PINGUIXYELA",
+      "name": "Pinguixyela",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "syspastoxyelidae",
+      "children": [
+        {
+          "id": "SP_PINGUIXYELA_PINGUIS_WANG_ET_AL_2021",
+          "name": "Pinguixyela pinguis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pinguixyela",
+          "authorship": "(Wang et al. 2021)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:440937"
+          },
+          "uuid": "dd2b176a-6789-4c28-b9a4-6059e276fb2b",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CILIOXYELA",
+      "name": "Cilioxyela",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "syspastoxyelidae",
+      "children": [
+        {
+          "id": "SP_CILIOXYELA_SETOSA_LI_AND_WEI_2026",
+          "name": "Cilioxyela setosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cilioxyela",
+          "authorship": "Li and Wei 2026",
+          "sourceIds": {
+            "checklistbank-1174": "txn:518777"
+          },
+          "uuid": "25e1c160-49b8-4a4f-8f21-01e7a7aeb163",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-1174": "txn:334405"
+  }
 }

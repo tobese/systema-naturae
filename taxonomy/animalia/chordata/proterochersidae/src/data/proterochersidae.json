@@ -3,7 +3,7 @@
   "name": "Proterochersidae",
   "rank": "FAMILY",
   "appSlug": "proterochersidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PROTEROCHERSIS",
@@ -19,7 +19,8 @@
           "lineage": "Proterochersis",
           "authorship": "Szczygielski & Sulej, 2016",
           "sourceIds": {
-            "gbif-backbone": "8467082"
+            "gbif-backbone": "8467082",
+            "checklistbank-1174": "txn:344458"
           },
           "children": []
         },
@@ -32,8 +33,23 @@
           "lineage": "Proterochersis",
           "authorship": "Fraas, 1913",
           "sourceIds": {
-            "gbif-backbone": "4965127"
+            "gbif-backbone": "4965127",
+            "wikispecies": "Proterochersis_robusta"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PROTEROCHERSIS_LIMENDORSA_SZCZYGIELSKI_AND_SULEJ_2016",
+          "name": "Proterochersis limendorsa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proterochersis",
+          "authorship": "(Szczygielski and Sulej 2016)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344460"
+          },
+          "uuid": "6acade93-2526-4d8f-bb4d-d5834a7070e3",
           "children": []
         }
       ],
@@ -61,7 +77,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "proterochersidae"
+    },
+    {
+      "id": "GENUS_THAICHELYS",
+      "name": "Thaichelys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "proterochersidae",
+      "children": [
+        {
+          "id": "SP_THAICHELYS_RUCHAE_DE_BROIN_1984",
+          "name": "Thaichelys ruchae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thaichelys",
+          "authorship": "(de Broin 1984)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:180695"
+          },
+          "uuid": "120aad18-fe99-44e2-bd84-4f6bbb2043ae",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Proterochersidae",
+    "checklistbank-1174": "txn:37586"
+  }
 }

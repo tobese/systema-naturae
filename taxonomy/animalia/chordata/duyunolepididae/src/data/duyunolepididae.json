@@ -3,7 +3,7 @@
   "name": "Duyunolepididae",
   "rank": "FAMILY",
   "appSlug": "duyunolepididae",
-  "speciesCount": 4,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_DUYUNOLEPIS",
@@ -19,7 +19,8 @@
           "lineage": "Duyunolepis",
           "authorship": "Pan & Wang, 1978",
           "sourceIds": {
-            "gbif-backbone": "8692950"
+            "gbif-backbone": "8692950",
+            "checklistbank-1174": "txn:321403"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Lopadaspis",
           "authorship": "Wang & Etal, 2001",
           "sourceIds": {
-            "gbif-backbone": "8559468"
+            "gbif-backbone": "8559468",
+            "checklistbank-1174": "txn:321406"
           },
           "children": []
         }
@@ -63,7 +65,8 @@
           "lineage": "Neoduyunaspis",
           "authorship": "Pan & Wang, 1978",
           "sourceIds": {
-            "gbif-backbone": "8510754"
+            "gbif-backbone": "8510754",
+            "checklistbank-1174": "txn:321405"
           },
           "children": []
         }
@@ -85,14 +88,64 @@
           "lineage": "Paraduyunaspis",
           "authorship": "Pan & Wang, 1978",
           "sourceIds": {
-            "gbif-backbone": "8482951"
+            "gbif-backbone": "8482951",
+            "checklistbank-1174": "txn:321404"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "duyunolepididae"
+    },
+    {
+      "id": "GENUS_PSEUDODUYUNASPIS",
+      "name": "Pseudoduyunaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "duyunolepididae",
+      "children": [
+        {
+          "id": "SP_PSEUDODUYUNASPIS_BACHUENSIS_WANG_ET_AL_1996",
+          "name": "Pseudoduyunaspis bachuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoduyunaspis",
+          "authorship": "Wang et al. 1996",
+          "sourceIds": {
+            "checklistbank-1174": "txn:321431"
+          },
+          "uuid": "477f5138-a665-4b53-b3d5-179e8e5a2eb3",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_FOXASPIS",
+      "name": "Foxaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "duyunolepididae",
+      "children": [
+        {
+          "id": "SP_FOXASPIS_NOVEMURA_GAI_ET_AL_2023",
+          "name": "Foxaspis novemura",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Foxaspis",
+          "authorship": "Gai et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502061"
+          },
+          "uuid": "25828b37-5f7b-44f6-97c1-22cbf93ca41c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:321304"
+  }
 }

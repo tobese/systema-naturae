@@ -3,7 +3,7 @@
   "name": "Compsognathidae",
   "rank": "FAMILY",
   "appSlug": "compsognathidae",
-  "speciesCount": 10,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_BEIPIAOGNATHUS",
@@ -195,7 +195,8 @@
           "lineage": "Aniksosaurus",
           "authorship": "Martínez & Novas, 2006",
           "sourceIds": {
-            "gbif-backbone": "4966213"
+            "gbif-backbone": "4966213",
+            "checklistbank-1174": "txn:97083"
           },
           "children": []
         }
@@ -224,7 +225,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "compsognathidae"
+    },
+    {
+      "id": "GENUS_SCIPIONYX",
+      "name": "Scipionyx",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "compsognathidae",
+      "children": [
+        {
+          "id": "SP_SCIPIONYX_SAMNITICUS_DAL_SASSO_AND_SIGNORE_1996",
+          "name": "Scipionyx samniticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scipionyx",
+          "authorship": "Dal Sasso and Signore 1996",
+          "sourceIds": {
+            "checklistbank-1174": "txn:57428"
+          },
+          "uuid": "7d17e660-2dc6-4547-b9e8-a83cb297ee5a",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ARISTOSUCHUS",
+      "name": "Aristosuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "compsognathidae",
+      "children": [
+        {
+          "id": "SP_ARISTOSUCHUS_PUSILLUS_OWEN_1876",
+          "name": "Aristosuchus pusillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aristosuchus",
+          "authorship": "(Owen 1876)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:66825"
+          },
+          "uuid": "b55abd84-fd88-42ec-a5f9-c11976fbf58b",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 10
+  "genusCount": 12,
+  "sourceIds": {
+    "checklistbank-1174": "txn:38537"
+  }
 }

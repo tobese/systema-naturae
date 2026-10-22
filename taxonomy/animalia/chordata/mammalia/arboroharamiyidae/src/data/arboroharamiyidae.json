@@ -3,7 +3,7 @@
   "name": "Arboroharamiyidae",
   "rank": "FAMILY",
   "appSlug": "arboroharamiyidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_ARBOROHARAMIYA",
@@ -19,7 +19,8 @@
           "lineage": "Arboroharamiya",
           "authorship": "Han, Mao, Bi, Wang & Meng, 2017",
           "sourceIds": {
-            "gbif-backbone": "9249092"
+            "gbif-backbone": "9249092",
+            "checklistbank-1174": "txn:106246"
           },
           "children": []
         },
@@ -32,14 +33,55 @@
           "lineage": "Arboroharamiya",
           "authorship": "Zheng, Bi, Wang & Meng, 2013",
           "sourceIds": {
-            "gbif-backbone": "8698996"
+            "gbif-backbone": "8698996",
+            "checklistbank-1174": "txn:276074"
           },
+          "children": []
+        },
+        {
+          "id": "SP_ARBOROHARAMIYA_FUSCUS_LI_ET_AL_2025",
+          "name": "Arboroharamiya fuscus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arboroharamiya",
+          "authorship": "Li et al. 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:505305"
+          },
+          "uuid": "d7629e19-3521-483c-874d-cd5eebcb3969",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "arboroharamiyidae"
+    },
+    {
+      "id": "GENUS_MIRUSODENS",
+      "name": "Mirusodens",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "arboroharamiyidae",
+      "children": [
+        {
+          "id": "SP_MIRUSODENS_CAII_MAO_ET_AL_2023",
+          "name": "Mirusodens caii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mirusodens",
+          "authorship": "Mao et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:499870"
+          },
+          "uuid": "2e4af5ed-5fdd-4d0f-84c7-6e8a00b65ee5",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:364544"
+  }
 }

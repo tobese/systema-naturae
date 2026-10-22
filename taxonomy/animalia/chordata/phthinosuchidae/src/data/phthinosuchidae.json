@@ -3,7 +3,7 @@
   "name": "Phthinosuchidae",
   "rank": "FAMILY",
   "appSlug": "phthinosuchidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_KNOXOSAURUS",
@@ -85,7 +85,8 @@
           "lineage": "Steppesaurus",
           "authorship": "Olson & Beerbower, 1953",
           "sourceIds": {
-            "gbif-backbone": "4975311"
+            "gbif-backbone": "4975311",
+            "checklistbank-1174": "txn:140370"
           },
           "children": []
         }
@@ -114,7 +115,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phthinosuchidae"
+    },
+    {
+      "id": "GENUS_DINOSAURUS",
+      "name": "Dinosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "phthinosuchidae",
+      "children": [
+        {
+          "id": "SP_DINOSAURUS_MURCHISONI_FISCHER_VON_WALDHEIM_1845",
+          "name": "Dinosaurus murchisoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dinosaurus",
+          "authorship": "(Fischer von Waldheim 1845)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:358799"
+          },
+          "uuid": "e73ee145-f3d7-49dc-859a-ac8d319056d6",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:38942"
+  }
 }

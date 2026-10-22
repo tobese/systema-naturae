@@ -3,7 +3,7 @@
   "name": "Rhizodontidae",
   "rank": "FAMILY",
   "appSlug": "rhizodontidae",
-  "speciesCount": 9,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_RHIZODUS",
@@ -58,7 +58,8 @@
           "lineage": "Rhizodus",
           "authorship": "Newberry & Worthen, 1870",
           "sourceIds": {
-            "gbif-backbone": "9114619"
+            "gbif-backbone": "9114619",
+            "checklistbank-1174": "txn:390866"
           },
           "children": []
         },
@@ -71,8 +72,23 @@
           "lineage": "Rhizodus",
           "authorship": "Owen, 1840",
           "sourceIds": {
-            "gbif-backbone": "4838301"
+            "gbif-backbone": "4838301",
+            "checklistbank-1174": "txn:245848"
           },
+          "children": []
+        },
+        {
+          "id": "SP_RHIZODUS_SERPUKHOVENSIS_SMIRNOVA_2022",
+          "name": "Rhizodus serpukhovensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizodus",
+          "authorship": "Smirnova 2022",
+          "sourceIds": {
+            "checklistbank-1174": "txn:494651"
+          },
+          "uuid": "b2931ba8-eb92-4dcf-9b96-60c3348068be",
           "children": []
         }
       ],
@@ -157,7 +173,130 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhizodontidae"
+    },
+    {
+      "id": "GENUS_STREPSODUS",
+      "name": "Strepsodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizodontidae",
+      "children": [
+        {
+          "id": "SP_STREPSODUS_SAUROIDES_BINNEY_1841",
+          "name": "Strepsodus sauroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Strepsodus",
+          "authorship": "(Binney 1841)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:260049"
+          },
+          "uuid": "acc6620c-fe86-4291-896a-ef282fe0abb3",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SAURIPTERIS",
+      "name": "Sauripteris",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizodontidae",
+      "children": [
+        {
+          "id": "SP_SAURIPTERIS_TAYLORI_HALL_1843",
+          "name": "Sauripteris taylori",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sauripteris",
+          "authorship": "Hall 1843",
+          "sourceIds": {
+            "checklistbank-1174": "txn:250270"
+          },
+          "uuid": "4a6e152c-efac-4a19-9f61-2f282a582703",
+          "children": []
+        },
+        {
+          "id": "SP_SAURIPTERIS_FAVOSUS_AGASSIZ_1844",
+          "name": "Sauripteris favosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sauripteris",
+          "authorship": "(Agassiz 1844)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:260267"
+          },
+          "uuid": "95379629-392b-4f85-964b-9733a9400ae8",
+          "children": []
+        },
+        {
+          "id": "SP_SAURIPTERIS_ANGLICUS_WOODWARD_1891",
+          "name": "Sauripteris anglicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sauripteris",
+          "authorship": "Woodward 1891",
+          "sourceIds": {
+            "checklistbank-1174": "txn:260269"
+          },
+          "uuid": "f2fae025-29af-40c8-a49f-b1e575282b59",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GOOLOOGONGIA",
+      "name": "Gooloogongia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizodontidae",
+      "children": [
+        {
+          "id": "SP_GOOLOOGONGIA_LOOMESI_JOHANSON_AND_AHLBERG_1998",
+          "name": "Gooloogongia loomesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gooloogongia",
+          "authorship": "Johanson and Ahlberg 1998",
+          "sourceIds": {
+            "checklistbank-1174": "txn:403564"
+          },
+          "uuid": "30b545df-489a-4134-89d8-787e16ee268d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SCREBINODUS",
+      "name": "Screbinodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizodontidae",
+      "children": [
+        {
+          "id": "SP_SCREBINODUS_ORNATUS_TRAQUAIR_1836",
+          "name": "Screbinodus ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Screbinodus",
+          "authorship": "(Traquair 1836)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:260048"
+          },
+          "uuid": "e4d80e27-908f-4971-a12e-1a241b741a16",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 8,
+  "sourceIds": {
+    "checklistbank-1174": "txn:224766"
+  }
 }

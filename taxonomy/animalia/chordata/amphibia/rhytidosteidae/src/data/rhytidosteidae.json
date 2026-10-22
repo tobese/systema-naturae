@@ -3,7 +3,7 @@
   "name": "Rhytidosteidae",
   "rank": "FAMILY",
   "appSlug": "rhytidosteidae",
-  "speciesCount": 12,
+  "speciesCount": 14,
   "children": [
     {
       "id": "GENUS_NANOLANIA",
@@ -208,7 +208,8 @@
           "lineage": "Pneumatostega",
           "authorship": "Cosgriff & Zawiskie, 1979",
           "sourceIds": {
-            "gbif-backbone": "8499710"
+            "gbif-backbone": "8499710",
+            "checklistbank-1174": "txn:251507"
           },
           "children": []
         }
@@ -259,7 +260,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhytidosteidae"
+    },
+    {
+      "id": "GENUS_SANGAIA",
+      "name": "Sangaia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhytidosteidae",
+      "children": [
+        {
+          "id": "SP_SANGAIA_LAVINAI_DIAS_DA_SILVA_ET_AL_2006",
+          "name": "Sangaia lavinai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sangaia",
+          "authorship": "(Dias-da-Silva et al. 2006)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:91803"
+          },
+          "uuid": "5c746cc4-c564-45cc-aabf-3d015746f837",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TRUCHEOSAURUS",
+      "name": "Trucheosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhytidosteidae",
+      "children": [
+        {
+          "id": "SP_TRUCHEOSAURUS_MAJOR_WOODWARD_1909",
+          "name": "Trucheosaurus major",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trucheosaurus",
+          "authorship": "(Woodward 1909)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:113845"
+          },
+          "uuid": "0ffe4fda-e30e-47dc-8281-67c099423803",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 11
+  "genusCount": 13,
+  "sourceIds": {
+    "checklistbank-1174": "txn:37110"
+  }
 }

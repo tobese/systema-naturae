@@ -3,7 +3,7 @@
   "name": "Ulospongiellidae",
   "rank": "FAMILY",
   "appSlug": "ulospongiellidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_HAPALOSPONGIA",
@@ -19,7 +19,8 @@
           "lineage": "Hapalospongia",
           "authorship": "Rigby & Collins, 2004",
           "sourceIds": {
-            "gbif-backbone": "8684597"
+            "gbif-backbone": "8684597",
+            "checklistbank-1174": "txn:208499"
           },
           "children": []
         }
@@ -41,14 +42,55 @@
           "lineage": "Ulospongiella",
           "authorship": "Rigby & Collins, 2004",
           "sourceIds": {
-            "gbif-backbone": "8551788"
+            "gbif-backbone": "8551788",
+            "checklistbank-1174": "txn:208497"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ulospongiellidae"
+    },
+    {
+      "id": "GENUS_NEOMENISPONGIA",
+      "name": "Neomenispongia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ulospongiellidae",
+      "children": [
+        {
+          "id": "SP_NEOMENISPONGIA_PLEXA_KOLESNIKOV_ET_AL_2024",
+          "name": "Neomenispongia plexa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neomenispongia",
+          "authorship": "Kolesnikov et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509412"
+          },
+          "uuid": "4bfd2b4f-ebc9-47cf-9e7d-f973b1125005",
+          "children": []
+        },
+        {
+          "id": "SP_NEOMENISPONGIA_DIAZOMA_KOLESNIKOV_ET_AL_2024",
+          "name": "Neomenispongia diazoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neomenispongia",
+          "authorship": "Kolesnikov et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509414"
+          },
+          "uuid": "2f606e5d-ff6e-4bfc-8ae6-b95ff5c8a74c",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:208496"
+  }
 }

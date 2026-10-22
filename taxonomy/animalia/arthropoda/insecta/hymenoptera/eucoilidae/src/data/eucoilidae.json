@@ -17,7 +17,24 @@
           "lineage": "Leptopilina",
           "authorship": "Barbotin, Carton & Keiner-Pillault, 1979",
           "children": [],
-          "uuid": "2a4b09d9-ebb0-51e-84a-a49d73da807158"
+          "uuid": "2a4b09d9-ebb0-51e-84a-a49d73da807158",
+          "sourceIds": {
+            "checklistbank-127379": "5e431223-6abb-4dfa-aae9-d3f9ef662fad",
+            "checklistbank-139831": "672713"
+          }
+        },
+        {
+          "id": "SP_LEPTOPILINA_HETERODOMA_THOMSON",
+          "name": "Leptopilina heterodoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptopilina",
+          "authorship": "(Thomson)",
+          "sourceIds": {
+            "checklistbank-124661": "152529"
+          },
+          "uuid": "f6912a72-d1be-49cc-8d01-84d5b7dd8906"
         }
       ],
       "sourcedFrom": "worms",
@@ -310,7 +327,8 @@
           "lineage": "Ganaspidium",
           "authorship": "Buffington, 2010",
           "sourceIds": {
-            "gbif-backbone": "9146527"
+            "gbif-backbone": "9146527",
+            "checklistbank-139831": "1095579"
           },
           "children": [],
           "uuid": "1ee03c00-30c6-59d-9a8-8c3684ef14b715"
@@ -592,9 +610,39 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eucoilidae"
+    },
+    {
+      "id": "GENUS_ASOBARA",
+      "name": "Asobara",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eucoilidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_EUCOILA",
+      "name": "Eucoila",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eucoilidae",
+      "children": [
+        {
+          "id": "SP_EUCOILA_RUFOCINCTA_KIEFFER",
+          "name": "Eucoila rufocincta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucoila",
+          "authorship": "(Kieffer)",
+          "sourceIds": {
+            "checklistbank-124661": "155076"
+          },
+          "uuid": "ffbe06d2-bac1-45bf-b779-afc6eadf3eb2"
+        }
+      ]
     }
   ],
-  "speciesCount": 34,
+  "speciesCount": 36,
   "appSlug": "eucoilidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Insecta",

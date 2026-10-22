@@ -3,7 +3,7 @@
   "name": "Amplectobeluidae",
   "rank": "FAMILY",
   "appSlug": "amplectobeluidae",
-  "speciesCount": 3,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_AMPLECTOBELUA",
@@ -21,6 +21,20 @@
           "sourceIds": {
             "gbif-backbone": "9762166"
           },
+          "children": []
+        },
+        {
+          "id": "SP_AMPLECTOBELUA_STEPHENENSIS_DALEY_AND_BUDD_2010",
+          "name": "Amplectobelua stephenensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amplectobelua",
+          "authorship": "Daley and Budd 2010",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474688"
+          },
+          "uuid": "c42785b8-fd96-40a1-b0af-b514ce376ceb",
           "children": []
         }
       ],
@@ -41,7 +55,8 @@
           "lineage": "Lyrarapax",
           "authorship": "Cong, Daley, Edgecombe, Hou & Chen, 2016",
           "sourceIds": {
-            "gbif-backbone": "9423802"
+            "gbif-backbone": "9423802",
+            "checklistbank-1174": "txn:490824"
           },
           "children": []
         },
@@ -54,14 +69,67 @@
           "lineage": "Lyrarapax",
           "authorship": "Cong, Ma, Hou, Edgecombe & Strausfeld, 2014",
           "sourceIds": {
-            "gbif-backbone": "8920829"
+            "gbif-backbone": "8920829",
+            "checklistbank-1174": "txn:490823",
+            "wikispecies": "Lyrarapax_unguispinus"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amplectobeluidae"
+    },
+    {
+      "id": "GENUS_RAMSKOELDIA",
+      "name": "Ramskoeldia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amplectobeluidae",
+      "children": [
+        {
+          "id": "SP_RAMSKOELDIA_CONSIMILIS_CONG_2018",
+          "name": "Ramskoeldia consimilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ramskoeldia",
+          "authorship": "Cong 2018",
+          "sourceIds": {
+            "checklistbank-1174": "txn:470041"
+          },
+          "uuid": "10d8d4c9-5e2c-48eb-8cbe-581664c0214b",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GUANSHANCARIS",
+      "name": "Guanshancaris",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amplectobeluidae",
+      "children": [
+        {
+          "id": "SP_GUANSHANCARIS_KUNMINGENSIS_WANG_ET_AL_2013",
+          "name": "Guanshancaris kunmingensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guanshancaris",
+          "authorship": "(Wang et al. 2013)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:491149",
+            "wikispecies": "Guanshancaris_kunmingensis"
+          },
+          "uuid": "744029f7-fbbb-47e8-a7d3-1204accadc1b",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Amplectobeluidae",
+    "checklistbank-1174": "txn:290858"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Mixodectidae",
   "rank": "FAMILY",
   "appSlug": "mixodectidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_DRACONTOLESTES",
@@ -41,8 +41,23 @@
           "lineage": "Mixodectes",
           "authorship": "Cope, 1883",
           "sourceIds": {
-            "gbif-backbone": "4972177"
+            "gbif-backbone": "4972177",
+            "wikispecies": "Mixodectes_pungens"
           },
+          "children": []
+        },
+        {
+          "id": "SP_MIXODECTES_MALARIS_COPE_1884",
+          "name": "Mixodectes malaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mixodectes",
+          "authorship": "(Cope 1884)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:47362"
+          },
+          "uuid": "fc4c1aa8-c116-4f9e-a4b3-98278caa0604",
           "children": []
         }
       ],
@@ -70,7 +85,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mixodectidae"
+    },
+    {
+      "id": "GENUS_EUDAEMONEMA",
+      "name": "Eudaemonema",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mixodectidae",
+      "children": [
+        {
+          "id": "SP_EUDAEMONEMA_BOHACHAE_SCOTT_ET_AL_2013",
+          "name": "Eudaemonema bohachae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eudaemonema",
+          "authorship": "Scott et al. 2013",
+          "sourceIds": {
+            "checklistbank-1174": "txn:265659"
+          },
+          "uuid": "9504cd5b-7a14-483d-952e-0f22b7c3680e",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Mixodectidae"
+  }
 }

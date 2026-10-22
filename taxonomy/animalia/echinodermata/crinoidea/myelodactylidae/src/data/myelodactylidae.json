@@ -3,7 +3,7 @@
   "name": "Myelodactylidae",
   "rank": "FAMILY",
   "appSlug": "myelodactylidae",
-  "speciesCount": 6,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_MYELODACTYLUS",
@@ -21,6 +21,20 @@
           "sourceIds": {
             "gbif-backbone": "11192710"
           },
+          "children": []
+        },
+        {
+          "id": "SP_MYELODACTYLUS_AMMONIS_BATHER_1893",
+          "name": "Myelodactylus ammonis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myelodactylus",
+          "authorship": "(Bather 1893)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:495558"
+          },
+          "uuid": "203c9dca-149e-4895-8a47-7920cc99162a",
           "children": []
         }
       ],
@@ -54,7 +68,8 @@
           "lineage": "Eomyelodactylus",
           "authorship": "Ausich & Copper, 2010",
           "sourceIds": {
-            "gbif-backbone": "9652749"
+            "gbif-backbone": "9652749",
+            "checklistbank-1174": "txn:370216"
           },
           "children": []
         },
@@ -67,7 +82,8 @@
           "lineage": "Eomyelodactylus",
           "authorship": "Ausich & Copper, 2010",
           "sourceIds": {
-            "gbif-backbone": "9718000"
+            "gbif-backbone": "9718000",
+            "checklistbank-1174": "txn:370219"
           },
           "children": []
         },
@@ -80,8 +96,23 @@
           "lineage": "Eomyelodactylus",
           "authorship": "Ausich & Copper, 2010",
           "sourceIds": {
-            "gbif-backbone": "9702332"
+            "gbif-backbone": "9702332",
+            "checklistbank-1174": "txn:370218"
           },
+          "children": []
+        },
+        {
+          "id": "SP_EOMYELODACTYLUS_FOERSTEI_AUSICH_AND_COPPER_2010",
+          "name": "Eomyelodactylus foerstei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eomyelodactylus",
+          "authorship": "Ausich and Copper 2010",
+          "sourceIds": {
+            "checklistbank-1174": "txn:370217"
+          },
+          "uuid": "2938fff3-7aeb-4b73-9c9b-57b38b698428",
           "children": []
         }
       ],
@@ -109,7 +140,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myelodactylidae"
+    },
+    {
+      "id": "GENUS_HYPEREXOCHUS",
+      "name": "Hyperexochus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "myelodactylidae",
+      "children": [
+        {
+          "id": "SP_HYPEREXOCHUS_IMMODICUS_MOORE_AND_JEFFORDS_1968",
+          "name": "Hyperexochus immodicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyperexochus",
+          "authorship": "Moore and Jeffords 1968",
+          "sourceIds": {
+            "checklistbank-1174": "txn:495561"
+          },
+          "uuid": "aa921555-c6f5-4439-82bb-41f408feef0e",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:319911"
+  }
 }

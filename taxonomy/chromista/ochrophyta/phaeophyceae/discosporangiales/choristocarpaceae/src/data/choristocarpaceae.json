@@ -3,7 +3,7 @@
   "name": "Choristocarpaceae",
   "rank": "FAMILY",
   "appSlug": "choristocarpaceae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_CHORISTOCARPUS",
@@ -19,7 +19,9 @@
           "lineage": "Choristocarpus",
           "authorship": "Zanardini, 1860",
           "sourceIds": {
-            "gbif-backbone": "3198071"
+            "gbif-backbone": "3198071",
+            "checklistbank-2008": "373236",
+            "wikispecies": "Choristocarpus_tenellus"
           },
           "children": [],
           "uuid": "96abdfa5-788b-590-be3-7207e284ae731e"
@@ -46,11 +48,71 @@
           },
           "children": [],
           "uuid": "824d2095-be98-5f5-980-161929e91d2cb0"
+        },
+        {
+          "id": "SP_DISCOSPORANGIUM_SUBTILE_FALKENBERG_1878",
+          "name": "Discosporangium subtile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discosporangium",
+          "authorship": "Falkenberg, 1878",
+          "sourceIds": {
+            "checklistbank-2008": "571616"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "choristocarpaceae"
+    },
+    {
+      "id": "GENUS_ECTOCARPUS",
+      "name": "Ectocarpus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ECTOCARPUS_TENELLUS_K_TZ_1849",
+          "name": "Ectocarpus tenellus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ectocarpus",
+          "authorship": "Kütz., 1849",
+          "sourceIds": {
+            "checklistbank-2008": "571117"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "choristocarpaceae"
+    },
+    {
+      "id": "GENUS_CALLITHAMNION",
+      "name": "Callithamnion",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLITHAMNION_MESARTHROCARPUM_MENEGH_1844",
+          "name": "Callithamnion mesarthrocarpum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callithamnion",
+          "authorship": "Menegh., 1844",
+          "sourceIds": {
+            "checklistbank-2008": "572777"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "choristocarpaceae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Choristocarpaceae"
+  }
 }

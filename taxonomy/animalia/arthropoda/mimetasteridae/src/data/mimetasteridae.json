@@ -3,7 +3,7 @@
   "name": "Mimetasteridae",
   "rank": "FAMILY",
   "appSlug": "mimetasteridae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TOMLINSONUS",
@@ -19,14 +19,64 @@
           "lineage": "Tomlinsonus",
           "authorship": "Moysiuk, Izquierdo-Lopez, Kampouris & Caron, 2022",
           "sourceIds": {
-            "gbif-backbone": "12173407"
+            "gbif-backbone": "12173407",
+            "checklistbank-1174": "txn:464036"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mimetasteridae"
+    },
+    {
+      "id": "GENUS_FURCA",
+      "name": "Furca",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mimetasteridae",
+      "children": [
+        {
+          "id": "SP_FURCA_BOHEMICA_FRITSCH_1908",
+          "name": "Furca bohemica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Furca",
+          "authorship": "Fritsch 1908",
+          "sourceIds": {
+            "checklistbank-1174": "txn:429295"
+          },
+          "uuid": "77f7f110-0730-4d72-9c53-8130e2b528ca",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MIMETASTER",
+      "name": "Mimetaster",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mimetasteridae",
+      "children": [
+        {
+          "id": "SP_MIMETASTER_HEXAGONALIS_G_RICH_1931",
+          "name": "Mimetaster hexagonalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mimetaster",
+          "authorship": "Gürich 1931",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501929"
+          },
+          "uuid": "dce0b916-cef6-4fd7-9d93-12a9a6486695",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:429297"
+  }
 }

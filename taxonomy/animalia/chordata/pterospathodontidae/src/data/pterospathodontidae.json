@@ -3,7 +3,7 @@
   "name": "Pterospathodontidae",
   "rank": "FAMILY",
   "appSlug": "pterospathodontidae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_GALERODUS",
@@ -19,7 +19,8 @@
           "lineage": "Galerodus",
           "authorship": "Tsyganko & Chermnyh, 1987",
           "sourceIds": {
-            "gbif-backbone": "9506023"
+            "gbif-backbone": "9506023",
+            "checklistbank-1174": "txn:358843"
           },
           "children": []
         }
@@ -175,7 +176,47 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pterospathodontidae"
+    },
+    {
+      "id": "GENUS_AULACOGNATHUS",
+      "name": "Aulacognathus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pterospathodontidae",
+      "children": [
+        {
+          "id": "SP_AULACOGNATHUS_BULLATUS_NICOLL_AND_REXROAD_1968",
+          "name": "Aulacognathus bullatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacognathus",
+          "authorship": "(Nicoll and Rexroad 1968)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344759"
+          },
+          "uuid": "35f2a648-9767-4e36-8e1d-e5c30b5b6e76",
+          "children": []
+        },
+        {
+          "id": "SP_AULACOGNATHUS_LATUS_NICOLL_AND_REXROAD_1968",
+          "name": "Aulacognathus latus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacognathus",
+          "authorship": "(Nicoll and Rexroad 1968)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:344761"
+          },
+          "uuid": "d84fe078-2138-4e11-b9e3-a352d7436ced",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-1174": "txn:434591"
+  }
 }

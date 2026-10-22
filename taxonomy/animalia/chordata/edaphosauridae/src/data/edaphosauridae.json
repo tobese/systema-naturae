@@ -3,7 +3,7 @@
   "name": "Edaphosauridae",
   "rank": "FAMILY",
   "appSlug": "edaphosauridae",
-  "speciesCount": 14,
+  "speciesCount": 20,
   "children": [
     {
       "id": "GENUS_GORDODON",
@@ -19,7 +19,8 @@
           "lineage": "Gordodon",
           "authorship": "Lucas, Rinehart & Celeskey, 2018",
           "sourceIds": {
-            "gbif-backbone": "10000131"
+            "gbif-backbone": "10000131",
+            "checklistbank-1174": "txn:409766"
           },
           "children": []
         }
@@ -43,6 +44,20 @@
           "sourceIds": {
             "gbif-backbone": "9489525"
           },
+          "children": []
+        },
+        {
+          "id": "SP_IANTHASAURUS_HARDESTIORUM_REISZ_AND_BERMAN_1986",
+          "name": "Ianthasaurus hardestiorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ianthasaurus",
+          "authorship": "Reisz and Berman 1986",
+          "sourceIds": {
+            "checklistbank-1174": "txn:138227"
+          },
+          "uuid": "eacde136-d14f-422f-a2d5-c1ffeff6942e",
           "children": []
         }
       ],
@@ -168,7 +183,8 @@
           "lineage": "Edaphosaurus",
           "authorship": "Romer & Price, 1940",
           "sourceIds": {
-            "gbif-backbone": "4975449"
+            "gbif-backbone": "4975449",
+            "checklistbank-1174": "txn:122352"
           },
           "children": []
         },
@@ -194,7 +210,8 @@
           "lineage": "Edaphosaurus",
           "authorship": "Williston & Case, 1913",
           "sourceIds": {
-            "gbif-backbone": "4975446"
+            "gbif-backbone": "4975446",
+            "checklistbank-1174": "txn:122351"
           },
           "children": []
         },
@@ -207,8 +224,51 @@
           "lineage": "Edaphosaurus",
           "authorship": "Cope, 1882",
           "sourceIds": {
-            "gbif-backbone": "4975451"
+            "gbif-backbone": "4975451",
+            "wikispecies": "Edaphosaurus_pogonias"
           },
+          "children": []
+        },
+        {
+          "id": "SP_EDAPHOSAURUS_CLAVIGER_COPE_1886",
+          "name": "Edaphosaurus claviger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Edaphosaurus",
+          "authorship": "(Cope 1886)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:134988"
+          },
+          "uuid": "eb8be384-7fdf-4453-bc59-a29632613f94",
+          "children": []
+        },
+        {
+          "id": "SP_EDAPHOSAURUS_CREDNERI_JAEKEL_1910",
+          "name": "Edaphosaurus credneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Edaphosaurus",
+          "authorship": "(Jaekel 1910)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:346040"
+          },
+          "uuid": "711c2031-a6d5-47e9-8116-dfe12b1b513c",
+          "children": []
+        },
+        {
+          "id": "SP_EDAPHOSAURUS_CRUCIGER_COPE_1878",
+          "name": "Edaphosaurus cruciger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Edaphosaurus",
+          "authorship": "(Cope 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:138134"
+          },
+          "uuid": "c207e4c5-67b4-4d1b-9f1a-8caa1a9bac4c",
           "children": []
         }
       ],
@@ -258,7 +318,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "edaphosauridae"
+    },
+    {
+      "id": "GENUS_BOHEMICLAVULUS",
+      "name": "Bohemiclavulus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "edaphosauridae",
+      "children": [
+        {
+          "id": "SP_BOHEMICLAVULUS_MIRABILIS_FRITSCH_1895",
+          "name": "Bohemiclavulus mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bohemiclavulus",
+          "authorship": "(Fritsch 1895)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:346037"
+          },
+          "uuid": "6e51de9f-b9fd-4d83-a7cc-a57c41d1ba6b",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MELANEDAPHODON",
+      "name": "Melanedaphodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "edaphosauridae",
+      "children": [
+        {
+          "id": "SP_MELANEDAPHODON_HOVANECI_MANN_ET_AL_2023",
+          "name": "Melanedaphodon hovaneci",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melanedaphodon",
+          "authorship": "Mann et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:492430"
+          },
+          "uuid": "fce1d2fe-95f6-4db7-93fe-4b7639152a1d",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 8
+  "genusCount": 10,
+  "sourceIds": {
+    "wikispecies": "Edaphosauridae",
+    "checklistbank-1174": "txn:38910"
+  }
 }

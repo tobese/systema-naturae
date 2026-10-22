@@ -3,7 +3,7 @@
   "name": "Oneotodontidae",
   "rank": "FAMILY",
   "appSlug": "oneotodontidae",
-  "speciesCount": 5,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_ACONTIODUS",
@@ -76,7 +76,8 @@
           "lineage": "Oneotodus",
           "authorship": "Missarzhevsky & Mambetov, 1981",
           "sourceIds": {
-            "gbif-backbone": "8505690"
+            "gbif-backbone": "8505690",
+            "checklistbank-1174": "txn:172449"
           },
           "children": []
         }
@@ -105,7 +106,92 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oneotodontidae"
+    },
+    {
+      "id": "GENUS_UTAHCONUS",
+      "name": "Utahconus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oneotodontidae",
+      "children": [
+        {
+          "id": "SP_UTAHCONUS_UTAHENSIS_MILLER_1969",
+          "name": "Utahconus utahensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Utahconus",
+          "authorship": "(Miller 1969)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:393544"
+          },
+          "uuid": "19d1b792-7f04-4a1f-8228-2b3eccd74afc",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SEMIACONTIODUS",
+      "name": "Semiacontiodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oneotodontidae",
+      "children": [
+        {
+          "id": "SP_SEMIACONTIODUS_IOWENSIS_F_RNISH_1938",
+          "name": "Semiacontiodus iowensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Semiacontiodus",
+          "authorship": "(Fürnish 1938)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:393639"
+          },
+          "uuid": "e597ea08-4e88-44df-a560-45338e00eff3",
+          "children": []
+        },
+        {
+          "id": "SP_SEMIACONTIODUS_CORNUFORMIS_SERGEEVA_1963",
+          "name": "Semiacontiodus cornuformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Semiacontiodus",
+          "authorship": "(Sergeeva 1963)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:420812"
+          },
+          "uuid": "0a58d8c9-3e58-45c1-a03a-55f2b4187e8d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TERIDONTUS",
+      "name": "Teridontus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oneotodontidae",
+      "children": [
+        {
+          "id": "SP_TERIDONTUS_NAKAMURAI_NOGAMI_1967",
+          "name": "Teridontus nakamurai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teridontus",
+          "authorship": "(Nogami 1967)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:393740"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 4
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-1174": "txn:393538"
+  }
 }

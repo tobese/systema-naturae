@@ -3,7 +3,7 @@
   "name": "Astrocrinidae",
   "rank": "FAMILY",
   "appSlug": "astrocrinidae",
-  "speciesCount": 3,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_PENTREMITIDEA",
@@ -19,7 +19,8 @@
           "lineage": "Pentremitidea",
           "authorship": "Etheridge & Carpenter, 1882",
           "sourceIds": {
-            "gbif-backbone": "8463848"
+            "gbif-backbone": "8463848",
+            "checklistbank-1174": "txn:220072"
           },
           "children": []
         },
@@ -32,7 +33,8 @@
           "lineage": "Pentremitidea",
           "authorship": "De Verneuil, 1884",
           "sourceIds": {
-            "gbif-backbone": "8610216"
+            "gbif-backbone": "8610216",
+            "checklistbank-1174": "txn:220073"
           },
           "children": []
         },
@@ -45,13 +47,71 @@
           "lineage": "Pentremitidea",
           "authorship": "Etheridge & Carpenter, 1882",
           "sourceIds": {
-            "gbif-backbone": "8587612"
+            "gbif-backbone": "8587612",
+            "checklistbank-1174": "txn:220070"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "astrocrinidae"
+    },
+    {
+      "id": "GENUS_ASTROCRINUS",
+      "name": "Astrocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "astrocrinidae",
+      "children": [
+        {
+          "id": "SP_ASTROCRINUS_TETRAGONUS_AUSTIN_AND_AUSTIN_1843",
+          "name": "Astrocrinus tetragonus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrocrinus",
+          "authorship": "Austin and Austin 1843",
+          "sourceIds": {
+            "checklistbank-1174": "txn:221515"
+          },
+          "uuid": "baeb0439-5aa1-4a90-a889-baf0601bdde0"
+        },
+        {
+          "id": "SP_ASTROCRINUS_BENNIEI_ETHERIDGE_1878",
+          "name": "Astrocrinus benniei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrocrinus",
+          "authorship": "(Etheridge 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474040"
+          },
+          "uuid": "22331887-7669-4e9b-ae4f-8c25cf8d024e"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CERATOBLASTUS",
+      "name": "Ceratoblastus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "astrocrinidae",
+      "children": [
+        {
+          "id": "SP_CERATOBLASTUS_NANUS_WANNER_1940",
+          "name": "Ceratoblastus nanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratoblastus",
+          "authorship": "Wanner 1940",
+          "sourceIds": {
+            "checklistbank-1174": "txn:221703"
+          },
+          "uuid": "a7210c7a-7365-4871-9368-dedc1cd0a488"
+        }
+      ]
     }
   ],
   "genusCount": 1

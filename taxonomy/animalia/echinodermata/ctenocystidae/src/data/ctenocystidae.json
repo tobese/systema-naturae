@@ -3,7 +3,7 @@
   "name": "Ctenocystidae",
   "rank": "FAMILY",
   "appSlug": "ctenocystidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_CTENOCYSTIS",
@@ -19,7 +19,8 @@
           "lineage": "Ctenocystis",
           "authorship": "Ubaghs & Robison, 1988",
           "sourceIds": {
-            "gbif-backbone": "9026516"
+            "gbif-backbone": "9026516",
+            "checklistbank-1174": "txn:386788"
           },
           "children": []
         },
@@ -32,7 +33,8 @@
           "lineage": "Ctenocystis",
           "authorship": "Robison & Sprinkle, 1969",
           "sourceIds": {
-            "gbif-backbone": "8496023"
+            "gbif-backbone": "8496023",
+            "checklistbank-1174": "txn:231367"
           },
           "children": []
         },
@@ -65,7 +67,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ctenocystidae"
+    },
+    {
+      "id": "GENUS_PEMBROCYSTIS",
+      "name": "Pembrocystis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenocystidae",
+      "children": [
+        {
+          "id": "SP_PEMBROCYSTIS_GALLICA_DOM_NGUEZ_ALONSO_1999",
+          "name": "Pembrocystis gallica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pembrocystis",
+          "authorship": "Domínguez-Alonso 1999",
+          "sourceIds": {
+            "checklistbank-1174": "txn:515394"
+          },
+          "uuid": "7c234bd3-ad15-49e3-ae74-1fe8597447a0",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:231368"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Pycnosteroididae",
   "rank": "FAMILY",
   "appSlug": "pycnosteroididae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_MAGREBICHTHYS",
@@ -19,7 +19,8 @@
           "lineage": "Magrebichthys",
           "authorship": "Murray & Wilson, 2014",
           "sourceIds": {
-            "gbif-backbone": "8631879"
+            "gbif-backbone": "8631879",
+            "checklistbank-1174": "txn:297934"
           },
           "children": []
         }
@@ -48,7 +49,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pycnosteroididae"
+    },
+    {
+      "id": "GENUS_PYCNOSTEROIDES",
+      "name": "Pycnosteroides",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pycnosteroididae",
+      "children": [
+        {
+          "id": "SP_PYCNOSTEROIDES_LEVISPINOSUS_HAY_1903",
+          "name": "Pycnosteroides levispinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pycnosteroides",
+          "authorship": "(Hay 1903)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:439604"
+          },
+          "uuid": "712b7c8d-eedb-4653-adc2-e0550a0bed31",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "checklistbank-1174": "txn:297932"
+  }
 }

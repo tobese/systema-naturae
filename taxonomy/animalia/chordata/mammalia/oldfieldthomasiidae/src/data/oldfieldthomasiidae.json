@@ -3,7 +3,7 @@
   "name": "Oldfieldthomasiidae",
   "rank": "FAMILY",
   "appSlug": "oldfieldthomasiidae",
-  "speciesCount": 23,
+  "speciesCount": 25,
   "children": [
     {
       "id": "GENUS_DOLICHOSTYLODON",
@@ -19,7 +19,8 @@
           "lineage": "Dolichostylodon",
           "authorship": "Garcia-López & Powell, 2009",
           "sourceIds": {
-            "gbif-backbone": "8587322"
+            "gbif-backbone": "8587322",
+            "checklistbank-1174": "txn:246056"
           },
           "children": []
         }
@@ -386,6 +387,20 @@
             "gbif-backbone": "9539479"
           },
           "children": []
+        },
+        {
+          "id": "SP_COLBERTIA_MAGELLANICA_PRICE_AND_PAULA_COUTO_1950",
+          "name": "Colbertia magellanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colbertia",
+          "authorship": "(Price and Paula Couto 1950)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:247105"
+          },
+          "uuid": "fd279aad-3369-425b-b870-aeac6c3d9a92",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -456,7 +471,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oldfieldthomasiidae"
+    },
+    {
+      "id": "GENUS_ITABORAITHERIUM",
+      "name": "Itaboraitherium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oldfieldthomasiidae",
+      "children": [
+        {
+          "id": "SP_ITABORAITHERIUM_ATAVUM_COUTO_1954",
+          "name": "Itaboraitherium atavum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Itaboraitherium",
+          "authorship": "Couto 1954",
+          "sourceIds": {
+            "checklistbank-1174": "txn:471319"
+          },
+          "uuid": "a15fe521-50e6-43e4-a02e-805e6b5f40f0",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 17
+  "genusCount": 18,
+  "sourceIds": {
+    "checklistbank-1174": "txn:43341"
+  }
 }

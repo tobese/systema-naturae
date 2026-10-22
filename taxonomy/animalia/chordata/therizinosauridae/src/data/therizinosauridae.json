@@ -3,7 +3,7 @@
   "name": "Therizinosauridae",
   "rank": "FAMILY",
   "appSlug": "therizinosauridae",
-  "speciesCount": 12,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_ERLIANSAURUS",
@@ -85,7 +85,8 @@
           "lineage": "Enigmosaurus",
           "authorship": "Barsbold & Perle, 1983",
           "sourceIds": {
-            "gbif-backbone": "4966967"
+            "gbif-backbone": "4966967",
+            "checklistbank-1174": "txn:68385"
           },
           "children": []
         }
@@ -195,7 +196,8 @@
           "lineage": "Nothronychus",
           "authorship": "Kirkland & Wolfe, 2001",
           "sourceIds": {
-            "gbif-backbone": "4966976"
+            "gbif-backbone": "4966976",
+            "checklistbank-1174": "txn:66508"
           },
           "children": []
         },
@@ -243,14 +245,41 @@
           "lineage": "Nanshiungosaurus",
           "authorship": "Dong & Yu, 1997",
           "sourceIds": {
-            "gbif-backbone": "4966970"
+            "gbif-backbone": "4966970",
+            "checklistbank-1174": "txn:58885"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "therizinosauridae"
+    },
+    {
+      "id": "GENUS_DUONYCHUS",
+      "name": "Duonychus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "therizinosauridae",
+      "children": [
+        {
+          "id": "SP_DUONYCHUS_TSOGTBAATARI_KOBAYASHI_ET_AL_2025",
+          "name": "Duonychus tsogtbaatari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Duonychus",
+          "authorship": "Kobayashi et al. 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:506063"
+          },
+          "uuid": "73fd2660-c843-4307-810c-41481b7d4232",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 10
+  "genusCount": 11,
+  "sourceIds": {
+    "checklistbank-1174": "txn:38552"
+  }
 }

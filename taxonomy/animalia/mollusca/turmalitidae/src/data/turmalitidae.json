@@ -3,7 +3,7 @@
   "name": "Turmalitidae",
   "rank": "FAMILY",
   "appSlug": "turmalitidae",
-  "speciesCount": 1,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_BICINGULITES",
@@ -19,14 +19,69 @@
           "lineage": "Bicingulites",
           "authorship": "Wei, Zong & Gong, 2019",
           "sourceIds": {
-            "gbif-backbone": "10622922"
+            "gbif-backbone": "10622922",
+            "checklistbank-1174": "txn:509610"
           },
+          "children": []
+        },
+        {
+          "id": "SP_BICINGULITES_KRASNOVI_LYASHENKO_1969",
+          "name": "Bicingulites krasnovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bicingulites",
+          "authorship": "Lyashenko 1969",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509611"
+          },
+          "uuid": "3fad3320-6d4e-42fb-a3d5-b5c4ace85d16",
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "turmalitidae"
+    },
+    {
+      "id": "GENUS_LONCHIDIUM",
+      "name": "Lonchidium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "turmalitidae",
+      "children": [
+        {
+          "id": "SP_LONCHIDIUM_INAEQUALE_D_EICHWALD_1860",
+          "name": "Lonchidium inaequale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lonchidium",
+          "authorship": "d'Eichwald 1860",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509608"
+          },
+          "uuid": "098386d4-a11f-4387-9e91-7c33d09ec15b",
+          "children": []
+        },
+        {
+          "id": "SP_LONCHIDIUM_CYCLICUS_WEI_ET_AL_2019",
+          "name": "Lonchidium cyclicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lonchidium",
+          "authorship": "Wei et al. 2019",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509609"
+          },
+          "uuid": "3c3525d6-4767-4b73-9b0e-83dea4644df3",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:119356"
+  }
 }

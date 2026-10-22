@@ -3,7 +3,7 @@
   "name": "Cothurnocystidae",
   "rank": "FAMILY",
   "appSlug": "cothurnocystidae",
-  "speciesCount": 12,
+  "speciesCount": 16,
   "children": [
     {
       "id": "GENUS_CARDIOCYSTELLA",
@@ -41,7 +41,8 @@
           "lineage": "Ampelocarpus",
           "authorship": "Lefebvre & Vizcaino, 1999",
           "sourceIds": {
-            "gbif-backbone": "11127933"
+            "gbif-backbone": "11127933",
+            "checklistbank-1174": "txn:371254"
           },
           "children": []
         }
@@ -215,6 +216,20 @@
             "gbif-backbone": "8450844"
           },
           "children": []
+        },
+        {
+          "id": "SP_ARCHAEOCOTHURNUS_BIFIDA_UBAGHS_AND_ROBISON_1988",
+          "name": "Archaeocothurnus bifida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeocothurnus",
+          "authorship": "(Ubaghs and Robison 1988)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:311070"
+          },
+          "uuid": "c59cdcc2-f0ca-4525-bfd3-bf6f1037512d",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -234,14 +249,87 @@
           "lineage": "Ponticulocarpus",
           "authorship": "Sumrall & Sprinkle, 1999",
           "sourceIds": {
-            "gbif-backbone": "8625023"
+            "gbif-backbone": "8625023",
+            "checklistbank-1174": "txn:205067"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cothurnocystidae"
+    },
+    {
+      "id": "GENUS_THORALICYSTIS",
+      "name": "Thoralicystis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cothurnocystidae",
+      "children": [
+        {
+          "id": "SP_THORALICYSTIS_UBAGHSI_LEFEBVRE_AND_VIZCAINO_1999",
+          "name": "Thoralicystis ubaghsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thoralicystis",
+          "authorship": "Lefebvre and Vizcaino 1999",
+          "sourceIds": {
+            "checklistbank-1174": "txn:371259"
+          },
+          "uuid": "57377ee1-b340-4c5f-bf14-369ce09fa38f",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SCOTIAECYSTIS",
+      "name": "Scotiaecystis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cothurnocystidae",
+      "children": [
+        {
+          "id": "SP_SCOTIAECYSTIS_GUILLOUI_LEFEBVRE_AND_VIZCAINO_1999",
+          "name": "Scotiaecystis guilloui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scotiaecystis",
+          "authorship": "Lefebvre and Vizcaino 1999",
+          "sourceIds": {
+            "checklistbank-1174": "txn:371260"
+          },
+          "uuid": "ddbae734-0f2b-4b14-bb9f-f8fe6c289ea6",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NEVADAECYSTIS",
+      "name": "Nevadaecystis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cothurnocystidae",
+      "children": [
+        {
+          "id": "SP_NEVADAECYSTIS_AMERICANA_UBAGHS_1963",
+          "name": "Nevadaecystis americana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nevadaecystis",
+          "authorship": "(Ubaghs 1963)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:386798"
+          },
+          "uuid": "adc3c75b-6185-472a-815f-b89b3f95bd4a",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 9
+  "genusCount": 12,
+  "sourceIds": {
+    "checklistbank-1174": "txn:64824"
+  }
 }

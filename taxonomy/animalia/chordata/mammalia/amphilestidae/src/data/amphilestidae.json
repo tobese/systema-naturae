@@ -3,7 +3,7 @@
   "name": "Amphilestidae",
   "rank": "FAMILY",
   "appSlug": "amphilestidae",
-  "speciesCount": 20,
+  "speciesCount": 23,
   "children": [
     {
       "id": "GENUS_KEMCHUGIA",
@@ -80,7 +80,8 @@
           "lineage": "Gobiconodon",
           "authorship": "Jenkins & Schaff, 1988",
           "sourceIds": {
-            "gbif-backbone": "4975205"
+            "gbif-backbone": "4975205",
+            "checklistbank-1174": "txn:46675"
           },
           "children": []
         },
@@ -106,7 +107,8 @@
           "lineage": "Gobiconodon",
           "authorship": "Butler & Sigogneau-Russel, 2016",
           "sourceIds": {
-            "gbif-backbone": "9517676"
+            "gbif-backbone": "9517676",
+            "checklistbank-1174": "txn:347499"
           },
           "children": []
         },
@@ -233,7 +235,8 @@
           "lineage": "Klamelia",
           "authorship": "Chow & Rich, 1984",
           "sourceIds": {
-            "gbif-backbone": "4975210"
+            "gbif-backbone": "4975210",
+            "checklistbank-1174": "txn:140286"
           },
           "children": []
         }
@@ -321,8 +324,23 @@
           "lineage": "Phascolotherium",
           "authorship": "Butler & Sigogneau-Russel, 2016",
           "sourceIds": {
-            "gbif-backbone": "9514077"
+            "gbif-backbone": "9514077",
+            "checklistbank-1174": "txn:347498"
           },
+          "children": []
+        },
+        {
+          "id": "SP_PHASCOLOTHERIUM_BUCKLANDI_BRODERIP_1828",
+          "name": "Phascolotherium bucklandi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phascolotherium",
+          "authorship": "(Broderip 1828)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:203413"
+          },
+          "uuid": "95cd960d-7e55-4f27-aa2d-bee709603367",
           "children": []
         }
       ],
@@ -372,7 +390,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amphilestidae"
+    },
+    {
+      "id": "GENUS_COMODON",
+      "name": "Comodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphilestidae",
+      "children": [
+        {
+          "id": "SP_COMODON_GIDLEYI_SIMPSON_1925",
+          "name": "Comodon gidleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Comodon",
+          "authorship": "(Simpson 1925)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:103930"
+          },
+          "uuid": "578f460b-cb09-4558-98a7-1f11b2b281c0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_AMPHILESTES",
+      "name": "Amphilestes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphilestidae",
+      "children": [
+        {
+          "id": "SP_AMPHILESTES_BRODERIPII_OWEN_1846",
+          "name": "Amphilestes broderipii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphilestes",
+          "authorship": "(Owen 1846)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:207502"
+          },
+          "uuid": "f982747c-cfe9-441c-96d5-b3ceb9ff8504",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 12
+  "genusCount": 14,
+  "sourceIds": {
+    "checklistbank-1174": "txn:39754"
+  }
 }

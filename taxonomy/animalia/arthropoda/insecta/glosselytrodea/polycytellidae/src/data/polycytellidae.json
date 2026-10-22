@@ -3,7 +3,7 @@
   "name": "Polycytellidae",
   "rank": "FAMILY",
   "appSlug": "polycytellidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_MOLTENOJURINA",
@@ -19,14 +19,40 @@
           "lineage": "Moltenojurina",
           "authorship": "Béthoux & Anderson, 2021",
           "sourceIds": {
-            "gbif-backbone": "11463246"
+            "gbif-backbone": "11463246",
+            "checklistbank-1174": "txn:459838"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polycytellidae"
+    },
+    {
+      "id": "GENUS_POLYCYTELLA",
+      "name": "Polycytella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "polycytellidae",
+      "children": [
+        {
+          "id": "SP_POLYCYTELLA_RASNITSYNI_B_THOUX_AND_ANDERSON_2021",
+          "name": "Polycytella rasnitsyni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polycytella",
+          "authorship": "Béthoux and Anderson 2021",
+          "sourceIds": {
+            "checklistbank-1174": "txn:459836"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-1174": "txn:183212"
+  }
 }

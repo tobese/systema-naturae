@@ -3,7 +3,7 @@
   "name": "Phlyctaeniidae",
   "rank": "FAMILY",
   "appSlug": "phlyctaeniidae",
-  "speciesCount": 37,
+  "speciesCount": 39,
   "children": [
     {
       "id": "GENUS_ARCTASPIS",
@@ -316,7 +316,8 @@
           "lineage": "Grifftaylor",
           "authorship": "Young & Long, 2014",
           "sourceIds": {
-            "gbif-backbone": "11180603"
+            "gbif-backbone": "11180603",
+            "checklistbank-1174": "txn:402687"
           },
           "children": []
         }
@@ -494,6 +495,20 @@
             "gbif-backbone": "11138529"
           },
           "children": []
+        },
+        {
+          "id": "SP_PHLYCTAENIUS_ACADICA_TRAQUAIR_1890",
+          "name": "Phlyctaenius acadica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phlyctaenius",
+          "authorship": "(Traquair 1890)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:259458"
+          },
+          "uuid": "05068a7c-f76c-4a34-b978-b77d7dbd6e4e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -649,14 +664,41 @@
           "lineage": "Barwickosteus",
           "authorship": "Young & Long, 2014",
           "sourceIds": {
-            "gbif-backbone": "11178292"
+            "gbif-backbone": "11178292",
+            "checklistbank-1174": "txn:402685"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phlyctaeniidae"
+    },
+    {
+      "id": "GENUS_STIPATOSTEUS",
+      "name": "Stipatosteus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "phlyctaeniidae",
+      "children": [
+        {
+          "id": "SP_STIPATOSTEUS_SVIDUNOVITCHI_PLAX_AND_NEWMAN_2020",
+          "name": "Stipatosteus svidunovitchi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stipatosteus",
+          "authorship": "Plax and Newman 2020",
+          "sourceIds": {
+            "checklistbank-1174": "txn:517664"
+          },
+          "uuid": "e70d599e-2a38-4929-83c8-c4acac2ace08",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 19
+  "genusCount": 20,
+  "sourceIds": {
+    "checklistbank-1174": "txn:347231"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Hazeliidae",
   "rank": "FAMILY",
   "appSlug": "hazeliidae",
-  "speciesCount": 17,
+  "speciesCount": 22,
   "children": [
     {
       "id": "GENUS_FALOSPONGIA",
@@ -32,7 +32,8 @@
           "lineage": "Falospongia",
           "authorship": "Rigby & Collins, 2004",
           "sourceIds": {
-            "gbif-backbone": "8471689"
+            "gbif-backbone": "8471689",
+            "checklistbank-1174": "txn:208517"
           },
           "children": []
         }
@@ -167,7 +168,8 @@
           "lineage": "Hazelia",
           "authorship": "Rigby & Collins, 2004",
           "sourceIds": {
-            "gbif-backbone": "8659674"
+            "gbif-backbone": "8659674",
+            "checklistbank-1174": "txn:208514"
           },
           "children": []
         },
@@ -182,6 +184,34 @@
           "sourceIds": {
             "gbif-backbone": "8577544"
           },
+          "children": []
+        },
+        {
+          "id": "SP_HAZELIA_WALCOTTI_RESSER_AND_HOWELL_1938",
+          "name": "Hazelia walcotti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hazelia",
+          "authorship": "(Resser and Howell 1938)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:206833"
+          },
+          "uuid": "8f311fc4-d3fc-41a0-b1ef-f22e13704e55",
+          "children": []
+        },
+        {
+          "id": "SP_HAZELIA_DIGNATA_WALCOTT_1920",
+          "name": "Hazelia dignata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hazelia",
+          "authorship": "(Walcott 1920)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:208509"
+          },
+          "uuid": "16686899-c8d9-4377-84dd-4369bfd3cf86",
           "children": []
         }
       ],
@@ -284,11 +314,74 @@
             "gbif-backbone": "8679793"
           },
           "children": []
+        },
+        {
+          "id": "SP_CRUMILLOSPONGIA_FRONDOSA_WALCOTT_1919",
+          "name": "Crumillospongia frondosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crumillospongia",
+          "authorship": "(Walcott 1919)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:208518"
+          },
+          "uuid": "6e38a341-5790-44f6-b6d2-36b9aa61885a",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hazeliidae"
+    },
+    {
+      "id": "GENUS_KEITHOSPONGOS",
+      "name": "Keithospongos",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hazeliidae",
+      "children": [
+        {
+          "id": "SP_KEITHOSPONGOS_LORICATUS_KOLESNIKOV_ET_AL_2024",
+          "name": "Keithospongos loricatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Keithospongos",
+          "authorship": "Kolesnikov et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509404"
+          },
+          "uuid": "34132323-250b-41e2-9d08-1d3c75c2938d",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LASIOCLADIA",
+      "name": "Lasiocladia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hazeliidae",
+      "children": [
+        {
+          "id": "SP_LASIOCLADIA_COMPRESSA_HINDE_1883",
+          "name": "Lasiocladia compressa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lasiocladia",
+          "authorship": "Hinde 1883",
+          "sourceIds": {
+            "checklistbank-1174": "txn:518762"
+          },
+          "uuid": "8e5cf42a-ff26-45c3-919a-b1b14b83c6c9",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:205702"
+  }
 }

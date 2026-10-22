@@ -3,7 +3,7 @@
   "name": "Caseodontidae",
   "rank": "FAMILY",
   "appSlug": "caseodontidae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_FADENIA",
@@ -45,7 +45,8 @@
           "lineage": "Fadenia",
           "authorship": "Mutter & Neuman, 2008",
           "sourceIds": {
-            "gbif-backbone": "8498503"
+            "gbif-backbone": "8498503",
+            "checklistbank-1174": "txn:209100"
           },
           "children": []
         }
@@ -146,8 +147,23 @@
           "lineage": "Caseodus",
           "authorship": "Mutter & Neuman, 2008",
           "sourceIds": {
-            "gbif-backbone": "8622282"
+            "gbif-backbone": "8622282",
+            "checklistbank-1174": "txn:209099"
           },
+          "children": []
+        },
+        {
+          "id": "SP_CASEODUS_BASALIS_COPE_1894",
+          "name": "Caseodus basalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caseodus",
+          "authorship": "(Cope 1894)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:244971"
+          },
+          "uuid": "c63b4121-d98a-4448-8551-298290f4c135",
           "children": []
         }
       ],
@@ -175,7 +191,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "caseodontidae"
+    },
+    {
+      "id": "GENUS_ERIKODUS",
+      "name": "Erikodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "caseodontidae",
+      "children": [
+        {
+          "id": "SP_ERIKODUS_GROENLANDICUS_NIELSEN_1932",
+          "name": "Erikodus groenlandicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Erikodus",
+          "authorship": "(Nielsen 1932)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:209397"
+          },
+          "uuid": "bf96e706-9f9d-4523-ad43-f73827410f59",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-1174": "txn:209098"
+  }
 }

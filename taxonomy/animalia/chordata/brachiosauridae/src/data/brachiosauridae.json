@@ -3,7 +3,7 @@
   "name": "Brachiosauridae",
   "rank": "FAMILY",
   "appSlug": "brachiosauridae",
-  "speciesCount": 20,
+  "speciesCount": 22,
   "children": [
     {
       "id": "GENUS_SORIATITAN",
@@ -19,7 +19,8 @@
           "lineage": "Soriatitan",
           "authorship": "Royo-Torres, Fuentes, Meijide, Meijide-Fuentes & Meijide-Fuentes, 2017",
           "sourceIds": {
-            "gbif-backbone": "9618674"
+            "gbif-backbone": "9618674",
+            "checklistbank-1174": "txn:359458"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Qiaowanlong",
           "authorship": "You & Li, 2009",
           "sourceIds": {
-            "gbif-backbone": "8483368"
+            "gbif-backbone": "8483368",
+            "checklistbank-139831": "804324"
           },
           "children": []
         }
@@ -63,7 +65,8 @@
           "lineage": "Abydosaurus",
           "authorship": "Chure et al., 2010",
           "sourceIds": {
-            "gbif-backbone": "8631286"
+            "gbif-backbone": "8631286",
+            "wikispecies": "Abydosaurus_mcintoshi"
           },
           "children": []
         }
@@ -120,7 +123,9 @@
           "lineage": "Brachiosaurus",
           "authorship": "(Riggs, 1903)",
           "sourceIds": {
-            "gbif-backbone": "4967320"
+            "gbif-backbone": "4967320",
+            "checklistbank-139831": "542628",
+            "wikispecies": "Brachiosaurus_altithorax"
           },
           "children": []
         },
@@ -309,7 +314,8 @@
           "lineage": "Vouivria",
           "authorship": "Mannion, Allain & Moine, 2017",
           "sourceIds": {
-            "gbif-backbone": "9298048"
+            "gbif-backbone": "9298048",
+            "checklistbank-1174": "txn:352538"
           },
           "children": []
         }
@@ -417,7 +423,59 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "brachiosauridae"
+    },
+    {
+      "id": "GENUS_LUSOTITAN",
+      "name": "Lusotitan",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachiosauridae",
+      "children": [
+        {
+          "id": "SP_LUSOTITAN_ATALAIENSIS_LAPPARENT_AND_ZBYSZEWSKI_1957",
+          "name": "Lusotitan atalaiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lusotitan",
+          "authorship": "(Lapparent and Zbyszewski 1957)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:65348",
+            "checklistbank-139831": "542625"
+          },
+          "uuid": "212d05f0-978c-40d5-8788-f76b9accf718",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GIRAFFATITAN",
+      "name": "Giraffatitan",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachiosauridae",
+      "children": [
+        {
+          "id": "SP_GIRAFFATITAN_BRANCAI_JANENSCH_1914",
+          "name": "Giraffatitan brancai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Giraffatitan",
+          "authorship": "(Janensch 1914)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:64501",
+            "checklistbank-139831": "804320"
+          },
+          "uuid": "51cf068e-6e1a-41ed-8bef-2ab263550014",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 17
+  "genusCount": 19,
+  "sourceIds": {
+    "wikispecies": "Brachiosauridae",
+    "checklistbank-1174": "txn:38673"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Wukongopteridae",
   "rank": "FAMILY",
   "appSlug": "wukongopteridae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_KUNPENGOPTERUS",
@@ -19,7 +19,9 @@
           "lineage": "Kunpengopterus",
           "authorship": "Zhou, Pêgas, Ma, Han, Wei, Shen, Leal, Bonde, Kobayashi, Lautenschlager & Ji, 2021",
           "sourceIds": {
-            "gbif-backbone": "11150040"
+            "gbif-backbone": "11150040",
+            "checklistbank-1174": "txn:435924",
+            "wikispecies": "Kunpengopterus_antipollicatus"
           },
           "children": []
         },
@@ -32,7 +34,8 @@
           "lineage": "Kunpengopterus",
           "authorship": "Wang et al., 2010",
           "sourceIds": {
-            "gbif-backbone": "8531990"
+            "gbif-backbone": "8531990",
+            "wikispecies": "Kunpengopterus_sinensis"
           },
           "children": []
         }
@@ -54,7 +57,29 @@
           "lineage": "Wukongopterus",
           "authorship": "Wang et al., 2009",
           "sourceIds": {
-            "gbif-backbone": "8645662"
+            "gbif-backbone": "8645662",
+            "wikispecies": "Wukongopterus_lii"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "wukongopteridae"
+    },
+    {
+      "id": "GENUS_DARWINOPTERUS",
+      "name": "Darwinopterus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DARWINOPTERUS_MODULARIS",
+          "name": "Darwinopterus modularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Darwinopterus",
+          "sourceIds": {
+            "wikispecies": "Darwinopterus_modularis"
           },
           "children": []
         }
@@ -63,5 +88,9 @@
       "lineage": "wukongopteridae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Wukongopteridae",
+    "checklistbank-1174": "txn:157361"
+  }
 }

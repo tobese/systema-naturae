@@ -28,7 +28,8 @@
           "lineage": "Eschrichtius",
           "authorship": "Kimura, Hasegawa & Kohno, 2018",
           "sourceIds": {
-            "gbif-backbone": "9637177"
+            "gbif-backbone": "9637177",
+            "checklistbank-1174": "txn:364750"
           },
           "children": [],
           "uuid": "dc7a2ce6-1537-533-a9c-72aa4582085528"
@@ -74,7 +75,8 @@
           "lineage": "Archaeschrichtius",
           "authorship": "Bisconti & Varola, 2006",
           "sourceIds": {
-            "gbif-backbone": "4970932"
+            "gbif-backbone": "4970932",
+            "checklistbank-1174": "txn:114365"
           },
           "children": [],
           "uuid": "63cb3528-88ef-5d3-bef-1fa5cee0d0945e"
@@ -97,7 +99,8 @@
           "lineage": "Gricetoides",
           "authorship": "Whitmore & Kaltenbach, 2008",
           "sourceIds": {
-            "gbif-backbone": "4970929"
+            "gbif-backbone": "4970929",
+            "checklistbank-1174": "txn:114707"
           },
           "children": [],
           "uuid": "5ef53e70-30b2-5cf-88b-c743fd5a0c461c"
@@ -105,11 +108,60 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eschrichtiidae"
+    },
+    {
+      "id": "GENUS_ESCHRICHTIOIDES",
+      "name": "Eschrichtioides",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eschrichtiidae",
+      "children": [
+        {
+          "id": "SP_ESCHRICHTIOIDES_GASTALDII_STROBEL_1881",
+          "name": "Eschrichtioides gastaldii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eschrichtioides",
+          "authorship": "(Strobel 1881)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:68449"
+          },
+          "uuid": "7877ef24-081d-45c6-b8d3-6494b03dcc6e",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GLAUCABALAENA",
+      "name": "Glaucabalaena",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eschrichtiidae",
+      "children": [
+        {
+          "id": "SP_GLAUCABALAENA_INOPINATA_BISCONTI_ET_AL_2024",
+          "name": "Glaucabalaena inopinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glaucabalaena",
+          "authorship": "Bisconti et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:497989"
+          },
+          "uuid": "f68e7563-fd5b-4473-996b-f8f86b237031",
+          "children": []
+        }
+      ]
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 7,
   "appSlug": "eschrichtiidae",
   "sourcedFrom": "worms",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 4
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-1174": "txn:42976"
+  }
 }

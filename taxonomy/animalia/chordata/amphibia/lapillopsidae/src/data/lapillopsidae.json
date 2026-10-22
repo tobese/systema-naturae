@@ -3,7 +3,7 @@
   "name": "Lapillopsidae",
   "rank": "FAMILY",
   "appSlug": "lapillopsidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_LAPILLOPSIS",
@@ -19,7 +19,8 @@
           "lineage": "Lapillopsis",
           "authorship": "Warren & Hutchinson, 1990",
           "sourceIds": {
-            "gbif-backbone": "4975551"
+            "gbif-backbone": "4975551",
+            "checklistbank-1174": "txn:150341"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Manubrantlia",
           "authorship": "Yates & Sengupta, 2002",
           "sourceIds": {
-            "gbif-backbone": "8659414"
+            "gbif-backbone": "8659414",
+            "checklistbank-1174": "txn:251619"
           },
           "children": []
         }
@@ -70,7 +72,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lapillopsidae"
+    },
+    {
+      "id": "GENUS_RHIGERPETON",
+      "name": "Rhigerpeton",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lapillopsidae",
+      "children": [
+        {
+          "id": "SP_RHIGERPETON_ISBELLI_GEE_ET_AL_2023",
+          "name": "Rhigerpeton isbelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhigerpeton",
+          "authorship": "Gee et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474394"
+          },
+          "uuid": "c7b07ac6-5f2f-498c-aa6b-51087458dc22",
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:251283"
+  }
 }
