@@ -3,7 +3,7 @@
   "name": "Aulaceratidae",
   "rank": "FAMILY",
   "appSlug": "aulaceratidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_QUASIAULACERA",
@@ -19,7 +19,8 @@
           "lineage": "Quasiaulacera",
           "authorship": "Copper, Stock & Jin, 2013",
           "sourceIds": {
-            "gbif-backbone": "8630665"
+            "gbif-backbone": "8630665",
+            "checklistbank-1174": "txn:309023"
           },
           "children": []
         },
@@ -39,6 +40,63 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aulaceratidae"
+    },
+    {
+      "id": "GENUS_AULACERA",
+      "name": "Aulacera",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulaceratidae",
+      "children": [
+        {
+          "id": "SP_AULACERA_PLUMMERI_GALLOWAY_AND_ST_JEAN_1957",
+          "name": "Aulacera plummeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacera",
+          "authorship": "Galloway and St Jean 1957",
+          "sourceIds": {
+            "checklistbank-1174": "txn:328906"
+          },
+          "uuid": "5ba0a34c-40e6-48b8-8ad2-2667d671b1ad"
+        },
+        {
+          "id": "SP_AULACERA_RADIATA_GALLOWAY_AND_ST_JEAN_1961",
+          "name": "Aulacera radiata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacera",
+          "authorship": "Galloway and St Jean 1961",
+          "sourceIds": {
+            "checklistbank-1174": "txn:328911"
+          },
+          "uuid": "b116d42e-f354-4676-a191-9577be027c6c"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THAMNOBEATRICEA",
+      "name": "Thamnobeatricea",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulaceratidae",
+      "children": [
+        {
+          "id": "SP_THAMNOBEATRICEA_PARALLELA_RAYMOND_1931",
+          "name": "Thamnobeatricea parallela",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnobeatricea",
+          "authorship": "Raymond 1931",
+          "sourceIds": {
+            "checklistbank-1174": "txn:376219"
+          },
+          "uuid": "0e968eb6-cb12-4cfd-b8d3-6938f4b2b207"
+        }
+      ]
     }
   ],
   "genusCount": 1

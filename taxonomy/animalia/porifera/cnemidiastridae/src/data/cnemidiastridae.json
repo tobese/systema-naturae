@@ -3,7 +3,7 @@
   "name": "Cnemidiastridae",
   "rank": "FAMILY",
   "appSlug": "cnemidiastridae",
-  "speciesCount": 6,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_LITHOSTROBILUS",
@@ -41,7 +41,8 @@
           "lineage": "Cnemidiastrum",
           "authorship": "Brimaud & Vachard, 1986",
           "sourceIds": {
-            "gbif-backbone": "8628761"
+            "gbif-backbone": "8628761",
+            "checklistbank-1174": "txn:198447"
           },
           "children": []
         },
@@ -57,6 +58,32 @@
             "gbif-backbone": "8651375"
           },
           "children": []
+        },
+        {
+          "id": "SP_CNEMIDIASTRUM_RETICULATUS_LAGNEAU_HERENGER_1962",
+          "name": "Cnemidiastrum reticulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cnemidiastrum",
+          "authorship": "(Lagneau-Herenger 1962)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:191524"
+          },
+          "uuid": "72f4b88a-c0b0-47d2-a535-e0643f1abb38"
+        },
+        {
+          "id": "SP_CNEMIDIASTRUM_STELLATUM_GOLDFUSS_1826",
+          "name": "Cnemidiastrum stellatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cnemidiastrum",
+          "authorship": "(Goldfuss 1826)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:195289"
+          },
+          "uuid": "83914376-aac3-45e3-b240-0bb133e597a8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -111,13 +138,36 @@
           "lineage": "Cucumaltina",
           "authorship": "Brimaud & Vachard, 1986",
           "sourceIds": {
-            "gbif-backbone": "8569767"
+            "gbif-backbone": "8569767",
+            "checklistbank-1174": "txn:198448"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cnemidiastridae"
+    },
+    {
+      "id": "GENUS_CNEMOPELTIA",
+      "name": "Cnemopeltia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cnemidiastridae",
+      "children": [
+        {
+          "id": "SP_CNEMOPELTIA_RIMULOSUM_GOLDFUSS_1826",
+          "name": "Cnemopeltia rimulosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cnemopeltia",
+          "authorship": "(Goldfuss 1826)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:195285"
+          },
+          "uuid": "365d1d04-dd68-4eae-8883-b9824106d501"
+        }
+      ]
     }
   ],
   "genusCount": 4

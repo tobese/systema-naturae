@@ -3,7 +3,7 @@
   "name": "Choiidae",
   "rank": "FAMILY",
   "appSlug": "choiidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_ALLANTOSPONGIA",
@@ -19,7 +19,8 @@
           "lineage": "Allantospongia",
           "authorship": "Rigby & Hou, 1995",
           "sourceIds": {
-            "gbif-backbone": "8600913"
+            "gbif-backbone": "8600913",
+            "checklistbank-1174": "txn:206765"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Choiaella",
           "authorship": "Rigby & Hou, 1995",
           "sourceIds": {
-            "gbif-backbone": "8680178"
+            "gbif-backbone": "8680178",
+            "checklistbank-1174": "txn:206764"
           },
           "children": []
         },
@@ -118,6 +120,19 @@
             "gbif-backbone": "8547800"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHOIA_HINDEI_DAWSON_1896",
+          "name": "Choia hindei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Choia",
+          "authorship": "(Dawson 1896)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:206751"
+          },
+          "uuid": "262dba64-e6b4-4578-baa7-360f0d70191d"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -144,6 +159,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "choiidae"
+    },
+    {
+      "id": "GENUS_LENICA",
+      "name": "Lenica",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "choiidae",
+      "children": [
+        {
+          "id": "SP_LENICA_UNICA_GORYANSKIY_1977",
+          "name": "Lenica unica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lenica",
+          "authorship": "Goryanskiy 1977",
+          "sourceIds": {
+            "checklistbank-1174": "txn:206755"
+          },
+          "uuid": "23bd6283-bb4f-4f55-aeee-db896a2c4181"
+        }
+      ]
     }
   ],
   "genusCount": 4
