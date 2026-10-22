@@ -2575,7 +2575,8 @@
           "sourceIds": {
             "col": [
               "DZ6CM"
-            ]
+            ],
+            "gbif-backbone": "8645911"
           },
           "authorityIds": "col:DZ6CM",
           "description": "Haglopsis brodiei is a haglidae species found in its native region."
@@ -2633,6 +2634,19 @@
           },
           "authorityIds": "col:L2P8Z",
           "description": "Sinohagla pleioneura is a haglidae species found in its native region."
+        },
+        {
+          "id": "SP_SINOHAGLA_ANTHOIDES_LINNAEUS_1965",
+          "name": "Sinohagla anthoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sinohagla",
+          "authorship": "Linnaeus, 1965",
+          "sourceIds": {
+            "gbif-backbone": "4402255"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2754,16 +2768,60 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Haglidae"
+    },
+    {
+      "id": "GENUS_ARCHAEOHAGLA",
+      "name": "Archaeohagla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAEOHAGLA_SINENSIS_LINNAEUS_1965",
+          "name": "Archaeohagla sinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeohagla",
+          "authorship": "Linnaeus, 1965",
+          "sourceIds": {
+            "gbif-backbone": "4402271"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "†haglidae"
+    },
+    {
+      "id": "GENUS_MACROVOLIOPUS",
+      "name": "Macrovoliopus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACROVOLIOPUS_DECLIVIS_GOROCHOV_1986",
+          "name": "Macrovoliopus declivis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrovoliopus",
+          "authorship": "Gorochov, 1986",
+          "sourceIds": {
+            "gbif-backbone": "8553487"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "†haglidae"
     }
   ],
-  "speciesCount": 107,
+  "speciesCount": 110,
   "appSlug": "haglidae",
   "lineage": "Ensifera > Hagloidea",
   "continents": [
     "Asia",
     "Australia"
   ],
-  "genusCount": 31,
+  "genusCount": 83,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
