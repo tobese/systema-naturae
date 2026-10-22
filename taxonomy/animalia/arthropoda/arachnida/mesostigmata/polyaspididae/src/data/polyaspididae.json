@@ -3,7 +3,7 @@
   "name": "Polyaspididae",
   "rank": "FAMILY",
   "appSlug": "polyaspididae",
-  "speciesCount": 41,
+  "speciesCount": 43,
   "children": [
     {
       "id": "GENUS_TRACHYTES",
@@ -422,7 +422,8 @@
           "lineage": "Trachytes",
           "authorship": "(C.L.Koch, 1841)",
           "sourceIds": {
-            "gbif-backbone": "4549759"
+            "gbif-backbone": "4549759",
+            "checklistbank-139831": "1639383"
           },
           "children": []
         }
@@ -501,7 +502,8 @@
           "lineage": "Polyaspis",
           "authorship": "Berlese, 1881",
           "sourceIds": {
-            "gbif-backbone": "6892203"
+            "gbif-backbone": "6892203",
+            "checklistbank-139831": "263482"
           },
           "children": []
         },
@@ -573,6 +575,39 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polyaspididae"
+    },
+    {
+      "id": "GENUS_CALOTRACHYTES",
+      "name": "Calotrachytes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "polyaspididae",
+      "children": [
+        {
+          "id": "SP_CALOTRACHYTES_SCLEROPHYLLUS",
+          "name": "Calotrachytes sclerophyllus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calotrachytes",
+          "sourceIds": {
+            "checklistbank-139831": "387033"
+          },
+          "uuid": "d0fbd1b2-35f2-4034-b26b-ed922abd2f50"
+        },
+        {
+          "id": "SP_CALOTRACHYTES_FIMBRIATIPES",
+          "name": "Calotrachytes fimbriatipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calotrachytes",
+          "sourceIds": {
+            "checklistbank-139831": "387045"
+          },
+          "uuid": "79aba4f6-0cf6-42bb-a985-cc1a048649ec"
+        }
+      ]
     }
   ],
   "genusCount": 4
