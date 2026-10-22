@@ -3,7 +3,7 @@
   "name": "Pengornithidae",
   "rank": "FAMILY",
   "appSlug": "pengornithidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_CHIAPPEAVIS",
@@ -19,7 +19,8 @@
           "lineage": "Chiappeavis",
           "authorship": "O'Connor, Wang, Zheng, Hu, Zhang & Zhou, 2016",
           "sourceIds": {
-            "gbif-backbone": "8751023"
+            "gbif-backbone": "8751023",
+            "checklistbank-1174": "txn:379277"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Parapengornis",
           "authorship": "Hu, O'Connor & Zhou, 2015",
           "sourceIds": {
-            "gbif-backbone": "8603546"
+            "gbif-backbone": "8603546",
+            "checklistbank-1174": "txn:321577"
           },
           "children": []
         }
@@ -92,6 +94,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pengornithidae"
+    },
+    {
+      "id": "GENUS_YUANCHUAVIS",
+      "name": "Yuanchuavis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pengornithidae",
+      "children": [
+        {
+          "id": "SP_YUANCHUAVIS_KOMPSOSOURA_WANG_ET_AL_2021",
+          "name": "Yuanchuavis kompsosoura",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Yuanchuavis",
+          "authorship": "Wang et al. 2021",
+          "sourceIds": {
+            "checklistbank-1174": "txn:483990"
+          },
+          "uuid": "6ead3c93-03cf-466e-82f5-8a16ef3d523c"
+        }
+      ]
     }
   ],
   "genusCount": 4
