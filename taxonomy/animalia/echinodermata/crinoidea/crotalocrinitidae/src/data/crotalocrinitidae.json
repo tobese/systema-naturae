@@ -3,7 +3,7 @@
   "name": "Crotalocrinitidae",
   "rank": "FAMILY",
   "appSlug": "crotalocrinitidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PENTAGONOCYCLICUS",
@@ -63,13 +63,49 @@
           "lineage": "Salinocrinus",
           "authorship": "Ausich & Copper, 2010",
           "sourceIds": {
-            "gbif-backbone": "9660350"
+            "gbif-backbone": "9660350",
+            "checklistbank-1174": "txn:370200"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "crotalocrinitidae"
+    },
+    {
+      "id": "GENUS_CROTALOCRINITES",
+      "name": "Crotalocrinites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "crotalocrinitidae",
+      "children": [
+        {
+          "id": "SP_CROTALOCRINITES_RUGOSUS_MILLER_1821",
+          "name": "Crotalocrinites rugosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crotalocrinites",
+          "authorship": "(Miller 1821)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:388042"
+          },
+          "uuid": "5052ae06-971c-40e2-9bd2-ba3d10e851d6"
+        },
+        {
+          "id": "SP_CROTALOCRINITES_BOREALIS_YELTYSCHEWA_1955",
+          "name": "Crotalocrinites borealis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crotalocrinites",
+          "authorship": "(Yeltyschewa 1955)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:434951"
+          },
+          "uuid": "cb17436f-facc-461f-98ba-b4a8187b230d"
+        }
+      ]
     }
   ],
   "genusCount": 3

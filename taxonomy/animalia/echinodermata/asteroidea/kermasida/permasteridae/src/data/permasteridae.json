@@ -3,7 +3,7 @@
   "name": "Permasteridae",
   "rank": "FAMILY",
   "appSlug": "permasteridae",
-  "speciesCount": 7,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_EMPHEREASTER",
@@ -19,7 +19,8 @@
           "lineage": "Emphereaster",
           "authorship": "Blake & Elliott, 2003",
           "sourceIds": {
-            "gbif-backbone": "4975951"
+            "gbif-backbone": "4975951",
+            "checklistbank-1174": "txn:101357"
           },
           "children": []
         }
@@ -63,9 +64,23 @@
           "lineage": "Delicaster",
           "authorship": "Blake & Koniecki, 2018",
           "sourceIds": {
-            "gbif-backbone": "10262549"
+            "gbif-backbone": "10262549",
+            "checklistbank-1174": "txn:383297"
           },
           "children": []
+        },
+        {
+          "id": "SP_DELICASTER_ENIGMATICUS_KESLING_1967",
+          "name": "Delicaster enigmaticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Delicaster",
+          "authorship": "(Kesling 1967)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:101362"
+          },
+          "uuid": "25d0f146-7400-4940-91f1-a731ebf83657"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -140,6 +155,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "permasteridae"
+    },
+    {
+      "id": "GENUS_AMBIGASTER",
+      "name": "Ambigaster",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "permasteridae",
+      "children": [
+        {
+          "id": "SP_AMBIGASTER_WANDAGEENSIS_KESLING_1969",
+          "name": "Ambigaster wandageensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ambigaster",
+          "authorship": "(Kesling 1969)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:101366"
+          },
+          "uuid": "492cabdd-f540-42d2-9590-e52ecce056c7"
+        },
+        {
+          "id": "SP_AMBIGASTER_CARNARVONENSIS_KESLING_1969",
+          "name": "Ambigaster carnarvonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ambigaster",
+          "authorship": "(Kesling 1969)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:101367"
+          },
+          "uuid": "81a43f36-0b92-48c1-8912-cb1f324c6416"
+        },
+        {
+          "id": "SP_AMBIGASTER_COLEYI_WEBSTER_AND_JELL_1992",
+          "name": "Ambigaster coleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ambigaster",
+          "authorship": "(Webster and Jell 1992)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:148429"
+          },
+          "uuid": "6b051c6f-e59d-4824-83be-e5d9500913c3"
+        }
+      ]
     }
   ],
   "genusCount": 5

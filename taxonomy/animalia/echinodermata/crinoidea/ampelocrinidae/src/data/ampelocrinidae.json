@@ -3,7 +3,7 @@
   "name": "Ampelocrinidae",
   "rank": "FAMILY",
   "appSlug": "ampelocrinidae",
-  "speciesCount": 8,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_CYMBIOCRINUS",
@@ -54,9 +54,23 @@
           "lineage": "Halogetocrinus",
           "authorship": "Pabian & Strimple, 1974",
           "sourceIds": {
-            "gbif-backbone": "8698405"
+            "gbif-backbone": "8698405",
+            "checklistbank-1174": "txn:198350"
           },
           "children": []
+        },
+        {
+          "id": "SP_HALOGETOCRINUS_PAUCUS_STRIMPLE_AND_MOORE_1971",
+          "name": "Halogetocrinus paucus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halogetocrinus",
+          "authorship": "(Strimple and Moore 1971)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:66127"
+          },
+          "uuid": "4762cfb4-66f6-4c68-a16c-6b2adf125f90"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -98,7 +112,8 @@
           "lineage": "Exallocrinus",
           "authorship": "Webster, Heward & Ausich, 2022",
           "sourceIds": {
-            "gbif-backbone": "11598762"
+            "gbif-backbone": "11598762",
+            "checklistbank-1174": "txn:455896"
           },
           "children": []
         }
@@ -142,7 +157,8 @@
           "lineage": "Spheniscocrinus",
           "authorship": "Webster & Jell, 1992",
           "sourceIds": {
-            "gbif-backbone": "8506005"
+            "gbif-backbone": "8506005",
+            "checklistbank-1174": "txn:205735"
           },
           "children": []
         }
@@ -171,6 +187,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ampelocrinidae"
+    },
+    {
+      "id": "GENUS_OKLAHOMACRINUS",
+      "name": "Oklahomacrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ampelocrinidae",
+      "children": [
+        {
+          "id": "SP_OKLAHOMACRINUS_SUPINUS_MOORE_1939",
+          "name": "Oklahomacrinus supinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oklahomacrinus",
+          "authorship": "Moore 1939",
+          "sourceIds": {
+            "checklistbank-1174": "txn:463511"
+          },
+          "uuid": "2a2c8f44-c9a3-411d-9f8a-aedf7152d298"
+        },
+        {
+          "id": "SP_OKLAHOMACRINUS_EXPANSUS_WANNER_1916",
+          "name": "Oklahomacrinus expansus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oklahomacrinus",
+          "authorship": "(Wanner 1916)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:463512"
+          },
+          "uuid": "c4997d1c-c20a-4a11-b3f4-ca9286d2079e"
+        }
+      ]
     }
   ],
   "genusCount": 7
