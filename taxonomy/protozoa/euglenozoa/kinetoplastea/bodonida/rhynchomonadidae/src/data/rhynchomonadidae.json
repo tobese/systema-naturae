@@ -3,7 +3,7 @@
   "name": "Rhynchomonadidae",
   "rank": "FAMILY",
   "appSlug": "rhynchomonadidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_DIMASTIGELLA",
@@ -19,14 +19,48 @@
           "lineage": "Dimastigella",
           "authorship": "Sandon, 1928",
           "sourceIds": {
-            "gbif-backbone": "11201208"
+            "gbif-backbone": "11201208",
+            "checklistbank-308974": "362351"
           },
           "children": [],
           "uuid": "51dfc21d-5038-5cf-90a-56bd599891fc24"
+        },
+        {
+          "id": "SP_DIMASTIGELLA_MIMOSA",
+          "name": "Dimastigella mimosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dimastigella",
+          "sourceIds": {
+            "checklistbank-308974": "419760"
+          },
+          "uuid": "8ba9c877-34eb-4f3f-9244-df1a054742d9"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhynchomonadidae"
+    },
+    {
+      "id": "GENUS_RHYNCHOMONAS",
+      "name": "Rhynchomonas",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhynchomonadidae",
+      "children": [
+        {
+          "id": "SP_RHYNCHOMONAS_NASUTA",
+          "name": "Rhynchomonas nasuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchomonas",
+          "sourceIds": {
+            "checklistbank-308974": "365728"
+          },
+          "uuid": "0a6bcb92-6895-4673-b599-a0ab426864e0"
+        }
+      ]
     }
   ],
   "genusCount": 1,
