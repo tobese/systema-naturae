@@ -3,7 +3,7 @@
   "name": "Volynitidae",
   "rank": "FAMILY",
   "appSlug": "volynitidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_VOLYNITES",
@@ -19,13 +19,49 @@
           "lineage": "Volynites",
           "authorship": "Wei, Zong & Gong, 2019",
           "sourceIds": {
-            "gbif-backbone": "10657258"
+            "gbif-backbone": "10657258",
+            "checklistbank-1174": "txn:509616"
           },
           "children": []
+        },
+        {
+          "id": "SP_VOLYNITES_RUSSIENSIS_LYASHENKO_1957",
+          "name": "Volynites russiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Volynites",
+          "authorship": "Lyashenko 1957",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509615"
+          },
+          "uuid": "1b0483a4-1f5c-4d07-9498-cdacb7941cfe"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "volynitidae"
+    },
+    {
+      "id": "GENUS_PODOLITES",
+      "name": "Podolites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "volynitidae",
+      "children": [
+        {
+          "id": "SP_PODOLITES_RUGOSUS_LYASHENKO_1969",
+          "name": "Podolites rugosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podolites",
+          "authorship": "Lyashenko 1969",
+          "sourceIds": {
+            "checklistbank-1174": "txn:509617"
+          },
+          "uuid": "d0bc684d-9c1a-48ca-a095-fb4a6d752ae3"
+        }
+      ]
     }
   ],
   "genusCount": 1
