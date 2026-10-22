@@ -3,7 +3,7 @@
   "name": "Psoroptidae",
   "rank": "FAMILY",
   "appSlug": "psoroptidae",
-  "speciesCount": 19,
+  "speciesCount": 22,
   "children": [
     {
       "id": "GENUS_CAPARINIA",
@@ -117,7 +117,8 @@
           "lineage": "Chorioptes",
           "authorship": "(Hering, 1845)",
           "sourceIds": {
-            "gbif-backbone": "2181890"
+            "gbif-backbone": "2181890",
+            "checklistbank-127379": "8bd50fc6-8e4e-47ae-a9a6-8683d49f072a"
           },
           "children": []
         }
@@ -168,6 +169,19 @@
             "gbif-backbone": "10520655"
           },
           "children": []
+        },
+        {
+          "id": "SP_PSOROPTES_CUNICULI_DELAFOND",
+          "name": "Psoroptes cuniculi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psoroptes",
+          "authorship": "Delafond",
+          "sourceIds": {
+            "checklistbank-127379": "c3400fcb-0243-49e5-9b82-e7bbfbcec462"
+          },
+          "uuid": "ec550291-7138-46b9-92d5-bcacb34dd2ca"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -280,7 +294,8 @@
           "lineage": "Otodectes",
           "authorship": "(Hering, 1838)",
           "sourceIds": {
-            "gbif-backbone": "2181892"
+            "gbif-backbone": "2181892",
+            "checklistbank-127379": "7aa816a2-caee-43e3-8440-35848d8f6128"
           },
           "children": []
         }
@@ -309,6 +324,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psoroptidae"
+    },
+    {
+      "id": "GENUS_ACAROPTES",
+      "name": "Acaroptes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoroptidae",
+      "children": [
+        {
+          "id": "SP_ACAROPTES_VOMBATUS_WOMERSLEY",
+          "name": "Acaroptes vombatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acaroptes",
+          "authorship": "Womersley",
+          "sourceIds": {
+            "checklistbank-127379": "1dc355dc-28ff-4526-b9f1-6dd2a996327e"
+          },
+          "uuid": "3ef67c01-4dd2-4384-802d-41de5eb97653"
+        },
+        {
+          "id": "SP_ACAROPTES_WOMERSLEYI_FAIN",
+          "name": "Acaroptes womersleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acaroptes",
+          "authorship": "Fain",
+          "sourceIds": {
+            "checklistbank-127379": "5a7b8450-7f8b-4417-8ea0-bfdf9d9cd0dc"
+          },
+          "uuid": "d0b8f4db-8cb3-45a7-b9e7-92ac00a52e30"
+        }
+      ]
     }
   ],
   "genusCount": 7

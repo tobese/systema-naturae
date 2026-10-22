@@ -17,7 +17,10 @@
           "lineage": "Suidasia",
           "authorship": "Hughes, 1948",
           "children": [],
-          "uuid": "a514d23b-e620-541-82c-3b40729525c915"
+          "uuid": "a514d23b-e620-541-82c-3b40729525c915",
+          "sourceIds": {
+            "checklistbank-127379": "331de2dc-3d7d-4f6b-933e-30f32e626a83"
+          }
         },
         {
           "id": "SP_SUIDASIA_RETICULATA",
@@ -41,7 +44,8 @@
           "lineage": "Suidasia",
           "authorship": "Oudemans, 1905",
           "sourceIds": {
-            "gbif-backbone": "4653812"
+            "gbif-backbone": "4653812",
+            "checklistbank-127379": "c82c3e41-6fe9-496a-ae55-76d9894fafa1"
           },
           "children": [],
           "uuid": "56753941-c312-560-bc5-09ec715bdd5b95"
@@ -63,9 +67,53 @@
       ],
       "sourcedFrom": "worms",
       "lineage": "Suidasiidae"
+    },
+    {
+      "id": "GENUS_SAPRACARUS",
+      "name": "Sapracarus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "suidasiidae",
+      "children": [
+        {
+          "id": "SP_SAPRACARUS_TUBERCULATUS_FAIN_PHILIPS",
+          "name": "Sapracarus tuberculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sapracarus",
+          "authorship": "Fain & Philips",
+          "sourceIds": {
+            "checklistbank-127379": "43559f3a-7da7-434b-86b8-9ce02dba0b02"
+          },
+          "uuid": "9f059668-fdf1-4ef0-b4d2-d527f34d9f57"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TORTONIA",
+      "name": "Tortonia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "suidasiidae",
+      "children": [
+        {
+          "id": "SP_TORTONIA_AUSTRALIENSIS_FAIN_PHILIPS",
+          "name": "Tortonia australiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tortonia",
+          "authorship": "Fain & Philips",
+          "sourceIds": {
+            "checklistbank-127379": "e74a20ba-55a6-46e0-b790-966bda4e8326"
+          },
+          "uuid": "d936501f-b5d2-4234-a78c-0f64c9e35bcd"
+        }
+      ]
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 6,
   "appSlug": "suidasiidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Arachnida",
