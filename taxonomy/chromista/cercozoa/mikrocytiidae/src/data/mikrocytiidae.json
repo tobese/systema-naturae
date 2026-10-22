@@ -3,7 +3,7 @@
   "name": "Mikrocytiidae",
   "rank": "FAMILY",
   "appSlug": "mikrocytiidae",
-  "speciesCount": 4,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_MIKROCYTOS",
@@ -19,7 +19,8 @@
           "lineage": "Mikrocytos",
           "authorship": "Abbott, Meyer, Lowe, Kim & Johnson, 2014",
           "sourceIds": {
-            "gbif-backbone": "10799830"
+            "gbif-backbone": "10799830",
+            "checklistbank-308974": "52427"
           },
           "children": [],
           "uuid": "b140f38f-a3ec-5a5-aeb-587ffeb3c66d34"
@@ -33,7 +34,8 @@
           "lineage": "Mikrocytos",
           "authorship": "Farley, Wolf & Elston, 1988",
           "sourceIds": {
-            "gbif-backbone": "10866735"
+            "gbif-backbone": "10866735",
+            "checklistbank-308974": "52436"
           },
           "children": [],
           "uuid": "b740bda1-7a9b-52d-af7-29b382fc552b72"
@@ -61,14 +63,60 @@
           "lineage": "Mikrocytos",
           "authorship": "Hartikainen, Stentiford, Bateman, Berney, Feist, Longshaw, Okamura, Stone, Ward, Wood & Bass, 2014",
           "sourceIds": {
-            "gbif-backbone": "10757181"
+            "gbif-backbone": "10757181",
+            "checklistbank-308974": "351339"
           },
           "children": [],
           "uuid": "1121ad10-8bdd-51c-abd-1ce5caab13916d"
+        },
+        {
+          "id": "SP_MIKROCYTOS_DONAXI",
+          "name": "Mikrocytos donaxi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocytos",
+          "sourceIds": {
+            "checklistbank-308974": "423195"
+          },
+          "uuid": "bff566d4-c195-46ad-8c82-d8396a646766"
+        },
+        {
+          "id": "SP_MIKROCYTOS_VENEROIDES",
+          "name": "Mikrocytos veneroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocytos",
+          "sourceIds": {
+            "checklistbank-308974": "423204"
+          },
+          "uuid": "74734760-29d4-4e9a-9445-8752ed56b644"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mikrocytiidae"
+    },
+    {
+      "id": "GENUS_PARAMIKROCYTOS",
+      "name": "Paramikrocytos",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mikrocytiidae",
+      "children": [
+        {
+          "id": "SP_PARAMIKROCYTOS_CANCERI",
+          "name": "Paramikrocytos canceri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paramikrocytos",
+          "sourceIds": {
+            "checklistbank-308974": "351348"
+          },
+          "uuid": "a61c7f54-5409-40d0-b641-55a23a37d51e"
+        }
+      ]
     }
   ],
   "genusCount": 1
