@@ -400,193 +400,44 @@ def check_file_counts(max_mismatch=0):
 # anyone looking at the birds, and that is worth knowing if it is ever
 # re-opened: the choice is recorded in the tree, not justified by it.
 #
-# Kept as an empty set rather than deleted, because the check asserts that
-# whatever is listed here is still duplicated -- so a placement that comes back
-# fails loudly instead of passing on a stale allowance.
-KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = {
-    # SP_TANYSPHYRUS_LEMNAE_FABRICIUS_1792 (a Wikipedia-sourced weevil held in
-    # both Brachyceridae and Curculionidae) was here as a genuine
-    # family-circumscription disagreement, not a dedupe error -- resolved by
-    # the 2026-10-22 dedupe pass (one copy collapsed into the other), so
-    # dropped rather than left as a stale allowance.
-}
+# Both allowlists below are data, not code -- moved out of this file
+# (2026-10-22) into data/known-same-kingdom-duplicates.json and
+# data/known-cross-kingdom-homonyms.json, each a flat {id: reason} map, so
+# a script (this one, or a future dedupeSpeciesAcrossFamilies.py pass that
+# wants to register its own "left alone (cross-kingdom homonym)" verdicts)
+# can read or write the record without touching this file's source. Load
+# failure is fatal rather than silently treated as empty: an allowlist that
+# can't be read is not the same thing as an allowlist with nothing in it,
+# and the latter is what every "unexpected" collision below would then be
+# compared against.
+#
+# KNOWN_SAME_KINGDOM_DUPLICATES: the check asserts that whatever is listed
+# is still duplicated -- so a placement that comes back fails loudly
+# instead of passing on a stale allowance. (The three genera whose family
+# assignment was once genuinely disputed -- Cincloramphus and Poodytes
+# under both Locustellidae and Acanthizidae, Oryzoborus under both
+# Vangidae and Passerellidae -- are resolved now, not by a taxonomic
+# argument: the dedupe collapsed each pair on its own rules, one by
+# authority id and Oryzoborus by "both from imports, the larger family
+# keeps it". All three landed on the second-named family -- the placement
+# question was answered by a data signal, not by anyone looking at the
+# birds, which is worth knowing if it is ever re-opened.)
+#
+# KNOWN_CROSS_KINGDOM_HOMONYMS: these are NOT a bug and must never be
+# "fixed" -- unrelated organisms that share a binomial. Alfaria minuta is
+# an ant and a fungus; Graphium sarpedon is a butterfly and a fungus;
+# Phyllocardium complanatum is a bivalve and a plant. BACKLOG.md records
+# this as settled.
+def _load_allowlist(name: str) -> set[str]:
+    path = os.path.join(ROOT, "data", name)
+    with open(path, encoding="utf-8") as fh:
+        return set(json.load(fh).keys())
 
-# Cross-kingdom homonyms are NOT a bug and must never be "fixed": these are
-# unrelated organisms that share a binomial. Alfaria minuta is an ant and a
-# fungus; Graphium sarpedon is a butterfly and a fungus; Phyllocardium
-# complanatum is a bivalve and a plant. BACKLOG.md records this as settled.
-KNOWN_CROSS_KINGDOM_HOMONYMS = {
-    "ALFARIA_MINUTA", "CLAVULINA_FLORIDANA", "CLAVULINA_RUGOSA",
-    "DIPLODERMA_POLYGONATUM", "GRAPHIUM_SARPEDON", "HEXAGONIA_BICOLOR",
-    "SP_PHYLLOCARDIUM_COMPLANATUM",
-    # eunis (checklistbank-2122) import, 2026-10-10: Chondracanthus is both a
-    # parasitic copepod genus (animalia) and a red-algae genus (plantae,
-    # Gigartinaceae), and "angustatus Heller, 1865" happens to name a species
-    # in each. Confirmed a genuine homonym, not a collision: the animalia copy
-    # is the copepod (Catalogue of Life), the plantae copy is the alga
-    # (checklistbank/eunis). The same import also added four species of
-    # Oxynoemacheilus (a loach genus, animalia-only) under fungi/Coniocybaceae
-    # -- that WAS a collision, traced to EUNIS's own data mis-joining those
-    # four fish records to a lichen family's kingdom/order/class/phylum
-    # (order literally read "[unassigned] Pulmonata", a gastropod clade,
-    # which is itself the bug showing). Removed from coniocybaceae.json
-    # rather than allow-listed here, the same call made on ITIS's nudibranch
-    # filed under a diatom family (see docs/dataset-inbox.md).
-    "SP_CHONDRACANTHUS_ANGUSTATUS_HELLER_1865",
-    # The BOLD import added 21 more here, all thrips whose genus names coincide
-    # with recently described plant genera (Aliceathrips, Masamithrips,
-    # Xerophytacolus, Xerophytavorus and the rest) plus Phoenix reclinata, a
-    # palm that is also a scale insect. All 21 are gone: the plant half of each
-    # pair was one of the in-family duplicates the merge collapsed, so what was
-    # a cross-kingdom homonym became a single record and there is nothing left
-    # to allow. They are named rather than counted, because a *different*
-    # cross-kingdom collision has to fail and a bare count cannot tell it from
-    # a reappearance of one of these.
-    #
-    # NCBI Taxonomy import (2026-10-12) added 34 more, every one an indeterminate
-    # "Genus sp." or "Genus aff." placeholder, never a named species -- so each
-    # pair is two unrelated real genera (different family in each kingdom, no
-    # family-name collision) that each happen to carry an unidentified-specimen
-    # record. Checked against NCBI's own raw NameUsage.tsv chain for a sample
-    # (Giraudia: ICN brown-alga genus 86872 vs ICZN wasp genus 216146, NCBI's own
-    # annotation literally reads "unclassified Giraudia (in: wasps, ants & bees)"
-    # -- a genuine homonym, not a collision).
-    "SP_AMPHINEMA_SP", "SP_APTEROSTIGMA_SP", "SP_CLUSIA_SP", "SP_CORELLA_AFF",
-    "SP_DUFOUREA_SP", "SP_EISENIA_SP", "SP_ERICA_SP", "SP_EUCLEA_SP",
-    "SP_EURYBIA_SP", "SP_EWARTIA_SP", "SP_GEOCHARIS_SP", "SP_GIRAUDIA_SP",
-    "SP_GLOEOSOMA_SP", "SP_GLOMERELLA_SP", "SP_GOMPHUS_SP", "SP_GRAMINELLA_SP",
-    "SP_HEXAGONIA_SP", "SP_LEPTOSTYLIS_SP", "SP_LIMACIA_SP", "SP_LORICARIA_SP",
-    "SP_MELANOCHAETA_SP", "SP_MORINIA_SP", "SP_MYRMECIA_SP", "SP_OPERCULINA_SP",
-    "SP_OUROCOCCUS_SP", "SP_PACHYPELTIS_SP", "SP_PENNELLA_SP", "SP_PERIPLOCA_SP",
-    "SP_PLINIA_SP", "SP_RHIZOPHAGUS_SP", "SP_RHYTISMA_SP", "SP_SATYRIUM_SP",
-    "SP_SCOPARIA_SP", "SP_TURBINARIA_SP",
-    # Actinocyclus verrucosus Ehrenberg, 1831 -- the same genus name as the
-    # diatom Actinocyclus (hemidiscaceae), but NCBI's own NameUsage.tsv carries
-    # a SEPARATE ICZN-coded taxon (id 262595, no author) under family
-    # Actinocyclidae / superfamily Eudoridoidea, the same nudibranch family we
-    # hold Hallaxa in. The Australian Faunal Directory import independently
-    # agrees -- it reintroduced this exact species (plus papillatus, laevis,
-    # japonicus) into actinocyclidae.json before NCBI was ever run, which is
-    # what NCBI's copy duplicated against. Two independent sources filing the
-    # same name under the zoological family makes this a genuine homonym to
-    # confirm, not a one-off misfiling to delete.
-    "SP_ACTINOCYCLUS_VERRUCOSUS_EHRENBERG_1831",
-    # ENA Taxonomy import (2026-10-12), same session: 2 more "sp." placeholder
-    # collisions (Didymocyrtis, Fluminicola), plus 6 more Eisenia species under
-    # the same earthworm/kelp family pair already confirmed above.
-    "SP_DIDYMOCYRTIS_SP", "SP_FLUMINICOLA_SP",
-    "SP_EISENIA_CAROLINENSIS", "SP_EISENIA_MURANYII",
-    "SP_EISENIA_NANA", "SP_EISENIA_OREOPHILA",
-    "SP_EISENIA_SALAIRICA", "SP_EISENIA_TRACTA",
-    # GTDB archaea top-up (2026-10-12): 9 more, every one a
-    # genus that is simultaneously an animal genus and a fungal
-    # genus, each carrying an indeterminate "Genus sp." record in
-    # both kingdoms -- Bactridium (beetle / fungus), Corticium
-    # (sponge / corticioid fungus), Crucibulum (snail / bird's-nest
-    # fungus), Hypoderma (botfly / fungus), Microstoma (fly /
-    # fungus), Scutiger (centipede / fungus), Serpula (tubeworm /
-    # dry rot), Tapinella (rove beetle / fungus), Venturia (fly /
-    # apple scab). Same class as the NCBI placeholders above: two
-    # unrelated real genera that each carry an unidentified record.
-    "SP_BACTRIDIUM_SP", "SP_CORTICIUM_SP", "SP_CRUCIBULUM_SP",
-    "SP_HYPODERMA_SP", "SP_MICROSTOMA_SP", "SP_SCUTIGER_SP",
-    "SP_SERPULA_SP", "SP_TAPINELLA_SP", "SP_VENTURIA_SP",
-    # Cross-kingdom collisions from the CheckListBank / NCBI import
-    # (2026-10-12/13):
-    # SP_CORTICIUM_TOPSENTI_POULIQUEN_1972: legitimate -- Corticium is
-    #   both a sponge genus (animalia/Plakinidae) and a fungal genus
-    #   (fungi/Corticiaceae); the same binomial is a real, independent
-    #   species in each kingdom.
-    # SP_ALICEATHRIPS_AUSTRALIENSIS: import artifact -- the animalia
-    #   entry in Thripidae (checklistbank 1279082) is the real thrips
-    #   species; the plantae entry in Poaceae (checklistbank ott6021347,
-    #   an OTT ID) is the same thrips species misplaced into grasses by
-    #   the OTT merge. The animalia genus Lineage is correct; the
-    #   plantae copy is a duplicate carrying the wrong family context.
-    "SP_ALICEATHRIPS_AUSTRALIENSIS",
-    "SP_CORTICIUM_TOPSENTI_POULIQUEN_1972",
-    # Wikispecies import (2026-10-19) surfaced 18 new collisions. 11 were
-    # contamination (templated or empty description on one side, GBIF
-    # Backbone confirming exactly one kingdom for the species) and were
-    # removed from the tree rather than allow-listed -- see that commit.
-    # These 3 are genuine homonyms, confirmed against GBIF Backbone (both
-    # kingdoms carry the exact binomial as a real, independently-described
-    # taxon):
-    # SP_CHLORIS_CHLORIS / SP_CHLORIS_SINICA: Chloris Sw. 1788 (a grass
-    #   genus, Poaceae) and Chloris Illiger 1811 (greenfinches, Fringillidae)
-    #   are two independently published genus names; GBIF carries both
-    #   species as "accepted" in their respective kingdom.
-    # SP_HERBERTIA_BRASILIENSIS: Animalia/Pteromalidae (a wasp) is GBIF's
-    #   accepted placement; the Plantae/Iridaceae copy is GBIF's own
-    #   "synonym" entry (an older name for a different, currently-accepted
-    #   Iridaceae species) rather than contamination -- the name genuinely
-    #   was once a published plant name, carried here by wikispecies.
-    "SP_CHLORIS_CHLORIS", "SP_CHLORIS_SINICA", "SP_HERBERTIA_BRASILIENSIS",
-    # UNRESOLVED -- kept provisionally rather than guessed on. Neither GBIF
-    # Backbone nor Catalogue of Life carries these at all, so there is no
-    # authoritative signal for either side, unlike the 11 removed above. Same
-    # "plant-family template vs. empty Pentatomidae description" shape as
-    # several of those, but with zero confirmation either way. Revisit if a
-    # future source (a Pentatomidae-specific checklist, or a fuller COL/GBIF
-    # release) resolves which kingdom each one actually belongs to.
-    "SP_TSHINGISELLA_BELLA", "SP_PHRICODUS_BESSACI", "SP_DESERTOMENIDA_ALBULA",
-    # Wikispecies pending-family re-run (2026-10-19) surfaced 9 more, same
-    # investigation method. 8 were contamination and removed instead of
-    # allow-listed here (a recurrence of the Decaisnella formosa/WoRMS case
-    # already in this tree -- its own structured kingdom column disagrees
-    # with its own citation text; four more carrying a bare sourceIds.ott
-    # id and a templated description, the OTT-merge class of bug already
-    # documented above; and one long-standing ghost, a palm's full
-    # Wikipedia description sitting in geometridae.json under Phoenix
-    # reclinata, which this run's correct Arecaceae placement is what
-    # finally exposed). This one is a genuine homonym:
-    # SP_LEUCOTHOE_VADEROTTI: Animalia/Amphipoda/Leucothoidae (Krapp-
-    #   Schickel, 2018) and Plantae/Ericaceae are both GBIF Backbone
-    #   "accepted" taxa in their own kingdom -- the playful epithet
-    #   ("vaderotti") was evidently used independently for both.
-    "SP_LEUCOTHOE_VADEROTTI",
-    # 2026-10-22, backbone.zip + checklistbank-139831/2008/2011 batch: 34 new
-    # collisions. 24 were contamination (a bare/empty copy on one side, a
-    # real curated record with an established kingdom-correct genus on the
-    # other) and were removed instead of allow-listed -- see that commit.
-    # These 10 are kept provisionally: real evidence exists on both sides
-    # (a genuine authority id, a non-template description, or a
-    # well-documented real genus in each kingdom), so guessing which to
-    # delete risks losing real data rather than contamination. Revisit with
-    # scripts/dedupeSpeciesAcrossFamilies.py --authority-family once a
-    # richer GBIF family cache or a per-genus literature check can settle
-    # them:
-    #   SP_DIAPSE_PTILOTA, SP_GRAPHIS_ALBIDA, SP_GRAPHIS_TENUISSIMA:
-    #     Graphis is a well-known lichen genus (Graphidaceae), but the
-    #     animalia copies carry real external ids (mycobank/col/itis, one
-    #     with a WoRMS lsid) rather than empty stubs -- plausible that a
-    #     genuinely distinct marine/animal "Graphis" also exists. Diapse
-    #     ptilota has no strong signal on either side at all.
-    #   SP_RETICULARIA_JURANA, SP_TUBIFERA_DIMORPHOTHECA, SP_TUBIFERA_MAGNA,
-    #   SP_TUBIFERA_MONTANA: both Reticularia and Tubifera are genuinely
-    #     used in the literature for a fossil brachiopod genus AND a
-    #     myxomycete (slime mold) genus independently; here the
-    #     animalia/Reticulariidae copies carry real checklistbank ids and
-    #     descriptions while the protozoa copies are bare iNaturalist
-    #     stubs, which could mean either a genuine homonym or a misrouted
-    #     duplicate of the same brachiopod record.
-    #   SP_RICINUS_DALGLEISHI: Ricinus is both the castor-bean genus
-    #     (plantae, Euphorbiaceae) and a genus of bird-chewing lice
-    #     (animalia, Phthiraptera) in real nomenclature -- both copies here
-    #     are bare stubs, so there is no way to tell which this one is.
-    #   SP_TETRAPEDIA_REINSCHIANA: plantae copy has a real itis id;
-    #     Tetrapedia is a solitary-bee genus (Apidae) in animalia but the
-    #     name (four-sided) also fits a desmid alga, so this could be
-    #     either.
-    #   SP_TRACHYNEMA_MORTENSENII: wikispecies-backed chromista copy, but
-    #     "mortensenii" (honouring invertebrate zoologist Th. Mortensen)
-    #     reads zoological while the copy sits in chromista/Rhodophyta's
-    #     sibling kingdom placement is also plausible for a red alga.
-    "SP_DIAPSE_PTILOTA", "SP_GRAPHIS_ALBIDA", "SP_GRAPHIS_TENUISSIMA",
-    "SP_RETICULARIA_JURANA", "SP_TUBIFERA_DIMORPHOTHECA", "SP_TUBIFERA_MAGNA",
-    "SP_TUBIFERA_MONTANA", "SP_RICINUS_DALGLEISHI", "SP_TETRAPEDIA_REINSCHIANA",
-    "SP_TRACHYNEMA_MORTENSENII",
-}
+
+KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = _load_allowlist(
+    "known-same-kingdom-duplicates.json")
+KNOWN_CROSS_KINGDOM_HOMONYMS: set[str] = _load_allowlist(
+    "known-cross-kingdom-homonyms.json")
 
 def check_duplicate_species():
     """No species id in two families *within one kingdom*.
@@ -716,25 +567,11 @@ def check_lineage(sample=200):
 
 CODE_LIKE_NAME = re.compile(r"^\d+[-_]\d+|^\d+$")
 
-# Two archaea families are named for a GBIF taxon key rather than a name. Both
-# are honest placeholders for organisms that have no binomial: NCBI environmental
-# sequences from candidate phyla, where the "genus" is a locus tag --
-# 21-14-0-10-32-9 holds 6 species under genera SKIS01 and PWWA01, and
-# 1-14-0-10-31-34 holds 3 under a genus with the same code. Renaming them to
-# "Incertae sedis" would match the project's 103 existing placeholder families,
-# but it moves directories, appSlugs and node ids, so it is a decision rather
-# than a repair. Listed here so the gate is honest instead of permanently red.
-# GTDB's placeholder family codes, from the GTDB r232 archaea
-# top-up (2026-10-12): GTDB names the families it erects for
-# unnamed clades by their genome placeholder code ("0-14-0-20-30-16")
-# rather than a Latin name -- the same convention the bacteria
-# scaffold's "surf-5"/"jafgav01" families use, but those sit in the
-# undeclared bacteria kingdom this check does not walk. These three
-# are real GTDB family designations, not importer bugs.
-KNOWN_CODE_LIKE_FAMILIES = {
-    "1-14-0-10-31-34", "21-14-0-10-32-9",
-    "0-14-0-20-30-16", "0-14-0-20-34-12", "0-14-0-80-44-23",
-}
+# Moved to data/known-code-like-families.json (2026-10-22), same reasoning
+# as KNOWN_SAME_KINGDOM_DUPLICATES / KNOWN_CROSS_KINGDOM_HOMONYMS above:
+# archaea families GTDB names by genome placeholder code rather than a
+# Latin name, real designations rather than importer bugs.
+KNOWN_CODE_LIKE_FAMILIES: set[str] = _load_allowlist("known-code-like-families.json")
 PLACEHOLDER_NAME = re.compile(
     r"^(unknown|incertae\s+sedis|unclassified|unplaced)$", re.I)
 
