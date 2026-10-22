@@ -226,7 +226,8 @@
             "col": [
               "6S9FB"
             ],
-            "checklistbank": "1703046"
+            "checklistbank": "1703046",
+            "checklistbank-139831": "1703046"
           },
           "uuid": "ad279f4b-b273-50e-9ba-2ae9ec496d9774",
           "authorityIds": "col:6S9FB,gbif:2619084,mycobank:130495"
@@ -602,7 +603,8 @@
           "lineage": "\"Lepidosphaeria",
           "authorship": "\"Parg.-Leduc, 1970\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437720"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:437720",
+            "checklistbank-139831": "1113607"
           },
           "children": [],
           "uuid": "0b56545b-bd6d-535-b57-f045091251268f",
@@ -635,11 +637,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "testudinaceae"
+    },
+    {
+      "id": "GENUS_LOJKANIA",
+      "name": "Lojkania",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "testudinaceae",
+      "children": [
+        {
+          "id": "SP_LOJKANIA_MELASPERMA",
+          "name": "Lojkania melasperma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lojkania",
+          "sourceIds": {
+            "checklistbank-139831": "1077564"
+          },
+          "uuid": "6eed7909-3cee-4cc7-aa23-f86e1442a8c0"
+        }
+      ]
     }
   ],
   "authorship": "Arx",
   "genusCount": 16,
-  "speciesCount": 23,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
