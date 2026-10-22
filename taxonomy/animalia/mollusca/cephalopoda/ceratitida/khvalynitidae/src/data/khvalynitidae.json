@@ -3,7 +3,7 @@
   "name": "Khvalynitidae",
   "rank": "FAMILY",
   "appSlug": "khvalynitidae",
-  "speciesCount": 16,
+  "speciesCount": 20,
   "children": [
     {
       "id": "GENUS_ALANITES",
@@ -45,7 +45,8 @@
           "lineage": "Alanites",
           "authorship": "Silberling & Nichols, 1982",
           "sourceIds": {
-            "gbif-backbone": "8639897"
+            "gbif-backbone": "8639897",
+            "checklistbank-1174": "txn:265527"
           },
           "children": []
         },
@@ -71,7 +72,8 @@
           "lineage": "Alanites",
           "authorship": "Silberling & Nichols, 1982",
           "sourceIds": {
-            "gbif-backbone": "8437874"
+            "gbif-backbone": "8437874",
+            "checklistbank-1174": "txn:265528"
           },
           "children": []
         }
@@ -222,6 +224,19 @@
             "gbif-backbone": "11136443"
           },
           "children": []
+        },
+        {
+          "id": "SP_KHVALYNITES_UNICUS_KIPARISOVA_1961",
+          "name": "Khvalynites unicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Khvalynites",
+          "authorship": "(Kiparisova 1961)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:185531"
+          },
+          "uuid": "8e9fa65c-a805-4762-8e32-e74154535b2d"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -248,6 +263,63 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "khvalynitidae"
+    },
+    {
+      "id": "GENUS_VOROBYEVITES",
+      "name": "Vorobyevites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "khvalynitidae",
+      "children": [
+        {
+          "id": "SP_VOROBYEVITES_UNICUS_SHEVYREV_1995",
+          "name": "Vorobyevites unicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vorobyevites",
+          "authorship": "Shevyrev 1995",
+          "sourceIds": {
+            "checklistbank-1174": "txn:172675"
+          },
+          "uuid": "b457aedc-4b17-4592-aebc-dbd6869b53be"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_KOIPATOCERAS",
+      "name": "Koipatoceras",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "khvalynitidae",
+      "children": [
+        {
+          "id": "SP_KOIPATOCERAS_KRAFFTI_BUCHER_1994",
+          "name": "Koipatoceras kraffti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Koipatoceras",
+          "authorship": "Bucher 1994",
+          "sourceIds": {
+            "checklistbank-1174": "txn:189221"
+          },
+          "uuid": "44a97c1f-9820-448e-867d-94027bf888d2"
+        },
+        {
+          "id": "SP_KOIPATOCERAS_DISCOIDEUS_SILBERLING_AND_NICHOLS_1982",
+          "name": "Koipatoceras discoideus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Koipatoceras",
+          "authorship": "Silberling and Nichols 1982",
+          "sourceIds": {
+            "checklistbank-1174": "txn:265526"
+          },
+          "uuid": "daf552ef-47aa-4237-8ce0-b14469b1fc6f"
+        }
+      ]
     }
   ],
   "genusCount": 4

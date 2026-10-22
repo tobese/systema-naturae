@@ -3,7 +3,7 @@
   "name": "Nectocarididae",
   "rank": "FAMILY",
   "appSlug": "nectocarididae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_NECTOCOTIS",
@@ -41,7 +41,8 @@
           "lineage": "Petalilium",
           "authorship": "Luo & Hu, 1999",
           "sourceIds": {
-            "gbif-backbone": "9722257"
+            "gbif-backbone": "9722257",
+            "checklistbank-1174": "txn:367910"
           },
           "children": []
         }
@@ -70,6 +71,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nectocarididae"
+    },
+    {
+      "id": "GENUS_NEKTOGNATHUS",
+      "name": "Nektognathus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "nectocarididae",
+      "children": [
+        {
+          "id": "SP_NEKTOGNATHUS_EVASMITHAE_VINTHER_ET_AL_2025",
+          "name": "Nektognathus evasmithae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nektognathus",
+          "authorship": "Vinther et al. 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:512035"
+          },
+          "uuid": "1d5dc4a9-1548-4e22-b71d-2a71664bbc07"
+        }
+      ]
     }
   ],
   "genusCount": 3
