@@ -480,7 +480,8 @@
             ],
             "checklistbank": "591472",
             "gbif-backbone": "7799949",
-            "checklistbank-139831": "455077"
+            "checklistbank-139831": "455077",
+            "checklistbank-311094": "591472"
           },
           "authorityIds": "col:FYNM",
           "description": "Apteroloma tenuicorne is a apteroloma species found in its native region.",
@@ -775,7 +776,8 @@
               "4PX42"
             ],
             "checklistbank": "468245",
-            "checklistbank-139831": "541481"
+            "checklistbank-139831": "541481",
+            "checklistbank-311094": "468245"
           },
           "authorityIds": "col:4PX42",
           "description": "Pteroloma forsstromii is a pteroloma species found in its native region.",
@@ -1110,7 +1112,8 @@
               "1014326"
             ],
             "checklistbank": "591474",
-            "checklistbank-139831": "455078"
+            "checklistbank-139831": "455078",
+            "checklistbank-311094": "591474"
           },
           "authorityIds": "col:6MX9Z,itis:1014326",
           "description": "Ipelates latus is a ipelates species found in its native region.",
@@ -1241,7 +1244,8 @@
           "lineage": "Ipelates",
           "authorship": "(Reitter, 1884)",
           "sourceIds": {
-            "checklistbank": "230469"
+            "checklistbank": "230469",
+            "checklistbank-311094": "1266555"
           },
           "children": [],
           "uuid": "2858cf6a-7ec1-56e-9b0-f6d75a1f15c856"
@@ -1447,7 +1451,8 @@
           "authorship": "(Fabricius, 1792)",
           "sourceIds": {
             "checklistbank": "230471",
-            "checklistbank-139831": "538962"
+            "checklistbank-139831": "538962",
+            "checklistbank-311094": "1301235"
           },
           "children": [],
           "uuid": "5533377f-207e-5f5-a68-9fabc834c3666c"
@@ -1460,7 +1465,10 @@
           "sourcedFrom": "checklistbank-2008",
           "lineage": "Agyrtes",
           "authorship": "Laporte de Castelnau, 1840",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank-311094": "1319448"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1488,7 +1496,8 @@
             ],
             "checklistbank": "501868",
             "wikispecies": "Necrophilus_subterraneus",
-            "checklistbank-139831": "176865"
+            "checklistbank-139831": "176865",
+            "checklistbank-311094": "501868"
           },
           "authorityIds": "col:45ZT8",
           "description": "Necrophilus subterraneus is a necrophilus species found in its native region.",
@@ -1621,7 +1630,8 @@
             ],
             "checklistbank": "591475",
             "wikispecies": "Necrophilus_hydrophiloides",
-            "checklistbank-139831": "176866"
+            "checklistbank-139831": "176866",
+            "checklistbank-311094": "591475"
           },
           "authorityIds": "col:45ZSW,itis:1014324",
           "commonName": "Flat Brown Scavenger Beetle",
@@ -1736,7 +1746,8 @@
             "itis": [
               "1014329"
             ],
-            "checklistbank": "511806"
+            "checklistbank": "511806",
+            "checklistbank-311094": "511806"
           },
           "authorityIds": "col:3WTT9,itis:1014329",
           "description": "Lyrosoma opacum is a species of primitive carrion beetle in the family Agyrtidae.",
@@ -2156,9 +2167,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "agyrtidae"
+    },
+    {
+      "id": "GENUS_ECANUS",
+      "name": "Ecanus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "agyrtidae",
+      "children": [
+        {
+          "id": "SP_ECANUS_GLABER",
+          "name": "Ecanus glaber",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ecanus",
+          "sourceIds": {
+            "checklistbank-311094": "1066182"
+          },
+          "uuid": "b2e19371-60a6-465a-a49a-57d4633ff6ca"
+        }
+      ]
     }
   ],
-  "speciesCount": 104,
+  "speciesCount": 105,
   "appSlug": "agyrtidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
