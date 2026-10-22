@@ -3,7 +3,7 @@
   "name": "Anthracosironidae",
   "rank": "FAMILY",
   "appSlug": "anthracosironidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_ANTHRACOSIRO",
@@ -89,13 +89,36 @@
           "lineage": "Arianrhoda",
           "authorship": "Dunlop & Selden, 2004",
           "sourceIds": {
-            "gbif-backbone": "8584951"
+            "gbif-backbone": "8584951",
+            "checklistbank-1174": "txn:286652"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anthracosironidae"
+    },
+    {
+      "id": "GENUS_VRATISLAVIA",
+      "name": "Vratislavia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "anthracosironidae",
+      "children": [
+        {
+          "id": "SP_VRATISLAVIA_SILESIACA_R_MER_1878",
+          "name": "Vratislavia silesiaca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vratislavia",
+          "authorship": "(Römer 1878)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:272236"
+          },
+          "uuid": "2ab22cb1-8217-404b-a9c8-d5b325aa94b5"
+        }
+      ]
     }
   ],
   "genusCount": 3

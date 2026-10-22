@@ -3,7 +3,7 @@
   "name": "Kreischeriidae",
   "rank": "FAMILY",
   "appSlug": "kreischeriidae",
-  "speciesCount": 9,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_KREISCHERIA",
@@ -122,6 +122,19 @@
             "gbif-backbone": "8577835"
           },
           "children": []
+        },
+        {
+          "id": "SP_HEMIKREISCHERIA_GEINITZI_THEVENIN_1902",
+          "name": "Hemikreischeria geinitzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemikreischeria",
+          "authorship": "(Thevenin 1902)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:286684"
+          },
+          "uuid": "1531998d-22b5-454d-9628-c67b2ee31828"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -141,13 +154,58 @@
           "lineage": "Gondwanarachne",
           "authorship": "Pinto",
           "sourceIds": {
-            "gbif-backbone": "6927125"
+            "gbif-backbone": "6927125",
+            "checklistbank-1174": "txn:432980"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "kreischeriidae"
+    },
+    {
+      "id": "GENUS_ANZINIA",
+      "name": "Anzinia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kreischeriidae",
+      "children": [
+        {
+          "id": "SP_ANZINIA_THEVENINI_PRUVOST_1919",
+          "name": "Anzinia thevenini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anzinia",
+          "authorship": "(Pruvost 1919)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:291886"
+          },
+          "uuid": "d218d7d1-6d56-4b3c-9eeb-4c143dba2792"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PSEUDOKREISCHERIA",
+      "name": "Pseudokreischeria",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kreischeriidae",
+      "children": [
+        {
+          "id": "SP_PSEUDOKREISCHERIA_POCOCKI_GILL_1924",
+          "name": "Pseudokreischeria pococki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudokreischeria",
+          "authorship": "(Gill 1924)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:291962"
+          },
+          "uuid": "1aa28fea-6961-4d3d-a3e8-7ca76cb5d265"
+        }
+      ]
     }
   ],
   "genusCount": 3
