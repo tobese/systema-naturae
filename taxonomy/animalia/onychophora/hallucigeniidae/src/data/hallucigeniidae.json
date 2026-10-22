@@ -3,7 +3,7 @@
   "name": "Hallucigeniidae",
   "rank": "FAMILY",
   "appSlug": "hallucigeniidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_HALLUCIGENIA",
@@ -19,7 +19,8 @@
           "lineage": "Hallucigenia",
           "authorship": "Hou & Bergström, 1995",
           "sourceIds": {
-            "gbif-backbone": "9684474"
+            "gbif-backbone": "9684474",
+            "checklistbank-1174": "txn:367906"
           },
           "children": []
         },
@@ -32,13 +33,71 @@
           "lineage": "Hallucigenia",
           "authorship": "(Walcott, 1911)",
           "sourceIds": {
-            "gbif-backbone": "7470422"
+            "gbif-backbone": "7470422",
+            "checklistbank-1174": "txn:358348"
           },
           "children": []
+        },
+        {
+          "id": "SP_HALLUCIGENIA_HONGMEIA_STEINER_ET_AL_2012",
+          "name": "Hallucigenia hongmeia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hallucigenia",
+          "authorship": "Steiner et al. 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:490861"
+          },
+          "uuid": "be76055d-bf30-47c3-ac6d-1f883effd3ce"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hallucigeniidae"
+    },
+    {
+      "id": "GENUS_CARBOTUBULUS",
+      "name": "Carbotubulus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hallucigeniidae",
+      "children": [
+        {
+          "id": "SP_CARBOTUBULUS_WALOSZEKI_HAUG_ET_AL_2012",
+          "name": "Carbotubulus waloszeki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carbotubulus",
+          "authorship": "Haug et al. 2012",
+          "sourceIds": {
+            "checklistbank-1174": "txn:358352"
+          },
+          "uuid": "24a25787-0bc7-417a-80ef-681d957346c5"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THANAHITA",
+      "name": "Thanahita",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hallucigeniidae",
+      "children": [
+        {
+          "id": "SP_THANAHITA_DISTOS_SIVETER_ET_AL_2018",
+          "name": "Thanahita distos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thanahita",
+          "authorship": "Siveter et al. 2018",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474577"
+          },
+          "uuid": "f8b47596-e6c5-40c8-9f89-0bb803e42e1d"
+        }
+      ]
     }
   ],
   "genusCount": 1
