@@ -3,7 +3,7 @@
   "name": "Lepidocystidae",
   "rank": "FAMILY",
   "appSlug": "lepidocystidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_VYSCYSTIS",
@@ -19,9 +19,23 @@
           "lineage": "Vyscystis",
           "authorship": "Fatka & Kordule, 1990",
           "sourceIds": {
-            "gbif-backbone": "9281027"
+            "gbif-backbone": "9281027",
+            "checklistbank-1174": "txn:355703"
           },
           "children": []
+        },
+        {
+          "id": "SP_VYSCYSTIS_SPINOSA_WANG_ET_AL_2024",
+          "name": "Vyscystis spinosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vyscystis",
+          "authorship": "Wang et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:491901"
+          },
+          "uuid": "1a7695c4-088f-4fe8-832b-b05d1dcad73e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -48,6 +62,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lepidocystidae"
+    },
+    {
+      "id": "GENUS_LEPIDOCYSTIS",
+      "name": "Lepidocystis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lepidocystidae",
+      "children": [
+        {
+          "id": "SP_LEPIDOCYSTIS_WANNERI_FOERSTE_1938",
+          "name": "Lepidocystis wanneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidocystis",
+          "authorship": "Foerste 1938",
+          "sourceIds": {
+            "checklistbank-1174": "txn:151071"
+          },
+          "uuid": "94c73591-6354-4b82-93c9-60650bfa7fb1"
+        }
+      ]
     }
   ],
   "genusCount": 2

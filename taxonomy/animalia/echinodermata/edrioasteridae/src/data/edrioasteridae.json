@@ -3,7 +3,7 @@
   "name": "Edrioasteridae",
   "rank": "FAMILY",
   "appSlug": "edrioasteridae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_CYCLASTER",
@@ -41,13 +41,36 @@
           "lineage": "Pseudedriophus",
           "authorship": "Sprinkle & Sumrall, 2015",
           "sourceIds": {
-            "gbif-backbone": "9477324"
+            "gbif-backbone": "9477324",
+            "checklistbank-1174": "txn:345552"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "edrioasteridae"
+    },
+    {
+      "id": "GENUS_EDRIOASTER",
+      "name": "Edrioaster",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "edrioasteridae",
+      "children": [
+        {
+          "id": "SP_EDRIOASTER_BIGSBYI_BILLINGS_1858",
+          "name": "Edrioaster bigsbyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Edrioaster",
+          "authorship": "(Billings 1858)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:377643"
+          },
+          "uuid": "ba7e85a1-dc53-4e9f-be54-726e367afed3"
+        }
+      ]
     }
   ],
   "genusCount": 2

@@ -3,7 +3,7 @@
   "name": "Gyrocystidae",
   "rank": "FAMILY",
   "appSlug": "gyrocystidae",
-  "speciesCount": 9,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_PROGYROCYSTIS",
@@ -67,7 +67,8 @@
           "lineage": "Gyrocystis",
           "authorship": "Gil Cid & Domínguez Alonso, 1995",
           "sourceIds": {
-            "gbif-backbone": "11195255"
+            "gbif-backbone": "11195255",
+            "checklistbank-1174": "txn:380841"
           },
           "children": []
         },
@@ -148,6 +149,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gyrocystidae"
+    },
+    {
+      "id": "GENUS_GRACIACYSTIS",
+      "name": "Graciacystis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gyrocystidae",
+      "children": [
+        {
+          "id": "SP_GRACIACYSTIS_AMBIGUA_ZAMORA_ET_AL_2013",
+          "name": "Graciacystis ambigua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Graciacystis",
+          "authorship": "Zamora et al. 2013",
+          "sourceIds": {
+            "checklistbank-1174": "txn:371142"
+          },
+          "uuid": "149517f0-0de6-45aa-af29-5a30cd0254b5"
+        }
+      ]
     }
   ],
   "genusCount": 3

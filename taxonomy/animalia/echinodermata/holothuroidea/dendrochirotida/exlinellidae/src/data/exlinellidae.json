@@ -3,7 +3,7 @@
   "name": "Exlinellidae",
   "rank": "FAMILY",
   "appSlug": "exlinellidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_JORDANOCAUDINA",
@@ -19,7 +19,8 @@
           "lineage": "Jordanocaudina",
           "authorship": "Kozur & Sadeddin, 1990",
           "sourceIds": {
-            "gbif-backbone": "8514812"
+            "gbif-backbone": "8514812",
+            "checklistbank-1174": "txn:162911"
           },
           "children": []
         }
@@ -63,13 +64,36 @@
           "lineage": "Pseudoexlinella",
           "authorship": "Kozur & Sadeddin, 1990",
           "sourceIds": {
-            "gbif-backbone": "8441305"
+            "gbif-backbone": "8441305",
+            "checklistbank-1174": "txn:162912"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "exlinellidae"
+    },
+    {
+      "id": "GENUS_PEDATOPRISCUS",
+      "name": "Pedatopriscus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "exlinellidae",
+      "children": [
+        {
+          "id": "SP_PEDATOPRISCUS_PINGUIS_DEFLANDRE_RIGAUD_1946",
+          "name": "Pedatopriscus pinguis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pedatopriscus",
+          "authorship": "(Deflandre-Rigaud 1946)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:164550"
+          },
+          "uuid": "497a1912-1ca0-45fe-bb4d-db4a6010240f"
+        }
+      ]
     }
   ],
   "genusCount": 3
