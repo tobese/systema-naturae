@@ -3,7 +3,7 @@
   "name": "Nannogomphidae",
   "rank": "FAMILY",
   "appSlug": "nannogomphidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_SINAHEMEROSCOPUS",
@@ -19,13 +19,36 @@
           "lineage": "Sinahemeroscopus",
           "authorship": "Huang & Nel, 2010",
           "sourceIds": {
-            "gbif-backbone": "8467559"
+            "gbif-backbone": "8467559",
+            "checklistbank-1174": "txn:176777"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nannogomphidae"
+    },
+    {
+      "id": "GENUS_NANNOGOMPHUS",
+      "name": "Nannogomphus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "nannogomphidae",
+      "children": [
+        {
+          "id": "SP_NANNOGOMPHUS_VETUSTUS_HAGEN_1848",
+          "name": "Nannogomphus vetustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannogomphus",
+          "authorship": "(Hagen 1848)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:257778"
+          },
+          "uuid": "47666590-5c37-46b1-9af2-c14fdcd33671"
+        }
+      ]
     }
   ],
   "genusCount": 1
