@@ -3,7 +3,7 @@
   "name": "Rotadiscidae",
   "rank": "FAMILY",
   "appSlug": "rotadiscidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_SEPUTUS",
@@ -19,13 +19,36 @@
           "lineage": "Seputus",
           "authorship": "MacGabhann & Murray, 2010",
           "sourceIds": {
-            "gbif-backbone": "9624696"
+            "gbif-backbone": "9624696",
+            "checklistbank-1174": "txn:358247"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rotadiscidae"
+    },
+    {
+      "id": "GENUS_VELUMBRELLA",
+      "name": "Velumbrella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rotadiscidae",
+      "children": [
+        {
+          "id": "SP_VELUMBRELLA_CZARNOCKII_SCHROEDER_ET_AL_2018",
+          "name": "Velumbrella czarnockii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Velumbrella",
+          "authorship": "Schroeder et al. 2018",
+          "sourceIds": {
+            "checklistbank-1174": "txn:387160"
+          },
+          "uuid": "0773c129-050e-4016-9bed-8bd595881109"
+        }
+      ]
     }
   ],
   "genusCount": 1
