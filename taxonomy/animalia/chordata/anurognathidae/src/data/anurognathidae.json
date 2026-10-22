@@ -3,7 +3,7 @@
   "name": "Anurognathidae",
   "rank": "FAMILY",
   "appSlug": "anurognathidae",
-  "speciesCount": 7,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_JEHOLOPTERUS",
@@ -63,9 +63,23 @@
           "lineage": "Dendrorhynchoides",
           "authorship": "(Lü & Hone, 2012)",
           "sourceIds": {
-            "gbif-backbone": "8686709"
+            "gbif-backbone": "8686709",
+            "checklistbank-1174": "txn:255637"
           },
           "children": []
+        },
+        {
+          "id": "SP_DENDRORHYNCHOIDES_CURVIDENTATUS_JI_AND_JI_1998",
+          "name": "Dendrorhynchoides curvidentatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dendrorhynchoides",
+          "authorship": "(Ji and Ji 1998)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:68166"
+          },
+          "uuid": "71037221-71da-4749-81a6-90f26cbcc25b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -151,13 +165,36 @@
           "lineage": "Sinomacrops",
           "authorship": "Wei, Pêgas, Shen, Guo, Ma, Sun & Zhou, 2021",
           "sourceIds": {
-            "gbif-backbone": "11213694"
+            "gbif-backbone": "11213694",
+            "checklistbank-1174": "txn:438190"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anurognathidae"
+    },
+    {
+      "id": "GENUS_VESPEROPTERYLUS",
+      "name": "Vesperopterylus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "anurognathidae",
+      "children": [
+        {
+          "id": "SP_VESPEROPTERYLUS_LAMADONGENSIS_LU_ET_AL_2017",
+          "name": "Vesperopterylus lamadongensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vesperopterylus",
+          "authorship": "Lu et al. 2017",
+          "sourceIds": {
+            "checklistbank-1174": "txn:372107"
+          },
+          "uuid": "8411634f-c4f2-48fb-802b-6f2aa26a9962"
+        }
+      ]
     }
   ],
   "genusCount": 7
