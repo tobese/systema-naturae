@@ -3,7 +3,7 @@
   "name": "Thylacoleonidae",
   "rank": "FAMILY",
   "appSlug": "thylacoleonidae",
-  "speciesCount": 10,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_WAKALEO",
@@ -19,7 +19,8 @@
           "lineage": "Wakaleo",
           "authorship": "Clemens & Plane, 1974",
           "sourceIds": {
-            "gbif-backbone": "8601750"
+            "gbif-backbone": "8601750",
+            "checklistbank-1174": "txn:247289"
           },
           "children": []
         },
@@ -45,7 +46,8 @@
           "lineage": "Wakaleo",
           "authorship": "Archer & Rich, 1982",
           "sourceIds": {
-            "gbif-backbone": "8471262"
+            "gbif-backbone": "8471262",
+            "checklistbank-1174": "txn:247290"
           },
           "children": []
         },
@@ -58,9 +60,23 @@
           "lineage": "Wakaleo",
           "authorship": "Clemens & Plane, 1974",
           "sourceIds": {
-            "gbif-backbone": "8679291"
+            "gbif-backbone": "8679291",
+            "checklistbank-1174": "txn:94076"
           },
           "children": []
+        },
+        {
+          "id": "SP_WAKALEO_PITIKANTENSIS_RAUSCHER_1987",
+          "name": "Wakaleo pitikantensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wakaleo",
+          "authorship": "(Rauscher 1987)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:248009"
+          },
+          "uuid": "3ff46d47-8ff4-4290-b663-2f408348ccad"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -163,13 +179,36 @@
           "lineage": "Microleo",
           "authorship": "Gillespie, Archer & Hand, 2016",
           "sourceIds": {
-            "gbif-backbone": "8902824"
+            "gbif-backbone": "8902824",
+            "checklistbank-1174": "txn:432858"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thylacoleonidae"
+    },
+    {
+      "id": "GENUS_LEKANELEO",
+      "name": "Lekaneleo",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "thylacoleonidae",
+      "children": [
+        {
+          "id": "SP_LEKANELEO_ROSKELLYAE_GILLESPIE_ET_AL_2019",
+          "name": "Lekaneleo roskellyae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lekaneleo",
+          "authorship": "Gillespie et al. 2019",
+          "sourceIds": {
+            "checklistbank-1174": "txn:511184"
+          },
+          "uuid": "11bde561-b8b8-48ec-a432-d37b3e8886d6"
+        }
+      ]
     }
   ],
   "genusCount": 4

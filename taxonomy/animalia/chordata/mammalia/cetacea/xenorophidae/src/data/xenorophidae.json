@@ -3,7 +3,7 @@
   "name": "Xenorophidae",
   "rank": "FAMILY",
   "appSlug": "xenorophidae",
-  "speciesCount": 7,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_XENOROPHUS",
@@ -19,9 +19,23 @@
           "lineage": "Xenorophus",
           "authorship": "Sanders & Geisler, 2015",
           "sourceIds": {
-            "gbif-backbone": "9053844"
+            "gbif-backbone": "9053844",
+            "checklistbank-1174": "txn:62942"
           },
           "children": []
+        },
+        {
+          "id": "SP_XENOROPHUS_SIMPLICIDENS_BOESSENECKER_AND_GEISLER_2023",
+          "name": "Xenorophus simplicidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xenorophus",
+          "authorship": "Boessenecker and Geisler 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:479183"
+          },
+          "uuid": "3405347a-8ff3-4de7-bf2d-860424714178"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -158,6 +172,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "xenorophidae"
+    },
+    {
+      "id": "GENUS_ASHLEYCETUS",
+      "name": "Ashleycetus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "xenorophidae",
+      "children": [
+        {
+          "id": "SP_ASHLEYCETUS_PLANICAPITIS_SANDERS_AND_GEISLER_2015",
+          "name": "Ashleycetus planicapitis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ashleycetus",
+          "authorship": "Sanders and Geisler 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:313774"
+          },
+          "uuid": "3a0bf2b6-4dbe-40ec-88ba-815880674393"
+        }
+      ]
     }
   ],
   "genusCount": 7

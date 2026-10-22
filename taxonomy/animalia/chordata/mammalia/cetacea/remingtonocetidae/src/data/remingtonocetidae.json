@@ -3,7 +3,7 @@
   "name": "Remingtonocetidae",
   "rank": "FAMILY",
   "appSlug": "remingtonocetidae",
-  "speciesCount": 7,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_DALANISTES",
@@ -41,7 +41,8 @@
           "lineage": "Kutchicetus",
           "authorship": "Bajpai & Thewissen, 2000",
           "sourceIds": {
-            "gbif-backbone": "4971346"
+            "gbif-backbone": "4971346",
+            "checklistbank-1174": "txn:63096"
           },
           "children": []
         }
@@ -123,6 +124,19 @@
             "gbif-backbone": "4971348"
           },
           "children": []
+        },
+        {
+          "id": "SP_REMINGTONOCETUS_HARUDIENSIS_SAHNI_AND_MISHRA_1975",
+          "name": "Remingtonocetus harudiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Remingtonocetus",
+          "authorship": "(Sahni and Mishra 1975)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:53238"
+          },
+          "uuid": "8b593b2d-3ab3-45ee-a5a2-bccc06d261b5"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -142,13 +156,36 @@
           "lineage": "Attockicetus",
           "authorship": "Thewissen & Hussain, 2000",
           "sourceIds": {
-            "gbif-backbone": "4971345"
+            "gbif-backbone": "4971345",
+            "checklistbank-1174": "txn:62970"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "remingtonocetidae"
+    },
+    {
+      "id": "GENUS_ANDREWSIPHIUS",
+      "name": "Andrewsiphius",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "remingtonocetidae",
+      "children": [
+        {
+          "id": "SP_ANDREWSIPHIUS_SLOANI_SAHNI_AND_MISHRA_1972",
+          "name": "Andrewsiphius sloani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Andrewsiphius",
+          "authorship": "(Sahni and Mishra 1972)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:63120"
+          },
+          "uuid": "36fda8da-db85-442a-8ced-5358c48ce0ec"
+        }
+      ]
     }
   ],
   "genusCount": 6

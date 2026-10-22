@@ -3,7 +3,7 @@
   "name": "Ambulocetidae",
   "rank": "FAMILY",
   "appSlug": "ambulocetidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_AMBULOCETUS",
@@ -41,13 +41,36 @@
           "lineage": "Gandakasia",
           "authorship": "Dehm & Oettingen-Spielberg, 1958",
           "sourceIds": {
-            "gbif-backbone": "4971316"
+            "gbif-backbone": "4971316",
+            "checklistbank-1174": "txn:62973"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ambulocetidae"
+    },
+    {
+      "id": "GENUS_HIMALAYACETUS",
+      "name": "Himalayacetus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ambulocetidae",
+      "children": [
+        {
+          "id": "SP_HIMALAYACETUS_SUBATHUENSIS_BAJPAI_AND_GINGERICH_1998",
+          "name": "Himalayacetus subathuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Himalayacetus",
+          "authorship": "Bajpai and Gingerich 1998",
+          "sourceIds": {
+            "checklistbank-1174": "txn:63094"
+          },
+          "uuid": "7ccf5296-0fac-4b84-b4a1-fda20c625718"
+        }
+      ]
     }
   ],
   "genusCount": 2

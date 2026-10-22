@@ -67,7 +67,10 @@
           "lineage": "Otekaikea",
           "authorship": "Tanaka & Fordyce, 2015",
           "children": [],
-          "uuid": "8d90723c-226f-551-80b-cfeae2fd70f319"
+          "uuid": "8d90723c-226f-551-80b-cfeae2fd70f319",
+          "sourceIds": {
+            "checklistbank-1174": "txn:351476"
+          }
         }
       ],
       "sourcedFrom": "worms",
@@ -133,7 +136,8 @@
           "lineage": "Papahu",
           "authorship": "Aguirre Fernandez & Fordyce, 2014",
           "sourceIds": {
-            "gbif-backbone": "8564583"
+            "gbif-backbone": "8564583",
+            "checklistbank-1174": "txn:287293"
           },
           "children": [],
           "uuid": "37f691c5-ea4e-550-86d-228cc10f7e7a9e"
@@ -164,9 +168,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "waipatiidae"
+    },
+    {
+      "id": "GENUS_NIHOHAE",
+      "name": "Nihohae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "waipatiidae",
+      "children": [
+        {
+          "id": "SP_NIHOHAE_MATAKOI_COSTE_ET_AL_2023",
+          "name": "Nihohae matakoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nihohae",
+          "authorship": "Coste et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:474396"
+          },
+          "uuid": "de20fcf3-36cb-4915-a0df-b74a7d399c4f"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NIHOROA",
+      "name": "Nihoroa",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "waipatiidae",
+      "children": [
+        {
+          "id": "SP_NIHOROA_REIMAEA_COSTE_ET_AL_2024",
+          "name": "Nihoroa reimaea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nihoroa",
+          "authorship": "Coste et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:496843"
+          },
+          "uuid": "45e0d09e-f31c-411b-8c03-65b6913322f0"
+        }
+      ]
     }
   ],
-  "speciesCount": 8,
+  "speciesCount": 10,
   "appSlug": "waipatiidae",
   "sourcedFrom": "worms",
   "lineage": "Chordata > Mammalia",
