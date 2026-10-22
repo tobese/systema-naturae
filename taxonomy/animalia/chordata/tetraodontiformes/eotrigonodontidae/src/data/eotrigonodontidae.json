@@ -3,7 +3,7 @@
   "name": "Eotrigonodontidae",
   "rank": "FAMILY",
   "appSlug": "eotrigonodontidae",
-  "speciesCount": 5,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_KANKATODUS",
@@ -19,7 +19,8 @@
           "lineage": "Kankatodus",
           "authorship": "Kumar & Loyal, 1987",
           "sourceIds": {
-            "gbif-backbone": "8505413"
+            "gbif-backbone": "8505413",
+            "checklistbank-1174": "txn:154359"
           },
           "children": []
         }
@@ -54,9 +55,36 @@
           "lineage": "Eotrigonodon",
           "authorship": "Jain & Sahni, 1983",
           "sourceIds": {
-            "gbif-backbone": "4964316"
+            "gbif-backbone": "4964316",
+            "checklistbank-1174": "txn:80997"
           },
           "children": []
+        },
+        {
+          "id": "SP_EOTRIGONODON_INDICUS_KUMAR_AND_LOYAL_1987",
+          "name": "Eotrigonodon indicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eotrigonodon",
+          "authorship": "(Kumar and Loyal 1987)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:154364"
+          },
+          "uuid": "e58eea92-039c-412c-88d0-c01a0b31a6e6"
+        },
+        {
+          "id": "SP_EOTRIGONODON_SERRATUS_GERVAIS_1852",
+          "name": "Eotrigonodon serratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eotrigonodon",
+          "authorship": "(Gervais 1852)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:434144"
+          },
+          "uuid": "1fd9291d-cf8e-408c-9968-6404a6c7881f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -105,6 +133,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eotrigonodontidae"
+    },
+    {
+      "id": "GENUS_STEPHANODUS",
+      "name": "Stephanodus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "eotrigonodontidae",
+      "children": [
+        {
+          "id": "SP_STEPHANODUS_LYBICUS_ZITTEL_1888",
+          "name": "Stephanodus lybicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanodus",
+          "authorship": "(Zittel 1888)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:154361"
+          },
+          "uuid": "cb029f24-f2d0-4491-b9bc-6040b0c0e7a6"
+        },
+        {
+          "id": "SP_STEPHANODUS_MOSENSIS_DAMES_1883",
+          "name": "Stephanodus mosensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanodus",
+          "authorship": "(Dames 1883)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:512298"
+          },
+          "uuid": "4024a4b7-eaf7-4a56-a27c-deece1e388d6"
+        }
+      ]
     }
   ],
   "genusCount": 4
