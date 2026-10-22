@@ -3,7 +3,7 @@
   "name": "Ellobiopsidae",
   "rank": "FAMILY",
   "appSlug": "ellobiopsidae",
-  "speciesCount": 1,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_ELLOBIOPSIS",
@@ -19,14 +19,60 @@
           "lineage": "Ellobiopsis",
           "authorship": "Caullery, 1910",
           "sourceIds": {
-            "gbif-backbone": "8408861"
+            "gbif-backbone": "8408861",
+            "checklistbank-139831": "503499"
           },
           "children": [],
           "uuid": "cf96441a-60fd-573-8da-5909966ef26cd7"
+        },
+        {
+          "id": "SP_ELLOBIOPSIS_ELONGATA",
+          "name": "Ellobiopsis elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ellobiopsis",
+          "sourceIds": {
+            "checklistbank-139831": "1231963"
+          },
+          "uuid": "c885b73c-c774-49c4-881f-9d449f230b69"
+        },
+        {
+          "id": "SP_ELLOBIOPSIS_FAGEI",
+          "name": "Ellobiopsis fagei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ellobiopsis",
+          "sourceIds": {
+            "checklistbank-139831": "1231964"
+          },
+          "uuid": "c84d03cb-3193-4c73-a461-205b9929aa01"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ellobiopsidae"
+    },
+    {
+      "id": "GENUS_THALASSOMYCES",
+      "name": "Thalassomyces",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ellobiopsidae",
+      "children": [
+        {
+          "id": "SP_THALASSOMYCES_CAPILLOSUS",
+          "name": "Thalassomyces capillosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassomyces",
+          "sourceIds": {
+            "checklistbank-139831": "1520344"
+          },
+          "uuid": "a13fc469-e0f8-48eb-8abe-955df33f9061"
+        }
+      ]
     }
   ],
   "genusCount": 1
