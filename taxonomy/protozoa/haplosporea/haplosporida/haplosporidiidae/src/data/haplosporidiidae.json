@@ -3,7 +3,7 @@
   "name": "Haplosporidiidae",
   "rank": "FAMILY",
   "appSlug": "haplosporidiidae",
-  "speciesCount": 29,
+  "speciesCount": 31,
   "children": [
     {
       "id": "GENUS_BONAMIA",
@@ -47,7 +47,8 @@
           "lineage": "Bonamia",
           "authorship": "Pichot, Comps, Tigé, Grizel & Rabouin, 1980",
           "sourceIds": {
-            "gbif-backbone": "8050384"
+            "gbif-backbone": "8050384",
+            "checklistbank-139831": "550352"
           },
           "children": [],
           "uuid": "3d75a576-1238-560-83c-1d687a4b4b5b14"
@@ -65,6 +66,18 @@
           },
           "children": [],
           "uuid": "740a10fb-8ff1-524-81e-9326855bfb9c6f"
+        },
+        {
+          "id": "SP_BONAMIA_EX",
+          "name": "Bonamia ex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bonamia",
+          "sourceIds": {
+            "checklistbank-139831": "566645"
+          },
+          "uuid": "831fa691-a69a-4b26-ab99-ead999cb78d1"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -261,7 +274,8 @@
           "lineage": "Haplosporidium",
           "authorship": "Haskin, Stauber & Mackin, 1966",
           "sourceIds": {
-            "gbif-backbone": "5425554"
+            "gbif-backbone": "5425554",
+            "checklistbank-139831": "549812"
           },
           "children": [],
           "uuid": "441e3f42-9c6e-576-b23-8b442c352da3cd"
@@ -436,6 +450,27 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "haplosporidiidae"
+    },
+    {
+      "id": "GENUS_MIKROCYSTOS",
+      "name": "Mikrocystos",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "haplosporidiidae",
+      "children": [
+        {
+          "id": "SP_MIKROCYSTOS_MACKINI",
+          "name": "Mikrocystos mackini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocystos",
+          "sourceIds": {
+            "checklistbank-139831": "972044"
+          },
+          "uuid": "489efbf8-ffec-40d3-b9ca-ec6c30033c0a"
+        }
+      ]
     }
   ],
   "genusCount": 3
