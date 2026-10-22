@@ -3,7 +3,7 @@
   "name": "Prepidolopidae",
   "rank": "FAMILY",
   "appSlug": "prepidolopidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_COLORADOLOPS",
@@ -19,7 +19,8 @@
           "lineage": "Coloradolops",
           "authorship": "Chornogubsky, Zimicz, Goin, Fernicola, Payrola & Cárdenas, 2018",
           "sourceIds": {
-            "gbif-backbone": "10269542"
+            "gbif-backbone": "10269542",
+            "checklistbank-1174": "txn:423709"
           },
           "children": []
         }
@@ -98,13 +99,36 @@
           "lineage": "Incadolops",
           "authorship": "Goin & Candela, 2004",
           "sourceIds": {
-            "gbif-backbone": "8610028"
+            "gbif-backbone": "8610028",
+            "checklistbank-1174": "txn:276018"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "prepidolopidae"
+    },
+    {
+      "id": "GENUS_PUNADOLOPS",
+      "name": "Punadolops",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "prepidolopidae",
+      "children": [
+        {
+          "id": "SP_PUNADOLOPS_ALONSOI_PASCUAL_1983",
+          "name": "Punadolops alonsoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Punadolops",
+          "authorship": "(Pascual 1983)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:334425"
+          },
+          "uuid": "78d2dccd-9ac2-48d4-a0cb-67ab3e9b8612"
+        }
+      ]
     }
   ],
   "genusCount": 4

@@ -3,7 +3,7 @@
   "name": "Paroxyclaenidae",
   "rank": "FAMILY",
   "appSlug": "paroxyclaenidae",
-  "speciesCount": 10,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_KIINKERISHELLA",
@@ -111,9 +111,23 @@
           "lineage": "Vulpavoides",
           "authorship": "Russell & Godinot, 1988",
           "sourceIds": {
-            "gbif-backbone": "9494214"
+            "gbif-backbone": "9494214",
+            "checklistbank-1174": "txn:347869"
           },
           "children": []
+        },
+        {
+          "id": "SP_VULPAVOIDES_SIMPLICIDENS_VAN_VALEN_1965",
+          "name": "Vulpavoides simplicidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vulpavoides",
+          "authorship": "(Van Valen 1965)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:347867"
+          },
+          "uuid": "8ff8a48f-ccdf-453f-9c3b-b4400aa8368b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -146,7 +160,8 @@
           "lineage": "Merialus",
           "authorship": "Russell & Godinot, 1988",
           "sourceIds": {
-            "gbif-backbone": "9375680"
+            "gbif-backbone": "9375680",
+            "checklistbank-1174": "txn:347866"
           },
           "children": []
         }
@@ -197,6 +212,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paroxyclaenidae"
+    },
+    {
+      "id": "GENUS_EUHOOKERIA",
+      "name": "Euhookeria",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "paroxyclaenidae",
+      "children": [
+        {
+          "id": "SP_EUHOOKERIA_HOPWOODI_CRAY_1973",
+          "name": "Euhookeria hopwoodi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euhookeria",
+          "authorship": "(Cray 1973)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:347863"
+          },
+          "uuid": "0c34a6e5-b670-42b1-af35-e1c006d52461"
+        }
+      ]
     }
   ],
   "genusCount": 7

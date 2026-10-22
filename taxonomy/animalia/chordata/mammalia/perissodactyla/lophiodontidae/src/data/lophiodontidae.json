@@ -3,7 +3,7 @@
   "name": "Lophiodontidae",
   "rank": "FAMILY",
   "appSlug": "lophiodontidae",
-  "speciesCount": 16,
+  "speciesCount": 19,
   "children": [
     {
       "id": "GENUS_LOPHIODON",
@@ -32,7 +32,8 @@
           "lineage": "Lophiodon",
           "authorship": "Labarrère & Montenat, 2011",
           "sourceIds": {
-            "gbif-backbone": "9557220"
+            "gbif-backbone": "9557220",
+            "checklistbank-1174": "txn:347971"
           },
           "children": []
         },
@@ -203,6 +204,19 @@
             "gbif-backbone": "11173866"
           },
           "children": []
+        },
+        {
+          "id": "SP_LOPHIODON_OCCITANICUM_CUVIER_1821",
+          "name": "Lophiodon occitanicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lophiodon",
+          "authorship": "Cuvier 1821",
+          "sourceIds": {
+            "checklistbank-1174": "txn:499356"
+          },
+          "uuid": "a841f7b7-a2af-4639-9440-64f9e643be71"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -229,6 +243,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lophiodontidae"
+    },
+    {
+      "id": "GENUS_RHINOCEROLOPHIODON",
+      "name": "Rhinocerolophiodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophiodontidae",
+      "children": [
+        {
+          "id": "SP_RHINOCEROLOPHIODON_BUXOVILLANUM_CUVIER_1812",
+          "name": "Rhinocerolophiodon buxovillanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhinocerolophiodon",
+          "authorship": "(Cuvier 1812)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:63457"
+          },
+          "uuid": "0e621e82-653e-4020-9558-15bf43d8c5af"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PARALOPHIODON",
+      "name": "Paralophiodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophiodontidae",
+      "children": [
+        {
+          "id": "SP_PARALOPHIODON_BAROENSIS_CHECA_SOLER_1998",
+          "name": "Paralophiodon baroensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralophiodon",
+          "authorship": "(Checa Soler 1998)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:347804"
+          },
+          "uuid": "a787b773-c91e-4f6b-98ab-67514eb379ca"
+        }
+      ]
     }
   ],
   "genusCount": 2

@@ -3,7 +3,7 @@
   "name": "Microcosmodontidae",
   "rank": "FAMILY",
   "appSlug": "microcosmodontidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_ALOPOCOSMODON",
@@ -19,7 +19,8 @@
           "lineage": "Alopocosmodon",
           "authorship": "Scott, Spivak & Sweet, 2013",
           "sourceIds": {
-            "gbif-backbone": "8444103"
+            "gbif-backbone": "8444103",
+            "checklistbank-1174": "txn:265655"
           },
           "children": []
         }
@@ -48,6 +49,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "microcosmodontidae"
+    },
+    {
+      "id": "GENUS_ALLOCOSMODON",
+      "name": "Allocosmodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "microcosmodontidae",
+      "children": [
+        {
+          "id": "SP_ALLOCOSMODON_WOODI_HOLTZMAN_AND_WOLBERG_1977",
+          "name": "Allocosmodon woodi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allocosmodon",
+          "authorship": "(Holtzman and Wolberg 1977)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:48510"
+          },
+          "uuid": "052364be-54b9-4033-a5d6-4ec1e3b570cc"
+        }
+      ]
     }
   ],
   "genusCount": 2

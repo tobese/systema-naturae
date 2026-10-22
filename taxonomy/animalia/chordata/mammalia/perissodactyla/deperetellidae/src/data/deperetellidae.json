@@ -3,7 +3,7 @@
   "name": "Deperetellidae",
   "rank": "FAMILY",
   "appSlug": "deperetellidae",
-  "speciesCount": 11,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_PATAECOPS",
@@ -63,7 +63,8 @@
           "lineage": "Deperetella",
           "authorship": "Matthew & Granger, 1925",
           "sourceIds": {
-            "gbif-backbone": "8495175"
+            "gbif-backbone": "8495175",
+            "checklistbank-1174": "txn:155431"
           },
           "children": []
         },
@@ -118,6 +119,19 @@
             "gbif-backbone": "9434566"
           },
           "children": []
+        },
+        {
+          "id": "SP_DEPERETELLA_DEPERETI_ZDANSKY_1930",
+          "name": "Deperetella depereti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deperetella",
+          "authorship": "(Zdansky 1930)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:58309"
+          },
+          "uuid": "cb761b59-4e13-4ae7-92dd-0f8f44f2f560"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -203,13 +217,36 @@
           "lineage": "Irdinolophus",
           "authorship": "Dashzeveg & Hooker, 1997",
           "sourceIds": {
-            "gbif-backbone": "9601165"
+            "gbif-backbone": "9601165",
+            "checklistbank-1174": "txn:345249"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "deperetellidae"
+    },
+    {
+      "id": "GENUS_BAHINOLOPHUS",
+      "name": "Bahinolophus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "deperetellidae",
+      "children": [
+        {
+          "id": "SP_BAHINOLOPHUS_BIRMANICUS_PILGRIM_1925",
+          "name": "Bahinolophus birmanicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bahinolophus",
+          "authorship": "(Pilgrim 1925)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:107144"
+          },
+          "uuid": "4f7f137d-b4a5-41a0-89b1-fb0bfbec7add"
+        }
+      ]
     }
   ],
   "genusCount": 7

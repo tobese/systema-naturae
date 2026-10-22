@@ -3,7 +3,7 @@
   "name": "Abderitidae",
   "rank": "FAMILY",
   "appSlug": "abderitidae",
-  "speciesCount": 6,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_ABDERITES",
@@ -45,9 +45,23 @@
           "lineage": "Abderites",
           "authorship": "Abello & Rubilar-Rogers, 2012",
           "sourceIds": {
-            "gbif-backbone": "11182234"
+            "gbif-backbone": "11182234",
+            "checklistbank-1174": "txn:432412"
           },
           "children": []
+        },
+        {
+          "id": "SP_ABDERITES_PRISTINUS_AMEGHINO_1902",
+          "name": "Abderites pristinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abderites",
+          "authorship": "(Ameghino 1902)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:123447"
+          },
+          "uuid": "0f21448f-a897-4641-a111-367197f23c73"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -105,10 +119,45 @@
             "gbif-backbone": "8492395"
           },
           "children": []
+        },
+        {
+          "id": "SP_PITHECULITES_IPURURENSIS_STUTZ_ET_AL_2022",
+          "name": "Pitheculites ipururensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pitheculites",
+          "authorship": "Stutz et al. 2022",
+          "sourceIds": {
+            "checklistbank-1174": "txn:476548"
+          },
+          "uuid": "c95e044c-8634-4e92-a287-640d5fc662f1"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "abderitidae"
+    },
+    {
+      "id": "GENUS_PITHICULITES",
+      "name": "Pithiculites",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "abderitidae",
+      "children": [
+        {
+          "id": "SP_PITHICULITES_CHENCHE_DUMONT_AND_BROWN_1997",
+          "name": "Pithiculites chenche",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pithiculites",
+          "authorship": "Dumont and Brown 1997",
+          "sourceIds": {
+            "checklistbank-1174": "txn:268561"
+          },
+          "uuid": "7493d8e2-ac10-46cc-8271-e430118c3995"
+        }
+      ]
     }
   ],
   "genusCount": 3

@@ -3,7 +3,7 @@
   "name": "Gobiconodontidae",
   "rank": "FAMILY",
   "appSlug": "gobiconodontidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_HANGJINIA",
@@ -19,7 +19,8 @@
           "lineage": "Hangjinia",
           "authorship": "Godefroit & Guo, 1999",
           "sourceIds": {
-            "gbif-backbone": "4975213"
+            "gbif-backbone": "4975213",
+            "checklistbank-1174": "txn:57346"
           },
           "children": []
         }
@@ -92,6 +93,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gobiconodontidae"
+    },
+    {
+      "id": "GENUS_GOBICONODON",
+      "name": "Gobiconodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gobiconodontidae",
+      "children": [
+        {
+          "id": "SP_GOBICONODON_HOBURENSIS_TROFIMOV_1978",
+          "name": "Gobiconodon hoburensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gobiconodon",
+          "authorship": "(Trofimov 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:140285"
+          },
+          "uuid": "2d726ed7-7580-4db2-a0c8-6650fd441b9d"
+        }
+      ]
     }
   ],
   "genusCount": 4
