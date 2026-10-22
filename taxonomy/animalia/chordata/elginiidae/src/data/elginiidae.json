@@ -3,7 +3,7 @@
   "name": "Elginiidae",
   "rank": "FAMILY",
   "appSlug": "elginiidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_OBIRKOVIA",
@@ -19,13 +19,36 @@
           "lineage": "Obirkovia",
           "authorship": "Bulanov & Yashina, 2005",
           "sourceIds": {
-            "gbif-backbone": "8455760"
+            "gbif-backbone": "8455760",
+            "checklistbank-1174": "txn:160258"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "elginiidae"
+    },
+    {
+      "id": "GENUS_ELGINIA",
+      "name": "Elginia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "elginiidae",
+      "children": [
+        {
+          "id": "SP_ELGINIA_WUYONGAE_LIU_AND_BEVER_2018",
+          "name": "Elginia wuyongae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elginia",
+          "authorship": "Liu and Bever 2018",
+          "sourceIds": {
+            "checklistbank-1174": "txn:371877"
+          },
+          "uuid": "d4121eb5-9f43-46c5-b237-01756044a883"
+        }
+      ]
     }
   ],
   "genusCount": 1

@@ -3,7 +3,7 @@
   "name": "Diplodoselachidae",
   "rank": "FAMILY",
   "appSlug": "diplodoselachidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_DICENTRODUS",
@@ -22,10 +22,45 @@
             "gbif-backbone": "8440266"
           },
           "children": []
+        },
+        {
+          "id": "SP_DICENTRODUS_BELEMNOIDES_ZIDEK_1978",
+          "name": "Dicentrodus belemnoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dicentrodus",
+          "authorship": "(Zidek 1978)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:469888"
+          },
+          "uuid": "36f4bb43-31f7-4f59-8de6-c024051a504f"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "diplodoselachidae"
+    },
+    {
+      "id": "GENUS_DIPLODOSELACHE",
+      "name": "Diplodoselache",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "diplodoselachidae",
+      "children": [
+        {
+          "id": "SP_DIPLODOSELACHE_WOODI_DICK_1981",
+          "name": "Diplodoselache woodi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplodoselache",
+          "authorship": "Dick 1981",
+          "sourceIds": {
+            "checklistbank-1174": "txn:504638"
+          },
+          "uuid": "5b79fe6c-d400-4516-a5ef-82e16ce77003"
+        }
+      ]
     }
   ],
   "genusCount": 1

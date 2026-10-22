@@ -17,7 +17,12 @@
           "lineage": "Alopias",
           "authorship": "Lowe, 1841",
           "children": [],
-          "uuid": "d52b6648-32fe-522-8de-439be44c998b0f"
+          "uuid": "d52b6648-32fe-522-8de-439be44c998b0f",
+          "sourceIds": {
+            "checklistbank-1174": "txn:83161",
+            "checklistbank-127379": "53b1e2bc-856f-4b0d-8131-9a8cbe0a3ed5",
+            "checklistbank-139831": "93695"
+          }
         },
         {
           "id": "SP_ALOPIAS_VULPINUS_BONNATERRE_1788",
@@ -28,7 +33,11 @@
           "lineage": "Alopias",
           "authorship": "(Bonnaterre, 1788)",
           "children": [],
-          "uuid": "7ff5a6f3-8119-5cf-a2f-e57e870651277b"
+          "uuid": "7ff5a6f3-8119-5cf-a2f-e57e870651277b",
+          "sourceIds": {
+            "checklistbank-127379": "e753f025-b2d6-4372-8c6e-390afc730821",
+            "checklistbank-139831": "93696"
+          }
         },
         {
           "id": "SP_ALOPIAS_PELAGICUS_NAKAMURA_1935",
@@ -41,7 +50,9 @@
           "children": [],
           "sourceIds": {
             "checklistbank": "Alopias_pelagicus",
-            "wikispecies": "Alopias_pelagicus"
+            "wikispecies": "Alopias_pelagicus",
+            "checklistbank-127379": "50d7d38a-8c36-4b72-8ab7-9bfeedbfcc65",
+            "checklistbank-139831": "68050"
           },
           "uuid": "742fba78-82f6-559-aeb-ee8083eb742f3f"
         },
@@ -119,7 +130,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Alopias",
           "sourceIds": {
-            "checklistbank": "Alopias_grandis"
+            "checklistbank": "Alopias_grandis",
+            "checklistbank-1174": "txn:132706"
           },
           "children": [],
           "uuid": "bc461dcd-2d42-5b3-844-f901953bb2f3c2"
@@ -133,7 +145,8 @@
           "lineage": "Alopias",
           "sourceIds": {
             "checklistbank": "Alopias_palatasi",
-            "gbif-backbone": "11138852"
+            "gbif-backbone": "11138852",
+            "checklistbank-1174": "txn:377170"
           },
           "children": [],
           "authorship": "Kent, 2018",
@@ -148,7 +161,8 @@
           "lineage": "Alopias",
           "authorship": "White, 1956",
           "sourceIds": {
-            "gbif-backbone": "4964519"
+            "gbif-backbone": "4964519",
+            "checklistbank-1174": "txn:125020"
           },
           "children": [],
           "uuid": "e5ae6746-aff4-5ad-a45-9ecb198177f2dc"
@@ -166,6 +180,71 @@
           },
           "children": [],
           "uuid": "8f272544-db2a-56a-a9b-c2689fb93cbded"
+        },
+        {
+          "id": "SP_ALOPIAS_EXIGUA_PROBST_1879",
+          "name": "Alopias exigua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alopias",
+          "authorship": "(Probst 1879)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:420580"
+          },
+          "uuid": "f7fc61b8-9166-49ee-aee9-5a4f9db6473e"
+        },
+        {
+          "id": "SP_ALOPIAS_DENTICULATUS_CAPPETTA_1981",
+          "name": "Alopias denticulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alopias",
+          "authorship": "Cappetta 1981",
+          "sourceIds": {
+            "checklistbank-1174": "txn:517192"
+          },
+          "uuid": "32bd7858-2898-473b-a504-ab79ac26ce4d"
+        },
+        {
+          "id": "SP_ALOPIAS_HERMANI_KOZLOV_1999",
+          "name": "Alopias hermani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alopias",
+          "authorship": "Kozlov 1999",
+          "sourceIds": {
+            "checklistbank-1174": "txn:517949"
+          },
+          "uuid": "41cc7a8b-bc70-46ad-ad6f-e38a427665d8"
+        },
+        {
+          "id": "SP_ALOPIAS_CROCHARDI_WARD_1978",
+          "name": "Alopias crochardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alopias",
+          "authorship": "Ward 1978",
+          "sourceIds": {
+            "checklistbank-1174": "txn:518145"
+          },
+          "uuid": "c5a8580b-9283-4365-8793-c7710b736216"
+        },
+        {
+          "id": "SP_ALOPIAS_SUBEXIGUA_DARTEVELLE_AND_CASIER_1959",
+          "name": "Alopias subexigua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alopias",
+          "authorship": "Dartevelle and Casier 1959",
+          "sourceIds": {
+            "checklistbank-1174": "txn:518828"
+          },
+          "uuid": "fba5bffb-cc9f-449c-9a91-c79f9f4c74fa"
         }
       ],
       "sourcedFrom": "worms",
@@ -373,9 +452,101 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "alopiidae"
+    },
+    {
+      "id": "GENUS_PARANOMOTODON",
+      "name": "Paranomotodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "alopiidae",
+      "children": [
+        {
+          "id": "SP_PARANOMOTODON_ANGUSTIDENS_REUSS_1845",
+          "name": "Paranomotodon angustidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paranomotodon",
+          "authorship": "(Reuss 1845)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:253549"
+          },
+          "uuid": "c7932dc6-c006-4b95-91d4-b82689dea009"
+        },
+        {
+          "id": "SP_PARANOMOTODON_TODDI_CASE_AND_CAPPETTA_1997",
+          "name": "Paranomotodon toddi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paranomotodon",
+          "authorship": "(Case and Cappetta 1997)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:425890"
+          },
+          "uuid": "43b03c26-86d7-4634-9fc1-95e70ab3089b"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_USAKIAS",
+      "name": "Usakias",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "alopiidae",
+      "children": [
+        {
+          "id": "SP_USAKIAS_WARDI_ZHELEZKO_AND_KOZLOV_1999",
+          "name": "Usakias wardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Usakias",
+          "authorship": "Zhelezko and Kozlov 1999",
+          "sourceIds": {
+            "checklistbank-1174": "txn:517924"
+          },
+          "uuid": "b735eaad-0696-4b18-8f65-191c0cdb42f8"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PARALOPIAS",
+      "name": "Paralopias",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "alopiidae",
+      "children": [
+        {
+          "id": "SP_PARALOPIAS_FOLLIOTI_CANEVET_2025",
+          "name": "Paralopias follioti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralopias",
+          "authorship": "Canevet 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:518605"
+          },
+          "uuid": "833a61c8-4222-479d-9e42-e2552a5e2278"
+        },
+        {
+          "id": "SP_PARALOPIAS_ALABAMENSIS_WHITE_1956",
+          "name": "Paralopias alabamensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralopias",
+          "authorship": "(White 1956)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:125021"
+          },
+          "uuid": "d3fe8aef-f1ec-4cbc-a27f-ff4f4c976fa4"
+        }
+      ]
     }
   ],
-  "speciesCount": 26,
+  "speciesCount": 36,
   "appSlug": "alopiidae",
   "sourcedFrom": "worms",
   "lineage": "Chordata > Elasmobranchii",
