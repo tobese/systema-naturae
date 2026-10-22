@@ -3,7 +3,7 @@
   "name": "Dolichopteridae",
   "rank": "FAMILY",
   "appSlug": "dolichopteridae",
-  "speciesCount": 6,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_DOLICHOPTERUS",
@@ -45,7 +45,8 @@
           "lineage": "Dolichopterus",
           "authorship": "Caster & Kjellesvig-Waering, 1956",
           "sourceIds": {
-            "gbif-backbone": "5931891"
+            "gbif-backbone": "5931891",
+            "checklistbank-1174": "txn:109654"
           },
           "children": []
         },
@@ -58,9 +59,36 @@
           "lineage": "Dolichopterus",
           "authorship": "Caster & Kjellesvig-Waering, 1956",
           "sourceIds": {
-            "gbif-backbone": "5931889"
+            "gbif-backbone": "5931889",
+            "checklistbank-1174": "txn:109655"
           },
           "children": []
+        },
+        {
+          "id": "SP_DOLICHOPTERUS_ASPERATUS_KJELLESVIG_WAERING_1961",
+          "name": "Dolichopterus asperatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolichopterus",
+          "authorship": "Kjellesvig-Waering 1961",
+          "sourceIds": {
+            "checklistbank-1174": "txn:480587"
+          },
+          "uuid": "461389ea-c734-4bbe-ab2f-0b73522099ac"
+        },
+        {
+          "id": "SP_DOLICHOPTERUS_GOTLANDICUS_KJELLESVIG_WAERING_1979",
+          "name": "Dolichopterus gotlandicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolichopterus",
+          "authorship": "Kjellesvig-Waering 1979",
+          "sourceIds": {
+            "checklistbank-1174": "txn:512143"
+          },
+          "uuid": "8411dbe9-d4e2-4c2e-a17f-a8c6cb070dc5"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -105,10 +133,89 @@
             "gbif-backbone": "9442375"
           },
           "children": []
+        },
+        {
+          "id": "SP_CLARKEIPTERUS_TESTUDINEUS_CLARKE_AND_RUEDEMANN_1912",
+          "name": "Clarkeipterus testudineus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clarkeipterus",
+          "authorship": "(Clarke and Ruedemann 1912)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:109656"
+          },
+          "uuid": "668175fb-695f-47cc-b414-51e6238c33cb"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dolichopteridae"
+    },
+    {
+      "id": "GENUS_PENTLANDOPTERUS",
+      "name": "Pentlandopterus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dolichopteridae",
+      "children": [
+        {
+          "id": "SP_PENTLANDOPTERUS_MINOR_LAURIE_1899",
+          "name": "Pentlandopterus minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pentlandopterus",
+          "authorship": "(Laurie 1899)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:286965"
+          },
+          "uuid": "3d45cefb-83c5-4770-9383-4825c87b1f66"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PARAEURYPTERUS",
+      "name": "Paraeurypterus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dolichopteridae",
+      "children": [
+        {
+          "id": "SP_PARAEURYPTERUS_ANATOLIENSIS_LAMSDELL_ET_AL_2013",
+          "name": "Paraeurypterus anatoliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraeurypterus",
+          "authorship": "Lamsdell et al. 2013",
+          "sourceIds": {
+            "checklistbank-1174": "txn:351535"
+          },
+          "uuid": "6c55e8e0-1774-4895-b33f-5928090d4498"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MALONGIA",
+      "name": "Malongia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dolichopteridae",
+      "children": [
+        {
+          "id": "SP_MALONGIA_MIRABILIS_WANG_ET_AL_2022",
+          "name": "Malongia mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malongia",
+          "authorship": "Wang et al. 2022",
+          "sourceIds": {
+            "checklistbank-1174": "txn:466653"
+          },
+          "uuid": "8b9de311-d813-49f5-aca8-3e884e14f51d"
+        }
+      ]
     }
   ],
   "genusCount": 3
