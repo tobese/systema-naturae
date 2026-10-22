@@ -3,7 +3,7 @@
   "name": "Mylostomatidae",
   "rank": "FAMILY",
   "appSlug": "mylostomatidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_MYLOSTOMA",
@@ -45,7 +45,8 @@
           "lineage": "Mylostoma",
           "authorship": "Dunkle & Bungart, 1945",
           "sourceIds": {
-            "gbif-backbone": "11173624"
+            "gbif-backbone": "11173624",
+            "checklistbank-1174": "txn:421238"
           },
           "children": []
         },
@@ -80,7 +81,8 @@
           "lineage": "Tafilalichthys",
           "authorship": "Lehman, 1954",
           "sourceIds": {
-            "gbif-backbone": "8929144"
+            "gbif-backbone": "8929144",
+            "checklistbank-1174": "txn:421240"
           },
           "children": []
         }
@@ -128,13 +130,58 @@
           "lineage": "Dinomylostoma",
           "authorship": "Hussakof & Bryant, 1919",
           "sourceIds": {
-            "gbif-backbone": "11193385"
+            "gbif-backbone": "11193385",
+            "checklistbank-1174": "txn:421237"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mylostomatidae"
+    },
+    {
+      "id": "GENUS_TRACHOSTEUS",
+      "name": "Trachosteus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mylostomatidae",
+      "children": [
+        {
+          "id": "SP_TRACHOSTEUS_CLARKII_NEWBERRY_1889",
+          "name": "Trachosteus clarkii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trachosteus",
+          "authorship": "Newberry 1889",
+          "sourceIds": {
+            "checklistbank-1174": "txn:390791"
+          },
+          "uuid": "ac1d79f3-0c22-4b48-8460-77e2a9b57304"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_KENDRICKICHTHYS",
+      "name": "Kendrickichthys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mylostomatidae",
+      "children": [
+        {
+          "id": "SP_KENDRICKICHTHYS_CAVERNOSUS_DENNIS_AND_MILES_1980",
+          "name": "Kendrickichthys cavernosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kendrickichthys",
+          "authorship": "Dennis and Miles 1980",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502359"
+          },
+          "uuid": "16db6725-5d6d-4d65-9ac6-1433895f502a"
+        }
+      ]
     }
   ],
   "genusCount": 3

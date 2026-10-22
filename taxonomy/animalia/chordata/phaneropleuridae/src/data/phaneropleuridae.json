@@ -3,7 +3,7 @@
   "name": "Phaneropleuridae",
   "rank": "FAMILY",
   "appSlug": "phaneropleuridae",
-  "speciesCount": 3,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_PHANEROPLEURON",
@@ -32,9 +32,23 @@
           "lineage": "Phaneropleuron",
           "authorship": "Huxley, 1859",
           "sourceIds": {
-            "gbif-backbone": "8541873"
+            "gbif-backbone": "8541873",
+            "checklistbank-1174": "txn:259300"
           },
           "children": []
+        },
+        {
+          "id": "SP_PHANEROPLEURON_ELEGANS_TRAQUAIR_1889",
+          "name": "Phaneropleuron elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaneropleuron",
+          "authorship": "Traquair 1889",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502828"
+          },
+          "uuid": "2080611f-2cf8-44fc-bf68-44f4ccfd12b3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -54,13 +68,58 @@
           "lineage": "Fleurantia",
           "authorship": "Graham-Smith & Westoll, 1937",
           "sourceIds": {
-            "gbif-backbone": "8872610"
+            "gbif-backbone": "8872610",
+            "checklistbank-1174": "txn:372954"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phaneropleuridae"
+    },
+    {
+      "id": "GENUS_SCAUMENACIA",
+      "name": "Scaumenacia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaneropleuridae",
+      "children": [
+        {
+          "id": "SP_SCAUMENACIA_CURTA_WHITEAVES_1881",
+          "name": "Scaumenacia curta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scaumenacia",
+          "authorship": "(Whiteaves 1881)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:372950"
+          },
+          "uuid": "5b4f766c-5ec3-4d8e-a368-e3cdc214439e"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PENTLANDIA",
+      "name": "Pentlandia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaneropleuridae",
+      "children": [
+        {
+          "id": "SP_PENTLANDIA_MACROPTERA_WATSON_AND_DAY_1916",
+          "name": "Pentlandia macroptera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pentlandia",
+          "authorship": "Watson and Day 1916",
+          "sourceIds": {
+            "checklistbank-1174": "txn:391455"
+          },
+          "uuid": "2ccedcd5-c7bb-4f09-9fc2-715fb68b4a77"
+        }
+      ]
     }
   ],
   "genusCount": 2

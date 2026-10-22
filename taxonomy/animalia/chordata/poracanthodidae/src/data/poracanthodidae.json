@@ -3,7 +3,7 @@
   "name": "Poracanthodidae",
   "rank": "FAMILY",
   "appSlug": "poracanthodidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_PORACANTHODES",
@@ -19,13 +19,36 @@
           "lineage": "Poracanthodes",
           "authorship": "Valiukevious, 1992",
           "sourceIds": {
-            "gbif-backbone": "8585733"
+            "gbif-backbone": "8585733",
+            "checklistbank-1174": "txn:226259"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "poracanthodidae"
+    },
+    {
+      "id": "GENUS_ACANTHOPORA",
+      "name": "Acanthopora",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "poracanthodidae",
+      "children": [
+        {
+          "id": "SP_ACANTHOPORA_TRANSITANS_VALIUKEVICIUS_2003",
+          "name": "Acanthopora transitans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthopora",
+          "authorship": "Valiukevicius 2003",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501946"
+          },
+          "uuid": "8fc57cde-3ca2-45c2-9b34-8b5ec2e68ce0"
+        }
+      ]
     }
   ],
   "genusCount": 1

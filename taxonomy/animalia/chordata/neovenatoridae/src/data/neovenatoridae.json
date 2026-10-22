@@ -3,7 +3,7 @@
   "name": "Neovenatoridae",
   "rank": "FAMILY",
   "appSlug": "neovenatoridae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_FUKUIRAPTOR",
@@ -19,13 +19,44 @@
           "lineage": "Fukuiraptor",
           "authorship": "Azuma & Currie, 2000",
           "sourceIds": {
-            "gbif-backbone": "4967020"
+            "gbif-backbone": "4967020",
+            "checklistbank-1174": "txn:66357"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "neovenatoridae"
+    },
+    {
+      "id": "GENUS_NEOVENATOR",
+      "name": "Neovenator",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "neovenatoridae",
+      "children": []
+    },
+    {
+      "id": "GENUS_RAPATOR",
+      "name": "Rapator",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "neovenatoridae",
+      "children": [
+        {
+          "id": "SP_RAPATOR_ORNITHOLESTOIDES_HUENE_1932",
+          "name": "Rapator ornitholestoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rapator",
+          "authorship": "Huene 1932",
+          "sourceIds": {
+            "checklistbank-1174": "txn:67936"
+          },
+          "uuid": "7ec86eb8-fb1c-46ee-9f60-9a30bd78af7d"
+        }
+      ]
     }
   ],
   "genusCount": 1

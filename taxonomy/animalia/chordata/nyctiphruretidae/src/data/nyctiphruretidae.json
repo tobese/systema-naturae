@@ -3,7 +3,7 @@
   "name": "Nyctiphruretidae",
   "rank": "FAMILY",
   "appSlug": "nyctiphruretidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_ABYSSOMEDON",
@@ -19,7 +19,8 @@
           "lineage": "Abyssomedon",
           "authorship": "MacDougall & Reisz, 2014",
           "sourceIds": {
-            "gbif-backbone": "8623452"
+            "gbif-backbone": "8623452",
+            "checklistbank-1174": "txn:324161"
           },
           "children": []
         }
@@ -83,6 +84,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nyctiphruretidae"
+    },
+    {
+      "id": "GENUS_NYCTIBOETUS",
+      "name": "Nyctiboetus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "nyctiphruretidae",
+      "children": [
+        {
+          "id": "SP_NYCTIBOETUS_KASSINI_CHUDINOV_1955",
+          "name": "Nyctiboetus kassini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nyctiboetus",
+          "authorship": "(Chudinov 1955)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:120851"
+          },
+          "uuid": "7e69d7d7-dd7c-4a44-ae17-bbd2960dbbf6"
+        }
+      ]
     }
   ],
   "genusCount": 3

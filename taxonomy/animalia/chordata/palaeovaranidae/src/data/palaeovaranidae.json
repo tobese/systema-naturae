@@ -3,7 +3,7 @@
   "name": "Palaeovaranidae",
   "rank": "FAMILY",
   "appSlug": "palaeovaranidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PALAEOVARANUS",
@@ -19,7 +19,8 @@
           "lineage": "Palaeovaranus",
           "authorship": "Georgalis, Čerňanský & Klembara, 2021",
           "sourceIds": {
-            "gbif-backbone": "11153245"
+            "gbif-backbone": "11153245",
+            "checklistbank-1174": "txn:455533"
           },
           "children": []
         },
@@ -83,6 +84,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "palaeovaranidae"
+    },
+    {
+      "id": "GENUS_PARANECROSAURUS",
+      "name": "Paranecrosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeovaranidae",
+      "children": [
+        {
+          "id": "SP_PARANECROSAURUS_FEISTI_STRITZKE_1983",
+          "name": "Paranecrosaurus feisti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paranecrosaurus",
+          "authorship": "(Stritzke 1983)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:375941"
+          },
+          "uuid": "bb2e4b3b-7162-4592-816d-0dd5327cfec2"
+        }
+      ]
     }
   ],
   "genusCount": 3
