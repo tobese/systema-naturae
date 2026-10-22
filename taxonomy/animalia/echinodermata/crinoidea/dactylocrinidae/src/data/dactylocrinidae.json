@@ -3,7 +3,7 @@
   "name": "Dactylocrinidae",
   "rank": "FAMILY",
   "appSlug": "dactylocrinidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_WACHSMUTHICRINUS",
@@ -19,7 +19,8 @@
           "lineage": "Wachsmuthicrinus",
           "authorship": "Webster & Lane, 1987",
           "sourceIds": {
-            "gbif-backbone": "9223874"
+            "gbif-backbone": "9223874",
+            "checklistbank-1174": "txn:459505"
           },
           "children": []
         }
@@ -41,13 +42,58 @@
           "lineage": "Zenocrinus",
           "authorship": "Moore & Strimple, 1973",
           "sourceIds": {
-            "gbif-backbone": "8632381"
+            "gbif-backbone": "8632381",
+            "checklistbank-1174": "txn:222063"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dactylocrinidae"
+    },
+    {
+      "id": "GENUS_NEVADACRINUS",
+      "name": "Nevadacrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylocrinidae",
+      "children": [
+        {
+          "id": "SP_NEVADACRINUS_GENICULATUS_LANE_AND_WEBSTER_1966",
+          "name": "Nevadacrinus geniculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nevadacrinus",
+          "authorship": "Lane and Webster 1966",
+          "sourceIds": {
+            "checklistbank-1174": "txn:123561"
+          },
+          "uuid": "432ead91-3b49-46d5-bfd2-4173049759b4"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RUMPHIOCRINUS",
+      "name": "Rumphiocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylocrinidae",
+      "children": [
+        {
+          "id": "SP_RUMPHIOCRINUS_SINGULARIS_WANNER_1924",
+          "name": "Rumphiocrinus singularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rumphiocrinus",
+          "authorship": "Wanner 1924",
+          "sourceIds": {
+            "checklistbank-1174": "txn:471239"
+          },
+          "uuid": "a619dfe2-9ea0-478b-b83c-68f5d7f548a3"
+        }
+      ]
     }
   ],
   "genusCount": 2

@@ -3,7 +3,7 @@
   "name": "Gasterocomidae",
   "rank": "FAMILY",
   "appSlug": "gasterocomidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_BOUSKACRINUS",
@@ -41,13 +41,58 @@
           "lineage": "Gasterocoma",
           "authorship": "Johnson & Lane, 1969",
           "sourceIds": {
-            "gbif-backbone": "8465019"
+            "gbif-backbone": "8465019",
+            "checklistbank-1174": "txn:214867"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gasterocomidae"
+    },
+    {
+      "id": "GENUS_ANCYROCRINUS",
+      "name": "Ancyrocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gasterocomidae",
+      "children": [
+        {
+          "id": "SP_ANCYROCRINUS_CROZONENSIS_MENN_AND_JAOUEN_2003",
+          "name": "Ancyrocrinus crozonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ancyrocrinus",
+          "authorship": "Menn and Jaouen 2003",
+          "sourceIds": {
+            "checklistbank-1174": "txn:193500"
+          },
+          "uuid": "ae0bdf85-950b-4d4c-81f6-0f6603b0ba43"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PROLECYTHIOCRINUS",
+      "name": "Prolecythiocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gasterocomidae",
+      "children": [
+        {
+          "id": "SP_PROLECYTHIOCRINUS_PROBLEMATICUS_SPRINGER_1926",
+          "name": "Prolecythiocrinus problematicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prolecythiocrinus",
+          "authorship": "(Springer 1926)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:513581"
+          },
+          "uuid": "f31aa259-6f6f-4907-975d-29702f4d50b8"
+        }
+      ]
     }
   ],
   "genusCount": 2

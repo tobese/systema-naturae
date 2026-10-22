@@ -3,7 +3,7 @@
   "name": "Dadocrinidae",
   "rank": "FAMILY",
   "appSlug": "dadocrinidae",
-  "speciesCount": 5,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_ENCRINUS",
@@ -98,13 +98,97 @@
           "lineage": "Baudicrinus",
           "authorship": "Oji & Twitchett, 2015",
           "sourceIds": {
-            "gbif-backbone": "8497605"
+            "gbif-backbone": "8497605",
+            "checklistbank-1174": "txn:318417"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dadocrinidae"
+    },
+    {
+      "id": "GENUS_CARNALLICRINUS",
+      "name": "Carnallicrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dadocrinidae",
+      "children": [
+        {
+          "id": "SP_CARNALLICRINUS_CARNALLI_BEYRICH_1856",
+          "name": "Carnallicrinus carnalli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carnallicrinus",
+          "authorship": "(Beyrich 1856)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:270163"
+          },
+          "uuid": "380d69c4-a230-4155-a2df-84bc333f867a"
+        },
+        {
+          "id": "SP_CARNALLICRINUS_HUMILIS_JAEKEL_1918",
+          "name": "Carnallicrinus humilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carnallicrinus",
+          "authorship": "(Jaekel 1918)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:456718"
+          },
+          "uuid": "492d1ec4-00db-4fc5-aa6d-0e4f36ac3c78"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DADOCRINUS",
+      "name": "Dadocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dadocrinidae",
+      "children": [
+        {
+          "id": "SP_DADOCRINUS_GRACILIS_VON_BUCH_1845",
+          "name": "Dadocrinus gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dadocrinus",
+          "authorship": "(von Buch 1845)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:456708"
+          },
+          "uuid": "4743c81b-3a10-4749-a865-adfc9a65e73e"
+        },
+        {
+          "id": "SP_DADOCRINUS_RECUBARIENSIS_CREMA_1896",
+          "name": "Dadocrinus recubariensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dadocrinus",
+          "authorship": "(Crema 1896)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:456713"
+          },
+          "uuid": "241fe889-bf7c-47b3-ae26-631cd9f6959e"
+        },
+        {
+          "id": "SP_DADOCRINUS_MONTELLONIS_SAUC_DE_ET_AL_2023",
+          "name": "Dadocrinus montellonis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dadocrinus",
+          "authorship": "Saucède et al. 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:470290"
+          },
+          "uuid": "2b444d8f-6038-470f-aef6-4f41c923f238"
+        }
+      ]
     }
   ],
   "genusCount": 4

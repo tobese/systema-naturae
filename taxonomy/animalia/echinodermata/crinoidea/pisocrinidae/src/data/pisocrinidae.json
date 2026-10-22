@@ -3,7 +3,7 @@
   "name": "Pisocrinidae",
   "rank": "FAMILY",
   "appSlug": "pisocrinidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_LAGAROCRINUS",
@@ -44,6 +44,19 @@
             "gbif-backbone": "8592829"
           },
           "children": []
+        },
+        {
+          "id": "SP_CICEROCRINUS_ANGLICUS_JAEKEL_1900",
+          "name": "Cicerocrinus anglicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cicerocrinus",
+          "authorship": "(Jaekel 1900)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:203994"
+          },
+          "uuid": "68f037ab-38ef-42b5-9288-a2a49b612bdb"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -111,7 +124,8 @@
           "lineage": "Parapisocrinus",
           "authorship": "Ausich & Copper, 2010",
           "sourceIds": {
-            "gbif-backbone": "9809511"
+            "gbif-backbone": "9809511",
+            "checklistbank-1174": "txn:370220"
           },
           "children": []
         },
@@ -146,13 +160,36 @@
           "lineage": "Playfordicrinus",
           "authorship": "Jell & Jell, 1999",
           "sourceIds": {
-            "gbif-backbone": "4873690"
+            "gbif-backbone": "4873690",
+            "checklistbank-1174": "txn:326639"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pisocrinidae"
+    },
+    {
+      "id": "GENUS_POLYGONOCRINUS",
+      "name": "Polygonocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pisocrinidae",
+      "children": [
+        {
+          "id": "SP_POLYGONOCRINUS_SPINIFERUS_STRIMPLE_AND_MOORE_1971",
+          "name": "Polygonocrinus spiniferus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polygonocrinus",
+          "authorship": "Strimple and Moore 1971",
+          "sourceIds": {
+            "checklistbank-1174": "txn:66138"
+          },
+          "uuid": "e60eb682-10e2-4504-b508-3dcdac6eca99"
+        }
+      ]
     }
   ],
   "genusCount": 5

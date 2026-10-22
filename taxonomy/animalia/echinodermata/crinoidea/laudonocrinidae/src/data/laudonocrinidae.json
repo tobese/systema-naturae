@@ -3,7 +3,7 @@
   "name": "Laudonocrinidae",
   "rank": "FAMILY",
   "appSlug": "laudonocrinidae",
-  "speciesCount": 5,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_ATHLOCRINUS",
@@ -19,7 +19,8 @@
           "lineage": "Athlocrinus",
           "authorship": "Moore & Strimple, 1973",
           "sourceIds": {
-            "gbif-backbone": "8639633"
+            "gbif-backbone": "8639633",
+            "checklistbank-1174": "txn:227264"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Bathronocrinus",
           "authorship": "Pabian & Strimple, 1974",
           "sourceIds": {
-            "gbif-backbone": "8558744"
+            "gbif-backbone": "8558744",
+            "checklistbank-1174": "txn:219993"
           },
           "children": []
         },
@@ -76,9 +78,23 @@
           "lineage": "Anchicrinus",
           "authorship": "Moore & Strimple, 1973",
           "sourceIds": {
-            "gbif-backbone": "8438111"
+            "gbif-backbone": "8438111",
+            "checklistbank-1174": "txn:227260"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANCHICRINUS_RUGOSUS_STRIMPLE_1961",
+          "name": "Anchicrinus rugosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anchicrinus",
+          "authorship": "(Strimple 1961)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:227261"
+          },
+          "uuid": "09392bc9-fcc1-4454-b7c5-2d3da586afea"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -105,6 +121,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "laudonocrinidae"
+    },
+    {
+      "id": "GENUS_TETRABRACHIOCRINUS",
+      "name": "Tetrabrachiocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "laudonocrinidae",
+      "children": [
+        {
+          "id": "SP_TETRABRACHIOCRINUS_FABIANII_YAKOVLEV_1934",
+          "name": "Tetrabrachiocrinus fabianii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetrabrachiocrinus",
+          "authorship": "Yakovlev 1934",
+          "sourceIds": {
+            "checklistbank-1174": "txn:188230"
+          },
+          "uuid": "3e6a7f06-7511-4e06-a3a0-2bfac73697cc"
+        }
+      ]
     }
   ],
   "genusCount": 4

@@ -3,7 +3,7 @@
   "name": "Homalocrinidae",
   "rank": "FAMILY",
   "appSlug": "homalocrinidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TINTINNABULICRINUS",
@@ -19,13 +19,49 @@
           "lineage": "Tintinnabulicrinus",
           "authorship": "Wright & Toom, 2017",
           "sourceIds": {
-            "gbif-backbone": "9621308"
+            "gbif-backbone": "9621308",
+            "checklistbank-1174": "txn:359307"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "homalocrinidae"
+    },
+    {
+      "id": "GENUS_HOMALOCRINUS",
+      "name": "Homalocrinus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "homalocrinidae",
+      "children": [
+        {
+          "id": "SP_HOMALOCRINUS_NANUS_SALTER_1873",
+          "name": "Homalocrinus nanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Homalocrinus",
+          "authorship": "Salter 1873",
+          "sourceIds": {
+            "checklistbank-1174": "txn:514494"
+          },
+          "uuid": "979531d8-348f-4c42-85ff-bedcd641bc14"
+        },
+        {
+          "id": "SP_HOMALOCRINUS_LILJEVALLI_SPRINGER_1920",
+          "name": "Homalocrinus liljevalli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Homalocrinus",
+          "authorship": "Springer 1920",
+          "sourceIds": {
+            "checklistbank-1174": "txn:514495"
+          },
+          "uuid": "17559ea0-ada9-48d8-ab2c-e2e41e6c3b87"
+        }
+      ]
     }
   ],
   "genusCount": 1
