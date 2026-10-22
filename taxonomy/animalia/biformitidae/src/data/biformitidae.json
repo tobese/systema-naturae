@@ -3,7 +3,7 @@
   "name": "Biformitidae",
   "rank": "FAMILY",
   "appSlug": "biformitidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_BIFORMITES",
@@ -19,7 +19,8 @@
           "lineage": "Biformites",
           "authorship": "Yang & Song, 1985",
           "sourceIds": {
-            "gbif-backbone": "8629138"
+            "gbif-backbone": "8629138",
+            "checklistbank-1174": "txn:341294"
           },
           "children": []
         },
@@ -39,6 +40,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "biformitidae"
+    },
+    {
+      "id": "GENUS_ARCICHNUS",
+      "name": "Arcichnus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "biformitidae",
+      "children": [
+        {
+          "id": "SP_ARCICHNUS_SALTATUS_SUTCLIFFE_1997",
+          "name": "Arcichnus saltatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arcichnus",
+          "authorship": "Sutcliffe 1997",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502017"
+          },
+          "uuid": "07980654-cda3-4baa-96f6-1a0ef91f1012"
+        }
+      ]
     }
   ],
   "genusCount": 1
