@@ -3,7 +3,7 @@
   "name": "Shieliidae",
   "rank": "FAMILY",
   "appSlug": "shieliidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_NETHERTONODUS",
@@ -19,13 +19,35 @@
           "lineage": "Nethertonodus",
           "authorship": "Märss & Miller, 2004",
           "sourceIds": {
-            "gbif-backbone": "8493178"
+            "gbif-backbone": "8493178",
+            "checklistbank-1174": "txn:342261"
           },
           "children": []
+        },
+        {
+          "id": "SP_NETHERTONODUS_LAADJALAENSIS_MA_RSS_2006",
+          "name": "Nethertonodus laadjalaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nethertonodus",
+          "authorship": "Märss 2006",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502433"
+          },
+          "uuid": "614e10b5-394b-4313-8e16-574f47189e53"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "shieliidae"
+    },
+    {
+      "id": "GENUS_SHIELIA",
+      "name": "Shielia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "shieliidae",
+      "children": []
     }
   ],
   "genusCount": 1

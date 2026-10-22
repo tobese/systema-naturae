@@ -3,7 +3,7 @@
   "name": "Pycnosteidae",
   "rank": "FAMILY",
   "appSlug": "pycnosteidae",
-  "speciesCount": 1,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_TARTUOSTEUS",
@@ -22,10 +22,58 @@
             "gbif-backbone": "4975625"
           },
           "children": []
+        },
+        {
+          "id": "SP_TARTUOSTEUS_MAXIMUS_MARK_KURIK_1965",
+          "name": "Tartuosteus maximus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tartuosteus",
+          "authorship": "Mark-Kurik 1965",
+          "sourceIds": {
+            "checklistbank-1174": "txn:505631"
+          },
+          "uuid": "2cdd1c92-5434-4c2c-a73d-0b336f301620"
+        },
+        {
+          "id": "SP_TARTUOSTEUS_GIGANTEUS_GROSS_1933",
+          "name": "Tartuosteus giganteus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tartuosteus",
+          "authorship": "Gross 1933",
+          "sourceIds": {
+            "checklistbank-1174": "txn:505632"
+          },
+          "uuid": "0016c90e-3677-43a8-9fa9-7b0d67b58f78"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pycnosteidae"
+    },
+    {
+      "id": "GENUS_PYCNOLEPIS",
+      "name": "Pycnolepis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pycnosteidae",
+      "children": [
+        {
+          "id": "SP_PYCNOLEPIS_SPLENDENS_HALSTEAD_TARLO_1964",
+          "name": "Pycnolepis splendens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pycnolepis",
+          "authorship": "Halstead Tarlo 1964",
+          "sourceIds": {
+            "checklistbank-1174": "txn:505229"
+          },
+          "uuid": "d0f36670-0594-4a33-8857-c6497a64bba3"
+        }
+      ]
     }
   ],
   "genusCount": 1

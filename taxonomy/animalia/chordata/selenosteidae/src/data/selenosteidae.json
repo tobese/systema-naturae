@@ -3,7 +3,7 @@
   "name": "Selenosteidae",
   "rank": "FAMILY",
   "appSlug": "selenosteidae",
-  "speciesCount": 17,
+  "speciesCount": 25,
   "children": [
     {
       "id": "GENUS_PARAMYLOSTOMA",
@@ -19,7 +19,8 @@
           "lineage": "Paramylostoma",
           "authorship": "Dunkle & Bungart, 1945",
           "sourceIds": {
-            "gbif-backbone": "11155395"
+            "gbif-backbone": "11155395",
+            "checklistbank-1174": "txn:421227"
           },
           "children": []
         }
@@ -164,7 +165,8 @@
           "lineage": "Enseosteus",
           "authorship": "Stensio, 1959",
           "sourceIds": {
-            "gbif-backbone": "11119282"
+            "gbif-backbone": "11119282",
+            "checklistbank-1174": "txn:421222"
           },
           "children": []
         },
@@ -190,9 +192,23 @@
           "lineage": "Enseosteus",
           "authorship": "Stensio, 1959",
           "sourceIds": {
-            "gbif-backbone": "11171383"
+            "gbif-backbone": "11171383",
+            "checklistbank-1174": "txn:421221"
           },
           "children": []
+        },
+        {
+          "id": "SP_ENSEOSTEUS_MAROCANENSIS_R_CKLIN_2011",
+          "name": "Enseosteus marocanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enseosteus",
+          "authorship": "Rücklin 2011",
+          "sourceIds": {
+            "checklistbank-1174": "txn:482148"
+          },
+          "uuid": "fd31b225-2d46-4c08-9274-13fe279d8399"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -308,13 +324,150 @@
           "lineage": "Gymnotrachelus",
           "authorship": "Dunkle & Bungart, 1939",
           "sourceIds": {
-            "gbif-backbone": "11163716"
+            "gbif-backbone": "11163716",
+            "checklistbank-1174": "txn:421223"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "selenosteidae"
+    },
+    {
+      "id": "GENUS_AMAZICHTHYS",
+      "name": "Amazichthys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "selenosteidae",
+      "children": [
+        {
+          "id": "SP_AMAZICHTHYS_TRINAJSTICAE_JOBBINS_ET_AL_2022",
+          "name": "Amazichthys trinajsticae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amazichthys",
+          "authorship": "Jobbins et al. 2022",
+          "sourceIds": {
+            "checklistbank-1174": "txn:477213"
+          },
+          "uuid": "310778f5-cbf6-4e3e-83db-8f3d24658ca7"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_WALTEROSTEUS",
+      "name": "Walterosteus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "selenosteidae",
+      "children": [
+        {
+          "id": "SP_WALTEROSTEUS_PACHYOSTOIDES_STENSI_1959",
+          "name": "Walterosteus pachyostoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Walterosteus",
+          "authorship": "Stensiö 1959",
+          "sourceIds": {
+            "checklistbank-1174": "txn:482135"
+          },
+          "uuid": "353d44f6-2104-416c-be77-1672d8b69e57"
+        },
+        {
+          "id": "SP_WALTEROSTEUS_LELIEVREI_R_CKLIN_2011",
+          "name": "Walterosteus lelievrei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Walterosteus",
+          "authorship": "Rücklin 2011",
+          "sourceIds": {
+            "checklistbank-1174": "txn:482137"
+          },
+          "uuid": "d112d76e-2ad0-4b5c-82b2-c4736a92ed30"
+        },
+        {
+          "id": "SP_WALTEROSTEUS_GROSSI_R_CKLIN_2011",
+          "name": "Walterosteus grossi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Walterosteus",
+          "authorship": "Rücklin 2011",
+          "sourceIds": {
+            "checklistbank-1174": "txn:482169"
+          },
+          "uuid": "bed9839d-4128-4401-bfbb-5234af97c9ce"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DRISCOLLASPIS",
+      "name": "Driscollaspis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "selenosteidae",
+      "children": [
+        {
+          "id": "SP_DRISCOLLASPIS_PANKOWSKIORUM_RUCKLIN_ET_AL_2015",
+          "name": "Driscollaspis pankowskiorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Driscollaspis",
+          "authorship": "Rucklin et al. 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:501843"
+          },
+          "uuid": "3523ee72-1f19-4291-b6f2-967d23433ca8"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MELANOMONTANOSTEUS",
+      "name": "Melanomontanosteus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "selenosteidae",
+      "children": [
+        {
+          "id": "SP_MELANOMONTANOSTEUS_OCCITANUS_PROKOFIEV_2023",
+          "name": "Melanomontanosteus occitanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melanomontanosteus",
+          "authorship": "Prokofiev 2023",
+          "sourceIds": {
+            "checklistbank-1174": "txn:502457"
+          },
+          "uuid": "48fb940b-224f-412f-a710-e940b664ff24"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ALIENACANTHUS",
+      "name": "Alienacanthus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "selenosteidae",
+      "children": [
+        {
+          "id": "SP_ALIENACANTHUS_MALKOWSKII_KULCZYCKI_1957",
+          "name": "Alienacanthus malkowskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alienacanthus",
+          "authorship": "Kulczycki 1957",
+          "sourceIds": {
+            "checklistbank-1174": "txn:503842"
+          },
+          "uuid": "d1f92fc6-9ea8-427b-ae6e-01ef4b4d22f8"
+        }
+      ]
     }
   ],
   "genusCount": 10
