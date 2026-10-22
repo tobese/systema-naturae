@@ -3,7 +3,7 @@
   "name": "Clavohamulidae",
   "rank": "FAMILY",
   "appSlug": "clavohamulidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TERIDONTUS",
@@ -18,7 +18,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Teridontus",
           "sourceIds": {
-            "gbif-backbone": "11199143"
+            "gbif-backbone": "11199143",
+            "checklistbank-1174": "txn:393740"
           },
           "children": []
         }
@@ -40,13 +41,36 @@
           "lineage": "Clavohamulus",
           "authorship": "(Zhang & Lin, 1983)",
           "sourceIds": {
-            "gbif-backbone": "11172161"
+            "gbif-backbone": "11172161",
+            "checklistbank-1174": "txn:393422"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "clavohamulidae"
+    },
+    {
+      "id": "GENUS_HIRSUTODONTUS",
+      "name": "Hirsutodontus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "clavohamulidae",
+      "children": [
+        {
+          "id": "SP_HIRSUTODONTUS_NODUS_ZHANG_AND_XIANG_1983",
+          "name": "Hirsutodontus nodus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hirsutodontus",
+          "authorship": "(Zhang and Xiang 1983)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:393742"
+          },
+          "uuid": "f5495c2d-cf9b-4ec3-8716-85523a9db788"
+        }
+      ]
     }
   ],
   "genusCount": 2

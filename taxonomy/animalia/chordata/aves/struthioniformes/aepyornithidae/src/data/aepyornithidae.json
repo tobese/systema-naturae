@@ -3,7 +3,7 @@
   "name": "Aepyornithidae",
   "rank": "FAMILY",
   "appSlug": "aepyornithidae",
-  "speciesCount": 6,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_MULLERORNIS",
@@ -19,7 +19,9 @@
           "lineage": "Mullerornis",
           "authorship": "Milne-Edwards & Grandidier, 1894",
           "sourceIds": {
-            "gbif-backbone": "4844162"
+            "gbif-backbone": "4844162",
+            "checklistbank-1174": "txn:369784",
+            "checklistbank-139831": "631779"
           },
           "children": []
         },
@@ -32,7 +34,9 @@
           "lineage": "Mullerornis",
           "authorship": "Milne-Edwards & Grandidier, 1894",
           "sourceIds": {
-            "gbif-backbone": "9736407"
+            "gbif-backbone": "9736407",
+            "checklistbank-1174": "txn:369783",
+            "checklistbank-139831": "631778"
           },
           "children": []
         },
@@ -45,9 +49,22 @@
           "lineage": "Mullerornis",
           "authorship": "Milne-Edwards & Grandidier, 1894",
           "sourceIds": {
-            "gbif-backbone": "9766545"
+            "gbif-backbone": "9766545",
+            "checklistbank-1174": "txn:369785"
           },
           "children": []
+        },
+        {
+          "id": "SP_MULLERORNIS_MODESTUS",
+          "name": "Mullerornis modestus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mullerornis",
+          "sourceIds": {
+            "checklistbank-139831": "1703314"
+          },
+          "uuid": "112f7acc-81a6-4456-9385-b238571b1da5"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -67,7 +84,8 @@
           "lineage": "Aepyornis",
           "authorship": "Burckhardt, 1893",
           "sourceIds": {
-            "gbif-backbone": "4844155"
+            "gbif-backbone": "4844155",
+            "checklistbank-139831": "546429"
           },
           "children": []
         },
@@ -80,7 +98,8 @@
           "lineage": "Aepyornis",
           "authorship": "Geoffroy Saint-Hilaire, 1850",
           "sourceIds": {
-            "gbif-backbone": "4844156"
+            "gbif-backbone": "4844156",
+            "checklistbank-139831": "546428"
           },
           "children": []
         },
@@ -93,13 +112,48 @@
           "lineage": "Aepyornis",
           "authorship": "Milne-Edwards & Grandidier, 1869",
           "sourceIds": {
-            "gbif-backbone": "9655410"
+            "gbif-backbone": "9655410",
+            "checklistbank-1174": "txn:369787",
+            "checklistbank-139831": "546423"
           },
           "children": []
+        },
+        {
+          "id": "SP_AEPYORNIS_GRACILIS",
+          "name": "Aepyornis gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aepyornis",
+          "sourceIds": {
+            "checklistbank-139831": "546425"
+          },
+          "uuid": "556420ac-ab56-4836-a7a6-358232c166c3"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aepyornithidae"
+    },
+    {
+      "id": "GENUS_VOROMBE",
+      "name": "Vorombe",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aepyornithidae",
+      "children": [
+        {
+          "id": "SP_VOROMBE_TITAN",
+          "name": "Vorombe titan",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vorombe",
+          "sourceIds": {
+            "checklistbank-139831": "1348700"
+          },
+          "uuid": "938456c1-3f0d-49cb-affc-e12add94925b"
+        }
+      ]
     }
   ],
   "genusCount": 2

@@ -3,7 +3,7 @@
   "name": "Burnetiidae",
   "rank": "FAMILY",
   "appSlug": "burnetiidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_MOBACERAS",
@@ -19,7 +19,8 @@
           "lineage": "Mobaceras",
           "authorship": "Kammerer & Sidor, 2021",
           "sourceIds": {
-            "gbif-backbone": "11201709"
+            "gbif-backbone": "11201709",
+            "checklistbank-1174": "txn:433324"
           },
           "children": []
         }
@@ -70,6 +71,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "burnetiidae"
+    },
+    {
+      "id": "GENUS_BULLACEPHALUS",
+      "name": "Bullacephalus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "burnetiidae",
+      "children": [
+        {
+          "id": "SP_BULLACEPHALUS_JACKSONI_RUBIDGE_AND_KITCHING_2003",
+          "name": "Bullacephalus jacksoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bullacephalus",
+          "authorship": "Rubidge and Kitching 2003",
+          "sourceIds": {
+            "checklistbank-1174": "txn:335886"
+          },
+          "uuid": "051b8f7d-a0df-484f-9cc8-0884b272d97a"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LEUCOCEPHALUS",
+      "name": "Leucocephalus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "burnetiidae",
+      "children": [
+        {
+          "id": "SP_LEUCOCEPHALUS_WEWERSI_DAY_ET_AL_2018",
+          "name": "Leucocephalus wewersi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leucocephalus",
+          "authorship": "Day et al. 2018",
+          "sourceIds": {
+            "checklistbank-1174": "txn:370018"
+          },
+          "uuid": "bcac2a8a-4040-4a8b-bbd8-87825e92dffa"
+        }
+      ]
     }
   ],
   "genusCount": 3

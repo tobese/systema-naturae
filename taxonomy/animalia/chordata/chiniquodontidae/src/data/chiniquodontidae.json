@@ -3,7 +3,7 @@
   "name": "Chiniquodontidae",
   "rank": "FAMILY",
   "appSlug": "chiniquodontidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_ALEODON",
@@ -127,6 +127,19 @@
             "gbif-backbone": "8488743"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHINIQUODON_SANJUANENSIS_MARTINEZ_AND_FORSTER_1996",
+          "name": "Chiniquodon sanjuanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chiniquodon",
+          "authorship": "(Martinez and Forster 1996)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:177686"
+          },
+          "uuid": "2f420430-2ebf-4d38-83f9-9e53533f236f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -146,13 +159,36 @@
           "lineage": "Deccanodon",
           "authorship": "Nath & Yadagiri, 2007",
           "sourceIds": {
-            "gbif-backbone": "8613705"
+            "gbif-backbone": "8613705",
+            "checklistbank-1174": "txn:330721"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chiniquodontidae"
+    },
+    {
+      "id": "GENUS_RIOJANODON",
+      "name": "Riojanodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chiniquodontidae",
+      "children": [
+        {
+          "id": "SP_RIOJANODON_NENOI_MARTINELLI_ET_AL_2024",
+          "name": "Riojanodon nenoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Riojanodon",
+          "authorship": "Martinelli et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:482572"
+          },
+          "uuid": "e542e18a-42b5-44e8-ba89-10e2acd71972"
+        }
+      ]
     }
   ],
   "genusCount": 5

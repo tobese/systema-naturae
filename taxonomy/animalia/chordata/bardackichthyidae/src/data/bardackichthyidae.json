@@ -3,7 +3,7 @@
   "name": "Bardackichthyidae",
   "rank": "FAMILY",
   "appSlug": "bardackichthyidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_BARDACKICHTHYS",
@@ -19,13 +19,49 @@
           "lineage": "Bardackichthys",
           "authorship": "Hacker & Shimada, 2021",
           "sourceIds": {
-            "gbif-backbone": "11143870"
+            "gbif-backbone": "11143870",
+            "checklistbank-1174": "txn:436410"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bardackichthyidae"
+    },
+    {
+      "id": "GENUS_HECKELICHTHYS",
+      "name": "Heckelichthys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "bardackichthyidae",
+      "children": [
+        {
+          "id": "SP_HECKELICHTHYS_MICRODON_HECKEL_1849",
+          "name": "Heckelichthys microdon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heckelichthys",
+          "authorship": "(Heckel 1849)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:304558"
+          },
+          "uuid": "11ad2a61-474e-49d9-8e92-887343fe7cfb"
+        },
+        {
+          "id": "SP_HECKELICHTHYS_VEXILLIFER_HECKEL_1856",
+          "name": "Heckelichthys vexillifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heckelichthys",
+          "authorship": "(Heckel 1856)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:304560"
+          },
+          "uuid": "ba0f811b-0921-457f-b497-0b9731c00a01"
+        }
+      ]
     }
   ],
   "genusCount": 1

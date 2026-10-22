@@ -3,7 +3,7 @@
   "name": "Ctenochelyidae",
   "rank": "FAMILY",
   "appSlug": "ctenochelyidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_ASMODOCHELYS",
@@ -19,13 +19,49 @@
           "lineage": "Asmodochelys",
           "authorship": "Gentry, Ebersole & Kiernan, 2019",
           "sourceIds": {
-            "gbif-backbone": "11166952"
+            "gbif-backbone": "11166952",
+            "checklistbank-1174": "txn:401832"
           },
           "children": []
+        },
+        {
+          "id": "SP_ASMODOCHELYS_LEVIATHAN_SMITH_ET_AL_2025",
+          "name": "Asmodochelys leviathan",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asmodochelys",
+          "authorship": "Smith et al. 2025",
+          "sourceIds": {
+            "checklistbank-1174": "txn:508937"
+          },
+          "uuid": "8d6a592a-6bfc-4f42-82a5-a8def5bdc9f9"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ctenochelyidae"
+    },
+    {
+      "id": "GENUS_CTENOCHELYS",
+      "name": "Ctenochelys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenochelyidae",
+      "children": [
+        {
+          "id": "SP_CTENOCHELYS_STENOPORUS_HAY_1905",
+          "name": "Ctenochelys stenoporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenochelys",
+          "authorship": "(Hay 1905)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:128354"
+          },
+          "uuid": "52f54c95-fe92-473d-a3fc-0582c202a41b"
+        }
+      ]
     }
   ],
   "genusCount": 1

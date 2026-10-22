@@ -3,7 +3,7 @@
   "name": "Coelophysidae",
   "rank": "FAMILY",
   "appSlug": "coelophysidae",
-  "speciesCount": 13,
+  "speciesCount": 15,
   "children": [
     {
       "id": "GENUS_PANGURAPTOR",
@@ -85,7 +85,8 @@
           "lineage": "Lepidus",
           "authorship": "Nesbitt & Ezcurra, 2015",
           "sourceIds": {
-            "gbif-backbone": "11192994"
+            "gbif-backbone": "11192994",
+            "checklistbank-1174": "txn:372124"
           },
           "children": []
         }
@@ -107,7 +108,8 @@
           "lineage": "Lucianovenator",
           "authorship": "Martínez & Apaldetti, 2017",
           "sourceIds": {
-            "gbif-backbone": "9325021"
+            "gbif-backbone": "9325021",
+            "checklistbank-1174": "txn:370734"
           },
           "children": []
         }
@@ -281,6 +283,51 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "coelophysidae"
+    },
+    {
+      "id": "GENUS_COELOPHYSIS",
+      "name": "Coelophysis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "coelophysidae",
+      "children": [
+        {
+          "id": "SP_COELOPHYSIS_BAURI_COPE_1887",
+          "name": "Coelophysis bauri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coelophysis",
+          "authorship": "(Cope 1887)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:54212",
+            "checklistbank-139831": "965319"
+          },
+          "uuid": "d8551204-7a39-4e50-90eb-513faf9fff40"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MEGAPNOSAURUS",
+      "name": "Megapnosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "coelophysidae",
+      "children": [
+        {
+          "id": "SP_MEGAPNOSAURUS_RHODESIENSIS_RAATH_1969",
+          "name": "Megapnosaurus rhodesiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megapnosaurus",
+          "authorship": "(Raath 1969)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:55541"
+          },
+          "uuid": "af21119c-9d3f-4640-858b-3d055cd23040"
+        }
+      ]
     }
   ],
   "genusCount": 12
