@@ -3,7 +3,7 @@
   "name": "Heliscomyidae",
   "rank": "FAMILY",
   "appSlug": "heliscomyidae",
-  "speciesCount": 6,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_HELISCOMYS",
@@ -54,9 +54,23 @@
           "lineage": "Tylionomys",
           "authorship": "Korth & Branciforte, 2007",
           "sourceIds": {
-            "gbif-backbone": "8556454"
+            "gbif-backbone": "8556454",
+            "checklistbank-1174": "txn:322042"
           },
           "children": []
+        },
+        {
+          "id": "SP_TYLIONOMYS_WOODI_MCGREW_1941",
+          "name": "Tylionomys woodi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tylionomys",
+          "authorship": "(McGrew 1941)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:46834"
+          },
+          "uuid": "8cb4fdbd-af8b-440c-8d8a-9edc7a41f9f8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -101,6 +115,19 @@
             "gbif-backbone": "4972344"
           },
           "children": []
+        },
+        {
+          "id": "SP_APLETOTOMEUS_INCOHATUS_REEDER_1960",
+          "name": "Apletotomeus incohatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apletotomeus",
+          "authorship": "(Reeder 1960)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:43844"
+          },
+          "uuid": "cb7df38d-5926-429a-9be7-253622adda2e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -120,13 +147,36 @@
           "lineage": "Passaliscomys",
           "authorship": "Korth & Eaton, 2004",
           "sourceIds": {
-            "gbif-backbone": "8689678"
+            "gbif-backbone": "8689678",
+            "checklistbank-1174": "txn:333669"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "heliscomyidae"
+    },
+    {
+      "id": "GENUS_MEGAHELISCOMYS",
+      "name": "Megaheliscomys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "heliscomyidae",
+      "children": [
+        {
+          "id": "SP_MEGAHELISCOMYS_MCGREWI_KORTH_1989",
+          "name": "Megaheliscomys mcgrewi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megaheliscomys",
+          "authorship": "(Korth 1989)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:46826"
+          },
+          "uuid": "323218ef-e912-416e-a695-759de1824ac0"
+        }
+      ]
     }
   ],
   "genusCount": 5

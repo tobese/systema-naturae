@@ -3,7 +3,7 @@
   "name": "Acaremyidae",
   "rank": "FAMILY",
   "appSlug": "acaremyidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_CHANGQUIN",
@@ -54,7 +54,8 @@
           "lineage": "Galileomys",
           "authorship": "Vucetich & Kramarz, 2003",
           "sourceIds": {
-            "gbif-backbone": "8707897"
+            "gbif-backbone": "8707897",
+            "checklistbank-1174": "txn:264016"
           },
           "children": []
         },
@@ -80,13 +81,36 @@
           "lineage": "Galileomys",
           "authorship": "Vucetich & Kramarz, 2003",
           "sourceIds": {
-            "gbif-backbone": "8497790"
+            "gbif-backbone": "8497790",
+            "checklistbank-1174": "txn:264014"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acaremyidae"
+    },
+    {
+      "id": "GENUS_PSEUDOACAREMYS",
+      "name": "Pseudoacaremys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "acaremyidae",
+      "children": [
+        {
+          "id": "SP_PSEUDOACAREMYS_KRAMARZI_ARNAL_AND_VUCETICH_2015",
+          "name": "Pseudoacaremys kramarzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoacaremys",
+          "authorship": "Arnal and Vucetich 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:336707"
+          },
+          "uuid": "d8f04ec7-6e1f-455f-a331-61b23991033e"
+        }
+      ]
     }
   ],
   "genusCount": 2
