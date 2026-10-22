@@ -2851,7 +2851,8 @@
             ],
             "checklistbank": "1170428",
             "gbif-backbone": "7545135",
-            "checklistbank-139831": "1094933"
+            "checklistbank-139831": "1094933",
+            "checklistbank-311094": "1170428"
           },
           "authorityIds": "col:8N376",
           "description": "Nannopygia gerstaeckeri is a nannopygia species found in its native region."
@@ -3161,7 +3162,8 @@
             "col": [
               "CFSLM"
             ],
-            "checklistbank": "1170338"
+            "checklistbank": "1170338",
+            "checklistbank-311094": "1170338"
           },
           "authorityIds": "col:CFSLM",
           "description": "Diplatyella signata is a diplatyella species found in its native region."
@@ -3561,9 +3563,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "diplatyidae"
+    },
+    {
+      "id": "GENUS_PARADIPLATYS",
+      "name": "Paradiplatys",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "diplatyidae",
+      "children": [
+        {
+          "id": "SP_PARADIPLATYS_KUBANI_KO_REK_2012",
+          "name": "Paradiplatys kubani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradiplatys",
+          "authorship": "Kočárek, 2012",
+          "sourceIds": {
+            "checklistbank-311094": "1170448"
+          },
+          "uuid": "2abbe4f6-2031-40e5-93e7-34a4b2a9e80a"
+        },
+        {
+          "id": "SP_PARADIPLATYS_SALVAZAE_BURR_1917",
+          "name": "Paradiplatys salvazae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradiplatys",
+          "authorship": "(Burr, 1917)",
+          "sourceIds": {
+            "checklistbank-311094": "1170452"
+          },
+          "uuid": "16347166-e252-4e52-8b96-7ae3f8e167dd"
+        }
+      ]
     }
   ],
-  "speciesCount": 188,
+  "speciesCount": 59,
   "appSlug": "diplatyidae",
   "lineage": "Neodermaptera > Pygidicranoidea",
   "continents": [
