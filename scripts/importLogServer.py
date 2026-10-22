@@ -7,8 +7,9 @@ Reuses importLogView.py's row-loading and problem/note logic directly
 rather than re-deriving it -- the same reason scripts/taxaserve.py exists:
 one place answers the question, everything else asks it.
 
-The "up next / open items" panel reads data/source-queue.json live (see
-scripts/sourceQueue.py) rather than embedding a hand-written list in this
+The "up next / open items" panel reads the source queue live (see
+scripts/sourceQueue.py, data/source-queue/<key>.json) rather than
+embedding a hand-written list in this
 page's HTML -- the first version of this panel (2026-10-19) hardcoded
 both the completed-today list and the open-items list, and was already
 wrong by the time the next candidate batch finished triaging. The panel

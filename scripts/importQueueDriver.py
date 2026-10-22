@@ -2,7 +2,8 @@
 """Macie-side driver for the import pipeline.
 
 Drives the split pipeline end-to-end for every source sitting at
-stage `downloaded` in data/source-queue.json:
+stage `downloaded` in the source queue (scripts/sourceQueue.py,
+data/source-queue/<key>.json):
 
     0. licence gate -- an NC licence goes straight to blocked, no archive
        work spent on it (see docs/dataset-inbox.md's AlgaeBase entry)
@@ -37,7 +38,6 @@ Usage:
 """
 from __future__ import annotations
 
-import json
 import os
 import re
 import subprocess
@@ -47,23 +47,19 @@ from datetime import datetime, timezone
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
-QUEUE_PATH = os.path.join(REPO_ROOT, "data", "source-queue.json")
+sys.path.insert(0, SCRIPT_DIR)
+import sourceQueue as SQ  # noqa: E402
+
 IMPORTWRITE_URL = os.environ.get("IMPORTWRITE_URL", "http://q-bert:8089")
 REFILL_THRESHOLD = 5
 REFILL_BATCH = 10
 
 
 def load_queue() -> dict:
-    with open(QUEUE_PATH, encoding="utf-8") as fh:
-        return json.load(fh)
-
-
-def save_queue(q: dict) -> None:
-    tmp = QUEUE_PATH + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as fh:
-        json.dump(q, fh, indent=2, ensure_ascii=False)
-        fh.write("\n")
-    os.replace(tmp, QUEUE_PATH)
+    """Every source, read fresh from its own file -- see sourceQueue.py's
+    read_store(). Kept as a thin alias here since callers in this module
+    already say `load_queue()`, not `SQ.read_store()`."""
+    return SQ.read_store()
 
 
 def set_stage(q: dict, key: str, stage: str, **stats) -> None:
@@ -74,7 +70,8 @@ def set_stage(q: dict, key: str, stage: str, **stats) -> None:
     )
     if stats:
         entry.update(stats)
-    save_queue(q)
+    SQ.write_entry(key, entry)
+    SQ.log_event(key, stage, action="driver", **stats)
 
 
 def refill_queue(q: dict, limit: int = REFILL_BATCH) -> dict:
@@ -177,23 +174,19 @@ def run(cmd: list[str], label: str, env: dict | None = None) -> tuple[int, str]:
     return result.returncode, result.stdout
 
 
-def main() -> int:
-    loop = "--loop" in sys.argv
-    q = load_queue()
-
-    # Auto-refill: if downloaded queue is low, triage + fetch new candidates.
-    q = refill_queue(q)
-
+def process_downloaded(q: dict) -> None:
+    """Run every `downloaded` source through the split pipeline to a
+    terminal stage (applied/blocked/queued-on-failure). Mutates `q`'s
+    stages on disk as it goes (via set_stage); does not return anything,
+    since the caller always re-reads from disk afterward if it needs the
+    current state. Split out of main() so scripts/pipelineOrchestrator.py
+    can call this alongside the other stages it owns, in one process."""
     downloaded = [
         (k, v) for k, v in q.items() if v.get("stage") == "downloaded"
     ]
     if not downloaded:
-        if loop:
-            print("No sources at stage 'downloaded'. Sleeping 30s before retry.", flush=True)
-            time.sleep(30)
-            return main()
-        print("No sources at stage 'downloaded'. Nothing to do.", flush=True)
-        return 0
+        print("No sources at stage 'downloaded'.", flush=True)
+        return
 
     print(f"{len(downloaded)} source(s) at stage 'downloaded'.", flush=True)
 
@@ -206,7 +199,7 @@ def main() -> int:
             if os.path.exists(candidate):
                 archive = candidate
                 entry["archivePath"] = archive
-                save_queue(q)
+                SQ.write_entry(key, entry)
             else:
                 print(f"  {key} ({title}): archive not on disk ({candidate}), skipping", flush=True)
                 set_stage(q, key, "blocked", reason="archive missing on disk")
@@ -272,7 +265,7 @@ def main() -> int:
         # the "safe to apply automatically" case this driver handles. A
         # dataset that needs a human call (bacteria/virus carry-through, a
         # synthetic tree, a reader-format gap) is kept out of `downloaded`
-        # in the first place -- see data/source-queue.json's blocked/declined
+        # in the first place -- see the source queue's blocked/declined
         # entries and sourceQueue.py add()'s manifest check.
         def _num(pattern):
             m = re.search(pattern, transform_out)
@@ -324,11 +317,21 @@ def main() -> int:
         )
         print(f"  {key}: applied — +{added} added, {merged} merged, {cross_family} cross-family, {families} families", flush=True)
 
+
+def main() -> int:
+    """Standalone CLI, kept for manual single-pass debugging of just this
+    stage. In production this module is imported by
+    scripts/pipelineOrchestrator.py, which also owns needs-rerun and the
+    pending-family sweep in the same process/log -- run that, not this,
+    to drive the pipeline end-to-end."""
+    loop = "--loop" in sys.argv
+    q = load_queue()
+    q = refill_queue(q)
+    process_downloaded(q)
     if loop:
         print("\n(pass complete; looping in 30s)", flush=True)
         time.sleep(30)
         return main()
-
     return 0
 
 

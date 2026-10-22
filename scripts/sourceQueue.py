@@ -5,11 +5,14 @@ moves (see docs/dataset-inbox.md's 2026-10-19 top section and
 scripts/importLogServer.py's queue panel, both hand-edited and both wrong
 within the same session that wrote them).
 
-One JSON object, data/source-queue.json, keyed by the source's own id (a
+One file per source under data/source-queue/, named <key>.json (a
 ChecklistBank key, or whatever slug a non-ChecklistBank source uses
-elsewhere in this repo). Small and factual -- same footing as
-data/import-log.jsonl, data/dedupe-log.jsonl -- so it is tracked in git,
-not pushed out to the external volume the way pending/families.jsonl is.
+elsewhere in this repo) -- moved off a single data/source-queue.json
+(2026-10-22) because a process holding a stale in-memory copy of the
+WHOLE queue clobbered every other source's concurrent update when it
+saved its own. Small and factual -- same footing as data/import-log.jsonl,
+data/dedupe-log.jsonl -- so it is tracked in git, not pushed out to the
+external volume the way pending/families.jsonl is.
 
 A source moves through `stage` in roughly this order, though any stage can
 be set directly (a source already known to be blocked never needs to pass
@@ -36,7 +39,13 @@ through "triaged"):
     blocked     -- can't proceed yet (no archive, needs a decision); `reason` says why
     needs-rerun -- applied before, but something downstream changed (a
                    family got scaffolded, an importer bug got fixed) and
-                   re-running would likely pick up more
+                   re-running would likely pick up more. `rerunCommand`
+                   (a JSON argv list, see `set --rerun-command`) says
+                   exactly what scripts/pipelineOrchestrator.py should
+                   run -- a source may need a different tool than the
+                   standard transform/apply pipeline (TAXREF needed
+                   importColStage2.py --kingdom for each kingdom, not a
+                   plain re-run)
 
 `history` is append-only -- every `set` call adds one entry with the stage
 and a timestamp, even if the stage itself didn't change (an updated
@@ -77,32 +86,87 @@ import tempfile
 import time
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-STORE = os.path.join(os.path.dirname(SCRIPT_DIR), "data", "source-queue.json")
+DATA_DIR = os.path.dirname(SCRIPT_DIR) + "/data"
+STORE = os.path.join(DATA_DIR, "source-queue")
+EVENTS_LOG = os.path.join(DATA_DIR, "pipeline-events.jsonl")
 
 STAGES = ("candidate", "downloaded", "triaging", "triaged", "queued",
           "applying", "applied", "declined", "blocked", "needs-rerun")
 
 
-def read_store() -> dict:
-    if not os.path.exists(STORE):
-        return {}
-    with open(STORE, encoding="utf-8") as f:
+def _entry_path(key: str) -> str:
+    return os.path.join(STORE, f"{key}.json")
+
+
+def read_entry(key: str) -> dict | None:
+    path = _entry_path(key)
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
-def write_store(doc: dict) -> None:
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(STORE),
-                                prefix="source-queue.", suffix=".tmp")
+def log_event(key: str, stage: str, **extra) -> None:
+    """Append one line to data/pipeline-events.jsonl -- NOT the source of
+    truth (that's each source's own file in data/source-queue/, including
+    its own `history` list), just a flat chronological feed so "what
+    happened across the whole pipeline, in order" doesn't mean scanning
+    every one of those files and interleaving their `history` entries by
+    hand. Same append-only shape as data/import-log.jsonl, which already
+    tolerates concurrent writers (a single `write()` of one line is
+    atomic on a local filesystem at this size)."""
+    row = {"at": _now(), "key": key, "stage": stage}
+    row.update({k: v for k, v in extra.items() if v is not None and v != ""})
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(EVENTS_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def write_entry(key: str, row: dict) -> None:
+    """Atomic write of exactly one source's own file -- the whole point of
+    moving off a single data/source-queue.json (2026-10-22): a process
+    holding a stale in-memory copy of the WHOLE queue used to overwrite
+    every other source's concurrent update when it saved, which is what
+    silently reverted manual `set` calls made while the driver was still
+    running mid-pass on a stale snapshot. A write here can only ever
+    clobber this one source's own file."""
+    os.makedirs(STORE, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=STORE, prefix=f"{key}.", suffix=".tmp")
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(doc, f, ensure_ascii=False, indent=2, sort_keys=True)
+            json.dump(row, f, ensure_ascii=False, indent=2, sort_keys=True)
             f.write("\n")
-        os.replace(tmp, STORE)
+        os.replace(tmp, _entry_path(key))
     finally:
         try:
             os.unlink(tmp)
         except OSError:
             pass
+
+
+def read_store() -> dict:
+    """Every source, keyed by its own id -- for callers that want the
+    whole picture (the dashboard, `report`, refill's dedup check) rather
+    than one entry. Each file is read independently, so one source's
+    update is never visible mid-write to a concurrent reader of another."""
+    if not os.path.isdir(STORE):
+        return {}
+    out = {}
+    for name in sorted(os.listdir(STORE)):
+        if name.endswith(".json"):
+            key = name[: -len(".json")]
+            row = read_entry(key)
+            if row is not None:
+                out[key] = row
+    return out
+
+
+def write_store(doc: dict) -> None:
+    """Write every entry in `doc` to its own file. Only for migrating an
+    old single-file store or bulk-seeding from a script -- `set`/`add`
+    below call `write_entry` for the one key they touched, not this."""
+    for key, row in doc.items():
+        write_entry(key, row)
 
 
 def _manifest_resolved_keys() -> set[str]:
@@ -120,15 +184,15 @@ def _manifest_resolved_keys() -> set[str]:
 
 
 def cmd_add(args) -> None:
-    doc = read_store()
-    if args.key not in doc and args.key in _manifest_resolved_keys():
+    row = read_entry(args.key)
+    if row is None and args.key in _manifest_resolved_keys():
         sys.exit(
             f"FATAL: {args.key} already has a verdict in the manifest -- "
             f"check docs/dataset-inbox.md and scripts/triageNext.py before "
             f"re-adding it. If you mean to deliberately re-triage it (something "
             f"downstream changed), use `set --stage needs-rerun` instead of `add`."
         )
-    row = doc.setdefault(args.key, {"key": args.key, "history": []})
+    row = row or {"key": args.key, "history": []}
     row["title"] = args.title or row.get("title", "")
     row["size"] = args.size if args.size is not None else row.get("size")
     row["licence"] = args.licence or row.get("licence", "")
@@ -136,15 +200,15 @@ def cmd_add(args) -> None:
         row["archivePath"] = args.archive_path
     row.setdefault("stage", "candidate")
     row["history"].append({"stage": row["stage"], "at": _now()})
-    write_store(doc)
+    write_entry(args.key, row)
+    log_event(args.key, row["stage"], action="add", title=row["title"])
     print(f"  {args.key}: {row['stage']} ({row['title']})")
 
 
 def cmd_set(args) -> None:
-    doc = read_store()
-    if args.key not in doc:
+    row = read_entry(args.key)
+    if row is None:
         sys.exit(f"FATAL: {args.key} not in {STORE} -- run `add` first")
-    row = doc[args.key]
     row["stage"] = args.stage
     if args.archive_path:
         row["archivePath"] = args.archive_path
@@ -161,6 +225,11 @@ def cmd_set(args) -> None:
         }
     if args.stage in ("declined", "blocked", "queued") and args.reason:
         row["reason"] = args.reason
+    if args.stage == "needs-rerun":
+        if args.reason:
+            row["reason"] = args.reason
+        if args.rerun_command:
+            row["rerunCommand"] = json.loads(args.rerun_command)
     if args.stage == "applied":
         row["applied"] = {
             "added": args.added, "merged": args.merged,
@@ -168,7 +237,8 @@ def cmd_set(args) -> None:
         }
 
     row.setdefault("history", []).append({"stage": args.stage, "at": _now()})
-    write_store(doc)
+    write_entry(args.key, row)
+    log_event(args.key, args.stage, action="set", reason=row.get("reason"))
     print(f"  {args.key}: -> {args.stage}")
 
 
@@ -230,6 +300,14 @@ def main() -> int:
     p.add_argument("--added", type=int, default=None)
     p.add_argument("--merged", type=int, default=None)
     p.add_argument("--cross-family", type=int, default=None)
+    p.add_argument("--rerun-command", default="",
+                    help="only with --stage needs-rerun: a JSON-encoded "
+                         "argv list, e.g. '[\"python3\", \"scripts/"
+                         "importColStage2.py\", \"--archive\", \"...\", "
+                         "\"--kingdom\", \"Animalia\", \"--apply\"]' -- "
+                         "scripts/pipelineOrchestrator.py runs this "
+                         "verbatim when it picks the source up, so store "
+                         "exactly the command you'd run by hand")
 
     sub.add_parser("report", help="print every source grouped by stage")
 

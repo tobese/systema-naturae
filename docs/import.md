@@ -451,18 +451,34 @@ Macie (this host)                      q-bert (WSL2, importwrite host)
 └─────────────────┘                    └──────────────────┘
 ```
 
-### Stage machine: `data/source-queue.json`
+### Stage machine: `scripts/sourceQueue.py` / `data/source-queue/<key>.json`
 
-Every tracked source lives in `data/source-queue.json`, keyed by
-`checklistbank-<key>`, with a `stage` that moves through:
+Every tracked source has its own file, `data/source-queue/<key>.json`
+(`checklistbank-<key>` for ChecklistBank sources) -- one file per source
+since 2026-10-22, not a single `data/source-queue.json`: a process
+holding a stale in-memory copy of the whole queue used to clobber every
+other source's concurrent update when it saved its own. `stage` moves
+through:
 
 ```
-candidate → downloaded → measuring → measured → queued → applying → applied
+candidate → downloaded → triaging → triaged → queued → applying → applied
                                      ↑                                    ↑
                                   (dry run)                          (done)
-                                  
+
 declined / blocked / needs-rerun   (terminal / holding states)
 ```
+
+`needs-rerun` carries its own `rerunCommand` (a JSON argv list set via
+`sourceQueue.py set --stage needs-rerun --rerun-command '[...]'`) --
+some sources need a different tool than the standard transform/apply
+pipeline (TAXREF needed `importColStage2.py --kingdom`, once per
+kingdom, not a plain re-run).
+
+Every stage transition also appends one line to `data/pipeline-events.jsonl`
+-- not the source of truth (each source's own file, including its
+`history` list, is), but a flat chronological feed across *all* sources,
+so "what happened across the whole pipeline, in order" doesn't mean
+scanning 300+ files and interleaving their `history` entries by hand.
 
 `scripts/sourceQueue.py` is the CLI for moving a source between stages:
 
@@ -518,45 +534,57 @@ and returns the aggregate counts.
 
 The source's `applied` block holds the result; `history` is append-only.
 
-### Auto-refill driver: `scripts/importQueueDriver.py`
+### Orchestrator: `scripts/pipelineOrchestrator.py`
 
-The macie-side process that was missing from the pipeline — it drains the
-`downloaded` queue and automatically refills when it runs low.
+The single entry point that drives the whole pipeline -- one process,
+one log, owns every stage transition. Before 2026-10-22 this was two
+independent, narrow daemons (`importQueueDriver.py` watching only
+`downloaded`, `pendingFamilyWatcher.py` watching the pending-family
+store directly and bypassing the stage machine entirely); nothing
+watched `needs-rerun` at all, found when TAXREF sat there with no
+process that would ever pick it up. Both daemons' logic is unchanged and
+imported here, not duplicated.
 
 ```bash
-# One pass (processes all downloaded, then exits):
-python3 scripts/importQueueDriver.py
+# One pass (processes everything, then exits):
+python3 scripts/pipelineOrchestrator.py
 
-# Loop forever, polling every 30s:
-python3 scripts/importQueueDriver.py --loop
+# Loop forever, polling every 60s between passes:
+python3 scripts/pipelineOrchestrator.py --loop
 
 # Run under caffeinate (macOS, holds lid open):
-nohup caffeinate -dimsu python3 scripts/importQueueDriver.py --loop \
-    > /tmp/importQueueDriver.log 2>&1 &
+nohup caffeinate -dimsu python3 scripts/pipelineOrchestrator.py --loop \
+    > /tmp/pipelineOrchestrator.log 2>&1 &
 ```
 
-On each pass:
+Each pass:
 1. **Refill:** if fewer than 5 sources are at stage `downloaded`, triage up
    to 10 new open-licence ChecklistBank candidates via
    `scripts/triageNext.py --keys-only --limit 10`, download each archive
    with `scripts/fetchBatch.sh <key>`, register via
    `sourceQueue.py add ... --stage candidate`, then set to `downloaded`.
-   Archives that 404 on ChecklistBank (e.g. `Banco Taxonômico Integrado`,
-   `XR Test`) are marked `blocked`.
-2. **Drain:** for each `downloaded` source, run the transform (stage 1),
-   then the apply via importwrite (stage 2), then mark `applied` with the
-   summary stats. Sources where nothing is new ("nothing to do") are marked
-   `applied` with zero stats.
+   `sourceQueue.py add` itself refuses to register a key the manifest
+   already has a verdict for (found 2026-10-22: a bulk add that bypassed
+   this re-queued six already-taken sources and GTDB, on hold by policy).
+2. **Drain `downloaded`:** licence gate (NC → blocked, no archive work
+   spent), then transform (stage 1) + apply via importwrite (stage 2),
+   then mark `applied` with the summary stats.
+3. **Drain `needs-rerun`:** run each source's stored `rerunCommand`
+   verbatim; a source with none stored is left alone with a loud note
+   every pass rather than guessed at.
+4. **Pending-family sweep:** one cycle of `pendingFamilyWatcher.cycle()`
+   (see §12 below).
 
-The driver is currently running on macie as PID (see `ps aux | grep
-importQueueDriver`), under `caffeinate -dimsu`, logging to
-`/tmp/importQueueDriver.log`.
+Either daemon's own file still runs standalone for one-off debugging of
+just that stage (`python3 scripts/importQueueDriver.py`, `python3
+scripts/pendingFamilyWatcher.py`) -- but in production run the
+orchestrator, not those two separately.
 
 ### Related scripts
 
 | Script | Role |
 |---|---|
-| `scripts/sourceQueue.py` | Queue state: add / set / report |
+| `scripts/sourceQueue.py` | Queue state: add / set / report; `data/source-queue/<key>.json` storage, `data/pipeline-events.jsonl` log |
 | `scripts/triageNext.py` | List open-licence ChecklistBank datasets we don't hold |
 | `scripts/fetchBatch.sh` | Download a ChecklistBank archive.zip to the sources volume |
 | `scripts/transformColChecklist.py` | Transform archive → transformed.jsonl sidecar |
@@ -565,6 +593,7 @@ importQueueDriver`), under `caffeinate -dimsu`, logging to
 | `scripts/importLogServer.py` | HTTP dashboard on :9883 serving import-log.jsonl + queue |
 | `services/importwrite` | Go single-writer service on q-bert:8089 |
 | `scripts/pendingFamilies.py` | Pending-family store for refused species |
+| `scripts/importColStage2.py` | Scaffold+merge a source's families across kingdoms, for a `needs-rerun`-style second pass |
 
 ### Ports in use
 
@@ -587,7 +616,10 @@ are now in the taxonomy (and have a data file on disk), grouped by archive
 with the exact re-import command — but it doesn't run them. That's the
 watcher's job.
 
-`scripts/pendingFamilyWatcher.py` closes the loop:
+`scripts/pendingFamilyWatcher.py`'s `cycle()` closes the loop, called
+once per pass by `scripts/pipelineOrchestrator.py` (§11) in production --
+run the file below standalone only for one-off debugging of just this
+stage:
 
   1. Reads the pending-family store.
   2. Computes which family names the taxonomy now holds (`held_family_slugs()`)
@@ -602,22 +634,14 @@ watcher's job.
      archive isn't re-run every cycle while its families are still being
      scaffolded.
 
-Usage:
+Standalone usage (debugging only -- the orchestrator is the production path):
 ```bash
 # One cycle, then exit:
 python3 scripts/pendingFamilyWatcher.py
 
 # Loop forever, polling every 5 minutes:
 python3 scripts/pendingFamilyWatcher.py --loop
-
-# Run under caffeinate (macOS, holds lid open):
-nohup caffeinate -dimsu python3 scripts/pendingFamilyWatcher.py --loop \
-    > /tmp/pendingFamilyWatcher.log 2>&1 &
 ```
-
-The watcher is currently running on macie as PID (see `ps aux | grep
-pendingFamilyWatcher`), under `caffeinate -dimsu`, logging to
-`/tmp/pendingFamilyWatcher.log`.
 
 First cycle results (2026-10-20): re-imported 4 archives with recorded
 paths — checklistbank-2011 (+360 / 37,681 held, 21 families),
@@ -630,6 +654,7 @@ with no archive recorded (pre-date the archive-tracking fix) were skipped.
 | Script | Role |
 |---|---|
 | `scripts/pendingFamilies.py` | Pending-family store: seed / add / report |
-| `scripts/pendingFamilyWatcher.py` | Watches store, re-runs imports when families become ready |
+| `scripts/pendingFamilyWatcher.py` | Watches store, re-runs imports when families become ready; `cycle()` called by the orchestrator |
+| `scripts/pipelineOrchestrator.py` | §11 -- the production entry point that calls this + importQueueDriver.py each pass |
 
 

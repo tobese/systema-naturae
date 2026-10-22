@@ -20,7 +20,7 @@ was written. Superseded entries get struck through here, not rewritten below.
 
 The queue's actual current state — every source's stage (candidate,
 downloaded, measured, queued, applied, declined, blocked, needs-rerun),
-with per-stage numbers and reasons — lives in `data/source-queue.json`
+with per-stage numbers and reasons — lives in `data/source-queue/<key>.json`
 now, not in this file: a hand-written table here went stale within the
 same session that wrote it (declined/blocked verdicts recorded hours
 apart, a table that only ever said "done"). Read it with:
@@ -73,7 +73,7 @@ the rest safely re-confirmed already-present species).
 
 Not acted on this round — listed so the next pass doesn't have to
 re-discover them. The per-source ones (everything but the last three
-bullets) are also in `data/source-queue.json` as `stage: declined` or
+bullets) are also in `data/source-queue/<key>.json` as `stage: declined` or
 `blocked`, with a one-line `reason`; the prose below is the fuller why.
 
 - **Japan fungi checklist (checklistbank-315538)**: 18,817 offered, only
