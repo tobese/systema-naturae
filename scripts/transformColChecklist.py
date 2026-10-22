@@ -37,8 +37,28 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import zipfile
 import importColChecklist as ICC  # noqa: E402
 import sources  # noqa: E402
+
+
+def _is_txtree(path):
+    try:
+        with zipfile.ZipFile(path) as z:
+            names = z.namelist()
+            for n in names:
+                if n.lower().endswith(".txtree"):
+                    return True
+                # A non-DwC-A archive with no .txtree and no expected
+                # DwCA members (taxon.txt / .tsv / name.tsv etc.)
+                # is an unsupported format; skip gracefully rather than crash.
+            # No .txtree and no standard DwCA members either
+            base_names = [m.rsplit("/", 1)[-1].lower() for m in names if not m.startswith("__MACOSX")]
+            has_dwc = any("taxon" in b or "name" in b for b in base_names)
+            return False if has_dwc else "unsupported"
+    except zipfile.BadZipFile:
+        return "unsupported"
+    return False
 
 
 def transform_records(r: "ICC.RoutedSpecies"):
@@ -103,6 +123,22 @@ def main() -> int:
                      help="same override as importColChecklist.py -- see "
                           "its --help for why this exists")
     args = ap.parse_args()
+
+    # Exit codes 3 and 4 are distinct from 0 (handled) and 1 (crashed) so
+    # importQueueDriver.py can tell "this archive needs different handling"
+    # from "nothing new to stage" -- both print and return 0 would otherwise
+    # look identical to the driver, which then tries to apply a
+    # transformed.jsonl that was never written and fails every loop
+    # (found 2026-10-22: checklistbank-1046/1118/1190 stuck retrying).
+    txtree_check = _is_txtree(args.archive)
+    if txtree_check is True:
+        print(f"\n  archive uses .txtree format (txtree.py handles separately); "
+              f"skipping ColDP pipeline. See docs/import.md for the .txtree path.")
+        return 3
+    if txtree_check == "unsupported":
+        print(f"\n  archive at {args.archive} has no .txtree member and no "
+              f"recognised DwCA/ColDP table; skipping (unsupported format).")
+        return 4
 
     r = ICC.route_species(args.archive, kingdom_override=args.kingdom)
     ICC.record_misses(r, args.archive, args.apply)
