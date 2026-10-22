@@ -3,7 +3,7 @@
   "name": "Tegotheriidae",
   "rank": "FAMILY",
   "appSlug": "tegotheriidae",
-  "speciesCount": 6,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_KRUSATODON",
@@ -41,7 +41,8 @@
           "lineage": "Khorotherium",
           "authorship": "Averianov, Martin, Lopatin, Skutschas, Schellhorn, Kolosov & Vitenko, 2018",
           "sourceIds": {
-            "gbif-backbone": "10372575"
+            "gbif-backbone": "10372575",
+            "checklistbank-1174": "txn:374104"
           },
           "children": []
         }
@@ -110,6 +111,18 @@
             "gbif-backbone": "8508984"
           },
           "children": []
+        },
+        {
+          "id": "SP_SIBIROTHERIUM_ROSSICUS",
+          "name": "Sibirotherium rossicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sibirotherium",
+          "sourceIds": {
+            "checklistbank-1174": "txn:264054"
+          },
+          "uuid": "d642f1fa-6f73-41de-aa8b-33c2e9510c37"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -129,13 +142,36 @@
           "lineage": "Microdocodon",
           "authorship": "Zhou, Bhullar, Neander, Martin & Luo, 2019",
           "sourceIds": {
-            "gbif-backbone": "10201272"
+            "gbif-backbone": "10201272",
+            "checklistbank-1174": "txn:433248"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tegotheriidae"
+    },
+    {
+      "id": "GENUS_PARITATODON",
+      "name": "Paritatodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "tegotheriidae",
+      "children": [
+        {
+          "id": "SP_PARITATODON_KERMACKI_SIGOGNEAU_RUSSELL_1998",
+          "name": "Paritatodon kermacki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paritatodon",
+          "authorship": "(Sigogneau-Russell 1998)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:168385"
+          },
+          "uuid": "86e31e72-7c34-4dab-a68c-6d33f9d96f55"
+        }
+      ]
     }
   ],
   "genusCount": 6

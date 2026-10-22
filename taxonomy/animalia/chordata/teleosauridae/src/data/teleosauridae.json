@@ -3,7 +3,7 @@
   "name": "Teleosauridae",
   "rank": "FAMILY",
   "appSlug": "teleosauridae",
-  "speciesCount": 39,
+  "speciesCount": 43,
   "children": [
     {
       "id": "GENUS_INDOSINOSUCHUS",
@@ -19,7 +19,8 @@
           "lineage": "Indosinosuchus",
           "authorship": "Johnson, Young & Brusatte, 2020",
           "sourceIds": {
-            "gbif-backbone": "11630155"
+            "gbif-backbone": "11630155",
+            "checklistbank-1174": "txn:447829"
           },
           "children": []
         },
@@ -537,9 +538,23 @@
           "lineage": "Steneosaurus",
           "authorship": "Geoffroy Saint-Hilaire, 1825",
           "sourceIds": {
-            "gbif-backbone": "4967639"
+            "gbif-backbone": "4967639",
+            "checklistbank-1174": "txn:83545"
           },
           "children": []
+        },
+        {
+          "id": "SP_STENEOSAURUS_AALENSIS_MEYER_1842",
+          "name": "Steneosaurus aalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Steneosaurus",
+          "authorship": "(Meyer 1842)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:385718"
+          },
+          "uuid": "0602d422-f814-499e-b2f5-0dda0178a5c1"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -601,6 +616,72 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "teleosauridae"
+    },
+    {
+      "id": "GENUS_MYCTEROSUCHUS",
+      "name": "Mycterosuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "teleosauridae",
+      "children": [
+        {
+          "id": "SP_MYCTEROSUCHUS_NASUTUS_ANDREWS_1909",
+          "name": "Mycterosuchus nasutus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mycterosuchus",
+          "authorship": "(Andrews 1909)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:171397"
+          },
+          "uuid": "2525b530-a9f5-4bce-a41a-835c37b5fa7a"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PLATYSUCHUS",
+      "name": "Platysuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "teleosauridae",
+      "children": [
+        {
+          "id": "SP_PLATYSUCHUS_MULTICROBICULATUS_BERCKHEMER_1929",
+          "name": "Platysuchus multicrobiculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platysuchus",
+          "authorship": "(Berckhemer 1929)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:245911"
+          },
+          "uuid": "762b3341-0b72-4a8e-a9fe-7df24e6529e2"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BATHYSUCHUS",
+      "name": "Bathysuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "teleosauridae",
+      "children": [
+        {
+          "id": "SP_BATHYSUCHUS_MEGARHINUS_HULKE_1871",
+          "name": "Bathysuchus megarhinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bathysuchus",
+          "authorship": "(Hulke 1871)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:270250"
+          },
+          "uuid": "2ab01798-5efa-48ff-936e-5c3da841a93f"
+        }
+      ]
     }
   ],
   "genusCount": 10
