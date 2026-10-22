@@ -3,7 +3,7 @@
   "name": "Stephanoecidae",
   "rank": "FAMILY",
   "appSlug": "stephanoecidae",
-  "speciesCount": 4,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_DIDYMOECA",
@@ -19,10 +19,23 @@
           "lineage": "Didymoeca",
           "authorship": "(Valkanov, 1970)",
           "sourceIds": {
-            "gbif-backbone": "7645292"
+            "gbif-backbone": "7645292",
+            "checklistbank-308974": "378444"
           },
           "children": [],
           "uuid": "b3f07885-83b0-5b5-a72-4af890fc179bfb"
+        },
+        {
+          "id": "SP_DIDYMOECA_ELONGATA",
+          "name": "Didymoeca elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymoeca",
+          "sourceIds": {
+            "checklistbank-308974": "378453"
+          },
+          "uuid": "0d99b335-e544-4547-a0a6-057b682c3eb8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -85,6 +98,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stephanoecidae"
+    },
+    {
+      "id": "GENUS_COSMOECA",
+      "name": "Cosmoeca",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "stephanoecidae",
+      "children": [
+        {
+          "id": "SP_COSMOECA_VENTRICOSA",
+          "name": "Cosmoeca ventricosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cosmoeca",
+          "sourceIds": {
+            "checklistbank-308974": "378435"
+          },
+          "uuid": "73ed556a-d64c-4f01-9f5b-e12d5e6c9948"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PLEURASIGA",
+      "name": "Pleurasiga",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "stephanoecidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_STEPHANOECA",
+      "name": "Stephanoeca",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "stephanoecidae",
+      "children": [
+        {
+          "id": "SP_STEPHANOECA_ARNDTI",
+          "name": "Stephanoeca arndti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanoeca",
+          "sourceIds": {
+            "checklistbank-308974": "378480"
+          },
+          "uuid": "4d70e56d-b0c0-47e3-8d93-3a1c2f54ef35"
+        },
+        {
+          "id": "SP_STEPHANOECA_APHELES",
+          "name": "Stephanoeca apheles",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanoeca",
+          "sourceIds": {
+            "checklistbank-308974": "401603"
+          },
+          "uuid": "8c4f8b91-da99-491b-a206-0f47c797532a"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CRINOLINA",
+      "name": "Crinolina",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "stephanoecidae",
+      "children": []
     }
   ],
   "genusCount": 3
