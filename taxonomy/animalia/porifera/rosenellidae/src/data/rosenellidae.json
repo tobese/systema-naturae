@@ -3,7 +3,7 @@
   "name": "Rosenellidae",
   "rank": "FAMILY",
   "appSlug": "rosenellidae",
-  "speciesCount": 14,
+  "speciesCount": 17,
   "children": [
     {
       "id": "GENUS_CYSTOSTROMA",
@@ -32,7 +32,8 @@
           "lineage": "Cystostroma",
           "authorship": "Galloway & St Jean, 1957",
           "sourceIds": {
-            "gbif-backbone": "8575030"
+            "gbif-backbone": "8575030",
+            "checklistbank-1174": "txn:328905"
           },
           "children": []
         },
@@ -209,10 +210,58 @@
             "gbif-backbone": "8586545"
           },
           "children": []
+        },
+        {
+          "id": "SP_FOROLINIA_PACHYPHYLLA_NICHOLSON_1886",
+          "name": "Forolinia pachyphylla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Forolinia",
+          "authorship": "(Nicholson 1886)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:333326"
+          },
+          "uuid": "fbee3266-dfc4-446e-a147-cf335c5c43e8"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rosenellidae"
+    },
+    {
+      "id": "GENUS_PACHYSTYLOSTROMA",
+      "name": "Pachystylostroma",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rosenellidae",
+      "children": [
+        {
+          "id": "SP_PACHYSTYLOSTROMA_OZAKII_BOLSHAKOVA_AND_ULITINA_1985",
+          "name": "Pachystylostroma ozakii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachystylostroma",
+          "authorship": "Bolshakova and Ulitina 1985",
+          "sourceIds": {
+            "checklistbank-1174": "txn:119502"
+          },
+          "uuid": "628de905-a2f0-4346-bb25-4d6f4196fc2e"
+        },
+        {
+          "id": "SP_PACHYSTYLOSTROMA_UNGERNI_ROSEN_1867",
+          "name": "Pachystylostroma ungerni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachystylostroma",
+          "authorship": "(Rosen 1867)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:328901"
+          },
+          "uuid": "f2b778ef-5df8-4fdd-8576-743e769ec86e"
+        }
+      ]
     }
   ],
   "genusCount": 3
