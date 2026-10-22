@@ -545,6 +545,47 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     #   "accepted" taxa in their own kingdom -- the playful epithet
     #   ("vaderotti") was evidently used independently for both.
     "SP_LEUCOTHOE_VADEROTTI",
+    # 2026-10-22, backbone.zip + checklistbank-139831/2008/2011 batch: 34 new
+    # collisions. 24 were contamination (a bare/empty copy on one side, a
+    # real curated record with an established kingdom-correct genus on the
+    # other) and were removed instead of allow-listed -- see that commit.
+    # These 10 are kept provisionally: real evidence exists on both sides
+    # (a genuine authority id, a non-template description, or a
+    # well-documented real genus in each kingdom), so guessing which to
+    # delete risks losing real data rather than contamination. Revisit with
+    # scripts/dedupeSpeciesAcrossFamilies.py --authority-family once a
+    # richer GBIF family cache or a per-genus literature check can settle
+    # them:
+    #   SP_DIAPSE_PTILOTA, SP_GRAPHIS_ALBIDA, SP_GRAPHIS_TENUISSIMA:
+    #     Graphis is a well-known lichen genus (Graphidaceae), but the
+    #     animalia copies carry real external ids (mycobank/col/itis, one
+    #     with a WoRMS lsid) rather than empty stubs -- plausible that a
+    #     genuinely distinct marine/animal "Graphis" also exists. Diapse
+    #     ptilota has no strong signal on either side at all.
+    #   SP_RETICULARIA_JURANA, SP_TUBIFERA_DIMORPHOTHECA, SP_TUBIFERA_MAGNA,
+    #   SP_TUBIFERA_MONTANA: both Reticularia and Tubifera are genuinely
+    #     used in the literature for a fossil brachiopod genus AND a
+    #     myxomycete (slime mold) genus independently; here the
+    #     animalia/Reticulariidae copies carry real checklistbank ids and
+    #     descriptions while the protozoa copies are bare iNaturalist
+    #     stubs, which could mean either a genuine homonym or a misrouted
+    #     duplicate of the same brachiopod record.
+    #   SP_RICINUS_DALGLEISHI: Ricinus is both the castor-bean genus
+    #     (plantae, Euphorbiaceae) and a genus of bird-chewing lice
+    #     (animalia, Phthiraptera) in real nomenclature -- both copies here
+    #     are bare stubs, so there is no way to tell which this one is.
+    #   SP_TETRAPEDIA_REINSCHIANA: plantae copy has a real itis id;
+    #     Tetrapedia is a solitary-bee genus (Apidae) in animalia but the
+    #     name (four-sided) also fits a desmid alga, so this could be
+    #     either.
+    #   SP_TRACHYNEMA_MORTENSENII: wikispecies-backed chromista copy, but
+    #     "mortensenii" (honouring invertebrate zoologist Th. Mortensen)
+    #     reads zoological while the copy sits in chromista/Rhodophyta's
+    #     sibling kingdom placement is also plausible for a red alga.
+    "SP_DIAPSE_PTILOTA", "SP_GRAPHIS_ALBIDA", "SP_GRAPHIS_TENUISSIMA",
+    "SP_RETICULARIA_JURANA", "SP_TUBIFERA_DIMORPHOTHECA", "SP_TUBIFERA_MAGNA",
+    "SP_TUBIFERA_MONTANA", "SP_RICINUS_DALGLEISHI", "SP_TETRAPEDIA_REINSCHIANA",
+    "SP_TRACHYNEMA_MORTENSENII",
 }
 
 def check_duplicate_species():
