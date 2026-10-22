@@ -3,7 +3,7 @@
   "name": "Cornulitidae",
   "rank": "FAMILY",
   "appSlug": "cornulitidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_CORNULITES",
@@ -80,13 +80,36 @@
           "lineage": "Coralloconchus",
           "authorship": "Vinn & Motus, 2008",
           "sourceIds": {
-            "gbif-backbone": "4953792"
+            "gbif-backbone": "4953792",
+            "checklistbank-1174": "txn:120136"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cornulitidae"
+    },
+    {
+      "id": "GENUS_PORKUNICONCHUS",
+      "name": "Porkuniconchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cornulitidae",
+      "children": [
+        {
+          "id": "SP_PORKUNICONCHUS_FRAGILIS_VINN_ET_AL_2024",
+          "name": "Porkuniconchus fragilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porkuniconchus",
+          "authorship": "Vinn et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:491286"
+          },
+          "uuid": "2a64e039-6790-46dd-80ca-a9680e29354f"
+        }
+      ]
     }
   ],
   "genusCount": 2
