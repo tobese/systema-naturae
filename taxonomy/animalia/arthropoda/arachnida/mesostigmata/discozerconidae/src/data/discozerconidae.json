@@ -3,7 +3,7 @@
   "name": "Discozerconidae",
   "rank": "FAMILY",
   "appSlug": "discozerconidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_BERZERCON",
@@ -19,13 +19,36 @@
           "lineage": "Berzercon",
           "authorship": "Seeman & Baker, 2013",
           "sourceIds": {
-            "gbif-backbone": "8634773"
+            "gbif-backbone": "8634773",
+            "checklistbank-139831": "411021"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "discozerconidae"
+    },
+    {
+      "id": "GENUS_DISCOZERCON",
+      "name": "Discozercon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "discozerconidae",
+      "children": [
+        {
+          "id": "SP_DISCOZERCON_DERRICKI_DOMROW",
+          "name": "Discozercon derricki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discozercon",
+          "authorship": "Domrow",
+          "sourceIds": {
+            "checklistbank-127379": "cf45b607-6b7e-45d7-b29d-0b3e69ceac42"
+          },
+          "uuid": "01e4ab87-b28a-4a2c-8ba3-8ec5f9309ec1"
+        }
+      ]
     }
   ],
   "genusCount": 1

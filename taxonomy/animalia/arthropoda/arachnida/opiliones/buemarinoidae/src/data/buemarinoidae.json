@@ -3,7 +3,7 @@
   "name": "Buemarinoidae",
   "rank": "FAMILY",
   "appSlug": "buemarinoidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TURONYCHUS",
@@ -19,13 +19,72 @@
           "lineage": "Turonychus",
           "authorship": "Derkarabetian, Prieto & Giribet, 2021",
           "sourceIds": {
-            "gbif-backbone": "10785389"
+            "gbif-backbone": "10785389",
+            "checklistbank-139831": "1152373"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "buemarinoidae"
+    },
+    {
+      "id": "GENUS_FUMONTANA",
+      "name": "Fumontana",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "buemarinoidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_ARBASUS",
+      "name": "Arbasus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "buemarinoidae",
+      "children": [
+        {
+          "id": "SP_ARBASUS_CAECUS",
+          "name": "Arbasus caecus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arbasus",
+          "sourceIds": {
+            "checklistbank-139831": "534167"
+          },
+          "uuid": "1882cb6e-898f-4744-99f2-574d7e883c06"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_FLAVONUNCIA",
+      "name": "Flavonuncia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "buemarinoidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_PHOCYX",
+      "name": "Phocyx",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "buemarinoidae",
+      "children": [
+        {
+          "id": "SP_PHOCYX_AUSTRALIS",
+          "name": "Phocyx australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phocyx",
+          "sourceIds": {
+            "checklistbank-139831": "1579141"
+          },
+          "uuid": "ea8f7ce9-5714-493d-9556-36b5b89215b9"
+        }
+      ]
     }
   ],
   "genusCount": 1
