@@ -388,29 +388,40 @@ function renderQueue(sources) {
   document.getElementById('openCount').textContent = String(open.length);
 
   document.getElementById('queueUpNext').innerHTML = upNext.length
-    ? upNext.map(r => {
+    ? '<ul class="queue-list" style="font-size:11.5px; list-style:none; padding:0; margin:0;">'
+        + '<li style="color:#8a909c; font-size:10px; text-transform:uppercase; letter-spacing:.03em; padding:4px 0; border-bottom:1px solid #262b35; font-weight:600;">'
+        + '<span style="float:left;">Source</span><span style="float:right;">State · Size</span><span style="clear:both;"></span>'
+        + '</li>'
+        + upNext.map(r => {
         const badge = r.stage === 'measuring'
             ? '<span class="status-badge status-measuring"><span class="status-dot"></span>measuring</span>'
           : r.stage === 'applying'
             ? '<span class="status-badge status-applying"><span class="status-dot"></span>importing</span>'
           : '';
-        const stage = r.stage === 'candidate' ? 'not yet downloaded'
-          : r.stage === 'downloaded' ? 'downloaded'
-          : r.stage === 'measured' ? 'measured'
-          : r.stage === 'queued' ? 'queued to apply'
-          : r.stage === 'needs-rerun' ? 'needs re-run'
-          : '';
-        return `<li>
-          <span class="qi-title">${r.title || r.key}${r.publisher ? ' <span style="color:var(--dim); font-size:11px;"> &mdash; '+escape(r.publisher)+'</span>' : ''}</span>
-          <span class="qn">${badge}${stage}${stage ? ' &middot; ' : ''}${r.key} &middot; ${fmt(r.size)}</span>
-        </li>`;
+        const cleanTitle2 = (r.title || r.key || '').replace(/^Batch [iI]mport[ -]?/, '').trim();
+        const displayName2 = cleanTitle2 || r.key;
+        return `<li style="display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:4px 0; border-bottom:1px solid #262b35;">`
+          + `<span style="min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${escape(displayName2)}${r.publisher ? ' — ' + escape(r.publisher) : ''}</span>`
+          + `<span style="white-space:nowrap; text-align:right; font-variant-numeric:tabular-nums;">`
+          + `${badge ? badge + ' ' : ''}${r.stage}<span style="color:#5b9dff;"> · ${fmt(r.size)}</span></span>`
+          + `</li>`;
       }).join('')
+        + '</ul>'
     : '<li class="queue-empty">Nothing queued.</li>';
 
   document.getElementById('queueOpen').innerHTML = open.length
-    ? open.map(r =>
-        `<li><b>${r.title || r.key}${r.publisher ? ' <span style="color:var(--dim); font-size:11px;"> &mdash; '+escape(r.publisher)+'</span>' : ''}</b> (${r.stage}) &mdash; ${r.reason || 'no reason recorded'}</li>`
-      ).join('')
+    ? '<ul class="open-list" style="font-size:11.5px; list-style:none; padding:0; margin:0;">'
+        + '<li style="color:#8a909c; font-size:10px; text-transform:uppercase; letter-spacing:.03em; padding:4px 0; border-bottom:1px solid #262b35; font-weight:600;">'
+        + '<span style="float:left;">Source</span><span style="float:right;">State · Size</span><span style="clear:both;"></span></li>'
+        + open.map(r => {
+        const cleanTitle3 = (r.title || r.key || '').replace(/^Batch [iI]mport[ -]?/, '').trim();
+        const displayName3 = cleanTitle3 || r.key;
+        return `<li style="display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:4px 0; border-bottom:1px solid #262b35;">`
+          + `<span style="min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${escape(displayName3)}${r.publisher ? ' — ' + escape(r.publisher) : ''}</span>`
+          + `<span style="white-space:nowrap; text-align:right; font-variant-numeric:tabular-nums;">${r.stage} · ${fmt(r.size || 0)}</span>`
+          + `</li>`;
+      }).join('')
+        + '</ul>'
     : '<li class="queue-empty">Nothing open.</li>';
 }
 

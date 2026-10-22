@@ -207,6 +207,19 @@ def main() -> int:
             ["python3", os.path.join(SCRIPT_DIR, "transformColChecklist.py"), archive, key, "--apply"],
             "transform",
         )
+        # rc 3/4 mean transformColChecklist.py deliberately wrote nothing --
+        # a format this pipeline can't read yet, not a transient failure.
+        # Leaving these at "downloaded" makes the driver retry them forever
+        # (found 2026-10-22 racing against an orphaned duplicate driver on
+        # checklistbank-139831); blocked is the correct terminal state.
+        if rc == 3:
+            set_stage(q, key, "blocked", reason="txtree format — needs scripts/txtree.py path, see docs/import.md")
+            print(f"  {key}: blocked — txtree format, not handled by this driver", flush=True)
+            continue
+        if rc == 4:
+            set_stage(q, key, "blocked", reason="unsupported archive format (no .txtree, no DwCA/ColDP table)")
+            print(f"  {key}: blocked — unsupported archive format", flush=True)
+            continue
         if rc != 0:
             print(f"  {key}: transform FAILED (rc={rc}), leaving at downloaded", flush=True)
             continue
