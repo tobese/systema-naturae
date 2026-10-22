@@ -3,7 +3,7 @@
   "name": "Pemphredonidae",
   "rank": "FAMILY",
   "appSlug": "pemphredonidae",
-  "speciesCount": 5,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_LISPONEMA",
@@ -41,7 +41,8 @@
           "lineage": "Iwestia",
           "authorship": "Rasnitsyn & Jarzembowski, 1998",
           "sourceIds": {
-            "gbif-backbone": "8654275"
+            "gbif-backbone": "8654275",
+            "checklistbank-1174": "txn:216329"
           },
           "children": []
         }
@@ -85,7 +86,8 @@
           "lineage": "Colmepsiterona",
           "authorship": "Cockx & McKellar, 2018",
           "sourceIds": {
-            "gbif-backbone": "9654380"
+            "gbif-backbone": "9654380",
+            "checklistbank-1174": "txn:368261"
           },
           "children": []
         }
@@ -114,6 +116,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pemphredonidae"
+    },
+    {
+      "id": "GENUS_PEMPHREDON",
+      "name": "Pemphredon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pemphredonidae",
+      "children": [
+        {
+          "id": "SP_PEMPHREDON_SPINALATUM_HONG_1984",
+          "name": "Pemphredon spinalatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pemphredon",
+          "authorship": "(Hong 1984)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:70787"
+          },
+          "uuid": "ad72125a-f1ce-4cdd-9f7e-1d5d1506c22c"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PALARPACTOPHILUS",
+      "name": "Palarpactophilus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pemphredonidae",
+      "children": [
+        {
+          "id": "SP_PALARPACTOPHILUS_SAXONICUS_OHL_AND_BENNETT_2009",
+          "name": "Palarpactophilus saxonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palarpactophilus",
+          "authorship": "Ohl and Bennett 2009",
+          "sourceIds": {
+            "checklistbank-1174": "txn:281226"
+          },
+          "uuid": "725b7e58-e352-4201-8080-63b0bfb1bbf3"
+        }
+      ]
     }
   ],
   "genusCount": 5

@@ -3,7 +3,7 @@
   "name": "Panguidae",
   "rank": "FAMILY",
   "appSlug": "panguidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_PROSPHEX",
@@ -19,7 +19,8 @@
           "lineage": "Prosphex",
           "authorship": "Grimaldi & Engel, 2019",
           "sourceIds": {
-            "gbif-backbone": "10819185"
+            "gbif-backbone": "10819185",
+            "checklistbank-1174": "txn:398963"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Pangu",
           "authorship": "Li, Rasnitsyn, Shih & Ren, 2019",
           "sourceIds": {
-            "gbif-backbone": "10853431"
+            "gbif-backbone": "10853431",
+            "checklistbank-1174": "txn:409716"
           },
           "children": []
         },
@@ -54,13 +56,36 @@
           "lineage": "Pangu",
           "authorship": "Li, Rasnitsyn, Shih & Ren, 2020",
           "sourceIds": {
-            "gbif-backbone": "11209985"
+            "gbif-backbone": "11209985",
+            "checklistbank-1174": "txn:428105"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "panguidae"
+    },
+    {
+      "id": "GENUS_PROTOPANGU",
+      "name": "Protopangu",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "panguidae",
+      "children": [
+        {
+          "id": "SP_PROTOPANGU_VALDENSIS_ZHUANG_ET_AL_2024",
+          "name": "Protopangu valdensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protopangu",
+          "authorship": "Zhuang et al. 2024",
+          "sourceIds": {
+            "checklistbank-1174": "txn:505874"
+          },
+          "uuid": "3a078d7e-1eb3-4def-8502-6e7709690113"
+        }
+      ]
     }
   ],
   "genusCount": 2

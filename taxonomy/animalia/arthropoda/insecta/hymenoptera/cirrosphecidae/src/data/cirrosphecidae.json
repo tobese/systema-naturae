@@ -3,7 +3,7 @@
   "name": "Cirrosphecidae",
   "rank": "FAMILY",
   "appSlug": "cirrosphecidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_CIRROSPHEX",
@@ -41,7 +41,8 @@
           "lineage": "Glenocephalus",
           "authorship": "Rosa & Melo, 2021",
           "sourceIds": {
-            "gbif-backbone": "11145016"
+            "gbif-backbone": "11145016",
+            "checklistbank-1174": "txn:434835"
           },
           "children": []
         }
@@ -63,13 +64,36 @@
           "lineage": "Haptodioctes",
           "authorship": "Rosa & Melo, 2021",
           "sourceIds": {
-            "gbif-backbone": "11177231"
+            "gbif-backbone": "11177231",
+            "checklistbank-1174": "txn:434831"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cirrosphecidae"
+    },
+    {
+      "id": "GENUS_HETEROSPHEX",
+      "name": "Heterosphex",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cirrosphecidae",
+      "children": [
+        {
+          "id": "SP_HETEROSPHEX_WUNI_LI_ET_AL_2022",
+          "name": "Heterosphex wuni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterosphex",
+          "authorship": "Li et al. 2022",
+          "sourceIds": {
+            "checklistbank-1174": "txn:464061"
+          },
+          "uuid": "ae9ad69c-57d0-45ee-a31f-3900150ab331"
+        }
+      ]
     }
   ],
   "genusCount": 3
