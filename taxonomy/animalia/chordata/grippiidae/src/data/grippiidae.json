@@ -3,7 +3,7 @@
   "name": "Grippiidae",
   "rank": "FAMILY",
   "appSlug": "grippiidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_CHAOHUSAURUS",
@@ -19,7 +19,8 @@
           "lineage": "Chaohusaurus",
           "authorship": "Young & Dong, 1972",
           "sourceIds": {
-            "gbif-backbone": "8574656"
+            "gbif-backbone": "8574656",
+            "checklistbank-1174": "txn:170845"
           },
           "children": []
         },
@@ -32,7 +33,8 @@
           "lineage": "Chaohusaurus",
           "authorship": "Huang, Motani, Jiang, Tintori, Zhou, Ren & Zhang, 2019",
           "sourceIds": {
-            "gbif-backbone": "10830198"
+            "gbif-backbone": "10830198",
+            "checklistbank-1174": "txn:397941"
           },
           "children": []
         },
@@ -87,6 +89,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "grippiidae"
+    },
+    {
+      "id": "GENUS_CHENSAURUS",
+      "name": "Chensaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "grippiidae",
+      "children": [
+        {
+          "id": "SP_CHENSAURUS_CHAOXIANENSIS_CHEN_1985",
+          "name": "Chensaurus chaoxianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chensaurus",
+          "authorship": "(Chen 1985)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:150075"
+          },
+          "uuid": "b9f1af04-3af8-47f9-b2af-03af4f56c5fb"
+        }
+      ]
     }
   ],
   "genusCount": 2

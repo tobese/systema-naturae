@@ -3,7 +3,7 @@
   "name": "Luganoiidae",
   "rank": "FAMILY",
   "appSlug": "luganoiidae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_BRACHYSOMUS",
@@ -89,13 +89,36 @@
           "lineage": "Besania",
           "authorship": "Herzog & Bürgin, 2005",
           "sourceIds": {
-            "gbif-backbone": "8493551"
+            "gbif-backbone": "8493551",
+            "checklistbank-1174": "txn:241766"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "luganoiidae"
+    },
+    {
+      "id": "GENUS_GUIZHOUBRACHYSOMUS",
+      "name": "Guizhoubrachysomus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "luganoiidae",
+      "children": [
+        {
+          "id": "SP_GUIZHOUBRACHYSOMUS_MINOR_LIU_2003",
+          "name": "Guizhoubrachysomus minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guizhoubrachysomus",
+          "authorship": "(Liu 2003)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:271572"
+          },
+          "uuid": "35efcf56-5ef3-4889-9244-1ef42fce79a2"
+        }
+      ]
     }
   ],
   "genusCount": 3

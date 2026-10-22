@@ -3,7 +3,7 @@
   "name": "Galesauridae",
   "rank": "FAMILY",
   "appSlug": "galesauridae",
-  "speciesCount": 6,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_GALESAURUS",
@@ -63,7 +63,8 @@
           "lineage": "Sysphinctostoma",
           "authorship": "Broili & Schröder, 1936",
           "sourceIds": {
-            "gbif-backbone": "8673038"
+            "gbif-backbone": "8673038",
+            "checklistbank-1174": "txn:270223"
           },
           "children": []
         },
@@ -98,7 +99,8 @@
           "lineage": "Progalesaurus",
           "authorship": "Sidor & Smith, 2004",
           "sourceIds": {
-            "gbif-backbone": "8703849"
+            "gbif-backbone": "8703849",
+            "checklistbank-1174": "txn:171916"
           },
           "children": []
         }
@@ -127,6 +129,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "galesauridae"
+    },
+    {
+      "id": "GENUS_BOLOTRIDON",
+      "name": "Bolotridon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "galesauridae",
+      "children": [
+        {
+          "id": "SP_BOLOTRIDON_FRERENSIS_SEELEY_1895",
+          "name": "Bolotridon frerensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolotridon",
+          "authorship": "(Seeley 1895)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:177656"
+          },
+          "uuid": "05e353e2-74fd-4d0b-a524-3dfe3b4c4e62"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CYNOSAURUS",
+      "name": "Cynosaurus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "galesauridae",
+      "children": [
+        {
+          "id": "SP_CYNOSAURUS_SUPPOSTUS_OWEN_1876",
+          "name": "Cynosaurus suppostus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cynosaurus",
+          "authorship": "(Owen 1876)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:56827"
+          },
+          "uuid": "66f74cc6-a78b-4a87-9fb5-bd835662d9a7"
+        }
+      ]
     }
   ],
   "genusCount": 5
