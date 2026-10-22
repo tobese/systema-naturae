@@ -3,7 +3,7 @@
   "name": "Salterellidae",
   "rank": "FAMILY",
   "appSlug": "salterellidae",
-  "speciesCount": 5,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_ELLISELL",
@@ -19,7 +19,8 @@
           "lineage": "Ellisell",
           "authorship": "Peel & Berg-Madsen, 1988",
           "sourceIds": {
-            "gbif-backbone": "12177255"
+            "gbif-backbone": "12177255",
+            "checklistbank-1174": "txn:463607"
           },
           "children": []
         }
@@ -96,6 +97,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "salterellidae"
+    },
+    {
+      "id": "GENUS_VOLBORTHELLA",
+      "name": "Volborthella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "salterellidae",
+      "children": [
+        {
+          "id": "SP_VOLBORTHELLA_TENUIS_SCHMIDT_1888",
+          "name": "Volborthella tenuis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Volborthella",
+          "authorship": "Schmidt 1888",
+          "sourceIds": {
+            "checklistbank-1174": "txn:337703"
+          },
+          "uuid": "6d170e7a-a2a8-4bc1-aa46-4e628bd37944"
+        },
+        {
+          "id": "SP_VOLBORTHELLA_TITANIUS_FIRBY_AND_DURHAM_1974",
+          "name": "Volborthella titanius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Volborthella",
+          "authorship": "(Firby and Durham 1974)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:380758"
+          },
+          "uuid": "7b250122-e563-467c-bfed-dff1facd3525"
+        }
+      ]
     }
   ],
   "genusCount": 3
