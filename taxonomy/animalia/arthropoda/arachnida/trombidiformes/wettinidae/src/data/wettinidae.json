@@ -3,7 +3,7 @@
   "name": "Wettinidae",
   "rank": "FAMILY",
   "appSlug": "wettinidae",
-  "speciesCount": 8,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_WETTINA",
@@ -112,7 +112,8 @@
           "sourceIds": {
             "checklistbank-127379": "d4b05820-cc28-4738-bc42-799fad012efa"
           },
-          "uuid": "cd9f7fe5-3bd2-4151-9fd0-25644c1042b8"
+          "uuid": "cd9f7fe5-3bd2-4151-9fd0-25644c1042b8",
+          "children": []
         }
       ]
     },
@@ -134,18 +135,33 @@
           "sourceIds": {
             "checklistbank-127379": "7f7c9c2b-f962-49ef-9a7a-532cca144de7"
           },
-          "uuid": "7bb93862-3081-4a6e-bca5-551ab3477284"
+          "uuid": "7bb93862-3081-4a6e-bca5-551ab3477284",
+          "children": []
         }
       ]
     },
     {
-      "id": "GENUS_WHEENYOIDES",
-      "name": "Wheenyoides",
+      "id": "GENUS_TIPHYS",
+      "name": "Tiphys",
       "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TIPHYS_PODAGRICA_KOCH_1837",
+          "name": "Tiphys podagrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tiphys",
+          "authorship": "Koch, 1837",
+          "sourceIds": {
+            "checklistbank-2008": "703257"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
-      "lineage": "wettinidae",
-      "children": []
+      "lineage": "wettinidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 4
 }

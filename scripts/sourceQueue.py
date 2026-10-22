@@ -13,19 +13,24 @@ not pushed out to the external volume the way pending/families.jsonl is.
 
 A source moves through `stage` in roughly this order, though any stage can
 be set directly (a source already known to be blocked never needs to pass
-through "measured"):
+through "triaged"):
 
     candidate   -- known (scripts/triageNext.py), not yet downloaded
-    downloaded  -- archive on disk, not yet measured
-    measuring   -- a dry run is actively running right now (set this
+    downloaded  -- archive on disk, not yet triaged
+    triaging    -- a dry run is actively running right now (set this
                    *before* launching it, not after -- the whole point is
                    a viewer mid-tick sees "running", not a stale
-                   "downloaded" that silently became "measured" minutes
+                   "downloaded" that silently became "triaged" minutes
                    later with no step in between)
-    measured    -- dry run done; `measured` holds the numbers
+    triaged     -- dry run done; `triaged` holds the numbers. This is where
+                   the pipeline stops and waits: `add()` below refuses to
+                   register a key the manifest already has a verdict for,
+                   but it can't catch a source that is simply *new* and
+                   risky (bacteria-heavy, a synthetic tree, NC-licensed) --
+                   that judgement call is what "triaged" is for.
     queued      -- verdict is "take", not yet applied
     applying    -- the split pipeline is actively running right now, same
-                   reasoning as "measuring"
+                   reasoning as "triaging"
     applied     -- split pipeline finished; `applied` holds the result
     declined    -- verdict is "decline"; `reason` says why
     blocked     -- can't proceed yet (no archive, needs a decision); `reason` says why
@@ -35,32 +40,46 @@ through "measured"):
 
 `history` is append-only -- every `set` call adds one entry with the stage
 and a timestamp, even if the stage itself didn't change (an updated
-`measured` block still gets a history row) -- so "when did this last
+`triaged` block still gets a history row) -- so "when did this last
 move" is answerable without re-deriving it from git blame.
 
 Usage:
     python3 scripts/sourceQueue.py add --key 311726 \\
         --title "ASEAN KBA Trigger Species Checklist" --size 19723 --licence "cc by"
     python3 scripts/sourceQueue.py set --key 311726 --stage downloaded
-    python3 scripts/sourceQueue.py set --key 311726 --stage measured \\
+    python3 scripts/sourceQueue.py set --key 311726 --stage triaged \\
         --offered 19723 --already-held 12000 --staged 500 --refused 200 \\
         --families 12 --missed-families 1
     python3 scripts/sourceQueue.py set --key 311726 --stage declined --reason "..."
     python3 scripts/sourceQueue.py set --key 311726 --stage applied \\
         --added 480 --merged 20 --cross-family 0
     python3 scripts/sourceQueue.py report
+
+`add` is the one gate every path into this queue has to pass through --
+the manual CLI, a bulk script, and scripts/importQueueDriver.py's own
+refill all call it. It cross-checks data/manifest.json (the same
+held_keys() scripts/triageNext.py uses) and refuses to (re-)register a key
+the manifest already has a verdict for, instead of silently resetting it
+to "candidate". Found 2026-10-22: a bulk add that bypassed triageNext.py's
+own filtering re-queued six already-taken sources (Dyntaxa, Nortaxa, eunis,
+taicol, IRMNG, the Brazilian Fauna catalogue) and three explicitly-declined
+ones (OTL, ZooBank, INA), plus GTDB -- on hold by policy, not a triage
+question at all. triageNext.py's filter is only as good as the paths that
+actually call it; this makes the bypass impossible instead of relying on
+every future caller to remember.
 """
 import argparse
 import json
 import os
+import re
 import sys
 import tempfile
 import time
 
-STORE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                      "data", "source-queue.json")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+STORE = os.path.join(os.path.dirname(SCRIPT_DIR), "data", "source-queue.json")
 
-STAGES = ("candidate", "downloaded", "measuring", "measured", "queued",
+STAGES = ("candidate", "downloaded", "triaging", "triaged", "queued",
           "applying", "applied", "declined", "blocked", "needs-rerun")
 
 
@@ -86,8 +105,29 @@ def write_store(doc: dict) -> None:
             pass
 
 
+def _manifest_resolved_keys() -> set[str]:
+    """ChecklistBank slugs the manifest already has a verdict for -- the
+    same key/DOI/title matching triageNext.py's held_keys() does, kept here
+    too so `add` can refuse a bypass regardless of which script called it."""
+    manifest = os.path.join(
+        os.environ.get("SN_SOURCES_ROOT", "/Volumes/MacieExternal/sources"),
+        "manifest.json")
+    try:
+        src = json.load(open(manifest, encoding="utf-8")).get("sources", {})
+    except (OSError, ValueError):
+        return set()
+    return {slug for slug in src if re.match(r"checklistbank-\d+$", slug)}
+
+
 def cmd_add(args) -> None:
     doc = read_store()
+    if args.key not in doc and args.key in _manifest_resolved_keys():
+        sys.exit(
+            f"FATAL: {args.key} already has a verdict in the manifest -- "
+            f"check docs/dataset-inbox.md and scripts/triageNext.py before "
+            f"re-adding it. If you mean to deliberately re-triage it (something "
+            f"downstream changed), use `set --stage needs-rerun` instead of `add`."
+        )
     row = doc.setdefault(args.key, {"key": args.key, "history": []})
     row["title"] = args.title or row.get("title", "")
     row["size"] = args.size if args.size is not None else row.get("size")
@@ -111,8 +151,8 @@ def cmd_set(args) -> None:
     if args.kingdom_override:
         row["kingdomOverride"] = args.kingdom_override
 
-    if args.stage == "measured":
-        row["measured"] = {
+    if args.stage == "triaged":
+        row["triaged"] = {
             "offered": args.offered, "alreadyHeld": args.already_held,
             "staged": args.staged, "refused": args.refused,
             "refusalRate": (round(args.refused / args.offered, 4)
@@ -147,8 +187,8 @@ def cmd_report(_args) -> None:
         print(f"\n  {stage} ({len(rows)})")
         for row in sorted(rows, key=lambda r: -(r.get("size") or 0)):
             extra = ""
-            if stage == "measured" and row.get("measured"):
-                m = row["measured"]
+            if stage == "triaged" and row.get("triaged"):
+                m = row["triaged"]
                 extra = f"  staged {m.get('staged', '?')}"
             if stage in ("declined", "blocked") and row.get("reason"):
                 extra = f"  {row['reason'][:60]}"

@@ -3,7 +3,7 @@
   "name": "Philisidae",
   "rank": "FAMILY",
   "appSlug": "philisidae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_DIZZYA",
@@ -115,7 +115,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:136264"
           },
-          "uuid": "b2a87629-8ef5-48d9-b24e-342211f75ce0"
+          "uuid": "b2a87629-8ef5-48d9-b24e-342211f75ce0",
+          "children": []
         },
         {
           "id": "SP_PHILISIS_SEVKETI_SIG_ET_AL_1994",
@@ -128,7 +129,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:425124"
           },
-          "uuid": "cbf538d3-1aa8-4dc8-a2dd-1d3ae586afdc"
+          "uuid": "cbf538d3-1aa8-4dc8-a2dd-1d3ae586afdc",
+          "children": []
         }
       ]
     },
@@ -138,8 +140,25 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "philisidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_SCOTOPHILISIS_LIBYCUS_HOR_EK_ET_AL_2006",
+          "name": "Scotophilisis libycus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scotophilisis",
+          "authorship": "HoráČek,  et al. 2006",
+          "sourceIds": {
+            "checklistbank-1174": "txn:425235"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-1174": "txn:136262"
+  }
 }

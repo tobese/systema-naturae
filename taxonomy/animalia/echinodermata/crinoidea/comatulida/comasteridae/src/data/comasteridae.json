@@ -3,7 +3,7 @@
   "name": "Comasteridae",
   "rank": "FAMILY",
   "appSlug": "comasteridae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_OXYCOMANTHUS",
@@ -23,7 +23,8 @@
           "sourceIds": {
             "checklistbank-127379": "d62348c6-493f-4ed1-b16a-cd445a066474"
           },
-          "uuid": "d244234e-4785-467e-8535-4a0e79931a85"
+          "uuid": "d244234e-4785-467e-8535-4a0e79931a85",
+          "children": []
         },
         {
           "id": "SP_OXYCOMANTHUS_PERPLEXUM_H_L_CLARK",
@@ -36,9 +37,47 @@
           "sourceIds": {
             "checklistbank-127379": "b247987d-d4a1-4c93-bf60-3caa920059a4"
           },
-          "uuid": "37d1f759-fb41-4bf2-bc49-beca48bd1f1d"
+          "uuid": "37d1f759-fb41-4bf2-bc49-beca48bd1f1d",
+          "children": []
+        },
+        {
+          "id": "SP_OXYCOMANTHUS_BENHAMI",
+          "name": "Oxycomanthus benhami",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oxycomanthus",
+          "sourceIds": {
+            "wikispecies": "Oxycomanthus_benhami"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_COMASTER",
+      "name": "Comaster",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COMASTER_MEYERENSIS",
+          "name": "Comaster meyerensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Comaster",
+          "sourceIds": {
+            "wikispecies": "Comaster_meyerensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "comasteridae"
     }
-  ]
+  ],
+  "genusCount": 2,
+  "sourceIds": {
+    "wikispecies": "Comasteridae"
+  }
 }

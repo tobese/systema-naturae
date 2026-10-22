@@ -3,7 +3,7 @@
   "name": "Athienemanniidae",
   "rank": "FAMILY",
   "appSlug": "athienemanniidae",
-  "speciesCount": 28,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_MELLAMUNDA",
@@ -35,7 +35,8 @@
           "sourceIds": {
             "checklistbank-127379": "982f2439-d787-4185-b9e0-d5061ccd733d"
           },
-          "uuid": "679c9c74-f1d4-45fc-b1f8-12c1422664ff"
+          "uuid": "679c9c74-f1d4-45fc-b1f8-12c1422664ff",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -165,7 +166,8 @@
           "lineage": "Africasia",
           "authorship": "K.Viets, 1931",
           "sourceIds": {
-            "gbif-backbone": "8309828"
+            "gbif-backbone": "8309828",
+            "wikispecies": "Africasia_vietnamitica"
           },
           "children": []
         },
@@ -230,7 +232,9 @@
           "lineage": "Africasia",
           "authorship": "Smit & Pe",
           "sourceIds": {
-            "gbif-backbone": "8582304"
+            "gbif-backbone": "8582304",
+            "checklistbank-2008": "829907",
+            "wikispecies": "Africasia_comorosensis"
           },
           "children": []
         },
@@ -324,7 +328,8 @@
           "lineage": "Mundamella",
           "authorship": "Viets, 1913",
           "sourceIds": {
-            "gbif-backbone": "4541954"
+            "gbif-backbone": "4541954",
+            "checklistbank-2008": "299261"
           },
           "children": []
         }
@@ -361,7 +366,8 @@
           "sourceIds": {
             "checklistbank-139831": "262444"
           },
-          "uuid": "e7e70da3-a3bf-4801-a333-23dce109a0e8"
+          "uuid": "e7e70da3-a3bf-4801-a333-23dce109a0e8",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -469,10 +475,36 @@
           "sourceIds": {
             "checklistbank-127379": "a6c57f52-6aa2-4815-a159-a6899211188a"
           },
-          "uuid": "dcc49691-abc4-41d9-83c9-11f87602cbf7"
+          "uuid": "dcc49691-abc4-41d9-83c9-11f87602cbf7",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_FRONTIPODOPSIS",
+      "name": "Frontipodopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FRONTIPODOPSIS_SUBTERRANEA_WALTER_1947",
+          "name": "Frontipodopsis subterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Frontipodopsis",
+          "authorship": "(Walter, 1947)",
+          "sourceIds": {
+            "checklistbank-2008": "2348"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "athienemanniidae"
     }
   ],
-  "genusCount": 10
+  "genusCount": 12,
+  "sourceIds": {
+    "wikispecies": "Athienemanniidae"
+  }
 }

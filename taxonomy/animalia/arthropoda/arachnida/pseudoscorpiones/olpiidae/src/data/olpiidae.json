@@ -4629,8 +4629,7 @@
             ],
             "col": [
               "4BTCR"
-            ],
-            "checklistbank-139831": "271916"
+            ]
           },
           "uuid": "5147b156-af4e-572-bf7-4dc36efbf2b5c7",
           "authorityIds": "col:4BTCR,gbif:2125044,itis:749485",
@@ -5022,8 +5021,7 @@
             ],
             "checklistbank": "Pachyolpium_arubense",
             "wikispecies": "Pachyolpium_arubense",
-            "gbif-backbone": "10784228",
-            "checklistbank-139831": "1064684"
+            "gbif-backbone": "10784228"
           },
           "uuid": "b6387d49-6ba2-5c0-917-fdec50043c55d0",
           "authorityIds": "col:4BTC7,gbif:2125038,itis:749473",
@@ -5872,7 +5870,8 @@
           "sourceIds": {
             "checklistbank-139831": "695376"
           },
-          "uuid": "1fd2058c-99af-46d0-bf64-ac275c957483"
+          "uuid": "1fd2058c-99af-46d0-bf64-ac275c957483",
+          "children": []
         },
         {
           "id": "SP_XENOLPIUM_OCEANICUM",
@@ -5884,7 +5883,8 @@
           "sourceIds": {
             "checklistbank-139831": "1204651"
           },
-          "uuid": "3e4cdb9c-07f1-437b-a26d-4a94497742a4"
+          "uuid": "3e4cdb9c-07f1-437b-a26d-4a94497742a4",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -8094,14 +8094,39 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "olpiidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_GARYPINIDIUS_CAPENSIS",
+          "name": "Garypinidius capensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Garypinidius",
+          "sourceIds": {
+            "checklistbank-139831": "666754"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GARYPINIDIUS_MOLLIS",
+          "name": "Garypinidius mollis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Garypinidius",
+          "sourceIds": {
+            "checklistbank-139831": "666755"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "speciesCount": 365,
+  "speciesCount": 367,
   "appSlug": "olpiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 42,
+  "genusCount": 43,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

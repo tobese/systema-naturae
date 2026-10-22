@@ -3,7 +3,7 @@
   "name": "Ankylosauridae",
   "rank": "FAMILY",
   "appSlug": "ankylosauridae",
-  "speciesCount": 44,
+  "speciesCount": 47,
   "children": [
     {
       "id": "GENUS_AMTOSAURUS",
@@ -315,7 +315,8 @@
           "authorship": "Brown, 1908",
           "sourceIds": {
             "gbif-backbone": "4965736",
-            "checklistbank-139831": "804319"
+            "checklistbank-139831": "804319",
+            "wikispecies": "Ankylosaurus_magniventris"
           },
           "children": []
         }
@@ -418,7 +419,8 @@
           "lineage": "Tarchia",
           "authorship": "Maryanska, 1977",
           "sourceIds": {
-            "gbif-backbone": "8614656"
+            "gbif-backbone": "8614656",
+            "wikispecies": "Tarchia_kielanae"
           },
           "children": []
         },
@@ -432,7 +434,20 @@
           "authorship": "Penkalski & Tumanova, 2017",
           "sourceIds": {
             "gbif-backbone": "11164072",
-            "checklistbank-1174": "txn:378705"
+            "checklistbank-1174": "txn:378705",
+            "wikispecies": "Tarchia_teresae"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TARCHIA_GIGANTEA",
+          "name": "Tarchia gigantea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tarchia",
+          "sourceIds": {
+            "wikispecies": "Tarchia_gigantea"
           },
           "children": []
         }
@@ -512,7 +527,8 @@
           "authorship": "Han, Zheng, Hu, Xu & Barrett, 2014",
           "sourceIds": {
             "gbif-backbone": "8516573",
-            "checklistbank-1174": "txn:302921"
+            "checklistbank-1174": "txn:302921",
+            "wikispecies": "Chuanqilong_chaoyangensis"
           },
           "children": []
         }
@@ -691,7 +707,8 @@
           "lineage": "Shamosaurus",
           "authorship": "Tumanova, 1983",
           "sourceIds": {
-            "gbif-backbone": "4965733"
+            "gbif-backbone": "4965733",
+            "wikispecies": "Shamosaurus_scutatus"
           },
           "children": []
         }
@@ -796,7 +813,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:57227"
           },
-          "uuid": "80f1e4fa-3b8c-4653-95ef-d65598dafc4d"
+          "uuid": "80f1e4fa-3b8c-4653-95ef-d65598dafc4d",
+          "children": []
         }
       ]
     },
@@ -818,7 +836,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:52912"
           },
-          "uuid": "bc292096-3bf0-4833-992d-08861f373814"
+          "uuid": "bc292096-3bf0-4833-992d-08861f373814",
+          "children": []
         }
       ]
     },
@@ -840,7 +859,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:64270"
           },
-          "uuid": "ff0fb7a4-2add-4092-a105-bc3a48458f22"
+          "uuid": "ff0fb7a4-2add-4092-a105-bc3a48458f22",
+          "children": []
         }
       ]
     },
@@ -862,7 +882,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:153811"
           },
-          "uuid": "145add13-c23f-4624-9fda-4d1cb2ad24dd"
+          "uuid": "145add13-c23f-4624-9fda-4d1cb2ad24dd",
+          "children": []
         }
       ]
     },
@@ -884,7 +905,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:484517"
           },
-          "uuid": "b018efa9-bb23-498a-b39f-f5ded4861b03"
+          "uuid": "b018efa9-bb23-498a-b39f-f5ded4861b03",
+          "children": []
         }
       ]
     },
@@ -906,7 +928,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:500589"
           },
-          "uuid": "2f88a2cd-c134-4cc5-939a-74fbd4a5a8f0"
+          "uuid": "2f88a2cd-c134-4cc5-939a-74fbd4a5a8f0",
+          "children": []
         }
       ]
     },
@@ -928,10 +951,48 @@
           "sourceIds": {
             "checklistbank-1174": "txn:514723"
           },
-          "uuid": "1af655f2-f015-43e5-8f02-3e2cae303db9"
+          "uuid": "1af655f2-f015-43e5-8f02-3e2cae303db9",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_POLACANTHUS",
+      "name": "Polacanthus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POLACANTHUS_FOXII",
+          "name": "Polacanthus foxii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polacanthus",
+          "sourceIds": {
+            "wikispecies": "Polacanthus_foxii"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POLACANTHUS_RUDGWICKENSIS",
+          "name": "Polacanthus rudgwickensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polacanthus",
+          "sourceIds": {
+            "wikispecies": "Polacanthus_rudgwickensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ankylosauridae"
     }
   ],
-  "genusCount": 31
+  "genusCount": 39,
+  "sourceIds": {
+    "wikispecies": "Ankylosauridae",
+    "checklistbank-1174": "txn:38831"
+  }
 }

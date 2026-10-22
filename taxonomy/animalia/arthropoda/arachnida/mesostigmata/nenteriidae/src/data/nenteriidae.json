@@ -3,7 +3,7 @@
   "name": "Nenteriidae",
   "rank": "FAMILY",
   "appSlug": "nenteriidae",
-  "speciesCount": 7,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_STAMMERNENTERIA",
@@ -66,9 +66,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Austrodinychus",
           "sourceIds": {
-            "checklistbank-139831": "1115297"
+            "checklistbank-139831": "1115297",
+            "checklistbank-2008": "1025882"
           },
-          "uuid": "25ddcdd2-6b0a-40df-8d1f-e34fa8321d27"
+          "uuid": "25ddcdd2-6b0a-40df-8d1f-e34fa8321d27",
+          "children": [],
+          "authorship": "Trägårdh, 1952"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -136,10 +139,68 @@
           "sourceIds": {
             "checklistbank-127379": "c3f02911-8d90-4ac3-bcb7-7b202167f3c9"
           },
-          "uuid": "cd42737f-eefb-43bb-9b37-89b2b67dfad9"
+          "uuid": "cd42737f-eefb-43bb-9b37-89b2b67dfad9",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DINYCHOPSIS",
+      "name": "Dinychopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DINYCHOPSIS_UROPODINA_BERLESE_1918",
+          "name": "Dinychopsis uropodina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dinychopsis",
+          "authorship": "Berlese, 1918",
+          "sourceIds": {
+            "checklistbank-2008": "944104"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DINYCHOPSIS_PACIFICA_VITZTHUM_1935",
+          "name": "Dinychopsis pacifica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dinychopsis",
+          "authorship": "Vitzthum, 1935",
+          "sourceIds": {
+            "checklistbank-2008": "955067"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nenteriidae"
+    },
+    {
+      "id": "GENUS_UROPODA",
+      "name": "Uropoda",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UROPODA_MASCULINATA_VITZTHUM_1935",
+          "name": "Uropoda masculinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uropoda",
+          "authorship": "Vitzthum, 1935",
+          "sourceIds": {
+            "checklistbank-2008": "955066"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nenteriidae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 7
 }

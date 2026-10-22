@@ -3,7 +3,7 @@
   "name": "Ambiortidae",
   "rank": "FAMILY",
   "appSlug": "ambiortidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_AMBIORTUS",
@@ -19,7 +19,29 @@
           "lineage": "Ambiortus",
           "authorship": "Kurochkin, 1982",
           "sourceIds": {
-            "gbif-backbone": "4966842"
+            "gbif-backbone": "4966842",
+            "wikispecies": "Ambiortus_dementjevi"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ambiortidae"
+    },
+    {
+      "id": "GENUS_OTOGORNIS",
+      "name": "Otogornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOGORNIS_GENGHISI",
+          "name": "Otogornis genghisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otogornis",
+          "sourceIds": {
+            "wikispecies": "Otogornis_genghisi"
           },
           "children": []
         }
@@ -28,5 +50,8 @@
       "lineage": "ambiortidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "wikispecies": "Ambiortidae"
+  }
 }

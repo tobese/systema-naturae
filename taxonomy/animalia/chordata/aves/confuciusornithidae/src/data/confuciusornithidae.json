@@ -3,7 +3,7 @@
   "name": "Confuciusornithidae",
   "rank": "FAMILY",
   "appSlug": "confuciusornithidae",
-  "speciesCount": 7,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_EOCONFUCIUSORNIS",
@@ -19,7 +19,8 @@
           "lineage": "Eoconfuciusornis",
           "authorship": "Zhang et al., 2008",
           "sourceIds": {
-            "gbif-backbone": "4966877"
+            "gbif-backbone": "4966877",
+            "wikispecies": "Eoconfuciusornis_zhengi"
           },
           "children": []
         }
@@ -41,7 +42,8 @@
           "lineage": "Confuciusornis",
           "authorship": "Hou et al., 1999",
           "sourceIds": {
-            "gbif-backbone": "4966879"
+            "gbif-backbone": "4966879",
+            "wikispecies": "Confuciusornis_dui"
           },
           "children": []
         },
@@ -55,7 +57,8 @@
           "authorship": "Hou et al., 1995",
           "sourceIds": {
             "gbif-backbone": "4966878",
-            "checklistbank-139831": "1075521"
+            "checklistbank-139831": "1075521",
+            "wikispecies": "Confuciusornis_sanctus"
           },
           "children": []
         },
@@ -113,7 +116,8 @@
           "lineage": "Changchengornis",
           "authorship": "Ji et al., 1999",
           "sourceIds": {
-            "gbif-backbone": "4966876"
+            "gbif-backbone": "4966876",
+            "wikispecies": "Changchengornis_hengdaoziensis"
           },
           "children": []
         }
@@ -142,7 +146,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "confuciusornithidae"
+    },
+    {
+      "id": "GENUS_JINZHOURNIS",
+      "name": "Jinzhournis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_JINZHOURNIS_YIXIANENSIS",
+          "name": "Jinzhournis yixianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jinzhournis",
+          "sourceIds": {
+            "wikispecies": "Jinzhournis_yixianensis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_JINZHOURNIS_ZHANGJIYINGIA",
+          "name": "Jinzhournis zhangjiyingia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jinzhournis",
+          "sourceIds": {
+            "wikispecies": "Jinzhournis_zhangjiyingia"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "confuciusornithidae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Confuciusornithidae",
+    "checklistbank-1174": "txn:67262"
+  }
 }

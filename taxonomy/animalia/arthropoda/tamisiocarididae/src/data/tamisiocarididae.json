@@ -3,7 +3,7 @@
   "name": "Tamisiocarididae",
   "rank": "FAMILY",
   "appSlug": "tamisiocarididae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_TAMISIOCARIS",
@@ -23,7 +23,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:290856"
           },
-          "uuid": "f0cd298e-77b8-4d63-9aac-b6782ce38fcc"
+          "uuid": "f0cd298e-77b8-4d63-9aac-b6782ce38fcc",
+          "children": []
         }
       ]
     },
@@ -43,9 +44,11 @@
           "lineage": "Houcaris",
           "authorship": "(Hou et al. 1995)",
           "sourceIds": {
-            "checklistbank-1174": "txn:120987"
+            "checklistbank-1174": "txn:120987",
+            "wikispecies": "Houcaris_saron"
           },
-          "uuid": "5051a56c-36fc-4520-8b08-71be00172fa6"
+          "uuid": "5051a56c-36fc-4520-8b08-71be00172fa6",
+          "children": []
         },
         {
           "id": "SP_HOUCARIS_MAGNABASIS_PATES_ET_AL_2021",
@@ -56,11 +59,38 @@
           "lineage": "Houcaris",
           "authorship": "(Pates et al. 2021)",
           "sourceIds": {
-            "checklistbank-1174": "txn:470056"
+            "checklistbank-1174": "txn:470056",
+            "wikispecies": "Houcaris_magnabasis"
           },
-          "uuid": "475f33ac-4603-43d5-be55-81106f7d07be"
+          "uuid": "475f33ac-4603-43d5-be55-81106f7d07be",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ECHIDNACARIS",
+      "name": "Echidnacaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ECHIDNACARIS_BRIGGSI",
+          "name": "Echidnacaris briggsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echidnacaris",
+          "sourceIds": {
+            "wikispecies": "Echidnacaris_briggsi"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tamisiocarididae"
     }
-  ]
+  ],
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Tamisiocarididae"
+  }
 }

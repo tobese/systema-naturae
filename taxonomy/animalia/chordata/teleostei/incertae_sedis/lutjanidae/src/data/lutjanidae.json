@@ -5500,7 +5500,8 @@
             "itis": [
               "550967"
             ],
-            "checklistbank": "609555"
+            "checklistbank": "609555",
+            "checklistbank-139831": "609555"
           },
           "uuid": "f95b2031-8b7a-517-ac5-31d378f39b0704",
           "authorityIds": "col:4PVDB,gbif:177712281,gbif:2374740,itis:550967",
@@ -5703,6 +5704,18 @@
           "children": [],
           "uuid": "388b35cd-af10-599-91e-4359031816a06e",
           "description": "Pterocaesio subgen. is a lutjanidae species found in its native region."
+        },
+        {
+          "id": "SP_PTEROCAESIO_MONIKAE",
+          "name": "Pterocaesio monikae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterocaesio",
+          "sourceIds": {
+            "checklistbank-139831": "549045"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5734,7 +5747,8 @@
               "36QZG"
             ],
             "checklistbank": "2aeef37d-8420-4aef-8436-d889940e4add",
-            "checklistbank-127379": "2aeef37d-8420-4aef-8436-d889940e4add"
+            "checklistbank-127379": "2aeef37d-8420-4aef-8436-d889940e4add",
+            "checklistbank-139831": "448083"
           },
           "uuid": "e9a85feb-7455-568-9e3-6c35247f28b2ac",
           "authorityIds": "col:36QZG,gbif:177712278,gbif:2374804,itis:550965",
@@ -10336,14 +10350,27 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "lutjanidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_GYMNOCAESIO_GYMNOPTERA",
+          "name": "Gymnocaesio gymnoptera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnocaesio",
+          "sourceIds": {
+            "checklistbank-139831": "183182"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "speciesCount": 552,
+  "speciesCount": 554,
   "appSlug": "lutjanidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 75,
+  "genusCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -10352,6 +10379,7 @@
       "familyKey": 8542
     },
     "checklistbank": "Lutjanidae",
-    "wikispecies": "Lutjanidae"
+    "wikispecies": "Lutjanidae",
+    "checklistbank-1174": "txn:266302"
   }
 }

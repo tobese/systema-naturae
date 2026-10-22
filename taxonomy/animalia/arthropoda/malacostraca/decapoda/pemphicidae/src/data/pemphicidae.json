@@ -3,7 +3,7 @@
   "name": "Pemphicidae",
   "rank": "FAMILY",
   "appSlug": "pemphicidae",
-  "speciesCount": 6,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_SINOPEMPHIX",
@@ -41,7 +41,8 @@
           "lineage": "Pemphix",
           "authorship": "Via, 1971",
           "sourceIds": {
-            "gbif-backbone": "8558330"
+            "gbif-backbone": "8558330",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1718894"
           },
           "children": []
         },
@@ -84,7 +85,21 @@
           "sourceIds": {
             "checklistbank-1174": "txn:215949"
           },
-          "uuid": "1af7fcd3-385c-4892-9ab4-5a9b851f485a"
+          "uuid": "1af7fcd3-385c-4892-9ab4-5a9b851f485a",
+          "children": []
+        },
+        {
+          "id": "SP_PEMPHIX_SUERII_DESMAREST_1817",
+          "name": "Pemphix suerii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pemphix",
+          "authorship": "(Desmarest, 1817)",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1698184"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -116,10 +131,27 @@
       "id": "GENUS_OOSTERINKIA",
       "name": "Oosterinkia",
       "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OOSTERINKIA_NEERLANDICA_KLOMPMAKER_AND_FRAAIJE_2011",
+          "name": "Oosterinkia neerlandica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oosterinkia",
+          "authorship": "Klompmaker and Fraaije 2011",
+          "sourceIds": {
+            "checklistbank-1174": "txn:180630"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
-      "lineage": "pemphicidae",
-      "children": []
+      "lineage": "pemphicidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:215942"
+  }
 }

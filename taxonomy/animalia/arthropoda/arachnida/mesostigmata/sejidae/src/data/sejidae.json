@@ -3,7 +3,7 @@
   "name": "Sejidae",
   "rank": "FAMILY",
   "appSlug": "sejidae",
-  "speciesCount": 14,
+  "speciesCount": 18,
   "children": [
     {
       "id": "GENUS_SEJUS",
@@ -20,7 +20,7 @@
           "authorship": "Fain & Galloway, 1993",
           "sourceIds": {
             "gbif-backbone": "2185014",
-            "checklistbank-139831": "397053"
+            "wikispecies": "Sejus_novaezealandiae"
           },
           "children": []
         },
@@ -87,8 +87,7 @@
           "lineage": "Sejus",
           "authorship": "C.L.Koch, 1836",
           "sourceIds": {
-            "gbif-backbone": "4549788",
-            "checklistbank-139831": "1655600"
+            "gbif-backbone": "4549788"
           },
           "children": []
         },
@@ -142,7 +141,8 @@
           "sourceIds": {
             "checklistbank-127379": "41adb86f-9654-4fba-b8c3-4c658ddf8ecd"
           },
-          "uuid": "a169b459-f8bd-4e01-9c3b-656c557e0af5"
+          "uuid": "a169b459-f8bd-4e01-9c3b-656c557e0af5",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -203,12 +203,83 @@
           "sourceIds": {
             "checklistbank-127379": "9108b130-e486-44f9-9805-81a4942f6482"
           },
-          "uuid": "0941bdd9-18ba-4cf7-96c1-8e18b2aad6f2"
+          "uuid": "0941bdd9-18ba-4cf7-96c1-8e18b2aad6f2",
+          "children": []
+        },
+        {
+          "id": "SP_EPICROSEIUS_BLASZAKI",
+          "name": "Epicroseius blaszaki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epicroseius",
+          "sourceIds": {
+            "wikispecies": "Epicroseius_blaszaki"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sejidae"
+    },
+    {
+      "id": "GENUS_AFRICASEJUS",
+      "name": "Africasejus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AFRICASEJUS_CONGOENSIS",
+          "name": "Africasejus congoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Africasejus",
+          "sourceIds": {
+            "wikispecies": "Africasejus_congoensis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AFRICASEJUS_SOLARIS",
+          "name": "Africasejus solaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Africasejus",
+          "sourceIds": {
+            "wikispecies": "Africasejus_solaris"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sejidae"
+    },
+    {
+      "id": "GENUS_ADENOSEJUS",
+      "name": "Adenosejus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ADENOSEJUS_KRANTZI",
+          "name": "Adenosejus krantzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adenosejus",
+          "sourceIds": {
+            "wikispecies": "Adenosejus_krantzi"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sejidae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Sejidae",
+    "checklistbank-1174": "txn:271441"
+  }
 }

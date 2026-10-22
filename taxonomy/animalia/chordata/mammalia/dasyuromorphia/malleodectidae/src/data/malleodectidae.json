@@ -3,7 +3,7 @@
   "name": "Malleodectidae",
   "rank": "FAMILY",
   "appSlug": "malleodectidae",
-  "speciesCount": 1,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_MALLEODECTES",
@@ -19,7 +19,77 @@
           "lineage": "Malleodectes",
           "authorship": "Arena et al., 2011",
           "sourceIds": {
-            "gbif-backbone": "9796307"
+            "gbif-backbone": "9796307",
+            "wikispecies": "Malleodectes_mirabilis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "malleodectidae"
+    },
+    {
+      "id": "GENUS_BARINYA",
+      "name": "Barinya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARINYA_WANGALA",
+          "name": "Barinya wangala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barinya",
+          "sourceIds": {
+            "wikispecies": "Barinya_wangala"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "malleodectidae"
+    },
+    {
+      "id": "GENUS_GAYLORDIA",
+      "name": "Gaylordia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GAYLORDIA_MACROCYNODONTA_PAULA_COUTO_1952",
+          "name": "Gaylordia macrocynodonta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaylordia",
+          "authorship": "Paula Couto 1952",
+          "sourceIds": {
+            "checklistbank-1174": "txn:247083"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GAYLORDIA_MENDESI_PAULA_COUTO_1970",
+          "name": "Gaylordia mendesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaylordia",
+          "authorship": "Paula Couto 1970",
+          "sourceIds": {
+            "checklistbank-1174": "txn:335184"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GAYLORDIA_MATER_OLIVEIRA_AND_GOIN_2015",
+          "name": "Gaylordia mater",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaylordia",
+          "authorship": "Oliveira and Goin 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:335185"
           },
           "children": []
         }
@@ -28,5 +98,9 @@
       "lineage": "malleodectidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Malleodectidae",
+    "checklistbank-1174": "txn:63408"
+  }
 }

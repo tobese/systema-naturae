@@ -3,7 +3,7 @@
   "name": "Polyaspididae",
   "rank": "FAMILY",
   "appSlug": "polyaspididae",
-  "speciesCount": 43,
+  "speciesCount": 44,
   "children": [
     {
       "id": "GENUS_TRACHYTES",
@@ -422,8 +422,7 @@
           "lineage": "Trachytes",
           "authorship": "(C.L.Koch, 1841)",
           "sourceIds": {
-            "gbif-backbone": "4549759",
-            "checklistbank-139831": "1639383"
+            "gbif-backbone": "4549759"
           },
           "children": []
         }
@@ -570,7 +569,8 @@
           "sourceIds": {
             "checklistbank-127379": "5ee5aff7-4af4-4f5c-9257-5866621b5a74"
           },
-          "uuid": "83ac9d20-2e3b-471f-9667-5a31b4c6a614"
+          "uuid": "83ac9d20-2e3b-471f-9667-5a31b4c6a614",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -593,7 +593,8 @@
           "sourceIds": {
             "checklistbank-139831": "387033"
           },
-          "uuid": "d0fbd1b2-35f2-4034-b26b-ed922abd2f50"
+          "uuid": "d0fbd1b2-35f2-4034-b26b-ed922abd2f50",
+          "children": []
         },
         {
           "id": "SP_CALOTRACHYTES_FIMBRIATIPES",
@@ -605,10 +606,35 @@
           "sourceIds": {
             "checklistbank-139831": "387045"
           },
-          "uuid": "79aba4f6-0cf6-42bb-a985-cc1a048649ec"
+          "uuid": "79aba4f6-0cf6-42bb-a985-cc1a048649ec",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DYSCRITASPIS",
+      "name": "Dyscritaspis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DYSCRITASPIS_WHARTONI",
+          "name": "Dyscritaspis whartoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dyscritaspis",
+          "sourceIds": {
+            "wikispecies": "Dyscritaspis_whartoni"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "polyaspididae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Polyaspididae"
+  }
 }

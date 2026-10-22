@@ -8497,7 +8497,8 @@
           "sourceIds": {
             "checklistbank-139831": "301740"
           },
-          "uuid": "6ee102b3-65a9-43b7-8437-0b025587db28"
+          "uuid": "6ee102b3-65a9-43b7-8437-0b025587db28",
+          "children": []
         }
       ]
     },
@@ -16911,7 +16912,8 @@
           "sourceIds": {
             "checklistbank-139831": "301736"
           },
-          "uuid": "ba2cc7ef-3f33-4435-945b-5bd564053dfe"
+          "uuid": "ba2cc7ef-3f33-4435-945b-5bd564053dfe",
+          "children": []
         }
       ]
     },
@@ -19075,12 +19077,32 @@
           "lineage": "\"Taurocerastes",
           "authorship": "\"Philippi, 1866\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:990057",
-            "checklistbank-139831": "785547"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:990057"
           },
           "children": [],
           "uuid": "ddae2138-288a-5fd-9ae-ad3acf74567590",
           "description": "\"Taurocerastes patagonicus\" is a geotrupidae species found in its native region."
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geotrupidae"
+    },
+    {
+      "id": "GENUS_TAUROCERASTES",
+      "name": "Taurocerastes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TAUROCERASTES_PATAGONICUS",
+          "name": "Taurocerastes patagonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taurocerastes",
+          "sourceIds": {
+            "checklistbank-139831": "785547"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -21082,7 +21104,8 @@
           "sourceIds": {
             "checklistbank-139831": "1292158"
           },
-          "uuid": "2921b294-3894-4150-b62b-22a3390c60f5"
+          "uuid": "2921b294-3894-4150-b62b-22a3390c60f5",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -22014,7 +22037,8 @@
           "sourceIds": {
             "checklistbank-139831": "500650"
           },
-          "uuid": "21087d2d-1ebe-4668-bf9f-a4ba3753a7c1"
+          "uuid": "21087d2d-1ebe-4668-bf9f-a4ba3753a7c1",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -22607,7 +22631,8 @@
           "lineage": "Bolbapium",
           "authorship": "Martínez, 1976",
           "sourceIds": {
-            "checklistbank": "122833"
+            "checklistbank": "122833",
+            "checklistbank-139831": "1066117"
           },
           "children": [],
           "uuid": "8a988595-b031-5bd-969-8232067bff48fb",
@@ -22622,7 +22647,8 @@
           "lineage": "Bolbapium",
           "authorship": "(Luederwaldt, 1931)",
           "sourceIds": {
-            "checklistbank": "122838"
+            "checklistbank": "122838",
+            "checklistbank-139831": "1066118"
           },
           "children": [],
           "uuid": "4d6c8104-c73f-565-bb5-0cf792b8f1aa7f",
@@ -22756,6 +22782,30 @@
           },
           "children": [],
           "uuid": "640caf88-012e-5db-904-de6b7af08d78a6"
+        },
+        {
+          "id": "SP_BOLBAPIUM_QUINQUESTRIATUM",
+          "name": "Bolbapium quinquestriatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolbapium",
+          "sourceIds": {
+            "checklistbank-139831": "1066116"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLBAPIUM_PARALUCIDULUM",
+          "name": "Bolbapium paralucidulum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolbapium",
+          "sourceIds": {
+            "checklistbank-139831": "1432471"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -22949,8 +22999,7 @@
           "lineage": "Scarabaeus",
           "authorship": "O.G. Costa, 1839",
           "sourceIds": {
-            "checklistbank": "800732",
-            "checklistbank-139831": "549130"
+            "checklistbank": "800732"
           },
           "children": [],
           "uuid": "77f307cf-c632-50e-b98-fd786088a5a4c5",
@@ -23277,7 +23326,8 @@
           "sourceIds": {
             "checklistbank-139831": "1190062"
           },
-          "uuid": "8491d79e-ff98-4a34-81f9-ec968b010899"
+          "uuid": "8491d79e-ff98-4a34-81f9-ec968b010899",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -23353,8 +23403,8 @@
       "lineage": "geotrupidae"
     }
   ],
-  "genusCount": 91,
-  "speciesCount": 1262,
+  "genusCount": 92,
+  "speciesCount": 1265,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -23364,6 +23414,7 @@
       "familyKey": 8495
     },
     "checklistbank": "Geotrupidae",
-    "wikispecies": "Geotrupidae"
+    "wikispecies": "Geotrupidae",
+    "checklistbank-1174": "txn:69306"
   }
 }

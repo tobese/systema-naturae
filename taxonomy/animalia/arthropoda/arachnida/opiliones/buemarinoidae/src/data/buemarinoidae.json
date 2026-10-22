@@ -3,7 +3,7 @@
   "name": "Buemarinoidae",
   "rank": "FAMILY",
   "appSlug": "buemarinoidae",
-  "speciesCount": 3,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_TURONYCHUS",
@@ -20,7 +20,8 @@
           "authorship": "Derkarabetian, Prieto & Giribet, 2021",
           "sourceIds": {
             "gbif-backbone": "10785389",
-            "checklistbank-139831": "1152373"
+            "checklistbank-139831": "1152373",
+            "wikispecies": "Turonychus_fadriquei"
           },
           "children": []
         }
@@ -34,7 +35,20 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "buemarinoidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_FUMONTANA_DEPREHENDOR",
+          "name": "Fumontana deprehendor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fumontana",
+          "sourceIds": {
+            "checklistbank-139831": "172517"
+          },
+          "children": []
+        }
+      ]
     },
     {
       "id": "GENUS_ARBASUS",
@@ -53,7 +67,8 @@
           "sourceIds": {
             "checklistbank-139831": "534167"
           },
-          "uuid": "1882cb6e-898f-4744-99f2-574d7e883c06"
+          "uuid": "1882cb6e-898f-4744-99f2-574d7e883c06",
+          "children": []
         }
       ]
     },
@@ -63,7 +78,68 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "buemarinoidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_FLAVONUNCIA_PUPILLA",
+          "name": "Flavonuncia pupilla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flavonuncia",
+          "sourceIds": {
+            "checklistbank-139831": "534724"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FLAVONUNCIA_UBICKI",
+          "name": "Flavonuncia ubicki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flavonuncia",
+          "sourceIds": {
+            "wikispecies": "Flavonuncia_ubicki"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FLAVONUNCIA_MAHAKA",
+          "name": "Flavonuncia mahaka",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flavonuncia",
+          "sourceIds": {
+            "wikispecies": "Flavonuncia_mahaka"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FLAVONUNCIA_VAZIMBA",
+          "name": "Flavonuncia vazimba",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flavonuncia",
+          "sourceIds": {
+            "wikispecies": "Flavonuncia_vazimba"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FLAVONUNCIA_ZANAHARY",
+          "name": "Flavonuncia zanahary",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flavonuncia",
+          "sourceIds": {
+            "wikispecies": "Flavonuncia_zanahary"
+          },
+          "children": []
+        }
+      ]
     },
     {
       "id": "GENUS_PHOCYX",
@@ -82,10 +158,14 @@
           "sourceIds": {
             "checklistbank-139831": "1579141"
           },
-          "uuid": "ea8f7ce9-5714-493d-9556-36b5b89215b9"
+          "uuid": "ea8f7ce9-5714-493d-9556-36b5b89215b9",
+          "children": []
         }
       ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 5,
+  "sourceIds": {
+    "wikispecies": "Buemarinoidae"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Discozerconidae",
   "rank": "FAMILY",
   "appSlug": "discozerconidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_BERZERCON",
@@ -20,7 +20,8 @@
           "authorship": "Seeman & Baker, 2013",
           "sourceIds": {
             "gbif-backbone": "8634773",
-            "checklistbank-139831": "411021"
+            "checklistbank-139831": "411021",
+            "wikispecies": "Berzercon_ferdinandi"
           },
           "children": []
         }
@@ -44,12 +45,50 @@
           "lineage": "Discozercon",
           "authorship": "Domrow",
           "sourceIds": {
-            "checklistbank-127379": "cf45b607-6b7e-45d7-b29d-0b3e69ceac42"
+            "checklistbank-127379": "cf45b607-6b7e-45d7-b29d-0b3e69ceac42",
+            "wikispecies": "Discozercon_derricki"
           },
-          "uuid": "01e4ab87-b28a-4a2c-8ba3-8ec5f9309ec1"
+          "uuid": "01e4ab87-b28a-4a2c-8ba3-8ec5f9309ec1",
+          "children": []
+        },
+        {
+          "id": "SP_DISCOZERCON_MIRABILIS",
+          "name": "Discozercon mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discozercon",
+          "sourceIds": {
+            "wikispecies": "Discozercon_mirabilis"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DISCOMEGISTUS",
+      "name": "Discomegistus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISCOMEGISTUS_PECTINATUS",
+          "name": "Discomegistus pectinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discomegistus",
+          "sourceIds": {
+            "wikispecies": "Discomegistus_pectinatus"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discozerconidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Discozerconidae"
+  }
 }

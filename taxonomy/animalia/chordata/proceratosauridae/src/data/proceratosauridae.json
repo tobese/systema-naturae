@@ -3,7 +3,7 @@
   "name": "Proceratosauridae",
   "rank": "FAMILY",
   "appSlug": "proceratosauridae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_KILESKUS",
@@ -48,7 +48,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "proceratosauridae"
+    },
+    {
+      "id": "GENUS_GUANLONG",
+      "name": "Guanlong",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GUANLONG_WUCAII",
+          "name": "Guanlong wucaii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guanlong",
+          "sourceIds": {
+            "checklistbank-139831": "804925"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "proceratosauridae"
+    },
+    {
+      "id": "GENUS_PROCERATOSAURUS",
+      "name": "Proceratosaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROCERATOSAURUS_BRADLEYI_WOODWARD_1910",
+          "name": "Proceratosaurus bradleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proceratosaurus",
+          "authorship": "(Woodward 1910)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:63720"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "proceratosauridae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-1174": "txn:185194"
+  }
 }

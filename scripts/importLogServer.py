@@ -198,7 +198,7 @@ PAGE = """<!doctype html>
     border-radius: 999px; font-size: 10.5px; font-weight: 700;
     text-transform: uppercase; letter-spacing: .03em; white-space: nowrap;
   }
-  .status-measuring { background: rgba(245, 196, 94, 0.15); color: var(--note); }
+  .status-triaging { background: rgba(245, 196, 94, 0.15); color: var(--note); }
   .status-applying { background: rgba(91, 157, 255, 0.18); color: var(--accent); }
   .status-dot {
     width: 6px; height: 6px; border-radius: 50%; background: currentColor;
@@ -368,8 +368,8 @@ function render(data) {
     '<tr><td colspan="9" class="empty">No runs recorded yet.</td></tr>';
 }
 
-const UP_NEXT_STAGES = ['candidate', 'downloaded', 'measuring', 'measured', 'queued', 'applying', 'needs-rerun'];
-const ACTIVE_STAGES = ['measuring', 'applying'];
+const UP_NEXT_STAGES = ['candidate', 'downloaded', 'triaging', 'triaged', 'queued', 'applying', 'needs-rerun'];
+const ACTIVE_STAGES = ['triaging', 'applying'];
 
 function renderQueue(sources) {
   const byKey = Object.values(sources);
@@ -393,8 +393,8 @@ function renderQueue(sources) {
         + '<span style="float:left;">Source</span><span style="float:right;">State · Size</span><span style="clear:both;"></span>'
         + '</li>'
         + upNext.map(r => {
-        const badge = r.stage === 'measuring'
-            ? '<span class="status-badge status-measuring"><span class="status-dot"></span>measuring</span>'
+        const badge = r.stage === 'triaging'
+            ? '<span class="status-badge status-triaging"><span class="status-dot"></span>triaging</span>'
           : r.stage === 'applying'
             ? '<span class="status-badge status-applying"><span class="status-dot"></span>importing</span>'
           : '';

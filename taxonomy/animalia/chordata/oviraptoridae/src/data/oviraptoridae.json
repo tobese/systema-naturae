@@ -3,7 +3,7 @@
   "name": "Oviraptoridae",
   "rank": "FAMILY",
   "appSlug": "oviraptoridae",
-  "speciesCount": 25,
+  "speciesCount": 26,
   "children": [
     {
       "id": "GENUS_HUANANSAURUS",
@@ -302,7 +302,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:57022"
           },
-          "uuid": "4d7f0f33-9229-41eb-a1df-ceac355d9bf2"
+          "uuid": "4d7f0f33-9229-41eb-a1df-ceac355d9bf2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -322,7 +323,8 @@
           "lineage": "Machairasaurus",
           "authorship": "Longrich et al., 2010",
           "sourceIds": {
-            "gbif-backbone": "8594320"
+            "gbif-backbone": "8594320",
+            "wikispecies": "Machairasaurus_leptonychus"
           },
           "children": []
         }
@@ -345,7 +347,8 @@
           "authorship": "Xu & Han, 2010",
           "sourceIds": {
             "gbif-backbone": "8495527",
-            "checklistbank-1174": "txn:172315"
+            "checklistbank-1174": "txn:172315",
+            "wikispecies": "Banji_long"
           },
           "children": []
         }
@@ -402,7 +405,8 @@
           "lineage": "Ganzhousaurus",
           "authorship": "Wang et al., 2013",
           "sourceIds": {
-            "gbif-backbone": "8687242"
+            "gbif-backbone": "8687242",
+            "wikispecies": "Ganzhousaurus_nankangensis"
           },
           "children": []
         }
@@ -514,9 +518,11 @@
           "lineage": "Rinchenia",
           "authorship": "(Barsbold 1986)",
           "sourceIds": {
-            "checklistbank-1174": "txn:57021"
+            "checklistbank-1174": "txn:57021",
+            "wikispecies": "Rinchenia_mongoliensis"
           },
-          "uuid": "ed8ac601-84f2-43e4-88b8-120fa132c605"
+          "uuid": "ed8ac601-84f2-43e4-88b8-120fa132c605",
+          "children": []
         }
       ]
     },
@@ -538,10 +544,36 @@
           "sourceIds": {
             "checklistbank-1174": "txn:68044"
           },
-          "uuid": "7d3b56ec-6e07-41d8-8023-d200fe5a6ea5"
+          "uuid": "7d3b56ec-6e07-41d8-8023-d200fe5a6ea5",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_GIGANTORAPTOR",
+      "name": "Gigantoraptor",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GIGANTORAPTOR_ERLIANENSIS",
+          "name": "Gigantoraptor erlianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gigantoraptor",
+          "sourceIds": {
+            "wikispecies": "Gigantoraptor_erlianensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oviraptoridae"
     }
   ],
-  "genusCount": 21
+  "genusCount": 24,
+  "sourceIds": {
+    "wikispecies": "Oviraptoridae",
+    "checklistbank-1174": "txn:38557"
+  }
 }

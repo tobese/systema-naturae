@@ -1883,7 +1883,8 @@
           "sourceIds": {
             "checklistbank-139831": "686660"
           },
-          "uuid": "bbc9b081-213a-47e4-a1df-695407639d8d"
+          "uuid": "bbc9b081-213a-47e4-a1df-695407639d8d",
+          "children": []
         }
       ]
     },
@@ -2649,7 +2650,8 @@
           "lineage": "Pennatula",
           "authorship": "Koren & Danielssen, 1858",
           "sourceIds": {
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:243196"
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:243196",
+            "checklistbank-139831": "460108"
           },
           "children": [],
           "uuid": "1f307950-ffdd-5cb-bc5-659f0a58f3b73e",
@@ -2977,6 +2979,42 @@
           "uuid": "6f660dc9-25fb-51a-a99-24579df2d08ec1"
         }
       ]
+    },
+    {
+      "id": "GENUS_PENNATULA",
+      "name": "\"Pennatula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENNATULA_RUBRA_ELLIS_1764",
+          "name": "\"Pennatula rubra\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Pennatula",
+          "authorship": "\"Ellis, 1764\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:128519"
+          },
+          "children": [],
+          "uuid": "4facddfb-a79b-580-bbe-38fb6e6a34dcff",
+          "description": "\"Pennatula rubra\" is a pennatulidae species found in its native region."
+        },
+        {
+          "id": "SP_PENNATULA_ACULEATA",
+          "name": "Pennatula aculeata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pennatula",
+          "sourceIds": {
+            "checklistbank-139831": "460108"
+          },
+          "uuid": "e195b206-7fb7-4a6a-a246-70b4e4f3397e"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pennatulidae"
     },
     {
       "id": "GENUS_PTILOSARCUS",
@@ -3789,42 +3827,6 @@
       "lineage": "pennatulidae"
     },
     {
-      "id": "GENUS_PENNATULA",
-      "name": "\"Pennatula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PENNATULA_RUBRA_ELLIS_1764",
-          "name": "\"Pennatula rubra\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pennatula",
-          "authorship": "\"Ellis, 1764\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:128519"
-          },
-          "children": [],
-          "uuid": "4facddfb-a79b-580-bbe-38fb6e6a34dcff",
-          "description": "\"Pennatula rubra\" is a pennatulidae species found in its native region."
-        },
-        {
-          "id": "SP_PENNATULA_ACULEATA",
-          "name": "Pennatula aculeata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pennatula",
-          "sourceIds": {
-            "checklistbank-139831": "460108"
-          },
-          "uuid": "e195b206-7fb7-4a6a-a246-70b4e4f3397e"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pennatulidae"
-    },
-    {
       "id": "GENUS_PTEROMORPHA",
       "name": "Pteromorpha",
       "rank": "GENUS",
@@ -3909,7 +3911,7 @@
     }
   ],
   "genusCount": 17,
-  "speciesCount": 244,
+  "speciesCount": 243,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -3,7 +3,7 @@
   "name": "Leptopharyngidae",
   "rank": "FAMILY",
   "appSlug": "leptopharyngidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PSEUDOMICROTHORAX",
@@ -22,7 +22,8 @@
           "sourceIds": {
             "checklistbank-139831": "473668"
           },
-          "uuid": "d0938e6f-16b4-43a1-b6ae-d37736d0d070"
+          "uuid": "d0938e6f-16b4-43a1-b6ae-d37736d0d070",
+          "children": []
         },
         {
           "id": "SP_PSEUDOMICROTHORAX_AGILIS",
@@ -34,7 +35,8 @@
           "sourceIds": {
             "checklistbank-139831": "1445057"
           },
-          "uuid": "38bc6c05-4223-4d02-ad6d-930c3239206f"
+          "uuid": "38bc6c05-4223-4d02-ad6d-930c3239206f",
+          "children": []
         }
       ]
     },
@@ -46,6 +48,18 @@
       "lineage": "leptopharyngidae",
       "children": [
         {
+          "id": "SP_LEPTOPHARYNX_COSTATUS",
+          "name": "Leptopharynx costatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptopharynx",
+          "sourceIds": {
+            "checklistbank-139831": "1447791"
+          },
+          "children": []
+        },
+        {
           "id": "SP_LEPTOPHARYNX_SPHAGNETORUM",
           "name": "Leptopharynx sphagnetorum",
           "rank": "SPECIES",
@@ -55,9 +69,24 @@
           "sourceIds": {
             "checklistbank-139831": "1625789"
           },
-          "uuid": "70d4e7ff-44a5-4446-8cf1-1e54390d5b49"
+          "uuid": "70d4e7ff-44a5-4446-8cf1-1e54390d5b49",
+          "children": []
+        },
+        {
+          "id": "SP_LEPTOPHARYNX_TORPENS_KAHL_1931",
+          "name": "Leptopharynx torpens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptopharynx",
+          "authorship": "Kahl, 1931",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:426677"
+          },
+          "children": []
         }
       ]
     }
-  ]
+  ],
+  "genusCount": 2
 }

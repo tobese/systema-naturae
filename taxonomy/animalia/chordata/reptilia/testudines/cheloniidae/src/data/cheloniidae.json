@@ -912,7 +912,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:235091"
           },
-          "uuid": "246a5a9f-3687-4c0c-aa98-154110f3e5a8"
+          "uuid": "246a5a9f-3687-4c0c-aa98-154110f3e5a8",
+          "children": []
         },
         {
           "id": "SP_CHELONE_GIRUNDICA_DELFORTRIE_1869",
@@ -925,7 +926,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:235144"
           },
-          "uuid": "2cf0a9e4-ff76-4f16-b21e-fabd3ca1919b"
+          "uuid": "2cf0a9e4-ff76-4f16-b21e-fabd3ca1919b",
+          "children": []
         },
         {
           "id": "SP_CHELONE_VANBENEDENI_SMETS_1886",
@@ -938,7 +940,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:359402"
           },
-          "uuid": "53cf2a1f-d098-4940-bd6f-95926d8f928c"
+          "uuid": "53cf2a1f-d098-4940-bd6f-95926d8f928c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2400,7 +2403,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:235145"
           },
-          "uuid": "ccf6c381-18ec-466d-a579-6546ac780851"
+          "uuid": "ccf6c381-18ec-466d-a579-6546ac780851",
+          "children": []
         },
         {
           "id": "SP_CHELONIA_PARVITECTA_COPE_1870",
@@ -2413,7 +2417,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:179145"
           },
-          "uuid": "ce49004f-61e7-4031-a4ec-b459ef4715c9"
+          "uuid": "ce49004f-61e7-4031-a4ec-b459ef4715c9",
+          "children": []
         },
         {
           "id": "SP_CHELONIA_GIRUNDICA_DELFORTRIE_1869",
@@ -2426,7 +2431,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:462009"
           },
-          "uuid": "e39210a2-a6f6-402f-893d-369dbc8b14dc"
+          "uuid": "e39210a2-a6f6-402f-893d-369dbc8b14dc",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2931,10 +2937,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cheloniidae"
+    },
+    {
+      "id": "GENUS_NATATOR",
+      "name": "Natator",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NATATOR_DEPRESSUS",
+          "name": "Natator depressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Natator",
+          "sourceIds": {
+            "checklistbank-139831": "73876"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cheloniidae"
     }
   ],
-  "genusCount": 54,
-  "speciesCount": 169,
+  "genusCount": 55,
+  "speciesCount": 170,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2942,6 +2969,7 @@
       "classKey": 11418114,
       "familyKey": 9413
     },
-    "checklistbank": "Cheloniidae"
+    "checklistbank": "Cheloniidae",
+    "checklistbank-1174": "txn:37695"
   }
 }

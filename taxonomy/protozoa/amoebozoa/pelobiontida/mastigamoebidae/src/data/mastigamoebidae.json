@@ -3,7 +3,7 @@
   "name": "Mastigamoebidae",
   "rank": "FAMILY",
   "appSlug": "mastigamoebidae",
-  "speciesCount": 3,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_MASTIGAMOEBA",
@@ -22,7 +22,8 @@
           "sourceIds": {
             "checklistbank-139831": "1116264"
           },
-          "uuid": "a66998b5-ce0a-4ea9-b881-70316c1017fb"
+          "uuid": "a66998b5-ce0a-4ea9-b881-70316c1017fb",
+          "children": []
         },
         {
           "id": "SP_MASTIGAMOEBA_SETOSA",
@@ -34,7 +35,8 @@
           "sourceIds": {
             "checklistbank-139831": "1499215"
           },
-          "uuid": "0ae1e10c-93f9-46ba-bb8e-24d316e7956e"
+          "uuid": "0ae1e10c-93f9-46ba-bb8e-24d316e7956e",
+          "children": []
         },
         {
           "id": "SP_MASTIGAMOEBA_SCHIZOPHRENIA",
@@ -46,9 +48,55 @@
           "sourceIds": {
             "checklistbank-139831": "1598718"
           },
-          "uuid": "337fc828-7c02-4fcf-9986-bd4a278595e4"
+          "uuid": "337fc828-7c02-4fcf-9986-bd4a278595e4",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MASTIGINA",
+      "name": "Mastigina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MASTIGINA_HYLAE_FRENZEL_1892",
+          "name": "Mastigina hylae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mastigina",
+          "authorship": "(Frenzel, 1892)",
+          "sourceIds": {
+            "checklistbank-2008": "1041933"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mastigamoebidae"
+    },
+    {
+      "id": "GENUS_TRICHOLIMAX",
+      "name": "Tricholimax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRICHOLIMAX_HYLAE_FRENZEL_1892",
+          "name": "Tricholimax hylae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tricholimax",
+          "authorship": "Frenzel, 1892",
+          "sourceIds": {
+            "checklistbank-2008": "1041934"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mastigamoebidae"
     }
-  ]
+  ],
+  "genusCount": 3
 }

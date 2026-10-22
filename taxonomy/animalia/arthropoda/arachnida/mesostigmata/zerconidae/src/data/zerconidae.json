@@ -3,7 +3,7 @@
   "name": "Zerconidae",
   "rank": "FAMILY",
   "appSlug": "zerconidae",
-  "speciesCount": 215,
+  "speciesCount": 218,
   "children": [
     {
       "id": "GENUS_ROTUNDOZERCON",
@@ -54,7 +54,8 @@
           "lineage": "Boreozercon",
           "authorship": "Díaz-Aguilar & Ujvári, 2010",
           "sourceIds": {
-            "gbif-backbone": "7605835"
+            "gbif-backbone": "7605835",
+            "wikispecies": "Boreozercon_emendi"
           },
           "children": []
         }
@@ -255,7 +256,8 @@
           "lineage": "Zercon",
           "authorship": "Urhan & Ekiz, 2002",
           "sourceIds": {
-            "gbif-backbone": "6891535"
+            "gbif-backbone": "6891535",
+            "wikispecies": "Zercon_delicatus"
           },
           "children": []
         },
@@ -1647,7 +1649,8 @@
           "lineage": "Zercon",
           "authorship": "Urhan, 2008",
           "sourceIds": {
-            "gbif-backbone": "8598451"
+            "gbif-backbone": "8598451",
+            "wikispecies": "Zercon_anatolicus"
           },
           "children": []
         },
@@ -2106,6 +2109,30 @@
             "gbif-backbone": "4548190"
           },
           "children": []
+        },
+        {
+          "id": "SP_ZERCON_KACKARICUS",
+          "name": "Zercon kackaricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zercon",
+          "sourceIds": {
+            "wikispecies": "Zercon_kackaricus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZERCON_BERCZIKI",
+          "name": "Zercon bercziki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zercon",
+          "sourceIds": {
+            "wikispecies": "Zercon_bercziki"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2272,7 +2299,8 @@
           "lineage": "Zerconella",
           "authorship": "Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "7520956"
+            "gbif-backbone": "7520956",
+            "wikispecies": "Zerconella_lobata"
           },
           "children": []
         },
@@ -2804,7 +2832,8 @@
           "lineage": "Mixozercon",
           "authorship": "Diaz-Aguilar & Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "8417605"
+            "gbif-backbone": "8417605",
+            "wikispecies": "Mixozercon_borealis"
           },
           "children": []
         },
@@ -2830,7 +2859,8 @@
           "lineage": "Mixozercon",
           "authorship": "Diaz-Aguilar & Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "7582628"
+            "gbif-backbone": "7582628",
+            "wikispecies": "Mixozercon_jasoniana"
           },
           "children": []
         },
@@ -2843,7 +2873,8 @@
           "lineage": "Mixozercon",
           "authorship": "Diaz-Aguilar & Ujvari, 2010",
           "sourceIds": {
-            "gbif-backbone": "8091439"
+            "gbif-backbone": "8091439",
+            "wikispecies": "Mixozercon_albertaensis"
           },
           "children": []
         },
@@ -2955,10 +2986,35 @@
           "sourceIds": {
             "checklistbank-139831": "1625843"
           },
-          "uuid": "2b6b8ea8-5c5c-4de9-8a4d-54ed8042b889"
+          "uuid": "2b6b8ea8-5c5c-4de9-8a4d-54ed8042b889",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BLASZAKIELLA",
+      "name": "Blaszakiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BLASZAKIELLA_AMERICANA",
+          "name": "Blaszakiella americana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blaszakiella",
+          "sourceIds": {
+            "wikispecies": "Blaszakiella_americana"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zerconidae"
     }
   ],
-  "genusCount": 17
+  "genusCount": 19,
+  "sourceIds": {
+    "wikispecies": "Zerconidae"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Anomalocarididae",
   "rank": "FAMILY",
   "appSlug": "anomalocarididae",
-  "speciesCount": 15,
+  "speciesCount": 18,
   "children": [
     {
       "id": "GENUS_PARAPEYTOIA",
@@ -145,9 +145,11 @@
           "authorship": "Whiteaves 1892",
           "sourceIds": {
             "checklistbank-1174": "txn:490825",
-            "checklistbank-139831": "333149"
+            "checklistbank-139831": "333149",
+            "wikispecies": "Anomalocaris_canadensis"
           },
-          "uuid": "0e33384e-5cb3-4781-9816-9591fc1b07e1"
+          "uuid": "0e33384e-5cb3-4781-9816-9591fc1b07e1",
+          "children": []
         },
         {
           "id": "SP_ANOMALOCARIS_BRIGGSI_NEDIN_1995",
@@ -161,7 +163,8 @@
             "checklistbank-1174": "txn:491152",
             "checklistbank-139831": "333150"
           },
-          "uuid": "a2b81981-4d95-4992-b3e1-174af96dc8e4"
+          "uuid": "a2b81981-4d95-4992-b3e1-174af96dc8e4",
+          "children": []
         },
         {
           "id": "SP_ANOMALOCARIS_CRANBROOKENSIS",
@@ -173,7 +176,8 @@
           "sourceIds": {
             "checklistbank-139831": "333152"
           },
-          "uuid": "d505c2b5-bb9e-45ba-9724-5e8bd3998406"
+          "uuid": "d505c2b5-bb9e-45ba-9724-5e8bd3998406",
+          "children": []
         },
         {
           "id": "SP_ANOMALOCARIS_GIGANTEA",
@@ -185,7 +189,20 @@
           "sourceIds": {
             "checklistbank-139831": "333153"
           },
-          "uuid": "00109bda-7f1b-4f84-b407-615222a958e0"
+          "uuid": "00109bda-7f1b-4f84-b407-615222a958e0",
+          "children": []
+        },
+        {
+          "id": "SP_ANOMALOCARIS_DALEYAE",
+          "name": "Anomalocaris daleyae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomalocaris",
+          "sourceIds": {
+            "wikispecies": "Anomalocaris_daleyae"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -231,7 +248,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:491148"
           },
-          "uuid": "4122ed27-55c3-4158-b5a9-5be0ea9903a9"
+          "uuid": "4122ed27-55c3-4158-b5a9-5be0ea9903a9",
+          "children": []
         }
       ]
     },
@@ -253,10 +271,48 @@
           "sourceIds": {
             "checklistbank-1174": "txn:120990"
           },
-          "uuid": "80cf1289-857e-4555-b0ef-ed170198c9c6"
+          "uuid": "80cf1289-857e-4555-b0ef-ed170198c9c6",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_LENISICARIS",
+      "name": "Lenisicaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LENISICARIS_PENNSYLVANICA",
+          "name": "Lenisicaris pennsylvanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lenisicaris",
+          "sourceIds": {
+            "wikispecies": "Lenisicaris_pennsylvanica"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LENISICARIS_LUPATA",
+          "name": "Lenisicaris lupata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lenisicaris",
+          "sourceIds": {
+            "wikispecies": "Lenisicaris_lupata"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anomalocarididae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 7,
+  "sourceIds": {
+    "wikispecies": "Anomalocarididae",
+    "checklistbank-1174": "txn:120985"
+  }
 }

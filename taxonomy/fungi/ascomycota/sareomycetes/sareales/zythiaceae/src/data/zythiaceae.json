@@ -3,7 +3,7 @@
   "name": "Zythiaceae",
   "rank": "FAMILY",
   "appSlug": "zythiaceae",
-  "speciesCount": 5,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_ATROZYTHIA",
@@ -20,7 +20,8 @@
           "authorship": "J.K.Mitch. & Quijada",
           "sourceIds": {
             "gbif-backbone": "11169617",
-            "checklistbank-139831": "1225576"
+            "checklistbank-139831": "1225576",
+            "wikispecies": "Atrozythia_klamathica"
           },
           "children": [],
           "uuid": "1d8a8e59-577c-5ae-adb-d0f67875059ac1"
@@ -34,7 +35,8 @@
           "lineage": "Atrozythia",
           "authorship": "(Sigler) J.K.Mitch., Garrido-Ben. & Pfister",
           "sourceIds": {
-            "gbif-backbone": "11137227"
+            "gbif-backbone": "11137227",
+            "wikispecies": "Atrozythia_lignicola"
           },
           "children": [],
           "uuid": "619e2a0f-775f-5a9-9c8-6f14d9bfdca509"
@@ -51,6 +53,30 @@
       "lineage": "zythiaceae",
       "children": [
         {
+          "id": "SP_SAREA_DIFFORMIS",
+          "name": "Sarea difformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarea",
+          "sourceIds": {
+            "checklistbank-139831": "175150"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SAREA_COELOPLATA",
+          "name": "Sarea coeloplata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarea",
+          "sourceIds": {
+            "checklistbank-139831": "1225582"
+          },
+          "children": []
+        },
+        {
           "id": "SP_SAREA_SP",
           "name": "Sarea sp.",
           "rank": "SPECIES",
@@ -60,7 +86,8 @@
           "sourceIds": {
             "checklistbank-139831": "1694597"
           },
-          "uuid": "79737678-5fa0-4226-8e56-b95fa99bc782"
+          "uuid": "79737678-5fa0-4226-8e56-b95fa99bc782",
+          "children": []
         }
       ]
     },
@@ -72,6 +99,18 @@
       "lineage": "zythiaceae",
       "children": [
         {
+          "id": "SP_ZYTHIA_RESINAE",
+          "name": "Zythia resinae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zythia",
+          "sourceIds": {
+            "checklistbank-139831": "1225577"
+          },
+          "children": []
+        },
+        {
           "id": "SP_ZYTHIA_CIRRHENDOCARPA",
           "name": "Zythia cirrhendocarpa",
           "rank": "SPECIES",
@@ -81,7 +120,8 @@
           "sourceIds": {
             "checklistbank-139831": "1592182"
           },
-          "uuid": "8b0185e9-e368-46ee-a96e-864f091572d0"
+          "uuid": "8b0185e9-e368-46ee-a96e-864f091572d0",
+          "children": []
         },
         {
           "id": "SP_ZYTHIA_SP",
@@ -93,10 +133,14 @@
           "sourceIds": {
             "checklistbank-139831": "1698934"
           },
-          "uuid": "9e241402-6215-4518-b321-d8d7830f6f40"
+          "uuid": "9e241402-6215-4518-b321-d8d7830f6f40",
+          "children": []
         }
       ]
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Zythiaceae"
+  }
 }

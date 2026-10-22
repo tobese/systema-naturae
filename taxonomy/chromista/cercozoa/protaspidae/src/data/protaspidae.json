@@ -3,7 +3,7 @@
   "name": "Protaspidae",
   "rank": "FAMILY",
   "appSlug": "protaspidae",
-  "speciesCount": 17,
+  "speciesCount": 18,
   "children": [
     {
       "id": "GENUS_CRYOTHECOMONAS",
@@ -42,7 +42,8 @@
           "lineage": "Sinistermonas",
           "authorship": "Lee, 2015",
           "sourceIds": {
-            "gbif-backbone": "8498674"
+            "gbif-backbone": "8498674",
+            "wikispecies": "Sinistermonas_sinistrorsus"
           },
           "children": [],
           "uuid": "1dc38f5d-f3a6-51c-8dd-e2d4e23a528f60"
@@ -269,7 +270,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protaspidae"
+    },
+    {
+      "id": "GENUS_PROTASPIS",
+      "name": "Protaspis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTASPIS_GRANDIS_HOPPENRATH_LEANDER_2006",
+          "name": "Protaspis grandis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protaspis",
+          "authorship": "Hoppenrath & Leander, 2006",
+          "sourceIds": {
+            "checklistbank-2008": "959842"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protaspidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Protaspidae"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Neothrombiidae",
   "rank": "FAMILY",
   "appSlug": "neothrombiidae",
-  "speciesCount": 20,
+  "speciesCount": 23,
   "children": [
     {
       "id": "GENUS_SILPHITROMBIUM",
@@ -204,8 +204,7 @@
           "lineage": "Beronium",
           "authorship": "Haitlinger, 1994",
           "sourceIds": {
-            "gbif-backbone": "4540980",
-            "checklistbank-139831": "1639860"
+            "gbif-backbone": "4540980"
           },
           "children": []
         }
@@ -227,7 +226,8 @@
           "lineage": "Solistrus",
           "authorship": "Saboori, Ueckermann & Harten, 2008",
           "sourceIds": {
-            "gbif-backbone": "8207061"
+            "gbif-backbone": "8207061",
+            "wikispecies": "Solistrus_mitrae"
           },
           "children": []
         }
@@ -271,7 +271,8 @@
           "lineage": "Neothrombium",
           "authorship": "Zhang, 1994",
           "sourceIds": {
-            "gbif-backbone": "6924385"
+            "gbif-backbone": "6924385",
+            "wikispecies": "Neothrombium_medium"
           },
           "children": []
         },
@@ -284,7 +285,32 @@
           "lineage": "Neothrombium",
           "authorship": "(Bruyant, 1909)",
           "sourceIds": {
-            "gbif-backbone": "7908899"
+            "gbif-backbone": "7908899",
+            "wikispecies": "Neothrombium_neglectum"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOTHROMBIUM_GRYLLOTALPAE",
+          "name": "Neothrombium gryllotalpae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neothrombium",
+          "sourceIds": {
+            "wikispecies": "Neothrombium_gryllotalpae"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOTHROMBIUM_LONGITARSIS",
+          "name": "Neothrombium longitarsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neothrombium",
+          "sourceIds": {
+            "wikispecies": "Neothrombium_longitarsis"
           },
           "children": []
         }
@@ -352,9 +378,11 @@
           "lineage": "Acritrombium",
           "authorship": "Southcott",
           "sourceIds": {
-            "checklistbank-127379": "b8dc7d3a-ce82-4922-add7-fae75f798d97"
+            "checklistbank-127379": "b8dc7d3a-ce82-4922-add7-fae75f798d97",
+            "wikispecies": "Acritrombium_striatum"
           },
-          "uuid": "60fdb658-8ed1-4093-81a0-1f71ba91c86b"
+          "uuid": "60fdb658-8ed1-4093-81a0-1f71ba91c86b",
+          "children": []
         }
       ]
     },
@@ -376,7 +404,8 @@
           "sourceIds": {
             "checklistbank-127379": "3c092023-ba74-42a0-9b1d-9b4e6efe2481"
           },
-          "uuid": "7eddebf7-7e27-46e2-93ec-8787686c1976"
+          "uuid": "7eddebf7-7e27-46e2-93ec-8787686c1976",
+          "children": []
         }
       ]
     },
@@ -397,10 +426,36 @@
           "sourceIds": {
             "checklistbank-139831": "393962"
           },
-          "uuid": "3ba8447b-1fa0-4e08-b71b-4afc41627f93"
+          "uuid": "3ba8447b-1fa0-4e08-b71b-4afc41627f93",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ALLOTHROMBIUM",
+      "name": "Allothrombium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALLOTHROMBIUM_NEGLECTUM_BRUYANT_1909",
+          "name": "Allothrombium neglectum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allothrombium",
+          "authorship": "Bruyant, 1909",
+          "sourceIds": {
+            "checklistbank-2008": "954231"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neothrombiidae"
     }
   ],
-  "genusCount": 12
+  "genusCount": 16,
+  "sourceIds": {
+    "wikispecies": "Neothrombiidae"
+  }
 }

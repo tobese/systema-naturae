@@ -3,7 +3,7 @@
   "name": "Protostrigidae",
   "rank": "FAMILY",
   "appSlug": "protostrigidae",
-  "speciesCount": 12,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_OLIGOSTRIX",
@@ -69,7 +69,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:105712"
           },
-          "uuid": "2bfa6231-3b0d-41f2-bfad-120f91b80d5d"
+          "uuid": "2bfa6231-3b0d-41f2-bfad-120f91b80d5d",
+          "children": []
         },
         {
           "id": "SP_PROTOSTRIX_SAURODOSIS_WETMORE_1921",
@@ -82,7 +83,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:105716"
           },
-          "uuid": "2dc81c61-baeb-41c4-bd15-68fea8e667ab"
+          "uuid": "2dc81c61-baeb-41c4-bd15-68fea8e667ab",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -147,7 +149,8 @@
           "authorship": "Kurochkin & Dyke, 2011",
           "sourceIds": {
             "gbif-backbone": "8469332",
-            "checklistbank-1174": "txn:196301"
+            "checklistbank-1174": "txn:196301",
+            "wikispecies": "Eostrix_tsaganica"
           },
           "children": []
         },
@@ -202,12 +205,38 @@
           "sourceIds": {
             "checklistbank-1174": "txn:105107"
           },
-          "uuid": "7f875a22-4d62-4f06-adca-bc30a8827e0b"
+          "uuid": "7f875a22-4d62-4f06-adca-bc30a8827e0b",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostrigidae"
+    },
+    {
+      "id": "GENUS_AURORORNIS",
+      "name": "Aurorornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AURORORNIS_TAURICA",
+          "name": "Aurorornis taurica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aurorornis",
+          "sourceIds": {
+            "wikispecies": "Aurorornis_taurica"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protostrigidae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Protostrigidae",
+    "checklistbank-1174": "txn:39400"
+  }
 }

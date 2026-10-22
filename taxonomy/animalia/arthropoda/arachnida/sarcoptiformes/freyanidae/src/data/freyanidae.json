@@ -3,7 +3,7 @@
   "name": "Freyanidae",
   "rank": "FAMILY",
   "appSlug": "freyanidae",
-  "speciesCount": 37,
+  "speciesCount": 42,
   "children": [
     {
       "id": "GENUS_DOBYELLA",
@@ -139,7 +139,8 @@
           "sourceIds": {
             "checklistbank-139831": "675570"
           },
-          "uuid": "a94731a1-7b39-4b1f-b88d-90af60384314"
+          "uuid": "a94731a1-7b39-4b1f-b88d-90af60384314",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -197,6 +198,19 @@
             "gbif-backbone": "6900281"
           },
           "children": []
+        },
+        {
+          "id": "SP_SULANYSSUS_CAPUTMEDUSAE_TROUESSART_1886",
+          "name": "Sulanyssus caputmedusae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulanyssus",
+          "authorship": "(Trouessart, 1886)",
+          "sourceIds": {
+            "checklistbank-2008": "969536"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -245,7 +259,8 @@
           "sourceIds": {
             "checklistbank-139831": "1049749"
           },
-          "uuid": "251233de-f8cb-4d7e-a5c9-efa484e08e9b"
+          "uuid": "251233de-f8cb-4d7e-a5c9-efa484e08e9b",
+          "children": []
         },
         {
           "id": "SP_MONOFREYANA_COLLARIS",
@@ -257,7 +272,8 @@
           "sourceIds": {
             "checklistbank-139831": "1049750"
           },
-          "uuid": "c019e365-32fe-4127-a686-4ca4f9b4c4e2"
+          "uuid": "c019e365-32fe-4127-a686-4ca4f9b4c4e2",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -504,7 +520,34 @@
           "authorship": "(Koch, 1844)",
           "sourceIds": {
             "gbif-backbone": "4547936",
-            "checklistbank-139831": "297390"
+            "checklistbank-139831": "297390",
+            "wikispecies": "Freyana_anatina"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FREYANA_CAPUTMEDUSAE_TROUESSART_1886",
+          "name": "Freyana caputmedusae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Freyana",
+          "authorship": "Trouessart, 1886",
+          "sourceIds": {
+            "checklistbank-2008": "1022185"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FREYANA_HIRSUTIROSTRIS_M_GNIN_TROUESSART_1884",
+          "name": "Freyana hirsutirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Freyana",
+          "authorship": "Mégnin & Trouessart, 1884",
+          "sourceIds": {
+            "checklistbank-2008": "1026250"
           },
           "children": []
         }
@@ -564,7 +607,8 @@
           "sourceIds": {
             "checklistbank-139831": "1049746"
           },
-          "uuid": "a4404211-0cdf-498b-87b9-2d68d4621379"
+          "uuid": "a4404211-0cdf-498b-87b9-2d68d4621379",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -611,10 +655,58 @@
           "sourceIds": {
             "checklistbank-127379": "1df74564-4410-4bcd-9ea5-6477e00394e8"
           },
-          "uuid": "6078a786-479c-44e1-98ee-a10497246c83"
+          "uuid": "6078a786-479c-44e1-98ee-a10497246c83",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PTEROLICHUS",
+      "name": "Pterolichus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PTEROLICHUS_PALLIDUS_M_GNIN_TROUESSART_1884",
+          "name": "Pterolichus pallidus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterolichus",
+          "authorship": "Mégnin & Trouessart, 1884",
+          "sourceIds": {
+            "checklistbank-2008": "953581"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "freyanidae"
+    },
+    {
+      "id": "GENUS_DERMALEICHUS",
+      "name": "Dermaleichus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DERMALEICHUS_HETEROPUS_MICHAEL_1881",
+          "name": "Dermaleichus heteropus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermaleichus",
+          "authorship": "Michael, 1881",
+          "sourceIds": {
+            "checklistbank-2008": "953582"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "freyanidae"
     }
   ],
-  "genusCount": 12
+  "genusCount": 15,
+  "sourceIds": {
+    "wikispecies": "Freyanidae"
+  }
 }

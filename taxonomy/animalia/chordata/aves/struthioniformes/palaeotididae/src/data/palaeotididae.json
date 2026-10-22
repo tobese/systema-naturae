@@ -3,7 +3,7 @@
   "name": "Palaeotididae",
   "rank": "FAMILY",
   "appSlug": "palaeotididae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_GALLIGERANOIDES",
@@ -19,7 +19,29 @@
           "lineage": "Galligeranoides",
           "authorship": "Bourdon et al., 2014",
           "sourceIds": {
-            "gbif-backbone": "11197369"
+            "gbif-backbone": "11197369",
+            "wikispecies": "Galligeranoides_boriensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeotididae"
+    },
+    {
+      "id": "GENUS_PALAEOTIS",
+      "name": "Palaeotis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEOTIS_WEIGELTI",
+          "name": "Palaeotis weigelti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeotis",
+          "sourceIds": {
+            "wikispecies": "Palaeotis_weigelti"
           },
           "children": []
         }
@@ -28,5 +50,8 @@
       "lineage": "palaeotididae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "wikispecies": "Palaeotididae"
+  }
 }

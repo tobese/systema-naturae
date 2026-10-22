@@ -3,7 +3,7 @@
   "name": "Emeidae",
   "rank": "FAMILY",
   "appSlug": "emeidae",
-  "speciesCount": 27,
+  "speciesCount": 28,
   "children": [
     {
       "id": "GENUS_PACHYORNIS",
@@ -20,7 +20,8 @@
           "authorship": "Oliver, 1949",
           "sourceIds": {
             "gbif-backbone": "4852025",
-            "checklistbank-139831": "410552"
+            "checklistbank-139831": "410552",
+            "wikispecies": "Pachyornis_australis"
           },
           "children": []
         },
@@ -47,9 +48,11 @@
           "authorship": "(Owen 1856)",
           "sourceIds": {
             "checklistbank-1174": "txn:143730",
-            "checklistbank-139831": "410549"
+            "checklistbank-139831": "410549",
+            "wikispecies": "Pachyornis_elephantopus"
           },
-          "uuid": "ee6edfb2-8663-4f89-93ad-9a3c6bda1b2e"
+          "uuid": "ee6edfb2-8663-4f89-93ad-9a3c6bda1b2e",
+          "children": []
         },
         {
           "id": "SP_PACHYORNIS_GERANOIDES",
@@ -61,7 +64,8 @@
           "sourceIds": {
             "checklistbank-139831": "410550"
           },
-          "uuid": "84bc5935-ce84-4d84-ac33-25dae1735258"
+          "uuid": "84bc5935-ce84-4d84-ac33-25dae1735258",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -157,7 +161,8 @@
             "gbif-backbone": "5817275",
             "checklistbank-1174": "txn:335241"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Owen 1844)"
         },
         {
           "id": "SP_ANOMALOPTERYX_CASUARINUS_LYDEKKER_1891",
@@ -183,7 +188,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369704"
           },
-          "uuid": "6a14a033-3c79-4d37-8b2a-c8288a61e879"
+          "uuid": "6a14a033-3c79-4d37-8b2a-c8288a61e879",
+          "children": []
         },
         {
           "id": "SP_ANOMALOPTERYX_CURTUS_OWEN_1847",
@@ -196,7 +202,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369707"
           },
-          "uuid": "a6439756-d678-4ba3-960b-63d70bb18667"
+          "uuid": "a6439756-d678-4ba3-960b-63d70bb18667",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -282,7 +289,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:143733"
           },
-          "uuid": "b73a3df3-4e39-4b67-bcb3-85139d68616b"
+          "uuid": "b73a3df3-4e39-4b67-bcb3-85139d68616b",
+          "children": []
         },
         {
           "id": "SP_EURYAPTERYX_IMMANIS_LYDEKKER_1891",
@@ -295,7 +303,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369716"
           },
-          "uuid": "04448e65-2e19-428a-ab41-f2d136924b63"
+          "uuid": "04448e65-2e19-428a-ab41-f2d136924b63",
+          "children": []
         },
         {
           "id": "SP_EURYAPTERYX_GRAVIPES_LYDEKKER_1891",
@@ -308,7 +317,20 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369720"
           },
-          "uuid": "868961bb-9aa7-4290-88b0-8fd2d4f0ab55"
+          "uuid": "868961bb-9aa7-4290-88b0-8fd2d4f0ab55",
+          "children": []
+        },
+        {
+          "id": "SP_EURYAPTERYX_GRAVIS",
+          "name": "Euryapteryx gravis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euryapteryx",
+          "sourceIds": {
+            "wikispecies": "Euryapteryx_gravis"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -365,7 +387,8 @@
             "gbif-backbone": "5817276",
             "checklistbank-1174": "txn:143735"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Owen 1846)"
         },
         {
           "id": "SP_EMEUS_CASUARINUS_LYDEKKER_1891",
@@ -378,7 +401,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369709"
           },
-          "uuid": "847ced57-573d-402e-927d-2e10cdfde19f"
+          "uuid": "847ced57-573d-402e-927d-2e10cdfde19f",
+          "children": []
         },
         {
           "id": "SP_EMEUS_HUTTONI_OWEN_1879",
@@ -391,7 +415,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369711"
           },
-          "uuid": "70a81097-00f2-4080-8356-847b7fb0804d"
+          "uuid": "70a81097-00f2-4080-8356-847b7fb0804d",
+          "children": []
         },
         {
           "id": "SP_EMEUS_EXILLIS_HUTTON_1897",
@@ -404,12 +429,17 @@
           "sourceIds": {
             "checklistbank-1174": "txn:369713"
           },
-          "uuid": "4182508b-0c1c-4dcb-8607-da3343cedcb9"
+          "uuid": "4182508b-0c1c-4dcb-8607-da3343cedcb9",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "emeidae"
     }
   ],
-  "genusCount": 6
+  "genusCount": 6,
+  "sourceIds": {
+    "wikispecies": "Emeidae",
+    "checklistbank-1174": "txn:143729"
+  }
 }

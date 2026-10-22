@@ -3,7 +3,7 @@
   "name": "Sespedectidae",
   "rank": "FAMILY",
   "appSlug": "sespedectidae",
-  "speciesCount": 10,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_ANKYLODON",
@@ -203,7 +203,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:45369"
           },
-          "uuid": "e2a98495-0513-4f7d-9ba3-5be0ff32abba"
+          "uuid": "e2a98495-0513-4f7d-9ba3-5be0ff32abba",
+          "children": []
         }
       ]
     },
@@ -213,8 +214,25 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "sespedectidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_COLPOCHERUS_MISSISSIPPIENSIS_BEARD_AND_DAWSON_2009",
+          "name": "Colpocherus mississippiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colpocherus",
+          "authorship": "Beard and Dawson 2009",
+          "sourceIds": {
+            "checklistbank-1174": "txn:159152"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-1174": "txn:347999"
+  }
 }

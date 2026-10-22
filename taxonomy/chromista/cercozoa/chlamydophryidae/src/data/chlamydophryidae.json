@@ -3,7 +3,7 @@
   "name": "Chlamydophryidae",
   "rank": "FAMILY",
   "appSlug": "chlamydophryidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_LECYTHIUM",
@@ -22,7 +22,8 @@
           "sourceIds": {
             "checklistbank-139831": "1165099"
           },
-          "uuid": "3e984a60-568b-4da9-bf13-556d0b6346c3"
+          "uuid": "3e984a60-568b-4da9-bf13-556d0b6346c3",
+          "children": []
         }
       ]
     },
@@ -43,9 +44,57 @@
           "sourceIds": {
             "checklistbank-139831": "1660312"
           },
-          "uuid": "ae130b41-de47-46d4-9ed5-dc63cb27f470"
+          "uuid": "ae130b41-de47-46d4-9ed5-dc63cb27f470",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CLYPEOLINA",
+      "name": "Clypeolina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLYPEOLINA_MARGINATA_PENARD_1902",
+          "name": "Clypeolina marginata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clypeolina",
+          "authorship": "Penard, 1902",
+          "sourceIds": {
+            "checklistbank-2008": "1037857"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chlamydophryidae"
+    },
+    {
+      "id": "GENUS_CHLAMYDOPHRYS",
+      "name": "Chlamydophrys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHLAMYDOPHRYS_STERCOREA",
+          "name": "Chlamydophrys stercorea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chlamydophrys",
+          "sourceIds": {
+            "wikispecies": "Chlamydophrys_stercorea"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chlamydophryidae"
     }
-  ]
+  ],
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Chlamydophryidae"
+  }
 }

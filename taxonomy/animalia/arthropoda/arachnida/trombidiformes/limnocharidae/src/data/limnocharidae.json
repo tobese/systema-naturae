@@ -3,7 +3,7 @@
   "name": "Limnocharidae",
   "rank": "FAMILY",
   "appSlug": "limnocharidae",
-  "speciesCount": 16,
+  "speciesCount": 19,
   "children": [
     {
       "id": "GENUS_NEOLIMNOCHARES",
@@ -144,7 +144,8 @@
           "lineage": "Limnochares",
           "authorship": "Gerecke, 2005",
           "sourceIds": {
-            "gbif-backbone": "8040658"
+            "gbif-backbone": "8040658",
+            "checklistbank-2008": "444418"
           },
           "children": []
         },
@@ -172,7 +173,21 @@
           "authorship": "(Linnaeus, 1758)",
           "sourceIds": {
             "gbif-backbone": "2181166",
-            "checklistbank-139831": "997134"
+            "checklistbank-139831": "997134",
+            "wikispecies": "Limnochares_aquatica"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIMNOCHARES_HOLOSERICA_GEER_1778",
+          "name": "Limnochares holoserica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limnochares",
+          "authorship": "(Geer, 1778)",
+          "sourceIds": {
+            "checklistbank-2008": "702001"
           },
           "children": []
         }
@@ -256,12 +271,60 @@
           "sourceIds": {
             "checklistbank-139831": "262598"
           },
-          "uuid": "5d3c943b-af89-40ce-a58a-6d668d1f3bde"
+          "uuid": "5d3c943b-af89-40ce-a58a-6d668d1f3bde",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "limnocharidae"
+    },
+    {
+      "id": "GENUS_TROMBIDIUM",
+      "name": "Trombidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TROMBIDIUM_AQUATICUM_LINNAEUS_1758",
+          "name": "Trombidium aquaticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trombidium",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank-2008": "702002"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "limnocharidae"
+    },
+    {
+      "id": "GENUS_ACARUS",
+      "name": "Acarus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACARUS_AQUATICUS_LINNAEUS_1758",
+          "name": "Acarus aquaticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acarus",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank-2008": "850723"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "limnocharidae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 7,
+  "sourceIds": {
+    "wikispecies": "Limnocharidae"
+  }
 }

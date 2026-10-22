@@ -3,7 +3,7 @@
   "name": "Protostegidae",
   "rank": "FAMILY",
   "appSlug": "protostegidae",
-  "speciesCount": 17,
+  "speciesCount": 18,
   "children": [
     {
       "id": "GENUS_ARCHELON",
@@ -19,7 +19,8 @@
           "lineage": "Archelon",
           "authorship": "Wieland, 1896",
           "sourceIds": {
-            "gbif-backbone": "4965003"
+            "gbif-backbone": "4965003",
+            "wikispecies": "Archelon_ischyros"
           },
           "children": []
         },
@@ -275,7 +276,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:125123"
           },
-          "uuid": "73dc4dd4-696f-4a42-8b5e-471bc9cedca7"
+          "uuid": "73dc4dd4-696f-4a42-8b5e-471bc9cedca7",
+          "children": []
         }
       ]
     },
@@ -297,7 +299,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:156268"
           },
-          "uuid": "88def56c-4e7b-4761-a37b-ec1bd17ca6f7"
+          "uuid": "88def56c-4e7b-4761-a37b-ec1bd17ca6f7",
+          "children": []
         }
       ]
     },
@@ -319,17 +322,10 @@
           "sourceIds": {
             "checklistbank-1174": "txn:235268"
           },
-          "uuid": "56462a11-620b-483c-95d6-1da2453d1d5a"
+          "uuid": "56462a11-620b-483c-95d6-1da2453d1d5a",
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_DESMATOCHELYS",
-      "name": "Desmatochelys",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "protostegidae",
-      "children": []
     },
     {
       "id": "GENUS_MICROSTEGA",
@@ -349,10 +345,37 @@
           "sourceIds": {
             "checklistbank-1174": "txn:128032"
           },
-          "uuid": "349e80ea-d838-4fb1-9fa0-3e68fde42974"
+          "uuid": "349e80ea-d838-4fb1-9fa0-3e68fde42974",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DESMATOCHELYS",
+      "name": "Desmatochelys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESMATOCHELYS_PADILLAI_CADENA_AND_PARHAM_2015",
+          "name": "Desmatochelys padillai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desmatochelys",
+          "authorship": "Cadena and Parham 2015",
+          "sourceIds": {
+            "checklistbank-1174": "txn:353086"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protostegidae"
     }
   ],
-  "genusCount": 9
+  "genusCount": 14,
+  "sourceIds": {
+    "wikispecies": "Protostegidae",
+    "checklistbank-1174": "txn:37689"
+  }
 }

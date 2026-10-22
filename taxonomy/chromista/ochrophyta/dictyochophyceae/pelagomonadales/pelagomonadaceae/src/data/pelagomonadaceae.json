@@ -3,7 +3,7 @@
   "name": "Pelagomonadaceae",
   "rank": "FAMILY",
   "appSlug": "pelagomonadaceae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_PELAGOCOCCUS",
@@ -19,7 +19,8 @@
           "lineage": "Pelagococcus",
           "authorship": "Norris, 1977",
           "sourceIds": {
-            "gbif-backbone": "3195489"
+            "gbif-backbone": "3195489",
+            "checklistbank-2008": "955736"
           },
           "children": [],
           "uuid": "981ed30c-a0ab-5a4-890-a876a66813289b"
@@ -68,10 +69,33 @@
           "sourceIds": {
             "checklistbank-139831": "1266010"
           },
-          "uuid": "fbbdc081-18bd-4154-aa10-5da9911a8e38"
+          "uuid": "fbbdc081-18bd-4154-aa10-5da9911a8e38",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PELAGOMONAS",
+      "name": "Pelagomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PELAGOMONAS_CALCEOLATA_R_A_ANDERSEN_G_SAUNDERS_1993",
+          "name": "Pelagomonas calceolata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagomonas",
+          "authorship": "R.A.Andersen & G.Saunders, 1993",
+          "sourceIds": {
+            "checklistbank-2008": "1021810"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagomonadaceae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 4
 }

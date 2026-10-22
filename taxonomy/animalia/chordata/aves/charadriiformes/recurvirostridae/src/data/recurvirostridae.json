@@ -467,7 +467,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:430210"
           },
-          "uuid": "55c737a9-50c8-4ec6-a199-f96e221905f3"
+          "uuid": "55c737a9-50c8-4ec6-a199-f96e221905f3",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -495,10 +496,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "recurvirostridae"
+    },
+    {
+      "id": "GENUS_CLADORHYNCHUS",
+      "name": "Cladorhynchus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLADORHYNCHUS_LEUCOCEPHALUS",
+          "name": "Cladorhynchus leucocephalus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cladorhynchus",
+          "sourceIds": {
+            "checklistbank-139831": "4916"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "recurvirostridae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 28,
+  "genusCount": 10,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -508,6 +530,7 @@
       "familyKey": 4287244
     },
     "checklistbank": "Recurvirostridae",
-    "wikispecies": "Recurvirostridae"
+    "wikispecies": "Recurvirostridae",
+    "checklistbank-1174": "txn:39587"
   }
 }

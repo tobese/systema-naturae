@@ -3,7 +3,7 @@
   "name": "Heptamelidae",
   "rank": "FAMILY",
   "appSlug": "heptamelidae",
-  "speciesCount": 1,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PSEUDOHEPTAMELUS",
@@ -20,7 +20,8 @@
           "authorship": "Conde, 1932",
           "sourceIds": {
             "gbif-backbone": "8271108",
-            "checklistbank-139831": "1049146"
+            "checklistbank-139831": "1049146",
+            "wikispecies": "Pseudoheptamelus_runari"
           },
           "children": []
         }
@@ -34,8 +35,70 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "heptamelidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_HEPTAMELUS_DAHLBOMI",
+          "name": "Heptamelus dahlbomi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heptamelus",
+          "sourceIds": {
+            "checklistbank-139831": "495103"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEPTAMELUS_OCHROLEUCUS",
+          "name": "Heptamelus ochroleucus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heptamelus",
+          "sourceIds": {
+            "checklistbank-139831": "992619"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEPTAMELUS_VIITASAARII",
+          "name": "Heptamelus viitasaarii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heptamelus",
+          "sourceIds": {
+            "checklistbank-139831": "1487599"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CAENONEURA",
+      "name": "Caenoneura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAENONEURA_DAHLBOMI_THOMSON_1870",
+          "name": "Caenoneura dahlbomi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caenoneura",
+          "authorship": "Thomson, 1870",
+          "sourceIds": {
+            "checklistbank-2008": "817876"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heptamelidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 3,
+  "sourceIds": {
+    "wikispecies": "Heptamelidae"
+  }
 }

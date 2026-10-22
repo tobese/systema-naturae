@@ -3,7 +3,7 @@
   "name": "Allosauridae",
   "rank": "FAMILY",
   "appSlug": "allosauridae",
-  "speciesCount": 13,
+  "speciesCount": 14,
   "children": [
     {
       "id": "GENUS_ALLOSAURUS",
@@ -46,7 +46,8 @@
           "lineage": "Allosaurus",
           "authorship": "Mateus et al., 2006",
           "sourceIds": {
-            "gbif-backbone": "8502900"
+            "gbif-backbone": "8502900",
+            "wikispecies": "Allosaurus_europaeus"
           },
           "children": []
         },
@@ -61,6 +62,18 @@
           "sourceIds": {
             "gbif-backbone": "4822588",
             "checklistbank-139831": "496364"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALLOSAURUS_ATROX",
+          "name": "Allosaurus atrox",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allosaurus",
+          "sourceIds": {
+            "wikispecies": "Allosaurus_atrox"
           },
           "children": []
         }
@@ -252,5 +265,8 @@
       "lineage": "allosauridae"
     }
   ],
-  "genusCount": 8
+  "genusCount": 8,
+  "sourceIds": {
+    "wikispecies": "Allosauridae"
+  }
 }

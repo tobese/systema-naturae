@@ -3,7 +3,7 @@
   "name": "Thylacosmilidae",
   "rank": "FAMILY",
   "appSlug": "thylacosmilidae",
-  "speciesCount": 3,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_THYLACOSMILUS",
@@ -19,7 +19,8 @@
           "lineage": "Thylacosmilus",
           "authorship": "Riggs, 1933",
           "sourceIds": {
-            "gbif-backbone": "8574603"
+            "gbif-backbone": "8574603",
+            "wikispecies": "Thylacosmilus_atrox"
           },
           "children": []
         }
@@ -42,7 +43,8 @@
           "authorship": "Forasiepi & Carlini, 2010",
           "sourceIds": {
             "gbif-backbone": "8380220",
-            "checklistbank-1174": "txn:264681"
+            "checklistbank-1174": "txn:264681",
+            "wikispecies": "Patagosmilus_goini"
           },
           "children": []
         }
@@ -64,7 +66,29 @@
           "lineage": "Anachlysictis",
           "authorship": "Goin, 1997",
           "sourceIds": {
-            "gbif-backbone": "8451960"
+            "gbif-backbone": "8451960",
+            "wikispecies": "Anachlysictis_gracilis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thylacosmilidae"
+    },
+    {
+      "id": "GENUS_EOMAKHAIRA",
+      "name": "Eomakhaira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOMAKHAIRA_MOLOSSUS",
+          "name": "Eomakhaira molossus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eomakhaira",
+          "sourceIds": {
+            "wikispecies": "Eomakhaira_molossus"
           },
           "children": []
         }
@@ -73,5 +97,9 @@
       "lineage": "thylacosmilidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "wikispecies": "Thylacosmilidae",
+    "checklistbank-1174": "txn:40041"
+  }
 }

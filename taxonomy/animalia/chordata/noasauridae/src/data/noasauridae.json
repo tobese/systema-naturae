@@ -3,7 +3,7 @@
   "name": "Noasauridae",
   "rank": "FAMILY",
   "appSlug": "noasauridae",
-  "speciesCount": 13,
+  "speciesCount": 15,
   "children": [
     {
       "id": "GENUS_LIMUSAURUS",
@@ -108,7 +108,8 @@
           "lineage": "Berthasaura",
           "authorship": "de Souza et al., 2021",
           "sourceIds": {
-            "gbif-backbone": "11561561"
+            "gbif-backbone": "11561561",
+            "wikispecies": "Berthasaura_leopoldinae"
           },
           "children": []
         }
@@ -174,7 +175,8 @@
           "lineage": "Masiakasaurus",
           "authorship": "Sampson et al., 2001",
           "sourceIds": {
-            "gbif-backbone": "4966173"
+            "gbif-backbone": "4966173",
+            "wikispecies": "Masiakasaurus_knopfleri"
           },
           "children": []
         }
@@ -267,7 +269,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:65367"
           },
-          "uuid": "57d96e54-3543-4ced-8922-bfc34626358a"
+          "uuid": "57d96e54-3543-4ced-8922-bfc34626358a",
+          "children": []
         }
       ]
     },
@@ -289,10 +292,57 @@
           "sourceIds": {
             "checklistbank-1174": "txn:491462"
           },
-          "uuid": "7f190262-4ddf-4735-abab-6db3c329ccbb"
+          "uuid": "7f190262-4ddf-4735-abab-6db3c329ccbb",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_AFROMIMUS",
+      "name": "Afromimus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AFROMIMUS_TENERENSIS",
+          "name": "Afromimus tenerensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Afromimus",
+          "sourceIds": {
+            "wikispecies": "Afromimus_tenerensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "noasauridae"
+    },
+    {
+      "id": "GENUS_LAEVISUCHUS",
+      "name": "Laevisuchus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LAEVISUCHUS_INDICUS",
+          "name": "Laevisuchus indicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Laevisuchus",
+          "sourceIds": {
+            "wikispecies": "Laevisuchus_indicus"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "noasauridae"
     }
   ],
-  "genusCount": 11
+  "genusCount": 15,
+  "sourceIds": {
+    "wikispecies": "Noasauridae",
+    "checklistbank-1174": "txn:54535"
+  }
 }

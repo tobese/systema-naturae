@@ -3,7 +3,7 @@
   "name": "Nodosauridae",
   "rank": "FAMILY",
   "appSlug": "nodosauridae",
-  "speciesCount": 40,
+  "speciesCount": 42,
   "children": [
     {
       "id": "GENUS_DRACOPELTA",
@@ -162,7 +162,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:63263"
           },
-          "uuid": "8057c0b4-c703-434a-977a-91dbf84cad0e"
+          "uuid": "8057c0b4-c703-434a-977a-91dbf84cad0e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -205,7 +206,8 @@
           "authorship": "Brown, Henderson, Vinther, Fletcher, Sistaga, Herrera & Summons, 2017",
           "sourceIds": {
             "gbif-backbone": "9329303",
-            "checklistbank-1174": "txn:372000"
+            "checklistbank-1174": "txn:372000",
+            "wikispecies": "Borealopelta_markmitchelli"
           },
           "children": []
         }
@@ -342,7 +344,8 @@
           "lineage": "Animantarx",
           "authorship": "Carpenter et al., 1999",
           "sourceIds": {
-            "gbif-backbone": "4965710"
+            "gbif-backbone": "4965710",
+            "wikispecies": "Animantarx_ramaljonesi"
           },
           "children": []
         }
@@ -446,6 +449,18 @@
             "gbif-backbone": "8686137"
           },
           "children": []
+        },
+        {
+          "id": "SP_ACANTHOPHOLIS_HORRIDA",
+          "name": "Acanthopholis horrida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthopholis",
+          "sourceIds": {
+            "wikispecies": "Acanthopholis_horrida"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -480,7 +495,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:52789"
           },
-          "uuid": "5abd8b30-309b-4531-9f0d-2af18b15fa02"
+          "uuid": "5abd8b30-309b-4531-9f0d-2af18b15fa02",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -725,7 +741,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:57576"
           },
-          "uuid": "d7dc99e6-97ce-4ec0-8e56-38628198b57e"
+          "uuid": "d7dc99e6-97ce-4ec0-8e56-38628198b57e",
+          "children": []
         }
       ]
     },
@@ -747,7 +764,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:57683"
           },
-          "uuid": "b0884c37-b200-4917-aaed-c8b574f3cbdc"
+          "uuid": "b0884c37-b200-4917-aaed-c8b574f3cbdc",
+          "children": []
         }
       ]
     },
@@ -769,7 +787,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:65207"
           },
-          "uuid": "030dd376-4808-490b-8427-bd0c2b5979c2"
+          "uuid": "030dd376-4808-490b-8427-bd0c2b5979c2",
+          "children": []
         }
       ]
     },
@@ -791,17 +810,10 @@
           "sourceIds": {
             "checklistbank-1174": "txn:63704"
           },
-          "uuid": "5d67be81-85ff-449e-b31a-ab0fda0363e5"
+          "uuid": "5d67be81-85ff-449e-b31a-ab0fda0363e5",
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_TATANKACEPHALUS",
-      "name": "Tatankacephalus",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "nodosauridae",
-      "children": []
     },
     {
       "id": "GENUS_PATAGOPELTA",
@@ -821,10 +833,37 @@
           "sourceIds": {
             "checklistbank-1174": "txn:466648"
           },
-          "uuid": "d0ca55c7-5e90-4c57-94f1-59b8ff1f83c8"
+          "uuid": "d0ca55c7-5e90-4c57-94f1-59b8ff1f83c8",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_TATANKACEPHALUS",
+      "name": "Tatankacephalus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TATANKACEPHALUS_COONEYORUM_PARSONS_AND_PARSONS_2009",
+          "name": "Tatankacephalus cooneyorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tatankacephalus",
+          "authorship": "Parsons and Parsons 2009",
+          "sourceIds": {
+            "checklistbank-1174": "txn:156242"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nodosauridae"
     }
   ],
-  "genusCount": 27
+  "genusCount": 33,
+  "sourceIds": {
+    "wikispecies": "Nodosauridae",
+    "checklistbank-1174": "txn:38817"
+  }
 }
