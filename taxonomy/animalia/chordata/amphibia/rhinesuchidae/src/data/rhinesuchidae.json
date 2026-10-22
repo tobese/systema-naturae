@@ -3,7 +3,7 @@
   "name": "Rhinesuchidae",
   "rank": "FAMILY",
   "appSlug": "rhinesuchidae",
-  "speciesCount": 11,
+  "speciesCount": 15,
   "children": [
     {
       "id": "GENUS_RASTOSUCHUS",
@@ -19,7 +19,8 @@
           "lineage": "Rastosuchus",
           "authorship": "Dias, Dias-da-Silva & Schultz, 2020",
           "sourceIds": {
-            "gbif-backbone": "11172116"
+            "gbif-backbone": "11172116",
+            "checklistbank-1174": "txn:433422"
           },
           "children": []
         }
@@ -92,6 +93,19 @@
             "gbif-backbone": "8535745"
           },
           "children": []
+        },
+        {
+          "id": "SP_RHINESUCHUS_SENEKALENSIS_VAN_HOEPEN_1911",
+          "name": "Rhinesuchus senekalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhinesuchus",
+          "authorship": "(van Hoepen 1911)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:266928"
+          },
+          "uuid": "0faa7d7d-e2ff-4998-a43c-71f8678ee45b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -199,9 +213,23 @@
           "lineage": "Rhinesuchoides",
           "authorship": "Olson & Broom, 1937",
           "sourceIds": {
-            "gbif-backbone": "4975550"
+            "gbif-backbone": "4975550",
+            "checklistbank-1174": "txn:120919"
           },
           "children": []
+        },
+        {
+          "id": "SP_RHINESUCHOIDES_CAPENSIS_HAUGHTON_1925",
+          "name": "Rhinesuchoides capensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhinesuchoides",
+          "authorship": "(Haughton 1925)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:266933"
+          },
+          "uuid": "d47cccd1-acd4-45eb-a909-49343b90ce41"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -228,6 +256,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhinesuchidae"
+    },
+    {
+      "id": "GENUS_BROOMISTEGA",
+      "name": "Broomistega",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhinesuchidae",
+      "children": [
+        {
+          "id": "SP_BROOMISTEGA_PUTTERILLI_BROOM_1930",
+          "name": "Broomistega putterilli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Broomistega",
+          "authorship": "(Broom 1930)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:266420"
+          },
+          "uuid": "b0829777-fa3e-4ba6-a193-d740521b2aab"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RHINECEPS",
+      "name": "Rhineceps",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhinesuchidae",
+      "children": [
+        {
+          "id": "SP_RHINECEPS_NYASAENSIS_HAUGHTON_1926",
+          "name": "Rhineceps nyasaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhineceps",
+          "authorship": "(Haughton 1926)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:267021"
+          },
+          "uuid": "22011895-45a9-4da5-b2c7-c892a185de86"
+        }
+      ]
     }
   ],
   "genusCount": 9

@@ -3,7 +3,7 @@
   "name": "Trematosauridae",
   "rank": "FAMILY",
   "appSlug": "trematosauridae",
-  "speciesCount": 26,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_TERTREMA",
@@ -348,7 +348,8 @@
           "lineage": "Aphaneramma",
           "authorship": "Fortuny, Gastou, Escuillié, Ranivoharimanana & Steyer, 2017",
           "sourceIds": {
-            "gbif-backbone": "9515118"
+            "gbif-backbone": "9515118",
+            "checklistbank-1174": "txn:367546"
           },
           "children": []
         },
@@ -364,6 +365,19 @@
             "gbif-backbone": "8588600"
           },
           "children": []
+        },
+        {
+          "id": "SP_APHANERAMMA_KOKENI_HUENE_1920",
+          "name": "Aphaneramma kokeni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphaneramma",
+          "authorship": "(Huene 1920)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:251627"
+          },
+          "uuid": "b1036783-8905-4add-95dc-9ea91cee938b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -506,13 +520,58 @@
           "lineage": "Erythrobatrachus",
           "authorship": "Cosgriff & Garbutt, 1972",
           "sourceIds": {
-            "gbif-backbone": "8639296"
+            "gbif-backbone": "8639296",
+            "checklistbank-1174": "txn:265928"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trematosauridae"
+    },
+    {
+      "id": "GENUS_TREMATOSUCHUS",
+      "name": "Trematosuchus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "trematosauridae",
+      "children": [
+        {
+          "id": "SP_TREMATOSUCHUS_SOBEYI_HAUGHTON_1915",
+          "name": "Trematosuchus sobeyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trematosuchus",
+          "authorship": "(Haughton 1915)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:266629"
+          },
+          "uuid": "44d41530-d53b-40a7-8693-797c7f314c82"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TERTREMOIDES",
+      "name": "Tertremoides",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "trematosauridae",
+      "children": [
+        {
+          "id": "SP_TERTREMOIDES_MADAGASCARIENSIS_LEHMAN_1966",
+          "name": "Tertremoides madagascariensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tertremoides",
+          "authorship": "(Lehman 1966)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:266660"
+          },
+          "uuid": "14f318bf-76ea-46ba-a72c-4ff7a7076632"
+        }
+      ]
     }
   ],
   "genusCount": 19

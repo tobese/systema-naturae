@@ -3,7 +3,7 @@
   "name": "Colosteidae",
   "rank": "FAMILY",
   "appSlug": "colosteidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_GREERERPETON",
@@ -41,7 +41,8 @@
           "lineage": "Deltaherpeton",
           "authorship": "Bolt & Lombard, 2010",
           "sourceIds": {
-            "gbif-backbone": "8683378"
+            "gbif-backbone": "8683378",
+            "checklistbank-1174": "txn:330704"
           },
           "children": []
         }
@@ -92,6 +93,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "colosteidae"
+    },
+    {
+      "id": "GENUS_COLOSTEUS",
+      "name": "Colosteus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "colosteidae",
+      "children": [
+        {
+          "id": "SP_COLOSTEUS_SCUTELLATUS_COPE_1869",
+          "name": "Colosteus scutellatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colosteus",
+          "authorship": "(Cope 1869)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:335313"
+          },
+          "uuid": "af512695-9677-4e7a-b824-3d65894a9a95"
+        }
+      ]
     }
   ],
   "genusCount": 4
