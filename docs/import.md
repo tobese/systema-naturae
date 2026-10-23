@@ -699,6 +699,34 @@ wikispecies (3 families), checklistbank-311726 (+216 / 1,322 held, 59
 families), checklistbank-1113 (+5 / 7,680 held, 1 family). 861 families
 with no archive recorded (pre-date the archive-tracking fix) were skipped.
 
+### Archive parsing is cached: `colChecklist.py`'s `load_cached()`
+
+Every watcher cycle re-runs `importColChecklist.py <archive> --apply` on
+each archive with newly-ready families — which means re-parsing the whole
+archive from scratch every time, even though most of it gets thrown
+straight back out by the importer's own already-held dedup. For something
+the size of the GBIF Backbone (708k+ taxa), that's the dominant cost of a
+cycle: a 2026-10-23 measurement found a cold parse of a 709k-taxon archive
+at 40.6s and a cache hit at 9.2s (archive-size-dependent; the win scales
+with how much of the archive is pure re-scan).
+
+`load_cached(path)` wraps `load(path)` with a parquet sidecar
+(`<archive>.taxa-cache.parquet`, next to the archive) written via duckdb's
+`read_json_auto` (taxa go to a temp JSONL first, since taxon dicts carry
+heterogeneous optional keys — not every row has every rank's `<rank>_name`
+— and duckdb infers one wide schema from the union across rows). Valid
+when the cache is newer than the archive; re-parses and rewrites otherwise.
+`names`/`meta` are not cached — every call site but one (`auditChecklistArchive.py`,
+which calls `load()` directly) already discards them.
+
+Degrades to a plain, uncached `load()` when duckdb isn't installed (see
+`buildSpeciesParquet.py`'s own note — it's a ~20MB wheel, not a standing
+project dependency), not a hard failure.
+
+`importColChecklist.py` and `importColStage2.py` both call `load_cached()`;
+`auditChecklistArchive.py` still calls `load()` directly since it reads
+`meta`.
+
 ### Related scripts (added)
 
 | Script | Role |

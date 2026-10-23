@@ -668,6 +668,85 @@ def _coldp(path):
     return list(by_id.values()), {}, _C.metadata(path)
 
 
+def _taxa_cache_path(path):
+    """Sidecar parquet next to the archive -- same directory, so it travels
+    with the archive rather than living in a separate cache tree."""
+    base, _ = os.path.splitext(path)
+    return base + ".taxa-cache.parquet"
+
+
+def _write_taxa_cache(taxa, cache_path):
+    """Dump `taxa` (a list of dicts with heterogeneous optional keys -- not
+    every row carries every rank's `<rank>_name`) to a parquet sidecar via
+    duckdb's read_json_auto, which infers one wide schema from the union of
+    keys across all rows. Raises on any failure; the caller decides whether
+    a cache write failure should stop the import (it shouldn't)."""
+    import duckdb
+    import tempfile
+    fd, tmp = tempfile.mkstemp(suffix=".jsonl")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            for t in taxa:
+                f.write(json.dumps(t, ensure_ascii=False) + "\n")
+        con = duckdb.connect()
+        con.execute(
+            f"COPY (SELECT * FROM read_json_auto({tmp!r})) "
+            f"TO {cache_path!r} (FORMAT PARQUET)")
+    finally:
+        os.unlink(tmp)
+
+
+def _read_taxa_cache(cache_path):
+    """-> taxa, reversing _write_taxa_cache. duckdb pads every row to the
+    union schema with NULLs for keys that row didn't have; drop those back
+    out so a cached taxon dict looks exactly like a freshly-parsed one (the
+    importer's `.get('authorship')` etc. expect a missing key, not a
+    present-but-None one -- same contract either way, but this avoids ever
+    finding out the hard way that they differ)."""
+    import duckdb
+    con = duckdb.connect()
+    rel = con.sql(f"SELECT * FROM read_parquet({cache_path!r})")
+    cols = rel.columns
+    return [{c: v for c, v in zip(cols, row) if v is not None}
+            for row in rel.fetchall()]
+
+
+def load_cached(path):
+    """Same contract as load(), except taxa comes from a parquet sidecar
+    when one is fresh (newer than the archive itself) rather than re-parsing
+    the archive's actual tables every time.
+
+    Built for the pending-family watcher: it re-runs `importColChecklist.py
+    <archive> --apply` on every cycle an archive has newly-ready families,
+    and for something the size of the GBIF Backbone that means re-walking
+    the whole archive again and again to place a shrinking sliver of
+    still-unplaceable species -- most of each re-parse is thrown straight
+    back out by the importer's own already-held dedup. names/meta are not
+    cached: every caller of load() already discards them (`_names`/`_` at
+    every call site but one, which calls load() directly instead of this).
+
+    duckdb is optional -- see buildSpeciesParquet.py's own note -- so this
+    degrades to a plain load() with no caching, not a hard failure, when
+    it's missing."""
+    try:
+        import duckdb  # noqa: F401
+    except ImportError:
+        return load(path)
+    cache_path = _taxa_cache_path(path)
+    if (os.path.exists(cache_path)
+            and os.path.getmtime(cache_path) >= os.path.getmtime(path)):
+        try:
+            return _read_taxa_cache(cache_path), {}, {}
+        except Exception as e:
+            print(f"  (taxa cache unreadable, re-parsing: {e})")
+    taxa, names, meta = load(path)
+    try:
+        _write_taxa_cache(taxa, cache_path)
+    except Exception as e:
+        print(f"  (taxa cache write skipped: {e})")
+    return taxa, names, meta
+
+
 def load(path):
     """-> (taxa, names, meta), whatever serialisation the archive uses.
 

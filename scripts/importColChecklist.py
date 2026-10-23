@@ -168,7 +168,7 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     dataset_key = os.path.basename(os.path.dirname(os.path.abspath(archive)))
     r.source_key = dataset_key or SOURCE
 
-    taxa, _names, _ = K.load(archive)
+    taxa, _names, _ = K.load_cached(archive)
     by_id = {t["id"]: t for t in taxa}
     cand = [t for t in taxa
             if (t["rank"] or "").lower() in ("species", "subspecies")

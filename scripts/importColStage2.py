@@ -165,7 +165,7 @@ FLAT_COL = {"kingdom_name": "kingdom", "phylum_name": "phylum",
 
 def _via_colchecklist(path):
     import colChecklist as CC
-    taxa, _names, _meta = CC.load(path)
+    taxa, _names, _meta = CC.load_cached(path)
     par, rank, name, auth, flat = {}, {}, {}, {}, {}
     for t in taxa:
         if t.get("is_synonym"):
