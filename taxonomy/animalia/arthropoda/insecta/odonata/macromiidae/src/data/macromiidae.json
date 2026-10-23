@@ -1732,7 +1732,8 @@
           "sourceIds": {
             "checklistbank": "50ae9e41e519433b942d9fce9b305e38",
             "checklistbank-1020": "5129",
-            "checklistbank-311094": "524125"
+            "checklistbank-311094": "524125",
+            "gbif-backbone": "1429904"
           },
           "children": [],
           "description": "Macromia flavocolorata is a species of dragonfly in the family Macromiidae.",
@@ -1748,10 +1749,12 @@
           "lineage": "Macromia",
           "sourceIds": {
             "checklistbank-139831": "562851",
-            "checklistbank-311094": "537555"
+            "checklistbank-311094": "537555",
+            "gbif-backbone": "1429919"
           },
           "uuid": "852cd42c-8be8-482a-84aa-c08f9f4655ee",
-          "children": []
+          "children": [],
+          "authorship": "Lieftinck, 1942"
         },
         {
           "id": "SP_MACROMIA_TERPSICHORE",
@@ -1762,9 +1765,24 @@
           "lineage": "Macromia",
           "sourceIds": {
             "checklistbank-139831": "562862",
-            "checklistbank-311094": "537585"
+            "checklistbank-311094": "537585",
+            "gbif-backbone": "1429866"
           },
           "uuid": "e93da36d-3d63-4196-bf3c-12c989497d7b",
+          "children": [],
+          "authorship": "Förster, 1900"
+        },
+        {
+          "id": "SP_MACROMIA_VIETNAMICA_ASAHINA_1996",
+          "name": "Macromia vietnamica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macromia",
+          "authorship": "Asahina, 1996",
+          "sourceIds": {
+            "gbif-backbone": "9458608"
+          },
           "children": []
         }
       ],
@@ -1790,7 +1808,8 @@
               "4H7PR"
             ],
             "checklistbank": "3396143",
-            "checklistbank-139831": "109442"
+            "checklistbank-139831": "109442",
+            "gbif-backbone": "1430213"
           },
           "authorityIds": "col:4H7PR",
           "children": [],
@@ -2766,7 +2785,8 @@
           "sourcedFrom": "wikipedia",
           "lineage": "Didymops",
           "sourceIds": {
-            "checklistbank": "447887"
+            "checklistbank": "447887",
+            "gbif-backbone": "5052244"
           },
           "children": [],
           "uuid": "4b686936-4125-59c-a90-ed53f20bc7363d",
@@ -2777,13 +2797,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "macromiidae"
+    },
+    {
+      "id": "GENUS_LARAGITHEMIS",
+      "name": "Laragithemis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LARAGITHEMIS_PILIFERA_LINNAEUS_1982",
+          "name": "Laragithemis pilifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Laragithemis",
+          "authorship": "(Linnaeus, 1982)",
+          "sourceIds": {
+            "gbif-backbone": "9339187"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "macromiidae"
     }
   ],
-  "speciesCount": 141,
+  "speciesCount": 143,
   "appSlug": "macromiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

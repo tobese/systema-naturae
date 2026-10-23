@@ -421,7 +421,8 @@
             ],
             "checklistbank-139831": [
               "43584"
-            ]
+            ],
+            "gbif-backbone": "2436436"
           },
           "authorityIds": "checklistbank:815096,checklistbank:urn:lsid:marinespecies.org:taxname:1455977,checklistbank-139831:43584,col:6MB3T,itis:180092,wikidata:Q15978631,wikispecies:Homo_sapiens",
           "authorship": "Linnaeus, 1758"
@@ -1031,7 +1032,8 @@
           "sourceIds": {
             "checklistbank-9802": "1000718"
           },
-          "uuid": "9ac6a745-e86f-40c0-af90-5d44cdb2fde6"
+          "uuid": "9ac6a745-e86f-40c0-af90-5d44cdb2fde6",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2597,10 +2599,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hominidae"
+    },
+    {
+      "id": "GENUS_PLATODONTOPITHECUS",
+      "name": "Platodontopithecus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLATODONTOPITHECUS_JIANGHUAIENSIS_GU_LIN_1983",
+          "name": "Platodontopithecus jianghuaiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platodontopithecus",
+          "authorship": "Gu & Lin, 1983",
+          "sourceIds": {
+            "gbif-backbone": "4974733"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hominidae"
     }
   ],
-  "genusCount": 43,
-  "speciesCount": 125,
+  "genusCount": 44,
+  "speciesCount": 126,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

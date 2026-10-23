@@ -230,7 +230,8 @@
             ],
             "wikispecies": [
               "Enhydra_lutris"
-            ]
+            ],
+            "checklistbank-1174": "txn:48855"
           },
           "authorityIds": "checklistbank:17297,checklistbank:urn:lsid:marinespecies.org:taxname:242598,col:39TWB,itis:180547,wikidata:Q41407,wikispecies:Enhydra_lutris",
           "authorship": "(Linnaeus, 1758)"
@@ -320,7 +321,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005842"
           },
-          "uuid": "027c2e01-091d-4457-b257-424674aafffb"
+          "uuid": "027c2e01-091d-4457-b257-424674aafffb",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1302,7 +1304,8 @@
             ],
             "wikispecies": [
               "Lutra_lutra"
-            ]
+            ],
+            "checklistbank-1174": "txn:104165"
           },
           "authorityIds": "checklistbank:1435,checklistbank:urn:lsid:marinespecies.org:taxname:137076,col:72PQL,itis:621916,wikidata:Q29995,wikispecies:Lutra_lutra",
           "authorship": "(Linnaeus, 1758)"
@@ -1441,7 +1444,8 @@
             ],
             "checklistbank-2011": [
               "urn:lsid:marinespecies.org:taxname:404089"
-            ]
+            ],
+            "checklistbank-1174": "txn:159264"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:404089,checklistbank-2011:urn:lsid:marinespecies.org:taxname:404089,col:3WGGS,itis:621918,wikidata:Q751763,wikispecies:Lutra_sumatrana",
           "authorship": "(Gray, 1865)"
@@ -1993,7 +1997,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005848"
           },
-          "uuid": "f0c47f2c-1630-404e-8c19-f2759024828c"
+          "uuid": "f0c47f2c-1630-404e-8c19-f2759024828c",
+          "children": []
         },
         {
           "id": "SP_LUTRA_SUMATRANA",
@@ -2005,7 +2010,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005850"
           },
-          "uuid": "5067aa74-27dd-43d1-af8f-1bb1961d7543"
+          "uuid": "5067aa74-27dd-43d1-af8f-1bb1961d7543",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2183,9 +2189,15 @@
               "726278"
             ],
             "checklistbank": "11718",
-            "gbif-backbone": "2433884"
+            "gbif-backbone": "2433884",
+            "checklistbank-1174": [
+              "txn:471804"
+            ],
+            "wikispecies": [
+              "Meles_anakuma"
+            ]
           },
-          "authorityIds": "col:3ZDRJ,itis:726278,wikidata:Q1576038",
+          "authorityIds": "checklistbank:11718,checklistbank-1174:txn:471804,col:3ZDRJ,gbif-backbone:2433884,itis:726278,wikidata:Q1576038,wikispecies:Meles_anakuma",
           "authorship": "Temminck, 1844"
         },
         {
@@ -2233,9 +2245,15 @@
               "Q6009542"
             ],
             "checklistbank": "txn:115207",
-            "gbif-backbone": "4969916"
+            "gbif-backbone": "4969916",
+            "checklistbank-1174": [
+              "txn:115207"
+            ],
+            "wikispecies": [
+              "Meles_iberica"
+            ]
           },
-          "authorityIds": "wikidata:Q6009542",
+          "authorityIds": "checklistbank:txn:115207,checklistbank-1174:txn:115207,gbif-backbone:4969916,wikidata:Q6009542,wikispecies:Meles_iberica",
           "authorship": "Arribas and Garrido 2007"
         },
         {
@@ -2261,9 +2279,15 @@
               "726279"
             ],
             "checklistbank": "5d084c4a998943d1988bb5e1c9782216",
-            "gbif-backbone": "6163947"
+            "gbif-backbone": "6163947",
+            "checklistbank-1174": [
+              "txn:471806"
+            ],
+            "wikispecies": [
+              "Meles_leucurus"
+            ]
           },
-          "authorityIds": "col:3ZDRV,itis:726279,wikidata:Q728454",
+          "authorityIds": "checklistbank:5d084c4a998943d1988bb5e1c9782216,checklistbank-1174:txn:471806,col:3ZDRV,gbif-backbone:6163947,itis:726279,wikidata:Q728454,wikispecies:Meles_leucurus",
           "authorship": "(Hodgson，1847)"
         },
         {
@@ -2297,7 +2321,8 @@
             "wikispecies": [
               "Meles_meles"
             ],
-            "gbif-backbone": "6163943"
+            "gbif-backbone": "6163943",
+            "checklistbank-1174": "txn:104171"
           },
           "authorityIds": "checklistbank:11280,checklistbank:urn:lsid:marinespecies.org:taxname:1465482,col:3ZDRX,gbif-backbone:6163943,itis:621922,wikidata:Q27066,wikispecies:Meles_meles",
           "authorship": "(Linnaeus, 1758)"
@@ -2516,48 +2541,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MELES_ANAKUMA",
-          "name": "Meles anakuma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meles",
-          "sourceIds": {
-            "wikispecies": "Meles_anakuma",
-            "checklistbank-1174": "txn:471804"
-          },
-          "uuid": "cf458be6-9e67-4762-b913-49e24db884b4",
-          "children": []
-        },
-        {
-          "id": "SP_MELES_IBERICA",
-          "name": "Meles iberica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meles",
-          "sourceIds": {
-            "wikispecies": "Meles_iberica",
-            "checklistbank-1174": "txn:115207"
-          },
-          "uuid": "030fb119-96a6-4b4d-a4a2-da109215f07f",
-          "children": []
-        },
-        {
-          "id": "SP_MELES_LEUCURUS",
-          "name": "Meles leucurus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meles",
-          "sourceIds": {
-            "wikispecies": "Meles_leucurus",
-            "checklistbank-1174": "txn:471806"
-          },
-          "uuid": "53c87d9a-be10-4638-8f3e-8da656e89149",
-          "children": []
-        },
-        {
           "id": "SP_MELES_CANESCENS",
           "name": "Meles canescens",
           "rank": "SPECIES",
@@ -2594,7 +2577,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005859"
           },
-          "uuid": "4b51c053-c7db-4dbf-9cd9-22b778d0550e"
+          "uuid": "4b51c053-c7db-4dbf-9cd9-22b778d0550e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5659,9 +5643,15 @@
               "621947"
             ],
             "checklistbank": "316538",
-            "gbif-backbone": "5218963"
+            "gbif-backbone": "5218963",
+            "checklistbank-1174": [
+              "txn:157458"
+            ],
+            "wikispecies": [
+              "Mustela_altaica"
+            ]
           },
-          "authorityIds": "col:44QVW,itis:621947,wikidata:Q434197",
+          "authorityIds": "checklistbank:316538,checklistbank-1174:txn:157458,col:44QVW,gbif-backbone:5218963,itis:621947,wikidata:Q434197,wikispecies:Mustela_altaica",
           "authorship": "Pallas, 1811"
         },
         {
@@ -5717,7 +5707,8 @@
             ],
             "wikispecies": [
               "Mustela_erminea"
-            ]
+            ],
+            "checklistbank-1174": "txn:48848"
           },
           "authorityIds": "checklistbank:11307,checklistbank:urn:lsid:marinespecies.org:taxname:1506692,col:44QWG,itis:180555,wikidata:Q25345,wikispecies:Mustela_erminea",
           "authorship": "Linnaeus, 1758"
@@ -5832,7 +5823,8 @@
             ],
             "checklistbank-2011": [
               "urn:lsid:marinespecies.org:taxname:1526037"
-            ]
+            ],
+            "checklistbank-1174": "txn:157466"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1526037,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1526037,col:44QX8,itis:726281,wikidata:Q628006,wikispecies:Mustela_itatsi",
           "authorship": "Temminck, 1844"
@@ -5882,9 +5874,15 @@
               "6RQQN"
             ],
             "checklistbank": "410057ff3ff34dcf9ef3d5b4e31c3063",
-            "gbif-backbone": "5218969"
+            "gbif-backbone": "5218969",
+            "checklistbank-1174": [
+              "txn:471809"
+            ],
+            "wikispecies": [
+              "Mustela_kathiah"
+            ]
           },
-          "authorityIds": "col:6RQQN,itis:621950,wikidata:Q46144",
+          "authorityIds": "checklistbank:410057ff3ff34dcf9ef3d5b4e31c3063,checklistbank-1174:txn:471809,col:6RQQN,gbif-backbone:5218969,itis:621950,wikidata:Q46144,wikispecies:Mustela_kathiah",
           "authorship": "Hodgson，1835"
         },
         {
@@ -5934,7 +5932,8 @@
             ],
             "wikispecies": [
               "Mustela_lutreola"
-            ]
+            ],
+            "checklistbank-1174": "txn:157455"
           },
           "authorityIds": "checklistbank:1462,checklistbank:urn:lsid:marinespecies.org:taxname:1461490,col:44QXK,itis:621951,wikidata:Q26559,wikispecies:Mustela_lutreola",
           "authorship": "(Linnaeus, 1761)"
@@ -6033,9 +6032,15 @@
               "44QY2"
             ],
             "checklistbank": "ott541439",
-            "gbif-backbone": "5218985"
+            "gbif-backbone": "5218985",
+            "checklistbank-1174": [
+              "txn:48860"
+            ],
+            "wikispecies": [
+              "Mustela_nigripes"
+            ]
           },
-          "authorityIds": "col:44QY2,itis:180557,wikidata:Q402885",
+          "authorityIds": "checklistbank:ott541439,checklistbank-1174:txn:48860,col:44QY2,gbif-backbone:5218985,itis:180557,wikidata:Q402885,wikispecies:Mustela_nigripes",
           "authorship": "(Audubon and Bachman 1851)"
         },
         {
@@ -6069,7 +6074,8 @@
             ],
             "wikispecies": [
               "Mustela_nivalis"
-            ]
+            ],
+            "checklistbank-1174": "txn:48861"
           },
           "authorityIds": "checklistbank:1464,checklistbank:urn:lsid:marinespecies.org:taxname:1506693,col:44QY4,itis:180554,wikidata:Q25311,wikispecies:Mustela_nivalis",
           "authorship": "Linnaeus, 1766"
@@ -6118,9 +6124,15 @@
               "621953"
             ],
             "checklistbank": "ott378004",
-            "gbif-backbone": "5219015"
+            "gbif-backbone": "5219015",
+            "checklistbank-1174": [
+              "txn:234307"
+            ],
+            "wikispecies": [
+              "Mustela_nudipes"
+            ]
           },
-          "authorityIds": "col:44QY5,itis:621953,wikidata:Q909694",
+          "authorityIds": "checklistbank:ott378004,checklistbank-1174:txn:234307,col:44QY5,gbif-backbone:5219015,itis:621953,wikidata:Q909694,wikispecies:Mustela_nudipes",
           "authorship": "Desmarest, 1822"
         },
         {
@@ -6298,9 +6310,15 @@
               "621955"
             ],
             "checklistbank": "16446",
-            "gbif-backbone": "5218972"
+            "gbif-backbone": "5218972",
+            "checklistbank-1174": [
+              "txn:157457"
+            ],
+            "wikispecies": [
+              "Mustela_sibirica"
+            ]
           },
-          "authorityIds": "col:44QYK,itis:621955,wikidata:Q271459",
+          "authorityIds": "checklistbank:16446,checklistbank-1174:txn:157457,col:44QYK,gbif-backbone:5218972,itis:621955,wikidata:Q271459,wikispecies:Mustela_sibirica",
           "authorship": "Pallas, 1773"
         },
         {
@@ -6344,9 +6362,15 @@
               "44QYP"
             ],
             "checklistbank": "fd4c997e5a5b4e22955e0c4db4561e8f",
-            "gbif-backbone": "5219018"
+            "gbif-backbone": "5219018",
+            "checklistbank-1174": [
+              "txn:231978"
+            ],
+            "wikispecies": [
+              "Mustela_strigidorsa"
+            ]
           },
-          "authorityIds": "col:44QYP,itis:621956,wikidata:Q1142024",
+          "authorityIds": "checklistbank:fd4c997e5a5b4e22955e0c4db4561e8f,checklistbank-1174:txn:231978,col:44QYP,gbif-backbone:5219018,itis:621956,wikidata:Q1142024,wikispecies:Mustela_strigidorsa",
           "authorship": "Gray, 1853"
         },
         {
@@ -6432,9 +6456,15 @@
             "col": [
               "QW2BD"
             ],
-            "checklistbank": "fa8621aa3cbf4f6cbec05e621af82c81"
+            "checklistbank": "fa8621aa3cbf4f6cbec05e621af82c81",
+            "checklistbank-1174": [
+              "txn:471818"
+            ],
+            "wikispecies": [
+              "Mustela_aistoodonnivalis"
+            ]
           },
-          "authorityIds": "col:QW2BD,itis:1271750",
+          "authorityIds": "checklistbank:fa8621aa3cbf4f6cbec05e621af82c81,checklistbank-1174:txn:471818,col:QW2BD,itis:1271750,wikispecies:Mustela_aistoodonnivalis",
           "commonName": "Sichuan Weasel",
           "description": "Mustela aistoodonnivalis, the missing-toothed pygmy weasel or Sichuan weasel, is a species of weasel that inhabits mountains in the Shaanxi and Sichuan provinces of China."
         },
@@ -7216,20 +7246,6 @@
           "children": []
         },
         {
-          "id": "SP_MUSTELA_NIGRIPES",
-          "name": "Mustela nigripes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_nigripes",
-            "checklistbank-1174": "txn:48860"
-          },
-          "uuid": "c93d329f-c079-4c17-a58b-572eed32df11",
-          "children": []
-        },
-        {
           "id": "SP_MUSTELA_EVERSMANII",
           "name": "Mustela eversmanii",
           "rank": "SPECIES",
@@ -7240,76 +7256,6 @@
             "wikispecies": "Mustela_eversmanii"
           },
           "uuid": "b4d95432-08f2-4aeb-9742-883cc62d1474",
-          "children": []
-        },
-        {
-          "id": "SP_MUSTELA_SIBIRICA",
-          "name": "Mustela sibirica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_sibirica",
-            "checklistbank-1174": "txn:157457"
-          },
-          "uuid": "f1b3fecc-63e1-42f3-84e3-a532e206c367",
-          "children": []
-        },
-        {
-          "id": "SP_MUSTELA_STRIGIDORSA",
-          "name": "Mustela strigidorsa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_strigidorsa",
-            "checklistbank-1174": "txn:231978"
-          },
-          "uuid": "03f3c0b5-d451-45f6-8b73-9563a7fe5c3d",
-          "children": []
-        },
-        {
-          "id": "SP_MUSTELA_ALTAICA",
-          "name": "Mustela altaica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_altaica",
-            "checklistbank-1174": "txn:157458"
-          },
-          "uuid": "f2dc99be-5503-4193-97c3-88ed4053c1df",
-          "children": []
-        },
-        {
-          "id": "SP_MUSTELA_NUDIPES",
-          "name": "Mustela nudipes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_nudipes",
-            "checklistbank-1174": "txn:234307"
-          },
-          "uuid": "4b727874-9a40-490b-bf7f-08c0b21d2505",
-          "children": []
-        },
-        {
-          "id": "SP_MUSTELA_KATHIAH",
-          "name": "Mustela kathiah",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_kathiah",
-            "checklistbank-1174": "txn:471809"
-          },
-          "uuid": "7550a58b-625a-47b4-a91d-b6a816ea75f4",
           "children": []
         },
         {
@@ -7336,20 +7282,6 @@
             "wikispecies": "Mustela_furo"
           },
           "uuid": "06e8d5a9-16e9-4f1b-8310-f60ee61eabe6",
-          "children": []
-        },
-        {
-          "id": "SP_MUSTELA_AISTOODONNIVALIS",
-          "name": "Mustela aistoodonnivalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mustela",
-          "sourceIds": {
-            "wikispecies": "Mustela_aistoodonnivalis",
-            "checklistbank-1174": "txn:471818"
-          },
-          "uuid": "a766b15c-aecb-47d8-a137-c76591fd680d",
           "children": []
         },
         {
@@ -7502,7 +7434,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005863"
           },
-          "uuid": "4c699840-9415-4347-87d2-34c4fd562b22"
+          "uuid": "4c699840-9415-4347-87d2-34c4fd562b22",
+          "children": []
         },
         {
           "id": "SP_MUSTELA_ITATSI",
@@ -7514,7 +7447,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005868"
           },
-          "uuid": "39fec6f4-a1a0-453b-9005-e4614cdb00dc"
+          "uuid": "39fec6f4-a1a0-453b-9005-e4614cdb00dc",
+          "children": []
         },
         {
           "id": "SP_MUSTELA_LUTREOLA",
@@ -7526,7 +7460,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005870"
           },
-          "uuid": "0611816d-7668-4319-9d5a-b7528025388f"
+          "uuid": "0611816d-7668-4319-9d5a-b7528025388f",
+          "children": []
         },
         {
           "id": "SP_MUSTELA_NIVALIS",
@@ -7538,7 +7473,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005874"
           },
-          "uuid": "ccf6aa2c-e649-4df4-91e5-a59e907e23cd"
+          "uuid": "ccf6aa2c-e649-4df4-91e5-a59e907e23cd",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7576,9 +7512,15 @@
               "180559"
             ],
             "checklistbank": "ott923116",
-            "gbif-backbone": "5218877"
+            "gbif-backbone": "5218877",
+            "checklistbank-1174": [
+              "txn:233976"
+            ],
+            "wikispecies": [
+              "Martes_americana"
+            ]
           },
-          "authorityIds": "col:3Y9VR,itis:180559,wikidata:Q322145",
+          "authorityIds": "checklistbank:ott923116,checklistbank-1174:txn:233976,col:3Y9VR,gbif-backbone:5218877,itis:180559,wikidata:Q322145,wikispecies:Martes_americana",
           "authorship": "(Turton, 1806)"
         },
         {
@@ -7604,9 +7546,15 @@
               "3Y9VS"
             ],
             "checklistbank": "txn:105035",
-            "gbif-backbone": "5847373"
+            "gbif-backbone": "5847373",
+            "checklistbank-1174": [
+              "txn:105035"
+            ],
+            "wikispecies": [
+              "Martes_caurina"
+            ]
           },
-          "authorityIds": "col:3Y9VS,itis:1086128,wikidata:Q25427460",
+          "authorityIds": "checklistbank:txn:105035,checklistbank-1174:txn:105035,col:3Y9VS,gbif-backbone:5847373,itis:1086128,wikidata:Q25427460,wikispecies:Martes_caurina",
           "authorship": "Merriam 1890"
         },
         {
@@ -7632,9 +7580,15 @@
               "3Y9VV"
             ],
             "checklistbank": "316536",
-            "gbif-backbone": "5218846"
+            "gbif-backbone": "5218846",
+            "checklistbank-1174": [
+              "txn:157453"
+            ],
+            "wikispecies": [
+              "Martes_flavigula"
+            ]
           },
-          "authorityIds": "col:3Y9VV,itis:621940,wikidata:Q220248",
+          "authorityIds": "checklistbank:316536,checklistbank-1174:txn:157453,col:3Y9VV,gbif-backbone:5218846,itis:621940,wikidata:Q220248,wikispecies:Martes_flavigula",
           "authorship": "(Boddaert, 1785)"
         },
         {
@@ -7662,9 +7616,15 @@
               "621941"
             ],
             "checklistbank": "11279",
-            "gbif-backbone": "5218895"
+            "gbif-backbone": "5218895",
+            "checklistbank-1174": [
+              "txn:157447"
+            ],
+            "wikispecies": [
+              "Martes_foina"
+            ]
           },
-          "authorityIds": "col:3Y9VW,itis:621941,wikidata:Q27366",
+          "authorityIds": "checklistbank:11279,checklistbank-1174:txn:157447,col:3Y9VW,gbif-backbone:5218895,itis:621941,wikidata:Q27366,wikispecies:Martes_foina",
           "authorship": "(Erxleben, 1777)"
         },
         {
@@ -7798,7 +7758,8 @@
             "wikispecies": [
               "Martes_martes"
             ],
-            "gbif-backbone": "5218880"
+            "gbif-backbone": "5218880",
+            "checklistbank-1174": "txn:104167"
           },
           "authorityIds": "checklistbank:1443,checklistbank:urn:lsid:marinespecies.org:taxname:1597432,col:3Y9W2,gbif-backbone:5218880,itis:621943,wikidata:Q26046,wikispecies:Martes_martes",
           "authorship": "(Linnaeus, 1758)"
@@ -7826,9 +7787,15 @@
               "3Y9W3"
             ],
             "checklistbank": "ott681181",
-            "gbif-backbone": "5218862"
+            "gbif-backbone": "5218862",
+            "checklistbank-1174": [
+              "txn:157451"
+            ],
+            "wikispecies": [
+              "Martes_melampus"
+            ]
           },
-          "authorityIds": "col:3Y9W3,itis:621944,wikidata:Q1052830",
+          "authorityIds": "checklistbank:ott681181,checklistbank-1174:txn:157451,col:3Y9W3,gbif-backbone:5218862,itis:621944,wikidata:Q1052830,wikispecies:Martes_melampus",
           "authorship": "(Wagner 1841)"
         },
         {
@@ -7923,7 +7890,8 @@
             "wikispecies": [
               "Martes_zibellina"
             ],
-            "gbif-backbone": "5218843"
+            "gbif-backbone": "5218843",
+            "checklistbank-1174": "txn:104170"
           },
           "authorityIds": "checklistbank:16447,checklistbank:urn:lsid:marinespecies.org:taxname:1506696,col:3Y9W9,gbif-backbone:5218843,itis:621945,wikidata:Q26423,wikispecies:Martes_zibellina",
           "authorship": "(Linnaeus, 1758)"
@@ -8116,62 +8084,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MARTES_FOINA",
-          "name": "Martes foina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Martes",
-          "sourceIds": {
-            "wikispecies": "Martes_foina",
-            "checklistbank-1174": "txn:157447"
-          },
-          "uuid": "56f55389-0881-43d2-aa39-808f89b3c27a",
-          "children": []
-        },
-        {
-          "id": "SP_MARTES_MELAMPUS",
-          "name": "Martes melampus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Martes",
-          "sourceIds": {
-            "wikispecies": "Martes_melampus",
-            "checklistbank-1174": "txn:157451"
-          },
-          "uuid": "2e3d02df-c026-4897-8459-a8cdc48abcaa",
-          "children": []
-        },
-        {
-          "id": "SP_MARTES_AMERICANA",
-          "name": "Martes americana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Martes",
-          "sourceIds": {
-            "wikispecies": "Martes_americana",
-            "checklistbank-1174": "txn:233976"
-          },
-          "uuid": "4af2f319-1c18-4497-b600-fda2b6d2e5f4",
-          "children": []
-        },
-        {
-          "id": "SP_MARTES_FLAVIGULA",
-          "name": "Martes flavigula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Martes",
-          "sourceIds": {
-            "wikispecies": "Martes_flavigula",
-            "checklistbank-1174": "txn:157453"
-          },
-          "uuid": "ecdead85-4ae6-43be-89fb-a1e86294de1d",
-          "children": []
-        },
-        {
           "id": "SP_MARTES_GWATKINSII",
           "name": "Martes gwatkinsii",
           "rank": "SPECIES",
@@ -8182,20 +8094,6 @@
             "wikispecies": "Martes_gwatkinsii"
           },
           "uuid": "a7fad244-5917-4ef3-9726-f7423323ae47",
-          "children": []
-        },
-        {
-          "id": "SP_MARTES_CAURINA",
-          "name": "Martes caurina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Martes",
-          "sourceIds": {
-            "wikispecies": "Martes_caurina",
-            "checklistbank-1174": "txn:105035"
-          },
-          "uuid": "41449566-1791-44db-ba3d-dace45c91521",
           "children": []
         },
         {
@@ -8292,7 +8190,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005822"
           },
-          "uuid": "f1da7e66-330a-4c0b-96d9-6dd9d2af7cfa"
+          "uuid": "f1da7e66-330a-4c0b-96d9-6dd9d2af7cfa",
+          "children": []
         },
         {
           "id": "SP_MARTES_ZIBELLINA",
@@ -8304,7 +8203,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005824"
           },
-          "uuid": "f7e28236-adb9-4cc0-adcf-9a1357818d03"
+          "uuid": "f7e28236-adb9-4cc0-adcf-9a1357818d03",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8505,7 +8405,8 @@
             ],
             "wikispecies": [
               "Gulo_gulo"
-            ]
+            ],
+            "checklistbank-1174": "txn:48854"
           },
           "authorityIds": "checklistbank:1418,checklistbank:urn:lsid:marinespecies.org:taxname:1460001,col:3HLZN,itis:180551,wikidata:Q14334,wikispecies:Gulo_gulo",
           "authorship": "(Linnaeus, 1758)"
@@ -8688,7 +8589,8 @@
           "sourceIds": {
             "checklistbank-9802": "1005816"
           },
-          "uuid": "c1e79b7e-9cb8-4073-b852-f59e585268f7"
+          "uuid": "c1e79b7e-9cb8-4073-b852-f59e585268f7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -12669,7 +12571,7 @@
     }
   ],
   "genusCount": 156,
-  "speciesCount": 646,
+  "speciesCount": 631,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -12679,6 +12581,7 @@
       "familyKey": 5307
     },
     "checklistbank": "Mustelidae",
-    "wikispecies": "Mustelidae"
+    "wikispecies": "Mustelidae",
+    "checklistbank-1174": "txn:41086"
   }
 }

@@ -2860,6 +2860,18 @@
           "children": [],
           "uuid": "83716825-0ec7-5b4-8a8-42c6f3f45584af",
           "description": "Centranthus battandieri is a caprifoliaceae species found in its native region."
+        },
+        {
+          "id": "SP_CENTRANTHUS_CALCITRAPAE",
+          "name": "Centranthus calcitrapae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Centranthus",
+          "sourceIds": {
+            "gbif-backbone": "7298988"
+          },
+          "children": []
         }
       ]
     },
@@ -10277,7 +10289,8 @@
               "wfo-0001143872"
             ],
             "checklistbank": "778017",
-            "checklistbank-139831": "778017"
+            "checklistbank-139831": "778017",
+            "gbif-backbone": "4094733"
           },
           "authorityIds": "col:7FCN4,wfo:wfo-0001143872",
           "description": "The native range of this species is SE. Brazil. It grows primarily in the subtropical biome.",
@@ -16806,6 +16819,42 @@
           },
           "uuid": "dda3d379-42cd-4ede-a87f-2a319e7715bb",
           "children": []
+        },
+        {
+          "id": "SP_VALERIANA_AJANENSIS",
+          "name": "Valeriana ajanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valeriana",
+          "sourceIds": {
+            "gbif-backbone": "7298914"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VALERIANA_CAPITATA",
+          "name": "Valeriana capitata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valeriana",
+          "sourceIds": {
+            "gbif-backbone": "7298957"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VALERIANA_CRINII",
+          "name": "Valeriana crinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valeriana",
+          "sourceIds": {
+            "gbif-backbone": "7298861"
+          },
+          "children": []
         }
       ]
     },
@@ -18440,7 +18489,8 @@
           "authorship": "Loisel., 1810",
           "sourceIds": {
             "checklistbank": "128479",
-            "checklistbank-139831": "778143"
+            "checklistbank-139831": "778143",
+            "gbif-backbone": "7298981"
           },
           "children": [],
           "uuid": "7db6d5d9-2146-58e-b5e-f743fdadb2d002",
@@ -39019,9 +39069,15 @@
             "checklistbank": "106550",
             "checklistbank-2008": "106550",
             "gbif-backbone": "7272593",
-            "checklistbank-139831": "448130"
+            "checklistbank-139831": "448130",
+            "checklistbank-1174": [
+              "txn:490704"
+            ],
+            "checklistbank-2232": [
+              "2340021"
+            ]
           },
-          "authorityIds": "col:3VZ3G,itis:823508,wfo:wfo-0000359767",
+          "authorityIds": "checklistbank:106550,checklistbank-1174:txn:490704,checklistbank-139831:448130,checklistbank-2008:106550,checklistbank-2232:2340021,col:3VZ3G,gbif-backbone:7272593,itis:823508,wfo:wfo-0000359767",
           "commonName": "Alpine Honeysuckle",
           "continents": [
             "Europe",
@@ -40905,11 +40961,17 @@
             "wfo": [
               "wfo-0001290705"
             ],
-            "checklistbank": "106585",
+            "checklistbank": [
+              "106585",
+              "urn:lsid:marinespecies.org:taxname:1491748"
+            ],
             "checklistbank-2008": "106585",
-            "checklistbank-139831": "119809"
+            "checklistbank-139831": "119809",
+            "checklistbank-1174": [
+              "txn:490698"
+            ]
           },
-          "authorityIds": "col:3VZFS,itis:35303,wfo:wfo-0001290705",
+          "authorityIds": "checklistbank:106585,checklistbank:urn:lsid:marinespecies.org:taxname:1491748,checklistbank-1174:txn:490698,checklistbank-139831:119809,checklistbank-2008:106585,col:3VZFS,itis:35303,wfo:wfo-0001290705",
           "description": "Lonicera sempervirens (commonly known as coral honeysuckle, trumpet honeysuckle, or scarlet honeysuckle) is a flowering plant species of honeysuckle vine native to the eastern United States which is known for its reddish flowers.",
           "commonName": "Coral Honeysuckle",
           "continents": [
@@ -41547,12 +41609,19 @@
             "checklistbank": "165404",
             "checklistbank-2008": "106555",
             "gbif-backbone": "7272471",
-            "checklistbank-139831": "164761"
+            "checklistbank-139831": "164761",
+            "checklistbank-1174": [
+              "txn:490705"
+            ],
+            "checklistbank-2232": [
+              "2339970"
+            ]
           },
           "children": [],
           "uuid": "ae19f132-28d0-53a-911-f7fec9eb0f6f14",
           "commonName": "Fly Honeysuckle",
-          "description": "Lonicera caerulea, commonly known as honeyberry or by various honeysuckle names,."
+          "description": "Lonicera caerulea, commonly known as honeyberry or by various honeysuckle names,.",
+          "authorityIds": "checklistbank:165404,checklistbank-1174:txn:490705,checklistbank-139831:164761,checklistbank-2008:106555,checklistbank-2232:2339970,gbif-backbone:7272471"
         },
         {
           "id": "SP_LONICERA_TRICALYSIOIDES_C_Y_WU_EX_P_S_HSU_H_J_WANG",
@@ -44296,22 +44365,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LONICERA_SEMPERVIRENS_LINNAEUS",
-          "name": "\"Lonicera sempervirens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lonicera",
-          "authorship": "Linnaeus",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1491748",
-            "checklistbank-1174": "txn:490698"
-          },
-          "children": [],
-          "uuid": "53b6d329-7ea6-506-a8e-76d043e1f6f794",
-          "description": "\"Lonicera sempervirens\" is a caprifoliaceae species found in its native region."
-        },
-        {
           "id": "SP_LONICERA_KABYLICA_BATT_REHDER",
           "name": "Lonicera kabylica",
           "rank": "SPECIES",
@@ -44408,36 +44461,6 @@
             "checklistbank-1141": "b13ef61d-0e5f-5594-a6d5-b0aeee38c919"
           },
           "uuid": "43138c07-5947-4a5e-ba0d-6e3b3e4e6739",
-          "children": []
-        },
-        {
-          "id": "SP_LONICERA_CAERULEA_LEDEB_BROWICZ",
-          "name": "Lonicera caerulea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lonicera",
-          "authorship": "(Ledeb.) Browicz",
-          "sourceIds": {
-            "checklistbank-2232": "2339970",
-            "checklistbank-1174": "txn:490705"
-          },
-          "uuid": "d19b5da3-c857-4a77-b0b2-2bf11995708e",
-          "children": []
-        },
-        {
-          "id": "SP_LONICERA_ALPIGENA_VIS_KIT_TAN_ZIEL",
-          "name": "Lonicera alpigena",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lonicera",
-          "authorship": "(Vis.) Kit Tan & Ziel.",
-          "sourceIds": {
-            "checklistbank-2232": "2340021",
-            "checklistbank-1174": "txn:490704"
-          },
-          "uuid": "47ec6a5f-e132-4722-aeee-282126011295",
           "children": []
         },
         {
@@ -47085,6 +47108,18 @@
           "children": [],
           "uuid": "3637277b-9c9b-514-b51-7b0596de586153",
           "description": "Fedia triquetra is a caprifoliaceae species found in its native region."
+        },
+        {
+          "id": "SP_FEDIA_GRACILIFLORA",
+          "name": "Fedia graciliflora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fedia",
+          "sourceIds": {
+            "gbif-backbone": "7298884"
+          },
+          "children": []
         }
       ]
     },
@@ -51677,7 +51712,7 @@
     }
   ],
   "genusCount": 86,
-  "speciesCount": 2877,
+  "speciesCount": 2879,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -51687,6 +51722,7 @@
       "familyKey": 6710
     },
     "checklistbank": "Caprifoliaceae",
-    "wikispecies": "Caprifoliaceae"
+    "wikispecies": "Caprifoliaceae",
+    "checklistbank-1174": "txn:54738"
   }
 }

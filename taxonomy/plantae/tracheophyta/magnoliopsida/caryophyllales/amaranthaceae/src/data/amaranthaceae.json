@@ -23963,13 +23963,20 @@
           "lineage": "Chenopodium",
           "authorship": "(Boenn.) Sterner",
           "sourceIds": {
-            "checklistbank": "Chenopodium_album_subsp_microphyllum_Boenn_Sterner",
-            "checklistbank-2008": "90681"
+            "checklistbank": [
+              "Chenopodium_album_subsp_microphyllum_Boenn_Sterner",
+              "urn:lsid:marinespecies.org:taxname:1491770"
+            ],
+            "checklistbank-2008": "90681",
+            "checklistbank-1174": [
+              "txn:467055"
+            ]
           },
           "children": [],
           "uuid": "21891b10-a802-592-9ca-76f39e5dfd940d",
           "commonName": "Fat Hen",
-          "description": "Chenopodium album is a fast-growing annual plant in the flowering plant family Amaranthaceae."
+          "description": "Chenopodium album is a fast-growing annual plant in the flowering plant family Amaranthaceae.",
+          "authorityIds": "checklistbank:Chenopodium_album_subsp_microphyllum_Boenn_Sterner,checklistbank:urn:lsid:marinespecies.org:taxname:1491770,checklistbank-1174:txn:467055,checklistbank-2008:90681"
         },
         {
           "id": "SP_CHENOPODIUM_AMARANTICOLOR_H_J_COSTE_A_REYN_H_J_COSTE_A_REYN",
@@ -28353,22 +28360,6 @@
       "name": "\"Chenopodium",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CHENOPODIUM_ALBUM_L",
-          "name": "\"Chenopodium album\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chenopodium",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1491770",
-            "checklistbank-1174": "txn:467055"
-          },
-          "children": [],
-          "uuid": "a45e3369-1f5c-50f-b90-1c02a78a1cf67a",
-          "description": "\"Chenopodium album\" is a amaranthaceae species found in its native region."
-        },
         {
           "id": "SP_CHENOPODIUM_BERLANDIERI_MOQUIN_TANDON_1840",
           "name": "Chenopodium berlandieri",
@@ -118872,7 +118863,7 @@
     }
   ],
   "genusCount": 298,
-  "speciesCount": 6721,
+  "speciesCount": 6720,
   "speciesList": [],
   "sourceIds": {
     "gbif": {
@@ -118882,6 +118873,7 @@
       "orderKey": 422,
       "familyKey": 3064
     },
-    "checklistbank": "Amaranthaceae"
+    "checklistbank": "Amaranthaceae",
+    "checklistbank-1174": "txn:55412"
   }
 }

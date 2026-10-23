@@ -253,9 +253,15 @@
             "col": [
               "6XFS8"
             ],
-            "checklistbank": "Salvadora_persica_L"
+            "checklistbank": [
+              "Salvadora_persica_L",
+              "urn:lsid:marinespecies.org:taxname:1546829"
+            ],
+            "checklistbank-1174": [
+              "txn:489174"
+            ]
           },
-          "authorityIds": "col:6XFS8,wfo:wfo-0000492914",
+          "authorityIds": "checklistbank:Salvadora_persica_L,checklistbank:urn:lsid:marinespecies.org:taxname:1546829,checklistbank-1174:txn:489174,col:6XFS8,wfo:wfo-0000492914",
           "description": "Salvadora persica or the arak, Its roots and twigs called miswak are traditionally used for chewing as a toothbrush.",
           "commonName": "toothbrushtree"
         },
@@ -333,22 +339,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SALVADORA_PERSICA_L",
-          "name": "\"Salvadora persica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Salvadora",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1546829",
-            "checklistbank-1174": "txn:489174"
-          },
-          "children": [],
-          "uuid": "10a33849-2510-5da-805-b7aa53379e3ed5",
-          "description": "\"Salvadora persica\" is a salvadoraceae species found in its native region."
-        },
-        {
           "id": "SP_SALVADORA_OLEOIDES_DECNE",
           "name": "Salvadora oleoides",
           "rank": "SPECIES",
@@ -408,7 +398,7 @@
     }
   ],
   "genusCount": 4,
-  "speciesCount": 20,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -417,6 +407,7 @@
       "orderKey": 7225535,
       "familyKey": 3232304
     },
-    "checklistbank": "Salvadoraceae"
+    "checklistbank": "Salvadoraceae",
+    "checklistbank-1174": "txn:55653"
   }
 }
