@@ -78,6 +78,19 @@ def ready_rows(rows: list[dict]) -> list[dict]:
             continue
         slug = held[fam]
         hits = files.get(slug.lower(), [])
+        if len(hits) > 1:
+            # Same family name validly placed at two different taxonomic
+            # placements (Microsporidia under both Fungi and Protozoa,
+            # testate amoebae under both Protozoa and Chromista, etc.)
+            # rather than a genuinely missing file -- narrow to this row's
+            # own kingdom before giving up on it. Same fix as
+            # pendingFamilies.py's report and importColChecklist.py's
+            # importer; this was the third, still-silent copy.
+            kingdom = (r.get("kingdom") or "").lower()
+            kingdom_hits = [h for h in hits
+                            if h.split("taxonomy/")[-1].split("/")[0] == kingdom]
+            if len(kingdom_hits) == 1:
+                hits = kingdom_hits
         if len(hits) != 1:
             continue  # registered but no data file yet -- scaffold first
         if recently_reimported(r):
