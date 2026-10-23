@@ -352,6 +352,18 @@ def cmd_report(args):
     for r in ready:
         slug = slugs.get((r.get("family") or "").lower(), "")
         hits = files.get(slug.lower(), []) if slug else []
+        if len(hits) > 1:
+            # Same family name validly placed at two different taxonomic
+            # placements -- Microsporidia under both Fungi and Protozoa,
+            # testate amoebae under both Protozoa and Chromista, some fossil
+            # hemipteroids under both Hemiptera and Coleorrhyncha -- rather
+            # than a genuinely missing file. Narrow to the one under this
+            # row's own kingdom before concluding it's ambiguous.
+            kingdom = (r.get("kingdom") or "").lower()
+            kingdom_hits = [h for h in hits
+                            if h.split("taxonomy/")[-1].split("/")[0] == kingdom]
+            if len(kingdom_hits) == 1:
+                hits = kingdom_hits
         (importable if len(hits) == 1 else needs_file).append(r)
 
     if needs_file:

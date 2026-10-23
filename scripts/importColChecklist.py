@@ -435,6 +435,16 @@ def main() -> int:
             print(f"  indexed {sum(len(v) for v in files.values()):,} family "
                   f"data files across {len(files):,} slugs")
         hits = files.get(slug, [])
+        if len(hits) > 1:
+            # Same family name validly placed at two different taxonomic
+            # placements (Microsporidia under both Fungi and Protozoa,
+            # testate amoebae under both Protozoa and Chromista, etc.) rather
+            # than a genuinely duplicated file. `kind` is this row's own
+            # kingdom -- narrow to the file under it before giving up.
+            kingdom_hits = [h for h in hits
+                            if h.split("taxonomy/")[1].split("/")[0] == kind]
+            if len(kingdom_hits) == 1:
+                hits = kingdom_hits
         if len(hits) != 1:
             print(f"  ! {slug}: {len(hits)} files found, skipping")
             continue
