@@ -14,15 +14,21 @@ const portalRoot = resolve(__dirname, "..");
 const UUID_NAMESPACE = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
 
 function generateUUID(name: string): string {
-  // UUID v5 = SHA-1(namespace + name) with variant/version bits set
+  // UUID v5 = SHA-1(namespace + name) with variant/version bits set.
+  // Groups are 8-4-4-4-12 hex chars (32 total): group 3 keeps 3 hash chars
+  // after the forced version nibble, group 4 keeps 3 after the forced
+  // variant nibble, so they draw from hex[13:16] and hex[17:20] -- not
+  // hex[13:15]/hex[16:18], which under-counted both groups by one char
+  // and shifted every group after, producing a malformed (non-RFC4122)
+  // string that still looked plausible at a glance.
   const hash = createHash("sha1").update(UUID_NAMESPACE + name).digest("hex");
   const hex = hash.slice(0, 32);
   return [
     hex.slice(0, 8),
     hex.slice(8, 12),
-    "5" + hex.slice(13, 15),  // version 5
-    (parseInt(hex.slice(15, 16), 16) & 0x3 | 0x8).toString(16) + hex.slice(16, 18), // variant
-    hex.slice(18, 32),
+    "5" + hex.slice(13, 16),  // version 5
+    ((parseInt(hex[16], 16) & 0x3) | 0x8).toString(16) + hex.slice(17, 20), // variant
+    hex.slice(20, 32),
   ].join("-");
 }
 

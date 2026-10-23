@@ -603,6 +603,56 @@ orchestrator, not those two separately.
 | 9883 | importLogServer.py dashboard | macie |
 | 9876 | progressd (gap-task tracking) | macie |
 
+### Dashboard: `scripts/importLogServer.py` (port 9883)
+
+A read-only HTTP dashboard — the human-friendly sibling of
+`importLogView.py`'s terminal table, for watching a run of several
+imports in a row without squinting at a monospace table. It reuses
+`importLogView.py`'s row-loading and `problems()`/`notes()` logic
+directly rather than re-deriving it, and reads `sourceQueue.py`'s store
+live rather than embedding a hand-written queue list in the page (the
+first version, 2026-10-19, hardcoded both the completed-today list and
+the open-items list, and was already wrong by the time the next
+candidate batch finished triaging).
+
+```bash
+python3 scripts/importLogServer.py                 # serve on :9883
+python3 scripts/importLogServer.py --port 9883
+open http://localhost:9883/
+
+# Production, survives a lid-close (macOS):
+nohup caffeinate -dimsu python3 scripts/importLogServer.py --port 9883 \
+    > /tmp/importLogServer.log 2>&1 &
+```
+
+The page polls four endpoints every 3 seconds and re-renders in place —
+nothing server-side is pushed, so a stale tab just needs a reload after
+a long gap:
+
+| Endpoint | Source | Renders |
+|---|---|---|
+| `/api/log` | `data/import-log.jsonl` via `importLogView.load_rows()` | Summary cards (runs, species added, offered, refused, flagged) + the per-run table, newest first. Each row's `issues` (refusal rate over 20% ceiling, or staged-but-added-zero) and `notes` (missed-families count) come from `importLogView.problems()`/`notes()` — the same two gate criteria `verifyTree.py`'s `check_import()` uses, not reinvented here. |
+| `/api/queue` | `sourceQueue.read_store()` (`data/source-queue/<key>.json`) | "Up next" list (stages `candidate`…`needs-rerun`, active ones — `triaging`/`applying` — sorted first) and the collapsible "open items" list (`declined`/`blocked`). |
+| `/api/driver` | `pgrep -f importQueueDriver.py` + queue's `downloaded` count | The driver badge (running/stopped) and the auto-refill detail line. Note: checks for `importQueueDriver.py` specifically — when the orchestrator (`pipelineOrchestrator.py`) is driving the pipeline instead (the production path since 2026-10-22), this badge reads **stopped** even though refilling is happening; it hasn't been updated to also check for the orchestrator. |
+| `/api/pending` | `pendingFamilies.read_store()` + `held_families()` | The "missing families" panel (hidden when empty): total pending, species they'd add, how many are now scaffoldable vs. still genuinely absent, broken down by source. |
+
+Rows whose `slugHint` looks like a ChecklistBank dataset key
+(`checklistbank-<id>` or a bare numeric id) get a `publisher` field
+resolved via `cb_publisher()` — one GET to
+`api.checklistbank.org/dataset/<id>` for `contact.organisation` (falling
+back to `creator[0].organisation`), cached in-process for 10 minutes so
+the 3-second tick doesn't hammer the API. The same lookup decorates both
+the run table (replacing a bare slug with a readable name) and the
+queue panel's up-next/open rows.
+
+The queue panel's footer is a static reminder of what's deliberately
+*not* in this dashboard: the `pendingFamilies.py` worklist's
+no-archive-recorded backlog, and the tree-wide audits logged in
+`BACKLOG.md` (WoRMS name-quoting, historical `sourceIds` collisions) —
+both cross-cutting rather than per-source, so they don't fit this
+page's source-keyed model. See `docs/dataset-inbox.md` for that
+narrative.
+
 ---
 
 ## 12. Pending-family watcher (close the loop after family creation)

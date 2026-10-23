@@ -31,6 +31,14 @@ Every dedupe decision is appended to `data/dedupe-log.jsonl` as one JSON line pe
 
 Machines (Macie / q-bert) can read `dedupe-log.jsonl` to avoid undoing each other's decisions across the cross-machine sync. A second run is idempotent: species already removed won't be removed again.
 
+## Locking
+
+`--apply` holds `scripts/maintenanceLock.py`'s exclusive lock for the whole
+run (see root `CLAUDE.md`'s "No concurrent writers" section) — the
+orchestrator's non-blocking per-cycle attempt skips its own writes rather
+than racing a maintenance pass that's mid-rewrite of the same family files.
+A dry run takes no lock, since it writes nothing.
+
 ## Usage
 
 ```bash

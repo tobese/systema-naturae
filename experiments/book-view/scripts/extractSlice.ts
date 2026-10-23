@@ -202,7 +202,11 @@ function buildKingdomParts(kingdom: Kingdom): PartDef[] {
   }
 
   return classOrder.map((classSlug, classIndex) => {
-    const className = classSlug[0].toUpperCase() + classSlug.slice(1);
+    // Some orders carry no CLASS ancestor in taxonomy.json (classSlug ""),
+    // e.g. 47 bony-fish orders as of 2026-10-23 — a real classification gap,
+    // not a book-view bug. Fall back to one grouped "Unclassified" Part
+    // rather than crashing on `""[0].toUpperCase()`; see BACKLOG.md.
+    const className = classSlug ? classSlug[0].toUpperCase() + classSlug.slice(1) : "Unclassified";
     const chapters = orderIdsByClass.get(classSlug)!.map((orderFile, chapterIndex) => {
       const orderSlug = manifest.orders[orderFile].orderSlug;
       const orderName = orderSlug[0].toUpperCase() + orderSlug.slice(1);

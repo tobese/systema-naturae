@@ -2,6 +2,59 @@
 
 How the build works, what is incremental, and what was decided about it.
 
+## Command pipeline
+
+`npm run build`/`dev` and their per-kingdom siblings are three shell steps
+chained with `&&`, not one program — each can be run standalone for
+debugging a single stage:
+
+```
+sh scripts/buildData.sh          → npx tsx buildData.ts (or bun, if present)
+sh scripts/ensureBookData.sh     → book sidecars (skipped if already built)
+vite build / vite                → production bundle or dev server
+```
+
+1. **`scripts/buildData.sh`** — a cross-runtime launcher, nothing else. Picks
+   `bun` over `npx tsx` when `bun` is on `PATH` (cloud agents carry it; local
+   dev usually doesn't), and pins `TMPDIR` to `/tmp` only when the inherited
+   one doesn't exist — `tsx` opens IPC sockets under `TMPDIR`, and a stale
+   value pointing at an unmounted `/Volumes` path breaks the build outright.
+   Reads `SN_KINGDOM` (default `animalia`) and passes it straight through as
+   an env var; the script itself takes no arguments.
+
+2. **`buildData.ts`** — the actual work: walks `taxonomy.json` (or
+   `taxonomy-<kingdom>.json`), grafts each family in per-family cache, writes
+   the skeleton + per-order files + manifest (see "The three tiers" below),
+   and the monolith only under `SN_BUILD_UNIFIED=1`. This is the step that
+   dominates build time — tens of seconds to a few minutes depending on
+   kingdom size and cache hit rate, printing one `Building kingdom <k> → ...`
+   line up front and a `Done. N physical nodes ... (M total nodes
+   represented)` summary at the end (see "Known test rot" below for why two
+   tests still expect the pre-restructure wording).
+
+3. **`scripts/ensureBookData.sh`** — builds the Book viewMode's sidecars
+   (`public/data/book/book-skeleton.json` + `extensions/`) by running
+   `experiments/book-view/scripts/extractSlice.ts`. `dev`/`dev:<kingdom>`
+   call it bare (skip if the files already exist, so a dev-loop restart
+   doesn't pay this cost every time); `build`/`build:all` pass `--force`
+   (always rebuild, since a stale book sidecar in a production artifact is
+   a worse failure mode than the extra minute).
+
+4. **`vite build` / `vite`** — the frontend bundle or dev server, reading
+   whatever `buildData.ts` just wrote under `public/data/kingdoms/<k>/`.
+
+`build:all` replaces step 1 with `scripts/buildAllKingdoms.sh`, which reads
+every kingdom name out of `kingdom-config.json` and calls `buildData.sh`
+once per kingdom in a loop (same `--max-old-space-size=8192` heap each
+time) before running the single `vite build` — one bundle serving all six
+kingdoms' pre-built data, not six separate bundles.
+
+All of `dev`/`build` and their per-kingdom variants, plus `build:all`, carry
+`NODE_OPTIONS=--max-old-space-size=8192` on the Node invocations; large
+kingdoms (animalia, plantae) OOM against Node's ~2GB default old-space
+limit without it, mainly from the per-family graft cache and (opt-in) the
+monolithic `JSON.stringify` described below.
+
 Status: **decided and implemented.** The original note on this page proposed
 building the taxonomy in parts and rebuilding only what changed. That is what
 the build does now, at family granularity, with the kingdom as the output

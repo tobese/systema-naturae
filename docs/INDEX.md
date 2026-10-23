@@ -23,24 +23,36 @@ see Superseded-by), **obsolete** (no longer applicable at all), **historical**
 | `dataset-inbox.md` | Triage queue for new dataset links | active | — | 2026-10-18 |
 | `id-backfill-plan.md` | sourceIds backfill plan | active | — | 2026-10-18 |
 | `taxaserve.md` | `taxaserve.py` held-names index | active | — | 2026-10-18 |
-| `dedupeSpeciesAcrossFamilies.md` | Cross-family dedupe (script side) | unclear | partly `services/importwrite/crossfamily.go` (server side) | — |
-| `archive-formats.md` | Checklist archive shape reference | unclear | — | — |
-| `globalnames-triage.md` | GNparser triage notes | unclear | — | — |
+| `dedupeSpeciesAcrossFamilies.md` | Cross-family dedupe (script side) | active | — (complements `services/importwrite/crossfamily.go`'s live import-time matching with tree-wide maintenance-pass cleanup; `scripts/dedupeSpeciesAcrossFamilies.py` was touched again 2026-10-23, in HEAD `47232a3defe`) | 2026-10-23 |
+| `archive-formats.md` | Checklist archive shape reference | active | — | 2026-10-23 (all 4 readers it documents — `colChecklist.py`/`coldp.py`/`dwca.py`/`txtree.py` — exist with recent commits; its 2026-10-04 archive-inventory numbers are a ~3-week-stale snapshot inside an otherwise-current doc) |
+| `globalnames-triage.md` | GNparser/Taxamatch triage notes | active, mixed | ZooBank subsection superseded by `0751b77da3a` + `ba4e2be967665` (2026-10-10/11: ZooBank data *was* taken, via a DwC checklist route instead of the authorship-API sweep this doc argued against) | 2026-10-23 |
 | `bacteria-and-viruses.md` | Why those 2 kingdoms are on hold | active | — | — |
 | `navigation.md` | Portal navigation architecture | active | — | — |
 | `build-structure.md` | Skeleton/order-file/manifest build output | active | — | — |
 | `deploy-debbie.md` | Docker deploy on Debbie | active | — | — |
 | `worms-integration.md` | WoRMS candidate-family plan | active | — | — |
 | `interaction-model.md` | Node click behavior by rank | active | — | — |
-| `coverage.md`, `graph-ui.md`, `data-tiers.md`, `screen-handling.md`, `statistics-header.md`, `tooltip.md`, `wheel-of-nature.md`, `book-view.md` | Portal UI/architecture docs | active | — | — |
+| `coverage.md`, `graph-ui.md`, `data-tiers.md`, `screen-handling.md`, `statistics-header.md`, `tooltip.md`, `wheel-of-nature.md` | Portal UI/architecture docs | active | — | — |
 | `gap-tasks.md`, `gap-tasks-phyla.md` | Generated gap reports | active, but machine-written | — | regenerated on every `findGaps.ts`/`reportPhyla.ts` run |
 | `drafts/mycobank-token-request.md` | Draft outreach note | active | — | — |
-| `book-integration-plan.md`, `graph-vs-book-parity.md`, `wiki-on-debbie-plan.md`, `plantae-gaps.md`, `mollusca-expansion-plan.md`, `non-vertebrate-enrichment-plan.md`, `oddities.md`, `kingdoms-phyla-report.md`, `missing-phyla.md`, `phyla-gap-report.md`, `remaining-gaps-source-analysis.md`, `fossil-extinct-classification.md` | Jun-Jul dated plan/report snapshots | unclear | possibly the regenerated `gap-tasks*.md` | — |
-| `insecta-scout.json` | GBIF scout data, misfiled as a doc | misfiled | should live under `portal/data/` with the other `gbif-scout-*.json` files | — |
+| `book-integration-plan.md` | Book/portal integration plan | active | — | 2026-10-23 (self-declares "phases 1–4 done 2026-09-25, only book-mode right-panel design open" — verified: `BookView.tsx` absent, `BookReadingPane.tsx` present, matching the claimed Phase 4) |
+| `book-view.md` | Pre-implementation book-view concept pitch (ASCII mockup, wishlist) | superseded | `experiments/book-view/README.md` (the real, current implementation doc — 436 lines vs. this one's 58, describes the shipped shell app) | 2026-10-23 |
+| `graph-vs-book-parity.md` | Data-provenance parity audit | historical | `data-tiers.md` (2026-09-29, flagged at the top of this doc itself) | 2026-10-23 (findings resolved in-place with strikethroughs; remaining items are in `BACKLOG.md`, not here) |
+| `wiki-on-debbie-plan.md` | Offline-wiki service rollout plan | active | — | 2026-10-23 (§1 `wikiserved` done & verified — `services/wikiserved/server.ts` exists, `portal/.env.local` sets `VITE_WIKI_SUMMARY_BASE`; §2 svwiki MediaWiki and §3 search remain genuinely open, not started) |
+| `plantae-gaps.md` | Plantae empty-family gap analysis | superseded | current `gap-report-plantae.json` for the numbers (1,259→1,272 families, 237→228 empty); its "Next steps" (POWO/WFO unexplored) overtaken by the completed WCVP/Wikispecies round (`BACKLOG.md`, 2026-10-19) | 2026-10-23 (historical "why families are empty" framing still stands) |
+| `mollusca-expansion-plan.md` | Mollusca class-coverage expansion plan | historical | — | 2026-10-23 (fully executed and exceeded: Gastropoda 957 families vs. plan's 634, Bivalvia 445 vs. 339, Cephalopoda 785 vs. 184, plus fossil-only classes the plan had excluded) |
+| `non-vertebrate-enrichment-plan.md` | Non-vertebrate enrichment phases | historical | `worms-integration.md` | 2026-10-23 (concluded 2026-07-11 "accept the ceiling"; its 758 empty-family number fed directly into the WoRMS candidate list, which was then imported) |
+| `oddities.md` | Standalone natural-history field-guide writeup | historical | — | 2026-10-23 (never wired into app code; not a plan with open/closed tasks, nothing to supersede) |
+| `kingdoms-phyla-report.md` | Scouted-but-unscaffolded phyla report | obsolete | `gap-tasks-phyla.md` / `reportPhyla.ts` | 2026-10-23 (generated 2026-07-04; all 8 listed Animalia phyla and all 7 listed Plantae phyla now exist as `taxonomy/` directories) |
+| `missing-phyla.md` | Animalia phylum-coverage snapshot | obsolete | `gap-tasks-phyla.md` / `reportPhyla.ts` | 2026-10-23 (dated 2026-06-28, claimed only 7 of 35 animalia phyla existed; all are present now, plus ~20 more) |
+| `phyla-gap-report.md` | Cross-kingdom phylum gap snapshot | obsolete | `bacteria-and-viruses.md` + current `kingdom-config.json` | 2026-10-23 (dated 2026-07-04, claimed 4 kingdoms had zero data; all six are now built and the bacteria/viruses hold is a deliberate, separately-documented decision, not an open gap) |
+| `remaining-gaps-source-analysis.md` | Per-family species-count gap snapshot | historical | `gap-report.json` / `gap-tasks.md` | 2026-10-23 (dated 2026-06-28; e.g. Chrysomelidae was 1,310/35,000, now 28,445; Hylidae was 766/1,000, now 1,479 — numbers moved on, current state lives in the regenerated reports) |
+| `fossil-extinct-classification.md` | Fossil/extinct higher-rank classification pass | historical | — | 2026-10-23 (self-declared "complete," 2026-07-13; `classifyFossils.ts` still exists and is runnable, but this doc is a result record of one finished pass) |
+| `portal/data/gbif-scout-insecta.json` | GBIF scout data | active | — | 2026-10-23 (moved out of `docs/` — was misfiled there — and renamed to match the `gbif-scout-<phylum>.json` convention) |
 | `reports/` (37 files, incl. 4 relocated `SESSION-*.md` logs) | Historical run reports & session logs | historical | — | 2026-10-18 (session logs moved in here) |
 | `services/importwrite/README.md` | importwrite service docs | active | — | 2026-10-18 (registry check + merged-to-main noted) |
-| `services/wikiserved/README.md` | wikiserved service docs | unclear | — | not cross-referenced from root `CLAUDE.md` yet |
-| `experiments/book-view/README.md` | Book-view experiment | unclear | overlaps `docs/book-view.md` and the `prototype/book-view` branch — needs reconciling | — |
+| `services/wikiserved/README.md` | wikiserved service docs | active | — | 2026-10-23 (real running service on Debbie, port 9881, docker compose; wired into the build via `shared/src/lib/wikiSummary.ts`'s `VITE_WIKI_SUMMARY_BASE` switch; shares extraction logic with `scripts/enrichBreedsFromWikipedia.py`, which must stay in step) |
+| `experiments/book-view/README.md` | Book-view shell-app implementation doc | active | — | 2026-10-23 (describes the shipped build step read by `ensureBookData.sh`; `portal/public/data/book/` confirmed live on disk; `prototype/book-view` branch is 0 commits ahead of `main` — fully merged, nothing left to reconcile) |
 | `tasks/{steamie,q-bert,biggie}/README.md` | Per-host runbooks | active | — | — |
 
 ## Tooling
@@ -98,12 +110,27 @@ All current, built this session; no obsolescence. See
 
 ## Known gaps in this index (not yet resolved)
 
-- The dozen "unclear/likely stale" plan docs each need an individual
-  "still open or already done?" pass — not done here; that's its own
-  session, not a tooling-index chore.
-- `docs/insecta-scout.json` should probably move to `portal/data/`
-  alongside the other `gbif-scout-*.json` files — not moved yet since
-  nothing currently reads it by path, so there's no urgency.
-- `services/wikiserved/`, `experiments/book-view/`, and the
-  `prototype/book-view` branch are not reconciled with each other or with
-  root `CLAUDE.md`'s architecture tree.
+- Two stale local branches found while reconciling `experiments/book-view/`,
+  safe to delete but not deleted here (that's the user's call): `prototype/book-view`
+  (0 commits ahead of `main` — fully merged) and `fix/enrich-wikipedia-live-path`
+  (1 unmerged commit from 2026-08-20, but the fix it carries — the
+  `p.missing` falsy-string bug in `enrichFromWikipedia.ts` — already
+  reached `main` independently through a different merge; this branch's
+  own commit is dead weight).
+- **New, found during this pass (2026-10-23): 356 families sit directly
+  under `KINGDOM` in `taxonomy/animalia/` with no `PHYLUM`/`CLASS`/`ORDER`
+  ancestor at all** (confirmed in `taxonomy.json`'s own tree, not just the
+  filesystem — e.g. `Aceridae`). 270 are empty shells, 86 carry 579 real
+  species. `portal/scripts/lib/familyPath.ts`'s `[loc.slug]` fallback
+  resolves these by design ("every rank is optional because the tree
+  decides"), so this is not a path-resolution bug, and it does not
+  contradict root `CLAUDE.md`'s literal "no family directories at the
+  repo root" claim (they're under `taxonomy/animalia/`, not the repo
+  root) — but it does mean "every family lives at
+  `taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/`" overstates
+  completeness for these 356. Same pattern `BACKLOG.md` already tracks
+  for the 1,091 Fungi / 105 Plantae / 6 Chromista 2026-10-21 scaffolding
+  shells ("sit directly under kingdom Fungi, which is not where mycology
+  would place them") — that entry doesn't yet mention Animalia's count.
+  Worth a `BACKLOG.md` addendum, not done here since it's a data/triage
+  decision, not an index-accuracy one.
