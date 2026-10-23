@@ -683,14 +683,20 @@ def _write_taxa_cache(taxa, cache_path):
     a cache write failure should stop the import (it shouldn't).
 
     Writes to a `.tmp` sibling first and renames onto `cache_path` only on
-    success. Found 2026-10-23 on the GBIF Backbone (millions of taxa, far
-    bigger than anything this was tested against): the COPY failed
-    silently partway through (never diagnosed -- not disk space, the
-    archive and its cache share a volume with 1.5TB free; likely a duckdb
-    memory ceiling on a JSON file that size) and left a 0-byte file at
-    `cache_path` that then passed the next run's "newer than the archive"
-    freshness check and would have been trusted as an empty-but-valid
-    cache had `load_cached` not also started checking size."""
+    success. Found 2026-10-23 on the GBIF Backbone (7.7M taxa, far bigger
+    than anything this was tested against): `read_json_auto` only samples
+    its *first* rows to infer one schema for the whole file, and failed
+    outright at row 24,013 with "unknown key 'family_name'" -- a key that
+    simply hadn't shown up yet in the sample. `sample_size=-1` scans every
+    row for schema inference instead of guessing from a prefix, which is
+    the fix `duckdb`'s own error message names. Costs some time up front
+    (this is still a one-time cost per archive, amortized by every
+    cache-hit re-import after), not worth trading for a cache that can
+    silently fail on exactly the archives large enough to need it most.
+    Left a 0-byte file at `cache_path` on failure before this fix, which
+    then passed the next run's "newer than the archive" freshness check
+    and would have been trusted as an empty-but-valid cache had
+    `load_cached` not also started checking size."""
     import duckdb
     import tempfile
     fd, tmp = tempfile.mkstemp(suffix=".jsonl", dir=os.path.dirname(cache_path) or ".")
@@ -701,7 +707,7 @@ def _write_taxa_cache(taxa, cache_path):
                 f.write(json.dumps(t, ensure_ascii=False) + "\n")
         con = duckdb.connect()
         con.execute(
-            f"COPY (SELECT * FROM read_json_auto({tmp!r})) "
+            f"COPY (SELECT * FROM read_json_auto({tmp!r}, sample_size=-1)) "
             f"TO {tmp_out!r} (FORMAT PARQUET)")
         os.replace(tmp_out, cache_path)
     finally:
