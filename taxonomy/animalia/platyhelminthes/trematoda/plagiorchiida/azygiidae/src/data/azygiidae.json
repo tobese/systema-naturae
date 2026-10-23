@@ -402,6 +402,19 @@
           },
           "children": [],
           "uuid": "3b7c8318-54a5-519-904-b078a3f075e465"
+        },
+        {
+          "id": "SP_OTODISTOMUM_VELIPORUM_CREPLIN_1837",
+          "name": "Otodistomum veliporum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otodistomum",
+          "authorship": "(Creplin, 1837)",
+          "sourceIds": {
+            "checklistbank-2008": "913106"
+          },
+          "children": []
         }
       ]
     },
@@ -1526,11 +1539,18 @@
           "lineage": "Azygia",
           "authorship": "(Müller, 1776)",
           "sourceIds": {
-            "checklistbank": "241666"
+            "checklistbank": [
+              "241666",
+              "urn:lsid:marinespecies.org:taxname:726181"
+            ],
+            "checklistbank-139831": [
+              "988142"
+            ]
           },
           "children": [],
           "uuid": "f0a71097-50e3-57f-bb5-2f865d2bce60f2",
-          "description": "Azygia lucii is a azygiidae species found in its native region."
+          "description": "Azygia lucii is a azygiidae species found in its native region.",
+          "authorityIds": "checklistbank:241666,checklistbank:urn:lsid:marinespecies.org:taxname:726181,checklistbank-139831:988142"
         },
         {
           "id": "SP_AZYGIA_MIRABILIS_BRAUN_1891",
@@ -2026,11 +2046,14 @@
           "authorship": "\"(Van Beneden, 1870) Odhner, 1911\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:109254",
-            "checklistbank-139831": "1068247"
+            "checklistbank-139831": [
+              "1068247"
+            ]
           },
           "children": [],
           "uuid": "7fcdc83a-41e9-59c-b53-ee639687fbd215",
-          "description": "\"Otodistomum cestoides\" is a azygiidae species found in its native region."
+          "description": "\"Otodistomum cestoides\" is a azygiidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:109254,checklistbank-139831:1068247"
         },
         {
           "id": "SP_OTODISTOMUM_PRISTIOPHORI_JOHNSTON",
@@ -2055,22 +2078,6 @@
       "name": "\"Azygia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_AZYGIA_LUCII_M_LLER_1776_L_HE_1909",
-          "name": "\"Azygia lucii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Azygia",
-          "authorship": "\"(Müller, 1776) Lühe, 1909\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:726181",
-            "checklistbank-139831": "988142"
-          },
-          "children": [],
-          "uuid": "2689fb65-f718-5b9-a1d-8b5ed87e391c0d",
-          "description": "\"Azygia lucii\" is a azygiidae species found in its native region."
-        },
         {
           "id": "SP_AZYGIA_MIRABILIS_BRAUN_1891_ODENING_1978",
           "name": "\"Azygia mirabilis\"",

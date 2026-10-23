@@ -993,32 +993,17 @@
           "description": "Cupuladria tuberosa is a cupuladriidae species found in its native region."
         },
         {
-          "id": "SP_CUPULADRIA_BIPOROSA_CANU_AND_BASSLER_1923",
-          "name": "Cupuladria biporosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cupuladria",
-          "authorship": "Canu and Bassler 1923",
-          "sourceIds": {
-            "checklistbank": "txn:151236"
-          },
-          "children": [],
-          "uuid": "96d315a4-f4f2-553-bb7-a1686e93137294"
-        },
-        {
           "id": "SP_CUPULADRIA_CANARIENSIS_BUSK_1859",
           "name": "Cupuladria canariensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Cupuladria",
-          "authorship": "(Busk 1859)",
+          "authorship": "(Busk, 1859)",
           "sourceIds": {
-            "checklistbank": "txn:151234"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:111346"
           },
-          "children": [],
-          "uuid": "04b90a35-93b2-520-84b-519fbebf2e3f4a"
+          "children": []
         }
       ]
     },
@@ -2272,12 +2257,18 @@
           "lineage": "\"Cupuladria",
           "authorship": "\"(Canu & Bassler, 1923)\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111345",
-            "checklistbank-139831": "1665554"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:111345",
+              "txn:151236"
+            ],
+            "checklistbank-139831": [
+              "1665554"
+            ]
           },
           "children": [],
           "uuid": "49199b9f-9e3e-5e2-88a-5495aa88386a0b",
-          "description": "\"Cupuladria biporosa\" is a cupuladriidae species found in its native region."
+          "description": "\"Cupuladria biporosa\" is a cupuladriidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:151236,checklistbank:urn:lsid:marinespecies.org:taxname:111345,checklistbank-139831:1665554"
         },
         {
           "id": "SP_CUPULADRIA_CAVERNOSA_PIZZAFERRI_2006",
@@ -2494,7 +2485,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 146,
+  "speciesCount": 145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

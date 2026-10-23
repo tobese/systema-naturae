@@ -108,11 +108,15 @@
               "6WR3W"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:397179"
+              "urn:lsid:marinespecies.org:taxname:397179",
+              "urn:lsid:marinespecies.org:taxname:1482135"
             ],
-            "gbif-backbone": "11149789"
+            "gbif-backbone": "11149789",
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:397179"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:397179,col:6WR3W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1482135,checklistbank:urn:lsid:marinespecies.org:taxname:397179,checklistbank-2011:urn:lsid:marinespecies.org:taxname:397179,col:6WR3W,gbif-backbone:11149789",
           "authorship": "(L. Pfeiffer, 1840)"
         },
         {
@@ -2397,6 +2401,32 @@
             "checklistbank-139831": "227905"
           },
           "uuid": "38f55d45-5b26-4d8b-9ab9-888728683316",
+          "children": []
+        },
+        {
+          "id": "SP_PHREATODROBIA_SPICA_K_E_PEREZ_ALVEAR_2020",
+          "name": "Phreatodrobia spica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phreatodrobia",
+          "authorship": "K. E. Perez & Alvear, 2020",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1470117"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHREATODROBIA_BULLA_K_E_PEREZ_CASTA_EDA_2023",
+          "name": "Phreatodrobia bulla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phreatodrobia",
+          "authorship": "K. E. Perez & Castañeda, 2023",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1721101"
+          },
           "children": []
         }
       ]
@@ -14594,22 +14624,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PYRGOPHORUS_CORONATUS_AGUAYO_1947",
-          "name": "\"Pyrgophorus coronatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pyrgophorus",
-          "authorship": "\"(Aguayo, 1947)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1482135",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:397179"
-          },
-          "children": [],
-          "uuid": "85c717d1-cbdf-51c-a23-e4a3c36f4450d8",
-          "description": "\"Pyrgophorus coronatus is a cochliopidae species found in its native region."
-        },
-        {
           "id": "SP_PYRGOPHORUS_SPINOSUS_CALL_PILSBRY_1886",
           "name": "Pyrgophorus spinosus",
           "rank": "SPECIES",
@@ -15449,7 +15463,7 @@
     }
   ],
   "genusCount": 84,
-  "speciesCount": 815,
+  "speciesCount": 816,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

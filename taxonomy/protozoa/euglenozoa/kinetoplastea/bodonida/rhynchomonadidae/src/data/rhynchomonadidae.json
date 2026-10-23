@@ -3,7 +3,7 @@
   "name": "Rhynchomonadidae",
   "rank": "FAMILY",
   "appSlug": "rhynchomonadidae",
-  "speciesCount": 3,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_DIMASTIGELLA",
@@ -19,8 +19,7 @@
           "lineage": "Dimastigella",
           "authorship": "Sandon, 1928",
           "sourceIds": {
-            "gbif-backbone": "11201208",
-            "checklistbank-308974": "362351"
+            "gbif-backbone": "11201208"
           },
           "children": [],
           "uuid": "51dfc21d-5038-5cf-90a-56bd599891fc24"
@@ -45,8 +44,6 @@
       "id": "GENUS_RHYNCHOMONAS",
       "name": "Rhynchomonas",
       "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "rhynchomonadidae",
       "children": [
         {
           "id": "SP_RHYNCHOMONAS_NASUTA",
@@ -56,14 +53,16 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Rhynchomonas",
           "sourceIds": {
-            "checklistbank-308974": "365728"
+            "wikispecies": "Rhynchomonas_nasuta"
           },
-          "uuid": "0a6bcb92-6895-4673-b599-a0ab426864e0"
+          "children": []
         }
-      ]
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhynchomonadidae"
     }
   ],
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "wikispecies": "Rhynchomonadidae"
   }
