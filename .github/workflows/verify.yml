@@ -21,6 +21,17 @@ name: Verify tree invariants
 # timeout-minutes too, as a margin against sanity_scan continuing to grow with
 # the tree -- not the primary fix.
 #
+# 2026-10-23: hit the 30-minute ceiling again (run 39992329330, cancelled at
+# exactly 30m0s) -- not from checkout this time (already shallow), from the
+# actual work: buildSpeciesParquet.py + verifyTree.py + sanity_scan all
+# walking a tree that grew by 41,452+306,000+ species in one session (the
+# pending-family watcher loop, run repeatedly once a lookup bug stopped it
+# silently skipping ~24 dual-kingdom families every cycle). Same margin logic
+# as 2026-10-19, same fix: raise the ceiling again rather than make the
+# checks themselves artificially stop early. Revisit if this keeps
+# recurring -- the real fix at that point is splitting the always-growing
+# sanity_scan off the push-blocking gate, not another timeout bump.
+#
 # 2026-10-18: this workflow DOES run on push (confirmed via `gh run list` --
 # the "billing-locked" note that used to live here was stale). What was
 # actually failing every run since the parquet-freshness gate landed
@@ -48,7 +59,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
