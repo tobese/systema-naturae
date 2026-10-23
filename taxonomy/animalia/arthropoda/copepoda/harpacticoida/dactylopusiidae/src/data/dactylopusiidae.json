@@ -425,7 +425,10 @@
           "sourcedFrom": "checklistbank-2008",
           "lineage": "Dactylopusia",
           "authorship": "Sars G.O., 1905",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:116904"
+          }
         }
       ],
       "sourcedFrom": "worms",
@@ -990,6 +993,19 @@
           "lineage": "Diarthrodes",
           "children": [],
           "uuid": "ff73279e-cc21-5de-aaa-1a7bb47113a8df"
+        },
+        {
+          "id": "SP_DIARTHRODES_MAJOR_SCOTT_T_SCOTT_A_1895",
+          "name": "Diarthrodes major",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diarthrodes",
+          "authorship": "(Scott T. & Scott A., 1895)",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:116572"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -1484,11 +1500,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Dactylopusiidae"
+    },
+    {
+      "id": "GENUS_DACTYLOPODOPSIS",
+      "name": "Dactylopodopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DACTYLOPODOPSIS_DILATATA_SARS_G_O_1911",
+          "name": "Dactylopodopsis dilatata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dactylopodopsis",
+          "authorship": "Sars G.O., 1911",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:116553"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylopusiidae"
     }
   ],
-  "speciesCount": 119,
+  "speciesCount": 121,
   "appSlug": "dactylopusiidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 14
+  "genusCount": 15
 }

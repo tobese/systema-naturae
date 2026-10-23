@@ -9118,6 +9118,30 @@
           },
           "children": [],
           "uuid": "bab19c15-fb1c-54d-8c8-a61925ec7ae61b"
+        },
+        {
+          "id": "SP_DRYMAEUS_BIVITTATUS",
+          "name": "Drymaeus bivittatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Drymaeus",
+          "sourceIds": {
+            "checklistbank-139831": "49775"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DRYMAEUS_FLEXILABRIS",
+          "name": "Drymaeus flexilabris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Drymaeus",
+          "sourceIds": {
+            "checklistbank-139831": "805273"
+          },
+          "children": []
         }
       ]
     },
@@ -26199,11 +26223,15 @@
               "4VZWN"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1060011"
+              "urn:lsid:marinespecies.org:taxname:1060011",
+              "urn:lsid:marinespecies.org:taxname:1060015"
             ],
-            "gbif-backbone": "8815338"
+            "gbif-backbone": "8815338",
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1060011"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1060011,col:4VZWN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1060011,checklistbank:urn:lsid:marinespecies.org:taxname:1060015,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1060011,col:4VZWN,gbif-backbone:8815338",
           "authorship": "(F. Haas, 1955)"
         },
         {
@@ -27428,7 +27456,8 @@
             ],
             "checklistbank-139831": [
               "948921"
-            ]
+            ],
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1037260"
           },
           "children": [],
           "uuid": "ba914f5d-09c3-5b7-b73-4c09b82fbd9f96",
@@ -28060,6 +28089,18 @@
           "authorship": "La Pasta, Klatau & Oliveira, 2026",
           "children": [],
           "uuid": "23c3bf97-0cd9-535-852-17c36eb1a0c63f"
+        },
+        {
+          "id": "SP_COCHLORINA_INTENSIOR",
+          "name": "Cochlorina intensior",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cochlorina",
+          "sourceIds": {
+            "checklistbank-139831": "578782"
+          },
+          "children": []
         }
       ]
     },
@@ -32869,6 +32910,20 @@
           "authorship": "(Vernhout, 1914)",
           "children": [],
           "uuid": "2afcfbc6-a813-5cf-8cb-f4754c54598b34"
+        },
+        {
+          "id": "SP_MESEMBRINUS_TRANSLUCENS_BRODERIP_1832",
+          "name": "Mesembrinus translucens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesembrinus",
+          "authorship": "(Broderip, 1832)",
+          "sourceIds": {
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1713554",
+            "checklistbank-139831": "292799"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -33291,7 +33346,8 @@
             ],
             "checklistbank-139831": [
               "1677032"
-            ]
+            ],
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1875487"
           },
           "children": [],
           "uuid": "0fefb3c4-3da4-526-b3b-90d27acbc47411",
@@ -37132,22 +37188,6 @@
       "name": "\"Scutalus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_SCUTALUS_PHAEOCHEILUS_BREURE_MOGOLL_N_2010",
-          "name": "\"Scutalus phaeocheilus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Scutalus",
-          "authorship": "\"Breure & Mogollón, 2010\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1060015",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1060011"
-          },
-          "children": [],
-          "uuid": "e320eadc-c151-5ce-a0d-f95c4a32e776e8",
-          "description": "\"Scutalus phaeocheilus is a bulimulidae species found in its native region."
-        },
         {
           "id": "SP_SCUTALUS_LATECOLUMELLARIS_PRESTON_1909",
           "name": "Scutalus latecolumellaris",
@@ -41849,7 +41889,7 @@
     }
   ],
   "genusCount": 64,
-  "speciesCount": 2467,
+  "speciesCount": 2470,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
