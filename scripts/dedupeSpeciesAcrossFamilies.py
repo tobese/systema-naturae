@@ -118,6 +118,7 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import maintenanceLock  # noqa: E402
 from tree import (  # noqa: E402
     save_json,  # noqa: E402
     KINGDOMS,
@@ -756,4 +757,8 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    if "--apply" in sys.argv:
+        with maintenanceLock.hold_exclusive():
+            sys.exit(main())
+    else:
+        sys.exit(main())

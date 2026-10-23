@@ -45,6 +45,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import maintenanceLock  # noqa: E402
 from tree import (  # noqa: E402
     KINGDOMS,
     count_species,
@@ -95,6 +96,13 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
 
+    if args.apply:
+        with maintenanceLock.hold_exclusive():
+            return _run(args)
+    return _run(args)
+
+
+def _run(args) -> int:
     sync_file_counts(args.apply)
     print()
 

@@ -55,6 +55,7 @@ from datetime import datetime, timezone
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, SCRIPT_DIR)
 import importQueueDriver as IQD  # noqa: E402
+import maintenanceLock  # noqa: E402
 import pendingFamilyWatcher as PFW  # noqa: E402
 
 CYCLE_SECONDS = 60
@@ -101,9 +102,7 @@ def process_needs_rerun(q: dict) -> None:
         print(f"  {key}: applied via stored rerunCommand", flush=True)
 
 
-def main() -> int:
-    loop = "--loop" in sys.argv
-
+def run_pass() -> None:
     q = IQD.load_queue()
     q = IQD.refill_queue(q)
     IQD.process_downloaded(q)
@@ -113,6 +112,24 @@ def main() -> int:
 
     print("\n-- pending-family sweep --", flush=True)
     PFW.cycle()
+
+
+def main() -> int:
+    loop = "--loop" in sys.argv
+
+    # A maintenance pass (resyncFamilyCounts.py/dedupeSpeciesAcrossFamilies.py
+    # --apply) holds scripts/maintenanceLock.py's lock for its whole run.
+    # Writing taxonomy.json/family files from both sides at once is a lost-
+    # update race (found 2026-10-23: a resync fix got silently clobbered by
+    # this exact loop and had to be redone from scratch) -- so this side
+    # takes a non-blocking shot and skips the cycle's writes rather than
+    # blocking the loop or racing.
+    with maintenanceLock.try_nonblocking() as got_lock:
+        if got_lock:
+            run_pass()
+        else:
+            print("maintenance pass in progress -- skipping this cycle's "
+                  "writes", flush=True)
 
     if loop:
         print(f"\n(pass complete; looping in {CYCLE_SECONDS}s)", flush=True)

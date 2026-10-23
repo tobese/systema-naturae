@@ -74,6 +74,30 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 > on demand (`npm run build:plantae` and siblings). Their inputs are separate
 > files — do not graft plant nodes into `taxonomy.json` or vice versa.
 
+> ## 🔒 No concurrent writers to taxonomy.json / family files
+>
+> Decided **2026-10-23**, after a resync fix got silently clobbered and had to
+> be redone from scratch overnight: `scripts/pipelineOrchestrator.py` (via
+> `pendingFamilyWatcher`) writes `taxonomy.json`, the per-kingdom
+> `taxonomy-<kingdom>.json` files and family files every ~60s while it's
+> running. A maintenance pass (`resyncFamilyCounts.py --apply`,
+> `dedupeSpeciesAcrossFamilies.py --apply`) reads and rewrites the same files.
+> With no coordination, whichever finishes last wins and the other's change is
+> gone with no error — the exact same "understated" counts kept reappearing,
+> identically, run after run, because the orchestrator's next cycle was
+> overwriting the fix as fast as it landed.
+>
+> **The rule:** no two processes write these files at once. `scripts/maintenanceLock.py`
+> is the one lock for this — a maintenance pass holds it for its whole run
+> (`maintenanceLock.hold_exclusive()`), the orchestrator takes a non-blocking
+> shot each cycle (`maintenanceLock.try_nonblocking()`) and skips that cycle's
+> writes entirely rather than blocking the loop or racing. `resyncFamilyCounts.py`
+> and `dedupeSpeciesAcrossFamilies.py --apply` already hold it; any new script
+> that writes `taxonomy.json`, `taxonomy-<kingdom>.json` or a family file in a
+> read-modify-write pass must hold it too. A one-off import that only appends
+> new species (not reconciling against a prior read of the whole file) is lower
+> risk but should still prefer holding it when run alongside the live pipeline.
+
 ## Commands
 
 ```bash

@@ -11,6 +11,27 @@
 
 ## Open right now (2026-10-05)
 
+### Needs investigation, not another delete
+
+- **WoRMS keeps re-adding `SP_CRATICULA_RIPARIA_HUST_LANGE_BERT` to the wrong
+  kingdom** — `taxonomy/plantae/rhodophyta/florideophyceae/corallinales/craticulaceae`
+  is a bogus family: *Craticula* is unambiguously a diatom genus
+  (chromista/Bacillariophyceae/Stauroneidaceae, ~70 species with rich
+  gbif/itis/checklistbank/marinespecies sourceIds there), not a red alga. One
+  species (`Craticula riparia`, sourced from `checklistbank-2031`, bare
+  `sourceIds`, no cross-authority ids) keeps getting grafted into this wrong
+  family every time `pendingFamilyWatcher`'s WoRMS reimport cycle runs — deleted
+  three times in one overnight session (2026-10-22/23) and reappeared each
+  time within the hour. Deleting the copy is clearly the right call each time
+  (not allowlist-worthy — this isn't a genuine homonym, it's a wrong-kingdom
+  join), but it doesn't stick because the source scaffold/import path keeps
+  reconstituting `taxonomy/plantae/.../craticulaceae` from `checklistbank-2031`
+  on every run. The actual fix is upstream: find why `checklistbank-2031`'s
+  importer (or whatever scaffolds `FAM_CRATICULACEAE` under Rhodophyta) assigns
+  this one species to Corallinales instead of Naviculales/Stauroneidaceae, and
+  fix the mapping there — or exclude this family from WoRMS's rescaffold path
+  entirely if plantae's craticulaceae was never supposed to exist.
+
 ### Blocked on a person — only you can unblock these
 
 - ~~**Request the WoRMS full copy**~~ — **Superseded 2026-10-17, no email
