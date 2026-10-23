@@ -59,6 +59,25 @@ FALLBACK_KINGDOM = "animalia"
 SOURCE = "checklistbank"
 FORMS = ("{g} \u00d7{s}", "{g} {s}", "{g} \u00d7{s}", "{g} \u00d7 {s}")
 
+# Data, not code -- same convention as verifyTree.py's allowlists
+# (data/known-same-kingdom-duplicates.json etc.): a flat {usageKey: reason}
+# map of GBIF Backbone taxa whose OWN parent chain resolves to the wrong
+# kingdom/family -- a homonymous genus in a different kingdom than the one
+# this species actually belongs to (Fallacia fawensis is a diatom; GBIF's
+# own chain for usageKey 11466599 walks up through the beetle genus
+# Fallacia in Cerambycidae instead). route_species() only cross-checks a
+# conflicting placement against what we already hold (the `r.diffs` path);
+# a species with nothing to hold -- because the wrong copy was deleted --
+# gets staged fresh under whatever GBIF's chain says, with no diff logged
+# at all. Found 2026-10-23 when the same 3 species kept reappearing every
+# gbif-backbone re-import; see BACKLOG.md. Load failure is fatal, same
+# reasoning as verifyTree.py's loader: a missing file is not the same as
+# an empty one.
+with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                        "data", "known-bad-gbif-backbone-placements.json"),
+          encoding="utf-8") as _f:
+    KNOWN_BAD_GBIF_BACKBONE_PLACEMENTS = set(json.load(_f).keys())
+
 
 def slug_hint(archive):
     """A stable short identifier for the source, for the pending store.
@@ -124,6 +143,7 @@ class RoutedSpecies:
         self.fam_source_ids = collections.defaultdict(set)
         self.cand_count = 0
         self.held = self.refused = self.nonb = self.unresolved = 0
+        self.known_bad_skipped = 0
         self.no_family = collections.Counter()
         self.diffs = []                               # (kingdom, id, name, our_slug, source_slug, source_family, source_id)
         self.routed = collections.Counter()
@@ -226,6 +246,9 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             FAM2K[fam].add(k)
 
     for t in cand:
+        if (t.get("id") or "") in KNOWN_BAD_GBIF_BACKBONE_PLACEMENTS:
+            r.known_bad_skipped += 1
+            continue
         nm = t["name"]
         g, s = taxamatch.bare_binomial(nm, parsed)
         if not g or not s:
@@ -290,6 +313,9 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     print(f"\n  already held (skipped): {r.held:,}")
     print(f"  staged:              {sum(len(v) for v in r.staged.values()):,}")
     print(f"  non-binominal:       {r.nonb:,}")
+    if r.known_bad_skipped:
+        print(f"  known-bad placements skipped: {r.known_bad_skipped:,}"
+              f"  (see data/known-bad-gbif-backbone-placements.json)")
     print(f"  new, into a family we hold: {sum(len(v) for v in r.staged.values()):,}"
           f"  across {len(r.staged)} families in {len({k for k, _ in r.staged})} kingdoms")
     print(f"  REFUSED (would need a new family): {r.refused:,}"
