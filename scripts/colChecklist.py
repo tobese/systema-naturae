@@ -687,18 +687,30 @@ def _write_taxa_cache(taxa, cache_path):
     than anything this was tested against): `read_json_auto` only samples
     its *first* rows to infer one schema for the whole file, and failed
     outright at row 24,013 with "unknown key 'family_name'" -- a key that
-    simply hadn't shown up yet in the sample. `sample_size=-1` scans every
-    row for schema inference instead of guessing from a prefix, which is
-    the fix `duckdb`'s own error message names. Costs some time up front
-    (this is still a one-time cost per archive, amortized by every
-    cache-hit re-import after), not worth trading for a cache that can
-    silently fail on exactly the archives large enough to need it most.
-    Left a 0-byte file at `cache_path` on failure before this fix, which
-    then passed the next run's "newer than the archive" freshness check
-    and would have been trusted as an empty-but-valid cache had
-    `load_cached` not also started checking size."""
+    simply hadn't shown up yet in the sample.
+
+    First fix tried was `sample_size=-1` (scan every row), which duckdb's
+    own error message suggests -- but on this same 7.7M-row file it
+    exhausted enough memory/CPU on q-bert to force a hard reboot (no
+    OOM-killer log survived to prove it, but the timeline and the
+    symptoms -- Tailscale itself stopped responding, not just SSH --
+    match). `SAMPLE_SIZE` below is a large bounded number instead: far
+    more schema coverage than the original (tiny, implicit) default that
+    failed at row 24,013, without the unbounded cost of scanning
+    everything. Not theoretically bulletproof -- a key that only shows up
+    after this many rows would still break it -- but a deliberately
+    chosen trade-off rather than an unexamined one. Costs some time up
+    front either way (this is a one-time cost per archive, amortized by
+    every cache-hit re-import after), not worth trading for a cache that
+    can silently fail on exactly the archives large enough to need it
+    most. Left a 0-byte file at `cache_path` on failure before the
+    `.tmp`-then-rename change below, which then passed the next run's
+    "newer than the archive" freshness check and would have been trusted
+    as an empty-but-valid cache had `load_cached` not also started
+    checking size."""
     import duckdb
     import tempfile
+    SAMPLE_SIZE = 500_000
     fd, tmp = tempfile.mkstemp(suffix=".jsonl", dir=os.path.dirname(cache_path) or ".")
     tmp_out = cache_path + ".tmp"
     try:
@@ -707,7 +719,7 @@ def _write_taxa_cache(taxa, cache_path):
                 f.write(json.dumps(t, ensure_ascii=False) + "\n")
         con = duckdb.connect()
         con.execute(
-            f"COPY (SELECT * FROM read_json_auto({tmp!r}, sample_size=-1)) "
+            f"COPY (SELECT * FROM read_json_auto({tmp!r}, sample_size={SAMPLE_SIZE})) "
             f"TO {tmp_out!r} (FORMAT PARQUET)")
         os.replace(tmp_out, cache_path)
     finally:
