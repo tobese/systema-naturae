@@ -680,10 +680,21 @@ def _write_taxa_cache(taxa, cache_path):
     every row carries every rank's `<rank>_name`) to a parquet sidecar via
     duckdb's read_json_auto, which infers one wide schema from the union of
     keys across all rows. Raises on any failure; the caller decides whether
-    a cache write failure should stop the import (it shouldn't)."""
+    a cache write failure should stop the import (it shouldn't).
+
+    Writes to a `.tmp` sibling first and renames onto `cache_path` only on
+    success. Found 2026-10-23 on the GBIF Backbone (millions of taxa, far
+    bigger than anything this was tested against): the COPY failed
+    silently partway through (never diagnosed -- not disk space, the
+    archive and its cache share a volume with 1.5TB free; likely a duckdb
+    memory ceiling on a JSON file that size) and left a 0-byte file at
+    `cache_path` that then passed the next run's "newer than the archive"
+    freshness check and would have been trusted as an empty-but-valid
+    cache had `load_cached` not also started checking size."""
     import duckdb
     import tempfile
-    fd, tmp = tempfile.mkstemp(suffix=".jsonl")
+    fd, tmp = tempfile.mkstemp(suffix=".jsonl", dir=os.path.dirname(cache_path) or ".")
+    tmp_out = cache_path + ".tmp"
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             for t in taxa:
@@ -691,9 +702,12 @@ def _write_taxa_cache(taxa, cache_path):
         con = duckdb.connect()
         con.execute(
             f"COPY (SELECT * FROM read_json_auto({tmp!r})) "
-            f"TO {cache_path!r} (FORMAT PARQUET)")
+            f"TO {tmp_out!r} (FORMAT PARQUET)")
+        os.replace(tmp_out, cache_path)
     finally:
         os.unlink(tmp)
+        if os.path.exists(tmp_out):
+            os.unlink(tmp_out)
 
 
 def _read_taxa_cache(cache_path):
@@ -734,6 +748,7 @@ def load_cached(path):
         return load(path)
     cache_path = _taxa_cache_path(path)
     if (os.path.exists(cache_path)
+            and os.path.getsize(cache_path) > 0
             and os.path.getmtime(cache_path) >= os.path.getmtime(path)):
         try:
             return _read_taxa_cache(cache_path), {}, {}
