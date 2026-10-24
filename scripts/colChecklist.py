@@ -728,18 +728,35 @@ def _write_taxa_cache(taxa, cache_path):
             os.unlink(tmp_out)
 
 
+#  Every taxon dict load() produces always carries these, per its own
+#  docstring -- set at construction time regardless of value, even when
+#  that value is None (e.g. a row with no recorded rank still gets
+#  `"rank": None`, not an absent key). Only the `<rank>_name` chain
+#  fields are genuinely optional, present only when that row had one.
+_TAXON_CORE_KEYS = frozenset(
+    {"id", "parent", "name_id", "name", "authorship", "rank", "is_synonym"})
+
+
 def _read_taxa_cache(cache_path):
     """-> taxa, reversing _write_taxa_cache. duckdb pads every row to the
-    union schema with NULLs for keys that row didn't have; drop those back
-    out so a cached taxon dict looks exactly like a freshly-parsed one (the
-    importer's `.get('authorship')` etc. expect a missing key, not a
-    present-but-None one -- same contract either way, but this avoids ever
-    finding out the hard way that they differ)."""
+    union schema with NULLs for keys that row didn't have.
+
+    Dropping every None back out (the first version of this function) is
+    wrong for the core keys above: it turns "present with value None" into
+    "absent key", and importColChecklist.py's route_species() does
+    `t["rank"]` (bracket access, not `.get()`) on the assumption the key
+    always exists -- found 2026-10-23 when 103 cached taxa in
+    checklistbank-2011 lost their `rank` key this way and crashed the
+    whole archive's import with `KeyError: 'rank'`. Drop None only for
+    the genuinely-optional `<rank>_name` columns, where "absent" and
+    "present but None" really are the same thing to every caller (all of
+    which read them with `.get()`)."""
     import duckdb
     con = duckdb.connect()
     rel = con.sql(f"SELECT * FROM read_parquet({cache_path!r})")
     cols = rel.columns
-    return [{c: v for c, v in zip(cols, row) if v is not None}
+    return [{c: v for c, v in zip(cols, row)
+             if v is not None or c in _TAXON_CORE_KEYS}
             for row in rel.fetchall()]
 
 

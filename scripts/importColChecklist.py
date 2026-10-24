@@ -190,9 +190,14 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
 
     taxa, _names, _ = K.load_cached(archive)
     by_id = {t["id"]: t for t in taxa}
+    # .get(), not bracket access: a cached taxon dict is reconstructed from
+    # a parquet sidecar and isn't guaranteed to carry every core key the
+    # same way a freshly-parsed one does (found 2026-10-23 -- checklistbank-
+    # 2011 had 103 taxa lose their `rank` key through an earlier version of
+    # that round-trip and crashed the whole archive's import outright).
     cand = [t for t in taxa
-            if (t["rank"] or "").lower() in ("species", "subspecies")
-            and t["name"] and not t["is_synonym"]]
+            if (t.get("rank") or "").lower() in ("species", "subspecies")
+            and t.get("name") and not t.get("is_synonym")]
     r.cand_count = len(cand)
     print(f"  accepted species/subspecies offered: {len(cand):,}")
 
