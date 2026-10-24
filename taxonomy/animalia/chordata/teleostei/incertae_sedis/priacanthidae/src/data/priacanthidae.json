@@ -856,11 +856,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Priacanthus",
           "sourceIds": {
-            "checklistbank": "1561318"
+            "checklistbank": "1561318",
+            "checklistbank-316441": "S8YSN"
           },
           "children": [],
           "uuid": "e87549b8-339b-5ab-a20-8a7624158a746c",
-          "description": "Priacanthus gracilis is a priacanthidae species found in its native region."
+          "description": "Priacanthus gracilis is a priacanthidae species found in its native region.",
+          "authorship": "Hashimoto & Motomura, 2024"
         },
         {
           "id": "SP_PRIACANTHUS_SP",
@@ -1018,7 +1020,8 @@
           "lineage": "Priacanthus",
           "authorship": "Döderlein, 1883",
           "sourceIds": {
-            "gbif-backbone": "9020431"
+            "gbif-backbone": "9020431",
+            "checklistbank-316441": "S8YS6"
           },
           "children": [],
           "uuid": "cf271d26-4613-533-82a-1b2c3aba30f30c"
@@ -1777,13 +1780,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "priacanthidae"
+    },
+    {
+      "id": "GENUS_BOGODA",
+      "name": "Bogoda",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOGODA_INFUSCATA_BLYTH_1860",
+          "name": "Bogoda infuscata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bogoda",
+          "authorship": "Blyth, 1860",
+          "sourceIds": {
+            "checklistbank-316441": "M7DHF"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "priacanthidae"
     }
   ],
-  "speciesCount": 93,
+  "speciesCount": 94,
   "appSlug": "priacanthidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

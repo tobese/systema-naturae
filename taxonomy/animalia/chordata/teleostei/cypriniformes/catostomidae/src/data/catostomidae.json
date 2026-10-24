@@ -166,7 +166,8 @@
             ],
             "checklistbank": "96860",
             "gbif-backbone": "8954881",
-            "checklistbank-139831": "96860"
+            "checklistbank-139831": "96860",
+            "checklistbank-316441": "M9CPB"
           },
           "uuid": "166cd9dc-369f-50a-84f-b41e08f81c2254",
           "authorityIds": "col:RW3Z,gbif:177754735,gbif:2359027,itis:163897",
@@ -550,7 +551,8 @@
             ],
             "checklistbank": "67613",
             "gbif-backbone": "9089233",
-            "checklistbank-139831": "67613"
+            "checklistbank-139831": "67613",
+            "checklistbank-316441": "M9D3R"
           },
           "uuid": "9e46369c-7760-59a-9f5-df7f56ea9969a8",
           "authorityIds": "col:RW53,gbif:177754741,gbif:4286867,itis:163908",
@@ -2150,6 +2152,18 @@
           "children": [],
           "uuid": "ceeb7b2b-fba1-581-adc-4acc91cde445df",
           "description": "Pantosteus ×platyrhynchus is a catostomidae species found in its native region."
+        },
+        {
+          "id": "SP_PANTOSTEUS_DELPHINUS",
+          "name": "Pantosteus delphinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pantosteus",
+          "sourceIds": {
+            "checklistbank-316441": "4CHFZ"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2346,7 +2360,8 @@
           "sourceIds": {
             "checklistbank": "ott7653136",
             "gbif-backbone": "10562015",
-            "checklistbank-1174": "txn:394506"
+            "checklistbank-1174": "txn:394506",
+            "checklistbank-316441": "PVC9N"
           },
           "children": [],
           "authorship": "Alvarado-Ortega et al. 2006",
@@ -2626,7 +2641,8 @@
               "6GPKJ"
             ],
             "checklistbank": "100359",
-            "checklistbank-139831": "100359"
+            "checklistbank-139831": "100359",
+            "checklistbank-316441": "NK8X4"
           },
           "uuid": "c0521ebf-aecc-5f1-888-a6b7cd655c84ad",
           "authorityIds": "col:6GPKJ,gbif:177754530,gbif:2358941,itis:163924",
@@ -3044,7 +3060,8 @@
               "639710"
             ],
             "checklistbank": "467515",
-            "checklistbank-139831": "467515"
+            "checklistbank-139831": "467515",
+            "checklistbank-316441": "QJWB3"
           },
           "uuid": "a5f20272-8824-527-897-7485a2f644ad3e",
           "authorityIds": "col:6S576,gbif:177754634,gbif:2359106,itis:639710",
@@ -3106,7 +3123,11 @@
           "children": [],
           "lineage": "Wilsonium",
           "uuid": "ceb025fe-a4da-536-a88-d4c2fbc88fd7a4",
-          "description": "Wilsonium brevipinne is a catostomidae species found in its native region."
+          "description": "Wilsonium brevipinne is a catostomidae species found in its native region.",
+          "authorship": "(Cope, 1893)",
+          "sourceIds": {
+            "checklistbank-316441": "TY4MX"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3216,13 +3237,127 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "catostomidae"
+    },
+    {
+      "id": "GENUS_MYXOSTOMA",
+      "name": "Myxostoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYXOSTOMA_TENGGOLENSIS_FOON_2016",
+          "name": "Myxostoma tenggolensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myxostoma",
+          "authorship": "Foon, 2016",
+          "sourceIds": {
+            "checklistbank-316441": "QK4GR"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catostomidae"
+    },
+    {
+      "id": "GENUS_AMBLODON",
+      "name": "Amblodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMBLODON_NEGLECTUS_GIRARD_1858",
+          "name": "Amblodon neglectus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amblodon",
+          "authorship": "Girard, 1858",
+          "sourceIds": {
+            "checklistbank-316441": "L7W4K"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AMBLODON_CONCINNUS_AGASSIZ_1854",
+          "name": "Amblodon concinnus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amblodon",
+          "authorship": "Agassiz, 1854",
+          "sourceIds": {
+            "checklistbank-316441": "L7W4H"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AMBLODON_LINEATUS_AGASSIZ_1854",
+          "name": "Amblodon lineatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amblodon",
+          "authorship": "Agassiz, 1854",
+          "sourceIds": {
+            "checklistbank-316441": "L7W4J"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catostomidae"
+    },
+    {
+      "id": "GENUS_MINOMUS",
+      "name": "Minomus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MINOMUS_BARDUS_COPE_1871",
+          "name": "Minomus bardus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Minomus",
+          "authorship": "Cope, 1871",
+          "sourceIds": {
+            "checklistbank-316441": "QX3LG"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catostomidae"
+    },
+    {
+      "id": "GENUS_BUBALICHTHYS",
+      "name": "Bubalichthys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BUBALICHTHYS_NIGER_AGASSIZ_1855",
+          "name": "Bubalichthys niger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bubalichthys",
+          "authorship": "Agassiz, 1855",
+          "sourceIds": {
+            "checklistbank-316441": "MC2B7"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catostomidae"
     }
   ],
-  "speciesCount": 139,
+  "speciesCount": 146,
   "appSlug": "catostomidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 19,
+  "genusCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

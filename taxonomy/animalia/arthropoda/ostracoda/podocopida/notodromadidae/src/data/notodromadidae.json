@@ -92,7 +92,8 @@
           "description": "Notodromas trulla is a notodromadidae species found in its native region.",
           "authorship": "Smith & Kamiya, 2014",
           "sourceIds": {
-            "gbif-backbone": "8569212"
+            "gbif-backbone": "8569212",
+            "checklistbank-316441": "RB4GW"
           }
         },
         {
@@ -271,7 +272,11 @@
           "children": [],
           "lineage": "Newnhamia",
           "uuid": "5ca18c55-56ed-5b9-b4d-1201542b519fbb",
-          "description": "Newnhamia patagonica is a notodromadidae species found in its native region."
+          "description": "Newnhamia patagonica is a notodromadidae species found in its native region.",
+          "authorship": "(Vavra, 1898)",
+          "sourceIds": {
+            "checklistbank-316441": "QS8BL"
+          }
         },
         {
           "id": "SP_NEWNHAMIA_DUMONTI",
@@ -314,7 +319,8 @@
           "sourceIds": {
             "checklistbank": "dd640409-1b10-4912-882b-f25dfa0f7f9c",
             "gbif-backbone": "5789891",
-            "checklistbank-127379": "dd640409-1b10-4912-882b-f25dfa0f7f9c"
+            "checklistbank-127379": "dd640409-1b10-4912-882b-f25dfa0f7f9c",
+            "checklistbank-316441": "QS8BF"
           },
           "description": "Newnhamia insolita is a species of crustacean in the family Notodromadidae."
         },
@@ -332,7 +338,8 @@
           "sourceIds": {
             "checklistbank": "5fb4f2b5-745c-43d9-a5c9-4d0ee43473db",
             "gbif-backbone": "5789890",
-            "checklistbank-127379": "5fb4f2b5-745c-43d9-a5c9-4d0ee43473db"
+            "checklistbank-127379": "5fb4f2b5-745c-43d9-a5c9-4d0ee43473db",
+            "checklistbank-316441": "QS8B7"
           },
           "description": "Newnhamia fuscata is a species of ostracod in the family Notodromadidae."
         },
@@ -348,7 +355,8 @@
           "description": "Newnhamia mckenziana is a notodromadidae species found in its native region.",
           "authorship": "Matzke-Karasz, Neil, Smith, Godthelp, Archer & Hand, 2013",
           "sourceIds": {
-            "gbif-backbone": "9088545"
+            "gbif-backbone": "9088545",
+            "checklistbank-316441": "QS8BJ"
           }
         }
       ],
@@ -602,13 +610,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "notodromadidae"
+    },
+    {
+      "id": "GENUS_ARGENTODROMAS",
+      "name": "Argentodromas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARGENTODROMAS_BELLANELLA_DIAZ_MARTENS_2018",
+          "name": "Argentodromas bellanella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Argentodromas",
+          "authorship": "Diaz & Martens, 2018",
+          "sourceIds": {
+            "checklistbank-316441": "LVC9J"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "notodromadidae"
     }
   ],
-  "speciesCount": 35,
+  "speciesCount": 36,
   "appSlug": "notodromadidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

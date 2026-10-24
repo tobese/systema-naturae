@@ -75,7 +75,8 @@
             ],
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:427491"
-            ]
+            ],
+            "checklistbank-316441": "QVFM5"
           },
           "uuid": "2c1d1451-1bce-5b4-982-d3e3717cd089be",
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:427491,gbif:7829128,itis:46697",
@@ -137,11 +138,13 @@
           "description": "Metacylis jorgensenii is a metacylididae species found in Europe region.",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 7956683
+            "gbif": 7956683,
+            "checklistbank-316441": "QVFMZ"
           },
           "uuid": "50456c87-2440-58f-b4a-33b5df3677a9e3",
           "authorityIds": "gbif:7956683",
-          "children": []
+          "children": [],
+          "authorship": "(Cleve, 1902)"
         },
         {
           "id": "METACYLIS_MEDITERRANEA",
@@ -199,7 +202,8 @@
             "gbif": 8377727,
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:427493"
-            ]
+            ],
+            "checklistbank-316441": "V7WBC"
           },
           "uuid": "0821a861-0200-522-aea-0bb322053f4e3c",
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:427493,gbif:8377727",
@@ -310,7 +314,8 @@
           "lineage": "Metacylis",
           "authorship": "Nie & Ch'eng, 1947",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1799279"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1799279",
+            "checklistbank-316441": "V7WBD"
           },
           "children": [],
           "uuid": "4e08428f-7638-5d2-948-c5ac7256160c3d",
@@ -501,7 +506,8 @@
             "itis": [
               "46699"
             ],
-            "checklistbank": "147873"
+            "checklistbank": "147873",
+            "checklistbank-316441": "P7GDR"
           },
           "uuid": "016b109f-7c24-504-af3-052b5ef8e30ddb",
           "authorityIds": "gbif:8148022,itis:46699",
@@ -588,7 +594,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:417178"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:417178"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:417178",
+            "checklistbank-316441": "MSX93"
           },
           "uuid": "84f72b6e-3fb7-546-950-4ad8f67f2fdcad",
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:417178,gbif:8059619,itis:46704",
@@ -693,7 +700,8 @@
           "lineage": "Coxliella",
           "authorship": "(Claparède et Lachmann)",
           "sourceIds": {
-            "checklistbank": "147871"
+            "checklistbank": "147871",
+            "checklistbank-316441": "MZCBS"
           },
           "children": [],
           "uuid": "294cfe5d-5d48-5a0-8cc-a5f6f80bbc9d5b",
@@ -708,7 +716,8 @@
           "lineage": "Coxliella",
           "authorship": "nom.dub.",
           "sourceIds": {
-            "checklistbank": "149907"
+            "checklistbank": "149907",
+            "checklistbank-316441": "MZCB3"
           },
           "children": [],
           "uuid": "db7f8c05-d12a-53f-943-07df31a7a8e96e",
@@ -723,7 +732,8 @@
           "lineage": "Coxliella",
           "authorship": "nom.dub.",
           "sourceIds": {
-            "checklistbank": "149908"
+            "checklistbank": "149908",
+            "checklistbank-316441": "MZCC4"
           },
           "children": [],
           "uuid": "2c36f4e6-349f-565-837-1b105b28b14710",
@@ -772,6 +782,18 @@
           "children": [],
           "uuid": "dd53bb05-2f5b-5ad-adc-8aa6bf127c944f",
           "description": "Coxliella sp. is a metacylididae species found in its native region."
+        },
+        {
+          "id": "SP_COXLIELLA_PELAGICA",
+          "name": "Coxliella pelagica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coxliella",
+          "sourceIds": {
+            "checklistbank-316441": "MZCD6"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1180,10 +1202,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "metacylididae"
+    },
+    {
+      "id": "GENUS_CLIMATOCYLIS",
+      "name": "Climatocylis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLIMATOCYLIS_SCALAROIDES_KOFOID_CAMPBELL_1929",
+          "name": "Climatocylis scalaroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Climatocylis",
+          "authorship": "Kofoid & Campbell, 1929",
+          "sourceIds": {
+            "checklistbank-316441": "V7WBB"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "metacylididae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 64,
+  "genusCount": 11,
+  "speciesCount": 66,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

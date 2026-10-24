@@ -30,7 +30,8 @@
             "itis": [
               "114040"
             ],
-            "checklistbank": "1605543"
+            "checklistbank": "1605543",
+            "checklistbank-316441": "QDP9G"
           },
           "uuid": "ba81f589-9d83-53e-bc6-b85f5e12837a44",
           "authorityIds": "gbif:1033696,itis:114040",
@@ -56,10 +57,12 @@
             "itis": [
               "114038"
             ],
-            "checklistbank-311094": "491948"
+            "checklistbank-311094": "491948",
+            "checklistbank-316441": "QDPBK"
           },
           "uuid": "bb6cf836-6cde-52c-9fc-0f9cd2c4b1e4da",
-          "authorityIds": "gbif:1033698,itis:114038"
+          "authorityIds": "gbif:1033698,itis:114038",
+          "authorship": "Casey, 1893"
         },
         {
           "id": "SP_LUTROCHUS_LUTEUS",
@@ -77,10 +80,12 @@
             ],
             "itis": [
               "114039"
-            ]
+            ],
+            "checklistbank-316441": "QDPBT"
           },
           "uuid": "b8eb7abf-4cfc-51b-83f-2433ebfb3aec65",
-          "authorityIds": "gbif:1033697,itis:114039"
+          "authorityIds": "gbif:1033697,itis:114039",
+          "authorship": "LeConte, 1852"
         },
         {
           "id": "SP_LUTROCHUS_FUNKAE",
@@ -125,7 +130,10 @@
           "lineage": "lutrochus",
           "uuid": "433f5c77-7b2c-524-86f-5ea404318e36a0",
           "description": "Lutrochus wao is a lutrochus species found in its native region.",
-          "authorship": "Maier & Short, 2014"
+          "authorship": "Maier & Short, 2014",
+          "sourceIds": {
+            "checklistbank-316441": "QDPD9"
+          }
         },
         {
           "id": "SP_LUTROCHUS_CAURAENSIS",
@@ -202,7 +210,11 @@
           "children": [],
           "lineage": "lutrochus",
           "uuid": "310241fb-cf00-5d3-9c7-8f2a0f4553f593",
-          "description": "Lutrochus acuminatus is a lutrochus species found in its native region."
+          "description": "Lutrochus acuminatus is a lutrochus species found in its native region.",
+          "authorship": "Grouvelle, 1889",
+          "sourceIds": {
+            "checklistbank-316441": "QDP9B"
+          }
         },
         {
           "id": "SP_LUTROCHUS_VESTITUS",
@@ -300,10 +312,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lutrochidae"
+    },
+    {
+      "id": "GENUS_BYRRHOMORPHUS",
+      "name": "Byrrhomorphus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BYRRHOMORPHUS_VESTITUS_SHARP_1882",
+          "name": "Byrrhomorphus vestitus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Byrrhomorphus",
+          "authorship": "Sharp, 1882",
+          "sourceIds": {
+            "checklistbank-316441": "V32Y4"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lutrochidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 20,
+  "genusCount": 3,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

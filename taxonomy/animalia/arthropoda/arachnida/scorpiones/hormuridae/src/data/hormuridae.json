@@ -204,7 +204,8 @@
             "itis": [
               "1209034"
             ],
-            "checklistbank": "668026"
+            "checklistbank": "668026",
+            "checklistbank-316441": "7K5LW"
           },
           "uuid": "c0cd3aa4-ff2d-56f-a85-0cc397c08f032b",
           "authorityIds": "col:3J6RB,gbif:6892754,itis:1209034",
@@ -329,7 +330,8 @@
             "col": [
               "3J6RC"
             ],
-            "checklistbank": "482442"
+            "checklistbank": "482442",
+            "checklistbank-316441": "7K5LL"
           },
           "uuid": "42eeef4e-0280-56a-9a9-b922a010474ac7",
           "authorityIds": "col:3J6RC,gbif:6892747,itis:1209035",
@@ -639,7 +641,8 @@
             "col": [
               "QQBN9"
             ],
-            "checklistbank": "325936"
+            "checklistbank": "325936",
+            "checklistbank-316441": "5J4V8"
           },
           "uuid": "07a2edec-307b-57a-878-69071a74d9459e",
           "authorityIds": "col:QQBN9,gbif:6892772",
@@ -1438,7 +1441,8 @@
           "lineage": "opisthacanthus",
           "sourceIds": {
             "gbif": 6892707,
-            "gbif-backbone": "6892707"
+            "gbif-backbone": "6892707",
+            "checklistbank-316441": "R4SQC"
           },
           "uuid": "c72e6e3b-ce2c-56c-97e-083eab14220998",
           "authorityIds": "gbif:6892707",
@@ -1554,7 +1558,8 @@
           "lineage": "Opisthacanthus",
           "authorship": "Kraepelin, 1911",
           "sourceIds": {
-            "gbif-backbone": "6892693"
+            "gbif-backbone": "6892693",
+            "checklistbank-316441": "KRLKP"
           },
           "children": [],
           "uuid": "efeec42f-5a71-5ba-af7-c93c503381785c"
@@ -2436,6 +2441,18 @@
           },
           "children": [],
           "uuid": "3eea9b73-f73a-506-970-aea8f47c9f1d01"
+        },
+        {
+          "id": "SP_HORMURUS_AUSTRALASIAE",
+          "name": "Hormurus australasiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hormurus",
+          "sourceIds": {
+            "checklistbank-316441": "KRLKJ"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2637,11 +2654,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Liocheles",
           "sourceIds": {
-            "checklistbank": "1701577"
+            "checklistbank": "1701577",
+            "checklistbank-316441": "VRWDP"
           },
           "children": [],
           "uuid": "def4a566-eaf7-56a-982-e5676f676e016d",
-          "description": "Liocheles gracilipalpus is a hormuridae species found in its native region."
+          "description": "Liocheles gracilipalpus is a hormuridae species found in its native region.",
+          "authorship": "Bhardwaj, Katal, Lalremsanga & Mirza, 2026"
         },
         {
           "id": "SP_LIOCHELES_EXTENSA_LOCKET_1997",
@@ -3107,13 +3126,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hormuridae"
+    },
+    {
+      "id": "GENUS_METASCORPIOPS",
+      "name": "Metascorpiops",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METASCORPIOPS_MARGARITATUS_TOLEDO_PIZA_1972",
+          "name": "Metascorpiops margaritatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metascorpiops",
+          "authorship": "Toledo-Piza, 1972",
+          "sourceIds": {
+            "checklistbank-316441": "QXHPN"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hormuridae"
     }
   ],
-  "speciesCount": 152,
+  "speciesCount": 154,
   "appSlug": "hormuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 13,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -3,7 +3,7 @@
   "name": "Abelisauridae",
   "rank": "FAMILY",
   "appSlug": "abelisauridae",
-  "speciesCount": 34,
+  "speciesCount": 36,
   "children": [
     {
       "id": "GENUS_AUCASAURUS",
@@ -563,7 +563,8 @@
           "authorship": "Iori et al., 2021",
           "sourceIds": {
             "gbif-backbone": "11376028",
-            "wikispecies": "Kurupi_itaata"
+            "wikispecies": "Kurupi_itaata",
+            "checklistbank-316441": "PQK3T"
           },
           "children": [],
           "uuid": "22a95574-c70e-5775-83a6-6b92110be5eb"
@@ -586,7 +587,8 @@
           "lineage": "Rugops",
           "authorship": "Sereno et al., 2004",
           "sourceIds": {
-            "gbif-backbone": "4966168"
+            "gbif-backbone": "4966168",
+            "checklistbank-316441": "SKMZZ"
           },
           "children": [],
           "uuid": "5610e003-5a88-5162-b852-35f8c4f087be"
@@ -727,7 +729,8 @@
           "lineage": "Elemgasem",
           "authorship": "Baiano et al. 2022",
           "sourceIds": {
-            "checklistbank-1174": "txn:472265"
+            "checklistbank-1174": "txn:472265",
+            "checklistbank-316441": "NMQCK"
           },
           "uuid": "a08e8e14-683b-4cfe-b2f4-022566c05fd9",
           "children": []
@@ -750,7 +753,8 @@
           "lineage": "Koleken",
           "authorship": "Pol et al. 2024",
           "sourceIds": {
-            "checklistbank-1174": "txn:491505"
+            "checklistbank-1174": "txn:491505",
+            "checklistbank-316441": "PMQF7"
           },
           "uuid": "091293ec-78e3-43c5-80fa-07b71158ee20",
           "children": []
@@ -802,9 +806,52 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CHENANISAURUS",
+      "name": "Chenanisaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHENANISAURUS_BARBARICUS",
+          "name": "Chenanisaurus barbaricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chenanisaurus",
+          "sourceIds": {
+            "checklistbank-316441": "MVVY8"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "abelisauridae"
+    },
+    {
+      "id": "GENUS_SPINOSTROPHEUS",
+      "name": "Spinostropheus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPINOSTROPHEUS_GAUTIERI_LAPPARENT_1960_SERENO_WILSON_CONRAD_2004",
+          "name": "Spinostropheus gautieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spinostropheus",
+          "authorship": "(Lapparent, 1960) Sereno, Wilson & Conrad, 2004",
+          "sourceIds": {
+            "checklistbank-316441": "T4BKF"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "abelisauridae"
     }
   ],
-  "genusCount": 34,
+  "genusCount": 36,
   "sourceIds": {
     "wikispecies": "Abelisauridae",
     "checklistbank-1174": "txn:53942"

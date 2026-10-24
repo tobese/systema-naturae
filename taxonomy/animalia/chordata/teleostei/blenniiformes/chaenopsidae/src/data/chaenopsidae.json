@@ -282,7 +282,8 @@
             "itis": [
               "638590"
             ],
-            "gbif-backbone": "4286017"
+            "gbif-backbone": "4286017",
+            "checklistbank-316441": "R4RZ5"
           },
           "authorityIds": "itis:638590",
           "description": "Neoclinus fenestratus is a chaenopsidae species found in its native region."
@@ -3076,13 +3077,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chaenopsidae"
+    },
+    {
+      "id": "GENUS_PARVICLINUS",
+      "name": "Parviclinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARVICLINUS_SPINOSUS_FRASER_BRUNNER_1932",
+          "name": "Parviclinus spinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parviclinus",
+          "authorship": "Fraser-Brunner, 1932",
+          "sourceIds": {
+            "checklistbank-316441": "RG949"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaenopsidae"
     }
   ],
-  "speciesCount": 126,
+  "speciesCount": 127,
   "appSlug": "chaenopsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 17,
+  "genusCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

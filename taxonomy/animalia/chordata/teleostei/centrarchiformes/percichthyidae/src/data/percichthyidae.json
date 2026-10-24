@@ -241,7 +241,8 @@
             ],
             "col": [
               "4XKDW"
-            ]
+            ],
+            "checklistbank-316441": "SY34V"
           },
           "uuid": "ac078e57-6aa9-505-b18-2f5dcf051625b7",
           "authorityIds": "col:4XKDW,gbif:177717774,gbif:2380448,itis:641911",
@@ -287,10 +288,12 @@
           "sourceIds": {
             "col": [
               "KVTGW"
-            ]
+            ],
+            "checklistbank-316441": "KVTGW"
           },
           "authorityIds": "col:KVTGW",
-          "description": "Siniperca schezeri is a percichthyidae species found in its native region."
+          "description": "Siniperca schezeri is a percichthyidae species found in its native region.",
+          "authorship": "Steindachner, 1892"
         },
         {
           "id": "SP_SINIPERCA_ROBUSTA_YU_KWANG_ET_NI_1986",
@@ -385,7 +388,8 @@
           "lineage": "Siniperca",
           "authorship": "Sauvage, Dabry de Thiersant & Dabry de Thiersant, 1874",
           "sourceIds": {
-            "gbif-backbone": "9030840"
+            "gbif-backbone": "9030840",
+            "checklistbank-316441": "SY36B"
           },
           "children": [],
           "uuid": "7a8f4a3d-6669-580-832-00c74310422c2b"
@@ -399,7 +403,8 @@
           "lineage": "Siniperca",
           "authorship": "Bleeker, 1879",
           "sourceIds": {
-            "gbif-backbone": "8726775"
+            "gbif-backbone": "8726775",
+            "checklistbank-316441": "SY36D"
           },
           "children": [],
           "uuid": "07c16e31-9eac-5e0-b29-eda024be6fb1a9"
@@ -1661,13 +1666,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "percichthyidae"
+    },
+    {
+      "id": "GENUS_HOMODEMUS",
+      "name": "Homodemus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HOMODEMUS_CAVIFRONS_DE_VIS_1884",
+          "name": "Homodemus cavifrons",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Homodemus",
+          "authorship": "De Vis, 1884",
+          "sourceIds": {
+            "checklistbank-316441": "PDXP4"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "percichthyidae"
+    },
+    {
+      "id": "GENUS_PLECTROPERCA",
+      "name": "Plectroperca",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLECTROPERCA_BERENDTII_PETERS_1864",
+          "name": "Plectroperca berendtii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plectroperca",
+          "authorship": "Peters, 1864",
+          "sourceIds": {
+            "checklistbank-316441": "RJH2T"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "percichthyidae"
     }
   ],
-  "speciesCount": 74,
+  "speciesCount": 76,
   "appSlug": "percichthyidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 14,
+  "genusCount": 16,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

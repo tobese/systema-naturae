@@ -3,7 +3,7 @@
   "name": "Sphaerozoidae",
   "rank": "FAMILY",
   "appSlug": "sphaerozoidae",
-  "speciesCount": 8,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_SPHAEROZOUM",
@@ -23,7 +23,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:484148"
           },
-          "uuid": "d352e6b5-dee2-4dd2-bef7-0bd7419c26ae"
+          "uuid": "d352e6b5-dee2-4dd2-bef7-0bd7419c26ae",
+          "children": []
         },
         {
           "id": "SP_SPHAEROZOUM_BRANDTII",
@@ -35,7 +36,8 @@
           "sourceIds": {
             "checklistbank-308974": "360771"
           },
-          "uuid": "f8a566af-4088-432f-84a5-d3e103caa672"
+          "uuid": "f8a566af-4088-432f-84a5-d3e103caa672",
+          "children": []
         },
         {
           "id": "SP_SPHAEROZOUM_FUSCUM",
@@ -47,7 +49,8 @@
           "sourceIds": {
             "checklistbank-308974": "360780"
           },
-          "uuid": "97947e03-4fb1-41d0-a1e9-de461a75284b"
+          "uuid": "97947e03-4fb1-41d0-a1e9-de461a75284b",
+          "children": []
         },
         {
           "id": "SP_SPHAEROZOUM_OVODIMARE",
@@ -59,7 +62,8 @@
           "sourceIds": {
             "checklistbank-308974": "360789"
           },
-          "uuid": "e6e91a4c-ea9c-4b6d-85e9-f1d54389196d"
+          "uuid": "e6e91a4c-ea9c-4b6d-85e9-f1d54389196d",
+          "children": []
         },
         {
           "id": "SP_SPHAEROZOUM_STRIGULOSUM",
@@ -71,17 +75,10 @@
           "sourceIds": {
             "checklistbank-308974": "360815"
           },
-          "uuid": "a83634f0-35e0-41e5-b2b5-17b0da3928f7"
+          "uuid": "a83634f0-35e0-41e5-b2b5-17b0da3928f7",
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_COLLOZOUM",
-      "name": "Collozoum",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "sphaerozoidae",
-      "children": []
     },
     {
       "id": "GENUS_PROCYTTARIUM-C",
@@ -100,17 +97,10 @@
           "sourceIds": {
             "checklistbank-308974": "360744"
           },
-          "uuid": "408340e3-93a5-42cf-83f9-06325e132be2"
+          "uuid": "408340e3-93a5-42cf-83f9-06325e132be2",
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_RHAPHIDOZOUM",
-      "name": "Rhaphidozoum",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "sphaerozoidae",
-      "children": []
     },
     {
       "id": "GENUS_THALASSICOLLA-C",
@@ -129,7 +119,8 @@
           "sourceIds": {
             "checklistbank-308974": "360833"
           },
-          "uuid": "c58850de-dde7-437b-a01d-3acd7272f439"
+          "uuid": "c58850de-dde7-437b-a01d-3acd7272f439",
+          "children": []
         }
       ]
     },
@@ -150,9 +141,33 @@
           "sourceIds": {
             "checklistbank-308974": "360842"
           },
-          "uuid": "2d4252b5-b893-4d5d-a7b4-fe0f8865ca14"
+          "uuid": "2d4252b5-b893-4d5d-a7b4-fe0f8865ca14",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BELONOZOUM",
+      "name": "Belonozoum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BELONOZOUM_ITALICUM_HAECKEL_1862",
+          "name": "Belonozoum italicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Belonozoum",
+          "authorship": "(Haeckel, 1862)",
+          "sourceIds": {
+            "checklistbank-316441": "V7WCY"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerozoidae"
     }
-  ]
+  ],
+  "genusCount": 5
 }

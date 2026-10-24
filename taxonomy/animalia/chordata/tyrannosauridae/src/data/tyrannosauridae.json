@@ -3,7 +3,7 @@
   "name": "Tyrannosauridae",
   "rank": "FAMILY",
   "appSlug": "tyrannosauridae",
-  "speciesCount": 54,
+  "speciesCount": 57,
   "children": [
     {
       "id": "GENUS_ZHUCHENGTYRANNUS",
@@ -70,6 +70,19 @@
           },
           "children": [],
           "uuid": "45ea5328-6663-517c-ae94-eda622bb4208"
+        },
+        {
+          "id": "SP_NANOTYRANNUS_LETHAEUS_ZANNO_NAPOLI_2025",
+          "name": "Nanotyrannus lethaeus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nanotyrannus",
+          "authorship": "Zanno & Napoli, 2025",
+          "sourceIds": {
+            "checklistbank-316441": "VRKJW"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -177,10 +190,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Gorgosaurus",
           "sourceIds": {
-            "gbif-backbone": "8500529"
+            "gbif-backbone": "8500529",
+            "checklistbank-316441": "PDGFG"
           },
           "children": [],
-          "uuid": "55db1947-5b66-5ae7-a5ca-be859b500593"
+          "uuid": "55db1947-5b66-5ae7-a5ca-be859b500593",
+          "authorship": "Matthew & Brown, 1923"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -428,7 +443,8 @@
           "authorship": "Dalman et al. 2024",
           "sourceIds": {
             "checklistbank-1174": "txn:482540",
-            "wikispecies": "Tyrannosaurus_mcraeensis"
+            "wikispecies": "Tyrannosaurus_mcraeensis",
+            "checklistbank-316441": "TPJ7G"
           },
           "uuid": "beccc79b-a155-4fa1-8cd2-3432e145a7ac",
           "children": []
@@ -711,7 +727,8 @@
           "lineage": "Albertosaurus",
           "authorship": "Parks",
           "sourceIds": {
-            "gbif-backbone": "8640448"
+            "gbif-backbone": "8640448",
+            "checklistbank-316441": "L7L2N"
           },
           "children": [],
           "uuid": "3cff4bdd-26ab-5899-84b6-7a53fcc2b628"
@@ -785,7 +802,8 @@
           "lineage": "Daspletosaurus",
           "authorship": "Carr et al., 2017",
           "sourceIds": {
-            "gbif-backbone": "9260196"
+            "gbif-backbone": "9260196",
+            "checklistbank-316441": "NNDZS"
           },
           "children": [],
           "uuid": "f00d8629-1b3d-5ff4-8469-77f79d9888bf"
@@ -1068,9 +1086,44 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DEINODON",
+      "name": "Deinodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DEINODON_EXPLANATUS_COPE_1876",
+          "name": "Deinodon explanatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deinodon",
+          "authorship": "Cope, 1876",
+          "sourceIds": {
+            "checklistbank-316441": "N3WL5"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DEINODON_HORRIDUS_LEIDY_1856",
+          "name": "Deinodon horridus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deinodon",
+          "authorship": "Leidy, 1856",
+          "sourceIds": {
+            "checklistbank-316441": "N3WLX"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tyrannosauridae"
     }
   ],
-  "genusCount": 33,
+  "genusCount": 34,
   "sourceIds": {
     "wikispecies": "Tyrannosauridae",
     "checklistbank-1174": "txn:38606"

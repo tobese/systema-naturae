@@ -89,6 +89,19 @@
           },
           "children": [],
           "uuid": "f8683fa7-49eb-572-b32-da50e3e6c710ce"
+        },
+        {
+          "id": "SP_LISTROPHOROIDES_AETHIOPICUS_HIRST_1923",
+          "name": "Listrophoroides aethiopicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Listrophoroides",
+          "authorship": "Hirst, 1923",
+          "sourceIds": {
+            "checklistbank-316441": "PT2S8"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -198,10 +211,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Listrophorus",
           "sourceIds": {
-            "gbif-backbone": "11895437"
+            "gbif-backbone": "11895437",
+            "checklistbank-316441": "PT3F5"
           },
           "children": [],
-          "uuid": "e2a3f65a-a6d4-517-aa3-e3d5b74ed9c584"
+          "uuid": "e2a3f65a-a6d4-517-aa3-e3d5b74ed9c584",
+          "authorship": "Fain"
         },
         {
           "id": "SP_LISTROPHORUS_DOZIERI_RADFORD_1944",
@@ -262,7 +277,8 @@
           "sourceIds": {
             "checklistbank": "Lynxacarus_radovskyi",
             "gbif-backbone": "2181985",
-            "checklistbank-127379": "8952d350-4080-40f1-a5a6-adcec2c80c32"
+            "checklistbank-127379": "8952d350-4080-40f1-a5a6-adcec2c80c32",
+            "checklistbank-316441": "PZB56"
           },
           "children": [],
           "authorship": "Tenorio, 1974",
@@ -828,13 +844,48 @@
           "uuid": "8f12e8b8-b821-59a6-8cdc-aa19bf7f6e3a"
         }
       ]
+    },
+    {
+      "id": "GENUS_DUBININETTA",
+      "name": "Dubininetta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DUBININETTA_ABRAMOVI_BOCHKOV_2017",
+          "name": "Dubininetta abramovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dubininetta",
+          "authorship": "Bochkov, 2017",
+          "sourceIds": {
+            "checklistbank-316441": "NQQXM"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DUBININETTA_EUROSCAPTOR_BOCHKOV_2017",
+          "name": "Dubininetta euroscaptor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dubininetta",
+          "authorship": "Bochkov, 2017",
+          "sourceIds": {
+            "checklistbank-316441": "NQQXN"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "listrophoridae"
     }
   ],
-  "speciesCount": 52,
+  "speciesCount": 55,
   "appSlug": "listrophoridae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "checklistbank": "Listrophoridae",
     "wikispecies": "Listrophoridae"

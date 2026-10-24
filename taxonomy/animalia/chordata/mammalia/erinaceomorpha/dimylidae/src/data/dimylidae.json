@@ -3,7 +3,7 @@
   "name": "Dimylidae",
   "rank": "FAMILY",
   "appSlug": "dimylidae",
-  "speciesCount": 21,
+  "speciesCount": 22,
   "children": [
     {
       "id": "GENUS_CORDYLODON",
@@ -253,7 +253,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:96567"
           },
-          "uuid": "f68f77b6-77ea-4a36-95c8-2a768f4cc96e"
+          "uuid": "f68f77b6-77ea-4a36-95c8-2a768f4cc96e",
+          "children": []
         },
         {
           "id": "SP_CHAINODUS_SULCATUS_STEPHAN_HARTL_1972",
@@ -266,7 +267,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:96568"
           },
-          "uuid": "74788c4c-6b6d-4471-8eb9-ab4e6befbd1e"
+          "uuid": "74788c4c-6b6d-4471-8eb9-ab4e6befbd1e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -373,10 +375,33 @@
           "sourceIds": {
             "checklistbank-1174": "txn:96565"
           },
-          "uuid": "112f63c3-c04c-4804-af02-2cda6486640c"
+          "uuid": "112f63c3-c04c-4804-af02-2cda6486640c",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_LACRIMODON",
+      "name": "Lacrimodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LACRIMODON_VANDERMEULENI_VAN_DEN_HOEK_OSTENDE_FEJFAR_2015",
+          "name": "Lacrimodon vandermeuleni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lacrimodon",
+          "authorship": "Van den Hoek Ostende & Fejfar, 2015",
+          "sourceIds": {
+            "checklistbank-316441": "PVW8L"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dimylidae"
     }
   ],
-  "genusCount": 8
+  "genusCount": 10
 }

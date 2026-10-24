@@ -3,7 +3,7 @@
   "name": "Plateosauridae",
   "rank": "FAMILY",
   "appSlug": "plateosauridae",
-  "speciesCount": 19,
+  "speciesCount": 23,
   "children": [
     {
       "id": "GENUS_ISSI",
@@ -19,7 +19,8 @@
           "lineage": "Issi",
           "authorship": "Beccari et al., 2021",
           "sourceIds": {
-            "gbif-backbone": "11370455"
+            "gbif-backbone": "11370455",
+            "checklistbank-316441": "PS8G6"
           },
           "children": [],
           "uuid": "8494f8f3-ed6f-5db3-aec1-80edd42fe335"
@@ -171,6 +172,32 @@
           },
           "uuid": "c9fe2ebc-432d-4250-855e-932277124441",
           "children": []
+        },
+        {
+          "id": "SP_PLATEOSAURUS_ORNATUS_VON_HUENE_1905",
+          "name": "Plateosaurus ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plateosaurus",
+          "authorship": "von Huene, 1905",
+          "sourceIds": {
+            "checklistbank-316441": "S2H9J"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLATEOSAURUS_GRACILIS_VON_HUENE_1905",
+          "name": "Plateosaurus gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plateosaurus",
+          "authorship": "(von Huene, 1905)",
+          "sourceIds": {
+            "checklistbank-316441": "S2H8Y"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -319,7 +346,8 @@
           "lineage": "Lufengosaurus",
           "authorship": "(Young, 1940)",
           "sourceIds": {
-            "gbif-backbone": "4967245"
+            "gbif-backbone": "4967245",
+            "checklistbank-316441": "QBT6C"
           },
           "children": [],
           "uuid": "7bfcb8b2-2f10-543b-84d9-5128629e2f18"
@@ -396,9 +424,53 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_AMMOSAURUS",
+      "name": "Ammosaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMMOSAURUS_COLURUS_MARSH_1891",
+          "name": "Ammosaurus colurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ammosaurus",
+          "authorship": "Marsh, 1891",
+          "sourceIds": {
+            "checklistbank-316441": "LB7BB"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plateosauridae"
+    },
+    {
+      "id": "GENUS_MACROCOLLUM",
+      "name": "Macrocollum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACROCOLLUM_ITAQUII_M_LLER_LANGER_DIAS_DA_SILVA_2018",
+          "name": "Macrocollum itaquii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrocollum",
+          "authorship": "Müller, Langer & Dias-da-Silva, 2018",
+          "sourceIds": {
+            "checklistbank-316441": "Q7B22"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plateosauridae"
     }
   ],
-  "genusCount": 14,
+  "genusCount": 16,
   "sourceIds": {
     "checklistbank-1174": "txn:54157"
   }

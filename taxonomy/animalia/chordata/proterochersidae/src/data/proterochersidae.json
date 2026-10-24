@@ -3,7 +3,7 @@
   "name": "Proterochersidae",
   "rank": "FAMILY",
   "appSlug": "proterochersidae",
-  "speciesCount": 5,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_PROTEROCHERSIS",
@@ -35,7 +35,8 @@
           "authorship": "Fraas, 1913",
           "sourceIds": {
             "gbif-backbone": "4965127",
-            "wikispecies": "Proterochersis_robusta"
+            "wikispecies": "Proterochersis_robusta",
+            "checklistbank-316441": "V9GKZ"
           },
           "children": [],
           "uuid": "ec4df943-ea7a-5c81-b514-dec5f86c23fc"
@@ -103,9 +104,53 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BARTASSOCHERSIS",
+      "name": "Bartassochersis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARTASSOCHERSIS_LOPEZI_SZCZYGIELSKI_CELESTIN_ADNET_GUINOT_2026",
+          "name": "Bartassochersis lopezi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bartassochersis",
+          "authorship": "Szczygielski, Celestin, Adnet & Guinot, 2026",
+          "sourceIds": {
+            "checklistbank-316441": "VRTVM"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "proterochersidae"
+    },
+    {
+      "id": "GENUS_CRYPTOCHERSIS",
+      "name": "Cryptochersis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTOCHERSIS_PARAXENE_SZCZYGIELSKI_DR_D_2026",
+          "name": "Cryptochersis paraxene",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptochersis",
+          "authorship": "Szczygielski & Dróżdż, 2026",
+          "sourceIds": {
+            "checklistbank-316441": "VRWN8"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "proterochersidae"
     }
   ],
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "wikispecies": "Proterochersidae",
     "checklistbank-1174": "txn:37586"

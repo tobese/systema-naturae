@@ -3,7 +3,7 @@
   "name": "Hadrosauridae",
   "rank": "FAMILY",
   "appSlug": "hadrosauridae",
-  "speciesCount": 112,
+  "speciesCount": 113,
   "children": [
     {
       "id": "GENUS_SHANTUNGOSAURUS",
@@ -839,10 +839,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Mandschurosaurus",
           "sourceIds": {
-            "gbif-backbone": "8485697"
+            "gbif-backbone": "8485697",
+            "checklistbank-316441": "VB6S9"
           },
           "children": [],
-          "uuid": "1c0e5121-1654-522e-8114-de2854567e17"
+          "uuid": "1c0e5121-1654-522e-8114-de2854567e17",
+          "authorship": "Hoffet, 1944"
         },
         {
           "id": "SP_MANDSCHUROSAURUS_AMURENSIS_RIABININ_1925",
@@ -2303,9 +2305,31 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PLESIOLOPHUS",
+      "name": "Plesiolophus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLESIOLOPHUS_WARNERENSIS_MCFEETERS_EVANS_RYAN_MADDIN_2026",
+          "name": "Plesiolophus warnerensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plesiolophus",
+          "authorship": "McFeeters, Evans, Ryan & Maddin, 2026",
+          "sourceIds": {
+            "checklistbank-316441": "VRMQL"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hadrosauridae"
     }
   ],
-  "genusCount": 80,
+  "genusCount": 81,
   "sourceIds": {
     "wikispecies": "Hadrosauridae",
     "checklistbank-1174": "txn:38755"

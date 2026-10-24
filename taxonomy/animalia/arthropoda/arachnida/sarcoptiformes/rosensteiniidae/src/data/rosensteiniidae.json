@@ -3,7 +3,7 @@
   "name": "Rosensteiniidae",
   "rank": "FAMILY",
   "appSlug": "rosensteiniidae",
-  "speciesCount": 4,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_ARICOSTEINIA",
@@ -23,7 +23,8 @@
           "sourceIds": {
             "checklistbank-127379": "2c0b654b-08e2-4117-96bf-e318a90e863a"
           },
-          "uuid": "ff65be27-4ade-4a45-a088-75789b9d4901"
+          "uuid": "ff65be27-4ade-4a45-a088-75789b9d4901",
+          "children": []
         }
       ]
     },
@@ -45,7 +46,8 @@
           "sourceIds": {
             "checklistbank-127379": "f3810072-50f0-4ee9-b280-91d7a542385c"
           },
-          "uuid": "c6eb5fe4-eca8-4d5a-9922-92fd4aeb5adb"
+          "uuid": "c6eb5fe4-eca8-4d5a-9922-92fd4aeb5adb",
+          "children": []
         }
       ]
     },
@@ -67,7 +69,8 @@
           "sourceIds": {
             "checklistbank-127379": "6560741a-32fb-4fab-8599-76834f00e1e4"
           },
-          "uuid": "083db26f-40d6-440c-a8cc-a6e35503d98e"
+          "uuid": "083db26f-40d6-440c-a8cc-a6e35503d98e",
+          "children": []
         },
         {
           "id": "SP_NYCTERIGLYPHUS_MINIOPTERI_FAIN",
@@ -80,9 +83,55 @@
           "sourceIds": {
             "checklistbank-127379": "0d0c6d77-2248-484f-ae2d-465d1406173a"
           },
-          "uuid": "5dbf92f8-0f5e-4ba4-b703-901512d25265"
+          "uuid": "5dbf92f8-0f5e-4ba4-b703-901512d25265",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CHIROPTOGLYPHUS",
+      "name": "Chiroptoglyphus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHIROPTOGLYPHUS_BULGARICUS_DUSHABEK_1964",
+          "name": "Chiroptoglyphus bulgaricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chiroptoglyphus",
+          "authorship": "(Dushabek, 1964)",
+          "sourceIds": {
+            "checklistbank-316441": "MFQ7V"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rosensteiniidae"
+    },
+    {
+      "id": "GENUS_ROSENSTEINIA",
+      "name": "Rosensteinia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ROSENSTEINIA_SIEVERSI_OUDEMANS_1923",
+          "name": "Rosensteinia sieversi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rosensteinia",
+          "authorship": "Oudemans, 1923",
+          "sourceIds": {
+            "checklistbank-316441": "SF5DG"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rosensteiniidae"
     }
-  ]
+  ],
+  "genusCount": 5
 }

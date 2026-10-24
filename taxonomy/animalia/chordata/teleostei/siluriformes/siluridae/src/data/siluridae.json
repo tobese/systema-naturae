@@ -1929,7 +1929,8 @@
           "description": "Silurus undecimalis is a siluridae species found in its native region.",
           "authorship": "Linnæus, 1758",
           "sourceIds": {
-            "gbif-backbone": "9043205"
+            "gbif-backbone": "9043205",
+            "checklistbank-316441": "SWT4N"
           }
         },
         {
@@ -1944,7 +1945,8 @@
           "description": "Silurus ascita is a siluridae species found in its native region.",
           "authorship": "Linnaeus, 1758",
           "sourceIds": {
-            "gbif-backbone": "8044217"
+            "gbif-backbone": "8044217",
+            "checklistbank-316441": "SWSB4"
           }
         },
         {
@@ -2010,7 +2012,8 @@
           "lineage": "Silurus",
           "authorship": "Yang, Ou, Li et Wu, 2020",
           "sourceIds": {
-            "checklistbank": "a582d0ded648415b96e6dcd64161cc38"
+            "checklistbank": "a582d0ded648415b96e6dcd64161cc38",
+            "checklistbank-316441": "V7ZGG"
           },
           "children": [],
           "uuid": "d50780e6-f88a-55d-9f6-4cde9a73fcc88d",
@@ -2170,7 +2173,8 @@
           "lineage": "Silurus",
           "authorship": "van Hasselt, 1858",
           "sourceIds": {
-            "gbif-backbone": "9176003"
+            "gbif-backbone": "9176003",
+            "checklistbank-316441": "SWSD7"
           },
           "children": [],
           "uuid": "7241c8ac-8e12-516-b8e-e0766364887535"
@@ -2352,7 +2356,8 @@
           "lineage": "Silurus",
           "authorship": "Natterer, 1841",
           "sourceIds": {
-            "gbif-backbone": "9107926"
+            "gbif-backbone": "9107926",
+            "checklistbank-316441": "SWSY9"
           },
           "children": [],
           "uuid": "78bd9cda-c6ba-5a1-8cb-1158f49e9b5d40"
@@ -3275,11 +3280,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Silurichthys",
           "sourceIds": {
-            "checklistbank": "1416168"
+            "checklistbank": "1416168",
+            "checklistbank-316441": "SWRMW"
           },
           "children": [],
           "uuid": "337cc8dc-20a2-5c8-bd3-2b421b897db384",
-          "description": "Silurichthys insulanus is a siluridae species found in its native region."
+          "description": "Silurichthys insulanus is a siluridae species found in its native region.",
+          "authorship": "Low, Ng & Tan, 2022"
         },
         {
           "id": "SP_SILURICHTHYS_EXORTIVUS",
@@ -3290,7 +3297,8 @@
           "lineage": "Silurichthys",
           "sourceIds": {
             "checklistbank": "1416204",
-            "gbif-backbone": "11932143"
+            "gbif-backbone": "11932143",
+            "checklistbank-316441": "SWRLW"
           },
           "children": [],
           "uuid": "b57e0da3-79c2-57a-b1f-9f027b6a4e18ae",
@@ -4036,6 +4044,19 @@
           "authorship": "(Ng, 2004)",
           "uuid": "2edc0b97-8d0c-5cb-ab6-29f12c0712ab64",
           "description": "Wallagonia micropogon is a species of catfish in the genus Wallagonia."
+        },
+        {
+          "id": "SP_WALLAGONIA_MACULATUS_INGER_CHIN_1859",
+          "name": "Wallagonia maculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wallagonia",
+          "authorship": "(Inger & Chin, 1859)",
+          "sourceIds": {
+            "checklistbank-316441": "TX3KT"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4324,13 +4345,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "siluridae"
+    },
+    {
+      "id": "GENUS_CALLICHROUS",
+      "name": "Callichrous",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLICHROUS_NOTATUS_DAY_1870",
+          "name": "Callichrous notatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callichrous",
+          "authorship": "Day, 1870",
+          "sourceIds": {
+            "checklistbank-316441": "M9R2C"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "siluridae"
+    },
+    {
+      "id": "GENUS_CRYPTOPTERELLA",
+      "name": "Cryptopterella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTOPTERELLA_BELDTI_FOWLER_1944",
+          "name": "Cryptopterella beldti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptopterella",
+          "authorship": "Fowler, 1944",
+          "sourceIds": {
+            "checklistbank-316441": "N33Z7"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "siluridae"
     }
   ],
-  "speciesCount": 204,
+  "speciesCount": 207,
   "appSlug": "siluridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 26,
+  "genusCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

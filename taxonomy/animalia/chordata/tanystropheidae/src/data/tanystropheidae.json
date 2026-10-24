@@ -3,7 +3,7 @@
   "name": "Tanystropheidae",
   "rank": "FAMILY",
   "appSlug": "tanystropheidae",
-  "speciesCount": 23,
+  "speciesCount": 25,
   "children": [
     {
       "id": "GENUS_TANYSTROPHEUS",
@@ -91,7 +91,8 @@
           "authorship": "von Meyer",
           "sourceIds": {
             "gbif-backbone": "4967946",
-            "checklistbank-1174": "txn:95799"
+            "checklistbank-1174": "txn:95799",
+            "checklistbank-316441": "T9793"
           },
           "children": [],
           "uuid": "eeaf5021-cd8a-5aca-8481-53284dfb6902"
@@ -459,9 +460,53 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_LUXISAURUS",
+      "name": "Luxisaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LUXISAURUS_TERRESTRIS_LU_LIU_2023",
+          "name": "Luxisaurus terrestris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Luxisaurus",
+          "authorship": "Lu & Liu, 2023",
+          "sourceIds": {
+            "checklistbank-316441": "V3359"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tanystropheidae"
+    },
+    {
+      "id": "GENUS_AKIDOSTROPHEUS",
+      "name": "Akidostropheus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AKIDOSTROPHEUS_OLIGOS_SCHUBUL_MARSH_KLIGMAN_2025",
+          "name": "Akidostropheus oligos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Akidostropheus",
+          "authorship": "Schubul, Marsh & Kligman, 2025",
+          "sourceIds": {
+            "checklistbank-316441": "VR8MF"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tanystropheidae"
     }
   ],
-  "genusCount": 14,
+  "genusCount": 16,
   "sourceIds": {
     "wikispecies": "Tanystropheidae",
     "checklistbank-1174": "txn:38195"

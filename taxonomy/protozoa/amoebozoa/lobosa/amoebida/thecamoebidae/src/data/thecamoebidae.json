@@ -127,7 +127,8 @@
             "itis": [
               "615926"
             ],
-            "checklistbank": "40636"
+            "checklistbank": "40636",
+            "checklistbank-316441": "TBSSZ"
           },
           "uuid": "82a51cf5-ca9d-570-820-0fbcb2136bd2b7",
           "authorityIds": "gbif:3210368,itis:615926",
@@ -165,11 +166,13 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 3210369,
-            "checklistbank": "1229087"
+            "checklistbank": "1229087",
+            "checklistbank-316441": "TBSTP"
           },
           "uuid": "28c985ef-4ab1-5d4-80a-be108b0fec6544",
           "authorityIds": "gbif:3210369",
-          "children": []
+          "children": [],
+          "authorship": "(Carter, 1856) Lepşi, 1960"
         },
         {
           "id": "THECAMOEBA_VERRUCOSA",
@@ -182,11 +185,13 @@
           "description": "Thecamoeba verrucosa is a thecamoebidae species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11456891
+            "gbif": 11456891,
+            "checklistbank-316441": "TBSVP"
           },
           "uuid": "d44a4cee-1c72-500-9a2-e08e7a652004cd",
           "authorityIds": "gbif:11456891",
-          "children": []
+          "children": [],
+          "authorship": "(Ehrenberg, 1838)"
         },
         {
           "id": "THECAMOEBA_VUMURTA",
@@ -214,11 +219,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Thecamoeba",
           "sourceIds": {
-            "checklistbank": "1156577"
+            "checklistbank": "1156577",
+            "checklistbank-316441": "TBSVC"
           },
           "children": [],
           "uuid": "7afcd7fa-4a39-543-b05-3c368883a3f128",
-          "description": "Thecamoeba striata is a thecamoebidae species found in its native region."
+          "description": "Thecamoeba striata is a thecamoebidae species found in its native region.",
+          "authorship": "(Penard, 1890) Schaeffer, 1926"
         },
         {
           "id": "SP_THECAMOEBA_COSMOPHOREA",
@@ -242,11 +249,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Thecamoeba",
           "sourceIds": {
-            "checklistbank": "1245458"
+            "checklistbank": "1245458",
+            "checklistbank-316441": "TBSVH"
           },
           "children": [],
           "uuid": "be58810d-f60b-57c-bf6-5c8b7998544433",
-          "description": "Thecamoeba terricola is a thecamoebidae species found in its native region."
+          "description": "Thecamoeba terricola is a thecamoebidae species found in its native region.",
+          "authorship": "(Greeff, 1866) Lepşi, 1960"
         },
         {
           "id": "SP_THECAMOEBA_SIMILIS",
@@ -275,6 +284,19 @@
           "children": [],
           "uuid": "649c12ca-fc37-572-99e-661b0611febfba",
           "description": "Thecamoeba homeri is a thecamoebidae species found in its native region."
+        },
+        {
+          "id": "SP_THECAMOEBA_SPHAERONUCLEOLUS_GREEFF_1891_SCHAEFFER_1926",
+          "name": "Thecamoeba sphaeronucleolus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thecamoeba",
+          "authorship": "(Greeff, 1891) Schaeffer, 1926",
+          "sourceIds": {
+            "checklistbank-316441": "VDQ7T"
+          },
+          "children": []
         }
       ]
     },
@@ -445,7 +467,8 @@
           "sourceIds": {
             "checklistbank-308974": "402203"
           },
-          "uuid": "cc00a9fa-b96c-4e6d-a0af-4fe8a4c5302d"
+          "uuid": "cc00a9fa-b96c-4e6d-a0af-4fe8a4c5302d",
+          "children": []
         },
         {
           "id": "SP_THECAMOEBA_FOLIOVENANDA",
@@ -457,7 +480,8 @@
           "sourceIds": {
             "checklistbank-308974": "402211"
           },
-          "uuid": "d90c26f3-93bc-43d9-875f-fb57b5eb14c6"
+          "uuid": "d90c26f3-93bc-43d9-875f-fb57b5eb14c6",
+          "children": []
         },
         {
           "id": "SP_THECAMOEBA_VUMURTA",
@@ -469,7 +493,8 @@
           "sourceIds": {
             "checklistbank-308974": "402226"
           },
-          "uuid": "a8be73c0-7c5a-4f9f-93d1-732c6bcc46c7"
+          "uuid": "a8be73c0-7c5a-4f9f-93d1-732c6bcc46c7",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -581,10 +606,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thecamoebidae"
+    },
+    {
+      "id": "GENUS_PSEUDOTHECAMOEBA",
+      "name": "Pseudothecamoeba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOTHECAMOEBA_PROTEOIDES_PAGE_1976_PAGE_1988",
+          "name": "Pseudothecamoeba proteoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudothecamoeba",
+          "authorship": "(Page, 1976) Page, 1988",
+          "sourceIds": {
+            "checklistbank-316441": "VDQ7Q"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecamoebidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 34,
+  "genusCount": 6,
+  "speciesCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,

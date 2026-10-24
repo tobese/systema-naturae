@@ -1735,7 +1735,8 @@
           "lineage": "Platycephalus",
           "authorship": "Gray, 1835",
           "sourceIds": {
-            "gbif-backbone": "8719878"
+            "gbif-backbone": "8719878",
+            "checklistbank-316441": "S3338"
           },
           "children": [],
           "uuid": "f66b17ba-83ca-560-bf6-706ad9452a9f66"
@@ -4168,11 +4169,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Suggrundus",
           "sourceIds": {
-            "checklistbank": "ott3631507"
+            "checklistbank": "ott3631507",
+            "checklistbank-316441": "TC4D9"
           },
           "children": [],
           "uuid": "4b523e66-a965-584-b19-62d6a447bbac77",
-          "description": "Suggrundus tuberculatus is a platycephalidae species found in its native region."
+          "description": "Suggrundus tuberculatus is a platycephalidae species found in its native region.",
+          "authorship": "Whitley, 1933"
         },
         {
           "id": "SP_SUGGRUNDUS_BENGALENSIS_RAO_1966",
@@ -4600,6 +4603,19 @@
           "children": [],
           "uuid": "c4c66b70-102e-5c2-ad9-b946e23e8af0bf",
           "description": "Wakiyus welanderi is a platycephalidae species found in its native region."
+        },
+        {
+          "id": "SP_WAKIYUS_ABLANI_HERRE_1953",
+          "name": "Wakiyus ablani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wakiyus",
+          "authorship": "Herre, 1953",
+          "sourceIds": {
+            "checklistbank-316441": "TWYPP"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4650,13 +4666,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "platycephalidae"
+    },
+    {
+      "id": "GENUS_CALLIOMORUS",
+      "name": "Calliomorus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLIOMORUS_CHACA_HAMILTON_1822",
+          "name": "Calliomorus chaca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliomorus",
+          "authorship": "Hamilton, 1822",
+          "sourceIds": {
+            "checklistbank-316441": "MBGGH"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "platycephalidae"
     }
   ],
-  "speciesCount": 229,
+  "speciesCount": 231,
   "appSlug": "platycephalidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 28,
+  "genusCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -3,7 +3,7 @@
   "name": "Helotidae",
   "rank": "FAMILY",
   "appSlug": "helotidae",
-  "speciesCount": 39,
+  "speciesCount": 44,
   "children": [
     {
       "id": "GENUS_PALAEOHELOTA",
@@ -114,10 +114,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Metahelotella",
           "sourceIds": {
-            "checklistbank-139831": "1601879"
+            "checklistbank-139831": "1601879",
+            "checklistbank-316441": "V8SVR"
           },
           "uuid": "6b4b9a6c-225d-447f-9f89-c490ae249249",
-          "children": []
+          "children": [],
+          "authorship": "(Ritsema, 1881)"
         },
         {
           "id": "SP_METAHELOTELLA_SCHAWALLERI",
@@ -153,10 +155,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Metahelotella",
           "sourceIds": {
-            "wikispecies": "Metahelotella_immaculata"
+            "wikispecies": "Metahelotella_immaculata",
+            "checklistbank-316441": "V8SVQ"
           },
           "children": [],
-          "uuid": "19f41856-9e57-527c-8553-7f0e1d51f67b"
+          "uuid": "19f41856-9e57-527c-8553-7f0e1d51f67b",
+          "authorship": "(Ritsema, 1891)"
         },
         {
           "id": "SP_METAHELOTELLA_MARTHAE",
@@ -170,6 +174,19 @@
           },
           "children": [],
           "uuid": "fa53ee09-5f4f-5665-a66a-8e7682cd0ff8"
+        },
+        {
+          "id": "SP_METAHELOTELLA_ALATONOTATA_HUANG_GU_2025",
+          "name": "Metahelotella alatonotata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metahelotella",
+          "authorship": "Huang & Gu, 2025",
+          "sourceIds": {
+            "checklistbank-316441": "V8SVP"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -367,6 +384,32 @@
           },
           "children": [],
           "uuid": "cc59ec44-522b-55da-9036-fe59674a6667"
+        },
+        {
+          "id": "SP_HELOTA_JAPONICA_OHTA_1929",
+          "name": "Helota japonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Helota",
+          "authorship": "Ohta, 1929",
+          "sourceIds": {
+            "checklistbank-316441": "VRGMN"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELOTA_VIGORSII_MACLEAY_1825",
+          "name": "Helota vigorsii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Helota",
+          "authorship": "MacLeay, 1825",
+          "sourceIds": {
+            "checklistbank-316441": "PDWNJ"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -572,6 +615,19 @@
           },
           "uuid": "05ad7285-17fc-479f-b018-223a42ad38e2",
           "children": []
+        },
+        {
+          "id": "SP_NEOHELOTA_CHENI_GU_HUANG_2025",
+          "name": "Neohelota cheni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neohelota",
+          "authorship": "Gu & Huang, 2025",
+          "sourceIds": {
+            "checklistbank-316441": "VRWYC"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -593,7 +649,8 @@
           "lineage": "Lobatihelota",
           "authorship": "Li et al. 2023",
           "sourceIds": {
-            "checklistbank-1174": "txn:478651"
+            "checklistbank-1174": "txn:478651",
+            "checklistbank-316441": "PY3BP"
           },
           "uuid": "ccefcfa3-e545-4619-afe1-e9f564cdc040",
           "children": []
@@ -607,15 +664,38 @@
           "lineage": "Lobatihelota",
           "authorship": "Li et al. 2023",
           "sourceIds": {
-            "checklistbank-1174": "txn:478652"
+            "checklistbank-1174": "txn:478652",
+            "checklistbank-316441": "PY3BK"
           },
           "uuid": "efc3039b-2b9b-438a-bf87-45c9f19591b3",
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MYSTERIOHELOTA",
+      "name": "Mysteriohelota",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYSTERIOHELOTA_METALLICUS_HSIAO_2026",
+          "name": "Mysteriohelota metallicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mysteriohelota",
+          "authorship": "Hsiao, 2026",
+          "sourceIds": {
+            "checklistbank-316441": "VDQZX"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "helotidae"
     }
   ],
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "wikispecies": "Helotidae"
   }

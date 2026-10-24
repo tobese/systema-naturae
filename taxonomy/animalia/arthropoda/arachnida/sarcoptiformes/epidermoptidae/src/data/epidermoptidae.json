@@ -3,7 +3,7 @@
   "name": "Epidermoptidae",
   "rank": "FAMILY",
   "appSlug": "epidermoptidae",
-  "speciesCount": 45,
+  "speciesCount": 48,
   "children": [
     {
       "id": "GENUS_EPIDERMOPTES",
@@ -127,7 +127,8 @@
           "authorship": "Trouessart, 1906",
           "sourceIds": {
             "gbif-backbone": "4547612",
-            "checklistbank-139831": "676777"
+            "checklistbank-139831": "676777",
+            "checklistbank-316441": "R3S5M"
           },
           "children": [],
           "uuid": "9fc4b090-3fc9-5c75-af90-a894d60d34ee"
@@ -159,6 +160,19 @@
             "checklistbank-139831": "676778"
           },
           "uuid": "d590edae-0171-4818-b511-a7019ba1a6e0",
+          "children": []
+        },
+        {
+          "id": "SP_MYIALGES_OLIGERI_DUBININ_1950",
+          "name": "Myialges oligeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myialges",
+          "authorship": "Dubinin, 1950",
+          "sourceIds": {
+            "checklistbank-316441": "R3S74"
+          },
           "children": []
         }
       ],
@@ -669,6 +683,19 @@
           },
           "children": [],
           "uuid": "e567d30e-cf9c-5060-9ac5-7acdbe145d27"
+        },
+        {
+          "id": "SP_PROMYIALGES_ITALICUS_MORADI_FARADONBEH_OSTOVAN_OCONNOR_GHEIBI_JOHARCHI_MACCHIONI_2019",
+          "name": "Promyialges italicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Promyialges",
+          "authorship": "Moradi Faradonbeh, Ostovan, OConnor, Gheibi, Joharchi & Macchioni, 2019",
+          "sourceIds": {
+            "checklistbank-316441": "RVCCM"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -689,10 +716,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Picicnemidocoptes",
           "sourceIds": {
-            "checklistbank-139831": "395203"
+            "checklistbank-139831": "395203",
+            "checklistbank-316441": "RFMGD"
           },
           "uuid": "537f5201-af41-4f8a-a639-3e5957787f5f",
-          "children": []
+          "children": [],
+          "authorship": "(Railliet, 1885)"
         },
         {
           "id": "SP_PICICNEMIDOCOPTES_DRYOCOPAE",
@@ -777,9 +806,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "epidermoptidae"
+    },
+    {
+      "id": "GENUS_HEMIMYIALGES",
+      "name": "Hemimyialges",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEMIMYIALGES_MACDONALDI_EVANS_1963",
+          "name": "Hemimyialges macdonaldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemimyialges",
+          "authorship": "(Evans, 1963)",
+          "sourceIds": {
+            "checklistbank-316441": "PHZXN"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epidermoptidae"
     }
   ],
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "wikispecies": "Epidermoptidae"
   }

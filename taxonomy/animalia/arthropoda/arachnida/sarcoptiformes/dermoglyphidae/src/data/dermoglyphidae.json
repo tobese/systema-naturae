@@ -3,7 +3,7 @@
   "name": "Dermoglyphidae",
   "rank": "FAMILY",
   "appSlug": "dermoglyphidae",
-  "speciesCount": 11,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_PARALGES",
@@ -129,7 +129,8 @@
           "sourceIds": {
             "gbif-backbone": "4547379",
             "checklistbank-139831": "297371",
-            "checklistbank-2008": "221075"
+            "checklistbank-2008": "221075",
+            "checklistbank-316441": "NDPP5"
           },
           "children": [],
           "uuid": "d83d0e09-9455-5cc0-a6b5-85f6799646cc"
@@ -175,7 +176,8 @@
           "lineage": "Neumannella",
           "authorship": "Hernandes, 2017",
           "sourceIds": {
-            "gbif-backbone": "9264543"
+            "gbif-backbone": "9264543",
+            "checklistbank-316441": "QR6DL"
           },
           "children": [],
           "uuid": "f2f96f07-8ab5-51ae-8cbd-e7480e976429"
@@ -206,7 +208,29 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dermoglyphidae"
+    },
+    {
+      "id": "GENUS_NEUMANNIA",
+      "name": "Neumannia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEUMANNIA_CHELIFER_TROUESSART_NEUMANN_1888",
+          "name": "Neumannia chelifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neumannia",
+          "authorship": "Trouessart & Neumann, 1888",
+          "sourceIds": {
+            "checklistbank-316441": "V2XWN"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermoglyphidae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6
 }

@@ -3,7 +3,7 @@
   "name": "Sejidae",
   "rank": "FAMILY",
   "appSlug": "sejidae",
-  "speciesCount": 18,
+  "speciesCount": 21,
   "children": [
     {
       "id": "GENUS_SEJUS",
@@ -63,7 +63,8 @@
           "authorship": "Koch & Berendt, 1854",
           "sourceIds": {
             "gbif-backbone": "8553875",
-            "checklistbank-1174": "txn:271378"
+            "checklistbank-1174": "txn:271378",
+            "checklistbank-316441": "VCHWP"
           },
           "children": [],
           "uuid": "0f321226-d7f2-52c4-8822-77e3913679e0"
@@ -148,9 +149,36 @@
           "lineage": "Sejus",
           "authorship": "Canestrini",
           "sourceIds": {
-            "checklistbank-127379": "41adb86f-9654-4fba-b8c3-4c658ddf8ecd"
+            "checklistbank-127379": "41adb86f-9654-4fba-b8c3-4c658ddf8ecd",
+            "checklistbank-316441": "SYRVL"
           },
           "uuid": "a169b459-f8bd-4e01-9c3b-656c557e0af5",
+          "children": []
+        },
+        {
+          "id": "SP_SEJUS_ZINGIBERAE_MARTIN_JAMES_JAMES_JAMES_2020",
+          "name": "Sejus zingiberae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sejus",
+          "authorship": "Martin, James, James & James, 2020",
+          "sourceIds": {
+            "checklistbank-316441": "V33HG"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SEJUS_MURICATUS_KOCH_1839",
+          "name": "Sejus muricatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sejus",
+          "authorship": "Koch, 1839",
+          "sourceIds": {
+            "checklistbank-316441": "SYRZQ"
+          },
           "children": []
         }
       ],
@@ -291,9 +319,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sejidae"
+    },
+    {
+      "id": "GENUS_IPHIDINYCHUS",
+      "name": "Iphidinychus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_IPHIDINYCHUS_KAKUMEIENSIS_HIRAMATSU_HIRSCHMANN",
+          "name": "Iphidinychus kakumeiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Iphidinychus",
+          "authorship": "Hiramatsu & Hirschmann",
+          "sourceIds": {
+            "checklistbank-316441": "QQVTV"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sejidae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "wikispecies": "Sejidae",
     "checklistbank-1174": "txn:271441"

@@ -29,10 +29,12 @@
             ],
             "itis": [
               "114285"
-            ]
+            ],
+            "checklistbank-316441": "TVSMB"
           },
           "uuid": "e1d2635d-dada-5aa-b38-a532ec10c98202",
-          "authorityIds": "gbif:1033700,itis:114285"
+          "authorityIds": "gbif:1033700,itis:114285",
+          "authorship": "(Beauvois, 1806)"
         }
       ]
     },
@@ -491,6 +493,45 @@
           },
           "uuid": "a0ce4959-fb05-45fd-9a2d-c1f77d272764",
           "children": []
+        },
+        {
+          "id": "SP_CALLIRHIPIS_BOGOTENSIS_PIC_1943",
+          "name": "Callirhipis bogotensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callirhipis",
+          "authorship": "Pic, 1943",
+          "sourceIds": {
+            "checklistbank-316441": "MC5TV"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIRHIPIS_HOODII_SAUNDERS_1837",
+          "name": "Callirhipis hoodii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callirhipis",
+          "authorship": "Saunders, 1837",
+          "sourceIds": {
+            "checklistbank-316441": "MC5WM"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIRHIPIS_GORYI_GU_RIN_1830",
+          "name": "Callirhipis goryi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callirhipis",
+          "authorship": "Guérin, 1830",
+          "sourceIds": {
+            "checklistbank-316441": "MC5WC"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -509,11 +550,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Celadonia",
           "sourceIds": {
-            "checklistbank": "1235366"
+            "checklistbank": "1235366",
+            "checklistbank-316441": "MGQB7"
           },
           "children": [],
           "uuid": "b85c6f26-7bbc-54b-ba1-aee3a929dd0b9f",
-          "description": "Celadonia laportei is a callirhipidae species found in its native region."
+          "description": "Celadonia laportei is a callirhipidae species found in its native region.",
+          "authorship": "(Hope, 1846)"
         },
         {
           "id": "SP_CELADONIA_VESTITA",
@@ -840,10 +883,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "callirhipidae"
+    },
+    {
+      "id": "GENUS_CALLIRRHIPIS",
+      "name": "Callirrhipis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLIRRHIPIS_PLICATA_PIC_1925",
+          "name": "Callirrhipis plicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callirrhipis",
+          "authorship": "Pic, 1925",
+          "sourceIds": {
+            "checklistbank-316441": "MC6X2"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIRRHIPIS_UNICOSTATA_CHAMPION_1896",
+          "name": "Callirrhipis unicostata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callirrhipis",
+          "authorship": "Champion, 1896",
+          "sourceIds": {
+            "checklistbank-316441": "MC6X9"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "callirhipidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 52,
+  "genusCount": 11,
+  "speciesCount": 57,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

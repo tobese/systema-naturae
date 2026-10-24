@@ -3,7 +3,7 @@
   "name": "Sweetognathidae",
   "rank": "FAMILY",
   "appSlug": "sweetognathidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_SWEETOGNATHUS",
@@ -23,9 +23,46 @@
           "sourceIds": {
             "checklistbank-1174": "txn:310700"
           },
-          "uuid": "ff70627f-0a48-4b7c-86de-5265fd6aa44d"
+          "uuid": "ff70627f-0a48-4b7c-86de-5265fd6aa44d",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DIPLOGNATHODUS",
+      "name": "Diplognathodus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIPLOGNATHODUS_BENDERI_HU_HOGANCAMP_LAMBERT_QI_CHEN_2020",
+          "name": "Diplognathodus benderi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplognathodus",
+          "authorship": "Hu, Hogancamp, Lambert, Qi & Chen, 2020",
+          "sourceIds": {
+            "checklistbank-316441": "NLKSM"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPLOGNATHODUS_PORVENIRENSIS_BARRICK_NESTELL_WAHLMAN_2023",
+          "name": "Diplognathodus porvenirensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplognathodus",
+          "authorship": "Barrick, Nestell & Wahlman, 2023",
+          "sourceIds": {
+            "checklistbank-316441": "V2XBD"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sweetognathidae"
     }
-  ]
+  ],
+  "genusCount": 2
 }

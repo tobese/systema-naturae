@@ -3,7 +3,7 @@
   "name": "Aspidorhynchidae",
   "rank": "FAMILY",
   "appSlug": "aspidorhynchidae",
-  "speciesCount": 41,
+  "speciesCount": 42,
   "children": [
     {
       "id": "GENUS_ASPIDORHYNCHUS",
@@ -291,7 +291,8 @@
           "lineage": "Vinctifer",
           "authorship": "Cantalice et al., 2018",
           "sourceIds": {
-            "gbif-backbone": "9922345"
+            "gbif-backbone": "9922345",
+            "checklistbank-316441": "TRZV4"
           },
           "children": [],
           "uuid": "5932736f-7aca-5b2d-b89b-b06231f556a1"
@@ -620,9 +621,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aspidorhynchidae"
+    },
+    {
+      "id": "GENUS_DIPHYODUS",
+      "name": "Diphyodus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIPHYODUS_LONGIROSTRIS",
+          "name": "Diphyodus longirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diphyodus",
+          "sourceIds": {
+            "checklistbank-316441": "KRJLH"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aspidorhynchidae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "checklistbank-1174": "txn:63029"
   }

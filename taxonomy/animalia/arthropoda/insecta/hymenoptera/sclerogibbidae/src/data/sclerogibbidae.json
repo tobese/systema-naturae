@@ -3,7 +3,7 @@
   "name": "Sclerogibbidae",
   "rank": "FAMILY",
   "appSlug": "sclerogibbidae",
-  "speciesCount": 35,
+  "speciesCount": 36,
   "children": [
     {
       "id": "GENUS_SCLEROGIBBA",
@@ -126,10 +126,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sclerogibba",
           "sourceIds": {
-            "gbif-backbone": "10161503"
+            "gbif-backbone": "10161503",
+            "checklistbank-316441": "V6RV3"
           },
           "children": [],
-          "uuid": "8baf21d4-cf9b-5825-8a83-4d150ea1d67c"
+          "uuid": "8baf21d4-cf9b-5825-8a83-4d150ea1d67c",
+          "authorship": "Olmi **"
         },
         {
           "id": "SP_SCLEROGIBBA_BERLANDI_BENOIT_1963",
@@ -185,10 +187,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sclerogibba",
           "sourceIds": {
-            "gbif-backbone": "10557634"
+            "gbif-backbone": "10557634",
+            "checklistbank-316441": "VCHVJ"
           },
           "children": [],
-          "uuid": "93b20261-aaa5-56d8-b1df-9b98e4dbc85e"
+          "uuid": "93b20261-aaa5-56d8-b1df-9b98e4dbc85e",
+          "authorship": "Benoit **"
         },
         {
           "id": "SP_SCLEROGIBBA_MANCINII_MASI_1933",
@@ -257,7 +261,8 @@
           "sourceIds": {
             "checklistbank-311094": "371166"
           },
-          "uuid": "c8632fb3-7164-4387-a01f-b9b7a549c2a5"
+          "uuid": "c8632fb3-7164-4387-a01f-b9b7a549c2a5",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -628,9 +633,31 @@
           "uuid": "5801453b-7242-539c-9eb8-ea3b31c748f5"
         }
       ]
+    },
+    {
+      "id": "GENUS_PROSCLEROGIBBA",
+      "name": "Prosclerogibba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROSCLEROGIBBA_MAGRETTII_KIEFFER_1913",
+          "name": "Prosclerogibba magrettii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prosclerogibba",
+          "authorship": "(KIEFFER, 1913)",
+          "sourceIds": {
+            "checklistbank-316441": "RWXV4"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sclerogibbidae"
     }
   ],
-  "genusCount": 13,
+  "genusCount": 14,
   "sourceIds": {
     "checklistbank-1174": "txn:179812"
   }
