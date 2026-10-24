@@ -1404,8 +1404,14 @@ SOURCES = {
     "checklistbank-1027": (
         "World Scarabaeidae Database", "DOI not recorded; version 2026-10-05",
         "https://www.checklistbank.org/dataset/1027",
-        "CC BY", "assessed",
-        "Scarabaeidae specialist database, 80k species. Coleoptera gap filler."),
+        "CC BY", "applied",
+        "MEASURED AND TAKEN 2026-10-24 -- never actually run before despite "
+        "being on disk since 2026-10-11. 42,388 offered across Scarabaeidae, "
+        "Lucanidae, Trogidae, Passalidae, Pleocomidae and Ochodaeidae; "
+        "already near-completely covered by other sources -- 20,532 of "
+        "20,534 staged candidates matched an existing species by name. "
+        "**2 species added.** Not a gap-filler in practice, just confirms "
+        "the Coleoptera coverage already achieved elsewhere is solid."),
     "checklistbank-1140": (
         "Checklist of Ferns and Lycophytes of the World", "DOI not recorded; version 26.08",
         "https://www.checklistbank.org/dataset/1140",
