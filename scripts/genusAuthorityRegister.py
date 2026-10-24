@@ -29,6 +29,16 @@ job):
   - Nomenclator Zoologicus (dataset 126539): 340k+ zoological (ICZN) genus
     name instances back to 1758, CC0.
   - Species Fungorum Plus (dataset 2073): ~490k fungal (ICN) names.
+  - ZooBank (dataset 2037): 527,127 ICZN name usages, CC0. Declined as an
+    import source because its data model has no accepted/synonym concept
+    at all (sourcesManifest.py, re-assessed twice) -- irrelevant here,
+    since this register only asks "does this genus exist, under what
+    kingdom/family", not "is this a new species". Added 2026-10-24.
+  - Australian Faunal Directory (dataset 127379): zoological-only
+    nomenclatural register, CC BY. Declined as an import source for
+    lacking a taxon table/family data at all -- same "nomenclatural
+    register, not a classification" shape as Nomenclator Zoologicus,
+    which this register already uses the same way. Added 2026-10-24.
 
 Usage:
     python3 scripts/genusAuthorityRegister.py --build      # force a rebuild
@@ -51,6 +61,8 @@ SOURCES = {
     "irmng": os.path.join(ARCHIVES, "checklistbank-2007", "archive.zip"),
     "nomenclator-zoologicus": os.path.join(ARCHIVES, "checklistbank-126539", "archive.zip"),
     "species-fungorum-plus": os.path.join(ARCHIVES, "checklistbank-2073", "archive.zip"),
+    "zoobank": os.path.join(ARCHIVES, "checklistbank-2037", "archive.zip"),
+    "afd": os.path.join(ARCHIVES, "checklistbank-127379", "archive.zip"),
 }
 
 
@@ -131,10 +143,64 @@ def _rows_species_fungorum_plus(archive_path):
         }
 
 
+def _rows_zoobank(archive_path):
+    # Standard DwCA taxon table, same shape as IRMNG's -- confirmed
+    # 2026-10-24 the taxon.txt export genuinely carries genus/family/
+    # kingdom columns despite sourcesManifest.py declining it as an
+    # IMPORT source (ZooBank's data model has no accepted/synonym
+    # concept at all, so it can't tell a new species from a synonym --
+    # a different question from "does this genus exist, and under what
+    # kingdom/family", which is all this register ever asks).
+    for row in _read_tsv_from_zip(archive_path, "taxon.txt"):
+        if (row.get("taxonRank") or "").lower() != "genus":
+            continue
+        genus = row.get("genus") or row.get("scientificName")
+        if not genus:
+            continue
+        yield {
+            "genus": genus, "genus_norm": _norm(genus),
+            "kingdom": row.get("kingdom") or None,
+            "code": row.get("nomenclaturalCode") or None,
+            "family": row.get("family") or None,
+            "status": row.get("taxonomicStatus") or None,
+            "author": row.get("scientificNameAuthorship") or None,
+            "year": row.get("namePublishedInYear") or None,
+            "remarks": row.get("taxonRemarks") or None,
+        }
+
+
+def _rows_afd(archive_path):
+    # name.tsv is the same nomenclatural-register shape as Nomenclator
+    # Zoologicus's names.tsv (uninomial/scientificName, ICZN code,
+    # authorship, publishedInYear) -- declined as an import source for
+    # exactly that reason (sourcesManifest.py: "no taxon.* table at all,
+    # no parent/accepted links, no family"), which is also why `family`
+    # is always None here. Australian Faunal Directory is zoological
+    # only, like Nomenclator Zoologicus, so kingdom is hardcoded.
+    for row in _read_tsv_from_zip(archive_path, "name.tsv"):
+        if (row.get("rank") or "").lower() != "genus":
+            continue
+        genus = row.get("uninomial") or row.get("scientificName")
+        if not genus:
+            continue
+        yield {
+            "genus": genus, "genus_norm": _norm(genus),
+            "kingdom": "Animalia",
+            "code": row.get("code") or "ICZN",
+            "family": None,
+            "status": row.get("status") or None,
+            "author": row.get("authorship") or None,
+            "year": row.get("publishedInYear") or None,
+            "remarks": row.get("remarks") or None,
+        }
+
+
 READERS = {
     "irmng": _rows_irmng,
     "nomenclator-zoologicus": _rows_nomenclator_zoologicus,
     "species-fungorum-plus": _rows_species_fungorum_plus,
+    "zoobank": _rows_zoobank,
+    "afd": _rows_afd,
 }
 
 
