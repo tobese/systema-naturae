@@ -44,6 +44,7 @@ import json
 import os
 import re
 import sys
+from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import colChecklist as K  # noqa: E402
@@ -315,6 +316,13 @@ class RoutedSpecies:
         self.src_kingdom = None
         self.default_k = ""
         self.kinds = {}
+        # Taxa whose kingdom AND family both failed to resolve (the honest
+        # UNRESOLVED KINGDOM bucket) -- grouped by family name, since that is
+        # the one thing we do know about them and the one thing worth
+        # searching other datasets for later. {fam_raw: {"owners": set(),
+        # "count": int, "samples": [(name, tid), ...]}}. See
+        # record_unresolved() for the on-disk form.
+        self.unresolved_detail = {}
 
 
 def route_species(archive, kingdom_override="") -> RoutedSpecies:
@@ -367,6 +375,22 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
 
     placed = set()
 
+    # Diagnostic only -- "the first candidate (of up to 200) that happens to
+    # carry a kingdom in its own chain". Do NOT feed this into DEFAULT_K: for
+    # a multi-kingdom archive (GBIF Backbone, Wikispecies) it is one archive-
+    # order accident, not a property of the archive, and using it as the
+    # fallback kingdom for every taxon whose OWN kingdom and family name both
+    # fail to resolve mislabels the refusal's true kingdom. Found 2026-10-24:
+    # both backbone.zip and wikispecies/archive.zip happened to probe
+    # "Plantae" first, so every such refusal -- even unambiguously
+    # non-plant ones (Cicindelidae/Animalia, Pseudomonadaceae/Bacteria,
+    # Diploschistaceae/Fungi) -- got filed as "[plantae] <family>" in
+    # pendingFamilies.py's store. No species was ever mis-imported by this
+    # (a refusal stays a refusal either way), but it corrupted the
+    # bookkeeping of what is actually missing from which kingdom. The
+    # UNRESOLVED KINGDOM path below already exists and already reports this
+    # honestly -- the fix is to let taxa reach it instead of papering over
+    # them with this probe's guess.
     src_kingdom = None
     probe = {t["id"]: t for t in taxa}
     for t in cand[:200]:
@@ -381,7 +405,11 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
         KINDS[k] = our_families(k, quiet=True)
     r.kinds = KINDS
 
-    DEFAULT_K = (kingdom_override or src_kingdom or "").lower()
+    # Only an explicit --kingdom override asserts "treat this whole archive
+    # as kingdom X" -- that is a human's informed claim about a source (e.g.
+    # LCVP, which is plant-only and carries no kingdom field at all). The
+    # auto-probed src_kingdom above is not that; see the comment above it.
+    DEFAULT_K = (kingdom_override or "").lower()
     if DEFAULT_K and DEFAULT_K not in KINDS:
         sys.exit(f"FATAL: --kingdom {DEFAULT_K!r} is not one of "
                   f"{', '.join(sorted(KINDS))}")
@@ -504,6 +532,18 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             r.routed_unknown += 1
         elif routed_via == "unresolved":
             r.unresolved += 1
+            # Recomputed from FAM2K rather than cached per-row: cheap (FAM2K
+            # is a dict already built once per run) and it's grouped by
+            # family here, not per-taxon, so this is the one extra lookup
+            # for the whole family, not one per taxon.
+            owners = FAM2K.get(fam) or set()
+            fkey = fam_raw or "(no family)"
+            d = r.unresolved_detail.setdefault(
+                fkey, {"owners": set(), "count": 0, "samples": []})
+            d["owners"] |= owners
+            d["count"] += 1
+            if len(d["samples"]) < 5:
+                d["samples"].append((t.get("name") or bare, tid))
             continue
         r.routed[k] += 1
         fams_k = KINDS[k][1]
@@ -541,6 +581,12 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
               f"ambiguous across kingdoms. Not attributed to one and not "
               f"refused under a specific kingdom either; re-run with "
               f"--kingdom <name> if you know what this source is.")
+        print(f"      (recorded in the unresolved-taxa store on --apply; "
+              f"see scripts/pendingFamilies.py's sibling store)")
+        for fam, d in sorted(r.unresolved_detail.items(),
+                              key=lambda kv: -kv[1]["count"])[:10]:
+            owners = ",".join(sorted(d["owners"])) or "none held"
+            print(f"      {d['count']:>6,}  {fam}  (held under: {owners})")
     print(f"\n  already held (skipped): {r.held:,}")
     print(f"  staged:              {sum(len(v) for v in r.staged.values()):,}")
     print(f"  non-binominal:       {r.nonb:,}")
@@ -580,6 +626,84 @@ def record_misses(r: RoutedSpecies, archive, apply_: bool):
         print(f"  (dry run: {sum(r.missed.values()):,} refusals across "
               f"{len({f for _, f in r.missed if f}):} families would be recorded "
               f"in the pending store)")
+
+
+# Sibling to pendingFamilies.py's STORE/LINK pattern, same reasoning: derived
+# from the archives, weighs more than belongs in git, so it lives on the
+# external volume with a gitignored symlink standing in for it in the repo.
+UNRESOLVED_STORE = os.path.join(_sources.ROOT, "pending", "unresolved-taxa.jsonl")
+UNRESOLVED_LINK = "portal/data/pending-unresolved-taxa.jsonl"
+
+
+def _ensure_unresolved_link():
+    os.makedirs(os.path.dirname(UNRESOLVED_STORE), exist_ok=True)
+    if not os.path.exists(UNRESOLVED_STORE):
+        open(UNRESOLVED_STORE, "a").close()
+    if os.path.islink(UNRESOLVED_LINK):
+        if os.readlink(UNRESOLVED_LINK) == UNRESOLVED_STORE:
+            return
+        os.unlink(UNRESOLVED_LINK)
+    elif os.path.exists(UNRESOLVED_LINK):
+        raise SystemExit(f"{UNRESOLVED_LINK} exists and is not a symlink -- "
+                          f"refusing to replace it; move it aside first")
+    os.symlink(UNRESOLVED_STORE, UNRESOLVED_LINK)
+
+
+def record_unresolved(r: RoutedSpecies, archive, apply_: bool):
+    """Persist r.unresolved_detail -- taxa whose kingdom AND family both
+    failed to resolve, grouped by family name -- to a sibling of
+    pendingFamilies.py's store. A family name is the one fact an unresolved
+    taxon still carries, and the one thing worth searching other datasets
+    for later: these are orphans that might be adopted by a supporting
+    checklist which happens to classify this exact family, not species lost
+    for good (see [[project_kingdom_fallback_mislabels_refusals]] in
+    project memory for why this bucket exists at all -- it used to be
+    silently mislabeled as whatever kingdom the archive's first taxon
+    happened to carry, instead of recorded honestly like this).
+
+    Merged across runs the same way pendingFamilies.py merges: keyed by
+    family name (lowercased), counts and sample taxa accumulate per
+    (family, source) pair rather than overwriting, since different
+    archives can each contribute their own stuck taxa under the same
+    unresolved family name. Written only on --apply, same rule as
+    record_misses()."""
+    if not r.unresolved_detail:
+        return
+    if not apply_:
+        print(f"  (dry run: {sum(d['count'] for d in r.unresolved_detail.values()):,} "
+              f"unresolved-kingdom taxa across {len(r.unresolved_detail)} "
+              f"families would be recorded in the unresolved-taxa store)")
+        return
+    _ensure_unresolved_link()
+    rows = []
+    if os.path.getsize(UNRESOLVED_STORE) > 0:
+        with open(UNRESOLVED_STORE, encoding="utf-8") as fh:
+            rows = [json.loads(line) for line in fh if line.strip()]
+    index = {row["family"].lower(): row for row in rows}
+    source = f"{SOURCE}:{slug_hint(archive)}"
+    today = date.today().isoformat()
+    added = 0
+    for fam, d in r.unresolved_detail.items():
+        row = index.get(fam.lower())
+        if row is None:
+            row = {"family": fam, "owners": [], "bySource": {},
+                   "samples": [], "firstSeen": today}
+            index[fam.lower()] = row
+            added += 1
+        row["owners"] = sorted(set(row.get("owners") or []) | d["owners"])
+        row["bySource"][source] = d["count"]
+        seen = {tuple(s) for s in row.get("samples") or []}
+        for s in d["samples"]:
+            if s not in seen and len(row["samples"]) < 10:
+                row["samples"].append(list(s))
+                seen.add(s)
+        row["lastSeen"] = today
+        row["archive"] = archive
+    with open(UNRESOLVED_STORE, "w", encoding="utf-8") as fh:
+        for row in index.values():
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+    print(f"  recorded {added} new ({len(index)} total) families in the "
+          f"unresolved-taxa store ({UNRESOLVED_STORE})")
 
 
 def write_placement_diffs(r: RoutedSpecies, path, archive):
@@ -643,6 +767,7 @@ def main() -> int:
     r = route_species(args.archive, kingdom_override=args.kingdom)
     meta = r.meta
     record_misses(r, args.archive, args.apply)
+    record_unresolved(r, args.archive, args.apply)
     if args.diff_log:
         write_placement_diffs(r, args.diff_log, args.archive)
     staged = r.staged
