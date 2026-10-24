@@ -39,7 +39,17 @@ sys.path.insert(0, os.path.dirname(__file__))
 from sources import ROOT, MANIFEST
 
 # slug -> (title, identifier, source url, licence, status, what we took)
-# status: applied | partial | ready | assessed | refused
+# status: applied | partial | ready | assessed | refused | repurposed
+#   repurposed: declined as a SPECIES-import source (nomenclatural register,
+#   no taxon table, no accepted/synonym split, etc.) but actually in use for
+#   a different job -- genusAuthorityRegister.py's genus/name authority
+#   lookups, which only ever asks "does this genus exist, under what
+#   kingdom/family", a question a bare nomenclatural register can still
+#   answer even though it can't support an import decision. The "took" text
+#   for each of these keeps BOTH verdicts: why it was declined for import,
+#   and what it is actually feeding now. Distinct from "assessed" (looked
+#   at, no decision reached or decision was simply "no") because a
+#   repurposed source has an active consumer today, not just a note.
 SOURCES = {
     "gbif-backbone": (
         "GBIF Backbone Taxonomy", "GBIF dataset d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
@@ -523,13 +533,17 @@ SOURCES = {
         "IRMNG, Interim Register of Marine and Nonmarine Genera (dataset 2007)",
         "DOI 10.48580/d4f8; version 2026-09-16",
         "https://api.checklistbank.org/dataset/2007/archive.zip",
-        "CC BY", "assessed",
-        "NOT taken, and not comparable to the species sources. 269,528 accepted "
-        "genera and 2 species: it is a register of genus names, so '59.9% of its "
-        "genera are held' answers a different question from the rest of the "
-        "batch. Its value is nomenclatural availability, which this tree does "
-        "not model. Sampled at species rank before the tooling was fixed, it "
-        "reported a confident 100% already-held from a two-name sample."),
+        "CC BY", "repurposed",
+        "NOT taken as a species source, and not comparable to them. 269,528 "
+        "accepted genera and 2 species: it is a register of genus names, so "
+        "'59.9% of its genera are held' answers a different question from the "
+        "rest of the batch. Its value is nomenclatural availability, which "
+        "this tree does not model as species occurrence. Sampled at species "
+        "rank before the tooling was fixed, it reported a confident 100% "
+        "already-held from a two-name sample. REPURPOSED 2026-10-24: now one "
+        "of genusAuthorityRegister.py's genus-authority sources, used to "
+        "settle cross-kingdom-homonym triage against a real external record "
+        "instead of one-by-one manual lookups."),
     "worms": (
         "World Register of Marine Species (GBIF dataset "
         "2d59e5db-57ad-41ff-97d6-11f5fb264527)",
@@ -557,7 +571,7 @@ SOURCES = {
     "checklistbank-2037": (
         "ZooBank (ChecklistBank bulk export)", "DOI 10.48580/d4g9",
         "https://www.checklistbank.org/dataset/2037",
-        "CC0 (confirmed in the archive's own eml.xml)", "assessed",
+        "CC0 (confirmed in the archive's own eml.xml)", "repurposed",
         "NOT TAKEN, and downloaded: 81MB DwCA at "
         "archives/checklistbank-2037/archive.zip, 527,127 rows, version "
         "2026-08-29. Measured 2026-10-09 from the archive: 275,961 names "
@@ -586,7 +600,12 @@ SOURCES = {
         "Linnæus, 1758\") -- noise, not synonymy. So the missing column "
         "is not an export-format gap to wait out: ZooBank's data model has no "
         "accepted/synonym concept to export, in any format ChecklistBank "
-        "offers. Verdict unchanged, and nothing left to re-open on"),
+        "offers. Verdict unchanged as an import source, nothing left to "
+        "re-open on that question. REPURPOSED 2026-10-24: added to "
+        "genusAuthorityRegister.py's genus-authority sources anyway -- the "
+        "accepted/synonym gap that rules it out for import is irrelevant to "
+        "'does this genus exist, under what kingdom/family', which is all "
+        "that register ever asks."),
     "checklistbank-311094": (
         "BOLD Systems Taxonomy -- Insecta", "DOI 10.48580/dgrxf",
         "https://www.checklistbank.org/dataset/311094",
@@ -860,18 +879,23 @@ SOURCES = {
         "Australian Faunal Directory (AFD)",
         "DOI 10.48580/d78hf; version 2022-10-12",
         "https://www.checklistbank.org/dataset/127379",
-        "CC BY", "assessed",
-        "NOT taken. Pasted 2026-10-10. ChecklistBank types it "
-        "`nomenclatural`, and the export proves why: `name.tsv` "
+        "CC BY", "repurposed",
+        "NOT taken as a species source. Pasted 2026-10-10. ChecklistBank "
+        "types it `nomenclatural`, and the export proves why: `name.tsv` "
         "(scientificName, rank, status, ICZN/ICN code) plus "
-        "`reference.tsv` only -- no `taxon.*` table at all, no "
-        "parent/accepted links, no family. This is the Ozymandias "
+        "`reference.tsv` -- the archive also carries `taxa.tsv` and "
+        "`synonym.tsv`, but neither gives the parent/family links an "
+        "import needs. This is the Ozymandias "
         "nomenclatural layer AFD publishes through ChecklistBank, not "
         "AFD's actual classification (which lives at "
         "biodiversity.org.au/afd, not as a ChecklistBank export). Same "
         "underlying problem as ZooBank (checklistbank-2037) one step "
         "further -- ZooBank at least had a taxon table to read. Declined "
-        "on data shape, not licence (CC BY) or vintage."),
+        "on data shape, not licence (CC BY) or vintage. REPURPOSED "
+        "2026-10-24: added to genusAuthorityRegister.py's genus-authority "
+        "sources anyway, same reasoning as IRMNG/ZooBank -- a bare genus "
+        "name register still answers 'does this genus exist, under what "
+        "kingdom/family' even though it can't support an import decision."),
     "checklistbank-2026": (
         "Fauna Europaea (FaEu)", "DOI 10.48580/d4fw; version 2016-09-09",
         "https://www.checklistbank.org/dataset/2026",
@@ -959,23 +983,19 @@ SOURCES = {
         "Catalogue of Life China 2025 Annual Checklist",
         "DOI not recorded; version 2025-05-22",
         "https://www.checklistbank.org/dataset/312616",
-        "CC BY", "assessed",
-        "NOT YET DECIDED. Pasted 2026-10-10. A regional slice of the same "
-        "COL backbone Stage 1/2 already imported globally, so the prior "
-        "was heavy redundancy -- measured instead, and it isn't: its "
-        "`taxon.txt` has no rank column at all (every row came back "
-        "rank=None through colChecklist.py, so it isn't importable through "
-        "the normal path yet), but a hand-rolled check against taxaserve "
-        "found 148,081 distinct names, **44,805 (30.3%) not held** -- "
-        "mostly China-regional names in poorly globally-catalogued groups "
-        "(gall mites, Abacarus, the same group eunis and Nortaxa both "
-        "under-covered). Some visibly corrupted genus names in the raw "
-        "data too (`0vipennis bicolor`, a leading digit). Needs a rank-"
-        "inference fix before it can go through importColChecklist.py -- "
-        "every row in this export is species-or-infraspecific by the "
-        "dataset's own documented scope, so defaulting rank when the row "
-        "carries its own genus/family columns should be safe, but "
-        "untested. Archive on disk at archives/checklistbank-312616/."),
+        "CC BY", "applied",
+        "TAKEN 2026-10-10 (commit f772bd6c435): 24,597 species added, plus "
+        "the rank-inference fix this entry used to say was still needed --"
+        " `taxon.txt` carries no rank column anywhere, inferred as species "
+        "only when NO row in the whole table carries a rank and the name "
+        "looks like a binomial under a known family (colChecklist.py). "
+        "RE-APPLIED 2026-10-24 via importColChecklist.py --apply: a "
+        "further 3,377 added, the real remaining gap after this session's "
+        "kingdom-fallback and family-scaffolding fixes let more of it "
+        "resolve cleanly (921 bacteria/virus taxa correctly fell to "
+        "UNRESOLVED KINGDOM instead of being refused under a wrong one). "
+        "This entry previously read 'NOT YET DECIDED' -- stale; the import "
+        "commit never updated it."),
     "checklistbank-9818": (
         "COL Lepidoptera Project", "version/issued not recorded by "
         "ChecklistBank",
@@ -992,13 +1012,41 @@ SOURCES = {
     "checklistbank-2003": (
         "Index Nominum Algarum (INA)", "DOI not recorded; version 2019-05-10",
         "https://www.checklistbank.org/dataset/2003",
-        "CC BY", "assessed",
-        "NOT taken. Pasted 2026-10-10. ChecklistBank types it "
-        "`nomenclatural`, and the export proves why, the exact AFD "
+        "CC BY", "repurposed",
+        "NOT taken as a species source. Pasted 2026-10-10. ChecklistBank "
+        "types it `nomenclatural`, and the export proves why, the exact AFD "
         "(checklistbank-127379) shape: `name.tsv` + `name-rel.tsv` + "
         "`reference.tsv` only, no `taxon.*` table, nothing to place "
         "against a family. Declined on data shape, not licence (CC BY) "
-        "or vintage."),
+        "or vintage. REPURPOSED 2026-10-24: used directly (ad hoc, not yet "
+        "wired into genusAuthorityRegister.py) during the cross-kingdom-"
+        "homonym triage -- confirmed Solenomeris as chromista-only "
+        "(matching IRMNG), which resolved a case neither the tree nor "
+        "gbif-backbone could settle alone."),
+    "checklistbank-126539": (
+        "Nomenclator Zoologicus (dataset 126539)",
+        "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/126539",
+        "CC0", "repurposed",
+        "Never run through a species-import assessment, and never added to "
+        "this manifest or to the external manifest.json until 2026-10-24 -- "
+        "fetched directly for genusAuthorityRegister.py's own build, which "
+        "predates this entry. 340k+ zoological (ICZN) genus name instances "
+        "back to 1758. Settled several cross-kingdom-homonym cases IRMNG "
+        "alone had marked uncertain in the 2026-10-24 triage, and caught "
+        "one (`Tubifera`) IRMNG itself flags inconsistently."),
+    "checklistbank-2073": (
+        "Species Fungorum Plus (dataset 2073)",
+        "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/2073",
+        "CC BY", "repurposed",
+        "Same gap as Nomenclator Zoologicus above: fetched directly for "
+        "genusAuthorityRegister.py, never assessed as a species-import "
+        "source or added to this manifest until 2026-10-24. ~490k fungal "
+        "(ICN) names; this export carries no bare genus-rank taxa (every "
+        "Taxon.tsv row has a species filled in), so a genus's presence is "
+        "derived by grouping its species rows rather than read off one "
+        "dedicated row the way IRMNG/Nomenclator Zoologicus provide it."),
     "checklistbank-2041": (
         "Dyntaxa -- Svensk taxonomisk databas",
         "DOI not recorded; version 2026-10-09",
