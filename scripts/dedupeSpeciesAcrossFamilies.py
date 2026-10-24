@@ -497,6 +497,21 @@ def main() -> int:
                               # count below, so they are NOT a separate category
     for sid, places in dupes.items():
         files = {f for f, _ in places}
+        # Cross-kingdom first, before any provenance-based branch gets a
+        # chance to `continue`. This used to sit after the native/imported
+        # and both-imported branches below, which don't check kingdom at
+        # all -- so a cross-kingdom pair where one side's `sourcedFrom`
+        # happened to land in IMPORTED and the other didn't (a real,
+        # checklistbank-sourced record against a sourcedFrom:"none"
+        # fabricated stub in a different kingdom, e.g. SP_ORTHOCERAS_
+        # ANNULATA_SOWERBY_1818 in animalia vs. plantae) got resolved by
+        # the kingdom-blind branch before this guard ever ran, deleting
+        # the real copy and keeping the stub. Moving the check here is
+        # what the module docstring already claimed happened "by
+        # construction" -- it didn't, until now.
+        if len({file_kingdom.get(f) for f, _s in places}) > 1:
+            keep_report["left alone (cross-kingdom homonym)"] += 1
+            continue
         imported = [(f, s) for f, s in places if (s.get("sourcedFrom") or "") in IMPORTED]
         native = [(f, s) for f, s in places if (s.get("sourcedFrom") or "") not in IMPORTED]
         if native and imported:
@@ -552,20 +567,13 @@ def main() -> int:
         if len({f for f, _s in places}) < 2:
             keep_report["left alone (both copies in one family)"] += 1
             continue
-        # A cross-kingdom homonym is not a duplicate, and this is the one check
-        # that cannot be left to the richness test. `Graphium sarpedon` is a
-        # butterfly in papilionidae and a fungus in microascaceae; `Diploderma
-        # polygonatum` is an agamid and a diplocystidiid; `Hexagonia bicolor` is
-        # a carabid and a polypore. They share an id because the id is derived
-        # from the name, not because they are one taxon, and verifyTree already
-        # carries a documented allowlist of seven such homonyms. Both copies here
-        # happen to be documented, so the bare-stub test spares them by luck --
-        # and a homonym whose fungal copy had no description would have been
-        # deleted from another kingdom, which is the same class of error as the
-        # 194 subspecies an earlier version of this script destroyed.
-        if len({file_kingdom.get(f) for f, _s in places}) > 1:
-            keep_report["left alone (cross-kingdom homonym)"] += 1
-            continue
+        # Cross-kingdom is already excluded at the top of this loop, before
+        # the provenance branches above -- see the comment there. `Graphium
+        # sarpedon` is a butterfly in papilionidae and a fungus in
+        # microascaceae; `Diploderma polygonatum` is an agamid and a
+        # diplocystidiid; `Hexagonia bicolor` is a carabid and a polypore.
+        # They share an id because the id is derived from the name, not
+        # because they are one taxon.
         if any((s.get("rank") or "SPECIES") != "SPECIES" for _f, s in places):
             keep_report["left alone (a copy is not rank SPECIES)"] += 1
             continue

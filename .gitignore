@@ -88,6 +88,10 @@ portal/data/name-parse-index/
 # automatically, by merge_family itself whenever it is older than the newest
 # family file); never read by the app.
 portal/data/.authority-index.sqlite3
+# scripts/genusAuthorityRegister.py's aggregated genus-level nomenclatural
+# register (IRMNG + Nomenclator Zoologicus + Species Fungorum Plus); derived
+# from archives on the sources volume, rebuilt automatically when stale.
+portal/data/.genus-authority-register.sqlite3
 portal/public/data/kingdoms/
 portal/public/data/book/
 portal/data/non-english-descriptions.jsonl
