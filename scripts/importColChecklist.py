@@ -48,6 +48,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import colChecklist as K  # noqa: E402
 import importSpeciesFile as SF  # noqa: E402
+import sources as _sources  # noqa: E402
 import taxamatch  # noqa: E402
 
 KINGDOM_CONFIG = "portal/data/kingdom-config.json"
@@ -77,6 +78,169 @@ with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
                         "data", "known-bad-gbif-backbone-placements.json"),
           encoding="utf-8") as _f:
     KNOWN_BAD_GBIF_BACKBONE_PLACEMENTS = set(json.load(_f).keys())
+
+
+def _routing_cache_path(archive):
+    base, _ = os.path.splitext(archive)
+    return base + ".routing-cache.parquet"
+
+
+def _load_routing_cache(archive, default_k):
+    """-> {taxon_id: row}, or {} if missing/stale/wrong default_k.
+
+    Caches the EXPENSIVE, archive-derived part of route_species()'s
+    per-candidate work (name parsing + K.chain()'s parent-walk) so a
+    re-import of an unchanged archive -- which is what the pending-family
+    watcher does every cycle -- doesn't pay it again for candidates whose
+    archive-side routing can't have changed. What DOES need to stay fresh
+    every run (not cached): whether we currently hold that species
+    (ON_DISK) and whether we currently hold that family (KINDS) -- those
+    are exactly what a re-run exists to notice.
+
+    Valid only when newer than the archive (same convention as
+    colChecklist.py's taxa cache) AND built under the same `default_k`:
+    a few candidates per archive route through the `elif DEFAULT_K`
+    fallback, so a cache built under one --kingdom override (or none)
+    isn't safe to reuse under a different one -- rather than track that
+    per-row, the whole cache is invalidated if it doesn't match."""
+    path = _routing_cache_path(archive)
+    if not (os.path.exists(path) and os.path.getsize(path) > 0
+            and os.path.getmtime(path) >= os.path.getmtime(archive)):
+        return {}
+    try:
+        import duckdb
+    except ImportError:
+        return {}
+    try:
+        con = duckdb.connect()
+        rel = con.sql(f"SELECT * FROM read_parquet({path!r})")
+        cols = rel.columns
+        rows = rel.fetchall()
+    except Exception as e:
+        print(f"  (routing cache unreadable, ignoring: {e})")
+        return {}
+    if "default_k" not in cols or "id" not in cols:
+        return {}
+    out = {}
+    default_k_idx = cols.index("default_k")
+    for row in rows:
+        if row[default_k_idx] != default_k:
+            return {}  # built under a different --kingdom; whole cache invalid
+        d = dict(zip(cols, row))
+        out[d["id"]] = d
+    return out
+
+
+def _write_routing_cache(cache_rows, archive, default_k):
+    """cache_rows: {taxon_id: row_dict (no 'id'/'default_k' keys -- added
+    here)}. Same .tmp-then-rename pattern as colChecklist.py's taxa
+    cache, for the same reason (found 2026-10-23: a kill mid-write
+    truncated a different file outright when it wasn't atomic)."""
+    if not cache_rows:
+        return
+    try:
+        import duckdb
+        import tempfile
+    except ImportError:
+        return
+    path = _routing_cache_path(archive)
+    fd, tmp = tempfile.mkstemp(suffix=".jsonl", dir=os.path.dirname(path) or ".")
+    tmp_out = path + ".tmp"
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            for tid, row in cache_rows.items():
+                rec = dict(row)
+                rec["id"] = tid
+                rec["default_k"] = default_k
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+        con = duckdb.connect()
+        con.execute(
+            f"COPY (SELECT * FROM read_json_auto({tmp!r}, sample_size=500000)) "
+            f"TO {tmp_out!r} (FORMAT PARQUET)")
+        os.replace(tmp_out, path)
+    except Exception as e:
+        print(f"  (routing cache write skipped: {e})")
+    finally:
+        os.unlink(tmp)
+        if os.path.exists(tmp_out):
+            os.unlink(tmp_out)
+
+
+def _ondisk_cache_path(kingdom):
+    """Outside the repo, on the sources volume -- same convention as
+    pendingFamilies.py's store, derived/local, never committed."""
+    d = os.path.join(_sources.ROOT, "ondisk-species-index")
+    os.makedirs(d, exist_ok=True)
+    return os.path.join(d, f"{kingdom}.parquet")
+
+
+def _load_ondisk_cache(kingdom):
+    """-> {family_slug: {'mtime', 'size', 'ids'}}, or {} if missing/unreadable.
+
+    Per-family-file granularity, keyed by (mtime, size) on that one
+    file -- same two-factor freshness check buildData.ts's own
+    per-family `.build-cache/families/<slug>.json` already uses, applied
+    here to the species-id extraction `route_species()`'s ON_DISK scan
+    does instead of the grafted-subtree extraction buildData.ts does.
+    Measured 2026-10-24: scanning+parsing all 24,148 family files across
+    six kingdoms took 88s by itself, the dominant cost of a repeat
+    archive import (ON_DISK is rebuilt from scratch on every single
+    route_species() call, archive-independent) -- this is what actually
+    needs caching, not (only) the archive-side routing work."""
+    path = _ondisk_cache_path(kingdom)
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        return {}
+    try:
+        import duckdb
+        con = duckdb.connect()
+        rel = con.sql(f"SELECT * FROM read_parquet({path!r})")
+        cols = rel.columns
+        rows = rel.fetchall()
+    except Exception as e:
+        print(f"  (on-disk species cache unreadable, ignoring: {e})")
+        return {}
+    out = {}
+    for row in rows:
+        d = dict(zip(cols, row))
+        out[d["slug"]] = {"mtime": d.get("mtime"), "size": d.get("size"),
+                           "ids": list(d.get("ids") or [])}
+    return out
+
+
+def _write_ondisk_cache(kingdom, entries):
+    """entries: {family_slug: {'mtime', 'size', 'ids'}} -- every family
+    slug currently on disk for this kingdom, one way or another (cache
+    hit or freshly re-parsed); a slug that no longer exists on disk is
+    never in `entries` to begin with, so it naturally drops out of the
+    cache rather than needing an explicit removal step. Same
+    .tmp-then-rename pattern as the other caches."""
+    if not entries:
+        return
+    try:
+        import duckdb
+        import tempfile
+    except ImportError:
+        return
+    path = _ondisk_cache_path(kingdom)
+    fd, tmp = tempfile.mkstemp(suffix=".jsonl", dir=os.path.dirname(path) or ".")
+    tmp_out = path + ".tmp"
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            for slug, e in entries.items():
+                rec = {"slug": slug, "mtime": e["mtime"], "size": e["size"],
+                       "ids": e["ids"]}
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+        con = duckdb.connect()
+        con.execute(
+            f"COPY (SELECT * FROM read_json_auto({tmp!r}, sample_size=500000)) "
+            f"TO {tmp_out!r} (FORMAT PARQUET)")
+        os.replace(tmp_out, path)
+    except Exception as e:
+        print(f"  (on-disk species cache write skipped: {e})")
+    finally:
+        os.unlink(tmp)
+        if os.path.exists(tmp_out):
+            os.unlink(tmp_out)
 
 
 def slug_hint(archive):
@@ -226,21 +390,42 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     import glob as _glob
     ON_DISK = {}
     for k in KINDS:
+        ondisk_cache = _load_ondisk_cache(k)
+        new_ondisk_cache = {}
         ids = {}
+        on_cache_hits = on_cache_misses = 0
         for f in _glob.glob(f"taxonomy/{k}/**/src/data/*.json", recursive=True):
             slug = os.path.basename(f)[:-5]
             try:
-                d = json.load(open(f, encoding="utf-8"))
-            except Exception:
+                st = os.stat(f)
+            except OSError:
                 continue
-            st = list(d.get("children") or [])
-            while st:
-                nd = st.pop()
-                if nd.get("rank") == "SPECIES" and nd.get("id"):
-                    ids[nd["id"]] = slug
-                st.extend(nd.get("children") or [])
+            cached = ondisk_cache.get(slug)
+            if (cached is not None and cached.get("mtime") == st.st_mtime
+                    and cached.get("size") == st.st_size):
+                on_cache_hits += 1
+                file_ids = cached["ids"]
+            else:
+                on_cache_misses += 1
+                try:
+                    d = json.load(open(f, encoding="utf-8"))
+                except Exception:
+                    continue
+                file_ids = []
+                stack = list(d.get("children") or [])
+                while stack:
+                    nd = stack.pop()
+                    if nd.get("rank") == "SPECIES" and nd.get("id"):
+                        file_ids.append(nd["id"])
+                    stack.extend(nd.get("children") or [])
+            new_ondisk_cache[slug] = {"mtime": st.st_mtime, "size": st.st_size,
+                                       "ids": file_ids}
+            for sid in file_ids:
+                ids[sid] = slug
         ON_DISK[k] = ids
-        print(f"  {k:10s} families {len(KINDS[k][1]):>7,}   species on disk {len(ids):>9,}")
+        _write_ondisk_cache(k, new_ondisk_cache)
+        print(f"  {k:10s} families {len(KINDS[k][1]):>7,}   species on disk {len(ids):>9,}"
+              f"   (file cache: {on_cache_hits:,} hits, {on_cache_misses:,} misses)")
     print(f"  source kingdom (first taxon with one): {src_kingdom or '(none)'}")
 
     parsed = taxamatch.parse_names(sorted({t["name"] for t in cand}))
@@ -250,38 +435,76 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
         for fam in fams_k:
             FAM2K[fam].add(k)
 
+    # Caches the expensive, archive-derived half of this loop (name
+    # parsing + K.chain()'s parent-walk) across repeated runs of an
+    # unchanged archive -- see _load_routing_cache()'s docstring. What is
+    # NOT cached, and must stay fresh every run: ON_DISK (do we currently
+    # hold this species) and KINDS (do we currently hold this family) --
+    # that is exactly what re-running an archive exists to notice.
+    routing_cache = _load_routing_cache(archive, DEFAULT_K)
+    new_cache_rows = {}
+    cache_hits = 0
+
     for t in cand:
-        if (t.get("id") or "") in KNOWN_BAD_GBIF_BACKBONE_PLACEMENTS:
+        tid = t.get("id") or ""
+        if tid in KNOWN_BAD_GBIF_BACKBONE_PLACEMENTS:
             r.known_bad_skipped += 1
             continue
-        nm = t["name"]
-        g, s = taxamatch.bare_binomial(nm, parsed)
-        if not g or not s:
-            r.nonb += 1
-            continue
-        bare = taxamatch.bare_name(nm, parsed)
+
+        cached = routing_cache.get(tid)
+        if cached is not None:
+            cache_hits += 1
+            routed_via = cached.get("routed_via")
+            if routed_via == "nonbinomial":
+                r.nonb += 1
+                continue
+            bare, g, sid = cached.get("bare"), cached.get("g"), cached.get("sid")
+            fam_raw, fam, k = cached.get("fam_raw"), cached.get("fam"), cached.get("k")
+            fid = cached.get("fid")
+        else:
+            nm = t["name"]
+            g, s = taxamatch.bare_binomial(nm, parsed)
+            if not g or not s:
+                r.nonb += 1
+                new_cache_rows[tid] = {"routed_via": "nonbinomial"}
+                continue
+            bare = taxamatch.bare_name(nm, parsed)
+            sid = SF.node_id(SF.PREFIX["SPECIES"], bare, (t.get("authorship") or "").strip() or "")
+            ch = K.chain(t, by_id)
+            fam_raw = (ch.get("family") or "").strip()
+            fam = fam_raw.lower()
+            k = (ch.get("kingdom") or "").strip().lower()
+            fid = ch.get("family_id")
+            if k not in KINDS:
+                k = ""
+                owners = FAM2K.get(fam) or set()
+                if len(owners) == 1:
+                    k = next(iter(owners))
+                    routed_via = "family"
+                elif DEFAULT_K:
+                    k = DEFAULT_K
+                    routed_via = "default"
+                else:
+                    routed_via = "unresolved"
+            else:
+                routed_via = "kingdom"
+            new_cache_rows[tid] = {"routed_via": routed_via, "bare": bare, "g": g,
+                                    "sid": sid, "fam_raw": fam_raw, "fam": fam,
+                                    "k": k, "fid": fid}
+
         if bare.lower() in placed:
             continue
         placed.add(bare.lower())
-        sid = SF.node_id(SF.PREFIX["SPECIES"], bare, (t.get("authorship") or "").strip() or "")
-        ch = K.chain(t, by_id)
-        fam_raw = (ch.get("family") or "").strip()
-        fam = fam_raw.lower()
-        k = (ch.get("kingdom") or "").strip().lower()
-        if k not in KINDS:
-            k = ""
-            owners = FAM2K.get(fam) or set()
-            if len(owners) == 1:
-                k = next(iter(owners))
-                r.routed_by_family += 1
-            elif DEFAULT_K:
-                k = DEFAULT_K
-                r.routed_unknown += 1
-            else:
-                r.unresolved += 1
-                continue
-        else:
+
+        if routed_via == "kingdom":
             r.routed_by_kingdom += 1
+        elif routed_via == "family":
+            r.routed_by_family += 1
+        elif routed_via == "default":
+            r.routed_unknown += 1
+        elif routed_via == "unresolved":
+            r.unresolved += 1
+            continue
         r.routed[k] += 1
         fams_k = KINDS[k][1]
         ours = ON_DISK[k].get(sid)
@@ -289,8 +512,7 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             r.held += 1
             theirs = (fams_k.get(fam) or (None,))[0] if fam else None
             if theirs and ours != theirs:
-                r.diffs.append((k, sid, bare, ours, theirs, fam_raw,
-                                (t.get("id") or "")))
+                r.diffs.append((k, sid, bare, ours, theirs, fam_raw, tid))
             continue
         if fam not in fams_k:
             r.no_family[(k, fam or "(no family)")] += 1
@@ -300,10 +522,14 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
         slug = fams_k[fam][0]
         r.staged[(k, slug)].append((g, bare,
                                     (t.get("authorship") or "").strip() or None,
-                                    t.get("id"), fam))
-        fid = ch.get("family_id")
+                                    tid, fam))
         if fid:
             r.fam_source_ids[(k, slug)].add(fid)
+
+    _write_routing_cache(new_cache_rows, archive, DEFAULT_K)
+    if routing_cache:
+        print(f"  routing cache: {cache_hits:,} of {len(cand):,} candidates "
+              f"skipped the archive-side routing work (already known)")
 
     print("  routed per taxon: " + ", ".join(f"{k} {v:,}" for k, v in r.routed.most_common()))
     print(f"      kingdom from the taxon: {r.routed_by_kingdom:,}"
