@@ -3538,13 +3538,22 @@
           "lineage": "Passalus",
           "authorship": "Saint-Fargeau & Audinet-Serville, 1828",
           "sourceIds": {
-            "checklistbank": "126286",
+            "checklistbank": [
+              "126286",
+              "urn:lsid:marinespecies.org:taxname:1489733"
+            ],
             "gbif-backbone": "6991177",
-            "checklistbank-1027": "25-.04-.01-.00-.005-.001-.061-.-"
+            "checklistbank-1027": [
+              "25-.04-.01-.00-.005-.001-.061-.-"
+            ],
+            "checklistbank-311094": [
+              "405076"
+            ]
           },
           "children": [],
           "uuid": "1d96a248-7e72-5bf-823-f27db052a87955",
-          "description": "Passalus punctiger is a beetle of the family Passalidae."
+          "description": "Passalus punctiger is a beetle of the family Passalidae.",
+          "authorityIds": "checklistbank:126286,checklistbank:urn:lsid:marinespecies.org:taxname:1489733,checklistbank-1027:25-.04-.01-.00-.005-.001-.061-.-,checklistbank-311094:405076,gbif-backbone:6991177"
         },
         {
           "id": "SP_PASSALUS_PUNCTATISSIMUS_ESCHSCHOLTZ_1829",
@@ -4098,23 +4107,6 @@
       "name": "\"Passalus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PASSALUS_PUNCTIGER_LEPELETIER_SERVILLE_1825",
-          "name": "\"Passalus punctiger\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Passalus",
-          "authorship": "\"LePeletier & Serville, 1825\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1489733",
-            "checklistbank-1027": "25-.04-.01-.00-.005-.001-.061-.-",
-            "checklistbank-311094": "405076"
-          },
-          "children": [],
-          "uuid": "ab534de7-fe22-5ce-87f-12d1b111cb6bfd",
-          "description": "\"Passalus punctiger\" is a passalidae species found in its native region."
-        },
         {
           "id": "SP_PASSALUS_INTERRUPTUS",
           "name": "Passalus interruptus",
@@ -18780,7 +18772,7 @@
       "lineage": "passalidae"
     }
   ],
-  "speciesCount": 1054,
+  "speciesCount": 1053,
   "appSlug": "passalidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
