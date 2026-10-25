@@ -3,7 +3,7 @@
   "name": "Syndiniaceae",
   "rank": "FAMILY",
   "appSlug": "syndiniaceae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_HEMATODINIUM",
@@ -18,10 +18,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hematodinium",
           "sourceIds": {
-            "gbif-backbone": "4267738"
+            "gbif-backbone": "4267738",
+            "checklistbank-2169": "412152"
           },
           "children": [],
-          "uuid": "d55f1322-af4c-513-bef-d4a18a576b03b7"
+          "uuid": "d55f1322-af4c-513-bef-d4a18a576b03b7",
+          "authorship": "Chatton & Poisson, 1931"
         },
         {
           "id": "SP_HEMATODINIUM_SP",
@@ -139,7 +141,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "syndiniaceae"
+    },
+    {
+      "id": "GENUS_SYNDINIACEAE",
+      "name": "Syndiniaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYNDINIACEAE_SP",
+          "name": "Syndiniaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syndiniaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3061900"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "syndiniaceae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-2169": "88550"
+  }
 }

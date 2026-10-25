@@ -3,7 +3,7 @@
   "name": "Pelagomonadaceae",
   "rank": "FAMILY",
   "appSlug": "pelagomonadaceae",
-  "speciesCount": 4,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_PELAGOCOCCUS",
@@ -21,10 +21,23 @@
           "sourceIds": {
             "gbif-backbone": "3195489",
             "checklistbank-2008": "955736",
-            "checklistbank-308974": "345062"
+            "checklistbank-308974": "345062",
+            "checklistbank-2169": "35679"
           },
           "children": [],
           "uuid": "981ed30c-a0ab-5a4-890-a876a66813289b"
+        },
+        {
+          "id": "SP_PELAGOCOCCUS_SP",
+          "name": "Pelagococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagococcus",
+          "sourceIds": {
+            "checklistbank-2169": "1764904"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -45,10 +58,23 @@
           "authorship": "Hargraves & Sieburth",
           "sourceIds": {
             "gbif-backbone": "3195491",
-            "checklistbank-308974": "345002"
+            "checklistbank-308974": "345002",
+            "checklistbank-2169": "44056"
           },
           "children": [],
           "uuid": "fcab4c82-76d7-5cc-9cc-fe766949d15c3f"
+        },
+        {
+          "id": "SP_AUREOCOCCUS_SP",
+          "name": "Aureococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aureococcus",
+          "sourceIds": {
+            "checklistbank-2169": "2812053"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -69,10 +95,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chrysophaeum",
           "sourceIds": {
-            "checklistbank-139831": "1266010"
+            "checklistbank-139831": "1266010",
+            "checklistbank-2169": "2483200"
           },
           "uuid": "fbbdc081-18bd-4154-aa10-5da9911a8e38",
-          "children": []
+          "children": [],
+          "authorship": "I.F.Lewis & H.F.Bryan, 1941"
         }
       ]
     },
@@ -94,11 +122,146 @@
             "checklistbank-308974": "345071"
           },
           "children": []
+        },
+        {
+          "id": "SP_PELAGOMONAS_SP",
+          "name": "Pelagomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagomonas",
+          "sourceIds": {
+            "checklistbank-2169": "114180"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagomonadaceae"
+    },
+    {
+      "id": "GENUS_VEERELLA",
+      "name": "Veerella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VEERELLA_VENUSTA_R_A_ANDERSEN_WETHERBEE_2024",
+          "name": "Veerella venusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Veerella",
+          "authorship": "R.A.Andersen & Wetherbee, 2024",
+          "sourceIds": {
+            "checklistbank-2169": "296670"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VEERELLA_SP",
+          "name": "Veerella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Veerella",
+          "sourceIds": {
+            "checklistbank-2169": "1606578"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagomonadaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PELAGOMONAS",
+          "name": "uncultured Pelagomonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "660917"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagomonadaceae"
+    },
+    {
+      "id": "GENUS_WYEOPHYCUS",
+      "name": "Wyeophycus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WYEOPHYCUS_JULIEHARRISSIAE_WETHERBEE_2022",
+          "name": "Wyeophycus julieharrissiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wyeophycus",
+          "authorship": "Wetherbee, 2022",
+          "sourceIds": {
+            "checklistbank-2169": "2993742"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagomonadaceae"
+    },
+    {
+      "id": "GENUS_CHROMOPALLIDA",
+      "name": "Chromopallida",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHROMOPALLIDA_AUSTRALIS_WETHERBEE_2022",
+          "name": "Chromopallida australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chromopallida",
+          "authorship": "Wetherbee, 2022",
+          "sourceIds": {
+            "checklistbank-2169": "2993743"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagomonadaceae"
+    },
+    {
+      "id": "GENUS_PELAGOMONADACEAE",
+      "name": "Pelagomonadaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PELAGOMONADACEAE_SP",
+          "name": "Pelagomonadaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagomonadaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3235060"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pelagomonadaceae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank-2169": "3235057"
+  }
 }

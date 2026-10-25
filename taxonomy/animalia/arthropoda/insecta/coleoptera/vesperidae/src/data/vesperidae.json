@@ -3,7 +3,7 @@
   "name": "Vesperidae",
   "rank": "FAMILY",
   "appSlug": "vesperidae",
-  "speciesCount": 32,
+  "speciesCount": 33,
   "children": [
     {
       "id": "GENUS_VESPERUS",
@@ -423,9 +423,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Philus",
           "sourceIds": {
-            "checklistbank-312616": "651d40a7246a40688b069a36a25b1358"
+            "checklistbank-312616": "651d40a7246a40688b069a36a25b1358",
+            "checklistbank-2169": "583469"
           },
-          "children": []
+          "children": [],
+          "authorship": "Vives, 2001"
         },
         {
           "id": "SP_PHILUS_ANTENNATUS",
@@ -490,10 +492,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "vesperidae"
+    },
+    {
+      "id": "GENUS_HYPOCEPHALUS",
+      "name": "Hypocephalus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYPOCEPHALUS_ARMATUS_DESMAREST_1832",
+          "name": "Hypocephalus armatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypocephalus",
+          "authorship": "Desmarest, 1832",
+          "sourceIds": {
+            "checklistbank-2169": "3241320"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vesperidae"
     }
   ],
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
-    "wikispecies": "Vesperidae"
+    "wikispecies": "Vesperidae",
+    "checklistbank-2169": "584324"
   }
 }

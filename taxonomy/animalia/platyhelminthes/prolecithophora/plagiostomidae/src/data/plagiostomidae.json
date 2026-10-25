@@ -49,7 +49,8 @@
           "sourceIds": {
             "checklistbank": "62922",
             "checklistbank-139831": "1023062",
-            "checklistbank-2265": "84131"
+            "checklistbank-2265": "84131",
+            "checklistbank-2169": "84131"
           },
           "uuid": "266f2adf-4011-5de-97b-691a99b0711048"
         },
@@ -1233,9 +1234,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Plagiostomum",
           "sourceIds": {
-            "checklistbank-2265": "86111"
+            "checklistbank-2265": "86111",
+            "checklistbank-2169": "86111"
           },
-          "children": []
+          "children": [],
+          "authorship": "Meixner, 1938"
         },
         {
           "id": "SP_PLAGIOSTOMUM_SP",
@@ -1591,7 +1594,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:142930",
             "checklistbank-316441": "7FT4Y",
-            "checklistbank-2265": "162278"
+            "checklistbank-2265": "162278",
+            "checklistbank-2169": "162278"
           },
           "uuid": "938b4634-3fc5-5c89-ae77-583453bd2339"
         },
@@ -1603,9 +1607,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Vorticeros",
           "sourceIds": {
-            "checklistbank-2265": "57458"
+            "checklistbank-2265": "57458",
+            "checklistbank-2169": "57458"
           },
-          "children": []
+          "children": [],
+          "authorship": "Tozawa, 1918"
         },
         {
           "id": "SP_VORTICEROS_SP",
@@ -1839,7 +1845,8 @@
           "children": [],
           "sourceIds": {
             "gbif-backbone": "5891928",
-            "checklistbank-2265": "198250"
+            "checklistbank-2265": "198250",
+            "checklistbank-2169": "198250"
           },
           "uuid": "27449f27-1f73-5cb-a5d-99981beed33c3f"
         },
@@ -2141,11 +2148,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "plagiostomidae"
+    },
+    {
+      "id": "GENUS_PLAGIOSTOMIDAE",
+      "name": "Plagiostomidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLAGIOSTOMIDAE_SP",
+          "name": "Plagiostomidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plagiostomidae",
+          "sourceIds": {
+            "checklistbank-2169": "3061518"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plagiostomidae"
     }
   ],
-  "speciesCount": 164,
+  "speciesCount": 165,
   "appSlug": "plagiostomidae",
   "sourcedFrom": "checklistbank",
   "lineage": "Platyhelminthes",
-  "genusCount": 19
+  "genusCount": 20,
+  "sourceIds": {
+    "checklistbank-2169": "79797"
+  }
 }

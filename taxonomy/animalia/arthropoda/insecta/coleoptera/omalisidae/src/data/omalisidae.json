@@ -3,7 +3,7 @@
   "name": "Omalisidae",
   "rank": "FAMILY",
   "appSlug": "omalisidae",
-  "speciesCount": 27,
+  "speciesCount": 28,
   "children": [
     {
       "id": "GENUS_OMALISUS",
@@ -231,7 +231,8 @@
           "lineage": "Thilmanus",
           "authorship": "Baudi di Selve, 1872",
           "sourceIds": {
-            "gbif-backbone": "4430786"
+            "gbif-backbone": "4430786",
+            "checklistbank-2169": "2217665"
           },
           "children": [],
           "uuid": "4e981172-c99b-5b60-9c57-66cbed05c336"
@@ -454,10 +455,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "omalisidae"
+    },
+    {
+      "id": "GENUS_PARADRILUS",
+      "name": "Paradrilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARADRILUS_OPACUS_KIESENWETTER_1865",
+          "name": "Paradrilus opacus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradrilus",
+          "authorship": "Kiesenwetter, 1865",
+          "sourceIds": {
+            "checklistbank-2169": "1514726"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "omalisidae"
     }
   ],
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
-    "wikispecies": "Omalisidae"
+    "wikispecies": "Omalisidae",
+    "checklistbank-2169": "195261"
   }
 }

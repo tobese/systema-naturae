@@ -3,7 +3,7 @@
   "name": "Aulosphaeridae",
   "rank": "FAMILY",
   "appSlug": "aulosphaeridae",
-  "speciesCount": 6,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_AULOSCENA",
@@ -56,7 +56,8 @@
           "sourceIds": {
             "gbif-backbone": "9372226",
             "checklistbank-308974": "334579",
-            "checklistbank-2265": "238782"
+            "checklistbank-2265": "238782",
+            "checklistbank-2169": "238782"
           },
           "children": [],
           "uuid": "0eb97e09-798d-5a8-b88-50130e136e9a52"
@@ -113,7 +114,52 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_AULASTRUM",
+      "name": "Aulastrum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULASTRUM_SP",
+          "name": "Aulastrum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulastrum",
+          "sourceIds": {
+            "checklistbank-2169": "3457921"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulosphaeridae"
+    },
+    {
+      "id": "GENUS_AULOSPHAERIDAE",
+      "name": "Aulosphaeridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULOSPHAERIDAE_SP",
+          "name": "Aulosphaeridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulosphaeridae",
+          "sourceIds": {
+            "checklistbank-2169": "3457927"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulosphaeridae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-2169": "238780"
+  }
 }

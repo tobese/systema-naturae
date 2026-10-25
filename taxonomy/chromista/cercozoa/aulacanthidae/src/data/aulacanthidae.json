@@ -3,7 +3,7 @@
   "name": "Aulacanthidae",
   "rank": "FAMILY",
   "appSlug": "aulacanthidae",
-  "speciesCount": 5,
+  "speciesCount": 9,
   "children": [
     {
       "id": "GENUS_AULOGRAPHIS",
@@ -35,7 +35,8 @@
           "sourceIds": {
             "gbif-backbone": "11133134",
             "checklistbank-308974": "334405",
-            "checklistbank-2265": "1572351"
+            "checklistbank-2265": "1572351",
+            "checklistbank-2169": "1572351"
           },
           "children": [],
           "uuid": "c506376c-dc08-545-b10-13ba6743bb2b06"
@@ -49,6 +50,31 @@
           "lineage": "Aulographis",
           "sourceIds": {
             "checklistbank-2265": "3077301"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AULOGRAPHIS_PANDORA_HAECKEL_1887",
+          "name": "Aulographis pandora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulographis",
+          "authorship": "Haeckel, 1887",
+          "sourceIds": {
+            "checklistbank-2169": "3077301"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AULOGRAPHIS_STELLATA",
+          "name": "Aulographis stellata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulographis",
+          "sourceIds": {
+            "checklistbank-2169": "3461290"
           },
           "children": []
         }
@@ -73,7 +99,8 @@
             "gbif-backbone": "8234759",
             "checklistbank-139831": "1225298",
             "checklistbank-308974": "334387",
-            "checklistbank-2265": "238793"
+            "checklistbank-2265": "238793",
+            "checklistbank-2169": "238793"
           },
           "children": [],
           "uuid": "0b7edc4f-477a-52c-b32-5353cc93c5f622"
@@ -97,13 +124,60 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Auloceros",
           "sourceIds": {
-            "checklistbank-308974": "334396"
+            "checklistbank-308974": "334396",
+            "checklistbank-2169": "1572424"
           },
           "uuid": "41591741-a088-4bc6-9bfa-ea6d52345b4f",
-          "children": []
+          "children": [],
+          "authorship": "Haeckel, 1887"
         }
       ]
+    },
+    {
+      "id": "GENUS_AULACANTHIDAE",
+      "name": "Aulacanthidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULACANTHIDAE_SP",
+          "name": "Aulacanthidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacanthidae",
+          "sourceIds": {
+            "checklistbank-2169": "3345014"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulacanthidae"
+    },
+    {
+      "id": "GENUS_AULOKLEPTES",
+      "name": "Aulokleptes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULOKLEPTES_SP",
+          "name": "Aulokleptes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulokleptes",
+          "sourceIds": {
+            "checklistbank-2169": "3457923"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulacanthidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 5,
+  "sourceIds": {
+    "checklistbank-2169": "238791"
+  }
 }

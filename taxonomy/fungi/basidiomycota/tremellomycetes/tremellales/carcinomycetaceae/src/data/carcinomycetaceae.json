@@ -3,7 +3,7 @@
   "name": "Carcinomycetaceae",
   "rank": "FAMILY",
   "appSlug": "carcinomycetaceae",
-  "speciesCount": 21,
+  "speciesCount": 24,
   "children": [
     {
       "id": "GENUS_CARCINOMYCES",
@@ -20,10 +20,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Carcinomyces",
           "sourceIds": {
-            "checklistbank-139831": "1110075"
+            "checklistbank-139831": "1110075",
+            "checklistbank-2169": "1041194"
           },
           "uuid": "5f8fa244-0772-4cd6-89cb-9307c640072d",
-          "children": []
+          "children": [],
+          "authorship": "(Ginns & Sunhede) Oberw. & Bandoni, 1982"
         },
         {
           "id": "SP_CARCINOMYCES_MYCETOPHILUS_PECK_OBERW_BANDONI_1982",
@@ -46,9 +48,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Carcinomyces",
           "sourceIds": {
-            "checklistbank-2265": "209780"
+            "checklistbank-2265": "209780",
+            "checklistbank-2169": "209780"
           },
-          "children": []
+          "children": [],
+          "authorship": "Fungsin, M. Takash. & Nakase ex Yurkov, 2020"
         },
         {
           "id": "SP_CARCINOMYCES_POLYPORINA",
@@ -82,7 +86,21 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Carcinomyces",
           "sourceIds": {
-            "checklistbank-2265": "2569587"
+            "checklistbank-2265": "2569587",
+            "checklistbank-2169": "2569587"
+          },
+          "children": [],
+          "authorship": "D.A. Andrade, C.R. Felix, F.S. Bomfim, R.P. Neves & Landell, 2019"
+        },
+        {
+          "id": "SP_CARCINOMYCES_POLYPORINUS",
+          "name": "Carcinomyces polyporinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carcinomyces",
+          "sourceIds": {
+            "checklistbank-2169": "1041187"
           },
           "children": []
         }
@@ -324,10 +342,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "carcinomycetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CARCINOMYCES",
+          "name": "uncultured Carcinomyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2980224"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "carcinomycetaceae"
+    },
+    {
+      "id": "GENUS_CARCINOMYCETACEAE",
+      "name": "Carcinomycetaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARCINOMYCETACEAE_SP",
+          "name": "Carcinomycetaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carcinomycetaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3133963"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "carcinomycetaceae"
     }
   ],
-  "genusCount": 6,
+  "genusCount": 8,
   "sourceIds": {
-    "wikispecies": "Carcinomycetaceae"
+    "wikispecies": "Carcinomycetaceae",
+    "checklistbank-2169": "1905117"
   }
 }

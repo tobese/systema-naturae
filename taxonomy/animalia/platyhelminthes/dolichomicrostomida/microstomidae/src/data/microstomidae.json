@@ -226,7 +226,8 @@
             "wikispecies": "Microstomum_lineare",
             "gbif-backbone": "7260742",
             "checklistbank-139831": "912568",
-            "checklistbank-2265": "52057"
+            "checklistbank-2265": "52057",
+            "checklistbank-2169": "52057"
           },
           "uuid": "389ccca6-bcc8-5aa-873-a6a7d62f3a58d9"
         },
@@ -282,7 +283,8 @@
           "uuid": "0c9909b2-63c2-5dd-8b1-ff188f4734f9d5",
           "sourceIds": {
             "checklistbank-139831": "1668623",
-            "checklistbank-2265": "2574745"
+            "checklistbank-2265": "2574745",
+            "checklistbank-2169": "2574745"
           }
         },
         {
@@ -335,7 +337,8 @@
           "children": [],
           "uuid": "271e0f31-f5e3-53a-9ac-1c44e9af9a7498",
           "sourceIds": {
-            "checklistbank-2265": "1962670"
+            "checklistbank-2265": "1962670",
+            "checklistbank-2169": "1962670"
           }
         },
         {
@@ -679,7 +682,8 @@
           "authorship": "Atherton & Jondelius, 2019",
           "sourceIds": {
             "gbif-backbone": "10234427",
-            "checklistbank-2265": "2574743"
+            "checklistbank-2265": "2574743",
+            "checklistbank-2169": "2574743"
           },
           "children": [],
           "uuid": "5a28e3ae-f07f-510-90d-f27fbeeb490ec5"
@@ -936,15 +940,58 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Microstomidae"
+    },
+    {
+      "id": "GENUS_AFF",
+      "name": "aff.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AFF_MICROSTOMUM",
+          "name": "aff. Microstomum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "aff.",
+          "sourceIds": {
+            "checklistbank-2169": "317501"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microstomidae"
+    },
+    {
+      "id": "GENUS_MICROSTOMIDAE",
+      "name": "Microstomidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROSTOMIDAE_SP",
+          "name": "Microstomidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microstomidae",
+          "sourceIds": {
+            "checklistbank-2169": "3061469"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microstomidae"
     }
   ],
-  "speciesCount": 64,
+  "speciesCount": 66,
   "appSlug": "microstomidae",
   "sourcedFrom": "checklistbank",
   "lineage": "Platyhelminthes",
-  "genusCount": 8,
+  "genusCount": 10,
   "sourceIds": {
     "checklistbank": "Microstomidae",
-    "wikispecies": "Microstomidae"
+    "wikispecies": "Microstomidae",
+    "checklistbank-2169": "52055"
   }
 }

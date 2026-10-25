@@ -3,7 +3,7 @@
   "name": "Tilopteridaceae",
   "rank": "FAMILY",
   "appSlug": "tilopteridaceae",
-  "speciesCount": 9,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_TILOPTERIS",
@@ -21,7 +21,8 @@
           "sourceIds": {
             "gbif-backbone": "3200101",
             "checklistbank-2008": "380780",
-            "wikispecies": "Tilopteris_mertensii"
+            "wikispecies": "Tilopteris_mertensii",
+            "checklistbank-2169": "112064"
           },
           "children": [],
           "uuid": "625a6fb5-835e-56c-a32-c842f0d2972d00"
@@ -60,7 +61,8 @@
             "gbif-backbone": "5423381",
             "checklistbank-2008": "380779",
             "wikispecies": "Haplospora_globosa",
-            "checklistbank-316441": "PMXRQ"
+            "checklistbank-316441": "PMXRQ",
+            "checklistbank-2169": "86885"
           },
           "children": [],
           "uuid": "8b78258e-2dae-5c8-b9f-fd4663c91d7ccd"
@@ -191,10 +193,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tilopteridaceae"
+    },
+    {
+      "id": "GENUS_PHAEOSIPHONIELLA",
+      "name": "Phaeosiphoniella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHAEOSIPHONIELLA_CRYOPHILA_R_G_HOOPER_E_C_HENRY_KUHLENKAMP_1988",
+          "name": "Phaeosiphoniella cryophila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeosiphoniella",
+          "authorship": "R.G.Hooper, E.C.Henry & Kuhlenkamp, 1988",
+          "sourceIds": {
+            "checklistbank-2169": "112066"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tilopteridaceae"
     }
   ],
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
-    "wikispecies": "Tilopteridaceae"
+    "wikispecies": "Tilopteridaceae",
+    "checklistbank-2169": "86883"
   }
 }

@@ -3,7 +3,7 @@
   "name": "Talbotiomycetaceae",
   "rank": "FAMILY",
   "appSlug": "talbotiomycetaceae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_TALBOTIOMYCES",
@@ -20,7 +20,8 @@
           "authorship": "(P.H.B.Talbot) Vánky, R.Bauer & Begerow",
           "sourceIds": {
             "gbif-backbone": "2513046",
-            "checklistbank-2265": "1608522"
+            "checklistbank-2265": "1608522",
+            "checklistbank-2169": "1608522"
           },
           "children": [],
           "uuid": "f69b0cc5-d81f-53b-81f-f92c4a46121a0a"
@@ -40,7 +41,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "talbotiomycetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TALBOTIOMYCES",
+          "name": "uncultured Talbotiomyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2980338"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "talbotiomycetaceae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-2169": "1696060"
+  }
 }

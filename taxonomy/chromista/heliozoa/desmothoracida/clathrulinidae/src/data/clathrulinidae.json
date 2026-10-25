@@ -3,7 +3,7 @@
   "name": "Clathrulinidae",
   "rank": "FAMILY",
   "appSlug": "clathrulinidae",
-  "speciesCount": 9,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_CLATHRULINA",
@@ -23,7 +23,8 @@
             "checklistbank-139831": "320646",
             "checklistbank-308974": "332612",
             "checklistbank-316441": "MMY9C",
-            "checklistbank-2265": "238774"
+            "checklistbank-2265": "238774",
+            "checklistbank-2169": "238774"
           },
           "children": [],
           "uuid": "cc6bdff7-5c6d-580-844-a12a4dc1e578d2"
@@ -87,7 +88,8 @@
           "lineage": "Hedriocystis",
           "sourceIds": {
             "checklistbank-139831": "1497931",
-            "checklistbank-316441": "VDQBJ"
+            "checklistbank-316441": "VDQBJ",
+            "checklistbank-2169": "3457935"
           },
           "uuid": "b1a384ad-4e61-4ed1-a46c-d022ce253423",
           "children": [],
@@ -158,7 +160,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "clathrulinidae"
+    },
+    {
+      "id": "GENUS_CLATHRULINIDAE",
+      "name": "Clathrulinidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLATHRULINIDAE_SP",
+          "name": "Clathrulinidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clathrulinidae",
+          "sourceIds": {
+            "checklistbank-2169": "3238162"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clathrulinidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-2169": "238764"
+  }
 }

@@ -1441,7 +1441,8 @@
           "sourceIds": {
             "gbif-backbone": "6076046",
             "checklistbank-139831": "1349347",
-            "checklistbank-2265": "291243"
+            "checklistbank-2265": "291243",
+            "checklistbank-2169": "291243"
           },
           "uuid": "7e92c792-c724-531-bed-10e6af7aa7664c"
         },
@@ -1543,7 +1544,8 @@
           "children": [],
           "uuid": "1a24d39b-478b-5701-9332-760d10e46b13",
           "sourceIds": {
-            "checklistbank-2265": "1244777"
+            "checklistbank-2265": "1244777",
+            "checklistbank-2169": "1244777"
           }
         },
         {
@@ -1858,7 +1860,8 @@
           "children": [],
           "uuid": "0d4d9a98-7b45-550-90e-a6a5ad138db9e5",
           "sourceIds": {
-            "checklistbank-2265": "3035903"
+            "checklistbank-2265": "3035903",
+            "checklistbank-2169": "3035903"
           }
         },
         {
@@ -2513,11 +2516,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tisbidae"
+    },
+    {
+      "id": "GENUS_TISBIDAE",
+      "name": "Tisbidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TISBIDAE_SP",
+          "name": "Tisbidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tisbidae",
+          "sourceIds": {
+            "checklistbank-2169": "3061755"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tisbidae"
     }
   ],
-  "speciesCount": 192,
+  "speciesCount": 193,
   "appSlug": "tisbidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 30
+  "genusCount": 31,
+  "sourceIds": {
+    "checklistbank-2169": "291241"
+  }
 }

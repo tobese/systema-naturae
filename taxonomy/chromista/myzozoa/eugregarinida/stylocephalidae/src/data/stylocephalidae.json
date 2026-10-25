@@ -3,7 +3,7 @@
   "name": "Stylocephalidae",
   "rank": "FAMILY",
   "appSlug": "stylocephalidae",
-  "speciesCount": 27,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_XIPHOCEPHALUS",
@@ -71,9 +71,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Xiphocephalus",
           "sourceIds": {
-            "checklistbank-2265": "2853605"
+            "checklistbank-2265": "2853605",
+            "checklistbank-2169": "2853605"
           },
-          "children": []
+          "children": [],
+          "authorship": "Nitsche, Rueckert and Arndt, 2023"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -297,9 +299,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Stylocephalus",
           "sourceIds": {
-            "checklistbank-308974": "372730"
+            "checklistbank-308974": "372730",
+            "checklistbank-2169": "650331"
           },
           "uuid": "c687a91b-dbe3-4cb1-b545-25d9dae4fb8d",
+          "children": [],
+          "authorship": "Ellis, 1912"
+        },
+        {
+          "id": "SP_STYLOCEPHALUS_SP",
+          "name": "Stylocephalus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylocephalus",
+          "sourceIds": {
+            "checklistbank-2169": "3439070"
+          },
           "children": []
         }
       ],
@@ -435,10 +451,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Colepismatophila",
           "sourceIds": {
-            "checklistbank-308974": "372721"
+            "checklistbank-308974": "372721",
+            "checklistbank-2169": "651455"
           },
           "uuid": "7a30b684-9aa7-4931-9b48-03fe3c19ca7c",
-          "children": []
+          "children": [],
+          "authorship": "Adams & Travis, 1935"
         }
       ]
     },
@@ -455,7 +473,30 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Atacamagregarina",
           "sourceIds": {
-            "checklistbank-2265": "2853604"
+            "checklistbank-2265": "2853604",
+            "checklistbank-2169": "2853604"
+          },
+          "children": [],
+          "authorship": "Nitsche et al., 2023"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stylocephalidae"
+    },
+    {
+      "id": "GENUS_STYLOCEPHALIDAE",
+      "name": "Stylocephalidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYLOCEPHALIDAE_SP",
+          "name": "Stylocephalidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylocephalidae",
+          "sourceIds": {
+            "checklistbank-2169": "3045161"
           },
           "children": []
         }
@@ -464,5 +505,8 @@
       "lineage": "stylocephalidae"
     }
   ],
-  "genusCount": 11
+  "genusCount": 12,
+  "sourceIds": {
+    "checklistbank-2169": "650329"
+  }
 }

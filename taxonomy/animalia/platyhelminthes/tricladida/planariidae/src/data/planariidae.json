@@ -92,7 +92,8 @@
           "sourceIds": {
             "checklistbank-139831": "484019",
             "checklistbank-316441": "7HTWW",
-            "checklistbank-2265": "39785"
+            "checklistbank-2265": "39785",
+            "checklistbank-2169": "39785"
           }
         },
         {
@@ -108,7 +109,8 @@
           "sourceIds": {
             "checklistbank-139831": "484020",
             "checklistbank-316441": "S3TDH",
-            "checklistbank-2265": "39786"
+            "checklistbank-2265": "39786",
+            "checklistbank-2169": "39786"
           }
         },
         {
@@ -170,7 +172,8 @@
           "sourceIds": {
             "gbif-backbone": "9500451",
             "checklistbank-139831": "228527",
-            "checklistbank-2265": "1930915"
+            "checklistbank-2265": "1930915",
+            "checklistbank-2169": "1930915"
           },
           "uuid": "e9e7623f-d933-505-b17-6cac22d91456c3"
         },
@@ -954,6 +957,31 @@
           },
           "children": [],
           "uuid": "393a56ab-a029-55a-b50-c58e380dc93256"
+        },
+        {
+          "id": "SP_CRENOBIA_ANOPHTHALMA_MRAZEK_1907",
+          "name": "Crenobia anophthalma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crenobia",
+          "authorship": "(Mrazek, 1907)",
+          "sourceIds": {
+            "checklistbank-2169": "3079614"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRENOBIA_SP",
+          "name": "Crenobia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crenobia",
+          "sourceIds": {
+            "checklistbank-2169": "3373553"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -991,7 +1019,8 @@
           "uuid": "6a516871-3fd9-50b-b99-239b9aca537fdc",
           "sourceIds": {
             "checklistbank-139831": "484016",
-            "checklistbank-2265": "391283"
+            "checklistbank-2265": "391283",
+            "checklistbank-2169": "391283"
           }
         },
         {
@@ -1049,7 +1078,8 @@
           "children": [],
           "uuid": "de22b0c0-eb5e-549-aef-4332746ce2367a",
           "sourceIds": {
-            "checklistbank-2265": "104541"
+            "checklistbank-2265": "104541",
+            "checklistbank-2169": "104541"
           }
         },
         {
@@ -1458,7 +1488,8 @@
           "children": [],
           "uuid": "488a71d9-7b14-5e3-953-52dc4fbbf90aaa",
           "sourceIds": {
-            "checklistbank-2265": "67580"
+            "checklistbank-2265": "67580",
+            "checklistbank-2169": "67580"
           }
         },
         {
@@ -1803,7 +1834,8 @@
           "children": [],
           "uuid": "603e6d1b-c82c-556-a8b-0025a891abb90b",
           "sourceIds": {
-            "checklistbank-2265": "3073260"
+            "checklistbank-2265": "3073260",
+            "checklistbank-2169": "3073260"
           }
         },
         {
@@ -1970,7 +2002,8 @@
             "gbif-backbone": "9147917",
             "checklistbank-139831": "484018",
             "checklistbank-316441": "RXDHG",
-            "checklistbank-2265": "2066000"
+            "checklistbank-2265": "2066000",
+            "checklistbank-2169": "2066000"
           },
           "uuid": "ae4e0793-29dd-5ad-82d-d1e636848486ca"
         },
@@ -2696,6 +2729,18 @@
           "authorship": "de Beauchamp, 1937",
           "children": [],
           "uuid": "ddf2565a-ab09-57a-8a6-fd3741609bfe71"
+        },
+        {
+          "id": "SP_ATRIOPLANARIA_SP",
+          "name": "Atrioplanaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atrioplanaria",
+          "sourceIds": {
+            "checklistbank-2169": "3081753"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3841,15 +3886,49 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "planariidae"
+    },
+    {
+      "id": "GENUS_PLANARIIDAE",
+      "name": "Planariidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLANARIIDAE_SP",
+          "name": "Planariidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planariidae",
+          "sourceIds": {
+            "checklistbank-2169": "3132994"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLANARIIDAE_GEN",
+          "name": "Planariidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planariidae",
+          "sourceIds": {
+            "checklistbank-2169": "3373551"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planariidae"
     }
   ],
-  "speciesCount": 293,
+  "speciesCount": 298,
   "appSlug": "planariidae",
   "sourcedFrom": "checklistbank",
   "lineage": "Platyhelminthes",
-  "genusCount": 25,
+  "genusCount": 26,
   "sourceIds": {
     "checklistbank": "Planariidae",
-    "wikispecies": "Planariidae"
+    "wikispecies": "Planariidae",
+    "checklistbank-2169": "27896"
   }
 }

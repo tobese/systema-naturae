@@ -3,7 +3,7 @@
   "name": "Pellitidae",
   "rank": "FAMILY",
   "appSlug": "pellitidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_PELLITA",
@@ -33,7 +33,30 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pellita",
           "sourceIds": {
-            "checklistbank-2265": "1485084"
+            "checklistbank-2265": "1485084",
+            "checklistbank-2169": "1485084"
+          },
+          "children": [],
+          "authorship": "Smirnov & Kudryavtsev 2005"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pellitidae"
+    },
+    {
+      "id": "GENUS_PELLITIDAE",
+      "name": "Pellitidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PELLITIDAE_SP",
+          "name": "Pellitidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pellitidae",
+          "sourceIds": {
+            "checklistbank-2169": "3238177"
           },
           "children": []
         }
@@ -42,5 +65,8 @@
       "lineage": "pellitidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-2169": "1485080"
+  }
 }

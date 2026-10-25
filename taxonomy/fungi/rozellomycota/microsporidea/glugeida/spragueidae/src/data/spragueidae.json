@@ -56,7 +56,8 @@
           "authorship": "(Doflein, 1898) Vávra & Sprague, 1976",
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:559167",
-            "checklistbank-316441": "4ZDNR"
+            "checklistbank-316441": "4ZDNR",
+            "checklistbank-2169": "51541"
           },
           "children": []
         },
@@ -69,7 +70,8 @@
           "lineage": "Spraguea",
           "authorship": "Casal, Clemente, Matos, Knoff, Matos, Abdel-Baki & Azevedo, 2012",
           "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:819678"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:819678",
+            "checklistbank-2169": "798212"
           },
           "children": []
         },
@@ -82,7 +84,20 @@
           "lineage": "Spraguea",
           "authorship": "(Takvorian & Cali) Freeman, Yokoyama & Ogawa, 2004",
           "sourceIds": {
-            "checklistbank-316441": "4ZDNQ"
+            "checklistbank-316441": "4ZDNQ",
+            "checklistbank-2169": "75295"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPRAGUEA_SP",
+          "name": "Spraguea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spraguea",
+          "sourceIds": {
+            "checklistbank-2169": "256132"
           },
           "children": []
         }
@@ -134,11 +149,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spragueidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SPRAGUEA",
+          "name": "uncultured Spraguea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1030337"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spragueidae"
+    },
+    {
+      "id": "GENUS_PAOSPORA",
+      "name": "Paospora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PAOSPORA_CARINIFANG_WANG_ET_AL_2024",
+          "name": "Paospora carinifang",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paospora",
+          "authorship": "Wang et al., 2024",
+          "sourceIds": {
+            "checklistbank-2169": "1337116"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spragueidae"
     }
   ],
-  "speciesCount": 7,
+  "speciesCount": 10,
   "appSlug": "spragueidae",
   "sourcedFrom": "checklistbank-2008",
   "lineage": "Rozellomycota > Microsporidea",
-  "genusCount": 5
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank-2169": "227310"
+  }
 }

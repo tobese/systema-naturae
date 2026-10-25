@@ -3,7 +3,7 @@
   "name": "Pycnotrichidae",
   "rank": "FAMILY",
   "appSlug": "pycnotrichidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_BUXTONELLA",
@@ -18,9 +18,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Buxtonella",
           "sourceIds": {
-            "checklistbank-2265": "1144346"
+            "checklistbank-2265": "1144346",
+            "checklistbank-2169": "1144346"
           },
-          "children": []
+          "children": [],
+          "authorship": "Jameson, 1926"
         },
         {
           "id": "SP_BUXTONELLA_SP",
@@ -72,7 +74,31 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Infundibulorium",
           "sourceIds": {
-            "checklistbank-2265": "3036762"
+            "checklistbank-2265": "3036762",
+            "checklistbank-2169": "3036762"
+          },
+          "children": [],
+          "authorship": "Bozhenko, 1925"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pycnotrichidae"
+    },
+    {
+      "id": "GENUS_MUNIZIELLA",
+      "name": "Muniziella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MUNIZIELLA_CUNHAI_FONSECA_1939",
+          "name": "Muniziella cunhai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muniziella",
+          "authorship": "Fonseca, 1939",
+          "sourceIds": {
+            "checklistbank-2169": "3159565"
           },
           "children": []
         }
@@ -81,5 +107,8 @@
       "lineage": "pycnotrichidae"
     }
   ],
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank-2169": "1280769"
+  }
 }

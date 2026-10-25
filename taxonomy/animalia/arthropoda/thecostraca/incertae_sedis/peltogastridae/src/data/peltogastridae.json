@@ -244,7 +244,8 @@
           "children": [],
           "uuid": "2c259348-bd3c-56f-ad8-03e81bb2c6c0c1",
           "sourceIds": {
-            "checklistbank-139831": "1155727"
+            "checklistbank-139831": "1155727",
+            "checklistbank-2169": "1285367"
           }
         },
         {
@@ -273,7 +274,8 @@
           "sourceIds": {
             "gbif-backbone": "8246473",
             "checklistbank-139831": "1155729",
-            "checklistbank-2265": "930967"
+            "checklistbank-2265": "930967",
+            "checklistbank-2169": "930967"
           },
           "uuid": "a5c01be0-1940-5e0-957-1d180ee1480b0f"
         },
@@ -498,9 +500,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Peltogaster",
           "sourceIds": {
-            "checklistbank-2265": "1285366"
+            "checklistbank-2265": "1285366",
+            "checklistbank-2169": "1285366"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shiino, 1943"
         },
         {
           "id": "SP_PELTOGASTER_AFF",
@@ -705,7 +709,8 @@
           "uuid": "896e01a8-4888-5b3-a21-f2fc93855871e6",
           "sourceIds": {
             "checklistbank-139831": "1155717",
-            "checklistbank-2265": "399092"
+            "checklistbank-2265": "399092",
+            "checklistbank-2169": "399092"
           }
         },
         {
@@ -884,7 +889,8 @@
           "children": [],
           "sourceIds": {
             "gbif-backbone": "7648591",
-            "checklistbank-2265": "930969"
+            "checklistbank-2265": "930969",
+            "checklistbank-2169": "930969"
           },
           "uuid": "fb083e1f-5bd4-55c-b50-b76e36ca8ac698"
         }
@@ -1128,16 +1134,38 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "peltogastridae"
+    },
+    {
+      "id": "GENUS_PELTOGASTRIDAE",
+      "name": "Peltogastridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PELTOGASTRIDAE_SP",
+          "name": "Peltogastridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peltogastridae",
+          "sourceIds": {
+            "checklistbank-2169": "3419784"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peltogastridae"
     }
   ],
-  "speciesCount": 74,
+  "speciesCount": 75,
   "appSlug": "peltogastridae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Thecostraca",
-  "genusCount": 19,
+  "genusCount": 20,
   "sourceIds": {
     "checklistbank": "Peltogastridae",
     "wikispecies": "Peltogastridae",
-    "checklistbank-1174": "txn:302382"
+    "checklistbank-1174": "txn:302382",
+    "checklistbank-2169": "399076"
   }
 }

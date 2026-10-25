@@ -3,7 +3,7 @@
   "name": "Aturidae",
   "rank": "FAMILY",
   "appSlug": "aturidae",
-  "speciesCount": 584,
+  "speciesCount": 588,
   "children": [
     {
       "id": "GENUS_KONGSBERGIA",
@@ -2806,7 +2806,8 @@
           "authorship": "Pešić, Smit, Sharma, Rana, Bahuguna & Rayal, 2022",
           "sourceIds": {
             "checklistbank-316441": "LNY7R",
-            "checklistbank-2265": "3069819"
+            "checklistbank-2265": "3069819",
+            "checklistbank-2169": "3069819"
           },
           "children": []
         },
@@ -3677,6 +3678,19 @@
           },
           "children": [],
           "uuid": "8ca39dbe-37f4-545c-a44e-1f7240c5dad4"
+        },
+        {
+          "id": "SP_LETHAXONA_PYGMAEA_VIETS_1932",
+          "name": "Lethaxona pygmaea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lethaxona",
+          "authorship": "Viets, 1932",
+          "sourceIds": {
+            "checklistbank-2169": "3126118"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3722,9 +3736,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Parabrachypoda",
           "sourceIds": {
-            "checklistbank-2265": "2907902"
+            "checklistbank-2265": "2907902",
+            "checklistbank-2169": "2907902"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Maglio, 1924)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4315,7 +4331,8 @@
           "sourceIds": {
             "gbif-backbone": "5774163",
             "checklistbank-139831": "1110835",
-            "checklistbank-2265": "2796844"
+            "checklistbank-2265": "2796844",
+            "checklistbank-2169": "2796844"
           },
           "children": [],
           "uuid": "5496a921-817a-5951-b711-8185ab0d4201"
@@ -5748,7 +5765,8 @@
           "lineage": "Barbaxonella",
           "authorship": "Esen & Pesi",
           "sourceIds": {
-            "gbif-backbone": "8076709"
+            "gbif-backbone": "8076709",
+            "checklistbank-2169": "3679555"
           },
           "children": [],
           "uuid": "f503d19d-eb76-5094-b40d-26a406f58964"
@@ -6388,7 +6406,8 @@
           "sourceIds": {
             "gbif-backbone": "4541303",
             "checklistbank-316441": "TYFFK",
-            "checklistbank-2265": "2907908"
+            "checklistbank-2265": "2907908",
+            "checklistbank-2169": "2907908"
           },
           "children": [],
           "uuid": "c2ecc8b0-2384-5031-8e1f-fd8c20f847f0"
@@ -8204,6 +8223,18 @@
           },
           "uuid": "f76667ce-9bb7-4062-a1f2-b1ba6434635f",
           "children": []
+        },
+        {
+          "id": "SP_NEOATURUS_SP",
+          "name": "Neoaturus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoaturus",
+          "sourceIds": {
+            "checklistbank-2169": "3450278"
+          },
+          "children": []
         }
       ]
     },
@@ -8269,6 +8300,18 @@
             "checklistbank-139831": "297226"
           },
           "uuid": "6e1f5b47-9f5a-419e-a411-eb68c752f121",
+          "children": []
+        },
+        {
+          "id": "SP_NEOAXONA_SP",
+          "name": "Neoaxona sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoaxona",
+          "sourceIds": {
+            "checklistbank-2169": "3450281"
+          },
           "children": []
         }
       ]
@@ -8798,7 +8841,8 @@
           "authorship": "(K. Viets, 1910)",
           "sourceIds": {
             "checklistbank-316441": "VDQDM",
-            "checklistbank-2265": "2796886"
+            "checklistbank-2265": "2796886",
+            "checklistbank-2169": "2796886"
           },
           "children": []
         }
@@ -8943,10 +8987,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aturidae"
+    },
+    {
+      "id": "GENUS_ATURIDES",
+      "name": "Aturides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ATURIDES_DENTATUS_LUNDBLAD_1936",
+          "name": "Aturides dentatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturides",
+          "authorship": "(Lundblad, 1936)",
+          "sourceIds": {
+            "checklistbank-2169": "3450257"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aturidae"
     }
   ],
-  "genusCount": 91,
+  "genusCount": 92,
   "sourceIds": {
-    "wikispecies": "Aturidae"
+    "wikispecies": "Aturidae",
+    "checklistbank-2169": "322632"
   }
 }

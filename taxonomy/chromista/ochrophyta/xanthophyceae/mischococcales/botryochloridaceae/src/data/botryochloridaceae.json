@@ -3,7 +3,7 @@
   "name": "Botryochloridaceae",
   "rank": "FAMILY",
   "appSlug": "botryochloridaceae",
-  "speciesCount": 9,
+  "speciesCount": 11,
   "children": [
     {
       "id": "GENUS_CHLORELLIDIUM",
@@ -20,7 +20,8 @@
           "authorship": "NN",
           "sourceIds": {
             "gbif-backbone": "12256081",
-            "checklistbank-2265": "243652"
+            "checklistbank-2265": "243652",
+            "checklistbank-2169": "243652"
           },
           "children": [],
           "uuid": "dfbc66ee-59d1-5cb-a0e-09947dff0e9dae"
@@ -33,9 +34,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chlorellidium",
           "sourceIds": {
-            "checklistbank-2265": "240566"
+            "checklistbank-2265": "240566",
+            "checklistbank-2169": "240566"
           },
-          "children": []
+          "children": [],
+          "authorship": "A.Begum & P.A.Broady, 2002"
         },
         {
           "id": "SP_CHLORELLIDIUM_SP",
@@ -139,7 +142,22 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sphaerosorus",
           "sourceIds": {
-            "checklistbank-2265": "240564"
+            "checklistbank-2265": "240564",
+            "checklistbank-2169": "240564"
+          },
+          "children": [],
+          "authorship": "Moewus, 1951"
+        },
+        {
+          "id": "SP_SPHAEROSORUS_COELASTROIDES_PASCHER_1938",
+          "name": "Sphaerosorus coelastroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerosorus",
+          "authorship": "Pascher, 1938",
+          "sourceIds": {
+            "checklistbank-2169": "3443824"
           },
           "children": []
         }
@@ -167,7 +185,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "botryochloridaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHLORELLIDIUM",
+          "name": "uncultured Chlorellidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3049179"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "botryochloridaceae"
     }
   ],
-  "genusCount": 5
+  "genusCount": 6,
+  "sourceIds": {
+    "checklistbank-2169": "240560"
+  }
 }

@@ -19,7 +19,8 @@
           "children": [],
           "uuid": "29fa87a1-0940-55b-8fb-85e4dc9c7e251d",
           "sourceIds": {
-            "checklistbank-139831": "1166271"
+            "checklistbank-139831": "1166271",
+            "checklistbank-2169": "3119945"
           }
         },
         {
@@ -344,7 +345,8 @@
           "lineage": "Brisinga",
           "sourceIds": {
             "checklistbank": "Brisinga_chathamica",
-            "gbif-backbone": "2273187"
+            "gbif-backbone": "2273187",
+            "checklistbank-2169": "3069573"
           },
           "children": [],
           "authorship": "McKnight, 1973",
@@ -374,6 +376,18 @@
           "lineage": "Brisinga",
           "sourceIds": {
             "checklistbank-2265": "2692287"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRISINGA_AFF",
+          "name": "Brisinga aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brisinga",
+          "sourceIds": {
+            "checklistbank-2169": "3071474"
           },
           "children": []
         }
@@ -441,6 +455,18 @@
             "checklistbank-139831": "255718"
           },
           "uuid": "facd24b0-2def-546-b16-29a2053e7b184f"
+        },
+        {
+          "id": "SP_MIDGARDIA_SP",
+          "name": "Midgardia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Midgardia",
+          "sourceIds": {
+            "checklistbank-2169": "3076207"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -571,6 +597,18 @@
           "authorship": "Mah, 2016",
           "children": [],
           "uuid": "42fe152e-6ed4-5d2-8d5-8f76ad7b2ebbc7"
+        },
+        {
+          "id": "SP_BRISINGENES_SP",
+          "name": "Brisingenes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brisingenes",
+          "sourceIds": {
+            "checklistbank-2169": "3069351"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -779,9 +817,22 @@
           "children": [],
           "sourceIds": {
             "gbif-backbone": "10779098",
-            "checklistbank-2265": "2692304"
+            "checklistbank-2265": "2692304",
+            "checklistbank-2169": "2692304"
           },
           "uuid": "2aa74746-299d-547-9eb-1b9f56302b47aa"
+        },
+        {
+          "id": "SP_ASTROLIRUS_SP",
+          "name": "Astrolirus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrolirus",
+          "sourceIds": {
+            "checklistbank-2169": "3497227"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -1082,7 +1133,8 @@
           "children": [],
           "sourceIds": {
             "checklistbank": "Lokiella_parva",
-            "wikispecies": "Lokiella_parva"
+            "wikispecies": "Lokiella_parva",
+            "checklistbank-2169": "3069374"
           },
           "uuid": "2f189aaf-bbd4-5c6-920-95bfa2f0f3bb4c"
         }
@@ -1272,9 +1324,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Freyastera",
           "sourceIds": {
-            "checklistbank-2265": "2562125"
+            "checklistbank-2265": "2562125",
+            "checklistbank-2169": "2562125"
           },
-          "children": []
+          "children": [],
+          "authorship": "Zhang, Wang, Zhou & Zhang, 2019"
         },
         {
           "id": "SP_FREYASTERA_BASKETA",
@@ -1284,9 +1338,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Freyastera",
           "sourceIds": {
-            "checklistbank-2265": "2585750"
+            "checklistbank-2265": "2585750",
+            "checklistbank-2169": "2585750"
           },
-          "children": []
+          "children": [],
+          "authorship": "Zhang, Wang, Zhou & Zhang, 2019"
         },
         {
           "id": "SP_FREYASTERA_TUBERCULATA",
@@ -1303,15 +1359,49 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "brisingidae"
+    },
+    {
+      "id": "GENUS_BRISINGIDAE",
+      "name": "Brisingidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRISINGIDAE_GEN",
+          "name": "Brisingidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brisingidae",
+          "sourceIds": {
+            "checklistbank-2169": "3101794"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRISINGIDAE_SP",
+          "name": "Brisingidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brisingidae",
+          "sourceIds": {
+            "checklistbank-2169": "3411570"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brisingidae"
     }
   ],
-  "speciesCount": 83,
+  "speciesCount": 89,
   "appSlug": "brisingidae",
   "sourcedFrom": "worms",
   "lineage": "Echinodermata > Asteroidea",
-  "genusCount": 18,
+  "genusCount": 19,
   "sourceIds": {
     "checklistbank": "Brisingidae",
-    "wikispecies": "Brisingidae"
+    "wikispecies": "Brisingidae",
+    "checklistbank-2169": "105865"
   }
 }
