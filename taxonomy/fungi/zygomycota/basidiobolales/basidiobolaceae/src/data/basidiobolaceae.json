@@ -3,7 +3,7 @@
   "name": "Basidiobolaceae",
   "rank": "FAMILY",
   "appSlug": "basidiobolaceae",
-  "speciesCount": 13,
+  "speciesCount": 20,
   "children": [
     {
       "id": "GENUS_AMPHOROMORPHA",
@@ -43,7 +43,8 @@
           "authorship": "R.K.Benj.",
           "sourceIds": {
             "gbif-backbone": "2558172",
-            "wikispecies": "Basidiobolus_microsporus"
+            "wikispecies": "Basidiobolus_microsporus",
+            "checklistbank-2265": "181047"
           },
           "children": [],
           "uuid": "2385909c-085d-5bd-8a4-ad5e4bf17e66f4"
@@ -58,7 +59,8 @@
           "authorship": "Drechsler",
           "sourceIds": {
             "gbif-backbone": "2558173",
-            "wikispecies": "Basidiobolus_magnus"
+            "wikispecies": "Basidiobolus_magnus",
+            "checklistbank-2265": "4860"
           },
           "children": [],
           "uuid": "1b1a2c79-d083-566-8f7-445955a45943ab"
@@ -73,7 +75,8 @@
           "authorship": "Eidam",
           "sourceIds": {
             "gbif-backbone": "2558165",
-            "checklistbank-139831": "1159297"
+            "checklistbank-139831": "1159297",
+            "checklistbank-2265": "34480"
           },
           "children": [],
           "uuid": "28f63c96-2484-5ae-8e8-047194647fc364"
@@ -154,7 +157,8 @@
           "lineage": "Basidiobolus",
           "authorship": "Drechsler",
           "sourceIds": {
-            "checklistbank-312616": "0cd048b0-03be-4eb3-8e5a-b8779c2e2db8"
+            "checklistbank-312616": "0cd048b0-03be-4eb3-8e5a-b8779c2e2db8",
+            "checklistbank-2265": "90248"
           },
           "children": []
         },
@@ -167,7 +171,32 @@
           "lineage": "Basidiobolus",
           "authorship": "Drechsler",
           "sourceIds": {
-            "checklistbank-312616": "723f2267-4c3c-42b7-bc82-4690edf7c045"
+            "checklistbank-312616": "723f2267-4c3c-42b7-bc82-4690edf7c045",
+            "checklistbank-2265": "423460"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BASIDIOBOLUS_HETEROSPORUS",
+          "name": "Basidiobolus heterosporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Basidiobolus",
+          "sourceIds": {
+            "checklistbank-2265": "423455"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BASIDIOBOLUS_SP",
+          "name": "Basidiobolus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Basidiobolus",
+          "sourceIds": {
+            "checklistbank-2265": "423458"
           },
           "children": []
         }
@@ -189,10 +218,23 @@
           "lineage": "Schizangiella",
           "authorship": "J.Dwyer, B.Burwell, Humber, C.Mcleod, M.Fleetwood & T.Johnson bis",
           "sourceIds": {
-            "gbif-backbone": "7825383"
+            "gbif-backbone": "7825383",
+            "checklistbank-2265": "181060"
           },
           "children": [],
           "uuid": "8950f4db-03e2-59a-aa2-f1c8ad38483b98"
+        },
+        {
+          "id": "SP_SCHIZANGIELLA_SP",
+          "name": "Schizangiella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizangiella",
+          "sourceIds": {
+            "checklistbank-2265": "423469"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -219,9 +261,75 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "basidiobolaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BASIDIOBOLACEAE",
+          "name": "uncultured Basidiobolaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "270647"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BASIDIOBOLUS",
+          "name": "uncultured Basidiobolus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "706597"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SCHIZANGIELLA",
+          "name": "uncultured Schizangiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1260777"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "basidiobolaceae"
+    },
+    {
+      "id": "GENUS_BASIDIOBOLACEAE",
+      "name": "Basidiobolaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BASIDIOBOLACEAE_SP",
+          "name": "Basidiobolaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Basidiobolaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2012304"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "basidiobolaceae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 6,
   "sourceIds": {
     "wikispecies": "Basidiobolaceae"
   }

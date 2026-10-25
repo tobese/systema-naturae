@@ -31,7 +31,8 @@
           "sourceIds": {
             "gbif-backbone": "6184725",
             "checklistbank-139831": "261675",
-            "checklistbank-316441": "RLXMG"
+            "checklistbank-316441": "RLXMG",
+            "checklistbank-2265": "212005"
           },
           "uuid": "70f4388f-60f6-5b2-bfb-b8ef65c7f3898a"
         },
@@ -115,7 +116,8 @@
           "lineage": "Parajapyx",
           "authorship": "Pages, 1959",
           "sourceIds": {
-            "gbif-backbone": "6883290"
+            "gbif-backbone": "6883290",
+            "checklistbank-2265": "1236688"
           },
           "children": [],
           "uuid": "13eaa167-fba1-5c4-bf5-c52535c8cc039d"
@@ -297,6 +299,18 @@
             "checklistbank-316441": "RLXGK"
           },
           "children": []
+        },
+        {
+          "id": "SP_PARAJAPYX_SP",
+          "name": "Parajapyx sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parajapyx",
+          "sourceIds": {
+            "checklistbank-2265": "2727277"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -366,13 +380,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "parajapygidae"
+    },
+    {
+      "id": "GENUS_PARAJAPYGIDAE",
+      "name": "Parajapygidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAJAPYGIDAE_SP",
+          "name": "Parajapygidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parajapygidae",
+          "sourceIds": {
+            "checklistbank-2265": "2735487"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parajapygidae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 26,
   "appSlug": "parajapygidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Diplura",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "checklistbank": "Parajapygidae"
   }

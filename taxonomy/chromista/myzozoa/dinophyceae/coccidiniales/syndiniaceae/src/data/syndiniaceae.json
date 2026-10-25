@@ -3,7 +3,7 @@
   "name": "Syndiniaceae",
   "rank": "FAMILY",
   "appSlug": "syndiniaceae",
-  "speciesCount": 4,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_HEMATODINIUM",
@@ -22,6 +22,18 @@
           },
           "children": [],
           "uuid": "d55f1322-af4c-513-bef-d4a18a576b03b7"
+        },
+        {
+          "id": "SP_HEMATODINIUM_SP",
+          "name": "Hematodinium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hematodinium",
+          "sourceIds": {
+            "checklistbank-2265": "136085"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -41,10 +53,23 @@
           "lineage": "Syndinium",
           "authorship": "Chatton, 1910",
           "sourceIds": {
-            "gbif-backbone": "3207134"
+            "gbif-backbone": "3207134",
+            "checklistbank-2265": "340370"
           },
           "children": [],
           "uuid": "7b0f374a-33f5-59b-aa6-92ed8540f11d4b"
+        },
+        {
+          "id": "SP_SYNDINIUM_SP",
+          "name": "Syndinium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syndinium",
+          "sourceIds": {
+            "checklistbank-2265": "340371"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -93,7 +118,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "syndiniaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HEMATODINIUM",
+          "name": "uncultured Hematodinium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "405137"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "syndiniaceae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 5
 }

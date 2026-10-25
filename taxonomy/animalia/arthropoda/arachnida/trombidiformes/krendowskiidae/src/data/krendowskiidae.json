@@ -3,7 +3,7 @@
   "name": "Krendowskiidae",
   "rank": "FAMILY",
   "appSlug": "krendowskiidae",
-  "speciesCount": 11,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_ROQUEELLA",
@@ -168,10 +168,23 @@
           "authorship": "Viets, 1931",
           "sourceIds": {
             "gbif-backbone": "2181168",
-            "checklistbank-139831": "1136640"
+            "checklistbank-139831": "1136640",
+            "checklistbank-2265": "2449086"
           },
           "children": [],
           "uuid": "3a43d53a-1cf1-51e7-abaf-a89195fbb083"
+        },
+        {
+          "id": "SP_KRENDOWSKIA_SP",
+          "name": "Krendowskia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Krendowskia",
+          "sourceIds": {
+            "checklistbank-2265": "1882518"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -199,7 +212,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "krendowskiidae"
+    },
+    {
+      "id": "GENUS_KRENDOWSKIIDAE",
+      "name": "Krendowskiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KRENDOWSKIIDAE_SP",
+          "name": "Krendowskiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Krendowskiidae",
+          "sourceIds": {
+            "checklistbank-2265": "2134708"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "krendowskiidae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 5
 }

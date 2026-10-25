@@ -47,7 +47,10 @@
           "lineage": "Thinoseius",
           "authorship": "(Willmann, 1939)",
           "children": [],
-          "uuid": "d3722718-a39d-55f-81e-d753fbcf2a6030"
+          "uuid": "d3722718-a39d-55f-81e-d753fbcf2a6030",
+          "sourceIds": {
+            "checklistbank-2265": "2796236"
+          }
         },
         {
           "id": "SP_THINOSEIUS_BREVISTERNALIS_CANARIS_1962",
@@ -763,7 +766,8 @@
           "lineage": "Alliphis",
           "authorship": "Christie, 1983",
           "sourceIds": {
-            "gbif-backbone": "6887047"
+            "gbif-backbone": "6887047",
+            "checklistbank-2265": "3063198"
           },
           "children": [],
           "uuid": "33bf22b3-9126-519-8af-9a5c40ededf598"
@@ -781,6 +785,18 @@
           },
           "children": [],
           "uuid": "ee06b1b7-c93a-53f-8b8-88922875e43a6d"
+        },
+        {
+          "id": "SP_ALLIPHIS_SP",
+          "name": "Alliphis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alliphis",
+          "sourceIds": {
+            "checklistbank-2265": "704044"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -914,7 +930,8 @@
           "authorship": "(C.L. Koch, 1836)",
           "sourceIds": {
             "checklistbank": "263793",
-            "checklistbank-139831": "1579681"
+            "checklistbank-139831": "1579681",
+            "checklistbank-2265": "2796194"
           },
           "children": [],
           "uuid": "7a202136-0d3a-56e-991-69598957252d6b"
@@ -986,6 +1003,18 @@
           "authorship": "Berlese, 1903",
           "sourceIds": {
             "checklistbank-316441": "PCNFH"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EVIPHIS_SP",
+          "name": "Eviphis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eviphis",
+          "sourceIds": {
+            "checklistbank-2265": "704066"
           },
           "children": []
         }
@@ -1304,13 +1333,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eviphididae"
+    },
+    {
+      "id": "GENUS_EVIPHIDIDAE",
+      "name": "Eviphididae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EVIPHIDIDAE_SP",
+          "name": "Eviphididae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eviphididae",
+          "sourceIds": {
+            "checklistbank-2265": "2670415"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eviphididae"
     }
   ],
-  "speciesCount": 78,
+  "speciesCount": 81,
   "appSlug": "eviphididae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 25,
+  "genusCount": 26,
   "sourceIds": {
     "checklistbank": "Eviphididae",
     "wikispecies": "Eviphididae"

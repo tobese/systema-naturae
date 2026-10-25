@@ -3,7 +3,7 @@
   "name": "Siedleckiidae",
   "rank": "FAMILY",
   "appSlug": "siedleckiidae",
-  "speciesCount": 4,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_SIEDLECKIA",
@@ -19,7 +19,8 @@
           "lineage": "Siedleckia",
           "authorship": "Caullery & Mesnil, 1898",
           "sourceIds": {
-            "gbif-backbone": "7941719"
+            "gbif-backbone": "7941719",
+            "checklistbank-2265": "2107685"
           },
           "children": [],
           "uuid": "196d031c-3a25-599-95b-b52c0332d3ce89"
@@ -69,7 +70,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "siedleckiidae"
+    },
+    {
+      "id": "GENUS_CHATTONARIA",
+      "name": "Chattonaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHATTONARIA_MESNILI",
+          "name": "Chattonaria mesnili",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chattonaria",
+          "sourceIds": {
+            "checklistbank-2265": "2107687"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "siedleckiidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

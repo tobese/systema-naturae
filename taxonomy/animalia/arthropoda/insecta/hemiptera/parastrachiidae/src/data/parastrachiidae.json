@@ -3,7 +3,7 @@
   "name": "Parastrachiidae",
   "rank": "FAMILY",
   "appSlug": "parastrachiidae",
-  "speciesCount": 2,
+  "speciesCount": 5,
   "children": [
     {
       "id": "GENUS_PARASTRACHIA",
@@ -22,7 +22,8 @@
           "sourceIds": {
             "checklistbank-311094": "759280"
           },
-          "uuid": "e6bb6670-2aaa-4bbd-a45a-03eff8d6a6a3"
+          "uuid": "e6bb6670-2aaa-4bbd-a45a-03eff8d6a6a3",
+          "children": []
         },
         {
           "id": "SP_PARASTRACHIA_NAGAENSIS",
@@ -34,9 +35,65 @@
           "sourceIds": {
             "checklistbank-311094": "943626"
           },
-          "uuid": "39e3d855-3153-4105-820e-4dc1cbdb9982"
+          "uuid": "39e3d855-3153-4105-820e-4dc1cbdb9982",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DISMEGISTUS",
+      "name": "Dismegistus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISMEGISTUS_SANGUINEUS",
+          "name": "Dismegistus sanguineus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dismegistus",
+          "sourceIds": {
+            "checklistbank-2265": "468271"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DISMEGISTUS_BINOTATUS",
+          "name": "Dismegistus binotatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dismegistus",
+          "sourceIds": {
+            "checklistbank-2265": "1191082"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parastrachiidae"
+    },
+    {
+      "id": "GENUS_PARASTRACHIIDAE",
+      "name": "Parastrachiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARASTRACHIIDAE_SP",
+          "name": "Parastrachiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parastrachiidae",
+          "sourceIds": {
+            "checklistbank-2265": "2910656"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parastrachiidae"
     }
-  ]
+  ],
+  "genusCount": 3
 }

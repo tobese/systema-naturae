@@ -3,7 +3,7 @@
   "name": "Chortoglyphidae",
   "rank": "FAMILY",
   "appSlug": "chortoglyphidae",
-  "speciesCount": 4,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_CHORTOGLYPHUS",
@@ -22,7 +22,8 @@
             "gbif-backbone": "2181910",
             "checklistbank-127379": "390637e0-4b70-4eb4-941e-a34445eef175",
             "checklistbank-139831": "297352",
-            "wikispecies": "Chortoglyphus_arcuatus"
+            "wikispecies": "Chortoglyphus_arcuatus",
+            "checklistbank-2265": "66564"
           },
           "children": [],
           "uuid": "fc74805b-2e7f-5afb-8a99-b6c31de2d57a"
@@ -39,6 +40,30 @@
           },
           "children": [],
           "uuid": "c13070b7-ba0d-5434-811d-71e9257a1053"
+        },
+        {
+          "id": "SP_CHORTOGLYPHUS_SCIURICOLA",
+          "name": "Chortoglyphus sciuricola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chortoglyphus",
+          "sourceIds": {
+            "checklistbank-2265": "474164"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHORTOGLYPHUS_SP",
+          "name": "Chortoglyphus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chortoglyphus",
+          "sourceIds": {
+            "checklistbank-2265": "1111215"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -80,9 +105,30 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_AFF",
+      "name": "aff.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AFF_ALABIDOPUS",
+          "name": "aff. Alabidopus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "aff.",
+          "sourceIds": {
+            "checklistbank-2265": "1111441"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chortoglyphidae"
     }
   ],
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "wikispecies": "Chortoglyphidae"
   }

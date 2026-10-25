@@ -3,7 +3,7 @@
   "name": "Phaeodactylaceae",
   "rank": "FAMILY",
   "appSlug": "phaeodactylaceae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_PHAEODACTYLUM",
@@ -21,15 +21,49 @@
           "sourceIds": {
             "gbif-backbone": "7716676",
             "checklistbank-139831": "1005748",
-            "checklistbank-308974": "338306"
+            "checklistbank-308974": "338306",
+            "checklistbank-2265": "2850"
           },
           "children": [],
           "uuid": "7add32b3-8a47-562-ab4-bafbd5d1f2b070"
+        },
+        {
+          "id": "SP_PHAEODACTYLUM_SP",
+          "name": "Phaeodactylum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeodactylum",
+          "sourceIds": {
+            "checklistbank-2265": "279213"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaeodactylaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PHAEODACTYLUM",
+          "name": "uncultured Phaeodactylum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "391294"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phaeodactylaceae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

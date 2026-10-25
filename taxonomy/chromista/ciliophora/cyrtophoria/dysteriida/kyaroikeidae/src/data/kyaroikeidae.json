@@ -3,7 +3,7 @@
   "name": "Kyaroikeidae",
   "rank": "FAMILY",
   "appSlug": "kyaroikeidae",
-  "speciesCount": 2,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_PLANILAMINA",
@@ -19,7 +19,8 @@
           "lineage": "Planilamina",
           "authorship": "Ma, Overstreet, Sniezek, Solangi & Wayne Coats, 2006",
           "sourceIds": {
-            "gbif-backbone": "9017832"
+            "gbif-backbone": "9017832",
+            "checklistbank-2265": "2684848"
           },
           "children": [],
           "uuid": "5fb33395-03d9-5b2-925-f0cfa351af0c24"
@@ -41,7 +42,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "kyaroikeidae"
+    },
+    {
+      "id": "GENUS_KYAROIKEUS",
+      "name": "Kyaroikeus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KYAROIKEUS_PARACETARIUS",
+          "name": "Kyaroikeus paracetarius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kyaroikeus",
+          "sourceIds": {
+            "checklistbank-2265": "2684852"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kyaroikeidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

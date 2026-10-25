@@ -3,7 +3,7 @@
   "name": "Balamuthiidae",
   "rank": "FAMILY",
   "appSlug": "balamuthiidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
     {
       "id": "GENUS_BALAMUTHIA",
@@ -22,9 +22,44 @@
           "sourceIds": {
             "checklistbank-308974": "14053"
           },
-          "uuid": "b10691b8-d75d-4c70-a537-e6dd5e7882a1"
+          "uuid": "b10691b8-d75d-4c70-a537-e6dd5e7882a1",
+          "children": []
+        },
+        {
+          "id": "SP_BALAMUTHIA_SPINOSA",
+          "name": "Balamuthia spinosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Balamuthia",
+          "sourceIds": {
+            "checklistbank-2265": "2895817"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "Uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BALAMUTHIA",
+          "name": "Uncultured Balamuthia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1631784"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "balamuthiidae"
     }
-  ]
+  ],
+  "genusCount": 2
 }

@@ -3,7 +3,7 @@
   "name": "Mikrocytiidae",
   "rank": "FAMILY",
   "appSlug": "mikrocytiidae",
-  "speciesCount": 7,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_MIKROCYTOS",
@@ -20,7 +20,8 @@
           "authorship": "Abbott, Meyer, Lowe, Kim & Johnson, 2014",
           "sourceIds": {
             "gbif-backbone": "10799830",
-            "checklistbank-308974": "52427"
+            "checklistbank-308974": "52427",
+            "checklistbank-2265": "1436829"
           },
           "children": [],
           "uuid": "b140f38f-a3ec-5a5-aeb-587ffeb3c66d34"
@@ -35,7 +36,8 @@
           "authorship": "Farley, Wolf & Elston, 1988",
           "sourceIds": {
             "gbif-backbone": "10866735",
-            "checklistbank-308974": "52436"
+            "checklistbank-308974": "52436",
+            "checklistbank-2265": "195010"
           },
           "children": [],
           "uuid": "b740bda1-7a9b-52d-af7-29b382fc552b72"
@@ -49,7 +51,8 @@
           "lineage": "Mikrocytos",
           "authorship": "Darriba, Lee & López, 2020",
           "sourceIds": {
-            "gbif-backbone": "10824194"
+            "gbif-backbone": "10824194",
+            "checklistbank-2265": "2759701"
           },
           "children": [],
           "uuid": "c8ec4d70-63a4-58d-b7e-20afbad09aa227"
@@ -64,7 +67,8 @@
           "authorship": "Hartikainen, Stentiford, Bateman, Berney, Feist, Longshaw, Okamura, Stone, Ward, Wood & Bass, 2014",
           "sourceIds": {
             "gbif-backbone": "10757181",
-            "checklistbank-308974": "351339"
+            "checklistbank-308974": "351339",
+            "checklistbank-2265": "1593239"
           },
           "children": [],
           "uuid": "1121ad10-8bdd-51c-abd-1ce5caab13916d"
@@ -79,7 +83,8 @@
           "sourceIds": {
             "checklistbank-308974": "423195"
           },
-          "uuid": "bff566d4-c195-46ad-8c82-d8396a646766"
+          "uuid": "bff566d4-c195-46ad-8c82-d8396a646766",
+          "children": []
         },
         {
           "id": "SP_MIKROCYTOS_VENEROIDES",
@@ -91,7 +96,32 @@
           "sourceIds": {
             "checklistbank-308974": "423204"
           },
-          "uuid": "74734760-29d4-4e9a-9445-8752ed56b644"
+          "uuid": "74734760-29d4-4e9a-9445-8752ed56b644",
+          "children": []
+        },
+        {
+          "id": "SP_MIKROCYTOS_ROUGHLEYI",
+          "name": "Mikrocytos roughleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocytos",
+          "sourceIds": {
+            "checklistbank-2265": "196163"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MIKROCYTOS_SP",
+          "name": "Mikrocytos sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocytos",
+          "sourceIds": {
+            "checklistbank-2265": "353567"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -114,10 +144,74 @@
           "sourceIds": {
             "checklistbank-308974": "351348"
           },
-          "uuid": "a61c7f54-5409-40d0-b641-55a23a37d51e"
+          "uuid": "a61c7f54-5409-40d0-b641-55a23a37d51e",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MIKROCYTID",
+      "name": "Mikrocytid",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIKROCYTID_EX",
+          "name": "Mikrocytid ex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocytid",
+          "sourceIds": {
+            "checklistbank-2265": "1483966"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mikrocytiidae"
+    },
+    {
+      "id": "GENUS_MICROCYTID",
+      "name": "microcytid",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROCYTID_ENVIRONMENTAL",
+          "name": "microcytid environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "microcytid",
+          "sourceIds": {
+            "checklistbank-2265": "1483964"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mikrocytiidae"
+    },
+    {
+      "id": "GENUS_MIKROCYTIIDAE",
+      "name": "Mikrocytiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIKROCYTIIDAE_SP",
+          "name": "Mikrocytiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mikrocytiidae",
+          "sourceIds": {
+            "checklistbank-2265": "2704239"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mikrocytiidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 5
 }

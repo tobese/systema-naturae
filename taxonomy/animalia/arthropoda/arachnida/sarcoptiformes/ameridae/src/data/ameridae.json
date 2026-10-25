@@ -339,7 +339,8 @@
           "sourceIds": {
             "gbif": 2189435,
             "checklistbank": "ott1071664",
-            "checklistbank-139831": "917017"
+            "checklistbank-139831": "917017",
+            "checklistbank-2265": "229825"
           },
           "uuid": "3e8c364d-7cc8-55d-a7d-74ed60e7d6078e",
           "authorityIds": "gbif:2189435",
@@ -782,13 +783,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ameridae"
+    },
+    {
+      "id": "GENUS_AMERIDAE",
+      "name": "Ameridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMERIDAE_SP",
+          "name": "Ameridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ameridae",
+          "sourceIds": {
+            "checklistbank-2265": "1642535"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ameridae"
     }
   ],
-  "speciesCount": 35,
+  "speciesCount": 36,
   "appSlug": "ameridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

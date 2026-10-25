@@ -3,7 +3,7 @@
   "name": "Vampyrellidae",
   "rank": "FAMILY",
   "appSlug": "vampyrellidae",
-  "speciesCount": 6,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_VAMPYRELLA",
@@ -20,7 +20,8 @@
           "authorship": "(Fres.)",
           "sourceIds": {
             "gbif-backbone": "5425553",
-            "checklistbank-308974": "331950"
+            "checklistbank-308974": "331950",
+            "checklistbank-2265": "941460"
           },
           "children": [],
           "uuid": "aa305847-2924-5bf-a50-a5dc0375e15e75"
@@ -35,7 +36,8 @@
           "sourceIds": {
             "checklistbank-308974": "331959"
           },
-          "uuid": "c9435ba1-1318-4841-b7d8-8142c1d96c8b"
+          "uuid": "c9435ba1-1318-4841-b7d8-8142c1d96c8b",
+          "children": []
         },
         {
           "id": "SP_VAMPYRELLA_CLOSTERII",
@@ -47,7 +49,8 @@
           "sourceIds": {
             "checklistbank-308974": "433161"
           },
-          "uuid": "8e5428c5-6d60-45b7-8797-95982809d15c"
+          "uuid": "8e5428c5-6d60-45b7-8797-95982809d15c",
+          "children": []
         },
         {
           "id": "SP_VAMPYRELLA_CRYSTALLIFERA",
@@ -59,7 +62,8 @@
           "sourceIds": {
             "checklistbank-308974": "463016"
           },
-          "uuid": "f2401ddf-5266-47a2-8b8b-4d8fbbbca5ed"
+          "uuid": "f2401ddf-5266-47a2-8b8b-4d8fbbbca5ed",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -108,9 +112,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "vampyrellidae"
+    },
+    {
+      "id": "GENUS_VAMPYRELLIDAE",
+      "name": "Vampyrellidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VAMPYRELLIDAE_SP",
+          "name": "Vampyrellidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vampyrellidae",
+          "sourceIds": {
+            "checklistbank-2265": "2588357"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vampyrellidae"
     }
   ],
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "wikispecies": "Vampyrellidae"
   }

@@ -3,7 +3,7 @@
   "name": "Emeidae",
   "rank": "FAMILY",
   "appSlug": "emeidae",
-  "speciesCount": 28,
+  "speciesCount": 31,
   "children": [
     {
       "id": "GENUS_PACHYORNIS",
@@ -21,7 +21,8 @@
           "sourceIds": {
             "gbif-backbone": "4852025",
             "checklistbank-139831": "410552",
-            "wikispecies": "Pachyornis_australis"
+            "wikispecies": "Pachyornis_australis",
+            "checklistbank-2265": "239969"
           },
           "children": [],
           "uuid": "b9d477c6-a3dc-5812-b28d-2a78e50182ce"
@@ -51,7 +52,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:143730",
             "checklistbank-139831": "410549",
-            "wikispecies": "Pachyornis_elephantopus"
+            "wikispecies": "Pachyornis_elephantopus",
+            "checklistbank-2265": "8815"
           },
           "uuid": "ee6edfb2-8663-4f89-93ad-9a3c6bda1b2e",
           "children": []
@@ -67,6 +69,18 @@
             "checklistbank-139831": "410550"
           },
           "uuid": "84bc5935-ce84-4d84-ac33-25dae1735258",
+          "children": []
+        },
+        {
+          "id": "SP_PACHYORNIS_MAPPINI",
+          "name": "Pachyornis mappini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachyornis",
+          "sourceIds": {
+            "checklistbank-2265": "239970"
+          },
           "children": []
         }
       ],
@@ -453,9 +467,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "emeidae"
+    },
+    {
+      "id": "GENUS_MEGALAPTERYX",
+      "name": "Megalapteryx",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEGALAPTERYX_DIDINUS",
+          "name": "Megalapteryx didinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalapteryx",
+          "sourceIds": {
+            "checklistbank-2265": "8813"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEGALAPTERYX_BENHAMI",
+          "name": "Megalapteryx benhami",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalapteryx",
+          "sourceIds": {
+            "checklistbank-2265": "328612"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "emeidae"
     }
   ],
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "wikispecies": "Emeidae",
     "checklistbank-1174": "txn:143729"

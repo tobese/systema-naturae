@@ -3,7 +3,7 @@
   "name": "Hydrachnidae",
   "rank": "FAMILY",
   "appSlug": "hydrachnidae",
-  "speciesCount": 100,
+  "speciesCount": 102,
   "children": [
     {
       "id": "GENUS_HYDRACHNA",
@@ -82,7 +82,8 @@
             "gbif-backbone": "9089453",
             "checklistbank-139831": "803568",
             "checklistbank-2008": "298366",
-            "checklistbank-316441": "PRPBQ"
+            "checklistbank-316441": "PRPBQ",
+            "checklistbank-2265": "1046791"
           },
           "children": [],
           "uuid": "52ba0f8b-db33-5e44-9e66-e67a2cb633df"
@@ -254,7 +255,8 @@
           "lineage": "Hydrachna",
           "authorship": "Marshall, 1927",
           "sourceIds": {
-            "gbif-backbone": "5173889"
+            "gbif-backbone": "5173889",
+            "checklistbank-2265": "1633844"
           },
           "children": [],
           "uuid": "c0562945-85cd-560d-b459-2aa771a3ffc3"
@@ -654,7 +656,8 @@
           "authorship": "Koenike, 1895",
           "sourceIds": {
             "gbif-backbone": "5173877",
-            "checklistbank-139831": "992859"
+            "checklistbank-139831": "992859",
+            "checklistbank-2265": "1046790"
           },
           "children": [],
           "uuid": "dc26514d-7553-50a0-a443-b256e45114ce"
@@ -1228,7 +1231,8 @@
           "authorship": "(Wainstein, 1976)",
           "sourceIds": {
             "gbif-backbone": "6922589",
-            "checklistbank-316441": "PRNWV"
+            "checklistbank-316441": "PRNWV",
+            "checklistbank-2265": "2891660"
           },
           "children": [],
           "uuid": "85d127dd-d925-5037-90b2-90bbf404d5cc"
@@ -1381,6 +1385,18 @@
             "checklistbank-316441": "PRPPR"
           },
           "children": []
+        },
+        {
+          "id": "SP_HYDRACHNA_SP",
+          "name": "Hydrachna sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydrachna",
+          "sourceIds": {
+            "checklistbank-2265": "768092"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1468,7 +1484,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hydrachnidae"
+    },
+    {
+      "id": "GENUS_HYDRACHNIDAE",
+      "name": "Hydrachnidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYDRACHNIDAE_SP",
+          "name": "Hydrachnidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydrachnidae",
+          "sourceIds": {
+            "checklistbank-2265": "1687589"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hydrachnidae"
     }
   ],
-  "genusCount": 4
+  "genusCount": 5
 }

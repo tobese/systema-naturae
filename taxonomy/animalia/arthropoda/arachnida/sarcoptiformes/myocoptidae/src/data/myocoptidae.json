@@ -3,7 +3,7 @@
   "name": "Myocoptidae",
   "rank": "FAMILY",
   "appSlug": "myocoptidae",
-  "speciesCount": 27,
+  "speciesCount": 29,
   "children": [
     {
       "id": "GENUS_SCIUROCOPTES",
@@ -121,7 +121,8 @@
           "lineage": "Myocoptes",
           "authorship": "Radford, 1955",
           "sourceIds": {
-            "gbif-backbone": "7907692"
+            "gbif-backbone": "7907692",
+            "checklistbank-2265": "474226"
           },
           "children": [],
           "uuid": "7686fa11-57c0-5417-bc71-df0aaed52a36"
@@ -139,7 +140,8 @@
             "checklistbank-127379": "037bb3e6-481c-4b81-81de-b6890eed2463",
             "checklistbank-139831": "262892",
             "checklistbank-2008": "885084",
-            "wikispecies": "Myocoptes_musculinus"
+            "wikispecies": "Myocoptes_musculinus",
+            "checklistbank-2265": "1046713"
           },
           "children": [],
           "uuid": "b3f425c7-0b72-5bbc-bb4f-72a89755bf58"
@@ -272,7 +274,8 @@
           "lineage": "Trichoecius",
           "authorship": "(Michael, 1889)",
           "sourceIds": {
-            "gbif-backbone": "6901850"
+            "gbif-backbone": "6901850",
+            "checklistbank-2265": "474305"
           },
           "children": [],
           "uuid": "a284cd71-12a7-5f24-80f0-aa1f09ef4257"
@@ -303,6 +306,18 @@
             "checklistbank-139831": "694075"
           },
           "uuid": "197d62b8-5c45-48fd-a477-30bf17f89494",
+          "children": []
+        },
+        {
+          "id": "SP_TRICHOECIUS_SP",
+          "name": "Trichoecius sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichoecius",
+          "sourceIds": {
+            "checklistbank-2265": "482805"
+          },
           "children": []
         }
       ],
@@ -454,9 +469,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myocoptidae"
+    },
+    {
+      "id": "GENUS_MYOCOPTIDAE",
+      "name": "Myocoptidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYOCOPTIDAE_SP",
+          "name": "Myocoptidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myocoptidae",
+          "sourceIds": {
+            "checklistbank-2265": "708323"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "myocoptidae"
     }
   ],
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "wikispecies": "Myocoptidae"
   }

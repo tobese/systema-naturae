@@ -3,7 +3,7 @@
   "name": "Alexiidae",
   "rank": "FAMILY",
   "appSlug": "alexiidae",
-  "speciesCount": 32,
+  "speciesCount": 35,
   "children": [
     {
       "id": "GENUS_SPHAEROSOMA",
@@ -92,7 +92,8 @@
             "gbif-backbone": "11222305",
             "checklistbank-139831": "1225956",
             "checklistbank-2008": "221889",
-            "checklistbank-311094": "766293"
+            "checklistbank-311094": "766293",
+            "checklistbank-2265": "1588470"
           },
           "children": [],
           "uuid": "c8014cbe-0b55-5e8e-bcf7-7f75bbc94f3b"
@@ -305,7 +306,8 @@
           "sourceIds": {
             "checklistbank-311094": "1266556"
           },
-          "uuid": "f5923f76-fb6a-4d97-a393-7e25d5c3b98f"
+          "uuid": "f5923f76-fb6a-4d97-a393-7e25d5c3b98f",
+          "children": []
         },
         {
           "id": "SP_SPHAEROSOMA_SEIDLIZI",
@@ -317,7 +319,8 @@
           "sourceIds": {
             "checklistbank-311094": "1266558"
           },
-          "uuid": "1e673f8f-a5d6-409a-ba1a-ab1141afd14c"
+          "uuid": "1e673f8f-a5d6-409a-ba1a-ab1141afd14c",
+          "children": []
         },
         {
           "id": "SP_SPHAEROSOMA_SOLARII",
@@ -329,7 +332,8 @@
           "sourceIds": {
             "checklistbank-311094": "1266559"
           },
-          "uuid": "03556176-a718-4844-ba39-e9a9a471a51c"
+          "uuid": "03556176-a718-4844-ba39-e9a9a471a51c",
+          "children": []
         },
         {
           "id": "SP_SPHAEROSOMA_SPARSUM",
@@ -341,7 +345,8 @@
           "sourceIds": {
             "checklistbank-311094": "1266560"
           },
-          "uuid": "1f79d2d0-be35-48ae-94bb-73b2d0d78e24"
+          "uuid": "1f79d2d0-be35-48ae-94bb-73b2d0d78e24",
+          "children": []
         },
         {
           "id": "SP_SPHAEROSOMA_VALLOMBROSAE",
@@ -353,7 +358,20 @@
           "sourceIds": {
             "checklistbank-311094": "1266561"
           },
-          "uuid": "be1449d1-e952-45cb-9b2d-1775ee637e16"
+          "uuid": "be1449d1-e952-45cb-9b2d-1775ee637e16",
+          "children": []
+        },
+        {
+          "id": "SP_SPHAEROSOMA_SP",
+          "name": "Sphaerosoma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerosoma",
+          "sourceIds": {
+            "checklistbank-2265": "764636"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -405,6 +423,18 @@
           },
           "children": [],
           "uuid": "3c42bbc7-e65a-5732-9cd5-cb68849de8d1"
+        },
+        {
+          "id": "SP_ALEXIA_PILIFERA",
+          "name": "Alexia pilifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alexia",
+          "sourceIds": {
+            "checklistbank-2265": "347479"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -480,9 +510,30 @@
       ],
       "sourcedFrom": "checklistbank-2008",
       "lineage": "Alexiidae"
+    },
+    {
+      "id": "GENUS_ALEXIIDAE",
+      "name": "Alexiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALEXIIDAE_SP",
+          "name": "Alexiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alexiidae",
+          "sourceIds": {
+            "checklistbank-2265": "2834613"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alexiidae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "wikispecies": "Alexiidae"
   }

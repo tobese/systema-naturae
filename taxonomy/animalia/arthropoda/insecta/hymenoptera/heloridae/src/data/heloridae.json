@@ -3,7 +3,7 @@
   "name": "Heloridae",
   "rank": "FAMILY",
   "appSlug": "heloridae",
-  "speciesCount": 47,
+  "speciesCount": 49,
   "children": [
     {
       "id": "GENUS_CONOHELORUS",
@@ -136,7 +136,8 @@
           "sourceIds": {
             "gbif-backbone": "5762169",
             "checklistbank-139831": "853751",
-            "checklistbank-311094": "542531"
+            "checklistbank-311094": "542531",
+            "checklistbank-2265": "1888425"
           },
           "children": [],
           "uuid": "45e27f7b-18bc-55a5-bea9-5de61adba4eb"
@@ -433,6 +434,18 @@
           "authorship": "He et Xu,2015",
           "sourceIds": {
             "checklistbank-312616": "{D6C3E494-DE20-4D9B-8611-5E3F62C0DA0E}"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELORUS_SP",
+          "name": "Helorus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Helorus",
+          "sourceIds": {
+            "checklistbank-2265": "44346"
           },
           "children": []
         }
@@ -825,9 +838,30 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_HELORIDAE",
+      "name": "Heloridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HELORIDAE_SP",
+          "name": "Heloridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heloridae",
+          "sourceIds": {
+            "checklistbank-2265": "2329162"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heloridae"
     }
   ],
-  "genusCount": 17,
+  "genusCount": 18,
   "sourceIds": {
     "wikispecies": "Heloridae",
     "checklistbank-1174": "txn:140048"

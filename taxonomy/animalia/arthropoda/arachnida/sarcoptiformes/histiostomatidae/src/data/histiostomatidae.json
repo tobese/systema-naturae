@@ -52,7 +52,8 @@
               "1188611"
             ],
             "checklistbank": "ea76c774-ece1-4668-8882-0414459ec007",
-            "checklistbank-127379": "ea76c774-ece1-4668-8882-0414459ec007"
+            "checklistbank-127379": "ea76c774-ece1-4668-8882-0414459ec007",
+            "checklistbank-2265": "3004194"
           },
           "uuid": "842c9500-fa28-5c8-9fc-8bb553603eddb6",
           "authorityIds": "col:9GCFB,gbif:4651953,itis:1188611",
@@ -173,7 +174,8 @@
           "sourceIds": {
             "gbif": 4651946,
             "checklistbank": "541d4996-e036-4a9c-b479-f5d38e7c982a",
-            "checklistbank-127379": "541d4996-e036-4a9c-b479-f5d38e7c982a"
+            "checklistbank-127379": "541d4996-e036-4a9c-b479-f5d38e7c982a",
+            "checklistbank-2265": "2966320"
           },
           "uuid": "a5ff85f3-4f87-55a-ae0-d9126963a52b4f",
           "authorityIds": "gbif:4651946",
@@ -1426,7 +1428,8 @@
           "authorship": "Wirth & Moser, 2010",
           "sourceIds": {
             "gbif": 10829425,
-            "checklistbank": "ott6164869"
+            "checklistbank": "ott6164869",
+            "checklistbank-2265": "1902798"
           },
           "uuid": "0f945995-639a-5b4-b9a-4899b5975bd2e8",
           "authorityIds": "gbif:10829425",
@@ -1835,7 +1838,8 @@
             "gbif": 2181976,
             "checklistbank": "7ee239af-6a2d-4618-9059-07c6d1bd8b7b",
             "checklistbank-127379": "7ee239af-6a2d-4618-9059-07c6d1bd8b7b",
-            "checklistbank-139831": "262560"
+            "checklistbank-139831": "262560",
+            "checklistbank-2265": "334618"
           },
           "uuid": "f7e99f80-cc6b-523-977-87755d0682fe86",
           "authorityIds": "gbif:2181976",
@@ -2015,7 +2019,8 @@
           "authorship": "Cross, 1968",
           "sourceIds": {
             "gbif": 9190264,
-            "checklistbank": "ott240604"
+            "checklistbank": "ott240604",
+            "checklistbank-2265": "1111151"
           },
           "uuid": "337231a3-71f5-51f-beb-5428bc5f94fc35",
           "authorityIds": "gbif:9190264",
@@ -3638,7 +3643,10 @@
           "lineage": "Histiostoma",
           "authorship": "Hughes, 1950",
           "children": [],
-          "uuid": "00320d3d-d9ed-550-b7d-d65bd0496c005e"
+          "uuid": "00320d3d-d9ed-550-b7d-d65bd0496c005e",
+          "sourceIds": {
+            "checklistbank-2265": "223516"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -8473,7 +8481,8 @@
             "itis": [
               "1188347"
             ],
-            "checklistbank": "ott344329"
+            "checklistbank": "ott344329",
+            "checklistbank-2265": "474142"
           },
           "uuid": "d3e1f95e-cf2c-5e8-91c-917a8e3dcdee7a",
           "authorityIds": "col:9G75H,gbif:6901197,itis:1188347",
@@ -8643,7 +8652,8 @@
             "col": [
               "9G7ZC"
             ],
-            "checklistbank": "ott349769"
+            "checklistbank": "ott349769",
+            "checklistbank-2265": "474203"
           },
           "uuid": "5f9a7827-f3ff-571-907-a12da74a1a5cde",
           "authorityIds": "col:9G7ZC,gbif:8996934,itis:1188602",
@@ -11022,13 +11032,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Histiostomatidae"
+    },
+    {
+      "id": "GENUS_HISTIOSTOMATA",
+      "name": "Histiostomata",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HISTIOSTOMATA_SP",
+          "name": "Histiostomata sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostomata",
+          "sourceIds": {
+            "checklistbank-2265": "66578"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "histiostomatidae"
     }
   ],
-  "speciesCount": 576,
+  "speciesCount": 577,
   "appSlug": "histiostomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 64,
+  "genusCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

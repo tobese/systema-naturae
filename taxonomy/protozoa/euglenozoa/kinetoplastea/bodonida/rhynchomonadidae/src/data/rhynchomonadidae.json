@@ -3,7 +3,7 @@
   "name": "Rhynchomonadidae",
   "rank": "FAMILY",
   "appSlug": "rhynchomonadidae",
-  "speciesCount": 3,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_DIMASTIGELLA",
@@ -19,7 +19,8 @@
           "lineage": "Dimastigella",
           "authorship": "Sandon, 1928",
           "sourceIds": {
-            "gbif-backbone": "11201208"
+            "gbif-backbone": "11201208",
+            "checklistbank-2265": "35226"
           },
           "children": [],
           "uuid": "51dfc21d-5038-5cf-90a-56bd599891fc24"
@@ -34,7 +35,20 @@
           "sourceIds": {
             "checklistbank-308974": "419760"
           },
-          "uuid": "8ba9c877-34eb-4f3f-9244-df1a054742d9"
+          "uuid": "8ba9c877-34eb-4f3f-9244-df1a054742d9",
+          "children": []
+        },
+        {
+          "id": "SP_DIMASTIGELLA_SP",
+          "name": "Dimastigella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dimastigella",
+          "sourceIds": {
+            "checklistbank-2265": "2815824"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -56,13 +70,46 @@
             "wikispecies": "Rhynchomonas_nasuta"
           },
           "children": []
+        },
+        {
+          "id": "SP_RHYNCHOMONAS_SP",
+          "name": "Rhynchomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchomonas",
+          "sourceIds": {
+            "checklistbank-2265": "1955427"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhynchomonadidae"
+    },
+    {
+      "id": "GENUS_RHYNCHOMONADIDAE",
+      "name": "Rhynchomonadidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHYNCHOMONADIDAE_SP",
+          "name": "Rhynchomonadidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchomonadidae",
+          "sourceIds": {
+            "checklistbank-2265": "2728149"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhynchomonadidae"
     }
   ],
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "wikispecies": "Rhynchomonadidae"
   }

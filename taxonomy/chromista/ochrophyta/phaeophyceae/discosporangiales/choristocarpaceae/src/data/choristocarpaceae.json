@@ -3,7 +3,7 @@
   "name": "Choristocarpaceae",
   "rank": "FAMILY",
   "appSlug": "choristocarpaceae",
-  "speciesCount": 5,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_CHORISTOCARPUS",
@@ -21,7 +21,8 @@
           "sourceIds": {
             "gbif-backbone": "3198071",
             "checklistbank-2008": "373236",
-            "wikispecies": "Choristocarpus_tenellus"
+            "wikispecies": "Choristocarpus_tenellus",
+            "checklistbank-2265": "116065"
           },
           "children": [],
           "uuid": "96abdfa5-788b-590-be3-7207e284ae731e"
@@ -109,9 +110,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "choristocarpaceae"
+    },
+    {
+      "id": "GENUS_VEROSPHACELLA",
+      "name": "Verosphacella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VEROSPHACELLA_EBRACHIA",
+          "name": "Verosphacella ebrachia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Verosphacella",
+          "sourceIds": {
+            "checklistbank-2265": "116073"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "choristocarpaceae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "wikispecies": "Choristocarpaceae"
   }

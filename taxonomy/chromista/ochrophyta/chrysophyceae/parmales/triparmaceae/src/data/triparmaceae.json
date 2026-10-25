@@ -3,7 +3,7 @@
   "name": "Triparmaceae",
   "rank": "FAMILY",
   "appSlug": "triparmaceae",
-  "speciesCount": 20,
+  "speciesCount": 25,
   "children": [
     {
       "id": "GENUS_TRIPARMA",
@@ -20,7 +20,8 @@
           "authorship": "Booth & Marchant, 1987",
           "sourceIds": {
             "gbif-backbone": "3194327",
-            "wikispecies": "Triparma_columacea"
+            "wikispecies": "Triparma_columacea",
+            "checklistbank-2265": "722753"
           },
           "children": [],
           "uuid": "69962232-a0e7-5ad-be1-cb3a860e672cd1"
@@ -37,7 +38,8 @@
             "gbif-backbone": "12242998",
             "checklistbank-2008": "1017242",
             "wikispecies": "Triparma_pacifica",
-            "checklistbank-308974": "344475"
+            "checklistbank-308974": "344475",
+            "checklistbank-2265": "91992"
           },
           "children": [],
           "uuid": "f9e83f35-32d8-5e9-988-48cfadbef381fa"
@@ -52,7 +54,8 @@
           "authorship": "Ichinomiya & Lopes dos Santos, 2016",
           "sourceIds": {
             "checklistbank-2008": "1021745",
-            "checklistbank-308974": "344510"
+            "checklistbank-308974": "344510",
+            "checklistbank-2265": "172717"
           },
           "children": []
         },
@@ -139,6 +142,30 @@
             "wikispecies": "Triparma_papillosa"
           },
           "children": []
+        },
+        {
+          "id": "SP_TRIPARMA_SP",
+          "name": "Triparma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triparma",
+          "sourceIds": {
+            "checklistbank-2265": "722754"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRIPARMA_AFF",
+          "name": "Triparma aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triparma",
+          "sourceIds": {
+            "checklistbank-2265": "1714380"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -159,6 +186,30 @@
           "authorship": "L.Guillou & M.-J.Chrétiennot-Dinet, 1999",
           "sourceIds": {
             "checklistbank-2008": "1017241"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLIDOMONAS_MEDITERRANEA",
+          "name": "Bolidomonas mediterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolidomonas",
+          "sourceIds": {
+            "checklistbank-2265": "91991"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLIDOMONAS_SP",
+          "name": "Bolidomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolidomonas",
+          "sourceIds": {
+            "checklistbank-2265": "129302"
           },
           "children": []
         }
@@ -276,7 +327,8 @@
           "sourceIds": {
             "checklistbank-308974": "344501"
           },
-          "uuid": "a8eb7a6b-11aa-4cda-b684-0eabd1327f64"
+          "uuid": "a8eb7a6b-11aa-4cda-b684-0eabd1327f64",
+          "children": []
         },
         {
           "id": "SP_TRIPARMA_LAEVIS_F_LONGISPINA",
@@ -288,12 +340,34 @@
           "sourceIds": {
             "checklistbank-308974": "349467"
           },
-          "uuid": "f3c2edcc-d8e7-4582-9592-2314a8a075e1"
+          "uuid": "f3c2edcc-d8e7-4582-9592-2314a8a075e1",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TRIPARMA",
+          "name": "uncultured Triparma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2024385"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "triparmaceae"
     }
   ],
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "wikispecies": "Triparmaceae"
   }

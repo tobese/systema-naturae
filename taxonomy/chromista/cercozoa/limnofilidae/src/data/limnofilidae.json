@@ -3,7 +3,7 @@
   "name": "Limnofilidae",
   "rank": "FAMILY",
   "appSlug": "limnofilidae",
-  "speciesCount": 4,
+  "speciesCount": 6,
   "children": [
     {
       "id": "GENUS_LIMNOFILA",
@@ -22,7 +22,8 @@
           "sourceIds": {
             "checklistbank-308974": "332702"
           },
-          "uuid": "fb5f662d-1263-4ec8-b875-d068bf8b7b40"
+          "uuid": "fb5f662d-1263-4ec8-b875-d068bf8b7b40",
+          "children": []
         },
         {
           "id": "SP_LIMNOFILA_BOROKENSIS",
@@ -34,7 +35,8 @@
           "sourceIds": {
             "checklistbank-308974": "332711"
           },
-          "uuid": "8a387a2e-7760-4eb2-94db-44b11eb1c99a"
+          "uuid": "8a387a2e-7760-4eb2-94db-44b11eb1c99a",
+          "children": []
         },
         {
           "id": "SP_LIMNOFILA_LONGA",
@@ -46,7 +48,8 @@
           "sourceIds": {
             "checklistbank-308974": "332720"
           },
-          "uuid": "544ea290-75d8-47b2-b8e6-132e0d1f96fa"
+          "uuid": "544ea290-75d8-47b2-b8e6-132e0d1f96fa",
+          "children": []
         },
         {
           "id": "SP_LIMNOFILA_OXONIENSIS",
@@ -58,9 +61,53 @@
           "sourceIds": {
             "checklistbank-308974": "332729"
           },
-          "uuid": "9b0cd68f-a60f-4c80-aeb1-8c9e9d585cc5"
+          "uuid": "9b0cd68f-a60f-4c80-aeb1-8c9e9d585cc5",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LIMNOFILIDAE",
+          "name": "uncultured Limnofilidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1938437"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "limnofilidae"
+    },
+    {
+      "id": "GENUS_LIMNOFILIDAE",
+      "name": "Limnofilidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LIMNOFILIDAE_SP",
+          "name": "Limnofilidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limnofilidae",
+          "sourceIds": {
+            "checklistbank-2265": "1979838"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "limnofilidae"
     }
-  ]
+  ],
+  "genusCount": 3
 }

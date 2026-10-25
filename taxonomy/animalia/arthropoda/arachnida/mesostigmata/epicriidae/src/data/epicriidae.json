@@ -3,7 +3,7 @@
   "name": "Epicriidae",
   "rank": "FAMILY",
   "appSlug": "epicriidae",
-  "speciesCount": 18,
+  "speciesCount": 20,
   "children": [
     {
       "id": "GENUS_EPICRIUS",
@@ -132,7 +132,8 @@
           "lineage": "Epicrius",
           "authorship": "Haller, 1881",
           "sourceIds": {
-            "gbif-backbone": "4548247"
+            "gbif-backbone": "4548247",
+            "checklistbank-2265": "2796190"
           },
           "children": [],
           "uuid": "d796290e-d7fb-5953-850b-27f6c285b26e"
@@ -216,7 +217,8 @@
           "lineage": "Epicrius",
           "authorship": "(P.Kramer, 1876)",
           "sourceIds": {
-            "gbif-backbone": "4548245"
+            "gbif-backbone": "4548245",
+            "checklistbank-2265": "717519"
           },
           "children": [],
           "uuid": "0775bfc2-f850-55f8-9fb7-ef45e029262b"
@@ -234,6 +236,18 @@
           },
           "children": [],
           "uuid": "76cae440-8115-52d4-929d-68db6e99cbcc"
+        },
+        {
+          "id": "SP_EPICRIUS_N",
+          "name": "Epicrius n.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epicrius",
+          "sourceIds": {
+            "checklistbank-2265": "296237"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -275,7 +289,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "epicriidae"
+    },
+    {
+      "id": "GENUS_EPICRIIDAE",
+      "name": "Epicriidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EPICRIIDAE_SP",
+          "name": "Epicriidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epicriidae",
+          "sourceIds": {
+            "checklistbank-2265": "2241558"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epicriidae"
     }
   ],
-  "genusCount": 2
+  "genusCount": 3
 }

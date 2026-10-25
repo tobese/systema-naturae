@@ -3,7 +3,7 @@
   "name": "Phyllostauridae",
   "rank": "FAMILY",
   "appSlug": "phyllostauridae",
-  "speciesCount": 10,
+  "speciesCount": 20,
   "children": [
     {
       "id": "GENUS_ACANTHOSTAURUS",
@@ -33,7 +33,8 @@
           "authorship": "Jørgensen, 1899",
           "sourceIds": {
             "gbif-backbone": "4378094",
-            "checklistbank-312616": "7d6a98e7-afa4-4860-906c-85ae48720ce9"
+            "checklistbank-312616": "7d6a98e7-afa4-4860-906c-85ae48720ce9",
+            "checklistbank-2265": "1069743"
           },
           "children": [],
           "uuid": "26bc8a87-8d2d-52e-8aa-199f5c829f5757"
@@ -47,7 +48,20 @@
           "lineage": "Acanthostaurus",
           "authorship": "Haeckel,1862",
           "sourceIds": {
-            "checklistbank-312616": "46b10591-f73d-4c02-a778-4df394e72433"
+            "checklistbank-312616": "46b10591-f73d-4c02-a778-4df394e72433",
+            "checklistbank-2265": "1127127"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHOSTAURUS_CONACANTHUS",
+          "name": "Acanthostaurus conacanthus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "1127115"
           },
           "children": []
         }
@@ -69,7 +83,8 @@
           "lineage": "Amphistaurus",
           "authorship": "Haeckel, 1860",
           "sourceIds": {
-            "gbif-backbone": "7636326"
+            "gbif-backbone": "7636326",
+            "checklistbank-2265": "1127117"
           },
           "children": [],
           "uuid": "015824e4-2b24-515-a14-fc013afa49349f"
@@ -83,7 +98,8 @@
           "lineage": "Amphistaurus",
           "authorship": "(Haeckel,1860)",
           "sourceIds": {
-            "checklistbank-312616": "311fd41f-b6a0-43b7-bec2-9cdeaea38367"
+            "checklistbank-312616": "311fd41f-b6a0-43b7-bec2-9cdeaea38367",
+            "checklistbank-2265": "1128110"
           },
           "children": []
         }
@@ -187,11 +203,146 @@
             "checklistbank-312616": "5500292b-0f88-4675-9af5-4be537141d5e"
           },
           "children": []
+        },
+        {
+          "id": "SP_LONCHOSTAURUS_ROMBICUS",
+          "name": "Lonchostaurus rombicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lonchostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "1127211"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phyllostauridae"
+    },
+    {
+      "id": "GENUS_PHYLLOSTAURUS",
+      "name": "Phyllostaurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHYLLOSTAURUS_SP",
+          "name": "Phyllostaurus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "904407"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLOSTAURUS_QUADRANGULUS",
+          "name": "Phyllostaurus quadrangulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "1127217"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLOSTAURUS_CUSPIDATUS",
+          "name": "Phyllostaurus cuspidatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "1127216"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLOSTAURUS_SICULUS",
+          "name": "Phyllostaurus siculus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "1127218"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLOSTAURUS_CLAPAREDI",
+          "name": "Phyllostaurus claparedi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllostaurus",
+          "sourceIds": {
+            "checklistbank-2265": "1196153"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phyllostauridae"
+    },
+    {
+      "id": "GENUS_STAURACANTHA",
+      "name": "Stauracantha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STAURACANTHA_ORTHOSTAURA",
+          "name": "Stauracantha orthostaura",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stauracantha",
+          "sourceIds": {
+            "checklistbank-2265": "1127220"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phyllostauridae"
+    },
+    {
+      "id": "GENUS_XIPHACANTHA",
+      "name": "Xiphacantha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XIPHACANTHA_QUADRIDENTATA",
+          "name": "Xiphacantha quadridentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xiphacantha",
+          "sourceIds": {
+            "checklistbank-2265": "1127223"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_XIPHACANTHA_ALATA",
+          "name": "Xiphacantha alata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xiphacantha",
+          "sourceIds": {
+            "checklistbank-2265": "1127222"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phyllostauridae"
     }
   ],
-  "genusCount": 6
+  "genusCount": 9
 }

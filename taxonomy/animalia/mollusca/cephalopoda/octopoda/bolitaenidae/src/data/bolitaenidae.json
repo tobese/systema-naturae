@@ -3,16 +3,8 @@
   "name": "Bolitaenidae",
   "rank": "FAMILY",
   "appSlug": "bolitaenidae",
-  "speciesCount": 1,
+  "speciesCount": 3,
   "children": [
-    {
-      "id": "GENUS_ELEDONELLA",
-      "name": "Eledonella",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "bolitaenidae",
-      "children": []
-    },
     {
       "id": "GENUS_JAPETELLA",
       "name": "Japetella",
@@ -31,9 +23,44 @@
           "sourceIds": {
             "checklistbank-127379": "5ee18bec-bfe2-4639-996c-92dafd6d791b"
           },
-          "uuid": "d97f3553-bb50-4d79-9b55-25889ad04aa5"
+          "uuid": "d97f3553-bb50-4d79-9b55-25889ad04aa5",
+          "children": []
+        },
+        {
+          "id": "SP_JAPETELLA_SP",
+          "name": "Japetella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Japetella",
+          "sourceIds": {
+            "checklistbank-2265": "2871343"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BOLITAENA",
+      "name": "Bolitaena",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOLITAENA_SP",
+          "name": "Bolitaena sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolitaena",
+          "sourceIds": {
+            "checklistbank-2265": "2678277"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bolitaenidae"
     }
-  ]
+  ],
+  "genusCount": 2
 }

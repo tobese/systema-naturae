@@ -3,7 +3,7 @@
   "name": "Pezidae",
   "rank": "FAMILY",
   "appSlug": "pezidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_PEZA",
@@ -20,7 +20,8 @@
           "authorship": "Harvey, 1990",
           "sourceIds": {
             "gbif-backbone": "4652001",
-            "checklistbank-127379": "2e02a75d-9ef4-4a15-b8cd-946c76b853f9"
+            "checklistbank-127379": "2e02a75d-9ef4-4a15-b8cd-946c76b853f9",
+            "checklistbank-2265": "2912370"
           },
           "children": [],
           "uuid": "432f1cec-2e11-5927-9641-93252a54c4ae"
@@ -39,11 +40,44 @@
           },
           "children": [],
           "uuid": "956d4f0a-2be3-56f2-86ca-30ce43d03257"
+        },
+        {
+          "id": "SP_PEZA_SP",
+          "name": "Peza sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peza",
+          "sourceIds": {
+            "checklistbank-2265": "2978537"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pezidae"
+    },
+    {
+      "id": "GENUS_PEZIDAE",
+      "name": "Pezidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PEZIDAE_SP",
+          "name": "Pezidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pezidae",
+          "sourceIds": {
+            "checklistbank-2265": "2950270"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pezidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 2
 }

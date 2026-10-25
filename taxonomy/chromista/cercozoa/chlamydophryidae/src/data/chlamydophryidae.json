@@ -3,7 +3,7 @@
   "name": "Chlamydophryidae",
   "rank": "FAMILY",
   "appSlug": "chlamydophryidae",
-  "speciesCount": 7,
+  "speciesCount": 12,
   "children": [
     {
       "id": "GENUS_LECYTHIUM",
@@ -35,7 +35,8 @@
           "sourceIds": {
             "checklistbank-308974": "384636"
           },
-          "uuid": "eceb4bdb-3fb5-4bc6-b2d0-1d9a54c9c5ce"
+          "uuid": "eceb4bdb-3fb5-4bc6-b2d0-1d9a54c9c5ce",
+          "children": []
         },
         {
           "id": "SP_LECYTHIUM_SPINOSUM",
@@ -47,7 +48,32 @@
           "sourceIds": {
             "checklistbank-308974": "393795"
           },
-          "uuid": "6317f92c-9eae-4b97-8a03-9be9c48bea1e"
+          "uuid": "6317f92c-9eae-4b97-8a03-9be9c48bea1e",
+          "children": []
+        },
+        {
+          "id": "SP_LECYTHIUM_SP",
+          "name": "Lecythium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lecythium",
+          "sourceIds": {
+            "checklistbank-2265": "212454"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LECYTHIUM_MUTABILIS",
+          "name": "Lecythium mutabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lecythium",
+          "sourceIds": {
+            "checklistbank-2265": "2615114"
+          },
+          "children": []
         }
       ]
     },
@@ -69,6 +95,18 @@
             "checklistbank-139831": "1660312"
           },
           "uuid": "ae130b41-de47-46d4-9ed5-dc63cb27f470",
+          "children": []
+        },
+        {
+          "id": "SP_DIAPHOROPODON_ARCHERI",
+          "name": "Diaphoropodon archeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diaphoropodon",
+          "sourceIds": {
+            "checklistbank-2265": "2051557"
+          },
           "children": []
         }
       ]
@@ -133,12 +171,55 @@
           "sourceIds": {
             "checklistbank-308974": "384644"
           },
-          "uuid": "60b7ffb6-0151-4c1c-bcc8-6e78814a2b3e"
+          "uuid": "60b7ffb6-0151-4c1c-bcc8-6e78814a2b3e",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CAPSELLINA",
+          "name": "uncultured Capsellina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1938486"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chlamydophryidae"
+    },
+    {
+      "id": "GENUS_PENARDEUGENIA",
+      "name": "Penardeugenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENARDEUGENIA_SP",
+          "name": "Penardeugenia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Penardeugenia",
+          "sourceIds": {
+            "checklistbank-2265": "2051559"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chlamydophryidae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 7,
   "sourceIds": {
     "wikispecies": "Chlamydophryidae"
   }
