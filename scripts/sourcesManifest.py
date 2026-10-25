@@ -1466,6 +1466,126 @@ SOURCES = {
         "Taxon.tsv rows, close enough to be the same export via two hosts, "
         "not a meaningfully different dataset. Declined as redundant rather "
         "than re-deriving the same genus-authority rows twice."),
+    "checklistbank-310770": (
+        "Biodiversity Heritage Library", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/310770",
+        "CC0", "declined",
+        "Triaged 2026-10-25 (next-10-by-size sweep, 834,852 size). A "
+        "literature-digitisation library, not a taxonomy -- ChecklistBank "
+        "types it `other`; its own description is explicit: \"the largest "
+        "open-access digital library dedicated to global biodiversity "
+        "literature\". Declined without downloading."),
+    "checklistbank-53131": (
+        "The IUCN Red List of Threatened Species", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/53131",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (next-10-by-size sweep, 338,085 size). "
+        "Conservation-status data, not species discovery -- an enrichment "
+        "question (we already pull `iucnStatus` via the wiki-images.json "
+        "sidecar), same category as wikidata-species's Media/Distribution "
+        "sidecars, not the species-import pipeline. Declined for import "
+        "purposes; worth a separate enrichment look sometime, not done here."),
+    "checklistbank-128415": (
+        "BioNames Literature", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/128415",
+        "CC0", "declined",
+        "Triaged 2026-10-25 (next-10-by-size sweep, 598,683 size). "
+        "ChecklistBank types it `nomenclatural`; own description: \"a "
+        "database of taxa, texts, and trees... full text literature from "
+        "BioStor and BHL, links to digital literature\" -- a citation/"
+        "literature cross-reference tool, not a name register in the "
+        "IRMNG/Nomenclator-Zoologicus shape. Downloaded archive (48.8MB) "
+        "arrived corrupted (truncated central directory, twice); given the "
+        "lean toward decline from the description alone, not worth a third "
+        "attempt."),
+    "checklistbank-164203": (
+        "International Plant Names Index with Literature", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/164203",
+        "CC0", "declined",
+        "Triaged 2026-10-25 (next-10-by-size sweep, 444,323 size). Own "
+        "description: \"builds upon IPNI by adding persistent identifiers "
+        "for publications\" -- a literature-enriched variant of IPNI, "
+        "redundant with `gbif-ipni` (already wired into "
+        "genusAuthorityRegister.py) for this project's purposes."),
+    "checklistbank-129659": (
+        "Index Fungorum with Literature", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/129659",
+        "CC0", "declined",
+        "Triaged 2026-10-25 (next-10-by-size sweep, 100,904 size). Same "
+        "literature-enrichment-variant shape as checklistbank-164203 above, "
+        "for Index Fungorum -- overlaps checklistbank-1028 (Species "
+        "Fungorum/Index Fungorum API crawl, already assessed)."),
+    "checklistbank-316336": (
+        "Dutch bio-archaeological taxa list", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/316336",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (next-10-by-size sweep, 100,213 size). "
+        "Archaeological-finds taxonomy (Netherlands Cultural Heritage "
+        "Agency), not a general species checklist; ChecklistBank's own "
+        "`lastImportState` is unset -- never actually imported there "
+        "either. Niche scope, declined without downloading."),
+    "checklistbank-30477": (
+        "UNITE - Unified system for the DNA based fungal species linked to the classification",
+        "DOI not recorded; version 2026-08-10",
+        "https://www.checklistbank.org/dataset/30477",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (next-10-by-size sweep, 1,048,338 "
+        "size). ChecklistBank types it `other`, same initial worry as "
+        "iBOL BINs (DNA-cluster-derived \"species\"), but UNITE's fungal "
+        "species hypotheses are curated against classical taxonomy "
+        "(taxon.csv carries conventional kingdom/family/genus/species "
+        "fields, not raw sequence clusters), unlike BOLD's BINs. Measured: "
+        "101,789 offered, 1,246 genuinely new -- applied. First download "
+        "attempt corrupted via aria2c's multi-connection split (16MB vs "
+        "the real 120MB); single-connection curl got a clean file."),
+    "checklistbank-7888": (
+        "United Kingdom Species Inventory (UKSI)", "DOI not recorded; version 2023-03-13",
+        "https://www.checklistbank.org/dataset/7888",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (next-10-by-size sweep, 278,226 "
+        "size). The most comprehensive curated UK wildlife taxonomy/"
+        "nomenclature database (built for JNCC's Recorder package). "
+        "Measured: 78,719 offered, 2,260 genuinely new -- applied (2,249 "
+        "landed after a small drift from an earlier apply in the same "
+        "batch). Also the source of 3 of the 5 new cross-kingdom-homonym "
+        "pairs this sweep surfaced (Contarinia, Kefersteinia, Pirula, "
+        "Schizochlamydella all trace through UKSI) -- see "
+        "data/known-cross-kingdom-homonyms.json and the 2026-10-25 commit "
+        "for the triage."),
+    "checklistbank-1018": (
+        "LepIndex: The Global Lepidoptera Names Index", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/1018",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (next-10-by-size sweep, 188,409 "
+        "size). Digitised card-index archive of Lepidoptera names, "
+        "Natural History Museum London. Initially misread as unreadable: "
+        "the ILDIS-shape flat AcceptedSpecies.tsv table "
+        "(colChecklist.py's `_ildis()` reader, same shape as checklistbank-"
+        "1190/1118 which genuinely lack a reader) -- but colChecklist.py "
+        "already handles this exact shape, and the real blocker was a "
+        "corrupted download (a stale cached response via ChecklistBank's "
+        "CDN; a cache-busted re-fetch got a clean gzip'd tar, which "
+        "`colChecklist._Container` already magic-byte-detects, the same "
+        "handling it documents for ILDIS/1015 itself). Measured: 135,010 "
+        "offered, 12,197 genuinely new -- the largest single yield of this "
+        "sweep. Applied."),
+    "checklistbank-9712": (
+        "National Checklist of all species occurring in Denmark", "DOI not recorded; version 2026-10-14",
+        "https://www.checklistbank.org/dataset/9712",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (next-10-by-size sweep, 60,862 "
+        "size). Danish national species checklist. Measured: 41,852 "
+        "offered, 980 genuinely new -- applied (811 landed after drift "
+        "from earlier applies in the same batch)."),
+    "checklistbank-53133": (
+        "Belgian Species List", "DOI not recorded; version 2011-05-30",
+        "https://www.checklistbank.org/dataset/53133",
+        "CC0", "applied",
+        "Triaged + applied 2026-10-25 (next-10-by-size sweep, 59,448 "
+        "size). Belgian Biodiversity Platform's species.be backend "
+        "database. Measured: 32,945 offered, 1,481 genuinely new -- "
+        "applied (1,397 landed after drift from earlier applies in the "
+        "same batch)."),
     "checklistbank-2014": (
         "Checklist Dutch Species Register - Nederlands Soortenregister", "DOI not recorded; version 2026-09-24",
         "https://www.checklistbank.org/dataset/2014",

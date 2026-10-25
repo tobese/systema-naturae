@@ -3,7 +3,7 @@
   "name": "Polyaspididae",
   "rank": "FAMILY",
   "appSlug": "polyaspididae",
-  "speciesCount": 51,
+  "speciesCount": 53,
   "children": [
     {
       "id": "GENUS_TRACHYTES",
@@ -439,7 +439,8 @@
           "lineage": "Trachytes",
           "authorship": "(Berlese, 1914)",
           "sourceIds": {
-            "gbif-backbone": "4549756"
+            "gbif-backbone": "4549756",
+            "checklistbank-9712": "MSTSNM:Arter:581a2cf9-f785-ea11-aa77-501ac539d1ea"
           },
           "children": [],
           "uuid": "dfc6aea2-b21a-5fe0-a9c2-078aad4b3f9c"
@@ -480,7 +481,8 @@
           "lineage": "Trachytes",
           "authorship": "(Kramer)",
           "sourceIds": {
-            "checklistbank-316441": "THBQY"
+            "checklistbank-316441": "THBQY",
+            "checklistbank-9712": "MSTSNM:Arter:591a2cf9-f785-ea11-aa77-501ac539d1ea"
           },
           "children": []
         },
@@ -533,6 +535,19 @@
           },
           "children": [],
           "uuid": "b55f951e-cd12-580a-84c8-629eef562c62"
+        },
+        {
+          "id": "SP_POLYASPINUS_CYLINDRICUS_BERLESE_1916",
+          "name": "Polyaspinus cylindricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polyaspinus",
+          "authorship": "Berlese, 1916",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0021293649"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -779,10 +794,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polyaspididae"
+    },
+    {
+      "id": "GENUS_UROSEIUS",
+      "name": "Uroseius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UROSEIUS_CYLINDRICUS",
+          "name": "Uroseius cylindricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uroseius",
+          "sourceIds": {
+            "checklistbank-9712": "MSTSNM:Arter:22df75f9-f785-ea11-aa77-501ac539d1ea"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "polyaspididae"
     }
   ],
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
-    "wikispecies": "Polyaspididae"
+    "wikispecies": "Polyaspididae",
+    "checklistbank-9712": "MSTSNM:Arter:ad5767e4-f785-ea11-aa77-501ac539d1ea"
   }
 }

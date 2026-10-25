@@ -175,7 +175,8 @@
             "gbif": 4651946,
             "checklistbank": "541d4996-e036-4a9c-b479-f5d38e7c982a",
             "checklistbank-127379": "541d4996-e036-4a9c-b479-f5d38e7c982a",
-            "checklistbank-2265": "2966320"
+            "checklistbank-2265": "2966320",
+            "checklistbank-9712": "MSTSNM:Arter:6449ddf8-f785-ea11-aa77-501ac539d1ea"
           },
           "uuid": "a5ff85f3-4f87-55a-ae0-d9126963a52b4f",
           "authorityIds": "gbif:4651946",
@@ -1783,7 +1784,8 @@
           "lineage": "histiostoma",
           "authorship": "Jensen, 1896",
           "sourceIds": {
-            "gbif": 9391070
+            "gbif": 9391070,
+            "checklistbank-9712": "MSTSNM:Arter:6149ddf8-f785-ea11-aa77-501ac539d1ea"
           },
           "uuid": "afb3e15d-2a2c-5ba-a0c-a9174ef53112da",
           "authorityIds": "gbif:9391070",
@@ -1839,7 +1841,8 @@
             "checklistbank": "7ee239af-6a2d-4618-9059-07c6d1bd8b7b",
             "checklistbank-127379": "7ee239af-6a2d-4618-9059-07c6d1bd8b7b",
             "checklistbank-139831": "262560",
-            "checklistbank-2265": "334618"
+            "checklistbank-2265": "334618",
+            "checklistbank-9712": "MSTSNM:Arter:6249ddf8-f785-ea11-aa77-501ac539d1ea"
           },
           "uuid": "f7e99f80-cc6b-523-977-87755d0682fe86",
           "authorityIds": "gbif:2181976",
@@ -2386,7 +2389,9 @@
           "lineage": "histiostoma",
           "authorship": "(C. L. Koch, 1843)",
           "sourceIds": {
-            "gbif": 6901285
+            "gbif": 6901285,
+            "checklistbank-7888": "NHMSYS0021291769",
+            "checklistbank-9712": "MSTSNM:Arter:6349ddf8-f785-ea11-aa77-501ac539d1ea"
           },
           "uuid": "1a5147c0-5d75-5b5-af0-454bdf20416bc3",
           "authorityIds": "gbif:6901285",
@@ -3615,11 +3620,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Histiostoma",
           "sourceIds": {
-            "checklistbank": "ott7677869"
+            "checklistbank": "ott7677869",
+            "checklistbank-7888": "NHMSYS0021291774"
           },
           "children": [],
           "uuid": "f53b90d5-136f-5da-89c-4ed5917310433f",
-          "description": "Histiostoma neglectus is a histiostomatidae species found in its native region."
+          "description": "Histiostoma neglectus is a histiostomatidae species found in its native region.",
+          "authorship": "(Oudemans, 1903)"
         },
         {
           "id": "SP_HISTIOSTOMA_POLYNESIACUS",
@@ -3649,6 +3656,45 @@
             "checklistbank-2265": "223516",
             "checklistbank-2169": "223516"
           }
+        },
+        {
+          "id": "SP_HISTIOSTOMA_DIADEMATUS_WILLMANN_1937",
+          "name": "Histiostoma diadematus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostoma",
+          "authorship": "(Willmann, 1937)",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0021291759"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HISTIOSTOMA_PULCHRUM_KRAMER_1886",
+          "name": "Histiostoma pulchrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostoma",
+          "authorship": "Kramer, 1886",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0021291779"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HISTIOSTOMA_SPINIFERUM_MICHAEL_1901",
+          "name": "Histiostoma spiniferum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostoma",
+          "authorship": "Michael, 1901",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0021291794"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5302,7 +5348,8 @@
             "itis": [
               "1188259"
             ],
-            "checklistbank": "ott5120186"
+            "checklistbank": "ott5120186",
+            "checklistbank-9712": "MSTSNM:Arter:491b7e7e-ec09-40d8-a6b9-b23500bee5fc"
           },
           "uuid": "3e483559-3c9b-5c0-a03-0a4a7a41b43a86",
           "authorityIds": "col:9GC58,gbif:6901193,itis:1188259",
@@ -11056,13 +11103,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "histiostomatidae"
+    },
+    {
+      "id": "GENUS_LENTUNGULA",
+      "name": "Lentungula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LENTUNGULA_ALGIVORANS_MICHAEL_1893",
+          "name": "Lentungula algivorans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lentungula",
+          "authorship": "Michael, 1893",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0021292319"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "histiostomatidae"
     }
   ],
-  "speciesCount": 577,
+  "speciesCount": 581,
   "appSlug": "histiostomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 65,
+  "genusCount": 66,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -11073,6 +11142,7 @@
     },
     "checklistbank": "Histiostomatidae",
     "wikispecies": "Histiostomatidae",
-    "checklistbank-2169": "66576"
+    "checklistbank-2169": "66576",
+    "checklistbank-9712": "MSTSNM:Arter:635467e4-f785-ea11-aa77-501ac539d1ea"
   }
 }

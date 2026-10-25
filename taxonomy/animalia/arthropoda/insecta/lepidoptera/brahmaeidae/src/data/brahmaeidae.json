@@ -365,7 +365,8 @@
               "sourceIds": {
                 "checklistbank": "945596",
                 "gbif-backbone": "9066723",
-                "wikispecies": "Dactyloceras_ostentator"
+                "wikispecies": "Dactyloceras_ostentator",
+                "checklistbank-1018": "68597"
               },
               "description": "Dactyloceras ostentator is a bombycoidea > dactyloceras species found in Africa region."
             },
@@ -505,11 +506,13 @@
               "sourcedFrom": "checklistbank",
               "lineage": "Dactyloceras",
               "sourceIds": {
-                "checklistbank": "945598"
+                "checklistbank": "945598",
+                "checklistbank-1018": "68600"
               },
               "children": [],
               "uuid": "cb22622b-d6db-55a-9ed-ef5c8a4cc7554e",
-              "description": "Dactyloceras swanzii is a brahmaeidae species found in its native region."
+              "description": "Dactyloceras swanzii is a brahmaeidae species found in its native region.",
+              "authorship": "Butler, 1871"
             },
             {
               "id": "SP_DACTYLOCERAS_LEQUEUXI",
@@ -570,6 +573,19 @@
               "lineage": "Dactyloceras",
               "children": [],
               "uuid": "69b18ced-ea41-5ea-83c-cea78cde04b5fb"
+            },
+            {
+              "id": "SP_DACTYLOCERAS_TRIDENTATA_CONTE_1911",
+              "name": "Dactyloceras tridentata",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Dactyloceras",
+              "authorship": "Conte., 1911",
+              "sourceIds": {
+                "checklistbank-1018": "68601"
+              },
+              "children": []
             }
           ]
         },
@@ -1143,7 +1159,8 @@
                   "9363V"
                 ],
                 "checklistbank": "578767",
-                "wikispecies": "Lemonia_dumi"
+                "wikispecies": "Lemonia_dumi",
+                "checklistbank-9712": "MSTSNM:Arter:2753ddf8-f785-ea11-aa77-501ac539d1ea"
               },
               "authorityIds": "col:9363V",
               "description": "thumb|pupae Lemonia dumi is a species of moth of the family Brahmaeidae (older classifications placed it in Lemoniidae)."
@@ -1922,6 +1939,32 @@
           "children": [],
           "uuid": "180a3134-abb4-5e0f-a432-2a664dc6f28d",
           "authorship": "Rogenhofer, 1873"
+        },
+        {
+          "id": "SP_BRAHMAEA_MAGNIFICENTIA_BRYK_1949",
+          "name": "Brahmaea magnificentia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brahmaea",
+          "authorship": "Bryk, 1949",
+          "sourceIds": {
+            "checklistbank-1018": "68565"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRAHMAEA_BICOLOR_MATSUMURA_1921",
+          "name": "Brahmaea bicolor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brahmaea",
+          "authorship": "Matsumura, 1921",
+          "sourceIds": {
+            "checklistbank-1018": "68553"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1970,7 +2013,11 @@
           "children": [],
           "lineage": "acanthobrahmaea",
           "uuid": "06777105-c54c-5c7-9e2-31c3e3b124aca5",
-          "description": "Acanthobrahmaea europaea is a acanthobrahmaea species found in its native region."
+          "description": "Acanthobrahmaea europaea is a acanthobrahmaea species found in its native region.",
+          "authorship": "Hartig, 1963",
+          "sourceIds": {
+            "checklistbank-1018": "68550"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2146,14 +2193,58 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Brahmaeidae"
+    },
+    {
+      "id": "GENUS_BRAHMIDIA",
+      "name": "Brahmidia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRAHMIDIA_HEARSEYI_WHITE_1862",
+          "name": "Brahmidia hearseyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brahmidia",
+          "authorship": "White, 1862",
+          "sourceIds": {
+            "checklistbank-1018": "68578"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brahmaeidae"
+    },
+    {
+      "id": "GENUS_BRAHMAEOPS",
+      "name": "Brahmaeops",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRAHMAEOPS_JAPONICA_BUTLER_1873",
+          "name": "Brahmaeops japonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brahmaeops",
+          "authorship": "Butler, 1873",
+          "sourceIds": {
+            "checklistbank-1018": "68574"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brahmaeidae"
     }
   ],
-  "speciesCount": 117,
+  "speciesCount": 122,
   "appSlug": "brahmaeidae",
   "authorship": "Swinhoe",
   "yearPublished": "1892",
   "lineage": "Bombycoidea",
-  "genusCount": 12,
+  "genusCount": 14,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -2165,6 +2256,7 @@
     },
     "checklistbank": "Brahmaeidae",
     "wikispecies": "Brahmaeidae",
-    "checklistbank-2169": "119237"
+    "checklistbank-2169": "119237",
+    "checklistbank-9712": "MSTSNM:Arter:f75067e4-f785-ea11-aa77-501ac539d1ea"
   }
 }

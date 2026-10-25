@@ -127,7 +127,11 @@
           "description": "Characiochloris apiculata is a characiochloridaceae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5fed0d7e-5c53-5af-9a0-5e56413bdd72e5"
+          "uuid": "5fed0d7e-5c53-5af-9a0-5e56413bdd72e5",
+          "authorship": "Korshikov",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0000600479"
+          }
         },
         {
           "id": "SP_CHARACIOCHLORIS_CHARACIOIDES",
@@ -143,9 +147,11 @@
           "sourceIds": {
             "itis": [
               "2003"
-            ]
+            ],
+            "checklistbank-7888": "NHMSYS0000600480"
           },
-          "authorityIds": "itis:2003"
+          "authorityIds": "itis:2003",
+          "authorship": "(Korshikov) Pascher"
         },
         {
           "id": "SP_CHARACIOCHLORIS_EPIZOOTICA",
@@ -193,7 +199,11 @@
           "description": "Characiochloris sessilis is a characiochloridaceae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "db2714d7-a93b-521-bc6-d94e4d112aecf0"
+          "uuid": "db2714d7-a93b-521-bc6-d94e4d112aecf0",
+          "authorship": "(Korshikov) Pascher",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0000600481"
+          }
         },
         {
           "id": "SP_CHARACIOCHLORIS_ANOPHELESI",
@@ -434,10 +444,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "characiochloridaceae"
+    },
+    {
+      "id": "GENUS_MALLEOCHLORIS",
+      "name": "Malleochloris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MALLEOCHLORIS_SESSILIS_PASCHER",
+          "name": "Malleochloris sessilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malleochloris",
+          "authorship": "Pascher",
+          "sourceIds": {
+            "checklistbank-7888": "NHMSYS0000603655"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "characiochloridaceae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 28,
+  "genusCount": 7,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

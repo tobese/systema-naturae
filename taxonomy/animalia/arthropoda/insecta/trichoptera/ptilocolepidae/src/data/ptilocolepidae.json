@@ -3,7 +3,7 @@
   "name": "Ptilocolepidae",
   "rank": "FAMILY",
   "appSlug": "ptilocolepidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_MESOCOLEPUS",
@@ -23,9 +23,35 @@
           "sourceIds": {
             "checklistbank-1174": "txn:433047"
           },
-          "uuid": "d5d3969c-0094-4ccd-9ae3-fba5276cd80e"
+          "uuid": "d5d3969c-0094-4ccd-9ae3-fba5276cd80e",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PTILOCOLEPUS",
+      "name": "Ptilocolepus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PTILOCOLEPUS_GRANULATUS",
+          "name": "Ptilocolepus granulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ptilocolepus",
+          "sourceIds": {
+            "checklistbank-9712": "MSTSNM:Arter:aa022cf9-f785-ea11-aa77-501ac539d1ea"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ptilocolepidae"
     }
-  ]
+  ],
+  "genusCount": 2,
+  "sourceIds": {
+    "checklistbank-9712": "MSTSNM:Arter:195867e4-f785-ea11-aa77-501ac539d1ea"
+  }
 }
