@@ -4,6 +4,32 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 
 > Navigation architecture documented in [`docs/navigation.md`](docs/navigation.md).
 
+> ## 📥 Running the import pipeline
+>
+> The day-to-day "add more species" loop — discovering new datasets,
+> triaging them, downloading, transforming, applying — is a running system
+> with its own state, not a set of scripts to improvise. **Before writing
+> any new discovery/triage/fetch script, read
+> [`docs/import.md`](docs/import.md) section 11** ("Queue-driven import
+> pipeline") and [`docs/dataset-inbox.md`](docs/dataset-inbox.md), and run
+> `python3 scripts/sourceQueue.py report` to see what's already in flight.
+> In short: `python3 scripts/pipelineOrchestrator.py --loop` (under
+> `caffeinate` on macOS) drives the whole thing — refill, transform, apply,
+> pending-family sweep — on its own; a human's job is watching
+> `scripts/importLogServer.py`'s dashboard (`:9883`) and making the
+> candidate/decline/block judgement calls that `triaged` state exists for.
+> Discovery (`scripts/triageNext.py`) already covers ChecklistBank, which is
+> where the great majority of candidate checklists live — **do not build a
+> second discovery path against another catalog (GBIF's dataset search,
+> etc.) without first checking `scripts/sources.py`'s `manifest.json` and
+> `docs/dataset-inbox.md`'s history**: other catalogs frequently mirror a
+> dataset ChecklistBank already serves under a different key, and
+> `sourceQueue.py add`'s manifest-overlap check is a heuristic safety net
+> (title/DOI/key matching), not a substitute for that look — it already
+> missed a same-source GBIF re-add once (2026-10-22) and, title-matching
+> alone, again (2026-10-25: 16 already-held/already-decided sources
+> re-queued under fresh GBIF keys before anything was applied).
+
 > ## 🚫 No LLM-generated content
 >
 > **No language model may write, infer, synthesise or guess anything in this

@@ -169,29 +169,101 @@ def write_store(doc: dict) -> None:
         write_entry(key, row)
 
 
-def _manifest_resolved_keys() -> set[str]:
-    """ChecklistBank slugs the manifest already has a verdict for -- the
-    same key/DOI/title matching triageNext.py's held_keys() does, kept here
-    too so `add` can refuse a bypass regardless of which script called it."""
+def _norm(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+
+
+STOPWORDS = {"the", "a", "an", "of", "and", "or", "dataset", "checklist",
+             "catalogue", "catalog", "database", "register", "online", "list"}
+
+
+def _title_tokens(title: str) -> set[str]:
+    """Words in a title, lowercased, with stopwords and bare numbers/years
+    dropped -- "ITIS, The Integrated Taxonomic Information System (dataset
+    2144)" and "Integrated Taxonomic Information System (ITIS)" share no
+    normalised *string* (different word order, one has a dataset id, one
+    has the acronym in parens) but share almost every meaningful *token*,
+    which is what title matching across catalogs actually needs to catch."""
+    words = re.findall(r"[a-z0-9]+", (title or "").lower())
+    return {w for w in words if w not in STOPWORDS and not w.isdigit()}
+
+
+def _manifest_resolved() -> tuple[set[str], set[str], list[tuple[str, set[str]]]]:
+    """Every way the manifest can claim a dataset already has a verdict:
+    its slug key, any DOI in its identifier/url/title, and its title's
+    token set -- the same three checks triageNext.py's held_keys() does for
+    ChecklistBank, kept here too so `add` refuses a bypass regardless of
+    which catalog or script presented the "new" key. A GBIF dataset UUID
+    for a dataset we already hold under a checklistbank-<N> slug (or any
+    other registered slug) will not match on key, but should still match
+    on DOI or title -- which a bare `re.match(r"checklistbank-\\d+$", slug)`
+    (the previous implementation here) could never catch, since it only
+    ever compared a candidate's own key against itself. That gap let
+    scripts/triageGbif.py --add re-queue 16 already-held/already-decided
+    sources (ITIS, WoRMS, WCVP, ZooBank, IRMNG, Wikidata Species, and
+    others) under fresh GBIF keys on 2026-10-25 -- see docs/import.md
+    section 11's note on the 2026-10-22 incident this was meant to guard
+    against in the first place."""
     manifest = os.path.join(
         os.environ.get("SN_SOURCES_ROOT", "/Volumes/MacieExternal/sources"),
         "manifest.json")
+    keys, dois, titles = set(), set(), []
     try:
         src = json.load(open(manifest, encoding="utf-8")).get("sources", {})
     except (OSError, ValueError):
-        return set()
-    return {slug for slug in src if re.match(r"checklistbank-\d+$", slug)}
+        return keys, dois, titles
+    for slug, rec in src.items():
+        keys.add(slug)
+        blob = " ".join(str(rec.get(f) or "") for f in ("identifier", "url", "title"))
+        for doi in re.findall(r"10\.\d{4,9}/\S+", blob):
+            dois.add(_norm(doi.rstrip(".,;)")))
+        if rec.get("title"):
+            titles.append((rec["title"], _title_tokens(rec["title"])))
+    return keys, dois, titles
+
+
+def _title_overlap_match(candidate_tokens, titles, threshold=0.7):
+    """The manifest title (and the ratio) with the strongest token overlap
+    against `candidate_tokens`, or None if nothing clears `threshold` of
+    the SMALLER title's tokens -- asymmetric on purpose, since one side is
+    often a bare name ("Wikidata Species") and the other a fuller citation
+    ("Wikidata Species (ChecklistBank dataset 314569)")."""
+    if not candidate_tokens:
+        return None
+    best = None
+    for title, tokens in titles:
+        if not tokens:
+            continue
+        shared = candidate_tokens & tokens
+        ratio = len(shared) / min(len(candidate_tokens), len(tokens))
+        if ratio >= threshold and (best is None or ratio > best[1]):
+            best = (title, ratio)
+    return best
 
 
 def cmd_add(args) -> None:
     row = read_entry(args.key)
-    if row is None and args.key in _manifest_resolved_keys():
-        sys.exit(
-            f"FATAL: {args.key} already has a verdict in the manifest -- "
-            f"check docs/dataset-inbox.md and scripts/triageNext.py before "
-            f"re-adding it. If you mean to deliberately re-triage it (something "
-            f"downstream changed), use `set --stage needs-rerun` instead of `add`."
-        )
+    if row is None and not args.force:
+        keys, dois, titles = _manifest_resolved()
+        doi_match = next((d for d in re.findall(r"10\.\d{4,9}/\S+", args.title or "")
+                           if _norm(d.rstrip(".,;)")) in dois), None)
+        title_match = _title_overlap_match(_title_tokens(args.title), titles)
+        if args.key in keys or doi_match or title_match:
+            reason = (f"title overlaps {title_match[0]!r} ({title_match[1]:.0%} of "
+                       f"the shorter title's words)" if title_match
+                       else f"DOI {doi_match}" if doi_match
+                       else "key")
+            sys.exit(
+                f"FATAL: {args.key!r} ({args.title!r}) already has a verdict in "
+                f"the manifest -- matched on {reason}. Check docs/dataset-inbox.md "
+                f"and scripts/triageNext.py before re-adding it under a new key "
+                f"(a different catalog, e.g. GBIF vs. ChecklistBank, often "
+                f"republishes the same dataset under its own key/DOI). If this "
+                f"is genuinely a different dataset that happens to share words "
+                f"with one we hold, re-run with --force. If you mean to "
+                f"deliberately re-triage the same dataset (something downstream "
+                f"changed), use `set --stage needs-rerun` instead of `add`."
+            )
     row = row or {"key": args.key, "history": []}
     row["title"] = args.title or row.get("title", "")
     row["size"] = args.size if args.size is not None else row.get("size")
@@ -284,6 +356,10 @@ def main() -> int:
     p.add_argument("--size", type=int, default=None)
     p.add_argument("--licence", default="")
     p.add_argument("--archive-path", default="")
+    p.add_argument("--force", action="store_true",
+                    help="skip the manifest key/DOI/title overlap check "
+                         "(use only once you've confirmed by hand this is "
+                         "not the dataset the overlap check thinks it is)")
 
     p = sub.add_parser("set", help="move a source to a new stage")
     p.add_argument("--key", required=True)
