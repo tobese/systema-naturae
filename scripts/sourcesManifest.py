@@ -1047,6 +1047,20 @@ SOURCES = {
         "Taxon.tsv row has a species filled in), so a genus's presence is "
         "derived by grouping its species rows rather than read off one "
         "dedicated row the way IRMNG/Nomenclator Zoologicus provide it."),
+    "gbif-ipni": (
+        "International Plant Names Index (IPNI)",
+        "version not recorded; archive fetched 2026-10-18",
+        "https://www.gbif.org/dataset/046bbc50-cae2-47ff-aa43-729fbf53f7c5",
+        "CC0", "repurposed",
+        "Never assessed as a species-import source -- cache built "
+        "2026-10-25 purely to wire into genusAuthorityRegister.py, same "
+        "shape as the other nomenclatural registers on this list. ColDP "
+        "export, but split across two tables unlike the rest: Taxon.tsv "
+        "carries family (col:status is blank on all 1.78M rows -- no "
+        "accepted/synonym concept, the usual reason these get repurposed "
+        "rather than imported) while rank/scientificName/authorship/year "
+        "live in Name.tsv, joined on nameID==ID. 60,130 genus-rank (col:"
+        "rank=='gen.') names, vascular plants only (ICN)."),
     "checklistbank-2041": (
         "Dyntaxa -- Svensk taxonomisk databas",
         "DOI not recorded; version 2026-10-09",

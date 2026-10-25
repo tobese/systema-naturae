@@ -39,6 +39,12 @@ job):
     lacking a taxon table/family data at all -- same "nomenclatural
     register, not a classification" shape as Nomenclator Zoologicus,
     which this register already uses the same way. Added 2026-10-24.
+  - IPNI (GBIF dataset gbif-ipni): ~60k vascular-plant genus names (ICN),
+    CC0. Not even assessed as an import source yet (no sourcesManifest.py
+    entry) -- it's a pure nomenclatural index (Name.tsv + Taxon.tsv, no
+    accepted/synonym concept, taxonomicStatus is blank on every row), so
+    it belongs here rather than in the species pipeline regardless. Added
+    2026-10-25.
 
 Usage:
     python3 scripts/genusAuthorityRegister.py --build      # force a rebuild
@@ -63,6 +69,7 @@ SOURCES = {
     "species-fungorum-plus": os.path.join(ARCHIVES, "checklistbank-2073", "archive.zip"),
     "zoobank": os.path.join(ARCHIVES, "checklistbank-2037", "archive.zip"),
     "afd": os.path.join(ARCHIVES, "checklistbank-127379", "archive.zip"),
+    "ipni": os.path.join(ARCHIVES, "gbif-ipni", "archive.zip"),
 }
 
 
@@ -195,12 +202,43 @@ def _rows_afd(archive_path):
         }
 
 
+def _rows_ipni(archive_path):
+    # ColDP shape, but split across two tables unlike the others here:
+    # Taxon.tsv carries family (keyed by nameID == Name.tsv's ID) while
+    # rank/scientificName/authorship/year live in Name.tsv. Taxon.tsv's
+    # col:status is blank on all 1.78M rows (IPNI has no accepted/synonym
+    # concept), so family is all this join gives us beyond Name.tsv alone.
+    family_by_name_id = {}
+    for row in _read_tsv_from_zip(archive_path, "Taxon.tsv"):
+        family = row.get("col:family")
+        name_id = row.get("col:nameID")
+        if family and name_id:
+            family_by_name_id[name_id] = family
+    for row in _read_tsv_from_zip(archive_path, "Name.tsv"):
+        if row.get("col:rank") != "gen.":
+            continue
+        genus = row.get("col:scientificName")
+        if not genus:
+            continue
+        yield {
+            "genus": genus, "genus_norm": _norm(genus),
+            "kingdom": "Plantae",
+            "code": "ICN",
+            "family": family_by_name_id.get(row.get("col:ID")),
+            "status": None,
+            "author": row.get("col:authorship") or None,
+            "year": row.get("col:publishedInYear") or None,
+            "remarks": row.get("col:remarks") or None,
+        }
+
+
 READERS = {
     "irmng": _rows_irmng,
     "nomenclator-zoologicus": _rows_nomenclator_zoologicus,
     "species-fungorum-plus": _rows_species_fungorum_plus,
     "zoobank": _rows_zoobank,
     "afd": _rows_afd,
+    "ipni": _rows_ipni,
 }
 
 
