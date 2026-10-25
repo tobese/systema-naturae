@@ -128,6 +128,18 @@
           "lineage": "Filifactor",
           "children": [],
           "uuid": "957a4e8c-9bfa-5a5-85d-f30b7f230d2c73"
+        },
+        {
+          "id": "SP_FILIFACTOR_SP",
+          "name": "Filifactor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Filifactor",
+          "sourceIds": {
+            "checklistbank-2265": "248683"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -190,6 +202,18 @@
           "authorship": "Bes et al. 2015",
           "children": [],
           "uuid": "89fffcc0-351a-548-981-6c8e3b5206466a"
+        },
+        {
+          "id": "SP_ACETOANAEROBIUM_SP",
+          "name": "Acetoanaerobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acetoanaerobium",
+          "sourceIds": {
+            "checklistbank-2265": "1382918"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -250,6 +274,18 @@
           "authorship": "Pikuta et al. 2009",
           "children": [],
           "uuid": "c13880c1-46b7-510-80b-7f9fd9f5c89f66"
+        },
+        {
+          "id": "SP_PROTEOCATELLA_SP",
+          "name": "Proteocatella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proteocatella",
+          "sourceIds": {
+            "checklistbank-2265": "1151456"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -396,16 +432,97 @@
           "lineage": "Criibacterium",
           "authorship": "(ex Maheux et al. 2016) Maheux et al. 2021",
           "children": [],
-          "uuid": "cd4fea93-9121-5e3-b0f-0d0b1888cba09d"
+          "uuid": "cd4fea93-9121-5e3-b0f-0d0b1888cba09d",
+          "sourceIds": {
+            "checklistbank-2265": "1871336"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Filifactoraceae"
+    },
+    {
+      "id": "GENUS_EUBACTERIUM",
+      "name": "[Eubacterium]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUBACTERIUM_YURII",
+          "name": "[Eubacterium] yurii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Eubacterium]",
+          "sourceIds": {
+            "checklistbank-2265": "39498"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "filifactoraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FILIFACTOR",
+          "name": "uncultured Filifactor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "417612"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PROTEOCATELLA",
+          "name": "uncultured Proteocatella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "453828"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ACETOANAEROBIUM",
+          "name": "uncultured Acetoanaerobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "999119"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CRIIBACTERIUM",
+          "name": "uncultured Criibacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1937667"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "filifactoraceae"
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 39,
   "appSlug": "filifactoraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 9
+  "genusCount": 11
 }

@@ -260,7 +260,10 @@
           "lineage": "Dongia",
           "authorship": "Kim et al. 2016",
           "children": [],
-          "uuid": "ac75b9b1-69b2-506-a21-be795481070e33"
+          "uuid": "ac75b9b1-69b2-506-a21-be795481070e33",
+          "sourceIds": {
+            "checklistbank-2265": "600628"
+          }
         },
         {
           "id": "SP_DONGIA_DESERTI_LU_ET_AL_2022",
@@ -271,7 +274,22 @@
           "lineage": "Dongia",
           "authorship": "Lu et al. 2022",
           "children": [],
-          "uuid": "ef455d81-8b41-5d6-9ef-5c94ad3b09e034"
+          "uuid": "ef455d81-8b41-5d6-9ef-5c94ad3b09e034",
+          "sourceIds": {
+            "checklistbank-2265": "2268030"
+          }
+        },
+        {
+          "id": "SP_DONGIA_SP",
+          "name": "Dongia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dongia",
+          "sourceIds": {
+            "checklistbank-2265": "1363064"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1028,15 +1046,81 @@
           "authorship": "Chen et al. 2017",
           "children": [],
           "uuid": "ed491903-b1ce-5c7-a9a-9b57c7644f5e40"
+        },
+        {
+          "id": "SP_ALIIDONGIA_SP",
+          "name": "Aliidongia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aliidongia",
+          "sourceIds": {
+            "checklistbank-2265": "1914230"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Dongiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DONGIA",
+          "name": "uncultured Dongia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1208328"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ALIIDONGIA",
+          "name": "uncultured Aliidongia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1914232"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dongiaceae"
+    },
+    {
+      "id": "GENUS_DONGIACEAE",
+      "name": "Dongiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DONGIACEAE_BACTERIUM",
+          "name": "Dongiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dongiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3069224"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dongiaceae"
     }
   ],
-  "speciesCount": 86,
+  "speciesCount": 91,
   "appSlug": "dongiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 18
+  "genusCount": 20
 }

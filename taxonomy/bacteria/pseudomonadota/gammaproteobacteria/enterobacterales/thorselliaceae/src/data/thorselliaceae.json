@@ -39,7 +39,10 @@
           "lineage": "Thorsellia",
           "authorship": "Kampfer et al. 2015",
           "children": [],
-          "uuid": "3894db61-edc9-56f-8a5-e80d678d56da15"
+          "uuid": "3894db61-edc9-56f-8a5-e80d678d56da15",
+          "sourceIds": {
+            "checklistbank-2265": "1549889"
+          }
         }
       ],
       "sourcedFrom": "gtdb",
@@ -59,16 +62,40 @@
           "lineage": "Coetzeea",
           "authorship": "Kampfer et al. 2016",
           "children": [],
-          "uuid": "87433573-5ea3-556-abe-99cbbcdb9da460"
+          "uuid": "87433573-5ea3-556-abe-99cbbcdb9da460",
+          "sourceIds": {
+            "checklistbank-2265": "1812101"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Thorselliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THORSELLIA",
+          "name": "uncultured Thorsellia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "434305"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thorselliaceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 5,
   "appSlug": "thorselliaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 2
+  "genusCount": 3
 }

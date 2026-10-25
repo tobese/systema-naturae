@@ -58,6 +58,23 @@ KINGDOM_CONFIG = "portal/data/kingdom-config.json"
 # refuses all 3,024 of ILDIS' legume species as needing a new family when the
 # tree already holds Fabaceae with 24,496 species.
 FALLBACK_KINGDOM = "animalia"
+
+# Decided 2026-10-25: import bacteria/viruses when a source offers them
+# (they kept arriving anyway -- NCBI/ENA runs this same week bucketed
+# ~200k of them as UNRESOLVED KINGDOM), but keep them out of the portal.
+# Deliberately NOT a kingdom-config.json entry -- that file is the single
+# enforcement point for the BUILD side (buildAllKingdoms.sh,
+# tree.kingdom_names(), verifyTree, sanity_scan all read it; see
+# docs/bacteria-and-viruses.md), so adding bacteria/viruses there would
+# turn the build/deploy decision on too, which is a separate call the
+# project owner hasn't made. This hardcoded side-channel is the import-
+# side mirror of what post-import.sh already does for the build side
+# (SN_INPUT env var bypassing kingdom-config.json for buildData.ts) --
+# same policy, same two kingdoms, opposite direction.
+BACTERIA_VIRUSES_INPUT = {
+    "bacteria": "data/taxonomy-bacteria.json",
+    "viruses": "data/taxonomy-viruses.json",
+}
 SOURCE = "checklistbank"
 FORMS = ("{g} \u00d7{s}", "{g} {s}", "{g} \u00d7{s}", "{g} \u00d7 {s}")
 
@@ -262,13 +279,17 @@ def slug_hint(archive):
 
 
 def taxonomy_input(kingdom):
-    """Path to a kingdom's taxonomy file, from kingdom-config.json.
+    """Path to a kingdom's taxonomy file, from kingdom-config.json --
+    except bacteria/viruses, which resolve via BACTERIA_VIRUSES_INPUT
+    instead and never touch kingdom-config.json at all (see its comment).
 
     Not derived from the kingdom's name: Plantae's input is
     taxonomy-plantae-snippet.json and Animalia's is plain taxonomy.json.
     """
-    cfg = json.load(open(KINGDOM_CONFIG, encoding="utf-8"))["kingdoms"]
     k = (kingdom or FALLBACK_KINGDOM).lower()
+    if k in BACTERIA_VIRUSES_INPUT:
+        return os.path.join("portal", BACTERIA_VIRUSES_INPUT[k]), k
+    cfg = json.load(open(KINGDOM_CONFIG, encoding="utf-8"))["kingdoms"]
     if k not in cfg:
         sys.exit(f"FATAL: kingdom {k!r} is not in kingdom-config.json. "
                  f"Declared: {', '.join(sorted(cfg))}")
@@ -401,7 +422,8 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     r.src_kingdom = src_kingdom
 
     KINDS = {}
-    for k in ("animalia", "plantae", "fungi", "chromista", "protozoa", "archaea"):
+    for k in ("animalia", "plantae", "fungi", "chromista", "protozoa", "archaea",
+              "bacteria", "viruses"):
         KINDS[k] = our_families(k, quiet=True)
     r.kinds = KINDS
 

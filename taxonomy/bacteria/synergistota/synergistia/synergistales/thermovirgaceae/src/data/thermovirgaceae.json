@@ -185,6 +185,18 @@
           "lineage": "Thermovirga",
           "children": [],
           "uuid": "232b6d4d-3baf-597-a45-6a7f0df123f782"
+        },
+        {
+          "id": "SP_THERMOVIRGA_SP",
+          "name": "Thermovirga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermovirga",
+          "sourceIds": {
+            "checklistbank-2265": "1506899"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -256,11 +268,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thermovirgaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOVIRGA",
+          "name": "uncultured Thermovirga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "481164"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermovirgaceae"
+    },
+    {
+      "id": "GENUS_THERMOVIRGACEAE",
+      "name": "Thermovirgaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOVIRGACEAE_BACTERIUM",
+          "name": "Thermovirgaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermovirgaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3041276"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermovirgaceae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 22,
   "appSlug": "thermovirgaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Synergistota > Synergistia",
-  "genusCount": 7
+  "genusCount": 9
 }

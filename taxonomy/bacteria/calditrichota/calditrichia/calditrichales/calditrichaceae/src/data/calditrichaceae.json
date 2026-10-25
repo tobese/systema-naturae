@@ -146,7 +146,22 @@
           "lineage": "Caldithrix",
           "authorship": "Miroshnichenko et al. 2010",
           "children": [],
-          "uuid": "33c6379e-228b-56f-a03-2bd05cd2416472"
+          "uuid": "33c6379e-228b-56f-a03-2bd05cd2416472",
+          "sourceIds": {
+            "checklistbank-2265": "650508"
+          }
+        },
+        {
+          "id": "SP_CALDITHRIX_SP",
+          "name": "Caldithrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caldithrix",
+          "sourceIds": {
+            "checklistbank-2265": "669407"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -409,11 +424,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Calditrichaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CALDITHRIX",
+          "name": "uncultured Caldithrix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "348149"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calditrichaceae"
+    },
+    {
+      "id": "GENUS_CALDITRICHACEAE",
+      "name": "Calditrichaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALDITRICHACEAE_BACTERIUM",
+          "name": "Calditrichaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calditrichaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2614252"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calditrichaceae"
     }
   ],
-  "speciesCount": 27,
+  "speciesCount": 30,
   "appSlug": "calditrichaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Calditrichota > Calditrichia",
-  "genusCount": 15
+  "genusCount": 17
 }

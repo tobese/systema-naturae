@@ -178,6 +178,18 @@
           "lineage": "Monoglobus",
           "children": [],
           "uuid": "9af0a30e-c178-512-864-c397b8a154d608"
+        },
+        {
+          "id": "SP_MONOGLOBUS_SP",
+          "name": "Monoglobus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monoglobus",
+          "sourceIds": {
+            "checklistbank-2265": "2047731"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1339,11 +1351,74 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Monoglobaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MONOGLOBUS",
+          "name": "uncultured Monoglobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2047733"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monoglobaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_MONOGLOBUS",
+          "name": "Candidatus Monoglobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838698"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monoglobaceae"
+    },
+    {
+      "id": "GENUS_MONOGLOBACEAE",
+      "name": "Monoglobaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONOGLOBACEAE_BACTERIUM",
+          "name": "Monoglobaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monoglobaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3085659"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monoglobaceae"
     }
   ],
-  "speciesCount": 121,
+  "speciesCount": 125,
   "appSlug": "monoglobaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 14
+  "genusCount": 17
 }

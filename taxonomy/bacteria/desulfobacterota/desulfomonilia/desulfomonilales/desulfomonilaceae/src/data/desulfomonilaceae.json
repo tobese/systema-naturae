@@ -482,7 +482,22 @@
           "lineage": "Desulfomonile",
           "authorship": "Sun et al. 2001",
           "children": [],
-          "uuid": "a1accc14-7890-512-80d-59d8c6ac4d31c5"
+          "uuid": "a1accc14-7890-512-80d-59d8c6ac4d31c5",
+          "sourceIds": {
+            "checklistbank-2265": "117208"
+          }
+        },
+        {
+          "id": "SP_DESULFOMONILE_SP",
+          "name": "Desulfomonile sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfomonile",
+          "sourceIds": {
+            "checklistbank-2265": "1145211"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -948,11 +963,74 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfomonilaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOMONILE",
+          "name": "uncultured Desulfomonile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "169962"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfomonilaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_DESULFOMONILE",
+          "name": "Candidatus Desulfomonile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2799490"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfomonilaceae"
+    },
+    {
+      "id": "GENUS_DESULFOMONILACEAE",
+      "name": "Desulfomonilaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFOMONILACEAE_BACTERIUM",
+          "name": "Desulfomonilaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfomonilaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3034167"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfomonilaceae"
     }
   ],
-  "speciesCount": 71,
+  "speciesCount": 75,
   "appSlug": "desulfomonilaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfomonilia",
-  "genusCount": 26
+  "genusCount": 29
 }

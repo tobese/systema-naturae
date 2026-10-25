@@ -97,7 +97,22 @@
           "lineage": "Tepidimicrobium",
           "authorship": "Slobodkin et al. 2006",
           "children": [],
-          "uuid": "e8e82f72-d179-56e-aca-d40ed383a5c0cc"
+          "uuid": "e8e82f72-d179-56e-aca-d40ed383a5c0cc",
+          "sourceIds": {
+            "checklistbank-2265": "285106"
+          }
+        },
+        {
+          "id": "SP_TEPIDIMICROBIUM_SP",
+          "name": "Tepidimicrobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tepidimicrobium",
+          "sourceIds": {
+            "checklistbank-2265": "454582"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -148,6 +163,18 @@
           "lineage": "Schnuerera",
           "children": [],
           "uuid": "bd9fac80-1df5-5fa-81e-9b170836385970"
+        },
+        {
+          "id": "SP_SCHNUERERA_SP",
+          "name": "Schnuerera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schnuerera",
+          "sourceIds": {
+            "checklistbank-2265": "2794844"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -383,11 +410,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Tepidimicrobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TEPIDIMICROBIUM",
+          "name": "uncultured Tepidimicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1399891"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tepidimicrobiaceae"
     }
   ],
-  "speciesCount": 26,
+  "speciesCount": 29,
   "appSlug": "tepidimicrobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 13
+  "genusCount": 14
 }

@@ -205,6 +205,18 @@
           "lineage": "Alloalcanivorax",
           "children": [],
           "uuid": "73f2a309-2166-5ee-8fc-a7ab1d5860fac1"
+        },
+        {
+          "id": "SP_ALLOALCANIVORAX_SP",
+          "name": "Alloalcanivorax sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alloalcanivorax",
+          "sourceIds": {
+            "checklistbank-2265": "3020835"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -470,7 +482,10 @@
           "lineage": "Alcanivorax",
           "authorship": "Zhu et al. 2022",
           "children": [],
-          "uuid": "d9a58c5c-718a-508-803-3a8ba1f6781326"
+          "uuid": "d9a58c5c-718a-508-803-3a8ba1f6781326",
+          "sourceIds": {
+            "checklistbank-2265": "2874102"
+          }
         },
         {
           "id": "SP_ALCANIVORAX_QUISQUILIARUM_AN_ET_AL_2023",
@@ -481,7 +496,10 @@
           "lineage": "Alcanivorax",
           "authorship": "An et al. 2023",
           "children": [],
-          "uuid": "e277472a-f265-5c6-8e4-24d001ef2c2a13"
+          "uuid": "e277472a-f265-5c6-8e4-24d001ef2c2a13",
+          "sourceIds": {
+            "checklistbank-2265": "2933565"
+          }
         },
         {
           "id": "SP_ALCANIVORAX_XIAMENENSIS_LAI_ET_AL_2023",
@@ -492,7 +510,22 @@
           "lineage": "Alcanivorax",
           "authorship": "Lai et al. 2023",
           "children": [],
-          "uuid": "b4533c75-55f2-521-afa-7b17a4e5623bad"
+          "uuid": "b4533c75-55f2-521-afa-7b17a4e5623bad",
+          "sourceIds": {
+            "checklistbank-2265": "1177156"
+          }
+        },
+        {
+          "id": "SP_ALCANIVORAX_SP",
+          "name": "Alcanivorax sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alcanivorax",
+          "sourceIds": {
+            "checklistbank-2265": "74460"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -833,11 +866,98 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Alcanivoracaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ALCANIVORAX",
+          "name": "uncultured Alcanivorax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "191215"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ALCANIVORACACEAE",
+          "name": "uncultured Alcanivoracaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "498745"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MARINICELLA",
+          "name": "uncultured Marinicella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1111746"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alcanivoracaceae"
+    },
+    {
+      "id": "GENUS_ALCANIVORACACEAE",
+      "name": "Alcanivoracaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALCANIVORACACEAE_BACTERIUM",
+          "name": "Alcanivoracaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alcanivoracaceae",
+          "sourceIds": {
+            "checklistbank-2265": "523423"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alcanivoracaceae"
+    },
+    {
+      "id": "GENUS_MARINICELLA",
+      "name": "Marinicella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MARINICELLA_SP",
+          "name": "Marinicella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marinicella",
+          "sourceIds": {
+            "checklistbank-2265": "1955066"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alcanivoracaceae"
     }
   ],
-  "speciesCount": 73,
+  "speciesCount": 80,
   "appSlug": "alcanivoracaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 9
+  "genusCount": 12
 }

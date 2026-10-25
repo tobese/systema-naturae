@@ -142,7 +142,10 @@
           "lineage": "Mycoplasmoides",
           "authorship": "(Lemcke and Poland 1980) Gupta et al. 2018",
           "children": [],
-          "uuid": "25b4f6df-64b5-5c1-bab-3a2a963015e773"
+          "uuid": "25b4f6df-64b5-5c1-bab-3a2a963015e773",
+          "sourceIds": {
+            "checklistbank-2265": "92758"
+          }
         }
       ],
       "sourcedFrom": "gtdb",
@@ -360,7 +363,10 @@
           "lineage": "Ureaplasma",
           "authorship": "Koshimizu et al. 1987",
           "children": [],
-          "uuid": "f68ca6f4-95ee-581-ac9-b3283bddd6d39e"
+          "uuid": "f68ca6f4-95ee-581-ac9-b3283bddd6d39e",
+          "sourceIds": {
+            "checklistbank-2265": "42096"
+          }
         },
         {
           "id": "SP_UREAPLASMA_CATI_HARASAWA_ET_AL_1990",
@@ -371,7 +377,10 @@
           "lineage": "Ureaplasma",
           "authorship": "Harasawa et al. 1990",
           "children": [],
-          "uuid": "f3fec1c3-6078-5c4-b77-95c3f09718f9f9"
+          "uuid": "f3fec1c3-6078-5c4-b77-95c3f09718f9f9",
+          "sourceIds": {
+            "checklistbank-2265": "42093"
+          }
         },
         {
           "id": "SP_UREAPLASMA_FELINUM_HARASAWA_ET_AL_1990",
@@ -382,7 +391,22 @@
           "lineage": "Ureaplasma",
           "authorship": "Harasawa et al. 1990",
           "children": [],
-          "uuid": "4d6a80ea-348c-589-9a2-b5ce2a02599b57"
+          "uuid": "4d6a80ea-348c-589-9a2-b5ce2a02599b57",
+          "sourceIds": {
+            "checklistbank-2265": "42095"
+          }
+        },
+        {
+          "id": "SP_UREAPLASMA_SP",
+          "name": "Ureaplasma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ureaplasma",
+          "sourceIds": {
+            "checklistbank-2265": "243313"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -515,7 +539,22 @@
           "lineage": "Malacoplasma",
           "authorship": "(Brown et al. 2001) Gupta et al. 2018",
           "children": [],
-          "uuid": "325e6ee3-a93c-5ab-9cb-160e99cafae51e"
+          "uuid": "325e6ee3-a93c-5ab-9cb-160e99cafae51e",
+          "sourceIds": {
+            "checklistbank-2265": "38746"
+          }
+        },
+        {
+          "id": "SP_MALACOPLASMA_SP",
+          "name": "Malacoplasma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malacoplasma",
+          "sourceIds": {
+            "checklistbank-2265": "2791014"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1531,11 +1570,143 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Mycoplasmoidaceae"
+    },
+    {
+      "id": "GENUS_MYCOPLASMA",
+      "name": "[Mycoplasma]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYCOPLASMA_IMITANS",
+          "name": "[Mycoplasma] imitans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Mycoplasma]",
+          "sourceIds": {
+            "checklistbank-2265": "29560"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYCOPLASMA_TESTUDINIS",
+          "name": "[Mycoplasma] testudinis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Mycoplasma]",
+          "sourceIds": {
+            "checklistbank-2265": "33924"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYCOPLASMA_CAVIPHARYNGIS",
+          "name": "[Mycoplasma] cavipharyngis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Mycoplasma]",
+          "sourceIds": {
+            "checklistbank-2265": "92757"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mycoplasmoidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_UREAPLASMA",
+          "name": "uncultured Ureaplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "293430"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mycoplasmoidaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_MALACOPLASMA",
+          "name": "Candidatus Malacoplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "1318617"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_UREAPLASMA",
+          "name": "Candidatus Ureaplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838770"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_HENNIGELLA",
+          "name": "Candidatus Hennigella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "3083104"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mycoplasmoidaceae"
+    },
+    {
+      "id": "GENUS_MYCOPLASMOIDACEAE",
+      "name": "Mycoplasmoidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYCOPLASMOIDACEAE_BACTERIUM",
+          "name": "Mycoplasmoidaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mycoplasmoidaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2854035"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mycoplasmoidaceae"
     }
   ],
-  "speciesCount": 140,
+  "speciesCount": 150,
   "appSlug": "mycoplasmoidaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota_I > Bacilli_A",
-  "genusCount": 12
+  "genusCount": 16
 }

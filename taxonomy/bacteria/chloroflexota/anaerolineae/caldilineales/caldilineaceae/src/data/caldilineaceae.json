@@ -766,7 +766,22 @@
           "lineage": "Caldilinea",
           "authorship": "Gregoire et al. 2011",
           "children": [],
-          "uuid": "a6f2d776-98b7-542-948-699e2f6efdb79f"
+          "uuid": "a6f2d776-98b7-542-948-699e2f6efdb79f",
+          "sourceIds": {
+            "checklistbank-2265": "859243"
+          }
+        },
+        {
+          "id": "SP_CALDILINEA_SP",
+          "name": "Caldilinea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caldilinea",
+          "sourceIds": {
+            "checklistbank-2265": "1215909"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -984,6 +999,18 @@
           "authorship": "Kale et al. 2013",
           "children": [],
           "uuid": "ee35648b-a307-530-ba7-4d1478b5681e20"
+        },
+        {
+          "id": "SP_LITORILINEA_SP",
+          "name": "Litorilinea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litorilinea",
+          "sourceIds": {
+            "checklistbank-2265": "2838787"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1769,11 +1796,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Caldilineaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CALDILINEA",
+          "name": "uncultured Caldilinea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "435295"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CALDILINEACEAE",
+          "name": "uncultured Caldilineaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543031"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_LITORILINEA",
+          "name": "uncultured Litorilinea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1552961"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caldilineaceae"
+    },
+    {
+      "id": "GENUS_CALDILINEACEAE",
+      "name": "Caldilineaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALDILINEACEAE_BACTERIUM",
+          "name": "Caldilineaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caldilineaceae",
+          "sourceIds": {
+            "checklistbank-2265": "863513"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caldilineaceae"
     }
   ],
-  "speciesCount": 153,
+  "speciesCount": 159,
   "appSlug": "caldilineaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Anaerolineae",
-  "genusCount": 26
+  "genusCount": 28
 }

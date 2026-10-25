@@ -498,7 +498,10 @@
           "lineage": "Granulosicoccus",
           "authorship": "Park et al. 2015",
           "children": [],
-          "uuid": "514ae285-29be-579-b09-8d2e5eb72ed10f"
+          "uuid": "514ae285-29be-579-b09-8d2e5eb72ed10f",
+          "sourceIds": {
+            "checklistbank-2265": "1524256"
+          }
         },
         {
           "id": "SP_GRANULOSICOCCUS_MARINUS_BAEK_ET_AL_2014",
@@ -509,7 +512,10 @@
           "lineage": "Granulosicoccus",
           "authorship": "Baek et al. 2014",
           "children": [],
-          "uuid": "b509641b-8cbd-5e8-ba0-a7729c3094aae2"
+          "uuid": "b509641b-8cbd-5e8-ba0-a7729c3094aae2",
+          "sourceIds": {
+            "checklistbank-2265": "1397110"
+          }
         },
         {
           "id": "SP_GRANULOSICOCCUS_COCCOIDES_KURILENKO_ET_AL_2010",
@@ -520,7 +526,22 @@
           "lineage": "Granulosicoccus",
           "authorship": "Kurilenko et al. 2010",
           "children": [],
-          "uuid": "33d982d6-a315-51a-8a2-557451518e7261"
+          "uuid": "33d982d6-a315-51a-8a2-557451518e7261",
+          "sourceIds": {
+            "checklistbank-2265": "588604"
+          }
+        },
+        {
+          "id": "SP_GRANULOSICOCCUS_SP",
+          "name": "Granulosicoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Granulosicoccus",
+          "sourceIds": {
+            "checklistbank-2265": "641675"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -956,15 +977,105 @@
           "authorship": "Kojima and Fukui 2016",
           "children": [],
           "uuid": "a14bbb77-9b63-5ce-b92-e544181112ca92"
+        },
+        {
+          "id": "SP_SULFURIFLEXUS_SP",
+          "name": "Sulfuriflexus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfuriflexus",
+          "sourceIds": {
+            "checklistbank-2265": "2015443"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Granulosicoccaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GRANULOSICOCCUS",
+          "name": "uncultured Granulosicoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "928896"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GRANULOSICOCCACEAE",
+          "name": "uncultured Granulosicoccaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1072516"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SULFURIFLEXUS",
+          "name": "uncultured Sulfuriflexus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1860079"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "granulosicoccaceae"
+    },
+    {
+      "id": "GENUS_GRANULOSICOCCACEAE",
+      "name": "Granulosicoccaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GRANULOSICOCCACEAE_BACTERIUM",
+          "name": "Granulosicoccaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Granulosicoccaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1577697"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GRANULOSICOCCACEAE_SP",
+          "name": "Granulosicoccaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Granulosicoccaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3062678"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "granulosicoccaceae"
     }
   ],
-  "speciesCount": 89,
+  "speciesCount": 96,
   "appSlug": "granulosicoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 7
+  "genusCount": 9
 }

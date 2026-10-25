@@ -80,6 +80,18 @@
           "lineage": "Desulfoluna",
           "children": [],
           "uuid": "19e87d94-e6b9-56e-b09-fc2fc8981d091b"
+        },
+        {
+          "id": "SP_DESULFOLUNA_SP",
+          "name": "Desulfoluna sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfoluna",
+          "sourceIds": {
+            "checklistbank-2265": "2045199"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -142,11 +154,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfolunaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOLUNA",
+          "name": "uncultured Desulfoluna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1936148"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfolunaceae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 13,
   "appSlug": "desulfolunaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfobacteria",
-  "genusCount": 3
+  "genusCount": 4
 }

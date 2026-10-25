@@ -955,6 +955,18 @@
           "authorship": "Sorokin et al. 2009",
           "children": [],
           "uuid": "5961dba6-2611-5f1-8a4-61b987dff09da1"
+        },
+        {
+          "id": "SP_NITRILIRUPTOR_SP",
+          "name": "Nitriliruptor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitriliruptor",
+          "sourceIds": {
+            "checklistbank-2265": "2448056"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1193,16 +1205,73 @@
           "lineage": "Profundirhabdus",
           "authorship": "Liu et al. 2023",
           "children": [],
-          "uuid": "44b1c357-5f94-5da-a23-5aa54bcd4b4f69"
+          "uuid": "44b1c357-5f94-5da-a23-5aa54bcd4b4f69",
+          "sourceIds": {
+            "checklistbank-2265": "2604685"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Nitriliruptoraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NITRILIRUPTOR",
+          "name": "uncultured Nitriliruptor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1031263"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_NITRILIRUPTORACEAE",
+          "name": "uncultured Nitriliruptoraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1667047"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitriliruptoraceae"
+    },
+    {
+      "id": "GENUS_NITRILIRUPTORACEAE",
+      "name": "Nitriliruptoraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NITRILIRUPTORACEAE_BACTERIUM",
+          "name": "Nitriliruptoraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitriliruptoraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2093808"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitriliruptoraceae"
     }
   ],
-  "speciesCount": 87,
+  "speciesCount": 91,
   "appSlug": "nitriliruptoraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Nitriliruptoria",
-  "genusCount": 36
+  "genusCount": 38
 }

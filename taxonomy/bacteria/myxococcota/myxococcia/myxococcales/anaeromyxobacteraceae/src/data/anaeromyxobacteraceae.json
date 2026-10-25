@@ -581,7 +581,10 @@
           "lineage": "Anaeromyxobacter",
           "authorship": "Itoh et al. 2022",
           "children": [],
-          "uuid": "1fcccc9d-a31f-598-a2f-d5d2c8ae33bd06"
+          "uuid": "1fcccc9d-a31f-598-a2f-d5d2c8ae33bd06",
+          "sourceIds": {
+            "checklistbank-2265": "2918171"
+          }
         },
         {
           "id": "SP_ANAEROMYXOBACTER_DIAZOTROPHICUS_ITOH_ET_AL_2022",
@@ -592,7 +595,22 @@
           "lineage": "Anaeromyxobacter",
           "authorship": "Itoh et al. 2022",
           "children": [],
-          "uuid": "aa349910-3df0-57f-971-7b42570b104de4"
+          "uuid": "aa349910-3df0-57f-971-7b42570b104de4",
+          "sourceIds": {
+            "checklistbank-2265": "2590199"
+          }
+        },
+        {
+          "id": "SP_ANAEROMYXOBACTER_SP",
+          "name": "Anaeromyxobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaeromyxobacter",
+          "sourceIds": {
+            "checklistbank-2265": "203349"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1049,11 +1067,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Anaeromyxobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ANAEROMYXOBACTER",
+          "name": "uncultured Anaeromyxobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "293435"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ANAEROMYXOBACTERACEAE",
+          "name": "uncultured Anaeromyxobacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2897382"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaeromyxobacteraceae"
+    },
+    {
+      "id": "GENUS_ANAEROMYXOBACTERACEAE",
+      "name": "Anaeromyxobacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANAEROMYXOBACTERACEAE_BACTERIUM",
+          "name": "Anaeromyxobacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaeromyxobacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2510643"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaeromyxobacteraceae"
     }
   ],
-  "speciesCount": 94,
+  "speciesCount": 98,
   "appSlug": "anaeromyxobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Myxococcota > Myxococcia",
-  "genusCount": 11
+  "genusCount": 13
 }

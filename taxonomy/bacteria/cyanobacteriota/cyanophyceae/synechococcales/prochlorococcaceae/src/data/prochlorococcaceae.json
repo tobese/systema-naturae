@@ -56,7 +56,10 @@
           "lineage": "Cyanobium",
           "authorship": "(Geitler 1953) Komarek et al. 1999",
           "children": [],
-          "uuid": "5d7223cc-d6cc-59d-8ae-2771ba20b4cc8c"
+          "uuid": "5d7223cc-d6cc-59d-8ae-2771ba20b4cc8c",
+          "sourceIds": {
+            "checklistbank-2265": "1240336"
+          }
         },
         {
           "id": "SP_CYANOBIUM_PARVUM_MIGULA_1906_KOMAREK_ET_AL_1999",
@@ -67,7 +70,10 @@
           "lineage": "Cyanobium",
           "authorship": "(Migula 1906) Komarek et al. 1999",
           "children": [],
-          "uuid": "01c88f85-4a3e-5e0-aa2-eece1cece58668"
+          "uuid": "01c88f85-4a3e-5e0-aa2-eece1cece58668",
+          "sourceIds": {
+            "checklistbank-2265": "1574324"
+          }
         },
         {
           "id": "SP_CYANOBIUM_USITATUM_CABELLO_YEVES_ET_AL_2018",
@@ -78,7 +84,10 @@
           "lineage": "Cyanobium",
           "authorship": "Cabello-Yeves et al. 2018",
           "children": [],
-          "uuid": "afc26f55-bef8-5f5-a19-66a7cf951d789b"
+          "uuid": "afc26f55-bef8-5f5-a19-66a7cf951d789b",
+          "sourceIds": {
+            "checklistbank-2265": "2304190"
+          }
         },
         {
           "id": "SP_CYANOBIUM_GRACILE_RIPPKA_COHEN_BAZIRE_1983",
@@ -90,6 +99,30 @@
           "authorship": "Rippka & Cohen-Bazire, 1983",
           "children": [],
           "uuid": "68784324-ebdc-5e8-9d2-f37ee0e9328436"
+        },
+        {
+          "id": "SP_CYANOBIUM_SP",
+          "name": "Cyanobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanobium",
+          "sourceIds": {
+            "checklistbank-2265": "115743"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYANOBIUM_PLANCTICUM",
+          "name": "Cyanobium plancticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanobium",
+          "sourceIds": {
+            "checklistbank-2265": "2716369"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -128,7 +161,10 @@
           "lineage": "Anathece",
           "authorship": "(W. West and G.S. West, 1906) Komarek, Kastovsky & Jezberova, 2011",
           "children": [],
-          "uuid": "124ad095-738c-5f6-9c3-4926607907f613"
+          "uuid": "124ad095-738c-5f6-9c3-4926607907f613",
+          "sourceIds": {
+            "checklistbank-2265": "1521602"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -148,7 +184,34 @@
           "lineage": "Prochlorococcus",
           "authorship": "Chisholm et al. 2001",
           "children": [],
-          "uuid": "5c0400ab-4a65-547-a5f-91dd627a3b92bc"
+          "uuid": "5c0400ab-4a65-547-a5f-91dd627a3b92bc",
+          "sourceIds": {
+            "checklistbank-2265": "1219"
+          }
+        },
+        {
+          "id": "SP_PROCHLOROCOCCUS_SP",
+          "name": "Prochlorococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prochlorococcus",
+          "sourceIds": {
+            "checklistbank-2265": "1220"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROCHLOROCOCCUS_SP_P1363",
+          "name": "Prochlorococcus sp.P1363",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prochlorococcus",
+          "sourceIds": {
+            "checklistbank-2265": "2729590"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -213,10 +276,43 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Prochlorococcaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PROCHLOROCOCCUS",
+          "name": "uncultured Prochlorococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "159733"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CYANOBIUM",
+          "name": "uncultured Cyanobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "326381"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prochlorococcaceae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 18,
   "appSlug": "prochlorococcaceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 9
+  "genusCount": 10
 }

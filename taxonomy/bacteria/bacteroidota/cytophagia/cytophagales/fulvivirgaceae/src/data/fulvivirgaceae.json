@@ -17,7 +17,10 @@
           "lineage": "Parachryseolinea",
           "authorship": "Wang et al. 2022",
           "children": [],
-          "uuid": "e9cc2796-d68b-51b-9c4-e85a301daffdb1"
+          "uuid": "e9cc2796-d68b-51b-9c4-e85a301daffdb1",
+          "sourceIds": {
+            "checklistbank-2265": "2873601"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -60,6 +63,18 @@
           "authorship": "Lee et al. 2019",
           "children": [],
           "uuid": "d7d76c2f-0cb0-5ea-a22-4471d98e216e6f"
+        },
+        {
+          "id": "SP_CHRYSEOLINEA_SP",
+          "name": "Chryseolinea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chryseolinea",
+          "sourceIds": {
+            "checklistbank-2265": "2059303"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -134,7 +149,10 @@
           "lineage": "Fulvivirga",
           "authorship": "Liu et al. 2022",
           "children": [],
-          "uuid": "5f9a1958-c5c7-57a-830-06fc88d5e52ba9"
+          "uuid": "5f9a1958-c5c7-57a-830-06fc88d5e52ba9",
+          "sourceIds": {
+            "checklistbank-2265": "2879465"
+          }
         },
         {
           "id": "SP_FULVIVIRGA_MARINA_ZHAO_ET_AL_2022",
@@ -190,6 +208,18 @@
           "authorship": "Nguyen et al. 2023",
           "children": [],
           "uuid": "cd6f9958-8706-580-954-e236251d9a2062"
+        },
+        {
+          "id": "SP_FULVIVIRGA_SP",
+          "name": "Fulvivirga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fulvivirga",
+          "sourceIds": {
+            "checklistbank-2265": "523620"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -221,6 +251,18 @@
           "authorship": "Yoon et al. 2011",
           "children": [],
           "uuid": "dcab82ae-4de5-52a-b1d-7c063791592adf"
+        },
+        {
+          "id": "SP_OHTAEKWANGIA_SP",
+          "name": "Ohtaekwangia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ohtaekwangia",
+          "sourceIds": {
+            "checklistbank-2265": "2066019"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -260,15 +302,96 @@
           "lineage": "Pseudochryseolinea",
           "authorship": "(Wang et al. 2018) Wang et al. 2022",
           "children": [],
-          "uuid": "2c4ac4c2-2dfa-5da-bfd-dbb4ba31fa9185"
+          "uuid": "2c4ac4c2-2dfa-5da-bfd-dbb4ba31fa9185",
+          "sourceIds": {
+            "checklistbank-2265": "2059302"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Fulvivirgaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FULVIVIRGA",
+          "name": "uncultured Fulvivirga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1071675"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_OHTAEKWANGIA",
+          "name": "uncultured Ohtaekwangia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1210121"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CHRYSEOLINEA",
+          "name": "uncultured Chryseolinea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1621539"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FULVIVIRGACEAE",
+          "name": "uncultured Fulvivirgaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2897376"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fulvivirgaceae"
+    },
+    {
+      "id": "GENUS_FULVIVIRGACEAE",
+      "name": "Fulvivirgaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FULVIVIRGACEAE_BACTERIUM",
+          "name": "Fulvivirgaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fulvivirgaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2782348"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fulvivirgaceae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 27,
   "appSlug": "fulvivirgaceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 6
+  "genusCount": 8
 }

@@ -129,6 +129,18 @@
           "lineage": "Pyramidobacter",
           "children": [],
           "uuid": "aa39e4a9-22aa-5fb-9c4-c0b0cf4b386bdb"
+        },
+        {
+          "id": "SP_PYRAMIDOBACTER_SP",
+          "name": "Pyramidobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyramidobacter",
+          "sourceIds": {
+            "checklistbank-2265": "1640373"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -149,6 +161,18 @@
           "authorship": "Jumas-Bilak et al. 2007",
           "children": [],
           "uuid": "91e0c690-8fe0-56c-b3b-b12753e287c818"
+        },
+        {
+          "id": "SP_JONQUETELLA_SP",
+          "name": "Jonquetella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jonquetella",
+          "sourceIds": {
+            "checklistbank-2265": "1111126"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -252,7 +276,10 @@
           "lineage": "Dethiosulfovibrio",
           "authorship": "Surkov et al. 2001",
           "children": [],
-          "uuid": "9205246a-56e0-56c-b48-aabf21c899f8ba"
+          "uuid": "9205246a-56e0-56c-b48-aabf21c899f8ba",
+          "sourceIds": {
+            "checklistbank-2265": "133532"
+          }
         },
         {
           "id": "SP_DETHIOSULFOVIBRIO_ACIDAMINOVORANS_SURKOV_ET_AL_2001",
@@ -263,7 +290,22 @@
           "lineage": "Dethiosulfovibrio",
           "authorship": "Surkov et al. 2001",
           "children": [],
-          "uuid": "6ca9e565-dabd-5fa-8c9-59f505f05749dd"
+          "uuid": "6ca9e565-dabd-5fa-8c9-59f505f05749dd",
+          "sourceIds": {
+            "checklistbank-2265": "133535"
+          }
+        },
+        {
+          "id": "SP_DETHIOSULFOVIBRIO_SP",
+          "name": "Dethiosulfovibrio sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dethiosulfovibrio",
+          "sourceIds": {
+            "checklistbank-2265": "1727201"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -312,16 +354,64 @@
           "lineage": "Rarimicrobium",
           "authorship": "Jumas-Bilak et al. 2015",
           "children": [],
-          "uuid": "60d1e42f-25a7-551-9a7-7b0080fd3eb479"
+          "uuid": "60d1e42f-25a7-551-9a7-7b0080fd3eb479",
+          "sourceIds": {
+            "checklistbank-2265": "434126"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Dethiosulfovibrionaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DETHIOSULFOVIBRIO",
+          "name": "uncultured Dethiosulfovibrio",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "185448"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_JONQUETELLA",
+          "name": "uncultured Jonquetella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "905009"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PYRAMIDOBACTER",
+          "name": "uncultured Pyramidobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1623495"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dethiosulfovibrionaceae"
     }
   ],
-  "speciesCount": 26,
+  "speciesCount": 32,
   "appSlug": "dethiosulfovibrionaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Synergistota > Synergistia",
-  "genusCount": 5
+  "genusCount": 6
 }

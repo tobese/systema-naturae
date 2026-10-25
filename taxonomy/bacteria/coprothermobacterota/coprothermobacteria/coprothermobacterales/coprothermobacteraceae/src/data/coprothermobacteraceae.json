@@ -59,6 +59,18 @@
           "lineage": "Coprothermobacter",
           "children": [],
           "uuid": "534ab57d-55f1-5f2-8d3-d4f7b0e5882962"
+        },
+        {
+          "id": "SP_COPROTHERMOBACTER_SP",
+          "name": "Coprothermobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coprothermobacter",
+          "sourceIds": {
+            "checklistbank-2265": "55509"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -82,11 +94,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Coprothermobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_COPROTHERMOBACTER",
+          "name": "uncultured Coprothermobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "335991"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coprothermobacteraceae"
+    },
+    {
+      "id": "GENUS_COPROTHERMOBACTERACEAE",
+      "name": "Coprothermobacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COPROTHERMOBACTERACEAE_BACTERIUM",
+          "name": "Coprothermobacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coprothermobacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2736298"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coprothermobacteraceae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 9,
   "appSlug": "coprothermobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Coprothermobacterota > Coprothermobacteria",
-  "genusCount": 2
+  "genusCount": 4
 }

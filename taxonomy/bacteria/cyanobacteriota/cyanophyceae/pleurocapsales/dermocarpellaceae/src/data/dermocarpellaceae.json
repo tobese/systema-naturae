@@ -18,6 +18,18 @@
           "authorship": "(Komarek & Hindak, 1975) Komarek & Anagnostidis, 1986",
           "children": [],
           "uuid": "a1096110-e100-5ed-857-b2e528fd4a1934"
+        },
+        {
+          "id": "SP_STANIERIA_SP",
+          "name": "Stanieria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stanieria",
+          "sourceIds": {
+            "checklistbank-2265": "34081"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -37,7 +49,22 @@
           "lineage": "Cyanocystis",
           "authorship": "(P.Crouan & H.Crouan, 1858) Komarek & Anagnostidis, 1986",
           "children": [],
-          "uuid": "92e96140-a361-50a-a74-b183a511d18818"
+          "uuid": "92e96140-a361-50a-a74-b183a511d18818",
+          "sourceIds": {
+            "checklistbank-2265": "54300"
+          }
+        },
+        {
+          "id": "SP_CYANOCYSTIS_SP",
+          "name": "Cyanocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanocystis",
+          "sourceIds": {
+            "checklistbank-2265": "688244"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -61,10 +88,52 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Dermocarpellaceae"
+    },
+    {
+      "id": "GENUS_DERMOCARPELLA",
+      "name": "Dermocarpella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DERMOCARPELLA_SP",
+          "name": "Dermocarpella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermocarpella",
+          "sourceIds": {
+            "checklistbank-2265": "54303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermocarpellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_STANIERIA",
+          "name": "uncultured Stanieria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "260058"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermocarpellaceae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 7,
   "appSlug": "dermocarpellaceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 3
+  "genusCount": 5
 }

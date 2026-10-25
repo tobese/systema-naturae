@@ -342,6 +342,18 @@
           "lineage": "Salinibacter",
           "children": [],
           "uuid": "e3acb4bc-ce78-5c4-9bf-3df8734d5c054b"
+        },
+        {
+          "id": "SP_SALINIBACTER_SP",
+          "name": "Salinibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinibacter",
+          "sourceIds": {
+            "checklistbank-2265": "329279"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -710,7 +722,10 @@
           "lineage": "Salinivenus",
           "authorship": "(Makhdoumi-Kakhki et al. 2012) Munoz et al. 2018",
           "children": [],
-          "uuid": "d2bcf660-6094-566-8e3-a3e2f36a7f1cb6"
+          "uuid": "d2bcf660-6094-566-8e3-a3e2f36a7f1cb6",
+          "sourceIds": {
+            "checklistbank-2265": "890425"
+          }
         },
         {
           "id": "SP_SALINIVENUS_LUTEA_MAKHDOUMI_KAKHKI_ET_AL_2012_MUNOZ_ET_AL_2018",
@@ -721,16 +736,73 @@
           "lineage": "Salinivenus",
           "authorship": "(Makhdoumi-Kakhki et al. 2012) Munoz et al. 2018",
           "children": [],
-          "uuid": "306d867a-2c27-5ca-bbc-5fef540928bb82"
+          "uuid": "306d867a-2c27-5ca-bbc-5fef540928bb82",
+          "sourceIds": {
+            "checklistbank-2265": "890426"
+          }
+        },
+        {
+          "id": "SP_SALINIVENUS_SP",
+          "name": "Salinivenus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinivenus",
+          "sourceIds": {
+            "checklistbank-2265": "1885341"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Salinibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SALINIBACTER",
+          "name": "uncultured Salinibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "309166"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinibacteraceae"
+    },
+    {
+      "id": "GENUS_SALINIBACTERACEAE",
+      "name": "Salinibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SALINIBACTERACEAE_BACTERIUM",
+          "name": "Salinibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2497636"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinibacteraceae"
     }
   ],
-  "speciesCount": 60,
+  "speciesCount": 64,
   "appSlug": "salinibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Rhodothermia",
-  "genusCount": 13
+  "genusCount": 15
 }

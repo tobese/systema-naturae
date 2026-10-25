@@ -68,7 +68,10 @@
           "lineage": "Phascolarctobacterium",
           "authorship": "Shigeno et al. 2019",
           "children": [],
-          "uuid": "9757722c-b1f2-52a-b23-f4b934aad5f916"
+          "uuid": "9757722c-b1f2-52a-b23-f4b934aad5f916",
+          "sourceIds": {
+            "checklistbank-2265": "2654621"
+          }
         },
         {
           "id": "SP_PHASCOLARCTOBACTERIUM_SUCCINATUTENS_WATANABE_ET_AL_2012",
@@ -79,7 +82,22 @@
           "lineage": "Phascolarctobacterium",
           "authorship": "Watanabe et al. 2012",
           "children": [],
-          "uuid": "d0216b6c-4e5e-5c4-9ea-5f091a92ed41c2"
+          "uuid": "d0216b6c-4e5e-5c4-9ea-5f091a92ed41c2",
+          "sourceIds": {
+            "checklistbank-2265": "626940"
+          }
+        },
+        {
+          "id": "SP_PHASCOLARCTOBACTERIUM_SP",
+          "name": "Phascolarctobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phascolarctobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "457408"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -734,7 +752,10 @@
           "lineage": "Acidaminococcus",
           "authorship": "Takakura et al. 2019",
           "children": [],
-          "uuid": "b9ea3c98-eee4-549-a18-f4aa1aab3147f3"
+          "uuid": "b9ea3c98-eee4-549-a18-f4aa1aab3147f3",
+          "sourceIds": {
+            "checklistbank-2265": "2058289"
+          }
         },
         {
           "id": "SP_ACIDAMINOCOCCUS_NYCTEREUTIS_LI_ET_AL_2026",
@@ -746,6 +767,18 @@
           "authorship": "Li et al. 2026",
           "children": [],
           "uuid": "1d79fadc-ebaa-550-a27-ec0bc247d3d89d"
+        },
+        {
+          "id": "SP_ACIDAMINOCOCCUS_SP",
+          "name": "Acidaminococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidaminococcus",
+          "sourceIds": {
+            "checklistbank-2265": "441742"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1055,6 +1088,18 @@
           "lineage": "Succiniclasticum",
           "children": [],
           "uuid": "50402cdb-17b2-5ce-8d8-2640117016b33b"
+        },
+        {
+          "id": "SP_SUCCINICLASTICUM_SP",
+          "name": "Succiniclasticum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Succiniclasticum",
+          "sourceIds": {
+            "checklistbank-2265": "1981083"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1673,11 +1718,122 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Acidaminococcaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ACIDAMINOCOCCUS",
+          "name": "uncultured Acidaminococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "352152"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PHASCOLARCTOBACTERIUM",
+          "name": "uncultured Phascolarctobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "512296"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SUCCINISPIRA",
+          "name": "uncultured Succinispira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "548271"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SUCCINICLASTICUM",
+          "name": "uncultured Succiniclasticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1500547"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidaminococcaceae"
+    },
+    {
+      "id": "GENUS_ACIDAMINOCOCCACEAE",
+      "name": "Acidaminococcaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACIDAMINOCOCCACEAE_BACTERIUM",
+          "name": "Acidaminococcaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidaminococcaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1951337"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidaminococcaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_PHASCOLARCTOBACTERIUM",
+          "name": "Candidatus Phascolarctobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838728"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_AVACIDAMINOCOCCUS",
+          "name": "Candidatus Avacidaminococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2840684"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidaminococcaceae"
     }
   ],
-  "speciesCount": 146,
+  "speciesCount": 156,
   "appSlug": "acidaminococcaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Negativicutes",
-  "genusCount": 22
+  "genusCount": 25
 }

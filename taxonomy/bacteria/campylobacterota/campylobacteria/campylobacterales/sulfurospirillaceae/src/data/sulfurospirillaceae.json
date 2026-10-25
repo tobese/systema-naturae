@@ -327,7 +327,10 @@
           "lineage": "Sulfurospirillum",
           "authorship": "Sorokin et al. 2013",
           "children": [],
-          "uuid": "6a398727-0ef6-5c4-a2e-feae6d1f628b4c"
+          "uuid": "6a398727-0ef6-5c4-a2e-feae6d1f628b4c",
+          "sourceIds": {
+            "checklistbank-2265": "680648"
+          }
         },
         {
           "id": "SP_SULFUROSPIRILLUM_ARCACHONENSE_FINSTER_ET_AL_1997",
@@ -338,7 +341,46 @@
           "lineage": "Sulfurospirillum",
           "authorship": "Finster et al. 1997",
           "children": [],
-          "uuid": "60e39dd3-b45f-5f7-bbd-624df437d23ec4"
+          "uuid": "60e39dd3-b45f-5f7-bbd-624df437d23ec4",
+          "sourceIds": {
+            "checklistbank-2265": "57666"
+          }
+        },
+        {
+          "id": "SP_SULFUROSPIRILLUM_SP",
+          "name": "Sulfurospirillum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurospirillum",
+          "sourceIds": {
+            "checklistbank-2265": "56699"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SULFUROSPIRILLUM_CARBOXYDOVORANS",
+          "name": "Sulfurospirillum carboxydovorans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurospirillum",
+          "sourceIds": {
+            "checklistbank-2265": "295028"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SULFUROSPIRILLUM_TAMANENSIS",
+          "name": "Sulfurospirillum tamanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurospirillum",
+          "sourceIds": {
+            "checklistbank-2265": "2813362"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -718,11 +760,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Sulfurospirillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SULFUROSPIRILLUM",
+          "name": "uncultured Sulfurospirillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "197506"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sulfurospirillaceae"
+    },
+    {
+      "id": "GENUS_SULFUROSPIRILLACEAE",
+      "name": "Sulfurospirillaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SULFUROSPIRILLACEAE_BACTERIUM",
+          "name": "Sulfurospirillaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurospirillaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2932625"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sulfurospirillaceae"
     }
   ],
-  "speciesCount": 65,
+  "speciesCount": 70,
   "appSlug": "sulfurospirillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Campylobacterota > Campylobacteria",
-  "genusCount": 6
+  "genusCount": 8
 }

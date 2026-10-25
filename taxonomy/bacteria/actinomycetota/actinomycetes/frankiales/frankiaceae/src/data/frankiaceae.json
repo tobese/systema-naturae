@@ -163,7 +163,10 @@
           "lineage": "Frankia",
           "authorship": "Imen et al. 2023",
           "children": [],
-          "uuid": "1fae1e0c-c250-594-8a8-04dc93d4cbf260"
+          "uuid": "1fae1e0c-c250-594-8a8-04dc93d4cbf260",
+          "sourceIds": {
+            "checklistbank-2265": "2950104"
+          }
         },
         {
           "id": "SP_FRANKIA_NEPALENSIS_NOUIOUI_ET_AL_2023",
@@ -174,7 +177,34 @@
           "lineage": "Frankia",
           "authorship": "Nouioui et al. 2023",
           "children": [],
-          "uuid": "8599797a-dd04-575-be3-b2e6a38a23da6a"
+          "uuid": "8599797a-dd04-575-be3-b2e6a38a23da6a",
+          "sourceIds": {
+            "checklistbank-2265": "1836974"
+          }
+        },
+        {
+          "id": "SP_FRANKIA_SP",
+          "name": "Frankia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Frankia",
+          "sourceIds": {
+            "checklistbank-2265": "1855"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FRANKIA_SYMBIONT",
+          "name": "Frankia symbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Frankia",
+          "sourceIds": {
+            "checklistbank-2265": "656024"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -254,6 +284,30 @@
           "lineage": "Protofrankia",
           "children": [],
           "uuid": "2bc1675c-27f7-53c-996-3b3c6601f1d5ff"
+        },
+        {
+          "id": "SP_PROTOFRANKIA_SP",
+          "name": "Protofrankia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protofrankia",
+          "sourceIds": {
+            "checklistbank-2265": "683310"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOFRANKIA_SYMBIONT",
+          "name": "Protofrankia symbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protofrankia",
+          "sourceIds": {
+            "checklistbank-2265": "1306539"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -348,6 +402,18 @@
           "authorship": "(Nouioui et al. 2017) Gtari 2023",
           "children": [],
           "uuid": "7bfd8375-afe6-5a6-8f8-19b8ea5da1ad98"
+        },
+        {
+          "id": "SP_PARAFRANKIA_SP",
+          "name": "Parafrankia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parafrankia",
+          "sourceIds": {
+            "checklistbank-2265": "102897"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -440,6 +506,18 @@
           "authorship": "(Nouioui et al. 2017) Gtari 2023",
           "children": [],
           "uuid": "3e513cd1-51f7-552-974-ce2e2603bd6926"
+        },
+        {
+          "id": "SP_PSEUDOFRANKIA_SP",
+          "name": "Pseudofrankia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudofrankia",
+          "sourceIds": {
+            "checklistbank-2265": "683323"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -670,11 +748,110 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Frankiaceae"
+    },
+    {
+      "id": "GENUS_FRANKIACEAE",
+      "name": "Frankiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FRANKIACEAE_GEN",
+          "name": "Frankiaceae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Frankiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "74720"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FRANKIACEAE_BACTERIUM",
+          "name": "Frankiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Frankiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "229564"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "frankiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FRANKIA",
+          "name": "uncultured Frankia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "181582"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FRANKIACEAE",
+          "name": "uncultured Frankiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "418003"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "frankiaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_PROTOFRANKIA",
+          "name": "Candidatus Protofrankia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "1839754"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_FRANKIA",
+          "name": "Candidatus Frankia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2060052"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "frankiaceae"
     }
   ],
-  "speciesCount": 58,
+  "speciesCount": 70,
   "appSlug": "frankiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 8
+  "genusCount": 11
 }

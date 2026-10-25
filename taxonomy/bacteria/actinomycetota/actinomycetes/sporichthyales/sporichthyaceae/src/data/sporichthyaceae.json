@@ -59,6 +59,18 @@
           "lineage": "Sporichthya",
           "children": [],
           "uuid": "397a4dcf-afdd-507-969-5592e79771378c"
+        },
+        {
+          "id": "SP_SPORICHTHYA_SP",
+          "name": "Sporichthya sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sporichthya",
+          "sourceIds": {
+            "checklistbank-2265": "65475"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -215,6 +227,18 @@
           "authorship": "Qu et al. 2018",
           "children": [],
           "uuid": "74c824bb-7665-54c-acc-b5a2505c304a1f"
+        },
+        {
+          "id": "SP_LONGIVIRGA_SP",
+          "name": "Longivirga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Longivirga",
+          "sourceIds": {
+            "checklistbank-2265": "2083195"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -239,11 +263,98 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Sporichthyaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SPORICHTHYA",
+          "name": "uncultured Sporichthya",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "211430"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SPORICHTHYACEAE",
+          "name": "uncultured Sporichthyaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "293301"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_LONGIVIRGA",
+          "name": "uncultured Longivirga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2083197"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sporichthyaceae"
+    },
+    {
+      "id": "GENUS_BACTERIUM",
+      "name": "bacterium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BACTERIUM_ELLIN5206",
+          "name": "bacterium Ellin5206",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "bacterium",
+          "sourceIds": {
+            "checklistbank-2265": "234660"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sporichthyaceae"
+    },
+    {
+      "id": "GENUS_SPORICHTHYACEAE",
+      "name": "Sporichthyaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPORICHTHYACEAE_BACTERIUM",
+          "name": "Sporichthyaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sporichthyaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1957016"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sporichthyaceae"
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 24,
   "appSlug": "sporichthyaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 7
+  "genusCount": 10
 }

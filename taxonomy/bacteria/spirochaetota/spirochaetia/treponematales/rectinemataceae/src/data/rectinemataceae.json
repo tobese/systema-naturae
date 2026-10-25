@@ -148,7 +148,22 @@
           "lineage": "Rectinema",
           "authorship": "Koelschbach et al. 2017",
           "children": [],
-          "uuid": "b09a592c-9807-515-97e-c42ac037b7df9d"
+          "uuid": "b09a592c-9807-515-97e-c42ac037b7df9d",
+          "sourceIds": {
+            "checklistbank-2265": "1652145"
+          }
+        },
+        {
+          "id": "SP_RECTINEMA_SP",
+          "name": "Rectinema sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rectinema",
+          "sourceIds": {
+            "checklistbank-2265": "1937017"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -893,11 +908,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Rectinemataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_RECTINEMA",
+          "name": "uncultured Rectinema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1937019"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rectinemataceae"
+    },
+    {
+      "id": "GENUS_RECTINEMATACEAE",
+      "name": "Rectinemataceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RECTINEMATACEAE_BACTERIUM",
+          "name": "Rectinemataceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rectinemataceae",
+          "sourceIds": {
+            "checklistbank-2265": "3064674"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rectinemataceae"
     }
   ],
-  "speciesCount": 70,
+  "speciesCount": 73,
   "appSlug": "rectinemataceae",
   "sourcedFrom": "gtdb",
   "lineage": "Spirochaetota > Spirochaetia",
-  "genusCount": 21
+  "genusCount": 23
 }

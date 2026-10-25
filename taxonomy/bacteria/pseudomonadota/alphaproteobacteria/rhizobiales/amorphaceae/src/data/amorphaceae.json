@@ -191,7 +191,22 @@
           "lineage": "Acuticoccus",
           "authorship": "Yin et al. 2018",
           "children": [],
-          "uuid": "0c505920-f0d2-562-81f-da0458d10d7348"
+          "uuid": "0c505920-f0d2-562-81f-da0458d10d7348",
+          "sourceIds": {
+            "checklistbank-2265": "2073160"
+          }
+        },
+        {
+          "id": "SP_ACUTICOCCUS_SP",
+          "name": "Acuticoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acuticoccus",
+          "sourceIds": {
+            "checklistbank-2265": "1904378"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -262,16 +277,85 @@
           "lineage": "Amorphus",
           "authorship": "Hwang et al. 2013",
           "children": [],
-          "uuid": "e6e52f0f-971d-510-9f4-6c3555ee2340a1"
+          "uuid": "e6e52f0f-971d-510-9f4-6c3555ee2340a1",
+          "sourceIds": {
+            "checklistbank-2265": "1327753"
+          }
+        },
+        {
+          "id": "SP_AMORPHUS_SP",
+          "name": "Amorphus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amorphus",
+          "sourceIds": {
+            "checklistbank-2265": "1543088"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Amorphaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_AMORPHUS",
+          "name": "uncultured Amorphus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1329635"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ACUTICOCCUS",
+          "name": "uncultured Acuticoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1904380"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amorphaceae"
+    },
+    {
+      "id": "GENUS_AMORPHACEAE",
+      "name": "Amorphaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMORPHACEAE_BACTERIUM",
+          "name": "Amorphaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amorphaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3014069"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amorphaceae"
     }
   ],
-  "speciesCount": 23,
+  "speciesCount": 28,
   "appSlug": "amorphaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 3
+  "genusCount": 5
 }

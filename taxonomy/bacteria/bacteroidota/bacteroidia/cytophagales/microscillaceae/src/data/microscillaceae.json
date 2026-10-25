@@ -222,6 +222,18 @@
           "lineage": "Microscilla",
           "children": [],
           "uuid": "76576230-ac1f-55d-a6a-0134258e06be08"
+        },
+        {
+          "id": "SP_MICROSCILLA_SP",
+          "name": "Microscilla sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microscilla",
+          "sourceIds": {
+            "checklistbank-2265": "78647"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -380,11 +392,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Microscillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MICROSCILLA",
+          "name": "uncultured Microscilla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "127776"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MICROSCILLACEAE",
+          "name": "uncultured Microscillaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2501637"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microscillaceae"
+    },
+    {
+      "id": "GENUS_MICROSCILLACEAE",
+      "name": "Microscillaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROSCILLACEAE_BACTERIUM",
+          "name": "Microscillaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microscillaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2053581"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microscillaceae"
     }
   ],
-  "speciesCount": 25,
+  "speciesCount": 29,
   "appSlug": "microscillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 14
+  "genusCount": 16
 }

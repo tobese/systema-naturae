@@ -168,6 +168,18 @@
           "lineage": "Nitratiruptor",
           "children": [],
           "uuid": "118fd609-b623-5a4-a9b-dd7bd589e16c13"
+        },
+        {
+          "id": "SP_NITRATIRUPTOR_SP",
+          "name": "Nitratiruptor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitratiruptor",
+          "sourceIds": {
+            "checklistbank-2265": "307558"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -257,7 +269,10 @@
           "lineage": "Nitrosophilus",
           "authorship": "Fukazawa et al. 2023",
           "children": [],
-          "uuid": "102887e5-b96c-543-bf3-808fb8c10a50a0"
+          "uuid": "102887e5-b96c-543-bf3-808fb8c10a50a0",
+          "sourceIds": {
+            "checklistbank-2265": "2930200"
+          }
         },
         {
           "id": "SP_NITROSOPHILUS_LABII",
@@ -268,15 +283,48 @@
           "lineage": "Nitrosophilus",
           "children": [],
           "uuid": "bd3b5b4d-fe6e-50b-805-081c4e017e14c8"
+        },
+        {
+          "id": "SP_NITROSOPHILUS_SP",
+          "name": "Nitrosophilus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrosophilus",
+          "sourceIds": {
+            "checklistbank-2265": "2795695"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Nitratiruptoraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NITRATIRUPTOR",
+          "name": "uncultured Nitratiruptor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "905027"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitratiruptoraceae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 27,
   "appSlug": "nitratiruptoraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Campylobacterota > Campylobacteria",
-  "genusCount": 3
+  "genusCount": 4
 }

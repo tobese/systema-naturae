@@ -300,7 +300,10 @@
           "lineage": "Chamaesiphon",
           "authorship": "(Rostafinski 1883) Hansgirg 1892",
           "children": [],
-          "uuid": "2f7ba17c-6894-5e1-8c5-379b73b6b5fd7e"
+          "uuid": "2f7ba17c-6894-5e1-8c5-379b73b6b5fd7e",
+          "sourceIds": {
+            "checklistbank-2265": "1519455"
+          }
         },
         {
           "id": "SP_CHAMAESIPHON_FONTINALIS_VELICHKO_MAKEEVA_AVERINA_SMIRNOVA_2023",
@@ -311,7 +314,10 @@
           "lineage": "Chamaesiphon",
           "authorship": "Velichko, Makeeva, Averina & Smirnova, 2023",
           "children": [],
-          "uuid": "1010dd03-e364-548-98d-e8984f88331ac9"
+          "uuid": "1010dd03-e364-548-98d-e8984f88331ac9",
+          "sourceIds": {
+            "checklistbank-2265": "3068732"
+          }
         },
         {
           "id": "SP_CHAMAESIPHON_INVESTIENS_SKUJA_1964",
@@ -322,7 +328,10 @@
           "lineage": "Chamaesiphon",
           "authorship": "Skuja 1964",
           "children": [],
-          "uuid": "fdc531fd-4544-561-a24-9deb436f8b5a04"
+          "uuid": "fdc531fd-4544-561-a24-9deb436f8b5a04",
+          "sourceIds": {
+            "checklistbank-2265": "1205916"
+          }
         },
         {
           "id": "SP_CHAMAESIPHON_INCRUSTANS_GRUNOW_IN_RABENHORST_1865",
@@ -333,7 +342,10 @@
           "lineage": "Chamaesiphon",
           "authorship": "Grunow in Rabenhorst 1865",
           "children": [],
-          "uuid": "a45bf0a5-9c07-58a-817-d473ac11aae014"
+          "uuid": "a45bf0a5-9c07-58a-817-d473ac11aae014",
+          "sourceIds": {
+            "checklistbank-2265": "2153196"
+          }
         },
         {
           "id": "SP_CHAMAESIPHON_GEITLERI_H_LUTHER_1954",
@@ -344,7 +356,10 @@
           "lineage": "Chamaesiphon",
           "authorship": "H.Luther 1954",
           "children": [],
-          "uuid": "1e9bd51a-3079-5ae-830-0768b0ae375443"
+          "uuid": "1e9bd51a-3079-5ae-830-0768b0ae375443",
+          "sourceIds": {
+            "checklistbank-2265": "2153195"
+          }
         },
         {
           "id": "SP_CHAMAESIPHON_SUBGLOBOSUS_ROSTAFINSKI_1883_LEMMERMANN_1910",
@@ -355,7 +370,22 @@
           "lineage": "Chamaesiphon",
           "authorship": "(Rostafinski 1883) Lemmermann 1910",
           "children": [],
-          "uuid": "1c77e2c0-a857-511-9db-4848cf13da4772"
+          "uuid": "1c77e2c0-a857-511-9db-4848cf13da4772",
+          "sourceIds": {
+            "checklistbank-2265": "217162"
+          }
+        },
+        {
+          "id": "SP_CHAMAESIPHON_SP",
+          "name": "Chamaesiphon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chamaesiphon",
+          "sourceIds": {
+            "checklistbank-2265": "1279366"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -508,11 +538,32 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Chamaesiphonaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHAMAESIPHON",
+          "name": "uncultured Chamaesiphon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "658162"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chamaesiphonaceae"
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 49,
   "appSlug": "chamaesiphonaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Cyanobacteriia",
-  "genusCount": 3
+  "genusCount": 4
 }

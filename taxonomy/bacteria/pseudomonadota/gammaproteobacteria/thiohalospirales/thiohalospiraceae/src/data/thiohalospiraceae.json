@@ -167,7 +167,10 @@
           "lineage": "Thiohalospira",
           "authorship": "Sorokin et al. 2008",
           "children": [],
-          "uuid": "5f4e0153-7d5e-576-80e-d4781237e0ac86"
+          "uuid": "5f4e0153-7d5e-576-80e-d4781237e0ac86",
+          "sourceIds": {
+            "checklistbank-2265": "476279"
+          }
         }
       ],
       "sourcedFrom": "gtdb",
@@ -211,11 +214,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thiohalospiraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THIOHALOSPIRA",
+          "name": "uncultured Thiohalospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "659696"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiohalospiraceae"
     }
   ],
-  "speciesCount": 18,
+  "speciesCount": 19,
   "appSlug": "thiohalospiraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 3
+  "genusCount": 4
 }

@@ -28,6 +28,18 @@
           "authorship": "Mohagheghi et al. 1986 emend. Nouioui et al. 2018",
           "children": [],
           "uuid": "5cbb2599-4356-56d-ac2-a1b19fcfd4ad94"
+        },
+        {
+          "id": "SP_ACIDOTHERMUS_SP",
+          "name": "Acidothermus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidothermus",
+          "sourceIds": {
+            "checklistbank-2265": "1872121"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -237,11 +249,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Acidothermaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ACIDOTHERMUS",
+          "name": "uncultured Acidothermus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "246138"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ACIDOTHERMACEAE",
+          "name": "uncultured Acidothermaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "418007"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidothermaceae"
+    },
+    {
+      "id": "GENUS_ACIDOTHERMACEAE",
+      "name": "Acidothermaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACIDOTHERMACEAE_BACTERIUM",
+          "name": "Acidothermaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidothermaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2575569"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidothermaceae"
     }
   ],
-  "speciesCount": 18,
+  "speciesCount": 22,
   "appSlug": "acidothermaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 6
+  "genusCount": 8
 }

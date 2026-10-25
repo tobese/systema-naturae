@@ -106,7 +106,22 @@
           "lineage": "Geothermobacter",
           "authorship": "Perez-Rodriguez et al. 2021",
           "children": [],
-          "uuid": "c935a8b8-0612-572-8cf-627e815279836f"
+          "uuid": "c935a8b8-0612-572-8cf-627e815279836f",
+          "sourceIds": {
+            "checklistbank-2265": "1969733"
+          }
+        },
+        {
+          "id": "SP_GEOTHERMOBACTER_SP",
+          "name": "Geothermobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geothermobacter",
+          "sourceIds": {
+            "checklistbank-2265": "398553"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -130,11 +145,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Geothermobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GEOTHERMOBACTER",
+          "name": "uncultured Geothermobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543049"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geothermobacteraceae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 11,
   "appSlug": "geothermobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfuromonadia",
-  "genusCount": 4
+  "genusCount": 5
 }

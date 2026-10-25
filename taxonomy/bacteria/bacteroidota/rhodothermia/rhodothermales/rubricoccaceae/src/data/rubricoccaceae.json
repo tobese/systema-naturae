@@ -309,7 +309,10 @@
           "lineage": "Rubrivirga",
           "authorship": "Song et al. 2016",
           "children": [],
-          "uuid": "a4be2624-dff9-53b-bba-1087adcc0bf098"
+          "uuid": "a4be2624-dff9-53b-bba-1087adcc0bf098",
+          "sourceIds": {
+            "checklistbank-2265": "1658620"
+          }
         },
         {
           "id": "SP_RUBRIVIRGA_AQUATILIS_HAN_ET_AL_2025",
@@ -321,6 +324,18 @@
           "authorship": "Han et al. 2025",
           "children": [],
           "uuid": "5a3507aa-1f61-573-80a-7f4bb8a82762a9"
+        },
+        {
+          "id": "SP_RUBRIVIRGA_SP",
+          "name": "Rubrivirga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rubrivirga",
+          "sourceIds": {
+            "checklistbank-2265": "1885344"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -637,11 +652,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Rubricoccaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_RUBRICOCCUS",
+          "name": "uncultured Rubricoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1642639"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_RUBRIVIRGA",
+          "name": "uncultured Rubrivirga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1699421"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rubricoccaceae"
+    },
+    {
+      "id": "GENUS_RUBRICOCCACEAE",
+      "name": "Rubricoccaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RUBRICOCCACEAE_BACTERIUM",
+          "name": "Rubricoccaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rubricoccaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2838334"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rubricoccaceae"
     }
   ],
-  "speciesCount": 53,
+  "speciesCount": 57,
   "appSlug": "rubricoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Rhodothermia",
-  "genusCount": 11
+  "genusCount": 13
 }

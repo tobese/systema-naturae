@@ -412,6 +412,18 @@
           "lineage": "Vicingus",
           "children": [],
           "uuid": "88f4cd80-bef2-583-a9e-a103c0a0de8abc"
+        },
+        {
+          "id": "SP_VICINGUS_SP",
+          "name": "Vicingus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vicingus",
+          "sourceIds": {
+            "checklistbank-2265": "2058170"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1098,11 +1110,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Vicingaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VICINGUS",
+          "name": "uncultured Vicingus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2058172"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vicingaceae"
+    },
+    {
+      "id": "GENUS_VICINGACEAE",
+      "name": "Vicingaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VICINGACEAE_BACTERIUM",
+          "name": "Vicingaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vicingaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2832346"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vicingaceae"
     }
   ],
-  "speciesCount": 87,
+  "speciesCount": 90,
   "appSlug": "vicingaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 25
+  "genusCount": 27
 }

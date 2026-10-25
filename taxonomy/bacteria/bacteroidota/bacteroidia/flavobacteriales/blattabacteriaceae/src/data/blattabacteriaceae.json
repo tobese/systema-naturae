@@ -588,7 +588,10 @@
           "lineage": "Blattabacterium",
           "authorship": "Clark and Kambhampati 2003",
           "children": [],
-          "uuid": "a3c0bac0-6bfd-50a-b06-5eadeee2e75557"
+          "uuid": "a3c0bac0-6bfd-50a-b06-5eadeee2e75557",
+          "sourceIds": {
+            "checklistbank-2265": "164515"
+          }
         },
         {
           "id": "SP_BLATTABACTERIUM_CUENOTI_MERCIER_1906_HOLLANDE_AND_FAVRE_1931",
@@ -599,7 +602,34 @@
           "lineage": "Blattabacterium",
           "authorship": "(Mercier 1906) Hollande and Favre 1931",
           "children": [],
-          "uuid": "0103dfff-e5d0-568-9f2-8391bb56b8d016"
+          "uuid": "0103dfff-e5d0-568-9f2-8391bb56b8d016",
+          "sourceIds": {
+            "checklistbank-2265": "1653831"
+          }
+        },
+        {
+          "id": "SP_BLATTABACTERIUM_SP",
+          "name": "Blattabacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blattabacterium",
+          "sourceIds": {
+            "checklistbank-2265": "34099"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BLATTABACTERIUM_SYMBIONT",
+          "name": "Blattabacterium symbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blattabacterium",
+          "sourceIds": {
+            "checklistbank-2265": "537618"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -955,11 +985,74 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Blattabacteriaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_BROWNIA",
+          "name": "Candidatus Brownia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "1010684"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "blattabacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BLATTABACTERIUM",
+          "name": "uncultured Blattabacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1434698"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "blattabacteriaceae"
+    },
+    {
+      "id": "GENUS_BLATTABACTERIACEAE",
+      "name": "Blattabacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BLATTABACTERIACEAE_BACTERIUM",
+          "name": "Blattabacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blattabacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3069148"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "blattabacteriaceae"
     }
   ],
-  "speciesCount": 85,
+  "speciesCount": 90,
   "appSlug": "blattabacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 11
+  "genusCount": 14
 }

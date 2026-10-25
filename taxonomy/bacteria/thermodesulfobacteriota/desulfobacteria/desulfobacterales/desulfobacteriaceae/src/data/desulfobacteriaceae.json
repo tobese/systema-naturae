@@ -27,7 +27,10 @@
           "lineage": "Desulfobacterium",
           "authorship": "Bak and Widdel 1988",
           "children": [],
-          "uuid": "c8c4f355-1841-5a5-879-80ebd670fddd6b"
+          "uuid": "c8c4f355-1841-5a5-879-80ebd670fddd6b",
+          "sourceIds": {
+            "checklistbank-2265": "90733"
+          }
         },
         {
           "id": "SP_DESULFOBACTERIUM_ZEPPELINII",
@@ -38,14 +41,47 @@
           "lineage": "Desulfobacterium",
           "children": [],
           "uuid": "1584b433-8aae-52b-934-f54ffc2601773d"
+        },
+        {
+          "id": "SP_DESULFOBACTERIUM_SP",
+          "name": "Desulfobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "56600"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Desulfobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOBACTERIUM",
+          "name": "uncultured Desulfobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "111751"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfobacteriaceae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "desulfobacteriaceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 1
+  "genusCount": 2
 }

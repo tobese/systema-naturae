@@ -59,6 +59,18 @@
           "lineage": "Dictyoglomus",
           "children": [],
           "uuid": "a7c8354b-747d-5d8-868-88c695cc9e3683"
+        },
+        {
+          "id": "SP_DICTYOGLOMUS_SP",
+          "name": "Dictyoglomus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dictyoglomus",
+          "sourceIds": {
+            "checklistbank-2265": "28205"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -141,11 +153,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Dictyoglomaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DICTYOGLOMUS",
+          "name": "uncultured Dictyoglomus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "221213"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dictyoglomaceae"
+    },
+    {
+      "id": "GENUS_DICTYOGLOMACEAE",
+      "name": "Dictyoglomaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DICTYOGLOMACEAE_BACTERIUM",
+          "name": "Dictyoglomaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dictyoglomaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2969825"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dictyoglomaceae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 14,
   "appSlug": "dictyoglomaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Dictyoglomota > Dictyoglomia",
-  "genusCount": 3
+  "genusCount": 5
 }

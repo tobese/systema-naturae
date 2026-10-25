@@ -77,7 +77,22 @@
           "lineage": "Desulfococcus",
           "authorship": "Platen et al. 1991",
           "children": [],
-          "uuid": "27329d3b-3f2d-5a3-acc-c72e65bf822bd3"
+          "uuid": "27329d3b-3f2d-5a3-acc-c72e65bf822bd3",
+          "sourceIds": {
+            "checklistbank-2265": "125602"
+          }
+        },
+        {
+          "id": "SP_DESULFOCOCCUS_SP",
+          "name": "Desulfococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfococcus",
+          "sourceIds": {
+            "checklistbank-2265": "449307"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -216,7 +231,10 @@
           "lineage": "Desulfonema",
           "authorship": "Widdel 1981",
           "children": [],
-          "uuid": "7f6a7790-a262-5c4-ab7-bebda65924e878"
+          "uuid": "7f6a7790-a262-5c4-ab7-bebda65924e878",
+          "sourceIds": {
+            "checklistbank-2265": "45655"
+          }
         },
         {
           "id": "SP_DESULFONEMA_ISHIMOTONII_CORRIG_FUKUI_ET_AL_2000",
@@ -227,7 +245,22 @@
           "lineage": "Desulfonema",
           "authorship": "corrig. Fukui et al. 2000",
           "children": [],
-          "uuid": "74f54fe0-94a7-5a5-81a-03f95f48c7e04c"
+          "uuid": "74f54fe0-94a7-5a5-81a-03f95f48c7e04c",
+          "sourceIds": {
+            "checklistbank-2265": "45657"
+          }
+        },
+        {
+          "id": "SP_DESULFONEMA_SP",
+          "name": "Desulfonema sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfonema",
+          "sourceIds": {
+            "checklistbank-2265": "1544500"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -270,11 +303,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfococcaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFONEMA",
+          "name": "uncultured Desulfonema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "111749"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFOCOCCUS",
+          "name": "uncultured Desulfococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "408142"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfococcaceae"
+    },
+    {
+      "id": "GENUS_DESULFOCOCCACEAE",
+      "name": "Desulfococcaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFOCOCCACEAE_BACTERIUM",
+          "name": "Desulfococcaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfococcaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2931041"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfococcaceae"
     }
   ],
-  "speciesCount": 20,
+  "speciesCount": 25,
   "appSlug": "desulfococcaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfobacteria",
-  "genusCount": 7
+  "genusCount": 9
 }

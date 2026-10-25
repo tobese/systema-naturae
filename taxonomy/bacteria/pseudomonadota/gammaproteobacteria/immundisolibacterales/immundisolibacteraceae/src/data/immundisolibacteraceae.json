@@ -88,6 +88,18 @@
           "lineage": "Immundisolibacter",
           "children": [],
           "uuid": "53673dab-012f-53d-a3b-fbe460c18354bc"
+        },
+        {
+          "id": "SP_IMMUNDISOLIBACTER_SP",
+          "name": "Immundisolibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Immundisolibacter",
+          "sourceIds": {
+            "checklistbank-2265": "1934948"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -189,11 +201,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Immundisolibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_IMMUNDISOLIBACTER",
+          "name": "uncultured Immundisolibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1934950"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "immundisolibacteraceae"
+    },
+    {
+      "id": "GENUS_IMMUNDISOLIBACTERACEAE",
+      "name": "Immundisolibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_IMMUNDISOLIBACTERACEAE_BACTERIUM",
+          "name": "Immundisolibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Immundisolibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2719033"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "immundisolibacteraceae"
     }
   ],
-  "speciesCount": 15,
+  "speciesCount": 18,
   "appSlug": "immundisolibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 4
+  "genusCount": 6
 }

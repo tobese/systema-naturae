@@ -119,7 +119,10 @@
           "lineage": "Barnesiella",
           "authorship": "Hitch et al. 2021",
           "children": [],
-          "uuid": "3a6cf411-9265-5db-bb9-d17db19a7eda65"
+          "uuid": "3a6cf411-9265-5db-bb9-d17db19a7eda65",
+          "sourceIds": {
+            "checklistbank-2265": "2981781"
+          }
         },
         {
           "id": "SP_BARNESIELLA_FAECIS_LIU_ET_AL_2021",
@@ -130,7 +133,22 @@
           "lineage": "Barnesiella",
           "authorship": "Liu et al. 2021",
           "children": [],
-          "uuid": "d1358434-ad52-5e4-b53-de527d59e7e9a2"
+          "uuid": "d1358434-ad52-5e4-b53-de527d59e7e9a2",
+          "sourceIds": {
+            "checklistbank-2265": "2764571"
+          }
+        },
+        {
+          "id": "SP_BARNESIELLA_SP",
+          "name": "Barnesiella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barnesiella",
+          "sourceIds": {
+            "checklistbank-2265": "447030"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -211,15 +229,114 @@
           "authorship": "Shkoporov et al. 2015",
           "children": [],
           "uuid": "be331037-83cf-54d-a7a-d2c23378ddc176"
+        },
+        {
+          "id": "SP_COPROBACTER_SP",
+          "name": "Coprobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coprobacter",
+          "sourceIds": {
+            "checklistbank-2265": "1941478"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Barnesiellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BARNESIELLA",
+          "name": "uncultured Barnesiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "584861"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_COPROBACTER",
+          "name": "uncultured Coprobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1720550"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BARNESIELLACEAE",
+          "name": "uncultured Barnesiellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "3080284"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barnesiellaceae"
+    },
+    {
+      "id": "GENUS_BARNESIELLACEAE",
+      "name": "Barnesiellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARNESIELLACEAE_BACTERIUM",
+          "name": "Barnesiellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barnesiellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2822392"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barnesiellaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_BARNESIELLA",
+          "name": "Candidatus Barnesiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838479"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barnesiellaceae"
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 24,
   "appSlug": "barnesiellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 4
+  "genusCount": 7
 }

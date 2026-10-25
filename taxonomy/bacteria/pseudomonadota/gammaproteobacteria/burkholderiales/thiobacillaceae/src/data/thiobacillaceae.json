@@ -607,6 +607,18 @@
           "lineage": "Parasulfuritortus",
           "children": [],
           "uuid": "1f150ea9-d86b-5a9-b38-066b2f1714f89c"
+        },
+        {
+          "id": "SP_PARASULFURITORTUS_SP",
+          "name": "Parasulfuritortus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parasulfuritortus",
+          "sourceIds": {
+            "checklistbank-2265": "2807742"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1759,7 +1771,10 @@
           "lineage": "Thiobacillus",
           "authorship": "Dultseva et al. 2006",
           "children": [],
-          "uuid": "465655bf-ec5d-52e-a41-efc7c7e6173b89"
+          "uuid": "465655bf-ec5d-52e-a41-efc7c7e6173b89",
+          "sourceIds": {
+            "checklistbank-2265": "373389"
+          }
         },
         {
           "id": "SP_THIOBACILLUS_BAREGENSIS",
@@ -1780,7 +1795,22 @@
           "lineage": "Thiobacillus",
           "authorship": "Kellermann and Griebler 2009",
           "children": [],
-          "uuid": "7872d1e2-e483-5a1-81a-ed3ee4b9a8986f"
+          "uuid": "7872d1e2-e483-5a1-81a-ed3ee4b9a8986f",
+          "sourceIds": {
+            "checklistbank-2265": "543892"
+          }
+        },
+        {
+          "id": "SP_THIOBACILLUS_SP",
+          "name": "Thiobacillus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiobacillus",
+          "sourceIds": {
+            "checklistbank-2265": "924"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1940,6 +1970,18 @@
           "lineage": "Sulfuritortus",
           "children": [],
           "uuid": "05dd976e-7b70-5b3-87d-90b637ac1a1cfa"
+        },
+        {
+          "id": "SP_SULFURITORTUS_SP",
+          "name": "Sulfuritortus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfuritortus",
+          "sourceIds": {
+            "checklistbank-2265": "1938336"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2409,16 +2451,97 @@
           "lineage": "Annwoodia",
           "authorship": "(Wood and Kelly 1995) Boden et al. 2017",
           "children": [],
-          "uuid": "920eab3c-d38d-549-964-07db72033c2bf2"
+          "uuid": "920eab3c-d38d-549-964-07db72033c2bf2",
+          "sourceIds": {
+            "checklistbank-2265": "47959"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Thiobacillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THIOBACILLUS",
+          "name": "uncultured Thiobacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "133828"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SULFURITORTUS",
+          "name": "uncultured Sulfuritortus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1938338"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ANNWOODIA",
+          "name": "uncultured Annwoodia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2008784"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PARASULFURITORTUS",
+          "name": "uncultured Parasulfuritortus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2807740"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiobacillaceae"
+    },
+    {
+      "id": "GENUS_THIOBACILLACEAE",
+      "name": "Thiobacillaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THIOBACILLACEAE_BACTERIUM",
+          "name": "Thiobacillaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiobacillaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2528409"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiobacillaceae"
     }
   ],
-  "speciesCount": 226,
+  "speciesCount": 234,
   "appSlug": "thiobacillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 16
+  "genusCount": 18
 }

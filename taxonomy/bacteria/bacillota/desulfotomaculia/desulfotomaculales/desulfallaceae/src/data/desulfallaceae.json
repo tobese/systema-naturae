@@ -195,7 +195,10 @@
           "lineage": "Sporotomaculum",
           "authorship": "Brauman et al. 1998",
           "children": [],
-          "uuid": "194d9378-855b-5e2-8c4-bb4171924fcfc5"
+          "uuid": "194d9378-855b-5e2-8c4-bb4171924fcfc5",
+          "sourceIds": {
+            "checklistbank-2265": "68035"
+          }
         }
       ],
       "sourcedFrom": "gtdb",
@@ -282,7 +285,10 @@
           "lineage": "Desulfallas",
           "authorship": "(Cord-Ruwisch and Garcia 1990) Watanabe et al. 2018",
           "children": [],
-          "uuid": "5a451b0a-b71b-5dc-914-fede3c1b3160a8"
+          "uuid": "5a451b0a-b71b-5dc-914-fede3c1b3160a8",
+          "sourceIds": {
+            "checklistbank-2265": "102170"
+          }
         },
         {
           "id": "SP_DESULFALLAS_THERMOSAPOVORANS_FARDEAU_ET_AL_1995_WATANABE_ET_AL_2018",
@@ -293,16 +299,64 @@
           "lineage": "Desulfallas",
           "authorship": "(Fardeau et al. 1995) Watanabe et al. 2018",
           "children": [],
-          "uuid": "a5f908d5-7798-500-a17-6e570f31ba56d7"
+          "uuid": "a5f908d5-7798-500-a17-6e570f31ba56d7",
+          "sourceIds": {
+            "checklistbank-2265": "58137"
+          }
+        },
+        {
+          "id": "SP_DESULFALLAS_SP",
+          "name": "Desulfallas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfallas",
+          "sourceIds": {
+            "checklistbank-2265": "2787620"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Desulfallaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SPOROTOMACULUM",
+          "name": "uncultured Sporotomaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1402012"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFALLAS",
+          "name": "uncultured Desulfallas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2282746"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfallaceae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 25,
   "appSlug": "desulfallaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Desulfotomaculia",
-  "genusCount": 8
+  "genusCount": 9
 }

@@ -168,6 +168,18 @@
           "lineage": "Desulfosalsimonas",
           "children": [],
           "uuid": "423f0f71-a009-57e-970-b9f23fc063db66"
+        },
+        {
+          "id": "SP_DESULFOSALSIMONAS_SP",
+          "name": "Desulfosalsimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfosalsimonas",
+          "sourceIds": {
+            "checklistbank-2265": "682398"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -715,7 +727,10 @@
           "lineage": "Desulfonatronobacter",
           "authorship": "Sorokin et al. 2012",
           "children": [],
-          "uuid": "56d0a2c3-3e28-557-94f-e00f39a591349b"
+          "uuid": "56d0a2c3-3e28-557-94f-e00f39a591349b",
+          "sourceIds": {
+            "checklistbank-2265": "708071"
+          }
         },
         {
           "id": "SP_DESULFONATRONOBACTER_ACETOXYDANS_SOROKIN_ET_AL_2016",
@@ -726,16 +741,97 @@
           "lineage": "Desulfonatronobacter",
           "authorship": "Sorokin et al. 2016",
           "children": [],
-          "uuid": "b7fefc2a-7aa0-5a3-bf5-284e6aa7905961"
+          "uuid": "b7fefc2a-7aa0-5a3-bf5-284e6aa7905961",
+          "sourceIds": {
+            "checklistbank-2265": "1640151"
+          }
+        },
+        {
+          "id": "SP_DESULFONATRONOBACTER_SP",
+          "name": "Desulfonatronobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfonatronobacter",
+          "sourceIds": {
+            "checklistbank-2265": "1955200"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Desulfosalsimonadaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOSALINA",
+          "name": "uncultured Desulfosalina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "577595"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFONATRONOBACTER",
+          "name": "uncultured Desulfonatronobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1664186"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFOSALSIMONAS",
+          "name": "uncultured Desulfosalsimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1689158"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfosalsimonadaceae"
+    },
+    {
+      "id": "GENUS_DESULFOSALSIMONADACEAE",
+      "name": "Desulfosalsimonadaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFOSALSIMONADACEAE_BACTERIUM",
+          "name": "Desulfosalsimonadaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfosalsimonadaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3060584"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfosalsimonadaceae"
     }
   ],
-  "speciesCount": 60,
+  "speciesCount": 66,
   "appSlug": "desulfosalsimonadaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfobacteria",
-  "genusCount": 14
+  "genusCount": 16
 }

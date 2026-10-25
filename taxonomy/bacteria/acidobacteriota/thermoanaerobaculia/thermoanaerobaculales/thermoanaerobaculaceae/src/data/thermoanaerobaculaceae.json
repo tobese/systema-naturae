@@ -306,6 +306,18 @@
           "lineage": "Thermoanaerobaculum",
           "children": [],
           "uuid": "f7d7f166-03fe-503-91e-cd3879c65f1d48"
+        },
+        {
+          "id": "SP_THERMOANAEROBACULUM_SP",
+          "name": "Thermoanaerobaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoanaerobaculum",
+          "sourceIds": {
+            "checklistbank-2265": "2510637"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -531,11 +543,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thermoanaerobaculaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOANAEROBACULUM",
+          "name": "uncultured Thermoanaerobaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1552967"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoanaerobaculaceae"
+    },
+    {
+      "id": "GENUS_THERMOANAEROBACULACEAE",
+      "name": "Thermoanaerobaculaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOANAEROBACULACEAE_BACTERIUM",
+          "name": "Thermoanaerobaculaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoanaerobaculaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2699758"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoanaerobaculaceae"
     }
   ],
-  "speciesCount": 42,
+  "speciesCount": 45,
   "appSlug": "thermoanaerobaculaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Acidobacteriota > Thermoanaerobaculia",
-  "genusCount": 12
+  "genusCount": 14
 }

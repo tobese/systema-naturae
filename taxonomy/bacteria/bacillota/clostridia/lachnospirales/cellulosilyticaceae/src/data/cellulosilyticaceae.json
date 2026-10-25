@@ -247,6 +247,18 @@
           "lineage": "Cellulosilyticum",
           "children": [],
           "uuid": "3fd67d62-1f23-5e5-9f4-7e3db0869e8c20"
+        },
+        {
+          "id": "SP_CELLULOSILYTICUM_SP",
+          "name": "Cellulosilyticum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cellulosilyticum",
+          "sourceIds": {
+            "checklistbank-2265": "1892843"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -601,11 +613,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Cellulosilyticaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CELLULOSILYTICUM",
+          "name": "uncultured Cellulosilyticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1191418"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cellulosilyticaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_CELLULOSILYTICUM",
+          "name": "Candidatus Cellulosilyticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838521"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cellulosilyticaceae"
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 50,
   "appSlug": "cellulosilyticaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 14
+  "genusCount": 16
 }

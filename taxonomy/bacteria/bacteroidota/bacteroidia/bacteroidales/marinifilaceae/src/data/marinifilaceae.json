@@ -606,6 +606,18 @@
           "authorship": "corrig. Yadav et al. 2026",
           "children": [],
           "uuid": "b54731ba-8f00-582-949-341fd24615effd"
+        },
+        {
+          "id": "SP_LABILIBACULUM_SP",
+          "name": "Labilibaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Labilibaculum",
+          "sourceIds": {
+            "checklistbank-2265": "2060723"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -720,7 +732,22 @@
           "lineage": "Marinifilum",
           "authorship": "Xu et al. 2016",
           "children": [],
-          "uuid": "0d8ed4f0-2e6a-5e6-802-b56adffdcf01f0"
+          "uuid": "0d8ed4f0-2e6a-5e6-802-b56adffdcf01f0",
+          "sourceIds": {
+            "checklistbank-2265": "1844052"
+          }
+        },
+        {
+          "id": "SP_MARINIFILUM_SP",
+          "name": "Marinifilum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marinifilum",
+          "sourceIds": {
+            "checklistbank-2265": "866675"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -881,7 +908,10 @@
           "lineage": "Ancylomarina",
           "authorship": "Jia et al. 2018",
           "children": [],
-          "uuid": "99308593-638a-554-925-d249da949874dc"
+          "uuid": "99308593-638a-554-925-d249da949874dc",
+          "sourceIds": {
+            "checklistbank-2265": "1824889"
+          }
         },
         {
           "id": "SP_ANCYLOMARINA_EUXINA_CORRIG_YADAV_ET_AL_2025",
@@ -903,7 +933,22 @@
           "lineage": "Ancylomarina",
           "authorship": "Fu et al. 2020",
           "children": [],
-          "uuid": "6a0c300b-0e87-549-b51-5e5c81438e9043"
+          "uuid": "6a0c300b-0e87-549-b51-5e5c81438e9043",
+          "sourceIds": {
+            "checklistbank-2265": "2487017"
+          }
+        },
+        {
+          "id": "SP_ANCYLOMARINA_SP",
+          "name": "Ancylomarina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ancylomarina",
+          "sourceIds": {
+            "checklistbank-2265": "1970196"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1265,11 +1310,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Marinifilaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MARINIFILUM",
+          "name": "uncultured Marinifilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1127472"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MARINIFILACEAE",
+          "name": "uncultured Marinifilaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2934798"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "marinifilaceae"
+    },
+    {
+      "id": "GENUS_MARINIFILACEAE",
+      "name": "Marinifilaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MARINIFILACEAE_BACTERIUM",
+          "name": "Marinifilaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marinifilaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2774595"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "marinifilaceae"
     }
   ],
-  "speciesCount": 104,
+  "speciesCount": 110,
   "appSlug": "marinifilaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 23
+  "genusCount": 25
 }

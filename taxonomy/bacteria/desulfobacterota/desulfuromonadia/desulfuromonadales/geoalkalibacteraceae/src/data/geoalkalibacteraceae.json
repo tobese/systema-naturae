@@ -59,7 +59,22 @@
           "lineage": "Geoalkalibacter",
           "authorship": "Greene et al. 2009",
           "children": [],
-          "uuid": "16feb736-bf30-56a-b53-f7f2a87ac1000d"
+          "uuid": "16feb736-bf30-56a-b53-f7f2a87ac1000d",
+          "sourceIds": {
+            "checklistbank-2265": "483547"
+          }
+        },
+        {
+          "id": "SP_GEOALKALIBACTER_SP",
+          "name": "Geoalkalibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geoalkalibacter",
+          "sourceIds": {
+            "checklistbank-2265": "1711663"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -112,11 +127,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Geoalkalibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GEOALKALIBACTER",
+          "name": "uncultured Geoalkalibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "905029"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geoalkalibacteraceae"
     }
   ],
-  "speciesCount": 8,
+  "speciesCount": 10,
   "appSlug": "geoalkalibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfuromonadia",
-  "genusCount": 3
+  "genusCount": 4
 }

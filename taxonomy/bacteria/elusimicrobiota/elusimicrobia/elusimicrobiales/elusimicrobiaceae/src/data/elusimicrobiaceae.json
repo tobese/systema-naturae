@@ -1407,6 +1407,18 @@
           "authorship": "Mies et al. 2025",
           "children": [],
           "uuid": "0d5bdf65-bb05-5dd-928-ea015d2b8624e0"
+        },
+        {
+          "id": "SP_ELUSIMICROBIUM_SP",
+          "name": "Elusimicrobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elusimicrobium",
+          "sourceIds": {
+            "checklistbank-2265": "1965617"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1556,11 +1568,74 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Elusimicrobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ELUSIMICROBIUM",
+          "name": "uncultured Elusimicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "575659"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elusimicrobiaceae"
+    },
+    {
+      "id": "GENUS_ELUSIMICROBIACEAE",
+      "name": "Elusimicrobiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ELUSIMICROBIACEAE_BACTERIUM",
+          "name": "Elusimicrobiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elusimicrobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2735568"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elusimicrobiaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_AVELUSIMICROBIUM",
+          "name": "Candidatus Avelusimicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2840689"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elusimicrobiaceae"
     }
   ],
-  "speciesCount": 146,
+  "speciesCount": 150,
   "appSlug": "elusimicrobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Elusimicrobiota > Elusimicrobia",
-  "genusCount": 10
+  "genusCount": 13
 }

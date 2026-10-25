@@ -151,7 +151,10 @@
           "lineage": "Moritella",
           "authorship": "Xu et al. 2003",
           "children": [],
-          "uuid": "cccdf065-cf7c-52f-ac3-50420912cb6913"
+          "uuid": "cccdf065-cf7c-52f-ac3-50420912cb6913",
+          "sourceIds": {
+            "checklistbank-2265": "111292"
+          }
         },
         {
           "id": "SP_MORITELLA_JAPONICA_NOGI_ET_AL_1999",
@@ -162,7 +165,10 @@
           "lineage": "Moritella",
           "authorship": "Nogi et al. 1999",
           "children": [],
-          "uuid": "76cbf1a5-ee87-5d1-83d-79c7120bcbb0a1"
+          "uuid": "76cbf1a5-ee87-5d1-83d-79c7120bcbb0a1",
+          "sourceIds": {
+            "checklistbank-2265": "89067"
+          }
         },
         {
           "id": "SP_MORITELLA_PROFUNDA_XU_ET_AL_2003",
@@ -173,7 +179,22 @@
           "lineage": "Moritella",
           "authorship": "Xu et al. 2003",
           "children": [],
-          "uuid": "881eef87-7505-590-8a9-e0f0adbcffb3ab"
+          "uuid": "881eef87-7505-590-8a9-e0f0adbcffb3ab",
+          "sourceIds": {
+            "checklistbank-2265": "111291"
+          }
+        },
+        {
+          "id": "SP_MORITELLA_SP",
+          "name": "Moritella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Moritella",
+          "sourceIds": {
+            "checklistbank-2265": "58051"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -193,7 +214,10 @@
           "lineage": "Paramoritella",
           "authorship": "Yang et al. 2013",
           "children": [],
-          "uuid": "2f047737-f623-536-b8d-7c7800358ad3c1"
+          "uuid": "2f047737-f623-536-b8d-7c7800358ad3c1",
+          "sourceIds": {
+            "checklistbank-2265": "1166481"
+          }
         },
         {
           "id": "SP_PARAMORITELLA_ALKALIPHILA_HOSOYA_ET_AL_2009_EMEND_YANG_ET_AL_2013",
@@ -204,16 +228,52 @@
           "lineage": "Paramoritella",
           "authorship": "Hosoya et al. 2009 emend. Yang et al. 2013",
           "children": [],
-          "uuid": "46685d63-dd52-576-826-ff1c3348bbbb55"
+          "uuid": "46685d63-dd52-576-826-ff1c3348bbbb55",
+          "sourceIds": {
+            "checklistbank-2265": "478738"
+          }
+        },
+        {
+          "id": "SP_PARAMORITELLA_SP",
+          "name": "Paramoritella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paramoritella",
+          "sourceIds": {
+            "checklistbank-2265": "1300409"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Moritellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MORITELLA",
+          "name": "uncultured Moritella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "78506"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "moritellaceae"
     }
   ],
-  "speciesCount": 18,
+  "speciesCount": 21,
   "appSlug": "moritellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 2
+  "genusCount": 3
 }

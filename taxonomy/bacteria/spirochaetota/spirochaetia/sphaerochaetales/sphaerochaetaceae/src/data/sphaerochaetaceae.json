@@ -501,6 +501,18 @@
           "lineage": "Sphaerochaeta",
           "children": [],
           "uuid": "7a2a5248-b2b1-5e1-a43-1caec02510e069"
+        },
+        {
+          "id": "SP_SPHAEROCHAETA_SP",
+          "name": "Sphaerochaeta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerochaeta",
+          "sourceIds": {
+            "checklistbank-2265": "399356"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2153,7 +2165,10 @@
           "lineage": "Pleomorphochaeta",
           "authorship": "Arroua et al. 2018",
           "children": [],
-          "uuid": "5e5f9894-8973-51b-a27-06998f9b391183"
+          "uuid": "5e5f9894-8973-51b-a27-06998f9b391183",
+          "sourceIds": {
+            "checklistbank-2265": "1895020"
+          }
         },
         {
           "id": "SP_PLEOMORPHOCHAETA_CAUDATA_ARROUA_ET_AL_2017",
@@ -2164,7 +2179,10 @@
           "lineage": "Pleomorphochaeta",
           "authorship": "Arroua et al. 2017",
           "children": [],
-          "uuid": "687997e0-6c49-58c-bd2-86c5965c970547"
+          "uuid": "687997e0-6c49-58c-bd2-86c5965c970547",
+          "sourceIds": {
+            "checklistbank-2265": "1806370"
+          }
         },
         {
           "id": "SP_PLEOMORPHOCHAETA_MULTIFORMIS_MIYAZAKI_ET_AL_2014_ARROUA_ET_AL_2017",
@@ -2175,7 +2193,22 @@
           "lineage": "Pleomorphochaeta",
           "authorship": "(Miyazaki et al. 2014) Arroua et al. 2017",
           "children": [],
-          "uuid": "73861e12-5aae-53e-9bd-6674d1add37f2d"
+          "uuid": "73861e12-5aae-53e-9bd-6674d1add37f2d",
+          "sourceIds": {
+            "checklistbank-2265": "913101"
+          }
+        },
+        {
+          "id": "SP_PLEOMORPHOCHAETA_SP",
+          "name": "Pleomorphochaeta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleomorphochaeta",
+          "sourceIds": {
+            "checklistbank-2265": "1920505"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2900,11 +2933,86 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Sphaerochaetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SPHAEROCHAETA",
+          "name": "uncultured Sphaerochaeta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "886478"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PLEOMORPHOCHAETA",
+          "name": "uncultured Pleomorphochaeta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1920507"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerochaetaceae"
+    },
+    {
+      "id": "GENUS_SPHAEROCHAETACEAE",
+      "name": "Sphaerochaetaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAEROCHAETACEAE_BACTERIUM",
+          "name": "Sphaerochaetaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerochaetaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2791017"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerochaetaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_PHYSCOSOMA",
+          "name": "Candidatus Physcosoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "3083127"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerochaetaceae"
     }
   ],
-  "speciesCount": 262,
+  "speciesCount": 268,
   "appSlug": "sphaerochaetaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Spirochaetota > Spirochaetia",
-  "genusCount": 30
+  "genusCount": 33
 }

@@ -57,6 +57,18 @@
           "lineage": "Vulgatibacter",
           "children": [],
           "uuid": "db9c739e-81e4-5f5-aeb-e086897483a307"
+        },
+        {
+          "id": "SP_VULGATIBACTER_SP",
+          "name": "Vulgatibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vulgatibacter",
+          "sourceIds": {
+            "checklistbank-2265": "1971226"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -147,11 +159,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Vulgatibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VULGATIBACTER",
+          "name": "uncultured Vulgatibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1559984"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vulgatibacteraceae"
+    },
+    {
+      "id": "GENUS_VULGATIBACTERACEAE",
+      "name": "Vulgatibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VULGATIBACTERACEAE_BACTERIUM",
+          "name": "Vulgatibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vulgatibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "3069704"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vulgatibacteraceae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 12,
   "appSlug": "vulgatibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Myxococcota > Myxococcia",
-  "genusCount": 6
+  "genusCount": 8
 }

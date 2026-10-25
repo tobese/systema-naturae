@@ -17,7 +17,10 @@
           "lineage": "Thermaerobacter",
           "authorship": "Nunoura et al. 2002",
           "children": [],
-          "uuid": "2f8fc014-0290-577-ac7-7c65c0d6e8a592"
+          "uuid": "2f8fc014-0290-577-ac7-7c65c0d6e8a592",
+          "sourceIds": {
+            "checklistbank-2265": "159723"
+          }
         },
         {
           "id": "SP_THERMAEROBACTER_MARIANENSIS_TAKAI_ET_AL_1999",
@@ -39,7 +42,10 @@
           "lineage": "Thermaerobacter",
           "authorship": "Tanaka et al. 2006",
           "children": [],
-          "uuid": "389dd138-76cb-506-8f2-dd0e77e0e50bca"
+          "uuid": "389dd138-76cb-506-8f2-dd0e77e0e50bca",
+          "sourceIds": {
+            "checklistbank-2265": "317015"
+          }
         },
         {
           "id": "SP_THERMAEROBACTER_SUBTERRANEUS_SPANEVELLO_ET_AL_2002",
@@ -62,6 +68,18 @@
           "authorship": "Yabe et al. 2010",
           "children": [],
           "uuid": "34ad8da3-5914-567-808-9f45e04424ca12"
+        },
+        {
+          "id": "SP_THERMAEROBACTER_SP",
+          "name": "Thermaerobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermaerobacter",
+          "sourceIds": {
+            "checklistbank-2265": "192756"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -93,7 +111,10 @@
           "lineage": "Sulfobacillus",
           "authorship": "Zhang et al. 2021",
           "children": [],
-          "uuid": "93f140a6-6a0c-585-835-262b677233d250"
+          "uuid": "93f140a6-6a0c-585-835-262b677233d250",
+          "sourceIds": {
+            "checklistbank-2265": "2729629"
+          }
         },
         {
           "id": "SP_SULFOBACILLUS_BENEFACIENS_JOHNSON_ET_AL_2008",
@@ -127,7 +148,10 @@
           "lineage": "Sulfobacillus",
           "authorship": "Melamud et al. 2006",
           "children": [],
-          "uuid": "7569d9c6-ba32-52b-a95-c425b8997ed0f7"
+          "uuid": "7569d9c6-ba32-52b-a95-c425b8997ed0f7",
+          "sourceIds": {
+            "checklistbank-2265": "188789"
+          }
         },
         {
           "id": "SP_SULFOBACILLUS_ACIDOPHILUS_NORRIS_ET_AL_1996",
@@ -139,15 +163,84 @@
           "authorship": "Norris et al. 1996",
           "children": [],
           "uuid": "b89c5cfd-b947-5f6-803-05816d8a6a7f31",
-          "description": "Sulfobacillus acidophilus is a species of moderately thermophilic mineral-sulphide-oxidizing bacteria."
+          "description": "Sulfobacillus acidophilus is a species of moderately thermophilic mineral-sulphide-oxidizing bacteria.",
+          "sourceIds": {
+            "checklistbank-2265": "53633"
+          }
+        },
+        {
+          "id": "SP_SULFOBACILLUS_SP",
+          "name": "Sulfobacillus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfobacillus",
+          "sourceIds": {
+            "checklistbank-2265": "31976"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Clostridiales Family XVII. Incertae Sedis"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SULFOBACILLUS",
+          "name": "uncultured Sulfobacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "184212"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMAEROBACTER",
+          "name": "uncultured Thermaerobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "388586"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clostridiales family xvii. incertae sedis"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_HYDROGENISULFOBACILLUS",
+          "name": "Candidatus Hydrogenisulfobacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2707344"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clostridiales family xvii. incertae sedis"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 16,
   "appSlug": "clostridiales-family-xvii-incertae-sedis",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 2
+  "genusCount": 4
 }

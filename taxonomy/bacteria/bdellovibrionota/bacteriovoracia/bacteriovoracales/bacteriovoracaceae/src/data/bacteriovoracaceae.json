@@ -684,6 +684,18 @@
           "lineage": "Bacteriovorax",
           "children": [],
           "uuid": "39ec5438-1ba5-5c8-9fe-d7c6cabaec55e0"
+        },
+        {
+          "id": "SP_BACTERIOVORAX_SP",
+          "name": "Bacteriovorax sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bacteriovorax",
+          "sourceIds": {
+            "checklistbank-2265": "242931"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1291,6 +1303,18 @@
           "lineage": "Peredibacter",
           "children": [],
           "uuid": "bb4a4cb6-0a27-596-a7f-d81c1c0f02d4bb"
+        },
+        {
+          "id": "SP_PEREDIBACTER_SP",
+          "name": "Peredibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peredibacter",
+          "sourceIds": {
+            "checklistbank-2265": "2024850"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2996,11 +3020,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Bacteriovoracaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BACTERIOVORAX",
+          "name": "uncultured Bacteriovorax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "346638"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PEREDIBACTER",
+          "name": "uncultured Peredibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "362445"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BACTERIOVORACACEAE",
+          "name": "uncultured Bacteriovoracaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "625924"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bacteriovoracaceae"
+    },
+    {
+      "id": "GENUS_BACTERIOVORACACEAE",
+      "name": "Bacteriovoracaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BACTERIOVORACACEAE_BACTERIUM",
+          "name": "Bacteriovoracaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bacteriovoracaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1344405"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bacteriovoracaceae"
     }
   ],
-  "speciesCount": 237,
+  "speciesCount": 243,
   "appSlug": "bacteriovoracaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bdellovibrionota > Bacteriovoracia",
-  "genusCount": 69
+  "genusCount": 71
 }

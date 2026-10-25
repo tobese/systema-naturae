@@ -58,6 +58,18 @@
           "authorship": "Belyakova et al. 2007",
           "children": [],
           "uuid": "bacead9b-dfa7-543-aa9-94bbde06068cdb"
+        },
+        {
+          "id": "SP_DESULFOVERMICULUS_SP",
+          "name": "Desulfovermiculus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfovermiculus",
+          "sourceIds": {
+            "checklistbank-2265": "2821143"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -77,16 +89,85 @@
           "lineage": "Desulfohalophilus",
           "authorship": "Blum et al. 2012",
           "children": [],
-          "uuid": "f2058467-f826-59a-aa7-46db1f68847b70"
+          "uuid": "f2058467-f826-59a-aa7-46db1f68847b70",
+          "sourceIds": {
+            "checklistbank-2265": "1181840"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Desulfohalobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOHALOBIACEAE",
+          "name": "uncultured Desulfohalobiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "366572"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFOHALOBIUM",
+          "name": "uncultured Desulfohalobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "994914"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFOVERMICULUS",
+          "name": "uncultured Desulfovermiculus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1339153"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfohalobiaceae"
+    },
+    {
+      "id": "GENUS_DESULFOHALOBIACEAE",
+      "name": "Desulfohalobiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFOHALOBIACEAE_BACTERIUM",
+          "name": "Desulfohalobiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfohalobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "372467"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfohalobiaceae"
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 10,
   "appSlug": "desulfohalobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfovibrionia",
-  "genusCount": 3
+  "genusCount": 5
 }

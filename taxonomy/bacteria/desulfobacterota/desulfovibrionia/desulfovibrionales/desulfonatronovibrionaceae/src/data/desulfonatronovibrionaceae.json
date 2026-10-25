@@ -109,7 +109,10 @@
           "lineage": "Desulfonatronovibrio",
           "authorship": "Sorokin et al. 2011",
           "children": [],
-          "uuid": "54912f11-16a6-515-afd-0638aa45915abb"
+          "uuid": "54912f11-16a6-515-afd-0638aa45915abb",
+          "sourceIds": {
+            "checklistbank-2265": "617000"
+          }
         },
         {
           "id": "SP_DESULFONATRONOVIBRIO_HALOPHILUS_SOROKIN_ET_AL_2012",
@@ -120,7 +123,22 @@
           "lineage": "Desulfonatronovibrio",
           "authorship": "Sorokin et al. 2012",
           "children": [],
-          "uuid": "e2a4a345-10f3-581-a82-a3985e282eda6b"
+          "uuid": "e2a4a345-10f3-581-a82-a3985e282eda6b",
+          "sourceIds": {
+            "checklistbank-2265": "682550"
+          }
+        },
+        {
+          "id": "SP_DESULFONATRONOVIBRIO_SP",
+          "name": "Desulfonatronovibrio sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfonatronovibrio",
+          "sourceIds": {
+            "checklistbank-2265": "1074885"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -221,7 +239,10 @@
           "lineage": "Desulfonatronospira",
           "authorship": "Sorokin et al. 2008",
           "children": [],
-          "uuid": "75f249d2-577c-562-ab3-f8a5afa2dbbef9"
+          "uuid": "75f249d2-577c-562-ab3-f8a5afa2dbbef9",
+          "sourceIds": {
+            "checklistbank-2265": "488938"
+          }
         },
         {
           "id": "SP_DESULFONATRONOSPIRA_SULFATIPHILA_SOROKIN_AND_CHERNYH_2017",
@@ -232,7 +253,22 @@
           "lineage": "Desulfonatronospira",
           "authorship": "Sorokin and Chernyh 2017",
           "children": [],
-          "uuid": "a0a9ffe8-827c-572-9da-d41b7f3f42f660"
+          "uuid": "a0a9ffe8-827c-572-9da-d41b7f3f42f660",
+          "sourceIds": {
+            "checklistbank-2265": "1640152"
+          }
+        },
+        {
+          "id": "SP_DESULFONATRONOSPIRA_SP",
+          "name": "Desulfonatronospira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfonatronospira",
+          "sourceIds": {
+            "checklistbank-2265": "1074884"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -373,11 +409,44 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfonatronovibrionaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFONATRONOSPIRA",
+          "name": "uncultured Desulfonatronospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "670718"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFONATRONOVIBRIO",
+          "name": "uncultured Desulfonatronovibrio",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1424506"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfonatronovibrionaceae"
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 35,
   "appSlug": "desulfonatronovibrionaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfovibrionia",
-  "genusCount": 6
+  "genusCount": 7
 }

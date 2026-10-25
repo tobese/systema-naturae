@@ -381,7 +381,10 @@
           "lineage": "Agathobaculum",
           "authorship": "Magdy Wasfy et al. 2023",
           "children": [],
-          "uuid": "fda49b58-cefb-5d4-929-bc94eb4ddfeac4"
+          "uuid": "fda49b58-cefb-5d4-929-bc94eb4ddfeac4",
+          "sourceIds": {
+            "checklistbank-2265": "3014267"
+          }
         },
         {
           "id": "SP_AGATHOBACULUM_FAECIS_LIU_ET_AL_2021",
@@ -392,7 +395,22 @@
           "lineage": "Agathobaculum",
           "authorship": "Liu et al. 2021",
           "children": [],
-          "uuid": "e73567b9-3b8e-586-95a-5699ce0a868260"
+          "uuid": "e73567b9-3b8e-586-95a-5699ce0a868260",
+          "sourceIds": {
+            "checklistbank-2265": "2763013"
+          }
+        },
+        {
+          "id": "SP_AGATHOBACULUM_SP",
+          "name": "Agathobaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Agathobaculum",
+          "sourceIds": {
+            "checklistbank-2265": "2048138"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1099,7 +1117,10 @@
           "lineage": "Butyricicoccus",
           "authorship": "Li et al. 2022",
           "children": [],
-          "uuid": "437c7304-c3c5-548-81a-c4334988909e19"
+          "uuid": "437c7304-c3c5-548-81a-c4334988909e19",
+          "sourceIds": {
+            "checklistbank-2265": "2841509"
+          }
         },
         {
           "id": "SP_BUTYRICICOCCUS_PORCORUM_TRACHSEL_ET_AL_2018",
@@ -1110,7 +1131,10 @@
           "lineage": "Butyricicoccus",
           "authorship": "Trachsel et al. 2018",
           "children": [],
-          "uuid": "4460163e-82aa-522-8b4-e4821613df1eb6"
+          "uuid": "4460163e-82aa-522-8b4-e4821613df1eb6",
+          "sourceIds": {
+            "checklistbank-2265": "1945634"
+          }
         },
         {
           "id": "SP_BUTYRICICOCCUS_FAECIHOMINIS_TAKADA_ET_AL_2016",
@@ -1121,7 +1145,22 @@
           "lineage": "Butyricicoccus",
           "authorship": "Takada et al. 2016",
           "children": [],
-          "uuid": "8621783f-e6f6-572-880-c59552e29f12ea"
+          "uuid": "8621783f-e6f6-572-880-c59552e29f12ea",
+          "sourceIds": {
+            "checklistbank-2265": "1712515"
+          }
+        },
+        {
+          "id": "SP_BUTYRICICOCCUS_SP",
+          "name": "Butyricicoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Butyricicoccus",
+          "sourceIds": {
+            "checklistbank-2265": "1316540"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1576,6 +1615,18 @@
           "lineage": "Intestinibacillus",
           "children": [],
           "uuid": "ae56b2a5-2f16-537-b3a-beeac26cddeba5"
+        },
+        {
+          "id": "SP_INTESTINIBACILLUS_SP",
+          "name": "Intestinibacillus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Intestinibacillus",
+          "sourceIds": {
+            "checklistbank-2265": "1928821"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1946,11 +1997,98 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Butyricicoccaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BUTYRICICOCCUS",
+          "name": "uncultured Butyricicoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1193532"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_AGATHOBACULUM",
+          "name": "uncultured Agathobaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2048140"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "butyricicoccaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_AGATHOBACULUM",
+          "name": "Candidatus Agathobaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838427"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_BUTYRICICOCCUS",
+          "name": "Candidatus Butyricicoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838519"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "butyricicoccaceae"
+    },
+    {
+      "id": "GENUS_BUTYRICICOCCACEAE",
+      "name": "Butyricicoccaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BUTYRICICOCCACEAE_BACTERIUM",
+          "name": "Butyricicoccaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Butyricicoccaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3085644"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "butyricicoccaceae"
     }
   ],
-  "speciesCount": 169,
+  "speciesCount": 177,
   "appSlug": "butyricicoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 27
+  "genusCount": 30
 }

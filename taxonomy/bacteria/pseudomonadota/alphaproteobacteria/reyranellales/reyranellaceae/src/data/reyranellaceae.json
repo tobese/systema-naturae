@@ -1161,7 +1161,10 @@
           "lineage": "Reyranella",
           "authorship": "Lee and Whang 2014",
           "children": [],
-          "uuid": "2cf1ce48-9bc3-5b0-a35-48749fbe1c1d04"
+          "uuid": "2cf1ce48-9bc3-5b0-a35-48749fbe1c1d04",
+          "sourceIds": {
+            "checklistbank-2265": "1368237"
+          }
         },
         {
           "id": "SP_REYRANELLA_TERRAE_LEE_ET_AL_2017",
@@ -1172,7 +1175,22 @@
           "lineage": "Reyranella",
           "authorship": "Lee et al. 2017",
           "children": [],
-          "uuid": "b5333244-ce84-596-a69-dd2e87d5fe070d"
+          "uuid": "b5333244-ce84-596-a69-dd2e87d5fe070d",
+          "sourceIds": {
+            "checklistbank-2265": "1634993"
+          }
+        },
+        {
+          "id": "SP_REYRANELLA_SP",
+          "name": "Reyranella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reyranella",
+          "sourceIds": {
+            "checklistbank-2265": "1341530"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1382,11 +1400,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Reyranellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_REYRANELLA",
+          "name": "uncultured Reyranella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "735512"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_REYRANELLACEAE",
+          "name": "uncultured Reyranellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2897406"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "reyranellaceae"
+    },
+    {
+      "id": "GENUS_REYRANELLACEAE",
+      "name": "Reyranellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_REYRANELLACEAE_BACTERIUM",
+          "name": "Reyranellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reyranellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2876937"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "reyranellaceae"
     }
   ],
-  "speciesCount": 132,
+  "speciesCount": 136,
   "appSlug": "reyranellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 6
+  "genusCount": 8
 }

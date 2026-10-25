@@ -114,6 +114,18 @@
           "authorship": "Antunes et al. 2008",
           "children": [],
           "uuid": "cd1994f1-45df-595-9a1-91958e96decda3"
+        },
+        {
+          "id": "SP_HALOPLASMA_SP",
+          "name": "Haloplasma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haloplasma",
+          "sourceIds": {
+            "checklistbank-2265": "3070056"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -204,11 +216,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Haloplasmataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HALOPLASMA",
+          "name": "uncultured Haloplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1137121"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HALOPLASMATACEAE",
+          "name": "uncultured Haloplasmataceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1233400"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haloplasmataceae"
+    },
+    {
+      "id": "GENUS_HALOPLASMATACEAE",
+      "name": "Haloplasmataceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALOPLASMATACEAE_BACTERIUM",
+          "name": "Haloplasmataceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haloplasmataceae",
+          "sourceIds": {
+            "checklistbank-2265": "2862752"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haloplasmataceae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 16,
   "appSlug": "haloplasmataceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota_I > Bacilli_A",
-  "genusCount": 9
+  "genusCount": 11
 }

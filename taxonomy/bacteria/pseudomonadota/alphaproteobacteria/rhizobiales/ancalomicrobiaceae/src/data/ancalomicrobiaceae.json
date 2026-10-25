@@ -68,7 +68,22 @@
           "lineage": "Pinisolibacter",
           "authorship": "Dahal et al. 2018",
           "children": [],
-          "uuid": "67b1e24a-16c7-524-a4a-e341c13cda7188"
+          "uuid": "67b1e24a-16c7-524-a4a-e341c13cda7188",
+          "sourceIds": {
+            "checklistbank-2265": "2172023"
+          }
+        },
+        {
+          "id": "SP_PINISOLIBACTER_SP",
+          "name": "Pinisolibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pinisolibacter",
+          "sourceIds": {
+            "checklistbank-2265": "2172024"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -265,6 +280,18 @@
           "lineage": "Siculibacillus",
           "children": [],
           "uuid": "3216a462-89a3-555-b70-2068bd02f74850"
+        },
+        {
+          "id": "SP_SICULIBACILLUS_SP",
+          "name": "Siculibacillus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siculibacillus",
+          "sourceIds": {
+            "checklistbank-2265": "2610843"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -342,16 +369,61 @@
           "lineage": "Ancalomicrobium",
           "authorship": "Staley 1968 (Approved Lists 1980)",
           "children": [],
-          "uuid": "6571f9b7-38ce-52f-bfa-d73192e106b76b"
+          "uuid": "6571f9b7-38ce-52f-bfa-d73192e106b76b",
+          "sourceIds": {
+            "checklistbank-2265": "213680"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Ancalomicrobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ANCALOMICROBIUM",
+          "name": "uncultured Ancalomicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "904066"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ancalomicrobiaceae"
+    },
+    {
+      "id": "GENUS_ANCALOMICROBIACEAE",
+      "name": "Ancalomicrobiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANCALOMICROBIACEAE_BACTERIUM",
+          "name": "Ancalomicrobiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ancalomicrobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3003346"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ancalomicrobiaceae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 28,
   "appSlug": "ancalomicrobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 11
+  "genusCount": 13
 }

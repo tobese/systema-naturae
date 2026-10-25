@@ -59,7 +59,22 @@
           "lineage": "Tindallia",
           "authorship": "Alazard et al. 2009",
           "children": [],
-          "uuid": "5c6c2991-b66b-551-896-625bf29878812f"
+          "uuid": "5c6c2991-b66b-551-896-625bf29878812f",
+          "sourceIds": {
+            "checklistbank-2265": "361365"
+          }
+        },
+        {
+          "id": "SP_TINDALLIA_SP",
+          "name": "Tindallia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tindallia",
+          "sourceIds": {
+            "checklistbank-2265": "717655"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -123,11 +138,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Tindalliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TINDALLIA",
+          "name": "uncultured Tindallia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "626079"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tindalliaceae"
     }
   ],
-  "speciesCount": 10,
+  "speciesCount": 12,
   "appSlug": "tindalliaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 2
+  "genusCount": 3
 }

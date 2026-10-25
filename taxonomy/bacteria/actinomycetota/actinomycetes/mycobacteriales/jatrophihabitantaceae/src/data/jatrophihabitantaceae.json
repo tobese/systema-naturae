@@ -676,7 +676,10 @@
           "lineage": "Jatrophihabitans",
           "authorship": "Jin et al. 2015",
           "children": [],
-          "uuid": "bb888eab-2eef-57b-b99-d3aa51ef3c1fbb"
+          "uuid": "bb888eab-2eef-57b-b99-d3aa51ef3c1fbb",
+          "sourceIds": {
+            "checklistbank-2265": "1348469"
+          }
         },
         {
           "id": "SP_JATROPHIHABITANS_CYNANCHI_SUH_ET_AL_2024",
@@ -698,7 +701,10 @@
           "lineage": "Jatrophihabitans",
           "authorship": "Lee et al. 2018",
           "children": [],
-          "uuid": "e7b93aa9-2abe-507-8a3-68a0e4ad821840"
+          "uuid": "e7b93aa9-2abe-507-8a3-68a0e4ad821840",
+          "sourceIds": {
+            "checklistbank-2265": "2038343"
+          }
         },
         {
           "id": "SP_JATROPHIHABITANS_LEDERBERGIAE_NOUIOUI_ET_AL_2024",
@@ -720,7 +726,10 @@
           "lineage": "Jatrophihabitans",
           "authorship": "Gong et al. 2016",
           "children": [],
-          "uuid": "722b749c-f8b7-574-891-7eafe54403ddae"
+          "uuid": "722b749c-f8b7-574-891-7eafe54403ddae",
+          "sourceIds": {
+            "checklistbank-2265": "1730378"
+          }
         },
         {
           "id": "SP_JATROPHIHABITANS_SOLI_KIM_ET_AL_2015",
@@ -731,7 +740,22 @@
           "lineage": "Jatrophihabitans",
           "authorship": "Kim et al. 2015",
           "children": [],
-          "uuid": "e6148293-6b38-5ba-817-bd65103ab4beb2"
+          "uuid": "e6148293-6b38-5ba-817-bd65103ab4beb2",
+          "sourceIds": {
+            "checklistbank-2265": "1610748"
+          }
+        },
+        {
+          "id": "SP_JATROPHIHABITANS_SP",
+          "name": "Jatrophihabitans sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jatrophihabitans",
+          "sourceIds": {
+            "checklistbank-2265": "1730379"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1867,11 +1891,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Jatrophihabitantaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_JATROPHIHABITANS",
+          "name": "uncultured Jatrophihabitans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1610747"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_JATROPHIHABITANTACEAE",
+          "name": "uncultured Jatrophihabitantaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2897400"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "jatrophihabitantaceae"
+    },
+    {
+      "id": "GENUS_JATROPHIHABITANTACEAE",
+      "name": "Jatrophihabitantaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_JATROPHIHABITANTACEAE_BACTERIUM",
+          "name": "Jatrophihabitantaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jatrophihabitantaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2811413"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "jatrophihabitantaceae"
     }
   ],
-  "speciesCount": 148,
+  "speciesCount": 152,
   "appSlug": "jatrophihabitantaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 42
+  "genusCount": 44
 }

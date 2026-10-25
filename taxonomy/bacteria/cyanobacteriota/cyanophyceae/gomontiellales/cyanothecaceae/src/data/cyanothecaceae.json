@@ -17,7 +17,10 @@
           "lineage": "Cyanothece",
           "authorship": "M. Watanabe et Komarek 1998",
           "children": [],
-          "uuid": "4da9ede3-e8a2-599-95f-48572981aa2167"
+          "uuid": "4da9ede3-e8a2-599-95f-48572981aa2167",
+          "sourceIds": {
+            "checklistbank-2265": "1382426"
+          }
         },
         {
           "id": "SP_CYANOTHECE_SVEHLOVAE_MARES_J_R_JOHANS_ET_HAUER_2019",
@@ -28,7 +31,10 @@
           "lineage": "Cyanothece",
           "authorship": "Mares, J.R.Johans. et Hauer 2019",
           "children": [],
-          "uuid": "763985b0-a5ae-555-a05-999fe3491d2992"
+          "uuid": "763985b0-a5ae-555-a05-999fe3491d2992",
+          "sourceIds": {
+            "checklistbank-2265": "2546352"
+          }
         },
         {
           "id": "SP_CYANOTHECE_AERUGINOSA_NAGELI_1849_KOMAREK_1976",
@@ -39,15 +45,51 @@
           "lineage": "Cyanothece",
           "authorship": "(Nageli, 1849) Komarek, 1976",
           "children": [],
-          "uuid": "71f63fed-0ee0-5f9-a75-0463ecf21de290"
+          "uuid": "71f63fed-0ee0-5f9-a75-0463ecf21de290",
+          "sourceIds": {
+            "checklistbank-2265": "54301"
+          }
+        },
+        {
+          "id": "SP_CYANOTHECE_SP",
+          "name": "Cyanothece sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanothece",
+          "sourceIds": {
+            "checklistbank-2265": "260482"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Cyanothecaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CYANOTHECE",
+          "name": "uncultured Cyanothece",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "259951"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyanothecaceae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "cyanothecaceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 1
+  "genusCount": 2
 }

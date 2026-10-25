@@ -516,7 +516,10 @@
           "lineage": "Anaerotignum",
           "authorship": "(Cardon and Barker 1946) Ueki et al. 2017",
           "children": [],
-          "uuid": "5f246bcf-6808-5a3-80a-0b2f2de3c990ef"
+          "uuid": "5f246bcf-6808-5a3-80a-0b2f2de3c990ef",
+          "sourceIds": {
+            "checklistbank-2265": "28446"
+          }
         },
         {
           "id": "SP_ANAEROTIGNUM_NEOPROPIONICUM_THOLOZAN_ET_AL_1995_UEKI_ET_AL_2017",
@@ -527,7 +530,10 @@
           "lineage": "Anaerotignum",
           "authorship": "(Tholozan et al. 1995) Ueki et al. 2017",
           "children": [],
-          "uuid": "c4af635c-869d-51e-aea-d265989893ad7d"
+          "uuid": "c4af635c-869d-51e-aea-d265989893ad7d",
+          "sourceIds": {
+            "checklistbank-2265": "36847"
+          }
         },
         {
           "id": "SP_ANAEROTIGNUM_FAECICOLA_CHOI_ET_AL_2019",
@@ -538,7 +544,10 @@
           "lineage": "Anaerotignum",
           "authorship": "Choi et al. 2019",
           "children": [],
-          "uuid": "45b84190-adf9-5fd-85c-b8550afe904332"
+          "uuid": "45b84190-adf9-5fd-85c-b8550afe904332",
+          "sourceIds": {
+            "checklistbank-2265": "2358141"
+          }
         },
         {
           "id": "SP_ANAEROTIGNUM_AMINIVORANS_UEKI_ET_AL_2017",
@@ -549,7 +558,22 @@
           "lineage": "Anaerotignum",
           "authorship": "Ueki et al. 2017",
           "children": [],
-          "uuid": "58761229-f0c7-5f4-806-a09a93856aa27c"
+          "uuid": "58761229-f0c7-5f4-806-a09a93856aa27c",
+          "sourceIds": {
+            "checklistbank-2265": "433287"
+          }
+        },
+        {
+          "id": "SP_ANAEROTIGNUM_SP",
+          "name": "Anaerotignum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaerotignum",
+          "sourceIds": {
+            "checklistbank-2265": "2039241"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1384,11 +1408,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Anaerotignaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ANAEROTIGNUM",
+          "name": "uncultured Anaerotignum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2039243"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaerotignaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_ANAEROTIGNUM",
+          "name": "Candidatus Anaerotignum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838464"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaerotignaceae"
     }
   ],
-  "speciesCount": 117,
+  "speciesCount": 120,
   "appSlug": "anaerotignaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 23
+  "genusCount": 25
 }

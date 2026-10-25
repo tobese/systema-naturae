@@ -321,6 +321,18 @@
           "lineage": "Sandaracinus",
           "children": [],
           "uuid": "187afc70-1f2d-59a-8fc-3d1c51a66f25d2"
+        },
+        {
+          "id": "SP_SANDARACINUS_SP",
+          "name": "Sandaracinus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sandaracinus",
+          "sourceIds": {
+            "checklistbank-2265": "2024858"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -431,11 +443,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Sandaracinaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SANDARACINUS",
+          "name": "uncultured Sandaracinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1331297"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SANDARACINACEAE",
+          "name": "uncultured Sandaracinaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1836789"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sandaracinaceae"
+    },
+    {
+      "id": "GENUS_SANDARACINACEAE",
+      "name": "Sandaracinaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SANDARACINACEAE_BACTERIUM",
+          "name": "Sandaracinaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sandaracinaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2510337"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sandaracinaceae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 36,
   "appSlug": "sandaracinaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Myxococcota_A > Polyangia",
-  "genusCount": 12
+  "genusCount": 14
 }

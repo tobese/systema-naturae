@@ -60,7 +60,10 @@
           "lineage": "Symbiobacterium",
           "authorship": "Shiratori-Takano et al. 2014",
           "children": [],
-          "uuid": "3b1f5fdd-31a4-595-ac6-6b6258b46a72d6"
+          "uuid": "3b1f5fdd-31a4-595-ac6-6b6258b46a72d6",
+          "sourceIds": {
+            "checklistbank-2265": "471799"
+          }
         },
         {
           "id": "SP_SYMBIOBACTERIUM_TURBINIS_SHIRATORI_TAKANO_ET_AL_2014",
@@ -71,7 +74,10 @@
           "lineage": "Symbiobacterium",
           "authorship": "Shiratori-Takano et al. 2014",
           "children": [],
-          "uuid": "6a3765a7-3e26-5af-bef-0e8367637a621e"
+          "uuid": "6a3765a7-3e26-5af-bef-0e8367637a621e",
+          "sourceIds": {
+            "checklistbank-2265": "557450"
+          }
         },
         {
           "id": "SP_SYMBIOBACTERIUM_TOEBII_EX_RHEE_ET_AL_2002_SUNG_ET_AL_2003",
@@ -82,7 +88,22 @@
           "lineage": "Symbiobacterium",
           "authorship": "(ex Rhee et al. 2002) Sung et al. 2003",
           "children": [],
-          "uuid": "5ecb4211-af18-58e-ae4-57415b62f0490c"
+          "uuid": "5ecb4211-af18-58e-ae4-57415b62f0490c",
+          "sourceIds": {
+            "checklistbank-2265": "120580"
+          }
+        },
+        {
+          "id": "SP_SYMBIOBACTERIUM_SP",
+          "name": "Symbiobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Symbiobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "56197"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -276,15 +297,81 @@
           "authorship": "Fardeau et al. 2010",
           "children": [],
           "uuid": "5b2f9708-0e44-5ee-845-469c61d481c21c"
+        },
+        {
+          "id": "SP_CALDINITRATIRUPTOR_SP",
+          "name": "Caldinitratiruptor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caldinitratiruptor",
+          "sourceIds": {
+            "checklistbank-2265": "2448814"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Symbiobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SYMBIOBACTERIUM",
+          "name": "uncultured Symbiobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "427677"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SYMBIOBACTERIACEAE",
+          "name": "uncultured Symbiobacteriaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1645734"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "symbiobacteriaceae"
+    },
+    {
+      "id": "GENUS_SYMBIOBACTERIACEAE",
+      "name": "Symbiobacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYMBIOBACTERIACEAE_BACTERIUM",
+          "name": "Symbiobacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Symbiobacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2602712"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "symbiobacteriaceae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 24,
   "appSlug": "symbiobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Sulfobacillia",
-  "genusCount": 9
+  "genusCount": 11
 }

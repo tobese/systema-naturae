@@ -71,6 +71,18 @@
           "authorship": "Yoon et al. 2010",
           "children": [],
           "uuid": "de8b7e91-2097-500-a5f-f6d42dfa6b3ece"
+        },
+        {
+          "id": "SP_CERASICOCCUS_SP",
+          "name": "Cerasicoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerasicoccus",
+          "sourceIds": {
+            "checklistbank-2265": "3004447"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -131,6 +143,18 @@
           "lineage": "Ruficoccus",
           "children": [],
           "uuid": "9f017c3a-3d54-536-941-614f94ca68c03a"
+        },
+        {
+          "id": "SP_RUFICOCCUS_SP",
+          "name": "Ruficoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ruficoccus",
+          "sourceIds": {
+            "checklistbank-2265": "2175958"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -222,11 +246,44 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Cerasicoccaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CERASICOCCUS",
+          "name": "uncultured Cerasicoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1230362"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_RUFICOCCUS",
+          "name": "uncultured Ruficoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2175960"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cerasicoccaceae"
     }
   ],
-  "speciesCount": 16,
+  "speciesCount": 20,
   "appSlug": "cerasicoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Verrucomicrobiota > Verrucomicrobiia",
-  "genusCount": 6
+  "genusCount": 7
 }

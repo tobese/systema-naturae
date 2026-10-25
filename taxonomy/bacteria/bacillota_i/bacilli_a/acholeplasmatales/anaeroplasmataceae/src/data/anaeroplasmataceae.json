@@ -695,7 +695,10 @@
           "lineage": "Anaeroplasma",
           "authorship": "Robinson and Freundt 1987",
           "children": [],
-          "uuid": "275e2bec-f5fa-529-a56-b7197c8af14971"
+          "uuid": "275e2bec-f5fa-529-a56-b7197c8af14971",
+          "sourceIds": {
+            "checklistbank-2265": "2090"
+          }
         },
         {
           "id": "SP_ANAEROPLASMA_VARIUM_ROBINSON_AND_FREUNDT_1987",
@@ -706,7 +709,10 @@
           "lineage": "Anaeroplasma",
           "authorship": "Robinson and Freundt 1987",
           "children": [],
-          "uuid": "9ac3facd-09e3-5f0-b57-d21445faadec03"
+          "uuid": "9ac3facd-09e3-5f0-b57-d21445faadec03",
+          "sourceIds": {
+            "checklistbank-2265": "2089"
+          }
         },
         {
           "id": "SP_ANAEROPLASMA_ABACTOCLASTICUM_ROBINSON_ET_AL_1975",
@@ -717,7 +723,22 @@
           "lineage": "Anaeroplasma",
           "authorship": "Robinson et al. 1975",
           "children": [],
-          "uuid": "dff271e2-5e7c-566-a44-b2b16076598d97"
+          "uuid": "dff271e2-5e7c-566-a44-b2b16076598d97",
+          "sourceIds": {
+            "checklistbank-2265": "2087"
+          }
+        },
+        {
+          "id": "SP_ANAEROPLASMA_SP",
+          "name": "Anaeroplasma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaeroplasma",
+          "sourceIds": {
+            "checklistbank-2265": "1872523"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1236,16 +1257,85 @@
           "lineage": "Asteroleplasma",
           "authorship": "Robinson and Freundt 1987",
           "children": [],
-          "uuid": "267b0fea-c6a6-518-aed-753e714d133d27"
+          "uuid": "267b0fea-c6a6-518-aed-753e714d133d27",
+          "sourceIds": {
+            "checklistbank-2265": "2153"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Anaeroplasmataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ASTEROLEPLASMA",
+          "name": "uncultured Asteroleplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "446074"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ANAEROPLASMA",
+          "name": "uncultured Anaeroplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "538969"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ANAEROPLASMATACEAE",
+          "name": "uncultured Anaeroplasmataceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "658266"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaeroplasmataceae"
+    },
+    {
+      "id": "GENUS_ANAEROPLASMATACEAE",
+      "name": "Anaeroplasmataceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANAEROPLASMATACEAE_BACTERIUM",
+          "name": "Anaeroplasmataceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaeroplasmataceae",
+          "sourceIds": {
+            "checklistbank-2265": "2793037"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaeroplasmataceae"
     }
   ],
-  "speciesCount": 110,
+  "speciesCount": 115,
   "appSlug": "anaeroplasmataceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota_I > Bacilli_A",
-  "genusCount": 15
+  "genusCount": 17
 }

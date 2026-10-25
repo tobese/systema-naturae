@@ -147,7 +147,10 @@
           "lineage": "Spirulina",
           "authorship": "Oersted ex Gomont, 1892",
           "children": [],
-          "uuid": "713bf971-8bb2-5bb-92e-e35e3dc2bf1b93"
+          "uuid": "713bf971-8bb2-5bb-92e-e35e3dc2bf1b93",
+          "sourceIds": {
+            "checklistbank-2265": "54311"
+          }
         },
         {
           "id": "SP_SPIRULINA_ROSEA_P_CROUAN_H_CROUAN_EX_GOMONT_1892",
@@ -158,7 +161,22 @@
           "lineage": "Spirulina",
           "authorship": "P.Crouan & H.Crouan ex Gomont, 1892",
           "children": [],
-          "uuid": "165b8e21-94c7-5d1-aa5-68fea7359cfd89"
+          "uuid": "165b8e21-94c7-5d1-aa5-68fea7359cfd89",
+          "sourceIds": {
+            "checklistbank-2265": "2650530"
+          }
+        },
+        {
+          "id": "SP_SPIRULINA_SP",
+          "name": "Spirulina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirulina",
+          "sourceIds": {
+            "checklistbank-2265": "1157"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -401,7 +419,22 @@
           "lineage": "Halospirulina",
           "authorship": "Nubel et al. 2000",
           "children": [],
-          "uuid": "2c2f5a79-8e91-591-9b2-50567971ecdacb"
+          "uuid": "2c2f5a79-8e91-591-9b2-50567971ecdacb",
+          "sourceIds": {
+            "checklistbank-2265": "123239"
+          }
+        },
+        {
+          "id": "SP_HALOSPIRULINA_SP",
+          "name": "Halospirulina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halospirulina",
+          "sourceIds": {
+            "checklistbank-2265": "123237"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -425,11 +458,44 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Spirulinaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HALOSPIRULINA",
+          "name": "uncultured Halospirulina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "332965"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SPIRULINA",
+          "name": "uncultured Spirulina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "336765"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spirulinaceae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 36,
   "appSlug": "spirulinaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Cyanobacteriia",
-  "genusCount": 11
+  "genusCount": 12
 }

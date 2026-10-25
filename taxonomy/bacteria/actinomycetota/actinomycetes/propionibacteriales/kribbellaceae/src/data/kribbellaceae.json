@@ -1032,7 +1032,10 @@
           "lineage": "Kribbella",
           "authorship": "Curtis et al. 2018",
           "children": [],
-          "uuid": "11bfb48e-62e0-57a-90f-3f52377ec15660"
+          "uuid": "11bfb48e-62e0-57a-90f-3f52377ec15660",
+          "sourceIds": {
+            "checklistbank-2265": "1572661"
+          }
         },
         {
           "id": "SP_KRIBBELLA_MIRABILIS_LI_ET_AL_2015",
@@ -1043,7 +1046,10 @@
           "lineage": "Kribbella",
           "authorship": "Li et al. 2015",
           "children": [],
-          "uuid": "2d83a2e9-1b8e-53b-a46-ff5051dd620b0e"
+          "uuid": "2d83a2e9-1b8e-53b-a46-ff5051dd620b0e",
+          "sourceIds": {
+            "checklistbank-2265": "1562584"
+          }
         },
         {
           "id": "SP_KRIBBELLA_ENDOPHYTICA_KAEWKLA_AND_FRANCO_2013",
@@ -1054,7 +1060,10 @@
           "lineage": "Kribbella",
           "authorship": "Kaewkla and Franco 2013",
           "children": [],
-          "uuid": "c8309d90-3c24-5a0-aab-162eeec54adea1"
+          "uuid": "c8309d90-3c24-5a0-aab-162eeec54adea1",
+          "sourceIds": {
+            "checklistbank-2265": "913948"
+          }
         },
         {
           "id": "SP_KRIBBELLA_GINSENGISOLI_CUI_ET_AL_2010",
@@ -1065,7 +1074,10 @@
           "lineage": "Kribbella",
           "authorship": "Cui et al. 2010",
           "children": [],
-          "uuid": "1121258e-efcc-502-b1c-01f389052c6bf6"
+          "uuid": "1121258e-efcc-502-b1c-01f389052c6bf6",
+          "sourceIds": {
+            "checklistbank-2265": "363865"
+          }
         },
         {
           "id": "SP_KRIBBELLA_SPEIBONAE_CURTIS_ET_AL_2020",
@@ -1076,7 +1088,10 @@
           "lineage": "Kribbella",
           "authorship": "Curtis et al. 2020",
           "children": [],
-          "uuid": "802d364a-c5c3-5c1-8eb-d66095f7f40251"
+          "uuid": "802d364a-c5c3-5c1-8eb-d66095f7f40251",
+          "sourceIds": {
+            "checklistbank-2265": "1572660"
+          }
         },
         {
           "id": "SP_KRIBBELLA_SWARTBERGENSIS_KIRBY_ET_AL_2006",
@@ -1087,7 +1102,22 @@
           "lineage": "Kribbella",
           "authorship": "Kirby et al. 2006",
           "children": [],
-          "uuid": "414ba838-5984-523-a73-aff4445c3ebf0f"
+          "uuid": "414ba838-5984-523-a73-aff4445c3ebf0f",
+          "sourceIds": {
+            "checklistbank-2265": "324852"
+          }
+        },
+        {
+          "id": "SP_KRIBBELLA_SP",
+          "name": "Kribbella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kribbella",
+          "sourceIds": {
+            "checklistbank-2265": "249616"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1131,11 +1161,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Kribbellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KRIBBELLA",
+          "name": "uncultured Kribbella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "304889"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kribbellaceae"
+    },
+    {
+      "id": "GENUS_KRIBBELLACEAE",
+      "name": "Kribbellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KRIBBELLACEAE_BACTERIUM",
+          "name": "Kribbellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kribbellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2726072"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kribbellaceae"
     }
   ],
-  "speciesCount": 107,
+  "speciesCount": 110,
   "appSlug": "kribbellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 2
+  "genusCount": 4
 }

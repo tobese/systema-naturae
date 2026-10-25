@@ -87,6 +87,18 @@
           "children": [],
           "uuid": "e570c52f-b49e-559-95c-12c36b3275f3fe",
           "description": "Dethiobacter alkaliphilus is a bacterium from the genus of Dethiobacter which has been isolated from sediments from a soda lake in the Mongolia."
+        },
+        {
+          "id": "SP_DETHIOBACTER_SP",
+          "name": "Dethiobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dethiobacter",
+          "sourceIds": {
+            "checklistbank-2265": "1743149"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -351,11 +363,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Dethiobacteraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_CONTUBERNALIS",
+          "name": "Candidatus Contubernalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "338645"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dethiobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DETHIOBACTER",
+          "name": "uncultured Dethiobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "683409"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dethiobacteraceae"
     }
   ],
-  "speciesCount": 23,
+  "speciesCount": 26,
   "appSlug": "dethiobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Dethiobacteria",
-  "genusCount": 13
+  "genusCount": 15
 }

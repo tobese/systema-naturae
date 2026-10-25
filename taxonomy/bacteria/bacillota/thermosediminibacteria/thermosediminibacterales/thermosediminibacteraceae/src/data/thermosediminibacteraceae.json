@@ -48,7 +48,22 @@
           "lineage": "Thermovenabulum",
           "authorship": "Zavarzina et al. 2002",
           "children": [],
-          "uuid": "11112757-0322-566-991-e29a9635bef5d9"
+          "uuid": "11112757-0322-566-991-e29a9635bef5d9",
+          "sourceIds": {
+            "checklistbank-2265": "159731"
+          }
+        },
+        {
+          "id": "SP_THERMOVENABULUM_SP",
+          "name": "Thermovenabulum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermovenabulum",
+          "sourceIds": {
+            "checklistbank-2265": "1229161"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -109,6 +124,18 @@
           "lineage": "Fervidicola",
           "children": [],
           "uuid": "1ef0b563-3dc9-522-833-bbdd62e7577f85"
+        },
+        {
+          "id": "SP_FERVIDICOLA_SP",
+          "name": "Fervidicola sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fervidicola",
+          "sourceIds": {
+            "checklistbank-2265": "1965288"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -140,6 +167,18 @@
           "authorship": "Lee et al. 2006",
           "children": [],
           "uuid": "f3b0d9a5-67e6-5d9-b50-dbe6159fa38255"
+        },
+        {
+          "id": "SP_THERMOSEDIMINIBACTER_SP",
+          "name": "Thermosediminibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermosediminibacter",
+          "sourceIds": {
+            "checklistbank-2265": "483186"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -178,7 +217,10 @@
           "lineage": "Caldanaerovirga",
           "authorship": "Wagner et al. 2009",
           "children": [],
-          "uuid": "d531a08e-1ef0-5e0-9ac-bd10a4eacf2855"
+          "uuid": "d531a08e-1ef0-5e0-9ac-bd10a4eacf2855",
+          "sourceIds": {
+            "checklistbank-2265": "447595"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -198,16 +240,97 @@
           "lineage": "Thermovorax",
           "authorship": "Makinen et al. 2012",
           "children": [],
-          "uuid": "149d7fe2-cd90-5dc-971-1b4eab4f485f0d"
+          "uuid": "149d7fe2-cd90-5dc-971-1b4eab4f485f0d",
+          "sourceIds": {
+            "checklistbank-2265": "496831"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Thermosediminibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOVENABULUM",
+          "name": "uncultured Thermovenabulum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "335989"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOSEDIMINIBACTER",
+          "name": "uncultured Thermosediminibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "585038"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FERVIDICOLA",
+          "name": "uncultured Fervidicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1936150"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CALDANAEROVIRGA",
+          "name": "uncultured Caldanaerovirga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1936167"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermosediminibacteraceae"
+    },
+    {
+      "id": "GENUS_THERMOSEDIMINIBACTERACEAE",
+      "name": "Thermosediminibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOSEDIMINIBACTERACEAE_BACTERIUM",
+          "name": "Thermosediminibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermosediminibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2885163"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermosediminibacteraceae"
     }
   ],
-  "speciesCount": 14,
+  "speciesCount": 22,
   "appSlug": "thermosediminibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Thermosediminibacteria",
-  "genusCount": 6
+  "genusCount": 8
 }

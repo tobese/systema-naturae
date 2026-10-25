@@ -846,7 +846,10 @@
           "lineage": "Parabacteroides",
           "authorship": "Benabdelkader et al. 2020",
           "children": [],
-          "uuid": "124f6378-da38-567-83a-bac57929c2beb6"
+          "uuid": "124f6378-da38-567-83a-bac57929c2beb6",
+          "sourceIds": {
+            "checklistbank-2265": "2086575"
+          }
         },
         {
           "id": "SP_PARABACTEROIDES_CAECI_SHAMSUZZAMAN_ET_AL_2025",
@@ -868,7 +871,10 @@
           "lineage": "Parabacteroides",
           "authorship": "Li et al. 2022",
           "children": [],
-          "uuid": "6952240a-0792-536-b45-58b0231900f392"
+          "uuid": "6952240a-0792-536-b45-58b0231900f392",
+          "sourceIds": {
+            "checklistbank-2265": "2753162"
+          }
         },
         {
           "id": "SP_PARABACTEROIDES_PROVENCENSIS_BENABDELKADER_ET_AL_2020",
@@ -879,7 +885,34 @@
           "lineage": "Parabacteroides",
           "authorship": "Benabdelkader et al. 2020",
           "children": [],
-          "uuid": "f50f6f62-0d6e-5ce-922-cfee55eb18e63b"
+          "uuid": "f50f6f62-0d6e-5ce-922-cfee55eb18e63b",
+          "sourceIds": {
+            "checklistbank-2265": "1944636"
+          }
+        },
+        {
+          "id": "SP_PARABACTEROIDES_SP",
+          "name": "Parabacteroides sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parabacteroides",
+          "sourceIds": {
+            "checklistbank-2265": "457388"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARABACTEROIDES_CHARTAE",
+          "name": "Parabacteroides chartae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parabacteroides",
+          "sourceIds": {
+            "checklistbank-2265": "1037355"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1400,6 +1433,18 @@
           "lineage": "Tannerella",
           "children": [],
           "uuid": "9c46d940-9d77-552-bb8-1e0dc41d55e6ab"
+        },
+        {
+          "id": "SP_TANNERELLA_SP",
+          "name": "Tannerella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tannerella",
+          "sourceIds": {
+            "checklistbank-2265": "447542"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2098,11 +2143,98 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Tannerellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TANNERELLA",
+          "name": "uncultured Tannerella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "417614"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PARABACTEROIDES",
+          "name": "uncultured Parabacteroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "512312"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_TANNERELLACEAE",
+          "name": "uncultured Tannerellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "3080293"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tannerellaceae"
+    },
+    {
+      "id": "GENUS_TANNERELLACEAE",
+      "name": "Tannerellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TANNERELLACEAE_BACTERIUM",
+          "name": "Tannerellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tannerellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2785930"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tannerellaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_PARABACTEROIDES",
+          "name": "Candidatus Parabacteroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2838723"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tannerellaceae"
     }
   ],
-  "speciesCount": 190,
+  "speciesCount": 198,
   "appSlug": "tannerellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 19
+  "genusCount": 22
 }

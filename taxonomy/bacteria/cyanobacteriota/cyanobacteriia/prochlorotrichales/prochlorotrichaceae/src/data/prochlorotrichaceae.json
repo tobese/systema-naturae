@@ -58,7 +58,22 @@
           "lineage": "Prochlorothrix",
           "authorship": "Skulberg, 2008 emend. Velichko et al,. 2012",
           "children": [],
-          "uuid": "bd9dd162-5e60-5c3-808-19ceb8b91e18e4"
+          "uuid": "bd9dd162-5e60-5c3-808-19ceb8b91e18e4",
+          "sourceIds": {
+            "checklistbank-2265": "142979"
+          }
+        },
+        {
+          "id": "SP_PROCHLOROTHRIX_SP",
+          "name": "Prochlorothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prochlorothrix",
+          "sourceIds": {
+            "checklistbank-2265": "54309"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -117,15 +132,69 @@
           "lineage": "Prochlorotrichaceae",
           "children": [],
           "uuid": "9b30f235-c1b6-537-878-c3af7ee940e214"
+        },
+        {
+          "id": "SP_PROCHLOROTRICHACEAE_BACTERIUM",
+          "name": "Prochlorotrichaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prochlorotrichaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3013907"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Prochlorotrichaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PROCHLOROTHRIX",
+          "name": "uncultured Prochlorothrix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "216589"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prochlorotrichaceae"
+    },
+    {
+      "id": "GENUS_LAGOSINEMA",
+      "name": "Lagosinema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LAGOSINEMA_TENUIS",
+          "name": "Lagosinema tenuis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lagosinema",
+          "sourceIds": {
+            "checklistbank-2265": "2509856"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prochlorotrichaceae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 13,
   "appSlug": "prochlorotrichaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Cyanobacteriia",
-  "genusCount": 3
+  "genusCount": 5
 }

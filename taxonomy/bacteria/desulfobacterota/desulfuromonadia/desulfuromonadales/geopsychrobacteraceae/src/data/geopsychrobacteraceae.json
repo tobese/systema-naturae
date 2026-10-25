@@ -356,7 +356,10 @@
           "lineage": "Desulfuromusa",
           "authorship": "Vandieken et al. 2006",
           "children": [],
-          "uuid": "a6b8ab0c-2076-5fd-ab2-72edda88eab2a3"
+          "uuid": "a6b8ab0c-2076-5fd-ab2-72edda88eab2a3",
+          "sourceIds": {
+            "checklistbank-2265": "304417"
+          }
         },
         {
           "id": "SP_DESULFUROMUSA_BAKII_LIESACK_AND_FINSTER_1994",
@@ -367,7 +370,10 @@
           "lineage": "Desulfuromusa",
           "authorship": "Liesack and Finster 1994",
           "children": [],
-          "uuid": "3451c983-66a5-5fc-aff-b4ea16ab368671"
+          "uuid": "3451c983-66a5-5fc-aff-b4ea16ab368671",
+          "sourceIds": {
+            "checklistbank-2265": "37624"
+          }
         },
         {
           "id": "SP_DESULFUROMUSA_SUCCINOXIDANS_LIESACK_AND_FINSTER_1994",
@@ -378,7 +384,22 @@
           "lineage": "Desulfuromusa",
           "authorship": "Liesack and Finster 1994",
           "children": [],
-          "uuid": "6fd98a81-dbbf-52c-9f4-bfb7f4c88bdd3b"
+          "uuid": "6fd98a81-dbbf-52c-9f4-bfb7f4c88bdd3b",
+          "sourceIds": {
+            "checklistbank-2265": "37626"
+          }
+        },
+        {
+          "id": "SP_DESULFUROMUSA_SP",
+          "name": "Desulfuromusa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfuromusa",
+          "sourceIds": {
+            "checklistbank-2265": "225198"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -598,6 +619,18 @@
           "lineage": "Malonomonas",
           "children": [],
           "uuid": "dd7921c7-6719-5cc-ae5-84aadafcd4b3ea"
+        },
+        {
+          "id": "SP_MALONOMONAS_SP",
+          "name": "Malonomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malonomonas",
+          "sourceIds": {
+            "checklistbank-2265": "3050478"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -747,6 +780,18 @@
           "lineage": "Geopsychrobacter",
           "children": [],
           "uuid": "bc4874d9-2559-562-acc-4f2ca1586188aa"
+        },
+        {
+          "id": "SP_GEOPSYCHROBACTER_SP",
+          "name": "Geopsychrobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geopsychrobacter",
+          "sourceIds": {
+            "checklistbank-2265": "2594959"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -867,11 +912,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Geopsychrobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFUROMUSA",
+          "name": "uncultured Desulfuromusa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "219183"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MALONOMONAS",
+          "name": "uncultured Malonomonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "219185"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GEOPSYCHROBACTER",
+          "name": "uncultured Geopsychrobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543076"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geopsychrobacteraceae"
+    },
+    {
+      "id": "GENUS_GEOPSYCHROBACTERACEAE",
+      "name": "Geopsychrobacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GEOPSYCHROBACTERACEAE_BACTERIUM",
+          "name": "Geopsychrobacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geopsychrobacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "3065857"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geopsychrobacteraceae"
     }
   ],
-  "speciesCount": 75,
+  "speciesCount": 82,
   "appSlug": "geopsychrobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfuromonadia",
-  "genusCount": 12
+  "genusCount": 14
 }

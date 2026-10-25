@@ -38,6 +38,18 @@
           "lineage": "Parachlamydia",
           "children": [],
           "uuid": "a9a0e18f-819b-523-9fa-12a272757b0ea0"
+        },
+        {
+          "id": "SP_PARACHLAMYDIA_SP",
+          "name": "Parachlamydia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parachlamydia",
+          "sourceIds": {
+            "checklistbank-2265": "244583"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -186,7 +198,34 @@
           "authorship": "Horn et al. 2001",
           "children": [],
           "uuid": "b70ed9ac-c357-52f-a1e-39b7447c9d4d99",
-          "description": "Neochlamydia hartmannellae is a species of bacteria, the type species of its genus."
+          "description": "Neochlamydia hartmannellae is a species of bacteria, the type species of its genus.",
+          "sourceIds": {
+            "checklistbank-2265": "112235"
+          }
+        },
+        {
+          "id": "SP_NEOCHLAMYDIA_SP",
+          "name": "Neochlamydia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neochlamydia",
+          "sourceIds": {
+            "checklistbank-2265": "182711"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOCHLAMYDIA_ENDOSYMBIONT",
+          "name": "Neochlamydia endosymbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neochlamydia",
+          "sourceIds": {
+            "checklistbank-2265": "1458362"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1159,11 +1198,134 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Parachlamydiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PARACHLAMYDIACEAE",
+          "name": "uncultured Parachlamydiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "193387"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PARACHLAMYDIA",
+          "name": "uncultured Parachlamydia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "211932"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_NEOCHLAMYDIA",
+          "name": "uncultured Neochlamydia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "212218"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CLINICAL",
+          "name": "uncultured clinical",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "226902"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parachlamydiaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_PROTOCHLAMYDIA",
+          "name": "Candidatus Protochlamydia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "362787"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_METACHLAMYDIA",
+          "name": "Candidatus Metachlamydia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "704159"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_MESOCHLAMYDIA",
+          "name": "Candidatus Mesochlamydia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "1108048"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parachlamydiaceae"
+    },
+    {
+      "id": "GENUS_PARACHLAMYDIACEAE",
+      "name": "Parachlamydiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARACHLAMYDIACEAE_BACTERIUM",
+          "name": "Parachlamydiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parachlamydiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "553506"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parachlamydiaceae"
     }
   ],
-  "speciesCount": 74,
+  "speciesCount": 85,
   "appSlug": "parachlamydiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chlamydiota > Chlamydiia",
-  "genusCount": 46
+  "genusCount": 49
 }

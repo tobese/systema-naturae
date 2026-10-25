@@ -197,6 +197,18 @@
           "authorship": "Huang et al. 2025",
           "children": [],
           "uuid": "0ee7ae34-6b8a-56b-9df-e1f75127acf78e"
+        },
+        {
+          "id": "SP_MICROBACULUM_SP",
+          "name": "Microbaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microbaculum",
+          "sourceIds": {
+            "checklistbank-2265": "2185301"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -275,7 +287,22 @@
           "lineage": "Lutibaculum",
           "authorship": "Lee 2019",
           "children": [],
-          "uuid": "1af2be78-3b96-55d-bcb-d8436407669f89"
+          "uuid": "1af2be78-3b96-55d-bcb-d8436407669f89",
+          "sourceIds": {
+            "checklistbank-2265": "1964212"
+          }
+        },
+        {
+          "id": "SP_LUTIBACULUM_SP",
+          "name": "Lutibaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lutibaculum",
+          "sourceIds": {
+            "checklistbank-2265": "1891220"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -306,6 +333,18 @@
           "lineage": "Tepidamorphus",
           "children": [],
           "uuid": "7779a155-24c2-5d4-a40-adefb849285835"
+        },
+        {
+          "id": "SP_TEPIDAMORPHUS_SP",
+          "name": "Tepidamorphus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tepidamorphus",
+          "sourceIds": {
+            "checklistbank-2265": "2073172"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -363,16 +402,73 @@
           "lineage": "Butyratibacter",
           "authorship": "Wang et al. 2017",
           "children": [],
-          "uuid": "debaeba6-7d80-593-8fc-281abde839bcb3"
+          "uuid": "debaeba6-7d80-593-8fc-281abde839bcb3",
+          "sourceIds": {
+            "checklistbank-2265": "2029869"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Tepidamorphaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TEPIDAMORPHUS",
+          "name": "uncultured Tepidamorphus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1137119"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MICROBACULUM",
+          "name": "uncultured Microbaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2185303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tepidamorphaceae"
+    },
+    {
+      "id": "GENUS_TEPIDAMORPHACEAE",
+      "name": "Tepidamorphaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEPIDAMORPHACEAE_BACTERIUM",
+          "name": "Tepidamorphaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tepidamorphaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2969161"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tepidamorphaceae"
     }
   ],
-  "speciesCount": 26,
+  "speciesCount": 32,
   "appSlug": "tepidamorphaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 11
+  "genusCount": 13
 }

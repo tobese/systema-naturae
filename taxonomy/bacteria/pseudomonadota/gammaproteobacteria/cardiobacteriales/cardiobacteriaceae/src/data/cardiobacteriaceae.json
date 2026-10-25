@@ -100,6 +100,18 @@
           "lineage": "Cardiobacterium",
           "children": [],
           "uuid": "a24f1ded-bdb9-568-897-084bcc99c51a33"
+        },
+        {
+          "id": "SP_CARDIOBACTERIUM_SP",
+          "name": "Cardiobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardiobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "93719"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -324,7 +336,22 @@
           "lineage": "Suttonella",
           "authorship": "Foster et al. 2005",
           "children": [],
-          "uuid": "0ba22bc2-a753-51b-8c0-a1c2db0988b368"
+          "uuid": "0ba22bc2-a753-51b-8c0-a1c2db0988b368",
+          "sourceIds": {
+            "checklistbank-2265": "279832"
+          }
+        },
+        {
+          "id": "SP_SUTTONELLA_SP",
+          "name": "Suttonella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Suttonella",
+          "sourceIds": {
+            "checklistbank-2265": "2908648"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -348,11 +375,89 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Cardiobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CARDIOBACTERIUM",
+          "name": "uncultured Cardiobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "417619"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DICHELOBACTER",
+          "name": "uncultured Dichelobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543047"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CARDIOBACTERIACEAE",
+          "name": "uncultured Cardiobacteriaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "863884"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SUTTONELLA",
+          "name": "uncultured Suttonella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1141688"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cardiobacteriaceae"
+    },
+    {
+      "id": "GENUS_CARDIOBACTERIACEAE",
+      "name": "Cardiobacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARDIOBACTERIACEAE_BACTERIUM",
+          "name": "Cardiobacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardiobacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2734614"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cardiobacteriaceae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 31,
   "appSlug": "cardiobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 11
+  "genusCount": 13
 }

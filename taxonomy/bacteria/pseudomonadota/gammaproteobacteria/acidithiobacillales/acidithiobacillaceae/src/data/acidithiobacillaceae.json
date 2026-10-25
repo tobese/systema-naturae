@@ -270,7 +270,10 @@
           "lineage": "Acidithiobacillus",
           "authorship": "(Hallberg and Lindstrom 1995) Kelly and Wood 2000",
           "children": [],
-          "uuid": "06620fb2-a9f1-528-97a-c0d551cc22540d"
+          "uuid": "06620fb2-a9f1-528-97a-c0d551cc22540d",
+          "sourceIds": {
+            "checklistbank-2265": "33059"
+          }
         },
         {
           "id": "SP_ACIDITHIOBACILLUS_SIBIRICUS_PANYUSHKINA_ET_AL_2026",
@@ -303,7 +306,10 @@
           "lineage": "Acidithiobacillus",
           "authorship": "Falagan et al. 2019",
           "children": [],
-          "uuid": "c5f7c15b-6404-5f0-b2a-0fa5790f4507c8"
+          "uuid": "c5f7c15b-6404-5f0-b2a-0fa5790f4507c8",
+          "sourceIds": {
+            "checklistbank-2265": "1867749"
+          }
         },
         {
           "id": "SP_ACIDITHIOBACILLUS_ALBERTENSIS_CORRIG_BRYANT_ET_AL_1988_KELLY_AND_WOOD_2000",
@@ -314,7 +320,22 @@
           "lineage": "Acidithiobacillus",
           "authorship": "corrig. (Bryant et al. 1988) Kelly and Wood 2000",
           "children": [],
-          "uuid": "6fc430f0-aafd-55a-ba6-cf7cdb1aed7fc0"
+          "uuid": "6fc430f0-aafd-55a-ba6-cf7cdb1aed7fc0",
+          "sourceIds": {
+            "checklistbank-2265": "119978"
+          }
+        },
+        {
+          "id": "SP_ACIDITHIOBACILLUS_SP",
+          "name": "Acidithiobacillus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidithiobacillus",
+          "sourceIds": {
+            "checklistbank-2265": "134481"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -497,11 +518,86 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Acidithiobacillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ACIDITHIOBACILLUS",
+          "name": "uncultured Acidithiobacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "153810"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ACIDITHIOBACILLACEAE",
+          "name": "uncultured Acidithiobacillaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "460513"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidithiobacillaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_IGNEACIDITHIOBACILLUS",
+          "name": "Candidatus Igneacidithiobacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "1945924"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidithiobacillaceae"
+    },
+    {
+      "id": "GENUS_ACIDITHIOBACILLACEAE",
+      "name": "Acidithiobacillaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACIDITHIOBACILLACEAE_BACTERIUM",
+          "name": "Acidithiobacillaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidithiobacillaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2813020"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidithiobacillaceae"
     }
   ],
-  "speciesCount": 44,
+  "speciesCount": 49,
   "appSlug": "acidithiobacillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 4
+  "genusCount": 7
 }

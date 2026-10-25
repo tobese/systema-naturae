@@ -1183,7 +1183,10 @@
           "lineage": "Sulfurovum",
           "authorship": "Li et al. 2023",
           "children": [],
-          "uuid": "eeb6ef34-646e-557-890-47c9cacb8e4cda"
+          "uuid": "eeb6ef34-646e-557-890-47c9cacb8e4cda",
+          "sourceIds": {
+            "checklistbank-2265": "2893889"
+          }
         },
         {
           "id": "SP_SULFUROVUM_AGGREGANS_MINO_ET_AL_2014",
@@ -1194,7 +1197,10 @@
           "lineage": "Sulfurovum",
           "authorship": "Mino et al. 2014",
           "children": [],
-          "uuid": "c8d9f8f5-7108-52e-a8f-b7dca9e217fd70"
+          "uuid": "c8d9f8f5-7108-52e-a8f-b7dca9e217fd70",
+          "sourceIds": {
+            "checklistbank-2265": "1431962"
+          }
         },
         {
           "id": "SP_SULFUROVUM_DENITRIFICANS_MORI_ET_AL_2018",
@@ -1205,7 +1211,22 @@
           "lineage": "Sulfurovum",
           "authorship": "Mori et al. 2018",
           "children": [],
-          "uuid": "2f776487-c228-539-8bf-3dc40e9fc3c8d1"
+          "uuid": "2f776487-c228-539-8bf-3dc40e9fc3c8d1",
+          "sourceIds": {
+            "checklistbank-2265": "2201018"
+          }
+        },
+        {
+          "id": "SP_SULFUROVUM_SP",
+          "name": "Sulfurovum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurovum",
+          "sourceIds": {
+            "checklistbank-2265": "307555"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2182,6 +2203,18 @@
           "lineage": "Nitratifractor",
           "children": [],
           "uuid": "f4f79b02-c96f-584-891-a083ad6a099f3f"
+        },
+        {
+          "id": "SP_NITRATIFRACTOR_SP",
+          "name": "Nitratifractor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitratifractor",
+          "sourceIds": {
+            "checklistbank-2265": "345597"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2641,11 +2674,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Sulfurovaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SULFUROVUM",
+          "name": "uncultured Sulfurovum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "269237"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SALSAMENTUM",
+          "name": "uncultured Salsamentum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "269263"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_NITRATIFRACTOR",
+          "name": "uncultured Nitratifractor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1446779"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sulfurovaceae"
+    },
+    {
+      "id": "GENUS_SULFUROVACEAE",
+      "name": "Sulfurovaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SULFUROVACEAE_BACTERIUM",
+          "name": "Sulfurovaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurovaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2771475"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sulfurovaceae"
     }
   ],
-  "speciesCount": 253,
+  "speciesCount": 259,
   "appSlug": "sulfurovaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Campylobacterota > Campylobacteria",
-  "genusCount": 11
+  "genusCount": 13
 }

@@ -49,7 +49,22 @@
           "lineage": "Aminobacterium",
           "authorship": "Hamdi et al. 2015",
           "children": [],
-          "uuid": "e2412e77-bafd-5bb-a09-e1f487ef951684"
+          "uuid": "e2412e77-bafd-5bb-a09-e1f487ef951684",
+          "sourceIds": {
+            "checklistbank-2265": "1482737"
+          }
+        },
+        {
+          "id": "SP_AMINOBACTERIUM_SP",
+          "name": "Aminobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aminobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "1367463"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -649,6 +664,18 @@
           "lineage": "Aminivibrio",
           "children": [],
           "uuid": "068ff805-5d11-55f-96e-b8f40c65f634f5"
+        },
+        {
+          "id": "SP_AMINIVIBRIO_SP",
+          "name": "Aminivibrio sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aminivibrio",
+          "sourceIds": {
+            "checklistbank-2265": "1872489"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -837,6 +864,30 @@
           "lineage": "Fretibacterium",
           "children": [],
           "uuid": "2863465c-6272-50e-94c-6d16aeac439615"
+        },
+        {
+          "id": "SP_FRETIBACTERIUM_FELINE",
+          "name": "Fretibacterium feline",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fretibacterium",
+          "sourceIds": {
+            "checklistbank-2265": "1577288"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FRETIBACTERIUM_SP",
+          "name": "Fretibacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fretibacterium",
+          "sourceIds": {
+            "checklistbank-2265": "1577289"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1282,16 +1333,97 @@
           "lineage": "Lactivibrio",
           "authorship": "Qiu et al. 2014",
           "children": [],
-          "uuid": "0a5179db-f150-526-a17-abac653694b09c"
+          "uuid": "0a5179db-f150-526-a17-abac653694b09c",
+          "sourceIds": {
+            "checklistbank-2265": "760261"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Aminobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_AMINOBACTERIUM",
+          "name": "uncultured Aminobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "548265"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FRETIBACTERIUM",
+          "name": "uncultured Fretibacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1678694"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_LACTIVIBRIO",
+          "name": "uncultured Lactivibrio",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1752783"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_AMINIVIBRIO",
+          "name": "uncultured Aminivibrio",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1810509"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aminobacteriaceae"
+    },
+    {
+      "id": "GENUS_AMINOBACTERIACEAE",
+      "name": "Aminobacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMINOBACTERIACEAE_BACTERIUM",
+          "name": "Aminobacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aminobacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3034609"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aminobacteriaceae"
     }
   ],
-  "speciesCount": 109,
+  "speciesCount": 118,
   "appSlug": "aminobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Synergistota > Synergistia",
-  "genusCount": 21
+  "genusCount": 23
 }

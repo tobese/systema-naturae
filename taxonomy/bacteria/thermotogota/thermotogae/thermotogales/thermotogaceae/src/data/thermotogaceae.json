@@ -91,7 +91,34 @@
           "lineage": "Thermotoga",
           "authorship": "Mori et al. 2014",
           "children": [],
-          "uuid": "5b6a112d-bd11-53c-ad6-41b5da436c0b2a"
+          "uuid": "5b6a112d-bd11-53c-ad6-41b5da436c0b2a",
+          "sourceIds": {
+            "checklistbank-2265": "1508420"
+          }
+        },
+        {
+          "id": "SP_THERMOTOGA_SP",
+          "name": "Thermotoga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermotoga",
+          "sourceIds": {
+            "checklistbank-2265": "28240"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THERMOTOGA_CALDIFONTIS",
+          "name": "Thermotoga caldifontis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermotoga",
+          "sourceIds": {
+            "checklistbank-2265": "1508419"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -246,7 +273,10 @@
           "lineage": "Pseudothermotoga",
           "authorship": "(Ravot et al. 1995) Bhandari and Gupta 2014",
           "children": [],
-          "uuid": "7b2227a2-344d-5b1-b42-1367ff0a12560e"
+          "uuid": "7b2227a2-344d-5b1-b42-1367ff0a12560e",
+          "sourceIds": {
+            "checklistbank-2265": "38322"
+          }
         },
         {
           "id": "SP_PSEUDOTHERMOTOGA_THERMARUM_WINDBERGER_ET_AL_1992_BHANDARI_AND_GUPTA_2014",
@@ -268,7 +298,10 @@
           "lineage": "Pseudothermotoga",
           "authorship": "(Fardeau et al. 1997) Bhandari and Gupta 2017",
           "children": [],
-          "uuid": "4a8675d8-d6f2-560-9f9-4a74ed86c97593"
+          "uuid": "4a8675d8-d6f2-560-9f9-4a74ed86c97593",
+          "sourceIds": {
+            "checklistbank-2265": "57487"
+          }
         },
         {
           "id": "SP_PSEUDOTHERMOTOGA_LETTINGAE_BALK_ET_AL_2002_BHANDARI_AND_GUPTA_2014",
@@ -279,7 +312,10 @@
           "lineage": "Pseudothermotoga",
           "authorship": "(Balk et al. 2002) Bhandari and Gupta 2014",
           "children": [],
-          "uuid": "272f4937-0b1a-5bc-9bd-76aac1681f7cb4"
+          "uuid": "272f4937-0b1a-5bc-9bd-76aac1681f7cb4",
+          "sourceIds": {
+            "checklistbank-2265": "177758"
+          }
         },
         {
           "id": "SP_PSEUDOTHERMOTOGA_CALDIFONTIS",
@@ -300,7 +336,22 @@
           "lineage": "Pseudothermotoga",
           "authorship": "(Jeanthon et al. 2000) Bhandari and Gupta 2014",
           "children": [],
-          "uuid": "aae00aa9-c992-55a-b42-7eb50e0b1967b6"
+          "uuid": "aae00aa9-c992-55a-b42-7eb50e0b1967b6",
+          "sourceIds": {
+            "checklistbank-2265": "39100"
+          }
+        },
+        {
+          "id": "SP_PSEUDOTHERMOTOGA_SP",
+          "name": "Pseudothermotoga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudothermotoga",
+          "sourceIds": {
+            "checklistbank-2265": "2033661"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -320,16 +371,85 @@
           "lineage": "Thermopallium",
           "authorship": "Duckworth et al. 1996",
           "children": [],
-          "uuid": "fdd798dc-dce5-5f6-834-359450d2cb8e9b"
+          "uuid": "fdd798dc-dce5-5f6-834-359450d2cb8e9b",
+          "sourceIds": {
+            "checklistbank-2265": "42735"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Thermotogaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOTOGA",
+          "name": "uncultured Thermotoga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "388610"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOTOGACEAE",
+          "name": "uncultured Thermotogaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "696960"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PSEUDOTHERMOTOGA",
+          "name": "uncultured Pseudothermotoga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2033663"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermotogaceae"
+    },
+    {
+      "id": "GENUS_THERMOTOGACEAE",
+      "name": "Thermotogaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOTOGACEAE_BACTERIUM",
+          "name": "Thermotogaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermotogaceae",
+          "sourceIds": {
+            "checklistbank-2265": "688330"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermotogaceae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 31,
   "appSlug": "thermotogaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Thermotogota > Thermotogae",
-  "genusCount": 8
+  "genusCount": 10
 }

@@ -91,6 +91,18 @@
           "lineage": "Rhodothermus",
           "children": [],
           "uuid": "82ad2e5e-616b-5d1-a3a-c15a179a9c7b20"
+        },
+        {
+          "id": "SP_RHODOTHERMUS_SP",
+          "name": "Rhodothermus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhodothermus",
+          "sourceIds": {
+            "checklistbank-2265": "71277"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -115,11 +127,65 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Rhodothermaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_RHODOTHERMUS",
+          "name": "uncultured Rhodothermus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "246141"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_RHODOTHERMACEAE",
+          "name": "uncultured Rhodothermaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "927589"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhodothermaceae"
+    },
+    {
+      "id": "GENUS_RHODOTHERMACEAE",
+      "name": "Rhodothermaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHODOTHERMACEAE_BACTERIUM",
+          "name": "Rhodothermaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhodothermaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1196023"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhodothermaceae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 13,
   "appSlug": "rhodothermaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Rhodothermia",
-  "genusCount": 2
+  "genusCount": 4
 }

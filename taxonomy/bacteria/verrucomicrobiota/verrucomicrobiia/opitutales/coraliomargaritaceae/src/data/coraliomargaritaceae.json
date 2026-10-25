@@ -1059,7 +1059,10 @@
           "lineage": "Coraliomargarita",
           "authorship": "Min et al. 2023",
           "children": [],
-          "uuid": "3f482ec9-c62d-529-b9f-27aa76d873b748"
+          "uuid": "3f482ec9-c62d-529-b9f-27aa76d873b748",
+          "sourceIds": {
+            "checklistbank-2265": "3014050"
+          }
         },
         {
           "id": "SP_CORALIOMARGARITA_SINENSIS_ZHOU_ET_AL_2019",
@@ -1070,7 +1073,10 @@
           "lineage": "Coraliomargarita",
           "authorship": "Zhou et al. 2019",
           "children": [],
-          "uuid": "28dd554e-d12a-5be-bd2-ec5a152b793d80"
+          "uuid": "28dd554e-d12a-5be-bd2-ec5a152b793d80",
+          "sourceIds": {
+            "checklistbank-2265": "2174842"
+          }
         },
         {
           "id": "SP_CORALIOMARGARITA_ALGICOLA_LEE_ET_AL_2024",
@@ -1082,6 +1088,18 @@
           "authorship": "Lee et al. 2024",
           "children": [],
           "uuid": "bdd8a257-5f3e-5d3-950-8c632eb5475955"
+        },
+        {
+          "id": "SP_CORALIOMARGARITA_SP",
+          "name": "Coraliomargarita sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coraliomargarita",
+          "sourceIds": {
+            "checklistbank-2265": "1262865"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1239,11 +1257,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Coraliomargaritaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CORALIOMARGARITA",
+          "name": "uncultured Coraliomargarita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1262866"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coraliomargaritaceae"
     }
   ],
-  "speciesCount": 105,
+  "speciesCount": 107,
   "appSlug": "coraliomargaritaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Verrucomicrobiota > Verrucomicrobiia",
-  "genusCount": 20
+  "genusCount": 21
 }

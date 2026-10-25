@@ -87,6 +87,18 @@
           "lineage": "Desulfatibacillum",
           "children": [],
           "uuid": "bcfbfa30-2269-588-879-32bfd0db54a0f1"
+        },
+        {
+          "id": "SP_DESULFATIBACILLUM_SP",
+          "name": "Desulfatibacillum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfatibacillum",
+          "sourceIds": {
+            "checklistbank-2265": "449314"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -187,11 +199,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfatibacillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFATIBACILLUM",
+          "name": "uncultured Desulfatibacillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "501916"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfatibacillaceae"
+    },
+    {
+      "id": "GENUS_DESULFATIBACILLACEAE",
+      "name": "Desulfatibacillaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFATIBACILLACEAE_BACTERIUM",
+          "name": "Desulfatibacillaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfatibacillaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3045165"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfatibacillaceae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 15,
   "appSlug": "desulfatibacillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfobacteria",
-  "genusCount": 7
+  "genusCount": 9
 }

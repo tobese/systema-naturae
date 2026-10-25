@@ -546,7 +546,22 @@
           "lineage": "Thermoleophilum",
           "authorship": "Zarilla and Perry 1986",
           "children": [],
-          "uuid": "7fb640ff-7cdb-55b-966-166813ffb33f6d"
+          "uuid": "7fb640ff-7cdb-55b-966-166813ffb33f6d",
+          "sourceIds": {
+            "checklistbank-2265": "192994"
+          }
+        },
+        {
+          "id": "SP_THERMOLEOPHILUM_SP",
+          "name": "Thermoleophilum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoleophilum",
+          "sourceIds": {
+            "checklistbank-2265": "2480089"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2385,11 +2400,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thermoleophilaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOLEOPHILUM",
+          "name": "uncultured Thermoleophilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "259935"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOLEOPHILACEAE",
+          "name": "uncultured Thermoleophilaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "349283"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoleophilaceae"
+    },
+    {
+      "id": "GENUS_THERMOLEOPHILACEAE",
+      "name": "Thermoleophilaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOLEOPHILACEAE_BACTERIUM",
+          "name": "Thermoleophilaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoleophilaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2732252"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoleophilaceae"
     }
   ],
-  "speciesCount": 212,
+  "speciesCount": 216,
   "appSlug": "thermoleophilaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Thermoleophilia",
-  "genusCount": 29
+  "genusCount": 31
 }

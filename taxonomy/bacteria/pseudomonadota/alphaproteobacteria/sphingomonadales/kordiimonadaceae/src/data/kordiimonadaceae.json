@@ -345,7 +345,22 @@
           "lineage": "Kordiimonas",
           "authorship": "Zhang et al. 2017",
           "children": [],
-          "uuid": "1d6f5b1d-da17-509-927-87e5561e655f5c"
+          "uuid": "1d6f5b1d-da17-509-927-87e5561e655f5c",
+          "sourceIds": {
+            "checklistbank-2265": "1735581"
+          }
+        },
+        {
+          "id": "SP_KORDIIMONAS_SP",
+          "name": "Kordiimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kordiimonas",
+          "sourceIds": {
+            "checklistbank-2265": "1392751"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -587,16 +602,73 @@
           "lineage": "Pseudokordiimonas",
           "authorship": "Li et al. 2023",
           "children": [],
-          "uuid": "99749985-4fa0-5c5-979-077f99419c77e9"
+          "uuid": "99749985-4fa0-5c5-979-077f99419c77e9",
+          "sourceIds": {
+            "checklistbank-2265": "2997908"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Kordiimonadaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KORDIIMONAS",
+          "name": "uncultured Kordiimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "402588"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_KORDIIMONADACEAE",
+          "name": "uncultured Kordiimonadaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1667041"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kordiimonadaceae"
+    },
+    {
+      "id": "GENUS_KORDIIMONADACEAE",
+      "name": "Kordiimonadaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KORDIIMONADACEAE_BACTERIUM",
+          "name": "Kordiimonadaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kordiimonadaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1951965"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kordiimonadaceae"
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 51,
   "appSlug": "kordiimonadaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 12
+  "genusCount": 14
 }

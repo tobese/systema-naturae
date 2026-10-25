@@ -1192,6 +1192,18 @@
           "authorship": "Albuquerque et al. 2011",
           "children": [],
           "uuid": "015166e8-b4d4-524-ad5-2290383c135cd8"
+        },
+        {
+          "id": "SP_SCHLEIFERIA_SP",
+          "name": "Schleiferia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schleiferia",
+          "sourceIds": {
+            "checklistbank-2265": "2173850"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1781,11 +1793,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Schleiferiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SCHLEIFERIA",
+          "name": "uncultured Schleiferia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1333718"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schleiferiaceae"
+    },
+    {
+      "id": "GENUS_SCHLEIFERIACEAE",
+      "name": "Schleiferiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCHLEIFERIACEAE_BACTERIUM",
+          "name": "Schleiferiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schleiferiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2562116"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schleiferiaceae"
     }
   ],
-  "speciesCount": 157,
+  "speciesCount": 160,
   "appSlug": "schleiferiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 23
+  "genusCount": 25
 }

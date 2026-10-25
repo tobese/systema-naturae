@@ -149,6 +149,18 @@
           "lineage": "Methylohalobius",
           "children": [],
           "uuid": "9e6b4437-ab94-5c4-bc2-22da422a84fe90"
+        },
+        {
+          "id": "SP_METHYLOHALOBIUS_SP",
+          "name": "Methylohalobius sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methylohalobius",
+          "sourceIds": {
+            "checklistbank-2265": "2972670"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -179,7 +191,22 @@
           "lineage": "Methylomarinovum",
           "authorship": "Hirayama et al. 2014",
           "children": [],
-          "uuid": "f9988909-8914-545-8fc-080b32baef93a3"
+          "uuid": "f9988909-8914-545-8fc-080b32baef93a3",
+          "sourceIds": {
+            "checklistbank-2265": "438856"
+          }
+        },
+        {
+          "id": "SP_METHYLOMARINOVUM_SP",
+          "name": "Methylomarinovum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methylomarinovum",
+          "sourceIds": {
+            "checklistbank-2265": "2840183"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -199,7 +226,10 @@
           "lineage": "Methylothermus",
           "authorship": "Hirayama et al. 2011",
           "children": [],
-          "uuid": "09762be1-e3c6-557-b17-06c12c69d3bdbd"
+          "uuid": "09762be1-e3c6-557-b17-06c12c69d3bdbd",
+          "sourceIds": {
+            "checklistbank-2265": "697197"
+          }
         },
         {
           "id": "SP_METHYLOTHERMUS_THERMALIS_TSUBOTA_ET_AL_2005",
@@ -210,16 +240,109 @@
           "lineage": "Methylothermus",
           "authorship": "Tsubota et al. 2005",
           "children": [],
-          "uuid": "01aa322e-8edf-559-aa3-37df888619da16"
+          "uuid": "01aa322e-8edf-559-aa3-37df888619da16",
+          "sourceIds": {
+            "checklistbank-2265": "317575"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Methylothermaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHYLOHALOBIUS",
+          "name": "uncultured Methylohalobius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543102"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHYLOTHERMUS",
+          "name": "uncultured Methylothermus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543112"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHYLOMARINOVUM",
+          "name": "uncultured Methylomarinovum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1486723"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHYLOTHERMACEAE",
+          "name": "uncultured Methylothermaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2461323"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methylothermaceae"
+    },
+    {
+      "id": "GENUS_METHYLOTHERMACEAE",
+      "name": "Methylothermaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHYLOTHERMACEAE_BACTERIA",
+          "name": "Methylothermaceae bacteria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methylothermaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1798802"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHYLOTHERMACEAE_BACTERIUM",
+          "name": "Methylothermaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methylothermaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2268196"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methylothermaceae"
     }
   ],
-  "speciesCount": 18,
+  "speciesCount": 26,
   "appSlug": "methylothermaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 3
+  "genusCount": 5
 }

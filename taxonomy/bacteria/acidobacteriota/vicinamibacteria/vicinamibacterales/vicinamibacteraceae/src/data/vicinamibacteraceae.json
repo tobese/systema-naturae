@@ -158,6 +158,18 @@
           "lineage": "Luteitalea",
           "children": [],
           "uuid": "ed235349-e60b-588-8e3-bfb727ff227921"
+        },
+        {
+          "id": "SP_LUTEITALEA_SP",
+          "name": "Luteitalea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Luteitalea",
+          "sourceIds": {
+            "checklistbank-2265": "2004800"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -353,16 +365,85 @@
           "lineage": "Vicinamibacter",
           "authorship": "Huber et al. 2016",
           "children": [],
-          "uuid": "e8e89a98-c1a2-5e8-b0a-5a135eee331df8"
+          "uuid": "e8e89a98-c1a2-5e8-b0a-5a135eee331df8",
+          "sourceIds": {
+            "checklistbank-2265": "1612172"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Vicinamibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LUTEITALEA",
+          "name": "uncultured Luteitalea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2004799"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_VICINAMIBACTERACEAE",
+          "name": "uncultured Vicinamibacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2790688"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_VICINAMIBACTER",
+          "name": "uncultured Vicinamibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2790950"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vicinamibacteraceae"
+    },
+    {
+      "id": "GENUS_VICINAMIBACTERACEAE",
+      "name": "Vicinamibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VICINAMIBACTERACEAE_BACTERIUM",
+          "name": "Vicinamibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vicinamibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2590576"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vicinamibacteraceae"
     }
   ],
-  "speciesCount": 30,
+  "speciesCount": 35,
   "appSlug": "vicinamibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Acidobacteriota > Vicinamibacteria",
-  "genusCount": 6
+  "genusCount": 8
 }

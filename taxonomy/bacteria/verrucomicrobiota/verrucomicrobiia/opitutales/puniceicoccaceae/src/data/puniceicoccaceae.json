@@ -88,6 +88,18 @@
           "lineage": "Puniceicoccus",
           "children": [],
           "uuid": "f8fb33f7-102e-50b-a89-7a2effa4d13458"
+        },
+        {
+          "id": "SP_PUNICEICOCCUS_SP",
+          "name": "Puniceicoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Puniceicoccus",
+          "sourceIds": {
+            "checklistbank-2265": "3080537"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -140,11 +152,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Puniceicoccaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PUNICEICOCCACEAE",
+          "name": "uncultured Puniceicoccaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1101446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PUNICEICOCCUS",
+          "name": "uncultured Puniceicoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1446781"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "puniceicoccaceae"
+    },
+    {
+      "id": "GENUS_PUNICEICOCCACEAE",
+      "name": "Puniceicoccaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PUNICEICOCCACEAE_BACTERIUM",
+          "name": "Puniceicoccaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Puniceicoccaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1986246"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "puniceicoccaceae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 15,
   "appSlug": "puniceicoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Verrucomicrobiota > Verrucomicrobiia",
-  "genusCount": 3
+  "genusCount": 5
 }

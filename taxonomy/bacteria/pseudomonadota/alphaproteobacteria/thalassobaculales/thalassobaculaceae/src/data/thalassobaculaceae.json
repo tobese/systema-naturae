@@ -150,6 +150,18 @@
           "lineage": "Nisaea",
           "children": [],
           "uuid": "cc31922f-9518-584-985-327177baac0e0e"
+        },
+        {
+          "id": "SP_NISAEA_SP",
+          "name": "Nisaea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nisaea",
+          "sourceIds": {
+            "checklistbank-2265": "483607"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -507,7 +519,22 @@
           "lineage": "Thalassobaculum",
           "authorship": "Su et al. 2016",
           "children": [],
-          "uuid": "def8dae4-61ad-522-bfa-2a3b3e50c0f9ff"
+          "uuid": "def8dae4-61ad-522-bfa-2a3b3e50c0f9ff",
+          "sourceIds": {
+            "checklistbank-2265": "1633335"
+          }
+        },
+        {
+          "id": "SP_THALASSOBACULUM_SP",
+          "name": "Thalassobaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassobaculum",
+          "sourceIds": {
+            "checklistbank-2265": "910917"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -811,11 +838,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thalassobaculaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NISAEA",
+          "name": "uncultured Nisaea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "538215"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THALASSOBACULUM",
+          "name": "uncultured Thalassobaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1145109"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassobaculaceae"
+    },
+    {
+      "id": "GENUS_THALASSOBACULACEAE",
+      "name": "Thalassobaculaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THALASSOBACULACEAE_BACTERIUM",
+          "name": "Thalassobaculaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassobaculaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3014067"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassobaculaceae"
     }
   ],
-  "speciesCount": 65,
+  "speciesCount": 70,
   "appSlug": "thalassobaculaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 17
+  "genusCount": 19
 }

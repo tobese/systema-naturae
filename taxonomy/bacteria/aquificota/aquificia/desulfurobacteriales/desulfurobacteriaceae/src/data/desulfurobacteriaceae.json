@@ -78,6 +78,18 @@
           "lineage": "Balnearium",
           "children": [],
           "uuid": "3d1fb599-0d38-528-b59-f156f3eb0de3d3"
+        },
+        {
+          "id": "SP_BALNEARIUM_SP",
+          "name": "Balnearium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Balnearium",
+          "sourceIds": {
+            "checklistbank-2265": "269223"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -139,7 +151,22 @@
           "lineage": "Thermovibrio",
           "authorship": "Huber et al. 2002",
           "children": [],
-          "uuid": "74f46173-6349-504-a72-95a6cca0bf2a5b"
+          "uuid": "74f46173-6349-504-a72-95a6cca0bf2a5b",
+          "sourceIds": {
+            "checklistbank-2265": "171869"
+          }
+        },
+        {
+          "id": "SP_THERMOVIBRIO_SP",
+          "name": "Thermovibrio sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermovibrio",
+          "sourceIds": {
+            "checklistbank-2265": "235686"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -209,7 +236,10 @@
           "lineage": "Desulfurobacterium",
           "authorship": "L'Haridon et al. 2006",
           "children": [],
-          "uuid": "bdc66f68-6569-5c6-877-be5a801508840d"
+          "uuid": "bdc66f68-6569-5c6-877-be5a801508840d",
+          "sourceIds": {
+            "checklistbank-2265": "240166"
+          }
         },
         {
           "id": "SP_DESULFUROBACTERIUM_ATLANTICUM_L_HARIDON_ET_AL_2006",
@@ -220,7 +250,10 @@
           "lineage": "Desulfurobacterium",
           "authorship": "L'Haridon et al. 2006",
           "children": [],
-          "uuid": "eb1039c5-7cf6-5f8-9ef-aa2ce7789c12b6"
+          "uuid": "eb1039c5-7cf6-5f8-9ef-aa2ce7789c12b6",
+          "sourceIds": {
+            "checklistbank-2265": "240169"
+          }
         },
         {
           "id": "SP_DESULFUROBACTERIUM_INDICUM_CAO_ET_AL_2017",
@@ -231,7 +264,10 @@
           "lineage": "Desulfurobacterium",
           "authorship": "Cao et al. 2017",
           "children": [],
-          "uuid": "c850a29b-f71e-564-949-2e85ed5c0e9315"
+          "uuid": "c850a29b-f71e-564-949-2e85ed5c0e9315",
+          "sourceIds": {
+            "checklistbank-2265": "1914305"
+          }
         },
         {
           "id": "SP_DESULFUROBACTERIUM_CRINIFEX_ALAIN_ET_AL_2003",
@@ -242,7 +278,22 @@
           "lineage": "Desulfurobacterium",
           "authorship": "Alain et al. 2003",
           "children": [],
-          "uuid": "88add6a5-3843-5c8-89d-da7b650e206c5f"
+          "uuid": "88add6a5-3843-5c8-89d-da7b650e206c5f",
+          "sourceIds": {
+            "checklistbank-2265": "206249"
+          }
+        },
+        {
+          "id": "SP_DESULFUROBACTERIUM_SP",
+          "name": "Desulfurobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfurobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "240168"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -432,11 +483,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfurobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFUROBACTERIUM",
+          "name": "uncultured Desulfurobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "428049"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOVIBRIO",
+          "name": "uncultured Thermovibrio",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "522380"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BALNEARIUM",
+          "name": "uncultured Balnearium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1936129"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfurobacteriaceae"
+    },
+    {
+      "id": "GENUS_DESULFUROBACTERIACEAE",
+      "name": "Desulfurobacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFUROBACTERIACEAE_BACTERIUM",
+          "name": "Desulfurobacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfurobacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2306013"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfurobacteriaceae"
     }
   ],
-  "speciesCount": 33,
+  "speciesCount": 40,
   "appSlug": "desulfurobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Aquificota > Aquificia",
-  "genusCount": 10
+  "genusCount": 12
 }

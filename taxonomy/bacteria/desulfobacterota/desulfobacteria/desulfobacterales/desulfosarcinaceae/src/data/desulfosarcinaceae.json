@@ -149,6 +149,18 @@
           "lineage": "Desulfatitalea",
           "children": [],
           "uuid": "95b1d6b7-140c-54a-a11-397dac3353101c"
+        },
+        {
+          "id": "SP_DESULFATITALEA_SP",
+          "name": "Desulfatitalea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfatitalea",
+          "sourceIds": {
+            "checklistbank-2265": "1629708"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -601,6 +613,18 @@
           "lineage": "Desulfosarcina",
           "children": [],
           "uuid": "029a8d38-4016-5e8-953-ac56fcbb8acea6"
+        },
+        {
+          "id": "SP_DESULFOSARCINA_SP",
+          "name": "Desulfosarcina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfosarcina",
+          "sourceIds": {
+            "checklistbank-2265": "165006"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -721,11 +745,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfosarcinaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOSARCINA",
+          "name": "uncultured Desulfosarcina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "111753"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFATITALEA",
+          "name": "uncultured Desulfatitalea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1681227"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfosarcinaceae"
+    },
+    {
+      "id": "GENUS_DESULFOSARCINACEAE",
+      "name": "Desulfosarcinaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFOSARCINACEAE_BACTERIUM",
+          "name": "Desulfosarcinaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfosarcinaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3036616"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfosarcinaceae"
     }
   ],
-  "speciesCount": 65,
+  "speciesCount": 70,
   "appSlug": "desulfosarcinaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfobacteria",
-  "genusCount": 7
+  "genusCount": 9
 }

@@ -609,6 +609,18 @@
           "lineage": "Salibacter",
           "children": [],
           "uuid": "b1b2eea4-0922-538-9d7-cab29a24948ed0"
+        },
+        {
+          "id": "SP_SALIBACTER_SP",
+          "name": "Salibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salibacter",
+          "sourceIds": {
+            "checklistbank-2265": "2010995"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -727,11 +739,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Salibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SALIBACTER",
+          "name": "uncultured Salibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "889297"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salibacteraceae"
+    },
+    {
+      "id": "GENUS_SALIBACTERACEAE",
+      "name": "Salibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SALIBACTERACEAE_BACTERIUM",
+          "name": "Salibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2832350"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salibacteraceae"
     }
   ],
-  "speciesCount": 58,
+  "speciesCount": 61,
   "appSlug": "salibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 16
+  "genusCount": 18
 }

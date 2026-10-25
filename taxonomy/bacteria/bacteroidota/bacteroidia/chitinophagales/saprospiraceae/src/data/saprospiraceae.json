@@ -4854,7 +4854,10 @@
           "lineage": "Aureispira",
           "authorship": "Hosoya et al. 2007",
           "children": [],
-          "uuid": "ac7bda38-18f6-58f-ac2-67098ec255bb2a"
+          "uuid": "ac7bda38-18f6-58f-ac2-67098ec255bb2a",
+          "sourceIds": {
+            "checklistbank-2265": "407844"
+          }
         },
         {
           "id": "SP_AUREISPIRA_MARINA_HOSOYA_ET_AL_2006",
@@ -4865,7 +4868,22 @@
           "lineage": "Aureispira",
           "authorship": "Hosoya et al. 2006",
           "children": [],
-          "uuid": "7f95cd0c-d222-599-b65-9e121bd298380a"
+          "uuid": "7f95cd0c-d222-599-b65-9e121bd298380a",
+          "sourceIds": {
+            "checklistbank-2265": "365033"
+          }
+        },
+        {
+          "id": "SP_AUREISPIRA_SP",
+          "name": "Aureispira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aureispira",
+          "sourceIds": {
+            "checklistbank-2265": "393655"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -7554,6 +7572,18 @@
           "authorship": "Guo et al. 2023",
           "children": [],
           "uuid": "581dc1b1-e9eb-550-9a4-9f0d98a63a7a2b"
+        },
+        {
+          "id": "SP_MEMBRANIHABITANS_SP",
+          "name": "Membranihabitans sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Membranihabitans",
+          "sourceIds": {
+            "checklistbank-2265": "2023708"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -7831,6 +7861,18 @@
           "lineage": "Saprospira",
           "children": [],
           "uuid": "4a2e5073-64ea-541-a66-5d8308c14a734a"
+        },
+        {
+          "id": "SP_SAPROSPIRA_SP",
+          "name": "Saprospira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saprospira",
+          "sourceIds": {
+            "checklistbank-2265": "156650"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -11196,16 +11238,199 @@
           "lineage": "Rubidimonas",
           "authorship": "Yoon et al. 2012",
           "children": [],
-          "uuid": "84cec56e-b1f9-55b-b51-7aea12db61efe1"
+          "uuid": "84cec56e-b1f9-55b-b51-7aea12db61efe1",
+          "sourceIds": {
+            "checklistbank-2265": "930973"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Saprospiraceae"
+    },
+    {
+      "id": "GENUS_BACTERIUM",
+      "name": "bacterium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BACTERIUM_ELLIN6111",
+          "name": "bacterium Ellin6111",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "bacterium",
+          "sourceIds": {
+            "checklistbank-2265": "234685"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saprospiraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SAPROSPIRACEAE",
+          "name": "uncultured Saprospiraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "261514"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SAPROSPIRA",
+          "name": "uncultured Saprospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "348139"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_AUREISPIRA",
+          "name": "uncultured Aureispira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1331704"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MEMBRANIHABITANS",
+          "name": "uncultured Membranihabitans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2023707"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saprospiraceae"
+    },
+    {
+      "id": "GENUS_SAPROSPIRACEAE",
+      "name": "Saprospiraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAPROSPIRACEAE_BACTERIUM",
+          "name": "Saprospiraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saprospiraceae",
+          "sourceIds": {
+            "checklistbank-2265": "287744"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saprospiraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_AQUIRESTIS",
+          "name": "Candidatus Aquirestis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "526863"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_DEFLUVIIBACTERIUM",
+          "name": "Candidatus Defluviibacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2981993"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_OPIMIBACTER",
+          "name": "Candidatus Opimibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2982029"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_PARVIBACILLUS",
+          "name": "Candidatus Parvibacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2982025"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_BRACHYBACTER",
+          "name": "Candidatus Brachybacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2982024"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_VICINIBACTER",
+          "name": "Candidatus Vicinibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2982027"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saprospiraceae"
     }
   ],
-  "speciesCount": 967,
+  "speciesCount": 982,
   "appSlug": "saprospiraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 169
+  "genusCount": 173
 }

@@ -128,7 +128,22 @@
           "lineage": "Thermomicrobium",
           "authorship": "King and King 2014 emend. Houghton et al. 2015",
           "children": [],
-          "uuid": "7e03be85-6741-512-b86-04b852eaa71d34"
+          "uuid": "7e03be85-6741-512-b86-04b852eaa71d34",
+          "sourceIds": {
+            "checklistbank-2265": "1401547"
+          }
+        },
+        {
+          "id": "SP_THERMOMICROBIUM_SP",
+          "name": "Thermomicrobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermomicrobium",
+          "sourceIds": {
+            "checklistbank-2265": "1674543"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -556,11 +571,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thermomicrobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOMICROBIUM",
+          "name": "uncultured Thermomicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "158795"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOMICROBIACEAE",
+          "name": "uncultured Thermomicrobiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2890871"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermomicrobiaceae"
+    },
+    {
+      "id": "GENUS_THERMOMICROBIACEAE",
+      "name": "Thermomicrobiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOMICROBIACEAE_BACTERIUM",
+          "name": "Thermomicrobiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermomicrobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2497640"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermomicrobiaceae"
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 51,
   "appSlug": "thermomicrobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Chloroflexia",
-  "genusCount": 9
+  "genusCount": 11
 }

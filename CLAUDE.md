@@ -34,29 +34,49 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 > The trees on the machines under the desk still run Ollama for other projects;
 > that is not a licence to use it here.
 
-> ## 🚫 Bacteria and viruses are deliberately on hold
+> ## 🚫 Bacteria and viruses: import yes, portal no
 >
-> Decided **2026-10-04**, reaffirmed 2026-10-17. **Do not import, scaffold,
-> build or deploy either kingdom.** The reasoning and the measurements are in
-> [`docs/bacteria-and-viruses.md`](docs/bacteria-and-viruses.md); it is a
-> decision, not a bug, and the numbers in it are why.
+> Decided **2026-10-04**, reaffirmed 2026-10-17, **partially lifted 2026-10-25.**
+> Importing the two kingdoms is now in scope whenever a source offers them —
+> they kept arriving anyway (NCBI/ENA runs bucketed ~200k of them as
+> UNRESOLVED KINGDOM in one week) and there is no reason to keep refusing data
+> we already have in hand. **Scaffolding, building and deploying either
+> kingdom stay on hold** — that half of the original decision is unchanged.
+> The reasoning and the measurements are in
+> [`docs/bacteria-and-viruses.md`](docs/bacteria-and-viruses.md).
 >
-> - **`kingdom-config.json` declares six kingdoms and must keep declaring six.**
->   Adding `bacteria` or `viruses` there is not a missing feature to be
->   completed — it is the hold being lifted without the decision being made. The
->   config is what `buildAllKingdoms.sh`, `tree.kingdom_names()`, `verifyTree`
->   and `sanity_scan` all read, so the six-kingdom list *is* the enforcement.
+> - **`kingdom-config.json` still declares six kingdoms and must keep
+>   declaring six.** Adding `bacteria` or `viruses` there is not a missing
+>   feature to be completed — it is the build/deploy half of the hold being
+>   lifted without that decision being made. The config is what
+>   `buildAllKingdoms.sh`, `tree.kingdom_names()`, `verifyTree` and
+>   `sanity_scan` all read, so the six-kingdom list *is* the enforcement for
+>   everything build-side — none of those four have changed.
+> - **What changed:** `scripts/importColChecklist.py` now recognises
+>   `bacteria`/`viruses` as valid *import* targets via a hardcoded
+>   `BACTERIA_VIRUSES_INPUT` side-channel (mirroring `post-import.sh`'s
+>   existing `SN_INPUT` override for the build side, just in the opposite
+>   direction) — writing `portal/data/taxonomy-{bacteria,viruses}.json` and
+>   the matching `taxonomy/{bacteria,viruses}/.../src/data/*.json` family
+>   files directly, never touching `kingdom-config.json`. This only **merges
+>   into families that already exist** on disk (the 3,784 bacteria + 393
+>   viruses families from the original q-bert import, below) — a source
+>   offering a genuinely new family still gets refused/unresolved, same as
+>   any other kingdom, because scaffolding a new family is a taxonomy
+>   decision this hold still defers.
 > - **The family files already on disk are a known artefact, not an oversight.**
 >   An import ran on q-bert (`Import NCBI bacteria/viruses + GTDB`) and left
 >   3,784 bacteria and 393 viruses families committed under `taxonomy/`. They
->   are unreachable: not in `kingdom-config.json`, so not grafted, not built,
->   not deployed, and invisible to `make check`. Leaving them is the cheapest
->   way to keep the measured material without acting on it.
-> - **Sources stay registered while the hold holds.** `ncbi-taxonomy`,
->   `ictv-msl`, `gtdb` and `wikidata-species` are recorded in the manifest.
->   Registration is the only work in scope.
+>   are still unreachable from the portal: not in `kingdom-config.json`, so
+>   not grafted, not built, not deployed, and invisible to `make check` and
+>   `dedupeSpeciesAcrossFamilies.py` — only now they keep growing as more
+>   sources are imported against them.
+> - **Sources stay registered as before.** `ncbi-taxonomy`, `ictv-msl`, `gtdb`
+>   and `wikidata-species` are recorded in the manifest.
 > - The rank question is settled for bacteria and still open for viruses — see
->   *Settled* in that doc. Lifting the hold means deciding rank first.
+>   *Settled* in that doc. It no longer blocks import (merging into an
+>   existing family doesn't require re-deriving its rank), only scaffolding
+>   a brand-new family and the build/deploy decision.
 >
 > `scripts/post-import.sh` is the one place that names these two kingdoms
 > explicitly, and it appends them to the config list on purpose so a backfill

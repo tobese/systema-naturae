@@ -861,7 +861,22 @@
           "lineage": "Wenzhouxiangella",
           "authorship": "Han et al. 2019",
           "children": [],
-          "uuid": "339409f3-6adc-510-b11-5e4796efa8e5c7"
+          "uuid": "339409f3-6adc-510-b11-5e4796efa8e5c7",
+          "sourceIds": {
+            "checklistbank-2265": "2670335"
+          }
+        },
+        {
+          "id": "SP_WENZHOUXIANGELLA_SP",
+          "name": "Wenzhouxiangella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wenzhouxiangella",
+          "sourceIds": {
+            "checklistbank-2265": "1979961"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1080,11 +1095,65 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Wenzhouxiangellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_WENZHOUXIANGELLA",
+          "name": "uncultured Wenzhouxiangella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1676145"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_WENZHOUXIANGELLACEAE",
+          "name": "uncultured Wenzhouxiangellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1983303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "wenzhouxiangellaceae"
+    },
+    {
+      "id": "GENUS_WENZHOUXIANGELLACEAE",
+      "name": "Wenzhouxiangellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WENZHOUXIANGELLACEAE_BACTERIUM",
+          "name": "Wenzhouxiangellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wenzhouxiangellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2448046"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "wenzhouxiangellaceae"
     }
   ],
-  "speciesCount": 98,
+  "speciesCount": 102,
   "appSlug": "wenzhouxiangellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 10
+  "genusCount": 12
 }

@@ -234,6 +234,18 @@
           "lineage": "Oligoflexus",
           "children": [],
           "uuid": "e25a70a8-fd25-568-be8-334589de934081"
+        },
+        {
+          "id": "SP_OLIGOFLEXUS_SP",
+          "name": "Oligoflexus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oligoflexus",
+          "sourceIds": {
+            "checklistbank-2265": "1971216"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -295,11 +307,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Oligoflexaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_OLIGOFLEXUS",
+          "name": "uncultured Oligoflexus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1553905"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_OLIGOFLEXACEAE",
+          "name": "uncultured Oligoflexaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1983275"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oligoflexaceae"
+    },
+    {
+      "id": "GENUS_OLIGOFLEXACEAE",
+      "name": "Oligoflexaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OLIGOFLEXACEAE_BACTERIUM",
+          "name": "Oligoflexaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oligoflexaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2957744"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oligoflexaceae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 26,
   "appSlug": "oligoflexaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bdellovibrionota_B > Oligoflexia",
-  "genusCount": 8
+  "genusCount": 10
 }

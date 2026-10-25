@@ -426,7 +426,22 @@
           "lineage": "Kangiella",
           "authorship": "Kim et al. 2015",
           "children": [],
-          "uuid": "4d567dbb-0935-512-b5c-333f923a922d96"
+          "uuid": "4d567dbb-0935-512-b5c-333f923a922d96",
+          "sourceIds": {
+            "checklistbank-2265": "1570282"
+          }
+        },
+        {
+          "id": "SP_KANGIELLA_SP",
+          "name": "Kangiella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kangiella",
+          "sourceIds": {
+            "checklistbank-2265": "523649"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -696,11 +711,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Kangiellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KANGIELLA",
+          "name": "uncultured Kangiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "503838"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_KANGIELLACEAE",
+          "name": "uncultured Kangiellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2448461"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kangiellaceae"
+    },
+    {
+      "id": "GENUS_KANGIELLACEAE",
+      "name": "Kangiellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KANGIELLACEAE_BACTERIUM",
+          "name": "Kangiellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kangiellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2026751"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kangiellaceae"
     }
   ],
-  "speciesCount": 62,
+  "speciesCount": 66,
   "appSlug": "kangiellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 7
+  "genusCount": 9
 }

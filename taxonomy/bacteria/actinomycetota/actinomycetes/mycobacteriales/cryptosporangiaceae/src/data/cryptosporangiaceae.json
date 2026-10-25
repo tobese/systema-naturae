@@ -91,7 +91,10 @@
           "lineage": "Cryptosporangium",
           "authorship": "Himaman et al. 2017",
           "children": [],
-          "uuid": "28bd913d-4a72-5d9-943-029e887954f0fe"
+          "uuid": "28bd913d-4a72-5d9-943-029e887954f0fe",
+          "sourceIds": {
+            "checklistbank-2265": "1717726"
+          }
         },
         {
           "id": "SP_CRYPTOSPORANGIUM_CIBODASENSE_NURKANTO_ET_AL_2015",
@@ -102,7 +105,10 @@
           "lineage": "Cryptosporangium",
           "authorship": "Nurkanto et al. 2015",
           "children": [],
-          "uuid": "2c73d2dc-bb61-532-ac5-1bcca7893d4942"
+          "uuid": "2c73d2dc-bb61-532-ac5-1bcca7893d4942",
+          "sourceIds": {
+            "checklistbank-2265": "1609276"
+          }
         },
         {
           "id": "SP_CRYPTOSPORANGIUM_MONGOLIENSE_ARA_ET_AL_2012",
@@ -113,7 +119,22 @@
           "lineage": "Cryptosporangium",
           "authorship": "Ara et al. 2012",
           "children": [],
-          "uuid": "df5a3f4b-88c3-5ea-821-f09ee78dbaf35e"
+          "uuid": "df5a3f4b-88c3-5ea-821-f09ee78dbaf35e",
+          "sourceIds": {
+            "checklistbank-2265": "690867"
+          }
+        },
+        {
+          "id": "SP_CRYPTOSPORANGIUM_SP",
+          "name": "Cryptosporangium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptosporangium",
+          "sourceIds": {
+            "checklistbank-2265": "65503"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -195,11 +216,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Cryptosporangiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CRYPTOSPORANGIACEAE",
+          "name": "uncultured Cryptosporangiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1245881"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CRYPTOSPORANGIUM",
+          "name": "uncultured Cryptosporangium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1315258"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cryptosporangiaceae"
+    },
+    {
+      "id": "GENUS_CRYPTOSPORANGIACEAE",
+      "name": "Cryptosporangiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTOSPORANGIACEAE_BACTERIUM",
+          "name": "Cryptosporangiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptosporangiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2811410"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cryptosporangiaceae"
     }
   ],
-  "speciesCount": 15,
+  "speciesCount": 19,
   "appSlug": "cryptosporangiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 4
+  "genusCount": 6
 }

@@ -1549,6 +1549,18 @@
           "lineage": "Humisphaera",
           "children": [],
           "uuid": "a72038b5-f9e2-5cf-a85-a96abf2c723445"
+        },
+        {
+          "id": "SP_HUMISPHAERA_SP",
+          "name": "Humisphaera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Humisphaera",
+          "sourceIds": {
+            "checklistbank-2265": "2807514"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2112,16 +2124,85 @@
           "lineage": "Tepidisphaera",
           "authorship": "Kovaleva et al. 2015",
           "children": [],
-          "uuid": "dff12ec1-fc88-58d-97f-6f6da8a88b9b2e"
+          "uuid": "dff12ec1-fc88-58d-97f-6f6da8a88b9b2e",
+          "sourceIds": {
+            "checklistbank-2265": "1546155"
+          }
+        },
+        {
+          "id": "SP_TEPIDISPHAERA_SP",
+          "name": "Tepidisphaera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tepidisphaera",
+          "sourceIds": {
+            "checklistbank-2265": "2017440"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Tepidisphaeraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TEPIDISPHAERA",
+          "name": "uncultured Tepidisphaera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1771358"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_TEPIDISPHAERACEAE",
+          "name": "uncultured Tepidisphaeraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2876887"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tepidisphaeraceae"
+    },
+    {
+      "id": "GENUS_TEPIDISPHAERACEAE",
+      "name": "Tepidisphaeraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEPIDISPHAERACEAE_BACTERIUM",
+          "name": "Tepidisphaeraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tepidisphaeraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2876886"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tepidisphaeraceae"
     }
   ],
-  "speciesCount": 142,
+  "speciesCount": 147,
   "appSlug": "tepidisphaeraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Planctomycetota > Phycisphaerae",
-  "genusCount": 77
+  "genusCount": 79
 }

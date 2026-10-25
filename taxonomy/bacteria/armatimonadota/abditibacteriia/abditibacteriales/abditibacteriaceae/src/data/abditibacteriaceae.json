@@ -217,6 +217,18 @@
           "lineage": "Abditibacterium",
           "children": [],
           "uuid": "019d3d11-d475-5e1-97d-abf73b648eee30"
+        },
+        {
+          "id": "SP_ABDITIBACTERIUM_SP",
+          "name": "Abditibacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abditibacterium",
+          "sourceIds": {
+            "checklistbank-2265": "2109264"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -357,11 +369,53 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Abditibacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ABDITIBACTERIUM",
+          "name": "uncultured Abditibacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2109266"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "abditibacteriaceae"
+    },
+    {
+      "id": "GENUS_ABDITIBACTERIACEAE",
+      "name": "Abditibacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ABDITIBACTERIACEAE_BACTERIUM",
+          "name": "Abditibacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abditibacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2800791"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "abditibacteriaceae"
     }
   ],
-  "speciesCount": 29,
+  "speciesCount": 32,
   "appSlug": "abditibacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Armatimonadota > Abditibacteriia",
-  "genusCount": 7
+  "genusCount": 9
 }

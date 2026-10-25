@@ -378,7 +378,10 @@
           "lineage": "Brachyspira",
           "authorship": "Backhans et al. 2010",
           "children": [],
-          "uuid": "e7d1fb0c-42d4-5bf-8ec-c135e68b0ba722"
+          "uuid": "e7d1fb0c-42d4-5bf-8ec-c135e68b0ba722",
+          "sourceIds": {
+            "checklistbank-2265": "797076"
+          }
         },
         {
           "id": "SP_BRACHYSPIRA_MURIDARUM_BACKHANS_ET_AL_2010",
@@ -389,7 +392,10 @@
           "lineage": "Brachyspira",
           "authorship": "Backhans et al. 2010",
           "children": [],
-          "uuid": "24721954-c146-52a-a00-ebbec4654af36b"
+          "uuid": "24721954-c146-52a-a00-ebbec4654af36b",
+          "sourceIds": {
+            "checklistbank-2265": "797079"
+          }
         },
         {
           "id": "SP_BRACHYSPIRA_MURIS_BACKHANS_ET_AL_2010",
@@ -400,7 +406,10 @@
           "lineage": "Brachyspira",
           "authorship": "Backhans et al. 2010",
           "children": [],
-          "uuid": "2950d870-cef2-50e-890-1257bfb6822af7"
+          "uuid": "2950d870-cef2-50e-890-1257bfb6822af7",
+          "sourceIds": {
+            "checklistbank-2265": "797080"
+          }
         },
         {
           "id": "SP_BRACHYSPIRA_CORVI_JANSSON_ET_AL_2008",
@@ -411,7 +420,10 @@
           "lineage": "Brachyspira",
           "authorship": "Jansson et al. 2008",
           "children": [],
-          "uuid": "336f64a6-e66e-57f-b47-3a2a317104f47e"
+          "uuid": "336f64a6-e66e-57f-b47-3a2a317104f47e",
+          "sourceIds": {
+            "checklistbank-2265": "542834"
+          }
         },
         {
           "id": "SP_BRACHYSPIRA_CANIS_OXBERRY_AND_HAMSPON_2003",
@@ -422,7 +434,10 @@
           "lineage": "Brachyspira",
           "authorship": "Oxberry and Hamspon 2003",
           "children": [],
-          "uuid": "3c70c1ed-b196-549-8ce-00844e70a8942d"
+          "uuid": "3c70c1ed-b196-549-8ce-00844e70a8942d",
+          "sourceIds": {
+            "checklistbank-2265": "235984"
+          }
         },
         {
           "id": "SP_BRACHYSPIRA_IBARAKI_TACHIBANA_ET_AL_2003",
@@ -433,7 +448,22 @@
           "lineage": "Brachyspira",
           "authorship": "Tachibana et al. 2003",
           "children": [],
-          "uuid": "399e6c51-9366-5e9-b39-f27cc88e150c59"
+          "uuid": "399e6c51-9366-5e9-b39-f27cc88e150c59",
+          "sourceIds": {
+            "checklistbank-2265": "186375"
+          }
+        },
+        {
+          "id": "SP_BRACHYSPIRA_SP",
+          "name": "Brachyspira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brachyspira",
+          "sourceIds": {
+            "checklistbank-2265": "120157"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -486,11 +516,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Brachyspiraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BRACHYSPIRA",
+          "name": "uncultured Brachyspira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "221953"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachyspiraceae"
+    },
+    {
+      "id": "GENUS_BRACHYSPIRACEAE",
+      "name": "Brachyspiraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRACHYSPIRACEAE_BACTERIUM",
+          "name": "Brachyspiraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brachyspiraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2478530"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachyspiraceae"
     }
   ],
-  "speciesCount": 44,
+  "speciesCount": 47,
   "appSlug": "brachyspiraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Spirochaetota > Brachyspiria",
-  "genusCount": 3
+  "genusCount": 5
 }

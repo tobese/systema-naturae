@@ -212,6 +212,18 @@
           "lineage": "Cohaesibacter",
           "children": [],
           "uuid": "240a33b6-255e-525-a27-7e97fc59831d8b"
+        },
+        {
+          "id": "SP_COHAESIBACTER_SP",
+          "name": "Cohaesibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cohaesibacter",
+          "sourceIds": {
+            "checklistbank-2265": "1213480"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -254,11 +266,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Cohaesibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_COHAESIBACTER",
+          "name": "uncultured Cohaesibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1002546"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_COHAESIBACTERACEAE",
+          "name": "uncultured Cohaesibacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1645728"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cohaesibacteraceae"
+    },
+    {
+      "id": "GENUS_COHAESIBACTERACEAE",
+      "name": "Cohaesibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COHAESIBACTERACEAE_BACTERIUM",
+          "name": "Cohaesibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cohaesibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "1349076"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cohaesibacteraceae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 26,
   "appSlug": "cohaesibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 3
+  "genusCount": 5
 }

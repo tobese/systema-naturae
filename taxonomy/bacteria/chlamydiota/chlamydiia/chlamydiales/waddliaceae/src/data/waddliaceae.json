@@ -48,7 +48,22 @@
           "lineage": "Waddlia",
           "authorship": "Chua et al. 2005",
           "children": [],
-          "uuid": "1921365c-eeeb-598-a66-487747e1dd31a8"
+          "uuid": "1921365c-eeeb-598-a66-487747e1dd31a8",
+          "sourceIds": {
+            "checklistbank-2265": "219016"
+          }
+        },
+        {
+          "id": "SP_WADDLIA_SP",
+          "name": "Waddlia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Waddlia",
+          "sourceIds": {
+            "checklistbank-2265": "1590031"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -139,11 +154,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Waddliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_WADDLIA",
+          "name": "uncultured Waddlia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "464465"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "waddliaceae"
+    },
+    {
+      "id": "GENUS_WADDLIACEAE",
+      "name": "Waddliaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WADDLIACEAE_BACTERIUM",
+          "name": "Waddliaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Waddliaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1009366"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "waddliaceae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 12,
   "appSlug": "waddliaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chlamydiota > Chlamydiia",
-  "genusCount": 5
+  "genusCount": 7
 }

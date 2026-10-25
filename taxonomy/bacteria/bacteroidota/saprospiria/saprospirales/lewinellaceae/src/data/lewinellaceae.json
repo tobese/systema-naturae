@@ -17,7 +17,10 @@
           "lineage": "Neolewinella",
           "authorship": "(Khan et al. 2007) Huang et al. 2022",
           "children": [],
-          "uuid": "84f0247a-6e8f-58a-9eb-e80b91543455c7"
+          "uuid": "84f0247a-6e8f-58a-9eb-e80b91543455c7",
+          "sourceIds": {
+            "checklistbank-2265": "438752"
+          }
         },
         {
           "id": "SP_NEOLEWINELLA_AURANTIACA_KIM_ET_AL_2020_HUANG_ET_AL_2022",
@@ -148,6 +151,18 @@
           "children": [],
           "uuid": "f3d5f86a-2525-5cf-949-1adaf5936e0f90",
           "description": "Flavilitoribacter nigricans is a bacterium from the family Saprospiraceae which has been isolated from beach sand near Lagos in Nigeria."
+        },
+        {
+          "id": "SP_FLAVILITORIBACTER_SP",
+          "name": "Flavilitoribacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flavilitoribacter",
+          "sourceIds": {
+            "checklistbank-2265": "2952963"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -168,14 +183,68 @@
           "authorship": "(Lewin 1970) Sly et al. 1998 emend. Khan et al. 2007",
           "children": [],
           "uuid": "a2d39683-761f-550-aa6-80d118adcafc8d"
+        },
+        {
+          "id": "SP_LEWINELLA_SP",
+          "name": "Lewinella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lewinella",
+          "sourceIds": {
+            "checklistbank-2265": "1229188"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Lewinellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LEWINELLA",
+          "name": "uncultured Lewinella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "101436"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lewinellaceae"
+    },
+    {
+      "id": "GENUS_LEWINELLACEAE",
+      "name": "Lewinellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEWINELLACEAE_BACTERIUM",
+          "name": "Lewinellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lewinellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2014804"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lewinellaceae"
     }
   ],
-  "speciesCount": 13,
+  "speciesCount": 17,
   "appSlug": "lewinellaceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 3
+  "genusCount": 5
 }

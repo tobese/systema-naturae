@@ -102,7 +102,10 @@
           "lineage": "Desulfitobacterium",
           "authorship": "Finneran et al. 2002",
           "children": [],
-          "uuid": "38c0c441-2e84-572-a30-66d7ea3059688f"
+          "uuid": "38c0c441-2e84-572-a30-66d7ea3059688f",
+          "sourceIds": {
+            "checklistbank-2265": "142877"
+          }
         },
         {
           "id": "SP_DESULFITOBACTERIUM_ELONGATUM_BHATTACHARJEE_ET_AL_2025",
@@ -114,6 +117,30 @@
           "authorship": "Bhattacharjee et al. 2025",
           "children": [],
           "uuid": "82e1025a-ee7b-5a0-ae7-8b05a2743ae734"
+        },
+        {
+          "id": "SP_DESULFITOBACTERIUM_SP",
+          "name": "Desulfitobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfitobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "49981"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DESULFITOBACTERIUM_ENRICHMENT",
+          "name": "Desulfitobacterium enrichment",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfitobacterium",
+          "sourceIds": {
+            "checklistbank-2265": "1143364"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -565,7 +592,10 @@
           "lineage": "Desulfosporosinus",
           "authorship": "corrig. (Newman et al. 2000) Stackebrandt et al. 2003",
           "children": [],
-          "uuid": "2cb49ef4-156d-502-83e-f4ef5efa672835"
+          "uuid": "2cb49ef4-156d-502-83e-f4ef5efa672835",
+          "sourceIds": {
+            "checklistbank-2265": "56760"
+          }
         },
         {
           "id": "SP_DESULFOSPOROSINUS_BURENSIS_MAYEUX_ET_AL_2013",
@@ -576,7 +606,22 @@
           "lineage": "Desulfosporosinus",
           "authorship": "Mayeux et al. 2013",
           "children": [],
-          "uuid": "05c9dc77-f423-55a-819-6630dc12b1636b"
+          "uuid": "05c9dc77-f423-55a-819-6630dc12b1636b",
+          "sourceIds": {
+            "checklistbank-2265": "1037382"
+          }
+        },
+        {
+          "id": "SP_DESULFOSPOROSINUS_SP",
+          "name": "Desulfosporosinus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfosporosinus",
+          "sourceIds": {
+            "checklistbank-2265": "97383"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -908,15 +953,126 @@
           "children": [],
           "uuid": "ff6d7998-da40-5de-a2b-b125d265bd36ce",
           "description": "Dehalobacter restrictus is a species of bacteria in the phylum Bacillota."
+        },
+        {
+          "id": "SP_DEHALOBACTER_SP",
+          "name": "Dehalobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dehalobacter",
+          "sourceIds": {
+            "checklistbank-2265": "205650"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Desulfitobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DEHALOBACTER",
+          "name": "uncultured Dehalobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "126462"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFOSPOROSINUS",
+          "name": "uncultured Desulfosporosinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "201088"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DESULFITOBACTERIUM",
+          "name": "uncultured Desulfitobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "244202"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SYNTROPHOBOTULUS",
+          "name": "uncultured Syntrophobotulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "577591"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfitobacteriaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_DESULFOSPOROSINUS",
+          "name": "Candidatus Desulfosporosinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2043169"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfitobacteriaceae"
+    },
+    {
+      "id": "GENUS_DESULFITOBACTERIACEAE",
+      "name": "Desulfitobacteriaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFITOBACTERIACEAE_BACTERIUM",
+          "name": "Desulfitobacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfitobacteriaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3018271"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfitobacteriaceae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 86,
   "appSlug": "desulfitobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Desulfitobacteriia",
-  "genusCount": 14
+  "genusCount": 17
 }

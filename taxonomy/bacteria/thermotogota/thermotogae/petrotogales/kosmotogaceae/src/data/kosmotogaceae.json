@@ -109,6 +109,30 @@
           "lineage": "Mesotoga",
           "children": [],
           "uuid": "6f15575d-216f-51b-80f-b1cac33dfd4269"
+        },
+        {
+          "id": "SP_MESOTOGA_BACTERIUM",
+          "name": "Mesotoga bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesotoga",
+          "sourceIds": {
+            "checklistbank-2265": "700509"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOTOGA_SP",
+          "name": "Mesotoga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesotoga",
+          "sourceIds": {
+            "checklistbank-2265": "1343998"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -178,7 +202,10 @@
           "lineage": "Kosmotoga",
           "authorship": "(Feng et al. 2010) Nunoura et al. 2013",
           "children": [],
-          "uuid": "a5136e7c-5a80-523-9c0-a9cb143ff46b90"
+          "uuid": "a5136e7c-5a80-523-9c0-a9cb143ff46b90",
+          "sourceIds": {
+            "checklistbank-2265": "501340"
+          }
         },
         {
           "id": "SP_KOSMOTOGA_ARENICORALLINA_NUNOURA_ET_AL_2011",
@@ -189,7 +216,10 @@
           "lineage": "Kosmotoga",
           "authorship": "Nunoura et al. 2011",
           "children": [],
-          "uuid": "00a41b3b-a69a-5bb-a3a-41d4a059a56950"
+          "uuid": "00a41b3b-a69a-5bb-a3a-41d4a059a56950",
+          "sourceIds": {
+            "checklistbank-2265": "688066"
+          }
         },
         {
           "id": "SP_KOSMOTOGA_PACIFICA_L_HARIDON_ET_AL_2016",
@@ -200,7 +230,22 @@
           "lineage": "Kosmotoga",
           "authorship": "L'Haridon et al. 2016",
           "children": [],
-          "uuid": "07c6ef5c-0245-554-ac8-c778bde12d7f1c"
+          "uuid": "07c6ef5c-0245-554-ac8-c778bde12d7f1c",
+          "sourceIds": {
+            "checklistbank-2265": "1330330"
+          }
+        },
+        {
+          "id": "SP_KOSMOTOGA_SP",
+          "name": "Kosmotoga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kosmotoga",
+          "sourceIds": {
+            "checklistbank-2265": "1310160"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -342,11 +387,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Kosmotogaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KOSMOTOGA",
+          "name": "uncultured Kosmotoga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "905000"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MESOTOGA",
+          "name": "uncultured Mesotoga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1184400"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_KOSMOTOGACEAE",
+          "name": "uncultured Kosmotogaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2020337"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kosmotogaceae"
+    },
+    {
+      "id": "GENUS_KOSMOTOGACEAE",
+      "name": "Kosmotogaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KOSMOTOGACEAE_BACTERIUM",
+          "name": "Kosmotogaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kosmotogaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1951967"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kosmotogaceae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 35,
   "appSlug": "kosmotogaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Thermotogota > Thermotogae",
-  "genusCount": 6
+  "genusCount": 8
 }

@@ -274,6 +274,30 @@
           "authorship": "Park et al. 2012",
           "children": [],
           "uuid": "dcbfc9c6-eaf2-544-819-3eba2d4beba4e8"
+        },
+        {
+          "id": "SP_SALINISPHAERA_SP",
+          "name": "Salinisphaera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinisphaera",
+          "sourceIds": {
+            "checklistbank-2265": "266736"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SALINISPHAERA_HALOPHILA",
+          "name": "Salinisphaera halophila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinisphaera",
+          "sourceIds": {
+            "checklistbank-2265": "1304158"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -399,16 +423,82 @@
           "lineage": "Halophibacterium",
           "authorship": "Lai et al. 2011",
           "children": [],
-          "uuid": "9b17ab01-1446-504-81f-143f99a09dfdd4"
+          "uuid": "9b17ab01-1446-504-81f-143f99a09dfdd4",
+          "sourceIds": {
+            "checklistbank-2265": "742033"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Salinisphaeraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SALINISPHAERA",
+          "name": "uncultured Salinisphaera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "359372"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinisphaeraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "Uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SALINISPHAERACEAE",
+          "name": "Uncultured Salinisphaeraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1233509"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinisphaeraceae"
+    },
+    {
+      "id": "GENUS_SALINISPHAERACEAE",
+      "name": "Salinisphaeraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SALINISPHAERACEAE_BACTERIUM",
+          "name": "Salinisphaeraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinisphaeraceae",
+          "sourceIds": {
+            "checklistbank-2265": "1953075"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinisphaeraceae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 37,
   "appSlug": "salinisphaeraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 8
+  "genusCount": 11
 }

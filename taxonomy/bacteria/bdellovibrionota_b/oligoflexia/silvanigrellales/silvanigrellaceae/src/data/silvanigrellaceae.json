@@ -297,6 +297,18 @@
           "lineage": "Silvanigrella",
           "children": [],
           "uuid": "47331c17-23d8-526-bf3-9ec2aa465c7743"
+        },
+        {
+          "id": "SP_SILVANIGRELLA_SP",
+          "name": "Silvanigrella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Silvanigrella",
+          "sourceIds": {
+            "checklistbank-2265": "2024976"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -421,7 +433,10 @@
           "lineage": "Fluviispira",
           "authorship": "Tang et al. 2023",
           "children": [],
-          "uuid": "9a5d0ccb-9fef-515-95a-0509960df79727"
+          "uuid": "9a5d0ccb-9fef-515-95a-0509960df79727",
+          "sourceIds": {
+            "checklistbank-2265": "2763012"
+          }
         },
         {
           "id": "SP_FLUVIISPIRA_MULTICOLORATA_PITT_ET_AL_2020",
@@ -432,7 +447,10 @@
           "lineage": "Fluviispira",
           "authorship": "Pitt et al. 2020",
           "children": [],
-          "uuid": "e9d6ded8-8a8d-56c-9d0-a7596854c600dc"
+          "uuid": "e9d6ded8-8a8d-56c-9d0-a7596854c600dc",
+          "sourceIds": {
+            "checklistbank-2265": "2654512"
+          }
         },
         {
           "id": "SP_FLUVIISPIRA_SANARUENSIS_MAEJIMA_ET_AL_2021",
@@ -443,7 +461,10 @@
           "lineage": "Fluviispira",
           "authorship": "Maejima et al. 2021",
           "children": [],
-          "uuid": "b1c11fd0-f665-55b-82a-c22e05eb355b9f"
+          "uuid": "b1c11fd0-f665-55b-82a-c22e05eb355b9f",
+          "sourceIds": {
+            "checklistbank-2265": "2493639"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -463,16 +484,85 @@
           "lineage": "Pigmentibacter",
           "authorship": "Peng et al. 2023",
           "children": [],
-          "uuid": "659f9279-a4f2-5ff-894-443e856573e9bc"
+          "uuid": "659f9279-a4f2-5ff-894-443e856573e9bc",
+          "sourceIds": {
+            "checklistbank-2265": "2683196"
+          }
+        },
+        {
+          "id": "SP_PIGMENTIBACTER_SP",
+          "name": "Pigmentibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pigmentibacter",
+          "sourceIds": {
+            "checklistbank-2265": "2838411"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Silvanigrellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SILVANIGRELLA",
+          "name": "uncultured Silvanigrella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2024978"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SILVANIGRELLACEAE",
+          "name": "uncultured Silvanigrellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2793014"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "silvanigrellaceae"
+    },
+    {
+      "id": "GENUS_SILVANIGRELLACEAE",
+      "name": "Silvanigrellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SILVANIGRELLACEAE_BACTERIUM",
+          "name": "Silvanigrellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Silvanigrellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2654442"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "silvanigrellaceae"
     }
   ],
-  "speciesCount": 37,
+  "speciesCount": 42,
   "appSlug": "silvanigrellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bdellovibrionota_B > Oligoflexia",
-  "genusCount": 10
+  "genusCount": 12
 }

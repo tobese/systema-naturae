@@ -80,6 +80,18 @@
           "lineage": "Turicibacter",
           "children": [],
           "uuid": "ea7f9b27-9f5b-5d0-b34-64f49088a2ab5a"
+        },
+        {
+          "id": "SP_TURICIBACTER_SP",
+          "name": "Turicibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turicibacter",
+          "sourceIds": {
+            "checklistbank-2265": "910310"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -132,11 +144,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Turicibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TURICIBACTER",
+          "name": "uncultured Turicibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "297316"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "turicibacteraceae"
+    },
+    {
+      "id": "GENUS_TURICIBACTERACEAE",
+      "name": "Turicibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TURICIBACTERACEAE_BACTERIUM",
+          "name": "Turicibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turicibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2952979"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "turicibacteraceae"
     }
   ],
-  "speciesCount": 10,
+  "speciesCount": 13,
   "appSlug": "turicibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota_I > Bacilli_A",
-  "genusCount": 3
+  "genusCount": 5
 }

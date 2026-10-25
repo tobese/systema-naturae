@@ -4239,7 +4239,10 @@
           "lineage": "Ilumatobacter",
           "authorship": "corrig. Matsumoto et al. 2013",
           "children": [],
-          "uuid": "fa5ff0f9-f8a0-596-bf5-75d82066dfb887"
+          "uuid": "fa5ff0f9-f8a0-596-bf5-75d82066dfb887",
+          "sourceIds": {
+            "checklistbank-2265": "467094"
+          }
         },
         {
           "id": "SP_ILUMATOBACTER_NONAMIENSIS_CORRIG_MATSUMOTO_ET_AL_2013",
@@ -4250,7 +4253,22 @@
           "lineage": "Ilumatobacter",
           "authorship": "corrig. Matsumoto et al. 2013",
           "children": [],
-          "uuid": "44273764-4cd7-558-811-368cc343c4accf"
+          "uuid": "44273764-4cd7-558-811-368cc343c4accf",
+          "sourceIds": {
+            "checklistbank-2265": "467093"
+          }
+        },
+        {
+          "id": "SP_ILUMATOBACTER_SP",
+          "name": "Ilumatobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ilumatobacter",
+          "sourceIds": {
+            "checklistbank-2265": "1967498"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -5497,6 +5515,18 @@
           "lineage": "Desertimonas",
           "children": [],
           "uuid": "49c2b88a-c527-576-8b0-cd44c006ab5e04"
+        },
+        {
+          "id": "SP_DESERTIMONAS_SP",
+          "name": "Desertimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desertimonas",
+          "sourceIds": {
+            "checklistbank-2265": "2448025"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -7545,11 +7575,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Ilumatobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ILUMATOBACTER",
+          "name": "uncultured Ilumatobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "879968"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ILUMATOBACTERACEAE",
+          "name": "uncultured Ilumatobacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2872356"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ilumatobacteraceae"
+    },
+    {
+      "id": "GENUS_ILUMATOBACTERACEAE",
+      "name": "Ilumatobacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ILUMATOBACTERACEAE_BACTERIUM",
+          "name": "Ilumatobacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ilumatobacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2497619"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ilumatobacteraceae"
     }
   ],
-  "speciesCount": 699,
+  "speciesCount": 704,
   "appSlug": "ilumatobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Acidimicrobiia",
-  "genusCount": 61
+  "genusCount": 63
 }

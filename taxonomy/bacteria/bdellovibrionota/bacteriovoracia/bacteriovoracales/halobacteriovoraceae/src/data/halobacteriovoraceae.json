@@ -17,7 +17,10 @@
           "lineage": "Halobacteriovorax",
           "authorship": "(Baer et al. 2004) Koval et al. 2015",
           "children": [],
-          "uuid": "6f30737d-72ea-53e-80b-d29b5c6d201475"
+          "uuid": "6f30737d-72ea-53e-80b-d29b5c6d201475",
+          "sourceIds": {
+            "checklistbank-2265": "97089"
+          }
         },
         {
           "id": "SP_HALOBACTERIOVORAX_VIBRIONIVORANS_YE_ET_AL_2019",
@@ -28,7 +31,10 @@
           "lineage": "Halobacteriovorax",
           "authorship": "Ye et al. 2019",
           "children": [],
-          "uuid": "e31bea3a-7b5f-52e-a12-5a614a53d2a44d"
+          "uuid": "e31bea3a-7b5f-52e-a12-5a614a53d2a44d",
+          "sourceIds": {
+            "checklistbank-2265": "2152716"
+          }
         },
         {
           "id": "SP_HALOBACTERIOVORAX_MARINUS_BAER_ET_AL_2004_KOVAL_ET_AL_2015",
@@ -40,14 +46,68 @@
           "authorship": "(Baer et al. 2004) Koval et al. 2015",
           "children": [],
           "uuid": "f48999a2-f6c6-5d5-ab3-e546348d0013ef"
+        },
+        {
+          "id": "SP_HALOBACTERIOVORAX_SP",
+          "name": "Halobacteriovorax sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halobacteriovorax",
+          "sourceIds": {
+            "checklistbank-2265": "1652022"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Halobacteriovoraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HALOBACTERIOVORAX",
+          "name": "uncultured Halobacteriovorax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1652137"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "halobacteriovoraceae"
+    },
+    {
+      "id": "GENUS_HALOBACTERIOVORACEAE",
+      "name": "Halobacteriovoraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALOBACTERIOVORACEAE_BACTERIUM",
+          "name": "Halobacteriovoraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halobacteriovoraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2026745"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "halobacteriovoraceae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 6,
   "appSlug": "halobacteriovoraceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 1
+  "genusCount": 3
 }

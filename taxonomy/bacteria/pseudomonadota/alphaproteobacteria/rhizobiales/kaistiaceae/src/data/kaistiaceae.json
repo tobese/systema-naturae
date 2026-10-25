@@ -148,7 +148,22 @@
           "lineage": "Bauldia",
           "authorship": "(Vasil'eva et al. 2009) Yee et al. 2010",
           "children": [],
-          "uuid": "c4639b0f-7295-5f5-8eb-4c03a07efbd978"
+          "uuid": "c4639b0f-7295-5f5-8eb-4c03a07efbd978",
+          "sourceIds": {
+            "checklistbank-2265": "616952"
+          }
+        },
+        {
+          "id": "SP_BAULDIA_SP",
+          "name": "Bauldia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bauldia",
+          "sourceIds": {
+            "checklistbank-2265": "2575872"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -388,6 +403,18 @@
           "lineage": "Kaistia",
           "children": [],
           "uuid": "b60cb607-25d5-56b-ad5-719f1b03f14fac"
+        },
+        {
+          "id": "SP_KAISTIA_SP",
+          "name": "Kaistia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kaistia",
+          "sourceIds": {
+            "checklistbank-2265": "366361"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -979,6 +1006,30 @@
           "authorship": "Staley 1968 (Approved Lists 1980)",
           "children": [],
           "uuid": "0192f4b6-6200-597-878-fe81cce3aee539"
+        },
+        {
+          "id": "SP_PROSTHECOMICROBIUM_SP",
+          "name": "Prosthecomicrobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prosthecomicrobium",
+          "sourceIds": {
+            "checklistbank-2265": "665130"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROSTHECOMICROBIUM_HIRSCHII",
+          "name": "Prosthecomicrobium hirschii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prosthecomicrobium",
+          "sourceIds": {
+            "checklistbank-2265": "665126"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1012,11 +1063,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Kaistiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KAISTIA",
+          "name": "uncultured Kaistia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "246136"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PROSTHECOMICROBIUM",
+          "name": "uncultured Prosthecomicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "543091"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BAULDIA",
+          "name": "uncultured Bauldia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1146869"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kaistiaceae"
+    },
+    {
+      "id": "GENUS_KAISTIACEAE",
+      "name": "Kaistiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KAISTIACEAE_BACTERIUM",
+          "name": "Kaistiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kaistiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3022877"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kaistiaceae"
     }
   ],
-  "speciesCount": 88,
+  "speciesCount": 96,
   "appSlug": "kaistiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 13
+  "genusCount": 15
 }

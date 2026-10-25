@@ -1,31 +1,47 @@
 # Holding bacteria and viruses
 
-> **ON HOLD as of 2026-10-04, reaffirmed 2026-10-17. Do not import, scaffold,
-> build or deploy either kingdom.** Bacteria and viruses are not to be imported,
-> and no rank decision is to be taken. Sources for them are still being
-> registered — `ncbi-taxonomy`, `ictv-msl`, `gtdb` and `wikidata-species` are
-> all on the record — but registration is the only work in scope. Everything below
-> is retained because the measurement is expensive to redo and because the hold
-> may be lifted; none of it is a task list. When the hold lifts, the rank
-> question is settled for bacteria (see *Settled* below) and still open for
-> viruses.
+> **PARTIALLY LIFTED 2026-10-25.** On hold as of 2026-10-04, reaffirmed
+> 2026-10-17: import, scaffolding, build and deploy all blocked. As of
+> 2026-10-25, **importing is back in scope** — not a bug-fix, a decision,
+> made because the two kingdoms kept arriving inside normal source imports
+> anyway (NCBI's checklistbank-2169 and ENA's checklistbank-2265 runs the
+> same week bucketed roughly 200k bacteria/virus taxa as UNRESOLVED KINGDOM
+> between them) and refusing data already in hand stopped making sense.
+> **Scaffolding a brand-new bacteria/virus family, building either kingdom,
+> and deploying either kingdom are all still on hold** — only merging new
+> species into the 3,784 bacteria + 393 viruses families already on disk is
+> back in scope. Sources: `ncbi-taxonomy`, `ictv-msl`, `gtdb` and
+> `wikidata-species` are all on the record. Everything below the line is
+> retained because the measurement is expensive to redo and because the rest
+> of the hold may also be lifted eventually; none of it is a task list. The
+> rank question is settled for bacteria (see *Settled* below) and still open
+> for viruses — it no longer blocks *import* (merging into an existing
+> family doesn't require re-deriving its rank), only new-family scaffolding
+> and the build/deploy decision.
 >
-> **What "on hold" means mechanically.** `portal/data/kingdom-config.json`
-> declares six kingdoms and must keep declaring six. It is what
-> `buildAllKingdoms.sh`, `tree.kingdom_names()`, `verifyTree` and `sanity_scan`
-> all read, so the six-kingdom list is the enforcement, not a description.
-> Adding `bacteria` or `viruses` there is not finishing a half-done feature; it
-> is lifting the hold without making the decision.
+> **What "import yes, portal no" means mechanically.**
+> `portal/data/kingdom-config.json` still declares six kingdoms and must
+> keep declaring six. It is what `buildAllKingdoms.sh`,
+> `tree.kingdom_names()`, `verifyTree` and `sanity_scan` all read, so the
+> six-kingdom list is still the enforcement for everything build/deploy/
+> verify-side. `scripts/importColChecklist.py` instead resolves bacteria/
+> viruses through a hardcoded `BACTERIA_VIRUSES_INPUT` side-channel (added
+> 2026-10-25) that never touches that file — the same asymmetry
+> `post-import.sh`'s `SN_INPUT` override already has for the build side,
+> just run the other direction for import.
 >
-> **The family files on disk are a known artefact, not an oversight.** An import
-> ran on q-bert (`Import NCBI bacteria/viruses + GTDB`, commits `d75d600cd1`,
-> `efc0c5f72b`) and left **3,784 bacteria and 393 viruses** families committed
-> under `taxonomy/`. They are unreachable — not in `kingdom-config.json`, so not
-> grafted, not built, not deployed, and invisible to `make check`, which is why
-> `tree.family_data_files()` returns 14,332 while 18,509 family files exist on
-> disk. They are left in place deliberately: the measured material is expensive to
-> regenerate, and *not building it* is the hold being honoured. Deleting them is
-> a separate decision with its own reasons and is not implied by this one.
+> **The family files on disk are a known artefact, not an oversight — and
+> now a live import target.** An import ran on q-bert (`Import NCBI
+> bacteria/viruses + GTDB`, commits `d75d600cd1`, `efc0c5f72b`) and left
+> **3,784 bacteria and 393 viruses** families committed under `taxonomy/`.
+> They are still unreachable from the portal — not in `kingdom-config.json`,
+> so not grafted, not built, not deployed, and invisible to `make check` —
+> which is why `tree.family_data_files()` undercounts the true family-file
+> total on disk. What changed 2026-10-25: a normal source import (ENA)
+> merged 19,360 more species into this same set via the import-side fix
+> above. A source offering a genuinely new bacteria/virus family still gets
+> refused, same as any other kingdom's missing-family case — scaffolding one
+> is still a taxonomy decision this hold defers, same as it always was.
 >
 > One place names these kingdoms outside this paragraph, on purpose:
 > `scripts/post-import.sh` appends `bacteria viruses` to the config kingdom list

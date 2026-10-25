@@ -28,6 +28,18 @@
           "authorship": "Kawaichi et al. 2013",
           "children": [],
           "uuid": "7796b3cc-5797-59b-97a-2b49d2b5c9f158"
+        },
+        {
+          "id": "SP_ARDENTICATENA_SP",
+          "name": "Ardenticatena sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardenticatena",
+          "sourceIds": {
+            "checklistbank-2265": "1872631"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -223,11 +235,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Ardenticatenaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ARDENTICATENA",
+          "name": "uncultured Ardenticatena",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1771905"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ardenticatenaceae"
+    },
+    {
+      "id": "GENUS_ARDENTICATENACEAE",
+      "name": "Ardenticatenaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARDENTICATENACEAE_BACTERIUM",
+          "name": "Ardenticatenaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardenticatenaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2614247"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ardenticatenaceae"
     }
   ],
-  "speciesCount": 13,
+  "speciesCount": 16,
   "appSlug": "ardenticatenaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Anaerolineae",
-  "genusCount": 10
+  "genusCount": 12
 }

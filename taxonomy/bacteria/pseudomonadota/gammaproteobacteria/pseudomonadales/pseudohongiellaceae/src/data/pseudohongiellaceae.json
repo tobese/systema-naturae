@@ -1967,6 +1967,18 @@
           "lineage": "Pseudohongiella",
           "children": [],
           "uuid": "2f7621c0-1493-5f8-889-281e45037d5a52"
+        },
+        {
+          "id": "SP_PSEUDOHONGIELLA_SP",
+          "name": "Pseudohongiella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudohongiella",
+          "sourceIds": {
+            "checklistbank-2265": "1979412"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2614,11 +2626,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Pseudohongiellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PSEUDOHONGIELLA",
+          "name": "uncultured Pseudohongiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1772216"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudohongiellaceae"
+    },
+    {
+      "id": "GENUS_PSEUDOHONGIELLACEAE",
+      "name": "Pseudohongiellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOHONGIELLACEAE_BACTERIUM",
+          "name": "Pseudohongiellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudohongiellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3085159"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudohongiellaceae"
     }
   ],
-  "speciesCount": 251,
+  "speciesCount": 254,
   "appSlug": "pseudohongiellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 11
+  "genusCount": 13
 }

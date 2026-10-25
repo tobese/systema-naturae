@@ -38,6 +38,18 @@
           "lineage": "Thiohalobacter",
           "children": [],
           "uuid": "33eff357-e05c-505-a2b-9a3ee1e8312205"
+        },
+        {
+          "id": "SP_THIOHALOBACTER_SP",
+          "name": "Thiohalobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiohalobacter",
+          "sourceIds": {
+            "checklistbank-2265": "2025948"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -295,11 +307,32 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thiohalobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THIOHALOBACTER",
+          "name": "uncultured Thiohalobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1689145"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiohalobacteraceae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 24,
   "appSlug": "thiohalobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 8
+  "genusCount": 9
 }

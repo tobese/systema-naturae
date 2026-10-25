@@ -215,7 +215,10 @@
           "lineage": "Halanaerobium",
           "authorship": "corrig. Cayol et al. 1995",
           "children": [],
-          "uuid": "e2e4cee1-a9f1-52d-9c0-63107d3a1ee9a0"
+          "uuid": "e2e4cee1-a9f1-52d-9c0-63107d3a1ee9a0",
+          "sourceIds": {
+            "checklistbank-2265": "42859"
+          }
         },
         {
           "id": "SP_HALANAEROBIUM_ALCALIPHILUM_TSAI_ET_AL_1995",
@@ -226,7 +229,10 @@
           "lineage": "Halanaerobium",
           "authorship": "Tsai et al. 1995",
           "children": [],
-          "uuid": "6ffe464e-84e2-57b-b79-3eec22021891a1"
+          "uuid": "6ffe464e-84e2-57b-b79-3eec22021891a1",
+          "sourceIds": {
+            "checklistbank-2265": "39651"
+          }
         },
         {
           "id": "SP_HALANAEROBIUM_FERMENTANS_KOBAYASHI_ET_AL_2000",
@@ -237,7 +243,10 @@
           "lineage": "Halanaerobium",
           "authorship": "Kobayashi et al. 2000",
           "children": [],
-          "uuid": "6bcb0569-4aaa-59b-85b-e4dacc85e9c8b6"
+          "uuid": "6bcb0569-4aaa-59b-85b-e4dacc85e9c8b6",
+          "sourceIds": {
+            "checklistbank-2265": "88362"
+          }
         },
         {
           "id": "SP_HALANAEROBIUM_ACETETHYLICUM_CORRIG_RENGPIPAT_ET_AL_1989_RAINEY_ET_AL_1995",
@@ -248,7 +257,10 @@
           "lineage": "Halanaerobium",
           "authorship": "corrig. (Rengpipat et al. 1989) Rainey et al. 1995",
           "children": [],
-          "uuid": "a0bbb2d7-3d72-530-a54-f1aa3cdc9b0d43"
+          "uuid": "a0bbb2d7-3d72-530-a54-f1aa3cdc9b0d43",
+          "sourceIds": {
+            "checklistbank-2265": "42421"
+          }
         },
         {
           "id": "SP_HALANAEROBIUM_SEHLINENSE_ABDELJABBAR_ET_AL_2013",
@@ -259,7 +271,22 @@
           "lineage": "Halanaerobium",
           "authorship": "Abdeljabbar et al. 2013",
           "children": [],
-          "uuid": "9816ec24-3b16-53a-87b-b67afd015f166d"
+          "uuid": "9816ec24-3b16-53a-87b-b67afd015f166d",
+          "sourceIds": {
+            "checklistbank-2265": "1076695"
+          }
+        },
+        {
+          "id": "SP_HALANAEROBIUM_SP",
+          "name": "Halanaerobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halanaerobium",
+          "sourceIds": {
+            "checklistbank-2265": "151446"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -357,16 +384,109 @@
           "lineage": "Halocella",
           "authorship": "corrig. Simankova et al. 1994",
           "children": [],
-          "uuid": "d5d3f8d2-d4b3-52c-800-9d340637874aa3"
+          "uuid": "d5d3f8d2-d4b3-52c-800-9d340637874aa3",
+          "sourceIds": {
+            "checklistbank-2265": "46467"
+          }
+        },
+        {
+          "id": "SP_HALOCELLA_SP",
+          "name": "Halocella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halocella",
+          "sourceIds": {
+            "checklistbank-2265": "2382161"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Halanaerobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HALANAEROBIUM",
+          "name": "uncultured Halanaerobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "262404"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HALANAEROBIACEAE",
+          "name": "uncultured Halanaerobiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "374446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HALOCELLA",
+          "name": "uncultured Halocella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "888100"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "halanaerobiaceae"
+    },
+    {
+      "id": "GENUS_HALANAEROBIACEAE",
+      "name": "Halanaerobiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALANAEROBIACEAE_BACTERIUM",
+          "name": "Halanaerobiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halanaerobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "372469"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALANAEROBIACEAE_ENRICHMENT",
+          "name": "Halanaerobiaceae enrichment",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halanaerobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "549628"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "halanaerobiaceae"
     }
   ],
-  "speciesCount": 30,
+  "speciesCount": 37,
   "appSlug": "halanaerobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Halanaerobiia",
-  "genusCount": 5
+  "genusCount": 7
 }

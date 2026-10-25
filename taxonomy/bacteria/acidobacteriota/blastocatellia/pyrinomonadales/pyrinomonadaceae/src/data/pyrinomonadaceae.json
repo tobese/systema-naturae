@@ -6001,6 +6001,18 @@
           "lineage": "Pyrinomonas",
           "children": [],
           "uuid": "fa800fd1-38d3-516-926-0cdd6ccc5b7395"
+        },
+        {
+          "id": "SP_PYRINOMONAS_SP",
+          "name": "Pyrinomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrinomonas",
+          "sourceIds": {
+            "checklistbank-2265": "2080306"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -7803,11 +7815,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Pyrinomonadaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PYRINOMONAS",
+          "name": "uncultured Pyrinomonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1562568"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PYRINOMONADACEAE",
+          "name": "uncultured Pyrinomonadaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2283094"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pyrinomonadaceae"
+    },
+    {
+      "id": "GENUS_PYRINOMONADACEAE",
+      "name": "Pyrinomonadaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PYRINOMONADACEAE_BACTERIUM",
+          "name": "Pyrinomonadaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrinomonadaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2283092"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pyrinomonadaceae"
     }
   ],
-  "speciesCount": 726,
+  "speciesCount": 730,
   "appSlug": "pyrinomonadaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Acidobacteriota > Blastocatellia",
-  "genusCount": 60
+  "genusCount": 62
 }

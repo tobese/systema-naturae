@@ -779,6 +779,18 @@
           "lineage": "Muribaculum",
           "children": [],
           "uuid": "4ae8065e-3d89-555-bf0-b0ad9fdd640ba5"
+        },
+        {
+          "id": "SP_MURIBACULUM_SP",
+          "name": "Muribaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muribaculum",
+          "sourceIds": {
+            "checklistbank-2265": "1918611"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -3621,6 +3633,18 @@
           "lineage": "Duncaniella",
           "children": [],
           "uuid": "5b7ae4a3-040d-559-bdf-f0973358b9bfc9"
+        },
+        {
+          "id": "SP_DUNCANIELLA_SP",
+          "name": "Duncaniella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Duncaniella",
+          "sourceIds": {
+            "checklistbank-2265": "2518496"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -5960,6 +5984,18 @@
           "lineage": "Paramuribaculum",
           "children": [],
           "uuid": "539e2638-4b92-5d2-865-439c71a8451a48"
+        },
+        {
+          "id": "SP_PARAMURIBACULUM_SP",
+          "name": "Paramuribaculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paramuribaculum",
+          "sourceIds": {
+            "checklistbank-2265": "2518501"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -7539,6 +7575,18 @@
           "lineage": "Sodaliphilus",
           "children": [],
           "uuid": "193fc916-fae2-568-a30-e058550dfba4ea"
+        },
+        {
+          "id": "SP_SODALIPHILUS_SP",
+          "name": "Sodaliphilus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sodaliphilus",
+          "sourceIds": {
+            "checklistbank-2265": "2815818"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -9541,7 +9589,10 @@
           "lineage": "Sangeribacter",
           "authorship": "Forster et al. 2022",
           "children": [],
-          "uuid": "5e66dd3f-ac9c-5b5-84d-ea3d3f3b324943"
+          "uuid": "5e66dd3f-ac9c-5b5-84d-ea3d3f3b324943",
+          "sourceIds": {
+            "checklistbank-2265": "2880703"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -9561,16 +9612,142 @@
           "lineage": "Heminiphilus",
           "authorship": "Park et al. 2021",
           "children": [],
-          "uuid": "f9ccda6b-601c-566-8b2-23ac025d543125"
+          "uuid": "f9ccda6b-601c-566-8b2-23ac025d543125",
+          "sourceIds": {
+            "checklistbank-2265": "2601703"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Muribaculaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MURIBACULUM",
+          "name": "uncultured Muribaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1918613"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MURIBACULACEAE",
+          "name": "uncultured Muribaculaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2301481"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DUNCANIELLA",
+          "name": "uncultured Duncaniella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2768039"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "muribaculaceae"
+    },
+    {
+      "id": "GENUS_MURIBACULACEAE",
+      "name": "Muribaculaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MURIBACULACEAE_BACTERIUM",
+          "name": "Muribaculaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muribaculaceae",
+          "sourceIds": {
+            "checklistbank-2265": "1958821"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "muribaculaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_HOMEOTHERMUS",
+          "name": "Candidatus Homeothermus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2005518"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_AMULUMRUPTOR",
+          "name": "Candidatus Amulumruptor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2109911"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_MERDIVIVENS",
+          "name": "Candidatus Merdivivens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2840873"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_SODALIPHILUS",
+          "name": "Candidatus Sodaliphilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "3083135"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "muribaculaceae"
     }
   ],
-  "speciesCount": 922,
+  "speciesCount": 934,
   "appSlug": "muribaculaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",
-  "genusCount": 37
+  "genusCount": 40
 }

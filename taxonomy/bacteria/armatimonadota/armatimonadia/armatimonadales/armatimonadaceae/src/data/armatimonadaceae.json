@@ -177,6 +177,18 @@
           "lineage": "Armatimonas",
           "children": [],
           "uuid": "6c9a9282-e356-5fb-bdd-768a85e11ecc60"
+        },
+        {
+          "id": "SP_ARMATIMONAS_SP",
+          "name": "Armatimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Armatimonas",
+          "sourceIds": {
+            "checklistbank-2265": "1872638"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -431,11 +443,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Armatimonadaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ARMATIMONADACEAE",
+          "name": "uncultured Armatimonadaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1579981"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ARMATIMONAS",
+          "name": "uncultured Armatimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1920858"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "armatimonadaceae"
+    },
+    {
+      "id": "GENUS_ARMATIMONADACEAE",
+      "name": "Armatimonadaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARMATIMONADACEAE_BACTERIUM",
+          "name": "Armatimonadaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Armatimonadaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2933160"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "armatimonadaceae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 36,
   "appSlug": "armatimonadaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Armatimonadota > Armatimonadia",
-  "genusCount": 12
+  "genusCount": 14
 }

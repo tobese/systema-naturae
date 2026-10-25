@@ -251,7 +251,10 @@
           "lineage": "Nannocystis",
           "authorship": "Mohr et al. 2018",
           "children": [],
-          "uuid": "36c67e7a-1a9c-51f-871-dca25af515273f"
+          "uuid": "36c67e7a-1a9c-51f-871-dca25af515273f",
+          "sourceIds": {
+            "checklistbank-2265": "2066023"
+          }
         },
         {
           "id": "SP_NANNOCYSTIS_AGGREGANS",
@@ -262,6 +265,30 @@
           "lineage": "Nannocystis",
           "children": [],
           "uuid": "b9054099-ed1c-5a0-b40-b84793369aea9b"
+        },
+        {
+          "id": "SP_NANNOCYSTIS_SP",
+          "name": "Nannocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannocystis",
+          "sourceIds": {
+            "checklistbank-2265": "324932"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NANNOCYSTIS_POENICANSA",
+          "name": "Nannocystis poenicansa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannocystis",
+          "sourceIds": {
+            "checklistbank-2265": "2995304"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -716,6 +743,18 @@
           "lineage": "Plesiocystis",
           "children": [],
           "uuid": "bcb8b33f-96cf-5eb-bef-9daad28f3a46a5"
+        },
+        {
+          "id": "SP_PLESIOCYSTIS_SP",
+          "name": "Plesiocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plesiocystis",
+          "sourceIds": {
+            "checklistbank-2265": "497805"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -949,16 +988,109 @@
           "lineage": "Pseudenhygromyxa",
           "authorship": "Iizuka et al. 2013",
           "children": [],
-          "uuid": "8a017d77-dbb3-5d1-aa1-2885c6426ebe8e"
+          "uuid": "8a017d77-dbb3-5d1-aa1-2885c6426ebe8e",
+          "sourceIds": {
+            "checklistbank-2265": "442868"
+          }
+        },
+        {
+          "id": "SP_PSEUDENHYGROMYXA_SP",
+          "name": "Pseudenhygromyxa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudenhygromyxa",
+          "sourceIds": {
+            "checklistbank-2265": "2712867"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Nannocystaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NANNOCYSTIS",
+          "name": "uncultured Nannocystis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "302199"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_NANNOCYSTACEAE",
+          "name": "uncultured Nannocystaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "887691"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PLESIOCYSTIS",
+          "name": "uncultured Plesiocystis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1182306"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PSEUDENHYGROMYXA",
+          "name": "uncultured Pseudenhygromyxa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1686108"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nannocystaceae"
+    },
+    {
+      "id": "GENUS_NANNOCYSTACEAE",
+      "name": "Nannocystaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NANNOCYSTACEAE_BACTERIUM",
+          "name": "Nannocystaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannocystaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2545255"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nannocystaceae"
     }
   ],
-  "speciesCount": 77,
+  "speciesCount": 86,
   "appSlug": "nannocystaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Myxococcota_A > Polyangia",
-  "genusCount": 19
+  "genusCount": 21
 }

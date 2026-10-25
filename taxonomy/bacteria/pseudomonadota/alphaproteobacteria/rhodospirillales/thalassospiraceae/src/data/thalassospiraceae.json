@@ -400,7 +400,10 @@
           "lineage": "Thalassospira",
           "authorship": "Pulicherla et al. 2013",
           "children": [],
-          "uuid": "0a803632-4e05-565-99b-744c10e53f48ec"
+          "uuid": "0a803632-4e05-565-99b-744c10e53f48ec",
+          "sourceIds": {
+            "checklistbank-2265": "1144705"
+          }
         },
         {
           "id": "SP_THALASSOSPIRA_PERMENSIS_PLOTNIKOVA_ET_AL_2011",
@@ -411,7 +414,22 @@
           "lineage": "Thalassospira",
           "authorship": "Plotnikova et al. 2011",
           "children": [],
-          "uuid": "debac51d-3072-52e-9b6-eebaf39cf2d122"
+          "uuid": "debac51d-3072-52e-9b6-eebaf39cf2d122",
+          "sourceIds": {
+            "checklistbank-2265": "680197"
+          }
+        },
+        {
+          "id": "SP_THALASSOSPIRA_SP",
+          "name": "Thalassospira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassospira",
+          "sourceIds": {
+            "checklistbank-2265": "380469"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -431,16 +449,106 @@
           "lineage": "Magnetospira",
           "authorship": "Williams et al. 2012",
           "children": [],
-          "uuid": "f6c40b3a-c48e-5ea-982-f6edec96b04fd1"
+          "uuid": "f6c40b3a-c48e-5ea-982-f6edec96b04fd1",
+          "sourceIds": {
+            "checklistbank-2265": "549691"
+          }
+        },
+        {
+          "id": "SP_MAGNETOSPIRA_SP",
+          "name": "Magnetospira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Magnetospira",
+          "sourceIds": {
+            "checklistbank-2265": "1288970"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Thalassospiraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THALASSOSPIRA",
+          "name": "uncultured Thalassospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "404382"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MAGNETOSPIRA",
+          "name": "uncultured Magnetospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1449797"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassospiraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_THALASSOSPIRA",
+          "name": "Candidatus Thalassospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2265": "2800829"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassospiraceae"
+    },
+    {
+      "id": "GENUS_THALASSOSPIRACEAE",
+      "name": "Thalassospiraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THALASSOSPIRACEAE_BACTERIUM",
+          "name": "Thalassospiraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassospiraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2909592"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassospiraceae"
     }
   ],
-  "speciesCount": 40,
+  "speciesCount": 46,
   "appSlug": "thalassospiraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",
-  "genusCount": 2
+  "genusCount": 5
 }

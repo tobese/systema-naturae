@@ -88,7 +88,10 @@
           "lineage": "Chroococcidiopsis",
           "authorship": "Andersen",
           "children": [],
-          "uuid": "a1e2b432-56a4-503-b48-6c78c85cf2b1f5"
+          "uuid": "a1e2b432-56a4-503-b48-6c78c85cf2b1f5",
+          "sourceIds": {
+            "checklistbank-2265": "1027909"
+          }
         },
         {
           "id": "SP_CHROOCOCCIDIOPSIS_MURALIS_LAGERHEIM_1893_MISCOE_JOHANSEN_2016",
@@ -99,7 +102,10 @@
           "lineage": "Chroococcidiopsis",
           "authorship": "(Lagerheim, 1893) Miscoe & Johansen, 2016",
           "children": [],
-          "uuid": "80d6ce11-4a0b-5d2-b1f-c62f7cb0e3a7ac"
+          "uuid": "80d6ce11-4a0b-5d2-b1f-c62f7cb0e3a7ac",
+          "sourceIds": {
+            "checklistbank-2265": "1881615"
+          }
         },
         {
           "id": "SP_CHROOCOCCIDIOPSIS_CUBANA_KOMAREK_HINDAK_1975",
@@ -110,7 +116,10 @@
           "lineage": "Chroococcidiopsis",
           "authorship": "Komarek & Hindak, 1975",
           "children": [],
-          "uuid": "7a4970cf-f1cd-514-b13-d814f7852c6bb6"
+          "uuid": "7a4970cf-f1cd-514-b13-d814f7852c6bb6",
+          "sourceIds": {
+            "checklistbank-2265": "171392"
+          }
         },
         {
           "id": "SP_CHROOCOCCIDIOPSIS_LICHENOIDES_VILLANUEVA_P_HASLER_CASAMATTA_2018",
@@ -121,7 +130,10 @@
           "lineage": "Chroococcidiopsis",
           "authorship": "Villanueva, P.Hasler & Casamatta, 2018",
           "children": [],
-          "uuid": "2f4e36dc-f639-55f-b14-23d061d3b5bcf5"
+          "uuid": "2f4e36dc-f639-55f-b14-23d061d3b5bcf5",
+          "sourceIds": {
+            "checklistbank-2265": "2152831"
+          }
         },
         {
           "id": "SP_CHROOCOCCIDIOPSIS_BOURRELLYANA_COMPERE_1998",
@@ -132,7 +144,22 @@
           "lineage": "Chroococcidiopsis",
           "authorship": "Compere, 1998",
           "children": [],
-          "uuid": "b4198611-27fa-52b-b61-3434794c0e4038"
+          "uuid": "b4198611-27fa-52b-b61-3434794c0e4038",
+          "sourceIds": {
+            "checklistbank-2265": "2138304"
+          }
+        },
+        {
+          "id": "SP_CHROOCOCCIDIOPSIS_SP",
+          "name": "Chroococcidiopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroococcidiopsis",
+          "sourceIds": {
+            "checklistbank-2265": "155894"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -434,7 +461,10 @@
           "lineage": "Haliplanktos",
           "authorship": "Panou & Gkelis, 2022",
           "children": [],
-          "uuid": "9be39a5c-67d2-5a1-9ff-3fb6e332878624"
+          "uuid": "9be39a5c-67d2-5a1-9ff-3fb6e332878624",
+          "sourceIds": {
+            "checklistbank-2265": "2886050"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -458,11 +488,32 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Chroococcidiopsidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHROOCOCCIDIOPSIS",
+          "name": "uncultured Chroococcidiopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "259957"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chroococcidiopsidaceae"
     }
   ],
-  "speciesCount": 35,
+  "speciesCount": 37,
   "appSlug": "chroococcidiopsidaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Cyanobacteriia",
-  "genusCount": 11
+  "genusCount": 12
 }

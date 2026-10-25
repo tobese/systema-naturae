@@ -148,6 +148,18 @@
           "lineage": "Stygiobacter",
           "children": [],
           "uuid": "037902c7-1698-5bb-92d-cf1cffaf560b2b"
+        },
+        {
+          "id": "SP_STYGIOBACTER_SP",
+          "name": "Stygiobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stygiobacter",
+          "sourceIds": {
+            "checklistbank-2265": "1798428"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1399,6 +1411,18 @@
           "lineage": "Melioribacter",
           "children": [],
           "uuid": "70519840-e3d6-52b-8f5-37e9ca8dfa485b"
+        },
+        {
+          "id": "SP_MELIORIBACTER_SP",
+          "name": "Melioribacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melioribacter",
+          "sourceIds": {
+            "checklistbank-2265": "1801613"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -2135,11 +2159,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Melioribacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MELIORIBACTER",
+          "name": "uncultured Melioribacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1334116"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MELIORIBACTERACEAE",
+          "name": "uncultured Melioribacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2072648"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melioribacteraceae"
+    },
+    {
+      "id": "GENUS_MELIORIBACTERACEAE",
+      "name": "Melioribacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELIORIBACTERACEAE_BACTERIUM",
+          "name": "Melioribacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melioribacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2614255"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melioribacteraceae"
     }
   ],
-  "speciesCount": 166,
+  "speciesCount": 171,
   "appSlug": "melioribacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Ignavibacteria",
-  "genusCount": 52
+  "genusCount": 54
 }

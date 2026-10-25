@@ -429,6 +429,18 @@
           "lineage": "Arenicella",
           "children": [],
           "uuid": "c76a8abf-b7e9-583-b12-64e818f3c1e527"
+        },
+        {
+          "id": "SP_ARENICELLA_SP",
+          "name": "Arenicella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arenicella",
+          "sourceIds": {
+            "checklistbank-2265": "1195758"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -536,16 +548,73 @@
           "lineage": "Perspicuibacter",
           "authorship": "Teramoto et al. 2015",
           "children": [],
-          "uuid": "dcfa21b4-624a-544-959-71bae45764e6bc"
+          "uuid": "dcfa21b4-624a-544-959-71bae45764e6bc",
+          "sourceIds": {
+            "checklistbank-2265": "1459949"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Arenicellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ARENICELLA",
+          "name": "uncultured Arenicella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1586337"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ARENICELLACEAE",
+          "name": "uncultured Arenicellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2026568"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arenicellaceae"
+    },
+    {
+      "id": "GENUS_ARENICELLACEAE",
+      "name": "Arenicellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARENICELLACEAE_BACTERIUM",
+          "name": "Arenicellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arenicellaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3022130"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arenicellaceae"
     }
   ],
-  "speciesCount": 50,
+  "speciesCount": 54,
   "appSlug": "arenicellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 4
+  "genusCount": 6
 }

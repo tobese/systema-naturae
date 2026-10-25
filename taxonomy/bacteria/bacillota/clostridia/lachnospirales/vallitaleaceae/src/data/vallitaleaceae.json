@@ -180,7 +180,10 @@
           "lineage": "Vallitalea",
           "authorship": "Sun et al. 2019",
           "children": [],
-          "uuid": "33f45aa8-99d6-56d-9f0-428ccbc32bebd6"
+          "uuid": "33f45aa8-99d6-56d-9f0-428ccbc32bebd6",
+          "sourceIds": {
+            "checklistbank-2265": "2078660"
+          }
         },
         {
           "id": "SP_VALLITALEA_SEDIMINICOLA_HIRANO_ET_AL_2025",
@@ -192,6 +195,18 @@
           "authorship": "Hirano et al. 2025",
           "children": [],
           "uuid": "6c117219-77f9-55f-a84-e288dabc495066"
+        },
+        {
+          "id": "SP_VALLITALEA_SP",
+          "name": "Vallitalea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vallitalea",
+          "sourceIds": {
+            "checklistbank-2265": "1882829"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -361,6 +376,18 @@
           "authorship": "Frolova et al. 2024",
           "children": [],
           "uuid": "f78d87b4-6dd9-5c6-a1b-37692bb95521d3"
+        },
+        {
+          "id": "SP_PETROCELLA_SP",
+          "name": "Petrocella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petrocella",
+          "sourceIds": {
+            "checklistbank-2265": "2874042"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -505,16 +532,61 @@
           "authorship": "Schouw et al. 2016",
           "children": [],
           "uuid": "c3f4add0-eadb-5aa-976-9480b8e273c571",
-          "description": "Abyssivirga alkaniphila is a Gram-positive, rod-shaped, strictly anaerobic, mesophilic, syntrophic, alkane-degrading and motile bacterium from the genus of Abyssivirga which has been isolated from biofilm from a black smoker chimney from the Loki's Castle vent field near Norway."
+          "description": "Abyssivirga alkaniphila is a Gram-positive, rod-shaped, strictly anaerobic, mesophilic, syntrophic, alkane-degrading and motile bacterium from the genus of Abyssivirga which has been isolated from biofilm from a black smoker chimney from the Loki's Castle vent field near Norway.",
+          "sourceIds": {
+            "checklistbank-2265": "1675854"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Vallitaleaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VALLITALEA",
+          "name": "uncultured Vallitalea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1446772"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vallitaleaceae"
+    },
+    {
+      "id": "GENUS_VALLITALEACEAE",
+      "name": "Vallitaleaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VALLITALEACEAE_BACTERIUM",
+          "name": "Vallitaleaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vallitaleaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2762022"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vallitaleaceae"
     }
   ],
-  "speciesCount": 39,
+  "speciesCount": 43,
   "appSlug": "vallitaleaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",
-  "genusCount": 12
+  "genusCount": 14
 }

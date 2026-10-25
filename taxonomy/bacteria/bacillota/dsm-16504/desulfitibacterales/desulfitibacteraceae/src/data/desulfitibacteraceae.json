@@ -38,6 +38,18 @@
           "authorship": "Nielsen et al. 2006",
           "children": [],
           "uuid": "6b3a80f9-2338-5a0-8ef-be26bb92b1af44"
+        },
+        {
+          "id": "SP_DESULFITIBACTER_SP",
+          "name": "Desulfitibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfitibacter",
+          "sourceIds": {
+            "checklistbank-2265": "1734395"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -81,11 +93,53 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Desulfitibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFITIBACTER",
+          "name": "uncultured Desulfitibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "768571"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfitibacteraceae"
+    },
+    {
+      "id": "GENUS_DESULFITIBACTERACEAE",
+      "name": "Desulfitibacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFITIBACTERACEAE_BACTERIUM",
+          "name": "Desulfitibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfitibacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "3039180"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfitibacteraceae"
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 8,
   "appSlug": "desulfitibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > DSM-16504",
-  "genusCount": 3
+  "genusCount": 5
 }

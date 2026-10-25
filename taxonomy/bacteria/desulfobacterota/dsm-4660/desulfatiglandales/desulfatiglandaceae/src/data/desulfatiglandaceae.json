@@ -919,7 +919,22 @@
           "lineage": "Desulfatiglans",
           "authorship": "Suzuki et al. 2014",
           "children": [],
-          "uuid": "a768a032-d38d-50b-b8c-6e7c64f68a4b2b"
+          "uuid": "a768a032-d38d-50b-b8c-6e7c64f68a4b2b",
+          "sourceIds": {
+            "checklistbank-2265": "1261393"
+          }
+        },
+        {
+          "id": "SP_DESULFATIGLANS_SP",
+          "name": "Desulfatiglans sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfatiglans",
+          "sourceIds": {
+            "checklistbank-2265": "1969697"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1469,11 +1484,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulfatiglandaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFATIGLANS",
+          "name": "uncultured Desulfatiglans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1748965"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfatiglandaceae"
+    },
+    {
+      "id": "GENUS_DESULFATIGLANDACEAE",
+      "name": "Desulfatiglandaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESULFATIGLANDACEAE_BACTERIUM",
+          "name": "Desulfatiglandaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfatiglandaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3080547"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfatiglandaceae"
     }
   ],
-  "speciesCount": 106,
+  "speciesCount": 109,
   "appSlug": "desulfatiglandaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > DSM-4660",
-  "genusCount": 45
+  "genusCount": 47
 }

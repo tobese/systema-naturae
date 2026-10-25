@@ -153,7 +153,10 @@
           "lineage": "Catenulispora",
           "authorship": "Lee et al. 2012",
           "children": [],
-          "uuid": "71909fa5-5e4a-5a3-bad-0f434e06cbf759"
+          "uuid": "71909fa5-5e4a-5a3-bad-0f434e06cbf759",
+          "sourceIds": {
+            "checklistbank-2265": "910543"
+          }
         },
         {
           "id": "SP_CATENULISPORA_CAVERNAE",
@@ -174,7 +177,22 @@
           "lineage": "Catenulispora",
           "authorship": "Lee and Whang 2016",
           "children": [],
-          "uuid": "c2a5f066-4265-53c-a21-745182a800041f"
+          "uuid": "c2a5f066-4265-53c-a21-745182a800041f",
+          "sourceIds": {
+            "checklistbank-2265": "627675"
+          }
+        },
+        {
+          "id": "SP_CATENULISPORA_SP",
+          "name": "Catenulispora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Catenulispora",
+          "sourceIds": {
+            "checklistbank-2265": "304893"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -404,11 +422,77 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Catenulisporaceae"
+    },
+    {
+      "id": "GENUS_BACTERIUM",
+      "name": "bacterium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BACTERIUM_ELLIN5062",
+          "name": "bacterium Ellin5062",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "bacterium",
+          "sourceIds": {
+            "checklistbank-2265": "234199"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BACTERIUM_ELLIN5119",
+          "name": "bacterium Ellin5119",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "bacterium",
+          "sourceIds": {
+            "checklistbank-2265": "234203"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BACTERIUM_ELLIN5116",
+          "name": "bacterium Ellin5116",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "bacterium",
+          "sourceIds": {
+            "checklistbank-2265": "234202"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catenulisporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CATENULISPORA",
+          "name": "uncultured Catenulispora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "487357"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catenulisporaceae"
     }
   ],
-  "speciesCount": 34,
+  "speciesCount": 39,
   "appSlug": "catenulisporaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Actinomycetota > Actinomycetes",
-  "genusCount": 6
+  "genusCount": 8
 }

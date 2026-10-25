@@ -520,6 +520,18 @@
           "lineage": "Mariprofundus",
           "children": [],
           "uuid": "b9509212-a451-5fb-915-2fb67fdfb56704"
+        },
+        {
+          "id": "SP_MARIPROFUNDUS_SP",
+          "name": "Mariprofundus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mariprofundus",
+          "sourceIds": {
+            "checklistbank-2265": "933853"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1495,11 +1507,53 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Mariprofundaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MARIPROFUNDUS",
+          "name": "uncultured Mariprofundus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "904974"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mariprofundaceae"
+    },
+    {
+      "id": "GENUS_MARIPROFUNDACEAE",
+      "name": "Mariprofundaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MARIPROFUNDACEAE_BACTERIUM",
+          "name": "Mariprofundaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mariprofundaceae",
+          "sourceIds": {
+            "checklistbank-2265": "2306050"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mariprofundaceae"
     }
   ],
-  "speciesCount": 128,
+  "speciesCount": 131,
   "appSlug": "mariprofundaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Zetaproteobacteria",
-  "genusCount": 23
+  "genusCount": 25
 }

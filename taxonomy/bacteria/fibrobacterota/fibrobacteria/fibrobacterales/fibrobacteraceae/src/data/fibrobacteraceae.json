@@ -199,6 +199,18 @@
           "lineage": "Hallerella",
           "children": [],
           "uuid": "adead561-f6c8-5fb-800-9161f5cc6ee327"
+        },
+        {
+          "id": "SP_HALLERELLA_SP",
+          "name": "Hallerella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hallerella",
+          "sourceIds": {
+            "checklistbank-2265": "2815812"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1229,7 +1241,22 @@
           "lineage": "Fibrobacter",
           "authorship": "Montgomery et al. 1988",
           "children": [],
-          "uuid": "9ee67e86-10cf-5c9-b71-fe233a33f000ee"
+          "uuid": "9ee67e86-10cf-5c9-b71-fe233a33f000ee",
+          "sourceIds": {
+            "checklistbank-2265": "28122"
+          }
+        },
+        {
+          "id": "SP_FIBROBACTER_SP",
+          "name": "Fibrobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fibrobacter",
+          "sourceIds": {
+            "checklistbank-2265": "35828"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1634,11 +1661,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Fibrobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FIBROBACTER",
+          "name": "uncultured Fibrobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "261512"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FIBROBACTERACEAE",
+          "name": "uncultured Fibrobacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "658264"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fibrobacteraceae"
+    },
+    {
+      "id": "GENUS_FIBROBACTERACEAE",
+      "name": "Fibrobacteraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FIBROBACTERACEAE_BACTERIUM",
+          "name": "Fibrobacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fibrobacteraceae",
+          "sourceIds": {
+            "checklistbank-2265": "2652288"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fibrobacteraceae"
     }
   ],
-  "speciesCount": 152,
+  "speciesCount": 157,
   "appSlug": "fibrobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Fibrobacterota > Fibrobacteria",
-  "genusCount": 12
+  "genusCount": 14
 }

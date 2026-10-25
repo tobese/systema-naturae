@@ -17,7 +17,10 @@
           "lineage": "Endothiovibrio",
           "authorship": "Bazylinski et al., 2017",
           "children": [],
-          "uuid": "2d431d2c-4df4-549-b26-a3224839500089"
+          "uuid": "2d431d2c-4df4-549-b26-a3224839500089",
+          "sourceIds": {
+            "checklistbank-2265": "913829"
+          }
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -37,15 +40,63 @@
           "lineage": "Thioalkalispira",
           "authorship": "Sorokin et al. 2002",
           "children": [],
-          "uuid": "fd55c856-e2e4-5b0-b6b-9fa2838647c518"
+          "uuid": "fd55c856-e2e4-5b0-b6b-9fa2838647c518",
+          "sourceIds": {
+            "checklistbank-2265": "200624"
+          }
+        },
+        {
+          "id": "SP_THIOALKALISPIRA_SP",
+          "name": "Thioalkalispira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thioalkalispira",
+          "sourceIds": {
+            "checklistbank-2265": "1617645"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Thioalkalispiraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THIOALKALISPIRA",
+          "name": "uncultured Thioalkalispira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "905003"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THIOALKALISPIRACEAE",
+          "name": "uncultured Thioalkalispiraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1247653"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thioalkalispiraceae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 5,
   "appSlug": "thioalkalispiraceae",
   "sourcedFrom": "ncbi-taxonomy",
-  "genusCount": 2
+  "genusCount": 3
 }

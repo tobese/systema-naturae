@@ -378,6 +378,18 @@
           "lineage": "Longimicrobium",
           "children": [],
           "uuid": "31132549-bb28-59b-870-b4be36137946ba"
+        },
+        {
+          "id": "SP_LONGIMICROBIUM_SP",
+          "name": "Longimicrobium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Longimicrobium",
+          "sourceIds": {
+            "checklistbank-2265": "2029185"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "gtdb",
@@ -893,11 +905,65 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Longimicrobiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LONGIMICROBIUM",
+          "name": "uncultured Longimicrobium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "1804996"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_LONGIMICROBIACEAE",
+          "name": "uncultured Longimicrobiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2265": "2501619"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "longimicrobiaceae"
+    },
+    {
+      "id": "GENUS_LONGIMICROBIACEAE",
+      "name": "Longimicrobiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LONGIMICROBIACEAE_BACTERIUM",
+          "name": "Longimicrobiaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Longimicrobiaceae",
+          "sourceIds": {
+            "checklistbank-2265": "3047548"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "longimicrobiaceae"
     }
   ],
-  "speciesCount": 71,
+  "speciesCount": 75,
   "appSlug": "longimicrobiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Gemmatimonadota > Gemmatimonadetes",
-  "genusCount": 20
+  "genusCount": 22
 }
