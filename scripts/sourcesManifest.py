@@ -39,17 +39,22 @@ sys.path.insert(0, os.path.dirname(__file__))
 from sources import ROOT, MANIFEST
 
 # slug -> (title, identifier, source url, licence, status, what we took)
-# status: applied | partial | ready | assessed | refused | repurposed
-#   repurposed: declined as a SPECIES-import source (nomenclatural register,
-#   no taxon table, no accepted/synonym split, etc.) but actually in use for
-#   a different job -- genusAuthorityRegister.py's genus/name authority
-#   lookups, which only ever asks "does this genus exist, under what
-#   kingdom/family", a question a bare nomenclatural register can still
-#   answer even though it can't support an import decision. The "took" text
-#   for each of these keeps BOTH verdicts: why it was declined for import,
-#   and what it is actually feeding now. Distinct from "assessed" (looked
-#   at, no decision reached or decision was simply "no") because a
-#   repurposed source has an active consumer today, not just a note.
+# status: applied | partial | ready | assessed | refused | genus-authority
+#   genus-authority: declined as a SPECIES-import source (nomenclatural
+#   register, no taxon table, no accepted/synonym split, etc.) but wired
+#   into genusAuthorityRegister.py's build -- named for that one specific
+#   job, not a generic "repurposed" label, because every source carrying
+#   this status is used the exact same way: `--lookup <genus>` answers
+#   "does this genus exist, under what kingdom/family", a question a bare
+#   nomenclatural register can still answer even though it can't support
+#   an import decision. The "took" text for each of these keeps BOTH
+#   verdicts: why it was declined for import, and what it is actually
+#   feeding now. Distinct from "assessed" (looked at, no decision reached
+#   or decision was simply "no") because a genus-authority source has an
+#   active consumer today, not just a note. If a future source gets
+#   repurposed for something OTHER than genus lookups, give it its own
+#   status naming THAT job rather than growing this one into a catch-all
+#   again.
 SOURCES = {
     "gbif-backbone": (
         "GBIF Backbone Taxonomy", "GBIF dataset d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
@@ -533,7 +538,7 @@ SOURCES = {
         "IRMNG, Interim Register of Marine and Nonmarine Genera (dataset 2007)",
         "DOI 10.48580/d4f8; version 2026-09-16",
         "https://api.checklistbank.org/dataset/2007/archive.zip",
-        "CC BY", "repurposed",
+        "CC BY", "genus-authority",
         "NOT taken as a species source, and not comparable to them. 269,528 "
         "accepted genera and 2 species: it is a register of genus names, so "
         "'59.9% of its genera are held' answers a different question from the "
@@ -571,7 +576,7 @@ SOURCES = {
     "checklistbank-2037": (
         "ZooBank (ChecklistBank bulk export)", "DOI 10.48580/d4g9",
         "https://www.checklistbank.org/dataset/2037",
-        "CC0 (confirmed in the archive's own eml.xml)", "repurposed",
+        "CC0 (confirmed in the archive's own eml.xml)", "genus-authority",
         "NOT TAKEN, and downloaded: 81MB DwCA at "
         "archives/checklistbank-2037/archive.zip, 527,127 rows, version "
         "2026-08-29. Measured 2026-10-09 from the archive: 275,961 names "
@@ -879,7 +884,7 @@ SOURCES = {
         "Australian Faunal Directory (AFD)",
         "DOI 10.48580/d78hf; version 2022-10-12",
         "https://www.checklistbank.org/dataset/127379",
-        "CC BY", "repurposed",
+        "CC BY", "genus-authority",
         "NOT taken as a species source. Pasted 2026-10-10. ChecklistBank "
         "types it `nomenclatural`, and the export proves why: `name.tsv` "
         "(scientificName, rank, status, ICZN/ICN code) plus "
@@ -1012,22 +1017,32 @@ SOURCES = {
     "checklistbank-2003": (
         "Index Nominum Algarum (INA)", "DOI not recorded; version 2019-05-10",
         "https://www.checklistbank.org/dataset/2003",
-        "CC BY", "repurposed",
+        "CC BY", "genus-authority",
         "NOT taken as a species source. Pasted 2026-10-10. ChecklistBank "
         "types it `nomenclatural`, and the export proves why, the exact AFD "
         "(checklistbank-127379) shape: `name.tsv` + `name-rel.tsv` + "
         "`reference.tsv` only, no `taxon.*` table, nothing to place "
         "against a family. Declined on data shape, not licence (CC BY) "
-        "or vintage. REPURPOSED 2026-10-24: used directly (ad hoc, not yet "
-        "wired into genusAuthorityRegister.py) during the cross-kingdom-"
-        "homonym triage -- confirmed Solenomeris as chromista-only "
-        "(matching IRMNG), which resolved a case neither the tree nor "
-        "gbif-backbone could settle alone."),
+        "or vintage. REPURPOSED 2026-10-24: used ad hoc (not yet wired in) "
+        "during the cross-kingdom-homonym triage -- confirmed Solenomeris "
+        "as chromista-only (matching IRMNG), which resolved a case neither "
+        "the tree nor gbif-backbone could settle alone. WIRED IN 2026-10-25: "
+        "added as genusAuthorityRegister.py's `ina` reader (12,834 genus-"
+        "rank rows from name.tsv), so the next algal-genus question is a "
+        "`--lookup` instead of a one-off read of the archive. What it's "
+        "for: ICN-governed algal nomenclature specifically -- the one gap "
+        "IRMNG/Nomenclator Zoologicus/Species Fungorum Plus/AFD/ZooBank/ "
+        "IPNI don't cover between them, since none of those is an algae "
+        "authority. `kingdom` is left unset for every INA row (unlike "
+        "AFD's hardcoded Animalia) because algae this tree holds split "
+        "across plantae and chromista and INA's own export doesn't say "
+        "which -- it answers \"does this genus exist\" only, same as "
+        "every other genus-authority source."),
     "checklistbank-126539": (
         "Nomenclator Zoologicus (dataset 126539)",
         "DOI not recorded; version not recorded",
         "https://www.checklistbank.org/dataset/126539",
-        "CC0", "repurposed",
+        "CC0", "genus-authority",
         "Never run through a species-import assessment, and never added to "
         "this manifest or to the external manifest.json until 2026-10-24 -- "
         "fetched directly for genusAuthorityRegister.py's own build, which "
@@ -1039,7 +1054,7 @@ SOURCES = {
         "Species Fungorum Plus (dataset 2073)",
         "DOI not recorded; version not recorded",
         "https://www.checklistbank.org/dataset/2073",
-        "CC BY", "repurposed",
+        "CC BY", "genus-authority",
         "Same gap as Nomenclator Zoologicus above: fetched directly for "
         "genusAuthorityRegister.py, never assessed as a species-import "
         "source or added to this manifest until 2026-10-24. ~490k fungal "
@@ -1051,7 +1066,7 @@ SOURCES = {
         "International Plant Names Index (IPNI)",
         "version not recorded; archive fetched 2026-10-18",
         "https://www.gbif.org/dataset/046bbc50-cae2-47ff-aa43-729fbf53f7c5",
-        "CC0", "repurposed",
+        "CC0", "genus-authority",
         "Never assessed as a species-import source -- cache built "
         "2026-10-25 purely to wire into genusAuthorityRegister.py, same "
         "shape as the other nomenclatural registers on this list. ColDP "

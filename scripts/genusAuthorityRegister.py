@@ -45,6 +45,16 @@ job):
     accepted/synonym concept, taxonomicStatus is blank on every row), so
     it belongs here rather than in the species pipeline regardless. Added
     2026-10-25.
+  - INA, Index Nominum Algarum (dataset 2003): ~12.8k algal genus names
+    (ICN). Used ad hoc (not wired in) during the 2026-10-24 triage to
+    confirm Solenomeris as chromista-only; wired in properly 2026-10-25
+    so the next algal-genus question doesn't need a one-off lookup.
+    `kingdom` is deliberately left unset for every row here -- unlike
+    AFD/Nomenclator Zoologicus (purely zoological, so "Animalia" is
+    always correct), ICN-governed algal genera split across this tree's
+    plantae and chromista kingdoms and INA's own export carries no
+    kingdom/family column to tell them apart. A genus-existence answer is
+    still useful without it; a kingdom placement is not asserted.
 
 Usage:
     python3 scripts/genusAuthorityRegister.py --build      # force a rebuild
@@ -70,6 +80,7 @@ SOURCES = {
     "zoobank": os.path.join(ARCHIVES, "checklistbank-2037", "archive.zip"),
     "afd": os.path.join(ARCHIVES, "checklistbank-127379", "archive.zip"),
     "ipni": os.path.join(ARCHIVES, "gbif-ipni", "archive.zip"),
+    "ina": os.path.join(ARCHIVES, "checklistbank-2003", "archive.zip"),
 }
 
 
@@ -202,6 +213,31 @@ def _rows_afd(archive_path):
         }
 
 
+def _rows_ina(archive_path):
+    # Same name.tsv shape as AFD/Nomenclator Zoologicus (ID/rank/
+    # scientificName/authorship/publishedInYear), but ICN-governed algal
+    # names rather than ICZN -- and unlike AFD, NOT zoological-only, so
+    # kingdom cannot be hardcoded the way AFD's can: algae this tree holds
+    # split across plantae and chromista, and this export carries no
+    # kingdom/family column to say which. Left unset rather than guessed.
+    for row in _read_tsv_from_zip(archive_path, "name.tsv"):
+        if (row.get("rank") or "").lower() != "genus":
+            continue
+        genus = row.get("scientificName")
+        if not genus:
+            continue
+        yield {
+            "genus": genus, "genus_norm": _norm(genus),
+            "kingdom": None,
+            "code": "ICN",
+            "family": None,
+            "status": row.get("status") or None,
+            "author": row.get("authorship") or None,
+            "year": row.get("publishedInYear") or None,
+            "remarks": row.get("remarks") or None,
+        }
+
+
 def _rows_ipni(archive_path):
     # ColDP shape, but split across two tables unlike the others here:
     # Taxon.tsv carries family (keyed by nameID == Name.tsv's ID) while
@@ -239,6 +275,7 @@ READERS = {
     "zoobank": _rows_zoobank,
     "afd": _rows_afd,
     "ipni": _rows_ipni,
+    "ina": _rows_ina,
 }
 
 
