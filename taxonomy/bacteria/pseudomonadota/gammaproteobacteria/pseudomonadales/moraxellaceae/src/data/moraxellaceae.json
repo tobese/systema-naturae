@@ -18,7 +18,10 @@
           "authorship": "Bouvet and Grimont 1986",
           "children": [],
           "uuid": "2a958a38-68b1-5e6-ac9-5d41bea0e0a29d",
-          "description": "Acinetobacter baumannii is a typically short, almost round, rod-shaped (coccobacillus) Gram-negative bacterium."
+          "description": "Acinetobacter baumannii is a typically short, almost round, rod-shaped (coccobacillus) Gram-negative bacterium.",
+          "sourceIds": {
+            "checklistbank-24580": "9B5V"
+          }
         },
         {
           "id": "SP_ACINETOBACTER_PITTII",
@@ -29,7 +32,10 @@
           "lineage": "Acinetobacter",
           "authorship": "Nemec et al. 2011",
           "children": [],
-          "uuid": "46ffa238-30fd-5a3-81c-4065f9e9650a82"
+          "uuid": "46ffa238-30fd-5a3-81c-4065f9e9650a82",
+          "sourceIds": {
+            "checklistbank-24580": "64KLK"
+          }
         },
         {
           "id": "SP_ACINETOBACTER_NOSOCOMIALIS",
@@ -95,7 +101,10 @@
           "lineage": "Acinetobacter",
           "authorship": "Bouvet and Grimont 1986",
           "children": [],
-          "uuid": "75dd8f09-2a17-52c-abf-21e9c7c57b8c4d"
+          "uuid": "75dd8f09-2a17-52c-abf-21e9c7c57b8c4d",
+          "sourceIds": {
+            "checklistbank-24580": "64KLL"
+          }
         },
         {
           "id": "SP_ACINETOBACTER_SEIFERTII",
@@ -567,7 +576,10 @@
           "lineage": "Acinetobacter",
           "authorship": "Krizova et al. 2015",
           "children": [],
-          "uuid": "42120015-08b1-542-8ab-ed40fb3d0a43a4"
+          "uuid": "42120015-08b1-542-8ab-ed40fb3d0a43a4",
+          "sourceIds": {
+            "checklistbank-24580": "CRPBQ"
+          }
         },
         {
           "id": "SP_ACINETOBACTER_GANDENSIS",
@@ -3471,9 +3483,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Moraxella",
           "sourceIds": {
-            "checklistbank-2265": "34062"
+            "checklistbank-2265": "34062",
+            "checklistbank-24580": "CSJWF"
           },
-          "children": []
+          "children": [],
+          "authorship": "Bøvre & Henriksen, 1967 (Approved Lists 1980)"
         },
         {
           "id": "SP_MORAXELLA_LINCOLNII",
@@ -7017,11 +7031,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "moraxellaceae"
+    },
+    {
+      "id": "GENUS_ENHYDROBACTER",
+      "name": "Enhydrobacter",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENHYDROBACTER_AEROSACCUS_STALEY_ET_AL_1987",
+          "name": "Enhydrobacter aerosaccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enhydrobacter",
+          "authorship": "Staley et al., 1987",
+          "sourceIds": {
+            "checklistbank-24580": "39TXZ"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "moraxellaceae"
     }
   ],
-  "speciesCount": 639,
+  "speciesCount": 640,
   "appSlug": "moraxellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 31
+  "genusCount": 32
 }

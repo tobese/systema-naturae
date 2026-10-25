@@ -77,8 +77,15 @@ FIELDS = {
 
 # A taxonomicStatus value that means "this is the name to use", not a
 # synonym. Nortaxa (2030) writes "valid" where DwC's own vocabulary says
-# "accepted" -- same concept, different publisher's word for it.
-ACCEPTED_STATUS = {"accepted", "provisionally accepted", "valid", "nome_aceito"}
+# "accepted" -- same concept, different publisher's word for it. "aceptado"
+# (Colombia's Catalogo de Plantas y Liquenes, checklistbank-21341) is the
+# Spanish-language sibling of Flora e Funga do Brasil's "nome_aceito" above
+# -- found 2026-10-25 when the whole archive silently offered 0 candidates:
+# every one of its 29,917 accepted rows read `is_synonym=True` for not
+# matching this set, the same class of bug RANK_SYNONYMS exists to catch,
+# just on the status side instead of the rank side.
+ACCEPTED_STATUS = {"accepted", "provisionally accepted", "valid", "nome_aceito",
+                    "aceptado"}
 
 # Rank vocabularies seen so far that are not the plain English terms both
 # the candidate filter (importColChecklist.py: rank in ("species",

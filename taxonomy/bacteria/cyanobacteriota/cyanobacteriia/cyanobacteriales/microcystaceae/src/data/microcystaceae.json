@@ -51,7 +51,8 @@
           "uuid": "2462b91b-724e-5fd-974-55036a154c7884",
           "description": "Microcystis aeruginosa is a species of freshwater cyanobacteria that can form harmful algal blooms of economic and ecological importance.",
           "sourceIds": {
-            "checklistbank-7888": "NHMSYS0000603903"
+            "checklistbank-7888": "NHMSYS0000603903",
+            "checklistbank-24580": "CP3G2"
           }
         },
         {
@@ -292,7 +293,8 @@
           "sourceIds": {
             "checklistbank-2265": "44823",
             "checklistbank-7888": "NHMSYS0000603907",
-            "checklistbank-9712": "MSTSNM:Arter:875eddf8-f785-ea11-aa77-501ac539d1ea"
+            "checklistbank-9712": "MSTSNM:Arter:875eddf8-f785-ea11-aa77-501ac539d1ea",
+            "checklistbank-24580": "CP3JS"
           }
         },
         {
@@ -943,7 +945,11 @@
           "sourcedFrom": "gtdb",
           "lineage": "Woronichinia",
           "children": [],
-          "uuid": "77f7d432-68b5-5d4-a61-a0e5959812ce97"
+          "uuid": "77f7d432-68b5-5d4-a61-a0e5959812ce97",
+          "authorship": "(Unger) Elenkin",
+          "sourceIds": {
+            "checklistbank-24580": "CPQBR"
+          }
         },
         {
           "id": "SP_WORONICHINIA_SP035285405",
@@ -1402,7 +1408,10 @@
           "lineage": "Aphanocapsa",
           "authorship": "(Carmichael 1833) Rabenhorst 1865",
           "children": [],
-          "uuid": "c6e5492d-2e10-5a6-850-2dc7a68b1317a2"
+          "uuid": "c6e5492d-2e10-5a6-850-2dc7a68b1317a2",
+          "sourceIds": {
+            "checklistbank-24580": "FB9R"
+          }
         },
         {
           "id": "SP_APHANOCAPSA_MUSCICOLA_MENEGHINI_WILLE_1919",
@@ -1781,13 +1790,92 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "microcystaceae"
+    },
+    {
+      "id": "GENUS_MERISMOPEDIA",
+      "name": "Merismopedia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MERISMOPEDIA_TENUISSIMA_LEMMERMANN",
+          "name": "Merismopedia tenuissima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Merismopedia",
+          "authorship": "Lemmermann",
+          "sourceIds": {
+            "checklistbank-24580": "6RBBZ"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MERISMOPEDIA_GLAUCA_EHRENBERG_K_TZING",
+          "name": "Merismopedia glauca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Merismopedia",
+          "authorship": "(Ehrenberg) Kützing",
+          "sourceIds": {
+            "checklistbank-24580": "CP44Q"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microcystaceae"
+    },
+    {
+      "id": "GENUS_APHANOTHECE",
+      "name": "Aphanothece",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_APHANOTHECE_STAGNINA_SPRENGEL_A_BRAUN",
+          "name": "Aphanothece stagnina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphanothece",
+          "authorship": "(Sprengel) A. Braun",
+          "sourceIds": {
+            "checklistbank-24580": "CN9GY"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microcystaceae"
+    },
+    {
+      "id": "GENUS_COELOSPHAERIUM",
+      "name": "Coelosphaerium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COELOSPHAERIUM_AERUGINEUM_LEMMERMANN",
+          "name": "Coelosphaerium aerugineum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coelosphaerium",
+          "authorship": "Lemmermann",
+          "sourceIds": {
+            "checklistbank-24580": "WT2X"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microcystaceae"
     }
   ],
-  "speciesCount": 136,
+  "speciesCount": 140,
   "appSlug": "microcystaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Cyanobacteriia",
-  "genusCount": 31,
+  "genusCount": 34,
   "sourceIds": {
     "checklistbank-9712": "MSTSNM:Arter:c85567e4-f785-ea11-aa77-501ac539d1ea"
   }

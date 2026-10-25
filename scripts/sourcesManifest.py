@@ -1524,6 +1524,34 @@ SOURCES = {
         "Agency), not a general species checklist; ChecklistBank's own "
         "`lastImportState` is unset -- never actually imported there "
         "either. Niche scope, declined without downloading."),
+    "checklistbank-315055": (
+        "USDA PLANTS Database", "DOI 10.48580/dgxmz; version not recorded",
+        "https://www.checklistbank.org/dataset/315055",
+        "CC0", "declined",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 93,969 size). A third "
+        "access point for data this project already covers via "
+        "`usda-plants` (EOL harvest, Zenodo) and `usda-plants-extracted` "
+        "(direct from plants.usda.gov) -- same scope (\"vascular plants, "
+        "mosses, liverworts, hornworts, and lichens of the United "
+        "States\"), just a ChecklistBank mirror. Declined as redundant."),
+    "checklistbank-6282": (
+        "Myriatrix", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/6282",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 32,466 size). A "
+        "Scratchpads-based collaborative VRE for myriapodology, not a "
+        "stable checklist export; ChecklistBank's own `lastImportState` "
+        "is `failed`. Declined on the failed-import signal, same pattern "
+        "as sintax."),
+    "checklistbank-307801": (
+        "XR Test", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/307801",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 43,055 size). "
+        "Literally named \"XR Test\" and never imported by ChecklistBank "
+        "itself (`lastImportState` unset) -- a test dataset, same class "
+        "as the already-declined ZOOtest (checklistbank-316038). Declined "
+        "without downloading."),
     "checklistbank-30477": (
         "UNITE - Unified system for the DNA based fungal species linked to the classification",
         "DOI not recorded; version 2026-08-10",
@@ -1586,6 +1614,90 @@ SOURCES = {
         "database. Measured: 32,945 offered, 1,481 genuinely new -- "
         "applied (1,397 landed after drift from earlier applies in the "
         "same batch)."),
+    "checklistbank-312242": (
+        "South African National Animal Checklist", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/312242",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (3rd-tier-by-size sweep, 57,926 "
+        "size). Measured: 14,480 offered, 4,640 genuinely new -- the "
+        "largest single yield of this batch. Applied."),
+    "checklistbank-21341": (
+        "Catalogo de Plantas y Liquenes de Colombia", "DOI 10.15472/7avdhn; version not recorded",
+        "https://www.checklistbank.org/dataset/21341",
+        "CC BY", "applied",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 51,895 size). First "
+        "attempt measured 0 offered across the board -- found why: a "
+        "Spanish-language DwC-A (`taxonRank` values like \"Especie\", "
+        "`taxonomicStatus` \"Aceptado\"/\"Sinonimo\") whose accepted-status "
+        "term `colChecklist.py`'s ACCEPTED_STATUS set didn't recognise "
+        "(it already had Flora e Funga do Brasil's Portuguese "
+        "\"nome_aceito\" but not the Spanish sibling), so all 29,917 "
+        "accepted rows read as synonyms and got filtered out entirely. "
+        "Fixed by adding \"aceptado\" to ACCEPTED_STATUS (same class of "
+        "fix as RANK_SYNONYMS, just on the status side). Re-measured: 683 "
+        "genuinely new (after also clearing the stale taxa-cache the "
+        "broken first run had written) -- applied."),
+    "checklistbank-24580": (
+        "Checklist of Vermont Species", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/24580",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (3rd-tier-by-size sweep, 38,995 "
+        "size). Measured: 7,327 offered, 84 genuinely new -- modest, "
+        "applied."),
+    "checklistbank-51518": (
+        "Taxon list of fungi and fungal-like organisms from Germany compiled by the DGfM",
+        "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/51518",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (3rd-tier-by-size sweep, 32,676 "
+        "size). German Mycological Society (DGfM) national fungi list. "
+        "Measured: 12,659 offered, 917 genuinely new -- applied."),
+    "checklistbank-26719": (
+        "Catalogo de Plantas das Unidades de Conservacao do Brasil",
+        "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/26719",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (3rd-tier-by-size sweep, 27,512 "
+        "size). Brazilian protected-areas plant checklist. Measured: "
+        "3,692 offered, 269 genuinely new -- applied (265 landed after "
+        "drift from earlier applies in the same batch)."),
+    "checklistbank-197537": (
+        "fna-accepted-names (Flora of North America)", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/197537",
+        "CC BY", "applied",
+        "Triaged + applied 2026-10-25 (3rd-tier-by-size sweep, 27,163 "
+        "size). ChecklistBank types it `article` rather than `taxonomic` "
+        "(misleading label -- own description confirms it's a real "
+        "vascular-plant checklist for Canada/Greenland/continental US/"
+        "Saint Pierre and Miquelon). Measured: 7,833 offered, 369 "
+        "genuinely new -- applied (367 landed after drift from earlier "
+        "applies in the same batch)."),
+    "checklistbank-315538": (
+        "List of fungi recorded in Japan (-2010)", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/315538",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 23,006 size). "
+        "Measured: 18,817 offered, 2,921 already held, 0 staged, 15,871 "
+        "REFUSED for \"no family\" -- 84% of the archive carries no family "
+        "data at all (15,442 of 15,871 refusals are fungi rows with a "
+        "blank family field), far too poorly structured to be worth "
+        "scaffolding new families over. Declined on data quality."),
+    "checklistbank-1133": (
+        "Psocodea Species File", "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/1133",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 22,747 size). "
+        "Measured: 723 offered, 0 genuinely new -- fully redundant with "
+        "what this tree already holds. Declined for lack of yield, not a "
+        "data problem."),
+    "checklistbank-93654": (
+        "Checklist of the Vascular Plants of the Republic of Guinea",
+        "DOI not recorded; version not recorded",
+        "https://www.checklistbank.org/dataset/93654",
+        "CC BY", "declined",
+        "Triaged 2026-10-25 (3rd-tier-by-size sweep, 35,490 size). "
+        "Measured: 89 offered, 0 genuinely new -- fully redundant. "
+        "Declined for lack of yield, not a data problem."),
     "checklistbank-2014": (
         "Checklist Dutch Species Register - Nederlands Soortenregister", "DOI not recorded; version 2026-09-24",
         "https://www.checklistbank.org/dataset/2014",

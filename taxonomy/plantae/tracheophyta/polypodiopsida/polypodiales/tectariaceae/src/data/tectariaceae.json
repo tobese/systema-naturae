@@ -969,7 +969,8 @@
             "checklistbank": "Tectaria_athyrioides_Baker_CChr",
             "gbif-backbone": "7932191",
             "checklistbank-316441": "55325",
-            "checklistbank-2169": "1312529"
+            "checklistbank-2169": "1312529",
+            "checklistbank-21341": "gbif.org/species/7932191"
           },
           "authorityIds": "col:55325,wfo:wfo-0001119761"
         },
@@ -2592,7 +2593,8 @@
             "checklistbank-2008": "833853",
             "gbif-backbone": "5275164",
             "checklistbank-316441": "5536J",
-            "checklistbank-2169": "1435278"
+            "checklistbank-2169": "1435278",
+            "checklistbank-21341": "gbif.org/species/5275164"
           },
           "authorityIds": "col:5536J,itis:17723,wfo:wfo-0001109386"
         },
@@ -5277,7 +5279,8 @@
               "BBDW7"
             ],
             "checklistbank": "Tectaria_rivalis_Mett_ex_Kuhn_Maxon",
-            "checklistbank-2169": "1481365"
+            "checklistbank-2169": "1481365",
+            "checklistbank-21341": "gbif.org/species/7889881"
           },
           "authorityIds": "col:BBDW7,wfo:wfo-0001429513"
         },
@@ -7138,7 +7141,12 @@
           "children": [],
           "uuid": "9292a6b2-ec6a-5d0-a70-ab3fdd557a79e3",
           "commonName": "plantainleaf halberd fern",
-          "description": "Tectaria plantaginea (plantainleaf halberd fern) is a tectariaceae species found in its native region."
+          "description": "Tectaria plantaginea (plantainleaf halberd fern) is a tectariaceae species found in its native region.",
+          "authorship": "(Jacq.) Maxon",
+          "sourceIds": {
+            "checklistbank-21341": "gbif.org/species/9220054",
+            "checklistbank-26719": "urn:catalog:catalogo-ucs-brasil:Estação Ecológica de Maracá:MIRR:2279"
+          }
         },
         {
           "id": "SP_TECTARIA_CUSPIDATO_PINNATA_HAYATA_C_CHR",
@@ -8329,7 +8337,8 @@
           "lineage": "Tectaria",
           "authorship": "(Baker) C.Chr., 1934",
           "sourceIds": {
-            "checklistbank": "2769822"
+            "checklistbank": "2769822",
+            "checklistbank-21341": "gbif.org/species/7508515"
           },
           "children": [],
           "uuid": "fabed76e-a7eb-55b-a5c-1ef35610791009",
@@ -8415,6 +8424,32 @@
           "lineage": "Tectaria",
           "sourceIds": {
             "checklistbank-316441": "VQPQY"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TECTARIA_BRAUNIANA_H_KARST_C_CHR",
+          "name": "Tectaria brauniana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tectaria",
+          "authorship": "(H.Karst.) C.Chr.",
+          "sourceIds": {
+            "checklistbank-21341": "gbif.org/species/7801300"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TECTARIA_DRACONOPTERA_D_C_EATON_COPEL",
+          "name": "Tectaria draconoptera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tectaria",
+          "authorship": "(D.C.Eaton) Copel.",
+          "sourceIds": {
+            "checklistbank-21341": "gbif.org/species/7627238"
           },
           "children": []
         }
@@ -11300,10 +11335,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tectariaceae"
+    },
+    {
+      "id": "GENUS_TECTARIACEAE",
+      "name": "TECTARIACEAE",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TECTARIACEAE_TECTARIA_F_E_R_C_MORAN",
+          "name": "TECTARIACEAE Tectaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "TECTARIACEAE",
+          "authorship": "(Fée) R.C.Moran",
+          "sourceIds": {
+            "checklistbank-26719": "urn:catalog:catalogo-ucs-brasil:Parque Nacional do Superagui:UPCB:UPCB0009904"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tectariaceae"
     }
   ],
-  "genusCount": 25,
-  "speciesCount": 539,
+  "genusCount": 26,
+  "speciesCount": 542,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
