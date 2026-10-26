@@ -3,7 +3,7 @@
   "name": "Amphisopodidae",
   "rank": "FAMILY",
   "appSlug": "amphisopodidae",
-  "speciesCount": 5,
+  "speciesCount": 7,
   "children": [
     {
       "id": "GENUS_LAKEAMPHISOPUS",
@@ -29,44 +29,26 @@
       "lineage": "amphisopodidae"
     },
     {
-      "id": "GENUS_KAKADUBEH",
-      "name": "Kakadubeh",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphisopodidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_AMPHISOPUS",
-      "name": "Amphisopus",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphisopodidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_EOPHREATOICUS",
-      "name": "Eophreatoicus",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphisopodidae",
-      "children": []
-    },
-    {
       "id": "GENUS_EREMISOPUS",
       "name": "Eremisopus",
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "amphisopodidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_PARAMPHISOPUS",
-      "name": "Paramphisopus",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphisopodidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_EREMISOPUS_BEEI_WILSON_AND_KEABLE_2002",
+          "name": "Eremisopus beei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eremisopus",
+          "authorship": "Wilson and Keable, 2002",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "683274"
+          },
+          "children": []
+        }
+      ]
     },
     {
       "id": "GENUS_PELUDO",
@@ -74,7 +56,21 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "amphisopodidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_PELUDO_PARALIOTUS_WILSON_AND_KEABLE_2002",
+          "name": "Peludo paraliotus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peludo",
+          "authorship": "Wilson and Keable, 2002",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "683275"
+          },
+          "children": []
+        }
+      ]
     },
     {
       "id": "GENUS_PHREATOICOPSIS",
@@ -92,9 +88,11 @@
           "lineage": "Phreatoicopsis",
           "authorship": "Spencer & Hall",
           "sourceIds": {
-            "checklistbank-127379": "f7f67079-fa19-4d66-8e6a-b6f21ec9a18d"
+            "checklistbank-127379": "f7f67079-fa19-4d66-8e6a-b6f21ec9a18d",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "546257"
           },
-          "uuid": "87a39e4f-dea5-4fd5-b245-fc634a14df5d"
+          "uuid": "87a39e4f-dea5-4fd5-b245-fc634a14df5d",
+          "children": []
         },
         {
           "id": "SP_PHREATOICOPSIS_RAFFAE_WILSON_KEABLE",
@@ -105,27 +103,13 @@
           "lineage": "Phreatoicopsis",
           "authorship": "Wilson & Keable",
           "sourceIds": {
-            "checklistbank-127379": "223edd4e-f8f0-4e7a-acda-1c35fb426011"
+            "checklistbank-127379": "223edd4e-f8f0-4e7a-acda-1c35fb426011",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "683302"
           },
-          "uuid": "e19e8da2-1977-4783-81fb-14fd6ed0da87"
+          "uuid": "e19e8da2-1977-4783-81fb-14fd6ed0da87",
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PHREATOMERUS",
-      "name": "Phreatomerus",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphisopodidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_PLATYPYGA",
-      "name": "Platypyga",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphisopodidae",
-      "children": []
     },
     {
       "id": "GENUS_SYNAMPHISOPUS",
@@ -143,9 +127,11 @@
           "lineage": "Synamphisopus",
           "authorship": "Wilson & Keable",
           "sourceIds": {
-            "checklistbank-127379": "903797ac-b210-44f1-9207-f5d86db4e657"
+            "checklistbank-127379": "903797ac-b210-44f1-9207-f5d86db4e657",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "683303"
           },
-          "uuid": "e6e5ac1c-43b8-4d5b-9236-7ae94aa344e8"
+          "uuid": "e6e5ac1c-43b8-4d5b-9236-7ae94aa344e8",
+          "children": []
         },
         {
           "id": "SP_SYNAMPHISOPUS_AMBIGUUS_SHEARD",
@@ -158,10 +144,23 @@
           "sourceIds": {
             "checklistbank-127379": "0dc24910-dc6b-4106-804e-e36f86e5cdaf"
           },
-          "uuid": "2aa611f6-8ada-4189-9a53-736e2400ead4"
+          "uuid": "2aa611f6-8ada-4189-9a53-736e2400ead4",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_KAKADUBEH",
+      "name": "Kakadubeh",
+      "rank": "GENUS",
+      "children": [],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphisopodidae"
     }
   ],
-  "genusCount": 1
+  "genusCount": 6,
+  "sourceIds": {
+    "9ca92552-f23a-41a8-a140-01abaa31c931": "541893",
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20735570"
+  }
 }
