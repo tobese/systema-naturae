@@ -3,7 +3,7 @@
   "name": "Philisidae",
   "rank": "FAMILY",
   "appSlug": "philisidae",
-  "speciesCount": 7,
+  "speciesCount": 8,
   "children": [
     {
       "id": "GENUS_DIZZYA",
@@ -42,7 +42,8 @@
           "lineage": "Vampyravus",
           "authorship": "Schlosser, 1910",
           "sourceIds": {
-            "gbif-backbone": "4969125"
+            "gbif-backbone": "4969125",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q18420677"
           },
           "children": [],
           "uuid": "5b4048b9-5097-534c-b1bb-def53863d810"
@@ -93,7 +94,8 @@
           "lineage": "Witwatia",
           "authorship": "Gunnell et al., 2008",
           "sourceIds": {
-            "gbif-backbone": "4969126"
+            "gbif-backbone": "4969126",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20719557"
           },
           "children": [],
           "uuid": "97b6ab05-07c5-5346-b1f6-ef49d28cf810"
@@ -138,10 +140,33 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SCOTOPHILISIS",
+      "name": "Scotophilisis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCOTOPHILISIS_LIBYCUS_HOR_EK_ET_AL_2006",
+          "name": "Scotophilisis libycus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scotophilisis",
+          "authorship": "HoráČek,  et al. 2006",
+          "sourceIds": {
+            "checklistbank-1174": "txn:425235"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "philisidae"
     }
   ],
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
-    "checklistbank-1174": "txn:136262"
+    "checklistbank-1174": "txn:136262",
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2884420"
   }
 }
