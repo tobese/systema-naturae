@@ -174,7 +174,15 @@ def _norm(s: str) -> str:
 
 
 STOPWORDS = {"the", "a", "an", "of", "and", "or", "dataset", "checklist",
-             "catalogue", "catalog", "database", "register", "online", "list"}
+             "catalogue", "catalog", "database", "register", "online", "list",
+             # Prepositions: without these, two titles sharing only a common
+             # template -- "Taxon list of Hymenoptera from Germany" vs. an
+             # already-held "Taxon list of fungi... from Germany compiled by
+             # the DGfM", both real, different, genuinely complementary
+             # datasets in the same German-monitoring series -- hit 75%
+             # overlap on "taxon"+"from"+"germany" alone and got wrongly
+             # blocked as a duplicate (found 2026-10-25, --all-types sweep).
+             "from", "by", "in", "with", "for", "at", "on", "to", "as"}
 
 
 def _title_tokens(title: str) -> set[str]:

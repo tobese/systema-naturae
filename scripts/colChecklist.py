@@ -83,9 +83,12 @@ FIELDS = {
 # -- found 2026-10-25 when the whole archive silently offered 0 candidates:
 # every one of its 29,917 accepted rows read `is_synonym=True` for not
 # matching this set, the same class of bug RANK_SYNONYMS exists to catch,
-# just on the status side instead of the rank side.
+# just on the status side instead of the rank side. "accepted name" (two
+# words -- Dutch Caribbean Species Register, checklistbank-7103) is the
+# same bug again, found the same day via the --all-types sweep: every one
+# of its 14,727 rows, including genuinely accepted ones, read as a synonym.
 ACCEPTED_STATUS = {"accepted", "provisionally accepted", "valid", "nome_aceito",
-                    "aceptado"}
+                    "aceptado", "accepted name"}
 
 # Rank vocabularies seen so far that are not the plain English terms both
 # the candidate filter (importColChecklist.py: rank in ("species",

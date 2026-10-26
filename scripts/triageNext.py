@@ -57,8 +57,16 @@ def _doi_in(citation):
 
 
 def held_keys():
-    """Every way the manifest can claim a dataset: slug key, DOI, title."""
-    keys, dois, titles = set(), set(), set()
+    """Every way the manifest can claim a dataset: slug key, DOI, and title
+    -- title as a token set (`SQ._title_tokens`), not an exact normalised
+    string: a stricter exact match let "South African National Plant
+    Checklist (SANPC)" (ChecklistBank key 312236) through as "new" past an
+    already-assessed "South African National Plant Checklist" (key 312166),
+    found 2026-10-25 widening this script to --all-types. Reusing
+    `sourceQueue.py`'s matcher (added the same day for the mirror-image
+    problem -- `add` registering a duplicate under a new key) rather than
+    keeping two slightly different title-matching implementations."""
+    keys, dois, titles = set(), set(), []
     try:
         src = json.load(open(MANIFEST, encoding="utf-8")).get("sources", {})
     except (OSError, ValueError):
@@ -71,7 +79,7 @@ def held_keys():
         for doi in re.findall(r"10\.\d{4,9}/\S+", blob):
             dois.add(norm(doi.rstrip(".,;)")))
         if rec.get("title"):
-            titles.add(norm(rec["title"]))
+            titles.append((rec["title"], SQ._title_tokens(rec["title"])))
     return keys, dois, titles
 
 
@@ -91,18 +99,65 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=25)
     ap.add_argument("--group", default="", help="taxonomicGroupScope filter")
-    ap.add_argument("--min-size", type=int, default=0)
+    ap.add_argument("--min-size", type=int, default=200,
+                     help="floor on a dataset's own `size` field (default 200 "
+                          "-- ChecklistBank's 65,480-dataset catalog is 95%% "
+                          "single-paper `article`-type records this project "
+                          "has no use for; 0 scans the whole thing)")
+    ap.add_argument("--all-types", action="store_true",
+                     help="also list datasets outside type=taxonomic. "
+                          "ChecklistBank's dataset `type` field is mostly a "
+                          "publishing/workflow tag, not a reliable signal for "
+                          "'is this a checklist' -- found 2026-10-25 via "
+                          "fna-accepted-names (ChecklistBank key 197537), a "
+                          "genuine 27k-name US flora checklist filed as "
+                          "`article`, already taken despite this script never "
+                          "surfacing it. A size>=200 scan of every non-"
+                          "taxonomic type the same day found 1,607 open-"
+                          "licence datasets this script's old hardcoded "
+                          "`type=taxonomic` filter had never once shown --  "
+                          "mostly real regional/national checklists and red "
+                          "lists (Dutch Caribbean Species Register, Korean "
+                          "Peninsula Flora, Swedish Red List, DAISIE...), not "
+                          "noise. Off by default because `type=taxonomic` "
+                          "alone is already a fast, clean 480-dataset shelf "
+                          "and most callers want that; turn this on "
+                          "deliberately; still subject to the held/licence/"
+                          "reissue filters below.")
     ap.add_argument("--keys-only", action="store_true")
     args = ap.parse_args()
 
     keys, dois, titles = held_keys()
     # Never re-triagen an already-queued key, whatever its terminal stage.
     keys |= queue_keys()
-    url = f"{API}?type=taxonomic&limit=1000"
-    if args.group:
-        url += "&taxonomicGroupScope=" + urllib.parse.quote(args.group)
-    doc = get(url)
-    rows = doc.get("result") or []
+
+    rows = []
+    if args.all_types:
+        # Paginate the whole catalog, sorted largest-first, and stop once a
+        # page's smallest row drops below --min-size (sort is descending, so
+        # nothing larger remains past that point).
+        offset = 0
+        page = 1000
+        while True:
+            url = f"{API}?limit={page}&offset={offset}&sortBy=size"
+            if args.group:
+                url += "&taxonomicGroupScope=" + urllib.parse.quote(args.group)
+            doc = get(url)
+            batch = doc.get("result") or []
+            if not batch:
+                break
+            rows.extend(batch)
+            offset += page
+            if offset >= (doc.get("total") or 0):
+                break
+            if (batch[-1].get("size") or 0) < args.min_size:
+                break
+    else:
+        url = f"{API}?type=taxonomic&limit=1000"
+        if args.group:
+            url += "&taxonomicGroupScope=" + urllib.parse.quote(args.group)
+        doc = get(url)
+        rows = doc.get("result") or []
 
     out = []
     for d in rows:
@@ -129,7 +184,7 @@ def main() -> int:
         doi = norm(d.get("doi") or _doi_in(d.get("citation")))
         if doi and doi in dois:
             continue
-        if norm(title) in titles or REISSUE.search(title):
+        if SQ._title_overlap_match(SQ._title_tokens(title), titles) or REISSUE.search(title):
             continue
         out.append((size, key, lic, title, d.get("alias") or ""))
 
@@ -145,7 +200,9 @@ def main() -> int:
     for size, key, lic, title, alias in out:
         name = f"{title} ({alias})" if alias and alias.lower() not in title.lower() else title
         print(f"{size:>11,}  {key:>7}  {lic:<12}  {name[:70]}")
-    print(f"\n{len(out)} candidates (of {len(rows)} on the shelf); run with --keys-only to feed fetchBatch.sh")
+    scanned = f"{len(rows)} scanned above --min-size {args.min_size}" if args.all_types \
+        else f"{len(rows)} on the shelf"
+    print(f"\n{len(out)} candidates ({scanned}); run with --keys-only to feed fetchBatch.sh")
     return 0
 
 

@@ -14,12 +14,27 @@ Every cycle:
   3. Find rows whose family is now "ready" (held + file exists) and that
      have not been re-imported within the cooldown window.
   4. Group those rows by their recorded `archive` path.
-  5. For each archive, run `importColChecklist.py <archive> --apply`.
+  5. For each archive, skip it if a lock file shows another watcher process
+     is still mid-run against it (see `archive_locked()`); otherwise take
+     the lock and run `importColChecklist.py <archive> --apply`.
      Re-running is safe: already-held species are skipped by the importer's
      dedup, so only newly-placeable species get added.
-  6. Mark every row from that archive with `reimportedAt` so we don't hammer
-     the same archive every cycle while its families are still being
-     scaffolded.
+  6. Mark every row from that archive with a fresh `reimportedAt` so we
+     don't re-scan the same archive every cycle when nothing new could
+     plausibly be ready yet -- refreshed on every successful run, not just
+     the first, so the throttle actually repeats (a bug until 2026-10-25:
+     the guard only ever set this once per row, so after the first
+     COOLDOWN_HOURS window every archive got re-scanned every single cycle,
+     forever).
+
+The lock and the cooldown solve two different problems and neither should
+be dropped in favour of the other: the lock stops two processes writing the
+same family files at once (a correctness hazard); the cooldown just avoids
+paying the cost of a full re-scan when it's very unlikely to find anything
+(an efficiency tweak). Before 2026-10-25 a single 24-hour cooldown tried to
+do both jobs and did neither well -- 24h is a long time to wait to pick up
+a newly-scaffolded family, and it was never the right tool for "is the
+previous run still active" in the first place.
 
 Usage:
     python3 scripts/pendingFamilyWatcher.py           # one cycle, then exit
@@ -44,8 +59,57 @@ REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 sys.path.insert(0, SCRIPT_DIR)
 import pendingFamilies as PF  # noqa: E402
 
-COOLDOWN_HOURS = 24
+COOLDOWN_HOURS = 1
 CYCLE_SECONDS = 300
+
+LOCK_DIR = os.path.join(os.path.dirname(PF.STORE), "watcher-locks")
+
+
+def _lock_path(archive: str) -> str:
+    # Archive paths are absolute and contain "/" -- flatten to a safe filename.
+    return os.path.join(LOCK_DIR, re.sub(r"[^A-Za-z0-9]+", "_", archive) + ".lock")
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True  # exists, just not ours to signal
+    return True
+
+
+def archive_locked(archive: str) -> bool:
+    """True if another watcher process is still mid-run against this exact
+    archive. This is the real guard the cooldown used to stand in for: a
+    cycle fires every 60s (orchestrator) / 5min (--loop), but a run against
+    something the size of the GBIF Backbone takes well over that (measured
+    2026-10-25: 15+ minutes), so without this a second cycle would start a
+    second `importColChecklist.py` against the same archive while the first
+    is still writing the same family files -- the exact "no concurrent
+    writers" hazard CLAUDE.md warns about. A stale lock (process no longer
+    alive -- e.g. the prior run crashed) is not honored."""
+    path = _lock_path(archive)
+    try:
+        with open(path, encoding="utf-8") as fh:
+            pid = int(fh.read().strip())
+    except (OSError, ValueError):
+        return False
+    return _pid_alive(pid)
+
+
+def acquire_lock(archive: str) -> None:
+    os.makedirs(LOCK_DIR, exist_ok=True)
+    with open(_lock_path(archive), "w", encoding="utf-8") as fh:
+        fh.write(str(os.getpid()))
+
+
+def release_lock(archive: str) -> None:
+    try:
+        os.remove(_lock_path(archive))
+    except OSError:
+        pass
 
 
 def now_iso() -> str:
@@ -136,14 +200,16 @@ def run_reimport(archive: str, rows: list[dict]) -> bool:
 
 def mark_reimported(rows: list[dict], store_path: str) -> None:
     """Set reimportedAt on every row whose family matches one of `rows`,
-    then rewrite the store atomically."""
+    then rewrite the store atomically. Always overwrites -- not just the
+    first time -- so the cooldown actually repeats; a row that keeps
+    getting re-imported cycle after cycle (e.g. one that's genuinely
+    popular) still gets the throttle applied each time, not just once."""
     now = now_iso()
     targets = {(r.get("family") or "").strip().lower() for r in rows}
     all_rows = PF.read_store()
     changed = 0
     for r in all_rows:
-        if ((r.get("family") or "").strip().lower() in targets
-                and not r.get("reimportedAt")):
+        if (r.get("family") or "").strip().lower() in targets:
             r["reimportedAt"] = now
             changed += 1
     if changed:
@@ -169,9 +235,17 @@ def cycle() -> int:
             print(f"  {len(group)} ready family(ies) have no archive recorded, "
                   f"skipping (pre-dates archive-tracking fix)", flush=True)
             continue
-        if run_reimport(archive, group):
-            mark_reimported(group, PF.STORE)
-            any_ok = True
+        if archive_locked(archive):
+            print(f"  {archive}: another run is still in progress, skipping "
+                  f"this cycle", flush=True)
+            continue
+        acquire_lock(archive)
+        try:
+            if run_reimport(archive, group):
+                mark_reimported(group, PF.STORE)
+                any_ok = True
+        finally:
+            release_lock(archive)
     return 0
 
 
