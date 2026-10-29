@@ -1,7 +1,19 @@
 {
+  "key": "checklistbank-21626",
+  "title": "The Swedish Red List 2020",
+  "stage": "applying",
+  "licence": "cc by",
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-21626/archive.zip",
+  "reason": "pipeline exception: cannot access local variable 'sources_root' where it is not associated with a value",
   "activePid": 88639,
   "activeStartedAt": "2026-10-27T18:43:15.788146+00:00",
-  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-21626/archive.zip",
+  "triaged": {
+    "offered": 5645,
+    "alreadyHeld": 3200,
+    "staged": 2366,
+    "refused": 44,
+    "refusalRate": 0.0078
+  },
   "history": [
     {
       "at": "2026-10-25T22:23:46+0100",
@@ -57,14 +69,13 @@
     },
     {
       "at": "2026-10-27T09:10:27+0100",
-      "note": "fix-state: transformed meta exists (no .jsonl)",
-      "reason": "transformed meta exists (no .jsonl)",
-      "stage": "queued"
+      "stage": "queued",
+      "note": "fix-state: transformed meta exists (no .jsonl)"
     },
     {
       "at": "2026-10-27T09:30:00+00:00",
-      "note": "fix-state: reset from queued - empty_jsonl",
-      "stage": "downloaded"
+      "stage": "downloaded",
+      "note": "fix-state: reset from queued - empty_jsonl"
     },
     {
       "at": "2026-10-27T13:44:09.364243+00:00",
@@ -109,19 +120,22 @@
     {
       "at": "2026-10-29T16:48:17+0100",
       "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-29T18:33:22Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-29T18:37:58Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-29T18:37:58Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-29T18:37:58Z",
+      "stage": "applying"
     }
-  ],
-  "key": "checklistbank-21626",
-  "licence": "cc by",
-  "reason": "pipeline exception: cannot access local variable 'sources_root' where it is not associated with a value",
-  "size": null,
-  "stage": "downloaded",
-  "title": "The Swedish Red List 2020",
-  "triaged": {
-    "alreadyHeld": 3186,
-    "offered": 5645,
-    "refusalRate": 0.0078,
-    "refused": 44,
-    "staged": 2380
-  }
+  ]
 }

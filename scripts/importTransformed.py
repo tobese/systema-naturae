@@ -72,6 +72,38 @@ def load_records(path: str) -> list:
     return records
 
 
+DECISIONS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              "data", "cross-kingdom-homonym-decisions.json")
+
+
+def drop_decided_removals(records: list) -> list:
+    """Drop records that would re-create a placement already removed by a
+    recorded cross-kingdom-homonym decision.
+
+    data/cross-kingdom-homonym-decisions.json records, per species id, the
+    kingdom/family copy that was judged a misroute (e.g. Giraudia
+    sphacelarioides, a brown alga, under Ichneumonidae). The source that
+    misrouted it still offers it, so without this every re-import of that
+    source puts it back -- and verifyTree fails on the same pair again.
+    """
+    try:
+        with open(DECISIONS_PATH, encoding="utf-8") as fh:
+            decisions = json.load(fh)
+    except FileNotFoundError:
+        return records
+    removed = {(sid, d["removed_from"]) for sid, d in decisions.items()
+               if d.get("action") == "remove" and d.get("removed_from")}
+    kept = []
+    for r in records:
+        sid = (r.get("species") or {}).get("id")
+        if (sid, f"{r.get('kingdom')}/{r.get('family')}") in removed:
+            print(f"  skipped {sid} -> {r.get('kingdom')}/{r.get('family')}: "
+                  f"removed by a recorded homonym decision")
+            continue
+        kept.append(r)
+    return kept
+
+
 def group_by_family_genus(records: list) -> dict:
     """(kingdom, phylum, class, order, family) -> genus name -> {ref, species[]}."""
     groups: dict = {}
@@ -145,7 +177,7 @@ def main() -> int:
         print(f"  run {meta.get('runId', '?')} from {meta.get('source', work_slug)}"
               f" ({meta.get('recordCount', '?')} records, transformed {meta.get('transformedAt', '?')})")
 
-    records = load_records(path)
+    records = drop_decided_removals(load_records(path))
     print(f"  {len(records)} records in {path}")
 
     groups = group_by_family_genus(records)
