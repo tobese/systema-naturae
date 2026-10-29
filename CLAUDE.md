@@ -13,11 +13,18 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 > [`docs/import.md`](docs/import.md) section 11** ("Queue-driven import
 > pipeline") and [`docs/dataset-inbox.md`](docs/dataset-inbox.md), and run
 > `python3 scripts/sourceQueue.py report` to see what's already in flight.
-> In short: `python3 scripts/pipelineOrchestrator.py --loop` (under
-> `caffeinate` on macOS) drives the whole thing — refill, transform, apply,
-> pending-family sweep — on its own; a human's job is watching
-> `scripts/importLogServer.py`'s dashboard (`:9883`) and making the
-> candidate/decline/block judgement calls that `triaged` state exists for.
+> In short: `services/import-ordinator` (`--loop`, under `caffeinate` on
+> macOS, dashboard on `:8090`) drives the whole thing. It drains the queue
+> (download, transform, apply) itself under `maintenanceLock`, then calls
+> `pipelineOrchestrator.py --side-tasks` for refill, needs-rerun and the
+> pending-family sweep. It needs `services/importwrite` running **on Macie**
+> against this checkout (`IMPORTWRITE_URL=http://localhost:8089`; q-bert's
+> copy serves a stale clone). Never run `pipelineOrchestrator.py --loop`
+> alongside it — both would drain `downloaded`. A human's job is watching
+> the dashboard and making the candidate/decline/block judgement calls that
+> `triaged` state exists for. Cross-kingdom homonym calls are recorded in
+> `data/cross-kingdom-homonym-decisions.json`; `importTransformed.py` drops
+> any record that would re-create a placement removed there.
 > Discovery (`scripts/triageNext.py`) already covers ChecklistBank, which is
 > where the great majority of candidate checklists live — **do not build a
 > second discovery path against another catalog (GBIF's dataset search,

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Import Pipeline</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230f1117'/%3E%3Ctext x='50' y='72' font-family='Georgia' font-size='62' font-style='italic' fill='%23c0c0d8' text-anchor='middle' letter-spacing='-2'%3ESN%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<style>
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f1115;
+    color: #e6e8eb;
+    margin: 0;
+    padding: 24px 20px 60px;
+}
+h1 { font-size: 18px; margin: 0 0 4px; font-weight: 600; }
+.sub { color: #8a909c; font-size: 12px; margin-bottom: 16px; }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+    max-width: 1100px;
+}
+.card {
+    background: #171a21;
+    border: 1px solid #262b35;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+.card .num {
+    font-size: 20px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+.card .label {
+    color: #8a909c;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.tab {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #262b35;
+    background: #171a21;
+    color: #8a909c;
+    cursor: pointer;
+    font-size: 12px;
+}
+.tab.active {
+    color: #e6e8eb;
+    border-color: #5b9dff;
+}
+.wrap {
+    overflow-x: auto;
+    border: 1px solid #262b35;
+    border-radius: 10px;
+    background: #171a21;
+    max-width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+thead th {
+    text-align: left;
+    color: #8a909c;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    padding: 6px 10px;
+    border-bottom: 1px solid #262b35;
+    position: sticky;
+    top: 0;
+    background: #0f1115;
+}
+tbody td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #262b35;
+    vertical-align: top;
+}
+.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.stage {
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: .03em;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+.stage-transforming, .stage-applying, .stage-triaging { color: #f5c45e; }
+.stage-applied { color: #3ddc84; }
+.stage-queued, .stage-downloaded, .stage-candidate { color: #8a909c; }
+.stage-blocked, .stage-error, .stage-declined { color: #ff5c5c; }
+.btn {
+    background: #262b35;
+    border: 1px solid #262b35;
+    color: #e6e8eb;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.btn:hover { background: #3a3f4b; }
+.btn.primary {
+    background: #5b9dff;
+    border-color: #5b9dff;
+}
+.btn.primary:hover { background: #6faaff; }
+.muted { color: #8a909c; }
+.refresh-btn {
+    background: #171a21;
+    border: 1px solid #262b35;
+    color: #e6e8eb;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.refresh-btn:hover { background: #262b35; }
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #262b35;
+    border-top-color: #5b9dff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 8px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty {
+    text-align: center;
+    padding: 40px;
+    color: #8a909c;
+}
+</style>
+</head>
+<body>
+<h1>Import Pipeline</h1>
+<div class="sub" id="asof">loading&hellip;</div>
+
+<div class="tabs">
+    <button class="tab active" id="tab-pipeline" onclick="loadQueue()">Pipeline</button>
+    <button class="tab" id="tab-stuck" onclick="loadStuck()">Stuck</button>
+    <button class="tab" id="tab-gbif" onclick="loadGbifDatasets()">GBIF Datasets</button>
+</div>
+
+<div class="cards" id="resCards"></div>
+
+<div class="wrap" id="pipelineWrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Title</th>
+                <th>Stage</th>
+                <th class="num">Last event</th>
+                <th class="num">Age (min)</th>
+                <th class="num">Offered</th>
+                <th class="num">Staged</th>
+                <th class="num">Added</th>
+                <th class="num">Merged</th>
+                <th class="num">Refused</th>
+                <th class="num">Rate</th>
+            </tr>
+        </thead>
+        <tbody id="pipelineRows"></tbody>
+    </table>
+</div>
+
+<div class="wrap" id="gbifWrap" style="display:none;">
+    <table>
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Title</th>
+                <th class="num">DOI</th>
+                <th>Type</th>
+                <th>Licence</th>
+                <th class="num">Name Usages</th>
+                <th>Country</th>
+                <th>Pipeline Status</th>
+                <th class="num">Action</th>
+            </tr>
+        </thead>
+        <tbody id="gbifRows"></tbody>
+    </table>
+</div>
+
+<script>
+let rows = [];
+let gbifRows = [];
+let currentTab = 'pipeline';
+let refreshTimer = null;
+
+function escapeHtml(text) {
+    if (!text) return '';
+    return text.replace(/[&<>"']/g, function(m) {
+        return ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[m]);
+    });
+}
+
+function shortKey(key) {
+    return key.replace(/^checklistbank-/, '');
+}
+
+function updateTabs(key) {
+    currentTab = key;
+    document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+    const activeTab = document.getElementById('tab-' + key);
+    if (activeTab) activeTab.classList.add('active');
+}
+
+async function loadQueue() {
+    currentTab = 'pipeline';
+    updateTabs('pipeline');
+    try {
+        const resp = await fetch('/queue');
+        rows = await resp.json();
+        renderCards(rows);
+        renderTable(rows);
+        document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
+        document.getElementById('gbifWrap').style.display = 'none';
+    } catch (e) {
+        console.error('Failed to load queue:', e);
+    }
+}
+
+async function loadGbifDatasets() {
+    currentTab = 'gbif';
+    updateTabs('gbif');
+    try {
+        const resp = await fetch('/gbif');
+        gbifRows = await resp.json();
+        gbifRows.sort((a, b) => (b.nameUsagesCount || 0) - (a.nameUsagesCount || 0));
+        renderGbifTable(gbifRows);
+        document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
+        document.getElementById('gbifWrap').style.display = 'block';
+        document.getElementById('pipelineWrap').style.display = 'none';
+        document.getElementById('resCards').innerHTML = '';
+    } catch (e) {
+        console.error('Failed to load GBIF datasets:', e);
+    }
+}
+
+async function loadStuck() {
+    currentTab = 'stuck';
+    updateTabs('stuck');
+    document.getElementById('pipelineWrap').style.display = 'none';
+    document.getElementById('gbifWrap').style.display = 'none';
+    document.getElementById('pipelineRows').innerHTML = '<tr><td colspan="10" class="empty">Stuck sources view coming soon</td></tr>';
+    document.getElementById('resCards').innerHTML = '';
+    document.getElementById('asof').textContent = 'Stuck view';
+}
+
+async function toggleSkg(key, action) {
+    try {
+        const resp = await fetch('/gbif/' + key + '/' + action, {
+            method: 'POST'
+        });
+        if (resp.ok) {
+            loadGbifDatasets();
+        } else {
+            console.error('Failed to toggle skip/use for ' + key);
+        }
+    } catch (e) {
+        console.error('Failed to toggle skip/use for ' + key, e);
+    }
+}
+
+function renderCards(rows) {
+    const counts = {};
+    for (const r of rows) {
+        counts[r.stage] = (counts[r.stage] || 0) + 1;
+    }
+    const total = rows.length;
+    const added = rows.reduce((sum, r) => sum + (r.added || 0), 0);
+    const merged = rows.reduce((sum, r) => sum + (r.merged || 0), 0);
+
+    const cards = [
+        { label: 'Total', num: total },
+        { label: 'Applied', num: counts.applied || 0, color: '#3ddc84' },
+        { label: 'Transforming', num: counts.transforming || 0, color: '#f5c45e' },
+        { label: 'Applying', num: counts.applying || 0, color: '#f5c45e' },
+        { label: 'Queued', num: counts.queued || 0, color: '#8a909c' },
+        { label: 'Downloaded', num: counts.downloaded || 0, color: '#8a909c' },
+        { label: 'Blocked', num: counts.blocked || 0, color: '#ff5c5c' },
+        { label: 'Error', num: counts.error || 0, color: '#ff5c5c' },
+        { label: 'Added', num: added, color: '#3ddc84' },
+        { label: 'Merged', num: merged, color: '#3ddc84' },
+    ];
+
+    let html = '';
+    for (const c of cards) {
+        html += '<div class="card"><div class="num" style="color:' + c.color + '">' + c.num + '</div><div class="label">' + c.label + '</div></div>';
+    }
+    document.getElementById('resCards').innerHTML = html;
+}
+
+function renderTable(rows) {
+    const tbody = document.getElementById('pipelineRows');
+    tbody.innerHTML = '';
+    for (const r of rows) {
+        const age = r.activeStartedAt ? Math.floor((Date.now() - new Date(r.activeStartedAt).getTime()) / 60000) : '-';
+        const shortKey = r.key.replace(/^checklistbank-/, '');
+        const tr = document.createElement('tr');
+        tr.innerHTML =
+            '<td>' + escapeHtml(shortKey) + ' ' + escapeHtml(r.title ? '\u2014 ' + r.title : '') + '</td>' +
+            '<td><span class="stage stage-' + r.stage + '">' + escapeHtml(r.stage) + '</span></td>' +
+            '<td class="num">' + escapeHtml(r.activeStartedAt || '-') + '</td>' +
+            '<td class="num">' + age + '</td>' +
+            '<td class="num">' + (r.offered !== undefined ? r.offered : '-') + '</td>' +
+            '<td class="num">' + (r.staged !== undefined ? r.staged : '-') + '</td>' +
+            '<td class="num">' + (r.added !== undefined ? r.added : '-') + '</td>' +
+            '<td class="num">' + (r.merged !== undefined ? r.merged : '-') + '</td>' +
+            '<td class="num">' + (r.refused !== undefined ? r.refused : '-') + '</td>' +
+            '<td class="num">' + (r.refusalRate !== undefined ? (r.refusalRate * 100).toFixed(1) + '%' : '-') + '</td>';
+        tbody.appendChild(tr);
+    }
+}
+
+function renderGbifTable(rows) {
+    const tbody = document.getElementById('gbifRows');
+    tbody.innerHTML = '';
+    for (const r of rows) {
+        if (r.decision === 'skip') continue;
+
+        const tr = document.createElement('tr');
+        const shortKey = r.key.replace(/^checklistbank-/, '');
+        const stateClass = r.state ? 'stage-' + r.state : '';
+        const doiLink = r.doi ? '<a href="https://doi.org/' + escapeHtml(r.doi) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(r.doi) + '</a>' : '-';
+        const pipelineStatus = r.state ? '<span class="stage ' + stateClass + '">' + escapeHtml(r.state) + '</span>' : '<span class="muted">-</span>';
+        tr.innerHTML =
+            '<td>' + escapeHtml(shortKey) + '</td>' +
+            '<td>' + escapeHtml(r.title) + '</td>' +
+            '<td class="num">' + doiLink + '</td>' +
+            '<td>' + escapeHtml(r.type) + '</td>' +
+            '<td>' + escapeHtml(r.licence) + '</td>' +
+            '<td class="num">' + (r.nameUsagesCount !== undefined ? r.nameUsagesCount.toLocaleString() : '-') + '</td>' +
+            '<td>' + escapeHtml(r.publishingCountry || '-') + '</td>' +
+            '<td>' + pipelineStatus + '</td>' +
+            '<td class="num">' +
+                '<button class="btn" onclick="toggleSkg(\'' + escapeHtml(r.key) + '\', \'use\')">Use</button> ' +
+                '<button class="btn" onclick="toggleSkg(\'' + escapeHtml(r.key) + '\', \'skip\')">Skip</button>' +
+            '</td>';
+        tbody.appendChild(tr);
+    }
+}
+
+async function loadQueue() {
+    currentTab = 'pipeline';
+    updateTabs('pipeline');
+    try {
+        const resp = await fetch('/queue');
+        rows = await resp.json();
+        renderCards(rows);
+        renderTable(rows);
+        document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
+        document.getElementById('gbifWrap').style.display = 'none';
+    } catch (e) {
+        console.error('Failed to load queue:', e);
+    }
+}
+
+async function loadGbifDatasets() {
+    currentTab = 'gbif';
+    updateTabs('gbif');
+    try {
+        const resp = await fetch('/gbif');
+        gbifRows = await resp.json();
+        gbifRows.sort((a, b) => (b.nameUsagesCount || 0) - (a.nameUsagesCount || 0));
+        renderGbifTable(gbifRows);
+        document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
+        document.getElementById('gbifWrap').style.display = 'block';
+        document.getElementById('pipelineWrap').style.display = 'none';
+        document.getElementById('resCards').innerHTML = '';
+    } catch (e) {
+        console.error('Failed to load GBIF datasets:', e);
+    }
+}
+
+async function toggleSkg(key, action) {
+    try {
+        const resp = await fetch('/gbif/' + key + '/' + action, {
+            method: 'POST'
+        });
+        if (resp.ok) {
+            loadGbifDatasets();
+        } else {
+            console.error('Failed to toggle skip/use for ' + key);
+        }
+    } catch (e) {
+        console.error('Failed to toggle skip/use for ' + key, e);
+    }
+}
+
+function startRefresh() {
+    loadQueue();
+    refreshTimer = setInterval(() => {
+        if (currentTab === 'pipeline') {
+            loadQueue();
+        }
+    }, 30000);
+}
+
+startRefresh();
+</script>
+</body>
+</html>

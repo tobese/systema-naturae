@@ -1,0 +1,46 @@
+version: "2"
+
+# GolangCI-Lint configuration for import-ordinator
+# See https://golangci-lint.run/usage/configuration/ for more details
+
+run:
+  timeout: 5m
+  tests: false
+
+linters:
+  enable:
+    - gofmt
+    - goimports
+    - govet
+    - ineffassign
+    - misspell
+    - staticcheck
+    - unused
+    - whitespace
+
+  disable:
+    - gochecknoglobals
+    - gochecknoinits
+    - gocognit
+    - gocyclo
+    - gosec
+    - lll
+    - maligned
+    - nakedret
+    - prealloc
+    - predeclared
+    - unconvert
+    - unparam
+    - unused
+    - whitespace
+
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gosec

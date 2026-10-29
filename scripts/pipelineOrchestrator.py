@@ -35,6 +35,8 @@ Each pass:
 Usage:
     python3 scripts/pipelineOrchestrator.py              # one pass, then exit
     python3 scripts/pipelineOrchestrator.py --loop        # keep polling
+    python3 scripts/pipelineOrchestrator.py --side-tasks  # one pass minus the drain
+                                                          # (called by services/import-ordinator)
     nohup caffeinate -dimsu python3 scripts/pipelineOrchestrator.py --loop \\
         > /tmp/pipelineOrchestrator.log 2>&1 &
 
@@ -102,10 +104,11 @@ def process_needs_rerun(q: dict) -> None:
         print(f"  {key}: applied via stored rerunCommand", flush=True)
 
 
-def run_pass() -> None:
+def run_pass(drain: bool = True) -> None:
     q = IQD.load_queue()
     q = IQD.refill_queue(q)
-    IQD.process_downloaded(q)
+    if drain:
+        IQD.process_downloaded(q)
 
     q = IQD.load_queue()
     process_needs_rerun(q)
@@ -116,6 +119,11 @@ def run_pass() -> None:
 
 def main() -> int:
     loop = "--loop" in sys.argv
+    # --side-tasks: everything except draining `downloaded` -- the mode
+    # services/import-ordinator calls after its own drain each pass, for
+    # the stages it doesn't implement (refill, needs-rerun, pending-family
+    # sweep). One pass; never combine with --loop.
+    side_tasks = "--side-tasks" in sys.argv
 
     # A maintenance pass (resyncFamilyCounts.py/dedupeSpeciesAcrossFamilies.py
     # --apply) holds scripts/maintenanceLock.py's lock for its whole run.
@@ -126,12 +134,12 @@ def main() -> int:
     # blocking the loop or racing.
     with maintenanceLock.try_nonblocking() as got_lock:
         if got_lock:
-            run_pass()
+            run_pass(drain=not side_tasks)
         else:
             print("maintenance pass in progress -- skipping this cycle's "
                   "writes", flush=True)
 
-    if loop:
+    if loop and not side_tasks:
         print(f"\n(pass complete; looping in {CYCLE_SECONDS}s)", flush=True)
         time.sleep(CYCLE_SECONDS)
         return main()
