@@ -166,6 +166,28 @@ func (fs *familyState) recordDiskStat() {
 	}
 }
 
+// indexGenera maps every GENUS under n, at any depth, by normalized name.
+// Families with a SUBFAMILY/TRIBE level keep their genera below the root;
+// indexing only the root's children (as this used to) made every import
+// into such a genus create a second, top-level genus of the same name and
+// re-add species the nested one already held -- 303 genera in 245 families
+// were split that way by 2026-10-29. A genus is not descended into. If a
+// name occurs twice (an already-split family), the copy holding more
+// species wins, so new imports land in the established placement.
+func indexGenera(n *onode, idx map[string]*onode) {
+	for _, c := range n.children() {
+		if c.str("rank") != "GENUS" {
+			indexGenera(c, idx)
+			continue
+		}
+		key := normalizeName(c.str("name"))
+		if prev, ok := idx[key]; ok && len(prev.children()) >= len(c.children()) {
+			continue
+		}
+		idx[key] = c
+	}
+}
+
 // countSpecies counts SPECIES nodes at any depth, children and speciesList
 // alike -- the same definition as scripts/tree.py's count_species, which
 // verifyTree checks every family file's declared speciesCount against.
@@ -244,9 +266,7 @@ func loadFamily(root string, loc familyLocation, registry *familyRegistry) (*fam
 		root:       rootNode,
 		genusIndex: map[string]*onode{},
 	}
-	for _, g := range rootNode.children() {
-		fs.genusIndex[normalizeName(g.str("name"))] = g
-	}
+	indexGenera(rootNode, fs.genusIndex)
 	if existed {
 		fs.recordDiskStat()
 	}

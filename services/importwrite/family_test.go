@@ -699,3 +699,43 @@ func TestStoreGet_ReloadsFamilyChangedOnDisk(t *testing.T) {
 		t.Fatalf("reloaded family holds %d species, want the on-disk 1", n)
 	}
 }
+
+// TestApply_NestedGenusIsReused is the regression test for the split-genus
+// bug found 2026-10-29: a genus under a SUBFAMILY was invisible to the
+// genus index, so an import created a second top-level genus of the same
+// name and re-added a species the nested one already held.
+func TestApply_NestedGenusIsReused(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "alcedinidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_ALCEDINIDAE", "name": "Alcedinidae", "rank": "FAMILY",
+		"children": []any{map[string]any{"name": "Cerylinae", "rank": "SUBFAMILY", "children": []any{
+			map[string]any{"name": "Megaceryle", "rank": "GENUS", "children": []any{
+				map[string]any{"id": "SP_MEGACERYLE_ALCYON", "name": "Megaceryle alcyon", "rank": "SPECIES"},
+			}},
+		}}},
+	})
+	fs, err := loadFamily(root, loc, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	res := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Megaceryle"},
+		Species: []*onode{
+			nodeFrom(map[string]any{"name": "Megaceryle alcyon", "rank": "SPECIES"}),
+			nodeFrom(map[string]any{"name": "Megaceryle maxima", "rank": "SPECIES"}),
+		},
+	})
+	if res.GenusNew {
+		t.Fatal("created a new genus although Megaceryle exists under Cerylinae")
+	}
+	if len(fs.root.children()) != 1 {
+		t.Fatalf("family root gained a sibling of the subfamily: %d children", len(fs.root.children()))
+	}
+	if len(res.Merged) != 1 || len(res.Added) != 1 {
+		t.Fatalf("want 1 merged + 1 added, got %d merged, %d added", len(res.Merged), len(res.Added))
+	}
+	if n := countSpecies(fs.root); n != 2 {
+		t.Fatalf("family holds %d species, want 2", n)
+	}
+}
