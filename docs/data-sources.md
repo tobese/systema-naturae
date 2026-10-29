@@ -240,6 +240,9 @@ sidecar predate any licence check. Currently **0 NC/ND** entries are present.
 
 ## Open items
 
+Licence decisions still open (Vermont, MycoBank, AlgaeBase, NC GBIF sets, …)
+are collected in [`licence-issues.md`](licence-issues.md).
+
 1. **No user-facing attribution notice.** `data-sources-attribution.md` has
    recommended a site-wide "Data sources & licences" page since 2026-07-06. The
    per-image credit now exists in the species panel; the dataset-level notice
