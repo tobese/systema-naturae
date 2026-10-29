@@ -1,17 +1,5 @@
 {
-  "key": "checklistbank-25428",
-  "title": "DAISIE - Inventory of alien invasive species in Europe",
-  "stage": "applying",
-  "licence": "cc by",
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-25428/archive.zip",
-  "reason": "reset: left in applying by an interrupted run",
-  "triaged": {
-    "offered": 11194,
-    "alreadyHeld": 4244,
-    "staged": 6242,
-    "refused": 645,
-    "refusalRate": 0.0576
-  },
   "history": [
     {
       "at": "2026-10-25T22:23:45+0100",
@@ -59,8 +47,8 @@
     },
     {
       "at": "2026-10-27T09:10:27+0100",
-      "stage": "queued",
-      "note": "fix-state: transformed.jsonl exists (2214929 bytes)"
+      "note": "fix-state: transformed.jsonl exists (2214929 bytes)",
+      "stage": "queued"
     },
     {
       "at": "2026-10-27T08:17:11.595812+00:00",
@@ -113,6 +101,26 @@
     {
       "at": "2026-10-29T20:43:10Z",
       "stage": "applying"
+    },
+    {
+      "at": "2026-10-29T21:13:10Z",
+      "stage": "error"
+    },
+    {
+      "at": "2026-10-29T22:30:26+0100",
+      "stage": "queued"
     }
-  ]
+  ],
+  "key": "checklistbank-25428",
+  "licence": "cc by",
+  "reason": "requeued 2026-10-29: apply timed out at the 30-min default; ordinator restarted with APPLY_TIMEOUT=180",
+  "stage": "queued",
+  "title": "DAISIE - Inventory of alien invasive species in Europe",
+  "triaged": {
+    "alreadyHeld": 4244,
+    "offered": 11194,
+    "refusalRate": 0.0576,
+    "refused": 645,
+    "staged": 6242
+  }
 }
