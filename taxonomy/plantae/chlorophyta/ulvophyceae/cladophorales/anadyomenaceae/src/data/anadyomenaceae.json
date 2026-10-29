@@ -125,7 +125,9 @@
             "itis": [
               "6881"
             ],
-            "checklistbank": "678378"
+            "checklistbank": "678378",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "6881",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q66821198"
           },
           "authorityIds": "itis:6881"
         },
@@ -142,7 +144,11 @@
             "South America"
           ],
           "children": [],
-          "uuid": "95b4a69d-6256-58c-9e7-81b6e8ada838b4"
+          "uuid": "95b4a69d-6256-58c-9e7-81b6e8ada838b4",
+          "authorship": "D.S.Littler & Littler",
+          "sourceIds": {
+            "checklistbank-7103": "P3NVTVSJXZM"
+          }
         },
         {
           "id": "SP_ANADYOMENE_LINKIANA",
@@ -200,7 +206,8 @@
           "authorship": "(J.Agardh) Wille, 1910",
           "sourceIds": {
             "checklistbank": "975570",
-            "checklistbank-2169": "1315955"
+            "checklistbank-2169": "1315955",
+            "checklistbank-7103": "4UP77E1CA49"
           }
         },
         {
@@ -236,7 +243,8 @@
           "authorship": "A.B.Joly & E.C.Oliveira, 1969",
           "sourceIds": {
             "checklistbank": "839101",
-            "checklistbank-2169": "430749"
+            "checklistbank-2169": "430749",
+            "checklistbank-7103": "T5PWH2S5SPO"
           }
         },
         {
@@ -260,7 +268,9 @@
               "6879"
             ],
             "checklistbank": "378189",
-            "checklistbank-2169": "204408"
+            "checklistbank-2169": "204408",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "6879",
+            "checklistbank-7103": "UHEVHUZ5R31"
           },
           "authorityIds": "itis:6879"
         },
@@ -356,7 +366,11 @@
           "lineage": "Anadyomene",
           "children": [],
           "uuid": "de8069fc-ed55-59d-a60-948dea55a9d6ee",
-          "description": "Anadyomene gigantodictyon is a anadyomenaceae species found in its native region."
+          "description": "Anadyomene gigantodictyon is a anadyomenaceae species found in its native region.",
+          "authorship": "Littler & Scullion, 2012",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q69703448"
+          }
         },
         {
           "id": "SP_ANADYOMENE_HOWEI",
@@ -418,11 +432,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Anadyomene",
           "sourceIds": {
-            "checklistbank": "ott5416514"
+            "checklistbank": "ott5416514",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q130361716"
           },
           "children": [],
           "uuid": "ea3c88fb-d398-54e-a0d-40636ff372c4c4",
-          "description": "Anadyomene muelleri is a anadyomenaceae species found in its native region."
+          "description": "Anadyomene muelleri is a anadyomenaceae species found in its native region.",
+          "authorship": "Sonder, 1871"
         },
         {
           "id": "SP_ANADYOMENE_CIRCUMSEPTA",
@@ -465,6 +481,18 @@
           "children": [],
           "uuid": "76bb4ab0-9a13-523-aae-98f286bffe7320",
           "description": "Anadyomene aruensis is a anadyomenaceae species found in its native region."
+        },
+        {
+          "id": "SP_ANADYOMENE_SP",
+          "name": "Anadyomene sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anadyomene",
+          "sourceIds": {
+            "checklistbank-7103": "1UFYIXFSK7X"
+          },
+          "children": []
         }
       ]
     },
@@ -496,7 +524,8 @@
               "9272"
             ],
             "checklistbank": "839138",
-            "checklistbank-2169": "34138"
+            "checklistbank-2169": "34138",
+            "checklistbank-7103": "TJ8Y5GQBDXE"
           },
           "authorityIds": "itis:9272"
         },
@@ -540,7 +569,8 @@
             "itis": [
               "9269"
             ],
-            "checklistbank": "648089"
+            "checklistbank": "648089",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "9269"
           },
           "authorityIds": "itis:9269"
         },
@@ -631,7 +661,8 @@
           "sourceIds": {
             "itis": [
               "203783"
-            ]
+            ],
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "203783"
           },
           "authorityIds": "itis:203783"
         },
@@ -666,7 +697,8 @@
             "itis": [
               "9270"
             ],
-            "checklistbank": "993655"
+            "checklistbank": "993655",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "9270"
           },
           "authorityIds": "itis:9270"
         },
@@ -704,7 +736,8 @@
           "sourceIds": {
             "itis": [
               "203784"
-            ]
+            ],
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "203784"
           },
           "authorityIds": "itis:203784"
         },
@@ -999,10 +1032,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anadyomenaceae"
+    },
+    {
+      "id": "GENUS_VALONIOPSIS",
+      "name": "Valoniopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VALONIOPSIS_PACHYNEMA_MARTENS_BOERGESEN",
+          "name": "Valoniopsis pachynema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valoniopsis",
+          "authorship": "(Martens) Boergesen",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "6883"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anadyomenaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 60,
+  "genusCount": 10,
+  "speciesCount": 62,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -1012,6 +1067,8 @@
       "familyKey": 4853
     },
     "checklistbank": "222489",
-    "checklistbank-2169": "222489"
+    "checklistbank-2169": "222489",
+    "9ca92552-f23a-41a8-a140-01abaa31c931": "6877",
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4750779"
   }
 }

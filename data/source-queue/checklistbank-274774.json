@@ -1,5 +1,12 @@
 {
   "added": 0,
+  "applied": {
+    "added": 1,
+    "at": "2026-10-27T21:00:00+00:00",
+    "crossFamily": 0,
+    "families": 1,
+    "merged": 0
+  },
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-274774/archive.zip",
   "crossFamily": 0,
   "families": 0,
@@ -18,7 +25,7 @@
     },
     {
       "at": "2026-10-27T11:26:49.214919+00:00",
-      "note": "fix-state: reset from applied-without-metrics \u2014 no transform output, no triaged block, no import log entry, no applied stats",
+      "note": "fix-state: reset from applied-without-metrics — no transform output, no triaged block, no import log entry, no applied stats",
       "stage": "downloaded"
     },
     {
@@ -84,14 +91,18 @@
     {
       "at": "2026-10-27T19:25:42.652463+00:00",
       "stage": "applying"
+    },
+    {
+      "at": "2026-10-29T17:18:34+0100",
+      "stage": "downloaded"
     }
   ],
   "key": "checklistbank-274774",
   "licence": "cc0",
   "merged": 0,
-  "reason": "transform completed, apply failed due to transient importwrite connection issue \u2014 retrying now that importwrite is healthy",
+  "reason": "transform completed, apply failed due to transient importwrite connection issue — retrying now that importwrite is healthy",
   "size": 20,
-  "stage": "applied",
+  "stage": "downloaded",
   "title": "Patch Data for the COL eXtended Release (XR Patch)",
   "triaged": {
     "alreadyHeld": 1,
@@ -99,12 +110,5 @@
     "refusalRate": 0.0,
     "refused": 0,
     "staged": 1
-  },
-  "applied": {
-    "added": 1,
-    "merged": 0,
-    "crossFamily": 0,
-    "families": 1,
-    "at": "2026-10-27T21:00:00+00:00"
   }
 }

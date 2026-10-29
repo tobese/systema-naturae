@@ -18,7 +18,11 @@
           "authorship": "(Derrick 1939) Philip 1948",
           "children": [],
           "uuid": "fc36b459-c556-586-b80-133c54d6dc2444",
-          "description": "Coxiella burnetii is a gram-negative, obligate intracellular bacterial pathogen (a type of bacterium that lives inside the cells of its host) and the causative agent of Q fever."
+          "description": "Coxiella burnetii is a gram-negative, obligate intracellular bacterial pathogen (a type of bacterium that lives inside the cells of its host) and the causative agent of Q fever.",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "960933",
+            "checklistbank-2008": "1024884"
+          }
         },
         {
           "id": "SP_COXIELLA_SP048494595",
@@ -953,7 +957,9 @@
           "children": [],
           "uuid": "d3a7af24-b5fb-5b1-ae1-fae67d431b40fe",
           "sourceIds": {
-            "checklistbank-2265": "59196"
+            "checklistbank-2265": "59196",
+            "checklistbank-139831": "356684",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q62901253"
           }
         },
         {
@@ -967,7 +973,8 @@
           "children": [],
           "uuid": "1ba5f730-8cda-5a1-a06-9bbd1d265aaf02",
           "sourceIds": {
-            "checklistbank-2265": "490179"
+            "checklistbank-2265": "490179",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q62901264"
           }
         },
         {
@@ -1009,7 +1016,8 @@
           "children": [],
           "uuid": "cdff7233-070b-5bf-9bc-d76657133175e7",
           "sourceIds": {
-            "checklistbank-2265": "445728"
+            "checklistbank-2265": "445728",
+            "checklistbank-2008": "1077614"
           }
         },
         {
@@ -1023,7 +1031,8 @@
           "children": [],
           "uuid": "8530a6e6-199f-5d2-808-99fbe21f0099ab",
           "sourceIds": {
-            "checklistbank-2265": "676517"
+            "checklistbank-2265": "676517",
+            "checklistbank-2008": "1051503"
           }
         },
         {
@@ -1051,7 +1060,8 @@
           "children": [],
           "uuid": "58576752-cba0-553-abb-68becf84fe3fc2",
           "sourceIds": {
-            "checklistbank-2265": "1653854"
+            "checklistbank-2265": "1653854",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q62901277"
           }
         },
         {
@@ -1091,6 +1101,18 @@
             "checklistbank-2265": "255021"
           },
           "children": []
+        },
+        {
+          "id": "SP_RICKETTSIELLA_CHIRONOMI",
+          "name": "Rickettsiella chironomi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rickettsiella",
+          "sourceIds": {
+            "checklistbank-139831": "905292"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -1121,7 +1143,10 @@
           "lineage": "Aquicella",
           "authorship": "Santos et al. 2004",
           "children": [],
-          "uuid": "f163e91b-2f9b-54b-896-145bfe9d532b10"
+          "uuid": "f163e91b-2f9b-54b-896-145bfe9d532b10",
+          "sourceIds": {
+            "checklistbank-2008": "995714"
+          }
         },
         {
           "id": "SP_AQUICELLA_SP",
@@ -1323,6 +1348,20 @@
             "checklistbank-2265": "2976857"
           },
           "children": []
+        },
+        {
+          "id": "SP_DIPLORICKETTSIA_MASSILIENSIS_MEDIANNIKOV_ET_AL_2011",
+          "name": "Diplorickettsia massiliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplorickettsia",
+          "authorship": "Mediannikov et al., 2011",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "961367",
+            "checklistbank-2008": "1051504"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1348,11 +1387,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "coxiellaceae"
+    },
+    {
+      "id": "GENUS_RICKETTSIA",
+      "name": "Rickettsia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RICKETTSIA_BURNETII_DERRICK_1939",
+          "name": "Rickettsia burnetii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rickettsia",
+          "authorship": "Derrick, 1939",
+          "sourceIds": {
+            "checklistbank-2008": "1048573"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RICKETTSIA_MELOLONTHAE_KRIEG_1955",
+          "name": "Rickettsia melolonthae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rickettsia",
+          "authorship": "Krieg, 1955",
+          "sourceIds": {
+            "checklistbank-2008": "1077615"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coxiellaceae"
     }
   ],
-  "speciesCount": 97,
+  "speciesCount": 101,
   "appSlug": "coxiellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 32
+  "genusCount": 33,
+  "sourceIds": {
+    "9ca92552-f23a-41a8-a140-01abaa31c931": "956366",
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3656478"
+  }
 }

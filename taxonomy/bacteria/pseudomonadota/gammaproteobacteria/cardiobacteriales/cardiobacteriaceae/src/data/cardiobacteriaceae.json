@@ -18,7 +18,10 @@
           "authorship": "Slotnick and Dougherty 1964",
           "children": [],
           "uuid": "672a106e-abd0-5cd-96b-8a2b1a9c8c7864",
-          "description": "Cardiobacterium hominis /ˌkɑːrdiəʊbækˈtɪəriəm ˈhɒmɪnɪs/ (KAR-dee-oh-bak-TEER-ee-um HOM-i-nis) is a microaerophilic, pleomorphic, fastidious, Gram-negative bacterium part of the Cardiobacteriaceae family and the HACEK group."
+          "description": "Cardiobacterium hominis /ˌkɑːrdiəʊbækˈtɪəriəm ˈhɒmɪnɪs/ (KAR-dee-oh-bak-TEER-ee-um HOM-i-nis) is a microaerophilic, pleomorphic, fastidious, Gram-negative bacterium part of the Cardiobacteriaceae family and the HACEK group.",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "960332"
+          }
         },
         {
           "id": "SP_CARDIOBACTERIUM_SP916618745",
@@ -39,7 +42,10 @@
           "lineage": "Cardiobacterium",
           "authorship": "Han et al. 2004 emend. Han and Falsen 2005",
           "children": [],
-          "uuid": "1d65f091-f188-54c-a64-dc1814bf39a5bc"
+          "uuid": "1d65f091-f188-54c-a64-dc1814bf39a5bc",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "960331"
+          }
         },
         {
           "id": "SP_CARDIOBACTERIUM_SP938028185",
@@ -131,7 +137,11 @@
           "lineage": "Dichelobacter",
           "authorship": "(Beveridge 1941) Dewhirst et al. 1990",
           "children": [],
-          "uuid": "2c779737-0b2e-5f6-a62-48b696f3e1b7d1"
+          "uuid": "2c779737-0b2e-5f6-a62-48b696f3e1b7d1",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "961342",
+            "checklistbank-2008": "952956"
+          }
         }
       ],
       "sourcedFrom": "gtdb",
@@ -325,7 +335,10 @@
           "lineage": "Suttonella",
           "authorship": "(Snell and Lapage 1976) Dewhirst et al. 1990",
           "children": [],
-          "uuid": "8dda25b1-ff88-514-bd5-6394884d597080"
+          "uuid": "8dda25b1-ff88-514-bd5-6394884d597080",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "967063"
+          }
         },
         {
           "id": "SP_SUTTONELLA_ORNITHOCOLA_FOSTER_ET_AL_2005",
@@ -338,7 +351,8 @@
           "children": [],
           "uuid": "0ba22bc2-a753-51b-8c0-a1c2db0988b368",
           "sourceIds": {
-            "checklistbank-2265": "279832"
+            "checklistbank-2265": "279832",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q26294467"
           }
         },
         {
@@ -453,11 +467,59 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cardiobacteriaceae"
+    },
+    {
+      "id": "GENUS_BACTEROIDES",
+      "name": "Bacteroides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BACTEROIDES_NODOSUS_BEVERIDGE_MRAZ_1963",
+          "name": "Bacteroides nodosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bacteroides",
+          "authorship": "(Beveridge) Mraz, 1963",
+          "sourceIds": {
+            "checklistbank-2008": "952957"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cardiobacteriaceae"
+    },
+    {
+      "id": "GENUS_FUSIFORMIS",
+      "name": "Fusiformis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FUSIFORMIS_NODOSUS_BEVERIDGE_1941",
+          "name": "Fusiformis nodosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fusiformis",
+          "authorship": "Beveridge, 1941",
+          "sourceIds": {
+            "checklistbank-2008": "952959"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cardiobacteriaceae"
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 33,
   "appSlug": "cardiobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",
-  "genusCount": 13
+  "genusCount": 15,
+  "sourceIds": {
+    "9ca92552-f23a-41a8-a140-01abaa31c931": "956347",
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q149618"
+  }
 }

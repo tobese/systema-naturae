@@ -22,7 +22,8 @@
           "sourceIds": {
             "itis": [
               "55169"
-            ]
+            ],
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "55169"
           },
           "authorityIds": "itis:55169",
           "description": "Taeniocotyle elegans is a aspidogasteridae species found in its native region."
@@ -99,7 +100,8 @@
           "lineage": "Aspidogaster",
           "authorship": "Baer, 1827",
           "sourceIds": {
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6005606"
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6005606",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "55180"
           },
           "children": [],
           "uuid": "81c19ee9-dab7-595-a69-431db9cbb12551",
@@ -108,10 +110,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aspidogasteridae"
+    },
+    {
+      "id": "GENUS_LOBATOSTOMA",
+      "name": "Lobatostoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOBATOSTOMA_RINGENS",
+          "name": "Lobatostoma ringens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lobatostoma",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "55177"
+          },
+          "children": [],
+          "uuid": "d0cdde76-b74a-582a-88ba-0478b2fd8cb0"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aspidogasteridae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 4,
+  "genusCount": 5,
+  "speciesCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -119,6 +143,7 @@
       "classKey": 345,
       "orderKey": 7377566,
       "familyKey": 3268244
-    }
+    },
+    "9ca92552-f23a-41a8-a140-01abaa31c931": "55167"
   }
 }
