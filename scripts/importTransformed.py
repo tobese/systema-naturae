@@ -91,8 +91,15 @@ def drop_decided_removals(records: list) -> list:
             decisions = json.load(fh)
     except FileNotFoundError:
         return records
-    removed = {(sid, d["removed_from"]) for sid, d in decisions.items()
-               if d.get("action") == "remove" and d.get("removed_from")}
+    # removed_from is one "kingdom/family" or, for a name where every copy
+    # was an artifact (action "remove-both"), a list of them.
+    removed = set()
+    for sid, d in decisions.items():
+        if not str(d.get("action", "")).startswith("remove"):
+            continue
+        places = d.get("removed_from") or []
+        for place in [places] if isinstance(places, str) else places:
+            removed.add((sid, place))
     kept = []
     for r in records:
         sid = (r.get("species") or {}).get("id")

@@ -309,9 +309,9 @@
  },
  "SP_CUPHEA_COXEIRANUS": {
   "decided": "2026-10-29",
-  "action": "allowlist",
-  "evidence": "UNRESOLVED: IRMNG knows Cuphea only as a plant genus, but the plantae copy is gbif-backbone-only and the animalia/Bulimulidae copy comes from COL XR alone; no authorship on either side. Allowlisted with uncertainty flagged, same as Olyra/Pavonia 2026-10-25",
-  "confidence": "low",
+  "action": "remove-both",
+  "evidence": "Neither copy is a real species. COL XR (316441, id VBHXY) carries \"Cuphea coxeiranus\" with no authorship under the snail genus Bulimulus, its var. purpurascens authored S. Moricand 1836 -- a misparsed record of the land snail Leiostracus coxeiranus (S. Moricand, 1836), accepted in Simpulopsidae by both COL XR (B6L6P) and WoRMS, and already held. No plant Cuphea coxeiranus exists in any held source; the Lythraceae copy is gbif-backbone only. Resolved 2026-10-29 from the archive taxa caches; supersedes the earlier allowlist-as-unresolved call.",
+  "confidence": "high",
   "placements": [
    {
     "kingdom": "animalia",
@@ -328,7 +328,14 @@
     ]
    }
   ],
-  "register_verdict": "IRMNG accepts only Plantae"
+  "register_verdict": "IRMNG accepts only Plantae",
+  "removed_from": [
+   "animalia/bulimulidae",
+   "plantae/lythraceae"
+  ],
+  "kept": [
+   "animalia/simpulopsidae: Leiostracus coxeiranus (S. Moricand, 1836)"
+  ]
  },
  "SP_DESMANTHUS_INCRUSTANS_TOPSENT_1889": {
   "decided": "2026-10-29",
@@ -1555,8 +1562,8 @@
  "SP_ULVA_PLANTAGINIFOLIA_WULFEN_1803": {
   "decided": "2026-10-29",
   "action": "remove",
-  "evidence": "IRMNG accepts Ulva only in Plantae; follows the 2026-10-25 COL XR triage. Low confidence: Wulfen 1803 Ulva names were partly brown algae; revisit if a species-level authority disagrees",
-  "confidence": "low",
+  "evidence": "IRMNG accepts Ulva only in Plantae; follows the 2026-10-25 COL XR triage. Low confidence: Wulfen 1803 Ulva names were partly brown algae; revisit if a species-level authority disagrees 2026-10-29 archive check: COL XR (316441, TQYW8) accepts Ulva plantaginifolia Wulfen 1803 in Ulvaceae under Ulva L.; only checklistbank-2008 (686871) places it in Chordariaceae; WoRMS (2011) does not list it. Kept Ulvaceae on the backbone majority; still revisit with AlgaeBase if that licence question is settled.",
+  "confidence": "medium",
   "placements": [
    {
     "kingdom": "plantae",

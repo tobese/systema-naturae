@@ -69,7 +69,13 @@ def set_stage(q: dict, key: str, stage: str, **stats) -> None:
         {"at": datetime.now(timezone.utc).isoformat(), "stage": stage}
     )
     if stats:
-        entry.update(stats)
+        if stage == "applied":
+            # Under `applied`, where sourceQueue.py report and the
+            # dashboards read them -- top-level stats were invisible there
+            # (see scripts/backfillAppliedStats.py).
+            entry.setdefault("applied", {}).update(stats)
+        else:
+            entry.update(stats)
     SQ.write_entry(key, entry)
     SQ.log_event(key, stage, action="driver", **stats)
 
