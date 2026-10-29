@@ -121,6 +121,13 @@ td.title { max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-sp
 }
 .btn.primary:hover { background: #6faaff; }
 .muted { color: #8a909c; }
+.filterbar { display: flex; gap: 6px; align-items: center; margin: 0 0 8px; }
+.filterbar .muted { margin-left: 8px; font-size: 12px; }
+.btn[disabled] { opacity: .4; cursor: not-allowed; }
+.stage-hold, .stage-assessed, .stage-ready, .stage-genus-authority { color: #f5c45e; }
+.stage-refused, .stage-skipped { color: #8a909c; }
+.stage-added { color: #5b9dff; }
+
 .refresh-btn {
     background: #171a21;
     border: 1px solid #262b35;
@@ -182,23 +189,32 @@ td.title { max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-sp
     </table>
 </div>
 
-<div class="wrap" id="gbifWrap" style="display:none;">
+<div id="gbifWrap" style="display:none;">
+    <div class="filterbar">
+        <button class="tab" id="gf-undecided" onclick="setGbifFilter('undecided')">Undecided</button>
+        <button class="tab" id="gf-decided" onclick="setGbifFilter('decided')">Decided</button>
+        <button class="tab" id="gf-all" onclick="setGbifFilter('all')">All</button>
+        <span class="muted" id="gbifMsg"></span>
+    </div>
+    <div class="wrap">
     <table>
         <thead>
             <tr>
                 <th>Key</th>
                 <th>Title</th>
-                <th class="num">DOI</th>
-                <th>Type</th>
+                <th>Status</th>
+                <th class="num">Last event</th>
+                <th class="num">Age</th>
+                <th class="num">Name usages</th>
                 <th>Licence</th>
-                <th class="num">Name Usages</th>
                 <th>Country</th>
-                <th>Pipeline Status</th>
-                <th class="num">Action</th>
+                <th>Match</th>
+                <th class="num">Decision</th>
             </tr>
         </thead>
         <tbody id="gbifRows"></tbody>
     </table>
+    </div>
 </div>
 
 <script>
@@ -241,22 +257,6 @@ async function loadQueue() {
     }
 }
 
-async function loadGbifDatasets() {
-    currentTab = 'gbif';
-    updateTabs('gbif');
-    try {
-        const resp = await fetch('/gbif');
-        gbifRows = await resp.json();
-        gbifRows.sort((a, b) => (b.nameUsagesCount || 0) - (a.nameUsagesCount || 0));
-        renderGbifTable(gbifRows);
-        document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
-        document.getElementById('gbifWrap').style.display = 'block';
-        document.getElementById('pipelineWrap').style.display = 'none';
-        document.getElementById('resCards').innerHTML = '';
-    } catch (e) {
-        console.error('Failed to load GBIF datasets:', e);
-    }
-}
 
 async function loadStuck() {
     currentTab = 'stuck';
@@ -268,20 +268,6 @@ async function loadStuck() {
     document.getElementById('asof').textContent = 'Stuck view';
 }
 
-async function toggleSkg(key, action) {
-    try {
-        const resp = await fetch('/gbif/' + key + '/' + action, {
-            method: 'POST'
-        });
-        if (resp.ok) {
-            loadGbifDatasets();
-        } else {
-            console.error('Failed to toggle skip/use for ' + key);
-        }
-    } catch (e) {
-        console.error('Failed to toggle skip/use for ' + key, e);
-    }
-}
 
 function renderCards(rows) {
     const counts = {};
@@ -364,63 +350,111 @@ function renderTable(rows) {
     }
 }
 
-function renderGbifTable(rows) {
-    const tbody = document.getElementById('gbifRows');
-    tbody.innerHTML = '';
-    for (const r of rows) {
-        if (r.decision === 'skip') continue;
 
-        const tr = document.createElement('tr');
-        const shortKey = r.key.replace(/^checklistbank-/, '');
-        const stateClass = r.state ? 'stage-' + r.state : '';
-        const doiLink = r.doi ? '<a href="https://doi.org/' + escapeHtml(r.doi) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(r.doi) + '</a>' : '-';
-        const pipelineStatus = r.state ? '<span class="stage ' + stateClass + '">' + escapeHtml(r.state) + '</span>' : '<span class="muted">-</span>';
-        tr.innerHTML =
-            '<td>' + escapeHtml(shortKey) + '</td>' +
-            '<td>' + escapeHtml(r.title) + '</td>' +
-            '<td class="num">' + doiLink + '</td>' +
-            '<td>' + escapeHtml(r.type) + '</td>' +
-            '<td>' + escapeHtml(r.licence) + '</td>' +
-            '<td class="num">' + (r.nameUsagesCount !== undefined ? r.nameUsagesCount.toLocaleString() : '-') + '</td>' +
-            '<td>' + escapeHtml(r.publishingCountry || '-') + '</td>' +
-            '<td>' + pipelineStatus + '</td>' +
-            '<td class="num">' +
-                '<button class="btn" onclick="toggleSkg(\'' + escapeHtml(r.key) + '\', \'use\')">Use</button> ' +
-                '<button class="btn" onclick="toggleSkg(\'' + escapeHtml(r.key) + '\', \'skip\')">Skip</button>' +
-            '</td>';
-        tbody.appendChild(tr);
-    }
-}
+
+
+// ---- GBIF tab: every GBIF checklist dataset against the pipeline, so each
+// one can be seen to carry a decision (pipeline stage, manifest verdict, or
+// a skip/add made here).
+let gbifFilter = 'undecided';
 
 async function loadGbifDatasets() {
-    currentTab = 'gbif';
     updateTabs('gbif');
     try {
         const resp = await fetch('/gbif');
         gbifRows = await resp.json();
-        gbifRows.sort((a, b) => (b.nameUsagesCount || 0) - (a.nameUsagesCount || 0));
+        renderGbifCards(gbifRows);
         renderGbifTable(gbifRows);
         document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
         document.getElementById('gbifWrap').style.display = 'block';
         document.getElementById('pipelineWrap').style.display = 'none';
-        document.getElementById('resCards').innerHTML = '';
     } catch (e) {
         console.error('Failed to load GBIF datasets:', e);
     }
 }
 
-async function toggleSkg(key, action) {
+function setGbifFilter(f) {
+    gbifFilter = f;
+    renderGbifTable(gbifRows);
+}
+
+function renderGbifCards(rows) {
+    const n = pred => rows.filter(pred).length;
+    const cards = [
+        { label: 'GBIF sets', num: rows.length },
+        { label: 'Decided', num: n(r => r.status !== 'undecided'), color: '#3ddc84' },
+        { label: 'Undecided', num: n(r => r.status === 'undecided'), color: '#f5c45e' },
+        { label: 'In pipeline', num: n(r => r.statusFrom === 'pipeline'), color: '#3ddc84' },
+        { label: 'In manifest', num: n(r => r.statusFrom === 'manifest'), color: '#3ddc84' },
+        { label: 'Skipped', num: n(r => r.status === 'skipped'), color: '#8a909c' },
+    ];
+    document.getElementById('resCards').innerHTML = cards.map(c =>
+        '<div class="card"><div class="num" style="color:' + (c.color || '') + '">' + fmtNum(c.num) +
+        '</div><div class="label">' + c.label + '</div></div>').join('');
+}
+
+function gbifAction(r) {
+    if (r.statusFrom === 'pipeline' || r.statusFrom === 'manifest') {
+        return '<span class="muted">' + escapeHtml(r.pipelineKey || '') + '</span>';
+    }
+    if (r.statusFrom === 'decision') {
+        return '<button class="btn" onclick="gbifDecide(\'' + escapeHtml(r.key) + '\', \'clear\')">Undo</button>';
+    }
+    const nc = /\bnc\b/.test((r.licence || '').replace(/[\s-]+/g, ' '));
+    const why = !r.clbKey ? 'no ChecklistBank copy to download' : nc ? 'NC licence -- the pipeline would block it' : '';
+    return '<button class="btn primary"' + (why ? ' disabled title="' + escapeHtml(why) + '"' : '') +
+        ' onclick="gbifDecide(\'' + escapeHtml(r.key) + '\', \'add\')">Add</button> ' +
+        '<button class="btn" onclick="gbifDecide(\'' + escapeHtml(r.key) + '\', \'skip\')">Skip</button>';
+}
+
+function renderGbifTable(rows) {
+    ['undecided', 'decided', 'all'].forEach(f =>
+        document.getElementById('gf-' + f).classList.toggle('active', f === gbifFilter));
+    const shown = rows.filter(r => gbifFilter === 'all' ||
+        (gbifFilter === 'undecided') === (r.status === 'undecided'));
+    const tbody = document.getElementById('gbifRows');
+    if (!shown.length) {
+        tbody.innerHTML = '<tr><td colspan="10" class="empty">Nothing here</td></tr>';
+        return;
+    }
+    tbody.innerHTML = shown.map(r => {
+        const key = r.clbKey ? String(r.clbKey) : r.key.slice(0, 8);
+        const keyTitle = 'GBIF ' + r.key + (r.clbKey ? ' / ChecklistBank ' + r.clbKey : '');
+        const status = r.status === 'undecided'
+            ? '<span class="muted">undecided</span>'
+            : '<span class="stage stage-' + escapeHtml(r.status) + '"' +
+              ' title="' + escapeHtml((r.statusFrom || '') + (r.reason ? ': ' + r.reason : '')) + '">' +
+              escapeHtml(r.status) + '</span>';
+        const title = r.doi
+            ? '<a href="https://doi.org/' + escapeHtml(r.doi) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(r.title) + '</a>'
+            : escapeHtml(r.title);
+        return '<tr>' +
+            '<td class="key" title="' + escapeHtml(keyTitle) + '">' + escapeHtml(key) + '</td>' +
+            '<td class="title" title="' + escapeHtml(r.title) + '">' + title + '</td>' +
+            '<td>' + status + '</td>' +
+            '<td class="num" title="' + escapeHtml(r.lastEventAt || '') + '">' + fmtTime(r.lastEventAt) + '</td>' +
+            '<td class="num">' + fmtAge(r.lastEventAt) + '</td>' +
+            '<td class="num">' + fmtNum(r.nameUsagesCount) + '</td>' +
+            '<td>' + escapeHtml(r.licence || '–') + '</td>' +
+            '<td>' + escapeHtml(r.publishingCountry || '–') + '</td>' +
+            '<td class="muted">' + escapeHtml(r.matchedBy || '–') + '</td>' +
+            '<td class="num">' + gbifAction(r) + '</td>' +
+            '</tr>';
+    }).join('');
+}
+
+async function gbifDecide(key, action) {
+    const msg = document.getElementById('gbifMsg');
+    msg.textContent = action + ' ' + key.slice(0, 8) + '…';
     try {
-        const resp = await fetch('/gbif/' + key + '/' + action, {
-            method: 'POST'
-        });
-        if (resp.ok) {
-            loadGbifDatasets();
-        } else {
-            console.error('Failed to toggle skip/use for ' + key);
-        }
+        const resp = await fetch('/gbif/' + key + '/' + action, { method: 'POST' });
+        const body = await resp.json();
+        msg.textContent = resp.ok
+            ? (action === 'add' ? 'queued: ' : action + ': ') + (body.output || key)
+            : 'refused: ' + body.error + (body.output ? ' -- ' + body.output : '');
+        loadGbifDatasets();
     } catch (e) {
-        console.error('Failed to toggle skip/use for ' + key, e);
+        msg.textContent = 'failed: ' + e;
     }
 }
 

@@ -1,217 +1,360 @@
-// Package gbifdb loads and manages the GBIF datasets TSV file,
-// providing sorted, filtered access with skip/use state tracking.
+// Package gbifdb lists GBIF's checklist datasets against the import
+// pipeline, so every one of them can be seen to carry a decision.
+//
+// GBIF keys are UUIDs and the pipeline is keyed by ChecklistBank dataset
+// (checklistbank-<key>); <sources>/gbif-dataset-map.json, written by
+// scripts/gbifDatasetMap.py, links the two. A dataset's status is, in
+// order: its pipeline queue stage, else its manifest status (matched by
+// ChecklistBank key, DOI or title -- the pipeline often holds the same
+// data under a different ChecklistBank key than GBIF's mirror), else the
+// decision recorded from the dashboard (skip / add), else "undecided".
+//
+// Decisions are kept in the repo, data/gbif-dataset-decisions.json, next to
+// the queue they feed -- not on the sources volume -- so they are
+// versioned like every other pipeline decision.
 package gbifdb
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
+	"time"
+
+	"systema-naturae/import-ordinator/internal/queue"
+	"systema-naturae/import-ordinator/internal/runproc"
 )
 
-// Dataset is a GBIF dataset entry from the TSV file.
+// Dataset is one GBIF checklist dataset with its pipeline-aligned status.
 type Dataset struct {
-	Key               string `json:"key"`
-	Title             string `json:"title"`
-	Type              string `json:"type"`
-	Licence           string `json:"licence"`
-	NameUsagesCount   int    `json:"nameUsagesCount"`
-	DOI               string `json:"doi,omitempty"`
-	PublishingCountry string `json:"publishingCountry,omitempty"`
-	State             string `json:"state,omitempty"`    // queue state: candidate/downloaded/transforming/queued/applying/blocked/error
-	Decision          string `json:"decision,omitempty"` // skip or use
+	Key             string `json:"key"` // GBIF dataset UUID
+	ClbKey          int    `json:"clbKey,omitempty"`
+	MatchedBy       string `json:"matchedBy,omitempty"` // gbifKey / doi / title
+	Title           string `json:"title"`
+	Type            string `json:"type"`
+	Licence         string `json:"licence"` // short form: "cc by", "cc0", "cc by-nc", ...
+	NameUsagesCount int    `json:"nameUsagesCount"`
+	DOI             string `json:"doi,omitempty"`
+	Country         string `json:"publishingCountry,omitempty"`
+
+	// Status is the pipeline stage, manifest status, "skipped", "added" or
+	// "undecided"; StatusFrom says which of pipeline/manifest/decision set it.
+	Status      string `json:"status"`
+	StatusFrom  string `json:"statusFrom,omitempty"`
+	PipelineKey string `json:"pipelineKey,omitempty"` // queue key or manifest slug
+	Reason      string `json:"reason,omitempty"`
+	LastEventAt string `json:"lastEventAt,omitempty"`
+}
+
+// Decision is a dashboard decision on one GBIF dataset.
+type Decision struct {
+	Decision string `json:"decision"` // "skip" or "add"
+	At       string `json:"at"`
+	ClbKey   int    `json:"clbKey,omitempty"`
+	Title    string `json:"title,omitempty"`
 }
 
 var (
+	mu            sync.Mutex
 	datasets      []Dataset
-	decisions     map[string]string // key -> "skip" or "use"
+	clbMap        map[string]mapRow
+	decisions     map[string]Decision
 	decisionsPath string
-	sourcesRoot   string
+	manifestPath  string
+	repoRoot      string
 )
 
-// Init loads the GBIF datasets TSV file, sorts by nameUsagesCount desc,
-// takes top N, and loads skip/use decisions.
-func Init(sourcesRootParam string, topN int) error {
-	sourcesRoot = sourcesRootParam
-	tsvPath := filepath.Join(sourcesRoot, "gbif-datasets.tsv")
-	decisionsPath = filepath.Join(sourcesRoot, "skip-decisions.json")
+type mapRow struct {
+	Clb int    `json:"clb"`
+	By  string `json:"by"`
+}
 
-	data, err := os.ReadFile(tsvPath)
+// Init loads the GBIF dataset list (top N by name usages), the
+// GBIF->ChecklistBank map and the recorded decisions.
+func Init(sourcesRoot, repo string, topN int) error {
+	mu.Lock()
+	defer mu.Unlock()
+	repoRoot = repo
+	manifestPath = filepath.Join(sourcesRoot, "manifest.json")
+	decisionsPath = filepath.Join(repo, "data", "gbif-dataset-decisions.json")
+
+	if err := loadTSV(filepath.Join(sourcesRoot, "gbif-datasets.tsv"), topN); err != nil {
+		return err
+	}
+	clbMap = map[string]mapRow{}
+	if raw, err := os.ReadFile(filepath.Join(sourcesRoot, "gbif-dataset-map.json")); err == nil {
+		json.Unmarshal(raw, &clbMap)
+	}
+	for i := range datasets {
+		if m, ok := clbMap[datasets[i].Key]; ok {
+			datasets[i].ClbKey, datasets[i].MatchedBy = m.Clb, m.By
+		}
+	}
+	return loadDecisions(filepath.Join(sourcesRoot, "skip-decisions.json"))
+}
+
+func loadTSV(path string, topN int) error {
+	data, err := os.ReadFile(path)
 	if err != nil {
 		return fmt.Errorf("read gbif-datasets.tsv: %w", err)
 	}
-
 	lines := strings.Split(string(data), "\n")
 	if len(lines) < 2 {
 		return fmt.Errorf("gbif-datasets.tsv has no data rows")
 	}
-
-	// Parse header to find column indices
-	header := strings.Split(lines[0], "\t")
-	colIndex := make(map[string]int)
-	for i, h := range header {
-		colIndex[strings.TrimSpace(h)] = i
+	col := map[string]int{}
+	for i, h := range strings.Split(lines[0], "\t") {
+		col[strings.TrimSpace(h)] = i
 	}
-
-	keyIdx := colIndex["key"]
-	titleIdx := colIndex["title"]
-	typeIdx := colIndex["type"]
-	licenceIdx := colIndex["license"]
-	nameUsagesIdx := colIndex["nameUsagesCount"]
-
-	for i := 1; i < len(lines); i++ {
-		line := strings.TrimSpace(lines[i])
-		if line == "" {
+	field := func(f []string, name string) string {
+		if i, ok := col[name]; ok && i < len(f) {
+			return strings.TrimSpace(f[i])
+		}
+		return ""
+	}
+	datasets = datasets[:0]
+	for _, line := range lines[1:] {
+		if strings.TrimSpace(line) == "" {
 			continue
 		}
-		fields := strings.Split(line, "\t")
-		if len(fields) <= keyIdx {
-			continue
-		}
-
+		f := strings.Split(line, "\t")
 		d := Dataset{
-			Key: strings.TrimSpace(fields[keyIdx]),
+			Key:     field(f, "key"),
+			Title:   field(f, "title"),
+			Type:    field(f, "type"),
+			Licence: shortLicence(field(f, "license")),
 		}
-
-		if titleIdx < len(fields) {
-			d.Title = strings.TrimSpace(fields[titleIdx])
+		d.NameUsagesCount, _ = strconv.Atoi(field(f, "nameUsagesCount"))
+		// Rows are ragged (some carry an empty column before the DOI), so
+		// take the DOI from wherever it is and the country from the end.
+		for _, v := range f {
+			if v = strings.TrimSpace(v); strings.HasPrefix(v, "10.") {
+				d.DOI = v
+			}
 		}
-		if typeIdx < len(fields) {
-			d.Type = strings.TrimSpace(fields[typeIdx])
+		if last := strings.TrimSpace(f[len(f)-1]); len(last) == 2 {
+			d.Country = last
 		}
-		if licenceIdx < len(fields) {
-			d.Licence = strings.TrimSpace(fields[licenceIdx])
+		if d.Key != "" {
+			datasets = append(datasets, d)
 		}
-		if nameUsagesIdx < len(fields) {
-			d.NameUsagesCount, _ = strconv.Atoi(strings.TrimSpace(fields[nameUsagesIdx]))
-		}
-
-		// Handle both 7-field and 8-field rows (some rows have an empty field
-		// between nameUsagesCount and doi)
-		var doiIdx, publishingCountryIdx int
-		if len(fields) >= 8 && nameUsagesIdx+1 < len(fields) && fields[nameUsagesIdx+1] == "" {
-			doiIdx = nameUsagesIdx + 2
-			publishingCountryIdx = nameUsagesIdx + 3
-		} else {
-			doiIdx = nameUsagesIdx + 1
-			publishingCountryIdx = nameUsagesIdx + 2
-		}
-
-		if doiIdx < len(fields) {
-			d.DOI = strings.TrimSpace(fields[doiIdx])
-		}
-		if publishingCountryIdx < len(fields) {
-			d.PublishingCountry = strings.TrimSpace(fields[publishingCountryIdx])
-		}
-
-		datasets = append(datasets, d)
 	}
-
-	// Sort by nameUsagesCount desc
-	sort.Slice(datasets, func(i, j int) bool {
+	sort.SliceStable(datasets, func(i, j int) bool {
 		return datasets[i].NameUsagesCount > datasets[j].NameUsagesCount
 	})
-
-	// Take top N
 	if len(datasets) > topN {
 		datasets = datasets[:topN]
 	}
-
-	// Load skip/use decisions
-	if err := loadDecisions(); err != nil {
-		return err
-	}
-
 	return nil
 }
 
-func loadDecisions() error {
-	data, err := os.ReadFile(decisionsPath)
-	if err != nil {
-		if os.IsNotExist(err) {
-			decisions = make(map[string]string)
-			return nil
-		}
-		return err
+// shortLicence turns GBIF's licence URL into the short form the source
+// queue uses ("cc by", "cc0", "cc by-nc"), which its NC gate matches on.
+func shortLicence(url string) string {
+	u := strings.ToLower(url)
+	switch {
+	case strings.Contains(u, "publicdomain/zero"):
+		return "cc0"
+	case strings.Contains(u, "licenses/by-nc"):
+		return "cc by-nc"
+	case strings.Contains(u, "licenses/by"):
+		return "cc by"
+	case u == "":
+		return ""
+	default:
+		return url
 	}
-	return json.Unmarshal(data, &decisions)
+}
+
+func loadDecisions(legacyPath string) error {
+	decisions = map[string]Decision{}
+	if raw, err := os.ReadFile(decisionsPath); err == nil {
+		if err := json.Unmarshal(raw, &decisions); err != nil {
+			return fmt.Errorf("parse %s: %w", decisionsPath, err)
+		}
+		return nil
+	}
+	// One-time migration from the sources-volume file the first version of
+	// this tab wrote ({"checklistbank-<uuid>": "skip"|"use"}).
+	raw, err := os.ReadFile(legacyPath)
+	if err != nil {
+		return nil
+	}
+	var legacy map[string]string
+	if json.Unmarshal(raw, &legacy) != nil {
+		return nil
+	}
+	now := time.Now().UTC().Format(time.RFC3339)
+	for k, v := range legacy {
+		uuid := strings.TrimPrefix(k, "checklistbank-")
+		dec := "skip"
+		if v == "use" {
+			dec = "add"
+		}
+		decisions[uuid] = Decision{Decision: dec, At: now, ClbKey: clbMap[uuid].Clb}
+	}
+	return saveDecisions()
 }
 
 func saveDecisions() error {
-	data, err := json.MarshalIndent(decisions, "", "  ")
+	data, err := json.MarshalIndent(decisions, "", " ")
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(decisionsPath, data, 0644)
+	tmp := decisionsPath + ".tmp"
+	if err := os.WriteFile(tmp, append(data, '\n'), 0o644); err != nil {
+		return err
+	}
+	return os.Rename(tmp, decisionsPath)
 }
 
-// GetDatasets returns all datasets with their current state.
-func GetDatasets() []Dataset {
-	result := make([]Dataset, len(datasets))
-	copy(result, datasets)
-	for i := range result {
-		if state, ok := decisions[result[i].Key]; ok {
-			result[i].State = state
+var (
+	reClbURL = regexp.MustCompile(`checklistbank\.org/dataset/(\d+)`)
+	reDOI    = regexp.MustCompile(`10\.\d{4,9}/[^\s;,]+`)
+	reNorm   = regexp.MustCompile(`[^a-z0-9]+`)
+)
+
+func norm(s string) string { return reNorm.ReplaceAllString(strings.ToLower(s), "") }
+
+type manifestHit struct{ slug, status string }
+
+// manifestIndex reads the sources manifest (small; re-read per request so
+// a status change there shows without a restart).
+func manifestIndex() (byClb map[int]manifestHit, byDOI, byTitle map[string]manifestHit) {
+	byClb, byDOI, byTitle = map[int]manifestHit{}, map[string]manifestHit{}, map[string]manifestHit{}
+	raw, err := os.ReadFile(manifestPath)
+	if err != nil {
+		return
+	}
+	var doc struct {
+		Sources map[string]struct {
+			Title, Identifier, URL, Status string
+		} `json:"sources"`
+	}
+	if json.Unmarshal(raw, &doc) != nil {
+		return
+	}
+	for slug, s := range doc.Sources {
+		h := manifestHit{slug, s.Status}
+		if m := reClbURL.FindStringSubmatch(s.URL); m != nil {
+			k, _ := strconv.Atoi(m[1])
+			byClb[k] = h
 		}
-		if decision, ok := decisions[result[i].Key]; ok {
-			result[i].Decision = decision
+		if m := reDOI.FindString(s.Identifier); m != "" {
+			byDOI[strings.ToLower(m)] = h
+		}
+		if t := norm(s.Title); t != "" {
+			byTitle[t] = h
 		}
 	}
-	return result
+	return
 }
 
-// PipelineInfo holds the fields we copy from a pipeline queue entry
-// when enriching a GBIF dataset that matches a locally held source.
-type PipelineInfo struct {
-	Key     string
-	Licence string
-	Stage   string
+// GetDatasets returns every listed dataset with its status, given the
+// current queue.
+func GetDatasets(entries map[string]*queue.Entry) []Dataset {
+	mu.Lock()
+	defer mu.Unlock()
+	byClb, byDOI, byTitle := manifestIndex()
+	out := make([]Dataset, len(datasets))
+	copy(out, datasets)
+	for i := range out {
+		d := &out[i]
+		if d.ClbKey != 0 {
+			qk := fmt.Sprintf("checklistbank-%d", d.ClbKey)
+			if e, ok := entries[qk]; ok {
+				d.Status, d.StatusFrom, d.PipelineKey, d.Reason = string(e.Stage), "pipeline", qk, e.Reason
+				if n := len(e.History); n > 0 {
+					d.LastEventAt = e.History[n-1].At
+				}
+				continue
+			}
+		}
+		if h, ok := byClb[d.ClbKey]; ok && d.ClbKey != 0 {
+			d.Status, d.StatusFrom, d.PipelineKey = h.status, "manifest", h.slug
+			continue
+		}
+		if h, ok := byDOI[strings.ToLower(d.DOI)]; ok && d.DOI != "" {
+			d.Status, d.StatusFrom, d.PipelineKey = h.status, "manifest", h.slug
+			continue
+		}
+		if h, ok := byTitle[norm(d.Title)]; ok {
+			d.Status, d.StatusFrom, d.PipelineKey = h.status, "manifest", h.slug
+			continue
+		}
+		if dec, ok := decisions[d.Key]; ok {
+			d.Status, d.StatusFrom, d.LastEventAt = map[string]string{"skip": "skipped", "add": "added"}[dec.Decision], "decision", dec.At
+			continue
+		}
+		d.Status = "undecided"
+	}
+	return out
 }
 
-// EnrichWithPipelineState matches datasets to pipeline queue entries by title
-// and copies the pipeline key, licence, and stage for locally held sources.
-// pipelineEntries maps a source title to its pipeline info.
-func EnrichWithPipelineState(datasets []Dataset, pipelineEntries map[string]PipelineInfo) []Dataset {
-	result := make([]Dataset, len(datasets))
-	copy(result, datasets)
-	for i := range result {
-		if info, ok := pipelineEntries[result[i].Title]; ok {
-			result[i].Key = info.Key
-			result[i].Licence = info.Licence
-			result[i].State = info.Stage
+func find(uuid string) (Dataset, bool) {
+	for _, d := range datasets {
+		if d.Key == uuid {
+			return d, true
 		}
 	}
-	return result
+	return Dataset{}, false
 }
 
-// SetDecision sets the skip/use decision for a dataset.
-func SetDecision(key, decision string) {
-	decisions[key] = decision
-	saveDecisions()
-}
-
-// GetState returns the queue stage for a dataset key.
-func GetState(key string) string {
-	return decisions[key]
-}
-
-// IsSkipped returns true if the dataset is marked as skip.
-func IsSkipped(key string) bool {
-	return decisions[key] == "skip"
-}
-
-// IsUsed returns true if the dataset is marked as use.
-func IsUsed(key string) bool {
-	return decisions[key] == "use"
-}
-
-// ShortKey returns a shortened key for display (first 8 chars).
-func ShortKey(key string) string {
-	if len(key) > 8 {
-		return key[:8]
+// Skip records that the dataset was looked at and not wanted.
+func Skip(uuid string) error {
+	mu.Lock()
+	defer mu.Unlock()
+	d, ok := find(uuid)
+	if !ok {
+		return fmt.Errorf("unknown dataset %s", uuid)
 	}
-	return key
+	decisions[uuid] = Decision{Decision: "skip", At: time.Now().UTC().Format(time.RFC3339), ClbKey: d.ClbKey, Title: d.Title}
+	return saveDecisions()
+}
+
+// Clear removes a recorded decision (the queue entry an "add" created, if
+// any, is left alone -- withdraw that through the queue).
+func Clear(uuid string) error {
+	mu.Lock()
+	defer mu.Unlock()
+	delete(decisions, uuid)
+	return saveDecisions()
+}
+
+// Add puts the dataset's ChecklistBank copy on the pipeline queue as a
+// candidate, through `sourceQueue.py add` so its manifest key/DOI/title
+// overlap check still guards against re-adding something already held
+// under another key. The ordinator downloads candidates on its next pass.
+// Returns sourceQueue's output, which explains a refusal.
+func Add(ctx context.Context, uuid string) (string, error) {
+	mu.Lock()
+	d, ok := find(uuid)
+	mu.Unlock()
+	if !ok {
+		return "", fmt.Errorf("unknown dataset %s", uuid)
+	}
+	if d.ClbKey == 0 {
+		return "", fmt.Errorf("no ChecklistBank copy of %q is known, so there is nothing the pipeline can download -- run scripts/gbifDatasetMap.py --refresh, or skip it", d.Title)
+	}
+	rc, out, err := runproc.Run(ctx, 2*time.Minute, nil, "python3",
+		filepath.Join(repoRoot, "scripts", "sourceQueue.py"), "add",
+		"--key", fmt.Sprintf("checklistbank-%d", d.ClbKey),
+		"--title", d.Title, "--licence", d.Licence,
+		"--size", strconv.Itoa(d.NameUsagesCount))
+	if err != nil {
+		return out, err
+	}
+	if rc != 0 {
+		return out, fmt.Errorf("sourceQueue.py add refused (rc=%d)", rc)
+	}
+	mu.Lock()
+	defer mu.Unlock()
+	decisions[uuid] = Decision{Decision: "add", At: time.Now().UTC().Format(time.RFC3339), ClbKey: d.ClbKey, Title: d.Title}
+	return out, saveDecisions()
 }

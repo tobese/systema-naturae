@@ -221,52 +221,57 @@ func (d *Dashboard) HandleStuck(w http.ResponseWriter, r *http.Request) {
 
 // HandleGBIF returns GBIF datasets sorted by nameUsagesCount desc, with state info.
 func (d *Dashboard) HandleGBIF(w http.ResponseWriter, r *http.Request) {
-	datasets := gbifdb.GetDatasets()
-
-	// Enrich with pipeline stage for locally held sources (matched by title).
 	entries, err := d.store.Read()
-	if err == nil {
-		pipelineEntries := make(map[string]gbifdb.PipelineInfo, len(entries))
-		for _, entry := range entries {
-			pipelineEntries[entry.Title] = gbifdb.PipelineInfo{
-				Key:     entry.Key,
-				Licence: entry.Licence,
-				Stage:   string(entry.Stage),
-			}
-		}
-		datasets = gbifdb.EnrichWithPipelineState(datasets, pipelineEntries)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
-
+	datasets := gbifdb.GetDatasets(entries)
+	for i := range datasets {
+		if datasets[i].LastEventAt != "" {
+			datasets[i].LastEventAt = normalizeTime(datasets[i].LastEventAt)
+		}
+	}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(datasets)
 }
 
-// HandleGBIFToggle sets skip/use decision for a GBIF dataset.
+// HandleGBIFToggle records a decision on a GBIF dataset:
+// POST /gbif/{uuid}/skip | add | clear. "add" queues the dataset's
+// ChecklistBank copy as a pipeline candidate (see gbifdb.Add); a refusal
+// from the manifest overlap check comes back as 409 with its explanation.
 func (d *Dashboard) HandleGBIFToggle(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-
-	// Parse key and action from path: /gbif/{key}/{action}
-	path := strings.TrimPrefix(r.URL.Path, "/gbif/")
-	parts := strings.SplitN(path, "/", 2)
+	parts := strings.SplitN(strings.TrimPrefix(r.URL.Path, "/gbif/"), "/", 2)
 	if len(parts) != 2 {
 		http.Error(w, "Invalid path", http.StatusBadRequest)
 		return
 	}
-	key := parts[0]
-	action := parts[1]
+	key, action := parts[0], parts[1]
 
-	if action != "skip" && action != "use" {
+	var out string
+	var err error
+	switch action {
+	case "skip":
+		err = gbifdb.Skip(key)
+	case "clear":
+		err = gbifdb.Clear(key)
+	case "add":
+		out, err = gbifdb.Add(r.Context(), key)
+	default:
 		http.Error(w, "Invalid action", http.StatusBadRequest)
 		return
 	}
-
-	gbifdb.SetDecision(key, action)
-
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]string{"key": key, "action": action})
+	if err != nil {
+		w.WriteHeader(http.StatusConflict)
+		json.NewEncoder(w).Encode(map[string]string{"error": err.Error(), "output": strings.TrimSpace(out)})
+		return
+	}
+	json.NewEncoder(w).Encode(map[string]string{"key": key, "action": action, "output": strings.TrimSpace(out)})
 }
 
 // historyLayouts are the timestamp shapes found in queue history: Go's

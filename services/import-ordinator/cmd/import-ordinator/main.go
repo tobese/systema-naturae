@@ -69,11 +69,6 @@ func main() {
 		sourcesRoot = "/Volumes/MacieExternal/sources"
 	}
 
-	// Initialize GBIF datasets
-	if err := gbifdb.Init(sourcesRoot, 1000); err != nil {
-		log.Printf("gbifdb init warning: %v", err)
-	}
-
 	repoRoot := os.Getenv("SN_SOURCES_DB")
 	if repoRoot == "" {
 		wd, err := os.Getwd()
@@ -81,6 +76,11 @@ func main() {
 			log.Fatalf("cannot determine working directory: %v", err)
 		}
 		repoRoot = wd
+	}
+
+	// GBIF datasets for the dashboard's GBIF tab (top 1000 by name usages).
+	if err := gbifdb.Init(sourcesRoot, repoRoot, 1000); err != nil {
+		log.Printf("gbifdb init warning: %v", err)
 	}
 
 	importWriteURL := os.Getenv("IMPORTWRITE_URL")
