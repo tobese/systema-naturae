@@ -303,11 +303,12 @@ def cmd_set(args) -> None:
                             if args.refused is not None and args.offered else None),
             "families": args.families, "missedFamilies": args.missed_families,
         }
-    if args.stage in ("declined", "blocked", "queued") and args.reason:
+    # Any stage can carry a reason (a re-take, a reset, a requeue) -- it
+    # used to be kept only for declined/blocked/queued/needs-rerun and
+    # silently dropped otherwise.
+    if args.reason:
         row["reason"] = args.reason
     if args.stage == "needs-rerun":
-        if args.reason:
-            row["reason"] = args.reason
         if args.rerun_command:
             row["rerunCommand"] = json.loads(args.rerun_command)
     if args.stage == "applied":
