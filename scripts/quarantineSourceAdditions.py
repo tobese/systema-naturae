@@ -104,7 +104,15 @@ class CatFile:
         self.proc.wait()
 
 
-def git_modified_family_files() -> list[str]:
+def git_modified_family_files(base: str = "") -> list[str]:
+    if base:
+        raw = subprocess.check_output(
+            ["git", "diff", "--name-only", "-z", base, "--", "taxonomy"]
+        )
+        return sorted({
+            p for p in raw.decode().split("\0")
+            if p.endswith(".json") and "/src/data/" in p and os.path.exists(p)
+        })
     raw = subprocess.check_output(
         ["git", "status", "--porcelain", "-z", "--", "taxonomy"]
     )
@@ -121,16 +129,19 @@ def git_modified_family_files() -> list[str]:
     return sorted(set(paths))
 
 
-def git_head_blobs() -> dict[str, str]:
+def git_head_blobs(base: str = "") -> dict[str, str]:
     raw = subprocess.check_output(
-        ["git", "ls-files", "-s", "-z", "--", "taxonomy"]
+        ["git", "ls-tree", "-r", "-z", base, "--", "taxonomy"] if base
+        else ["git", "ls-files", "-s", "-z", "--", "taxonomy"]
     )
     blobs = {}
     for entry in raw.split(b"\0"):
         if not entry:
             continue
         meta, path = entry.split(b"\t", 1)
-        blobs[path.decode()] = meta.split()[1].decode()
+        # ls-tree: "<mode> blob <sha>"; ls-files -s: "<mode> <sha> <stage>"
+        fields = meta.split()
+        blobs[path.decode()] = (fields[2] if base else fields[1]).decode()
     return blobs
 
 
@@ -213,7 +224,9 @@ def portal_index(kingdom: str) -> tuple[dict | None, dict | None]:
 def source_key_for(path: str, doc) -> tuple[str, tuple[str, ...]]:
     parts = path.split("/")
     kingdom = parts[1]
-    ancestors = tuple(norm(x) for x in parts[2:-4])
+    # Include the kingdom: portal_index() keys ancestors from the kingdom
+    # root down, so dropping it here made the name fallback never match.
+    ancestors = tuple(norm(x) for x in parts[1:-4])
     return kingdom, ancestors
 
 
@@ -238,18 +251,21 @@ def main() -> int:
     ap.add_argument("--restore-corrupt", action="store_true",
                     help="restore a modified family file that is not valid JSON from HEAD")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--base", default="",
+                    help="compare against this commit instead of HEAD -- needed when "
+                         "the source's additions were already committed (2026-10-26)")
     ap.add_argument("--report", default="")
     ap.add_argument("--summary", default="")
     args = ap.parse_args()
 
     t0 = time.time()
     source_id = args.source_id
-    paths = git_modified_family_files()
+    paths = git_modified_family_files(args.base)
     if args.limit:
         paths = paths[: args.limit]
     log(f"{len(paths)} modified family files")
 
-    head_blobs = git_head_blobs()
+    head_blobs = git_head_blobs(args.base)
     cat = CatFile()
     report = open(args.report, "w", encoding="utf-8") if args.report else None
 
