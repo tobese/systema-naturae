@@ -90,6 +90,8 @@ tbody td {
     vertical-align: top;
 }
 .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.key { font-variant-numeric: tabular-nums; white-space: nowrap; color: #8a909c; }
+td.title { max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .stage {
     text-transform: uppercase;
     font-size: 10.5px;
@@ -167,7 +169,7 @@ tbody td {
                 <th>Title</th>
                 <th>Stage</th>
                 <th class="num">Last event</th>
-                <th class="num">Age (min)</th>
+                <th class="num">Age</th>
                 <th class="num">Offered</th>
                 <th class="num">Staged</th>
                 <th class="num">Added</th>
@@ -233,6 +235,7 @@ async function loadQueue() {
         renderTable(rows);
         document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
         document.getElementById('gbifWrap').style.display = 'none';
+        document.getElementById('pipelineWrap').style.display = 'block';
     } catch (e) {
         console.error('Failed to load queue:', e);
     }
@@ -260,7 +263,7 @@ async function loadStuck() {
     updateTabs('stuck');
     document.getElementById('pipelineWrap').style.display = 'none';
     document.getElementById('gbifWrap').style.display = 'none';
-    document.getElementById('pipelineRows').innerHTML = '<tr><td colspan="10" class="empty">Stuck sources view coming soon</td></tr>';
+    document.getElementById('pipelineRows').innerHTML = '<tr><td colspan="11" class="empty">Stuck sources view coming soon</td></tr>';
     document.getElementById('resCards').innerHTML = '';
     document.getElementById('asof').textContent = 'Stuck view';
 }
@@ -304,29 +307,59 @@ function renderCards(rows) {
 
     let html = '';
     for (const c of cards) {
-        html += '<div class="card"><div class="num" style="color:' + c.color + '">' + c.num + '</div><div class="label">' + c.label + '</div></div>';
+        html += '<div class="card"><div class="num" style="color:' + c.color + '">' + fmtNum(c.num) + '</div><div class="label">' + c.label + '</div></div>';
     }
     document.getElementById('resCards').innerHTML = html;
+}
+
+// Numbers: thousands separators; absent values as an en dash.
+function fmtNum(v) {
+    return (v === undefined || v === null) ? '–' : Number(v).toLocaleString('en-US');
+}
+
+// Timestamps arrive as RFC3339 UTC (normalised server-side); show them in
+// local time, fixed width, so the column lines up.
+function fmtTime(iso) {
+    if (!iso) return '–';
+    const d = new Date(iso);
+    if (isNaN(d)) return escapeHtml(iso);
+    const p = n => String(n).padStart(2, '0');
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+}
+
+// Age since the last stage change, in the largest sensible unit.
+function fmtAge(iso) {
+    if (!iso) return '–';
+    const mins = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+    if (isNaN(mins) || mins < 0) return '–';
+    if (mins < 60) return mins + 'm';
+    if (mins < 48 * 60) return Math.floor(mins / 60) + 'h';
+    return Math.floor(mins / 1440) + 'd';
 }
 
 function renderTable(rows) {
     const tbody = document.getElementById('pipelineRows');
     tbody.innerHTML = '';
+    if (!rows.length) {
+        tbody.innerHTML = '<tr><td colspan="11" class="empty">No sources in the queue</td></tr>';
+        return;
+    }
     for (const r of rows) {
-        const age = r.activeStartedAt ? Math.floor((Date.now() - new Date(r.activeStartedAt).getTime()) / 60000) : '-';
         const shortKey = r.key.replace(/^checklistbank-/, '');
+        const reason = r.reason ? ' title="' + escapeHtml(r.reason) + '"' : '';
         const tr = document.createElement('tr');
         tr.innerHTML =
-            '<td>' + escapeHtml(shortKey) + ' ' + escapeHtml(r.title ? '\u2014 ' + r.title : '') + '</td>' +
-            '<td><span class="stage stage-' + r.stage + '">' + escapeHtml(r.stage) + '</span></td>' +
-            '<td class="num">' + escapeHtml(r.activeStartedAt || '-') + '</td>' +
-            '<td class="num">' + age + '</td>' +
-            '<td class="num">' + (r.offered !== undefined ? r.offered : '-') + '</td>' +
-            '<td class="num">' + (r.staged !== undefined ? r.staged : '-') + '</td>' +
-            '<td class="num">' + (r.added !== undefined ? r.added : '-') + '</td>' +
-            '<td class="num">' + (r.merged !== undefined ? r.merged : '-') + '</td>' +
-            '<td class="num">' + (r.refused !== undefined ? r.refused : '-') + '</td>' +
-            '<td class="num">' + (r.refusalRate !== undefined ? (r.refusalRate * 100).toFixed(1) + '%' : '-') + '</td>';
+            '<td class="key">' + escapeHtml(shortKey) + '</td>' +
+            '<td class="title" title="' + escapeHtml(r.title || '') + '">' + escapeHtml(r.title || '') + '</td>' +
+            '<td><span class="stage stage-' + escapeHtml(r.stage) + '"' + reason + '>' + escapeHtml(r.stage) + '</span></td>' +
+            '<td class="num" title="' + escapeHtml(r.lastEventAt || '') + '">' + fmtTime(r.lastEventAt) + '</td>' +
+            '<td class="num">' + fmtAge(r.lastEventAt) + '</td>' +
+            '<td class="num">' + fmtNum(r.offered) + '</td>' +
+            '<td class="num">' + fmtNum(r.staged) + '</td>' +
+            '<td class="num">' + fmtNum(r.added) + '</td>' +
+            '<td class="num">' + fmtNum(r.merged) + '</td>' +
+            '<td class="num">' + fmtNum(r.refused) + '</td>' +
+            '<td class="num">' + (r.refusalRate != null ? (r.refusalRate * 100).toFixed(1) + '%' : '–') + '</td>';
         tbody.appendChild(tr);
     }
 }
@@ -356,21 +389,6 @@ function renderGbifTable(rows) {
                 '<button class="btn" onclick="toggleSkg(\'' + escapeHtml(r.key) + '\', \'skip\')">Skip</button>' +
             '</td>';
         tbody.appendChild(tr);
-    }
-}
-
-async function loadQueue() {
-    currentTab = 'pipeline';
-    updateTabs('pipeline');
-    try {
-        const resp = await fetch('/queue');
-        rows = await resp.json();
-        renderCards(rows);
-        renderTable(rows);
-        document.getElementById('asof').textContent = 'Updated ' + new Date().toLocaleTimeString();
-        document.getElementById('gbifWrap').style.display = 'none';
-    } catch (e) {
-        console.error('Failed to load queue:', e);
     }
 }
 

@@ -67,6 +67,10 @@ func (d *Dashboard) HandleQueue(w http.ResponseWriter, r *http.Request) {
 		Families        *int                 `json:"families,omitempty"`
 		Refused         *int                 `json:"refused,omitempty"`
 		RefusalRate     *float64             `json:"refusalRate,omitempty"`
+		Offered         *int                 `json:"offered,omitempty"`
+		Staged          *int                 `json:"staged,omitempty"`
+		LastEventAt     string               `json:"lastEventAt,omitempty"`
+		Reason          string               `json:"reason,omitempty"`
 		ActivePID       int                  `json:"activePid,omitempty"`
 		ActiveStartedAt string               `json:"activeStartedAt,omitempty"`
 		History         []queue.HistoryEntry `json:"history,omitempty"`
@@ -83,6 +87,10 @@ func (d *Dashboard) HandleQueue(w http.ResponseWriter, r *http.Request) {
 			ActivePID:       entry.ActivePID,
 			ActiveStartedAt: entry.ActiveStartedAt,
 			History:         entry.History,
+			Reason:          entry.Reason,
+		}
+		if n := len(entry.History); n > 0 {
+			qe.LastEventAt = normalizeTime(entry.History[n-1].At)
 		}
 		if entry.Applied != nil {
 			qe.Added = &entry.Applied.Added
@@ -92,6 +100,8 @@ func (d *Dashboard) HandleQueue(w http.ResponseWriter, r *http.Request) {
 		if entry.Triaged != nil {
 			qe.Refused = entry.Triaged.Refused
 			qe.RefusalRate = entry.Triaged.RefusalRate
+			qe.Offered = entry.Triaged.Offered
+			qe.Staged = entry.Triaged.Staged
 		}
 		result = append(result, qe)
 	}
@@ -244,4 +254,27 @@ func (d *Dashboard) HandleGBIFToggle(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(map[string]string{"key": key, "action": action})
+}
+
+// historyLayouts are the timestamp shapes found in queue history: Go's
+// RFC3339, Python's isoformat() (microseconds, "+00:00"), sourceQueue's
+// "+0100" form, and a few naive local stamps from older tools.
+var historyLayouts = []string{
+	time.RFC3339Nano,
+	"2006-01-02T15:04:05.999999-07:00",
+	"2006-01-02T15:04:05-0700",
+	"2006-01-02T15:04:05.999999",
+	"2006-01-02T15:04:05",
+}
+
+// normalizeTime renders any history timestamp as RFC3339 UTC, so the
+// dashboard can sort and format one shape. Unparseable input is returned
+// unchanged rather than dropped.
+func normalizeTime(s string) string {
+	for _, layout := range historyLayouts {
+		if t, err := time.Parse(layout, s); err == nil {
+			return t.UTC().Format(time.RFC3339)
+		}
+	}
+	return s
 }
