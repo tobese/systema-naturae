@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"strings"
 	"sync"
@@ -140,6 +141,48 @@ type familyState struct {
 	idx     *globalIndex
 	kingdom string
 	loc     familyLocation
+	// diskMod/diskSize are the file's stat as of the last load or flush.
+	// Anything else that rewrites the file (a maintenance pass, a removal
+	// script) changes them, and a cached copy must not be written back
+	// over that change -- see changedOnDisk.
+	diskMod  time.Time
+	diskSize int64
+}
+
+// changedOnDisk reports whether the family file was rewritten by someone
+// else since this copy was loaded or last flushed. Caller holds fs.mu or
+// owns fs exclusively.
+func (fs *familyState) changedOnDisk() bool {
+	info, err := os.Stat(fs.file)
+	if err != nil {
+		return !fs.diskMod.IsZero() // existed when loaded, gone now
+	}
+	return !info.ModTime().Equal(fs.diskMod) || info.Size() != fs.diskSize
+}
+
+func (fs *familyState) recordDiskStat() {
+	if info, err := os.Stat(fs.file); err == nil {
+		fs.diskMod, fs.diskSize = info.ModTime(), info.Size()
+	}
+}
+
+// countSpecies counts SPECIES nodes at any depth, children and speciesList
+// alike -- the same definition as scripts/tree.py's count_species, which
+// verifyTree checks every family file's declared speciesCount against.
+func countSpecies(n *onode) int {
+	c := 0
+	if n.str("rank") == "SPECIES" {
+		c++
+	}
+	for _, key := range []string{"children", "speciesList"} {
+		raw, _ := n.get(key).([]any)
+		for _, x := range raw {
+			if o, ok := x.(*onode); ok {
+				c += countSpecies(o)
+			}
+		}
+	}
+	return c
 }
 
 // attachIndex connects this family to the server-wide identity index and
@@ -203,6 +246,9 @@ func loadFamily(root string, loc familyLocation, registry *familyRegistry) (*fam
 	}
 	for _, g := range rootNode.children() {
 		fs.genusIndex[normalizeName(g.str("name"))] = g
+	}
+	if existed {
+		fs.recordDiskStat()
 	}
 	return fs, nil
 }
@@ -396,10 +442,10 @@ func (fs *familyState) flush() (bool, error) {
 	// 20 files disagreed, worst case Dakuidae declaring 41 against 47 held).
 	// Recomputed here rather than in apply(), so it reflects the species
 	// actually being written, not a running tally that could drift from it.
-	n := 0
-	for _, g := range fs.root.children() {
-		n += len(g.children())
-	}
+	// Counted at every depth (subfamily/tribe levels, speciesList) -- the
+	// genus-children-only count this used to do understated any family
+	// with a subfamily level.
+	n := countSpecies(fs.root)
 	declared := -1 // never equals a real count, so a missing/odd-typed field still gets set
 	switch v := fs.root.get("speciesCount").(type) {
 	case float64:
@@ -417,9 +463,30 @@ func (fs *familyState) flush() (bool, error) {
 	if err := os.MkdirAll(dirOf(fs.file), 0o755); err != nil {
 		return false, err
 	}
-	if err := os.WriteFile(fs.file, out, 0o644); err != nil {
+	if fs.changedOnDisk() {
+		// The clean case is handled in store.get (reload before use); a
+		// dirty copy means an external write landed inside one flush
+		// interval. Writing wins, but loudly, so it can be checked.
+		log.Printf("WARNING: %s changed on disk while %d-second-old writes were pending; overwriting the external change", fs.file, int(time.Since(fs.lastWrite).Seconds()))
+	}
+	// Temp file + rename: a reader (verifyTree, a maintenance script) never
+	// sees a half-written family file.
+	tmp, err := os.CreateTemp(dirOf(fs.file), ".importwrite-*.tmp")
+	if err != nil {
 		return false, err
 	}
+	if _, err := tmp.Write(out); err != nil {
+		tmp.Close()
+		os.Remove(tmp.Name())
+		return false, err
+	}
+	tmp.Close()
+	os.Chmod(tmp.Name(), 0o644)
+	if err := os.Rename(tmp.Name(), fs.file); err != nil {
+		os.Remove(tmp.Name())
+		return false, err
+	}
+	fs.recordDiskStat()
 	fs.dirty = false
 	return true, nil
 }

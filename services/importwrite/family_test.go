@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+	"time"
 )
 
 // writeFixtureFamily writes raw JSON bytes to simulate a pre-existing
@@ -488,8 +489,8 @@ func TestFlush_RecomputesSpeciesCount(t *testing.T) {
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
 		Species: []*onode{
-			nodeFrom(map[string]any{"name": "Testus novus"}),
-			nodeFrom(map[string]any{"name": "Testus alius"}),
+			nodeFrom(map[string]any{"name": "Testus novus", "rank": "SPECIES"}),
+			nodeFrom(map[string]any{"name": "Testus alius", "rank": "SPECIES"}),
 		},
 	})
 	if _, err := fs.flush(); err != nil {
@@ -637,4 +638,64 @@ func indexOf(s, sub string) int {
 		}
 	}
 	return -1
+}
+
+// TestCountSpecies_AllDepths: a family with a subfamily level and a
+// compressed speciesList must count every species, the way
+// scripts/tree.py's count_species (and so verifyTree) does. The old
+// genus-children-only count understated both.
+func TestCountSpecies_AllDepths(t *testing.T) {
+	root := &onode{}
+	if err := json.Unmarshal([]byte(`{"rank": "FAMILY", "children": [
+		{"rank": "SUBFAMILY", "children": [
+			{"rank": "GENUS", "children": [{"rank": "SPECIES", "name": "A a"}]}]},
+		{"rank": "GENUS", "children": [{"rank": "SPECIES", "name": "B b"}],
+		 "speciesList": [{"rank": "SPECIES", "name": "B c"}]}]}`), root); err != nil {
+		t.Fatal(err)
+	}
+	if n := countSpecies(root); n != 3 {
+		t.Fatalf("countSpecies = %d, want 3", n)
+	}
+}
+
+// TestStoreGet_ReloadsFamilyChangedOnDisk is the regression test for
+// 2026-10-29: two cross-kingdom-homonym removals in Ichneumonidae were
+// silently restored because this service flushed a copy it had cached
+// before the removal. A clean cached family whose file changed on disk
+// must be reloaded, not reused.
+func TestStoreGet_ReloadsFamilyChangedOnDisk(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY",
+		"children": []any{map[string]any{"name": "Testus", "rank": "GENUS", "children": []any{
+			map[string]any{"name": "Testus novus", "rank": "SPECIES"},
+			map[string]any{"name": "Testus alius", "rank": "SPECIES"},
+		}}},
+	})
+	s := newStore(root, false, time.Hour)
+	first, err := s.get(loc)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// An external pass removes one species (and the mtime moves on).
+	time.Sleep(10 * time.Millisecond)
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY",
+		"children": []any{map[string]any{"name": "Testus", "rank": "GENUS", "children": []any{
+			map[string]any{"name": "Testus novus", "rank": "SPECIES"},
+		}}},
+	})
+
+	second, err := s.get(loc)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if second == first {
+		t.Fatal("store.get reused a cached family whose file changed on disk")
+	}
+	if n := countSpecies(second.root); n != 1 {
+		t.Fatalf("reloaded family holds %d species, want the on-disk 1", n)
+	}
 }

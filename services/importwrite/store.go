@@ -52,7 +52,19 @@ func (s *store) get(loc familyLocation) (*familyState, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 	if fs, ok := s.families[loc.Slug]; ok {
-		return fs, nil
+		fs.mu.Lock()
+		stale := !fs.dirty && fs.changedOnDisk()
+		fs.mu.Unlock()
+		if !stale {
+			return fs, nil
+		}
+		// Rewritten by something else since we loaded it (a maintenance
+		// pass, a removal script). Using the cached copy would write that
+		// change away on the next flush -- found 2026-10-29 when two
+		// cross-kingdom-homonym removals in Ichneumonidae were silently
+		// restored. Drop it and reload from disk.
+		log.Printf("reloading %s: changed on disk since it was cached", loc.Slug)
+		delete(s.families, loc.Slug)
 	}
 	fs, err := loadFamily(s.root, loc, s.registry)
 	if err != nil {
