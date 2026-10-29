@@ -1,7 +1,26 @@
 {
+  "key": "checklistbank-220590",
+  "title": "Update Checklist of Higher Plants in Myanmar (2023)",
+  "stage": "applied",
+  "licence": "cc by",
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-220590/archive.zip",
+  "reason": "pipeline exception: cannot access local variable 'sources_root' where it is not associated with a value",
   "activePid": 77332,
   "activeStartedAt": "2026-10-27T18:24:54.322342+00:00",
-  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-220590/archive.zip",
+  "applied": {
+    "added": 102,
+    "merged": 3959,
+    "crossFamily": 6,
+    "families": 280,
+    "at": "2026-10-29T19:57:04Z"
+  },
+  "triaged": {
+    "offered": 10635,
+    "alreadyHeld": 5728,
+    "staged": 4102,
+    "refused": 433,
+    "refusalRate": 0.0407
+  },
   "history": [
     {
       "at": "2026-10-25T22:23:48+0100",
@@ -57,14 +76,13 @@
     },
     {
       "at": "2026-10-27T09:10:27+0100",
-      "note": "fix-state: transformed meta exists (no .jsonl)",
-      "reason": "transformed meta exists (no .jsonl)",
-      "stage": "queued"
+      "stage": "queued",
+      "note": "fix-state: transformed meta exists (no .jsonl)"
     },
     {
       "at": "2026-10-27T09:30:00+00:00",
-      "note": "fix-state: reset from queued - empty_jsonl",
-      "stage": "downloaded"
+      "stage": "downloaded",
+      "note": "fix-state: reset from queued - empty_jsonl"
     },
     {
       "at": "2026-10-27T14:09:30.215123+00:00",
@@ -105,19 +123,26 @@
     {
       "at": "2026-10-29T16:48:17+0100",
       "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-29T19:51:51Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-29T19:56:01Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-29T19:56:01Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-29T19:56:01Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-29T19:57:04Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-220590",
-  "licence": "cc by",
-  "reason": "pipeline exception: cannot access local variable 'sources_root' where it is not associated with a value",
-  "size": null,
-  "stage": "downloaded",
-  "title": "Update Checklist of Higher Plants in Myanmar (2023)",
-  "triaged": {
-    "alreadyHeld": 5613,
-    "offered": 10635,
-    "refusalRate": 0.0407,
-    "refused": 433,
-    "staged": 4217
-  }
+  ]
 }
