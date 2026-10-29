@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"encoding/json"
 	"net/http"
+	"os"
 	"sort"
 	"strings"
 	"time"
@@ -19,6 +20,11 @@ var dashboardHTML string
 // Dashboard serves the import pipeline web UI.
 type Dashboard struct {
 	store *queue.Store
+
+	// HTMLPath, when set, is read on every request, so editing the page
+	// needs only a browser reload. If it can't be read, the embedded copy
+	// is served instead.
+	HTMLPath string
 }
 
 // NewDashboard creates a new dashboard.
@@ -45,6 +51,13 @@ func (d *Dashboard) HandleIndex(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	if d.HTMLPath != "" {
+		if page, err := os.ReadFile(d.HTMLPath); err == nil {
+			w.Header().Set("Cache-Control", "no-store")
+			w.Write(page)
+			return
+		}
+	}
 	w.Write([]byte(dashboardHTML))
 }
 

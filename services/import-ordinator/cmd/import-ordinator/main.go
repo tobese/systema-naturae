@@ -23,6 +23,9 @@
 //	go run ./cmd/import-ordinator          # run once, then exit
 //	go run ./cmd/import-ordinator --loop   # keep polling every 60s
 //
+// The dashboard page is read from the repo's dashboard.html on every
+// request (see --html-from), so editing it needs only a browser reload.
+//
 // Environment variables:
 //
 //	SN_SOURCES_ROOT   root of the sources volume (default /Volumes/MacieExternal/sources)
@@ -45,6 +48,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"syscall"
 	"time"
 
@@ -56,6 +60,8 @@ import (
 func main() {
 	loop := flag.Bool("loop", false, "keep polling every 60s")
 	port := flag.String("port", "8090", "HTTP dashboard port")
+	htmlFrom := flag.String("html-from", "",
+		"dashboard page to serve (default: services/import-ordinator/internal/dashboard/dashboard.html in the repo)")
 	flag.Parse()
 
 	sourcesRoot := os.Getenv("SN_SOURCES_ROOT")
@@ -136,6 +142,14 @@ func main() {
 
 	// Create the dashboard
 	dash := dashboard.NewDashboard(pipeline.Store())
+	// The page is read from the checkout on every request, so a layout or
+	// formatting change shows on browser reload -- no rebuild, no pipeline
+	// restart. The embedded copy is only a fallback for a binary run away
+	// from the repo.
+	dash.HTMLPath = *htmlFrom
+	if dash.HTMLPath == "" {
+		dash.HTMLPath = filepath.Join(repoRoot, "services", "import-ordinator", "internal", "dashboard", "dashboard.html")
+	}
 
 	// Context for graceful shutdown
 	ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
