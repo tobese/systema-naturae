@@ -90,7 +90,7 @@ DATA_DIR = os.path.dirname(SCRIPT_DIR) + "/data"
 STORE = os.path.join(DATA_DIR, "source-queue")
 EVENTS_LOG = os.path.join(DATA_DIR, "pipeline-events.jsonl")
 
-STAGES = ("candidate", "downloaded", "triaging", "triaged", "queued",
+STAGES = ("candidate", "downloaded", "triaging", "transforming", "triaged", "queued",
           "applying", "applied", "declined", "blocked", "needs-rerun")
 
 
@@ -341,9 +341,13 @@ def cmd_report(_args) -> None:
                 m = row["triaged"]
                 extra = f"  staged {m.get('staged', '?')}"
             if stage in ("declined", "blocked") and row.get("reason"):
-                extra = f"  {row['reason'][:60]}"
+                extra = f"  {row['reason']}"
             if stage == "applied" and row.get("applied"):
-                extra = f"  +{row['applied'].get('added', '?')}"
+                added = row["applied"].get("added")
+                if added is None:
+                    extra = "  (no metrics recorded)"
+                else:
+                    extra = f"  +{added}"
             print(f"      {row['key']:>8}  {row.get('title', '')[:50]:<50}{extra}")
     for stage, rows in by_stage.items():
         print(f"\n  {stage} ({len(rows)}, unrecognized stage)")

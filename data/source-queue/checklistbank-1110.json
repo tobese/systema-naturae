@@ -15,12 +15,49 @@
     {
       "at": "2026-10-20T13:43:06.867569+00:00",
       "stage": "applied"
+    },
+    {
+      "at": "2026-10-27T11:26:49.235015+00:00",
+      "note": "fix-state: reset from applied-without-metrics — no transform output, no triaged block, no import log entry, no applied stats",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-27T11:38:49.384194+00:00",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-27T11:43:46.370273+00:00",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-27T11:43:46.372550+00:00",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-27T11:43:46.374572+00:00",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-27T11:43:48.343718+00:00",
+      "stage": "error"
+    },
+    {
+      "at": "2026-10-29T16:48:16+0100",
+      "stage": "downloaded"
     }
   ],
   "key": "checklistbank-1110",
   "licence": "cc by",
   "merged": 0,
+  "reason": "apply failed (rc=1)",
   "size": 3220,
-  "stage": "applied",
-  "title": "World List of Tanaidacea (WoRMS Tanaidacea)"
+  "stage": "downloaded",
+  "title": "World List of Tanaidacea (WoRMS Tanaidacea)",
+  "triaged": {
+    "alreadyHeld": 1644,
+    "offered": 1657,
+    "refusalRate": 0.0012,
+    "refused": 2,
+    "staged": 3
+  }
 }

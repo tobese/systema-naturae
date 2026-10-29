@@ -1,4 +1,7 @@
 {
+  "activePid": 77332,
+  "activeStartedAt": "2026-10-27T18:24:54.434689+00:00",
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-58312/archive.zip",
   "history": [
     {
       "at": "2026-10-20T16:01:44+0200",
@@ -7,12 +10,29 @@
     {
       "at": "2026-10-20T14:01:44.694709+00:00",
       "stage": "blocked"
+    },
+    {
+      "at": "2026-10-27T11:35:21.992188+00:00",
+      "note": "fix-state: retried fetch after archive missing — archive now present",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-27T18:24:54.432531+00:00",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-27T18:24:54.436987+00:00",
+      "stage": "error"
+    },
+    {
+      "at": "2026-10-29T16:48:20+0100",
+      "stage": "downloaded"
     }
   ],
   "key": "checklistbank-58312",
   "licence": "cc0",
-  "reason": "archive missing after fetch",
+  "reason": "pipeline exception: Popen.__init__() got an unexpected keyword argument 'capture_output'",
   "size": 1793,
-  "stage": "blocked",
+  "stage": "downloaded",
   "title": "TEST Management Classification (MGMT)"
 }

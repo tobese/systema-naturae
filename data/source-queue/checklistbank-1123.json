@@ -15,12 +15,49 @@
     {
       "at": "2026-10-20T16:52:17.245902+00:00",
       "stage": "applied"
+    },
+    {
+      "at": "2026-10-27T11:26:49.209950+00:00",
+      "note": "fix-state: reset from applied-without-metrics — no transform output, no triaged block, no import log entry, no applied stats",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-27T11:43:48.346300+00:00",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-27T11:46:34.998583+00:00",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-27T11:46:35.001881+00:00",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-27T11:46:35.004515+00:00",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-27T11:46:36.340055+00:00",
+      "stage": "error"
+    },
+    {
+      "at": "2026-10-29T16:48:16+0100",
+      "stage": "downloaded"
     }
   ],
   "key": "checklistbank-1123",
   "licence": "cc by",
   "merged": 0,
+  "reason": "apply failed (rc=1)",
   "size": 22,
-  "stage": "applied",
-  "title": "World Placozoa Database (WoRMS Placozoa)"
+  "stage": "downloaded",
+  "title": "World Placozoa Database (WoRMS Placozoa)",
+  "triaged": {
+    "alreadyHeld": 3,
+    "offered": 4,
+    "refusalRate": 0.0,
+    "refused": 0,
+    "staged": 1
+  }
 }
