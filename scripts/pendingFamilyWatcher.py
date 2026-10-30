@@ -12,29 +12,30 @@ Every cycle:
   2. Compute which family names the taxonomy now holds, and which have a
      data file on disk (the same index importColChecklist.py builds).
   3. Find rows whose family is now "ready" (held + file exists) and that
-     have not been re-imported within the cooldown window.
+     carry no `resolvedAt` yet.
   4. Group those rows by their recorded `archive` path.
   5. For each archive, skip it if a lock file shows another watcher process
      is still mid-run against it (see `archive_locked()`); otherwise take
      the lock and run `importColChecklist.py <archive> --apply`.
      Re-running is safe: already-held species are skipped by the importer's
      dedup, so only newly-placeable species get added.
-  6. Mark every row from that archive with a fresh `reimportedAt` so we
-     don't re-scan the same archive every cycle when nothing new could
-     plausibly be ready yet -- refreshed on every successful run, not just
-     the first, so the throttle actually repeats (a bug until 2026-10-25:
-     the guard only ever set this once per row, so after the first
-     COOLDOWN_HOURS window every archive got re-scanned every single cycle,
-     forever).
+  6. Stamp `resolvedAt` on the rows that run covered -- that archive's rows
+     for those families only. A row is re-imported once after its family
+     is ready, then never again: a re-run of the same archive cannot place
+     more species into a family it has already been run against. A row
+     whose re-import fails stays unstamped and is retried next cycle; a
+     refusal recorded later is a new row and gets its own run.
 
-The lock and the cooldown solve two different problems and neither should
-be dropped in favour of the other: the lock stops two processes writing the
-same family files at once (a correctness hazard); the cooldown just avoids
-paying the cost of a full re-scan when it's very unlikely to find anything
-(an efficiency tweak). Before 2026-10-25 a single 24-hour cooldown tried to
-do both jobs and did neither well -- 24h is a long time to wait to pick up
-a newly-scaffolded family, and it was never the right tool for "is the
-previous run still active" in the first place.
+Until 2026-10-30 this was a 1-hour cooldown on `reimportedAt`, refreshed on
+every run. A sweep took about an hour, so every sweep re-ran the same 23
+archives (the GBIF Backbone, UNITE, COL XR, WoRMS ...), each adding 0
+species, and the queue was not drained while it did. `reimportedAt` was
+also stamped by family name across every archive, so a row could look
+re-imported when only another archive had been run. Rows stamped that way
+carry no `resolvedAt` and get one honest run each.
+
+The lock is separate and still needed: it stops two processes writing the
+same family files at once.
 
 Usage:
     python3 scripts/pendingFamilyWatcher.py           # one cycle, then exit
@@ -52,14 +53,13 @@ import subprocess
 import sys
 import time
 from collections import defaultdict
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 sys.path.insert(0, SCRIPT_DIR)
 import pendingFamilies as PF  # noqa: E402
 
-COOLDOWN_HOURS = 1
 CYCLE_SECONDS = 300
 
 LOCK_DIR = os.path.join(os.path.dirname(PF.STORE), "watcher-locks")
@@ -116,23 +116,13 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def recently_reimported(row: dict) -> bool:
-    """True if this row was re-imported within the cooldown window."""
-    ts = row.get("reimportedAt")
-    if not ts:
-        return False
-    try:
-        dt = datetime.fromisoformat(ts)
-    except ValueError:
-        return False
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=timezone.utc)
-    return datetime.now(timezone.utc) - dt < timedelta(hours=COOLDOWN_HOURS)
+def _row_key(row: dict) -> tuple[str, str]:
+    return (row.get("archive") or "", (row.get("family") or "").strip().lower())
 
 
 def ready_rows(rows: list[dict]) -> list[dict]:
-    """Rows whose family is now in the taxonomy, has a data file, and is
-    outside the re-import cooldown."""
+    """Rows whose family is now in the taxonomy, has a data file, and that
+    have not yet been re-imported against it (no `resolvedAt`)."""
     held = PF.held_family_slugs()
     files = PF.family_data_files()
     out = []
@@ -157,7 +147,7 @@ def ready_rows(rows: list[dict]) -> list[dict]:
                 hits = kingdom_hits
         if len(hits) != 1:
             continue  # registered but no data file yet -- scaffold first
-        if recently_reimported(r):
+        if r.get("resolvedAt"):
             continue
         out.append(r)
     return out
@@ -198,23 +188,23 @@ def run_reimport(archive: str, rows: list[dict]) -> bool:
     return result.returncode == 0
 
 
-def mark_reimported(rows: list[dict], store_path: str) -> None:
-    """Set reimportedAt on every row whose family matches one of `rows`,
-    then rewrite the store atomically. Always overwrites -- not just the
-    first time -- so the cooldown actually repeats; a row that keeps
-    getting re-imported cycle after cycle (e.g. one that's genuinely
-    popular) still gets the throttle applied each time, not just once."""
+def mark_resolved(rows: list[dict], store_path: str) -> None:
+    """Stamp resolvedAt (and reimportedAt, kept for the record) on the
+    store rows matching `rows` by (archive, family), then rewrite the store
+    atomically. Matching the archive too matters: the same family is often
+    pending from several archives, and only this one was run."""
     now = now_iso()
-    targets = {(r.get("family") or "").strip().lower() for r in rows}
+    targets = {_row_key(r) for r in rows}
     all_rows = PF.read_store()
     changed = 0
     for r in all_rows:
-        if (r.get("family") or "").strip().lower() in targets:
+        if _row_key(r) in targets:
             r["reimportedAt"] = now
+            r["resolvedAt"] = now
             changed += 1
     if changed:
         PF.write_store(all_rows)
-        print(f"    marked {changed} row(s) reimportedAt={now}", flush=True)
+        print(f"    marked {changed} row(s) resolvedAt={now}", flush=True)
 
 
 def cycle() -> int:
@@ -242,7 +232,7 @@ def cycle() -> int:
         acquire_lock(archive)
         try:
             if run_reimport(archive, group):
-                mark_reimported(group, PF.STORE)
+                mark_resolved(group, PF.STORE)
                 any_ok = True
         finally:
             release_lock(archive)
@@ -250,15 +240,10 @@ def cycle() -> int:
 
 
 def main() -> int:
-    global COOLDOWN_HOURS
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--loop", action="store_true",
                     help="keep polling every CYCLE_SECONDS seconds")
-    ap.add_argument("--cooldown-hours", type=int, default=COOLDOWN_HOURS,
-                    help="hours to wait before re-importing the same archive")
     args = ap.parse_args()
-
-    COOLDOWN_HOURS = args.cooldown_hours
 
     if args.loop:
         while True:

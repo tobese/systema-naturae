@@ -674,15 +674,16 @@ stage:
   1. Reads the pending-family store.
   2. Computes which family names the taxonomy now holds (`held_family_slugs()`)
      and which have a data file on disk (`family_data_files()`).
-  3. Finds rows whose family is now "ready" (held + file exists) and outside
-     the 24-hour re-import cooldown.
+  3. Finds rows whose family is now "ready" (held + file exists) and that
+     carry no `resolvedAt` yet.
   4. Groups those rows by their recorded `archive` path.
   5. Runs `importColChecklist.py <archive> --apply` for each archive.
      Re-running is safe: already-held species are skipped by dedup, so only
      newly-placeable species get added.
-  6. Marks every row from that archive with `reimportedAt` so the same
-     archive isn't re-run every cycle while its families are still being
-     scaffolded.
+  6. Stamps `resolvedAt` on that archive's rows for those families, so
+     each row is re-imported once after its family is ready and never
+     again. Until 2026-10-30 a 1-hour cooldown let every hour-long sweep
+     re-run the same 23 archives for 0 species, holding up the queue.
 
 Standalone usage (debugging only -- the orchestrator is the production path):
 ```bash
