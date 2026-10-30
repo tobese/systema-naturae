@@ -55,7 +55,12 @@ def _is_txtree(path):
                 # is an unsupported format; skip gracefully rather than crash.
             # No .txtree and no standard DwCA members either
             base_names = [m.rsplit("/", 1)[-1].lower() for m in names if not m.startswith("__MACOSX")]
-            has_dwc = any("taxon" in b or "name" in b for b in base_names)
+            # meta.xml declares a DwCA core whatever it is called -- ENA's
+            # (2265) is taxa.txt, which the name test alone sent to
+            # "unsupported" on 2026-10-30 although colChecklist.load()
+            # reads it (ENA applied fine through importColChecklist.py).
+            has_dwc = "meta.xml" in base_names or any(
+                "taxon" in b or "taxa" in b or "name" in b for b in base_names)
             return False if has_dwc else "unsupported"
     except zipfile.BadZipFile:
         return "unsupported"
