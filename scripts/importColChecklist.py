@@ -208,7 +208,8 @@ def _ondisk_cache_path(kingdom):
 
 
 def _load_ondisk_cache(kingdom):
-    """-> {family_slug: {'mtime', 'size', 'ids'}}, or {} if missing/unreadable.
+    """-> {family_slug: {'mtime', 'size', 'ids', 'names'}}, or {} if
+    missing/unreadable, or written before 'names' existed (2026-10-30).
 
     Per-family-file granularity, keyed by (mtime, size) on that one
     file -- same two-factor freshness check buildData.ts's own
@@ -232,16 +233,19 @@ def _load_ondisk_cache(kingdom):
     except Exception as e:
         print(f"  (on-disk species cache unreadable, ignoring: {e})")
         return {}
+    if "names" not in cols:
+        return {}
     out = {}
     for row in rows:
         d = dict(zip(cols, row))
         out[d["slug"]] = {"mtime": d.get("mtime"), "size": d.get("size"),
-                           "ids": list(d.get("ids") or [])}
+                           "ids": list(d.get("ids") or []),
+                           "names": list(d.get("names") or [])}
     return out
 
 
 def _write_ondisk_cache(kingdom, entries):
-    """entries: {family_slug: {'mtime', 'size', 'ids'}} -- every family
+    """entries: {family_slug: {'mtime', 'size', 'ids', 'names'}} -- every family
     slug currently on disk for this kingdom, one way or another (cache
     hit or freshly re-parsed); a slug that no longer exists on disk is
     never in `entries` to begin with, so it naturally drops out of the
@@ -261,7 +265,7 @@ def _write_ondisk_cache(kingdom, entries):
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             for slug, e in entries.items():
                 rec = {"slug": slug, "mtime": e["mtime"], "size": e["size"],
-                       "ids": e["ids"]}
+                       "ids": e["ids"], "names": e["names"]}
                 f.write(json.dumps(rec, ensure_ascii=False) + "\n")
         con = duckdb.connect()
         con.execute(
@@ -345,6 +349,11 @@ class RoutedSpecies:
         self.cand_count = 0
         self.held = self.refused = self.nonb = self.unresolved = 0
         self.known_bad_skipped = 0
+        # Staged species whose name we already hold in that kingdom under a
+        # different node id -- importwrite will merge them, not add them.
+        # See ON_DISK_NAMES in route_species().
+        self.staged_held_by_name = 0
+        self.new_families = set()                     # (kingdom, slug) receiving a species not held by name
         self.no_family = collections.Counter()
         self.diffs = []                               # (kingdom, id, name, our_slug, source_slug, source_family, source_id)
         self.routed = collections.Counter()
@@ -454,10 +463,20 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
 
     import glob as _glob
     ON_DISK = {}
+    # Lowercased species names per kingdom, for reporting only. ON_DISK is
+    # keyed by node id, and an id built here carries the authorship
+    # (SP_PSEUDOMYS_ORALIS_THOMAS_1921) where many older nodes do not
+    # (PSEUDOMYS_ORALIS), so a species we hold can miss ON_DISK and be
+    # staged. That staging stays -- importwrite merges it by name and
+    # stamps the source's sourceIds -- but counting it as "new" made the
+    # GBIF Backbone dry run report 644,683 new species on 2026-10-30 when
+    # its applies had converged to 0. This set splits the count honestly.
+    ON_DISK_NAMES = {}
     for k in KINDS:
         ondisk_cache = _load_ondisk_cache(k)
         new_ondisk_cache = {}
         ids = {}
+        names = set()
         on_cache_hits = on_cache_misses = 0
         for f in _glob.glob(f"taxonomy/{k}/**/src/data/*.json", recursive=True):
             slug = os.path.basename(f)[:-5]
@@ -470,6 +489,7 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
                     and cached.get("size") == st.st_size):
                 on_cache_hits += 1
                 file_ids = cached["ids"]
+                file_names = cached["names"]
             else:
                 on_cache_misses += 1
                 try:
@@ -477,17 +497,23 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
                 except Exception:
                     continue
                 file_ids = []
+                file_names = []
                 stack = list(d.get("children") or [])
                 while stack:
                     nd = stack.pop()
                     if nd.get("rank") == "SPECIES" and nd.get("id"):
                         file_ids.append(nd["id"])
+                        nm = (nd.get("name") or "").replace("\u2020", "").strip().lower()
+                        if nm:
+                            file_names.append(nm)
                     stack.extend(nd.get("children") or [])
             new_ondisk_cache[slug] = {"mtime": st.st_mtime, "size": st.st_size,
-                                       "ids": file_ids}
+                                       "ids": file_ids, "names": file_names}
             for sid in file_ids:
                 ids[sid] = slug
+            names.update(file_names)
         ON_DISK[k] = ids
+        ON_DISK_NAMES[k] = names
         _write_ondisk_cache(k, new_ondisk_cache)
         print(f"  {k:10s} families {len(KINDS[k][1]):>7,}   species on disk {len(ids):>9,}"
               f"   (file cache: {on_cache_hits:,} hits, {on_cache_misses:,} misses)")
@@ -597,6 +623,10 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             r.refused += 1
             continue
         slug = fams_k[fam][0]
+        if bare.lower() in ON_DISK_NAMES[k]:
+            r.staged_held_by_name += 1
+        else:
+            r.new_families.add((k, slug))
         r.staged[(k, slug)].append((g, bare,
                                     (t.get("authorship") or "").strip() or None,
                                     tid, fam))
@@ -625,13 +655,16 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             owners = ",".join(sorted(d["owners"])) or "none held"
             print(f"      {d['count']:>6,}  {fam}  (held under: {owners})")
     print(f"\n  already held (skipped): {r.held:,}")
-    print(f"  staged:              {sum(len(v) for v in r.staged.values()):,}")
+    staged_n = sum(len(v) for v in r.staged.values())
+    print(f"  staged:              {staged_n:,}")
+    print(f"      of which held by name under another id: {r.staged_held_by_name:,}"
+          f"  (importwrite merges these; they add sourceIds, not species)")
     print(f"  non-binominal:       {r.nonb:,}")
     if r.known_bad_skipped:
         print(f"  known-bad placements skipped: {r.known_bad_skipped:,}"
               f"  (see data/known-bad-gbif-backbone-placements.json)")
-    print(f"  new, into a family we hold: {sum(len(v) for v in r.staged.values()):,}"
-          f"  across {len(r.staged)} families in {len({k for k, _ in r.staged})} kingdoms")
+    print(f"  new, into a family we hold: {staged_n - r.staged_held_by_name:,}"
+          f"  across {len(r.new_families)} families in {len({k for k, _ in r.new_families})} kingdoms")
     print(f"  REFUSED (would need a new family): {r.refused:,}"
           f"  -- dropped, not placed: no placeholder family, no orphan node")
     print(f"      (these are recorded in the pending-family store; "
@@ -957,6 +990,7 @@ def main() -> int:
             "title": meta.get("title") or "",
             "offered": r.cand_count,
             "alreadyHeld": r.held,
+            "stagedHeldByName": r.staged_held_by_name,
             "nonBinominal": r.nonb,
             "staged": sum(len(v) for v in staged.values()),
             "refused": r.refused,

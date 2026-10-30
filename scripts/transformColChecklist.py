@@ -205,6 +205,7 @@ def main() -> int:
         routing_stats={
             "offered": r.cand_count,
             "alreadyHeld": r.held,
+            "stagedHeldByName": r.staged_held_by_name,
             "nonBinominal": r.nonb,
             "refused": r.refused,
             "refusalRate": round(r.refused / max(1, r.cand_count), 4),
