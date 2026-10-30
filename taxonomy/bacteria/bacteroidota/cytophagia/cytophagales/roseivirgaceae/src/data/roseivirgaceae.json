@@ -89,7 +89,10 @@
           "lineage": "Roseivirga",
           "authorship": "(Yoon et al. 2005) Lau et al. 2006",
           "children": [],
-          "uuid": "6582fd23-e8d8-554-9f6-c2d0fa8d771f60"
+          "uuid": "6582fd23-e8d8-554-9f6-c2d0fa8d771f60",
+          "sourceIds": {
+            "checklistbank-2169": "1566026"
+          }
         },
         {
           "id": "SP_ROSEIVIRGA_MISAKIENSIS",
@@ -154,6 +157,18 @@
             "checklistbank-2265": "543088"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ROSEIVIRGACEAE",
+          "name": "uncultured Roseivirgaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3063774"
+          },
+          "uuid": "0fcf624a-2395-4382-a24d-f3b0fd9b590c"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -246,9 +261,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "roseivirgaceae"
+    },
+    {
+      "id": "GENUS_ROSEIVIRGACEAE",
+      "name": "Roseivirgaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "roseivirgaceae",
+      "children": [
+        {
+          "id": "SP_ROSEIVIRGACEAE_BACTERIUM",
+          "name": "Roseivirgaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Roseivirgaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107569"
+          },
+          "uuid": "268c3010-b769-4682-b62e-51996b823022"
+        }
+      ]
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 19,
   "appSlug": "roseivirgaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 5,

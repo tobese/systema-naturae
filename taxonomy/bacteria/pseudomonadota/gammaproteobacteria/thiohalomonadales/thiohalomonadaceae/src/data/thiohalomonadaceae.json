@@ -166,7 +166,10 @@
           "lineage": "Sulfurivermis",
           "authorship": "Kojima et al. 2017",
           "children": [],
-          "uuid": "bf3b2589-f89b-501-93d-3c6cc47cf1abe3"
+          "uuid": "bf3b2589-f89b-501-93d-3c6cc47cf1abe3",
+          "sourceIds": {
+            "checklistbank-2169": "1972068"
+          }
         },
         {
           "id": "SP_SULFURIVERMIS_SP002840095",
@@ -187,6 +190,18 @@
           "lineage": "Sulfurivermis",
           "children": [],
           "uuid": "2803030b-5969-5b1-b78-34d7ccf19bb053"
+        },
+        {
+          "id": "SP_SULFURIVERMIS_SP",
+          "name": "Sulfurivermis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulfurivermis",
+          "sourceIds": {
+            "checklistbank-2169": "2034505"
+          },
+          "uuid": "2dccc446-f242-4688-9435-0194664daec1"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -556,7 +571,10 @@
           "lineage": "Thiohalomonas",
           "authorship": "Sorokin et al. 2007",
           "children": [],
-          "uuid": "8bfa7055-97a1-57f-b7b-af8593beebbe31"
+          "uuid": "8bfa7055-97a1-57f-b7b-af8593beebbe31",
+          "sourceIds": {
+            "checklistbank-2169": "415747"
+          }
         },
         {
           "id": "SP_THIOHALOMONAS_SP041685045",
@@ -742,9 +760,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thiohalomonadaceae"
+    },
+    {
+      "id": "GENUS_THIOHALOMONADACEAE",
+      "name": "Thiohalomonadaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiohalomonadaceae",
+      "children": [
+        {
+          "id": "SP_THIOHALOMONADACEAE_BACTERIUM",
+          "name": "Thiohalomonadaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiohalomonadaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107636"
+          },
+          "uuid": "687d1f08-0c50-489c-bc33-7fb652d55515"
+        }
+      ]
     }
   ],
-  "speciesCount": 55,
+  "speciesCount": 57,
   "appSlug": "thiohalomonadaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

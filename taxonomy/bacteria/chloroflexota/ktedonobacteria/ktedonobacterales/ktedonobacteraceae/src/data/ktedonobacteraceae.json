@@ -1106,7 +1106,8 @@
           "children": [],
           "uuid": "cfc804af-5005-5b9-98a-16459a55321d8c",
           "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "962610"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "962610",
+            "checklistbank-2169": "363277"
           }
         },
         {
@@ -1138,7 +1139,10 @@
           "lineage": "Ktedonobacter",
           "authorship": "Yabe et al. 2021",
           "children": [],
-          "uuid": "690af11c-adc6-5c5-bb9-7a6ea20f125c1a"
+          "uuid": "690af11c-adc6-5c5-bb9-7a6ea20f125c1a",
+          "sourceIds": {
+            "checklistbank-2169": "2778365"
+          }
         },
         {
           "id": "SP_KTEDONOBACTER_SP",
@@ -1509,6 +1513,18 @@
           "sourceIds": {
             "checklistbank-2265": "2778364"
           }
+        },
+        {
+          "id": "SP_KTEDONOSPORA_SP",
+          "name": "Ktedonospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ktedonospora",
+          "sourceIds": {
+            "checklistbank-2169": "2866731"
+          },
+          "uuid": "46c584bc-01c0-4a0e-b86d-8fde32be4256"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -1588,9 +1604,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ktedonobacteraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ktedonobacteraceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_PARAKTEDONOBACTER_ROY_ET_AL_2025",
+          "name": "Candidatus Paraktedonobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Roy et al. 2025",
+          "sourceIds": {
+            "checklistbank-2169": "3394845"
+          },
+          "uuid": "0eaf83ec-c650-4b79-9d5b-b897dc9c907d"
+        }
+      ]
     }
   ],
-  "speciesCount": 118,
+  "speciesCount": 120,
   "appSlug": "ktedonobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Ktedonobacteria",

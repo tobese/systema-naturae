@@ -55,7 +55,10 @@
           "lineage": "Luteibaculum",
           "authorship": "Shahina et al. 2013",
           "children": [],
-          "uuid": "6e6aa4ca-0d4a-5a1-a4c-6eca024c0b9c83"
+          "uuid": "6e6aa4ca-0d4a-5a1-a4c-6eca024c0b9c83",
+          "sourceIds": {
+            "checklistbank-2169": "1294296"
+          }
         },
         {
           "id": "SP_LUTEIBACULUM_SP964627445",
@@ -171,9 +174,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "luteibaculaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "luteibaculaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LUTEIBACULUM",
+          "name": "uncultured Luteibaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1816009"
+          },
+          "uuid": "212b2a3c-c03a-4d41-90b5-a3130ed3b0ab"
+        }
+      ]
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 12,
   "appSlug": "luteibaculaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",

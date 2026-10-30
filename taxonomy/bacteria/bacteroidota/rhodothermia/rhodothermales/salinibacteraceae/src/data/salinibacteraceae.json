@@ -18,7 +18,10 @@
           "authorship": "Anton et al. 2002",
           "children": [],
           "uuid": "06933a97-d1fd-5c6-a79-40eabf5de13d9f",
-          "description": "Salinibacter ruber is an extremely halophilic red bacterium, first found in Spain in 2002."
+          "description": "Salinibacter ruber is an extremely halophilic red bacterium, first found in Spain in 2002.",
+          "sourceIds": {
+            "checklistbank-2169": "146919"
+          }
         },
         {
           "id": "SP_SALINIBACTER_PEPAE",
@@ -29,7 +32,10 @@
           "lineage": "Salinibacter",
           "authorship": "Viver et al. 2023",
           "children": [],
-          "uuid": "98893c24-de6d-57f-ba0-000786e493cf37"
+          "uuid": "98893c24-de6d-57f-ba0-000786e493cf37",
+          "sourceIds": {
+            "checklistbank-2169": "3040382"
+          }
         },
         {
           "id": "SP_SALINIBACTER_ALTIPLANENSIS",
@@ -40,7 +46,10 @@
           "lineage": "Salinibacter",
           "authorship": "Viver et al. 2018",
           "children": [],
-          "uuid": "8281dd51-dba6-5be-8a9-457fc71816d1c6"
+          "uuid": "8281dd51-dba6-5be-8a9-457fc71816d1c6",
+          "sourceIds": {
+            "checklistbank-2169": "1803181"
+          }
         },
         {
           "id": "SP_SALINIBACTER_SP036625705",
@@ -121,7 +130,10 @@
           "lineage": "Salinibacter",
           "authorship": "Viver et al. 2023",
           "children": [],
-          "uuid": "e39ad7c9-bbce-54d-a6b-f95954c6fade3b"
+          "uuid": "e39ad7c9-bbce-54d-a6b-f95954c6fade3b",
+          "sourceIds": {
+            "checklistbank-2169": "3040353"
+          }
         },
         {
           "id": "SP_SALINIBACTER_SP964612165",
@@ -819,6 +831,18 @@
             "checklistbank-2265": "309166"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SALINIVENUS",
+          "name": "uncultured Salinivenus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1885343"
+          },
+          "uuid": "c5160923-dc77-4b39-af8e-1143276f9965"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -844,9 +868,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "salinibacteraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinibacteraceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_SALINIBACTER_VIVER_ET_AL_2023",
+          "name": "Candidatus Salinibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Viver et al. 2023",
+          "sourceIds": {
+            "checklistbank-2169": "3040383"
+          },
+          "uuid": "e9c45d63-dd8f-44e5-a97a-1ea7076e08c6"
+        }
+      ]
     }
   ],
-  "speciesCount": 67,
+  "speciesCount": 69,
   "appSlug": "salinibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Rhodothermia",

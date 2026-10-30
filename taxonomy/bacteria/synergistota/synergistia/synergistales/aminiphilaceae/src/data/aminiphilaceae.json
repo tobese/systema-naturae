@@ -95,7 +95,10 @@
           "lineage": "Aminiphilus",
           "authorship": "Diaz et al. 2007",
           "children": [],
-          "uuid": "700ba67d-f99a-50e-b8c-9190352cd47beb"
+          "uuid": "700ba67d-f99a-50e-b8c-9190352cd47beb",
+          "sourceIds": {
+            "checklistbank-2169": "290732"
+          }
         },
         {
           "id": "SP_AMINIPHILUS_SP",
@@ -172,9 +175,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aminiphilaceae"
+    },
+    {
+      "id": "GENUS_AMINIPHILACEAE",
+      "name": "Aminiphilaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aminiphilaceae",
+      "children": [
+        {
+          "id": "SP_AMINIPHILACEAE_BACTERIUM",
+          "name": "Aminiphilaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aminiphilaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3106976"
+          },
+          "uuid": "7f086261-dd2a-4ccc-b581-6f70604b66f8"
+        }
+      ]
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 12,
   "appSlug": "aminiphilaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Synergistota > Synergistia",

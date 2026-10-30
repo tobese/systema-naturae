@@ -37,7 +37,10 @@
           "lineage": "Fervidibacter",
           "authorship": "Nou et al. 2025",
           "children": [],
-          "uuid": "254f20bf-4f5a-57f-abc-bbcf965d7494ba"
+          "uuid": "254f20bf-4f5a-57f-abc-bbcf965d7494ba",
+          "sourceIds": {
+            "checklistbank-2169": "1448929"
+          }
         },
         {
           "id": "SP_FERVIDIBACTER_SP020833105",
@@ -198,6 +201,18 @@
           "lineage": "Fervidibacter",
           "children": [],
           "uuid": "889a8552-67bc-5bd-ade-f87ccf897550ea"
+        },
+        {
+          "id": "SP_FERVIDIBACTER_SP",
+          "name": "Fervidibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fervidibacter",
+          "sourceIds": {
+            "checklistbank-2169": "3100871"
+          },
+          "uuid": "63bdb65d-ba30-4079-9b1f-72cf1bb1188f"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -231,9 +246,31 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Fervidibacteraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "fervidibacteraceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_FERVIDIBACTER_NOU_ET_AL_2024",
+          "name": "Candidatus Fervidibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Nou et al. 2024",
+          "sourceIds": {
+            "checklistbank-2169": "2035412"
+          },
+          "uuid": "0ef5ae74-846d-49c9-8222-3f1ee34858e4"
+        }
+      ]
     }
   ],
-  "speciesCount": 21,
+  "speciesCount": 23,
   "appSlug": "fervidibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Armatimonadota > Fervidibacteria",

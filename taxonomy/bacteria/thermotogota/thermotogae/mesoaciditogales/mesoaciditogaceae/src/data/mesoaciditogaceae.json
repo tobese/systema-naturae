@@ -67,7 +67,10 @@
           "lineage": "Athalassotoga",
           "authorship": "Itoh et al. 2016",
           "children": [],
-          "uuid": "18a117e7-4de9-589-96a-02e5f9977a1785"
+          "uuid": "18a117e7-4de9-589-96a-02e5f9977a1785",
+          "sourceIds": {
+            "checklistbank-2169": "1441386"
+          }
         },
         {
           "id": "SP_ATHALASSOTOGA_SP020722015",
@@ -119,7 +122,10 @@
           "lineage": "Mesoaciditoga",
           "authorship": "Reysenbach et al. 2013",
           "children": [],
-          "uuid": "d4044eec-727b-59f-b1c-a7f825adb88143"
+          "uuid": "d4044eec-727b-59f-b1c-a7f825adb88143",
+          "sourceIds": {
+            "checklistbank-2169": "1495039"
+          }
         },
         {
           "id": "SP_MESOACIDITOGA_SP964503355",
@@ -254,9 +260,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mesoaciditogaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesoaciditogaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MESOACIDITOGA",
+          "name": "uncultured Mesoaciditoga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1769722"
+          },
+          "uuid": "b873f768-ca4b-4fdb-b5bc-cddc5ae87924"
+        }
+      ]
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 20,
   "appSlug": "mesoaciditogaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Thermotogota > Thermotogae",

@@ -39,7 +39,8 @@
           "children": [],
           "uuid": "05536c5d-3cf9-514-858-801eed0741eb2f",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123239939"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123239939",
+            "checklistbank-2169": "2847778"
           }
         },
         {
@@ -194,9 +195,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "atribacteraceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "atribacteraceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_ATRIBACTER_JIAO_ET_AL_2024",
+          "name": "Candidatus Atribacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Jiao et al. 2024",
+          "sourceIds": {
+            "checklistbank-2169": "1852833"
+          },
+          "uuid": "e3c72f44-b4aa-4d6e-9139-0d598fa8f101"
+        }
+      ]
     }
   ],
-  "speciesCount": 13,
+  "speciesCount": 14,
   "appSlug": "atribacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Atribacterota > Atribacteria",

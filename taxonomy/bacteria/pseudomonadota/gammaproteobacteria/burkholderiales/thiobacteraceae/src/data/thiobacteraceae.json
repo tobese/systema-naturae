@@ -156,7 +156,10 @@
           "lineage": "Thiobacter",
           "authorship": "Dukat et al. 2024",
           "children": [],
-          "uuid": "d539d1cd-c44b-584-a12-233c975084a8c3"
+          "uuid": "d539d1cd-c44b-584-a12-233c975084a8c3",
+          "sourceIds": {
+            "checklistbank-2169": "3121275"
+          }
         },
         {
           "id": "SP_THIOBACTER_SP037478575",
@@ -198,13 +201,46 @@
           "authorship": "Hirayama et al. 2005",
           "children": [],
           "uuid": "b952db59-0490-57d-8e4-77fd47d2cc421f"
+        },
+        {
+          "id": "SP_THIOBACTER_SP",
+          "name": "Thiobacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiobacter",
+          "sourceIds": {
+            "checklistbank-2169": "861379"
+          },
+          "uuid": "f2f87b1b-fc9a-4b0e-ac0b-7d3647e5dadb"
         }
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thiobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiobacteraceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THIOBACTER",
+          "name": "uncultured Thiobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "338825"
+          },
+          "uuid": "3c37f77f-23e6-4660-a244-7bda9c0f7f43"
+        }
+      ]
     }
   ],
-  "speciesCount": 18,
+  "speciesCount": 20,
   "appSlug": "thiobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

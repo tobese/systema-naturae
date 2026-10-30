@@ -137,7 +137,8 @@
           "children": [],
           "uuid": "6685d33b-89de-559-814-3fff37e93ad490",
           "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "960390"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "960390",
+            "checklistbank-2169": "412034"
           }
         },
         {
@@ -149,7 +150,10 @@
           "lineage": "Celerinatantimonas",
           "authorship": "Shcherbakova et al. 2013",
           "children": [],
-          "uuid": "4823e42d-dfea-5d5-925-053c749156ebc8"
+          "uuid": "4823e42d-dfea-5d5-925-053c749156ebc8",
+          "sourceIds": {
+            "checklistbank-2169": "559956"
+          }
         },
         {
           "id": "SP_CELERINATANTIMONAS_NEPTUNA",
@@ -180,6 +184,18 @@
           "lineage": "Celerinatantimonas",
           "children": [],
           "uuid": "2bcc776d-8bc7-5cd-ac0-05fd0c31954f63"
+        },
+        {
+          "id": "SP_CELERINATANTIMONAS_SP",
+          "name": "Celerinatantimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Celerinatantimonas",
+          "sourceIds": {
+            "checklistbank-2169": "3100727"
+          },
+          "uuid": "cbe20740-d59d-4084-a264-021c5c907395"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -248,16 +264,38 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "3043617"
+            "checklistbank-2265": "3043617",
+            "checklistbank-2169": "3043617"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "celerinatantimonadaceae"
+    },
+    {
+      "id": "GENUS_CELERINATANTIMONADACEAE",
+      "name": "Celerinatantimonadaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "celerinatantimonadaceae",
+      "children": [
+        {
+          "id": "SP_CELERINATANTIMONADACEAE_BACTERIUM",
+          "name": "Celerinatantimonadaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Celerinatantimonadaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107293"
+          },
+          "uuid": "89a9bb21-87c8-40af-be54-07e8d830ce84"
+        }
+      ]
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 21,
   "appSlug": "celerinatantimonadaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

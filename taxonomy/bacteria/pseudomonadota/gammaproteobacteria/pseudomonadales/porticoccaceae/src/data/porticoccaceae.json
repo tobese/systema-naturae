@@ -905,7 +905,10 @@
           "lineage": "Porticoccus",
           "authorship": "Gutierrez et al. 2012",
           "children": [],
-          "uuid": "0a3696bb-b88c-5fe-b25-d85dbd73c14156"
+          "uuid": "0a3696bb-b88c-5fe-b25-d85dbd73c14156",
+          "sourceIds": {
+            "checklistbank-2169": "1073414"
+          }
         },
         {
           "id": "SP_PORTICOCCUS_SP002341315",
@@ -956,7 +959,10 @@
           "lineage": "Porticoccus",
           "authorship": "Oh et al. 2010",
           "children": [],
-          "uuid": "5121f92e-0092-5e4-8d2-e6e7fd7b19c332"
+          "uuid": "5121f92e-0092-5e4-8d2-e6e7fd7b19c332",
+          "sourceIds": {
+            "checklistbank-2169": "434086"
+          }
         },
         {
           "id": "SP_PORTICOCCUS_SP018066715",
@@ -2245,6 +2251,18 @@
             "checklistbank-2265": "1256050"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PORTICOCCACEAE",
+          "name": "uncultured Porticoccaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3160810"
+          },
+          "uuid": "9b49fbf2-2dcd-40e5-acb3-f0143c4d5a19"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2315,9 +2333,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "porticoccaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "porticoccaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_REDDYBACTER",
+          "name": "Candidatus Reddybacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2169": "3101366"
+          },
+          "uuid": "ae4cd87c-38b0-4791-b672-ee16cf6c275a"
+        }
+      ]
     }
   ],
-  "speciesCount": 209,
+  "speciesCount": 211,
   "appSlug": "porticoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

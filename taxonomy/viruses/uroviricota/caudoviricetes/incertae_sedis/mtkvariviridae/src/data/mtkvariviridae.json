@@ -279,6 +279,18 @@
           "genome": "dsDNA",
           "children": [],
           "uuid": "7eb5a66f-c4a1-5b1-ba7-d361ee0141c394"
+        },
+        {
+          "id": "SP_KURAVIRUS_SP",
+          "name": "Kuravirus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kuravirus",
+          "sourceIds": {
+            "checklistbank-2169": "3019184"
+          },
+          "uuid": "6b27ac77-0383-47a5-98ec-c45a7f0e65b0"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -418,9 +430,30 @@
       ],
       "sourcedFrom": "ictv-msl",
       "lineage": "Mtkvariviridae"
+    },
+    {
+      "id": "GENUS_PHAGE",
+      "name": "Phage",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "mtkvariviridae",
+      "children": [
+        {
+          "id": "SP_PHAGE_NC_B",
+          "name": "Phage NC-B",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phage",
+          "sourceIds": {
+            "checklistbank-2169": "2528529"
+          },
+          "uuid": "a3d60987-d438-44ef-acc3-bbcd014ffcc9"
+        }
+      ]
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 34,
   "appSlug": "mtkvariviridae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 3

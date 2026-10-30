@@ -58,7 +58,10 @@
           "authorship": "(ex Gromov and Mamkayeva 1972) Gromov and Mamkayeva 1980",
           "children": [],
           "uuid": "1711fb87-88f0-52b-b6f-5fac117064f326",
-          "description": "Vampirovibrio chlorellavorus is a 0.6&nbsp;μm pleomorphic coccus with a gram negative cell wall, and is one of the few known predatory bacteria."
+          "description": "Vampirovibrio chlorellavorus is a 0.6&nbsp;μm pleomorphic coccus with a gram negative cell wall, and is one of the few known predatory bacteria.",
+          "sourceIds": {
+            "checklistbank-2169": "758823"
+          }
         },
         {
           "id": "SP_VAMPIROVIBRIO_SP902168245",
@@ -89,6 +92,18 @@
           "lineage": "Vampirovibrio",
           "children": [],
           "uuid": "95f1ebab-45ff-5b6-b8c-e8b51a86ede84d"
+        },
+        {
+          "id": "SP_VAMPIROVIBRIO_SP",
+          "name": "Vampirovibrio sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vampirovibrio",
+          "sourceIds": {
+            "checklistbank-2169": "1167722"
+          },
+          "uuid": "59b40dac-e508-433d-818f-decbcf325bfb"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -407,9 +422,72 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Vampirovibrionaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "vampirovibrionaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VAMPIROVIBRIO",
+          "name": "uncultured Vampirovibrio",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "948465"
+          },
+          "uuid": "592aa44e-5f23-4318-9860-77f1321a19ef"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_VAMPIROVIBRIONACEAE",
+      "name": "Vampirovibrionaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "vampirovibrionaceae",
+      "children": [
+        {
+          "id": "SP_VAMPIROVIBRIONACEAE_BACTERIUM",
+          "name": "Vampirovibrionaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vampirovibrionaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3122017"
+          },
+          "uuid": "e297a6b9-9ac2-45f4-9f32-5e991fe3094d"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "vampirovibrionaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_NEUTRINOBACTER",
+          "name": "Candidatus Neutrinobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2169": "3692266"
+          },
+          "uuid": "d2c71d93-692b-4906-a77c-ae3b0b117efb"
+        }
+      ]
     }
   ],
-  "speciesCount": 25,
+  "speciesCount": 29,
   "appSlug": "vampirovibrionaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Vampirovibrionia",

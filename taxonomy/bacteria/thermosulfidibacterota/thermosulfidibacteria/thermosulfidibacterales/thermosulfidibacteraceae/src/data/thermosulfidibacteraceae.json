@@ -56,7 +56,10 @@
           "lineage": "Thermosulfidibacter",
           "authorship": "Nunoura et al. 2008",
           "children": [],
-          "uuid": "41ee614c-ee2a-5a5-ac9-38c19878c1c4fb"
+          "uuid": "41ee614c-ee2a-5a5-ac9-38c19878c1c4fb",
+          "sourceIds": {
+            "checklistbank-2169": "412593"
+          }
         },
         {
           "id": "SP_THERMOSULFIDIBACTER_SP027037155",
@@ -87,6 +90,18 @@
           "lineage": "Thermosulfidibacter",
           "children": [],
           "uuid": "18884e22-6a1e-5ba-95f-804ec96d82d1a6"
+        },
+        {
+          "id": "SP_THERMOSULFIDIBACTER_SP",
+          "name": "Thermosulfidibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermosulfidibacter",
+          "sourceIds": {
+            "checklistbank-2169": "2813582"
+          },
+          "uuid": "6a507505-29df-40db-98d0-1417441f2a1e"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -139,9 +154,51 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Thermosulfidibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermosulfidibacteraceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOSULFIDIBACTER",
+          "name": "uncultured Thermosulfidibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1936134"
+          },
+          "uuid": "cd05ac48-fcdd-4db4-8306-1c5989d43776"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THERMOSULFIDIBACTERACEAE",
+      "name": "Thermosulfidibacteraceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermosulfidibacteraceae",
+      "children": [
+        {
+          "id": "SP_THERMOSULFIDIBACTERACEAE_BACTERIUM",
+          "name": "Thermosulfidibacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermosulfidibacteraceae",
+          "sourceIds": {
+            "checklistbank-2169": "3121987"
+          },
+          "uuid": "a9ab5e70-ed4a-4e7a-a5e2-d325c61d5e11"
+        }
+      ]
     }
   ],
-  "speciesCount": 10,
+  "speciesCount": 13,
   "appSlug": "thermosulfidibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Thermosulfidibacterota > Thermosulfidibacteria",

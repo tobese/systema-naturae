@@ -47,7 +47,10 @@
           "lineage": "Ketobacter",
           "authorship": "Kim et al. 2018",
           "children": [],
-          "uuid": "558e569e-5fab-513-9f1-49c3ba316c3763"
+          "uuid": "558e569e-5fab-513-9f1-49c3ba316c3763",
+          "sourceIds": {
+            "checklistbank-2169": "1917421"
+          }
         },
         {
           "id": "SP_KETOBACTER_SP003671495",
@@ -375,9 +378,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ketobacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ketobacteraceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KETOBACTER",
+          "name": "uncultured Ketobacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2211327"
+          },
+          "uuid": "cfa1a1b3-f1ae-49ea-9b0a-536faafd6596"
+        }
+      ]
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 32,
   "appSlug": "ketobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

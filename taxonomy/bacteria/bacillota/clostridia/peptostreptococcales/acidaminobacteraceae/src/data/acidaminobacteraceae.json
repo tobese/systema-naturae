@@ -799,7 +799,10 @@
           "lineage": "Acidaminobacter",
           "authorship": "Stams and Hansen 1985",
           "children": [],
-          "uuid": "1237d5be-75dd-511-bc9-52b2de84c33715"
+          "uuid": "1237d5be-75dd-511-bc9-52b2de84c33715",
+          "sourceIds": {
+            "checklistbank-2169": "65403"
+          }
         },
         {
           "id": "SP_ACIDAMINOBACTER_SP",
@@ -1092,13 +1095,46 @@
             "checklistbank-2265": "464210"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ACIDAMINOBACTERACEAE",
+          "name": "uncultured Acidaminobacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3469340"
+          },
+          "uuid": "1afda0ab-e237-4965-be1e-7b788f25948a"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acidaminobacteraceae"
+    },
+    {
+      "id": "GENUS_ACIDAMINOBACTERACEAE",
+      "name": "Acidaminobacteraceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidaminobacteraceae",
+      "children": [
+        {
+          "id": "SP_ACIDAMINOBACTERACEAE_BACTERIUM",
+          "name": "Acidaminobacteraceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidaminobacteraceae",
+          "sourceIds": {
+            "checklistbank-2169": "3121604"
+          },
+          "uuid": "fc68cc8f-95c7-4579-a67c-ee1fd467681f"
+        }
+      ]
     }
   ],
-  "speciesCount": 80,
+  "speciesCount": 82,
   "appSlug": "acidaminobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

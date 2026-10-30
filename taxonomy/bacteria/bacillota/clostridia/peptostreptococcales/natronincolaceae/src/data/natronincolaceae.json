@@ -214,7 +214,10 @@
           "lineage": "Serpentinicella",
           "authorship": "Mei et al. 2016",
           "children": [],
-          "uuid": "6947922c-4339-559-977-ce8b3e9485e184"
+          "uuid": "6947922c-4339-559-977-ce8b3e9485e184",
+          "sourceIds": {
+            "checklistbank-2169": "1734049"
+          }
         },
         {
           "id": "SP_SERPENTINICELLA_SP031432315",
@@ -314,7 +317,10 @@
           "lineage": "Alkaliphilus",
           "authorship": "Ben Aissa et al. 2017",
           "children": [],
-          "uuid": "3887ddcf-2537-5e8-889-28af218f45ab37"
+          "uuid": "3887ddcf-2537-5e8-889-28af218f45ab37",
+          "sourceIds": {
+            "checklistbank-2169": "1482730"
+          }
         },
         {
           "id": "SP_ALKALIPHILUS_TRANSVAALENSIS",
@@ -518,7 +524,10 @@
           "lineage": "Anaerovirgula",
           "authorship": "Pikuta et al. 2006",
           "children": [],
-          "uuid": "bd1f27e3-e6e3-58a-9d7-a29d5e82656831"
+          "uuid": "bd1f27e3-e6e3-58a-9d7-a29d5e82656831",
+          "sourceIds": {
+            "checklistbank-2169": "312168"
+          }
         },
         {
           "id": "SP_ANAEROVIRGULA_SP",
@@ -801,9 +810,51 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "natronincolaceae"
+    },
+    {
+      "id": "GENUS_NATRONINCOLACEAE",
+      "name": "Natronincolaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "natronincolaceae",
+      "children": [
+        {
+          "id": "SP_NATRONINCOLACEAE_BACTERIUM",
+          "name": "Natronincolaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Natronincolaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3121625"
+          },
+          "uuid": "c65885b9-d956-44de-af83-5e8d6272a138"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "natronincolaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_ALKALIPHILUS",
+          "name": "Candidatus Alkaliphilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank-2169": "3404146"
+          },
+          "uuid": "ee2581d3-eaca-4bf8-9db5-b7a299fd441e"
+        }
+      ]
     }
   ],
-  "speciesCount": 56,
+  "speciesCount": 58,
   "appSlug": "natronincolaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

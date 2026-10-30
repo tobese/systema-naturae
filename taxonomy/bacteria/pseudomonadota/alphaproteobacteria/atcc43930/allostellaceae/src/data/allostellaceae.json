@@ -17,7 +17,10 @@
           "lineage": "Allostella",
           "authorship": "(Vasilyeva 1985) Deshmukh and Oren 2025",
           "children": [],
-          "uuid": "dcac7e1f-5a9c-5fc-8d9-df26e7b78ca6b9"
+          "uuid": "dcac7e1f-5a9c-5fc-8d9-df26e7b78ca6b9",
+          "sourceIds": {
+            "checklistbank-2169": "94"
+          }
         },
         {
           "id": "SP_ALLOSTELLA_SP020852355",
@@ -38,7 +41,10 @@
           "lineage": "Allostella",
           "authorship": "(Vasilyeva 1985) Deshmukh and Oren 2025",
           "children": [],
-          "uuid": "58b2162c-6b67-513-b2c-ae54f78a093c4c"
+          "uuid": "58b2162c-6b67-513-b2c-ae54f78a093c4c",
+          "sourceIds": {
+            "checklistbank-2169": "217070"
+          }
         },
         {
           "id": "SP_ALLOSTELLA_SP006738865",
@@ -79,6 +85,18 @@
           "lineage": "Allostella",
           "children": [],
           "uuid": "fec58bec-23da-568-939-79438ea5069cc0"
+        },
+        {
+          "id": "SP_ALLOSTELLA_SP",
+          "name": "Allostella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allostella",
+          "sourceIds": {
+            "checklistbank-2169": "2558175"
+          },
+          "uuid": "decbcd16-0f59-4a31-8152-423396e1241e"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -99,13 +117,91 @@
           "authorship": "Yamada et al. 2011",
           "children": [],
           "uuid": "2f58e8e8-e19b-560-a83-eaf1386a44c12e"
+        },
+        {
+          "id": "SP_CONSTRICTIBACTER_SP",
+          "name": "Constrictibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Constrictibacter",
+          "sourceIds": {
+            "checklistbank-2169": "3156467"
+          },
+          "uuid": "f4b205b7-b91a-47b3-80f4-eaa9f6cc805d"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Allostellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "allostellaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ALLOSTELLA",
+          "name": "uncultured Allostella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "491341"
+          },
+          "uuid": "75a73fab-ce40-41ea-8538-0d1677bb6509"
+        },
+        {
+          "id": "SP_UNCULTURED_CONSTRICTIBACTER",
+          "name": "uncultured Constrictibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1561231"
+          },
+          "uuid": "5016ff59-e01d-4b37-8a28-068ad6bb0df1"
+        },
+        {
+          "id": "SP_UNCULTURED_STELLACEAE",
+          "name": "uncultured Stellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3063740"
+          },
+          "uuid": "7d33d342-7fee-4649-95bc-854b4a7a4f1d"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ALLOSTELLACEAE",
+      "name": "Allostellaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "allostellaceae",
+      "children": [
+        {
+          "id": "SP_ALLOSTELLACEAE_BACTERIUM",
+          "name": "Allostellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allostellaceae",
+          "sourceIds": {
+            "checklistbank-2169": "2910174"
+          },
+          "uuid": "2c34da84-3026-4dcb-b861-d314958d44d3"
+        }
+      ]
     }
   ],
-  "speciesCount": 8,
+  "speciesCount": 14,
   "appSlug": "allostellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",

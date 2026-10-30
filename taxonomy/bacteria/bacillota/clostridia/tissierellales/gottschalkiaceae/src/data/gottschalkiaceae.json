@@ -17,7 +17,10 @@
           "lineage": "Gottschalkia",
           "authorship": "(Liebert 1909) Poehlein et al. 2017",
           "children": [],
-          "uuid": "b018ca96-2eb0-573-b2a-d94678a6ebd1cb"
+          "uuid": "b018ca96-2eb0-573-b2a-d94678a6ebd1cb",
+          "sourceIds": {
+            "checklistbank-2169": "1556"
+          }
         },
         {
           "id": "SP_GOTTSCHALKIA_PURINILYTICA_DURRE_ET_AL_1981_POEHLEIN_ET_AL_2017",
@@ -82,7 +85,10 @@
           "lineage": "Andreesenia",
           "authorship": "(Beuscher and Andreesen 1985) Poehlein et al. 2017",
           "children": [],
-          "uuid": "90475f8c-c05f-54f-ba7-253dcb2a19b04a"
+          "uuid": "90475f8c-c05f-54f-ba7-253dcb2a19b04a",
+          "sourceIds": {
+            "checklistbank-2169": "39480"
+          }
         }
       ],
       "sourcedFrom": "gtdb",
@@ -127,9 +133,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gottschalkiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gottschalkiaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GOTTSCHALKIA",
+          "name": "uncultured Gottschalkia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2042898"
+          },
+          "uuid": "7596f858-4080-4956-b72e-2bd195aebe57"
+        }
+      ]
     }
   ],
-  "speciesCount": 8,
+  "speciesCount": 9,
   "appSlug": "gottschalkiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

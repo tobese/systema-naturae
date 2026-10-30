@@ -1517,7 +1517,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "1902831"
+            "checklistbank-2265": "1902831",
+            "checklistbank-2169": "1902831"
           },
           "children": []
         }
@@ -2260,9 +2261,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hapalosiphonaceae"
+    },
+    {
+      "id": "GENUS_FILAMENTOUS",
+      "name": "filamentous",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hapalosiphonaceae",
+      "children": [
+        {
+          "id": "SP_FILAMENTOUS_THERMOPHILIC",
+          "name": "filamentous thermophilic",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "filamentous",
+          "sourceIds": {
+            "checklistbank-2169": "384603"
+          },
+          "uuid": "9ec3bdd1-9862-4c76-bfcd-d30b1bef2b5c"
+        }
+      ]
     }
   ],
-  "speciesCount": 140,
+  "speciesCount": 141,
   "appSlug": "hapalosiphonaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 37,

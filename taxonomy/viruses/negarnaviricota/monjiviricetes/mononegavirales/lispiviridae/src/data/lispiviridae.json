@@ -660,6 +660,18 @@
           "lineage": "Ganiavirus",
           "children": [],
           "uuid": "bd3d928d-8e03-526-8a9-e6f8874705c0bf"
+        },
+        {
+          "id": "SP_GANIAVIRUS_CTENOCEPHALIDES",
+          "name": "Ganiavirus Ctenocephalides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ganiavirus",
+          "sourceIds": {
+            "checklistbank-2169": "3454112"
+          },
+          "uuid": "7c127410-dadc-4545-9436-eaab5ff29f35"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -1129,9 +1141,51 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lispiviridae"
+    },
+    {
+      "id": "GENUS_LISPIVIRIDAE",
+      "name": "Lispiviridae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lispiviridae",
+      "children": [
+        {
+          "id": "SP_LISPIVIRIDAE_SP",
+          "name": "Lispiviridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lispiviridae",
+          "sourceIds": {
+            "checklistbank-2169": "2809526"
+          },
+          "uuid": "b448d985-0ae2-44a0-8480-45532b25552b"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BRINE",
+      "name": "brine",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "lispiviridae",
+      "children": [
+        {
+          "id": "SP_BRINE_SHRIMP",
+          "name": "brine shrimp",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "brine",
+          "sourceIds": {
+            "checklistbank-2169": "2900382"
+          },
+          "uuid": "5a2dc213-fc2c-4e5b-ae53-730490fe600d"
+        }
+      ]
     }
   ],
-  "speciesCount": 70,
+  "speciesCount": 73,
   "appSlug": "lispiviridae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 43

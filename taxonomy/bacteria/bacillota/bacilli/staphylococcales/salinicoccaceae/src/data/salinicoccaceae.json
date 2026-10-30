@@ -413,7 +413,10 @@
           "lineage": "Phocicoccus",
           "authorship": "(Glaeser et al. 2016) Bello et al. 2023",
           "children": [],
-          "uuid": "defc07dd-be63-510-8b2-fd2791e56d73fc"
+          "uuid": "defc07dd-be63-510-8b2-fd2791e56d73fc",
+          "sourceIds": {
+            "checklistbank-2169": "1812261"
+          }
         },
         {
           "id": "SP_PHOCICOCCUS_PINNIPEDIALIS",
@@ -527,9 +530,30 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Salinicoccaceae"
+    },
+    {
+      "id": "GENUS_SALINICOCCACEAE",
+      "name": "Salinicoccaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "salinicoccaceae",
+      "children": [
+        {
+          "id": "SP_SALINICOCCACEAE_BACTERIUM",
+          "name": "Salinicoccaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinicoccaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107572"
+          },
+          "uuid": "0ca8e8b0-a29a-45b4-8452-87273ed3c67b"
+        }
+      ]
     }
   ],
-  "speciesCount": 46,
+  "speciesCount": 47,
   "appSlug": "salinicoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Bacilli",

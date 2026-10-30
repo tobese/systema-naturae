@@ -517,6 +517,18 @@
           "lineage": "Muricoccus",
           "children": [],
           "uuid": "5bebcfa4-938a-5d7-b45-e8fc28d2c7be97"
+        },
+        {
+          "id": "SP_MURICOCCUS_SP",
+          "name": "Muricoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muricoccus",
+          "sourceIds": {
+            "checklistbank-2169": "450608"
+          },
+          "uuid": "8489ea61-44dc-4572-9fa8-2fbd76bce7f3"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -887,6 +899,18 @@
           "authorship": "Qu et al. 2013",
           "children": [],
           "uuid": "f7312994-1614-50e-ba9-5c71548c9b6a8b"
+        },
+        {
+          "id": "SP_SEDIMINICOCCUS_SP",
+          "name": "Sediminicoccus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sediminicoccus",
+          "sourceIds": {
+            "checklistbank-2169": "3133721"
+          },
+          "uuid": "0ca3fd5a-a3ab-4be6-9829-a989be6f6c0a"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -960,6 +984,18 @@
           "authorship": "Margesin and Zhang 2013",
           "children": [],
           "uuid": "13b21468-4584-52d-9e4-b9ce419ff1efdc"
+        },
+        {
+          "id": "SP_HUMITALEA_SP",
+          "name": "Humitalea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Humitalea",
+          "sourceIds": {
+            "checklistbank-2169": "3100820"
+          },
+          "uuid": "75c543cd-cd6a-4e5a-9678-ee6e70a2b296"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -1015,9 +1051,50 @@
       ],
       "sourcedFrom": "ncbi-taxonomy",
       "lineage": "Roseomonadaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "roseomonadaceae",
+      "children": []
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "roseomonadaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SEDIMINICOCCUS",
+          "name": "uncultured Sediminicoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1706035"
+          },
+          "uuid": "ca3ec059-b96c-406c-8723-52e5bbf48160"
+        },
+        {
+          "id": "SP_UNCULTURED_MURICOCCUS",
+          "name": "uncultured Muricoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3409999"
+          },
+          "uuid": "b4496d0e-9f36-4a78-a2b7-41078527fdf1"
+        }
+      ]
     }
   ],
-  "speciesCount": 82,
+  "speciesCount": 87,
   "appSlug": "roseomonadaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 16

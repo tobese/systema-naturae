@@ -17,7 +17,10 @@
           "lineage": "Anaerocaecibacter",
           "authorship": "Afrizal et al. 2022",
           "children": [],
-          "uuid": "e8079f3a-23c3-596-ab1-6e6942c3e23635"
+          "uuid": "e8079f3a-23c3-596-ab1-6e6942c3e23635",
+          "sourceIds": {
+            "checklistbank-2169": "2941513"
+          }
         },
         {
           "id": "SP_ANAEROCAECIBACTER_SP910577995",
@@ -318,6 +321,18 @@
           "lineage": "Anaerocaecibacter",
           "children": [],
           "uuid": "4ec2304a-14e8-5fe-837-bc9fb180d4ee59"
+        },
+        {
+          "id": "SP_ANAEROCAECIBACTER_SP",
+          "name": "Anaerocaecibacter sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaerocaecibacter",
+          "sourceIds": {
+            "checklistbank-2169": "3032738"
+          },
+          "uuid": "1787243d-461d-4455-94d2-6385faa3b190"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -347,7 +362,10 @@
           "lineage": "Pumilibacter",
           "authorship": "Afrizal et al. 2022",
           "children": [],
-          "uuid": "92f3c5b5-fbe4-5dd-9b3-bf56015a40bb4e"
+          "uuid": "92f3c5b5-fbe4-5dd-9b3-bf56015a40bb4e",
+          "sourceIds": {
+            "checklistbank-2169": "2941511"
+          }
         },
         {
           "id": "SP_PUMILIBACTER_MURIS",
@@ -358,7 +376,10 @@
           "lineage": "Pumilibacter",
           "authorship": "Afrizal et al. 2022",
           "children": [],
-          "uuid": "7e815f6c-45aa-534-acc-7f81c621dd12ef"
+          "uuid": "7e815f6c-45aa-534-acc-7f81c621dd12ef",
+          "sourceIds": {
+            "checklistbank-2169": "2941510"
+          }
         },
         {
           "id": "SP_PUMILIBACTER_SP022791915",
@@ -1387,9 +1408,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pumilibacteraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pumilibacteraceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ANAEROCAECIBACTER",
+          "name": "uncultured Anaerocaecibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3032740"
+          },
+          "uuid": "e0bd697c-0666-4911-b20e-f2f1a1a825eb"
+        },
+        {
+          "id": "SP_UNCULTURED_PUMILIBACTER",
+          "name": "uncultured Pumilibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3032746"
+          },
+          "uuid": "5c0af0e1-feb7-4111-8c86-e657b123abd6"
+        },
+        {
+          "id": "SP_UNCULTURED_PUMILIBACTERACEAE",
+          "name": "uncultured Pumilibacteraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3391949"
+          },
+          "uuid": "be8eae93-d786-4e85-878e-7b8c7243bd92"
+        }
+      ]
     }
   ],
-  "speciesCount": 120,
+  "speciesCount": 124,
   "appSlug": "pumilibacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

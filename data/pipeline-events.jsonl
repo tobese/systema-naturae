@@ -1095,3 +1095,46 @@
 {"at": "2026-10-29T21:54:15+0100", "key": "checklistbank-2017", "stage": "candidate", "action": "set"}
 {"at": "2026-10-29T21:54:15+0100", "key": "checklistbank-1014", "stage": "candidate", "action": "add", "title": "ICTV Master Species List (MSL)"}
 {"at": "2026-10-29T21:54:15+0100", "key": "checklistbank-1014", "stage": "candidate", "action": "set"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-1014", "stage": "candidate", "action": "add", "title": "ICTV Master Species List (MSL)"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-1014", "stage": "downloaded", "action": "set", "reason": "q-bert bacteria/viruses fill 2026-10-30"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-2265", "stage": "candidate", "action": "add", "title": "The European Nucleotide Archive (ENA) taxonomy"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-2265", "stage": "downloaded", "action": "set", "reason": "q-bert bacteria/viruses fill 2026-10-30"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-2169", "stage": "candidate", "action": "add", "title": "NCBI Taxonomy"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-2169", "stage": "downloaded", "action": "set", "reason": "q-bert bacteria/viruses fill 2026-10-30"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-316441", "stage": "candidate", "action": "add", "title": "Catalogue of Life COL26.9 XR"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-316441", "stage": "downloaded", "action": "set", "reason": "q-bert bacteria/viruses fill 2026-10-30"}
+{"at": "2026-10-30T10:27:09+0100", "key": "gbif-backbone", "stage": "candidate", "action": "add", "title": "GBIF Backbone Taxonomy"}
+{"at": "2026-10-30T10:27:09+0100", "key": "gbif-backbone", "stage": "blocked", "action": "set", "reason": "measure memory first: 7.7M taxa on 15 GB q-bert, which froze once building this cache (2026-10-23); ~633k bacteria/virus species pending in held families"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-2214", "stage": "candidate", "action": "add", "title": "Genome Taxonomy Database (GTDB) r232"}
+{"at": "2026-10-30T10:27:09+0100", "key": "checklistbank-2214", "stage": "blocked", "action": "set", "reason": "licence: ChecklistBank states none, manifest gtdb says CC BY 4.0 -- confirm against gtdb.ecogenomic.org"}
+{"action":"ordinator","at":"2026-10-30T10:27:32+0100","key":"checklistbank-1014","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:28:57+0100","key":"checklistbank-1014","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T10:28:57+0100","key":"checklistbank-1014","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T10:28:57+0100","key":"checklistbank-1014","stage":"applying"}
+{"action":"ordinator","added":294,"at":"2026-10-30T10:28:58+0100","crossFamily":0,"families":13,"key":"checklistbank-1014","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T10:28:58+0100","key":"checklistbank-2169","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:31:13+0100","key":"checklistbank-2169","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T10:31:13+0100","key":"checklistbank-2169","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T10:31:13+0100","key":"checklistbank-2169","stage":"applying"}
+{"action":"ordinator","added":2928,"at":"2026-10-30T10:32:06+0100","crossFamily":4,"families":885,"key":"checklistbank-2169","merged":10364,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T10:32:06+0100","key":"checklistbank-2265","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:32:06+0100","key":"checklistbank-2265","reason":"unsupported archive format (no .txtree, no DwCA/ColDP table)","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-30T10:32:06+0100","key":"checklistbank-316441","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:33:39+0100","key":"checklistbank-316441","reason":"transform failed (rc=-1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-30T10:34:39+0100","key":"checklistbank-316441","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:42:03+0100","key":"checklistbank-316441","reason":"transform failed (rc=-1)","stage":"downloaded"}
+{"at": "2026-10-30T10:42:48+0100", "key": "checklistbank-316441", "stage": "blocked", "action": "set", "reason": "transform OOM-killed twice at 12.4 GB on q-bert (15 GB, 4 GB swap, Ollama holds 2.5 GB), 2026-10-30; needs a lower-memory route or run on Macie with SN_WRITE_KINGDOMS=bacteria,viruses"}
+{"at": "2026-10-30T11:01:50+0100", "key": "checklistbank-2265", "stage": "downloaded", "action": "set", "reason": "requeued: DwCA detection fixed (3d4533adbec)"}
+{"at": "2026-10-30T11:01:50+0100", "key": "checklistbank-1014", "stage": "downloaded", "action": "set", "reason": "re-run with --kingdom viruses: 2,836 unresolved without it"}
+{"action":"ordinator","at":"2026-10-30T11:02:00+0100","key":"checklistbank-1014","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T11:02:08+0100","crossFamily":0,"families":0,"key":"checklistbank-1014","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T11:02:08+0100","key":"checklistbank-2265","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T11:03:37+0100","key":"checklistbank-2265","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T11:03:37+0100","key":"checklistbank-2265","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T11:03:37+0100","key":"checklistbank-2265","stage":"applying"}
+{"action":"ordinator","added":62,"at":"2026-10-30T11:04:05+0100","crossFamily":0,"families":437,"key":"checklistbank-2265","merged":7076,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T14:01:09+0100","key":"checklistbank-1014","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T14:01:29+0100","key":"checklistbank-1014","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T14:01:29+0100","key":"checklistbank-1014","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T14:01:29+0100","key":"checklistbank-1014","stage":"applying"}
+{"action":"ordinator","added":218,"at":"2026-10-30T14:01:29+0100","crossFamily":0,"families":18,"key":"checklistbank-1014","merged":0,"stage":"applied"}

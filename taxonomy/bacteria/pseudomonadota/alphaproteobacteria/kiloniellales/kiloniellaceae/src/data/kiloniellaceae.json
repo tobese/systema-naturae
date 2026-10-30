@@ -216,7 +216,10 @@
           "lineage": "Kiloniella",
           "authorship": "Gerpe et al. 2017",
           "children": [],
-          "uuid": "bb8e229a-2535-594-957-aa424e094f9944"
+          "uuid": "bb8e229a-2535-594-957-aa424e094f9944",
+          "sourceIds": {
+            "checklistbank-2169": "1938558"
+          }
         },
         {
           "id": "SP_KILONIELLA_LITOPENAEI",
@@ -227,7 +230,10 @@
           "lineage": "Kiloniella",
           "authorship": "Wang et al. 2015",
           "children": [],
-          "uuid": "8b537f68-98a4-5fc-ab6-fdc919ede902d1"
+          "uuid": "8b537f68-98a4-5fc-ab6-fdc919ede902d1",
+          "sourceIds": {
+            "checklistbank-2169": "1549748"
+          }
         },
         {
           "id": "SP_KILONIELLA_SP002162915",
@@ -260,7 +266,8 @@
           "children": [],
           "uuid": "b4f0859b-fd11-528-a3e-17424d2dff8578",
           "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "962504"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "962504",
+            "checklistbank-2169": "454162"
           }
         },
         {
@@ -312,7 +319,10 @@
           "lineage": "Kiloniella",
           "authorship": "Si et al. 2017",
           "children": [],
-          "uuid": "93a712b0-bbb5-561-a74-f915bd1633dfe1"
+          "uuid": "93a712b0-bbb5-561-a74-f915bd1633dfe1",
+          "sourceIds": {
+            "checklistbank-2169": "1550907"
+          }
         },
         {
           "id": "SP_KILONIELLA_SP036960845",
@@ -343,7 +353,10 @@
           "lineage": "Kiloniella",
           "authorship": "Yang et al. 2015",
           "children": [],
-          "uuid": "5634dae3-b21c-53c-b8d-ad60810d7f48b5"
+          "uuid": "5634dae3-b21c-53c-b8d-ad60810d7f48b5",
+          "sourceIds": {
+            "checklistbank-2169": "1489064"
+          }
         },
         {
           "id": "SP_KILONIELLA_SP",
@@ -540,7 +553,10 @@
           "lineage": "Carbonatibacter",
           "authorship": "Hu et al. 2025",
           "children": [],
-          "uuid": "a209b4d1-301f-53b-ad9-b80dbc79498526"
+          "uuid": "a209b4d1-301f-53b-ad9-b80dbc79498526",
+          "sourceIds": {
+            "checklistbank-2169": "3141326"
+          }
         },
         {
           "id": "SP_CARBONATIBACTER_SP965199245",
@@ -616,6 +632,18 @@
             "checklistbank-2265": "1748254"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_KOPRIIMONAS",
+          "name": "uncultured Kopriimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1221381"
+          },
+          "uuid": "1a931bfe-88ff-4b92-89bd-6ed55a59c6b2"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -674,9 +702,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "kiloniellaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kiloniellaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_KOPRIIMONAS_QUINN_ET_AL_2012",
+          "name": "Candidatus Kopriimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Quinn et al. 2012",
+          "sourceIds": {
+            "checklistbank-2169": "343332"
+          },
+          "uuid": "bd21ab4e-5b30-43e1-905a-c05fe14dfdc0"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_KOPRIIMONAS",
+      "name": "Kopriimonas",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "kiloniellaceae",
+      "children": [
+        {
+          "id": "SP_KOPRIIMONAS_SP",
+          "name": "Kopriimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kopriimonas",
+          "sourceIds": {
+            "checklistbank-2169": "1038047"
+          },
+          "uuid": "b581f150-70de-467c-b446-ccf633106460"
+        }
+      ]
     }
   ],
-  "speciesCount": 54,
+  "speciesCount": 57,
   "appSlug": "kiloniellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",

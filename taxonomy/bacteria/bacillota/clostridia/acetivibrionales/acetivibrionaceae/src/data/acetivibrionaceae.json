@@ -176,7 +176,10 @@
           "lineage": "Acetivibrio",
           "authorship": "(Shiratori et al. 2009) Tindall 2019",
           "children": [],
-          "uuid": "d291d5c6-7bbc-5bd-9b2-c6d897caa9eab3"
+          "uuid": "d291d5c6-7bbc-5bd-9b2-c6d897caa9eab3",
+          "sourceIds": {
+            "checklistbank-2169": "288965"
+          }
         },
         {
           "id": "SP_ACETIVIBRIO_CELLULOLYTICUS",
@@ -357,9 +360,30 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Acetivibrionaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "acetivibrionaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ACETIVIBRIONALES",
+          "name": "uncultured Acetivibrionales",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3469344"
+          },
+          "uuid": "97b00dba-ec11-415f-80c7-0eb230fa1560"
+        }
+      ]
     }
   ],
-  "speciesCount": 30,
+  "speciesCount": 31,
   "appSlug": "acetivibrionaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

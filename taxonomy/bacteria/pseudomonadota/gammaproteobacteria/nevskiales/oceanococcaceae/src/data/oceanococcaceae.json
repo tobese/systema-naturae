@@ -96,7 +96,10 @@
           "lineage": "Oceanococcus",
           "authorship": "Li et al. 2014",
           "children": [],
-          "uuid": "23355e0e-709f-58d-ad3-35b74ea4ffb175"
+          "uuid": "23355e0e-709f-58d-ad3-35b74ea4ffb175",
+          "sourceIds": {
+            "checklistbank-2169": "1317117"
+          }
         },
         {
           "id": "SP_OCEANOCOCCUS_SP041619315",
@@ -245,9 +248,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oceanococcaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "oceanococcaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_OCEANOCOCCUS",
+          "name": "uncultured Oceanococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1739784"
+          },
+          "uuid": "eb486892-098d-4c16-b4e2-4078ae29fb60"
+        },
+        {
+          "id": "SP_UNCULTURED_ABYSSIBACTER",
+          "name": "uncultured Abyssibacter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2320202"
+          },
+          "uuid": "20224886-40a9-4113-be08-e57370943b56"
+        }
+      ]
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 21,
   "appSlug": "oceanococcaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

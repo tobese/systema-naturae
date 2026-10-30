@@ -75,7 +75,10 @@
           "lineage": "Govanella",
           "authorship": "Vandamme et al. 2026",
           "children": [],
-          "uuid": "46344a63-d5af-54d-800-9b44f42b76ffa4"
+          "uuid": "46344a63-d5af-54d-800-9b44f42b76ffa4",
+          "sourceIds": {
+            "checklistbank-2169": "2975056"
+          }
         },
         {
           "id": "SP_GOVANELLA_SP037189785",
@@ -109,9 +112,30 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Govanellaceae"
+    },
+    {
+      "id": "GENUS_GOVANELLACEAE",
+      "name": "Govanellaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "govanellaceae",
+      "children": [
+        {
+          "id": "SP_GOVANELLACEAE_BACTERIUM",
+          "name": "Govanellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Govanellaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107406"
+          },
+          "uuid": "5faf5408-e1dd-43f3-b11c-0eda432bea0b"
+        }
+      ]
     }
   ],
-  "speciesCount": 7,
+  "speciesCount": 8,
   "appSlug": "govanellaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",

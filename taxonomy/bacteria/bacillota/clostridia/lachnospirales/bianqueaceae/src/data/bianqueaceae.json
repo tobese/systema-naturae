@@ -244,7 +244,10 @@
           "lineage": "Bianquea",
           "authorship": "Liu et al. 2021",
           "children": [],
-          "uuid": "a5e65e6c-3fa5-5ec-9dd-102a8a88b81007"
+          "uuid": "a5e65e6c-3fa5-5ec-9dd-102a8a88b81007",
+          "sourceIds": {
+            "checklistbank-2169": "2763661"
+          }
         },
         {
           "id": "SP_BIANQUEA_SP959029275",
@@ -255,6 +258,18 @@
           "lineage": "Bianquea",
           "children": [],
           "uuid": "ddc5ab5e-a0da-519-a44-846af0ad8c9edc"
+        },
+        {
+          "id": "SP_BIANQUEA_SP",
+          "name": "Bianquea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bianquea",
+          "sourceIds": {
+            "checklistbank-2169": "2944160"
+          },
+          "uuid": "5889c086-a2fe-4e8c-ac0c-a32c6658262d"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -426,9 +441,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bianqueaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "bianqueaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BIANQUEACEAE",
+          "name": "uncultured Bianqueaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3391951"
+          },
+          "uuid": "6d941981-888e-499d-a581-caf27eba3640"
+        }
+      ]
     }
   ],
-  "speciesCount": 34,
+  "speciesCount": 36,
   "appSlug": "bianqueaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

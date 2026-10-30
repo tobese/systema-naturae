@@ -47,7 +47,10 @@
           "authorship": "Chuvochina et al. 2023",
           "children": [],
           "uuid": "f24fdc88-8cfc-58a-9fb-9bd813680cdb5d",
-          "description": "Candidatus genus Desulforudis is a monotypic taxon including the species Desulforudis audaxviator."
+          "description": "Candidatus genus Desulforudis is a monotypic taxon including the species Desulforudis audaxviator.",
+          "sourceIds": {
+            "checklistbank-2169": "471827"
+          }
         },
         {
           "id": "SP_DESULFORUDIS_SP040757205",
@@ -130,9 +133,52 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Desulforudaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulforudaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_DESULFOPERTINAX_JUNGBLUTH_ET_AL_2017",
+          "name": "Candidatus Desulfopertinax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Jungbluth et al. 2017",
+          "sourceIds": {
+            "checklistbank-2169": "1919273"
+          },
+          "uuid": "9d7b6ac3-916b-4cd6-b7ca-54c78dca8a62"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DESULFORUDACEAE",
+      "name": "Desulforudaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulforudaceae",
+      "children": [
+        {
+          "id": "SP_DESULFORUDACEAE_BACTERIUM",
+          "name": "Desulforudaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulforudaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3478419"
+          },
+          "uuid": "ef666a7b-def4-4827-9be7-36e65a5d85b5"
+        }
+      ]
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 11,
   "appSlug": "desulforudaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Desulfotomaculia",

@@ -375,7 +375,10 @@
           "lineage": "Anaerotignum",
           "authorship": "(van der Wielen et al. 2002) Ueki et al. 2017",
           "children": [],
-          "uuid": "cbcf7489-2529-5d4-9d5-7f8323e306564d"
+          "uuid": "cbcf7489-2529-5d4-9d5-7f8323e306564d",
+          "sourceIds": {
+            "checklistbank-2169": "160404"
+          }
         },
         {
           "id": "SP_ANAEROTIGNUM_MERDIPULLORUM",
@@ -1443,16 +1446,38 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "2838464"
+            "checklistbank-2265": "2838464",
+            "checklistbank-2169": "2838464"
           },
           "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anaerotignaceae"
+    },
+    {
+      "id": "GENUS_ANAEROTIGNACEAE",
+      "name": "Anaerotignaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaerotignaceae",
+      "children": [
+        {
+          "id": "SP_ANAEROTIGNACEAE_BACTERIUM",
+          "name": "Anaerotignaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaerotignaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3121680"
+          },
+          "uuid": "6b27646a-f739-4ca5-a1fd-498618187b03"
+        }
+      ]
     }
   ],
-  "speciesCount": 120,
+  "speciesCount": 121,
   "appSlug": "anaerotignaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

@@ -27,7 +27,10 @@
           "lineage": "Dehalococcoides",
           "authorship": "Loffler et al. 2013",
           "children": [],
-          "uuid": "08c4fb16-c618-5be-ba4-6a0c5ab7bcadac"
+          "uuid": "08c4fb16-c618-5be-ba4-6a0c5ab7bcadac",
+          "sourceIds": {
+            "checklistbank-2169": "61435"
+          }
         },
         {
           "id": "SP_DEHALOCOCCOIDES_MCCARTYI_A",
@@ -105,7 +108,10 @@
           "lineage": "Dehalogenimonas",
           "authorship": "Cui et al. 2023",
           "children": [],
-          "uuid": "16e0482a-6a19-596-b5c-dbcbcde0762748"
+          "uuid": "16e0482a-6a19-596-b5c-dbcbcde0762748",
+          "sourceIds": {
+            "checklistbank-2169": "1536648"
+          }
         },
         {
           "id": "SP_DEHALOGENIMONAS_SP024281335",
@@ -126,7 +132,10 @@
           "lineage": "Dehalogenimonas",
           "authorship": "Bowman et al. 2013 emend. Key et al. 2017",
           "children": [],
-          "uuid": "87f37c65-8e2c-53d-97e-3993a8747db164"
+          "uuid": "87f37c65-8e2c-53d-97e-3993a8747db164",
+          "sourceIds": {
+            "checklistbank-2169": "1217799"
+          }
         },
         {
           "id": "SP_DEHALOGENIMONAS_LOEFFLERI",
@@ -187,7 +196,10 @@
           "lineage": "Dehalogenimonas",
           "authorship": "Moe et al. 2009",
           "children": [],
-          "uuid": "99cf93ee-41f7-54d-abd-239b77b957dffc"
+          "uuid": "99cf93ee-41f7-54d-abd-239b77b957dffc",
+          "sourceIds": {
+            "checklistbank-2169": "552810"
+          }
         },
         {
           "id": "SP_DEHALOGENIMONAS_SP050859015",
@@ -208,7 +220,22 @@
           "lineage": "Dehalogenimonas",
           "authorship": "Key et al. 2017",
           "children": [],
-          "uuid": "77d9f01f-2845-526-953-764870323ea317"
+          "uuid": "77d9f01f-2845-526-953-764870323ea317",
+          "sourceIds": {
+            "checklistbank-2169": "1839801"
+          }
+        },
+        {
+          "id": "SP_DEHALOGENIMONAS_SP",
+          "name": "Dehalogenimonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dehalogenimonas",
+          "sourceIds": {
+            "checklistbank-2169": "943347"
+          },
+          "uuid": "d9b01c98-7d79-4b9b-b67d-05e30306a84c"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -242,6 +269,18 @@
             "checklistbank-2265": "1645742"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DEHALOGENIMONAS",
+          "name": "uncultured Dehalogenimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "876103"
+          },
+          "uuid": "a5adb346-4e01-4f5f-ac5e-a177f008599c"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -267,9 +306,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dehalococcoidaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dehalococcoidaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_DEHALOGENIMONAS_WANG_ET_AL_2025",
+          "name": "Candidatus Dehalogenimonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Wang et al. 2025",
+          "sourceIds": {
+            "checklistbank-2169": "3127115"
+          },
+          "uuid": "208f03ee-a433-4aff-b682-6c41f92d9890"
+        }
+      ]
     }
   ],
-  "speciesCount": 21,
+  "speciesCount": 24,
   "appSlug": "dehalococcoidaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Dehalococcoidia",

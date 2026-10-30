@@ -27,7 +27,10 @@
           "lineage": "Chloracidobacterium",
           "authorship": "Saini et al. 2021",
           "children": [],
-          "uuid": "a969b220-6339-5fb-95c-b16cd374f8d16a"
+          "uuid": "a969b220-6339-5fb-95c-b16cd374f8d16a",
+          "sourceIds": {
+            "checklistbank-2169": "2821543"
+          }
         },
         {
           "id": "SP_CHLORACIDOBACTERIUM_THERMOPHILUM",
@@ -38,7 +41,10 @@
           "lineage": "Chloracidobacterium",
           "authorship": "Tank and Bryant 2015",
           "children": [],
-          "uuid": "e25692a2-4c1b-5cb-881-f54e88d0f7f39e"
+          "uuid": "e25692a2-4c1b-5cb-881-f54e88d0f7f39e",
+          "sourceIds": {
+            "checklistbank-2169": "458033"
+          }
         },
         {
           "id": "SP_CHLORACIDOBACTERIUM_SP025057975",
@@ -79,6 +85,18 @@
           "lineage": "Chloracidobacterium",
           "children": [],
           "uuid": "8802bb1f-c160-552-ad7-b59fda8ebd95f2"
+        },
+        {
+          "id": "SP_CHLORACIDOBACTERIUM_SP",
+          "name": "Chloracidobacterium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chloracidobacterium",
+          "sourceIds": {
+            "checklistbank-2169": "1335092"
+          },
+          "uuid": "2087c277-08b3-45b7-8943-de564015cc3e"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -180,9 +198,73 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Chloracidobacteriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chloracidobacteriaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHLORACIDOBACTERIUM",
+          "name": "uncultured Chloracidobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "1191519"
+          },
+          "uuid": "b64bd45a-8ece-4032-ad23-101fd0e06c54"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chloracidobacteriaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_CHLORACIDOBACTERIUM_SAINI_ET_AL_2026",
+          "name": "Candidatus Chloracidobacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Saini et al. 2026",
+          "sourceIds": {
+            "checklistbank-2169": "2821541"
+          },
+          "uuid": "8beaa486-85a0-4e20-ab67-4098cafe54e0"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CHLORACIDOBACTERIACEAE",
+      "name": "Chloracidobacteriaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chloracidobacteriaceae",
+      "children": [
+        {
+          "id": "SP_CHLORACIDOBACTERIACEAE_BACTERIUM",
+          "name": "Chloracidobacteriaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chloracidobacteriaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3693652"
+          },
+          "uuid": "16d39543-aa78-4d41-a0a6-4e7cbc35a4d8"
+        }
+      ]
     }
   ],
-  "speciesCount": 14,
+  "speciesCount": 18,
   "appSlug": "chloracidobacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Acidobacteriota > Blastocatellia",

@@ -27,7 +27,10 @@
           "lineage": "Minwuia",
           "authorship": "Sun et al. 2018",
           "children": [],
-          "uuid": "3ba22845-b9fc-55c-a3d-b3028f2d867b47"
+          "uuid": "3ba22845-b9fc-55c-a3d-b3028f2d867b47",
+          "sourceIds": {
+            "checklistbank-2169": "2056226"
+          }
         },
         {
           "id": "SP_MINWUIA_THERMOTOLERANS_A",
@@ -213,9 +216,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "minwuiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "minwuiaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MINWUIA",
+          "name": "uncultured Minwuia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3063732"
+          },
+          "uuid": "769ec067-027f-4ee3-8d06-0333108cd3f8"
+        }
+      ]
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 18,
   "appSlug": "minwuiaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",

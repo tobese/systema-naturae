@@ -17,7 +17,10 @@
           "lineage": "Varunaivibrio",
           "authorship": "Patwardhan and Vetriani 2016",
           "children": [],
-          "uuid": "3cf37c7f-880d-53f-84a-a4bedf84367028"
+          "uuid": "3cf37c7f-880d-53f-84a-a4bedf84367028",
+          "sourceIds": {
+            "checklistbank-2169": "1773489"
+          }
         },
         {
           "id": "SP_VARUNAIVIBRIO_SP",
@@ -78,7 +81,10 @@
           "lineage": "Magnetovibrio",
           "authorship": "Bazylinski et al. 2013",
           "children": [],
-          "uuid": "ff4b860d-d7e7-51e-97e-def1011fa02b23"
+          "uuid": "ff4b860d-d7e7-51e-97e-def1011fa02b23",
+          "sourceIds": {
+            "checklistbank-2169": "28181"
+          }
         },
         {
           "id": "SP_MAGNETOVIBRIO_SP036689815",
@@ -322,9 +328,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "magnetovibrionaceae"
+    },
+    {
+      "id": "GENUS_MAGNETOVIBRIONACEAE",
+      "name": "Magnetovibrionaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "magnetovibrionaceae",
+      "children": [
+        {
+          "id": "SP_MAGNETOVIBRIONACEAE_BACTERIUM",
+          "name": "Magnetovibrionaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Magnetovibrionaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107470"
+          },
+          "uuid": "aaa3c0c1-d3e2-430d-8005-cc116e46e381"
+        }
+      ]
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 25,
   "appSlug": "magnetovibrionaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Alphaproteobacteria",

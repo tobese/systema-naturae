@@ -59,7 +59,10 @@
           "lineage": "Rivihabitans",
           "authorship": "(Sheu et al. 2014) Deshmukh and Oren 2023",
           "children": [],
-          "uuid": "b4ccefdd-ab04-5ef-a01-5c4a758f017ca0"
+          "uuid": "b4ccefdd-ab04-5ef-a01-5c4a758f017ca0",
+          "sourceIds": {
+            "checklistbank-2169": "1054498"
+          }
         },
         {
           "id": "SP_RIVIHABITANS_SP002002905",
@@ -183,7 +186,10 @@
           "lineage": "Aquaspirillum",
           "authorship": "(Muller 1786) Hylemon et al. 1973 (AL 1980) emend. Boivin et al. 1985",
           "children": [],
-          "uuid": "a998e2de-505d-532-970-8f42edfe0136e9"
+          "uuid": "a998e2de-505d-532-970-8f42edfe0136e9",
+          "sourceIds": {
+            "checklistbank-2169": "190"
+          }
         },
         {
           "id": "SP_AQUASPIRILLUM_POLYMORPHUM_WILLIAMS_AND_RITTENBERG_1957_HYLEMON_ET_AL_1973",
@@ -327,9 +333,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aquaspirillaceae"
+    },
+    {
+      "id": "GENUS_AQUASPIRILLACEAE",
+      "name": "Aquaspirillaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aquaspirillaceae",
+      "children": [
+        {
+          "id": "SP_AQUASPIRILLACEAE_BACTERIUM",
+          "name": "Aquaspirillaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aquaspirillaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3106985"
+          },
+          "uuid": "43dfcebf-c606-408c-8206-a821999dcca9"
+        }
+      ]
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 23,
   "appSlug": "aquaspirillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

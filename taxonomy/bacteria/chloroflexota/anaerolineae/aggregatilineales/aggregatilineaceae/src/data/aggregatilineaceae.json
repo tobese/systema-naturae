@@ -224,7 +224,10 @@
           "lineage": "Aggregatilinea",
           "authorship": "Nakahara et al. 2019",
           "children": [],
-          "uuid": "fc3908d4-94b4-502-822-b744d20abeaa99"
+          "uuid": "fc3908d4-94b4-502-822-b744d20abeaa99",
+          "sourceIds": {
+            "checklistbank-2169": "913108"
+          }
         },
         {
           "id": "SP_AGGREGATILINEA_SP964526095",
@@ -636,9 +639,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aggregatilineaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "aggregatilineaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_AGGREGATILINEALES",
+          "name": "uncultured Aggregatilineales",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "3063736"
+          },
+          "uuid": "1ffaa07e-0a99-4bb4-a1d0-c409f38a81f9"
+        }
+      ]
     }
   ],
-  "speciesCount": 44,
+  "speciesCount": 45,
   "appSlug": "aggregatilineaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Anaerolineae",

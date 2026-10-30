@@ -27,7 +27,10 @@
           "lineage": "Tindallia",
           "authorship": "corrig. Kevbrin et al. 1999",
           "children": [],
-          "uuid": "6900ed3d-f1df-534-83e-7340e371cfbbd7"
+          "uuid": "6900ed3d-f1df-534-83e-7340e371cfbbd7",
+          "sourceIds": {
+            "checklistbank-2169": "69895"
+          }
         },
         {
           "id": "SP_TINDALLIA_CALIFORNIENSIS",
@@ -159,9 +162,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tindalliaceae"
+    },
+    {
+      "id": "GENUS_TINDALLIACEAE",
+      "name": "Tindalliaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "tindalliaceae",
+      "children": [
+        {
+          "id": "SP_TINDALLIACEAE_BACTERIUM",
+          "name": "Tindalliaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tindalliaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3121999"
+          },
+          "uuid": "4608f36b-529b-4d1d-b2f0-16d11d601114"
+        }
+      ]
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 13,
   "appSlug": "tindalliaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

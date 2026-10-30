@@ -1177,6 +1177,18 @@
           "genome": "dsDNA",
           "children": [],
           "uuid": "c3994baa-5b66-522-853-c7ee27f65dc202"
+        },
+        {
+          "id": "SP_WEBERVIRUS_SP",
+          "name": "Webervirus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Webervirus",
+          "sourceIds": {
+            "checklistbank-2169": "2833353"
+          },
+          "uuid": "0ae24d09-f95a-4316-af36-21f239fb6faa"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -2921,6 +2933,18 @@
               "genome": "dsDNA",
               "children": [],
               "uuid": "09de39ec-56c5-592-98e-2d2e452dd3629d"
+            },
+            {
+              "id": "SP_VETERINAERPLATZVIRUS_T145P1",
+              "name": "Veterinaerplatzvirus T145P1",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Veterinaerplatzvirus",
+              "sourceIds": {
+                "checklistbank-2169": "3108161"
+              },
+              "uuid": "e56b1fa9-dd65-4395-a8a5-208ea4de7fbb"
             }
           ],
           "sourcedFrom": "ictv-msl",
@@ -3220,9 +3244,51 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "drexlerviridae"
+    },
+    {
+      "id": "GENUS_DREXLERVIRIDAE",
+      "name": "Drexlerviridae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "drexlerviridae",
+      "children": [
+        {
+          "id": "SP_DREXLERVIRIDAE_SP",
+          "name": "Drexlerviridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Drexlerviridae",
+          "sourceIds": {
+            "checklistbank-2169": "2832712"
+          },
+          "uuid": "190a2554-ddc9-46a3-bcb9-4a940c2b30fb"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ESCEHRICHIA",
+      "name": "Escehrichia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "drexlerviridae",
+      "children": [
+        {
+          "id": "SP_ESCEHRICHIA_PHAGE",
+          "name": "Escehrichia phage",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Escehrichia",
+          "sourceIds": {
+            "checklistbank-2169": "3098272"
+          },
+          "uuid": "a18bc327-3cfb-4c35-adc3-c8ce4997bc56"
+        }
+      ]
     }
   ],
-  "speciesCount": 250,
+  "speciesCount": 254,
   "appSlug": "drexlerviridae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 38

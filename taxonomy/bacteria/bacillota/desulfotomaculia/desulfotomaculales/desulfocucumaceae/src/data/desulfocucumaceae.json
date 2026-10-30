@@ -174,7 +174,10 @@
           "lineage": "Desulfocucumis",
           "authorship": "Watanabe et al. 2017",
           "children": [],
-          "uuid": "2b4daac1-84f2-587-bf5-c60cde970f4348"
+          "uuid": "2b4daac1-84f2-587-bf5-c60cde970f4348",
+          "sourceIds": {
+            "checklistbank-2169": "1898651"
+          }
         },
         {
           "id": "SP_DESULFOCUCUMIS_SP964643075",
@@ -205,6 +208,18 @@
           "lineage": "Desulfocucumis",
           "children": [],
           "uuid": "6281bc03-e1ea-559-a8f-9c116d3bce5d3b"
+        },
+        {
+          "id": "SP_DESULFOCUCUMIS_SP",
+          "name": "Desulfocucumis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desulfocucumis",
+          "sourceIds": {
+            "checklistbank-2169": "2026180"
+          },
+          "uuid": "f82a6ef1-5230-4660-986d-11394c7db88b"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -288,9 +303,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "desulfocucumaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfocucumaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DESULFOCUCUMIS",
+          "name": "uncultured Desulfocucumis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2026182"
+          },
+          "uuid": "f3f73974-66d8-46a0-b9d6-f2335bec4272"
+        }
+      ]
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 24,
   "appSlug": "desulfocucumaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Desulfotomaculia",

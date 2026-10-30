@@ -482,7 +482,10 @@
           "lineage": "Minisyncoccus",
           "authorship": "Nakajima et al. 2025",
           "children": [],
-          "uuid": "1879585d-2fcd-5de-bd8-3bfc5c4ebf1c41"
+          "uuid": "1879585d-2fcd-5de-bd8-3bfc5c4ebf1c41",
+          "sourceIds": {
+            "checklistbank-2169": "3238481"
+          }
         },
         {
           "id": "SP_MINISYNCOCCUS_SP023229485",
@@ -614,9 +617,31 @@
       ],
       "sourcedFrom": "gtdb",
       "lineage": "Minisyncoccaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "minisyncoccaceae",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_MICROSYNCOCCUS_KURODA_ET_AL_2024",
+          "name": "Candidatus Microsyncoccus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Kuroda et al. 2024",
+          "sourceIds": {
+            "checklistbank-2169": "3238482"
+          },
+          "uuid": "1550efbd-65bb-40a2-a03e-aeb57bb1c4aa"
+        }
+      ]
     }
   ],
-  "speciesCount": 53,
+  "speciesCount": 54,
   "appSlug": "minisyncoccaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Patescibacteriota > Minisyncoccia",

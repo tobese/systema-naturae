@@ -40,6 +40,30 @@
           "authorship": "Flood et al. 2015",
           "children": [],
           "uuid": "9dbabc13-4cb7-5ca-9c6-4d174d8256da4c"
+        },
+        {
+          "id": "SP_SEDIMENTICOLA_SP",
+          "name": "Sedimenticola sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sedimenticola",
+          "sourceIds": {
+            "checklistbank-2169": "1940285"
+          },
+          "uuid": "bf70a4cb-44fa-4ed2-b562-0a6073464e7d"
+        },
+        {
+          "id": "SP_SEDIMENTICOLA_ENDOSYMBIONT",
+          "name": "Sedimenticola endosymbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sedimenticola",
+          "sourceIds": {
+            "checklistbank-2169": "3083217"
+          },
+          "uuid": "2a6fb289-ac04-4931-9c90-8ac7b8af81f3"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -112,6 +136,18 @@
           "authorship": "Altamia et al. 2019",
           "children": [],
           "uuid": "b4e89b48-e8ca-55f-b3f-eda850756cfe79"
+        },
+        {
+          "id": "SP_THIOSOCIUS_SP",
+          "name": "Thiosocius sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiosocius",
+          "sourceIds": {
+            "checklistbank-2169": "2780490"
+          },
+          "uuid": "d56427ee-133c-4f4e-bc78-cc055504795d"
         }
       ],
       "sourcedFrom": "ncbi-taxonomy",
@@ -130,7 +166,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "393765"
+            "checklistbank-2265": "393765",
+            "checklistbank-2169": "393765"
           },
           "children": []
         },
@@ -142,9 +179,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "1655433"
+            "checklistbank-2265": "1655433",
+            "checklistbank-2169": "1655433"
           },
           "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_SEDIMENTICOLA_LIM_ET_AL_2018",
+          "name": "Candidatus Sedimenticola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Lim et al. 2018",
+          "sourceIds": {
+            "checklistbank-2169": "2548426"
+          },
+          "uuid": "22d75a52-70ed-408a-9ac8-9d0c27dcbb48"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -170,9 +221,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sedimenticolaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sedimenticolaceae",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SEDIMENTICOLA",
+          "name": "uncultured Sedimenticola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "754473"
+          },
+          "uuid": "f3537daf-db0b-4c3a-b909-c0bbb3fafe12"
+        },
+        {
+          "id": "SP_UNCULTURED_THIOSOCIUS",
+          "name": "uncultured Thiosocius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank-2169": "2780492"
+          },
+          "uuid": "b30f8ec6-cafb-4971-89cb-7f5cd3b32155"
+        }
+      ]
     }
   ],
-  "speciesCount": 10,
+  "speciesCount": 16,
   "appSlug": "sedimenticolaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 6

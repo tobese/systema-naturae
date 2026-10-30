@@ -28,7 +28,10 @@
           "lineage": "Photorhabdus",
           "authorship": "Fischer-Le Saux et al. 1999 emend. Akhurst et al. 2004",
           "children": [],
-          "uuid": "9fd18347-d907-5f9-b43-619183eef9fbd8"
+          "uuid": "9fd18347-d907-5f9-b43-619183eef9fbd8",
+          "sourceIds": {
+            "checklistbank-2169": "171440"
+          }
         },
         {
           "id": "SP_PHOTORHABDUS_HAINANENSIS_MACHADO_ET_AL_2018",
@@ -1237,7 +1240,10 @@
           "sourcedFrom": "ncbi-taxonomy",
           "lineage": "Proteus",
           "children": [],
-          "uuid": "1140af81-3687-5c3-b7f-73d0fb567d3f3c"
+          "uuid": "1140af81-3687-5c3-b7f-73d0fb567d3f3c",
+          "sourceIds": {
+            "checklistbank-2169": "626774"
+          }
         },
         {
           "id": "SP_PROTEUS_INCONSTANS",
@@ -1484,7 +1490,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "57911"
+            "checklistbank-2265": "57911",
+            "checklistbank-2169": "57911"
           },
           "children": []
         },
@@ -1496,7 +1503,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Candidatus",
           "sourceIds": {
-            "checklistbank-2265": "1715285"
+            "checklistbank-2265": "1715285",
+            "checklistbank-2169": "1715285"
           },
           "children": []
         }
@@ -1685,9 +1693,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "morganellaceae"
+    },
+    {
+      "id": "GENUS_MORGANELLACEAE",
+      "name": "Morganellaceae",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "morganellaceae",
+      "children": [
+        {
+          "id": "SP_MORGANELLACEAE_BACTERIUM",
+          "name": "Morganellaceae bacterium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morganellaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3107497"
+          },
+          "uuid": "ad6dd4f9-8eb7-4d31-aa2a-fbd225a2f7f3"
+        },
+        {
+          "id": "SP_MORGANELLACEAE_ENDOSYMBIONT",
+          "name": "Morganellaceae endosymbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morganellaceae",
+          "sourceIds": {
+            "checklistbank-2169": "3163625"
+          },
+          "uuid": "745b4d42-4681-4e0a-9bb4-8a90b146c1c9"
+        }
+      ]
     }
   ],
-  "speciesCount": 133,
+  "speciesCount": 135,
   "appSlug": "morganellaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 12,
