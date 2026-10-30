@@ -120,7 +120,8 @@ def pending_rows(kingdom: str) -> dict[str, dict]:
                 continue
             if not (r.get("source") or "").startswith(SOURCE):
                 continue
-            if (r.get("kingdom") or "").strip().lower() != kingdom:
+            k = (r.get("kingdom") or "").strip().lower()
+            if k != kingdom and not (unplaced and k in UNPLACED):
                 continue
             fam = (r.get("family") or "").strip()
             if fam.lower() in SKIP_NAMES:
@@ -228,10 +229,19 @@ def load_rules() -> dict:
         return {k: v for k, v in json.load(fh).items() if not k.startswith("_")}
 
 
-def all_pending_families(kingdom: str) -> dict[str, list[str]]:
+UNPLACED = {"", "incertae sedis", "incertae-sedis", "unresolved"}
+
+
+def all_pending_families(kingdom: str, unplaced: bool = False) -> dict[str, list[str]]:
     """family-name-lower -> sources that refused it, every source. The GBIF
     Backbone worklist above only sees the Backbone's own refusals; for a
-    rules kingdom the NCBI, ENA and GTDB runs' refusals count too."""
+    rules kingdom the NCBI, ENA and GTDB runs' refusals count too.
+
+    `unplaced` also takes refusals recorded with no kingdom: the Backbone
+    files Baculoviridae (2,326 species) under "incertae sedis", and the store
+    keeps the first record of a family, so a later ICTV refusal of it never
+    shows up as viruses. The caller must then check the kingdom itself
+    (scaffold_by_rules does, through the authority and its `within` rule)."""
     out: dict[str, list[str]] = {}
     if not os.path.exists(PENDING):
         return out
@@ -241,7 +251,8 @@ def all_pending_families(kingdom: str) -> dict[str, list[str]]:
                 r = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            if (r.get("kingdom") or "").strip().lower() != kingdom:
+            k = (r.get("kingdom") or "").strip().lower()
+            if k != kingdom and not (unplaced and k in UNPLACED):
                 continue
             fam = (r.get("family") or "").strip()
             if fam.lower() in SKIP_NAMES:
@@ -264,10 +275,11 @@ def authority_chains(archive: str, ranks: list[str]):
         if (t.get("rank") or "").lower() != "family" or t.get("is_synonym"):
             continue
         chain, problem, p = [], "", t.get("parent")
-        seen = set()
+        seen, above = set(), set()
         while p in by_id and p not in seen:
             seen.add(p)
             n = by_id[p]
+            above.add((n.get("name") or "").lower())
             r = (n.get("rank") or "").lower()
             if r == "family":
                 problem = f"the authority places it inside family {n['name']}"
@@ -278,7 +290,8 @@ def authority_chains(archive: str, ranks: list[str]):
         key = t["name"].lower()
         prior = fams.get(key)
         if prior is None or (prior["problem"] and not problem):
-            fams[key] = {"family": t["name"], "chain": chain, "problem": problem, "id": t["id"]}
+            fams[key] = {"family": t["name"], "chain": chain, "problem": problem,
+                         "id": t["id"], "above": above}
     # Accepted species per family: walk each species up to its family.
     fam_ids = {v["id"]: k for k, v in fams.items()}
     counts: dict[str, int] = {}
@@ -308,7 +321,8 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
     tax_path = taxonomy_input(kingdom)
     tax = json.load(open(tax_path, encoding="utf-8"))
     held = held_families(tax)
-    pend = all_pending_families(kingdom)
+    pend = all_pending_families(kingdom, unplaced=True)
+    within = (rules.get("within") or "").lower()
     wanted = {f for f in pend if f not in held}
     auth = rules["authority"]
     archive = os.path.join(_sources.ROOT, "archives", auth["key"], "archive.zip")
@@ -338,6 +352,9 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
         if rec is None:
             refuse(f"not a family in {auth['key']}", key)
             continue
+        if within and within not in rec["above"]:
+            refuse(f"not within {rules['within']} in {auth['key']}", rec["family"])
+            continue
         if rec["problem"]:
             refuse(rec["problem"], rec["family"])
             continue
@@ -354,7 +371,11 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
         for i, (rank, nm) in enumerate(chain):
             node = child_by_name(parent, nm)
             if node is None:
-                if i == 0 and not rules.get("createTopRank"):
+                # Only a new top rank (realm, phylum) is a structure call. A
+                # chain that starts lower is the authority leaving the ranks
+                # above unassigned (ICTV's realm-less Naldaviricetes), so it
+                # hangs from the KINGDOM node like an unassigned family.
+                if i == 0 and rank == ranks[0] and not rules.get("createTopRank"):
                     why = f"would need a new {rank} ({nm})"
                     break
                 node = {"id": node_id(PREFIX[rank], nm), "name": nm,

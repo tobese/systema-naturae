@@ -14,16 +14,22 @@
     "  skipped.",
     "createTopRank: false means a family whose top rank is not already in",
     "  the tree is refused and reported, not scaffolded -- a new phylum or",
-    "  realm is a structure decision, not a data one.",
+    "  realm is a structure decision, not a data one. A chain the authority",
+    "  starts lower (a class in no realm) hangs from the KINGDOM node.",
     "unassigned: where a family the authority places under no rank in",
     "  `ranks` goes. 'kingdom' puts it directly under the KINGDOM node (ICTV's",
     "  own 'unassigned'); 'refuse' refuses it.",
     "rejectNames: a family or rank name matching any pattern is refused,",
-    "  with the reason in the report."
+    "  with the reason in the report.",
+    "within: a name the authority must have above the family. NCBI covers",
+    "  all life, so a family refused with no kingdom (\"incertae sedis\") is",
+    "  only taken for bacteria if NCBI puts it under Bacteria. ICTV is viruses",
+    "  only and needs none."
   ],
   "bacteria": {
     "authority": {"key": "checklistbank-2169", "title": "NCBI Taxonomy", "licence": "CC0"},
     "ranks": ["phylum", "class", "order"],
+    "within": "Bacteria",
     "createTopRank": false,
     "unassigned": "refuse",
     "rejectNames": [
