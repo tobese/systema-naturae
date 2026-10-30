@@ -1,5 +1,23 @@
 {
+  "key": "checklistbank-316441",
+  "title": "Catalogue of Life COL26.9 XR",
+  "stage": "applied",
+  "licence": "cc by",
   "archivePath": "/home/agent/src/sources/archives/checklistbank-316441/archive.zip",
+  "applied": {
+    "added": 802,
+    "merged": 14111,
+    "crossFamily": 141,
+    "families": 582,
+    "at": "2026-10-30T13:57:17Z"
+  },
+  "triaged": {
+    "offered": 2671744,
+    "alreadyHeld": 1908629,
+    "staged": 568914,
+    "refused": 21493,
+    "refusalRate": 0.008
+  },
   "history": [
     {
       "at": "2026-10-30T10:27:09+0100",
@@ -28,11 +46,26 @@
     {
       "at": "2026-10-30T10:42:48+0100",
       "stage": "blocked"
+    },
+    {
+      "at": "2026-10-30T13:53:58Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-30T13:56:34Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-30T13:56:34Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-30T13:56:34Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-30T13:57:17Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-316441",
-  "licence": "cc by",
-  "reason": "transform OOM-killed twice at 12.4 GB on q-bert (15 GB, 4 GB swap, Ollama holds 2.5 GB), 2026-10-30; needs a lower-memory route or run on Macie with SN_WRITE_KINGDOMS=bacteria,viruses",
-  "stage": "blocked",
-  "title": "Catalogue of Life COL26.9 XR"
+  ]
 }
