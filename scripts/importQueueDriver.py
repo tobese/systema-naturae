@@ -95,17 +95,24 @@ def refill_queue(q: dict, limit: int = REFILL_BATCH) -> dict:
     print(f"\nOnly {len(downloaded)} source(s) at stage 'downloaded' "
           f"(< {REFILL_THRESHOLD}); refilling with up to {limit} candidates", flush=True)
 
-    # Get candidate keys from triageNext.py
-    rc, out = run(
-        ["python3", os.path.join(SCRIPT_DIR, "triageNext.py"),
-         "--keys-only", "--limit", str(limit)],
-        "triage",
-    )
-    if rc != 0:
-        print(f"  triage FAILED (rc={rc}), cannot refill", flush=True)
-        return q
-
-    keys = [line.strip() for line in out.splitlines() if line.strip()]
+    # Get candidate keys from triageNext.py. The type=taxonomic shelf goes
+    # first; once it is used up (2026-10-30: all 481 held or decided, and
+    # every refill came back empty) fall back to --all-types, which is where
+    # 623 of the GBIF tab's 643 open-licence undecided sets are.
+    for extra in ([], ["--all-types"]):
+        rc, out = run(
+            ["python3", os.path.join(SCRIPT_DIR, "triageNext.py"),
+             "--keys-only", "--limit", str(limit)] + extra,
+            "triage",
+        )
+        if rc != 0:
+            print(f"  triage FAILED (rc={rc}), cannot refill", flush=True)
+            return q
+        keys = [line.strip() for line in out.splitlines() if line.strip()]
+        if keys:
+            break
+        if not extra:
+            print("  taxonomic shelf empty, trying --all-types", flush=True)
     if not keys:
         print("  triage returned no candidates", flush=True)
         return q
@@ -114,7 +121,7 @@ def refill_queue(q: dict, limit: int = REFILL_BATCH) -> dict:
     # triage without --keys-only and parsing the table.
     rc2, table = run(
         ["python3", os.path.join(SCRIPT_DIR, "triageNext.py"),
-         "--limit", str(limit)],
+         "--limit", str(limit)] + extra,
         "triage-meta",
     )
     meta: dict[str, dict] = {}
