@@ -36,11 +36,44 @@
 > `dedupeSpeciesAcrossFamilies.py --kingdom bacteria` (and `viruses`),
 > `resyncFamilyCounts.py --kingdom bacteria --kingdom viruses`.
 >
-> Measured 2026-10-30, dry runs on Macie's tree: the pending store lists 873
-> bacteria families (521k species) and 259 virus families (168k); of the 259,
-> 224 are already held and 35 would be scaffolded from the GBIF Backbone.
-> Dedupe finds 8 duplicate bacteria species and 10 virus; resync finds 34
-> family counts behind their files.
+> **Rules of their own: `data/kingdom-rules.json`.** These two kingdoms are
+> not scaffolded from the GBIF Backbone. Its bacteria chains use older and
+> GTDB placeholder names (Proteobacteria, Firmicutes_A..D) where this tree,
+> built from NCBI, holds Pseudomonadota and Bacillota, and its virus chains
+> revive the abolished Caudovirales -- a Backbone scaffold would have built
+> parallel phyla next to the ones we hold. Instead each kingdom names an
+> authority, and a new family and every rank above it must be found there:
+> **NCBI Taxonomy (checklistbank-2169, CC0) for bacteria**, ranks
+> phylum > class > order; **ICTV (checklistbank-1014, CC BY 4.0) for
+> viruses**, ranks realm > kingdom > phylum > class > order, ICTV's
+> unassigned families directly under Viruses. GTDB placeholder names
+> (`_A` suffixes, `PS1`, `UBA…`) are refused; a family needing a new phylum
+> (bacteria) or realm (viruses) is reported, not created; the family node
+> records `scaffoldedFrom`.
+>
+> Measured 2026-10-30, dry runs on Macie's tree:
+> - Scaffolding under the rules: viruses 13 families (294 species), 22
+>   refused as names ICTV no longer has (Bunyaviridae, Autographiviridae,
+>   Comoviridae, Flexiviridae, …); bacteria 5 families (84 species), 105
+>   refused as names NCBI does not have (GTDB-only names such as
+>   Exiguobacteraceae, or variant spellings: the Backbone's Spirosomaceae is
+>   NCBI's Spirosomataceae).
+> - **The volume is not in new families.** The pending store holds ~510k
+>   bacteria and ~123k virus species that the GBIF Backbone offered for
+>   families we *already hold*, none re-imported yet. Re-applying the
+>   Backbone on q-bert is what places them (stale counts; the dry run is the
+>   measurement).
+> - **The virus tree has two parallel structures:** 298 families under a
+>   bare Phylum > Class > Order path and 95 under ICTV's Realm > Kingdom >
+>   Phylum > Class > Order, with 46 phyla/classes/orders present in both
+>   (Lenarviricota at the top level and under Riboviria/Orthornavirae). New
+>   families follow the ICTV path; merging the bare branch into it is a
+>   separate restructure pass, not yet done.
+> - Dedupe finds 8 duplicate bacteria species and 10 virus; resync finds 34
+>   family counts behind their files.
+> - Handover: Macie's last bacteria/virus writes (405 files, +6,517 species,
+>   none lost, from runs before the partition existed) were committed from
+>   Macie before q-bert took over.
 
 > **PARTIALLY LIFTED 2026-10-25.** On hold as of 2026-10-04, reaffirmed
 > 2026-10-17: import, scaffolding, build and deploy all blocked. As of

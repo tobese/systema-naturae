@@ -1,0 +1,42 @@
+{
+  "_doc": [
+    "Per-kingdom structure rules for kingdoms whose higher taxonomy the GBIF",
+    "Backbone does not describe the way this tree does. Read by",
+    "scripts/scaffoldFamilies.py; decided 2026-10-30, see",
+    "docs/bacteria-and-viruses.md. A kingdom not listed here is scaffolded",
+    "from the GBIF Backbone as before.",
+    "",
+    "authority: the dataset a new family and every rank above it must be",
+    "  found in (accepted, non-synonym, exact name). The family node records",
+    "  it as scaffoldedFrom, so each placement can be checked against it.",
+    "ranks: the levels between KINGDOM and FAMILY, top first. Other ranks",
+    "  the authority has (NCBI's clades and kingdom, ICTV's sub-ranks) are",
+    "  skipped.",
+    "createTopRank: false means a family whose top rank is not already in",
+    "  the tree is refused and reported, not scaffolded -- a new phylum or",
+    "  realm is a structure decision, not a data one.",
+    "unassigned: where a family the authority places under no rank in",
+    "  `ranks` goes. 'kingdom' puts it directly under the KINGDOM node (ICTV's",
+    "  own 'unassigned'); 'refuse' refuses it.",
+    "rejectNames: a family or rank name matching any pattern is refused,",
+    "  with the reason in the report."
+  ],
+  "bacteria": {
+    "authority": {"key": "checklistbank-2169", "title": "NCBI Taxonomy", "licence": "CC0"},
+    "ranks": ["phylum", "class", "order"],
+    "createTopRank": false,
+    "unassigned": "refuse",
+    "rejectNames": [
+      {"pattern": "_[A-Z]+[0-9]*$", "why": "GTDB placeholder suffix (Firmicutes_A, Sporomusales_A)"},
+      {"pattern": "^[A-Z]{1,6}-?[0-9]+$", "why": "alphanumeric placeholder (PS1, UBA9983)"},
+      {"pattern": "[0-9]{3,}", "why": "placeholder with a numeric id (bin or clone name)"}
+    ]
+  },
+  "viruses": {
+    "authority": {"key": "checklistbank-1014", "title": "ICTV Master Species List (ChecklistBank 1014)", "licence": "CC BY 4.0"},
+    "ranks": ["realm", "kingdom", "phylum", "class", "order"],
+    "createTopRank": false,
+    "unassigned": "kingdom",
+    "rejectNames": []
+  }
+}

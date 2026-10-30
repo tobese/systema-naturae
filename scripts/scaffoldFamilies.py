@@ -59,7 +59,8 @@ PENDING = os.path.join(_sources.ROOT, "pending", "families.jsonl")
 BACKBONE = os.path.join(_sources.ROOT, "archives", "gbif-backbone", "backbone.zip")
 SOURCE = "gbif-backbone"
 SKIP_NAMES = {"", "(no family)", "incertae sedis", "incertae-sedis"}
-PREFIX = {"phylum": "PHY", "class": "CLS", "order": "ORD"}
+PREFIX = {"realm": "RLM", "kingdom": "KNG", "phylum": "PHY", "class": "CLS", "order": "ORD"}
+RULES = os.path.join(ROOT, "data", "kingdom-rules.json")
 
 
 def taxonomy_input(kingdom: str) -> str:
@@ -222,6 +223,183 @@ def write_family_file(kingdom: str, parent_names: list[str], family: str,
     return rel
 
 
+def load_rules() -> dict:
+    with open(RULES, encoding="utf-8") as fh:
+        return {k: v for k, v in json.load(fh).items() if not k.startswith("_")}
+
+
+def all_pending_families(kingdom: str) -> dict[str, list[str]]:
+    """family-name-lower -> sources that refused it, every source. The GBIF
+    Backbone worklist above only sees the Backbone's own refusals; for a
+    rules kingdom the NCBI, ENA and GTDB runs' refusals count too."""
+    out: dict[str, list[str]] = {}
+    if not os.path.exists(PENDING):
+        return out
+    with open(PENDING, encoding="utf-8") as fh:
+        for line in fh:
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if (r.get("kingdom") or "").strip().lower() != kingdom:
+                continue
+            fam = (r.get("family") or "").strip()
+            if fam.lower() in SKIP_NAMES:
+                continue
+            out.setdefault(fam.lower(), []).append(r.get("source") or "?")
+    return out
+
+
+def authority_chains(archive: str, ranks: list[str]):
+    """-> (family-name-lower -> {"family", "chain": [(rank, name)], "problem"},
+    family-name-lower -> accepted species count) from one ColDP/DwCA archive.
+    The chain keeps only `ranks`, top first. `problem` is set when the
+    authority itself places the family inside another family (ICTV 1014 does
+    this for Adintoviridae), which is not a placement to copy."""
+    import colChecklist as K
+    taxa = K.load_cached(archive)[0]
+    by_id = {t["id"]: t for t in taxa}
+    fams = {}
+    for t in taxa:
+        if (t.get("rank") or "").lower() != "family" or t.get("is_synonym"):
+            continue
+        chain, problem, p = [], "", t.get("parent")
+        seen = set()
+        while p in by_id and p not in seen:
+            seen.add(p)
+            n = by_id[p]
+            r = (n.get("rank") or "").lower()
+            if r == "family":
+                problem = f"the authority places it inside family {n['name']}"
+            if r in ranks:
+                chain.append((r, n["name"]))
+            p = n.get("parent")
+        chain.reverse()
+        key = t["name"].lower()
+        prior = fams.get(key)
+        if prior is None or (prior["problem"] and not problem):
+            fams[key] = {"family": t["name"], "chain": chain, "problem": problem, "id": t["id"]}
+    # Accepted species per family: walk each species up to its family.
+    fam_ids = {v["id"]: k for k, v in fams.items()}
+    counts: dict[str, int] = {}
+    for t in taxa:
+        if (t.get("rank") or "").lower() != "species" or t.get("is_synonym"):
+            continue
+        p, hops = t.get("parent"), 0
+        while p in by_id and hops < 12:
+            if p in fam_ids:
+                counts[fam_ids[p]] = counts.get(fam_ids[p], 0) + 1
+                break
+            p, hops = by_id[p].get("parent"), hops + 1
+    return fams, counts
+
+
+def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
+    """Scaffold from the kingdom's own authority under data/kingdom-rules.json.
+
+    Measured 2026-10-30: the GBIF Backbone's bacteria chains use older and
+    GTDB placeholder names (Proteobacteria, Firmicutes_A..D) where this tree,
+    built from NCBI, holds Pseudomonadota and Bacillota, and its virus chains
+    revive the abolished Caudovirales. Scaffolding from it would have built
+    parallel phyla next to the ones we hold. Here every name comes from the
+    authority, the path is followed from the KINGDOM node down so a new
+    family joins the branch the authority names (never a same-named node
+    elsewhere), and a new top rank is reported rather than created."""
+    tax_path = taxonomy_input(kingdom)
+    tax = json.load(open(tax_path, encoding="utf-8"))
+    held = held_families(tax)
+    pend = all_pending_families(kingdom)
+    wanted = {f for f in pend if f not in held}
+    auth = rules["authority"]
+    archive = os.path.join(_sources.ROOT, "archives", auth["key"], "archive.zip")
+    if not os.path.exists(archive):
+        sys.exit(f"FATAL: authority archive not found at {archive}")
+    rejects = [(re.compile(r["pattern"]), r["why"]) for r in rules.get("rejectNames", [])]
+    ranks = rules["ranks"]
+
+    print(f"  kingdom:         {kingdom}")
+    print(f"  taxonomy input:  {tax_path}")
+    print(f"  authority:       {auth['title']} ({auth['key']}, {auth['licence']})")
+    print(f"  pending families (all sources): {len(pend):,}   already held: "
+          f"{len(pend) - len(wanted):,}   to consider: {len(wanted):,}")
+    if not wanted:
+        print("  nothing to scaffold")
+        return 0
+
+    fams, spp = authority_chains(archive, ranks)
+    refused: dict[str, list[str]] = {}
+    added = []
+
+    def refuse(why, fam):
+        refused.setdefault(why, []).append(fam)
+
+    for key in sorted(wanted):
+        rec = fams.get(key)
+        if rec is None:
+            refuse(f"not a family in {auth['key']}", key)
+            continue
+        if rec["problem"]:
+            refuse(rec["problem"], rec["family"])
+            continue
+        bad = next((why for rx, why in rejects
+                    for n in [rec["family"]] + [n for _, n in rec["chain"]] if rx.search(n)), None)
+        if bad:
+            refuse(bad, rec["family"])
+            continue
+        chain = rec["chain"]
+        if not chain and rules.get("unassigned") != "kingdom":
+            refuse("the authority gives no rank above it", rec["family"])
+            continue
+        parent, created, why = tax, [], ""
+        for i, (rank, nm) in enumerate(chain):
+            node = child_by_name(parent, nm)
+            if node is None:
+                if i == 0 and not rules.get("createTopRank"):
+                    why = f"would need a new {rank} ({nm})"
+                    break
+                node = {"id": node_id(PREFIX[rank], nm), "name": nm,
+                        "rank": rank.upper(), "children": []}
+                parent.setdefault("children", []).append(node)
+                created.append(f"{rank.upper()} {nm}")
+            parent = node
+        if why:
+            refuse(why, rec["family"])
+            continue
+        if child_by_name(parent, rec["family"]):
+            continue
+        app_slug = slugify(rec["family"])
+        fid = node_id("FAM", rec["family"])
+        parent.setdefault("children", []).append({
+            "id": fid, "name": rec["family"], "rank": "FAMILY",
+            "appSlug": app_slug, "speciesCount": spp.get(key, 0),
+            "scaffoldedFrom": auth["key"], "children": [],
+        })
+        rel = write_family_file(kingdom, [n for _, n in chain], rec["family"], fid,
+                                app_slug, dry_run=not apply_)
+        added.append((rec["family"], " > ".join(n for _, n in chain) or "(unassigned)",
+                      spp.get(key, 0), created))
+
+    for fam, chain, n, created in added:
+        print(f"  + {fam:28s} {n:>7,} spp  {chain}")
+        if created:
+            print(f"      created intermediates: {', '.join(created)}")
+    print(f"\n  families scaffolded: {len(added)}   species the authority gives them: "
+          f"{sum(a[2] for a in added):,}")
+    print(f"  refused: {sum(len(v) for v in refused.values()):,}")
+    for why, names in sorted(refused.items(), key=lambda kv: -len(kv[1])):
+        print(f"    {len(names):>5,}  {why}: {', '.join(sorted(names)[:6])}"
+              f"{' …' if len(names) > 6 else ''}")
+    if apply_ and added:
+        text = json.dumps(tax, indent=2, ensure_ascii=False) + "\n"
+        with open(tax_path + ".tmp", "w", encoding="utf-8") as fh:
+            fh.write(text)
+        os.replace(tax_path + ".tmp", tax_path)
+        print(f"  wrote {tax_path}")
+    elif added:
+        print("  (dry run -- pass --apply to write)")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--kingdom", required=True)
@@ -234,6 +412,10 @@ def main() -> int:
         sys.exit(f"FATAL: {kingdom} is not this writer's kingdom "
                  f"(SN_WRITE_KINGDOMS={','.join(sorted(WK.allowed()))}); "
                  f"see scripts/writerKingdoms.py")
+
+    rules = load_rules().get(kingdom)
+    if rules:
+        return scaffold_by_rules(kingdom, rules, args.apply)
 
     tax_path = taxonomy_input(kingdom)
     tax = json.load(open(tax_path, encoding="utf-8"))
