@@ -1,5 +1,24 @@
 {
+  "key": "gbif-backbone",
+  "title": "GBIF Backbone Taxonomy",
+  "stage": "applied",
+  "licence": "cc by",
   "archivePath": "/home/agent/src/sources/archives/gbif-backbone/backbone.zip",
+  "reason": "measured 2026-10-30: dry run peak RSS 13.3 GiB, 5 min on 23 GiB q-bert (no duckdb then; now installed); Backbone routes 47,548 bacteria + 12,080 viruses taxa",
+  "applied": {
+    "added": 6010,
+    "merged": 8913,
+    "crossFamily": 877,
+    "families": 922,
+    "at": "2026-10-30T18:38:55Z"
+  },
+  "triaged": {
+    "offered": 2808515,
+    "alreadyHeld": 1911627,
+    "staged": 662240,
+    "refused": 35437,
+    "refusalRate": 0.0126
+  },
   "history": [
     {
       "at": "2026-10-30T10:27:09+0100",
@@ -8,12 +27,30 @@
     {
       "at": "2026-10-30T10:27:09+0100",
       "stage": "blocked"
+    },
+    {
+      "at": "2026-10-30T19:33:34+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-30T18:34:20Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-30T18:37:44Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-30T18:37:44Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-30T18:37:44Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-30T18:38:55Z",
+      "stage": "applied"
     }
-  ],
-  "key": "gbif-backbone",
-  "licence": "cc by",
-  "reason": "measure memory first: 7.7M taxa on 15 GB q-bert, which froze once building this cache (2026-10-23); ~633k bacteria/virus species pending in held families",
-  "size": null,
-  "stage": "blocked",
-  "title": "GBIF Backbone Taxonomy"
+  ]
 }

@@ -30,7 +30,8 @@
           "uuid": "8375f12b-e1e5-505-8eb-ae36dbe6862737",
           "sourceIds": {
             "checklistbank-2169": "1129264",
-            "checklistbank-316441": "CT3YN"
+            "checklistbank-316441": "CT3YN",
+            "gbif-backbone": "9183840"
           }
         },
         {
@@ -531,7 +532,8 @@
           "lineage": "Sphaerochaeta",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q26286280",
-            "checklistbank-316441": "CT3YP"
+            "checklistbank-316441": "CT3YP",
+            "gbif-backbone": "7506048"
           },
           "children": []
         },
@@ -1843,6 +1845,18 @@
           "lineage": "UBA9732",
           "children": [],
           "uuid": "4e5b72a8-efc6-59d-972-ce9decd907ca48"
+        },
+        {
+          "id": "SP_UBA9732_SP017962865",
+          "name": "UBA9732 sp017962865",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "UBA9732",
+          "sourceIds": {
+            "gbif-backbone": "11841007"
+          },
+          "uuid": "d1fabec4-956c-4161-82df-4eacf8475fef"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -3081,9 +3095,63 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaerochaetaceae"
+    },
+    {
+      "id": "GENUS_RZYO01",
+      "name": "RZYO01",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerochaetaceae",
+      "children": [
+        {
+          "id": "SP_RZYO01_SP016649775",
+          "name": "RZYO01 sp016649775",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "RZYO01",
+          "sourceIds": {
+            "gbif-backbone": "11553762"
+          },
+          "uuid": "8347d6ec-5892-4aff-b8f9-6aebd452fde6"
+        },
+        {
+          "id": "SP_RZYO01_SP009930325",
+          "name": "RZYO01 sp009930325",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "RZYO01",
+          "sourceIds": {
+            "gbif-backbone": "11155970"
+          },
+          "uuid": "87850316-e16c-4f94-ad35-9bc08792fc91"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SPHAEROCHAETA_A",
+      "name": "Sphaerochaeta_A",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerochaetaceae",
+      "children": [
+        {
+          "id": "SP_SPHAEROCHAETA_A_COCCOIDES",
+          "name": "Sphaerochaeta_A coccoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerochaeta_A",
+          "sourceIds": {
+            "gbif-backbone": "12182186"
+          },
+          "uuid": "db32a208-5be1-476b-9075-eeca0d15b8d8"
+        }
+      ]
     }
   ],
-  "speciesCount": 272,
+  "speciesCount": 276,
   "appSlug": "sphaerochaetaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Spirochaetota > Spirochaetia",

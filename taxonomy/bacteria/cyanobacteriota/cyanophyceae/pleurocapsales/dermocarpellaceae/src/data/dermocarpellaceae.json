@@ -179,7 +179,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cyanocystis",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61946552"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61946552",
+            "gbif-backbone": "6533840"
           },
           "children": []
         },
@@ -482,7 +483,8 @@
           "lineage": "Dermocarpa",
           "authorship": "Setch. et Gardner",
           "sourceIds": {
-            "checklistbank-7888": "NHMSYS0000524491"
+            "checklistbank-7888": "NHMSYS0000524491",
+            "gbif-backbone": "3216888"
           },
           "children": []
         },
@@ -615,6 +617,19 @@
             "checklistbank-2008": "1000279"
           },
           "children": []
+        },
+        {
+          "id": "SP_DERMOCARPA_ROSTRATA_COPELAND",
+          "name": "Dermocarpa rostrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermocarpa",
+          "authorship": "Copeland",
+          "sourceIds": {
+            "gbif-backbone": "4306723"
+          },
+          "uuid": "d4435abd-efd8-4044-8a25-77a3e07cfccd"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -654,9 +669,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dermocarpellaceae"
+    },
+    {
+      "id": "GENUS_STAINIERIA",
+      "name": "Stainieria",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermocarpellaceae",
+      "children": [
+        {
+          "id": "SP_STAINIERIA_SUBLITORALIS_LINDST_ANAGN_PANTAZ",
+          "name": "Stainieria sublitoralis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stainieria",
+          "authorship": "(Lindst.) Anagn. & Pantaz.",
+          "sourceIds": {
+            "gbif-backbone": "7912079"
+          },
+          "uuid": "eb94dd6a-fc9d-4768-bd9b-ad32c052dcc1"
+        },
+        {
+          "id": "SP_STAINIERIA_SUECICA_KYLIN_KOM_REK_ANAGN",
+          "name": "Stainieria suecica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stainieria",
+          "authorship": "(Kylin) Komárek & Anagn.",
+          "sourceIds": {
+            "gbif-backbone": "7588690"
+          },
+          "uuid": "41b83c73-618f-4727-8e7f-e184cbbbea33"
+        }
+      ]
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 50,
   "appSlug": "dermocarpellaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 7,

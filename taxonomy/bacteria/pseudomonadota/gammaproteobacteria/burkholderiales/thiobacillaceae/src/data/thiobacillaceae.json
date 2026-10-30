@@ -1734,7 +1734,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Thiobacillus",
           "children": [],
-          "uuid": "1aa63d02-b23d-5ce-bce-9813da70b2e4e6"
+          "uuid": "1aa63d02-b23d-5ce-bce-9813da70b2e4e6",
+          "sourceIds": {
+            "gbif-backbone": "9792752"
+          }
         },
         {
           "id": "SP_THIOBACILLUS_SP964583195",
@@ -1812,7 +1815,8 @@
           "uuid": "7872d1e2-e483-5a1-81a-ed3ee4b9a8986f",
           "sourceIds": {
             "checklistbank-2265": "543892",
-            "checklistbank-316441": "7BWCV"
+            "checklistbank-316441": "7BWCV",
+            "gbif-backbone": "7886031"
           }
         },
         {
@@ -1826,6 +1830,18 @@
             "checklistbank-2265": "924"
           },
           "children": []
+        },
+        {
+          "id": "SP_THIOBACILLUS_SP011391285",
+          "name": "Thiobacillus sp011391285",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thiobacillus",
+          "sourceIds": {
+            "gbif-backbone": "12222666"
+          },
+          "uuid": "fe4f7613-6fcc-48c8-a3ab-6e9a86ae035b"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1957,7 +1973,8 @@
           "uuid": "5db3ae6f-4eab-5bc-a49-62a9f3dac64df2",
           "sourceIds": {
             "checklistbank-2169": "1914471",
-            "checklistbank-316441": "CT7WK"
+            "checklistbank-316441": "CT7WK",
+            "gbif-backbone": "9399395"
           }
         },
         {
@@ -2474,7 +2491,8 @@
           "sourceIds": {
             "checklistbank-2265": "47959",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q62894420",
-            "checklistbank-316441": "CRJLX"
+            "checklistbank-316441": "CRJLX",
+            "gbif-backbone": "9554505"
           }
         }
       ],
@@ -2558,9 +2576,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thiobacillaceae"
+    },
+    {
+      "id": "GENUS_JACAED01",
+      "name": "JACAED01",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "thiobacillaceae",
+      "children": [
+        {
+          "id": "SP_JACAED01_SP013389025",
+          "name": "JACAED01 sp013389025",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JACAED01",
+          "sourceIds": {
+            "gbif-backbone": "11177076"
+          },
+          "uuid": "dc3f1568-bc5f-40e8-ae3a-548b3d9176d5"
+        },
+        {
+          "id": "SP_JACAED01_SP018263115",
+          "name": "JACAED01 sp018263115",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JACAED01",
+          "sourceIds": {
+            "gbif-backbone": "11553015"
+          },
+          "uuid": "376ce295-c441-4188-a7f2-816e8657f837"
+        }
+      ]
     }
   ],
-  "speciesCount": 234,
+  "speciesCount": 237,
   "appSlug": "thiobacillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

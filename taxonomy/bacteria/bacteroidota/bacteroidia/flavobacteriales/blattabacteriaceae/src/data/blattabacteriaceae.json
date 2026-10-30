@@ -149,7 +149,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Blattabacterium",
           "children": [],
-          "uuid": "124e1cb0-068a-54f-95d-4ad8b637113d5b"
+          "uuid": "124e1cb0-068a-54f-95d-4ad8b637113d5b",
+          "sourceIds": {
+            "gbif-backbone": "11284367"
+          }
         },
         {
           "id": "SP_BLATTABACTERIUM_SP000233435",
@@ -1069,9 +1072,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "blattabacteriaceae"
+    },
+    {
+      "id": "GENUS_SULCIA",
+      "name": "Sulcia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "blattabacteriaceae",
+      "children": [
+        {
+          "id": "SP_SULCIA_MUELLERI_A",
+          "name": "Sulcia muelleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sulcia",
+          "authorship": "A",
+          "sourceIds": {
+            "gbif-backbone": "10811578"
+          },
+          "uuid": "e695a2f7-ee9b-486f-ab50-efcab27e9f82"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_JKI-2014",
+      "name": "JKI-2014",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "blattabacteriaceae",
+      "children": [
+        {
+          "id": "SP_JKI_2014_SP018200315",
+          "name": "JKI-2014 sp018200315",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JKI-2014",
+          "sourceIds": {
+            "gbif-backbone": "12211293"
+          },
+          "uuid": "294f0893-31b0-414a-b437-f6afa31b21f6"
+        }
+      ]
     }
   ],
-  "speciesCount": 91,
+  "speciesCount": 93,
   "appSlug": "blattabacteriaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacteroidota > Bacteroidia",

@@ -50,7 +50,8 @@
           "sourceIds": {
             "9ca92552-f23a-41a8-a140-01abaa31c931": "966057",
             "checklistbank-2169": "83561",
-            "checklistbank-316441": "6Z259"
+            "checklistbank-316441": "6Z259",
+            "gbif-backbone": "3228259"
           }
         },
         {
@@ -724,9 +725,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "simkaniaceae"
+    },
+    {
+      "id": "GENUS_NEPTUNOCHLAMYDIA",
+      "name": "Neptunochlamydia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "simkaniaceae",
+      "children": [
+        {
+          "id": "SP_NEPTUNOCHLAMYDIA_SP018399075",
+          "name": "Neptunochlamydia sp018399075",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neptunochlamydia",
+          "sourceIds": {
+            "gbif-backbone": "12200346"
+          },
+          "uuid": "e8e8e093-094a-48dc-92eb-40577450f66b"
+        },
+        {
+          "id": "SP_NEPTUNOCHLAMYDIA_VEXILLIFERAE",
+          "name": "Neptunochlamydia vexilliferae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neptunochlamydia",
+          "sourceIds": {
+            "gbif-backbone": "11453598"
+          },
+          "uuid": "f4d0d4ce-5aad-4452-bea3-30805498aac5"
+        }
+      ]
     }
   ],
-  "speciesCount": 50,
+  "speciesCount": 52,
   "appSlug": "simkaniaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chlamydiota > Chlamydiia",

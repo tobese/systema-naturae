@@ -16,7 +16,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Dehalococcoides",
           "children": [],
-          "uuid": "0712d2a4-f92a-503-b7a-df4eaed5f74230"
+          "uuid": "0712d2a4-f92a-503-b7a-df4eaed5f74230",
+          "sourceIds": {
+            "gbif-backbone": "10958876"
+          }
         },
         {
           "id": "SP_DEHALOCOCCOIDES_MCCARTYI",
@@ -137,7 +140,8 @@
           "uuid": "87f37c65-8e2c-53d-97e-3993a8747db164",
           "sourceIds": {
             "checklistbank-2169": "1217799",
-            "checklistbank-316441": "CRWS2"
+            "checklistbank-316441": "CRWS2",
+            "gbif-backbone": "8235905"
           }
         },
         {
@@ -205,7 +209,8 @@
           "uuid": "99cf93ee-41f7-54d-abd-239b77b957dffc",
           "sourceIds": {
             "checklistbank-2169": "552810",
-            "checklistbank-316441": "6CH4K"
+            "checklistbank-316441": "6CH4K",
+            "gbif-backbone": "8231567"
           }
         },
         {
@@ -230,7 +235,8 @@
           "uuid": "77d9f01f-2845-526-953-764870323ea317",
           "sourceIds": {
             "checklistbank-2169": "1839801",
-            "checklistbank-316441": "CRWS3"
+            "checklistbank-316441": "CRWS3",
+            "gbif-backbone": "9575375"
           }
         },
         {
@@ -244,6 +250,18 @@
             "checklistbank-2169": "943347"
           },
           "uuid": "d9b01c98-7d79-4b9b-b67d-05e30306a84c"
+        },
+        {
+          "id": "SP_DEHALOGENIMONAS_SP002878295",
+          "name": "Dehalogenimonas sp002878295",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dehalogenimonas",
+          "sourceIds": {
+            "gbif-backbone": "12228068"
+          },
+          "uuid": "ad8c4db8-3699-4488-811e-ef52150c76fb"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -336,9 +354,30 @@
           "uuid": "208f03ee-a433-4aff-b682-6c41f92d9890"
         }
       ]
+    },
+    {
+      "id": "GENUS_WRFJ01",
+      "name": "WRFJ01",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "dehalococcoidaceae",
+      "children": [
+        {
+          "id": "SP_WRFJ01_SP009778865",
+          "name": "WRFJ01 sp009778865",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "WRFJ01",
+          "sourceIds": {
+            "gbif-backbone": "11145969"
+          },
+          "uuid": "36b0f710-5540-4bdb-8522-ac97599460f7"
+        }
+      ]
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 26,
   "appSlug": "dehalococcoidaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Chloroflexota > Dehalococcoidia",

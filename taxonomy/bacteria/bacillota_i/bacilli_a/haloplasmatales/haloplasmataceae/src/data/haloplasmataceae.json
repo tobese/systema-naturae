@@ -117,7 +117,8 @@
           "sourceIds": {
             "9ca92552-f23a-41a8-a140-01abaa31c931": "962203",
             "checklistbank-2169": "471825",
-            "checklistbank-316441": "3JFPD"
+            "checklistbank-316441": "3JFPD",
+            "gbif-backbone": "7633297"
           }
         },
         {
@@ -275,9 +276,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "haloplasmataceae"
+    },
+    {
+      "id": "GENUS_INORDINATICELLA",
+      "name": "Inordinaticella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "haloplasmataceae",
+      "children": [
+        {
+          "id": "SP_INORDINATICELLA_SP018394295",
+          "name": "Inordinaticella sp018394295",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Inordinaticella",
+          "sourceIds": {
+            "gbif-backbone": "12236072"
+          },
+          "uuid": "625bb5be-9327-4748-9525-1e65912a0ec3"
+        },
+        {
+          "id": "SP_INORDINATICELLA_CONTRACTILE_A_A",
+          "name": "Inordinaticella contractile_A",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Inordinaticella",
+          "authorship": "A",
+          "sourceIds": {
+            "gbif-backbone": "11868791"
+          },
+          "uuid": "f70c6354-1b75-40ed-ac9e-3528a7cc625f"
+        }
+      ]
     }
   ],
-  "speciesCount": 16,
+  "speciesCount": 18,
   "appSlug": "haloplasmataceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota_I > Bacilli_A",

@@ -450,7 +450,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Desulfomonile",
           "children": [],
-          "uuid": "25a34d01-9c45-5e3-a19-921134bc5032f5"
+          "uuid": "25a34d01-9c45-5e3-a19-921134bc5032f5",
+          "sourceIds": {
+            "gbif-backbone": "3220399"
+          }
         },
         {
           "id": "SP_DESULFOMONILE_TIEDJEI",
@@ -1031,9 +1034,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "desulfomonilaceae"
+    },
+    {
+      "id": "GENUS_DTGT01",
+      "name": "DTGT01",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "desulfomonilaceae",
+      "children": [
+        {
+          "id": "SP_DTGT01_SP011362925",
+          "name": "DTGT01 sp011362925",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "DTGT01",
+          "sourceIds": {
+            "gbif-backbone": "11471366"
+          },
+          "uuid": "7888027d-b6f9-4b02-9d6e-67c889e1f862"
+        }
+      ]
     }
   ],
-  "speciesCount": 75,
+  "speciesCount": 76,
   "appSlug": "desulfomonilaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Desulfobacterota > Desulfomonilia",

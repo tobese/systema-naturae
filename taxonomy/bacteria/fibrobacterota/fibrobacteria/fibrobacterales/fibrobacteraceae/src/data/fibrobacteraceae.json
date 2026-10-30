@@ -487,7 +487,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Fibrobacter",
           "children": [],
-          "uuid": "15ed8a39-ca33-530-8e0-75656e809f87ef"
+          "uuid": "15ed8a39-ca33-530-8e0-75656e809f87ef",
+          "sourceIds": {
+            "gbif-backbone": "11256519"
+          }
         },
         {
           "id": "SP_FIBROBACTER_SUCCINOGENES_Q",
@@ -1729,9 +1732,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "fibrobacteraceae"
+    },
+    {
+      "id": "GENUS_FIBROMONAS",
+      "name": "Fibromonas",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "fibrobacteraceae",
+      "children": [
+        {
+          "id": "SP_FIBROMONAS_SP009787645",
+          "name": "Fibromonas sp009787645",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fibromonas",
+          "sourceIds": {
+            "gbif-backbone": "12232436"
+          },
+          "uuid": "a68e0b79-68e3-4f37-bd92-5cec988c0ecf"
+        },
+        {
+          "id": "SP_FIBROMONAS_TERMITIDIS",
+          "name": "Fibromonas termitidis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fibromonas",
+          "sourceIds": {
+            "gbif-backbone": "10892821"
+          },
+          "uuid": "1c43018f-3f81-46b3-981a-0dd11e771ba1"
+        }
+      ]
     }
   ],
-  "speciesCount": 157,
+  "speciesCount": 159,
   "appSlug": "fibrobacteraceae",
   "sourcedFrom": "gtdb",
   "lineage": "Fibrobacterota > Fibrobacteria",

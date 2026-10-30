@@ -403,7 +403,8 @@
           "uuid": "2d1c4d62-bb2b-59e-8f7-7d13813de53252",
           "sourceIds": {
             "checklistbank-2169": "1008392",
-            "checklistbank-316441": "CRRG6"
+            "checklistbank-316441": "CRRG6",
+            "gbif-backbone": "9377907"
           }
         },
         {
@@ -613,9 +614,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chitinispirillaceae"
+    },
+    {
+      "id": "GENUS_JAFGDP01",
+      "name": "JAFGDP01",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chitinispirillaceae",
+      "children": [
+        {
+          "id": "SP_JAFGDP01_SP016926315",
+          "name": "JAFGDP01 sp016926315",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JAFGDP01",
+          "sourceIds": {
+            "gbif-backbone": "11700223"
+          },
+          "uuid": "d943ee3c-ad10-4250-9595-22180c3ec248"
+        },
+        {
+          "id": "SP_JAFGDP01_SP016932075",
+          "name": "JAFGDP01 sp016932075",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JAFGDP01",
+          "sourceIds": {
+            "gbif-backbone": "11519561"
+          },
+          "uuid": "e85ffb10-edbd-4afb-9ea2-4f1e48f49897"
+        }
+      ]
     }
   ],
-  "speciesCount": 48,
+  "speciesCount": 50,
   "appSlug": "chitinispirillaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Fibrobacterota > Chitinivibrionia",

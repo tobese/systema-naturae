@@ -445,7 +445,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hyella",
           "sourceIds": {
-            "checklistbank-9712": "MSTSNM:Arter:0fbd97ea-1db5-4459-8f76-b0ed0094aebf"
+            "checklistbank-9712": "MSTSNM:Arter:0fbd97ea-1db5-4459-8f76-b0ed0094aebf",
+            "gbif-backbone": "5426515"
           },
           "children": []
         },
@@ -596,7 +597,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Stanieria",
           "sourceIds": {
-            "checklistbank-9712": "MSTSNM:Arter:cdac28cf-f41a-4346-9af4-b0ed00a6de9b"
+            "checklistbank-9712": "MSTSNM:Arter:cdac28cf-f41a-4346-9af4-b0ed00a6de9b",
+            "gbif-backbone": "3216861"
           },
           "children": []
         },
@@ -608,7 +610,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Stanieria",
           "sourceIds": {
-            "checklistbank-9712": "MSTSNM:Arter:4ff90774-4f46-4312-b565-b0ed00a708fe"
+            "checklistbank-9712": "MSTSNM:Arter:4ff90774-4f46-4312-b565-b0ed00a708fe",
+            "gbif-backbone": "3216857"
           },
           "children": []
         }
@@ -776,7 +779,8 @@
           "lineage": "Xenococcus",
           "sourceIds": {
             "checklistbank-9712": "MSTSNM:Arter:c287196d-e5bf-4162-b9d6-b0ed00aa536b",
-            "checklistbank-2008": "1000249"
+            "checklistbank-2008": "1000249",
+            "gbif-backbone": "5426457"
           },
           "children": [],
           "authorship": "Thuret, 1880"
@@ -955,7 +959,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Xenococcus",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q67375676"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q67375676",
+            "gbif-backbone": "5426658"
           },
           "children": []
         },
@@ -1145,6 +1150,19 @@
             "checklistbank-139831": "968135"
           },
           "children": []
+        },
+        {
+          "id": "SP_MYXOSARCINA_BURMENSIS_SKUJA",
+          "name": "Myxosarcina burmensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myxosarcina",
+          "authorship": "Skuja",
+          "sourceIds": {
+            "gbif-backbone": "3216275"
+          },
+          "uuid": "d223857b-4ed2-4763-a96f-937c60214020"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1295,6 +1313,19 @@
             "checklistbank-139831": "702348"
           },
           "children": []
+        },
+        {
+          "id": "SP_ENDOSPORA_RUBRA_N_L_GARDNER",
+          "name": "Endospora rubra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Endospora",
+          "authorship": "N.L.Gardner",
+          "sourceIds": {
+            "gbif-backbone": "5426641"
+          },
+          "uuid": "53dcae73-dc34-4f66-a3c1-ddeb315c8e7b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1433,9 +1464,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "xenococcaceae"
+    },
+    {
+      "id": "GENUS_PLEUROCAPSA",
+      "name": "Pleurocapsa",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "xenococcaceae",
+      "children": [
+        {
+          "id": "SP_PLEUROCAPSA_FULGINOSA_HAUCK",
+          "name": "Pleurocapsa fulginosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurocapsa",
+          "authorship": "Hauck",
+          "sourceIds": {
+            "gbif-backbone": "6123070"
+          },
+          "uuid": "724886bf-9bf2-4ddf-a215-ee91d0827281"
+        },
+        {
+          "id": "SP_PLEUROCAPSA_SP012034765",
+          "name": "Pleurocapsa sp012034765",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurocapsa",
+          "sourceIds": {
+            "gbif-backbone": "12262525"
+          },
+          "uuid": "663e8db4-83c6-4238-8e95-1c679612c764"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_XENTHOLOS",
+      "name": "Xentholos",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "xenococcaceae",
+      "children": [
+        {
+          "id": "SP_XENTHOLOS_KERNERI_HANSGIRG_M_GOLD_MORGAN_G_MONTEJANO_J_KOM_REK_1994",
+          "name": "Xentholos kerneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xentholos",
+          "authorship": "(Hansgirg) M.Gold-Morgan, G.Montejano & J.Komárek, 1994",
+          "sourceIds": {
+            "gbif-backbone": "8439479"
+          },
+          "uuid": "4ba12686-373d-457c-95bb-00a0571f8820"
+        }
+      ]
     }
   ],
-  "speciesCount": 114,
+  "speciesCount": 119,
   "appSlug": "xenococcaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Cyanobacteriota > Cyanobacteriia",

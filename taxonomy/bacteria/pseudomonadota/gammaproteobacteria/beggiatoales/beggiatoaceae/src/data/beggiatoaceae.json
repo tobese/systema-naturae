@@ -503,7 +503,8 @@
           "lineage": "Thioploca",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q17264637",
-            "checklistbank-316441": "56HL4"
+            "checklistbank-316441": "56HL4",
+            "gbif-backbone": "3223014"
           },
           "children": []
         },
@@ -516,7 +517,8 @@
           "lineage": "Thioploca",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q17264639",
-            "checklistbank-316441": "56HL3"
+            "checklistbank-316441": "56HL3",
+            "gbif-backbone": "3223013"
           },
           "children": []
         },
@@ -688,7 +690,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Thiomargarita",
           "uuid": "c7b2feae-f13e-5bf-907-fada415d2281dd",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "10948776"
+          }
         },
         {
           "id": "SP_THIOMARGARITA_SP039714115",
@@ -709,7 +714,8 @@
           "lineage": "Thiomargarita",
           "authorship": "Volland, 2022",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q111017090"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q111017090",
+            "gbif-backbone": "12244919"
           },
           "children": []
         },
@@ -975,9 +981,84 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "beggiatoaceae"
+    },
+    {
+      "id": "GENUS_BB20",
+      "name": "BB20",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "beggiatoaceae",
+      "children": [
+        {
+          "id": "SP_BB20_SP016744725",
+          "name": "BB20 sp016744725",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "BB20",
+          "sourceIds": {
+            "gbif-backbone": "11762912"
+          },
+          "uuid": "437d1c72-5800-4432-b470-f78bdc05533f"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THIOFLEXOTHRIX",
+      "name": "Thioflexothrix",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "beggiatoaceae",
+      "children": [
+        {
+          "id": "SP_THIOFLEXOTHRIX_PSEKUPSII",
+          "name": "Thioflexothrix psekupsii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thioflexothrix",
+          "sourceIds": {
+            "gbif-backbone": "10796864"
+          },
+          "uuid": "5872a936-4992-4019-901a-b8f974004efc"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_UBA10656",
+      "name": "UBA10656",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "beggiatoaceae",
+      "children": [
+        {
+          "id": "SP_UBA10656_SP003645185",
+          "name": "UBA10656 sp003645185",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "UBA10656",
+          "sourceIds": {
+            "gbif-backbone": "10822285"
+          },
+          "uuid": "84f0a535-4a24-4c9c-8ac7-759a4e0e9150"
+        },
+        {
+          "id": "SP_UBA10656_SP002085445",
+          "name": "UBA10656 sp002085445",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "UBA10656",
+          "sourceIds": {
+            "gbif-backbone": "10693177"
+          },
+          "uuid": "0779d13e-d40e-4cd7-8aba-820e94a5beb9"
+        }
+      ]
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 72,
   "appSlug": "beggiatoaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Pseudomonadota > Gammaproteobacteria",

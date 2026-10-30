@@ -408,7 +408,10 @@
           "sourcedFrom": "gtdb",
           "lineage": "Anaerotignum",
           "children": [],
-          "uuid": "37792229-2900-56b-abd-eb1b2aa6f96f18"
+          "uuid": "37792229-2900-56b-abd-eb1b2aa6f96f18",
+          "sourceIds": {
+            "gbif-backbone": "10757151"
+          }
         },
         {
           "id": "SP_ANAEROTIGNUM_SP905214825",
@@ -577,6 +580,18 @@
             "checklistbank-2265": "2039241"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANAEROTIGNUM_SP910576545",
+          "name": "Anaerotignum sp910576545",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaerotignum",
+          "sourceIds": {
+            "gbif-backbone": "12179165"
+          },
+          "uuid": "eec02e17-49ce-4af3-83bd-8d0490ccec95"
         }
       ],
       "sourcedFrom": "gtdb",
@@ -1475,9 +1490,30 @@
           "uuid": "6b27646a-f739-4ca5-a1fd-498618187b03"
         }
       ]
+    },
+    {
+      "id": "GENUS_NEOANAEROTIGNUM_B",
+      "name": "Neoanaerotignum_B",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "anaerotignaceae",
+      "children": [
+        {
+          "id": "SP_NEOANAEROTIGNUM_B_GALLI",
+          "name": "Neoanaerotignum_B galli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoanaerotignum_B",
+          "sourceIds": {
+            "gbif-backbone": "12246454"
+          },
+          "uuid": "a5e4f206-fdce-4111-8202-199ee3a096d1"
+        }
+      ]
     }
   ],
-  "speciesCount": 121,
+  "speciesCount": 123,
   "appSlug": "anaerotignaceae",
   "sourcedFrom": "gtdb",
   "lineage": "Bacillota > Clostridia",

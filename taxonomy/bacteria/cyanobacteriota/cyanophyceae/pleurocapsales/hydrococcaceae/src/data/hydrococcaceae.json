@@ -19,7 +19,8 @@
           "children": [],
           "uuid": "bf413c9f-c05d-5e0-b4f-6012b1a463683a",
           "sourceIds": {
-            "checklistbank-7888": "NHMSYS0000603408"
+            "checklistbank-7888": "NHMSYS0000603408",
+            "gbif-backbone": "5426588"
           }
         },
         {
@@ -216,7 +217,8 @@
           "authorship": "Huber et Jardin",
           "sourceIds": {
             "checklistbank-7888": "NHMSYS0000603426",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q67374505"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q67374505",
+            "gbif-backbone": "5426504"
           },
           "children": []
         },
@@ -633,7 +635,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Myxohyella",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q67373934"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q67373934",
+            "gbif-backbone": "3216988"
           },
           "children": []
         },
@@ -970,9 +973,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hydrococcaceae"
+    },
+    {
+      "id": "GENUS_PLEUROCOCCALES",
+      "name": "Pleurococcales",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hydrococcaceae",
+      "children": [
+        {
+          "id": "SP_PLEUROCOCCALES_AMETHYSTEA_ROSENVINGE_1884",
+          "name": "Pleurococcales amethystea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurococcales",
+          "authorship": "Rosenvinge, 1884",
+          "sourceIds": {
+            "gbif-backbone": "8484335"
+          },
+          "uuid": "fa5e305f-08f4-41d0-84f7-4fce04208fc5"
+        },
+        {
+          "id": "SP_PLEUROCOCCALES_FULIGINOSA_HAUCK_1885",
+          "name": "Pleurococcales fuliginosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurococcales",
+          "authorship": "Hauck, 1885",
+          "sourceIds": {
+            "gbif-backbone": "8694527"
+          },
+          "uuid": "602c3805-7d6b-4668-9f3b-5a27772e06d5"
+        }
+      ]
     }
   ],
-  "speciesCount": 70,
+  "speciesCount": 72,
   "appSlug": "hydrococcaceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 12,
