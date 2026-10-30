@@ -37,13 +37,19 @@ type Runner struct {
 }
 
 // Run runs transformColChecklist.py for the given archive and work slug.
-func (r *Runner) Run(ctx context.Context, archive, workSlug string) (*Result, error) {
+// kingdom, when set, is the queue entry's kingdomOverride: a single-kingdom
+// source whose rows carry no kingdom (ICTV left 2,836 species unresolved
+// without it, 2026-10-30).
+func (r *Runner) Run(ctx context.Context, archive, workSlug, kingdom string) (*Result, error) {
 	progressPath := filepath.Join(r.SourcesRoot, "work", workSlug, "transform.progress.json")
 	os.MkdirAll(filepath.Dir(progressPath), 0755)
 	writeProgress(progressPath, workSlug, nil, nil, false, "routing")
 
-	rc, out, err := runproc.Run(ctx, r.Timeout, []string{"TQDM_DISABLE=1"},
-		"python3", filepath.Join(r.ScriptDir, "transformColChecklist.py"), archive, workSlug, "--apply")
+	args := []string{filepath.Join(r.ScriptDir, "transformColChecklist.py"), archive, workSlug, "--apply"}
+	if kingdom != "" {
+		args = append(args, "--kingdom", kingdom)
+	}
+	rc, out, err := runproc.Run(ctx, r.Timeout, []string{"TQDM_DISABLE=1"}, "python3", args...)
 	if err != nil {
 		return &Result{RC: rc, Output: out}, fmt.Errorf("transform: %w", err)
 	}

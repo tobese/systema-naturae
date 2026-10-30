@@ -244,7 +244,7 @@ func (p *Pipeline) processOne(ctx context.Context, key string, entry *queue.Entr
 	// Stage 1: transform.
 	fmt.Printf("  %s: transforming\n", key)
 	p.store.SetStage(key, entry, queue.StageTransforming)
-	result, err := p.tr.Run(ctx, entry.ArchivePath, key)
+	result, err := p.tr.Run(ctx, entry.ArchivePath, key, entry.KingdomOverride)
 	if errors.Is(err, runproc.ErrTimeout) {
 		p.store.SetStageReason(key, entry, queue.StageError,
 			fmt.Sprintf("transform timed out after %s", p.cfg.TransformTimeout))
