@@ -14,6 +14,7 @@ package main
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -62,6 +63,22 @@ func handleImport(st *store) http.HandlerFunc {
 		slug := r.PathValue("slug")
 		if req.Kingdom == "" {
 			http.Error(w, "kingdom is required", http.StatusBadRequest)
+			return
+		}
+		ok, err := st.partition.mayWrite(st.root, req.Kingdom)
+		if err != nil {
+			http.Error(w, "writer partition: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+		if !ok {
+			// 403: another machine owns this kingdom (scripts/writerKingdoms.py).
+			writeJSON(w, http.StatusForbidden, map[string]any{
+				"error":          fmt.Sprintf("kingdom %q is not this writer's (SN_WRITE_KINGDOMS=%s)", req.Kingdom, st.partition.list()),
+				"foreignKingdom": true,
+				"kingdom":        req.Kingdom,
+				"family":         slug,
+				"speciesOffered": len(req.Species),
+			})
 			return
 		}
 		loc := familyLocation{Kingdom: req.Kingdom, Phylum: req.Phylum, Class: req.Class, Order: req.Order, Slug: slug}

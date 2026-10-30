@@ -83,12 +83,14 @@ func loadRegisteredSlugs(root, kingdom string) (map[string]bool, error) {
 	if err := json.Unmarshal(raw, &cfg); err != nil {
 		return nil, fmt.Errorf("parsing %s: %w", cfgPath, err)
 	}
-	k, ok := cfg.Kingdoms[kingdom]
-	if !ok {
-		return nil, fmt.Errorf("kingdom %q is not in %s", kingdom, cfgPath)
+	input := cfg.Kingdoms[kingdom].Input
+	if _, ok := cfg.Kingdoms[kingdom]; !ok {
+		if input = bacteriaVirusesInput[kingdom]; input == "" {
+			return nil, fmt.Errorf("kingdom %q is not in %s", kingdom, cfgPath)
+		}
 	}
 
-	taxPath := filepath.Join(root, "portal", k.Input)
+	taxPath := filepath.Join(root, "portal", input)
 	taxRaw, err := os.ReadFile(taxPath)
 	if err != nil {
 		return nil, fmt.Errorf("reading %s: %w", taxPath, err)

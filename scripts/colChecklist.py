@@ -34,6 +34,7 @@ import io
 import json
 import os
 import re
+import uuid
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -765,9 +766,19 @@ def _read_taxa_cache(cache_path):
     con = duckdb.connect()
     rel = con.sql(f"SELECT * FROM read_parquet({cache_path!r})")
     cols = rel.columns
-    return [{c: v for c, v in zip(cols, row)
+    return [{c: plain_cache_value(v) for c, v in zip(cols, row)
              if v is not None or c in _TAXON_CORE_KEYS}
             for row in rel.fetchall()]
+
+
+def plain_cache_value(v):
+    """read_json_auto infers a UUID column when every sampled id looks like
+    one, so the parquet hands back uuid.UUID where load() produced str.
+    Found 2026-10-30: four flora checklists with UUID taxon ids failed
+    their transform on json.dumps, and a str-keyed lookup against those
+    ids would silently miss. Convert back at read time, which also covers
+    caches already on disk."""
+    return str(v) if isinstance(v, uuid.UUID) else v
 
 
 def load_cached(path):

@@ -175,6 +175,9 @@ func (s *Store) Write(key string, entry *Entry) error {
 		return fmt.Errorf("marshal %s: %w", key, err)
 	}
 	data = append(data, '\n')
+	if err := os.MkdirAll(s.dir, 0o755); err != nil {
+		return fmt.Errorf("queue dir for %s: %w", key, err)
+	}
 	tmp, err := os.CreateTemp(s.dir, "."+key+".*.tmp")
 	if err != nil {
 		return fmt.Errorf("temp for %s: %w", key, err)

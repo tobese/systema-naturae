@@ -87,7 +87,11 @@ import time
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.dirname(SCRIPT_DIR) + "/data"
-STORE = os.path.join(DATA_DIR, "source-queue")
+# SN_QUEUE_DIR (relative to the repo root, or absolute) points at another
+# queue -- q-bert's bacteria/viruses ordinator uses data/source-queue-bv, the
+# same variable services/import-ordinator reads.
+STORE = os.path.join(os.path.dirname(SCRIPT_DIR),
+                     os.environ.get("SN_QUEUE_DIR") or os.path.join("data", "source-queue"))
 EVENTS_LOG = os.path.join(DATA_DIR, "pipeline-events.jsonl")
 
 STAGES = ("candidate", "downloaded", "triaging", "transforming", "triaged", "queued",

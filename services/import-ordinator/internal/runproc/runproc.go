@@ -9,6 +9,7 @@ import (
 	"io"
 	"os"
 	"os/exec"
+	"syscall"
 	"time"
 )
 
@@ -31,6 +32,15 @@ func Run(ctx context.Context, timeout time.Duration, env []string, name string, 
 	w := io.MultiWriter(os.Stdout, &buf)
 	cmd.Stdout = w
 	cmd.Stderr = w
+	// Own process group, and kill the whole group on timeout. Killing only
+	// the direct child orphaned its children: found 2026-10-30, a
+	// pipelineOrchestrator.py --side-tasks timeout would have left an
+	// importColChecklist.py run writing family files with no lock held,
+	// while the next pass started a second sweep over the same archives.
+	cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true}
+	cmd.Cancel = func() error {
+		return syscall.Kill(-cmd.Process.Pid, syscall.SIGKILL)
+	}
 	// Kill the child if it ignores the context's kill for this long.
 	cmd.WaitDelay = 30 * time.Second
 

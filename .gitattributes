@@ -1,0 +1,7 @@
+# Append-only logs written on both Macie and q-bert (the writer partition,
+# scripts/writerKingdoms.py). Both sides only ever add lines at the end, so a
+# merge keeps both sides' lines instead of conflicting on every sync.
+data/import-log.jsonl merge=union
+data/pipeline-events.jsonl merge=union
+data/gbif-placement-diffs.jsonl merge=union
+data/dedupe-log.jsonl merge=union

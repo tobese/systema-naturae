@@ -58,7 +58,7 @@ from tree import (  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-def sync_file_counts(apply: bool) -> None:
+def sync_file_counts(apply: bool, kingdoms=None) -> None:
     """A family file's own `speciesCount` must equal what the file holds.
 
     Distinct from the node's value, which is the real-world total and is
@@ -68,7 +68,8 @@ def sync_file_counts(apply: bool) -> None:
     """
     fixed = 0
     absent = 0
-    for fam in iter_family_files():
+    files = (f for k in (kingdoms or KINGDOMS) for f in iter_family_files(k))
+    for fam in files:
         try:
             d = fam.load()
         except Exception:
@@ -94,6 +95,9 @@ def sync_file_counts(apply: bool) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--kingdom", action="append", default=[],
+                    help="repeatable; default the six portal kingdoms. Name "
+                         "bacteria/viruses explicitly to resync those (q-bert).")
     args = ap.parse_args()
 
     if args.apply:
@@ -103,7 +107,8 @@ def main() -> int:
 
 
 def _run(args) -> int:
-    sync_file_counts(args.apply)
+    kingdoms = args.kingdom or KINGDOMS
+    sync_file_counts(args.apply, kingdoms)
     print()
 
     grand = {"same": 0, "under": 0, "over": 0, "missing": 0}
@@ -112,7 +117,7 @@ def _run(args) -> int:
     all_changes = []
     dirty = {}
 
-    for kingdom in KINGDOMS:
+    for kingdom in kingdoms:
         rel = kingdom_input(kingdom)
         path = os.path.join(ROOT, rel)
         if not os.path.exists(path):

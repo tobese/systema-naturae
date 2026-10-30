@@ -116,8 +116,19 @@ def kingdom_names() -> List[str]:
 KINGDOMS: List[str] = kingdom_names()
 
 
+# Imported but not built (portal stays six kingdoms, see CLAUDE.md); same
+# mapping as importColChecklist.BACTERIA_VIRUSES_INPUT. Only reachable by
+# naming the kingdom -- KINGDOMS and every default walk stay the six.
+BACTERIA_VIRUSES_INPUT = {
+    "bacteria": "data/taxonomy-bacteria.json",
+    "viruses": "data/taxonomy-viruses.json",
+}
+
+
 def kingdom_input(kingdom: str) -> str:
     """Repo-relative path to a kingdom's taxonomy input document."""
+    if kingdom in BACTERIA_VIRUSES_INPUT:
+        return os.path.join("portal", BACTERIA_VIRUSES_INPUT[kingdom])
     with open(os.path.join(ROOT, KINGDOM_CONFIG), encoding="utf-8") as fh:
         cfg = json.load(fh)["kingdoms"][kingdom]
     return os.path.join("portal", cfg["input"])

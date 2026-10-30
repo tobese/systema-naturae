@@ -51,6 +51,7 @@ import colChecklist as K  # noqa: E402
 import importSpeciesFile as SF  # noqa: E402
 import sources as _sources  # noqa: E402
 import taxamatch  # noqa: E402
+import writerKingdoms as WK  # noqa: E402
 
 KINGDOM_CONFIG = "portal/data/kingdom-config.json"
 # Fallback only. A source's own kingdom comes from its rank chain, because
@@ -144,9 +145,23 @@ def _load_routing_cache(archive, default_k):
     for row in rows:
         if row[default_k_idx] != default_k:
             return {}  # built under a different --kingdom; whole cache invalid
-        d = dict(zip(cols, row))
+        d = {c: K.plain_cache_value(v) for c, v in zip(cols, row)}
         out[d["id"]] = d
     return out
+
+
+def _write_json_atomic(path, obj):
+    """Serialise fully, then rename over `path`. Found 2026-10-30: a
+    uuid.UUID in one record made json.dump raise partway through
+    roccellaceae.json, leaving a truncated family file that broke every
+    later run touching it (the same thing hit it and achipteriidae on
+    10-29). Serialising before opening means a failure leaves the old
+    file untouched."""
+    text = json.dumps(obj, indent=2, ensure_ascii=False) + "\n"
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write(text)
+    os.replace(tmp, path)
 
 
 def _write_routing_cache(cache_rows, archive, default_k):
@@ -795,6 +810,15 @@ def main() -> int:
     staged = r.staged
     KINDS = r.kinds
 
+    # The writer partition (scripts/writerKingdoms.py): a kingdom another
+    # machine owns is routed and counted like any other, but not written here.
+    foreign = {k for k, _ in staged if not WK.may_write(k)}
+    if foreign:
+        n = sum(len(v) for (k, _), v in staged.items() if k in foreign)
+        print(f"  not this writer's kingdom(s), left for their owner: "
+              f"{', '.join(sorted(foreign))} ({n:,} species)")
+        staged = {key: v for key, v in staged.items() if key[0] not in foreign}
+
     if not staged:
         print("\n  nothing to do")
         return 0
@@ -899,9 +923,7 @@ def main() -> int:
         if args.apply and not m.get("species_added") and not fam_id_changed:
             print(f"      unchanged, not rewritten")
         elif args.apply:
-            with open(touched_path, "w", encoding="utf-8") as fh:
-                json.dump(doc, fh, indent=2, ensure_ascii=False)
-                fh.write("\n")
+            _write_json_atomic(touched_path, doc)
             # taxonomy.json's speciesCount is what the Coverage modal reads.
             # Use the same iterator merge_family uses rather than counting here:
             # a hand-rolled count of top-level children counts SUBFAMILY nodes
@@ -955,9 +977,7 @@ def main() -> int:
         for kind in sorted({k for k, _ in staged}):
             _tax_k, _ = KINDS[kind]
             tp, _kk = taxonomy_input(kind)
-            with open(tp, "w", encoding="utf-8") as fh:
-                json.dump(_tax_k, fh, indent=2, ensure_ascii=False)
-                fh.write("\n")
+            _write_json_atomic(tp, _tax_k)
             print(f"  wrote {tp}")
     else:
         print("\n  (dry run -- pass --apply to write)")

@@ -22,6 +22,7 @@ type store struct {
 	families  map[string]*familyState
 	index     *globalIndex
 	registry  *familyRegistry
+	partition writerPartition
 }
 
 func newStore(root string, gitCommit bool, idleEvict time.Duration) *store {

@@ -48,6 +48,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import importwriteClient as iw  # noqa: E402
 import sources  # noqa: E402
+import writerKingdoms as WK  # noqa: E402
 
 
 def genus_ref(g) -> dict:
@@ -108,6 +109,19 @@ def drop_decided_removals(records: list) -> list:
                   f"removed by a recorded homonym decision")
             continue
         kept.append(r)
+    return kept
+
+
+def drop_foreign_kingdoms(records: list) -> list:
+    """Keep only records this writer may write (scripts/writerKingdoms.py).
+    A mixed source like NCBI is applied on both machines, each taking its
+    own kingdoms; importwrite refuses the rest anyway, this just says so
+    once instead of per family."""
+    kept = [r for r in records if WK.may_write(r.get("kingdom") or "")]
+    if len(kept) != len(records):
+        foreign = sorted({(r.get("kingdom") or "?") for r in records} - WK.allowed())
+        print(f"  not this writer's kingdom(s), left for their owner: "
+              f"{', '.join(foreign)} ({len(records) - len(kept):,} records)")
     return kept
 
 
@@ -184,7 +198,7 @@ def main() -> int:
         print(f"  run {meta.get('runId', '?')} from {meta.get('source', work_slug)}"
               f" ({meta.get('recordCount', '?')} records, transformed {meta.get('transformedAt', '?')})")
 
-    records = drop_decided_removals(load_records(path))
+    records = drop_foreign_kingdoms(drop_decided_removals(load_records(path)))
     print(f"  {len(records)} records in {path}")
 
     groups = group_by_family_genus(records)

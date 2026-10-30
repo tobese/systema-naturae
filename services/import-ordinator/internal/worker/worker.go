@@ -32,6 +32,16 @@ type Config struct {
 	DownloadTimeout  time.Duration
 	SideTaskTimeout  time.Duration
 	PollInterval     time.Duration
+	// QueueDir defaults to <repo>/data/source-queue. q-bert's bacteria/viruses
+	// ordinator keeps its own (SN_QUEUE_DIR), so the two machines' queue
+	// files never meet in a merge.
+	QueueDir string
+	// NoDownload: work only from archives already on this machine; a source
+	// without one waits rather than being fetched.
+	NoDownload bool
+	// NoSideTasks: skip pipelineOrchestrator.py --side-tasks (discovery,
+	// needs-rerun, the pending-family sweep).
+	NoSideTasks bool
 }
 
 // Pipeline runs the import pipeline.
@@ -50,9 +60,12 @@ func NewPipeline(cfg Config) *Pipeline {
 	if cfg.Workers < 1 {
 		cfg.Workers = 1
 	}
+	if cfg.QueueDir == "" {
+		cfg.QueueDir = filepath.Join(cfg.RepoRoot, "data", "source-queue")
+	}
 	return &Pipeline{
 		cfg:   cfg,
-		store: queue.NewStore(filepath.Join(cfg.RepoRoot, "data", "source-queue")),
+		store: queue.NewStore(cfg.QueueDir),
 		dl: &download.Runner{
 			SourcesRoot: cfg.SourcesRoot,
 			Timeout:     cfg.DownloadTimeout,
@@ -93,7 +106,9 @@ func (p *Pipeline) RunOnce(ctx context.Context) {
 
 	// Outside the lock: the Python side takes the same lock itself, and
 	// flock on a second descriptor would fail even from our own child.
-	p.runSideTasks(ctx)
+	if !p.cfg.NoSideTasks {
+		p.runSideTasks(ctx)
+	}
 }
 
 func (p *Pipeline) drain(ctx context.Context) {
@@ -162,6 +177,9 @@ func (p *Pipeline) RunLoop(ctx context.Context) {
 }
 
 // Store returns the queue store for dashboard access.
+// Config returns the pipeline's resolved configuration.
+func (p *Pipeline) Config() Config { return p.cfg }
+
 func (p *Pipeline) Store() *queue.Store {
 	return p.store
 }
@@ -199,6 +217,10 @@ func (p *Pipeline) processOne(ctx context.Context, key string, entry *queue.Entr
 	}
 
 	// Stage 0: download archive if not present.
+	if !fileExists(entry.ArchivePath) && p.cfg.NoDownload {
+		fmt.Printf("  %s: no archive at %s and downloads are off -- waiting\n", key, entry.ArchivePath)
+		return
+	}
 	if !fileExists(entry.ArchivePath) {
 		fmt.Printf("  %s: downloading archive\n", key)
 		result, err := p.dl.Run(ctx, key)

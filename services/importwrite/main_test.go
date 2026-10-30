@@ -85,3 +85,45 @@ func TestHandleGet_UnregisteredFamilyReturns404(t *testing.T) {
 		t.Fatalf("expected 404, got %d", resp.StatusCode)
 	}
 }
+
+func TestHandleImport_ForeignKingdomReturns403(t *testing.T) {
+	root := t.TempDir()
+	writeFixtureKingdomConfig(t, root, "animalia", []string{"felidae"})
+	srv := newTestServer(t, root)
+
+	// Unset SN_WRITE_KINGDOMS = kingdom-config.json's kingdoms, which never
+	// include bacteria.
+	t.Setenv("SN_WRITE_KINGDOMS", "")
+	body := strings.NewReader(`{"kingdom":"bacteria","genus":{"name":"Escherichia"},"species":[{"name":"Escherichia coli"}]}`)
+	resp, err := http.Post(srv.URL+"/family/enterobacteriaceae/species", "application/json", body)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusForbidden {
+		t.Fatalf("expected 403, got %d", resp.StatusCode)
+	}
+	var got map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&got); err != nil {
+		t.Fatal(err)
+	}
+	if got["foreignKingdom"] != true {
+		t.Fatalf("expected foreignKingdom=true, got %v", got)
+	}
+}
+
+func TestWriterPartition_EnvOverridesConfig(t *testing.T) {
+	root := t.TempDir()
+	writeFixtureKingdomConfig(t, root, "animalia", []string{"felidae"})
+	t.Setenv("SN_WRITE_KINGDOMS", "bacteria, Viruses")
+	var p writerPartition
+	for k, want := range map[string]bool{"bacteria": true, "viruses": true, "animalia": false} {
+		got, err := p.mayWrite(root, k)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if got != want {
+			t.Errorf("mayWrite(%q) = %v, want %v", k, got, want)
+		}
+	}
+}

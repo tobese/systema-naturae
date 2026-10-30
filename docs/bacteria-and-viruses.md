@@ -1,5 +1,47 @@
 # Holding bacteria and viruses
 
+> **ONLY THE PORTAL IS ON HOLD, as of 2026-10-30.** Importing *and
+> scaffolding new families* are both in scope now; building and deploying
+> either kingdom stay on hold, and `kingdom-config.json` still declares six.
+> `scripts/scaffoldFamilies.py --kingdom bacteria|viruses` works like any
+> other kingdom, writing `portal/data/taxonomy-{bacteria,viruses}.json`.
+> The virus tree keeps the Kingdom > Phylum > Class > Order > Family shape
+> it already has (no ICTV realm level), so scaffolding fits it as it is.
+>
+> **The two kingdoms are filled on q-bert, not Macie.** The writer
+> partition (`scripts/writerKingdoms.py`, `SN_WRITE_KINGDOMS`) gives each
+> machine its own kingdoms: unset means the six portal kingdoms, so Macie
+> never writes these two; q-bert runs with
+> `SN_WRITE_KINGDOMS=bacteria,viruses`. Enforced in every writer:
+> importwrite (403 `foreignKingdom`), `importTransformed.py`,
+> `importColChecklist.py`'s direct writes, and `scaffoldFamilies.py`. Mixed
+> sources (NCBI, ENA, Wikidata, COL XR, the Backbone) are applied on both
+> machines, each taking its own kingdoms.
+>
+> q-bert's setup:
+>
+>     # its own importwrite on the q-bert checkout
+>     SN_WRITE_KINGDOMS=bacteria,viruses IMPORTWRITE_ROOT=~/src/systema-naturae \
+>         services/importwrite/importwrite
+>     # its own ordinator: own queue, no downloads, no side tasks
+>     SN_WRITE_KINGDOMS=bacteria,viruses SN_QUEUE_DIR=data/source-queue-bv \
+>         SN_SOURCES_ROOT=~/src/sources IMPORTWRITE_URL=http://localhost:8089 \
+>         services/import-ordinator/import-ordinator --loop --no-download --no-side-tasks
+>
+> Archives are copied to q-bert by hand (`--no-download`). q-bert commits
+> only `taxonomy/{bacteria,viruses}/`, `portal/data/taxonomy-{bacteria,viruses}.json`,
+> `data/source-queue-bv/` and the append-only logs, which `.gitattributes`
+> merges with `merge=union`. Quality checks for these kingdoms are run by
+> name, since every default walk stays the six:
+> `dedupeSpeciesAcrossFamilies.py --kingdom bacteria` (and `viruses`),
+> `resyncFamilyCounts.py --kingdom bacteria --kingdom viruses`.
+>
+> Measured 2026-10-30, dry runs on Macie's tree: the pending store lists 873
+> bacteria families (521k species) and 259 virus families (168k); of the 259,
+> 224 are already held and 35 would be scaffolded from the GBIF Backbone.
+> Dedupe finds 8 duplicate bacteria species and 10 virus; resync finds 34
+> family counts behind their files.
+
 > **PARTIALLY LIFTED 2026-10-25.** On hold as of 2026-10-04, reaffirmed
 > 2026-10-17: import, scaffolding, build and deploy all blocked. As of
 > 2026-10-25, **importing is back in scope** — not a bug-fix, a decision,

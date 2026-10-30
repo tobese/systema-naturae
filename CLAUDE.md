@@ -69,6 +69,16 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 
 > ## 🚫 Bacteria and viruses: import yes, portal no
 >
+> **2026-10-30: only the portal is on hold.** Scaffolding new bacteria/virus
+> families is in scope too, and both kingdoms are now filled **on q-bert**,
+> by its own importwrite and import-ordinator, under the writer partition
+> (`scripts/writerKingdoms.py`): `SN_WRITE_KINGDOMS` unset means the six
+> portal kingdoms, so nothing on Macie writes bacteria or viruses; q-bert
+> sets `SN_WRITE_KINGDOMS=bacteria,viruses`. Setup and commands are at the
+> top of [`docs/bacteria-and-viruses.md`](docs/bacteria-and-viruses.md).
+> The paragraphs below predate this, and their "merge into existing families
+> only" no longer applies.
+>
 > Decided **2026-10-04**, reaffirmed 2026-10-17, **partially lifted 2026-10-25.**
 > Importing the two kingdoms is now in scope whenever a source offers them —
 > they kept arriving anyway (NCBI/ENA runs bucketed ~200k of them as

@@ -31,8 +31,11 @@ the worklist itself starts looking wrong:
 
     python3 scripts/pendingFamilies.py seed
 
-Bacteria and viruses are deliberately on hold (see CLAUDE.md), so a run that
-would touch either kingdom exits non-zero instead of scaffolding it.
+Bacteria and viruses are scaffolded like any other kingdom since 2026-10-30
+(only the portal stays on hold for them -- see CLAUDE.md), into
+`portal/data/taxonomy-{bacteria,viruses}.json`, never kingdom-config.json.
+Every kingdom is subject to the writer partition (scripts/writerKingdoms.py):
+on Macie those two are q-bert's, so scaffolding them there exits non-zero.
 """
 from __future__ import annotations
 
@@ -47,18 +50,21 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sources as _sources  # noqa: E402
+import writerKingdoms as WK  # noqa: E402
+from importColChecklist import BACTERIA_VIRUSES_INPUT  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KINGDOM_CONFIG = os.path.join(ROOT, "portal", "data", "kingdom-config.json")
 PENDING = os.path.join(_sources.ROOT, "pending", "families.jsonl")
 BACKBONE = os.path.join(_sources.ROOT, "archives", "gbif-backbone", "backbone.zip")
 SOURCE = "gbif-backbone"
-ON_HOLD = {"bacteria", "viruses"}
 SKIP_NAMES = {"", "(no family)", "incertae sedis", "incertae-sedis"}
 PREFIX = {"phylum": "PHY", "class": "CLS", "order": "ORD"}
 
 
 def taxonomy_input(kingdom: str) -> str:
+    if kingdom in BACTERIA_VIRUSES_INPUT:
+        return os.path.join(ROOT, "portal", BACTERIA_VIRUSES_INPUT[kingdom])
     cfg = json.load(open(KINGDOM_CONFIG, encoding="utf-8"))["kingdoms"]
     if kingdom not in cfg:
         sys.exit(f"FATAL: kingdom {kingdom!r} is not in kingdom-config.json "
@@ -222,11 +228,12 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
     kingdom = args.kingdom.strip().lower()
-    if kingdom in ON_HOLD:
-        sys.exit(f"FATAL: {kingdom} is deliberately on hold (see CLAUDE.md); "
-                 f"not scaffolding it.")
-    if kingdom not in {"animalia", "plantae", "fungi", "chromista", "protozoa", "archaea"}:
+    if kingdom not in set(WK.portal_kingdoms()) | set(WK.BACTERIA_VIRUSES):
         sys.exit(f"FATAL: unknown kingdom {kingdom!r}")
+    if not WK.may_write(kingdom):
+        sys.exit(f"FATAL: {kingdom} is not this writer's kingdom "
+                 f"(SN_WRITE_KINGDOMS={','.join(sorted(WK.allowed()))}); "
+                 f"see scripts/writerKingdoms.py")
 
     tax_path = taxonomy_input(kingdom)
     tax = json.load(open(tax_path, encoding="utf-8"))

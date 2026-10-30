@@ -33,10 +33,18 @@
 //	IMPORTWRITE_URL   URL of the importwrite service (default http://localhost:8089)
 //	WORKERS           number of concurrent workers (default 1)
 //	TRANSFORM_TIMEOUT minutes for transform timeout (default 30)
-//	APPLY_TIMEOUT     minutes for apply timeout (default 30)
+//	APPLY_TIMEOUT     minutes for apply timeout (default 180; WFO-sized applies need it)
 //	DOWNLOAD_TIMEOUT  minutes for download timeout (default 60)
 //	SIDE_TASK_TIMEOUT minutes for the Python side tasks (default 120)
 //	PORT              HTTP dashboard port (default 8090)
+//	SN_QUEUE_DIR      queue directory (default <repo>/data/source-queue)
+//	SN_WRITE_KINGDOMS kingdoms this machine writes, passed through to the
+//	                  Python scripts and importwrite (scripts/writerKingdoms.py)
+//
+// q-bert's bacteria/viruses ordinator (docs/bacteria-and-viruses.md):
+//
+//	SN_WRITE_KINGDOMS=bacteria,viruses SN_QUEUE_DIR=data/source-queue-bv \
+//	    import-ordinator --loop --no-download --no-side-tasks
 
 package main
 
@@ -60,6 +68,10 @@ import (
 func main() {
 	loop := flag.Bool("loop", false, "keep polling every 60s")
 	port := flag.String("port", "8090", "HTTP dashboard port")
+	noDownload := flag.Bool("no-download", false,
+		"never fetch: a source whose archive is not on this machine waits")
+	noSideTasks := flag.Bool("no-side-tasks", false,
+		"skip pipelineOrchestrator.py --side-tasks (discovery, needs-rerun, pending-family sweep)")
 	htmlFrom := flag.String("html-from", "",
 		"dashboard page to serve (default: services/import-ordinator/internal/dashboard/dashboard.html in the repo)")
 	flag.Parse()
@@ -102,7 +114,7 @@ func main() {
 		}
 	}
 
-	applyTimeout := 30 * time.Minute
+	applyTimeout := 180 * time.Minute
 	if t := os.Getenv("APPLY_TIMEOUT"); t != "" {
 		if d, err := time.ParseDuration(t + "m"); err == nil {
 			applyTimeout = d
@@ -137,6 +149,9 @@ func main() {
 			DownloadTimeout:  downloadTimeout,
 			SideTaskTimeout:  sideTaskTimeout,
 			PollInterval:     pollInterval,
+			QueueDir:         queueDir(repoRoot),
+			NoDownload:       *noDownload,
+			NoSideTasks:      *noSideTasks,
 		},
 	)
 
@@ -169,7 +184,8 @@ func main() {
 	})
 
 	addr := ":" + *port
-	log.Printf("import-ordinator starting: %d workers, poll every %s, dashboard on :%s", workers, pollInterval, *port)
+	log.Printf("import-ordinator starting: %d workers, poll every %s, dashboard on :%s, queue %s, downloads %v, side tasks %v, writes %q",
+		workers, pollInterval, *port, pipeline.Config().QueueDir, !*noDownload, !*noSideTasks, os.Getenv("SN_WRITE_KINGDOMS"))
 
 	// Run pipeline in background goroutine
 	go func() {
@@ -209,4 +225,14 @@ func main() {
 
 	pipeline.Stop()
 	log.Println("import-ordinator stopped")
+}
+
+// queueDir resolves SN_QUEUE_DIR against the repo root; empty keeps the
+// pipeline's default.
+func queueDir(repoRoot string) string {
+	d := os.Getenv("SN_QUEUE_DIR")
+	if d == "" || filepath.IsAbs(d) {
+		return d
+	}
+	return filepath.Join(repoRoot, d)
 }
