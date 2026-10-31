@@ -10,10 +10,15 @@ bottleneck: 1,755,600 species in animalia alone.
 
 This is that walk done once and persisted, so a lookup is a keyed SQLite query
 instead of a tree traversal. Derived and gitignored, like `species.parquet` --
-never the source of truth, and `ensure_fresh` rebuilds it automatically when any
-family file on disk is newer than the index, so an import run never consults a
-stale picture without also paying to refresh it first (a cheap stat sweep, not a
-reparse, since only mtimes are compared).
+never the source of truth, and `ensure_fresh` brings it up to date before the
+first lookup in a process, so an import run never consults a stale picture.
+
+Refreshing is per file (2026-10-31). The index records each family file's
+mtime; `ensure_fresh` stats them all and re-reads only the ones that changed.
+It used to rebuild the whole 2 GB index whenever *any* family file was newer,
+and in the queue pipeline every apply writes family files, so the next
+source's transform paid a full rebuild -- about 4.5 of every source's ~5.5
+minutes, for a 59-taxon archive as much as for a large one.
 
     python3 scripts/authorityIndex.py --build      # force a rebuild
     python3 scripts/authorityIndex.py --stats
@@ -32,25 +37,33 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from tree import ROOT, family_data_files, iter_all_species  # noqa: E402
+from tree import ROOT, iter_family_files, iter_species  # noqa: E402
 from dedupeSpeciesAcrossFamilies import _same_taxon  # noqa: E402
 
 INDEX_PATH = os.path.join(ROOT, "portal", "data", ".authority-index.sqlite3")
+# 2: rows carry their family file's path, and `files` holds each file's mtime.
+SCHEMA_VERSION = "2"
 
 
-def _newest_family_mtime() -> float:
-    """Cheapest possible staleness signal: stat every family file, parse none."""
-    newest = 0.0
-    for path in family_data_files():
-        try:
-            newest = max(newest, os.path.getmtime(path))
-        except OSError:
-            continue
-    return newest
+def _rows(fam, mtime_out: dict):
+    """(kingdom, authority, key, name, family_slug, node_id, path) for one
+    family file. Its mtime is taken *before* the read and stored in
+    `mtime_out`, so a write landing mid-read leaves the file looking changed
+    to the next refresh rather than looking current with stale rows."""
+    mtime_out[fam.path] = os.path.getmtime(fam.path)
+    out = []
+    for sp in iter_species(fam.load()):
+        for auth, key in (sp.get("sourceIds") or {}).items():
+            if key:
+                out.append((fam.kingdom, auth, str(key), sp.get("name"),
+                            fam.slug, sp.get("id"), fam.path))
+    return out
 
 
 def build(path: str = INDEX_PATH) -> int:
-    """(Re)write the index from the family files on disk. Returns row count.
+    """(Re)write the whole index from the family files on disk. Returns row
+    count. `ensure_fresh` only calls this when there is no usable index;
+    otherwise it refreshes the changed files in place.
 
     `tmp` is per-process (pid in the name): two importers run at once --
     which happened, an eunis/LCVP/Nortaxa/Brazil batch all mid-import at
@@ -63,30 +76,74 @@ def build(path: str = INDEX_PATH) -> int:
     if os.path.exists(tmp):
         os.remove(tmp)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    source_mtime = _newest_family_mtime()
     con = sqlite3.connect(tmp)
     con.execute("""
         CREATE TABLE authority_keys (
             kingdom TEXT, authority TEXT, key TEXT,
-            name TEXT, family_slug TEXT, node_id TEXT
+            name TEXT, family_slug TEXT, node_id TEXT, path TEXT
         )
     """)
+    con.execute("CREATE TABLE files (path TEXT PRIMARY KEY, mtime REAL)")
     con.execute("CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT)")
-    rows = []
-    for fam, sp in iter_all_species():
-        sid = sp.get("sourceIds") or {}
-        for auth, key in sid.items():
-            if key:
-                rows.append((fam.kingdom, auth, str(key), sp.get("name"),
-                             fam.slug, sp.get("id")))
-    con.executemany(
-        "INSERT INTO authority_keys VALUES (?, ?, ?, ?, ?, ?)", rows)
+    n = 0
+    for fam in iter_family_files():
+        mtimes = {}
+        rows = _rows(fam, mtimes)
+        con.executemany(
+            "INSERT INTO authority_keys VALUES (?, ?, ?, ?, ?, ?, ?)", rows)
+        con.executemany("INSERT INTO files VALUES (?, ?)", mtimes.items())
+        n += len(rows)
     con.execute("CREATE INDEX idx_lookup ON authority_keys (kingdom, authority, key)")
-    con.execute("INSERT INTO meta VALUES ('source_mtime', ?)", (str(source_mtime),))
+    con.execute("CREATE INDEX idx_path ON authority_keys (path)")
+    con.execute("INSERT INTO meta VALUES ('schema', ?)", (SCHEMA_VERSION,))
     con.commit()
     con.close()
     os.replace(tmp, path)
-    return len(rows)
+    return n
+
+
+def refresh(path: str = INDEX_PATH) -> tuple:
+    """Re-read the family files whose mtime differs from the one recorded,
+    and drop the rows of files that no longer exist. Returns
+    (changed, removed) file counts.
+
+    One write transaction, so a concurrent reader sees the index before or
+    after, never half-way; a second refresher racing this one waits on the
+    lock and then finds nothing left to do.
+    """
+    current = {}
+    for fam in iter_family_files():
+        try:
+            current[fam.path] = (fam, os.path.getmtime(fam.path))
+        except OSError:
+            continue
+    con = sqlite3.connect(path, timeout=600)
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        stored = dict(con.execute("SELECT path, mtime FROM files"))
+        changed = [fam for p, (fam, m) in current.items() if stored.get(p) != m]
+        removed = [p for p in stored if p not in current]
+        for p in removed:
+            con.execute("DELETE FROM authority_keys WHERE path = ?", (p,))
+            con.execute("DELETE FROM files WHERE path = ?", (p,))
+        for fam in changed:
+            mtimes = {}
+            try:
+                rows = _rows(fam, mtimes)
+            except (OSError, ValueError) as e:
+                # Mid-write or vanished: leave its old rows and old mtime,
+                # so the next refresh tries it again.
+                print(f"  authorityIndex: skipped {fam.path}: {e}")
+                continue
+            con.execute("DELETE FROM authority_keys WHERE path = ?", (fam.path,))
+            con.executemany(
+                "INSERT INTO authority_keys VALUES (?, ?, ?, ?, ?, ?, ?)", rows)
+            con.execute("INSERT OR REPLACE INTO files VALUES (?, ?)",
+                        (fam.path, mtimes[fam.path]))
+        con.commit()
+    finally:
+        con.close()
+    return len(changed), len(removed)
 
 
 _conn_cache = {}
@@ -94,24 +151,25 @@ _checked_fresh = set()
 
 
 def ensure_fresh(path: str = INDEX_PATH) -> str:
-    """Build the index if it is missing, or if any family file is newer than
-    it. Cheap when nothing changed: a stat per family file (~14,085 of them,
-    a few seconds via glob+stat), no JSON parse -- but still too much to pay
-    per lookup, so `_conn` only calls this once per process per path."""
-    stale = True
+    """Build the index if there is none in the current schema, otherwise
+    refresh only the family files that changed. Cheap when nothing changed:
+    a stat per family file, no JSON parse -- but still too much to pay per
+    lookup, so `_conn` only calls this once per process per path."""
+    usable = False
     if os.path.exists(path):
         try:
             con = sqlite3.connect(path)
             row = con.execute(
-                "SELECT value FROM meta WHERE key = 'source_mtime'").fetchone()
+                "SELECT value FROM meta WHERE key = 'schema'").fetchone()
             con.close()
-            if row and float(row[0]) >= _newest_family_mtime():
-                stale = False
+            usable = bool(row) and row[0] == SCHEMA_VERSION
         except sqlite3.Error:
-            stale = True
-    if stale:
+            usable = False
+    if usable:
+        refresh(path)
+    else:
         build(path)
-        _conn_cache.pop(path, None)
+    _conn_cache.pop(path, None)
     return path
 
 
