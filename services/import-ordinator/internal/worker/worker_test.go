@@ -35,3 +35,13 @@ func TestNCLicence(t *testing.T) {
 		}
 	}
 }
+
+func TestFailureReason(t *testing.T) {
+	out := "  loading\nTraceback (most recent call last):\n  File \"x.py\"\nKeyError: \"no column for ['rank']\"\n\n"
+	if got, want := failureReason("transform", 1, out), "transform failed (rc=1): KeyError: \"no column for ['rank']\""; got != want {
+		t.Errorf("got %q, want %q", got, want)
+	}
+	if got, want := failureReason("apply", 2, ""), "apply failed (rc=2)"; got != want {
+		t.Errorf("got %q, want %q", got, want)
+	}
+}

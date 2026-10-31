@@ -264,8 +264,12 @@ func (p *Pipeline) processOne(ctx context.Context, key string, entry *queue.Entr
 		p.store.SetStageReason(key, entry, queue.StageBlocked, "unsupported archive format (no .txtree, no DwCA/ColDP table)")
 		return
 	default:
-		fmt.Printf("  %s: transform FAILED (rc=%d), leaving at downloaded\n", key, result.RC)
-		p.store.SetStageReason(key, entry, queue.StageDownloaded, fmt.Sprintf("transform failed (rc=%d)", result.RC))
+		// error, not back to downloaded: CanProcess picks downloaded up again
+		// next cycle, so a deterministic failure retried forever
+		// (checklistbank-265152, hourly from 2026-10-31 03:00, a names-only
+		// archive the reader can't place). Same as a failed apply below.
+		fmt.Printf("  %s: transform FAILED (rc=%d), marking error\n", key, result.RC)
+		p.store.SetStageReason(key, entry, queue.StageError, failureReason("transform", result.RC, result.Output))
 		return
 	}
 
@@ -296,7 +300,7 @@ func (p *Pipeline) applyOne(ctx context.Context, key string, entry *queue.Entry)
 	}
 	if res.RC != 0 {
 		fmt.Printf("  %s: apply FAILED (rc=%d), marking error\n", key, res.RC)
-		p.store.SetStageReason(key, entry, queue.StageError, fmt.Sprintf("apply failed (rc=%d)", res.RC))
+		p.store.SetStageReason(key, entry, queue.StageError, failureReason("apply", res.RC, res.Output))
 		return
 	}
 
@@ -368,4 +372,20 @@ func hasTransformOutput(sourcesRoot, key string) bool {
 func fileExists(path string) bool {
 	_, err := os.Stat(path)
 	return err == nil
+}
+
+// failureReason is "<step> failed (rc=N): <last output line>". The last line
+// of a Python crash is the exception itself, which is what the dashboard
+// needs to tell a bad archive from a transient fault without a log dive.
+func failureReason(step string, rc int, out string) string {
+	reason := fmt.Sprintf("%s failed (rc=%d)", step, rc)
+	lines := strings.Split(strings.TrimRight(out, " \t\r\n"), "\n")
+	last := strings.TrimSpace(lines[len(lines)-1])
+	if last == "" {
+		return reason
+	}
+	if len(last) > 300 {
+		last = last[:300] + "…"
+	}
+	return reason + ": " + last
 }
