@@ -154,16 +154,20 @@ def _parse_line(content):
     words = content.split()
     if rank is None:
         rank = _infer_rank(words)
-        if rank is None:
-            # An untagged uninomial, or a placeholder like "AVES INCERTAE
-            # SEDIS": kept as a node so its children still hang somewhere,
-            # with no name, so it is never offered as a species or matched
-            # as a family.
-            return {
-                "raw_name": content, "name": None, "authorship": None,
-                "rank": None, "is_synonym": False, "vernacular": vern,
-                "extinct": extinct,
-            }
+    elif rank == "unranked":
+        # A clade the source deliberately leaves without a rank (53684's
+        # "Cyclorrhapha [unranked]"), never a guess at what it would be.
+        rank = None
+    if rank is None:
+        # That, an untagged uninomial, or a placeholder like "AVES INCERTAE
+        # SEDIS": kept as a node so its children still hang somewhere, with
+        # no name, so it is never offered as a species or matched as a
+        # family.
+        return {
+            "raw_name": content, "name": None, "authorship": None,
+            "rank": None, "is_synonym": False, "vernacular": vern,
+            "extinct": extinct,
+        }
     want = RANK_NAME_WORDS.get(rank)
     if want is None:
         raise KeyError(f"txtree: unrecognized rank {rank!r} in line {content!r}")
