@@ -160,6 +160,16 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 > read-modify-write pass must hold it too. A one-off import that only appends
 > new species (not reconciling against a prior read of the whole file) is lower
 > risk but should still prefer holding it when run alongside the live pipeline.
+>
+> **Run maintenance through `scripts/maintenanceSession.py --run "<cmd>"`**
+> (2026-10-31). Holding the lock only while writing let the ordinator write
+> again before anything was checked — three new authority collisions landed
+> between a dedupe and its `verifyTree`. A session holds the lock across a start
+> gate (`make species-parquet` + a `verifyTree` baseline; nothing runs unless
+> the parquet is fresh), the commands, and a second parquet rebuild + verify.
+> If any invariant got worse it leaves `data/.maintenance.hold`, which keeps the
+> pipeline (Python and Go) out until `maintenanceSession.py --release`. Scripts
+> that take the lock themselves run fine inside it (holder pid is inherited).
 
 ## Commands
 

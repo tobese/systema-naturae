@@ -13,9 +13,19 @@ import (
 // Lock is a held maintenance lock.
 type Lock struct{ f *os.File }
 
+// HoldFile is the file next to the lock that keeps the pipeline out after the
+// lock itself is released: scripts/maintenanceSession.py leaves it when a
+// maintenance run made an invariant worse, so nothing writes on top of a tree
+// no one has checked yet. Same name as maintenanceLock.HOLD_PATH.
+const HoldFile = ".maintenance.hold"
+
 // TryAcquire takes the lock without blocking. ok is false if another
-// process (a maintenance pass) holds it.
+// process (a maintenance pass) holds it, or while a maintenance hold is in
+// place.
 func TryAcquire(path string) (l *Lock, ok bool, err error) {
+	if _, err := os.Stat(filepath.Join(filepath.Dir(path), HoldFile)); err == nil {
+		return nil, false, nil
+	}
 	if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
 		return nil, false, err
 	}

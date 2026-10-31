@@ -48,6 +48,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KINGDOM_DOCS = {k: kingdom_input(k) for k in KINGDOMS}
 
 failures = []
+passes = []
 notes = []
 
 
@@ -57,6 +58,7 @@ def fail(check, detail):
 
 
 def ok(check, detail=""):
+    passes.append((check, detail))
     print(f"  ok    {check}{': ' + detail if detail else ''}")
 
 
@@ -811,6 +813,9 @@ def main() -> int:
     ap.add_argument("--refusal-ceiling", type=float, default=0.20,
                     help="fraction of offered species an import may refuse "
                          "before this fails (default 0.20)")
+    ap.add_argument("--json", default="",
+                    help="also write {failures, passes} here, for "
+                         "maintenanceSession.py's before/after comparison")
     args = ap.parse_args()
     os.chdir(ROOT)
     print("verifying the tree's data invariants")
@@ -829,6 +834,9 @@ def main() -> int:
         print("\n  notes (not failures):")
         for n in notes:
             print(f"      {n}")
+    if args.json:
+        with open(args.json, "w", encoding="utf-8") as fh:
+            json.dump({"failures": failures, "passes": passes}, fh, indent=1)
     if failures:
         print(f"\n  {len(failures)} FAILED")
         return 1
