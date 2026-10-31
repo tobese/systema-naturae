@@ -48,29 +48,53 @@ ARCH = os.path.join(sources.ROOT, "archives")
 ALF = os.path.join(ARCH, "checklistbank-294066", "archive.zip")
 # Group databases, by the directory their archive sits in. Missing ones are
 # skipped and reported, so the list can name more than is on disk.
-# LepIndex (checklistbank-1018) is deliberately absent: a names index frozen
-# around 2012, it still holds Arctiidae and the old Noctuidae, and voted
-# "conflict" on Noctuidae/Arctiidae -> Erebidae where the current Global
-# Lepidoptera Index backs COL.
+# Group databases: (directory their archive sits in, date the data was issued
+# -- from the archive's metadata or ChecklistBank, checked 2026-10-31). An
+# expert counts only if issued on or after MIN_ISSUED: the Species Files held
+# outside ChecklistBank are GBIF exports from May 2011, and the Cockroach one
+# "backed" Ectobiidae against Blattellidae and Pseudophyllodromiidae only
+# because it predates their elevation to families -- COL follows the current
+# file. LepIndex (checklistbank-1018, ~2012) is left out for the same reason.
+# Missing archives are skipped and reported.
+MIN_ISSUED = "2020-01-01"
 EXPERTS = {
-    "Global Lepidoptera Index": "checklistbank-55434",
-    "World Scarabaeidae Database": "checklistbank-1027",
-    "WTaxa (weevils)": "checklistbank-1039",
-    "Carabcat": "checklistbank-1146",
-    "Cerambycidae database": "checklistbank-1032",
-    "Orthoptera Species File": "checklistbank-1021",
-    "Cockroach Species File": "species-file-cockroach",
-    "Lygaeoidea Species File": "species-file-lygaeoidea",
-    "Psocodea Species File": "checklistbank-1133",
-    "Systema Dipterorum": "checklistbank-1101",
-    "World Spider Catalog": "checklistbank-56185",
-    "Ants of the World": "checklistbank-54937",
-    "MolluscaBase": "checklistbank-1130",
-    "WoRMS": "checklistbank-2011",
-    "World Flora Online": "wfo-plant-list",
-    "WCVP": "checklistbank-2000",
-    "Species Fungorum": "checklistbank-2073",
+    "Global Lepidoptera Index": ("checklistbank-55434", "2026-09-04"),
+    "World Scarabaeidae Database": ("checklistbank-1027", "2026-10-05"),
+    "WTaxa (weevils)": ("checklistbank-1039", "2021-04-04"),
+    "Carabcat": ("checklistbank-1146", ""),
+    "Cerambycidae database": ("checklistbank-1032", ""),
+    "Orthoptera Species File": ("checklistbank-1021", "2026-10-01"),
+    "Psocodea Species File": ("checklistbank-1133", "2026-10-01"),
+    "Systema Dipterorum": ("checklistbank-1101", "2026-10-07"),
+    "World Spider Catalog": ("checklistbank-56185", "2026-10-04"),
+    "Ants of the World": ("checklistbank-54937", "2026-10-04"),
+    "MolluscaBase": ("checklistbank-1130", ""),
+    "WoRMS": ("checklistbank-2011", "2026-10-01"),
+    "World Flora Online": ("wfo-plant-list", "2026-06-21"),
+    "WCVP": ("checklistbank-2000", "2026-10-07"),
+    "Species Fungorum": ("checklistbank-2073", "2024-04-28"),
+    "Reptile Database": ("reptile-db", "2026-06-24"),
+    "Mammal Diversity Database": ("checklistbank-9802", "2025-04-06"),
+    "IOC World Bird List": ("checklistbank-2036", "2026-10-04"),
+    # held but too old to vote on family placement
+    "Cockroach Species File": ("species-file-cockroach", "2011-05-06"),
+    "Phasmida Species File": ("species-file-phasmida-v2", "2011-05-09"),
+    "Mantodea Species File": ("species-file-mantodea", "2011-05-09"),
+    "Dermaptera Species File": ("species-file-dermaptera", "2011-05-09"),
+    "Plecoptera Species File": ("species-file-plecoptera", "2011-05-09"),
+    "Coreoidea Species File": ("species-file-coreoidea", "2011-05-08"),
+    "Aphid Species File": ("aphid-species-file", "2011-05-06"),
+    "Lygaeoidea Species File": ("species-file-lygaeoidea", "2016-12-05"),
+    "Hymenoptera Information System": ("checklistbank-1118", "2017-07-31"),
 }
+# Mammal Species of the World (msw3) is held but left out for the same reason
+# as LepIndex: a 2005 snapshot, superseded by the Mammal Diversity Database.
+
+# When experts disagree, the specialist for the group wins: WFO over WCVP
+# (WFO follows PPG I for ferns, the fern community's consensus, and is this
+# tree's plant backbone; WCVP the broader 2014 Christenhusz & Chase lumping),
+# and any group database over WoRMS, which is marine-centred.
+LOW_PRIORITY = {"WoRMS", "WCVP"}
 
 
 def archive_in(dirname):
@@ -80,7 +104,7 @@ def archive_in(dirname):
     if os.path.exists(os.path.join(d, "archive.zip")):
         return os.path.join(d, "archive.zip")
     for f in sorted(os.listdir(d)):
-        if f.endswith((".zip", ".tgz")):
+        if f.endswith((".zip", ".tgz", ".tar.gz")):
             return os.path.join(d, f)
     return None
 
@@ -124,6 +148,21 @@ def expert_families(path, wanted):
     return out
 
 
+def recommend_for(consensus, votes):
+    """follow-col / follow-expert / review. Against COL it takes a specialist:
+    a vote from WoRMS or WCVP alone does not override COL (WoRMS is not the
+    authority for springtails or slime moulds), so those go to review."""
+    if consensus == "follow COL":
+        return "follow-col"
+    hi_to = [n for n, v in votes.items() if v["vote"] == "to" and n not in LOW_PRIORITY]
+    hi_from = [n for n, v in votes.items() if v["vote"] == "from" and n not in LOW_PRIORITY]
+    if hi_from and not hi_to:
+        return "follow-expert"
+    if hi_to and not hi_from:
+        return "follow-col"
+    return "review"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--plan", required=True,
@@ -131,6 +170,14 @@ def main() -> int:
     ap.add_argument("--out", default="data/family-pair-review.json")
     ap.add_argument("--md", default="docs/family-pair-review.md")
     args = ap.parse_args()
+
+    # Decisions survive a rerun: the list is regenerated, a human's call is not.
+    previous = {}
+    if os.path.exists(args.out):
+        with open(args.out, encoding="utf-8") as fh:
+            for p in json.load(fh)["pairs"]:
+                if p.get("decision"):
+                    previous[(p["kingdom"], p["removeFrom"], p["keepIn"])] = p
 
     pairs = collections.defaultdict(lambda: {"copies": 0, "names": set(),
                                              "sources": collections.Counter()})
@@ -149,10 +196,13 @@ def main() -> int:
     print(f"  ALF: {len(alf):,} accepted families")
 
     experts, used, missing = {}, [], []
-    for label, dirname in EXPERTS.items():
+    for label, (dirname, issued) in EXPERTS.items():
+        if not issued or issued < MIN_ISSUED:
+            missing.append(f"{label} (issued {issued or 'unknown'})")
+            continue
         path = archive_in(dirname)
         if not path:
-            missing.append(label)
+            missing.append(f"{label} (not on disk)")
             continue
         try:
             experts[label] = expert_families(path, names)
@@ -190,13 +240,18 @@ def main() -> int:
             consensus = "both valid"
         else:
             consensus = "COL only"
-        review.append({
+        recommend = recommend_for(consensus, votes)
+        row = {
             "kingdom": k, "removeFrom": frm, "keepIn": to, "copies": p["copies"],
             "sample": sorted(p["names"])[:5],
             "sources": dict(p["sources"].most_common(4)),
             "votes": {"col": to, "alf": alf_vote, "experts": votes},
-            "consensus": consensus, "decision": None,
-        })
+            "consensus": consensus, "recommend": recommend, "decision": None,
+        }
+        old = previous.get((k, frm, to))
+        if old:
+            row["decision"], row["decidedBy"] = old["decision"], old.get("decidedBy")
+        review.append(row)
     review.sort(key=lambda r: -r["copies"])
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
@@ -213,21 +268,23 @@ def main() -> int:
              "Generated by `scripts/familyPairReview.py` from a "
              "`dedupeNamesAgainstCol.py` dry run. One row per (family the copy "
              "would be removed from -> family COL keeps it in). Decide in "
-             "`data/family-pair-review.json` (`decision`: follow-col / keep / "
-             "skip); nothing is applied from this file.", "",
+             "`data/family-pair-review.json` (`decision`: follow-col / "
+             "follow-expert / skip); nothing is applied from this file. "
+             "`recommend` is the rule-based suggestion, never a decision.", "",
              "| consensus | copies |", "|---|---|"]
     lines += [f"| {c} | {n:,} |" for c, n in totals.most_common()]
     lines += ["", f"Experts used: {', '.join(used)}.  ",
               f"Not used: {', '.join(missing) or 'none'}.", "",
-              "| kingdom | remove from | keep in (COL) | copies | ALF | experts | consensus |",
-              "|---|---|---|---|---|---|---|"]
+              "| kingdom | remove from | keep in (COL) | copies | ALF | experts | consensus | recommend | decision |",
+              "|---|---|---|---|---|---|---|---|---|"]
     for r in review[:300]:
         a = r["votes"]["alf"]
         alf_s = f"{'Y' if a['fromAccepted'] else '-'}/{'Y' if a['toAccepted'] else '-'}"
         ex = "; ".join(f"{n}: {v['vote']} ({v['inFrom']}/{v['inTo']}/{v['elsewhere']})"
                        for n, v in r["votes"]["experts"].items()) or "-"
         lines.append(f"| {r['kingdom']} | {r['removeFrom']} | {r['keepIn']} | "
-                     f"{r['copies']:,} | {alf_s} | {ex} | **{r['consensus']}** |")
+                     f"{r['copies']:,} | {alf_s} | {ex} | **{r['consensus']}** | "
+                     f"{r['recommend']} | {r['decision'] or '-'} |")
     lines += ["", "ALF column: is the remove-from / keep-in family an accepted ALF "
               "family. Expert counts: (filed in remove-from / in keep-in / "
               "elsewhere). First 300 pairs by copies; all are in the JSON."]

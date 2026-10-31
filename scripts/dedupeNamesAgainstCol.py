@@ -64,6 +64,11 @@ Apply safeguards, after dedupeSpeciesAcrossFamilies.py's 2026-10 prune bug
 `--decisions` restricts removal to copies whose (kingdom, family removed
 from, family kept in) pair a human marked "follow-col" in
 familyPairReview.py's list -- the per-pair review the full set waits on.
+A pair marked "follow-expert" is applied the other way round: the copy in
+the family COL would empty is kept (a group database places it there --
+Ectobiidae, per the Cockroach Species File, not COL's Blattellidae) and
+COL's is removed. Only where the binomial sits in exactly those two
+families; a group spread over more is skipped and counted, not guessed.
 """
 import argparse
 import collections
@@ -189,13 +194,16 @@ def main() -> int:
                          "follow-col are removed")
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
-    approved = None
+    approved = reverse = None
     if args.decisions:
         with open(args.decisions, encoding="utf-8") as fh:
-            approved = {(p["kingdom"], p["removeFrom"], p["keepIn"])
-                        for p in json.load(fh)["pairs"]
-                        if p.get("decision") == "follow-col"}
-        print(f"  {len(approved):,} family pairs approved for removal")
+            review_pairs = json.load(fh)["pairs"]
+        approved = {(p["kingdom"], p["removeFrom"], p["keepIn"])
+                    for p in review_pairs if p.get("decision") == "follow-col"}
+        reverse = {(p["kingdom"], p["removeFrom"], p["keepIn"])
+                   for p in review_pairs if p.get("decision") == "follow-expert"}
+        print(f"  {len(approved):,} family pairs follow COL, "
+              f"{len(reverse):,} follow the expert")
 
     print(f"  reading {COL_DWCA}")
     col = col_accepted_families(COL_DWCA)
@@ -235,6 +243,18 @@ def main() -> int:
                 continue
             keep = [(f, sp) for f, sp in copies if f.slug == target]
             drop = [(f, sp) for f, sp in copies if f.slug != target]
+            reversed_pair = False
+            col_target = target
+            if reverse:
+                rev = [x for x in fams if (k, x, target) in reverse]
+                if rev and len(fams) == 2:
+                    # follow-expert: keep the copy COL would remove
+                    target = rev[0]
+                    keep, drop = drop, keep
+                    reversed_pair = True
+                elif rev:
+                    stat["skipped: follow-expert pair in a group of 3+ families"] += 1
+                    continue
             keeper = keep[0][1]
             if args.weak_only:
                 if "col" not in (keeper.get("sourceIds") or {}):
@@ -252,12 +272,14 @@ def main() -> int:
                     carried[field] += 1
             new_ids = sum(1 for _, sp in drop for src in (sp.get("sourceIds") or {})
                           if src not in (keeper.get("sourceIds") or {}))
-            if approved is not None:
+            if approved is not None and not reversed_pair:
                 drop = [(f, sp) for f, sp in drop if (k, f.slug, target) in approved]
                 if not drop:
                     stat["skipped: family pair not approved"] += 1
                     continue
             stat["planned groups"] += 1
+            if reversed_pair:
+                stat["groups kept in the expert's family (follow-expert)"] += 1
             for _, sp in drop:
                 if better_description(keeper, sp, target):
                     stat["real description carried over a template"] += 1
@@ -273,7 +295,8 @@ def main() -> int:
             planned.append((target, n, keep[0][0].path, keeper.get("id"),
                             [(f.path, sp.get("id")) for f, sp in drop]))
             plan.write(json.dumps({
-                "kingdom": k, "name": n, "colFamily": target,
+                "kingdom": k, "name": n, "colFamily": col_target,
+                "keepFamily": target, "followExpert": reversed_pair,
                 "keep": [{"family": f.slug, "path": os.path.relpath(f.path),
                           "id": sp.get("id"), "authorship": sp.get("authorship")}
                          for f, sp in keep],
@@ -294,6 +317,8 @@ def main() -> int:
                     "skipped (weak-only): kept copy has no COL id",
                     "skipped (weak-only): every other copy is better sourced",
                     "skipped: family pair not approved",
+                    "skipped: follow-expert pair in a group of 3+ families",
+                    "groups kept in the expert's family (follow-expert)",
                     "real description carried over a template",
                     "real description not carried (kept copy has its own, or it names another family)"):
             print(f"   {stat[key]:9,}  {key}")
