@@ -66,5 +66,9 @@ for key in "$@"; do
   bytes=$(stat -f%z "$out")
   sha=$(shasum -a 256 "$out" | cut -d' ' -f1)
   printf '   ok  %.1f MB  sha256:%s\n' "$(python3 -c "print($bytes/1048576)")" "$sha"
-  unzip -l "$out" 2>/dev/null | tail -n +4 | head -12 | sed 's/^/     /'
+  # Informational only. Under pipefail, head closing the pipe on a listing of
+  # thousands of members (Plazi's treatments/*.html) kills unzip with SIGPIPE
+  # and this script exits non-zero after a good download, which
+  # importQueueDriver.py read as "archive missing after fetch" (2026-10-31).
+  unzip -l "$out" 2>/dev/null | tail -n +4 | head -12 | sed 's/^/     /' || true
 done

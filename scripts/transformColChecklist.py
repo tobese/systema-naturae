@@ -37,7 +37,10 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import contextlib
+import tarfile
 import zipfile
+import colChecklist  # noqa: E402
 import importColChecklist as ICC  # noqa: E402
 import authorityIndex  # noqa: E402
 import sources  # noqa: E402
@@ -45,7 +48,11 @@ import sources  # noqa: E402
 
 def _is_txtree(path):
     try:
-        with zipfile.ZipFile(path) as z:
+        # colChecklist._Container, not zipfile: ILDIS-style ACEF datasets
+        # (1015, 1033, 1066, ...) arrive as a gzip'd tar named archive.zip,
+        # which colChecklist.load() reads but zipfile.ZipFile rejected, so
+        # 14 readable archives were blocked as "unsupported" (2026-10-31).
+        with contextlib.closing(colChecklist._Container(path)) as z:
             names = z.namelist()
             for n in names:
                 if n.lower().endswith(".txtree"):
@@ -62,7 +69,7 @@ def _is_txtree(path):
             has_dwc = "meta.xml" in base_names or any(
                 "taxon" in b or "taxa" in b or "name" in b for b in base_names)
             return False if has_dwc else "unsupported"
-    except zipfile.BadZipFile:
+    except (zipfile.BadZipFile, tarfile.TarError, EOFError, ValueError):
         return "unsupported"
     return False
 
