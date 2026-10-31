@@ -918,16 +918,43 @@ def load(path):
         # leave alone, not a shape to paper over -- and only for rows that
         # already look like a binomial under a family we can place, which is
         # what a species row looks like in this shape.
+        #
+        # The rank is read off the name, not assumed: "any name with a space
+        # is a species" (the first version) also made species of 15,260
+        # infraspecific names in COL China ("Peltigera polydactylon f.
+        # microphylla", "Arundinax aedon subsp. rufescens") and of virus names.
         if taxa and not any(t.get("rank") for t in taxa):
             for row in taxa:
-                nm = row.get("name") or ""
-                if " " in nm and row.get("family_name"):
-                    row["rank"] = "species"
+                if row.get("family_name"):
+                    rank = _rank_from_name(row.get("name") or "")
+                    if rank:
+                        row["rank"] = rank
     finally:
         c.close()
     return taxa, names, metadata(path)
 
 
+
+
+_INFRA_MARKERS = {"subsp.": "subspecies", "ssp.": "subspecies",
+                  "var.": "variety", "f.": "form", "fo.": "form"}
+
+
+def _rank_from_name(name):
+    """species / subspecies / variety / form from a name's own structure, or
+    None. Only for a table that states no rank at all (see load())."""
+    words = name.split()
+    if not words or not words[0][:1].isupper():
+        return None
+    for w in words[2:]:
+        if w in _INFRA_MARKERS:
+            return _INFRA_MARKERS[w]
+    epithets = [w for w in words[1:] if w[:1].islower() and w.replace("-", "").isalpha()]
+    if len(words) == 2 and len(epithets) == 1:
+        return "species"
+    if len(words) == 3 and len(epithets) == 2:
+        return "subspecies"
+    return None
 
 
 def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
