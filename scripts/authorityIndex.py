@@ -43,7 +43,14 @@ from dedupeSpeciesAcrossFamilies import _same_taxon  # noqa: E402
 INDEX_PATH = os.path.join(ROOT, "portal", "data", ".authority-index.sqlite3")
 # 3: rows carry an integer file_id into `files`, which holds each family
 # file's path and mtime. (2 stored the path on every row; see build().)
-SCHEMA_VERSION = "3"
+# 4: those paths are relative to the repo root, so an index refreshed from
+# another checkout (a worktree, q-bert's clone) does not see every file as
+# removed and re-added.
+SCHEMA_VERSION = "4"
+
+
+def _rel(path: str) -> str:
+    return os.path.relpath(path, ROOT)
 
 
 def _read(fam):
@@ -100,7 +107,7 @@ def build(path: str = INDEX_PATH) -> int:
     for fam in iter_family_files():
         mtime, rows = _read(fam)
         file_id = con.execute("INSERT INTO files (path, mtime) VALUES (?, ?)",
-                              (fam.path, mtime)).lastrowid
+                              (_rel(fam.path), mtime)).lastrowid
         _insert(con, file_id, rows)
         n += len(rows)
     con.execute("CREATE INDEX idx_lookup ON authority_keys (kingdom, authority, key)")
@@ -122,9 +129,11 @@ def refresh(path: str = INDEX_PATH) -> tuple:
     lock and then finds nothing left to do.
     """
     current = {}
-    for fam in iter_family_files():
+    # cached: refresh runs once per process (see _conn), and in a transform
+    # route_species has usually just listed the same tree.
+    for fam in iter_family_files(cached=True):
         try:
-            current[fam.path] = (fam, os.path.getmtime(fam.path))
+            current[_rel(fam.path)] = (fam, os.path.getmtime(fam.path))
         except OSError:
             continue
     con = sqlite3.connect(path, timeout=600)
@@ -145,12 +154,13 @@ def refresh(path: str = INDEX_PATH) -> tuple:
                 # so the next refresh tries it again.
                 print(f"  authorityIndex: skipped {fam.path}: {e}")
                 continue
-            if fam.path in stored:
+            rel = _rel(fam.path)
+            if rel in stored:
                 # Write only the difference. An apply adds a few species to a
                 # family like Carabidae (200k rows); deleting and re-inserting
                 # all of them touched every page of idx_lookup and took 20
                 # minutes for one busy cycle of applies.
-                file_id = stored[fam.path][0]
+                file_id = stored[rel][0]
                 have = {}
                 for rowid, *r in con.execute(
                         "SELECT rowid, kingdom, authority, key, name, family_slug, "
@@ -171,7 +181,7 @@ def refresh(path: str = INDEX_PATH) -> tuple:
                 _insert(con, file_id, new)
             else:
                 file_id = con.execute("INSERT INTO files (path, mtime) VALUES (?, ?)",
-                                      (fam.path, mtime)).lastrowid
+                                      (rel, mtime)).lastrowid
                 _insert(con, file_id, rows)
         con.commit()
     finally:

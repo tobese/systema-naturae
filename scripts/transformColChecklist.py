@@ -42,6 +42,7 @@ import tarfile
 import zipfile
 import colChecklist  # noqa: E402
 import importColChecklist as ICC  # noqa: E402
+import tree  # noqa: E402
 import txtree  # noqa: E402
 import authorityIndex  # noqa: E402
 import sources  # noqa: E402
@@ -105,10 +106,12 @@ def transform_records(r: "ICC.RoutedSpecies", diverted: list):
     2026-10-22: 24 of the ~59 cross-kingdom duplicates and homonym-bugs
     cleaned up by hand this session came in exactly this way.
     """
-    import glob as _glob
     files = {}
-    for f in _glob.glob("taxonomy/*/**/src/data/*.json", recursive=True):
-        files.setdefault(os.path.basename(f)[:-5], []).append(f)
+    for k in sorted(os.listdir(os.path.join(tree.ROOT, tree.TAXONOMY_DIR))):
+        if k.startswith("."):
+            continue
+        for f in tree.src_data_json(k, cached=True):
+            files.setdefault(os.path.basename(f)[:-5], []).append(f)
 
     for (kingdom, slug), rows in sorted(r.staged.items()):
         if not files.get(slug):

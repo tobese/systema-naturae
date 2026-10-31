@@ -208,8 +208,14 @@ def _ondisk_cache_path(kingdom):
 
 
 def _load_ondisk_cache(kingdom):
-    """-> {family_slug: {'mtime', 'size', 'ids', 'names'}}, or {} if
-    missing/unreadable, or written before 'names' existed (2026-10-30).
+    """-> {repo-relative family file path: {'mtime', 'size', 'ids', 'names'}}, or {} if
+    missing/unreadable, or written before 'names' existed (2026-10-30) or
+    before entries were keyed by path (2026-10-31).
+
+    Keyed by path, not slug: 103 families share the slug `incertae-sedis`
+    (tree.FamilyFile.sidecar_key), and under a slug key each overwrote the
+    other's entry, so they missed on every run (90 in fungi, 11 chromista,
+    4 animalia) and every kingdom's cache was rewritten every run, ~20 s.
 
     Per-family-file granularity, keyed by (mtime, size) on that one
     file -- same two-factor freshness check buildData.ts's own
@@ -233,21 +239,21 @@ def _load_ondisk_cache(kingdom):
     except Exception as e:
         print(f"  (on-disk species cache unreadable, ignoring: {e})")
         return {}
-    if "names" not in cols:
+    if "names" not in cols or "path" not in cols:
         return {}
     out = {}
     for row in rows:
         d = dict(zip(cols, row))
-        out[d["slug"]] = {"mtime": d.get("mtime"), "size": d.get("size"),
+        out[d["path"]] = {"mtime": d.get("mtime"), "size": d.get("size"),
                            "ids": list(d.get("ids") or []),
                            "names": list(d.get("names") or [])}
     return out
 
 
 def _write_ondisk_cache(kingdom, entries):
-    """entries: {family_slug: {'mtime', 'size', 'ids', 'names'}} -- every family
-    slug currently on disk for this kingdom, one way or another (cache
-    hit or freshly re-parsed); a slug that no longer exists on disk is
+    """entries: {repo-relative family file path: {'mtime', 'size', 'ids', 'names'}} -- every
+    family file currently on disk for this kingdom, one way or another (cache
+    hit or freshly re-parsed); a file that no longer exists on disk is
     never in `entries` to begin with, so it naturally drops out of the
     cache rather than needing an explicit removal step. Same
     .tmp-then-rename pattern as the other caches."""
@@ -263,8 +269,9 @@ def _write_ondisk_cache(kingdom, entries):
     tmp_out = path + ".tmp"
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
-            for slug, e in entries.items():
-                rec = {"slug": slug, "mtime": e["mtime"], "size": e["size"],
+            for path_, e in entries.items():
+                rec = {"slug": os.path.basename(path_)[:-5], "path": path_,
+                       "mtime": e["mtime"], "size": e["size"],
                        "ids": e["ids"], "names": e["names"]}
                 f.write(json.dumps(rec, ensure_ascii=False) + "\n")
         con = duckdb.connect()
@@ -461,7 +468,7 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
                   f"{', '.join(sorted(KINDS))}")
     r.default_k = DEFAULT_K
 
-    import glob as _glob
+    import tree as _tree
     ON_DISK = {}
     # Lowercased species names per kingdom, for reporting only. ON_DISK is
     # keyed by node id, and an id built here carries the authorship
@@ -478,13 +485,16 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
         ids = {}
         names = set()
         on_cache_hits = on_cache_misses = 0
-        for f in _glob.glob(f"taxonomy/{k}/**/src/data/*.json", recursive=True):
+        for f in _tree.src_data_json(k, cached=True):
             slug = os.path.basename(f)[:-5]
+            # Relative to the repo, so every checkout shares the cache (it
+            # lives on the sources volume) without missing on its own paths.
+            rel = os.path.relpath(f, _tree.ROOT)
             try:
                 st = os.stat(f)
             except OSError:
                 continue
-            cached = ondisk_cache.get(slug)
+            cached = ondisk_cache.get(rel)
             if (cached is not None and cached.get("mtime") == st.st_mtime
                     and cached.get("size") == st.st_size):
                 on_cache_hits += 1
@@ -507,14 +517,17 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
                         if nm:
                             file_names.append(nm)
                     stack.extend(nd.get("children") or [])
-            new_ondisk_cache[slug] = {"mtime": st.st_mtime, "size": st.st_size,
+            new_ondisk_cache[rel] = {"mtime": st.st_mtime, "size": st.st_size,
                                        "ids": file_ids, "names": file_names}
             for sid in file_ids:
                 ids[sid] = slug
             names.update(file_names)
         ON_DISK[k] = ids
         ON_DISK_NAMES[k] = names
-        _write_ondisk_cache(k, new_ondisk_cache)
+        # Rewritten only when a file changed, appeared or went away; the
+        # write is ~2-3 s a kingdom, and most runs change one or two.
+        if on_cache_misses or len(new_ondisk_cache) != len(ondisk_cache):
+            _write_ondisk_cache(k, new_ondisk_cache)
         print(f"  {k:10s} families {len(KINDS[k][1]):>7,}   species on disk {len(ids):>9,}"
               f"   (file cache: {on_cache_hits:,} hits, {on_cache_misses:,} misses)")
     print(f"  source kingdom (first taxon with one): {src_kingdom or '(none)'}")
