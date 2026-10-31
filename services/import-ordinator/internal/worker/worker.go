@@ -134,8 +134,13 @@ func (p *Pipeline) drain(ctx context.Context) {
 	sem := make(chan struct{}, p.cfg.Workers)
 	var wg sync.WaitGroup
 	for _, key := range queue.SortKeys(entries) {
-		entry := entries[key]
-		if !queue.CanProcess(entry.Stage) {
+		if !queue.CanProcess(entries[key].Stage) {
+			continue
+		}
+		// Re-read just before acting: the snapshot above can be hours old by
+		// the time this key's turn comes (see queue.Store.ReadOne).
+		entry, err := p.store.ReadOne(key)
+		if err != nil || !queue.CanProcess(entry.Stage) {
 			continue
 		}
 		select {

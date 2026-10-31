@@ -39,3 +39,28 @@ func TestWriteKeepsUnknownFields(t *testing.T) {
 		t.Fatal("no pipeline event logged")
 	}
 }
+
+func TestReadOneSeesAChangeMadeAfterRead(t *testing.T) {
+	s := NewStore(t.TempDir())
+	if err := s.Write("checklistbank-1", &Entry{Key: "checklistbank-1", Stage: StageDownloaded}); err != nil {
+		t.Fatal(err)
+	}
+	snap, err := s.Read()
+	if err != nil {
+		t.Fatal(err)
+	}
+	// a human declines it while the pass is still working through others
+	if err := s.Write("checklistbank-1", &Entry{Key: "checklistbank-1", Stage: StageDeclined}); err != nil {
+		t.Fatal(err)
+	}
+	if snap["checklistbank-1"].Stage != StageDownloaded {
+		t.Fatal("snapshot should still hold the old stage")
+	}
+	fresh, err := s.ReadOne("checklistbank-1")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if fresh.Stage != StageDeclined || CanProcess(fresh.Stage) {
+		t.Fatalf("ReadOne returned %q; a declined entry must not be processed", fresh.Stage)
+	}
+}

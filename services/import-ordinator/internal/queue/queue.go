@@ -166,6 +166,23 @@ func (s *Store) Read() (map[string]*Entry, error) {
 	return entries, nil
 }
 
+// ReadOne reads one entry fresh from disk. drain() snapshots the whole queue
+// when a pass starts and a pass can run for hours; an entry declined or
+// blocked by hand in the meantime must be re-read before it is acted on, or
+// the pass writes its stale stage back over the decision (found 2026-10-31:
+// checklistbank-265152, declined at 06:28, transformed again at 15:02).
+func (s *Store) ReadOne(key string) (*Entry, error) {
+	data, err := os.ReadFile(filepath.Join(s.dir, key+".json"))
+	if err != nil {
+		return nil, fmt.Errorf("read %s: %w", key, err)
+	}
+	var entry Entry
+	if err := json.Unmarshal(data, &entry); err != nil {
+		return nil, fmt.Errorf("parse %s: %w", key, err)
+	}
+	return &entry, nil
+}
+
 // Write writes a single queue entry atomically (temp file + rename), so a
 // reader never sees a half-written file.
 func (s *Store) Write(key string, entry *Entry) error {
