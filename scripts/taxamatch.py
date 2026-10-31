@@ -397,6 +397,155 @@ def parse_names(names):
 
 
 # --------------------------------------------------------------------------
+# Comparing two authorship strings for the same name
+# --------------------------------------------------------------------------
+# parse_names() keeps an authorship as ONE string ("MOLLER SCHWARZHANS AND
+# NIELSEN"), which suits what it is for but leaves authmatch -- written for
+# author LISTS, removing matched surnames pairwise -- comparing whole strings.
+# Measured 2026-10-31 on 1,500 cross-family duplicate groups whose copies
+# carry different authorships: it called 703 contradictory, many of them
+# "and" vs "&", "Olsson" vs "P. Olsson", "Stomp, N & Gouze, A", or a literal
+# "NULL". These functions give authmatch the lists it was written for.
+
+_NULLISH = {"", "null", "none", "nan", "-", "?", "unknown", "n/a", "na"}
+# "Stomp, N & Gouze, A, 1984": initials after the surname, which gnparser
+# reads as four authors. Rewritten to "N Stomp & A Gouze, 1984".
+_INITIALS_AFTER = re.compile(
+    r"\b([A-Z][^\s,&()\d]+),\s*([A-Z]\.?(?:\s?[A-Z]\.?){0,2})(?=\s*(?:&|,|\)|$))")
+
+
+def clean_authorship(string):
+    """An authorship string fit to parse, or None when it carries none."""
+    s = (string or "").strip()
+    if s.lower().strip(".") in _NULLISH:
+        return None
+    return _INITIALS_AFTER.sub(lambda m: f"{m.group(2)} {m.group(1)}", s)
+
+
+_PARTICLES = {"DE", "DA", "DO", "DOS", "DAS", "DEL", "DELLA", "DI", "DU", "LA",
+              "LE", "DES", "VAN", "VON", "ZU", "TER", "TEN", "DEN", "DER", "Y"}
+# "Burm. f.", "Hook. fil.", "Smith jr." -- a generation marker, not a name.
+_SUFFIXES = {"F", "FIL", "FILIUS", "FILS", "JR", "JUN", "JUNIOR", "SEN", "SR",
+             "SENIOR", "PATER", "II", "III", "IV"}
+_NO_DECOMPOSE = str.maketrans({"ø": "o", "Ø": "O", "æ": "ae", "Æ": "AE",
+                               "œ": "oe", "Œ": "OE", "ß": "ss", "ł": "l",
+                               "Ł": "L", "đ": "d", "Đ": "D", "ı": "i"})
+
+
+def _fold(string):
+    """Diacritics off by Unicode decomposition. normalize() maps anything its
+    table lacks to '?', and normalize_author then splits the word there:
+    "Węgierek" became "W GIEREK" and "Bănărescu" "B N RESCU" (found by the
+    same-year variant mining, 2026-10-31)."""
+    import unicodedata
+    s = unicodedata.normalize("NFKD", (string or "").translate(_NO_DECOMPOSE))
+    return "".join(c for c in s if not unicodedata.combining(c))
+
+
+def _name_words(author):
+    """The significant words of one author's name.
+
+    gnparser keeps initials with the surname ("P. Olsson", "PL Sclater"),
+    sources disagree on particles ("de Toulgoët" / "Toulgoët"), on how much of
+    a compound name to give ("Selys Longchamps" / "Selys", "Monet de Lamarck"
+    / "Lamarck", "Fischer von Waldheim" / "Fischer"), and "fil." or "III"
+    marks a generation, not a name. So: initials, particles and generation
+    markers off; every other word kept, for _align_authors to match on.
+    """
+    words = [_digraphs(w) for w in normalize_author(_fold(author)).split()
+             if len(w) > 1 and w not in _SUFFIXES]
+    core = [w for w in words if w not in _PARTICLES]
+    return tuple(core or words)
+
+
+def _digraphs(word):
+    """German umlauts written out ("Kuetzing", "Mueller", "Boettger") fold to
+    the same word as the umlaut itself does ("Kützing" -> KUTZING). Not "ae":
+    in Latinised names it is a diphthong (Linnaeus), not an umlaut."""
+    return re.sub(r"([OU])E", r"\1", word)
+
+
+def _words_match(a, b):
+    """Two name words agree: equal, or one a 3+ letter prefix of the other
+    ("LAM" / "LAMARCK", "BURM" / "BURMAN")."""
+    return a == b or (min(len(a), len(b)) >= 3 and (a.startswith(b) or b.startswith(a)))
+
+
+def _align_authors(authors1, authors2, same_person=None):
+    """Author word-tuples -> the strings authmatch compares, with any two
+    authors that share a name word given the same string, so a compound name
+    matches either of its parts. `same_person(words_a, words_b)`, when given
+    (authorNames.same_person bound to its index), also aligns two forms that
+    share no word but name one person ("DC" / "CANDOLLE")."""
+    out1 = [w[-1] if w else "" for w in authors1]
+    out2 = [w[-1] if w else "" for w in authors2]
+    for i, a in enumerate(authors1):
+        for j, b in enumerate(authors2):
+            hit = next((x for x in a for y in b if _words_match(x, y)), None)
+            if not hit and same_person and a and b and same_person(a, b):
+                hit = a[-1]
+            if hit:
+                out1[i] = out2[j] = hit
+    return [x for x in out1 if x], [x for x in out2 if x]
+
+
+def parse_authorships(strings):
+    """authorship -> (authors, years) for authmatch, one gnparser run.
+
+    `authors` are word-tuples per author (see _name_words); same_authorship
+    aligns them into the strings authmatch compares. Strings clean_authorship() rejects
+    are absent from the result.
+    """
+    import json
+    import os
+    import tempfile
+    cleaned = {}
+    for a in dict.fromkeys(strings):
+        c = clean_authorship(a)
+        if c:
+            cleaned[a] = c
+    if not cleaned:
+        return {}
+    # gnparser parses names, not bare authorships, so each is given a dummy
+    # binomial to hang off; only the authorship part is read back.
+    keyed = {f"Aus bus {c}": a for a, c in cleaned.items()}
+    fd, tmp = tempfile.mkstemp(prefix="gnparser-auth-", suffix=".txt")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(keyed) + "\n")
+        proc = subprocess.run([GNPARSER, "-f", "compact", tmp],
+                              capture_output=True, text=True, timeout=900)
+    finally:
+        os.unlink(tmp)
+    out = {}
+    for line in proc.stdout.splitlines():
+        try:
+            d = json.loads(line)
+        except ValueError:
+            continue
+        orig = keyed.get((d.get("verbatim") or "").strip())
+        auth = d.get("authorship") or {}
+        if orig is None or not auth.get("authors"):
+            continue
+        year = normalize_year(auth.get("year") or "")
+        out[orig] = ([_name_words(x) for x in auth["authors"] if _name_words(x)],
+                     [year] if year else [])
+    return out
+
+
+def same_authorship(a, b, parsed, same_person=None):
+    """True / False from authmatch, or None when either side carries no
+    usable authorship -- "unknown", which a caller must not read as either.
+    `parsed` is parse_authorships() over both strings; `same_person`, see
+    _align_authors."""
+    pa, pb = parsed.get(a), parsed.get(b)
+    if not pa or not pb:
+        return None
+    a1, a2 = _align_authors(pa[0], pb[0], same_person)
+    return authmatch(a1, a2, pa[1], pb[1]) > 0
+
+
+# --------------------------------------------------------------------------
 # Storing a name -- shared by every importer that reads a checklist
 # --------------------------------------------------------------------------
 _HYBRID_MARKERS = {"\u00d7", "x", "\u2715", "\u2a2f"}

@@ -471,5 +471,10 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    with hold_exclusive():
-        sys.exit(main())
+    # Only an --apply writes. A dry run reads every family file at HEAD through
+    # git cat-file, which takes the better part of an hour, and holding the
+    # lock for that kept the ordinator out the whole time (2026-10-31).
+    if "--apply" in sys.argv:
+        with hold_exclusive():
+            sys.exit(main())
+    sys.exit(main())
