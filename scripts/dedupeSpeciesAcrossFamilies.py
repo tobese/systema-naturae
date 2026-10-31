@@ -154,6 +154,49 @@ def _authority_ids(source_ids: dict) -> str:
     return ",".join(parts)
 
 
+# Fields worth carrying across a merge. A duplicate is the same taxon held
+# twice, so the two records between them hold one taxon's data and deleting
+# one of them destroys half of it.
+MERGEABLE = ("description", "commonName", "continents", "reference",
+             "yearPublished", "namedAfter", "namedAfterDetail",
+             "wikipediaUrl", "iucnStatus", "extinct", "subspeciesCount")
+
+
+def merge_into(winner, loser):
+    """Fold `loser`'s record into `winner` in place. Returns what moved.
+
+    Module level so dedupeNamesAgainstCol.py merges by the same rule."""
+    moved = []
+    for field in MERGEABLE:
+        # only where the winner has nothing: two records disagreeing on a
+        # description is not resolved by preferring one of them here.
+        if not winner.get(field) and loser.get(field):
+            if field == "subspeciesCount":
+                # a count, not a truthy flag: take the larger.
+                if int(loser.get(field) or 0) <= int(winner.get(field) or 0):
+                    continue
+            winner[field] = loser[field]
+            moved.append(field)
+    si_w = winner.get("sourceIds") or {}
+    si_l = loser.get("sourceIds") or {}
+    if si_l:
+        merged = dict(si_w)
+        for source, ids in si_l.items():
+            have = merged.get(source)
+            if not isinstance(have, list):
+                have = [have] if have else []
+            add = ids if isinstance(ids, list) else [ids]
+            for v in add:
+                if v not in have:
+                    have.append(v)
+            merged[source] = have
+        winner["sourceIds"] = merged
+        # authorityIds is a derived projection of sourceIds, so a merge that
+        # widened sourceIds leaves it stale and the app reads the stale one.
+        winner["authorityIds"] = _authority_ids(merged)
+    return moved
+
+
 def _strip_authorship(name):
     """Drop everything that is not the scientific name proper.
 
@@ -414,45 +457,6 @@ def main() -> int:
               f"{renamed:,} (a subspecies or hybrid filed under its parent)")
 
 
-
-    # Fields worth carrying across a merge. A duplicate is the same taxon held
-    # twice, so the two records between them hold one taxon's data and deleting
-    # one of them destroys half of it.
-    MERGEABLE = ("description", "commonName", "continents", "reference",
-                 "yearPublished", "namedAfter", "namedAfterDetail",
-                 "wikipediaUrl", "iucnStatus", "extinct", "subspeciesCount")
-
-    def merge_into(winner, loser):
-        """Fold `loser`'s record into `winner` in place. Returns what moved."""
-        moved = []
-        for field in MERGEABLE:
-            # only where the winner has nothing: two records disagreeing on a
-            # description is not resolved by preferring one of them here.
-            if not winner.get(field) and loser.get(field):
-                if field == "subspeciesCount":
-                    # a count, not a truthy flag: take the larger.
-                    if int(loser.get(field) or 0) <= int(winner.get(field) or 0):
-                        continue
-                winner[field] = loser[field]
-                moved.append(field)
-        si_w = winner.get("sourceIds") or {}
-        si_l = loser.get("sourceIds") or {}
-        if si_l:
-            merged = dict(si_w)
-            for source, ids in si_l.items():
-                have = merged.get(source)
-                if not isinstance(have, list):
-                    have = [have] if have else []
-                add = ids if isinstance(ids, list) else [ids]
-                for v in add:
-                    if v not in have:
-                        have.append(v)
-                merged[source] = have
-            winner["sourceIds"] = merged
-            # authorityIds is a derived projection of sourceIds, so a merge that
-            # widened sourceIds leaves it stale and the app reads the stale one.
-            winner["authorityIds"] = _authority_ids(merged)
-        return moved
 
     merged_groups = 0
     merged_fields = collections.Counter()
