@@ -1,25 +1,12 @@
 {
-  "key": "checklistbank-312616",
-  "title": "Batch import - checklistbank-312616",
-  "stage": "applied",
-  "licence": "cc by",
-  "size": 19072487,
-  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-312616/archive.zip",
-  "reason": "reset: left in triaged by an interrupted run",
   "applied": {
     "added": 1015,
-    "merged": 55210,
+    "at": "2026-10-31T17:19:24Z",
     "crossFamily": 1645,
     "families": 2160,
-    "at": "2026-10-31T17:19:24Z"
+    "merged": 55210
   },
-  "triaged": {
-    "offered": 153421,
-    "alreadyHeld": 87369,
-    "staged": 56544,
-    "refused": 3456,
-    "refusalRate": 0.0225
-  },
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-312616/archive.zip",
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -60,6 +47,23 @@
     {
       "at": "2026-10-31T17:19:24Z",
       "stage": "applied"
+    },
+    {
+      "at": "2026-10-31T19:34:48+0100",
+      "stage": "declined"
     }
-  ]
+  ],
+  "key": "checklistbank-312616",
+  "licence": "cc by",
+  "reason": "applied by mistake 2026-10-31 (ordinator reset 'triaged'); reviewed and reverted: 3,895 COL China-only species removed, merged ids kept. See data/source-only-removals-2026-10-31-colchina.json",
+  "size": 19072487,
+  "stage": "declined",
+  "title": "Batch import - checklistbank-312616",
+  "triaged": {
+    "alreadyHeld": 87369,
+    "offered": 153421,
+    "refusalRate": 0.0225,
+    "refused": 3456,
+    "staged": 56544
+  }
 }
