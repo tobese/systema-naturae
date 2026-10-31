@@ -113,7 +113,9 @@
             "checklistbank": "ott991557",
             "wikispecies": "Bombina_orientalis",
             "checklistbank-139831": "24501",
-            "checklistbank-2169": "8346"
+            "checklistbank-2169": "8346",
+            "checklistbank-25428": "50064",
+            "checklistbank-24476": "119142"
           },
           "authorityIds": "col:68NNM,itis:661630",
           "commonName": "Oriental Bell Toad",
@@ -166,7 +168,13 @@
             "wikispecies": "Bombina_variegata",
             "checklistbank-139831": "479255",
             "checklistbank-2169": "8348",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q606431"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q606431",
+            "checklistbank-25428": "50106",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18317/",
+            "checklistbank-28530": "INBO_RL_AMP_2013_VAL_2",
+            "checklistbank-28529": "INBO_RL_AMP_1996_NONVAL_2",
+            "checklistbank-28960": "1370",
+            "checklistbank-53684": "1044"
           },
           "authorityIds": "col:5WNNK,itis:661632",
           "commonName": "Yellow–bellied Toad",
@@ -518,9 +526,51 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Bombinatoridae"
+    },
+    {
+      "id": "GENUS_ALYTES",
+      "name": "Alytes",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "bombinatoridae",
+      "children": [
+        {
+          "id": "SP_ALYTES_CISTERNASII",
+          "name": "Alytes cisternasii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alytes",
+          "sourceIds": {
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18312/"
+          },
+          "uuid": "38c8efb3-ded2-41ca-867b-25b7dca3cd98"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DISCOGLOSSUS",
+      "name": "Discoglossus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "bombinatoridae",
+      "children": [
+        {
+          "id": "SP_DISCOGLOSSUS_MONTALENTII",
+          "name": "Discoglossus montalentii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discoglossus",
+          "sourceIds": {
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18322/"
+          },
+          "uuid": "590b5584-9b71-4c0e-adfb-567e9ba41734"
+        }
+      ]
     }
   ],
-  "speciesCount": 21,
+  "speciesCount": 23,
   "appSlug": "bombinatoridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Amphibia",

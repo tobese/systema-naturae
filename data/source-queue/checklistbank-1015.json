@@ -1,4 +1,25 @@
 {
+  "key": "checklistbank-1015",
+  "title": "ILDIS World Database of Legumes",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 44396,
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-1015/archive.zip",
+  "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)",
+  "applied": {
+    "added": 0,
+    "merged": 63,
+    "crossFamily": 0,
+    "families": 1,
+    "at": "2026-10-31T05:21:20Z"
+  },
+  "triaged": {
+    "offered": 16371,
+    "alreadyHeld": 16297,
+    "staged": 63,
+    "refused": 0,
+    "refusalRate": 0
+  },
   "history": [
     {
       "at": "2026-10-29T21:54:10+0100",
@@ -7,12 +28,42 @@
     {
       "at": "2026-10-29T21:54:10+0100",
       "stage": "candidate"
+    },
+    {
+      "at": "2026-10-29T21:41:00Z",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-29T21:41:00Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-29T21:41:00Z",
+      "stage": "blocked"
+    },
+    {
+      "at": "2026-10-31T05:10:18+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-31T05:14:41Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-31T05:21:17Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-31T05:21:17Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-31T05:21:17Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-31T05:21:20Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-1015",
-  "licence": "cc by",
-  "reason": "re-take 2026-10-29: applied before the queue existed; re-run through the pipeline for uniform provenance",
-  "size": 44396,
-  "stage": "candidate",
-  "title": "ILDIS World Database of Legumes"
+  ]
 }

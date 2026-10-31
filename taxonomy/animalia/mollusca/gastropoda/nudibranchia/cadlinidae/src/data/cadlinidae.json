@@ -769,6 +769,18 @@
           },
           "children": [],
           "uuid": "d36b1ef6-e628-5941-84f5-5a6b88039500"
+        },
+        {
+          "id": "SP_ALDISA_BERGHI",
+          "name": "Aldisa berghi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aldisa",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4713842"
+          },
+          "children": []
         }
       ]
     },
@@ -1072,7 +1084,8 @@
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:139134",
             "checklistbank-316441": "P7BW",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "78170"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "78170",
+            "checklistbank-7888": "NBNSYS0000174249"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:139134,col:P7BW,itis:78170"
         },
@@ -1295,9 +1308,12 @@
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:420604",
             "checklistbank-316441": "P7CD",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "78180"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "78180",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q3168752"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420604,col:P7CD,itis:78180"
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:78180,ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q3168752,checklistbank:urn:lsid:marinespecies.org:taxname:420604,checklistbank-2011:urn:lsid:marinespecies.org:taxname:420604,checklistbank-316441:P7CD,col:P7CD,itis:78180"
         },
         {
           "id": "SP_CADLINA_SPARSA",
@@ -1325,7 +1341,8 @@
               "urn:lsid:marinespecies.org:taxname:430397"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:430397",
-            "checklistbank-316441": "5WTBR"
+            "checklistbank-316441": "5WTBR",
+            "checklistbank-24927": "121246a7-029f-4365-b3a8-65b2612fcbc3"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:430397,col:5WTBR,itis:78177"
         },
@@ -1504,9 +1521,12 @@
               "7QHWK"
             ],
             "checklistbank": "1119320",
-            "checklistbank-139831": "1119320"
+            "checklistbank-139831": "1119320",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q106219505"
+            ]
           },
-          "authorityIds": "col:7QHWK",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q106219505,checklistbank:1119320,checklistbank-139831:1119320,col:7QHWK",
           "description": "Cadlina sylviaearleae is a cadlinidae species found in its native region."
         },
         {
@@ -1572,7 +1592,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Cadlina",
-          "authorship": "NULL",
           "children": [],
           "uuid": "622c5eb4-d9b3-5c7-821-95fe5bbdc1cdb5",
           "sourceIds": {
@@ -2189,10 +2208,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cadlinidae"
+    },
+    {
+      "id": "GENUS_LISSODORIS",
+      "name": "Lissodoris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LISSODORIS_MOLLIS",
+          "name": "Lissodoris mollis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lissodoris",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3833437"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cadlinidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 120,
+  "genusCount": 6,
+  "speciesCount": 122,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

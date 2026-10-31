@@ -45,7 +45,6 @@
             "Europe"
           ],
           "children": [],
-          "authorship": "NULL",
           "uuid": "e8e32e6c-e05b-531-92f-57e5e8737fe16d",
           "sourceIds": {
             "itis": [
@@ -212,7 +211,6 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:2324231",
           "children": [],
-          "authorship": "NULL",
           "uuid": "f4bad181-6fb0-5ef-a65-9a328f5c604df1",
           "sourceIds": {
             "itis": [
@@ -292,7 +290,6 @@
           "description": "Amphictene moorei is a pectinariidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "authorship": "NULL",
           "uuid": "711b5700-acef-5c3-97e-73eb0514a51f60",
           "sourceIds": {
             "col": [
@@ -548,7 +545,6 @@
           "description": "Cistenides brevicoma is a pectinariidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "authorship": "NULL",
           "uuid": "5944d887-7f94-54d-826-add1cfac2c83a9",
           "sourceIds": {
             "itis": [
@@ -656,7 +652,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Cistenides",
-          "authorship": "NULL",
           "children": [],
           "uuid": "9dd814f4-12c2-5c7-9ee-d7a00c275606fb",
           "sourceIds": {
@@ -1397,7 +1392,8 @@
             "checklistbank": "ott5972939",
             "checklistbank-2265": "363721",
             "checklistbank-2169": "363721",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2888260"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2888260",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/22374/"
           },
           "authorityIds": "itis:67713",
           "commonName": "trumpet worm",
@@ -1579,7 +1575,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pectinaria",
           "sourceIds": {
-            "checklistbank": "1239829"
+            "checklistbank": "1239829",
+            "checklistbank-312242": "8929"
           },
           "children": [],
           "uuid": "d7c3ef4c-cd6a-556-ac9-946e304b5d998c",
@@ -2003,6 +2000,30 @@
           "children": [],
           "authorship": "(Malmgren, 1866)",
           "uuid": "5791bd1f-44b5-548c-ad1a-30fc4567037e"
+        },
+        {
+          "id": "SP_PECTINARIA_NIGRESCENS",
+          "name": "Pectinaria nigrescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinaria",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1880397"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PECTINARIA_KIIENSIS",
+          "name": "Pectinaria kiiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinaria",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3901571"
+          },
+          "children": []
         }
       ]
     },
@@ -3212,10 +3233,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pectinariidae"
+    },
+    {
+      "id": "GENUS_ARIAPITHES",
+      "name": "Ariapithes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARIAPITHES_PALLIDUS",
+          "name": "Ariapithes pallidus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ariapithes",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1903267"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
+    },
+    {
+      "id": "GENUS_SCALIS",
+      "name": "Scalis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCALIS_MINAX",
+          "name": "Scalis minax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scalis",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2226661"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 178,
+  "genusCount": 17,
+  "speciesCount": 182,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

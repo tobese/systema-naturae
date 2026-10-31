@@ -30,7 +30,9 @@
             "checklistbank-1174": "txn:166835",
             "checklistbank-127379": "ac61fd14-4950-4566-b384-304bd99ca75f",
             "checklistbank-139831": "43236",
-            "checklistbank-9802": "1000001"
+            "checklistbank-9802": "1000001",
+            "checklistbank-24512": "4429",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12188/"
           },
           "authorityIds": "col:74WBV,itis:552524",
           "commonName": "platypus",
@@ -91,6 +93,18 @@
           },
           "children": [],
           "uuid": "94f8ddfc-6835-5b6-a05-9761ae3b17fd5f"
+        },
+        {
+          "id": "SP_ORNITHORHYNCHUS_MAXIMUS",
+          "name": "Ornithorhynchus maximus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ornithorhynchus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2706921"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -230,13 +244,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ornithorhynchidae"
+    },
+    {
+      "id": "GENUS_ORNITHORHYNCUS",
+      "name": "Ornithorhyncus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORNITHORHYNCUS_ANATINUS",
+          "name": "Ornithorhyncus anatinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ornithorhyncus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41166520"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ornithorhynchidae"
+    },
+    {
+      "id": "GENUS_PLATYPUS",
+      "name": "Platypus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLATYPUS_ANATINUS_SHAW_1799",
+          "name": "Platypus anatinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platypus",
+          "authorship": "Shaw, 1799",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125495145"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ornithorhynchidae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 14,
   "appSlug": "ornithorhynchidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 5,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

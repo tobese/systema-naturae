@@ -677,7 +677,6 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pachastrella",
           "children": [],
-          "authorship": "NULL",
           "uuid": "7baac510-1c62-526-8ec-ed8bda848b21b2",
           "sourceIds": {
             "col": [
@@ -1147,7 +1146,8 @@
             "gbif-backbone": "5182718",
             "checklistbank-1044": "urn:lsid:marinespecies.org:taxname:183627",
             "checklistbank-316441": "479JM",
-            "checklistbank-2169": "2931320"
+            "checklistbank-2169": "2931320",
+            "checklistbank-7888": "NHMSYS0021057152"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:183627,col:479JM",
           "authorship": "(Carter, 1876)",
@@ -1294,7 +1294,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Stoeba",
-          "authorship": "NULL",
           "children": [],
           "uuid": "0c177fd3-e02a-517-96c-f0dd15c9b8a398",
           "sourceIds": {
@@ -1313,7 +1312,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Stoeba",
-          "authorship": "NULL",
           "children": [],
           "uuid": "8ebc8ada-568a-583-8f7-d21bcf18925f28",
           "sourceIds": {
@@ -2306,10 +2304,66 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pachastrellidae"
+    },
+    {
+      "id": "GENUS_SAMMS",
+      "name": "Samms",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAMMS_SIMPLEX",
+          "name": "Samms simplex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Samms",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41167817"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachastrellidae"
+    },
+    {
+      "id": "GENUS_LAMELLOMORPHA",
+      "name": "Lamellomorpha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LAMELLOMORPHA_STRONGYLATA_SMYTH_1968",
+          "name": "Lamellomorpha strongylata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lamellomorpha",
+          "authorship": "Smyth, 1968",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2406844"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LAMELLOMORPHA_AUSTRALIS_C_RDENAS_KELLY_2019",
+          "name": "Lamellomorpha australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lamellomorpha",
+          "authorship": "Cárdenas & Kelly, 2019",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q79359951"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachastrellidae"
     }
   ],
-  "genusCount": 21,
-  "speciesCount": 123,
+  "genusCount": 23,
+  "speciesCount": 126,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

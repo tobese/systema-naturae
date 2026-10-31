@@ -1149,3 +1149,1452 @@
 {"action":"ordinator","at":"2026-10-30T19:37:44+0100","key":"gbif-backbone","stage":"queued"}
 {"action":"ordinator","at":"2026-10-30T19:37:44+0100","key":"gbif-backbone","stage":"applying"}
 {"action":"ordinator","added":6010,"at":"2026-10-30T19:38:55+0100","crossFamily":877,"families":922,"key":"gbif-backbone","merged":8913,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:13:10+0100","key":"checklistbank-25428","reason":"apply timed out after 30m0s","stage":"error"}
+{"action":"ordinator","at":"2026-10-29T22:13:10+0100","key":"checklistbank-274774","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:13:11+0100","key":"checklistbank-274774","reason":"txtree format — needs scripts/txtree.py path, see docs/import.md","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-29T22:13:11+0100","key":"checklistbank-28552","stage":"transforming"}
+{"at": "2026-10-29T22:15:59+0100", "key": "checklistbank-53147", "stage": "applied", "action": "record", "reason": "Applied before the queue existed (GBIF backbone.zip, the GBIF download of this ChecklistBank dataset). Converged: re-run repeatedly 2026-10-20..26, last runs add 0."}
+{"at": "2026-10-29T22:15:59+0100", "key": "checklistbank-2144", "stage": "applied", "action": "record", "reason": "Applied before the queue existed (archives/itis). Re-run 2026-10-25 (+11,795) and 2026-10-26 (+0): converged."}
+{"at": "2026-10-29T22:15:59+0100", "key": "checklistbank-30477", "stage": "applied", "action": "record", "reason": "Applied before the queue existed. Re-run 2026-10-25/26, last runs add 0: converged."}
+{"at": "2026-10-29T22:15:59+0100", "key": "checklistbank-316441", "stage": "applied", "action": "record", "reason": "COL26.9 XR, applied 2026-10-25 (+40,750) outside the queue; superset of the COL base release. Re-run 2026-10-26: converged."}
+{"at": "2026-10-29T22:15:59+0100", "key": "checklistbank-316321", "stage": "applied", "action": "record", "reason": "Base release imported before the queue (importColStage1/2 from catalogueoflife.org, ~1.13M species, see manifest catalogue-of-life). Covered by checklistbank-316441 (XR = base + extensions), so not re-taken."}
+{"at": "2026-10-29T22:15:59+0100", "key": "checklistbank-315557", "stage": "declined", "action": "record", "reason": "Superseded by checklistbank-316441 (COL26.9 XR); deliberately parked 2026-10-25. Taxa cache exists on Macie and q-bert."}
+{"action":"ordinator","at":"2026-10-29T22:17:41+0100","key":"checklistbank-28552","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:17:41+0100","key":"checklistbank-28552","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:17:41+0100","key":"checklistbank-28552","stage":"applying"}
+{"at": "2026-10-29T22:22:00+0100", "key": "checklistbank-2004", "stage": "downloaded", "action": "record", "reason": "re-take after dry run"}
+{"action":"ordinator","added":9,"at":"2026-10-29T22:26:18+0100","crossFamily":0,"families":275,"key":"checklistbank-28552","merged":1205,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:26:19+0100","key":"checklistbank-28651","stage":"transforming"}
+{"at": "2026-10-29T22:30:26+0100", "key": "checklistbank-25428", "stage": "queued", "action": "set", "reason": "requeued 2026-10-29: apply timed out at the 30-min default; ordinator restarted with APPLY_TIMEOUT=180"}
+{"action":"ordinator","at":"2026-10-29T22:30:27+0100","key":"checklistbank-28651","reason":"reset: left in transforming by an interrupted run","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:30:29+0100","key":"checklistbank-1005","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:30:29+0100","key":"checklistbank-1005","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:34:30+0100","key":"checklistbank-1005","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:34:30+0100","key":"checklistbank-1005","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:34:30+0100","key":"checklistbank-1005","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T22:34:46+0100","crossFamily":0,"families":4,"key":"checklistbank-1005","merged":432,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:34:57+0100","key":"checklistbank-1008","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:34:57+0100","key":"checklistbank-1008","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:39:04+0100","key":"checklistbank-1008","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:39:04+0100","key":"checklistbank-1008","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:39:04+0100","key":"checklistbank-1008","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T22:40:30+0100","crossFamily":0,"families":26,"key":"checklistbank-1008","merged":6237,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:40:32+0100","key":"checklistbank-1014","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:40:32+0100","key":"checklistbank-1014","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-29T22:40:57+0100","crossFamily":0,"families":0,"key":"checklistbank-1014","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:41:00+0100","key":"checklistbank-1015","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:41:00+0100","key":"checklistbank-1015","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:41:00+0100","key":"checklistbank-1015","reason":"unsupported archive format (no .txtree, no DwCA/ColDP table)","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-29T22:41:04+0100","key":"checklistbank-1021","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:41:04+0100","key":"checklistbank-1021","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:45:11+0100","key":"checklistbank-1021","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:45:11+0100","key":"checklistbank-1021","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:45:11+0100","key":"checklistbank-1021","stage":"applying"}
+{"action":"ordinator","added":32,"at":"2026-10-29T22:46:23+0100","crossFamily":0,"families":26,"key":"checklistbank-1021","merged":444,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:46:23+0100","key":"checklistbank-1050","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:46:23+0100","key":"checklistbank-1050","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:50:12+0100","key":"checklistbank-1050","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:50:12+0100","key":"checklistbank-1050","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:50:12+0100","key":"checklistbank-1050","stage":"applying"}
+{"action":"ordinator","added":4,"at":"2026-10-29T22:50:36+0100","crossFamily":0,"families":8,"key":"checklistbank-1050","merged":45,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:50:39+0100","key":"checklistbank-1061","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:50:39+0100","key":"checklistbank-1061","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:54:34+0100","key":"checklistbank-1061","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:54:34+0100","key":"checklistbank-1061","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:54:34+0100","key":"checklistbank-1061","stage":"applying"}
+{"action":"ordinator","added":36,"at":"2026-10-29T22:55:09+0100","crossFamily":0,"families":12,"key":"checklistbank-1061","merged":639,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:55:09+0100","key":"checklistbank-1062","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:55:09+0100","key":"checklistbank-1062","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T22:59:00+0100","key":"checklistbank-1062","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T22:59:00+0100","key":"checklistbank-1062","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T22:59:00+0100","key":"checklistbank-1062","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T22:59:55+0100","crossFamily":0,"families":20,"key":"checklistbank-1062","merged":149,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T22:59:56+0100","key":"checklistbank-1065","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T22:59:56+0100","key":"checklistbank-1065","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:03:48+0100","key":"checklistbank-1065","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:03:48+0100","key":"checklistbank-1065","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:03:48+0100","key":"checklistbank-1065","stage":"applying"}
+{"action":"ordinator","added":6,"at":"2026-10-29T23:04:11+0100","crossFamily":0,"families":8,"key":"checklistbank-1065","merged":113,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:04:12+0100","key":"checklistbank-1089","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:04:12+0100","key":"checklistbank-1089","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:08:00+0100","key":"checklistbank-1089","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:08:00+0100","key":"checklistbank-1089","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:08:00+0100","key":"checklistbank-1089","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:08:11+0100","crossFamily":0,"families":3,"key":"checklistbank-1089","merged":13,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:08:13+0100","key":"checklistbank-1134","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:08:13+0100","key":"checklistbank-1134","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:12:06+0100","key":"checklistbank-1134","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:12:06+0100","key":"checklistbank-1134","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:12:06+0100","key":"checklistbank-1134","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:12:17+0100","crossFamily":0,"families":3,"key":"checklistbank-1134","merged":30,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:12:17+0100","key":"checklistbank-1158","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:12:17+0100","key":"checklistbank-1158","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:16:09+0100","key":"checklistbank-1158","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:16:09+0100","key":"checklistbank-1158","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:16:09+0100","key":"checklistbank-1158","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-10-29T23:16:33+0100","crossFamily":0,"families":8,"key":"checklistbank-1158","merged":118,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:16:34+0100","key":"checklistbank-1167","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:16:34+0100","key":"checklistbank-1167","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:20:23+0100","key":"checklistbank-1167","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:20:23+0100","key":"checklistbank-1167","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:20:23+0100","key":"checklistbank-1167","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:20:29+0100","crossFamily":0,"families":1,"key":"checklistbank-1167","merged":1,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:20:29+0100","key":"checklistbank-1168","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:20:29+0100","key":"checklistbank-1168","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:20:49+0100","crossFamily":0,"families":0,"key":"checklistbank-1168","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:20:49+0100","key":"checklistbank-1169","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:20:49+0100","key":"checklistbank-1169","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:21:06+0100","crossFamily":0,"families":0,"key":"checklistbank-1169","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:21:07+0100","key":"checklistbank-1170","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:21:07+0100","key":"checklistbank-1170","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:24:51+0100","key":"checklistbank-1170","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:24:51+0100","key":"checklistbank-1170","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:24:51+0100","key":"checklistbank-1170","stage":"applying"}
+{"action":"ordinator","added":6,"at":"2026-10-29T23:25:30+0100","crossFamily":0,"families":14,"key":"checklistbank-1170","merged":43,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:25:31+0100","key":"checklistbank-1173","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:25:31+0100","key":"checklistbank-1173","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:29:20+0100","key":"checklistbank-1173","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:29:20+0100","key":"checklistbank-1173","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:29:20+0100","key":"checklistbank-1173","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:30:02+0100","crossFamily":0,"families":15,"key":"checklistbank-1173","merged":515,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:30:02+0100","key":"checklistbank-1192","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:30:02+0100","key":"checklistbank-1192","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:33:50+0100","key":"checklistbank-1192","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:33:50+0100","key":"checklistbank-1192","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:33:50+0100","key":"checklistbank-1192","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-29T23:33:56+0100","crossFamily":0,"families":1,"key":"checklistbank-1192","merged":4,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:33:56+0100","key":"checklistbank-197537","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:37:44+0100","key":"checklistbank-197537","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:37:44+0100","key":"checklistbank-197537","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:37:44+0100","key":"checklistbank-197537","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-29T23:38:52+0100","crossFamily":0,"families":175,"key":"checklistbank-197537","merged":7463,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:38:52+0100","key":"checklistbank-2004","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:43:10+0100","key":"checklistbank-2004","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:43:10+0100","key":"checklistbank-2004","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:43:10+0100","key":"checklistbank-2004","stage":"applying"}
+{"action":"ordinator","added":714,"at":"2026-10-29T23:45:31+0100","crossFamily":266,"families":655,"key":"checklistbank-2004","merged":71303,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:46:12+0100","key":"checklistbank-2017","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:46:12+0100","key":"checklistbank-2017","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:50:26+0100","key":"checklistbank-2017","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:50:26+0100","key":"checklistbank-2017","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:50:26+0100","key":"checklistbank-2017","stage":"applying"}
+{"action":"ordinator","added":212,"at":"2026-10-29T23:52:05+0100","crossFamily":0,"families":28,"key":"checklistbank-2017","merged":355,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:52:08+0100","key":"checklistbank-2040","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-29T23:52:08+0100","key":"checklistbank-2040","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-29T23:56:09+0100","key":"checklistbank-2040","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-29T23:56:09+0100","key":"checklistbank-2040","stage":"queued"}
+{"action":"ordinator","at":"2026-10-29T23:56:09+0100","key":"checklistbank-2040","stage":"applying"}
+{"action":"ordinator","added":22,"at":"2026-10-29T23:57:01+0100","crossFamily":64,"families":6,"key":"checklistbank-2040","merged":6039,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-29T23:57:01+0100","key":"checklistbank-21341","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T00:00:54+0100","key":"checklistbank-21341","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T00:00:54+0100","key":"checklistbank-21341","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T00:00:54+0100","key":"checklistbank-21341","stage":"applying"}
+{"action":"ordinator","added":11,"at":"2026-10-30T00:02:46+0100","crossFamily":10,"families":409,"key":"checklistbank-21341","merged":8281,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T00:02:46+0100","key":"checklistbank-25428","stage":"applying"}
+{"action":"ordinator","added":309,"at":"2026-10-30T00:35:39+0100","crossFamily":114,"families":959,"key":"checklistbank-25428","merged":5899,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T00:35:39+0100","key":"checklistbank-26719","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T00:40:03+0100","key":"checklistbank-26719","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T00:40:03+0100","key":"checklistbank-26719","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T00:40:03+0100","key":"checklistbank-26719","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-30T00:40:56+0100","crossFamily":4,"families":287,"key":"checklistbank-26719","merged":3408,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T00:40:56+0100","key":"checklistbank-28651","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T00:45:02+0100","key":"checklistbank-28651","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T00:45:02+0100","key":"checklistbank-28651","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T00:45:02+0100","key":"checklistbank-28651","stage":"applying"}
+{"action":"ordinator","added":502,"at":"2026-10-30T00:45:48+0100","crossFamily":5,"families":158,"key":"checklistbank-28651","merged":2308,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T00:45:49+0100","key":"checklistbank-28950","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T00:49:51+0100","key":"checklistbank-28950","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T00:49:51+0100","key":"checklistbank-28950","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T00:49:51+0100","key":"checklistbank-28950","stage":"applying"}
+{"action":"ordinator","added":11,"at":"2026-10-30T00:59:47+0100","crossFamily":4,"families":311,"key":"checklistbank-28950","merged":1030,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T00:59:47+0100","key":"checklistbank-30016","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T01:03:55+0100","key":"checklistbank-30016","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T01:03:55+0100","key":"checklistbank-30016","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T01:03:55+0100","key":"checklistbank-30016","stage":"applying"}
+{"action":"ordinator","added":866,"at":"2026-10-30T01:04:36+0100","crossFamily":288,"families":114,"key":"checklistbank-30016","merged":1473,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T01:04:37+0100","key":"checklistbank-303328","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T01:04:37+0100","key":"checklistbank-303328","reason":"txtree format — needs scripts/txtree.py path, see docs/import.md","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-30T01:04:37+0100","key":"checklistbank-308125","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T01:08:38+0100","key":"checklistbank-308125","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T01:08:38+0100","key":"checklistbank-308125","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T01:08:38+0100","key":"checklistbank-308125","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-30T01:09:20+0100","crossFamily":4,"families":237,"key":"checklistbank-308125","merged":1423,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T01:09:21+0100","key":"checklistbank-311282","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T01:13:27+0100","key":"checklistbank-311282","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T01:13:27+0100","key":"checklistbank-311282","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T01:13:27+0100","key":"checklistbank-311282","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-30T01:13:42+0100","crossFamily":1,"families":61,"key":"checklistbank-311282","merged":133,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T01:13:42+0100","key":"checklistbank-312242","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T01:17:42+0100","key":"checklistbank-312242","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T01:17:42+0100","key":"checklistbank-312242","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T01:17:42+0100","key":"checklistbank-312242","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-30T02:01:14+0100","crossFamily":1,"families":977,"key":"checklistbank-312242","merged":9824,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T02:01:14+0100","key":"checklistbank-315074","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:05:28+0100","key":"checklistbank-315074","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T02:05:28+0100","key":"checklistbank-315074","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T02:05:28+0100","key":"checklistbank-315074","stage":"applying"}
+{"action":"ordinator","added":25,"at":"2026-10-30T02:06:20+0100","crossFamily":2,"families":129,"key":"checklistbank-315074","merged":3428,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T02:06:20+0100","key":"checklistbank-315077","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:10:28+0100","key":"checklistbank-315077","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T02:10:28+0100","key":"checklistbank-315077","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T02:10:28+0100","key":"checklistbank-315077","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-30T02:25:39+0100","crossFamily":14,"families":571,"key":"checklistbank-315077","merged":2521,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T02:25:40+0100","key":"checklistbank-315407","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:29:58+0100","key":"checklistbank-315407","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T02:29:58+0100","key":"checklistbank-315407","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T02:29:58+0100","key":"checklistbank-315407","stage":"applying"}
+{"action":"ordinator","added":82,"at":"2026-10-30T02:30:33+0100","crossFamily":1,"families":87,"key":"checklistbank-315407","merged":1303,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T02:30:33+0100","key":"checklistbank-316600","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:34:34+0100","key":"checklistbank-316600","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-30T02:34:34+0100","key":"checklistbank-33082","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:35:12+0100","key":"checklistbank-33082","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T02:35:12+0100","key":"checklistbank-33082","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T02:35:12+0100","key":"checklistbank-33082","stage":"applying"}
+{"action":"ordinator","added":15,"at":"2026-10-30T02:38:18+0100","crossFamily":14,"families":67,"key":"checklistbank-33082","merged":7944,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T02:38:18+0100","key":"checklistbank-36535","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:42:08+0100","key":"checklistbank-36535","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-30T02:42:08+0100","key":"checklistbank-51518","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:42:46+0100","key":"checklistbank-51518","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T02:42:46+0100","key":"checklistbank-51518","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T02:42:46+0100","key":"checklistbank-51518","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-30T02:44:29+0100","crossFamily":1,"families":352,"key":"checklistbank-51518","merged":11714,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T02:44:30+0100","key":"checklistbank-51657","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:48:23+0100","key":"checklistbank-51657","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-30T02:48:23+0100","key":"checklistbank-51696","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T02:49:01+0100","key":"checklistbank-51696","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T02:49:01+0100","key":"checklistbank-51696","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T02:49:01+0100","key":"checklistbank-51696","stage":"applying"}
+{"action":"ordinator","added":413,"at":"2026-10-30T03:23:31+0100","crossFamily":519,"families":726,"key":"checklistbank-51696","merged":8037,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T03:23:32+0100","key":"checklistbank-51697","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T03:27:44+0100","key":"checklistbank-51697","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T03:27:44+0100","key":"checklistbank-51697","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T03:27:44+0100","key":"checklistbank-51697","stage":"applying"}
+{"action":"ordinator","added":72,"at":"2026-10-30T03:28:33+0100","crossFamily":8,"families":111,"key":"checklistbank-51697","merged":2447,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T03:28:33+0100","key":"checklistbank-53129","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T03:32:46+0100","key":"checklistbank-53129","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T03:32:46+0100","key":"checklistbank-53129","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T03:32:46+0100","key":"checklistbank-53129","stage":"applying"}
+{"action":"ordinator","added":50,"at":"2026-10-30T03:33:50+0100","crossFamily":12,"families":194,"key":"checklistbank-53129","merged":2533,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T03:33:50+0100","key":"checklistbank-53133","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T03:37:48+0100","key":"checklistbank-53133","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T03:37:48+0100","key":"checklistbank-53133","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T03:37:48+0100","key":"checklistbank-53133","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-30T04:03:07+0100","crossFamily":1,"families":963,"key":"checklistbank-53133","merged":12085,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T04:03:07+0100","key":"checklistbank-53795","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:07:30+0100","key":"checklistbank-53795","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T04:07:30+0100","key":"checklistbank-53795","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T04:07:30+0100","key":"checklistbank-53795","stage":"applying"}
+{"action":"ordinator","added":126,"at":"2026-10-30T04:08:15+0100","crossFamily":16,"families":151,"key":"checklistbank-53795","merged":952,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T04:08:16+0100","key":"checklistbank-54592","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:08:16+0100","key":"checklistbank-54592","reason":"txtree format — needs scripts/txtree.py path, see docs/import.md","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-30T04:08:16+0100","key":"checklistbank-55496","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:12:31+0100","key":"checklistbank-55496","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T04:12:31+0100","key":"checklistbank-55496","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T04:12:31+0100","key":"checklistbank-55496","stage":"applying"}
+{"action":"ordinator","added":28,"at":"2026-10-30T04:17:42+0100","crossFamily":19,"families":238,"key":"checklistbank-55496","merged":1633,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T04:17:43+0100","key":"checklistbank-5738","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T04:18:15+0100","crossFamily":0,"families":0,"key":"checklistbank-5738","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T04:18:15+0100","key":"checklistbank-58312","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:18:15+0100","key":"checklistbank-58312","reason":"unsupported archive format (no .txtree, no DwCA/ColDP table)","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-30T04:18:15+0100","key":"checklistbank-62696","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:22:03+0100","key":"checklistbank-62696","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-30T04:22:04+0100","key":"checklistbank-74965","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:22:40+0100","key":"checklistbank-74965","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T04:22:40+0100","key":"checklistbank-74965","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T04:22:40+0100","key":"checklistbank-74965","stage":"applying"}
+{"action":"ordinator","added":66,"at":"2026-10-30T04:31:38+0100","crossFamily":25,"families":203,"key":"checklistbank-74965","merged":1931,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T04:31:39+0100","key":"checklistbank-7888","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:31:39+0100","key":"checklistbank-7888","reason":"unsupported archive format (no .txtree, no DwCA/ColDP table)","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-30T04:31:39+0100","key":"checklistbank-8011","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:35:38+0100","key":"checklistbank-8011","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T04:35:38+0100","key":"checklistbank-8011","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T04:35:38+0100","key":"checklistbank-8011","stage":"applying"}
+{"action":"ordinator","added":482,"at":"2026-10-30T04:36:59+0100","crossFamily":6,"families":157,"key":"checklistbank-8011","merged":1757,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T04:37:00+0100","key":"checklistbank-9712","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T04:41:10+0100","key":"checklistbank-9712","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T04:41:10+0100","key":"checklistbank-9712","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T04:41:10+0100","key":"checklistbank-9712","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-30T05:47:42+0100","crossFamily":18,"families":2064,"key":"checklistbank-9712","merged":28229,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T10:25:02+0100","key":"checklistbank-316600","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:26:00+0100","key":"checklistbank-316600","reason":"reset: left in transforming by an interrupted run","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-30T10:26:00+0100","key":"checklistbank-316600","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:30:18+0100","key":"checklistbank-316600","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T10:30:18+0100","key":"checklistbank-316600","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T10:30:18+0100","key":"checklistbank-316600","stage":"applying"}
+{"action":"ordinator","added":40,"at":"2026-10-30T10:31:23+0100","crossFamily":16,"families":109,"key":"checklistbank-316600","merged":1137,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T10:31:23+0100","key":"checklistbank-36535","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:36:11+0100","key":"checklistbank-36535","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T10:36:11+0100","key":"checklistbank-36535","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T10:36:11+0100","key":"checklistbank-36535","stage":"applying"}
+{"action":"ordinator","added":42,"at":"2026-10-30T10:36:39+0100","crossFamily":61,"families":130,"key":"checklistbank-36535","merged":1292,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T10:36:39+0100","key":"checklistbank-51657","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T10:41:23+0100","key":"checklistbank-51657","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T10:41:23+0100","key":"checklistbank-51657","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T10:41:23+0100","key":"checklistbank-51657","stage":"applying"}
+{"action":"ordinator","added":146,"at":"2026-10-30T11:10:55+0100","crossFamily":22,"families":877,"key":"checklistbank-51657","merged":3036,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T11:10:55+0100","key":"checklistbank-62696","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T11:15:56+0100","key":"checklistbank-62696","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T11:15:56+0100","key":"checklistbank-62696","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T11:15:56+0100","key":"checklistbank-62696","stage":"applying"}
+{"action":"ordinator","added":42,"at":"2026-10-30T11:16:34+0100","crossFamily":56,"families":147,"key":"checklistbank-62696","merged":1234,"stage":"applied"}
+{"at": "2026-10-30T15:13:00+0100", "key": "checklistbank-316757", "stage": "candidate", "action": "add", "title": "Harmonized species names used under the EU nature directives (EEACOL 2"}
+{"at": "2026-10-30T15:13:00+0100", "key": "checklistbank-316757", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-30T15:13:00+0100", "key": "checklistbank-316787", "stage": "candidate", "action": "add", "title": "Marine Biodiversity Checklist of the Galapagos and Hermandad Marine Re"}
+{"at": "2026-10-30T15:13:01+0100", "key": "checklistbank-316787", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:01+0100", "key": "checklistbank-315075", "stage": "candidate", "action": "add", "title": "Red List Vascular Plants (2018, Germany) - Rote Liste Gefässpflanzen ("}
+{"at": "2026-10-30T15:13:01+0100", "key": "checklistbank-315075", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:01+0100", "key": "checklistbank-28958", "stage": "candidate", "action": "add", "title": "Catalogue of the Lepidoptera of Belgium"}
+{"at": "2026-10-30T15:13:02+0100", "key": "checklistbank-28958", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:02+0100", "key": "checklistbank-291320", "stage": "candidate", "action": "add", "title": "Checklist of Vascular Plants in Korea"}
+{"at": "2026-10-30T15:13:02+0100", "key": "checklistbank-291320", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:03+0100", "key": "checklistbank-25530", "stage": "candidate", "action": "add", "title": "FAUNA OF THE KURILSKIY NATURE RESERVE"}
+{"at": "2026-10-30T15:13:03+0100", "key": "checklistbank-25530", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:03+0100", "key": "checklistbank-2730", "stage": "candidate", "action": "add", "title": "Bhutan: Vascular plant species"}
+{"at": "2026-10-30T15:13:03+0100", "key": "checklistbank-2730", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:04+0100", "key": "checklistbank-21598", "stage": "candidate", "action": "add", "title": "Systema Naturae per regna tria naturae: secundum classes, ordines, gen"}
+{"at": "2026-10-30T15:13:04+0100", "key": "checklistbank-21598", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-30T15:13:04+0100", "key": "checklistbank-28530", "stage": "candidate", "action": "add", "title": "Validated red lists of Flanders, Belgium"}
+{"at": "2026-10-30T15:13:05+0100", "key": "checklistbank-28530", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T15:13:05+0100", "key": "checklistbank-32886", "stage": "candidate", "action": "add", "title": "Zeigerwerte von Pflanzen & Flechten in Mitteleuropa (Ellenberg)"}
+{"at": "2026-10-30T15:13:06+0100", "key": "checklistbank-32886", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-30T16:19:50+0100","key":"checklistbank-25530","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T16:20:33+0100","crossFamily":0,"families":0,"key":"checklistbank-25530","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T16:20:33+0100","key":"checklistbank-2730","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T16:29:22+0100","key":"checklistbank-2730","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T16:29:22+0100","key":"checklistbank-2730","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T16:29:22+0100","key":"checklistbank-2730","stage":"applying"}
+{"action":"ordinator","added":134,"at":"2026-10-30T16:33:03+0100","crossFamily":133,"families":152,"key":"checklistbank-2730","merged":1586,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T16:33:03+0100","key":"checklistbank-28530","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T16:41:19+0100","key":"checklistbank-28530","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T16:41:19+0100","key":"checklistbank-28530","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T16:41:19+0100","key":"checklistbank-28530","stage":"applying"}
+{"action":"ordinator","added":31,"at":"2026-10-30T16:57:21+0100","crossFamily":13,"families":184,"key":"checklistbank-28530","merged":1169,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T16:57:21+0100","key":"checklistbank-28958","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T17:05:56+0100","key":"checklistbank-28958","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T17:05:56+0100","key":"checklistbank-28958","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T17:05:56+0100","key":"checklistbank-28958","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-30T17:10:47+0100","crossFamily":0,"families":36,"key":"checklistbank-28958","merged":325,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T17:10:47+0100","key":"checklistbank-291320","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T17:18:52+0100","key":"checklistbank-291320","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T17:18:53+0100","key":"checklistbank-291320","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T17:18:53+0100","key":"checklistbank-291320","stage":"applying"}
+{"action":"ordinator","added":27,"at":"2026-10-30T17:22:57+0100","crossFamily":117,"families":141,"key":"checklistbank-291320","merged":1818,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T17:22:57+0100","key":"checklistbank-315075","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T17:24:06+0100","crossFamily":0,"families":0,"key":"checklistbank-315075","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T17:24:06+0100","key":"checklistbank-316787","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T17:32:02+0100","key":"checklistbank-316787","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T17:32:02+0100","key":"checklistbank-316787","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T17:32:02+0100","key":"checklistbank-316787","stage":"applying"}
+{"action":"ordinator","added":8,"at":"2026-10-30T17:48:13+0100","crossFamily":8,"families":278,"key":"checklistbank-316787","merged":862,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T17:48:13+0100","key":"checklistbank-32886","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T17:48:38+0100","crossFamily":0,"families":0,"key":"checklistbank-32886","merged":0,"stage":"applied"}
+{"at": "2026-10-30T17:48:47+0100", "key": "checklistbank-7237", "stage": "candidate", "action": "add", "title": "Vascular plants checklist from Russian Far East section of I.M. Krasno"}
+{"at": "2026-10-30T17:48:48+0100", "key": "checklistbank-7237", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-30T17:48:48+0100", "key": "checklistbank-50799", "stage": "candidate", "action": "add", "title": "Norwegian Red List 2015"}
+{"at": "2026-10-30T17:48:48+0100", "key": "checklistbank-50799", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:48+0100", "key": "checklistbank-183008", "stage": "candidate", "action": "add", "title": "Updated Checklist of Arthropods from Azores (Portugal) (ArthropodsPT)"}
+{"at": "2026-10-30T17:48:49+0100", "key": "checklistbank-183008", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:49+0100", "key": "checklistbank-37354", "stage": "candidate", "action": "add", "title": "Species named after famous people"}
+{"at": "2026-10-30T17:48:49+0100", "key": "checklistbank-37354", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:49+0100", "key": "checklistbank-28529", "stage": "candidate", "action": "add", "title": "Non-validated red list of Flanders, Belgium"}
+{"at": "2026-10-30T17:48:49+0100", "key": "checklistbank-28529", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:50+0100", "key": "checklistbank-316049", "stage": "candidate", "action": "add", "title": "A catalogue of Indian Pyraloidea (Lepidoptera) (Singh2022)"}
+{"at": "2026-10-30T17:48:50+0100", "key": "checklistbank-316049", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-30T17:48:50+0100", "key": "checklistbank-28907", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - France (GRIIS-FR)"}
+{"at": "2026-10-30T17:48:50+0100", "key": "checklistbank-28907", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:51+0100", "key": "checklistbank-21559", "stage": "candidate", "action": "add", "title": "Nordic plant uses from Gunnerus and Høeg"}
+{"at": "2026-10-30T17:48:51+0100", "key": "checklistbank-21559", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:51+0100", "key": "checklistbank-5679", "stage": "candidate", "action": "add", "title": "Lista de la herpetofauna con distribución en México"}
+{"at": "2026-10-30T17:48:51+0100", "key": "checklistbank-5679", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T17:48:51+0100", "key": "checklistbank-313479", "stage": "candidate", "action": "add", "title": "Listado de plantas de uso y aprovechamiento sostenible en Ecuador (Uso"}
+{"at": "2026-10-30T17:48:52+0100", "key": "checklistbank-313479", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-30T18:37:31+0100","key":"checklistbank-183008","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T18:42:04+0100","key":"checklistbank-183008","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T18:42:04+0100","key":"checklistbank-183008","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T18:42:04+0100","key":"checklistbank-183008","stage":"applying"}
+{"action":"ordinator","added":6,"at":"2026-10-30T18:52:40+0100","crossFamily":9,"families":188,"key":"checklistbank-183008","merged":611,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T18:52:40+0100","key":"checklistbank-21559","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T18:53:17+0100","crossFamily":0,"families":0,"key":"checklistbank-21559","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T18:53:17+0100","key":"checklistbank-28529","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T18:57:33+0100","key":"checklistbank-28529","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T18:57:33+0100","key":"checklistbank-28529","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T18:57:33+0100","key":"checklistbank-28529","stage":"applying"}
+{"action":"ordinator","added":44,"at":"2026-10-30T19:04:00+0100","crossFamily":51,"families":162,"key":"checklistbank-28529","merged":2315,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T19:04:00+0100","key":"checklistbank-28907","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T19:08:25+0100","key":"checklistbank-28907","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T19:08:25+0100","key":"checklistbank-28907","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T19:08:25+0100","key":"checklistbank-28907","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-10-30T19:27:23+0100","crossFamily":6,"families":361,"key":"checklistbank-28907","merged":1462,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T19:27:23+0100","key":"checklistbank-313479","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T19:33:24+0100","key":"checklistbank-313479","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T19:33:24+0100","key":"checklistbank-313479","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T19:33:24+0100","key":"checklistbank-313479","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-30T19:35:17+0100","crossFamily":3,"families":131,"key":"checklistbank-313479","merged":644,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T19:35:17+0100","key":"checklistbank-37354","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T19:47:28+0100","key":"checklistbank-37354","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T19:47:28+0100","key":"checklistbank-37354","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T19:47:28+0100","key":"checklistbank-37354","stage":"applying"}
+{"action":"ordinator","added":187,"at":"2026-10-30T20:08:31+0100","crossFamily":5,"families":381,"key":"checklistbank-37354","merged":827,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T20:08:31+0100","key":"checklistbank-50799","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T20:09:16+0100","crossFamily":0,"families":0,"key":"checklistbank-50799","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T20:09:16+0100","key":"checklistbank-5679","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T20:14:54+0100","key":"checklistbank-5679","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T20:14:54+0100","key":"checklistbank-5679","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T20:14:54+0100","key":"checklistbank-5679","stage":"applying"}
+{"action":"ordinator","added":6,"at":"2026-10-30T20:16:58+0100","crossFamily":43,"families":42,"key":"checklistbank-5679","merged":807,"stage":"applied"}
+{"at": "2026-10-30T20:17:07+0100", "key": "checklistbank-315071", "stage": "candidate", "action": "add", "title": "Red List Vascular Plants (2021, Norway) - Rødlista Karplanter (2021, N"}
+{"at": "2026-10-30T20:17:08+0100", "key": "checklistbank-315071", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:08+0100", "key": "checklistbank-287013", "stage": "candidate", "action": "add", "title": "terrANTALife_eukaryota: Antarctic terrestrial and freshwater eukaryoti"}
+{"at": "2026-10-30T20:17:09+0100", "key": "checklistbank-287013", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:09+0100", "key": "checklistbank-2728", "stage": "candidate", "action": "add", "title": "Bhutan: Invertebrate species"}
+{"at": "2026-10-30T20:17:09+0100", "key": "checklistbank-2728", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:09+0100", "key": "checklistbank-28960", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - United Kingdom (G"}
+{"at": "2026-10-30T20:17:09+0100", "key": "checklistbank-28960", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:10+0100", "key": "checklistbank-32803", "stage": "candidate", "action": "add", "title": "BID-AF2015-0004-NAC Liste des synonymes et noms corrects pour un nom d"}
+{"at": "2026-10-30T20:17:10+0100", "key": "checklistbank-32803", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:10+0100", "key": "checklistbank-315072", "stage": "candidate", "action": "add", "title": "Red List Vascular Plants (2016, Switzerland) - Rote Liste Gefässpflanz"}
+{"at": "2026-10-30T20:17:10+0100", "key": "checklistbank-315072", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:10+0100", "key": "checklistbank-315631", "stage": "candidate", "action": "add", "title": "draft- Harmonized species names used under the EU nature directives (E"}
+{"at": "2026-10-30T20:17:11+0100", "key": "checklistbank-315631", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:11+0100", "key": "checklistbank-23895", "stage": "candidate", "action": "add", "title": "Benin animal checklist"}
+{"at": "2026-10-30T20:17:11+0100", "key": "checklistbank-23895", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:11+0100", "key": "checklistbank-29666", "stage": "candidate", "action": "add", "title": "Checklist derived from occurrence data published on animalia on GBIF s"}
+{"at": "2026-10-30T20:17:12+0100", "key": "checklistbank-29666", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T20:17:12+0100", "key": "checklistbank-53677", "stage": "candidate", "action": "add", "title": "Archaeobotanical checklist for Archis (ArchisBotany)"}
+{"at": "2026-10-30T20:17:12+0100", "key": "checklistbank-53677", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-30T21:27:47+0100","key":"checklistbank-23895","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T21:32:56+0100","key":"checklistbank-23895","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T21:32:56+0100","key":"checklistbank-23895","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T21:32:56+0100","key":"checklistbank-23895","stage":"applying"}
+{"action":"ordinator","added":126,"at":"2026-10-30T22:08:45+0100","crossFamily":17,"families":499,"key":"checklistbank-23895","merged":2133,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T22:08:45+0100","key":"checklistbank-2728","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T22:09:43+0100","crossFamily":0,"families":0,"key":"checklistbank-2728","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T22:09:43+0100","key":"checklistbank-287013","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T22:15:37+0100","key":"checklistbank-287013","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T22:15:37+0100","key":"checklistbank-287013","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T22:15:37+0100","key":"checklistbank-287013","stage":"applying"}
+{"action":"ordinator","added":83,"at":"2026-10-30T22:23:59+0100","crossFamily":131,"families":352,"key":"checklistbank-287013","merged":1367,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T22:23:59+0100","key":"checklistbank-28960","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T22:31:21+0100","key":"checklistbank-28960","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T22:31:21+0100","key":"checklistbank-28960","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T22:31:21+0100","key":"checklistbank-28960","stage":"applying"}
+{"action":"ordinator","added":6,"at":"2026-10-30T22:49:43+0100","crossFamily":0,"families":299,"key":"checklistbank-28960","merged":1229,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T22:49:43+0100","key":"checklistbank-29666","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T22:55:05+0100","key":"checklistbank-29666","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T22:55:05+0100","key":"checklistbank-29666","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T22:55:05+0100","key":"checklistbank-29666","stage":"applying"}
+{"action":"ordinator","added":10,"at":"2026-10-30T23:23:07+0100","crossFamily":10,"families":443,"key":"checklistbank-29666","merged":1975,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T23:23:08+0100","key":"checklistbank-315071","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-30T23:23:59+0100","crossFamily":0,"families":0,"key":"checklistbank-315071","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T23:23:59+0100","key":"checklistbank-315072","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T23:29:18+0100","key":"checklistbank-315072","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T23:29:18+0100","key":"checklistbank-315072","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T23:29:18+0100","key":"checklistbank-315072","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-10-30T23:30:27+0100","crossFamily":7,"families":86,"key":"checklistbank-315072","merged":1229,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T23:30:28+0100","key":"checklistbank-315631","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T23:35:56+0100","key":"checklistbank-315631","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T23:35:56+0100","key":"checklistbank-315631","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T23:35:56+0100","key":"checklistbank-315631","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-30T23:42:25+0100","crossFamily":1,"families":179,"key":"checklistbank-315631","merged":596,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T23:42:25+0100","key":"checklistbank-32803","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T23:43:22+0100","key":"checklistbank-32803","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-30T23:43:22+0100","key":"checklistbank-32803","stage":"queued"}
+{"action":"ordinator","at":"2026-10-30T23:43:22+0100","key":"checklistbank-32803","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-30T23:43:23+0100","crossFamily":0,"families":1,"key":"checklistbank-32803","merged":2,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-30T23:43:23+0100","key":"checklistbank-53677","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-30T23:43:23+0100","key":"checklistbank-53677","reason":"txtree format — needs scripts/txtree.py path, see docs/import.md","stage":"blocked"}
+{"at": "2026-10-30T23:43:32+0100", "key": "checklistbank-21556", "stage": "candidate", "action": "add", "title": "Species plantarum: exhibentes plantas rite cognitas, ad genera relatas"}
+{"at": "2026-10-30T23:43:33+0100", "key": "checklistbank-21556", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-30T23:43:33+0100", "key": "checklistbank-8041", "stage": "candidate", "action": "add", "title": "Checklist of the Hymenoptera of Canada, Alaska and Greenland (Hymenopt"}
+{"at": "2026-10-30T23:43:33+0100", "key": "checklistbank-8041", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:33+0100", "key": "checklistbank-314453", "stage": "candidate", "action": "add", "title": "Annotated checklist of moths of Zambia (Insecta: Lepidoptera) (KeithJ2"}
+{"at": "2026-10-30T23:43:34+0100", "key": "checklistbank-314453", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-30T23:43:34+0100", "key": "checklistbank-316604", "stage": "candidate", "action": "add", "title": "Moths and Butterflies of the Prairies Ecozone in Canada"}
+{"at": "2026-10-30T23:43:34+0100", "key": "checklistbank-316604", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:34+0100", "key": "checklistbank-306935", "stage": "candidate", "action": "add", "title": "Checklist for the insect fauna of two East Sea Islands (Ulleungdo Is."}
+{"at": "2026-10-30T23:43:35+0100", "key": "checklistbank-306935", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:35+0100", "key": "checklistbank-24532", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Japan (GRIIS-JP)"}
+{"at": "2026-10-30T23:43:35+0100", "key": "checklistbank-24532", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:35+0100", "key": "checklistbank-37220", "stage": "candidate", "action": "add", "title": "Nordic Crop Wild Relative (CWR) Checklist"}
+{"at": "2026-10-30T23:43:36+0100", "key": "checklistbank-37220", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:36+0100", "key": "checklistbank-288059", "stage": "candidate", "action": "add", "title": "Lista de especies silvestres amenazadas de la diversidad biológica con"}
+{"at": "2026-10-30T23:43:36+0100", "key": "checklistbank-288059", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:36+0100", "key": "checklistbank-28934", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Denmark (GRIIS-DK"}
+{"at": "2026-10-30T23:43:36+0100", "key": "checklistbank-28934", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-30T23:43:36+0100", "key": "checklistbank-62702", "stage": "candidate", "action": "add", "title": "Bryozoa of the British Isles"}
+{"at": "2026-10-30T23:43:37+0100", "key": "checklistbank-62702", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T00:43:31+0100","key":"checklistbank-24532","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T00:48:15+0100","key":"checklistbank-24532","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T00:48:15+0100","key":"checklistbank-24532","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T00:48:15+0100","key":"checklistbank-24532","stage":"applying"}
+{"action":"ordinator","added":15,"at":"2026-10-31T00:58:42+0100","crossFamily":1,"families":282,"key":"checklistbank-24532","merged":1078,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T00:58:42+0100","key":"checklistbank-288059","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T01:04:01+0100","key":"checklistbank-288059","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T01:04:01+0100","key":"checklistbank-288059","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T01:04:01+0100","key":"checklistbank-288059","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T01:04:30+0100","crossFamily":0,"families":67,"key":"checklistbank-288059","merged":394,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:04:30+0100","key":"checklistbank-28934","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T01:09:54+0100","key":"checklistbank-28934","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T01:09:54+0100","key":"checklistbank-28934","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T01:09:54+0100","key":"checklistbank-28934","stage":"applying"}
+{"action":"ordinator","added":22,"at":"2026-10-31T01:18:45+0100","crossFamily":12,"families":248,"key":"checklistbank-28934","merged":1072,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:18:45+0100","key":"checklistbank-306935","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T01:19:38+0100","crossFamily":0,"families":0,"key":"checklistbank-306935","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:19:38+0100","key":"checklistbank-316604","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T01:20:08+0100","crossFamily":0,"families":0,"key":"checklistbank-316604","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:20:08+0100","key":"checklistbank-37220","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T01:24:46+0100","key":"checklistbank-37220","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T01:24:46+0100","key":"checklistbank-37220","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T01:24:46+0100","key":"checklistbank-37220","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T01:25:12+0100","crossFamily":8,"families":65,"key":"checklistbank-37220","merged":819,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:25:12+0100","key":"checklistbank-62702","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T01:25:58+0100","crossFamily":0,"families":0,"key":"checklistbank-62702","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:25:58+0100","key":"checklistbank-8041","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T01:30:39+0100","key":"checklistbank-8041","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T01:30:39+0100","key":"checklistbank-8041","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T01:30:39+0100","key":"checklistbank-8041","stage":"applying"}
+{"action":"ordinator","added":61,"at":"2026-10-31T01:33:10+0100","crossFamily":250,"families":51,"key":"checklistbank-8041","merged":2690,"stage":"applied"}
+{"at": "2026-10-31T01:33:19+0100", "key": "checklistbank-315281", "stage": "candidate", "action": "add", "title": "Checklist of introduced taxa in Cyprus (alien-species-cyprus)"}
+{"at": "2026-10-31T01:33:20+0100", "key": "checklistbank-315281", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:20+0100", "key": "checklistbank-25656", "stage": "candidate", "action": "add", "title": "Family-group names in Coleoptera (Insecta) (Bouchard2011)"}
+{"at": "2026-10-31T01:33:21+0100", "key": "checklistbank-25656", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:21+0100", "key": "checklistbank-20449", "stage": "candidate", "action": "add", "title": "Checklist and distribution of the species of Seychelles for conservati"}
+{"at": "2026-10-31T01:33:22+0100", "key": "checklistbank-20449", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:22+0100", "key": "checklistbank-24927", "stage": "candidate", "action": "add", "title": "Lista sistemática actualizada de los Moluscos de Chile"}
+{"at": "2026-10-31T01:33:22+0100", "key": "checklistbank-24927", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:22+0100", "key": "checklistbank-303888", "stage": "candidate", "action": "add", "title": "Konspekt Flory Dagestana (Murtazaliev, 2009): accepted names"}
+{"at": "2026-10-31T01:33:23+0100", "key": "checklistbank-303888", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:23+0100", "key": "checklistbank-315070", "stage": "candidate", "action": "add", "title": "Red List Vascular Plants (Denmark) - Rødliste Karplanter (Danmark) (dk"}
+{"at": "2026-10-31T01:33:23+0100", "key": "checklistbank-315070", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:23+0100", "key": "checklistbank-5977", "stage": "candidate", "action": "add", "title": "Swiss National Coleoptera Databank (Checklist)"}
+{"at": "2026-10-31T01:33:24+0100", "key": "checklistbank-5977", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:24+0100", "key": "checklistbank-77919", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Sweden (GRIIS-SE)"}
+{"at": "2026-10-31T01:33:24+0100", "key": "checklistbank-77919", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:24+0100", "key": "checklistbank-313964", "stage": "candidate", "action": "add", "title": "Characteristic species of Annex I habitats of the EU Habitats Directiv"}
+{"at": "2026-10-31T01:33:24+0100", "key": "checklistbank-313964", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T01:33:25+0100", "key": "checklistbank-28811", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Federated States"}
+{"at": "2026-10-31T01:33:26+0100", "key": "checklistbank-28811", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T01:34:34+0100","key":"checklistbank-20449","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T01:39:33+0100","key":"checklistbank-20449","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T01:39:33+0100","key":"checklistbank-20449","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T01:39:33+0100","key":"checklistbank-20449","stage":"applying"}
+{"action":"ordinator","added":15,"at":"2026-10-31T01:40:38+0100","crossFamily":10,"families":118,"key":"checklistbank-20449","merged":734,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:40:38+0100","key":"checklistbank-24927","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T01:45:43+0100","key":"checklistbank-24927","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T01:45:43+0100","key":"checklistbank-24927","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T01:45:43+0100","key":"checklistbank-24927","stage":"applying"}
+{"action":"ordinator","added":42,"at":"2026-10-31T01:55:13+0100","crossFamily":11,"families":204,"key":"checklistbank-24927","merged":621,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:55:13+0100","key":"checklistbank-25656","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T01:55:49+0100","crossFamily":0,"families":0,"key":"checklistbank-25656","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T01:55:49+0100","key":"checklistbank-28811","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:00:39+0100","key":"checklistbank-28811","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:00:39+0100","key":"checklistbank-28811","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:00:39+0100","key":"checklistbank-28811","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T02:01:46+0100","crossFamily":0,"families":60,"key":"checklistbank-28811","merged":252,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:01:46+0100","key":"checklistbank-303888","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T02:02:27+0100","crossFamily":0,"families":0,"key":"checklistbank-303888","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:02:27+0100","key":"checklistbank-313964","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T02:02:57+0100","crossFamily":0,"families":0,"key":"checklistbank-313964","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:02:57+0100","key":"checklistbank-315070","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:07:48+0100","key":"checklistbank-315070","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:07:48+0100","key":"checklistbank-315070","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:07:48+0100","key":"checklistbank-315070","stage":"applying"}
+{"action":"ordinator","added":16,"at":"2026-10-31T02:08:26+0100","crossFamily":19,"families":101,"key":"checklistbank-315070","merged":897,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:08:26+0100","key":"checklistbank-315281","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:13:38+0100","key":"checklistbank-315281","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:13:38+0100","key":"checklistbank-315281","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:13:38+0100","key":"checklistbank-315281","stage":"applying"}
+{"action":"ordinator","added":4,"at":"2026-10-31T02:24:23+0100","crossFamily":5,"families":281,"key":"checklistbank-315281","merged":768,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:24:23+0100","key":"checklistbank-5977","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:29:40+0100","key":"checklistbank-5977","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:29:40+0100","key":"checklistbank-5977","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:29:40+0100","key":"checklistbank-5977","stage":"applying"}
+{"action":"ordinator","added":8,"at":"2026-10-31T02:32:08+0100","crossFamily":2,"families":45,"key":"checklistbank-5977","merged":1395,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:32:08+0100","key":"checklistbank-77919","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:37:07+0100","key":"checklistbank-77919","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:37:07+0100","key":"checklistbank-77919","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:37:07+0100","key":"checklistbank-77919","stage":"applying"}
+{"action":"ordinator","added":4,"at":"2026-10-31T02:43:24+0100","crossFamily":3,"families":209,"key":"checklistbank-77919","merged":1037,"stage":"applied"}
+{"at": "2026-10-31T02:43:34+0100", "key": "checklistbank-55867", "stage": "candidate", "action": "add", "title": "A Checklist of Higher Plant Collections in the Lagos University Herbar"}
+{"at": "2026-10-31T02:43:35+0100", "key": "checklistbank-55867", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:35+0100", "key": "checklistbank-31960", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - South Africa (GRI"}
+{"at": "2026-10-31T02:43:35+0100", "key": "checklistbank-31960", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:35+0100", "key": "checklistbank-314681", "stage": "candidate", "action": "add", "title": "Risk assessment of alien taxa in Sweden 2024"}
+{"at": "2026-10-31T02:43:36+0100", "key": "checklistbank-314681", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:36+0100", "key": "checklistbank-2792", "stage": "candidate", "action": "add", "title": "Checklist of marine and estuarine fishes from the Alaska-Yukon Border,"}
+{"at": "2026-10-31T02:43:36+0100", "key": "checklistbank-2792", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T02:43:36+0100", "key": "checklistbank-265152", "stage": "candidate", "action": "add", "title": "List of Available Names in Zoology, Candidate Part Phylum Rotifera"}
+{"at": "2026-10-31T02:43:37+0100", "key": "checklistbank-265152", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:37+0100", "key": "checklistbank-105107", "stage": "candidate", "action": "add", "title": "Checklist of fungi from the Far Eastern Himalaya Landscape"}
+{"at": "2026-10-31T02:43:37+0100", "key": "checklistbank-105107", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:38+0100", "key": "checklistbank-29724", "stage": "candidate", "action": "add", "title": "Lista de referencia de especies de aves de Colombia - 2022"}
+{"at": "2026-10-31T02:43:38+0100", "key": "checklistbank-29724", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:38+0100", "key": "checklistbank-53701", "stage": "candidate", "action": "add", "title": "Taxonomic Diversity and Ecomorphological Traits of Wild Bees in Mexico"}
+{"at": "2026-10-31T02:43:38+0100", "key": "checklistbank-53701", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:39+0100", "key": "checklistbank-32110", "stage": "candidate", "action": "add", "title": "Manual of the Alien Plants of Belgium"}
+{"at": "2026-10-31T02:43:39+0100", "key": "checklistbank-32110", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T02:43:39+0100", "key": "checklistbank-21227", "stage": "candidate", "action": "add", "title": "Listado de especies de fauna silvestre, en la jurisdicción de los 80 m"}
+{"at": "2026-10-31T02:43:39+0100", "key": "checklistbank-21227", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T02:44:47+0100","key":"checklistbank-105107","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:50:08+0100","key":"checklistbank-105107","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:50:08+0100","key":"checklistbank-105107","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:50:08+0100","key":"checklistbank-105107","stage":"applying"}
+{"action":"ordinator","added":25,"at":"2026-10-31T02:50:58+0100","crossFamily":58,"families":149,"key":"checklistbank-105107","merged":1070,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T02:50:58+0100","key":"checklistbank-21227","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T02:55:47+0100","key":"checklistbank-21227","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T02:55:47+0100","key":"checklistbank-21227","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T02:55:47+0100","key":"checklistbank-21227","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T03:00:19+0100","crossFamily":41,"families":101,"key":"checklistbank-21227","merged":943,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:00:19+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:00:20+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T03:00:20+0100","key":"checklistbank-29724","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T03:00:53+0100","crossFamily":0,"families":0,"key":"checklistbank-29724","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:00:53+0100","key":"checklistbank-314681","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:05:44+0100","key":"checklistbank-314681","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:05:44+0100","key":"checklistbank-314681","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:05:44+0100","key":"checklistbank-314681","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T03:08:55+0100","crossFamily":0,"families":133,"key":"checklistbank-314681","merged":261,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:08:55+0100","key":"checklistbank-31960","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:14:10+0100","key":"checklistbank-31960","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:14:10+0100","key":"checklistbank-31960","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:14:10+0100","key":"checklistbank-31960","stage":"applying"}
+{"action":"ordinator","added":13,"at":"2026-10-31T03:23:33+0100","crossFamily":10,"families":284,"key":"checklistbank-31960","merged":928,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:23:33+0100","key":"checklistbank-32110","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:28:42+0100","key":"checklistbank-32110","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:28:42+0100","key":"checklistbank-32110","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:28:42+0100","key":"checklistbank-32110","stage":"applying"}
+{"action":"ordinator","added":10,"at":"2026-10-31T03:29:08+0100","crossFamily":12,"families":103,"key":"checklistbank-32110","merged":1264,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:29:08+0100","key":"checklistbank-53701","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:34:17+0100","key":"checklistbank-53701","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:34:17+0100","key":"checklistbank-53701","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:34:17+0100","key":"checklistbank-53701","stage":"applying"}
+{"action":"ordinator","added":33,"at":"2026-10-31T03:34:41+0100","crossFamily":0,"families":6,"key":"checklistbank-53701","merged":2376,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:34:41+0100","key":"checklistbank-55867","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:39:26+0100","key":"checklistbank-55867","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:39:26+0100","key":"checklistbank-55867","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:39:26+0100","key":"checklistbank-55867","stage":"applying"}
+{"action":"ordinator","added":102,"at":"2026-10-31T03:40:36+0100","crossFamily":12,"families":137,"key":"checklistbank-55867","merged":703,"stage":"applied"}
+{"at": "2026-10-31T03:40:45+0100", "key": "checklistbank-301864", "stage": "candidate", "action": "add", "title": "Taxonomic Composition and Special Features of the Natural Flora in the"}
+{"at": "2026-10-31T03:40:46+0100", "key": "checklistbank-301864", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:46+0100", "key": "checklistbank-28931", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Austria (GRIIS-AT"}
+{"at": "2026-10-31T03:40:46+0100", "key": "checklistbank-28931", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:46+0100", "key": "checklistbank-276867", "stage": "candidate", "action": "add", "title": "Chapter 7: Linnaean Plant Names and their Types (part C) (Jarvis2007)"}
+{"at": "2026-10-31T03:40:48+0100", "key": "checklistbank-276867", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T03:40:48+0100", "key": "checklistbank-25995", "stage": "candidate", "action": "add", "title": "Catálogo de autoridades taxonómicas de platyhelmithes y acanthocephala"}
+{"at": "2026-10-31T03:40:49+0100", "key": "checklistbank-25995", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:50+0100", "key": "checklistbank-24521", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Poland (GRIIS-PL)"}
+{"at": "2026-10-31T03:40:50+0100", "key": "checklistbank-24521", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:50+0100", "key": "checklistbank-302747", "stage": "candidate", "action": "add", "title": "Flora Severo-Zapadnogo Kavkaza (Zernov, 2006): accepted names"}
+{"at": "2026-10-31T03:40:51+0100", "key": "checklistbank-302747", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:51+0100", "key": "checklistbank-24519", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - India (GRIIS-IN)"}
+{"at": "2026-10-31T03:40:52+0100", "key": "checklistbank-24519", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:52+0100", "key": "checklistbank-287012", "stage": "candidate", "action": "add", "title": "terrANTALife_prokaryota: Antarctic terrestrial and freshwater prokaryo"}
+{"at": "2026-10-31T03:40:52+0100", "key": "checklistbank-287012", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:52+0100", "key": "checklistbank-28952", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Italy (GRIIS-IT)"}
+{"at": "2026-10-31T03:40:53+0100", "key": "checklistbank-28952", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T03:40:54+0100", "key": "checklistbank-302307", "stage": "candidate", "action": "add", "title": "Spontaneous Flora of the Crimean Peninsula (Yena, 2012): accepted name"}
+{"at": "2026-10-31T03:40:54+0100", "key": "checklistbank-302307", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T03:42:06+0100","key":"checklistbank-24519","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:47:19+0100","key":"checklistbank-24519","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:47:19+0100","key":"checklistbank-24519","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:47:19+0100","key":"checklistbank-24519","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T03:48:59+0100","crossFamily":7,"families":145,"key":"checklistbank-24519","merged":981,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T03:48:59+0100","key":"checklistbank-24521","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T03:53:59+0100","key":"checklistbank-24521","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T03:53:59+0100","key":"checklistbank-24521","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T03:53:59+0100","key":"checklistbank-24521","stage":"applying"}
+{"action":"ordinator","added":8,"at":"2026-10-31T04:03:24+0100","crossFamily":1,"families":277,"key":"checklistbank-24521","merged":872,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:03:24+0100","key":"checklistbank-25995","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T04:08:41+0100","key":"checklistbank-25995","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T04:08:41+0100","key":"checklistbank-25995","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T04:08:41+0100","key":"checklistbank-25995","stage":"applying"}
+{"action":"ordinator","added":63,"at":"2026-10-31T04:13:25+0100","crossFamily":15,"families":102,"key":"checklistbank-25995","merged":310,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:13:25+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T04:13:26+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T04:13:26+0100","key":"checklistbank-287012","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T04:13:59+0100","crossFamily":0,"families":0,"key":"checklistbank-287012","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:13:59+0100","key":"checklistbank-28931","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T04:18:51+0100","key":"checklistbank-28931","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T04:18:51+0100","key":"checklistbank-28931","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T04:18:51+0100","key":"checklistbank-28931","stage":"applying"}
+{"action":"ordinator","added":15,"at":"2026-10-31T04:27:46+0100","crossFamily":4,"families":257,"key":"checklistbank-28931","merged":935,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:27:46+0100","key":"checklistbank-28952","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T04:32:58+0100","key":"checklistbank-28952","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T04:32:58+0100","key":"checklistbank-28952","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T04:32:58+0100","key":"checklistbank-28952","stage":"applying"}
+{"action":"ordinator","added":6,"at":"2026-10-31T04:48:55+0100","crossFamily":6,"families":286,"key":"checklistbank-28952","merged":737,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:48:55+0100","key":"checklistbank-301864","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T04:50:10+0100","crossFamily":0,"families":0,"key":"checklistbank-301864","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:50:10+0100","key":"checklistbank-302307","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T04:50:58+0100","crossFamily":0,"families":0,"key":"checklistbank-302307","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T04:50:58+0100","key":"checklistbank-302747","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T04:51:45+0100","crossFamily":0,"families":0,"key":"checklistbank-302747","merged":0,"stage":"applied"}
+{"at": "2026-10-31T04:51:55+0100", "key": "checklistbank-31218", "stage": "candidate", "action": "add", "title": "Checklist of the Vanuatu National Herbarium (PVNH)"}
+{"at": "2026-10-31T04:51:56+0100", "key": "checklistbank-31218", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:51:56+0100", "key": "checklistbank-9208", "stage": "candidate", "action": "add", "title": "Lista de Flora de la reserva indígena Yaigojé-Apaporis"}
+{"at": "2026-10-31T04:51:56+0100", "key": "checklistbank-9208", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:51:56+0100", "key": "checklistbank-305365", "stage": "candidate", "action": "add", "title": "Nomenclator, geographic and stratigraphic distribution of the family T"}
+{"at": "2026-10-31T04:51:57+0100", "key": "checklistbank-305365", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T04:51:57+0100", "key": "checklistbank-5552", "stage": "candidate", "action": "add", "title": "Lista taxonómica de las especies de equinodermos de México"}
+{"at": "2026-10-31T04:51:57+0100", "key": "checklistbank-5552", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:51:58+0100", "key": "checklistbank-24528", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Czechia (GRIIS-CZ"}
+{"at": "2026-10-31T04:51:58+0100", "key": "checklistbank-24528", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:51:58+0100", "key": "checklistbank-5678", "stage": "candidate", "action": "add", "title": "Lista de las especies de Tenebrionidae (Coleoptera: Tenebrioidea) de M"}
+{"at": "2026-10-31T04:51:59+0100", "key": "checklistbank-5678", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:51:59+0100", "key": "checklistbank-259389", "stage": "candidate", "action": "add", "title": "Seed Plants of Kangchendzonga Biosphere Reserve"}
+{"at": "2026-10-31T04:51:59+0100", "key": "checklistbank-259389", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:51:59+0100", "key": "checklistbank-311811", "stage": "candidate", "action": "add", "title": "Lepidopteros de Cuba (Lepidopt_Cuba)"}
+{"at": "2026-10-31T04:52:00+0100", "key": "checklistbank-311811", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T04:52:00+0100", "key": "checklistbank-270146", "stage": "candidate", "action": "add", "title": "Chapter 7: Linnaean Plant Names and their Types (part A) (Jarvis2007)"}
+{"at": "2026-10-31T04:52:00+0100", "key": "checklistbank-270146", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T04:52:00+0100", "key": "checklistbank-53684", "stage": "candidate", "action": "add", "title": "Archaeozoological checklist for Archis (ArchisZoology)"}
+{"at": "2026-10-31T04:52:01+0100", "key": "checklistbank-53684", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T04:53:11+0100","key":"checklistbank-24528","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T04:59:05+0100","key":"checklistbank-24528","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T04:59:05+0100","key":"checklistbank-24528","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T04:59:05+0100","key":"checklistbank-24528","stage":"applying"}
+{"at": "2026-10-31T05:10:18+0100", "key": "checklistbank-1015", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:18+0100", "key": "checklistbank-1033", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:18+0100", "key": "checklistbank-1066", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:18+0100", "key": "checklistbank-1076", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:19+0100", "key": "checklistbank-1078", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:19+0100", "key": "checklistbank-1080", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:19+0100", "key": "checklistbank-1104", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:19+0100", "key": "checklistbank-1119", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:20+0100", "key": "checklistbank-1138", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:20+0100", "key": "checklistbank-1139", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:20+0100", "key": "checklistbank-1142", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:20+0100", "key": "checklistbank-1143", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:21+0100", "key": "checklistbank-1177", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:21+0100", "key": "checklistbank-21556", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:21+0100", "key": "checklistbank-21598", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:22+0100", "key": "checklistbank-270146", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:22+0100", "key": "checklistbank-276867", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:22+0100", "key": "checklistbank-2792", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:22+0100", "key": "checklistbank-305365", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:22+0100", "key": "checklistbank-314453", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:23+0100", "key": "checklistbank-316049", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:23+0100", "key": "checklistbank-35472", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:23+0100", "key": "checklistbank-7888", "stage": "downloaded", "action": "set", "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)"}
+{"at": "2026-10-31T05:10:23+0100", "key": "checklistbank-1148", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:24+0100", "key": "checklistbank-1153", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:24+0100", "key": "checklistbank-1194", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:24+0100", "key": "checklistbank-1197", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:24+0100", "key": "checklistbank-2231", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:25+0100", "key": "checklistbank-312462", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:25+0100", "key": "checklistbank-314254", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:25+0100", "key": "checklistbank-314574", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:25+0100", "key": "checklistbank-316260", "stage": "candidate", "action": "set", "reason": "truncated archive deleted 2026-10-31, re-fetch"}
+{"at": "2026-10-31T05:10:26+0100", "key": "checklistbank-2090", "stage": "candidate", "action": "set", "reason": "archive never landed; retry fetch 2026-10-31"}
+{"at": "2026-10-31T05:10:26+0100", "key": "checklistbank-7237", "stage": "candidate", "action": "set", "reason": "archive never landed; retry fetch 2026-10-31"}
+{"at": "2026-10-31T05:10:26+0100", "key": "checklistbank-316757", "stage": "candidate", "action": "set", "reason": "archive never landed; retry fetch 2026-10-31"}
+{"at": "2026-10-31T05:10:26+0100", "key": "checklistbank-58312", "stage": "declined", "action": "set", "reason": "test/tutorial dataset, not a real checklist"}
+{"at": "2026-10-31T05:10:27+0100", "key": "checklistbank-264436", "stage": "declined", "action": "set", "reason": "test/tutorial dataset, not a real checklist"}
+{"at": "2026-10-31T05:10:27+0100", "key": "checklistbank-312513", "stage": "declined", "action": "set", "reason": "test/tutorial dataset, not a real checklist"}
+{"at": "2026-10-31T05:10:27+0100", "key": "checklistbank-307801", "stage": "declined", "action": "set", "reason": "test/tutorial dataset, not a real checklist"}
+{"at": "2026-10-31T05:10:27+0100", "key": "checklistbank-9862", "stage": "declined", "action": "set", "reason": "test/tutorial dataset, not a real checklist"}
+{"action":"ordinator","added":7,"at":"2026-10-31T05:12:45+0100","crossFamily":13,"families":180,"key":"checklistbank-24528","merged":817,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T05:12:45+0100","key":"checklistbank-259389","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T05:14:31+0100","key":"checklistbank-259389","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T05:14:31+0100","key":"checklistbank-259389","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T05:14:31+0100","key":"checklistbank-259389","stage":"applying"}
+{"action":"ordinator","added":99,"at":"2026-10-31T05:17:23+0100","crossFamily":68,"families":93,"key":"checklistbank-259389","merged":885,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T05:17:23+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T05:17:24+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T05:17:24+0100","key":"checklistbank-311811","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T05:25:01+0100","key":"checklistbank-311811","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T05:25:01+0100","key":"checklistbank-311811","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T05:25:01+0100","key":"checklistbank-311811","stage":"applying"}
+{"action":"ordinator","added":8,"at":"2026-10-31T05:29:21+0100","crossFamily":0,"families":25,"key":"checklistbank-311811","merged":261,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T05:29:21+0100","key":"checklistbank-31218","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T05:36:42+0100","key":"checklistbank-31218","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T05:36:42+0100","key":"checklistbank-31218","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T05:36:42+0100","key":"checklistbank-31218","stage":"applying"}
+{"action":"ordinator","added":63,"at":"2026-10-31T05:39:01+0100","crossFamily":13,"families":134,"key":"checklistbank-31218","merged":668,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T05:39:01+0100","key":"checklistbank-53684","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T05:39:02+0100","key":"checklistbank-53684","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T05:39:02+0100","key":"checklistbank-5552","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T05:46:52+0100","key":"checklistbank-5552","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T05:46:52+0100","key":"checklistbank-5552","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T05:46:52+0100","key":"checklistbank-5552","stage":"applying"}
+{"action":"ordinator","added":27,"at":"2026-10-31T05:53:00+0100","crossFamily":0,"families":56,"key":"checklistbank-5552","merged":106,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T05:53:00+0100","key":"checklistbank-5678","stage":"transforming"}
+{"at": "2026-10-31T06:00:58+0100", "key": "checklistbank-274271", "stage": "downloaded", "action": "set", "reason": "TextTree reader wired in 9c521ec; dry run clean"}
+{"at": "2026-10-31T06:00:58+0100", "key": "checklistbank-54592", "stage": "downloaded", "action": "set", "reason": "TextTree reader wired in 9c521ec; dry run clean"}
+{"at": "2026-10-31T06:00:59+0100", "key": "checklistbank-303328", "stage": "downloaded", "action": "set", "reason": "TextTree reader wired in 9c521ec; dry run clean"}
+{"at": "2026-10-31T06:00:59+0100", "key": "checklistbank-274774", "stage": "declined", "action": "set", "reason": "COL XR patch file (20 lines of corrections), not a checklist"}
+{"at": "2026-10-31T06:01:00+0100", "key": "checklistbank-304685", "stage": "declined", "action": "set", "reason": "kingdom/phylum/class only, no species to add"}
+{"at": "2026-10-31T06:01:00+0100", "key": "checklistbank-53677", "stage": "declined", "action": "set", "reason": "Dutch archaeobotanical find list: common European flora we hold, non-taxonomic ranks (other, cultivar, section_botany)"}
+{"action":"ordinator","at":"2026-10-31T06:05:16+0100","key":"checklistbank-5678","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:05:16+0100","key":"checklistbank-5678","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:05:16+0100","key":"checklistbank-5678","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T06:05:29+0100","crossFamily":0,"families":1,"key":"checklistbank-5678","merged":613,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:05:29+0100","key":"checklistbank-9208","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T06:11:24+0100","key":"checklistbank-9208","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:11:24+0100","key":"checklistbank-9208","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:11:24+0100","key":"checklistbank-9208","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T06:13:23+0100","crossFamily":0,"families":115,"key":"checklistbank-9208","merged":672,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:14:41+0100","key":"checklistbank-1015","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T06:21:17+0100","key":"checklistbank-1015","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:21:17+0100","key":"checklistbank-1015","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:21:17+0100","key":"checklistbank-1015","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:21:20+0100","crossFamily":0,"families":1,"key":"checklistbank-1015","merged":63,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:21:20+0100","key":"checklistbank-1033","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T06:28:45+0100","key":"checklistbank-1033","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:28:45+0100","key":"checklistbank-1033","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:28:45+0100","key":"checklistbank-1033","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:28:50+0100","crossFamily":0,"families":8,"key":"checklistbank-1033","merged":369,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:28:50+0100","key":"checklistbank-1066","stage":"transforming"}
+{"at": "2026-10-31T06:28:56+0100", "key": "checklistbank-265152", "stage": "declined", "action": "set", "reason": "names-only nomenclator (Name.tsv: genus/epithet/authorship, no rank, no classification) -- nothing to place a species in a family with"}
+{"action":"ordinator","at":"2026-10-31T06:37:34+0100","key":"checklistbank-1066","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:37:34+0100","key":"checklistbank-1066","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:37:34+0100","key":"checklistbank-1066","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:37:35+0100","crossFamily":0,"families":1,"key":"checklistbank-1066","merged":134,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:37:35+0100","key":"checklistbank-1076","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T06:43:23+0100","key":"checklistbank-1076","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:43:23+0100","key":"checklistbank-1076","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:43:23+0100","key":"checklistbank-1076","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:43:29+0100","crossFamily":0,"families":1,"key":"checklistbank-1076","merged":2,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:43:29+0100","key":"checklistbank-1078","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T06:49:09+0100","key":"checklistbank-1078","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:49:09+0100","key":"checklistbank-1078","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:49:09+0100","key":"checklistbank-1078","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:49:15+0100","crossFamily":0,"families":1,"key":"checklistbank-1078","merged":25,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:49:15+0100","key":"checklistbank-1080","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T06:54:56+0100","key":"checklistbank-1080","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T06:54:56+0100","key":"checklistbank-1080","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T06:54:56+0100","key":"checklistbank-1080","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:55:05+0100","crossFamily":0,"families":2,"key":"checklistbank-1080","merged":27,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:55:05+0100","key":"checklistbank-1104","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T06:55:41+0100","crossFamily":0,"families":0,"key":"checklistbank-1104","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T06:55:41+0100","key":"checklistbank-1119","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:01:18+0100","key":"checklistbank-1119","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:01:18+0100","key":"checklistbank-1119","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:01:18+0100","key":"checklistbank-1119","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T07:01:27+0100","crossFamily":0,"families":2,"key":"checklistbank-1119","merged":80,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:01:27+0100","key":"checklistbank-1138","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:06:56+0100","key":"checklistbank-1138","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:06:56+0100","key":"checklistbank-1138","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:06:56+0100","key":"checklistbank-1138","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T07:07:17+0100","crossFamily":0,"families":5,"key":"checklistbank-1138","merged":8,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:07:17+0100","key":"checklistbank-1139","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:13:17+0100","key":"checklistbank-1139","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:13:17+0100","key":"checklistbank-1139","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:13:17+0100","key":"checklistbank-1139","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T07:13:24+0100","crossFamily":0,"families":1,"key":"checklistbank-1139","merged":9,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:13:24+0100","key":"checklistbank-1142","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:18:41+0100","key":"checklistbank-1142","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:18:41+0100","key":"checklistbank-1142","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:18:41+0100","key":"checklistbank-1142","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T07:18:49+0100","crossFamily":0,"families":1,"key":"checklistbank-1142","merged":16,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:18:49+0100","key":"checklistbank-1143","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:25:03+0100","key":"checklistbank-1143","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:25:03+0100","key":"checklistbank-1143","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:25:03+0100","key":"checklistbank-1143","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-10-31T07:25:12+0100","crossFamily":0,"families":1,"key":"checklistbank-1143","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:25:12+0100","key":"checklistbank-1148","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T07:25:12+0100","key":"checklistbank-1148","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:36:00+0100","key":"checklistbank-1148","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:36:00+0100","key":"checklistbank-1148","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:36:00+0100","key":"checklistbank-1148","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T07:36:03+0100","crossFamily":0,"families":24,"key":"checklistbank-1148","merged":999,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:36:03+0100","key":"checklistbank-1153","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T07:36:03+0100","key":"checklistbank-1153","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:47:25+0100","key":"checklistbank-1153","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:47:25+0100","key":"checklistbank-1153","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:47:25+0100","key":"checklistbank-1153","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T07:47:33+0100","crossFamily":0,"families":1,"key":"checklistbank-1153","merged":1,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:47:33+0100","key":"checklistbank-1177","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T07:54:30+0100","key":"checklistbank-1177","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T07:54:30+0100","key":"checklistbank-1177","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T07:54:30+0100","key":"checklistbank-1177","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-31T07:54:31+0100","crossFamily":0,"families":1,"key":"checklistbank-1177","merged":257,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T07:54:31+0100","key":"checklistbank-1194","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T07:54:31+0100","key":"checklistbank-1194","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:00:20+0100","key":"checklistbank-1194","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:00:20+0100","key":"checklistbank-1194","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:00:20+0100","key":"checklistbank-1194","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:00:25+0100","crossFamily":0,"families":1,"key":"checklistbank-1194","merged":5,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:00:26+0100","key":"checklistbank-1197","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:00:26+0100","key":"checklistbank-1197","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:01:14+0100","key":"checklistbank-1197","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:01:14+0100","key":"checklistbank-1197","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:01:14+0100","key":"checklistbank-1197","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:01:21+0100","crossFamily":0,"families":2,"key":"checklistbank-1197","merged":7,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:01:22+0100","key":"checklistbank-2090","reason":"download is not an archive: not an archive (magic=\"ta\")","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-31T08:01:22+0100","key":"checklistbank-21556","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:02:03+0100","crossFamily":0,"families":0,"key":"checklistbank-21556","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:02:03+0100","key":"checklistbank-21598","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:02:53+0100","crossFamily":0,"families":0,"key":"checklistbank-21598","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:02:53+0100","key":"checklistbank-2231","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:02:53+0100","key":"checklistbank-2231","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:04:18+0100","key":"checklistbank-2231","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:04:18+0100","key":"checklistbank-2231","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:04:18+0100","key":"checklistbank-2231","stage":"applying"}
+{"action":"ordinator","added":10,"at":"2026-10-31T08:05:49+0100","crossFamily":3,"families":94,"key":"checklistbank-2231","merged":430,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:05:49+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:05:50+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:05:50+0100","key":"checklistbank-270146","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:06:46+0100","crossFamily":0,"families":0,"key":"checklistbank-270146","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:06:46+0100","key":"checklistbank-274271","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:09:26+0100","key":"checklistbank-274271","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:09:26+0100","key":"checklistbank-274271","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:09:26+0100","key":"checklistbank-274271","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-10-31T08:10:30+0100","crossFamily":0,"families":21,"key":"checklistbank-274271","merged":37,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:10:30+0100","key":"checklistbank-276867","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:11:05+0100","crossFamily":0,"families":0,"key":"checklistbank-276867","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:11:05+0100","key":"checklistbank-2792","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:11:40+0100","crossFamily":0,"families":0,"key":"checklistbank-2792","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:11:40+0100","key":"checklistbank-303328","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:12:31+0100","key":"checklistbank-303328","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:12:31+0100","key":"checklistbank-303328","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:12:31+0100","key":"checklistbank-303328","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:12:49+0100","crossFamily":0,"families":5,"key":"checklistbank-303328","merged":374,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:12:49+0100","key":"checklistbank-305365","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:13:23+0100","crossFamily":0,"families":0,"key":"checklistbank-305365","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:13:25+0100","key":"checklistbank-312462","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:13:25+0100","key":"checklistbank-312462","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:14:30+0100","key":"checklistbank-312462","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:14:30+0100","key":"checklistbank-312462","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:14:30+0100","key":"checklistbank-312462","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:14:31+0100","crossFamily":0,"families":1,"key":"checklistbank-312462","merged":492,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:14:32+0100","key":"checklistbank-314254","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:14:32+0100","key":"checklistbank-314254","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:15:08+0100","crossFamily":0,"families":0,"key":"checklistbank-314254","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:15:08+0100","key":"checklistbank-314453","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:15:41+0100","crossFamily":0,"families":0,"key":"checklistbank-314453","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:15:42+0100","key":"checklistbank-314574","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:15:42+0100","key":"checklistbank-314574","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:16:32+0100","key":"checklistbank-314574","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:16:32+0100","key":"checklistbank-314574","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:16:32+0100","key":"checklistbank-314574","stage":"applying"}
+{"action":"ordinator","added":4,"at":"2026-10-31T08:17:14+0100","crossFamily":0,"families":14,"key":"checklistbank-314574","merged":1145,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:17:14+0100","key":"checklistbank-316049","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T08:17:47+0100","crossFamily":0,"families":0,"key":"checklistbank-316049","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:17:48+0100","key":"checklistbank-316260","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T08:17:48+0100","key":"checklistbank-316260","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:18:41+0100","key":"checklistbank-316260","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:18:41+0100","key":"checklistbank-316260","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:18:41+0100","key":"checklistbank-316260","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T08:19:33+0100","crossFamily":0,"families":19,"key":"checklistbank-316260","merged":120,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:19:33+0100","key":"checklistbank-35472","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:20:29+0100","key":"checklistbank-35472","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:20:29+0100","key":"checklistbank-35472","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:20:29+0100","key":"checklistbank-35472","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T08:20:43+0100","crossFamily":3,"families":2,"key":"checklistbank-35472","merged":1374,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:20:43+0100","key":"checklistbank-53684","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:21:55+0100","key":"checklistbank-53684","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:21:55+0100","key":"checklistbank-53684","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:21:55+0100","key":"checklistbank-53684","stage":"applying"}
+{"action":"ordinator","added":36,"at":"2026-10-31T08:32:09+0100","crossFamily":17,"families":192,"key":"checklistbank-53684","merged":448,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:32:09+0100","key":"checklistbank-54592","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:35:14+0100","key":"checklistbank-54592","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:35:14+0100","key":"checklistbank-54592","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:35:14+0100","key":"checklistbank-54592","stage":"applying"}
+{"action":"ordinator","added":72,"at":"2026-10-31T08:35:25+0100","crossFamily":0,"families":1,"key":"checklistbank-54592","merged":1397,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T08:35:25+0100","key":"checklistbank-7237","reason":"download is not an archive: not an archive (magic=\"\u003c!\")","stage":"blocked"}
+{"action":"ordinator","at":"2026-10-31T08:35:25+0100","key":"checklistbank-7888","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T08:36:54+0100","key":"checklistbank-7888","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T08:36:54+0100","key":"checklistbank-7888","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T08:36:54+0100","key":"checklistbank-7888","stage":"applying"}
+{"at": "2026-10-31T09:18:22+0100", "key": "checklistbank-2090", "stage": "declined", "action": "set", "reason": "served as a bare CSV: EEA red-list names matched to COL ids, no classification above genus -- COL already held"}
+{"action":"ordinator","added":5,"at":"2026-10-31T10:27:13+0100","crossFamily":4,"families":2566,"key":"checklistbank-7888","merged":31921,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:32:13+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:32:14+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"at": "2026-10-31T10:32:23+0100", "key": "checklistbank-301906", "stage": "candidate", "action": "add", "title": "Vascular Plants of the Khabarovsk Territory and Their Protection (Schl"}
+{"at": "2026-10-31T10:32:24+0100", "key": "checklistbank-301906", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:24+0100", "key": "checklistbank-37820", "stage": "candidate", "action": "add", "title": "Flora of vascular plants in the Central European Russia"}
+{"at": "2026-10-31T10:32:25+0100", "key": "checklistbank-37820", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:25+0100", "key": "checklistbank-303594", "stage": "candidate", "action": "add", "title": "Rastitelnyi Pokrov Kabardino-Balkarii (Shkhagapsoev, 2015): accepted n"}
+{"at": "2026-10-31T10:32:26+0100", "key": "checklistbank-303594", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:26+0100", "key": "checklistbank-301943", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Krasnoyarsk Krai in Flora S"}
+{"at": "2026-10-31T10:32:26+0100", "key": "checklistbank-301943", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:26+0100", "key": "checklistbank-36185", "stage": "candidate", "action": "add", "title": "Catalogue of Texas spiders (Dean2016)"}
+{"at": "2026-10-31T10:32:27+0100", "key": "checklistbank-36185", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:27+0100", "key": "checklistbank-2119", "stage": "candidate", "action": "add", "title": "Natura 2000 Directive Species"}
+{"at": "2026-10-31T10:32:27+0100", "key": "checklistbank-2119", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T10:32:27+0100", "key": "checklistbank-303375", "stage": "candidate", "action": "add", "title": "Sosudistye Rasteniya (Komzha, 2000) [in Prirodnye Resursy Respubliki S"}
+{"at": "2026-10-31T10:32:27+0100", "key": "checklistbank-303375", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:28+0100", "key": "checklistbank-25815", "stage": "candidate", "action": "add", "title": "Lista sistemática actualizada de los peces de Chile"}
+{"at": "2026-10-31T10:32:28+0100", "key": "checklistbank-25815", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:28+0100", "key": "checklistbank-301626", "stage": "candidate", "action": "add", "title": "Analiz Flory Chechenskoy Respubliki (Taysumov & Omarkhadzhieva, 2012):"}
+{"at": "2026-10-31T10:32:28+0100", "key": "checklistbank-301626", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:32:28+0100", "key": "checklistbank-304750", "stage": "candidate", "action": "add", "title": "Peces de Cuba"}
+{"at": "2026-10-31T10:32:30+0100", "key": "checklistbank-304750", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T10:37:48+0100","key":"checklistbank-25815","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:38:12+0100","key":"checklistbank-25815","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T10:38:12+0100","key":"checklistbank-25815","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T10:38:12+0100","key":"checklistbank-25815","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-10-31T10:44:15+0100","crossFamily":0,"families":62,"key":"checklistbank-25815","merged":127,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:44:15+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:44:16+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T10:44:17+0100","key":"checklistbank-301626","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:44:48+0100","crossFamily":0,"families":0,"key":"checklistbank-301626","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:44:48+0100","key":"checklistbank-301906","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:45:09+0100","crossFamily":0,"families":0,"key":"checklistbank-301906","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:45:09+0100","key":"checklistbank-301943","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:45:30+0100","crossFamily":0,"families":0,"key":"checklistbank-301943","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:45:30+0100","key":"checklistbank-303375","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:45:51+0100","crossFamily":0,"families":0,"key":"checklistbank-303375","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:45:51+0100","key":"checklistbank-303594","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:46:15+0100","crossFamily":0,"families":0,"key":"checklistbank-303594","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:46:16+0100","key":"checklistbank-304750","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:46:41+0100","key":"checklistbank-304750","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T10:46:41+0100","key":"checklistbank-304750","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T10:46:41+0100","key":"checklistbank-304750","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:47:07+0100","crossFamily":0,"families":17,"key":"checklistbank-304750","merged":62,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:47:08+0100","key":"checklistbank-36185","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:47:38+0100","key":"checklistbank-36185","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T10:47:38+0100","key":"checklistbank-36185","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T10:47:38+0100","key":"checklistbank-36185","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:50:17+0100","crossFamily":6,"families":25,"key":"checklistbank-36185","merged":412,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:50:17+0100","key":"checklistbank-37820","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:51:18+0100","crossFamily":0,"families":0,"key":"checklistbank-37820","merged":0,"stage":"applied"}
+{"at": "2026-10-31T10:51:30+0100", "key": "checklistbank-303394", "stage": "candidate", "action": "add", "title": "Manual of the Vascular Plants of North-West Russia (Tzvelev, 2000): ac"}
+{"at": "2026-10-31T10:51:31+0100", "key": "checklistbank-303394", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:31+0100", "key": "checklistbank-7621", "stage": "candidate", "action": "add", "title": "List of Medicinal Plants of Gaoligong Mountains"}
+{"at": "2026-10-31T10:51:32+0100", "key": "checklistbank-7621", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:32+0100", "key": "checklistbank-302185", "stage": "candidate", "action": "add", "title": "Konspekt Flory Stavropolya, 3rd edition (Ivanov, 2005): accepted names"}
+{"at": "2026-10-31T10:51:33+0100", "key": "checklistbank-302185", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:33+0100", "key": "checklistbank-56545", "stage": "candidate", "action": "add", "title": "Checklist of Caribbean marine fishes of Colombia"}
+{"at": "2026-10-31T10:51:34+0100", "key": "checklistbank-56545", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:34+0100", "key": "checklistbank-9367", "stage": "candidate", "action": "add", "title": "Lista de Especies de la Colección Viva del Jardín Botánico de Bogotá"}
+{"at": "2026-10-31T10:51:35+0100", "key": "checklistbank-9367", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:35+0100", "key": "checklistbank-307763", "stage": "candidate", "action": "add", "title": "FADA-Annelida-Oligochaeta"}
+{"at": "2026-10-31T10:51:36+0100", "key": "checklistbank-307763", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:37+0100", "key": "checklistbank-312243", "stage": "candidate", "action": "add", "title": "List of Alien Species in South Africa 2025"}
+{"at": "2026-10-31T10:51:37+0100", "key": "checklistbank-312243", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:38+0100", "key": "checklistbank-25996", "stage": "candidate", "action": "add", "title": "Catálogo de autoridades taxonómicas de las aves con distribución en Mé"}
+{"at": "2026-10-31T10:51:38+0100", "key": "checklistbank-25996", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:39+0100", "key": "checklistbank-39027", "stage": "candidate", "action": "add", "title": "Catalogue of the mite families Ascidae Voigts & Oudemans, Blattisociid"}
+{"at": "2026-10-31T10:51:39+0100", "key": "checklistbank-39027", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T10:51:40+0100", "key": "checklistbank-303398", "stage": "candidate", "action": "add", "title": "Checklist of species indicated for Leningrad Oblast and St. Petersburg"}
+{"at": "2026-10-31T10:51:40+0100", "key": "checklistbank-303398", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T10:53:08+0100","key":"checklistbank-25996","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:53:39+0100","key":"checklistbank-25996","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T10:53:39+0100","key":"checklistbank-25996","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T10:53:39+0100","key":"checklistbank-25996","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-31T10:58:21+0100","crossFamily":4,"families":72,"key":"checklistbank-25996","merged":693,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:58:21+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:58:21+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T10:58:21+0100","key":"checklistbank-302185","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:58:42+0100","crossFamily":0,"families":0,"key":"checklistbank-302185","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:58:42+0100","key":"checklistbank-303394","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:58:57+0100","crossFamily":0,"families":0,"key":"checklistbank-303394","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:58:57+0100","key":"checklistbank-303398","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T10:59:12+0100","crossFamily":0,"families":0,"key":"checklistbank-303398","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T10:59:12+0100","key":"checklistbank-307763","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T10:59:28+0100","key":"checklistbank-307763","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T10:59:28+0100","key":"checklistbank-307763","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T10:59:28+0100","key":"checklistbank-307763","stage":"applying"}
+{"action":"ordinator","added":20,"at":"2026-10-31T11:00:01+0100","crossFamily":2,"families":12,"key":"checklistbank-307763","merged":219,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:00:01+0100","key":"checklistbank-312243","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:00:23+0100","key":"checklistbank-312243","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:00:23+0100","key":"checklistbank-312243","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:00:23+0100","key":"checklistbank-312243","stage":"applying"}
+{"action":"ordinator","added":13,"at":"2026-10-31T11:05:48+0100","crossFamily":0,"families":138,"key":"checklistbank-312243","merged":353,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:05:48+0100","key":"checklistbank-39027","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:06:46+0100","crossFamily":0,"families":0,"key":"checklistbank-39027","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:06:46+0100","key":"checklistbank-56545","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:08:10+0100","key":"checklistbank-56545","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:08:10+0100","key":"checklistbank-56545","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:08:10+0100","key":"checklistbank-56545","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:10:02+0100","crossFamily":0,"families":17,"key":"checklistbank-56545","merged":56,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:10:03+0100","key":"checklistbank-7621","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:10:43+0100","key":"checklistbank-7621","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:10:43+0100","key":"checklistbank-7621","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:10:43+0100","key":"checklistbank-7621","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T11:12:00+0100","crossFamily":7,"families":130,"key":"checklistbank-7621","merged":572,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:12:01+0100","key":"checklistbank-9367","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:13:06+0100","key":"checklistbank-9367","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:13:06+0100","key":"checklistbank-9367","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:13:06+0100","key":"checklistbank-9367","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-10-31T11:13:35+0100","crossFamily":4,"families":105,"key":"checklistbank-9367","merged":515,"stage":"applied"}
+{"at": "2026-10-31T11:13:44+0100", "key": "checklistbank-302142", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Buryatia in Flora Sibiri (1"}
+{"at": "2026-10-31T11:13:45+0100", "key": "checklistbank-302142", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:45+0100", "key": "checklistbank-303034", "stage": "candidate", "action": "add", "title": "Conspectus Florae Provinciae Udmurtiensis (Baranova & Puzyrev, 2012):"}
+{"at": "2026-10-31T11:13:46+0100", "key": "checklistbank-303034", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:46+0100", "key": "checklistbank-314972", "stage": "candidate", "action": "add", "title": "Checklist of the flora of the transboundary areas of the Western Tian"}
+{"at": "2026-10-31T11:13:46+0100", "key": "checklistbank-314972", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:46+0100", "key": "checklistbank-30064", "stage": "candidate", "action": "add", "title": "Lista de especies silvestres amenazadas de la diversidad biológica con"}
+{"at": "2026-10-31T11:13:47+0100", "key": "checklistbank-30064", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:47+0100", "key": "checklistbank-28956", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Galápagos Islands"}
+{"at": "2026-10-31T11:13:47+0100", "key": "checklistbank-28956", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:47+0100", "key": "checklistbank-21779", "stage": "candidate", "action": "add", "title": "Updated checklist of marine fishes (Chordata: Craniata) from Portugal"}
+{"at": "2026-10-31T11:13:49+0100", "key": "checklistbank-21779", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:49+0100", "key": "checklistbank-31952", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Ireland (GRIIS-IE"}
+{"at": "2026-10-31T11:13:49+0100", "key": "checklistbank-31952", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:49+0100", "key": "checklistbank-4947", "stage": "candidate", "action": "add", "title": "Multi-taxa inventory of naturalized species in Chile (including native"}
+{"at": "2026-10-31T11:13:50+0100", "key": "checklistbank-4947", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T11:13:50+0100", "key": "checklistbank-82675", "stage": "candidate", "action": "add", "title": "annonaceae_cameroon (Couvreur2022)"}
+{"at": "2026-10-31T11:13:50+0100", "key": "checklistbank-82675", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T11:13:51+0100", "key": "checklistbank-51977", "stage": "candidate", "action": "add", "title": "Bryoquel : Liste des bryophytes présentes au Québec-Labrador"}
+{"at": "2026-10-31T11:13:51+0100", "key": "checklistbank-51977", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T11:15:01+0100","key":"checklistbank-21779","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:15:29+0100","crossFamily":0,"families":0,"key":"checklistbank-21779","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:15:29+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:15:30+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T11:15:30+0100","key":"checklistbank-28956","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:16:11+0100","key":"checklistbank-28956","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:16:11+0100","key":"checklistbank-28956","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:16:11+0100","key":"checklistbank-28956","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T11:29:42+0100","crossFamily":15,"families":229,"key":"checklistbank-28956","merged":683,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:29:42+0100","key":"checklistbank-30064","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:31:51+0100","key":"checklistbank-30064","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:31:51+0100","key":"checklistbank-30064","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:31:51+0100","key":"checklistbank-30064","stage":"applying"}
+{"action":"ordinator","added":4,"at":"2026-10-31T11:38:22+0100","crossFamily":15,"families":142,"key":"checklistbank-30064","merged":547,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:38:22+0100","key":"checklistbank-302142","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:39:03+0100","crossFamily":0,"families":0,"key":"checklistbank-302142","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:39:03+0100","key":"checklistbank-303034","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:39:20+0100","crossFamily":0,"families":0,"key":"checklistbank-303034","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:39:20+0100","key":"checklistbank-314972","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:39:35+0100","crossFamily":0,"families":0,"key":"checklistbank-314972","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:39:36+0100","key":"checklistbank-31952","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:40:15+0100","key":"checklistbank-31952","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:40:15+0100","key":"checklistbank-31952","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:40:15+0100","key":"checklistbank-31952","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T11:47:57+0100","crossFamily":1,"families":219,"key":"checklistbank-31952","merged":571,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:47:57+0100","key":"checklistbank-4947","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T11:49:33+0100","key":"checklistbank-4947","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T11:49:33+0100","key":"checklistbank-4947","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T11:49:33+0100","key":"checklistbank-4947","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-10-31T11:53:17+0100","crossFamily":10,"families":156,"key":"checklistbank-4947","merged":391,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T11:53:17+0100","key":"checklistbank-51977","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T11:54:14+0100","crossFamily":0,"families":0,"key":"checklistbank-51977","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:05:14+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:05:15+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"at": "2026-10-31T12:05:25+0100", "key": "checklistbank-314822", "stage": "candidate", "action": "add", "title": "Species names used under the EU nature directives (EEAD)"}
+{"at": "2026-10-31T12:05:26+0100", "key": "checklistbank-314822", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:26+0100", "key": "checklistbank-200020", "stage": "candidate", "action": "add", "title": "Animalia: Arthropoda: Hexapoda: Insecta: Hymenoptera: Apocrita: Ceraph"}
+{"at": "2026-10-31T12:05:27+0100", "key": "checklistbank-200020", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:27+0100", "key": "checklistbank-20302", "stage": "candidate", "action": "add", "title": "Regional Checklist of medicinal plants"}
+{"at": "2026-10-31T12:05:28+0100", "key": "checklistbank-20302", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:28+0100", "key": "checklistbank-77936", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Canada (GRIIS-CA)"}
+{"at": "2026-10-31T12:05:28+0100", "key": "checklistbank-77936", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:28+0100", "key": "checklistbank-314098", "stage": "candidate", "action": "add", "title": "Check-list of the Vascular Flora of the Samara Region (Vasjukov, 2024)"}
+{"at": "2026-10-31T12:05:29+0100", "key": "checklistbank-314098", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:29+0100", "key": "checklistbank-301682", "stage": "candidate", "action": "add", "title": "Opredelitel Rasteniy Respubliki Tyvy (Krasnoborov et al., 2007): accep"}
+{"at": "2026-10-31T12:05:30+0100", "key": "checklistbank-301682", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:30+0100", "key": "checklistbank-28943", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Mexico (GRIIS-MX)"}
+{"at": "2026-10-31T12:05:31+0100", "key": "checklistbank-28943", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:31+0100", "key": "checklistbank-303334", "stage": "candidate", "action": "add", "title": "List of Species of Vascular Plants of Moscow Flora (Shcherbakov & Lyub"}
+{"at": "2026-10-31T12:05:31+0100", "key": "checklistbank-303334", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:31+0100", "key": "checklistbank-301945", "stage": "candidate", "action": "add", "title": "Flora of Amur Region (Starchenko, 2008): accepted names"}
+{"at": "2026-10-31T12:05:32+0100", "key": "checklistbank-301945", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:05:32+0100", "key": "checklistbank-314096", "stage": "candidate", "action": "add", "title": "Opredelitel Sosydistykh Rasteniy Orenburgskoy Oblasti (Ryabinina & Kny"}
+{"at": "2026-10-31T12:05:32+0100", "key": "checklistbank-314096", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T12:08:17+0100","key":"checklistbank-200020","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:08:45+0100","key":"checklistbank-200020","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T12:08:45+0100","key":"checklistbank-200020","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T12:08:45+0100","key":"checklistbank-200020","stage":"applying"}
+{"action":"ordinator","added":28,"at":"2026-10-31T12:10:05+0100","crossFamily":0,"families":26,"key":"checklistbank-200020","merged":491,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:10:05+0100","key":"checklistbank-20302","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:10:30+0100","key":"checklistbank-20302","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T12:10:30+0100","key":"checklistbank-20302","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T12:10:30+0100","key":"checklistbank-20302","stage":"applying"}
+{"action":"ordinator","added":75,"at":"2026-10-31T12:12:12+0100","crossFamily":29,"families":96,"key":"checklistbank-20302","merged":558,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:12:12+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:12:13+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T12:12:13+0100","key":"checklistbank-28943","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:13:51+0100","key":"checklistbank-28943","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T12:13:51+0100","key":"checklistbank-28943","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T12:13:51+0100","key":"checklistbank-28943","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-10-31T12:29:18+0100","crossFamily":3,"families":230,"key":"checklistbank-28943","merged":630,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:29:18+0100","key":"checklistbank-301682","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T12:30:00+0100","crossFamily":0,"families":0,"key":"checklistbank-301682","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:30:00+0100","key":"checklistbank-301945","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T12:30:16+0100","crossFamily":0,"families":0,"key":"checklistbank-301945","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:30:16+0100","key":"checklistbank-303334","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T12:30:31+0100","crossFamily":0,"families":0,"key":"checklistbank-303334","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:30:31+0100","key":"checklistbank-314096","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T12:30:46+0100","crossFamily":0,"families":0,"key":"checklistbank-314096","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:30:46+0100","key":"checklistbank-314098","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T12:31:01+0100","crossFamily":0,"families":0,"key":"checklistbank-314098","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:31:01+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:31:01+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T12:31:02+0100","key":"checklistbank-77936","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:31:54+0100","key":"checklistbank-77936","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T12:31:54+0100","key":"checklistbank-77936","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T12:31:54+0100","key":"checklistbank-77936","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-10-31T12:36:10+0100","crossFamily":4,"families":146,"key":"checklistbank-77936","merged":713,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:55:11+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:55:11+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T12:55:11+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:55:11+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"at": "2026-10-31T12:55:20+0100", "key": "checklistbank-22804", "stage": "candidate", "action": "add", "title": "A survey of the weevils of Ukraine (Coleoptera: Curculionoidea) (Yunak"}
+{"at": "2026-10-31T12:55:21+0100", "key": "checklistbank-22804", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:21+0100", "key": "checklistbank-302143", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Irkutsk Oblast in Flora Sib"}
+{"at": "2026-10-31T12:55:21+0100", "key": "checklistbank-302143", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:21+0100", "key": "checklistbank-23243", "stage": "candidate", "action": "add", "title": "Protected Areas - Global Register of Introduced and Invasive Species -"}
+{"at": "2026-10-31T12:55:22+0100", "key": "checklistbank-23243", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:22+0100", "key": "checklistbank-314092", "stage": "candidate", "action": "add", "title": "Opredelitel Rasteniy Altaiskogo Kraya (Krasnoborov et al., 2003): acce"}
+{"at": "2026-10-31T12:55:22+0100", "key": "checklistbank-314092", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:22+0100", "key": "checklistbank-2103", "stage": "candidate", "action": "add", "title": "EEA emerald_r6"}
+{"at": "2026-10-31T12:55:23+0100", "key": "checklistbank-2103", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T12:55:23+0100", "key": "checklistbank-316384", "stage": "candidate", "action": "add", "title": "Listado taxonómico de las especies de diatomeas dulceacuícolas con dis"}
+{"at": "2026-10-31T12:55:23+0100", "key": "checklistbank-316384", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:23+0100", "key": "checklistbank-20443", "stage": "candidate", "action": "add", "title": "Hotspots of new species discovery: new mite species described during 2"}
+{"at": "2026-10-31T12:55:24+0100", "key": "checklistbank-20443", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:24+0100", "key": "checklistbank-291304", "stage": "candidate", "action": "add", "title": "Chapter 7: Linnaean Plant Names and their Types (part S) (Jarvis2007)"}
+{"at": "2026-10-31T12:55:24+0100", "key": "checklistbank-291304", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:24+0100", "key": "checklistbank-212265", "stage": "candidate", "action": "add", "title": "Lista de especies silvestres amenazadas de la diversidad biológica con"}
+{"at": "2026-10-31T12:55:25+0100", "key": "checklistbank-212265", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T12:55:25+0100", "key": "checklistbank-314167", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Donestk Oblast in Sosudisty"}
+{"at": "2026-10-31T12:55:25+0100", "key": "checklistbank-314167", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T12:56:34+0100","key":"checklistbank-20443","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T12:57:22+0100","crossFamily":0,"families":0,"key":"checklistbank-20443","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T12:57:22+0100","key":"checklistbank-212265","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T12:58:32+0100","key":"checklistbank-212265","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T12:58:32+0100","key":"checklistbank-212265","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T12:58:32+0100","key":"checklistbank-212265","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-10-31T13:02:40+0100","crossFamily":8,"families":119,"key":"checklistbank-212265","merged":419,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:02:40+0100","key":"checklistbank-22804","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:03:11+0100","crossFamily":0,"families":0,"key":"checklistbank-22804","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:03:11+0100","key":"checklistbank-23243","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:03:50+0100","key":"checklistbank-23243","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:03:50+0100","key":"checklistbank-23243","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:03:50+0100","key":"checklistbank-23243","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:12:07+0100","crossFamily":15,"families":226,"key":"checklistbank-23243","merged":682,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:12:07+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:12:11+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:12:11+0100","key":"checklistbank-291304","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:12:57+0100","crossFamily":0,"families":0,"key":"checklistbank-291304","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:12:57+0100","key":"checklistbank-302143","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:13:13+0100","crossFamily":0,"families":0,"key":"checklistbank-302143","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:13:13+0100","key":"checklistbank-314092","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:13:28+0100","crossFamily":0,"families":0,"key":"checklistbank-314092","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:13:28+0100","key":"checklistbank-314167","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:13:43+0100","crossFamily":0,"families":0,"key":"checklistbank-314167","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:13:43+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:13:43+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:13:43+0100","key":"checklistbank-316384","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:14:51+0100","key":"checklistbank-316384","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:14:51+0100","key":"checklistbank-316384","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:14:51+0100","key":"checklistbank-316384","stage":"applying"}
+{"action":"ordinator","added":31,"at":"2026-10-31T13:15:07+0100","crossFamily":191,"families":42,"key":"checklistbank-316384","merged":1138,"stage":"applied"}
+{"at": "2026-10-31T13:15:17+0100", "key": "checklistbank-302140", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Tuva in Flora Sibiri (1987-"}
+{"at": "2026-10-31T13:15:17+0100", "key": "checklistbank-302140", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:17+0100", "key": "checklistbank-31963", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Russian Federatio"}
+{"at": "2026-10-31T13:15:18+0100", "key": "checklistbank-31963", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:18+0100", "key": "checklistbank-25572", "stage": "candidate", "action": "add", "title": "FLORA OF THE KURILSKIY NATURE RESERVE"}
+{"at": "2026-10-31T13:15:18+0100", "key": "checklistbank-25572", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:18+0100", "key": "checklistbank-26780", "stage": "candidate", "action": "add", "title": "Checklist of the marine and estuarine fishes of New Ireland Province,"}
+{"at": "2026-10-31T13:15:19+0100", "key": "checklistbank-26780", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:19+0100", "key": "checklistbank-303325", "stage": "candidate", "action": "add", "title": "List of Species of Vascular Plants of Moscow Flora (Shcherbakov & Lyub"}
+{"at": "2026-10-31T13:15:19+0100", "key": "checklistbank-303325", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:19+0100", "key": "checklistbank-302141", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Zabaykalsky Krai in Flora S"}
+{"at": "2026-10-31T13:15:19+0100", "key": "checklistbank-302141", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:20+0100", "key": "checklistbank-222250", "stage": "candidate", "action": "add", "title": "Commission Regulation (EU) 2019/2117 (EU 2019/2117)"}
+{"at": "2026-10-31T13:15:20+0100", "key": "checklistbank-222250", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:20+0100", "key": "checklistbank-303351", "stage": "candidate", "action": "add", "title": "Sosudistye Rasteniya Voronezhskoy Oblasti (Grigoryevskaya & Prokhorova"}
+{"at": "2026-10-31T13:15:20+0100", "key": "checklistbank-303351", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:20+0100", "key": "checklistbank-20821", "stage": "candidate", "action": "add", "title": "Floral Checklist Records of Some Forest Reserves in Ghana"}
+{"at": "2026-10-31T13:15:21+0100", "key": "checklistbank-20821", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:15:21+0100", "key": "checklistbank-303207", "stage": "candidate", "action": "add", "title": "Opredelitel Sosudistykh Rasteniy Chelyabinskoy Oblasti (Kulikov, 2010)"}
+{"at": "2026-10-31T13:15:21+0100", "key": "checklistbank-303207", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T13:16:29+0100","key":"checklistbank-20821","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:16:48+0100","key":"checklistbank-20821","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:16:48+0100","key":"checklistbank-20821","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:16:48+0100","key":"checklistbank-20821","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:17:01+0100","crossFamily":0,"families":46,"key":"checklistbank-20821","merged":171,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:17:01+0100","key":"checklistbank-222250","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:17:02+0100","key":"checklistbank-222250","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:17:02+0100","key":"checklistbank-25572","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:17:24+0100","crossFamily":0,"families":0,"key":"checklistbank-25572","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:17:24+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:17:25+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:17:25+0100","key":"checklistbank-26780","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:17:39+0100","crossFamily":0,"families":0,"key":"checklistbank-26780","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:17:39+0100","key":"checklistbank-302140","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:17:54+0100","crossFamily":0,"families":0,"key":"checklistbank-302140","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:17:54+0100","key":"checklistbank-302141","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:18:09+0100","crossFamily":0,"families":0,"key":"checklistbank-302141","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:18:09+0100","key":"checklistbank-303207","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:18:24+0100","crossFamily":0,"families":0,"key":"checklistbank-303207","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:18:24+0100","key":"checklistbank-303325","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:18:39+0100","crossFamily":0,"families":0,"key":"checklistbank-303325","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:18:39+0100","key":"checklistbank-303351","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:18:54+0100","crossFamily":0,"families":0,"key":"checklistbank-303351","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:18:54+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:18:54+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:18:54+0100","key":"checklistbank-31963","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:19:21+0100","key":"checklistbank-31963","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:19:21+0100","key":"checklistbank-31963","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:19:21+0100","key":"checklistbank-31963","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-10-31T13:24:47+0100","crossFamily":7,"families":159,"key":"checklistbank-31963","merged":490,"stage":"applied"}
+{"at": "2026-10-31T13:24:56+0100", "key": "checklistbank-53732", "stage": "candidate", "action": "add", "title": "Lista Roja de las Aves de Ecuador"}
+{"at": "2026-10-31T13:24:57+0100", "key": "checklistbank-53732", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:24:57+0100", "key": "checklistbank-28913", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Tenerife, Islas C"}
+{"at": "2026-10-31T13:24:57+0100", "key": "checklistbank-28913", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:24:57+0100", "key": "checklistbank-33172", "stage": "candidate", "action": "add", "title": "BID-AF2015-0004-NAC MACRO CHAMPIGNON AU TOGO"}
+{"at": "2026-10-31T13:24:58+0100", "key": "checklistbank-33172", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:24:58+0100", "key": "checklistbank-316529", "stage": "candidate", "action": "add", "title": "A world catalog of the millipede family Chelodesmidae Cook in Cook & C"}
+{"at": "2026-10-31T13:24:58+0100", "key": "checklistbank-316529", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:24:58+0100", "key": "checklistbank-302656", "stage": "candidate", "action": "add", "title": "Compendium of Karelian Flora (Kravchenko, 2007): accepted names"}
+{"at": "2026-10-31T13:24:59+0100", "key": "checklistbank-302656", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:24:59+0100", "key": "checklistbank-314747", "stage": "candidate", "action": "add", "title": "Sistematização de dados históricos de plantas medicinais e alimentícia"}
+{"at": "2026-10-31T13:24:59+0100", "key": "checklistbank-314747", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:24:59+0100", "key": "checklistbank-302144", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Yakutia in Flora Sibiri (19"}
+{"at": "2026-10-31T13:24:59+0100", "key": "checklistbank-302144", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:25:00+0100", "key": "checklistbank-259393", "stage": "candidate", "action": "add", "title": "Seed Plants of Kangchenjunga Conservation Area"}
+{"at": "2026-10-31T13:25:00+0100", "key": "checklistbank-259393", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:25:00+0100", "key": "checklistbank-23476", "stage": "candidate", "action": "add", "title": "A foundation monograph of Ipomoea (Convolvulaceae) in the New World (W"}
+{"at": "2026-10-31T13:25:01+0100", "key": "checklistbank-23476", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:25:01+0100", "key": "checklistbank-314099", "stage": "candidate", "action": "add", "title": "Materialy k Flore Tverskoy Oblasti. 1. Vysshiye Rasteniya, v. 4 (Notov"}
+{"at": "2026-10-31T13:25:01+0100", "key": "checklistbank-314099", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T13:26:08+0100","key":"checklistbank-222250","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:26:09+0100","key":"checklistbank-222250","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:26:09+0100","key":"checklistbank-23476","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:26:46+0100","crossFamily":0,"families":0,"key":"checklistbank-23476","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:26:46+0100","key":"checklistbank-259393","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:27:02+0100","key":"checklistbank-259393","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:27:02+0100","key":"checklistbank-259393","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:27:02+0100","key":"checklistbank-259393","stage":"applying"}
+{"action":"ordinator","added":21,"at":"2026-10-31T13:27:41+0100","crossFamily":25,"families":104,"key":"checklistbank-259393","merged":526,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:27:41+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:27:42+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:27:42+0100","key":"checklistbank-28913","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:28:51+0100","key":"checklistbank-28913","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:28:51+0100","key":"checklistbank-28913","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:28:51+0100","key":"checklistbank-28913","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T13:36:31+0100","crossFamily":19,"families":226,"key":"checklistbank-28913","merged":591,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:36:31+0100","key":"checklistbank-302144","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:37:17+0100","crossFamily":0,"families":0,"key":"checklistbank-302144","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:37:17+0100","key":"checklistbank-302656","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:37:33+0100","crossFamily":0,"families":0,"key":"checklistbank-302656","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:37:33+0100","key":"checklistbank-314099","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:37:48+0100","crossFamily":0,"families":0,"key":"checklistbank-314099","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:37:48+0100","key":"checklistbank-314747","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:38:02+0100","crossFamily":0,"families":0,"key":"checklistbank-314747","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:38:02+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:38:02+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:38:02+0100","key":"checklistbank-316529","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:38:17+0100","crossFamily":0,"families":0,"key":"checklistbank-316529","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:38:17+0100","key":"checklistbank-33172","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:38:32+0100","crossFamily":0,"families":0,"key":"checklistbank-33172","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:38:32+0100","key":"checklistbank-53732","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:39:35+0100","key":"checklistbank-53732","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:39:35+0100","key":"checklistbank-53732","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:39:35+0100","key":"checklistbank-53732","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:43:01+0100","crossFamily":2,"families":72,"key":"checklistbank-53732","merged":1215,"stage":"applied"}
+{"at": "2026-10-31T13:43:10+0100", "key": "checklistbank-30469", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Brazil (GRIIS-BR)"}
+{"at": "2026-10-31T13:43:11+0100", "key": "checklistbank-30469", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:11+0100", "key": "checklistbank-303425", "stage": "candidate", "action": "add", "title": "Vascular Plants of Ulyanovsk Region (Rakov et al., 2014): accepted nam"}
+{"at": "2026-10-31T13:43:11+0100", "key": "checklistbank-303425", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:11+0100", "key": "checklistbank-24476", "stage": "candidate", "action": "add", "title": "Global Register of Introduced and Invasive Species - Germany (GRIIS-DE"}
+{"at": "2026-10-31T13:43:12+0100", "key": "checklistbank-24476", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:12+0100", "key": "checklistbank-301908", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Altai Krai in Flora Sibiri"}
+{"at": "2026-10-31T13:43:12+0100", "key": "checklistbank-301908", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:12+0100", "key": "checklistbank-303771", "stage": "candidate", "action": "add", "title": "Annotated checklist of the flora of Sverdlovsk Region (Knyazev et al.,"}
+{"at": "2026-10-31T13:43:13+0100", "key": "checklistbank-303771", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:13+0100", "key": "checklistbank-314767", "stage": "candidate", "action": "add", "title": "First in 109 years: Catalogue of scarab beetles (Coleoptera: Scarabaei"}
+{"at": "2026-10-31T13:43:13+0100", "key": "checklistbank-314767", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:13+0100", "key": "checklistbank-314175", "stage": "candidate", "action": "add", "title": "Flora Kemerovskoy Oblasti (Sheremetova et al., 2023): accepted names"}
+{"at": "2026-10-31T13:43:14+0100", "key": "checklistbank-314175", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:14+0100", "key": "checklistbank-24340", "stage": "candidate", "action": "add", "title": "Diversity of Colombian macrofungi (Ascomycota - Basidiomycota)"}
+{"at": "2026-10-31T13:43:14+0100", "key": "checklistbank-24340", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:14+0100", "key": "checklistbank-29611", "stage": "candidate", "action": "add", "title": "Taxon list of Araneae from Germany compiled in the context of the GBOL"}
+{"at": "2026-10-31T13:43:15+0100", "key": "checklistbank-29611", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T13:43:15+0100", "key": "checklistbank-303650", "stage": "candidate", "action": "add", "title": "Check-list of the Flora of Penza Region (Vasjukov & Saksonov, 2020): a"}
+{"at": "2026-10-31T13:43:15+0100", "key": "checklistbank-303650", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T13:44:22+0100","key":"checklistbank-222250","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:44:23+0100","key":"checklistbank-222250","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:44:23+0100","key":"checklistbank-24340","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:44:47+0100","key":"checklistbank-24340","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:44:47+0100","key":"checklistbank-24340","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:44:47+0100","key":"checklistbank-24340","stage":"applying"}
+{"action":"ordinator","added":49,"at":"2026-10-31T13:45:22+0100","crossFamily":185,"families":96,"key":"checklistbank-24340","merged":762,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:45:22+0100","key":"checklistbank-24476","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:45:46+0100","key":"checklistbank-24476","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:45:46+0100","key":"checklistbank-24476","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:45:46+0100","key":"checklistbank-24476","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-10-31T13:53:50+0100","crossFamily":5,"families":210,"key":"checklistbank-24476","merged":508,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:53:50+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:53:51+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T13:53:51+0100","key":"checklistbank-29611","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T13:55:25+0100","key":"checklistbank-29611","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T13:55:25+0100","key":"checklistbank-29611","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T13:55:25+0100","key":"checklistbank-29611","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:58:11+0100","crossFamily":0,"families":48,"key":"checklistbank-29611","merged":963,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:58:11+0100","key":"checklistbank-301908","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:58:43+0100","crossFamily":0,"families":0,"key":"checklistbank-301908","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:58:43+0100","key":"checklistbank-303425","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:59:04+0100","crossFamily":0,"families":0,"key":"checklistbank-303425","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:59:04+0100","key":"checklistbank-303650","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:59:23+0100","crossFamily":0,"families":0,"key":"checklistbank-303650","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:59:23+0100","key":"checklistbank-303771","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T13:59:42+0100","crossFamily":0,"families":0,"key":"checklistbank-303771","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T13:59:42+0100","key":"checklistbank-30469","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:00:06+0100","key":"checklistbank-30469","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:00:06+0100","key":"checklistbank-30469","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:00:06+0100","key":"checklistbank-30469","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-10-31T14:06:33+0100","crossFamily":11,"families":155,"key":"checklistbank-30469","merged":523,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:06:33+0100","key":"checklistbank-314175","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:07:18+0100","crossFamily":0,"families":0,"key":"checklistbank-314175","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:07:18+0100","key":"checklistbank-314767","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:07:36+0100","crossFamily":0,"families":0,"key":"checklistbank-314767","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:07:36+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:07:37+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"at": "2026-10-31T14:07:46+0100", "key": "checklistbank-2085", "stage": "candidate", "action": "add", "title": "EEA habitats_IV"}
+{"at": "2026-10-31T14:07:47+0100", "key": "checklistbank-2085", "stage": "blocked", "action": "driver", "reason": "archive missing after fetch"}
+{"at": "2026-10-31T14:07:47+0100", "key": "checklistbank-303640", "stage": "candidate", "action": "add", "title": "Flora Nizhnego Dona (Zozulin & Fedyaeva, 1984, 1985): accepted names"}
+{"at": "2026-10-31T14:07:47+0100", "key": "checklistbank-303640", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:47+0100", "key": "checklistbank-21570", "stage": "candidate", "action": "add", "title": "Biodiversity of the Api Nampa Conservation Area"}
+{"at": "2026-10-31T14:07:48+0100", "key": "checklistbank-21570", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:48+0100", "key": "checklistbank-25824", "stage": "candidate", "action": "add", "title": "Vascular plants of Voronezhsky Biosphere Reserve"}
+{"at": "2026-10-31T14:07:48+0100", "key": "checklistbank-25824", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:48+0100", "key": "checklistbank-304761", "stage": "candidate", "action": "add", "title": "Moluscos terrestres (Mollusca: Gastropoda) de Cuba"}
+{"at": "2026-10-31T14:07:49+0100", "key": "checklistbank-304761", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:49+0100", "key": "checklistbank-212266", "stage": "candidate", "action": "add", "title": "Lista de especies silvestres amenazadas de Colombia - Resolución 0383"}
+{"at": "2026-10-31T14:07:49+0100", "key": "checklistbank-212266", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:49+0100", "key": "checklistbank-314168", "stage": "candidate", "action": "add", "title": "Checklist of vascular plants indicated for Lugansk Oblast in Sosudisty"}
+{"at": "2026-10-31T14:07:50+0100", "key": "checklistbank-314168", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:50+0100", "key": "checklistbank-316135", "stage": "candidate", "action": "add", "title": "Chinese Vernacular Names of Araceae (tropicals-araceae-zh)"}
+{"at": "2026-10-31T14:07:50+0100", "key": "checklistbank-316135", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:51+0100", "key": "checklistbank-305670", "stage": "candidate", "action": "add", "title": "Chapter 7: Linnaean Plant Names and their Types (part P) (Jarvis2007)"}
+{"at": "2026-10-31T14:07:51+0100", "key": "checklistbank-305670", "stage": "downloaded", "action": "driver"}
+{"at": "2026-10-31T14:07:51+0100", "key": "checklistbank-53120", "stage": "candidate", "action": "add", "title": "Aves del departamento de Nariño, Colombia"}
+{"at": "2026-10-31T14:07:52+0100", "key": "checklistbank-53120", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-10-31T14:09:03+0100","key":"checklistbank-212266","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:10:01+0100","key":"checklistbank-212266","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:10:01+0100","key":"checklistbank-212266","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:10:01+0100","key":"checklistbank-212266","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:17:31+0100","crossFamily":10,"families":110,"key":"checklistbank-212266","merged":350,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:17:31+0100","key":"checklistbank-21570","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:19:01+0100","key":"checklistbank-21570","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:19:01+0100","key":"checklistbank-21570","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:19:01+0100","key":"checklistbank-21570","stage":"applying"}
+{"action":"ordinator","added":14,"at":"2026-10-31T14:22:47+0100","crossFamily":40,"families":122,"key":"checklistbank-21570","merged":440,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:22:47+0100","key":"checklistbank-222250","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:22:48+0100","key":"checklistbank-222250","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T14:22:48+0100","key":"checklistbank-25824","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:23:59+0100","key":"checklistbank-25824","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:23:59+0100","key":"checklistbank-25824","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:23:59+0100","key":"checklistbank-25824","stage":"applying"}
+{"action":"ordinator","added":8,"at":"2026-10-31T14:24:22+0100","crossFamily":12,"families":75,"key":"checklistbank-25824","merged":446,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:24:22+0100","key":"checklistbank-265152","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:24:22+0100","key":"checklistbank-265152","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T14:24:22+0100","key":"checklistbank-303640","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:24:51+0100","crossFamily":0,"families":0,"key":"checklistbank-303640","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:24:51+0100","key":"checklistbank-304761","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:25:33+0100","key":"checklistbank-304761","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:25:33+0100","key":"checklistbank-304761","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:25:33+0100","key":"checklistbank-304761","stage":"applying"}
+{"action":"ordinator","added":159,"at":"2026-10-31T14:26:53+0100","crossFamily":7,"families":26,"key":"checklistbank-304761","merged":388,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:26:53+0100","key":"checklistbank-305670","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:27:15+0100","crossFamily":0,"families":0,"key":"checklistbank-305670","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:27:15+0100","key":"checklistbank-314168","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:27:31+0100","crossFamily":0,"families":0,"key":"checklistbank-314168","merged":0,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:27:31+0100","key":"checklistbank-314822","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:27:32+0100","key":"checklistbank-314822","reason":"transform failed (rc=1)","stage":"downloaded"}
+{"action":"ordinator","at":"2026-10-31T14:27:32+0100","key":"checklistbank-316135","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:27:48+0100","key":"checklistbank-316135","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:27:48+0100","key":"checklistbank-316135","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:27:48+0100","key":"checklistbank-316135","stage":"applying"}
+{"action":"ordinator","added":0,"at":"2026-10-31T14:27:49+0100","crossFamily":0,"families":1,"key":"checklistbank-316135","merged":244,"stage":"applied"}
+{"action":"ordinator","at":"2026-10-31T14:27:49+0100","key":"checklistbank-53120","stage":"transforming"}
+{"action":"ordinator","at":"2026-10-31T14:28:09+0100","key":"checklistbank-53120","stage":"triaged"}
+{"action":"ordinator","at":"2026-10-31T14:28:09+0100","key":"checklistbank-53120","stage":"queued"}
+{"action":"ordinator","at":"2026-10-31T14:28:09+0100","key":"checklistbank-53120","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-10-31T14:30:25+0100","crossFamily":41,"families":60,"key":"checklistbank-53120","merged":742,"stage":"applied"}

@@ -733,6 +733,18 @@
           "children": [],
           "uuid": "1ac3a5ca-33a2-5b6-930-03ec597fce43c3",
           "description": "Paratanais sp. is a paratanaidae species found in its native region."
+        },
+        {
+          "id": "SP_PARATANAIS_BARNARDI",
+          "name": "Paratanais barnardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paratanais",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107100052"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1239,9 +1251,12 @@
             "col": [
               "42DVW"
             ],
-            "checklistbank": "ott7122416"
+            "checklistbank": "ott7122416",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q63724172"
+            ]
           },
-          "authorityIds": "col:42DVW",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q63724172,checklistbank:ott7122416,col:42DVW",
           "description": "Metatanais spinipropodus is a paratanaidae species found in its native region."
         },
         {
@@ -1282,9 +1297,12 @@
               "42DVV"
             ],
             "checklistbank": "ott6189445",
-            "checklistbank-139831": "475983"
+            "checklistbank-139831": "475983",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q63719645"
+            ]
           },
-          "authorityIds": "col:42DVV",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q63719645,checklistbank:ott6189445,checklistbank-139831:475983,col:42DVV",
           "description": "Metatanais progenitor is a paratanaidae species found in its native region."
         },
         {
@@ -1563,13 +1581,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paratanaidae"
+    },
+    {
+      "id": "GENUS_GAMMERUS",
+      "name": "Gammerus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GAMMERUS_HETEROCLITUS",
+          "name": "Gammerus heteroclitus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gammerus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13639667"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paratanaidae"
     }
   ],
-  "speciesCount": 69,
+  "speciesCount": 71,
   "appSlug": "paratanaidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

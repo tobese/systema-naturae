@@ -1,4 +1,25 @@
 {
+  "key": "checklistbank-7888",
+  "title": "United Kingdom Species Inventory (UKSI)",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 278226,
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-7888/archive.zip",
+  "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)",
+  "applied": {
+    "added": 5,
+    "merged": 31921,
+    "crossFamily": 4,
+    "families": 2566,
+    "at": "2026-10-31T09:27:13Z"
+  },
+  "triaged": {
+    "offered": 78719,
+    "alreadyHeld": 42801,
+    "staged": 32059,
+    "refused": 1716,
+    "refusalRate": 0.0218
+  },
   "history": [
     {
       "at": "2026-10-29T21:54:07+0100",
@@ -7,12 +28,38 @@
     {
       "at": "2026-10-29T21:54:07+0100",
       "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-30T03:31:39Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-30T03:31:39Z",
+      "stage": "blocked"
+    },
+    {
+      "at": "2026-10-31T05:10:23+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-31T07:35:25Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-31T07:36:54Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-31T07:36:54Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-31T07:36:54Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-31T09:27:13Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-7888",
-  "licence": "cc by",
-  "reason": "re-take 2026-10-29: applied before the queue existed; archive already on disk",
-  "size": 278226,
-  "stage": "downloaded",
-  "title": "United Kingdom Species Inventory (UKSI)"
+  ]
 }

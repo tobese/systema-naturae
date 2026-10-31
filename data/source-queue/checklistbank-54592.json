@@ -1,10 +1,31 @@
 {
+  "key": "checklistbank-54592",
+  "title": "BioLib Coccinellidae (BL ladybird)",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 2987,
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-54592/archive.zip",
+  "added": 0,
+  "merged": 0,
+  "families": 0,
+  "crossFamily": 0,
+  "reason": "TextTree reader wired in 9c521ec; dry run clean",
   "activePid": 77332,
   "activeStartedAt": "2026-10-27T18:24:54.344048+00:00",
-  "added": 0,
-  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-54592/archive.zip",
-  "crossFamily": 0,
-  "families": 0,
+  "applied": {
+    "added": 72,
+    "merged": 1397,
+    "crossFamily": 0,
+    "families": 1,
+    "at": "2026-10-31T07:35:25Z"
+  },
+  "triaged": {
+    "offered": 2046,
+    "alreadyHeld": 546,
+    "staged": 1469,
+    "refused": 0,
+    "refusalRate": 0
+  },
   "history": [
     {
       "at": "2026-10-20T15:36:41+0200",
@@ -20,8 +41,8 @@
     },
     {
       "at": "2026-10-27T11:26:49.244452+00:00",
-      "note": "fix-state: reset from applied-without-metrics — no transform output, no triaged block, no import log entry, no applied stats",
-      "stage": "downloaded"
+      "stage": "downloaded",
+      "note": "fix-state: reset from applied-without-metrics — no transform output, no triaged block, no import log entry, no applied stats"
     },
     {
       "at": "2026-10-27T17:59:29.432284+00:00",
@@ -38,13 +59,38 @@
     {
       "at": "2026-10-29T16:48:19+0100",
       "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-30T03:08:16Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-30T03:08:16Z",
+      "stage": "blocked"
+    },
+    {
+      "at": "2026-10-31T06:00:58+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-31T07:32:09Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-31T07:35:14Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-31T07:35:14Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-31T07:35:14Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-31T07:35:25Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-54592",
-  "licence": "cc by",
-  "merged": 0,
-  "reason": "pipeline exception: cannot access local variable 'sources_root' where it is not associated with a value",
-  "size": 2987,
-  "stage": "downloaded",
-  "title": "BioLib Coccinellidae (BL ladybird)"
+  ]
 }

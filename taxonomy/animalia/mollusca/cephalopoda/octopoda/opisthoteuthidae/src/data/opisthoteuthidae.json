@@ -86,7 +86,8 @@
               "urn:lsid:marinespecies.org:taxname:410387"
             ],
             "checklistbank-2169": "2750023",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q14650449"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q14650449",
+            "checklistbank-24927": "ae5f7b76-55cc-4213-98ca-ed0b190b49ea"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:410387,col:75394",
           "authorship": "(G. L. Voss, 1982)"
@@ -792,6 +793,18 @@
           "children": [],
           "uuid": "c82691c5-4acb-580-b79-a1ecf985cde3dc",
           "description": "Opisthoteuthis calypso is a opisthoteuthidae species found in its native region."
+        },
+        {
+          "id": "SP_OPISTHOTEUTHIS_ADORABILIS",
+          "name": "Opisthoteuthis adorabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Opisthoteuthis",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107022241"
+          },
+          "children": []
         }
       ]
     },
@@ -1463,6 +1476,18 @@
             ]
           },
           "authorityIds": "col:3WG4D"
+        },
+        {
+          "id": "SP_LUTEUTHIS_DENTATA",
+          "name": "Luteuthis dentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Luteuthis",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3819345"
+          },
+          "children": []
         }
       ]
     },
@@ -1740,10 +1765,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "opisthoteuthidae"
+    },
+    {
+      "id": "GENUS_ENIGMATITEUTHIS",
+      "name": "Enigmatiteuthis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENIGMATITEUTHIS_INNOMINATA",
+          "name": "Enigmatiteuthis innominata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enigmatiteuthis",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2503440"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "opisthoteuthidae"
+    },
+    {
+      "id": "GENUS_CIRROTEUTHIS",
+      "name": "Cirroteuthis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "opisthoteuthidae",
+      "children": [
+        {
+          "id": "SP_CIRROTEUTHIS_GRIMALDII_JOUBIN_1903",
+          "name": "Cirroteuthis grimaldii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cirroteuthis",
+          "authorship": "Joubin, 1903",
+          "sourceIds": {
+            "checklistbank-37354": "1026"
+          },
+          "uuid": "093dce24-da41-41f7-9940-3d7dcccbf1ef"
+        }
+      ]
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 92,
+  "genusCount": 9,
+  "speciesCount": 96,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

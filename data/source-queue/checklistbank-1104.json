@@ -1,5 +1,18 @@
 {
+  "key": "checklistbank-1104",
+  "title": "Phoronida Database",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 40,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-1104/archive.zip",
+  "reason": "unblocked 2026-10-31: 32427dc (ACEF tar sniff / fetchBatch pipefail) or 3d4533a (DwCA core name)",
+  "applied": {
+    "added": 0,
+    "merged": 0,
+    "crossFamily": 0,
+    "families": 0,
+    "at": "2026-10-31T05:55:41Z"
+  },
   "history": [
     {
       "at": "2026-10-20T18:47:11+0200",
@@ -11,8 +24,8 @@
     },
     {
       "at": "2026-10-27T11:35:20.668805+00:00",
-      "note": "fix-state: retried fetch after archive missing — archive now present",
-      "stage": "downloaded"
+      "stage": "downloaded",
+      "note": "fix-state: retried fetch after archive missing — archive now present"
     },
     {
       "at": "2026-10-27T12:02:06.849839+00:00",
@@ -21,12 +34,18 @@
     {
       "at": "2026-10-27T12:02:07.472461+00:00",
       "stage": "blocked"
+    },
+    {
+      "at": "2026-10-31T05:10:19+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-31T05:55:05Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-31T05:55:41Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-1104",
-  "licence": "cc by",
-  "reason": "unsupported archive format (no .txtree, no DwCA/ColDP table)",
-  "size": 40,
-  "stage": "blocked",
-  "title": "Phoronida Database"
+  ]
 }

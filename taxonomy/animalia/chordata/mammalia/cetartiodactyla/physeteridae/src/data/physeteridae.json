@@ -25,7 +25,9 @@
             "checklistbank-139831": "74890",
             "checklistbank-9802": "1006461",
             "checklistbank-9712": "MSTSNM:Arter:02f92bf9-f785-ea11-aa77-501ac539d1ea",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107195353"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107195353",
+            "checklistbank-28530": "INBO_RL_MAM_2014_VAL_76",
+            "checklistbank-53684": "1531"
           },
           "uuid": "ef137116-b398-577b-abad-98adec8f7fd6"
         },
@@ -41,7 +43,10 @@
           "uuid": "79d9da9b-4f05-5233-8668-6fdaa30fc232",
           "sourceIds": {
             "checklistbank-2265": "9755",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107195325"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107195325",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12607/",
+            "checklistbank-23895": "2281",
+            "checklistbank-29666": "2018_2373"
           }
         },
         {
@@ -212,6 +217,42 @@
           },
           "children": [],
           "uuid": "9a5f2db8-2aef-5f2a-be6b-b828303e3a57"
+        },
+        {
+          "id": "SP_PHYSETER_BREVICEPS",
+          "name": "Physeter breviceps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Physeter",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109647433"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYSETER_BIDENS",
+          "name": "Physeter bidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Physeter",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109647432"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYSETER_SIMUS",
+          "name": "Physeter simus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Physeter",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109647434"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -1195,7 +1236,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Kogia",
           "sourceIds": {
-            "checklistbank-2265": "27615"
+            "checklistbank-2265": "27615",
+            "checklistbank-53133": "4669"
           },
           "children": [],
           "uuid": "d5871773-3151-52a3-997a-e9d0c706e486"
@@ -1203,13 +1245,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "physeteridae"
+    },
+    {
+      "id": "GENUS_BRYGMOPHYSETER",
+      "name": "Brygmophyseter",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRYGMOPHYSETER_SHIGENSIS",
+          "name": "Brygmophyseter shigensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brygmophyseter",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q923613"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "physeteridae"
+    },
+    {
+      "id": "GENUS_ALBICETUS",
+      "name": "Albicetus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALBICETUS_OXYMYCTERUS_KELLOGG_1925",
+          "name": "Albicetus oxymycterus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Albicetus",
+          "authorship": "Kellogg, 1925",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q22285172"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "physeteridae"
     }
   ],
-  "speciesCount": 69,
+  "speciesCount": 74,
   "appSlug": "physeteridae",
   "sourcedFrom": "worms",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 30,
+  "genusCount": 32,
   "sourceIds": {
     "checklistbank": "Physeteridae",
     "wikispecies": "Physeteridae",

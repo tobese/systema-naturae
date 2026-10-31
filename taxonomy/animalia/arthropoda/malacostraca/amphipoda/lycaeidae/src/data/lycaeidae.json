@@ -250,7 +250,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Lycaea",
-          "authorship": "NULL",
           "children": [],
           "uuid": "2ba55f0e-3f77-508-817-28de6d4676ec8c",
           "sourceIds": {
@@ -361,6 +360,42 @@
           },
           "children": [],
           "uuid": "a0f90716-6c74-595d-bf72-8a714487ee1c"
+        },
+        {
+          "id": "SP_LYCAEA_BOVALII",
+          "name": "Lycaea bovalii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lycaea",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q49507980"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LYCAEA_SIMILIS",
+          "name": "Lycaea similis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lycaea",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107091831"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LYCAEA_ROBUSTA",
+          "name": "Lycaea robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lycaea",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107091829"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -390,9 +425,12 @@
             ],
             "checklistbank": "a532bde3-d799-474b-9c08-85790ecbcdb9",
             "checklistbank-127379": "a532bde3-d799-474b-9c08-85790ecbcdb9",
-            "checklistbank-139831": "295775"
+            "checklistbank-139831": "295775",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q4470670"
+            ]
           },
-          "authorityIds": "col:6Z246,itis:95254",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q4470670,checklistbank:a532bde3-d799-474b-9c08-85790ecbcdb9,checklistbank-127379:a532bde3-d799-474b-9c08-85790ecbcdb9,checklistbank-139831:295775,col:6Z246,itis:95254",
           "description": "Simorhynchotus antennarius is a lycaeidae species found in its native region."
         },
         {
@@ -446,7 +484,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Brachyscelus",
-          "authorship": "NULL",
           "children": [],
           "uuid": "021f4538-f622-5aa-be1-73b30088aa282d",
           "sourceIds": {
@@ -469,7 +506,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Brachyscelus",
-          "authorship": "NULL",
           "children": [],
           "uuid": "31715588-9783-567-8ee-ee29474b39b745",
           "sourceIds": {
@@ -491,7 +527,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Brachyscelus",
-          "authorship": "NULL",
           "children": [],
           "uuid": "a764cf7e-91ee-537-a76-7b4bcd06716cfe",
           "sourceIds": {
@@ -544,7 +579,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Pseudolycaea",
-          "authorship": "NULL",
           "children": [],
           "uuid": "d8bf50f4-7bf8-5c7-8b9-3ff8382c47ce33",
           "sourceIds": {
@@ -553,7 +587,8 @@
             ],
             "checklistbank": "taicol: 85524",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "95232",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4475203"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4475203",
+            "checklistbank-312242": "40373"
           },
           "authorityIds": "itis:95232",
           "description": "Pseudolycaea pachypoda is a lycaeidae species found in its native region."
@@ -661,13 +696,46 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lycaeidae"
+    },
+    {
+      "id": "GENUS_THAMNEUS",
+      "name": "Thamneus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAMNEUS_PLATYRRHYNCHUS",
+          "name": "Thamneus platyrrhynchus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamneus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107091920"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNEUS_RECURVIROSTRIS",
+          "name": "Thamneus recurvirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamneus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107091923"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lycaeidae"
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 36,
   "appSlug": "lycaeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -2014,7 +2014,9 @@
               "5CLSQ"
             ],
             "checklistbank": "739459",
-            "checklistbank-311094": "497022"
+            "checklistbank-311094": "497022",
+            "checklistbank-315077": "urn:lsid:dyntaxa.se:Taxon:236293",
+            "checklistbank-7888": "NBNSYS0000007848"
           },
           "authorityIds": "col:5CLSQ",
           "commonName": "Glenmore Awl-fly",
@@ -2626,9 +2628,12 @@
               "8F2V4"
             ],
             "checklistbank": "txn:198880",
-            "checklistbank-1174": "txn:198880"
+            "checklistbank-1174": "txn:198880",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q20719325"
+            ]
           },
-          "authorityIds": "col:8F2V4",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q20719325,checklistbank:txn:198880,checklistbank-1174:txn:198880,col:8F2V4",
           "description": "Sinonemestrius tuanwangensis is a sinonemestrius species found in its native region."
         },
         {
@@ -3709,13 +3714,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "xylophagidae"
+    },
+    {
+      "id": "GENUS_TRIPTOTRICHA",
+      "name": "Triptotricha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIPTOTRICHA_LAUTA",
+          "name": "Triptotricha lauta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triptotricha",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q14752947"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "xylophagidae"
     }
   ],
-  "speciesCount": 194,
+  "speciesCount": 195,
   "appSlug": "xylophagidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 27,
+  "genusCount": 28,
   "sourceIds": {
     "checklistbank": "txn:138716",
     "checklistbank-1174": "txn:138716",

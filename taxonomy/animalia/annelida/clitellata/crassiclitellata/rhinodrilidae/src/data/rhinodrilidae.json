@@ -2581,7 +2581,8 @@
             ],
             "gbif-backbone": "9449299",
             "checklistbank-316441": "NJFJS",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "976052"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "976052",
+            "checklistbank-7888": "NHMSYS0021193746"
           },
           "authorityIds": "itis:976052"
         },
@@ -2676,7 +2677,8 @@
             ],
             "gbif-backbone": "9363004",
             "checklistbank-316441": "NJFKB",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "976056"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "976056",
+            "checklistbank-7888": "NHMSYS0021193740"
           },
           "authorityIds": "itis:976056"
         },
@@ -9510,9 +9512,12 @@
             "col": [
               "CN5HQ"
             ],
-            "checklistbank": "242937"
+            "checklistbank": "242937",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q134363759"
+            ]
           },
-          "authorityIds": "col:CN5HQ",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q134363759,checklistbank:242937,col:CN5HQ",
           "description": "Atatina arimikuriaka is a rhinodrilidae species found in its native region."
         },
         {
@@ -10959,9 +10964,12 @@
               "69118"
             ],
             "checklistbank": "1611107",
-            "checklistbank-139831": "1611107"
+            "checklistbank-139831": "1611107",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q5147948"
+            ]
           },
-          "authorityIds": "col:8S775,itis:69118",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q5147948,checklistbank:1611107,checklistbank-139831:1611107,col:8S775,itis:69118",
           "description": "Onychochaeta windlei is a rhinodrilidae species found in its native region."
         },
         {
@@ -11969,10 +11977,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Rhinodrilidae"
+    },
+    {
+      "id": "GENUS_EURYDAME",
+      "name": "Eurydame",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EURYDAME_INSIGNIS",
+          "name": "Eurydame insignis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eurydame",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105865598"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhinodrilidae"
     }
   ],
-  "genusCount": 52,
-  "speciesCount": 691,
+  "genusCount": 53,
+  "speciesCount": 692,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

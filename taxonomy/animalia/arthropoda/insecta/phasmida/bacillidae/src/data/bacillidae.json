@@ -1450,6 +1450,19 @@
                   },
                   "children": [],
                   "uuid": "2a2a4c3b-63f1-5106-ad13-b6414351f8d5"
+                },
+                {
+                  "id": "SP_BACILLUS_RAMOSUM_DE_SAUSSURE_1861",
+                  "name": "Bacillus ramosum",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Bacillus",
+                  "authorship": "de Saussure, 1861",
+                  "sourceIds": {
+                    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q66827409"
+                  },
+                  "children": []
                 }
               ]
             },
@@ -1531,7 +1544,9 @@
                       "WB3J"
                     ],
                     "checklistbank": "974834",
-                    "checklistbank-2169": "89389"
+                    "checklistbank-2169": "89389",
+                    "checklistbank-25428": "52544",
+                    "checklistbank-28913": "46234"
                   },
                   "authorityIds": "col:WB3J",
                   "description": "Clonopsis gallica is a stick insect species in the genus Clonopsis."
@@ -4649,16 +4664,38 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bacillidae"
+    },
+    {
+      "id": "GENUS_BACILLIUS",
+      "name": "Bacillius",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "bacillidae",
+      "children": [
+        {
+          "id": "SP_BACILLIUS_ROSSIUS",
+          "name": "Bacillius rossius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bacillius",
+          "sourceIds": {
+            "checklistbank-25428": "52545"
+          },
+          "uuid": "103ec5f9-b9aa-4881-ab9f-fd28289f0eeb",
+          "children": []
+        }
+      ]
     }
   ],
-  "speciesCount": 266,
+  "speciesCount": 268,
   "appSlug": "bacillidae",
   "lineage": "Verophasmatodea > Bacilloidea",
   "continents": [
     "Africa",
     "Europe"
   ],
-  "genusCount": 43,
+  "genusCount": 44,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

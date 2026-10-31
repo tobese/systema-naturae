@@ -286,9 +286,12 @@
           "sourceIds": {
             "col": [
               "CVBY6"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q105981230"
             ]
           },
-          "authorityIds": "col:CVBY6",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q105981230,col:CVBY6",
           "description": "Kidderia subquadrata is a gaimardiidae species found in its native region."
         },
         {
@@ -650,7 +653,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:505180"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:505180"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:505180",
+            "checklistbank-24927": "0a8cafa1-d5ac-46e4-aa36-64a1774828a8"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505180,col:6JW2D",
           "authorship": "(Melvill & Standen, 1907)"
@@ -889,6 +893,18 @@
           "children": [],
           "uuid": "e2f43f8c-0d9e-534-ba6-f3c6d2a1f88317",
           "description": "Gaimardia flemingi is a gaimardiidae species found in its native region."
+        },
+        {
+          "id": "SP_GAIMARDIA_ZINSMEISTERI",
+          "name": "Gaimardia zinsmeisteri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaimardia",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105981222"
+          },
+          "children": []
         }
       ]
     },
@@ -1031,10 +1047,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gaimardiidae"
+    },
+    {
+      "id": "GENUS_COSTOKIDDERIA",
+      "name": "Costokidderia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COSTOKIDDERIA_LYALLENSIS",
+          "name": "Costokidderia lyallensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Costokidderia",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107316893"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COSTOKIDDERIA_PEDICA",
+          "name": "Costokidderia pedica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Costokidderia",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107316894"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gaimardiidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 52,
+  "genusCount": 7,
+  "speciesCount": 55,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

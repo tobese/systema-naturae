@@ -101,7 +101,9 @@
             "checklistbank-2169": "1507896",
             "checklistbank-30477": "154606",
             "checklistbank-7888": "BMSSYS0000009442",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q15027334"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q15027334",
+            "checklistbank-21626": "urn:lsid:dyntaxa.se:Taxon:1114",
+            "checklistbank-315077": "urn:lsid:dyntaxa.se:Taxon:1114"
           },
           "uuid": "c0474a3e-a541-54e-917-fa9dd983bd1c50",
           "authorityIds": "col:6P5MX,gbif:2592791,mycobank:413315"
@@ -1156,6 +1158,18 @@
           "sourceIds": {
             "checklistbank-7888": "BMSSYS0000046983",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107906849"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LECANOGRAPHA_HEMISPHAERICA",
+          "name": "Lecanographa hemisphaerica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lecanographa",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107906853"
           },
           "children": []
         }
@@ -2895,7 +2909,9 @@
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:1820",
             "checklistbank-316361": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=801449",
             "checklistbank-315805": "e702e51da2c0f5be4dd354bb3e295d37",
-            "gbif-backbone": "8857361"
+            "gbif-backbone": "8857361",
+            "checklistbank-21626": "urn:lsid:dyntaxa.se:Taxon:1820",
+            "checklistbank-315077": "urn:lsid:dyntaxa.se:Taxon:1820"
           },
           "uuid": "98a59343-56ea-5eb-962-69907c8aa76cde",
           "authorityIds": "col:CD6F,gbif:8857361,mycobank:801449"
@@ -3098,7 +3114,9 @@
             "checklistbank-315805": "459a4ddcb586f24efd9395aa7662bc7c",
             "gbif-backbone": "8405753",
             "checklistbank-2169": "543786",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q80810947"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q80810947",
+            "checklistbank-21626": "urn:lsid:dyntaxa.se:Taxon:1116",
+            "checklistbank-315077": "urn:lsid:dyntaxa.se:Taxon:1116"
           },
           "uuid": "5b27f9bb-26c6-56c-939-05c98a84e77beb",
           "authorityIds": "col:CD6L,gbif:8405753,mycobank:519245"
@@ -4661,11 +4679,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lecanographaceae"
+    },
+    {
+      "id": "GENUS_DELISEA",
+      "name": "Delisea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DELISEA_PSEUDOSTICTA_F_E_1825",
+          "name": "Delisea pseudosticta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Delisea",
+          "authorship": "Fée, 1825",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105052808"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lecanographaceae"
     }
   ],
   "authorship": "Ertz, Tehler, G. Thor & Frisch",
-  "genusCount": 23,
-  "speciesCount": 202,
+  "genusCount": 24,
+  "speciesCount": 204,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

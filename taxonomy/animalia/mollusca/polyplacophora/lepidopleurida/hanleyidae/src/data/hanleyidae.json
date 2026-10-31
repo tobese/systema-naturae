@@ -81,7 +81,8 @@
               "txn:333624"
             ],
             "checklistbank-2169": "2732485",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "78835"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "78835",
+            "checklistbank-21626": "urn:lsid:dyntaxa.se:Taxon:102913"
           },
           "authorityIds": "checklistbank:381533,checklistbank:urn:lsid:marinespecies.org:taxname:140082,checklistbank-1174:txn:333624,col:6LC6J,itis:78835"
         },
@@ -290,7 +291,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Hanleya",
-          "authorship": "NULL",
           "children": [],
           "uuid": "b58627ce-e707-53a-a16-75288a026e15a3",
           "sourceIds": {
@@ -311,7 +311,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Hanleya",
-          "authorship": "NULL",
           "children": [],
           "uuid": "bb3511b9-ee4d-5a0-b73-452bc3987400a5",
           "sourceIds": {
@@ -439,6 +438,30 @@
           "children": [],
           "authorityIds": "checklistbank-139831:1175289",
           "uuid": "fc93bcae-a73a-523f-b1c5-baf20c7cac1c"
+        },
+        {
+          "id": "SP_HANLEYA_SINICA",
+          "name": "Hanleya sinica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanleya",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3806503"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HANLEYA_ABYSSORUM",
+          "name": "Hanleya abyssorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanleya",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106311199"
+          },
+          "children": []
         }
       ]
     },
@@ -469,6 +492,18 @@
           },
           "authorityIds": "col:C79QM,itis:331032",
           "description": "Hemiarthrum setulosum is a hanleyidae species found in its native region."
+        },
+        {
+          "id": "SP_HEMIARTHRUM_HAMILTONORUM",
+          "name": "Hemiarthrum hamiltonorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemiarthrum",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106309794"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -625,15 +660,58 @@
           "sourceIds": {
             "checklistbank-21626": "urn:lsid:dyntaxa.se:Taxon:102913"
           },
-          "uuid": "995d609b-3dfb-4528-b4a1-51872668ef50"
+          "uuid": "995d609b-3dfb-4528-b4a1-51872668ef50",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hanleyidae"
+    },
+    {
+      "id": "GENUS_XYLOCHITON",
+      "name": "Xylochiton",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XYLOCHITON_XYLOPHAGUS",
+          "name": "Xylochiton xylophagus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xylochiton",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q21354465"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hanleyidae"
+    },
+    {
+      "id": "GENUS_HANLEYIA",
+      "name": "Hanleyia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HANLEYIA_BRACHYPLAX",
+          "name": "Hanleyia brachyplax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanleyia",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13653530"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hanleyidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 31,
+  "genusCount": 10,
+  "speciesCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

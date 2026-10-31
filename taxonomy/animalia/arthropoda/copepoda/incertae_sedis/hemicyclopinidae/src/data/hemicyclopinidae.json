@@ -376,6 +376,30 @@
           "authorityIds": "col:4NVCH",
           "children": [],
           "description": "Pseudocyclopina eddatreyae is a pseudocyclopina species found in its native region."
+        },
+        {
+          "id": "SP_PSEUDOCYCLOPINA_PHALLUSIAE",
+          "name": "Pseudocyclopina phallusiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocyclopina",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q14191394"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOCYCLOPINA_NEGLECTA",
+          "name": "Pseudocyclopina neglecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocyclopina",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107070825"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -475,9 +499,12 @@
             "itis": [
               "88874"
             ],
-            "checklistbank": "ott2948737"
+            "checklistbank": "ott2948737",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q6556584"
+            ]
           },
-          "authorityIds": "col:6C65Y,itis:88874",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q6556584,checklistbank:ott2948737,col:6C65Y,itis:88874",
           "children": [],
           "description": "Cyclopinodes intermedia is a cyclopinodes species found in its native region."
         },
@@ -497,9 +524,12 @@
             "itis": [
               "88870"
             ],
-            "checklistbank": "ott2948731"
+            "checklistbank": "ott2948731",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q6555375"
+            ]
           },
-          "authorityIds": "col:6C669,itis:88870",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q6555375,checklistbank:ott2948731,col:6C669,itis:88870",
           "children": [],
           "description": "Cyclopinodes belgicae is a cyclopinodes species found in its native region."
         },
@@ -582,7 +612,8 @@
               "46FKY"
             ],
             "checklistbank": "ott5092317",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13883681"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13883681",
+            "checklistbank-7888": "NHMSYS0021051270"
           },
           "authorityIds": "col:46FKY",
           "children": [],
@@ -664,13 +695,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Hemicyclopinidae"
+    },
+    {
+      "id": "GENUS_GLAREOLINA",
+      "name": "Glareolina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLAREOLINA_KLIEI",
+          "name": "Glareolina kliei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glareolina",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13642801"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemicyclopinidae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 35,
   "appSlug": "hemicyclopinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 9,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

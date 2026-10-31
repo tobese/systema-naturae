@@ -74,9 +74,12 @@
           "sourceIds": {
             "col": [
               "4MLRX"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q5456146"
             ]
           },
-          "authorityIds": "col:4MLRX",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q5456146,col:4MLRX",
           "children": [],
           "description": "Probelus acutiapex is a probelus species found in its native region."
         }
@@ -512,13 +515,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eobelidae"
+    },
+    {
+      "id": "GENUS_EOBELUS",
+      "name": "Eobelus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOBELUS_LONGIPES",
+          "name": "Eobelus longipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eobelus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3365840"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eobelidae"
     }
   ],
-  "speciesCount": 25,
+  "speciesCount": 26,
   "appSlug": "eobelidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

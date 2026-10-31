@@ -116,7 +116,8 @@
             "checklistbank": "ott608602",
             "checklistbank-2169": "641010",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "551807",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q49593696"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q49593696",
+            "checklistbank-5679": "2282REPTI"
           },
           "authorityIds": "col:3R86F,itis:551807",
           "commonName": "White-lipped Mud Turtle",
@@ -547,7 +548,10 @@
               "551809"
             ],
             "checklistbank": "ott969338",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q596405"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q596405",
+            "checklistbank-30064": "gbif.org/species/6156842",
+            "checklistbank-212265": "gbif.org/species/6156842",
+            "checklistbank-212266": "gbif.org/species/2442361"
           },
           "authorityIds": "col:3R86W,itis:551809",
           "commonName": "Scorpion Mud Turtle",
@@ -591,7 +595,8 @@
           "sourceIds": {
             "col": [
               "QDB4F"
-            ]
+            ],
+            "checklistbank-5679": "1389REPTI"
           },
           "authorityIds": "col:QDB4F",
           "description": "Kinosternon cruentatum is a kinosternidae species found in its native region."
@@ -842,6 +847,30 @@
           },
           "children": [],
           "uuid": "bfff8f59-d9e1-591-8b3-9f2ef56e1b4913"
+        },
+        {
+          "id": "SP_KINOSTERNON_ODORATUM",
+          "name": "Kinosternon odoratum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kinosternon",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q134076866"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KINOSTERNON_SPURRELLI",
+          "name": "Kinosternon spurrelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kinosternon",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q15197457"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1426,7 +1455,9 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1486615",
             "gbif-backbone": "5220393",
             "checklistbank-2169": "142480",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "173758"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "173758",
+            "checklistbank-1008": "d6fb3147-f1cd-3cd9-80d9-9e6213177c10",
+            "checklistbank-7888": "NHMSYS0021386044"
           },
           "children": [],
           "uuid": "dc8822e1-443f-5d4-a46-fa14c7fb9412ab"
@@ -1652,13 +1683,88 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Kinosternidae"
+    },
+    {
+      "id": "GENUS_CINOSTERNUM",
+      "name": "Cinosternum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CINOSTERNUM_SCORPIOIDES",
+          "name": "Cinosternum scorpioides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cinosternum",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107333382"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kinosternidae"
+    },
+    {
+      "id": "GENUS_GONIOCHELYS",
+      "name": "Goniochelys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GONIOCHELYS_MINOR",
+          "name": "Goniochelys minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goniochelys",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107333383"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kinosternidae"
+    },
+    {
+      "id": "GENUS_CINOSTERNON",
+      "name": "Cinosternon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CINOSTERNON_HIRTIPES",
+          "name": "Cinosternon hirtipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cinosternon",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107333380"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CINOSTERNON_LEUCOSTOMUM",
+          "name": "Cinosternon leucostomum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cinosternon",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107333381"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kinosternidae"
     }
   ],
-  "speciesCount": 87,
+  "speciesCount": 93,
   "appSlug": "kinosternidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Reptilia",
-  "genusCount": 11,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -973,6 +973,18 @@
           "children": [],
           "uuid": "fe11bfd2-6903-51e-988-c06e8f260db58c",
           "description": "Ballarra sp. is a neopilionidae species found in its native region."
+        },
+        {
+          "id": "SP_BALLARRA_LONGIPALPA",
+          "name": "Ballarra longipalpa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ballarra",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2614550"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1588,10 +1600,13 @@
             ],
             "checklistbank": "380382",
             "wikispecies": "Pantopsalis_johnsi",
-            "checklistbank-139831": "380382"
+            "checklistbank-139831": "380382",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q2305649"
+            ]
           },
           "uuid": "39ea317b-5182-5d9-aaf-edb0b449c3cea9",
-          "authorityIds": "col:7XVBR,gbif:2182265",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q2305649,checklistbank:380382,checklistbank-139831:380382,col:7XVBR,gbif:2182265,wikispecies:Pantopsalis_johnsi",
           "description": "Pantopsalis johnsi is a pantopsalis species found in its native region."
         },
         {
@@ -1612,10 +1627,13 @@
             ],
             "checklistbank": "1271849",
             "wikispecies": "Pantopsalis_rennelli",
-            "checklistbank-139831": "1271849"
+            "checklistbank-139831": "1271849",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q2283154"
+            ]
           },
           "uuid": "92944f23-caa7-58f-81e-56b2ff981b8bc3",
-          "authorityIds": "col:7XVBY,gbif:6908094",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q2283154,checklistbank:1271849,checklistbank-139831:1271849,col:7XVBY,gbif:6908094,wikispecies:Pantopsalis_rennelli",
           "description": "Pantopsalis rennelli is a pantopsalis species found in its native region."
         },
         {
@@ -2477,7 +2495,8 @@
           "sourceIds": {
             "checklistbank": "Neopilio_australis",
             "gbif-backbone": "6902996",
-            "checklistbank-2256": "554121"
+            "checklistbank-2256": "554121",
+            "checklistbank-312242": "20948"
           },
           "children": [],
           "authorship": "Lawrence, 1931",
@@ -2528,13 +2547,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "neopilionidae"
+    },
+    {
+      "id": "GENUS_HYPOMEGALOPSALIS",
+      "name": "Hypomegalopsalis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYPOMEGALOPSALIS_TANISPHYROS",
+          "name": "Hypomegalopsalis tanisphyros",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypomegalopsalis",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3144294"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neopilionidae"
     }
   ],
-  "speciesCount": 121,
+  "speciesCount": 123,
   "appSlug": "neopilionidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 29,
+  "genusCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

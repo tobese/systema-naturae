@@ -251,7 +251,8 @@
             "checklistbank": "27886",
             "gbif-backbone": "2430927",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "668485",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2213024"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2213024",
+            "checklistbank-74965": "https://www.gbif.org/species/2430927"
           },
           "children": [],
           "uuid": "24ce1384-5bbf-53f-897-79a37218d445b0",
@@ -403,9 +404,12 @@
             "checklistbank": "28004",
             "wikispecies": "Mimosiphonops_reinhardti",
             "checklistbank-139831": "28004",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "668489"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "668489",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q1946388"
+            ]
           },
-          "authorityIds": "col:43GZ9,itis:668489",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:668489,ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q1946388,checklistbank:28004,checklistbank-139831:28004,col:43GZ9,itis:668489,wikispecies:Mimosiphonops_reinhardti",
           "commonName": "Reinhardt's Caecilian",
           "description": "Mimosiphonops reinhardti is a species of caecilian in the family Siphonopidae."
         },
@@ -463,9 +467,12 @@
             "checklistbank": "923257",
             "wikispecies": "Brasilotyphlus_dubium",
             "checklistbank-139831": "923257",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "1105072"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "1105072",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q60512048"
+            ]
           },
-          "authorityIds": "col:N7ND,itis:1105072",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:1105072,ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q60512048,checklistbank:923257,checklistbank-139831:923257,col:N7ND,itis:1105072,wikispecies:Brasilotyphlus_dubium",
           "description": "Brasilotyphlus dubium is a species of caecilian in the family Caeciliidae."
         },
         {
@@ -679,7 +686,8 @@
             "wikispecies": "Siphonops_annulatus",
             "gbif-backbone": "2430946",
             "checklistbank-139831": "28051",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "668505"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "668505",
+            "checklistbank-74965": "https://www.gbif.org/species/2430946"
           },
           "children": [],
           "uuid": "c68323fd-d8d3-5aa-8b9-04107161aba7df",
@@ -736,13 +744,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "siphonopidae"
+    },
+    {
+      "id": "GENUS_CAECILITA",
+      "name": "Caecilita",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAECILITA_IWOKRAMAE",
+          "name": "Caecilita iwokramae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caecilita",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2932810"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "siphonopidae"
     }
   ],
-  "speciesCount": 34,
+  "speciesCount": 35,
   "appSlug": "siphonopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Amphibia",
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

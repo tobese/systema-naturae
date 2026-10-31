@@ -252,6 +252,18 @@
           "children": [],
           "authorityIds": "checklistbank-139831:1037798",
           "uuid": "472325c8-cb5a-5079-9dfb-cd5b0c14ccbb"
+        },
+        {
+          "id": "SP_DONDICE_BANYULENSIS",
+          "name": "Dondice banyulensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dondice",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2411830"
+          },
+          "children": []
         }
       ]
     },
@@ -1441,9 +1453,12 @@
               "V5MFG"
             ],
             "checklistbank": "1648345",
-            "checklistbank-139831": "1648345"
+            "checklistbank-139831": "1648345",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q136313136"
+            ]
           },
-          "authorityIds": "col:V5MFG",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q136313136,checklistbank:1648345,checklistbank-139831:1648345,col:V5MFG",
           "description": "Nanuca perolata is a myrrhinidae species found in its native region."
         },
         {
@@ -1461,9 +1476,12 @@
               "V586M"
             ],
             "checklistbank": "1648346",
-            "checklistbank-139831": "1648346"
+            "checklistbank-139831": "1648346",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q136313120"
+            ]
           },
-          "authorityIds": "col:V586M",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q136313120,checklistbank:1648346,checklistbank-139831:1648346,col:V586M",
           "description": "Nanuca smaugi is a myrrhinidae species found in its native region."
         },
         {
@@ -1481,9 +1499,12 @@
               "V56ZZ"
             ],
             "checklistbank": "1648344",
-            "checklistbank-139831": "1648344"
+            "checklistbank-139831": "1648344",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q136313143"
+            ]
           },
-          "authorityIds": "col:V56ZZ",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q136313143,checklistbank:1648344,checklistbank-139831:1648344,col:V56ZZ",
           "description": "Nanuca cahuitaensis is a myrrhinidae species found in its native region."
         },
         {
@@ -1750,10 +1771,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Myrrhinidae"
+    },
+    {
+      "id": "GENUS_PHYLLODESMOPSIS",
+      "name": "Phyllodesmopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHYLLODESMOPSIS_HORRIDUS",
+          "name": "Phyllodesmopsis horridus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllodesmopsis",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3901732"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "myrrhinidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 93,
+  "genusCount": 14,
+  "speciesCount": 95,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

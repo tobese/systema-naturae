@@ -37,6 +37,18 @@
           "uuid": "da558e75-2766-556-859-5d6375c458f449",
           "authorityIds": "col:DJWC,gbif:2581316,mycobank:361081",
           "children": []
+        },
+        {
+          "id": "SP_ANAVIRGA_DENDROMORPHA",
+          "name": "Anavirga dendromorpha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anavirga",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107483657"
+          },
+          "children": []
         }
       ],
       "authorship": "B. Sutton"
@@ -648,7 +660,8 @@
             "checklistbank-2008": "726097",
             "checklistbank-2169": "1071723",
             "checklistbank-7888": "NHMSYS0021009779",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10714945"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10714945",
+            "checklistbank-53133": "46495"
           },
           "uuid": "efa3292c-e125-57e-aa2-ae9ea61ba3885a",
           "authorityIds": "col:5BBZ2,gbif:3484889,mycobank:340914",
@@ -854,7 +867,8 @@
             "checklistbank": "68071",
             "checklistbank-2008": "45506",
             "checklistbank-7888": "NBNSYS0000017957",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10714948"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10714948",
+            "checklistbank-53133": "46496"
           },
           "uuid": "e139a947-53c5-5df-8eb-c6006929cd8ec6",
           "authorityIds": "col:5BBZB,gbif:2581361,mycobank:204486",
@@ -1454,6 +1468,32 @@
             "checklistbank-51518": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100103724/"
           },
           "children": []
+        },
+        {
+          "id": "SP_VIBRISSEA_OCHROLEUCA_MASSEE_1897",
+          "name": "Vibrissea ochroleuca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vibrissea",
+          "authorship": "Massee, 1897",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q108475718"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VIBRISSEA_AQUATICA_VELENOVSK_1934",
+          "name": "Vibrissea aquatica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vibrissea",
+          "authorship": "Velenovský, 1934",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q108475686"
+          },
+          "children": []
         }
       ],
       "authorship": "Fries"
@@ -1551,10 +1591,13 @@
             ],
             "col": [
               "4KNGP"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q108267075"
             ]
           },
           "uuid": "4ad64571-8fa1-543-aea-192375efcfe29c",
-          "authorityIds": "col:4KNGP,gbif:5434093,mycobank:304063",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q108267075,col:4KNGP,gbif:5434093,mycobank:304063",
           "children": []
         },
         {
@@ -1577,10 +1620,13 @@
             ],
             "col": [
               "4KNGR"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q108267077"
             ]
           },
           "uuid": "0fc465ee-ee94-566-b15-0c8898ff360e67",
-          "authorityIds": "col:4KNGR,gbif:5496582,mycobank:143807",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q108267077,col:4KNGR,gbif:5496582,mycobank:143807",
           "children": []
         },
         {
@@ -2385,11 +2431,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "vibrisseaceae"
+    },
+    {
+      "id": "GENUS_MYXOCEPHALA",
+      "name": "Myxocephala",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYXOCEPHALA_ALBIDA",
+          "name": "Myxocephala albida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myxocephala",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10592906"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vibrisseaceae"
     }
   ],
   "authorship": "Locquin",
-  "genusCount": 21,
-  "speciesCount": 99,
+  "genusCount": 22,
+  "speciesCount": 103,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

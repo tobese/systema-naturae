@@ -244,7 +244,6 @@
           "subspeciesCount": 0,
           "description": "Astrochis renicapite is a pronocephalidae species found in its native region.",
           "sourcedFrom": "none",
-          "authorship": "NULL",
           "children": [],
           "uuid": "dfb892a4-9a44-590-b23-eeddea6d5c03c8",
           "sourceIds": {
@@ -434,7 +433,8 @@
           "lineage": "\"Cricocephalus",
           "authorship": "\"(Kuhl & van Hasselt, 1822) Looss, 1899\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:728070"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:728070",
+            "checklistbank-25995": "19069TREMA"
           },
           "children": [],
           "uuid": "9ac0e589-be55-50b-83a-7ca1767cf1f7a6",
@@ -1896,7 +1896,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Parapronocephalum",
-          "authorship": "NULL",
           "children": [],
           "uuid": "ad402ce3-afff-5bb-85a-db63aed910b678",
           "sourceIds": {
@@ -1916,7 +1915,6 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Parapronocephalum",
-          "authorship": "NULL",
           "children": [],
           "uuid": "e0539ce6-4230-572-856-a57cf477aa3cf4",
           "sourceIds": {
@@ -1943,7 +1941,8 @@
           "lineage": "Parapronocephalum",
           "authorship": "Belopol'skaia, 1952",
           "sourceIds": {
-            "checklistbank": "242799"
+            "checklistbank": "242799",
+            "checklistbank-7888": "NHMSYS0000067688"
           },
           "children": [],
           "uuid": "8ddd1b04-6f55-53d-935-287fe380825e7e",
@@ -2189,7 +2188,8 @@
           "lineage": "Diaschistorchis",
           "sourceIds": {
             "checklistbank-2265": "2713271",
-            "checklistbank-2169": "2713271"
+            "checklistbank-2169": "2713271",
+            "checklistbank-25995": "19783TREMA"
           },
           "children": [],
           "authorship": "(Braun, 1901)",
@@ -2636,6 +2636,31 @@
           },
           "children": [],
           "uuid": "203b8c28-0431-51d5-9a91-704f75510c9f"
+        },
+        {
+          "id": "SP_PLEUROGONIUS_LOBATUS",
+          "name": "Pleurogonius lobatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurogonius",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61541614",
+            "checklistbank-25995": "19073TREMA"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROGONIUS_RNALACLEMYS",
+          "name": "Pleurogonius rnalaclemys",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurogonius",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q129497051"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2671,7 +2696,8 @@
           "authorship": "(Linton, 1910)",
           "sourceIds": {
             "checklistbank-1128": "urn:lsid:marinespecies.org:taxname:720399",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61516930"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61516930",
+            "checklistbank-25995": "19075TREMA"
           },
           "uuid": "2c4e6c6a-e2aa-4e46-b17b-e8c22db8785e",
           "children": []
@@ -2838,6 +2864,18 @@
           },
           "children": [],
           "uuid": "4442169e-2672-52da-a357-4ecb3d2c2549"
+        },
+        {
+          "id": "SP_PYELOSOMUM_CRASSUM",
+          "name": "Pyelosomum crassum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyelosomum",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61541841"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2900,13 +2938,47 @@
       "id": "GENUS_RUICEPHALUS",
       "name": "Ruicephalus",
       "rank": "GENUS",
-      "children": [],
+      "children": [
+        {
+          "id": "SP_RUICEPHALUS_MINUTUS",
+          "name": "Ruicephalus minutus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ruicephalus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61541997"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pronocephalidae"
+    },
+    {
+      "id": "GENUS_BARISOMUM",
+      "name": "Barisomum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARISOMUM_ERUBESCENS",
+          "name": "Barisomum erubescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barisomum",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4800076"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
       "lineage": "pronocephalidae"
     }
   ],
-  "genusCount": 33,
-  "speciesCount": 154,
+  "genusCount": 34,
+  "speciesCount": 159,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

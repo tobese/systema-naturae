@@ -638,6 +638,18 @@
                   "children": [],
                   "uuid": "c34d70ac-16cd-5af-807-c3ef359165bcb4",
                   "description": "Mantophasma sp. is a mantophasmatidae species found in its native region."
+                },
+                {
+                  "id": "SP_MANTOPHASMA_SUBSOLANA",
+                  "name": "Mantophasma subsolana",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Mantophasma",
+                  "sourceIds": {
+                    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4043696"
+                  },
+                  "children": []
                 }
               ],
               "lineage": "Mantophasmatini"
@@ -896,9 +908,12 @@
                 "col": [
                   "54R6F"
                 ],
-                "checklistbank": "Tanzaniophasma_subsolana"
+                "checklistbank": "Tanzaniophasma_subsolana",
+                "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+                  "Q13582821"
+                ]
               },
-              "authorityIds": "col:54R6F",
+              "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q13582821,checklistbank:Tanzaniophasma_subsolana,col:54R6F",
               "description": "Tanzaniophasma subsolana is a mantophasmatidae species found in Africa region."
             }
           ]
@@ -1218,14 +1233,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Mantophasmatidae"
+    },
+    {
+      "id": "GENUS_ENSIFEROPHASMA",
+      "name": "Ensiferophasma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENSIFEROPHASMA_VELOCIRAPTOR",
+          "name": "Ensiferophasma velociraptor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ensiferophasma",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4038086"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mantophasmatidae"
     }
   ],
-  "speciesCount": 46,
+  "speciesCount": 48,
   "appSlug": "mantophasmatidae",
   "continents": [
     "Africa"
   ],
-  "genusCount": 21,
+  "genusCount": 22,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

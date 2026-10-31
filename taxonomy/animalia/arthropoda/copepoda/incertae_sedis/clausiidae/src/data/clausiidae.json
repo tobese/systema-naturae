@@ -895,9 +895,12 @@
             "col": [
               "6J6R6"
             ],
-            "checklistbank": "ott2959775"
+            "checklistbank": "ott2959775",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q10496133"
+            ]
           },
-          "authorityIds": "col:6J6R6",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q10496133,checklistbank:ott2959775,col:6J6R6",
           "description": "Flabelliphilus inersus is a flabelliphilus species found in its native region."
         }
       ],
@@ -951,7 +954,8 @@
           "sourceIds": {
             "col": [
               "7ZGDZ"
-            ]
+            ],
+            "checklistbank-7888": "NHMSYS0021052272"
           },
           "authorityIds": "col:7ZGDZ",
           "description": "Jeanella minor is a jeanella species found in its native region."
@@ -989,6 +993,18 @@
           "authorityIds": "col:7C3VF,itis:667467",
           "commonName": "Copepod",
           "description": "Teredicola typica (Copepod) is a clausiidae species found in its native region."
+        },
+        {
+          "id": "SP_TEREDICOLA_TYPICUS",
+          "name": "Teredicola typicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teredicola",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q113133496"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1067,6 +1083,18 @@
           },
           "children": [],
           "uuid": "6b95f6da-76df-57a-afd-a85677ba23a67a"
+        },
+        {
+          "id": "SP_SAPPHIRINELLA_STYLIFERA",
+          "name": "Sapphirinella stylifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sapphirinella",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q14310077"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1141,13 +1169,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "clausiidae"
+    },
+    {
+      "id": "GENUS_SAPHIRELLA",
+      "name": "Saphirella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAPHIRELLA_TROPICA",
+          "name": "Saphirella tropica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saphirella",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4294479"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clausiidae"
     }
   ],
-  "speciesCount": 51,
+  "speciesCount": 54,
   "appSlug": "clausiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 23,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

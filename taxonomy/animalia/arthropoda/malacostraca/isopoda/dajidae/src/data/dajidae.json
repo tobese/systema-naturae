@@ -1245,7 +1245,8 @@
             "checklistbank": "ott3000816",
             "checklistbank-139831": "1652066",
             "checklistbank-9712": "MSTSNM:Arter:9eff2bf9-f785-ea11-aa77-501ac539d1ea",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2277144"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2277144",
+            "checklistbank-53133": "6928"
           },
           "authorityIds": "col:4MPZJ,itis:206363",
           "children": [],
@@ -1318,6 +1319,18 @@
           "authorityIds": "col:4MPZD,itis:93107",
           "children": [],
           "description": "Prodajus bigelowiensis is a dajidae species found in its native region."
+        },
+        {
+          "id": "SP_PRODAJUS_MYSIDIS",
+          "name": "Prodajus mysidis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prodajus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4420744"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1657,9 +1670,12 @@
               "BY8D"
             ],
             "checklistbank": "ott3000877",
-            "wikispecies": "Allophryxus_ruber"
+            "wikispecies": "Allophryxus_ruber",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q2255922"
+            ]
           },
-          "authorityIds": "col:BY8D",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q2255922,checklistbank:ott3000877,col:BY8D,wikispecies:Allophryxus_ruber",
           "children": [],
           "description": "Allophryxus ruber is a dajidae species found in its native region."
         }
@@ -1689,13 +1705,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dajidae"
+    },
+    {
+      "id": "GENUS_PARADAJUS",
+      "name": "Paradajus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARADAJUS_TENUIS",
+          "name": "Paradajus tenuis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradajus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2458555"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dajidae"
     }
   ],
-  "speciesCount": 74,
+  "speciesCount": 76,
   "appSlug": "dajidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 23,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

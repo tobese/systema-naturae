@@ -43,7 +43,8 @@
           "authorship": "Tschudi 1837",
           "sourceIds": {
             "checklistbank-1174": "txn:401244",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1811013"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1811013",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18324/"
           },
           "children": [],
           "uuid": "ea09a6c2-2215-537e-ab64-5daeeec4d649"
@@ -58,7 +59,8 @@
           "authorship": "Capula et al. 1985",
           "sourceIds": {
             "checklistbank-1174": "txn:409516",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1518297"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1518297",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18321/"
           },
           "children": [],
           "uuid": "a29e7012-7838-5c70-9658-81a2bdcdc47a"
@@ -77,6 +79,31 @@
           },
           "children": [],
           "uuid": "b79e2d09-2cd1-59a3-9ec9-b8bdb1959b80"
+        },
+        {
+          "id": "SP_DISCOGLOSSUS_PICTUS",
+          "name": "Discoglossus pictus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discoglossus",
+          "sourceIds": {
+            "checklistbank-25428": "50001"
+          },
+          "uuid": "dde86257-02a8-4883-8d11-2035a8ce079a",
+          "children": []
+        },
+        {
+          "id": "SP_DISCOGLOSSUS_ORNATUS",
+          "name": "Discoglossus ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discoglossus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q24809115"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank-2008",
@@ -168,26 +195,6 @@
           "authorship": "(Lesson, 1831)",
           "children": [],
           "uuid": "15c4daf7-fae6-5226-ae91-6abe348ca25d"
-        }
-      ],
-      "sourcedFrom": "checklistbank-2008",
-      "lineage": "Discoglossidae"
-    },
-    {
-      "id": "GENUS_PHRYNODERMA",
-      "name": "Phrynoderma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHRYNODERMA_HEXADACTYLUM_LESSON_1831",
-          "name": "Phrynoderma hexadactylum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank-2008",
-          "lineage": "Phrynoderma",
-          "authorship": "(Lesson, 1831)",
-          "children": [],
-          "uuid": "5f86184e-2ac8-537c-ba19-de92c5e6cae8"
         }
       ],
       "sourcedFrom": "checklistbank-2008",
@@ -398,7 +405,8 @@
           "authorship": "Arntzen and Garcia Paris 1995",
           "sourceIds": {
             "checklistbank-1174": "txn:409511",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q250533"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q250533",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18313/"
           },
           "children": [],
           "uuid": "8c3202a3-faa7-5111-8dca-9a9c0b7bd867"
@@ -413,21 +421,88 @@
           "authorship": "Sanchiz and Adrover 1979",
           "sourceIds": {
             "checklistbank-1174": "txn:409512",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61523"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61523",
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18314/"
           },
           "children": [],
           "uuid": "6e5fc8bc-7c01-50a3-a08f-858ee3ec3a05"
+        },
+        {
+          "id": "SP_ALYTES_AUSTRALIS",
+          "name": "Alytes australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alytes",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109556390"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discoglossidae"
+    },
+    {
+      "id": "GENUS_EODISCOGLOSSUS",
+      "name": "Eodiscoglossus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EODISCOGLOSSUS_OXONIENSIS",
+          "name": "Eodiscoglossus oxoniensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eodiscoglossus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q19741788"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EODISCOGLOSSUS_SANTONJAE",
+          "name": "Eodiscoglossus santonjae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eodiscoglossus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20717927"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discoglossidae"
+    },
+    {
+      "id": "GENUS_ARALOBATRACHUS",
+      "name": "Aralobatrachus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARALOBATRACHUS_ROBUSTUS",
+          "name": "Aralobatrachus robustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aralobatrachus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20717041"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "discoglossidae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 27,
   "appSlug": "discoglossidae",
   "sourcedFrom": "checklistbank-2008",
   "lineage": "Chordata > Amphibia",
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "checklistbank-1174": "txn:37426",
     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q55307"

@@ -3,7 +3,7 @@
   "name": "Palaelodidae",
   "rank": "FAMILY",
   "appSlug": "palaelodidae",
-  "speciesCount": 12,
+  "speciesCount": 13,
   "children": [
     {
       "id": "GENUS_PALAELODUS",
@@ -51,7 +51,8 @@
           "sourceIds": {
             "gbif-backbone": "4848529",
             "checklistbank-1174": "txn:430551",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16987139"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16987139",
+            "checklistbank-274271": "132"
           },
           "children": [],
           "uuid": "980848d2-7fa6-57b1-8ada-6c98d4cb2782"
@@ -205,9 +206,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "palaelodidae"
+    },
+    {
+      "id": "GENUS_ADELALOPUS",
+      "name": "Adelalopus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ADELALOPUS_HOOGBUTSELIENSIS",
+          "name": "Adelalopus hoogbutseliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adelalopus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q90123043"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaelodidae"
     }
   ],
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "checklistbank-1174": "txn:99558",
     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2046834"

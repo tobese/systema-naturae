@@ -3,7 +3,7 @@
   "name": "Heteromitidae",
   "rank": "FAMILY",
   "appSlug": "heteromitidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_SAINOURON",
@@ -19,7 +19,8 @@
           "lineage": "Sainouron",
           "authorship": "Sandon, 1924",
           "sourceIds": {
-            "gbif-backbone": "11197851"
+            "gbif-backbone": "11197851",
+            "checklistbank-287013": "2133"
           },
           "children": [],
           "uuid": "08da5f8d-f2d8-590-9c6-ff1cd00fabeb67"
@@ -54,6 +55,19 @@
           "lineage": "Heteromita",
           "sourceIds": {
             "checklistbank-2265": "323453"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HETEROMITA_ANGUSTA_DUJARDIN_1841",
+          "name": "Heteromita angusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heteromita",
+          "authorship": "Dujardin, 1841",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q29172215"
           },
           "children": []
         }
@@ -156,9 +170,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "heteromitidae"
+    },
+    {
+      "id": "GENUS_PROLEPTOMONAS",
+      "name": "Proleptomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROLEPTOMONAS_FAECICOLA",
+          "name": "Proleptomonas faecicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proleptomonas",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q724427"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heteromitidae"
     }
   ],
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1616208"
   }

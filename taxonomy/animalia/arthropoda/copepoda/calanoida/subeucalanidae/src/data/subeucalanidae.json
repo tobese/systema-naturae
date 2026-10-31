@@ -3,7 +3,7 @@
   "name": "Subeucalanidae",
   "rank": "FAMILY",
   "appSlug": "subeucalanidae",
-  "speciesCount": 1,
+  "speciesCount": 2,
   "children": [
     {
       "id": "GENUS_SUBEUCALANUS",
@@ -26,6 +26,27 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "subeucalanidae"
+    },
+    {
+      "id": "GENUS_EUCALANUS",
+      "name": "Eucalanus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "subeucalanidae",
+      "children": [
+        {
+          "id": "SP_EUCALANUS_PILEATUS",
+          "name": "Eucalanus pileatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucalanus",
+          "sourceIds": {
+            "checklistbank-23895": "2815"
+          },
+          "uuid": "3d092db8-8ff9-4865-935c-8644bed46758"
+        }
+      ]
     }
   ],
   "genusCount": 1
