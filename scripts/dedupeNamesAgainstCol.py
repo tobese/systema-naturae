@@ -59,6 +59,11 @@ Apply safeguards, after dedupeSpeciesAcrossFamilies.py's 2026-10 prune bug
     python3 scripts/dedupeNamesAgainstCol.py --weak-only
     python3 scripts/dedupeNamesAgainstCol.py --weak-only --apply
     python3 scripts/dedupeNamesAgainstCol.py --kingdom animalia
+    python3 scripts/dedupeNamesAgainstCol.py --decisions data/family-pair-review.json
+
+`--decisions` restricts removal to copies whose (kingdom, family removed
+from, family kept in) pair a human marked "follow-col" in
+familyPairReview.py's list -- the per-pair review the full set waits on.
 """
 import argparse
 import collections
@@ -66,6 +71,7 @@ import csv
 import io
 import json
 import os
+import re
 import sys
 import zipfile
 
@@ -88,6 +94,32 @@ COL_DWCA = os.path.join(sources.ROOT, "archives", "catalogue-of-life-2025",
 MERGEABLE = ("description", "commonName", "continents", "reference",
              "yearPublished", "namedAfter", "namedAfterDetail",
              "wikipediaUrl", "iucnStatus")
+
+# fix_all_descriptions.py's generated text: "X y is a <family> species found
+# in its native region." Not a description, and it names the family the copy
+# sat in -- the old one, for a copy this script removes.
+TEMPLATE = re.compile(r"^\S+ \S+ is an? [\w-]+ species found in .{0,60}\.$")
+FAMILY_WORD = re.compile(r"\b[A-Z][a-z]+(?:idae|aceae)\b")
+
+
+def better_description(keeper, loser, keep_family):
+    """The removed copy's description, when it should replace the kept one's.
+
+    merge_into only fills a description the kept copy lacks, but most copies
+    carry the generated template, so a real text on the removed copy would be
+    dropped (2,559 of the 2026-10-31 approved pairs). It is carried when the
+    kept copy has only the template and the real text names no family but the
+    one the species is kept in: "a sea snail ... in the family Cystiscidae" on
+    a copy moving to Plesiocystiscidae would state the old placement, and
+    rewording a sourced text to fix that would no longer be the source's.
+    """
+    kd, ld = keeper.get("description") or "", loser.get("description") or ""
+    if not ld or TEMPLATE.match(ld) or (kd and not TEMPLATE.match(kd)):
+        return None
+    if any(w.lower() != keep_family for w in FAMILY_WORD.findall(ld)):
+        return None
+    return ld
+
 
 COL_KINGDOMS = {"Animalia", "Plantae", "Fungi", "Chromista", "Protozoa",
                 "Archaea", "Bacteria", "Viruses"}
@@ -152,8 +184,18 @@ def main() -> int:
     ap.add_argument("--weak-only", action="store_true",
                     help="remove only Wikidata-only / unsourced copies beside a "
                          "COL-sourced kept copy (see module docstring)")
+    ap.add_argument("--decisions", default="",
+                    help="familyPairReview.py's JSON: only pairs marked "
+                         "follow-col are removed")
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
+    approved = None
+    if args.decisions:
+        with open(args.decisions, encoding="utf-8") as fh:
+            approved = {(p["kingdom"], p["removeFrom"], p["keepIn"])
+                        for p in json.load(fh)["pairs"]
+                        if p.get("decision") == "follow-col"}
+        print(f"  {len(approved):,} family pairs approved for removal")
 
     print(f"  reading {COL_DWCA}")
     col = col_accepted_families(COL_DWCA)
@@ -210,13 +252,25 @@ def main() -> int:
                     carried[field] += 1
             new_ids = sum(1 for _, sp in drop for src in (sp.get("sourceIds") or {})
                           if src not in (keeper.get("sourceIds") or {}))
+            if approved is not None:
+                drop = [(f, sp) for f, sp in drop if (k, f.slug, target) in approved]
+                if not drop:
+                    stat["skipped: family pair not approved"] += 1
+                    continue
             stat["planned groups"] += 1
+            for _, sp in drop:
+                if better_description(keeper, sp, target):
+                    stat["real description carried over a template"] += 1
+                elif (sp.get("description") and keeper.get("description")
+                      and sp.get("description") != keeper.get("description")
+                      and not TEMPLATE.match(sp["description"])):
+                    stat["real description not carried (kept copy has its own, or it names another family)"] += 1
             stat["copies to remove"] += len(drop)
             stat["removed copies with a description"] += sum(
                 1 for _, sp in drop if sp.get("description"))
             for f, _ in drop:
                 pairs[(f.slug, target)] += 1
-            planned.append((k, n, keep[0][0].path, keeper.get("id"),
+            planned.append((target, n, keep[0][0].path, keeper.get("id"),
                             [(f.path, sp.get("id")) for f, sp in drop]))
             plan.write(json.dumps({
                 "kingdom": k, "name": n, "colFamily": target,
@@ -238,7 +292,10 @@ def main() -> int:
                     "skipped: COL's family holds no copy of ours",
                     "skipped: a copy has child nodes",
                     "skipped (weak-only): kept copy has no COL id",
-                    "skipped (weak-only): every other copy is better sourced"):
+                    "skipped (weak-only): every other copy is better sourced",
+                    "skipped: family pair not approved",
+                    "real description carried over a template",
+                    "real description not carried (kept copy has its own, or it names another family)"):
             print(f"   {stat[key]:9,}  {key}")
         if carried:
             print("   fields the kept copy would gain: " + ", ".join(
@@ -290,7 +347,8 @@ def apply(planned):
     removed_from = collections.Counter()
     emptied = {}
     skipped = collections.Counter()
-    for _k, name, keep_path, keep_id, drops in planned:
+    carried = 0
+    for keep_family, name, keep_path, keep_id, drops in planned:
         keeper = find(keep_path, keep_id, name)
         if keeper is None:
             skipped["kept copy not found exactly once"] += len(drops)
@@ -300,7 +358,11 @@ def apply(planned):
             if loser is None:
                 skipped["copy to remove not found exactly once"] += 1
                 continue
+            better = better_description(keeper, loser, keep_family)
             merge_into(keeper, loser)
+            if better:
+                keeper["description"] = better
+                carried += 1
             parent, key = index[path][1][id(loser)]
             parent[key] = [c for c in parent[key] if c is not loser]
             removed_from[path] += 1
@@ -341,7 +403,8 @@ def apply(planned):
         doc["genusCount"] = count_rank(doc, "GENUS")
         save_json(path, doc)
     print(f"\n  wrote {len(docs):,} family files: removed {removed:,} copies "
-          f"(planned {planned_n:,}), pruned {pruned:,} emptied containers")
+          f"(planned {planned_n:,}), pruned {pruned:,} emptied containers, "
+          f"carried {carried:,} real descriptions over templates")
     for why, n in skipped.items():
         print(f"  skipped {n:,}: {why}")
     return 0
