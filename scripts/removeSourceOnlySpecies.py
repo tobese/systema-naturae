@@ -34,6 +34,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import maintenanceLock  # noqa: E402
+import sources  # noqa: E402
 from tree import (KINGDOMS, count_rank, count_species, iter_family_files,  # noqa: E402
                   save_json)
 
@@ -49,10 +50,41 @@ def _walk(doc):
                 stack.append(child)
 
 
+def close_pending(source, decided, apply):
+    """Stamp resolvedAt on unresolved pending-family rows that came from this
+    source's archive. pendingFamilyWatcher re-imports a row's archive once
+    its family exists; for a reverted source that would put the removed
+    species straight back (COL China, 2026-10-31). Runs inside --apply's
+    maintenance lock, which the watcher's own pass also takes."""
+    path = os.path.join(sources.ROOT, "pending", "families.jsonl")
+    marker = f"{os.sep}{source}{os.sep}"
+    rows, n = [], 0
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            r = json.loads(line)
+            if marker in (r.get("archive") or "") and not r.get("resolvedAt"):
+                n += 1
+                if apply:
+                    r["resolvedAt"] = decided or "closed"
+                    r["note"] = f"source reverted ({decided}); not to be re-imported"
+            rows.append(r)
+    if apply and n:
+        tmp = path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as fh:
+            for r in rows:
+                fh.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
+        os.replace(tmp, path)
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--decisions", required=True,
                     help="JSON with `source` and a `remove` list of {family, name}")
+    ap.add_argument("--close-pending", action="store_true",
+                    help="also stamp resolvedAt on the source's unresolved "
+                         "pending-family rows, so the pending sweep does not "
+                         "re-import the removed species (with --apply)")
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
     with open(args.decisions, encoding="utf-8") as fh:
@@ -102,6 +134,10 @@ def main() -> int:
             doc["genusCount"] = count_rank(doc, "GENUS")
             save_json(fam.path, doc)
             written += 1
+    if args.close_pending:
+        closed = close_pending(source, decisions.get("decided", ""), args.apply)
+        print(f"  pending-family rows from {source}'s archive "
+              f"{'closed' if args.apply else 'to close'}: {closed:,}")
     for fam_slug, name in sorted(wanted - seen):
         print(f"  not found as a {source}-only species, left alone: "
               f"{fam_slug} {name}")
