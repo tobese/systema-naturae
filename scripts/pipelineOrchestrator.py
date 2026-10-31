@@ -116,6 +116,15 @@ def run_pass(drain: bool = True) -> None:
     print("\n-- pending-family sweep --", flush=True)
     PFW.cycle()
 
+    # What ChecklistBank added or re-imported since the last look -- at most
+    # every 6 hours; records only (<sources>/clb-changes/), never fatal.
+    try:
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                                     "clbChanges.py"), "--min-interval-hours", "6"],
+                       timeout=600)
+    except Exception as e:
+        print(f"  clbChanges skipped: {e}", flush=True)
+
 
 def main() -> int:
     loop = "--loop" in sys.argv

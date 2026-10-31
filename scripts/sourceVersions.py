@@ -19,9 +19,11 @@ Per source in the sources manifest:
              a later version)
   sameKey    for a checklistbank-N source, the dataset's current `issued` on
              ChecklistBank (a later import under the same key)
-  candidates ChecklistBank datasets found by searching the title (and alias),
-             COL releases and annual checklists excluded, each with a title
-             similarity and its date
+  candidates ChecklistBank datasets whose title is close to ours, matched
+             against the whole local catalogue (<sources>/clb-catalogue.json,
+             65k datasets -- exhaustive, unlike the API search's top 20), COL
+             releases and annual checklists excluded; only the close ones are
+             then looked up for their date
   verdict    current / newer-same-key / newer-elsewhere (best candidate with
              a close title and a later date) / check-by-hand / no-date
 
@@ -30,6 +32,7 @@ proposal for a human, not a match this script trusts.
 
     python3 scripts/sourceVersions.py
 """
+import collections
 import json
 import os
 import re
@@ -120,6 +123,15 @@ def is_col_release(d):
 
 def main() -> int:
     manifest = json.load(open(os.path.join(sources.ROOT, "manifest.json")))["sources"]
+    catalogue = json.load(open(os.path.join(sources.ROOT, "clb-catalogue.json")))
+    df = {}
+    for d in catalogue:
+        d["_w"] = words(d.get("title"))
+        for w in d["_w"]:
+            df[w] = df.get(w, 0) + 1
+    import math
+    idf = collections.defaultdict(lambda: math.log(len(catalogue)),
+                                  {w: math.log(len(catalogue) / n) for w, n in df.items()})
     out = []
     for key, rec in sorted(manifest.items()):
         title = rec.get("title") or key
@@ -136,23 +148,37 @@ def main() -> int:
             d = get(f"/dataset/{own}") or {}
             row["sameKey"] = {"key": own, "issued": d.get("issued"), "version": d.get("version"),
                               "deleted": bool(d.get("deleted"))}
-        cands = {}
-        for q in {re.sub(r"\s*\(.*?\)", "", title).strip(), rec.get("alias") or ""} - {""}:
-            res = get("/dataset", q=q, limit=20) or {}
-            for d in res.get("result", []):
-                if d["key"] == own or is_col_release(d) or d.get("type") not in (None, "taxonomic", "nomenclatural"):
-                    continue
-                s = similarity(title, d.get("title"))
-                if s >= 0.25:
-                    cands[d["key"]] = {"key": d["key"], "title": d.get("title"), "alias": d.get("alias"),
-                                       "issued": d.get("issued"), "version": d.get("version"),
-                                       "similarity": round(s, 2)}
-            time.sleep(0.3)
-        row["candidates"] = sorted(cands.values(), key=lambda c: (-c["similarity"], c["issued"] or ""))[:5]
+        tw = words(title)
+        close = []
+        for d in catalogue:
+            if d["key"] == own or is_col_release(d):
+                continue
+            common = tw & d["_w"]
+            if not common:
+                continue
+            # Weighted by rarity across the catalogue: "Coleorrhyncha" says
+            # far more than "species" or "file", which made every Species
+            # File a 0.5 match for every other.
+            s = sum(idf[w] for w in common) / max(1e-9, sum(idf[w] for w in tw | d["_w"]))
+            if s >= 0.25:
+                close.append((s, d))
+        close.sort(key=lambda x: -x[0])
+        cands = []
+        for s, d in close[:8]:
+            info = get(f"/dataset/{d['key']}") or {}
+            if info.get("deleted") or info.get("type") not in (None, "taxonomic", "nomenclatural"):
+                continue
+            cands.append({"key": d["key"], "title": d.get("title"), "alias": info.get("alias"),
+                          "issued": info.get("issued"), "version": info.get("version"),
+                          "similarity": round(s, 2)})
+            time.sleep(0.2)
+        row["candidates"] = sorted(cands, key=lambda c: (-c["similarity"], c["issued"] or ""))[:5]
 
         same = (row.get("sameKey") or {}).get("issued") or ""
+        # The closest title first, its date second: by date alone a merely
+        # related list (Orthoptera SF for the Coleorrhyncha SF) won.
         best = max((c for c in row["candidates"] if c["similarity"] >= SIMILAR and c["issued"]),
-                   key=lambda c: c["issued"], default=None)
+                   key=lambda c: (c["similarity"], c["issued"]), default=None)
         hd = held.replace("fetched:", "")[:10]
         if not held:
             verdict = "no-date"
