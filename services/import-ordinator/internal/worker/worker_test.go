@@ -90,3 +90,16 @@ func TestStopDuringASourceStartsNoNext(t *testing.T) {
 		t.Fatalf("started a source after stop: %q", e.Stage)
 	}
 }
+
+func TestTriagedIsLeftForAHuman(t *testing.T) {
+	dir := t.TempDir()
+	p := NewPipeline(Config{RepoRoot: dir, QueueDir: dir, NoDownload: true, NoSideTasks: true})
+	if err := p.store.Write("checklistbank-1", &queue.Entry{Key: "checklistbank-1", Stage: queue.StageTriaged}); err != nil {
+		t.Fatal(err)
+	}
+	p.drain(context.Background())
+	e, _ := p.store.ReadOne("checklistbank-1")
+	if e.Stage != queue.StageTriaged {
+		t.Fatalf("a triaged source was moved to %q", e.Stage)
+	}
+}

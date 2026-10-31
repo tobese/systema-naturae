@@ -127,8 +127,13 @@ func (p *Pipeline) drain(ctx context.Context) {
 	// resting stage within the pass that picked it up).
 	for _, key := range queue.SortKeys(entries) {
 		e := entries[key]
+		// Not StageTriaged: in this daemon a source passes through it in the
+		// same instant it moves on to queued, so one found there was put
+		// there -- it is the queue's "measured, waiting on a human" stage
+		// (sourceQueue.py). Resetting it to downloaded applied COL China
+		// (312616) on 2026-10-31 an hour after it was parked for a decision.
 		switch e.Stage {
-		case queue.StageTransforming, queue.StageTriaged:
+		case queue.StageTransforming:
 			p.store.SetStageReason(key, e, queue.StageDownloaded, "reset: left in "+string(e.Stage)+" by an interrupted run")
 		case queue.StageApplying:
 			p.store.SetStageReason(key, e, queue.StageQueued, "reset: left in applying by an interrupted run")
