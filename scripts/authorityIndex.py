@@ -41,23 +41,30 @@ from tree import ROOT, iter_family_files, iter_species  # noqa: E402
 from dedupeSpeciesAcrossFamilies import _same_taxon  # noqa: E402
 
 INDEX_PATH = os.path.join(ROOT, "portal", "data", ".authority-index.sqlite3")
-# 2: rows carry their family file's path, and `files` holds each file's mtime.
-SCHEMA_VERSION = "2"
+# 3: rows carry an integer file_id into `files`, which holds each family
+# file's path and mtime. (2 stored the path on every row; see build().)
+SCHEMA_VERSION = "3"
 
 
-def _rows(fam, mtime_out: dict):
-    """(kingdom, authority, key, name, family_slug, node_id, path) for one
-    family file. Its mtime is taken *before* the read and stored in
-    `mtime_out`, so a write landing mid-read leaves the file looking changed
-    to the next refresh rather than looking current with stale rows."""
-    mtime_out[fam.path] = os.path.getmtime(fam.path)
-    out = []
+def _read(fam):
+    """(mtime, rows) for one family file; rows are (kingdom, authority, key,
+    name, family_slug, node_id). The mtime is taken *before* the read, so a
+    write landing mid-read leaves the file looking changed to the next
+    refresh rather than looking current with stale rows."""
+    mtime = os.path.getmtime(fam.path)
+    rows = []
     for sp in iter_species(fam.load()):
         for auth, key in (sp.get("sourceIds") or {}).items():
             if key:
-                out.append((fam.kingdom, auth, str(key), sp.get("name"),
-                            fam.slug, sp.get("id"), fam.path))
-    return out
+                rows.append((fam.kingdom, auth, str(key), sp.get("name"),
+                             fam.slug, sp.get("id")))
+    return mtime, rows
+
+
+def _insert(con, file_id, rows):
+    con.executemany(
+        "INSERT INTO authority_keys VALUES (?, ?, ?, ?, ?, ?, ?)",
+        [r + (file_id,) for r in rows])
 
 
 def build(path: str = INDEX_PATH) -> int:
@@ -77,24 +84,27 @@ def build(path: str = INDEX_PATH) -> int:
         os.remove(tmp)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     con = sqlite3.connect(tmp)
+    # Rows point at their file by integer id, not by path: a 100-byte path
+    # on each of ~12.5M rows, plus an index over it, took the file from
+    # 2.0 to 5.3 GB (schema 2, live for an hour on 2026-10-31 with the
+    # data volume at 99%).
     con.execute("""
         CREATE TABLE authority_keys (
             kingdom TEXT, authority TEXT, key TEXT,
-            name TEXT, family_slug TEXT, node_id TEXT, path TEXT
+            name TEXT, family_slug TEXT, node_id TEXT, file_id INTEGER
         )
     """)
-    con.execute("CREATE TABLE files (path TEXT PRIMARY KEY, mtime REAL)")
+    con.execute("CREATE TABLE files (id INTEGER PRIMARY KEY, path TEXT UNIQUE, mtime REAL)")
     con.execute("CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT)")
     n = 0
     for fam in iter_family_files():
-        mtimes = {}
-        rows = _rows(fam, mtimes)
-        con.executemany(
-            "INSERT INTO authority_keys VALUES (?, ?, ?, ?, ?, ?, ?)", rows)
-        con.executemany("INSERT INTO files VALUES (?, ?)", mtimes.items())
+        mtime, rows = _read(fam)
+        file_id = con.execute("INSERT INTO files (path, mtime) VALUES (?, ?)",
+                              (fam.path, mtime)).lastrowid
+        _insert(con, file_id, rows)
         n += len(rows)
     con.execute("CREATE INDEX idx_lookup ON authority_keys (kingdom, authority, key)")
-    con.execute("CREATE INDEX idx_path ON authority_keys (path)")
+    con.execute("CREATE INDEX idx_file ON authority_keys (file_id)")
     con.execute("INSERT INTO meta VALUES ('schema', ?)", (SCHEMA_VERSION,))
     con.commit()
     con.close()
@@ -120,26 +130,49 @@ def refresh(path: str = INDEX_PATH) -> tuple:
     con = sqlite3.connect(path, timeout=600)
     try:
         con.execute("BEGIN IMMEDIATE")
-        stored = dict(con.execute("SELECT path, mtime FROM files"))
-        changed = [fam for p, (fam, m) in current.items() if stored.get(p) != m]
+        stored = {p: (i, m) for i, p, m in con.execute("SELECT id, path, mtime FROM files")}
+        changed = [fam for p, (fam, m) in current.items()
+                   if p not in stored or stored[p][1] != m]
         removed = [p for p in stored if p not in current]
         for p in removed:
-            con.execute("DELETE FROM authority_keys WHERE path = ?", (p,))
-            con.execute("DELETE FROM files WHERE path = ?", (p,))
+            con.execute("DELETE FROM authority_keys WHERE file_id = ?", (stored[p][0],))
+            con.execute("DELETE FROM files WHERE id = ?", (stored[p][0],))
         for fam in changed:
-            mtimes = {}
             try:
-                rows = _rows(fam, mtimes)
+                mtime, rows = _read(fam)
             except (OSError, ValueError) as e:
                 # Mid-write or vanished: leave its old rows and old mtime,
                 # so the next refresh tries it again.
                 print(f"  authorityIndex: skipped {fam.path}: {e}")
                 continue
-            con.execute("DELETE FROM authority_keys WHERE path = ?", (fam.path,))
-            con.executemany(
-                "INSERT INTO authority_keys VALUES (?, ?, ?, ?, ?, ?, ?)", rows)
-            con.execute("INSERT OR REPLACE INTO files VALUES (?, ?)",
-                        (fam.path, mtimes[fam.path]))
+            if fam.path in stored:
+                # Write only the difference. An apply adds a few species to a
+                # family like Carabidae (200k rows); deleting and re-inserting
+                # all of them touched every page of idx_lookup and took 20
+                # minutes for one busy cycle of applies.
+                file_id = stored[fam.path][0]
+                have = {}
+                for rowid, *r in con.execute(
+                        "SELECT rowid, kingdom, authority, key, name, family_slug, "
+                        "node_id FROM authority_keys WHERE file_id = ?", (file_id,)):
+                    have.setdefault(tuple(r), []).append(rowid)
+                want = {}
+                for r in rows:
+                    want[r] = want.get(r, 0) + 1
+                gone, new = [], []
+                for r, rowids in have.items():
+                    extra = len(rowids) - want.get(r, 0)
+                    gone.extend(rowids[:max(0, extra)])
+                for r, n in want.items():
+                    new.extend([r] * max(0, n - len(have.get(r, ()))))
+                con.executemany("DELETE FROM authority_keys WHERE rowid = ?",
+                                [(i,) for i in gone])
+                con.execute("UPDATE files SET mtime = ? WHERE id = ?", (mtime, file_id))
+                _insert(con, file_id, new)
+            else:
+                file_id = con.execute("INSERT INTO files (path, mtime) VALUES (?, ?)",
+                                      (fam.path, mtime)).lastrowid
+                _insert(con, file_id, rows)
         con.commit()
     finally:
         con.close()
