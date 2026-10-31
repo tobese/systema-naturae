@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
-"""Reader for BioLib's .txtree format: an indentation tree with inline rank
-tags and vernacular-name blocks.
+"""Reader for ChecklistBank's TextTree format (.txtree, or .tree): an
+indentation tree with inline rank tags and info blocks.
+
+2026-10-31: no longer one file. Four more archives in the queue carry it --
+European Butterflies (303328), Fossil Birds of Australia (274271, a
+`.tree` member), Archis botany (53677), the algae reprise (304685) -- each
+using parts of the format BioLib doesn't: `=` for a synonym and `$` for a
+basionym, `{PUB=...}` info blocks, `# comments`, a `†` prefix, and accepted
+lines with no [rank] at all (274271's species are bare binomials). Those are
+handled below; colChecklist.load() now dispatches here.
+
+The original notes, from when BioLib was the only example:
 
 The sole known example on the shelf is BioLib Coccinellidae (54592, a
 worldwide ladybird beetle classification) -- grep confirms no other
@@ -39,7 +49,6 @@ Format, verified against the full 2988-line file, not a sample:
     `authorship`.
 """
 import re
-import zipfile
 
 # Leading-word count per rank, i.e. where the name ends and authorship
 # begins on an ACCEPTED line. Only the ranks actually present in the one
@@ -48,15 +57,23 @@ import zipfile
 # this set fails loudly instead of silently misreading every row at that
 # rank the way the dispatch gaps fixed earlier tonight did.
 RANK_NAME_WORDS = {
-    "kingdom": 1, "phylum": 1, "class": 1, "order": 1, "superfamily": 1,
-    "family": 1, "subfamily": 1, "tribe": 1, "subtribe": 1, "genus": 1,
-    "subgenus": 1, "section": 1,
+    "kingdom": 1, "phylum": 1, "subphylum": 1, "superclass": 1, "class": 1,
+    "subclass": 1, "infraclass": 1, "parvclass": 1, "superorder": 1,
+    "order": 1, "suborder": 1, "infraorder": 1, "parvorder": 1,
+    "superfamily": 1, "family": 1, "subfamily": 1, "tribe": 1, "subtribe": 1,
+    "genus": 1, "subgenus": 1, "section": 1,
     "species": 2,
     "subspecies": 3, "variety": 3, "form": 3,
 }
 
-_VERN_RE = re.compile(r"\s*\{VERN=(?P<vern>.*)\}\s*$")
-_RANK_RE = re.compile(r"\s*\[(?P<rank>[a-zA-Z ]+)\]\s*$")
+_INFO_RE = re.compile(r"\s*\{(?P<key>[A-Z]+)=(?P<val>[^{}]*)\}\s*$")
+_RANK_RE = re.compile(r"\s*\[(?P<rank>[a-zA-Z_ ]+)\]\s*$")
+_COMMENT_RE = re.compile(r"\s+#.*$")
+
+# Lowercase words that open an authorship rather than continue a name
+# ("Pelicanus proavus de Vis, 1892" is a binomial, not a trinomial).
+_AUTHOR_PARTICLES = {"de", "da", "das", "del", "della", "der", "den", "di",
+                     "du", "dos", "la", "le", "ter", "van", "von", "zu"}
 
 
 def _parse_vernacular(raw):
@@ -70,6 +87,25 @@ def _parse_vernacular(raw):
     return out
 
 
+def _infer_rank(words):
+    """Rank for an accepted line that carries no [rank] tag, or None.
+
+    Only the cases the name itself settles: a binomial (second word a
+    lowercase epithet) is a species, and a third lowercase epithet makes it
+    a subspecies. A bare uninomial stays None rather than being guessed
+    from its ending -- nothing downstream needs its rank, since
+    colChecklist.chain() only reads ranks that are tagged.
+    """
+    def epithet(w):
+        return (w[:1].islower() and w not in _AUTHOR_PARTICLES
+                and w.replace("-", "").isalpha())
+    if len(words) >= 2 and words[0][:1].isupper() and epithet(words[1]):
+        if len(words) >= 3 and epithet(words[2]):
+            return "subspecies"
+        return "species"
+    return None
+
+
 def _parse_line(content):
     """One stripped-of-indentation line -> a taxon dict, minus id/parent.
 
@@ -77,20 +113,29 @@ def _parse_line(content):
     (and therefore depth/parent) is the caller's job, not this function's,
     since a single line carries no idea of its own position in the tree.
     """
-    is_synonym = content.startswith("*")
+    content = _COMMENT_RE.sub("", content)
+    # "*" is BioLib's synonym marker, "=" (or homotypic "≡") the TextTree
+    # spec's; "$" after it flags the basionym, which is still a synonym here.
+    is_synonym = content[:1] in ("*", "=", "≡")
     if is_synonym:
+        content = content[1:].lstrip("$")
+    extinct = content.startswith("†")
+    if extinct:
         content = content[1:]
 
     vern = []
-    m = _VERN_RE.search(content)
-    if m:
-        vern = _parse_vernacular(m.group("vern"))
+    while True:
+        m = _INFO_RE.search(content)
+        if not m:
+            break
+        if m.group("key") == "VERN":
+            vern = _parse_vernacular(m.group("val"))
         content = content[: m.start()]
 
     rank = None
     m = _RANK_RE.search(content)
     if m:
-        rank = m.group("rank").strip()
+        rank = m.group("rank").strip().lower()
         content = content[: m.start()]
 
     content = content.strip()
@@ -103,17 +148,31 @@ def _parse_line(content):
         return {
             "raw_name": content, "name": None, "authorship": None,
             "rank": None, "is_synonym": True, "vernacular": vern,
+            "extinct": extinct,
         }
 
+    words = content.split()
+    if rank is None:
+        rank = _infer_rank(words)
+        if rank is None:
+            # An untagged uninomial, or a placeholder like "AVES INCERTAE
+            # SEDIS": kept as a node so its children still hang somewhere,
+            # with no name, so it is never offered as a species or matched
+            # as a family.
+            return {
+                "raw_name": content, "name": None, "authorship": None,
+                "rank": None, "is_synonym": False, "vernacular": vern,
+                "extinct": extinct,
+            }
     want = RANK_NAME_WORDS.get(rank)
     if want is None:
         raise KeyError(f"txtree: unrecognized rank {rank!r} in line {content!r}")
-    words = content.split()
     name = " ".join(words[:want])
     authorship = " ".join(words[want:]) or None
     return {
         "raw_name": content, "name": name, "authorship": authorship,
         "rank": rank, "is_synonym": False, "vernacular": vern,
+        "extinct": extinct,
     }
 
 
@@ -155,6 +214,14 @@ def parse_lines(lines):
     return taxa
 
 
+def find_member(names):
+    """The TextTree member of an archive's name list, or None. macOS's
+    __MACOSX/._* resource forks share the extension and are skipped."""
+    return next((n for n in names
+                 if n.lower().endswith((".txtree", ".tree"))
+                 and not n.startswith("__MACOSX")), None)
+
+
 def load(path):
     """(taxa, names, meta), the same shape colChecklist.load() returns.
 
@@ -162,11 +229,14 @@ def load(path):
     this format the way ColDP's Name.tsv is one, matching how
     colChecklist.py's own _coldp() returns {} for the same reason.
     """
-    with zipfile.ZipFile(path) as z:
-        member = next((n for n in z.namelist() if n.lower().endswith(".txtree")), None)
-        if member is None:
-            raise KeyError(f"no .txtree member in {path}")
-        text = z.read(member).decode("utf-8", errors="replace")
-
     import colChecklist as CC
+    c = CC._Container(path)
+    try:
+        member = find_member(c.namelist())
+        if member is None:
+            raise KeyError(f"no .txtree/.tree member in {path}")
+        text = c.read(member).decode("utf-8", errors="replace")
+    finally:
+        c.close()
+
     return parse_lines(text.split("\n")), {}, CC.metadata(path)

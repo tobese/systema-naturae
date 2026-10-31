@@ -42,11 +42,18 @@ import tarfile
 import zipfile
 import colChecklist  # noqa: E402
 import importColChecklist as ICC  # noqa: E402
+import txtree  # noqa: E402
 import authorityIndex  # noqa: E402
 import sources  # noqa: E402
 
 
-def _is_txtree(path):
+def _is_unsupported(path):
+    """True when no reader in colChecklist.load() can take this archive.
+
+    TextTree (.txtree/.tree) used to exit 3 here and sit blocked waiting for
+    a separate path; since 2026-10-31 colChecklist.load() hands it to
+    txtree.py like any other shape.
+    """
     try:
         # colChecklist._Container, not zipfile: ILDIS-style ACEF datasets
         # (1015, 1033, 1066, ...) arrive as a gzip'd tar named archive.zip,
@@ -54,24 +61,18 @@ def _is_txtree(path):
         # 14 readable archives were blocked as "unsupported" (2026-10-31).
         with contextlib.closing(colChecklist._Container(path)) as z:
             names = z.namelist()
-            for n in names:
-                if n.lower().endswith(".txtree"):
-                    return True
-                # A non-DwC-A archive with no .txtree and no expected
-                # DwCA members (taxon.txt / .tsv / name.tsv etc.)
-                # is an unsupported format; skip gracefully rather than crash.
-            # No .txtree and no standard DwCA members either
-            base_names = [m.rsplit("/", 1)[-1].lower() for m in names if not m.startswith("__MACOSX")]
-            # meta.xml declares a DwCA core whatever it is called -- ENA's
-            # (2265) is taxa.txt, which the name test alone sent to
-            # "unsupported" on 2026-10-30 although colChecklist.load()
-            # reads it (ENA applied fine through importColChecklist.py).
-            has_dwc = "meta.xml" in base_names or any(
-                "taxon" in b or "taxa" in b or "name" in b for b in base_names)
-            return False if has_dwc else "unsupported"
     except (zipfile.BadZipFile, tarfile.TarError, EOFError, ValueError):
-        return "unsupported"
-    return False
+        return True
+    if txtree.find_member(names):
+        return False
+    base_names = [m.rsplit("/", 1)[-1].lower() for m in names if not m.startswith("__MACOSX")]
+    # meta.xml declares a DwCA core whatever it is called -- ENA's
+    # (2265) is taxa.txt, which the name test alone sent to
+    # "unsupported" on 2026-10-30 although colChecklist.load()
+    # reads it (ENA applied fine through importColChecklist.py).
+    has_dwc = "meta.xml" in base_names or any(
+        "taxon" in b or "taxa" in b or "name" in b for b in base_names)
+    return not has_dwc
 
 
 def transform_records(r: "ICC.RoutedSpecies", diverted: list):
@@ -173,20 +174,17 @@ def main() -> int:
                           "its --help for why this exists")
     args = ap.parse_args()
 
-    # Exit codes 3 and 4 are distinct from 0 (handled) and 1 (crashed) so
+    # Exit code 4 is distinct from 0 (handled) and 1 (crashed) so
     # importQueueDriver.py can tell "this archive needs different handling"
     # from "nothing new to stage" -- both print and return 0 would otherwise
     # look identical to the driver, which then tries to apply a
     # transformed.jsonl that was never written and fails every loop
     # (found 2026-10-22: checklistbank-1046/1118/1190 stuck retrying).
-    txtree_check = _is_txtree(args.archive)
-    if txtree_check is True:
-        print(f"\n  archive uses .txtree format (txtree.py handles separately); "
-              f"skipping ColDP pipeline. See docs/import.md for the .txtree path.")
-        return 3
-    if txtree_check == "unsupported":
-        print(f"\n  archive at {args.archive} has no .txtree member and no "
-              f"recognised DwCA/ColDP table; skipping (unsupported format).")
+    # Exit 3 (TextTree, "needs a separate path") is retired: see
+    # _is_unsupported().
+    if _is_unsupported(args.archive):
+        print(f"\n  archive at {args.archive} has no TextTree member and no "
+              f"recognised DwCA/ColDP/ACEF table; skipping (unsupported format).")
         return 4
 
     r = ICC.route_species(args.archive, kingdom_override=args.kingdom)

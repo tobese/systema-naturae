@@ -830,6 +830,9 @@ def load(path):
     """
     c = _Container(path)
     try:
+        import txtree
+        if txtree.find_member(c.names()):
+            return txtree.load(path)
         if "AcceptedSpecies.tsv" in c.names():
             return _ildis(c)
         if all(t in c.names() for t in EUNIS_TABLES):
