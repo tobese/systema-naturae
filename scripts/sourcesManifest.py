@@ -2029,6 +2029,35 @@ def dir_stats(d):
     return files, total
 
 
+# Held copies a later version of the same list replaces (2026-10-31, the
+# user's rule: later is later). The newer one is already held and applied;
+# the old copy stays on disk as a record but is declined for any further use
+# -- imports, and familyPairReview's expert votes. Found by
+# scripts/sourceVersions.py; see docs/source-versions.md.
+SUPERSEDED = {
+    "aphid-species-file": "checklistbank-1061 (issued 2026-10-01)",
+    "orthoptera": "checklistbank-1021 (issued 2026-10-01)",
+    "itis": "checklistbank-2144 (issued 2026-10-28)",
+    "wcvp": "checklistbank-2000 (issued 2026-10-28)",
+    "world-spider-catalog": "checklistbank-56185 (issued 2026-10-18)",
+    "species-file-chrysididae": "checklistbank-1169 (issued 2026-10-01)",
+    "species-file-cockroach": "checklistbank-315660, Blattodea Species File (issued 2026-10-01)",
+    "species-file-coleorrhyncha": "checklistbank-1192 (issued 2026-01-05)",
+    "species-file-coreoidea": "checklistbank-1134 (issued 2026-10-01)",
+    "species-file-dermaptera": "checklistbank-1158 (issued 2026-10-01)",
+    "species-file-embioptera": "checklistbank-1089 (issued 2026-01-05)",
+    "species-file-grylloblattodea": "checklistbank-1170 (issued 2026-01-08)",
+    "species-file-lygaeoidea": "checklistbank-1173 (issued 2026-10-01)",
+    "species-file-mantodea": "checklistbank-1062 (issued 2026-10-01)",
+    "species-file-mantophasmatodea": "checklistbank-1168 (issued 2026-01-05)",
+    "species-file-phasmida": "checklistbank-1050 (issued 2026-10-01)",
+    "species-file-phasmida-v2": "checklistbank-1050 (issued 2026-10-01)",
+    "species-file-plecoptera": "checklistbank-1065 (issued 2026-10-01)",
+    "species-file-psocodea": "checklistbank-1133, Psocodea Species File (issued 2026-10-01)",
+    "species-file-zoraptera": "checklistbank-1167 (issued 2026-01-05)",
+}
+
+
 def build(verify: bool):
     if not os.path.isdir(ROOT):
         sys.exit(f"FATAL: {ROOT} not found.\n"
@@ -2047,7 +2076,8 @@ def build(verify: bool):
             "identifier": ident,
             "url": url,
             "licence": licence,
-            "status": status,
+            "status": (f"superseded by {SUPERSEDED[slug]}; declined 2026-10-31"
+                       if slug in SUPERSEDED else status),
             "took": took,
             "archive": {"path": f"archives/{slug}", "bytes": total, "files": files},
             "work": {"path": f"work/{slug}", "bytes": work_total, "files": work_files},

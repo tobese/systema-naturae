@@ -76,15 +76,17 @@ EXPERTS = {
     "Reptile Database": ("reptile-db", "2026-06-24"),
     "Mammal Diversity Database": ("checklistbank-9802", "2025-04-06"),
     "IOC World Bird List": ("checklistbank-2036", "2026-10-04"),
+    # The current Species Files, held and applied from ChecklistBank; their
+    # 2011 GBIF exports (species-file-*) are superseded (sourcesManifest.py)
+    "Blattodea Species File": ("checklistbank-315660", "2026-10-01"),
+    "Phasmida Species File": ("checklistbank-1050", "2026-10-01"),
+    "Mantodea Species File": ("checklistbank-1062", "2026-10-01"),
+    "Dermaptera Species File": ("checklistbank-1158", "2026-10-01"),
+    "Plecoptera Species File": ("checklistbank-1065", "2026-10-01"),
+    "Coreoidea Species File": ("checklistbank-1134", "2026-10-01"),
+    "Aphid Species File": ("checklistbank-1061", "2026-10-01"),
+    "Lygaeoidea Species File": ("checklistbank-1173", "2026-10-01"),
     # held but too old to vote on family placement
-    "Cockroach Species File": ("species-file-cockroach", "2011-05-06"),
-    "Phasmida Species File": ("species-file-phasmida-v2", "2011-05-09"),
-    "Mantodea Species File": ("species-file-mantodea", "2011-05-09"),
-    "Dermaptera Species File": ("species-file-dermaptera", "2011-05-09"),
-    "Plecoptera Species File": ("species-file-plecoptera", "2011-05-09"),
-    "Coreoidea Species File": ("species-file-coreoidea", "2011-05-08"),
-    "Aphid Species File": ("aphid-species-file", "2011-05-06"),
-    "Lygaeoidea Species File": ("species-file-lygaeoidea", "2016-12-05"),
     "Hymenoptera Information System": ("checklistbank-1118", "2017-07-31"),
 }
 # Mammal Species of the World (msw3) is held but left out for the same reason
