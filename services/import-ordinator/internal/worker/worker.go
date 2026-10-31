@@ -53,6 +53,7 @@ type Pipeline struct {
 	ap    *apply.Runner
 	stop  chan struct{}
 	done  chan struct{}
+	once  sync.Once
 }
 
 // NewPipeline creates a new pipeline.
@@ -103,6 +104,9 @@ func (p *Pipeline) RunOnce(ctx context.Context) {
 	}
 	p.drain(ctx)
 	lock.Release()
+	if p.stopping() {
+		return
+	}
 
 	// Outside the lock: the Python side takes the same lock itself, and
 	// flock on a second descriptor would fail even from our own child.
@@ -134,6 +138,10 @@ func (p *Pipeline) drain(ctx context.Context) {
 	sem := make(chan struct{}, p.cfg.Workers)
 	var wg sync.WaitGroup
 	for _, key := range queue.SortKeys(entries) {
+		if p.stopping() {
+			fmt.Println("stop requested -- not starting another source")
+			break
+		}
 		if !queue.CanProcess(entries[key].Stage) {
 			continue
 		}
@@ -169,12 +177,14 @@ func (p *Pipeline) runSideTasks(ctx context.Context) {
 	}
 }
 
-// RunLoop runs the pipeline in a loop until ctx is done.
+// RunLoop runs the pipeline in a loop until ctx is done or Stop is called.
 func (p *Pipeline) RunLoop(ctx context.Context) {
 	for {
 		p.RunOnce(ctx)
 		select {
 		case <-ctx.Done():
+			return
+		case <-p.stop:
 			return
 		case <-time.After(p.cfg.PollInterval):
 		}
@@ -189,9 +199,22 @@ func (p *Pipeline) Store() *queue.Store {
 	return p.store
 }
 
-// Stop stops the pipeline.
+// Stop asks the pipeline to stop at the next safe point: the source being
+// processed finishes (transform and apply), no further source or side task
+// starts, and RunLoop returns. Cancelling RunLoop's ctx is the hard stop,
+// which kills the running child and leaves the source for the next start to
+// reset. Safe to call more than once.
 func (p *Pipeline) Stop() {
-	close(p.stop)
+	p.once.Do(func() { close(p.stop) })
+}
+
+func (p *Pipeline) stopping() bool {
+	select {
+	case <-p.stop:
+		return true
+	default:
+		return false
+	}
 }
 
 // ncLicence matches sourceQueue/importQueueDriver's licence gate: "nc" as

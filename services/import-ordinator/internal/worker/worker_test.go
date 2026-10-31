@@ -1,8 +1,11 @@
 package worker
 
 import (
+	"context"
 	"strings"
 	"testing"
+
+	"systema-naturae/import-ordinator/internal/queue"
 )
 
 func TestParseTriaged(t *testing.T) {
@@ -43,5 +46,23 @@ func TestFailureReason(t *testing.T) {
 	}
 	if got, want := failureReason("apply", 2, ""), "apply failed (rc=2)"; got != want {
 		t.Errorf("got %q, want %q", got, want)
+	}
+}
+
+func TestStopStartsNoFurtherSource(t *testing.T) {
+	dir := t.TempDir()
+	p := NewPipeline(Config{RepoRoot: dir, QueueDir: dir, NoDownload: true, NoSideTasks: true})
+	if err := p.store.Write("checklistbank-1", &queue.Entry{Key: "checklistbank-1", Stage: queue.StageDownloaded}); err != nil {
+		t.Fatal(err)
+	}
+	p.Stop()
+	p.Stop() // idempotent: a second signal must not panic
+	p.drain(context.Background())
+	e, err := p.store.ReadOne("checklistbank-1")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if e.Stage != queue.StageDownloaded {
+		t.Fatalf("a stopping pipeline touched a source: stage %q", e.Stage)
 	}
 }

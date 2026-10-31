@@ -166,9 +166,16 @@ func main() {
 		dash.HTMLPath = filepath.Join(repoRoot, "services", "import-ordinator", "internal", "dashboard", "dashboard.html")
 	}
 
-	// Context for graceful shutdown
-	ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
-	defer stop()
+	// Shutdown in two steps. The first SIGINT/SIGTERM asks the pipeline to
+	// stop at the next safe point -- the source in progress finishes its
+	// transform and apply, nothing new starts -- so a restart never cuts an
+	// apply short. A second signal cancels ctx: the running child is killed
+	// and the next start resets the source it was on.
+	ctx, hardStop := context.WithCancel(context.Background())
+	defer hardStop()
+	sigs := make(chan os.Signal, 2)
+	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	done := make(chan struct{})
 
 	// HTTP server with dashboard and health endpoints
 	mux := http.NewServeMux()
@@ -189,6 +196,7 @@ func main() {
 
 	// Run pipeline in background goroutine
 	go func() {
+		defer close(done)
 		if *loop {
 			log.Printf("import-ordinator pipeline loop starting")
 			pipeline.RunLoop(ctx)
@@ -211,8 +219,20 @@ func main() {
 		}
 	}()
 
-	// Wait for context cancellation (SIGINT/SIGTERM)
-	<-ctx.Done()
+	select {
+	case <-sigs:
+		log.Println("stop requested: finishing the current source, then exiting " +
+			"(signal again to stop now)")
+		pipeline.Stop()
+		select {
+		case <-done:
+		case <-sigs:
+			log.Println("second signal: stopping now")
+			hardStop()
+			<-done
+		}
+	case <-done: // a single pass (no --loop) finished on its own
+	}
 	log.Println("shutting down...")
 
 	// Graceful shutdown with timeout
