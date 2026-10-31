@@ -2008,7 +2008,8 @@
           "children": [],
           "sourceIds": {
             "gbif": 6124505,
-            "gbif-backbone": "6124505"
+            "gbif-backbone": "6124505",
+            "checklistbank-98680": "NG:NCB:UL_SS_Coastal_Flora_Checklist:0000186"
           },
           "uuid": "d113ff13-4e85-5a6-abf-407e611f6dd4c6",
           "authorityIds": "gbif:6124505"
@@ -6837,7 +6838,8 @@
             "checklistbank-2169": "1093239",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "4565",
             "checklistbank-7888": "NHMSYS0020955015",
-            "checklistbank-316384": "3533PROT"
+            "checklistbank-316384": "3533PROT",
+            "checklistbank-98680": "NG:NCB:UL_SS_Coastal_Flora_Checklist:0000547"
           },
           "uuid": "0d63c946-aa74-5fd-8e7-49088d97e58a5d",
           "authorityIds": "gbif:8054741,itis:4565"
@@ -16646,10 +16648,40 @@
       "sourcedFrom": "checklistbank",
       "lineage": "amphipleuraceae",
       "children": []
+    },
+    {
+      "id": "GENUS_NITZSCHIA",
+      "name": "Nitzschia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphipleuraceae",
+      "children": []
+    },
+    {
+      "id": "GENUS_ANOMOENEIS",
+      "name": "Anomoeneis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphipleuraceae",
+      "children": [
+        {
+          "id": "SP_ANOMOENEIS_SERIANS_BR_BISSON_1838",
+          "name": "Anomoeneis serians",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomoeneis",
+          "authorship": "Brébisson, 1838",
+          "sourceIds": {
+            "checklistbank-98680": "NG:NCB:UL_SS_Coastal_Flora_Checklist:0000463"
+          },
+          "uuid": "4f90fae0-a141-4171-9a6c-5d119c46c757"
+        }
+      ]
     }
   ],
   "genusCount": 29,
-  "speciesCount": 893,
+  "speciesCount": 894,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

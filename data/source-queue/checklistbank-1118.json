@@ -1,5 +1,25 @@
 {
+  "key": "checklistbank-1118",
+  "title": "Batch import - checklistbank-1118",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 557841,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-1118/archive.zip",
+  "reason": "ACEF archive; readable since the 2026-10-31 ACEF/tar fix (32427dc)",
+  "applied": {
+    "added": 137,
+    "merged": 2413,
+    "crossFamily": 26,
+    "families": 3,
+    "at": "2026-10-31T16:12:17Z"
+  },
+  "triaged": {
+    "offered": 13795,
+    "alreadyHeld": 11088,
+    "staged": 2550,
+    "refused": 0,
+    "refusalRate": 0
+  },
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -12,12 +32,30 @@
     {
       "at": "2026-10-22T16:14:27+0200",
       "stage": "blocked"
+    },
+    {
+      "at": "2026-10-31T16:43:54+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-10-31T16:07:29Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-10-31T16:11:13Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-10-31T16:11:13Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-10-31T16:11:13Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-10-31T16:12:17Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-1118",
-  "licence": "cc by",
-  "reason": "HymIS ships flat-table ColDP (AcceptedSpecies.tsv, no Taxon/Name pair); needs a 5th reader shape, see dataset-inbox.md 2026-10-17",
-  "size": 557841,
-  "stage": "blocked",
-  "title": "Batch import - checklistbank-1118"
+  ]
 }

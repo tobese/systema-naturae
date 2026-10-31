@@ -48,9 +48,12 @@
             "col": [
               "7RSKS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1370363"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1370363",
+              "2710702"
+            ]
           },
-          "authorityIds": "col:7RSKS",
+          "authorityIds": "checklistbank:2710702,checklistbank:urn:lsid:marinespecies.org:taxname:1370363,col:7RSKS",
           "authorship": "(Deshayes, 1838)"
         },
         {
@@ -270,12 +273,16 @@
               "3RLBS"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1075251"
+              "urn:lsid:marinespecies.org:taxname:1075251",
+              "txn:348718"
             ],
             "gbif-backbone": "9469087",
-            "checklistbank-316441": "3RLBS"
+            "checklistbank-316441": "3RLBS",
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1075251"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1075251,col:3RLBS",
+          "authorityIds": "checklistbank:txn:348718,checklistbank:urn:lsid:marinespecies.org:taxname:1075251,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1075251,checklistbank-316441:3RLBS,col:3RLBS,gbif-backbone:9469087",
           "authorship": "(F. M. Anderson & G D. Hanna, 1925)"
         },
         {
@@ -355,10 +362,13 @@
             "col": [
               "6NQ65"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1064409",
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1064409",
+              "1498603"
+            ],
             "checklistbank-316441": "7H96R"
           },
-          "authorityIds": "col:6NQ65",
+          "authorityIds": "checklistbank:1498603,checklistbank:urn:lsid:marinespecies.org:taxname:1064409,checklistbank-316441:7H96R,col:6NQ65",
           "authorship": "(Broderip, 1832)"
         },
         {
@@ -629,11 +639,15 @@
           "lineage": "Labyrinthus",
           "authorship": "([Lightfoot], 1786)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1064481"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1064481",
+              "ott7970797"
+            ]
           },
           "children": [],
           "uuid": "24979cff-7c5e-52d-b37-e9f38e5f0d17ab",
-          "description": "Labyrinthus otis is a labyrinthidae species found in its native region."
+          "description": "Labyrinthus otis is a labyrinthidae species found in its native region.",
+          "authorityIds": "checklistbank:ott7970797,checklistbank:urn:lsid:marinespecies.org:taxname:1064481"
         },
         {
           "id": "SP_LABYRINTHUS_DIMINUTUS",
@@ -1206,13 +1220,14 @@
               "7RRH9"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1371100"
+              "urn:lsid:marinespecies.org:taxname:1371100",
+              "1498601"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1371100",
             "gbif-backbone": "9211655",
             "checklistbank-316441": "7RRH9"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1371100,col:7RRH9",
+          "authorityIds": "checklistbank:1498601,checklistbank:urn:lsid:marinespecies.org:taxname:1371100,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1371100,checklistbank-316441:7RRH9,col:7RRH9,gbif-backbone:9211655",
           "authorship": "(F. C. L. Koch, 1844)"
         },
         {
@@ -1346,9 +1361,12 @@
           "sourceIds": {
             "col": [
               "KPCTB"
+            ],
+            "checklistbank": [
+              "ott6361790"
             ]
           },
-          "authorityIds": "col:KPCTB",
+          "authorityIds": "checklistbank:ott6361790,col:KPCTB",
           "description": "Isomeria awa is a labyrinthidae species found in its native region."
         },
         {
@@ -1404,9 +1422,12 @@
           "sourceIds": {
             "col": [
               "PQG6B"
+            ],
+            "checklistbank": [
+              "ott6361791"
             ]
           },
-          "authorityIds": "col:PQG6B",
+          "authorityIds": "checklistbank:ott6361791,col:PQG6B",
           "description": "Isomeria tamsiana is a labyrinthidae species found in its native region."
         },
         {

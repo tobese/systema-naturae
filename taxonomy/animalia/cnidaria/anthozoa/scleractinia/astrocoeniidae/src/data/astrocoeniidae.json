@@ -34,13 +34,15 @@
               "52847"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:206950"
+              "urn:lsid:marinespecies.org:taxname:206950",
+              "txn:178405"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:206950",
             "checklistbank-127379": "3d7b8f1d-7a5b-4ff1-b7eb-aa495a5deb03",
-            "checklistbank-316441": "539YG"
+            "checklistbank-316441": "539YG",
+            "checklistbank-312616": "619c03d0-ed48-4229-a954-c73e7a596d50"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:206950,col:539YG,itis:52847,wikidata:Q3950348"
+          "authorityIds": "checklistbank:txn:178405,checklistbank:urn:lsid:marinespecies.org:taxname:206950,checklistbank-127379:3d7b8f1d-7a5b-4ff1-b7eb-aa495a5deb03,checklistbank-2011:urn:lsid:marinespecies.org:taxname:206950,checklistbank-316441:539YG,col:539YG,itis:52847,wikidata:Q3950348"
         },
         {
           "id": "SP_STYLOCOENIELLA_COCOSENSIS_VERON_1990",
@@ -86,11 +88,13 @@
               "52846"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:206948"
+              "urn:lsid:marinespecies.org:taxname:206948",
+              "txn:178406"
             ],
-            "checklistbank-127379": "983005c0-3a12-41e0-858e-418b6716c465"
+            "checklistbank-127379": "983005c0-3a12-41e0-858e-418b6716c465",
+            "checklistbank-312616": "bd34cba6-4176-446c-9670-28ef1a100ef4"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:206948,col:539YJ,itis:52846,wikidata:Q3952420"
+          "authorityIds": "checklistbank:txn:178406,checklistbank:urn:lsid:marinespecies.org:taxname:206948,checklistbank-127379:983005c0-3a12-41e0-858e-418b6716c465,col:539YJ,itis:52846,wikidata:Q3952420"
         },
         {
           "id": "SP_STYLOCOENIELLA_JAPONICA",
@@ -302,13 +306,20 @@
           "lineage": "Palauastrea",
           "authorship": "Yabe & Sugiyama",
           "sourceIds": {
-            "checklistbank": "17e61c68-28a0-4da7-9ee0-2886cbe9eec6",
-            "checklistbank-1174": "txn:223764"
+            "checklistbank": [
+              "17e61c68-28a0-4da7-9ee0-2886cbe9eec6",
+              "Palauastrea_ramosa"
+            ],
+            "checklistbank-1174": "txn:223764",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": [
+              "53031"
+            ]
           },
           "children": [],
           "uuid": "e90fb885-71d6-504-8bc-7208aa402e8b6d",
           "commonName": "finger coral",
-          "description": "Palauastrea ramosa (finger coral) is a astrocoeniidae species found in its native region."
+          "description": "Palauastrea ramosa (finger coral) is a astrocoeniidae species found in its native region.",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:53031,checklistbank:17e61c68-28a0-4da7-9ee0-2886cbe9eec6,checklistbank:Palauastrea_ramosa,checklistbank-1174:txn:223764"
         },
         {
           "id": "SP_PALAUASTREA_SP",
@@ -1034,11 +1045,19 @@
           "lineage": "Stephanocoenia",
           "authorship": "Alloiteau, 1947",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1870265"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1870265",
+            "col": [
+              "VC67W"
+            ],
+            "gbif-backbone": [
+              "8777197"
+            ]
           },
           "children": [],
           "uuid": "11727af2-963c-519-849-dc13bf527106d1",
-          "description": "Stephanocoenia aragonensis is a astrocoeniidae species found in its native region."
+          "description": "Stephanocoenia aragonensis (Columnocoenia Aragonensis) is a pachyphylliidae species found in its native region.",
+          "commonName": "Columnocoenia Aragonensis",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1870265,col:VC67W,gbif-backbone:8777197"
         },
         {
           "id": "SP_STEPHANOCOENIA_MICHELINII_MILNE_EDWARDS_HAIME_1849",
@@ -3776,11 +3795,16 @@
           "lineage": "Astrocoenia",
           "authorship": "Smith, 1927",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1699086"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1699086",
+            "col": [
+              "BTQ4F"
+            ]
           },
           "children": [],
           "uuid": "623fe071-54d9-5d2-b30-6153c26ccbf944",
-          "description": "Astrocoenia martini is a astrocoeniidae species found in its native region."
+          "description": "Astrocoenia martini (Ceriostella Martini) is a pamiroseriidae species found in its native region.",
+          "commonName": "Ceriostella Martini",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1699086,col:BTQ4F"
         },
         {
           "id": "SP_ASTROCOENIA_RETIFERA_STOLICZKA_1873",
@@ -3791,11 +3815,16 @@
           "lineage": "Astrocoenia",
           "authorship": "Stoliczka, 1873",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724265"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724265",
+            "col": [
+              "BX8RP"
+            ]
           },
           "children": [],
           "uuid": "25120cb9-84b4-5d7-b5f-aa0e8652980deb",
-          "description": "Astrocoenia retifera is a astrocoeniidae species found in its native region."
+          "description": "Astrocoenia retifera (Stelidioseris Retifera) is a actinastreidae species found in its native region.",
+          "commonName": "Stelidioseris Retifera",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1724265,col:BX8RP"
         },
         {
           "id": "SP_ASTROCOENIA_REUSSIANA_STOLICZKA_1873",
@@ -3821,11 +3850,16 @@
           "lineage": "Astrocoenia",
           "authorship": "Bölsche, 1871",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1725623"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1725623",
+            "col": [
+              "BX8RR"
+            ]
           },
           "children": [],
           "uuid": "325310ba-951a-54c-82f-8ff382e314a2f5",
-          "description": "Astrocoenia tourtiensis is a astrocoeniidae species found in its native region."
+          "description": "Astrocoenia tourtiensis (Stelidioseris Tourtiensis) is a actinastreidae species found in its native region.",
+          "commonName": "Stelidioseris Tourtiensis",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1725623,col:BX8RR"
         },
         {
           "id": "SP_ASTROCOENIA_KUNTHI_B_LSCHE_1871",
@@ -3836,11 +3870,16 @@
           "lineage": "Astrocoenia",
           "authorship": "Bölsche, 1871",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1725624"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1725624",
+            "col": [
+              "BX8RM"
+            ]
           },
           "children": [],
           "uuid": "be6b250c-2538-5da-a85-4caef4046afdeb",
-          "description": "Astrocoenia kunthi is a astrocoeniidae species found in its native region."
+          "description": "Astrocoenia kunthi (Stelidioseris Kunthi) is a actinastreidae species found in its native region.",
+          "commonName": "Stelidioseris Kunthi",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1725624,col:BX8RM"
         },
         {
           "id": "SP_ASTROCOENIA_STYLIFERA_POURTAL_S",
@@ -4731,38 +4770,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MADRACIS_KIRBYI_VERON_PICHON",
-          "name": "Madracis kirbyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Madracis",
-          "authorship": "Veron & Pichon",
-          "sourceIds": {
-            "checklistbank": "f5f7fd65-fe60-4751-a5ae-27657af6d9a3",
-            "checklistbank-1174": "txn:178409"
-          },
-          "children": [],
-          "uuid": "3ec18156-090d-5cc-bbc-57e3023e70189b",
-          "commonName": "ten coral",
-          "description": "Madracis kirbyi (ten coral) is a astrocoeniidae species found in its native region."
-        },
-        {
-          "id": "SP_MADRACIS_JOHNWELLSI_FROST_AND_LANGENHEIM_1974",
-          "name": "Madracis johnwellsi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Madracis",
-          "authorship": "Frost and Langenheim 1974",
-          "sourceIds": {
-            "checklistbank": "txn:119912"
-          },
-          "children": [],
-          "uuid": "20b946eb-045b-5cc-874-f3bb4929a380a9",
-          "description": "Madracis johnwellsi is a astrocoeniidae species found in its native region."
-        },
-        {
           "id": "SP_MADRACIS_DECASEPTATA_WEISBORD_1971",
           "name": "Madracis decaseptata",
           "rank": "SPECIES",
@@ -4776,127 +4783,6 @@
           "children": [],
           "uuid": "6479c5c6-5315-5c8-8a4-8f061896731b2c",
           "description": "Madracis decaseptata is a astrocoeniidae species found in its native region."
-        },
-        {
-          "id": "SP_MADRACIS_DENSA_BUDD_ET_AL_1992",
-          "name": "Madracis densa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Madracis",
-          "authorship": "Budd et al. 1992",
-          "sourceIds": {
-            "checklistbank": "txn:151275"
-          },
-          "children": [],
-          "uuid": "330c7c57-15b2-5b1-8ea-3125c0ec109384",
-          "description": "Madracis densa is a astrocoeniidae species found in its native region."
-        },
-        {
-          "id": "SP_MADRACIS_ASPERULA_MILNE_EDWARDS_AND_HAIME_1850",
-          "name": "Madracis asperula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Madracis",
-          "authorship": "Milne-Edwards and Haime 1850",
-          "sourceIds": {
-            "checklistbank": "txn:177458"
-          },
-          "children": [],
-          "uuid": "afdbf787-3b89-5f4-9c6-5a75985328007e",
-          "commonName": "Pencil coral",
-          "description": "Madracis asperula (Pencil coral) is a astrocoeniidae species found in its native region."
-        },
-        {
-          "id": "SP_MADRACIS_AURETENRA_LOCKE_ET_AL_2007",
-          "name": "Madracis auretenra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Madracis",
-          "authorship": "Locke et al. 2007",
-          "sourceIds": {
-            "checklistbank": "txn:182869",
-            "checklistbank-139831": "105090"
-          },
-          "children": [],
-          "uuid": "346669aa-008a-52a-b99-f113138c62593b",
-          "commonName": "Yellow Pencil Coral",
-          "description": "Madracis auretenra, commonly known as the yellow finger coral or yellow pencil coral, is a colonial species of stony coral in the family Pocilloporidae."
-        },
-        {
-          "id": "SP_MADRACIS_MYRIASTER_MILNE_EDWARDS_AND_HAIME_1850",
-          "name": "Madracis myriaster",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Madracis",
-          "authorship": "(Milne-Edwards and Haime 1850)",
-          "sourceIds": {
-            "checklistbank": "txn:446423",
-            "checklistbank-7103": "BB8VW2KTMD9"
-          },
-          "children": [],
-          "uuid": "0eca9d82-d43b-52c-80c-50709cc7fa9565",
-          "commonName": "Yellow Pencil Coral",
-          "description": "Madracis myriaster (Yellow Pencil Coral) is a astrocoeniidae species found in its native region."
-        },
-        {
-          "id": "SP_MADRACIS_DECACTIS_LYMAN_1859",
-          "name": "Madracis decactis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Madracis",
-          "authorship": "(Lyman 1859)",
-          "sourceIds": {
-            "checklistbank": "txn:148814"
-          },
-          "children": [],
-          "uuid": "40dd71f4-107e-5ce-84d-6f70e4d41afd31"
-        },
-        {
-          "id": "SP_MADRACIS_ORNATA_MICHELOTTI_1838",
-          "name": "Madracis ornata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Madracis",
-          "authorship": "(Michelotti 1838)",
-          "sourceIds": {
-            "checklistbank": "txn:150436"
-          },
-          "children": [],
-          "uuid": "59affef0-3dce-514-8ee-db307b3815defd"
-        },
-        {
-          "id": "SP_MADRACIS_PHARENSIS_HELLER_1868",
-          "name": "Madracis pharensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Madracis",
-          "authorship": "(Heller 1868)",
-          "sourceIds": {
-            "checklistbank": "txn:178407"
-          },
-          "children": [],
-          "uuid": "ad02d449-0776-5c3-a52-63c072d80db4d3"
-        },
-        {
-          "id": "SP_MADRACIS_BRUEGGEMANNI_RIDLEY_1881",
-          "name": "Madracis brueggemanni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Madracis",
-          "authorship": "(Ridley, 1881)",
-          "sourceIds": {
-            "checklistbank-7103": "MWLRJKOGKHZ"
-          },
-          "children": [],
-          "uuid": "5a8c6817-fcc8-5a0f-8513-20c916ea4399"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4974,7 +4860,7 @@
     }
   ],
   "genusCount": 16,
-  "speciesCount": 282,
+  "speciesCount": 272,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

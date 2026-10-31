@@ -155,10 +155,11 @@
               "W7BZ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1298028"
+              "urn:lsid:marinespecies.org:taxname:1298028",
+              "txn:325903"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1298028,col:W7BZ",
+          "authorityIds": "checklistbank:txn:325903,checklistbank:urn:lsid:marinespecies.org:taxname:1298028,col:W7BZ",
           "authorship": "(Bellardi, 1873)"
         },
         {
@@ -298,12 +299,13 @@
               "W7CN"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:390544"
+              "urn:lsid:marinespecies.org:taxname:390544",
+              "5a6c7546-3f41-475c-b424-98d3baab4c44"
             ],
             "gbif-backbone": "4359332",
             "checklistbank-2169": "1323124"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:390544,col:W7CN",
+          "authorityIds": "checklistbank:5a6c7546-3f41-475c-b424-98d3baab4c44,checklistbank:urn:lsid:marinespecies.org:taxname:390544,checklistbank-2169:1323124,col:W7CN,gbif-backbone:4359332",
           "authorship": "(Boas, 1886)"
         },
         {
@@ -329,12 +331,19 @@
               "W7CP"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:139032"
+              "urn:lsid:marinespecies.org:taxname:139032",
+              "59032"
             ],
             "gbif-backbone": "2293856",
-            "checklistbank-24927": "83320fc2-3bdf-480f-8346-f82899601abd"
+            "checklistbank-24927": "83320fc2-3bdf-480f-8346-f82899601abd",
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:139032"
+            ],
+            "checklistbank-127379": [
+              "a0d6ec41-e420-4623-ad54-5d6c78435c07"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:139032,col:W7CP,itis:76367",
+          "authorityIds": "checklistbank:59032,checklistbank:urn:lsid:marinespecies.org:taxname:139032,checklistbank-127379:a0d6ec41-e420-4623-ad54-5d6c78435c07,checklistbank-2011:urn:lsid:marinespecies.org:taxname:139032,checklistbank-24927:83320fc2-3bdf-480f-8346-f82899601abd,col:W7CP,gbif-backbone:2293856,itis:76367",
           "authorship": "(Bosc, 1801)"
         },
         {
@@ -1174,12 +1183,19 @@
           "sourcedFrom": "wikipedia",
           "lineage": "Clio",
           "sourceIds": {
-            "checklistbank": "taicol: 92690"
+            "checklistbank": [
+              "taicol: 92690",
+              "59033"
+            ],
+            "checklistbank-127379": [
+              "377a290d-9554-410b-ad47-d46d2950ddb6"
+            ]
           },
           "children": [],
           "uuid": "f6b04533-9c1a-5bc-a1b-d4948c87baf1d9",
           "commonName": "pyramid clio",
-          "description": "Clio pyramidata is a species of sea butterfly, a floating and swimming sea snail, a pelagic marine gastropod mollusk in the family Cliidae."
+          "description": "Clio pyramidata is a species of sea butterfly, a floating and swimming sea snail, a pelagic marine gastropod mollusk in the family Cliidae.",
+          "authorityIds": "checklistbank:59033,checklistbank:taicol: 92690,checklistbank-127379:377a290d-9554-410b-ad47-d46d2950ddb6"
         },
         {
           "id": "SP_CLIO_CHAPTALII_J_E_GRAY_1850",
@@ -1343,11 +1359,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Clio",
           "sourceIds": {
-            "checklistbank": "ott2883924"
+            "checklistbank": [
+              "ott2883924",
+              "txn:71719"
+            ]
           },
           "children": [],
           "uuid": "402719a0-9283-542-af8-46d1d7ce8a72d3",
-          "description": "Clio kendacensis is a cliidae species found in its native region."
+          "description": "Clio kendacensis is a cliidae species found in its native region.",
+          "authorityIds": "checklistbank:ott2883924,checklistbank:txn:71719"
         },
         {
           "id": "SP_CLIO_BERGLUNDORUM",

@@ -807,9 +807,12 @@
           "sourceIds": {
             "col": [
               "C5W3F"
+            ],
+            "checklistbank": [
+              "txn:386509"
             ]
           },
-          "authorityIds": "col:C5W3F",
+          "authorityIds": "checklistbank:txn:386509,col:C5W3F",
           "description": "Neomorphotis comta is a heteropectinidae species found in its native region."
         },
         {
@@ -839,11 +842,15 @@
           "lineage": "Neomorphotis",
           "authorship": "H.-F. Yin & J.-R. Yin, 1983",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1733929"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1733929",
+              "txn:383481"
+            ]
           },
           "children": [],
           "uuid": "f974ea32-d6c3-59f-91c-b64182320f7f3c",
-          "description": "Neomorphotis gigantea is a heteropectinidae species found in its native region."
+          "description": "Neomorphotis gigantea is a heteropectinidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:383481,checklistbank:urn:lsid:marinespecies.org:taxname:1733929"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -883,11 +890,15 @@
           "lineage": "Girtypecten",
           "authorship": "(Girty, 1909)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662391"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662391",
+            "col": [
+              "BCYFP"
+            ]
           },
           "children": [],
           "uuid": "a695cabc-b1d5-56a-84f-7cf9f717dcba7c",
-          "description": "Girtypecten sublaqueatus is a heteropectinidae species found in its native region."
+          "description": "Girtypecten sublaqueatus is a heteropectinidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1662391,col:BCYFP"
         },
         {
           "id": "SP_GIRTYPECTEN_SPINOSUS_C_Z_CHEN_1962",

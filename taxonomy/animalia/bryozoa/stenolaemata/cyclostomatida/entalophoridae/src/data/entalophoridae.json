@@ -39,10 +39,11 @@
               "86LYY"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1411989"
+              "urn:lsid:marinespecies.org:taxname:1411989",
+              "txn:439050"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411989,col:86LYY",
+          "authorityIds": "checklistbank:txn:439050,checklistbank:urn:lsid:marinespecies.org:taxname:1411989,col:86LYY",
           "authorship": "(d'Orbigny, 1851)"
         },
         {
@@ -183,10 +184,11 @@
               "3YMJJ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:470883"
+              "urn:lsid:marinespecies.org:taxname:470883",
+              "ca17833f-0e8e-495b-8ccc-c973eb7e2017"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470883,col:3YMJJ",
+          "authorityIds": "checklistbank:ca17833f-0e8e-495b-8ccc-c973eb7e2017,checklistbank:urn:lsid:marinespecies.org:taxname:470883,col:3YMJJ",
           "authorship": "(Busk, 1875)"
         },
         {
@@ -223,10 +225,11 @@
               "86LZ5"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1411993"
+              "urn:lsid:marinespecies.org:taxname:1411993",
+              "txn:439054"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411993,col:86LZ5",
+          "authorityIds": "checklistbank:txn:439054,checklistbank:urn:lsid:marinespecies.org:taxname:1411993,col:86LZ5",
           "authorship": "(d'Orbigny, 1851)"
         },
         {
@@ -327,10 +330,11 @@
               "3YMJL"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:111742"
+              "urn:lsid:marinespecies.org:taxname:111742",
+              "e3a3087d-39ab-4495-afec-505a1c7a4aff"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:111742,col:3YMJL",
+          "authorityIds": "checklistbank:e3a3087d-39ab-4495-afec-505a1c7a4aff,checklistbank:urn:lsid:marinespecies.org:taxname:111742,col:3YMJL",
           "authorship": "(Busk, 1875)"
         },
         {
@@ -469,10 +473,11 @@
               "86LZG"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1411997"
+              "urn:lsid:marinespecies.org:taxname:1411997",
+              "txn:425649"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411997,col:86LZG",
+          "authorityIds": "checklistbank:txn:425649,checklistbank:urn:lsid:marinespecies.org:taxname:1411997,col:86LZG",
           "authorship": "(d'Orbigny, 1850)"
         },
         {
@@ -532,10 +537,11 @@
               "86LZJ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1411999"
+              "urn:lsid:marinespecies.org:taxname:1411999",
+              "txn:438404"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411999,col:86LZJ",
+          "authorityIds": "checklistbank:txn:438404,checklistbank:urn:lsid:marinespecies.org:taxname:1411999,col:86LZJ",
           "authorship": "(Römer, 1840-1841)"
         },
         {
@@ -1149,9 +1155,14 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Mecynoecia",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107000969"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107000969",
+            "checklistbank": [
+              "txn:356602"
+            ]
           },
-          "children": []
+          "children": [],
+          "description": "Mecynoecia kaimi is a mecynoeciidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q107000969,checklistbank:txn:356602"
         },
         {
           "id": "SP_MECYNOECIA_LOBATA",
@@ -4772,29 +4783,6 @@
       "lineage": "entalophoridae"
     },
     {
-      "id": "GENUS_MICROECIA",
-      "name": "Microecia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MICROECIA_TUBULUS_D_ORBIGNY_1851",
-          "name": "Microecia tubulus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microecia",
-          "authorship": "(d'Orbigny 1851)",
-          "sourceIds": {
-            "checklistbank": "txn:439056"
-          },
-          "children": [],
-          "uuid": "b07d60fd-3f7f-539-9ce-91f7e90773ffc5"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "entalophoridae"
-    },
-    {
       "id": "GENUS_CERIOPORA",
       "name": "Ceriopora",
       "rank": "GENUS",
@@ -4918,30 +4906,6 @@
           "children": []
         },
         {
-          "id": "SP_MESENTERIPORA_JAMESI",
-          "name": "Mesenteripora jamesi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mesenteripora",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107003120"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MESENTERIPORA_MICHELINI",
-          "name": "Mesenteripora michelini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mesenteripora",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107003127"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MESENTERIPORA_CUSPIDATA",
           "name": "Mesenteripora cuspidata",
           "rank": "SPECIES",
@@ -5004,8 +4968,8 @@
       "lineage": "entalophoridae"
     }
   ],
-  "genusCount": 21,
-  "speciesCount": 294,
+  "genusCount": 20,
+  "speciesCount": 291,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

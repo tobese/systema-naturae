@@ -29,11 +29,12 @@
               "34ZJX"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:385869"
+              "urn:lsid:marinespecies.org:taxname:385869",
+              "993610"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:385869"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:385869,col:34ZJX",
+          "authorityIds": "checklistbank:993610,checklistbank:urn:lsid:marinespecies.org:taxname:385869,checklistbank-2011:urn:lsid:marinespecies.org:taxname:385869,col:34ZJX",
           "children": [],
           "authorship": "(P. P. Carpenter, 1879)"
         },
@@ -112,11 +113,15 @@
           "lineage": "Deshayesiella",
           "authorship": "H. Saito, Fujikura & Tsuchida, 2008",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:385871"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:385871",
+              "ott4160572"
+            ]
           },
           "children": [],
           "uuid": "f701ee83-56ab-53b-993-6d37da66327d66",
-          "description": "Deshayesiella sirenkoi is a protochitonidae species found in its native region."
+          "description": "Deshayesiella sirenkoi is a protochitonidae species found in its native region.",
+          "authorityIds": "checklistbank:ott4160572,checklistbank:urn:lsid:marinespecies.org:taxname:385871"
         }
       ]
     },
@@ -196,9 +201,12 @@
             "col": [
               "493GY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:488022"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:488022",
+              "993611"
+            ]
           },
-          "authorityIds": "col:493GY,itis:78830",
+          "authorityIds": "checklistbank:993611,checklistbank:urn:lsid:marinespecies.org:taxname:488022,col:493GY,itis:78830",
           "children": [],
           "authorship": "(Dall, 1894)"
         },
@@ -232,11 +240,21 @@
           "lineage": "Hanleyella",
           "authorship": "H. Saito, 1997",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:385842"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:385842",
+              "2510462"
+            ],
+            "checklistbank-2265": [
+              "2510462"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q3794869"
+            ]
           },
           "children": [],
           "uuid": "6b74f976-7d1b-57e-a40-e91bf2fde30cd8",
-          "description": "Hanleyella japonica is a protochitonidae species found in its native region."
+          "description": "Hanleyella japonica is a protochitonidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q3794869,checklistbank:2510462,checklistbank:urn:lsid:marinespecies.org:taxname:385842,checklistbank-2265:2510462"
         },
         {
           "id": "SP_HANLEYELLA_HENRICI_SIGWART_C_CHEN_2018",
@@ -247,11 +265,21 @@
           "lineage": "Hanleyella",
           "authorship": "Sigwart & C. Chen, 2018",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1316306"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1316306",
+              "2510461"
+            ],
+            "checklistbank-2265": [
+              "2510461"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q61707271"
+            ]
           },
           "children": [],
           "uuid": "36308f80-6585-516-a2a-f84dd1ed81a10f",
-          "description": "Hanleyella henrici is a protochitonidae species found in its native region."
+          "description": "Hanleyella henrici is a protochitonidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q61707271,checklistbank:2510461,checklistbank:urn:lsid:marinespecies.org:taxname:1316306,checklistbank-2265:2510461"
         },
         {
           "id": "SP_HANLEYELLA_ASIATICA_SIRENKO_1973",
@@ -262,7 +290,13 @@
           "lineage": "Hanleyella",
           "authorship": "Sirenko, 1973",
           "children": [],
-          "uuid": "9c7e42fd-05a0-503-94a-f284b72b021970"
+          "uuid": "9c7e42fd-05a0-503-94a-f284b72b021970",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q3802184"
+            ]
+          },
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q3802184"
         },
         {
           "id": "SP_HANLEYELLA_OLDROYDI_DALL_1919",
@@ -275,8 +309,12 @@
           "children": [],
           "uuid": "160e8960-6056-5fe-a7d-17ebdb074bed11",
           "sourceIds": {
-            "checklistbank-139831": "220901"
-          }
+            "checklistbank-139831": "220901",
+            "checklistbank-2265": [
+              "515356"
+            ]
+          },
+          "authorityIds": "checklistbank-139831:220901,checklistbank-2265:515356"
         }
       ],
       "sourcedFrom": "checklistbank",

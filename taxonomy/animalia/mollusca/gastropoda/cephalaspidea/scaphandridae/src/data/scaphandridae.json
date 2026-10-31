@@ -1115,9 +1115,12 @@
           "sourceIds": {
             "col": [
               "VR23K"
+            ],
+            "checklistbank": [
+              "txn:518748"
             ]
           },
-          "authorityIds": "col:VR23K",
+          "authorityIds": "checklistbank:txn:518748,col:VR23K",
           "description": "Scaphander schmitti is a scaphandridae species found in its native region."
         },
         {
@@ -1802,11 +1805,15 @@
           "lineage": "Scaphander",
           "authorship": "C. E. Weaver, 1916",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1767746"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1767746",
+              "txn:401610"
+            ]
           },
           "children": [],
           "uuid": "c6a4a1d6-941e-59f-9d4-8018d7a6ed8f8b",
-          "description": "Scaphander washingtonensis is a scaphandridae species found in its native region."
+          "description": "Scaphander washingtonensis is a scaphandridae species found in its native region.",
+          "authorityIds": "checklistbank:txn:401610,checklistbank:urn:lsid:marinespecies.org:taxname:1767746"
         },
         {
           "id": "SP_SCAPHANDER_SULCATINUS_DESHAYES_1862",
@@ -1817,11 +1824,15 @@
           "lineage": "Scaphander",
           "authorship": "(Deshayes, 1862)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1885098"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1885098",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q14314956"
+            ]
           },
           "children": [],
           "uuid": "9eefa95b-fddd-5ec-904-cbb4cae25aae20",
-          "description": "Scaphander sulcatinus is a scaphandridae species found in its native region."
+          "description": "Scaphander sulcatinus is a scaphandridae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q14314956,checklistbank:urn:lsid:marinespecies.org:taxname:1885098"
         },
         {
           "id": "SP_SCAPHANDER_JAPONICUS_A_ADAMS_1862",
@@ -2010,11 +2021,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Scaphander",
           "sourceIds": {
-            "checklistbank": "1201812"
+            "checklistbank": [
+              "1201812",
+              "6b0d0e76-b577-4277-b9a2-c46710b29295"
+            ]
           },
           "children": [],
           "uuid": "33f3555a-624e-58d-94f-927543b47a737b",
-          "description": "Scaphander illecebrosus is a scaphandridae species found in its native region."
+          "description": "Scaphander illecebrosus is a scaphandridae species found in its native region.",
+          "authorityIds": "checklistbank:1201812,checklistbank:6b0d0e76-b577-4277-b9a2-c46710b29295"
         },
         {
           "id": "SP_SCAPHANDER_CLAVUS",
@@ -3248,9 +3263,14 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Taita",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106228377"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106228377",
+            "checklistbank": [
+              "txn:340025"
+            ]
           },
-          "children": []
+          "children": [],
+          "description": "Taita lawsi is a cylichnidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q106228377,checklistbank:txn:340025"
         },
         {
           "id": "SP_TAITA_CALLOSA",
@@ -3549,52 +3569,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ROXANIA_PINGUICULA_SEGUENZA_G_1879",
-          "name": "Roxania pinguicula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Roxania",
-          "authorship": "(Seguenza G., 1879)",
-          "sourceIds": {
-            "checklistbank": "59485",
-            "checklistbank-7888": "NHMSYS0021184727"
-          },
-          "children": [],
-          "uuid": "2af9a4d7-a499-5b5-9ff-d9ad36cdb3b0b3",
-          "description": "Roxania pinguicula is a scaphandridae species found in its native region."
-        },
-        {
-          "id": "SP_ROXANIA_UTRICULUS_BROCCHI_1814",
-          "name": "Roxania utriculus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Roxania",
-          "authorship": "(Brocchi, 1814)",
-          "sourceIds": {
-            "checklistbank": "59486"
-          },
-          "children": [],
-          "uuid": "226bc395-7fac-5bf-987-0d1bce779ad2ef",
-          "description": "Roxania utriculus is a scaphandridae species found in its native region."
-        },
-        {
-          "id": "SP_ROXANIA_SEMILAEVIS",
-          "name": "Roxania semilaevis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Roxania",
-          "sourceIds": {
-            "checklistbank": "ott2884123",
-            "checklistbank-7888": "NHMSYS0021056086"
-          },
-          "children": [],
-          "uuid": "de79fdae-e0ef-50c-8e7-3feb163731d466",
-          "description": "Roxania semilaevis is a scaphandridae species found in its native region."
-        },
-        {
           "id": "SP_ROXANIA_PUNCTULATA",
           "name": "Roxania punctulata",
           "rank": "SPECIES",
@@ -3621,20 +3595,6 @@
           "children": [],
           "uuid": "2a8c72d2-421f-55e-914-ab92d0ada778dc",
           "description": "Roxania pacifica is a scaphandridae species found in its native region."
-        },
-        {
-          "id": "SP_ROXANIA_HORNII",
-          "name": "Roxania hornii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Roxania",
-          "sourceIds": {
-            "checklistbank": "ott7960176"
-          },
-          "children": [],
-          "uuid": "a07c65ae-0bb5-5ab-922-fadd102ee390a4",
-          "description": "Roxania hornii is a scaphandridae species found in its native region."
         },
         {
           "id": "SP_ROXANIA_JOGJACARTENSIS",
@@ -4601,7 +4561,7 @@
     }
   ],
   "genusCount": 34,
-  "speciesCount": 260,
+  "speciesCount": 256,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

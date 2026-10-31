@@ -3500,11 +3500,15 @@
           "lineage": "Protaraea",
           "authorship": "Mõtus, 2012",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861551"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861551",
+              "txn:268041"
+            ]
           },
           "children": [],
           "uuid": "2e82b62d-f3d0-529-a98-5cb6c0a9ed8753",
-          "description": "Protaraea procella is a poritidae species found in its native region."
+          "description": "Protaraea procella is a poritidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:268041,checklistbank:urn:lsid:marinespecies.org:taxname:1861551"
         },
         {
           "id": "SP_PROTARAEA_RICHMONDENSIS",
@@ -6699,7 +6703,8 @@
             ],
             "checklistbank-316441": "77W9W",
             "checklistbank-2169": "262591",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "53188"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "53188",
+            "checklistbank-312616": "f5ffc90c-e9a6-4cb0-be69-9a49819013b1"
           },
           "authorityIds": "checklistbank:f5ffc90c-e9a6-4cb0-be69-9a49819013b1,checklistbank:urn:lsid:marinespecies.org:taxname:207231,checklistbank-1174:txn:178899,checklistbank-127379:7d756e35-2476-4bf0-8378-b984ac867abc,col:77W9W,itis:53188,wikidata:Q3939310"
         },
@@ -6888,7 +6893,8 @@
             "checklistbank-316441": "6W7XV",
             "checklistbank-2169": "627028",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "53193",
-            "checklistbank-312242": "10000"
+            "checklistbank-312242": "10000",
+            "checklistbank-312616": "54375f7d-5526-4a6f-bdc5-79bff057dd53"
           },
           "authorityIds": "checklistbank:54375f7d-5526-4a6f-bdc5-79bff057dd53,checklistbank:urn:lsid:marinespecies.org:taxname:207227,checklistbank-1174:txn:150331,checklistbank-127379:58addf86-7e2c-49f8-9c25-85c9e9527f65,col:6W7XV,itis:53193,wikidata:Q3939981"
         },
@@ -7675,11 +7681,19 @@
           "lineage": "Porites",
           "authorship": "Počta, 1887",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1697736"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1697736",
+            "col": [
+              "BTSCF"
+            ],
+            "gbif-backbone": [
+              "9511457"
+            ]
           },
           "children": [],
           "uuid": "b05c2235-1481-574-b28-440b1a8859334a",
-          "description": "Porites spissus is a poritidae species found in its native region."
+          "description": "Porites spissus (Negoporites Spissus) is a negoporitidae species found in its native region.",
+          "commonName": "Negoporites Spissus",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1697736,col:BTSCF,gbif-backbone:9511457"
         },
         {
           "id": "SP_PORITES_CONVEXA_VERRILL_1864",
@@ -10257,146 +10271,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ALVEOPORA_VERRILLIANA_DANA_1872",
-          "name": "Alveopora verrilliana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Alveopora",
-          "authorship": "Dana,1872",
-          "sourceIds": {
-            "checklistbank": "1ba853ea-b6b7-40cf-878f-ce8032e96e70",
-            "checklistbank-311726": "16251",
-            "checklistbank-139831": "503680",
-            "checklistbank-2265": "1455035"
-          },
-          "children": [],
-          "uuid": "6a378f6b-ba9c-5f8-a43-1a088b946310cd",
-          "commonName": "net coral",
-          "description": "Alveopora verrilliana is a species of stony coral that is found in the Red Sea, the Gulf of Aden, the northern Indian Ocean, the central Indo-Pacific, Australia, Southeast Asia, Japan, the East China Sea, the oceanic west and central Pacific Ocean and the Johnston Atoll."
-        },
-        {
-          "id": "SP_ALVEOPORA_FENESTRATA_LAMARCK_1816",
-          "name": "Alveopora fenestrata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Alveopora",
-          "authorship": "(Lamarck),1816",
-          "sourceIds": {
-            "checklistbank": "4df5cbf4-d919-4279-89dc-474c06f9b172",
-            "checklistbank-127379": "ee4734bb-bcef-42d8-8618-7fd0b386ec1b"
-          },
-          "children": [],
-          "uuid": "9c2e8278-f7d9-552-bcb-e60eb2a0084f76",
-          "commonName": "net coral",
-          "description": "Pocillopora fenestrata is a species of stony coral that is found in the Red Sea, the Gulf of Aden, the southwest and northern Indian Ocean, the central Indo-Pacific, Australia, Southeast Asia and the oceanic west Pacific Ocean."
-        },
-        {
-          "id": "SP_ALVEOPORA_DAEDALEA_FORSKAL_1775",
-          "name": "Alveopora daedalea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "lineage": "Alveopora",
-          "authorship": "(Forskal, 1775)",
-          "sourceIds": {
-            "checklistbank": "3279874"
-          },
-          "children": [],
-          "uuid": "bd3aaf40-59fb-5ef-ae6-2a78e7c7761c61",
-          "commonName": "Alveopora coral",
-          "description": "Alveopora daedalea (Alveopora coral) is a poritidae species found in its native region."
-        },
-        {
-          "id": "SP_ALVEOPORA_ALLINGI",
-          "name": "Alveopora allingi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Alveopora",
-          "sourceIds": {
-            "checklistbank": "1455030"
-          },
-          "children": [],
-          "uuid": "bebc9acd-2952-5a2-8f1-37ed7e727c97e0",
-          "commonName": "net coral",
-          "description": "Alveopora allingi is a species of stony coral that is found in the Red Sea, the Gulf of Aden, the southwest and northern Indian Ocean, the central Indo-Pacific, Australia, Southeast Asia, Japan, the East China Sea and the oceanic west and central Pacific Ocean."
-        },
-        {
-          "id": "SP_ALVEOPORA_CATALAI",
-          "name": "Alveopora catalai",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Alveopora",
-          "sourceIds": {
-            "checklistbank": "1455031"
-          },
-          "children": [],
-          "uuid": "9610fe8e-c7af-55a-9a1-dd8adc7e0e19f4",
-          "commonName": "net coral",
-          "description": "Alveopora catalai (net coral) is a poritidae species found in its native region."
-        },
-        {
-          "id": "SP_ALVEOPORA_TIZARDI",
-          "name": "Alveopora tizardi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Alveopora",
-          "sourceIds": {
-            "checklistbank": "1455034"
-          },
-          "children": [],
-          "uuid": "b8fad0d4-f7e1-5c8-a45-bf694702dee14e",
-          "commonName": "net coral",
-          "description": "Alveopora tizardi (net coral) is a poritidae species found in its native region."
-        },
-        {
-          "id": "SP_ALVEOPORA_SPONGIOSA",
-          "name": "Alveopora spongiosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Alveopora",
-          "sourceIds": {
-            "checklistbank": "1455033"
-          },
-          "children": [],
-          "uuid": "9060cf7e-9f99-580-939-20000f2511d04b",
-          "commonName": "net coral",
-          "description": "Alveopora spongiosa is a species of stony coral that is found in the Red Sea, the Gulf of Aden, the southwest and northern Indian Ocean, the central Indo-Pacific, Australia, Southeast Asia Japan, the East China Sea and the oceanic west and central Pacific Ocean."
-        },
-        {
-          "id": "SP_ALVEOPORA_GIGAS",
-          "name": "Alveopora gigas",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alveopora",
-          "sourceIds": {
-            "checklistbank-311726": "16341"
-          },
-          "children": [],
-          "uuid": "2ad7f42a-285e-5a4-8fd-956e7d8ae4c70a"
-        },
-        {
-          "id": "SP_ALVEOPORA_MARIONENSIS",
-          "name": "Alveopora marionensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alveopora",
-          "sourceIds": {
-            "checklistbank-311726": "16503",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "53235"
-          },
-          "children": [],
-          "uuid": "121b2049-3601-511-834-201a530aa45f78",
-          "authorship": "Veron and Pichon, 1982"
-        },
-        {
           "id": "SP_ALVEOPORA_SP",
           "name": "Alveopora sp.",
           "rank": "SPECIES",
@@ -10410,18 +10284,30 @@
           "uuid": "0d34d1cf-0bbd-533c-b65e-efc4940401e3"
         },
         {
-          "id": "SP_ALVEOPORA_VIRIDIS_QUOY_AND_GAIMARD_1833",
-          "name": "Alveopora viridis",
+          "id": "SP_ALVEOPORA_VERRILLIANA_DANA_1872",
+          "name": "Alveopora verrilliana",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Alveopora",
-          "authorship": "(Quoy and Gaimard, 1833)",
+          "authorship": "Dana,1872",
           "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "571823"
+            "checklistbank-312616": "1ba853ea-b6b7-40cf-878f-ce8032e96e70"
           },
-          "children": [],
-          "uuid": "8aa7586e-33b0-5a23-a088-994ccee78ba1"
+          "children": []
+        },
+        {
+          "id": "SP_ALVEOPORA_FENESTRATA_LAMARCK_1816",
+          "name": "Alveopora fenestrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alveopora",
+          "authorship": "(Lamarck),1816",
+          "sourceIds": {
+            "checklistbank-312616": "4df5cbf4-d919-4279-89dc-474c06f9b172"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10886,7 +10772,7 @@
     }
   ],
   "genusCount": 27,
-  "speciesCount": 653,
+  "speciesCount": 645,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

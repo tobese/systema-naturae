@@ -51,9 +51,12 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:290855",
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:290855",
             "gbif-backbone": "2261305",
-            "checklistbank-316441": "4NCN6"
+            "checklistbank-316441": "4NCN6",
+            "checklistbank-2169": [
+              "1458684"
+            ]
           },
-          "authorityIds": "col:4NCN6,wikidata:Q2088921",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:290855,checklistbank-2011:urn:lsid:marinespecies.org:taxname:290855,checklistbank-2169:1458684,checklistbank-316441:4NCN6,col:4NCN6,gbif-backbone:2261305,wikidata:Q2088921",
           "authorship": "(Verrill, 1866)"
         },
         {
@@ -89,9 +92,12 @@
             "col": [
               "4NCN7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:889418"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:889418",
+              "3286051"
+            ]
           },
-          "authorityIds": "col:4NCN7,wikidata:Q61656558",
+          "authorityIds": "checklistbank:3286051,checklistbank:urn:lsid:marinespecies.org:taxname:889418,col:4NCN7,wikidata:Q61656558",
           "authorship": "(Pallas, 1766)"
         },
         {
@@ -349,9 +355,17 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Psammogorgia",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105939983"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105939983",
+            "checklistbank": [
+              "2650740"
+            ],
+            "checklistbank-2265": [
+              "2650740"
+            ]
           },
-          "children": []
+          "children": [],
+          "description": "Psammogorgia pax is a plexauridae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q105939983,checklistbank:2650740,checklistbank-2265:2650740"
         },
         {
           "id": "SP_PSAMMOGORGIA_ANASTOMOSANS",
@@ -10094,13 +10108,14 @@
               "5YJ4R"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:724231"
+              "urn:lsid:marinespecies.org:taxname:724231",
+              "1917407"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:724231",
             "gbif-backbone": "7567180",
             "checklistbank-316441": "5YJ4R"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:724231,col:5YJ4R,wikidata:Q61654628",
+          "authorityIds": "checklistbank:1917407,checklistbank:urn:lsid:marinespecies.org:taxname:724231,checklistbank-2011:urn:lsid:marinespecies.org:taxname:724231,checklistbank-316441:5YJ4R,col:5YJ4R,gbif-backbone:7567180,wikidata:Q61654628",
           "authorship": "(Kükenthal, 1913)"
         },
         {
@@ -10587,82 +10602,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_EUNICELLA_CAVOLINI_KOCH_1887",
-          "name": "Eunicella cavolini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Eunicella",
-          "authorship": "(Koch, 1887)",
-          "sourceIds": {
-            "checklistbank": "45361"
-          },
-          "children": [],
-          "uuid": "4ffcd6c4-bcbd-53c-be9-dc5e6df8f89566",
-          "commonName": "yellow sea fan",
-          "description": "Eunicella cavolini, commonly known as the yellow gorgonian or yellow sea whip, is a species of colonial soft coral in the family Gorgoniidae."
-        },
-        {
-          "id": "SP_EUNICELLA_FILIFORMIS_STUDER_1879",
-          "name": "Eunicella filiformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eunicella",
-          "authorship": "(Studer, 1879)",
-          "sourceIds": {
-            "checklistbank": "45362"
-          },
-          "children": [],
-          "uuid": "63699009-2ba4-5e3-bbe-a1549551f0f262",
-          "description": "Eunicella filiformis is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_EUNICELLA_GAZELLA_STUDER_1878",
-          "name": "Eunicella gazella",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eunicella",
-          "authorship": "Studer, 1878",
-          "sourceIds": {
-            "checklistbank": "45363"
-          },
-          "children": [],
-          "uuid": "ef3e6acf-84a1-515-ade-05e336986cf90d",
-          "description": "Eunicella gazella is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_EUNICELLA_SINGULARIS_ESPER_1791",
-          "name": "Eunicella singularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Eunicella",
-          "authorship": "(Esper, 1791)",
-          "sourceIds": {
-            "checklistbank": "45365"
-          },
-          "children": [],
-          "uuid": "6a3080a5-3247-56e-901-3836bece38fc33",
-          "commonName": "white sea fan",
-          "description": "Eunicella singularis, the white gorgonian, is a species of colonial soft coral, a sea fan in the family Gorgoniidae."
-        },
-        {
-          "id": "SP_EUNICELLA_VERRUCOSA_PALLAS_1766",
-          "name": "Eunicella verrucosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eunicella",
-          "authorship": "(Pallas, 1766)",
-          "sourceIds": {
-            "checklistbank-7888": "NBNSYS0000040771"
-          },
-          "children": [],
-          "uuid": "15c82ba2-c929-5729-8051-c297fdb4c2be"
-        },
-        {
           "id": "SP_EUNICELLA_DUBIA_STUDER_1890",
           "name": "Eunicella dubia",
           "rank": "SPECIES",
@@ -10695,138 +10634,10 @@
       "lineage": "gorgoniidae"
     },
     {
-      "id": "GENUS_RUMPHELLA",
-      "name": "Rumphella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_RUMPHELLA_ANTIPATHES_LINNAEUS_1758",
-          "name": "Rumphella antipathes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Rumphella",
-          "authorship": "(Linnaeus),1758",
-          "sourceIds": {
-            "checklistbank": "514c5508-648e-4631-a40d-e4e964b550e8"
-          },
-          "children": [],
-          "uuid": "0dd3d291-85ba-516-b96-15c9b80588ad38",
-          "commonName": "black sea rod",
-          "description": "Rumphella antipathes (black sea rod) is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_RUMPHELLA_AGGREGATA_NUTTING",
-          "name": "Rumphella aggregata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "lineage": "Rumphella",
-          "authorship": "Nutting",
-          "sourceIds": {
-            "checklistbank": "7d2c26af-d9e1-4183-9c8e-4df2f7508ce2"
-          },
-          "children": [],
-          "uuid": "d6fa982b-f8c6-591-921-230036e97fd137",
-          "commonName": "bushy sea rod",
-          "description": "Rumphella aggregata (bushy sea rod) is a gorgoniidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "gorgoniidae"
-    },
-    {
-      "id": "GENUS_HICKSONELLA",
-      "name": "Hicksonella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HICKSONELLA_GUISHANENSIS_ZOU_CHEN_1984",
-          "name": "Hicksonella guishanensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hicksonella",
-          "authorship": "Zou & Chen,1984",
-          "sourceIds": {
-            "checklistbank": "c9d5142d-7362-4f60-9b61-13520aa5b2bb"
-          },
-          "children": [],
-          "uuid": "61c8d33a-0e22-5b6-8e1-c6a936e95ec10a",
-          "description": "Hicksonella guishanensis is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_HICKSONELLA_PRINCEPS_NUTTING_1910",
-          "name": "Hicksonella princeps",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hicksonella",
-          "authorship": "Nutting,1910",
-          "sourceIds": {
-            "checklistbank": "cf8d5068-c64e-4af4-88cf-42c11136746d",
-            "checklistbank-127379": "42d485f1-8722-4d78-9552-30a02775c7ec"
-          },
-          "children": [],
-          "uuid": "4a0fe21a-83f9-504-b89-968b5d9d824d7c",
-          "description": "Hicksonella princeps is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_HICKSONELLA_EXPANSA_ALDERSLADE",
-          "name": "Hicksonella expansa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hicksonella",
-          "authorship": "Alderslade",
-          "sourceIds": {
-            "checklistbank": "c511ba4e-4055-43c6-aaa7-f2483472dc88"
-          },
-          "children": [],
-          "uuid": "6d52b372-d36d-57f-9c1-9fb79f9dc6475f",
-          "description": "Hicksonella expansa is a gorgoniidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "gorgoniidae"
-    },
-    {
       "id": "GENUS_PTEROGORGIA",
       "name": "Pterogorgia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PTEROGORGIA_ANCEPS_PALLAS_1766",
-          "name": "Pterogorgia anceps",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Pterogorgia",
-          "authorship": "(Pallas, 1766)",
-          "sourceIds": {
-            "checklistbank": "653855"
-          },
-          "children": [],
-          "uuid": "7f8dc9fc-d98c-5ec-af2-f7b254a07e4aed",
-          "commonName": "angular sea whip",
-          "description": "Pterogorgia anceps (angular sea whip) is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_PTEROGORGIA_CITRINA_ESPER_1792",
-          "name": "Pterogorgia citrina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Pterogorgia",
-          "authorship": "(Esper, 1792)",
-          "sourceIds": {
-            "checklistbank": "653856"
-          },
-          "children": [],
-          "uuid": "eb001951-5b1a-531-b79-9a1d9d727ffa62",
-          "commonName": "yellow sea whip",
-          "description": "Pterogorgia citrina (yellow sea whip) is a gorgoniidae species found in its native region."
-        },
         {
           "id": "SP_PTEROGORGIA_BIPINNATA_VERRILL_1864",
           "name": "Pterogorgia bipinnata",
@@ -10911,20 +10722,6 @@
           },
           "children": [],
           "uuid": "e6f01762-ed9b-5208-b8fb-d72a9983022a"
-        },
-        {
-          "id": "SP_PTEROGORGIA_GUADALUPENSIS_DUCHASSAING_AND_MICHELIN_1846",
-          "name": "Pterogorgia guadalupensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pterogorgia",
-          "authorship": "Duchassaing and Michelin, 1846",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "52266"
-          },
-          "children": [],
-          "uuid": "1172bb85-8f01-51e0-9d91-f9c7ecc26b27"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11036,60 +10833,6 @@
           "children": [],
           "uuid": "408f4b79-1729-5cf-9f9-924809b532b73b",
           "description": "Guaiagorgia sp. is a gorgoniidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "gorgoniidae"
-    },
-    {
-      "id": "GENUS_PINNIGORGIA",
-      "name": "Pinnigorgia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PINNIGORGIA_FLAVA_NUTTING",
-          "name": "Pinnigorgia flava",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pinnigorgia",
-          "authorship": "Nutting",
-          "sourceIds": {
-            "checklistbank": "19824bf3-7466-4daa-b30e-9fa6b500371a"
-          },
-          "children": [],
-          "uuid": "f257de70-f8f7-51f-b83-f8dff3f2f2fcc9",
-          "description": "Pinnigorgia flava is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_PINNIGORGIA_PERROTETI_STIASNY",
-          "name": "Pinnigorgia perroteti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pinnigorgia",
-          "authorship": "Stiasny",
-          "sourceIds": {
-            "checklistbank": "db271ada-5bf3-45dc-b245-16d04e6610b3"
-          },
-          "children": [],
-          "uuid": "c128ce79-6de8-523-aeb-e77723701af4e4",
-          "description": "Pinnigorgia perroteti is a gorgoniidae species found in its native region."
-        },
-        {
-          "id": "SP_PINNIGORGIA_PLATYSTOMA_NUTTING",
-          "name": "Pinnigorgia platystoma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pinnigorgia",
-          "authorship": "Nutting",
-          "sourceIds": {
-            "checklistbank": "a2e55d4a-569e-4100-94f8-4ed45382ab88"
-          },
-          "children": [],
-          "uuid": "29ff8067-7ed0-5f6-8b9-6bf40dd3caf9af",
-          "description": "Pinnigorgia platystoma is a gorgoniidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11367,27 +11110,6 @@
       "lineage": "gorgoniidae"
     },
     {
-      "id": "GENUS_TOBAGOGORGIA",
-      "name": "Tobagogorgia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TOBAGOGORGIA_HARDYI",
-          "name": "Tobagogorgia hardyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tobagogorgia",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2610216"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "gorgoniidae"
-    },
-    {
       "id": "GENUS_RHODOPHYTON",
       "name": "Rhodophyton",
       "rank": "GENUS",
@@ -11440,10 +11162,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gorgoniidae"
+    },
+    {
+      "id": "GENUS_RUMPHELLA",
+      "name": "Rumphella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gorgoniidae",
+      "children": [
+        {
+          "id": "SP_RUMPHELLA_ANTIPATHES_LINNAEUS_1758",
+          "name": "Rumphella antipathes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rumphella",
+          "authorship": "(Linnaeus),1758",
+          "sourceIds": {
+            "checklistbank-312616": "514c5508-648e-4631-a40d-e4e964b550e8"
+          },
+          "uuid": "fcef29bc-3766-4b6f-8731-1633d78b5e4f"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_HICKSONELLA",
+      "name": "Hicksonella",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "gorgoniidae",
+      "children": [
+        {
+          "id": "SP_HICKSONELLA_GUISHANENSIS_ZOU_CHEN_1984",
+          "name": "Hicksonella guishanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hicksonella",
+          "authorship": "Zou & Chen,1984",
+          "sourceIds": {
+            "checklistbank-312616": "c9d5142d-7362-4f60-9b61-13520aa5b2bb"
+          },
+          "uuid": "d9a09606-c750-4c83-95e6-4fcd927a711e"
+        },
+        {
+          "id": "SP_HICKSONELLA_PRINCEPS_NUTTING_1910",
+          "name": "Hicksonella princeps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hicksonella",
+          "authorship": "Nutting,1910",
+          "sourceIds": {
+            "checklistbank-312616": "cf8d5068-c64e-4af4-88cf-42c11136746d"
+          },
+          "uuid": "f3297626-0759-4b08-9190-9ea2224670a3"
+        }
+      ]
     }
   ],
-  "genusCount": 40,
-  "speciesCount": 665,
+  "genusCount": 36,
+  "speciesCount": 651,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

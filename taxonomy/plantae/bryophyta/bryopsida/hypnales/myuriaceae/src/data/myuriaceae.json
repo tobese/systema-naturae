@@ -34,7 +34,8 @@
             "gbif-backbone": "2673646",
             "checklistbank-2169": "84271",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q11078733",
-            "wfo-plant-list": "wfo-0001166709"
+            "wfo-plant-list": "wfo-0001166709",
+            "checklistbank-312616": "T20171000007614"
           },
           "authorityIds": "col:6GZ38,wfo:wfo-0001166709"
         }
@@ -454,7 +455,8 @@
             "checklistbank": "T20171000007621",
             "gbif-backbone": "2673656",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10906607",
-            "wfo-plant-list": "wfo-0001188735"
+            "wfo-plant-list": "wfo-0001188735",
+            "checklistbank-312616": "T20171000007621"
           },
           "authorityIds": "col:48W67,wfo:wfo-0001188735"
         },
@@ -534,7 +536,8 @@
             "gbif-backbone": "2673655",
             "checklistbank-2169": "1161993",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q17266890",
-            "wfo-plant-list": "wfo-0001188742"
+            "wfo-plant-list": "wfo-0001188742",
+            "checklistbank-312616": "T20171000007624"
           },
           "authorityIds": "col:48W6C,wfo:wfo-0001188742"
         },
@@ -561,7 +564,8 @@
             "gbif-backbone": "2673662",
             "checklistbank-2169": "455287",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q11102878",
-            "wfo-plant-list": "wfo-0001186115"
+            "wfo-plant-list": "wfo-0001186115",
+            "checklistbank-312616": "T20171000007628"
           },
           "authorityIds": "col:48W6D,wfo:wfo-0001186115"
         },
@@ -612,7 +616,8 @@
             "checklistbank": "T20171000007635",
             "gbif-backbone": "2673660",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q15587587",
-            "wfo-plant-list": "wfo-0001169701"
+            "wfo-plant-list": "wfo-0001169701",
+            "checklistbank-312616": "T20171000007635"
           },
           "authorityIds": "col:48W6F,wfo:wfo-0001169701"
         },
@@ -838,10 +843,13 @@
             "wfo": [
               "wfo-0001184565"
             ],
-            "checklistbank": "6020",
+            "checklistbank": [
+              "6020",
+              "198269"
+            ],
             "checklistbank-2008": "6020"
           },
-          "authorityIds": "col:3NLVR,wfo:wfo-0001184565",
+          "authorityIds": "checklistbank:198269,checklistbank:6020,checklistbank-2008:6020,col:3NLVR,wfo:wfo-0001184565",
           "authorship": "(Brid.) Wijk & Margad., 1961"
         },
         {
@@ -912,78 +920,6 @@
             ]
           },
           "authorityIds": "col:324FQ,wfo:wfo-0001181242"
-        },
-        {
-          "id": "SP_CTENIDIUM_CEYLANICUM",
-          "name": "Ctenidium ceylanicum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium ceylanicum is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "46b53e4d-ae56-584-b9b-5256362e522b3f",
-          "sourceIds": {
-            "wfo": [
-              "wfo-0001181243"
-            ],
-            "col": [
-              "324FR"
-            ],
-            "gbif-backbone": "5283759"
-          },
-          "authorityIds": "col:324FR,wfo:wfo-0001181243",
-          "authorship": "Cardot"
-        },
-        {
-          "id": "SP_CTENIDIUM_ELEGANTULUM",
-          "name": "Ctenidium elegantulum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium elegantulum is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "52f95982-0bdf-5d7-921-c156d26bd42882",
-          "sourceIds": {
-            "itis": [
-              "1136195"
-            ],
-            "wfo": [
-              "wfo-0001181247"
-            ],
-            "col": [
-              "324FT"
-            ],
-            "gbif-backbone": "5283765"
-          },
-          "authorityIds": "col:324FT,itis:1136195,wfo:wfo-0001181247",
-          "authorship": "Broth."
-        },
-        {
-          "id": "SP_CTENIDIUM_FLORIBUNDARIOIDES",
-          "name": "Ctenidium floribundarioides",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium floribundarioides is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "8560c93c-f23c-5b0-84a-35f3efcbf3ba24",
-          "sourceIds": {
-            "col": [
-              "6BMVG"
-            ],
-            "wfo": [
-              "wfo-0001195803"
-            ],
-            "gbif-backbone": "5283775"
-          },
-          "authorityIds": "col:6BMVG,wfo:wfo-0001195803",
-          "authorship": "Tosco & Piovano"
         },
         {
           "id": "SP_CTENIDIUM_HASTILE",
@@ -1102,180 +1038,6 @@
           "authorship": "Mitt., 1869"
         },
         {
-          "id": "SP_CTENIDIUM_MOLLUSCUM",
-          "name": "Ctenidium molluscum",
-          "rank": "SPECIES",
-          "commonName": "Comb-Moss",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium molluscum is a species of moss belonging to the family Hypnaceae.",
-          "sourcedFrom": "wikipedia",
-          "continents": [
-            "Europe",
-            "North America"
-          ],
-          "children": [],
-          "uuid": "63971ad9-dd45-531-811-1985cdbd672650",
-          "sourceIds": {
-            "wfo": [
-              "wfo-0001181260"
-            ],
-            "col": [
-              "324G4"
-            ],
-            "itis": [
-              "16325"
-            ]
-          },
-          "authorityIds": "col:324G4,itis:16325,wfo:wfo-0001181260",
-          "authorship": "(Hedw.) Mitt., 1869"
-        },
-        {
-          "id": "SP_CTENIDIUM_NOVOGUINEENSE",
-          "name": "Ctenidium novoguineense",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium novoguineense is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "873291d3-3f8c-5c0-924-a9d926eebc968a",
-          "sourceIds": {
-            "col": [
-              "324G5"
-            ],
-            "wfo": [
-              "wfo-0001194767"
-            ],
-            "gbif-backbone": "5283764"
-          },
-          "authorityIds": "col:324G5,wfo:wfo-0001194767",
-          "authorship": "N.Nishim."
-        },
-        {
-          "id": "SP_CTENIDIUM_PINNATUM",
-          "name": "Ctenidium pinnatum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium pinnatum is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "4cd7e859-2ef3-5fd-b9e-c07f3ccf472db9",
-          "sourceIds": {
-            "wfo": [
-              "wfo-0001183037"
-            ],
-            "col": [
-              "KSS22"
-            ]
-          },
-          "authorityIds": "col:KSS22,wfo:wfo-0001183037"
-        },
-        {
-          "id": "SP_CTENIDIUM_PLUMICAULE",
-          "name": "Ctenidium plumicaule",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium plumicaule is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "ee4aef48-2972-504-92f-b1adfb9d90e28a",
-          "sourceIds": {
-            "col": [
-              "324G8"
-            ],
-            "wfo": [
-              "wfo-0001181276"
-            ],
-            "gbif-backbone": "5283769"
-          },
-          "authorityIds": "col:324G8,wfo:wfo-0001181276",
-          "authorship": "M.Fleisch."
-        },
-        {
-          "id": "SP_CTENIDIUM_PUBESCENS",
-          "name": "Ctenidium pubescens",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium pubescens is a myuriaceae species found in Europe region.",
-          "sourcedFrom": "gbif",
-          "continents": [
-            "Europe"
-          ],
-          "children": [],
-          "uuid": "920f12b9-deb1-560-bc0-eb7b5cc816d846",
-          "sourceIds": {
-            "wfo": [
-              "wfo-0001181281"
-            ],
-            "col": [
-              "6BN7G"
-            ],
-            "checklistbank": "656597",
-            "checklistbank-2008": "656597",
-            "gbif-backbone": "5283762",
-            "checklistbank-2169": "2666443"
-          },
-          "authorityIds": "col:6BN7G,wfo:wfo-0001181281",
-          "authorship": "(Hook.f. & Wils.) Broth."
-        },
-        {
-          "id": "SP_CTENIDIUM_PULCHELLUM",
-          "name": "Ctenidium pulchellum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium pulchellum is a myuriaceae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "9ad11dcf-8a48-58e-bae-83f0f3ebcb3e93",
-          "sourceIds": {
-            "col": [
-              "324GB"
-            ],
-            "wfo": [
-              "wfo-0001181282"
-            ],
-            "gbif-backbone": "5283768"
-          },
-          "authorityIds": "col:324GB,wfo:wfo-0001181282",
-          "authorship": "Cardot"
-        },
-        {
-          "id": "SP_CTENIDIUM_SCHOFIELDII",
-          "name": "Ctenidium schofieldii",
-          "rank": "SPECIES",
-          "commonName": "Schofield's ctenidium moss",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium schofieldii (Schofield's ctenidium moss) is a myuriaceae species found in its native region.",
-          "sourcedFrom": "wikidata",
-          "children": [],
-          "uuid": "fe30ad99-9d1a-565-835-8ff6bdd3ac145a",
-          "sourceIds": {
-            "itis": [
-              "547688"
-            ],
-            "col": [
-              "324GC"
-            ],
-            "wfo": [
-              "wfo-0001194766"
-            ],
-            "gbif-backbone": "5283771"
-          },
-          "authorityIds": "col:324GC,itis:547688,wfo:wfo-0001194766",
-          "authorship": "N.Nishim."
-        },
-        {
           "id": "SP_CTENIDIUM_SERRATIFOLIUM",
           "name": "Ctenidium serratifolium",
           "rank": "SPECIES",
@@ -1319,32 +1081,6 @@
             ]
           },
           "authorityIds": "col:6BMVH,itis:1136452,wfo:wfo-0001181289"
-        },
-        {
-          "id": "SP_CTENIDIUM_SUBRECTIFOLIUM",
-          "name": "Ctenidium subrectifolium",
-          "rank": "SPECIES",
-          "commonName": "Chalk Comb Moss",
-          "lineage": "Ctenidium",
-          "subspeciesCount": 0,
-          "description": "Ctenidium subrectifolium (Chalk Comb Moss) is a myuriaceae species found in North America region.",
-          "sourcedFrom": "gbif",
-          "continents": [
-            "North America"
-          ],
-          "children": [],
-          "uuid": "a9215da7-33b6-514-a67-27a100193c387f",
-          "sourceIds": {
-            "col": [
-              "9RXWT"
-            ],
-            "wfo": [
-              "wfo-0001212478"
-            ],
-            "gbif-backbone": "8178530"
-          },
-          "authorityIds": "col:9RXWT,wfo:wfo-0001212478",
-          "authorship": "(Brid.) Pedano ex W.R.Buck & B.H.Allen"
         },
         {
           "id": "SP_CTENIDIUM_SP",
@@ -1591,7 +1327,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 78,
+  "speciesCount": 67,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

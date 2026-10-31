@@ -100,10 +100,16 @@
             "col": [
               "47XRR"
             ],
-            "checklistbank": "932343",
-            "checklistbank-2169": "221862"
+            "checklistbank": [
+              "932343",
+              "210987"
+            ],
+            "checklistbank-2169": "221862",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q4994070"
+            ]
           },
-          "authorityIds": "col:47XRR",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q4994070,checklistbank:210987,checklistbank:932343,checklistbank-2169:221862,col:47XRR",
           "authorship": "(O.F. Müller, 1776)"
         },
         {
@@ -392,9 +398,12 @@
             "itis": [
               "1040896"
             ],
-            "checklistbank": "62831"
+            "checklistbank": [
+              "62831",
+              "50609"
+            ]
           },
-          "authorityIds": "col:7W3SZ,itis:1040896"
+          "authorityIds": "checklistbank:50609,checklistbank:62831,col:7W3SZ,itis:1040896"
         },
         {
           "id": "SP_NOTOPLANA_LONGASTYLETTA",
@@ -892,11 +901,15 @@
           "lineage": "Notoplana",
           "authorship": "Prudhoe",
           "sourceIds": {
-            "checklistbank": "61c7ee6f-3fa7-4393-8524-58102595a1d1"
+            "checklistbank": "61c7ee6f-3fa7-4393-8524-58102595a1d1",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q2251137"
+            ]
           },
           "children": [],
           "uuid": "fc9d2864-7dae-515-ada-5fdfd856433c31",
-          "description": "Notoplana longicrumena is a notoplanidae species found in its native region."
+          "description": "Notoplana longicrumena is a notoplanidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q2251137,checklistbank:61c7ee6f-3fa7-4393-8524-58102595a1d1"
         },
         {
           "id": "SP_NOTOPLANA_LONGISACCATA_HYMAN",
@@ -923,11 +936,15 @@
           "authorship": "Cannon & Grygier",
           "sourceIds": {
             "checklistbank": "666b61b2-a344-47d5-9c87-edbd595b3f27",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "1040923"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "1040923",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q61506786"
+            ]
           },
           "children": [],
           "uuid": "6bc060fe-d4d6-501-80a-c7ae7e6c2d1b3d",
-          "description": "Notoplana comes is a notoplanidae species found in its native region."
+          "description": "Notoplana comes is a notoplanidae species found in its native region.",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:1040923,ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q61506786,checklistbank:666b61b2-a344-47d5-9c87-edbd595b3f27"
         },
         {
           "id": "SP_NOTOPLANA_DISTINCTA_PRUDHOE",
@@ -1351,10 +1368,14 @@
           "lineage": "Notoplana",
           "authorship": "(Lang, 1884) Bock 1913",
           "sourceIds": {
-            "checklistbank": "62832"
+            "checklistbank": "62832",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q1902734"
+            ]
           },
           "children": [],
-          "uuid": "0528e1bd-04f1-514-b40-4cb851df251e5d"
+          "uuid": "0528e1bd-04f1-514-b40-4cb851df251e5d",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q1902734,checklistbank:62832"
         }
       ]
     },
@@ -2177,28 +2198,6 @@
           "description": "Notocomplana tavoyensis is a notoplanidae species found in its native region."
         },
         {
-          "id": "SP_NOTOCOMPLANA_TIMIDA_HEATH_AND_MCGREGOR_1912",
-          "name": "Notocomplana timida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Notocomplana",
-          "authorship": "(Heath and McGregor, 1912)",
-          "children": [],
-          "uuid": "93b8a60c-e8cb-54c-8bc-848d09d88f0f18",
-          "sourceIds": {
-            "itis": [
-              "1040732"
-            ],
-            "col": [
-              "47VP8"
-            ],
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2962959"
-          },
-          "authorityIds": "col:47VP8,itis:1040732",
-          "description": "Notocomplana timida is a notoplanidae species found in its native region."
-        },
-        {
           "id": "SP_NOTOCOMPLANA_PALTA_MARCUS_1954",
           "name": "Notocomplana palta",
           "rank": "SPECIES",
@@ -2227,45 +2226,6 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61591746"
           },
           "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "notoplanidae"
-    },
-    {
-      "id": "GENUS_PUCELIS",
-      "name": "Pucelis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PUCELIS_SYNTOMA_MARCUS_1947",
-          "name": "Pucelis syntoma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pucelis",
-          "authorship": "(Marcus, 1947)",
-          "sourceIds": {
-            "checklistbank": "256342"
-          },
-          "children": [],
-          "uuid": "a107e49e-62fc-574-a0e-c88ae383102d42",
-          "description": "Pucelis syntoma is a notoplanidae species found in its native region."
-        },
-        {
-          "id": "SP_PUCELIS_MARTAE_MARCUS_1948",
-          "name": "Pucelis martae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pucelis",
-          "authorship": "(Marcus, 1948)",
-          "sourceIds": {
-            "checklistbank": "256425"
-          },
-          "children": [],
-          "uuid": "69cd6a4f-cfd9-5ad-a31-2016eb56c51c80",
-          "description": "Pucelis martae is a notoplanidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2469,35 +2429,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AMYRIS_BULBOSA_BEVERIDGE",
-          "name": "Amyris bulbosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amyris",
-          "authorship": "Beveridge",
-          "sourceIds": {
-            "checklistbank": "b3cb5f9a-3703-4237-8663-6364e87495af"
-          },
-          "children": [],
-          "uuid": "d6ab35a3-f65a-53d-977-9edc592d3b5368",
-          "description": "Amyris bulbosa is a notoplanidae species found in its native region."
-        },
-        {
-          "id": "SP_AMYRIS_HUMMELINCKI",
-          "name": "Amyris hummelincki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Amyris",
-          "sourceIds": {
-            "checklistbank": "ott5448370"
-          },
-          "children": [],
-          "uuid": "df4e93f8-5d1e-57e-a2d-72838be6c9b174",
-          "description": "Amyris hummelincki is a species of flatworm belonging to the family Faubelidae."
-        },
-        {
           "id": "SP_AMYRIS_UJARA",
           "name": "Amyris ujara",
           "rank": "SPECIES",
@@ -2510,20 +2441,6 @@
           "children": [],
           "uuid": "83a1e805-ccc0-532-829-cdcae57a7ec4d6",
           "description": "Amyris ujara is a notoplanidae species found in its native region."
-        },
-        {
-          "id": "SP_AMYRIS_FAVIS",
-          "name": "Amyris favis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Amyris",
-          "sourceIds": {
-            "checklistbank": "ott5448372"
-          },
-          "children": [],
-          "uuid": "9c4c4b15-7aa9-567-b6d-fa0a2bf77508bc",
-          "description": "Amyris favis is a notoplanidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2679,8 +2596,8 @@
       "lineage": "Notoplanidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 145,
+  "genusCount": 15,
+  "speciesCount": 139,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

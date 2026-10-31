@@ -61,11 +61,18 @@
           "lineage": "Pristigloma",
           "authorship": "Sanders & Allen, 1973",
           "sourceIds": {
-            "checklistbank": "103226"
+            "checklistbank": [
+              "103226",
+              "ott445637"
+            ],
+            "9ca92552-f23a-41a8-a140-01abaa31c931": [
+              "79309"
+            ]
           },
           "children": [],
           "uuid": "b99fc248-acb3-591-a3d-69947518f97093",
-          "description": "Pristigloma alba is a pristiglomidae species found in its native region."
+          "description": "Pristigloma alba is a pristiglomidae species found in its native region.",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:79309,checklistbank:103226,checklistbank:ott445637"
         },
         {
           "id": "SP_PRISTIGLOMA_MINIMA_G_SEGUENZA_1877",
@@ -76,12 +83,28 @@
           "lineage": "Pristigloma",
           "authorship": "(G. Seguenza, 1877)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:236684",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3802168"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:236684",
+              "ott2851140"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3802168",
+            "itis": [
+              "205523"
+            ],
+            "col": [
+              "SCBHJ"
+            ],
+            "checklistbank-139831": [
+              "1178327"
+            ],
+            "checklistbank-7888": [
+              "NHMSYS0021055011"
+            ]
           },
           "children": [],
           "uuid": "a0b7d733-7258-5a0-af8-01acf6271d6d0c",
-          "description": "Pristigloma minima is a pristiglomidae species found in its native region."
+          "description": "Pristigloma minima is a pristiglomidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q3802168,checklistbank:ott2851140,checklistbank:urn:lsid:marinespecies.org:taxname:236684,checklistbank-139831:1178327,checklistbank-7888:NHMSYS0021055011,col:SCBHJ,itis:205523"
         },
         {
           "id": "SP_PRISTIGLOMA_NITENS",
@@ -91,12 +114,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pristigloma",
           "sourceIds": {
-            "checklistbank": "1178326"
+            "checklistbank": "1178326",
+            "col": [
+              "4MJ8D"
+            ],
+            "itis": [
+              "79310"
+            ]
           },
           "children": [],
           "uuid": "4ba5f3bb-e58b-577-aff-3678842cfeda77",
           "description": "Pristigloma nitens is a pristiglomidae species found in its native region.",
-          "authorship": "(Jeffreys, 1876)"
+          "authorship": "(Jeffreys, 1876)",
+          "authorityIds": "checklistbank:1178326,col:4MJ8D,itis:79310"
         }
       ]
     },
@@ -149,61 +179,10 @@
       "lineage": "pristiglomidae"
     },
     {
-      "id": "GENUS_PSEUDOGLOMUS",
-      "name": "Pseudoglomus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOGLOMUS_FRAGILIS_BERNARD_1989",
-          "name": "Pseudoglomus fragilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudoglomus",
-          "authorship": "Bernard 1989",
-          "sourceIds": {
-            "checklistbank": "txn:86008"
-          },
-          "children": [],
-          "uuid": "e8245f52-4288-5b0-bd1-6fddb8c2b04f43",
-          "description": "Pseudoglomus fragilis is a pristiglomidae species found in its native region."
-        },
-        {
-          "id": "SP_PSEUDOGLOMUS_POMPHOLYX_DALL_1889",
-          "name": "Pseudoglomus pompholyx",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudoglomus",
-          "authorship": "(Dall 1889)",
-          "sourceIds": {
-            "checklistbank": "txn:86010"
-          },
-          "children": [],
-          "uuid": "eb275f36-e117-5e4-a13-0870761410a654",
-          "description": "Pseudoglomus pompholyx is a pristiglomidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pristiglomidae"
-    },
-    {
       "id": "GENUS_MICROGLOMA",
       "name": "Microgloma",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MICROGLOMA_YONGEI",
-          "name": "Microgloma yongei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microgloma",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3806063"
-          },
-          "children": []
-        },
         {
           "id": "SP_MICROGLOMA_TUMIDULA",
           "name": "Microgloma tumidula",
@@ -215,26 +194,14 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13853053"
           },
           "children": []
-        },
-        {
-          "id": "SP_MICROGLOMA_TURNERAE",
-          "name": "Microgloma turnerae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microgloma",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3800973"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pristiglomidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 12,
+  "genusCount": 4,
+  "speciesCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

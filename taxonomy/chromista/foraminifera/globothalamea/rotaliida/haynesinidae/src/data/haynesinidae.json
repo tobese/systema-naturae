@@ -28,10 +28,13 @@
             ],
             "col": [
               "823BB"
+            ],
+            "checklistbank": [
+              "ott8018189"
             ]
           },
           "uuid": "67a65330-0d4b-504-8c3-fb639706bf1bab",
-          "authorityIds": "col:823BB,gbif:10199390"
+          "authorityIds": "checklistbank:ott8018189,col:823BB,gbif:10199390"
         },
         {
           "id": "AUBIGNYNA_HAMBLENSIS",
@@ -50,10 +53,16 @@
             ],
             "col": [
               "JP6V"
+            ],
+            "checklistbank": [
+              "66404"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q23752420"
             ]
           },
           "uuid": "6dc6bf9d-561b-5d9-ad7-51a260658b3419",
-          "authorityIds": "col:JP6V,gbif:4381643"
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q23752420,checklistbank:66404,col:JP6V,gbif:4381643"
         },
         {
           "id": "AUBIGNYNA_KILIANI",
@@ -120,10 +129,13 @@
             "col": [
               "JP6W"
             ],
-            "checklistbank": "1270977"
+            "checklistbank": [
+              "1270977",
+              "ott4007526"
+            ]
           },
           "uuid": "a2da88af-d7af-5a4-a2a-b6b28eeefe010f",
-          "authorityIds": "col:JP6W,gbif:6535682"
+          "authorityIds": "checklistbank:1270977,checklistbank:ott4007526,col:JP6W,gbif:6535682"
         }
       ]
     },
@@ -173,10 +185,22 @@
             "col": [
               "3JWXN"
             ],
-            "checklistbank": "348972"
+            "checklistbank": [
+              "348972",
+              "33293"
+            ],
+            "checklistbank-127379": [
+              "3de8aca6-28e9-4e6b-8c03-14c6622a919b"
+            ],
+            "checklistbank-308974": [
+              "335506"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q23754459"
+            ]
           },
           "uuid": "e1a4c4ff-17c7-5ae-817-acabfc3c09b226",
-          "authorityIds": "col:3JWXN,gbif:8355001",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q23754459,checklistbank:33293,checklistbank:348972,checklistbank-127379:3de8aca6-28e9-4e6b-8c03-14c6622a919b,checklistbank-308974:335506,col:3JWXN,gbif:8355001",
           "authorship": "(Walker & Jacob, 1798)"
         },
         {
@@ -200,10 +224,19 @@
             "col": [
               "3JWXP"
             ],
-            "checklistbank": "348966"
+            "checklistbank": [
+              "348966",
+              "33294"
+            ],
+            "checklistbank-308974": [
+              "335515"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q49600791"
+            ]
           },
           "uuid": "582c0e14-d841-5e6-bd2-2b3ac5f812bd08",
-          "authorityIds": "col:3JWXP,gbif:7599415",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q49600791,checklistbank:33294,checklistbank:348966,checklistbank-308974:335515,col:3JWXP,gbif:7599415",
           "authorship": "(Ehrenberg, 1840)"
         },
         {
@@ -223,10 +256,13 @@
             ],
             "col": [
               "82QKL"
+            ],
+            "checklistbank": [
+              "ott8019803"
             ]
           },
           "uuid": "7388a971-31e3-558-8d5-edb4d9553251ce",
-          "authorityIds": "col:82QKL,gbif:9862740"
+          "authorityIds": "checklistbank:ott8019803,col:82QKL,gbif:9862740"
         },
         {
           "id": "HAYNESINA_MAGNA",
@@ -340,9 +376,15 @@
           "sourceIds": {
             "col": [
               "V96SK"
+            ],
+            "checklistbank": [
+              "ott5261702"
+            ],
+            "checklistbank-2169": [
+              "1407128"
             ]
           },
-          "authorityIds": "col:V96SK",
+          "authorityIds": "checklistbank:ott5261702,checklistbank-2169:1407128,col:V96SK",
           "description": "Haynesina nivea is a haynesinidae species found in its native region."
         },
         {
@@ -408,21 +450,6 @@
       "name": "Nonion",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_NONION_DEPRESSULUS_WALKER_JACOB_1798",
-          "name": "Nonion depressulus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nonion",
-          "authorship": "(Walker & Jacob, 1798)",
-          "sourceIds": {
-            "checklistbank": "382817"
-          },
-          "children": [],
-          "uuid": "75cdff24-d37b-579-82a-33fbbd70a9176c",
-          "description": "Nonion depressulus is a haynesinidae species found in its native region."
-        },
         {
           "id": "SP_NONION_DEPRESSULA_WALKER_JACOB",
           "name": "Nonion depressula",
@@ -772,7 +799,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 38,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

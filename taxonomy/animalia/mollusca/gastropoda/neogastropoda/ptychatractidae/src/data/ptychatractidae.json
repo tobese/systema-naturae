@@ -72,47 +72,6 @@
           "authorityIds": "col:3DL8F"
         },
         {
-          "id": "SP_EXILIOIDEA_RECTIROSTRIS",
-          "name": "Exilioidea rectirostris",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Exilioidea",
-          "subspeciesCount": 0,
-          "description": "Exilioidea rectirostris is a species of sea snail, a marine gastropod mollusc in the family Ptychatractidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Exilioidea rectirostris",
-          "children": [],
-          "uuid": "218c8aaa-a551-5d3-89f-2a1b3145217410",
-          "sourceIds": {
-            "col": [
-              "3DL8H"
-            ],
-            "itis": [
-              "73955"
-            ]
-          },
-          "authorityIds": "col:3DL8H,itis:73955"
-        },
-        {
-          "id": "SP_EXILIOIDEA_RUFOCAUDATA",
-          "name": "Exilioidea rufocaudata",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Exilioidea",
-          "subspeciesCount": 0,
-          "description": "Exilioidea rufocaudata is a species of sea snail, a marine gastropod mollusc in the family Ptychatractidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Exilioidea rufocaudata",
-          "children": [],
-          "uuid": "db9a56bf-b690-5c3-8fb-673874498a453d",
-          "sourceIds": {
-            "col": [
-              "3DL8J"
-            ]
-          },
-          "authorityIds": "col:3DL8J"
-        },
-        {
           "id": "SP_EXILIOIDEA_INDICA",
           "name": "Exilioidea indica",
           "rank": "SPECIES",
@@ -155,20 +114,6 @@
           "authorship": "Bouchet & Waren, 1988",
           "uuid": "f18d2119-420e-516-901-dfae72729e0cbe",
           "description": "Exilioidea costulata is a ptychatractidae species found in its native region."
-        },
-        {
-          "id": "SP_EXILIOIDEA_KELSEYI",
-          "name": "Exilioidea kelseyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Exilioidea",
-          "sourceIds": {
-            "checklistbank": "ott2902079"
-          },
-          "children": [],
-          "uuid": "ad4980c2-9d32-594-a65-9d041f4843a5ad",
-          "description": "Exilioidea kelseyi is a ptychatractidae species found in its native region."
         },
         {
           "id": "SP_EXILIOIDEA_SP",
@@ -255,10 +200,11 @@
               "8YJZQ"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1571379"
+              "urn:lsid:marinespecies.org:taxname:1571379",
+              "txn:349123"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571379,col:8YJZQ",
+          "authorityIds": "checklistbank:txn:349123,checklistbank:urn:lsid:marinespecies.org:taxname:1571379,col:8YJZQ",
           "authorship": "(Pilkington, 1804)"
         },
         {
@@ -554,10 +500,13 @@
             "col": [
               "R383F"
             ],
-            "checklistbank": "61852",
+            "checklistbank": [
+              "61852",
+              "109174"
+            ],
             "checklistbank-7888": "NHMSYS0021055873"
           },
-          "authorityIds": "col:R383F",
+          "authorityIds": "checklistbank:109174,checklistbank:61852,checklistbank-7888:NHMSYS0021055873,col:R383F",
           "authorship": "(Wyville-Thompson, 1873)"
         },
         {
@@ -702,12 +651,19 @@
           "lineage": "Metzgeria",
           "authorship": "A. G. Smith & M. Gordon, 1948",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:463456"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:463456",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": [
+              "74478"
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q3172785"
+            ]
           },
           "children": [],
           "uuid": "63294102-9286-5af-8eb-9e73bbfe9a4419",
           "commonName": "Monterey false spindle",
-          "description": "Metzgeria montereyana (Monterey false spindle) is a ptychatractidae species found in its native region."
+          "description": "Metzgeria montereyana (Monterey false spindle) is a ptychatractidae species found in its native region.",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:74478,ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q3172785,checklistbank:urn:lsid:marinespecies.org:taxname:463456"
         },
         {
           "id": "SP_METZGERIA_GAGEI",
@@ -1093,14 +1049,15 @@
               "6HKY7"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:463443"
+              "urn:lsid:marinespecies.org:taxname:463443",
+              "b4c5468d-267b-4b6f-b06e-87c77b5a573f"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:463443",
             "gbif-backbone": "5795342",
             "checklistbank-316441": "6HKY7",
             "checklistbank-2169": "1719399"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:463443,col:6HKY7",
+          "authorityIds": "checklistbank:b4c5468d-267b-4b6f-b06e-87c77b5a573f,checklistbank:urn:lsid:marinespecies.org:taxname:463443,checklistbank-2011:urn:lsid:marinespecies.org:taxname:463443,checklistbank-2169:1719399,checklistbank-316441:6HKY7,col:6HKY7,gbif-backbone:5795342",
           "authorship": "(E. von Martens, 1897)"
         },
         {
@@ -2744,7 +2701,7 @@
     }
   ],
   "genusCount": 17,
-  "speciesCount": 145,
+  "speciesCount": 142,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

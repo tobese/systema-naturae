@@ -140,24 +140,6 @@
           "authorityIds": "col:VQ2HV"
         },
         {
-          "id": "SP_GIRTYPECTEN_SUBLAQUEATUS",
-          "name": "Girtypecten sublaqueatus",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Girtypecten",
-          "subspeciesCount": 0,
-          "description": "Girtypecten sublaqueatus is a aviculopectinidae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "485bdb42-fe1b-5ab-a4b-f74c7abe55f598",
-          "sourceIds": {
-            "col": [
-              "BCYFP"
-            ]
-          },
-          "authorityIds": "col:BCYFP"
-        },
-        {
           "id": "SP_PSEUDOMONOTIS_FIMBRIATA",
           "name": "Pseudomonotis fimbriata",
           "rank": "SPECIES",
@@ -5823,9 +5805,12 @@
           "sourceIds": {
             "col": [
               "C4QVZ"
+            ],
+            "checklistbank": [
+              "txn:127743"
             ]
           },
-          "authorityIds": "col:C4QVZ",
+          "authorityIds": "checklistbank:txn:127743,col:C4QVZ",
           "description": "Leptochondria curtocardinalis is a aviculopectinidae species found in its native region."
         },
         {
@@ -5877,9 +5862,12 @@
           "sourceIds": {
             "col": [
               "C4QVS"
+            ],
+            "checklistbank": [
+              "txn:181606"
             ]
           },
-          "authorityIds": "col:C4QVS",
+          "authorityIds": "checklistbank:txn:181606,col:C4QVS",
           "description": "Leptochondria albertii is a aviculopectinidae species found in its native region."
         },
         {
@@ -6093,9 +6081,12 @@
           "sourceIds": {
             "col": [
               "C4QWC"
+            ],
+            "checklistbank": [
+              "txn:197988"
             ]
           },
-          "authorityIds": "col:C4QWC",
+          "authorityIds": "checklistbank:txn:197988,col:C4QWC",
           "description": "Leptochondria occidanea is a aviculopectinidae species found in its native region."
         },
         {
@@ -7260,45 +7251,6 @@
       "lineage": "aviculopectinidae"
     },
     {
-      "id": "GENUS_NEOMORPHOTIS",
-      "name": "Neomorphotis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEOMORPHOTIS_GIGANTEA_YIN_AND_YIN_1983",
-          "name": "Neomorphotis gigantea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neomorphotis",
-          "authorship": "Yin and Yin 1983",
-          "sourceIds": {
-            "checklistbank": "txn:383481"
-          },
-          "children": [],
-          "uuid": "e1eef79c-ee95-5c3-85c-caad859f102ecf",
-          "description": "Neomorphotis gigantea is a aviculopectinidae species found in its native region."
-        },
-        {
-          "id": "SP_NEOMORPHOTIS_COMTA_GOLDFUSS_1863",
-          "name": "Neomorphotis comta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neomorphotis",
-          "authorship": "(Goldfuss 1863)",
-          "sourceIds": {
-            "checklistbank": "txn:386509"
-          },
-          "children": [],
-          "uuid": "9a689c8f-7010-5f3-a6b-ca8332a6ea23f8",
-          "description": "Neomorphotis comta is a aviculopectinidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aviculopectinidae"
-    },
-    {
       "id": "GENUS_PECTEN",
       "name": "Pecten",
       "rank": "GENUS",
@@ -7730,8 +7682,8 @@
       "lineage": "aviculopectinidae"
     }
   ],
-  "genusCount": 41,
-  "speciesCount": 475,
+  "genusCount": 40,
+  "speciesCount": 472,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

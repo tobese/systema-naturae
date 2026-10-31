@@ -364,30 +364,6 @@
       "lineage": "Sphaerasteridae"
     },
     {
-      "id": "GENUS_PODOSPHAERASTER",
-      "name": "Podosphaeraster",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PODOSPHAERASTER_POLYPLAX_CLARK_WRIGHT_1962",
-          "name": "Podosphaeraster polyplax",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Podosphaeraster",
-          "authorship": "Clark & Wright,1962",
-          "sourceIds": {
-            "checklistbank": "2f0f742b-86c7-43e8-bde0-d8c2658ec556"
-          },
-          "children": [],
-          "uuid": "db66974b-46ed-544-bdd-828efb07fcac22",
-          "description": "Podosphaeraster polyplax is a sphaerasteridae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sphaerasteridae"
-    },
-    {
       "id": "GENUS_SPHAERITES",
       "name": "Sphaerites",
       "rank": "GENUS",
@@ -499,13 +475,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaerasteridae"
+    },
+    {
+      "id": "GENUS_PODOSPHAERASTER",
+      "name": "Podosphaeraster",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerasteridae",
+      "children": [
+        {
+          "id": "SP_PODOSPHAERASTER_POLYPLAX_CLARK_WRIGHT_1962",
+          "name": "Podosphaeraster polyplax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podosphaeraster",
+          "authorship": "Clark & Wright,1962",
+          "sourceIds": {
+            "checklistbank-312616": "2f0f742b-86c7-43e8-bde0-d8c2658ec556"
+          },
+          "uuid": "948b68b2-6d21-4892-a820-7843389ca5f0"
+        }
+      ]
     }
   ],
   "speciesCount": 23,
   "appSlug": "sphaerasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Asteroidea",
-  "genusCount": 12,
+  "genusCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

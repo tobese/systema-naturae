@@ -3194,9 +3194,12 @@
           "sourceIds": {
             "col": [
               "VF8WW"
+            ],
+            "checklistbank": [
+              "txn:74844"
             ]
           },
-          "authorityIds": "col:VF8WW",
+          "authorityIds": "checklistbank:txn:74844,col:VF8WW",
           "description": "Natirhenia margaritifera is a neritopsidae species found in its native region."
         }
       ],
@@ -3270,11 +3273,15 @@
           "lineage": "Lotzia",
           "authorship": "Heidelberger, 2005",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1894078"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1894078",
+              "txn:84611"
+            ]
           },
           "children": [],
           "uuid": "867fe82c-981d-591-9df-598a8335c09a25",
-          "description": "Lotzia blodgetti is a neritopsidae species found in its native region."
+          "description": "Lotzia blodgetti is a neritopsidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:84611,checklistbank:urn:lsid:marinespecies.org:taxname:1894078"
         }
       ],
       "sourcedFrom": "checklistbank",

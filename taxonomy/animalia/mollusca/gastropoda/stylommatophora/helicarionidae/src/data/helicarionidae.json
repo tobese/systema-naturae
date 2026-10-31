@@ -7991,9 +7991,12 @@
           "sourceIds": {
             "col": [
               "6YSNR"
+            ],
+            "checklistbank": [
+              "ott7969142"
             ]
           },
-          "authorityIds": "col:6YSNR",
+          "authorityIds": "checklistbank:ott7969142,col:6YSNR",
           "description": "Sitala euconuliforma is a helicarionidae species found in its native region."
         },
         {
@@ -8196,11 +8199,15 @@
           "lineage": "Sitala",
           "authorship": "von Möllendorff, 1894",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1335607"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1335607",
+              "ott7969156"
+            ]
           },
           "children": [],
           "uuid": "2f8c1efd-9001-544-860-ca927f11e41f2e",
-          "description": "Sitala insularis is a helicarionidae species found in its native region."
+          "description": "Sitala insularis is a helicarionidae species found in its native region.",
+          "authorityIds": "checklistbank:ott7969156,checklistbank:urn:lsid:marinespecies.org:taxname:1335607"
         },
         {
           "id": "SP_SITALA_MAZUMBAIENSIS",
@@ -10549,12 +10556,16 @@
           "sourcedFrom": "wikidata",
           "lineage": "Ibycus",
           "sourceIds": {
-            "checklistbank": "706127"
+            "checklistbank": [
+              "706127",
+              "1684994"
+            ]
           },
           "children": [],
           "uuid": "ad6c6e37-b26a-5b7-898-6a13fce59a8e60",
           "commonName": "Long-tailed slug",
-          "description": "Ibycus rachelae (Long-tailed slug) is a helicarionidae species found in its native region."
+          "description": "Ibycus rachelae (Long-tailed slug) is a helicarionidae species found in its native region.",
+          "authorityIds": "checklistbank:1684994,checklistbank:706127"
         }
       ]
     },
@@ -23615,37 +23626,6 @@
       "lineage": "Helicarionidae"
     },
     {
-      "id": "GENUS_DRYACHLOA",
-      "name": "Dryachloa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DRYACHLOA_DAUCA_F_G_THOMPSON_AND_H_G_LEE_1980",
-          "name": "Dryachloa dauca",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Dryachloa",
-          "authorship": "F. G. Thompson and H. G. Lee, 1980",
-          "children": [],
-          "uuid": "10d83ca3-339c-54f-a85-d8047b20e164e4",
-          "sourceIds": {
-            "itis": [
-              "77320"
-            ],
-            "col": [
-              "7R4ZV"
-            ]
-          },
-          "authorityIds": "col:7R4ZV,itis:77320",
-          "commonName": "carrot glass",
-          "description": "Dryachloa dauca (carrot glass) is a helicarionidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
       "id": "GENUS_GUPPYA",
       "name": "Guppya",
       "rank": "GENUS",
@@ -23668,48 +23648,6 @@
           "authorityIds": "itis:77328",
           "commonName": "glossy granule",
           "description": "Guppya gundlachi is a species of gastropod belonging to the family Euconulidae."
-        },
-        {
-          "id": "SP_GUPPYA_MIAMIENSIS_PILSBRY_1903",
-          "name": "Guppya miamiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Guppya",
-          "authorship": "Pilsbry, 1903",
-          "children": [],
-          "uuid": "48765cfa-7066-598-ba0-c5afe4723459bf",
-          "sourceIds": {
-            "col": [
-              "7RGRR"
-            ],
-            "itis": [
-              "77329"
-            ]
-          },
-          "authorityIds": "col:7RGRR,itis:77329",
-          "description": "Guppya miamiensis is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_GUPPYA_STERKII_DALL_1888",
-          "name": "Guppya sterkii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Guppya",
-          "authorship": "(Dall, 1888)",
-          "children": [],
-          "uuid": "b3e3c58a-4582-5ba-a15-65e30ebe11ef86",
-          "sourceIds": {
-            "col": [
-              "7RGRX"
-            ],
-            "itis": [
-              "77330"
-            ]
-          },
-          "authorityIds": "col:7RGRX,itis:77330",
-          "description": "Guppya sterkii is a helicarionidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -23720,21 +23658,6 @@
       "name": "Trochochlamys",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TROCHOCHLAMYS_LONGA_PILSBRY_HIRASE_1906",
-          "name": "Trochochlamys longa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Trochochlamys",
-          "authorship": "(Pilsbry & Hirase, 1906)",
-          "sourceIds": {
-            "checklistbank": "taicol: 90975"
-          },
-          "children": [],
-          "uuid": "e0e2ee9f-63d7-5ce-944-947bce328f3f2c",
-          "description": "Trochochlamys longa is a helicarionidae species found in its native region."
-        },
         {
           "id": "SP_TROCHOCHLAMYS_PRAEALTA",
           "name": "Trochochlamys praealta",
@@ -23748,75 +23671,6 @@
           "children": [],
           "uuid": "9e3bf2f4-15d5-575-9b3-ede67ac7c6fda8",
           "description": "Trochochlamys praealta is a helicarionidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
-      "id": "GENUS_DISCOCONULUS",
-      "name": "Discoconulus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DISCOCONULUS_LISSOBASIS_PILSBRY_HIRASE_1906",
-          "name": "Discoconulus lissobasis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discoconulus",
-          "authorship": "(Pilsbry & Hirase, 1906)",
-          "sourceIds": {
-            "checklistbank": "taicol: 70646"
-          },
-          "children": [],
-          "uuid": "1332c2b8-27e2-55f-b79-4bb25420a81863",
-          "description": "Discoconulus lissobasis is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_DISCOCONULUS_LAMPROBASIS_PILSBRY_HIRASE_1906",
-          "name": "Discoconulus lamprobasis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discoconulus",
-          "authorship": "(Pilsbry & Hirase, 1906)",
-          "sourceIds": {
-            "checklistbank": "taicol: 70645"
-          },
-          "children": [],
-          "uuid": "68876da3-535b-5b5-a90-62bd4972a1f87d",
-          "description": "Discoconulus lamprobasis is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_DISCOCONULUS_RADIATA_PILSBRY_HIRASE_1906",
-          "name": "Discoconulus radiata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discoconulus",
-          "authorship": "(Pilsbry & Hirase, 1906)",
-          "sourceIds": {
-            "checklistbank": "taicol: 70647"
-          },
-          "children": [],
-          "uuid": "526c2786-16e1-5f9-9f6-9b5017a67e663d",
-          "description": "Discoconulus radiata is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_DISCOCONULUS_SINAPIDIUM_REINHARDT_1877",
-          "name": "Discoconulus sinapidium",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Discoconulus",
-          "authorship": "(Reinhardt, 1877)",
-          "sourceIds": {
-            "checklistbank": "taicol: 70648"
-          },
-          "children": [],
-          "uuid": "9d800768-790e-57d-aa1-068a3af7585863",
-          "description": "Discoconulus sinapidium is a helicarionidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -23852,21 +23706,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PARAKALIELLA_VENUSTA_PILSBRY_HIRASE_1906",
-          "name": "Parakaliella venusta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parakaliella",
-          "authorship": "(Pilsbry & Hirase, 1906)",
-          "sourceIds": {
-            "checklistbank": "taicol: 82642"
-          },
-          "children": [],
-          "uuid": "8163a2a3-838b-5d3-8bb-9c3f62e34c1fbe",
-          "description": "Parakaliella venusta is a helicarionidae species found in its native region."
-        },
-        {
           "id": "SP_PARAKALIELLA_DEPRESSA_MOELLENDORFF_1883",
           "name": "Parakaliella depressa",
           "rank": "SPECIES",
@@ -23880,21 +23719,6 @@
           "children": [],
           "uuid": "a986f9ab-5545-56a-899-95e783d3485394",
           "description": "Parakaliella depressa is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_PARAKALIELLA_NAHAENSIS_GUDE_1900",
-          "name": "Parakaliella nahaensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parakaliella",
-          "authorship": "(Gude, 1900)",
-          "sourceIds": {
-            "checklistbank": "taicol: 82641"
-          },
-          "children": [],
-          "uuid": "a4fe5528-1e12-548-b34-961b44f206fd06",
-          "description": "Parakaliella nahaensis is a helicarionidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -23969,63 +23793,10 @@
       "lineage": "helicarionidae"
     },
     {
-      "id": "GENUS_KALIELLA",
-      "name": "Kaliella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_KALIELLA_COSTATA_PILSBRY_HIRASE_1906",
-          "name": "Kaliella costata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Kaliella",
-          "authorship": "Pilsbry & Hirase, 1906",
-          "sourceIds": {
-            "checklistbank": "taicol: 75942"
-          },
-          "children": [],
-          "uuid": "1ac4e74e-f461-5aa-b68-b871c5bad72a9f",
-          "description": "Kaliella costata is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_KALIELLA_BARRAKPORENSIS_PFEIFFER_1854",
-          "name": "Kaliella barrakporensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Kaliella",
-          "authorship": "(Pfeiffer, 1854)",
-          "sourceIds": {
-            "checklistbank-312242": "11802"
-          },
-          "children": [],
-          "uuid": "ab50ce1d-6413-5ced-87e6-4f2228ef976a"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
       "id": "GENUS_LIARDETIA",
       "name": "Liardetia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LIARDETIA_YAEYAMENSIS_PILSBRY_1901",
-          "name": "Liardetia yaeyamensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liardetia",
-          "authorship": "(Pilsbry, 1901)",
-          "sourceIds": {
-            "checklistbank": "taicol: 76945"
-          },
-          "children": [],
-          "uuid": "bdd038d0-c4d0-5ce-a2b-d2a33f81c6437c",
-          "description": "Liardetia yaeyamensis is a helicarionidae species found in its native region."
-        },
         {
           "id": "SP_LIARDETIA_YAEYAMAENSIS",
           "name": "Liardetia yaeyamaensis",
@@ -24207,54 +23978,6 @@
           "children": [],
           "uuid": "4cbcb94e-7f7c-5cc-841-9fad1cd034f2c2",
           "description": "Liardetia undulata is a helicarionidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
-      "id": "GENUS_OTESIOPSIS",
-      "name": "Otesiopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OTESIOPSIS_TAIWANICA_KURODA_1941",
-          "name": "Otesiopsis taiwanica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Otesiopsis",
-          "authorship": "(Kuroda, 1941)",
-          "sourceIds": {
-            "checklistbank": "taicol: 81957"
-          },
-          "children": [],
-          "uuid": "01d6bb3c-25b6-5e5-b16-69c8d030153594",
-          "description": "Otesiopsis taiwanica is a helicarionidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
-      "id": "GENUS_PARASITALA",
-      "name": "Parasitala",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARASITALA_REINHARDTI_PILSBRY_1900",
-          "name": "Parasitala reinhardti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parasitala",
-          "authorship": "(Pilsbry, 1900)",
-          "sourceIds": {
-            "checklistbank": "taicol: 82863"
-          },
-          "children": [],
-          "uuid": "4021de95-ea8b-57c-863-ce5646ec35743b",
-          "description": "Parasitala reinhardti is a helicarionidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -24779,22 +24502,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ADVENA_CAMPBELLII_GRAY",
-          "name": "Advena campbellii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Advena",
-          "authorship": "Gray",
-          "sourceIds": {
-            "checklistbank": "b3527b3b-7168-499e-baac-dfe17780a1df",
-            "checklistbank-2169": "3022146"
-          },
-          "children": [],
-          "uuid": "6bf8270e-8330-59f-bc0-0097d31d305b6b",
-          "description": "Advena campbellii is a helicarionidae species found in its native region."
-        },
-        {
           "id": "SP_ADVENA_CHARON_PRESTON",
           "name": "Advena charon",
           "rank": "SPECIES",
@@ -24808,44 +24515,6 @@
           "children": [],
           "uuid": "a40ee5e0-a3e2-53a-9c5-22fcbd7fb4e279",
           "description": "Advena charon is a species of air-breathing land snail or semi-slug, a terrestrial pulmonate gastropod mollusc in the family Helicarionidae."
-        },
-        {
-          "id": "SP_ADVENA_SUTERI",
-          "name": "Advena suteri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Advena",
-          "sourceIds": {
-            "checklistbank": "424201"
-          },
-          "children": [],
-          "uuid": "02e623d1-a447-58b-990-63c64d744beab1",
-          "description": "Advena suteri is a helicarionidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
-      "id": "GENUS_PITTOCONCHA",
-      "name": "Pittoconcha",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PITTOCONCHA_CONCINNA_PRESTON",
-          "name": "Pittoconcha concinna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pittoconcha",
-          "authorship": "Preston",
-          "sourceIds": {
-            "checklistbank": "a18b70b7-8fc4-4705-b16b-d87d3187463a"
-          },
-          "children": [],
-          "uuid": "eead6821-8482-5a8-900-b846f3fa9039eb",
-          "description": "Pittoconcha concinna is a helicarionidae species found in its native region."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -24985,66 +24654,6 @@
           "description": "Bekkochlamys nikkoensis is a helicarionidae species found in its native region."
         },
         {
-          "id": "SP_BEKKOCHLAMYS_PERFRAGILIS_PILSBRY_1901",
-          "name": "Bekkochlamys perfragilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bekkochlamys",
-          "authorship": "(Pilsbry, 1901)",
-          "sourceIds": {
-            "checklistbank": "2073118"
-          },
-          "children": [],
-          "uuid": "051cea24-e792-5e6-a8e-d7a115adf4f5d8",
-          "description": "Bekkochlamys perfragilis is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_BEKKOCHLAMYS_MICROGRAPTA_PILSBRY_1900",
-          "name": "Bekkochlamys micrograpta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bekkochlamys",
-          "authorship": "(Pilsbry, 1900)",
-          "sourceIds": {
-            "checklistbank": "2073119"
-          },
-          "children": [],
-          "uuid": "d2495e21-692d-553-b3d-e1f87574878f8d",
-          "description": "Bekkochlamys micrograpta is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_BEKKOCHLAMYS_SUBREJECTA_PILSBRY_HIRASE_1909",
-          "name": "Bekkochlamys subrejecta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bekkochlamys",
-          "authorship": "(Pilsbry & Hirase, 1909)",
-          "sourceIds": {
-            "checklistbank": "3074214"
-          },
-          "children": [],
-          "uuid": "145b8b69-5a20-55e-a22-ebb4e0a41a5461",
-          "description": "Bekkochlamys subrejecta is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_BEKKOCHLAMYS_QUELPARTENSIS_PILSBRY_HIRASE_1908",
-          "name": "Bekkochlamys quelpartensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bekkochlamys",
-          "authorship": "(Pilsbry & Hirase, 1908)",
-          "sourceIds": {
-            "checklistbank": "3080991"
-          },
-          "children": [],
-          "uuid": "ff901192-5f0d-533-89f-371de391bb68f2",
-          "description": "Bekkochlamys quelpartensis is a helicarionidae species found in its native region."
-        },
-        {
           "id": "SP_BEKKOCHLAMYS_SP",
           "name": "Bekkochlamys sp.",
           "rank": "SPECIES",
@@ -25135,20 +24744,6 @@
           "children": [],
           "uuid": "3faba26a-35be-5fc-98b-cef4404d4b58ac",
           "description": "Hiona sp. is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_HIONA_RADIANS_PFEIFFER_1853",
-          "name": "Hiona radians",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hiona",
-          "authorship": "(Pfeiffer, 1853)",
-          "sourceIds": {
-            "checklistbank-2169": "1041946"
-          },
-          "children": [],
-          "uuid": "8b92174d-9af7-5e10-9487-39510a7aac9f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -25159,21 +24754,6 @@
       "name": "Euconulus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_EUCONULUS_FULVUS",
-          "name": "Euconulus fulvus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott462401"
-          },
-          "children": [],
-          "uuid": "d7146e86-317f-5cf-abc-208951b1a5add8",
-          "commonName": "brown hive",
-          "description": "Euconulus fulvus is a species of very small, air-breathing land snail, a terrestrial pulmonate gastropod mollusk in the family Euconulidae, the hive snails."
-        },
         {
           "id": "SP_EUCONULUS_PRATICOLA",
           "name": "Euconulus praticola",
@@ -25188,66 +24768,6 @@
           "uuid": "c08f567f-e2f8-55f-a47-a2eecba08758b2",
           "commonName": "brown hive snail",
           "description": "Euconulus praticola is a species of small air-breathing land snail, a terrestrial pulmonate gastropod mollusk in the family Euconulidae, the hive snails."
-        },
-        {
-          "id": "SP_EUCONULUS_CHERSINUS",
-          "name": "Euconulus chersinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott2879505"
-          },
-          "children": [],
-          "uuid": "4f5090a5-76cd-516-b01-bb02acee190b19",
-          "commonName": "wild hive",
-          "description": "Euconulus chersinus (wild hive) is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_TROCHULUS",
-          "name": "Euconulus trochulus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott2879506"
-          },
-          "children": [],
-          "uuid": "e29acf07-27c5-52e-896-1bde8984213204",
-          "commonName": "silk hive",
-          "description": "Euconulus trochulus (silk hive) is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_DENTATUS",
-          "name": "Euconulus dentatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott2879507"
-          },
-          "children": [],
-          "uuid": "6569e8fd-7871-5d1-92b-c3e56f44bf3eb7",
-          "commonName": "toothed hive",
-          "description": "Euconulus dentatus (toothed hive) is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_POLYGYRATUS",
-          "name": "Euconulus polygyratus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "itis",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott2879508"
-          },
-          "children": [],
-          "uuid": "736edef8-04fd-536-8c4-01c3bda52424ec",
-          "commonName": "fat hive",
-          "description": "Euconulus polygyratus (fat hive) is a helicarionidae species found in its native region."
         },
         {
           "id": "SP_EUCONULUS_CALLOPISTICUS",
@@ -25279,21 +24799,6 @@
           "description": "Euconulus trochiformis (tawny glass snail) is a helicarionidae species found in its native region."
         },
         {
-          "id": "SP_EUCONULUS_ALDERI",
-          "name": "Euconulus alderi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott6361871"
-          },
-          "children": [],
-          "uuid": "e9300c7d-2014-52c-9a1-5c86aa2d65a56b",
-          "commonName": "Shiny Hive",
-          "description": "Euconulus alderi is a species of small air-breathing land snail, a terrestrial pulmonate gastropod mollusk in the family Euconulidae, the hive snails."
-        },
-        {
           "id": "SP_EUCONULUS_AFF",
           "name": "Euconulus aff.",
           "rank": "SPECIES",
@@ -25308,48 +24813,6 @@
           "description": "Euconulus aff. is a helicarionidae species found in its native region."
         },
         {
-          "id": "SP_EUCONULUS_CONOIDES",
-          "name": "Euconulus conoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott7969339"
-          },
-          "children": [],
-          "uuid": "6de6d034-3027-5f2-961-d2edec5d95cd0d",
-          "description": "Euconulus conoides is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_CRAMI",
-          "name": "Euconulus crami",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott7969340"
-          },
-          "children": [],
-          "uuid": "f4db297a-eed8-55f-9d5-bc30d6c8193655",
-          "description": "Euconulus crami is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_DERONI",
-          "name": "Euconulus deroni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott7969341"
-          },
-          "children": [],
-          "uuid": "177f5690-03c8-599-993-e210246e6d8bae",
-          "description": "Euconulus deroni is a helicarionidae species found in its native region."
-        },
-        {
           "id": "SP_EUCONULUS_LONGUS",
           "name": "Euconulus longus",
           "rank": "SPECIES",
@@ -25362,34 +24825,6 @@
           "children": [],
           "uuid": "6235ea45-7c59-5d1-a7e-9c53adf14eb6c8",
           "description": "Euconulus longus is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_MICROSOMA",
-          "name": "Euconulus microsoma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott7969343"
-          },
-          "children": [],
-          "uuid": "5aa6850a-187f-5a2-8e1-c820f4aeda8314",
-          "description": "Euconulus microsoma is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_EUCONULUS_TURBINATUS",
-          "name": "Euconulus turbinatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euconulus",
-          "sourceIds": {
-            "checklistbank": "ott7969344"
-          },
-          "children": [],
-          "uuid": "6ba7dee9-a0b5-5cc-83e-db8857ca9c563e",
-          "description": "Euconulus turbinatus is a helicarionidae species found in its native region."
         },
         {
           "id": "SP_EUCONULUS_ZETEKI",
@@ -25620,36 +25055,6 @@
           "children": [],
           "uuid": "4c9aad7e-4848-59a-aa3-777524a3cf5cf5",
           "description": "Fanulena fraternus is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_FANULENA_AMICULUS_IREDALE_1945",
-          "name": "Fanulena amiculus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Fanulena",
-          "authorship": "(Iredale, 1945)",
-          "sourceIds": {
-            "checklistbank": "3022133"
-          },
-          "children": [],
-          "uuid": "949e01ec-61b7-589-8b2-caaaeb8151e7b6",
-          "description": "Fanulena amiculus is a species of air-breathing land snails or semislugs, terrestrial pulmonate gastropod mollusks in the family Microcystidae."
-        },
-        {
-          "id": "SP_FANULENA_IMITATRIX_SYKES_1900",
-          "name": "Fanulena imitatrix",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Fanulena",
-          "authorship": "(Sykes, 1900)",
-          "sourceIds": {
-            "checklistbank": "3022136"
-          },
-          "children": [],
-          "uuid": "c5ce9e8a-bc0c-5de-8bc-f372fc485e1b2e",
-          "description": "Fanulena imitratrix is a species of air-breathing land snail or semislug, terrestrial pulmonate gastropod mollusk in the family Microcystidae."
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -25909,34 +25314,6 @@
       "name": "Louisia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LOUISIA_BARCLAYI",
-          "name": "Louisia barclayi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Louisia",
-          "sourceIds": {
-            "checklistbank": "ott904182"
-          },
-          "children": [],
-          "uuid": "92f9d1ef-de63-5c4-a32-0146eca35209fd",
-          "description": "Louisia barclayi is a helicarionidae species found in its native region."
-        },
-        {
-          "id": "SP_LOUISIA_DUPONTI",
-          "name": "Louisia duponti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Louisia",
-          "sourceIds": {
-            "checklistbank": "ott7969607"
-          },
-          "children": [],
-          "uuid": "9904cc25-cd3a-5fc-926-a5d8de7413b729",
-          "description": "Louisia duponti is a helicarionidae species found in its native region."
-        },
         {
           "id": "SP_LOUISIA_INSULARIS",
           "name": "Louisia insularis",
@@ -26793,18 +26170,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RYSSOTA_OTAHEITANA",
-          "name": "Ryssota otaheitana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ryssota",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106341353"
-          },
-          "children": []
-        },
-        {
           "id": "SP_RYSSOTA_PACHYSTOMA",
           "name": "Ryssota pachystoma",
           "rank": "SPECIES",
@@ -26825,18 +26190,6 @@
           "lineage": "Ryssota",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106269566"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_RYSSOTA_SAGITTIFERA",
-          "name": "Ryssota sagittifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ryssota",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106269605"
           },
           "children": []
         },
@@ -27075,28 +26428,6 @@
       "lineage": "helicarionidae"
     },
     {
-      "id": "GENUS_PHILONESIA",
-      "name": "Philonesia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHILONESIA_PITCAIRNENSIS_BAKER_1838",
-          "name": "Philonesia pitcairnensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Philonesia",
-          "authorship": "Baker, 1838",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q9059102"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicarionidae"
-    },
-    {
       "id": "GENUS_QUINTALIA",
       "name": "Quintalia",
       "rank": "GENUS",
@@ -27184,8 +26515,8 @@
       "lineage": "helicarionidae"
     }
   ],
-  "genusCount": 173,
-  "speciesCount": 1456,
+  "genusCount": 166,
+  "speciesCount": 1415,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

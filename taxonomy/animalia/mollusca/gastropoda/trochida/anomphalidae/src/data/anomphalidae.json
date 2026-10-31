@@ -94,9 +94,12 @@
           "sourceIds": {
             "col": [
               "V9QQ9"
+            ],
+            "checklistbank": [
+              "txn:196269"
             ]
           },
-          "authorityIds": "col:V9QQ9",
+          "authorityIds": "checklistbank:txn:196269,col:V9QQ9",
           "description": "Straparella fallax is a anomphalidae species found in its native region."
         },
         {
@@ -108,11 +111,15 @@
           "lineage": "Straparella",
           "authorship": "H.-Z. Pan & Erwin, 2002",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1862608"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1862608",
+              "txn:87280"
+            ]
           },
           "children": [],
           "uuid": "abbd2e34-4b92-570-bf1-eb84def1946224",
-          "description": "Straparella rotella is a anomphalidae species found in its native region."
+          "description": "Straparella rotella is a anomphalidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:87280,checklistbank:urn:lsid:marinespecies.org:taxname:1862608"
         },
         {
           "id": "SP_STRAPARELLA_JAMESI",
@@ -516,47 +523,6 @@
           "uuid": "d203b34f-3a22-5a9-8f7-45b6a7427799b1"
         },
         {
-          "id": "SP_NATICOPSIS_BOWSHERI",
-          "name": "Naticopsis bowsheri",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "9d55c89f-e998-555-bb2-92871ecd0511f1",
-          "sourceIds": {
-            "col": [
-              "VG6PT"
-            ],
-            "gbif-backbone": "4954010"
-          },
-          "authorityIds": "col:VG6PT",
-          "authorship": "(Blodgett, 1992)"
-        },
-        {
-          "id": "SP_NATICOPSIS_CLINOVATA",
-          "name": "Naticopsis clinovata",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis clinovata is a anomphalidae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "88d78b5f-0f5c-5d1-a51-bab18160ca5830",
-          "sourceIds": {
-            "col": [
-              "VQ7CX"
-            ],
-            "gbif-backbone": "4954025"
-          },
-          "authorityIds": "col:VQ7CX",
-          "authorship": "(Gordon & Yochelson, 1987)"
-        },
-        {
           "id": "SP_NATICOPSIS_COMPERTA_HALL_1879",
           "name": "Naticopsis comperta Hall, 1879",
           "rank": "SPECIES",
@@ -607,25 +573,6 @@
           "yearPublished": "1903",
           "children": [],
           "uuid": "f6cf7704-88e0-5b7-ad2-2a5334d2d9bec5"
-        },
-        {
-          "id": "SP_NATICOPSIS_CONVOLUTA",
-          "name": "Naticopsis convoluta",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "d85c0043-ac02-59f-bcd-61871516135e0b",
-          "sourceIds": {
-            "col": [
-              "VPJCD"
-            ]
-          },
-          "authorityIds": "col:VPJCD"
         },
         {
           "id": "SP_NATICOPSIS_CRETACEA_HALL_WHITFIELD_1873",
@@ -748,24 +695,6 @@
           "yearPublished": "1892",
           "children": [],
           "uuid": "ac2402c5-3afc-502-b86-08e7c61d706979"
-        },
-        {
-          "id": "SP_NATICOPSIS_GLOBULINA",
-          "name": "Naticopsis globulina",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis globulina is a anomphalidae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "fda1713b-306b-5c1-a36-31522b72424185",
-          "sourceIds": {
-            "col": [
-              "C5T6L"
-            ]
-          },
-          "authorityIds": "col:C5T6L"
         },
         {
           "id": "SP_NATICOPSIS_GLOMEROSA_GORDON_YOCHELSON_1983",
@@ -1004,24 +933,6 @@
           "uuid": "ea34eb68-4b8a-57a-bf0-1918f204b1b26a"
         },
         {
-          "id": "SP_NATICOPSIS_LILYDALENSIS",
-          "name": "Naticopsis lilydalensis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis lilydalensis is a anomphalidae species found in its native region.",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "b453091f-e4cd-535-b7d-4fca3982360aa7",
-          "sourceIds": {
-            "col": [
-              "VPFX9"
-            ]
-          },
-          "authorityIds": "col:VPFX9"
-        },
-        {
           "id": "SP_NATICOPSIS_LITTONANA",
           "name": "Naticopsis littonana",
           "rank": "SPECIES",
@@ -1044,25 +955,6 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c925194e-4feb-5eb-907-647b8c97e007c3"
-        },
-        {
-          "id": "SP_NATICOPSIS_MARIONA",
-          "name": "Naticopsis mariona",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "02cd2f93-c9c7-5e1-93a-24af32db886a1c",
-          "sourceIds": {
-            "col": [
-              "VQ8RJ"
-            ]
-          },
-          "authorityIds": "col:VQ8RJ"
         },
         {
           "id": "SP_NATICOPSIS_MARTHAAE_KNIGHT_1933",
@@ -1157,46 +1049,6 @@
           "yearPublished": "1906",
           "children": [],
           "uuid": "91db7d3b-8212-548-baa-54b066133c9d8c"
-        },
-        {
-          "id": "SP_NATICOPSIS_PEGMIHUMEROSA",
-          "name": "Naticopsis pegmihumerosa",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "d5f643fc-fbb5-503-8ed-5268b98657e112",
-          "sourceIds": {
-            "col": [
-              "VFMFY"
-            ]
-          },
-          "authorityIds": "col:VFMFY"
-        },
-        {
-          "id": "SP_NATICOPSIS_PHILLIPSI",
-          "name": "Naticopsis phillipsi",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "97f43b81-de46-5d5-9d6-5ca3dda1c69cae",
-          "sourceIds": {
-            "col": [
-              "VPCGV"
-            ],
-            "gbif-backbone": "4954047"
-          },
-          "authorityIds": "col:VPCGV",
-          "authorship": "(M'Coy, 1844)"
         },
         {
           "id": "SP_NATICOPSIS_PLANAPICULA_WANG_1980",
@@ -1408,44 +1260,6 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4d574b3d-de35-5ac-aee-9b5bcec64ba251"
-        },
-        {
-          "id": "SP_NATICOPSIS_SUTURICOMPTA",
-          "name": "Naticopsis suturicompta",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "9e2e1df8-45b6-521-bdc-5ca16c80f5654a",
-          "sourceIds": {
-            "col": [
-              "V9V49"
-            ]
-          },
-          "authorityIds": "col:V9V49"
-        },
-        {
-          "id": "SP_NATICOPSIS_TAEMASENSIS",
-          "name": "Naticopsis taemasensis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Naticopsis",
-          "subspeciesCount": 0,
-          "description": "Naticopsis is an extinct genus of small sea snails belonging to the family Neritopsidae.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Naticopsis",
-          "children": [],
-          "uuid": "fb81c88a-40b4-56a-aaf-79695f5cefe663",
-          "sourceIds": {
-            "col": [
-              "VPF87"
-            ]
-          },
-          "authorityIds": "col:VPF87"
         },
         {
           "id": "SP_NATICOPSIS_TAYLORIANA_GIRTY_1910",
@@ -1884,9 +1698,12 @@
           "sourceIds": {
             "col": [
               "VGB23"
+            ],
+            "checklistbank": [
+              "txn:73857"
             ]
           },
-          "authorityIds": "col:VGB23",
+          "authorityIds": "checklistbank:txn:73857,col:VGB23",
           "description": "Antirotella helicinaeformis is a anomphalidae species found in its native region."
         }
       ]
@@ -4236,7 +4053,7 @@
     }
   ],
   "genusCount": 40,
-  "speciesCount": 266,
+  "speciesCount": 256,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

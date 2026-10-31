@@ -6772,12 +6772,13 @@
               "4NXBV"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:506271"
+              "urn:lsid:marinespecies.org:taxname:506271",
+              "txn:86010"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:506271",
             "gbif-backbone": "8243534"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506271,col:4NXBV",
+          "authorityIds": "checklistbank:txn:86010,checklistbank:urn:lsid:marinespecies.org:taxname:506271,checklistbank-2011:urn:lsid:marinespecies.org:taxname:506271,col:4NXBV,gbif-backbone:8243534",
           "authorship": "(Dall, 1890)"
         },
         {
@@ -6788,11 +6789,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pseudoglomus",
           "sourceIds": {
-            "checklistbank": "1211765"
+            "checklistbank": [
+              "1211765",
+              "txn:86008"
+            ]
           },
           "children": [],
           "uuid": "2b399a36-de88-509-8a2-df83c4dcfc4937",
-          "description": "Pseudoglomus fragilis is a malletiidae species found in its native region."
+          "description": "Pseudoglomus fragilis is a malletiidae species found in its native region.",
+          "authorityIds": "checklistbank:1211765,checklistbank:txn:86008"
         },
         {
           "id": "SP_PSEUDOGLOMUS_VERCONIS",

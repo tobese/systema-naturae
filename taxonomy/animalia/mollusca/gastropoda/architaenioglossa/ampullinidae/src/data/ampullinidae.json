@@ -271,10 +271,11 @@
               "CJDK"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:954393"
+              "urn:lsid:marinespecies.org:taxname:954393",
+              "txn:121591"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:954393,col:CJDK",
+          "authorityIds": "checklistbank:txn:121591,checklistbank:urn:lsid:marinespecies.org:taxname:954393,col:CJDK",
           "authorship": "(Lamarck, 1804)"
         },
         {
@@ -520,9 +521,12 @@
           "sourceIds": {
             "col": [
               "CR8JZ"
+            ],
+            "checklistbank": [
+              "txn:499508"
             ]
           },
-          "authorityIds": "col:CR8JZ",
+          "authorityIds": "checklistbank:txn:499508,col:CR8JZ",
           "description": "Amaurellina cambayensis is a ampullinidae species found in its native region."
         },
         {
@@ -2577,10 +2581,11 @@
               "VGVV4"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1892319"
+              "urn:lsid:marinespecies.org:taxname:1892319",
+              "txn:59918"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1892319,col:VGVV4",
+          "authorityIds": "checklistbank:txn:59918,checklistbank:urn:lsid:marinespecies.org:taxname:1892319,col:VGVV4",
           "authorship": "(Dickerson, 1914)"
         },
         {
@@ -2717,11 +2722,15 @@
           "lineage": "Crommium",
           "authorship": "B. L. Clark, 1946",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823515"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1823515",
+              "txn:158331"
+            ]
           },
           "children": [],
           "uuid": "18966c9d-6b23-53f-8f0-3c77c58659c2fc",
-          "description": "Crommium palmerae is a ampullinidae species found in its native region."
+          "description": "Crommium palmerae is a ampullinidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:158331,checklistbank:urn:lsid:marinespecies.org:taxname:1823515"
         },
         {
           "id": "SP_CROMMIUM_DOLIUM_D_ARCHIAC_HAIME_1854",
@@ -5783,9 +5792,12 @@
           "sourceIds": {
             "col": [
               "C73KM"
+            ],
+            "checklistbank": [
+              "txn:339486"
             ]
           },
-          "authorityIds": "col:C73KM",
+          "authorityIds": "checklistbank:txn:339486,col:C73KM",
           "description": "Euspirocrommium nantoialense is a ampullinidae species found in its native region."
         },
         {
@@ -6028,11 +6040,24 @@
           "lineage": "Tejonia",
           "authorship": "(R. B. Stewart, 1927)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1713106"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1713106",
+              "txn:62440"
+            ],
+            "col": [
+              "C55VK"
+            ],
+            "gbif-backbone": [
+              "4963813"
+            ],
+            "checklistbank-1174": [
+              "txn:62440"
+            ]
           },
           "children": [],
           "uuid": "85c96201-09d6-56e-985-99c334ae81b492",
-          "description": "Tejonia moragai is a ampullinidae species found in its native region."
+          "description": "Tejonia moragai is a ampullinidae species found in its native region.",
+          "authorityIds": "checklistbank:txn:62440,checklistbank:urn:lsid:marinespecies.org:taxname:1713106,checklistbank-1174:txn:62440,col:C55VK,gbif-backbone:4963813"
         }
       ],
       "sourcedFrom": "catalogue of life",

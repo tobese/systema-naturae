@@ -8044,13 +8044,14 @@
               "70031"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:594170"
+              "urn:lsid:marinespecies.org:taxname:594170",
+              "taicol: 89170"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:594170",
             "checklistbank-127379": "673a6318-7b28-49d1-b785-fbecc817a9f4",
             "checklistbank-316441": "53TY6"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:594170,col:53TY6,itis:70031",
+          "authorityIds": "checklistbank:taicol: 89170,checklistbank:urn:lsid:marinespecies.org:taxname:594170,checklistbank-127379:673a6318-7b28-49d1-b785-fbecc817a9f4,checklistbank-2011:urn:lsid:marinespecies.org:taxname:594170,checklistbank-316441:53TY6,col:53TY6,itis:70031",
           "speciesList": []
         },
         {
@@ -9251,7 +9252,8 @@
             "checklistbank": "taicol: 88785",
             "checklistbank-1174": "txn:62341",
             "checklistbank-127379": "9631a188-5500-4fb0-afd6-0c51509b0ea4",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7618724"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7618724",
+            "checklistbank-24510": "94385"
           },
           "children": [],
           "uuid": "ca97bbff-7831-52d-895-4a541b06da96fe",
@@ -25978,7 +25980,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:225666",
             "checklistbank-139831": "923523",
-            "checklistbank-315281": "alien_species_cyprus:taxon:c4e8970bb1c82dd441791b21b436052a"
+            "checklistbank-315281": "alien_species_cyprus:taxon:c4e8970bb1c82dd441791b21b436052a",
+            "checklistbank-29007": "1875"
           },
           "uuid": "232bc2d7-dbb1-45e3-ba05-228a514f2da8",
           "children": []
@@ -33003,16 +33006,21 @@
           "lineage": "Stomatia",
           "authorship": "Helbling",
           "sourceIds": {
-            "checklistbank": "3bacd644-8d4a-4010-af3b-fb78d25f666b",
+            "checklistbank": [
+              "3bacd644-8d4a-4010-af3b-fb78d25f666b",
+              "f33e6d9b-c5cb-4b59-8245-8f5c1adf71ef"
+            ],
             "wikispecies": "Stomatia_phymotis",
             "checklistbank-139831": "577974",
             "checklistbank-2265": "479610",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7618730"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7618730",
+            "checklistbank-312616": "f33e6d9b-c5cb-4b59-8245-8f5c1adf71ef"
           },
           "children": [],
           "uuid": "fc68e404-1033-54c-87e-5d4b735a3a2f24",
           "description": "Stomatia phymotis, common name the swollen stomatella, is a species of sea snail, a marine gastropod mollusk in the family Trochidae, the top snails.",
-          "speciesList": []
+          "speciesList": [],
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q7618730,checklistbank:3bacd644-8d4a-4010-af3b-fb78d25f666b,checklistbank:f33e6d9b-c5cb-4b59-8245-8f5c1adf71ef,checklistbank-139831:577974,checklistbank-2265:479610,wikispecies:Stomatia_phymotis"
         },
         {
           "id": "SP_STOMATIA_RUBRA_LAMARCK",
@@ -35391,22 +35399,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_EUCHELUS_ATRATUS_GMELIN_1791",
-          "name": "Euchelus atratus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Euchelus",
-          "authorship": "(Gmelin, 1791)",
-          "sourceIds": {
-            "checklistbank": "taicol: 72226"
-          },
-          "children": [],
-          "uuid": "387a4b21-5e45-558-889-18119d861b3e3a",
-          "description": "Euchelus atratus, common name the blackish margarite, is a species of sea snail, a marine gastropod mollusk in the family Chilodontaidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_EUCHELUS_BOURCIERI_CROSSE_1863",
           "name": "Euchelus bourcieri",
           "rank": "SPECIES",
@@ -35474,20 +35466,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_EUCHELUS_EUCASTUS_DALL_1889",
-          "name": "Euchelus eucastus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euchelus",
-          "authorship": "(Dall, 1889)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "70000"
-          },
-          "children": [],
-          "uuid": "8a993829-87bd-50dd-85bd-dafad9a13e31"
-        },
-        {
           "id": "SP_EUCHELUS_MIDWAYENSIS",
           "name": "Euchelus midwayensis",
           "rank": "SPECIES",
@@ -35520,19 +35498,6 @@
           "lineage": "Euchelus",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106304597"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EUCHELUS_PULLATUS_ANTON_1848",
-          "name": "Euchelus pullatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euchelus",
-          "authorship": "(Anton, 1848)",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q5405853"
           },
           "children": []
         },
@@ -35609,18 +35574,6 @@
           "children": []
         },
         {
-          "id": "SP_EUCHELUS_HUMMELINCKI",
-          "name": "Euchelus hummelincki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euchelus",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13614349"
-          },
-          "children": []
-        },
-        {
           "id": "SP_EUCHELUS_NATALENSIS",
           "name": "Euchelus natalensis",
           "rank": "SPECIES",
@@ -35641,18 +35594,6 @@
           "lineage": "Euchelus",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106304630"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EUCHELUS_BERMUDENSIS",
-          "name": "Euchelus bermudensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euchelus",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13614345"
           },
           "children": []
         },
@@ -35737,18 +35678,6 @@
           "lineage": "Euchelus",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106304673"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EUCHELUS_DAMPIERENSIS",
-          "name": "Euchelus dampierensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euchelus",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16935181"
           },
           "children": []
         },
@@ -42862,23 +42791,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_MARGARITES_PUPILLUS_GOULD_1849",
-          "name": "Margarites pupillus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Margarites",
-          "authorship": "(Gould, 1849)",
-          "sourceIds": {
-            "checklistbank": "221913"
-          },
-          "children": [],
-          "uuid": "53edbaf2-914b-54e-a02-5d79313a474507",
-          "commonName": "little margarite",
-          "description": "Margarites pupillus, common name the puppet margarite or the little margarite, is a species of sea snail, a marine gastropod mollusk in the family Margaritidae, the turban snails.",
-          "speciesList": []
-        },
-        {
           "id": "SP_MARGARITES_BIANGULOSUS_A_ADAMS_1854",
           "name": "Margarites biangulosus",
           "rank": "SPECIES",
@@ -42926,34 +42838,6 @@
           "uuid": "4aade4fd-6a76-552-88c-6f993d077a9e58"
         },
         {
-          "id": "SP_MARGARITES_VAHLII_MOLLER_1842",
-          "name": "Margarites vahlii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "authorship": "(Moller, 1842)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "69880"
-          },
-          "children": [],
-          "uuid": "242ccade-f3ad-5056-a02c-32c62fbfbebe"
-        },
-        {
-          "id": "SP_MARGARITES_COSTALIS_GOULD_1841",
-          "name": "Margarites costalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "authorship": "(Gould, 1841)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "69893"
-          },
-          "children": [],
-          "uuid": "035f4535-b728-5c3d-8337-aef4b06936a8"
-        },
-        {
           "id": "SP_MARGARITES_UMBILICALIS_BRODERIP_AND_SOWERBY_1829",
           "name": "Margarites umbilicalis",
           "rank": "SPECIES",
@@ -42966,34 +42850,6 @@
           },
           "children": [],
           "uuid": "9f711a38-4a39-50ea-bc91-0c966623db80"
-        },
-        {
-          "id": "SP_MARGARITES_SALMONEUS_CARPENTER_1864",
-          "name": "Margarites salmoneus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "authorship": "(Carpenter, 1864)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "69900"
-          },
-          "children": [],
-          "uuid": "8b1edefa-25c8-5d1b-8d72-6b6ffa600b3e"
-        },
-        {
-          "id": "SP_MARGARITES_SCINTILLANS_WATSON_1879",
-          "name": "Margarites scintillans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "authorship": "Watson, 1879",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "69910"
-          },
-          "children": [],
-          "uuid": "52c35840-407e-59ca-81c3-debd018133b9"
         },
         {
           "id": "SP_MARGARITES_ANTARCTICA",
@@ -43044,19 +42900,6 @@
           "children": []
         },
         {
-          "id": "SP_MARGARITES_ALBOLINEATUS_SMITH_1899",
-          "name": "Margarites albolineatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "authorship": "(Smith, 1899)",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3736926"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MARGARITES_ATLANTOIDES",
           "name": "Margarites atlantoides",
           "rank": "SPECIES",
@@ -43101,19 +42944,6 @@
           "lineage": "Margarites",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106307277"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MARGARITES_PILSBRYI_HABE_1952",
-          "name": "Margarites pilsbryi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "authorship": "Habe, 1952",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6760221"
           },
           "children": []
         },
@@ -43174,18 +43004,6 @@
           "lineage": "Margarites",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106307269"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MARGARITES_HAYASHII",
-          "name": "Margarites hayashii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margarites",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106307270"
           },
           "children": []
         }
@@ -43291,48 +43109,6 @@
           "authorityIds": "itis:70048",
           "description": "Calliotropis regulata is a trochidae species found in its native region.",
           "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOTROPIS_CARLOTTA_DALL_1889",
-          "name": "Calliotropis carlotta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliotropis",
-          "authorship": "(Dall, 1889)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "70046"
-          },
-          "children": [],
-          "uuid": "60286c93-0434-571a-b41b-3fb9f5563248"
-        },
-        {
-          "id": "SP_CALLIOTROPIS_REGALIS_A_E_VERRILL_AND_S_SMITH_1880",
-          "name": "Calliotropis regalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliotropis",
-          "authorship": "(A. E. Verrill and S. Smith, 1880)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "70047"
-          },
-          "children": [],
-          "uuid": "29620157-d888-5e6c-964c-6e5cd76aa8cb"
-        },
-        {
-          "id": "SP_CALLIOTROPIS_OTTOI_PHILIPPI_1844",
-          "name": "Calliotropis ottoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliotropis",
-          "authorship": "(Philippi, 1844)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "204871"
-          },
-          "children": [],
-          "uuid": "7de3947c-fd46-57a7-aaf1-0c4b8e5308a1"
         },
         {
           "id": "SP_CALLIOTROPIS_LAMELLIFERA",
@@ -43451,18 +43227,6 @@
           "lineage": "Calliotropis",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106305054"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CALLIOTROPIS_PELSENEERI",
-          "name": "Calliotropis pelseneeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliotropis",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q5022666"
           },
           "children": []
         },
@@ -43633,23 +43397,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CALLIOSTOMA_OCCIDENTALE_MIGHELS_ADAMS_1842",
-          "name": "Calliostoma occidentale",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "(Mighels & Adams, 1842)",
-          "sourceIds": {
-            "checklistbank": "61765"
-          },
-          "children": [],
-          "uuid": "73d9674e-7e97-549-bd0-b7ff5c55aaa3d4",
-          "commonName": "boreal topsnail",
-          "description": "Calliostoma occidentale, common name the boreal topsnail, is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_SOYONE_IKEBE_1942",
           "name": "Calliostoma soyone",
           "rank": "SPECIES",
@@ -43698,22 +43445,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_KOMA_SCHIKAMA_ET_HABE_1965",
-          "name": "Calliostoma koma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "Schikama et Habe,1965",
-          "sourceIds": {
-            "checklistbank": "44265f7f-b0a6-4f70-b507-17bf02b43775"
-          },
-          "children": [],
-          "uuid": "52ccfbe5-9de5-5ac-b31-38b81744e9f849",
-          "description": "Calliostoma koma is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_FORMOSENSIS_SMITH_1907",
           "name": "Calliostoma formosensis",
           "rank": "SPECIES",
@@ -43743,22 +43474,6 @@
           "children": [],
           "uuid": "191dffc8-6115-57c-875-21185dd37c446c",
           "description": "Calliostoma haliarchus is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_ALBOREGIUM_AZUMA_1961",
-          "name": "Calliostoma alboregium",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "Azuma,1961",
-          "sourceIds": {
-            "checklistbank": "a3e67140-35e7-4f6c-9b95-91c63dcad175"
-          },
-          "children": [],
-          "uuid": "24f02b57-a4b0-5e8-a30-459b38e1c07f56",
-          "description": "Calliostoma alboregium is a trochidae species found in its native region.",
           "speciesList": []
         },
         {
@@ -43858,54 +43573,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_FORMOSENSE_SMITH_1907",
-          "name": "Calliostoma formosense",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "Smith, 1907",
-          "sourceIds": {
-            "checklistbank": "taicol: 66283"
-          },
-          "children": [],
-          "uuid": "d14c6629-0f63-5fb-87a-b1168745a1488c",
-          "description": "Calliostoma formosense, common name the Formosa top shell, is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_GALEA_SAKURAI_1994",
-          "name": "Calliostoma galea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "(Sakurai, 1994)",
-          "sourceIds": {
-            "checklistbank": "taicol: 66284"
-          },
-          "children": [],
-          "uuid": "32f3fd55-474e-511-ba7-49f0cbbd1b540b",
-          "description": "Calliostoma galea is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_KATOI_SAKURAI_1944",
-          "name": "Calliostoma katoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "(Sakurai, 1944)",
-          "sourceIds": {
-            "checklistbank": "taicol: 66286"
-          },
-          "children": [],
-          "uuid": "fc2a9fcd-18f5-532-9de-799b8ea51915da",
-          "description": "Calliostoma katoi is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_PROBLEMATICUS_KURODA_HABE_1971",
           "name": "Calliostoma problematicus",
           "rank": "SPECIES",
@@ -44002,23 +43669,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_LIGATUM_GOULD_1849",
-          "name": "Calliostoma ligatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "(Gould 1849)",
-          "sourceIds": {
-            "checklistbank": "txn:90507"
-          },
-          "children": [],
-          "uuid": "57b63a53-0128-55b-a15-00c15080173f87",
-          "commonName": "blue topsnail",
-          "description": "thumb|[[Seashell|Shell and operculum of Calliostoma ligatum (Gould, 1849)]] Calliostoma ligatum, common name the blue top snail, is a small prosobranch trochid gastropod mollusk in the family Calliostomatidae, the Calliostoma top snails.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_NONURUM_PILSBRY_AND_OLSSON_1941",
           "name": "Calliostoma nonurum",
           "rank": "SPECIES",
@@ -44080,22 +43730,6 @@
           "children": [],
           "uuid": "e4c0a4b9-d92e-5e7-82b-270f222d0fa0d9",
           "description": "Calliostoma philanthropus is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_VIRGINICUM_CONRAD_1875",
-          "name": "Calliostoma virginicum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "(Conrad 1875)",
-          "sourceIds": {
-            "checklistbank": "txn:97675"
-          },
-          "children": [],
-          "uuid": "ed93bd9d-5ae9-558-a07-63019829bf7833",
-          "description": "Calliostoma virginicum is a trochidae species found in its native region.",
           "speciesList": []
         },
         {
@@ -44211,22 +43845,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_ELEGANTULUM_PHILIPPI_1843",
-          "name": "Calliostoma elegantulum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "(Philippi 1843)",
-          "sourceIds": {
-            "checklistbank": "txn:114971"
-          },
-          "children": [],
-          "uuid": "828c48b5-759d-56c-9b0-2627969a7601d6",
-          "description": "Calliostoma elegantulum is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_HEGEDUESI_BALDI_1973",
           "name": "Calliostoma hegeduesi",
           "rank": "SPECIES",
@@ -44291,22 +43909,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_AURORA_DALL_1889",
-          "name": "Calliostoma aurora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "(Dall 1889)",
-          "sourceIds": {
-            "checklistbank": "txn:155275"
-          },
-          "children": [],
-          "uuid": "ad86f22e-013c-5f3-bee-4dee056e207ed5",
-          "description": "Calliostoma aurora, common name the dawn top shell, is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_NODULIFERUM_NELSON_1870",
           "name": "Calliostoma noduliferum",
           "rank": "SPECIES",
@@ -44336,23 +43938,6 @@
           "children": [],
           "uuid": "60860a87-7afa-55f-878-3448c8de06938a",
           "description": "Calliostoma hannibali is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_CONULUS_LINNAEAUS_1758",
-          "name": "Calliostoma conulus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "(Linnaeaus 1758)",
-          "sourceIds": {
-            "checklistbank": "txn:111866"
-          },
-          "children": [],
-          "uuid": "f8425b45-9981-501-995-12bc56863a4df0",
-          "commonName": "rusty topsnail",
-          "description": "Calliostoma conulus is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
           "speciesList": []
         },
         {
@@ -44401,23 +43986,6 @@
           "children": [],
           "uuid": "e40d2553-508e-5fc-911-9ed4a27c790f34",
           "description": "Calliostoma caronianum is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_BULLISI_CLENCH_AND_TURNER_1960",
-          "name": "Calliostoma bullisi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "Clench and Turner 1960",
-          "sourceIds": {
-            "checklistbank": "txn:187411",
-            "checklistbank-139831": "1214816"
-          },
-          "children": [],
-          "uuid": "6d33a7f3-df36-51d-bc6-7f73629ea19fc4",
-          "description": "Calliostoma bullisi, common name Bullis's top shell, is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
           "speciesList": []
         },
         {
@@ -44549,24 +44117,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_GEMMULATUM_CARPENTER_1864",
-          "name": "Calliostoma gemmulatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "Carpenter 1864",
-          "sourceIds": {
-            "checklistbank": "txn:362565",
-            "checklistbank-139831": "523570"
-          },
-          "children": [],
-          "uuid": "bb2a6dc5-c169-597-90d-dd7e4ffaa2b3fe",
-          "commonName": "gem topsnail",
-          "description": "Calliostoma gemmulatum, common name the western gem top shell, is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_IRERENSE_HARZHAUSER_ET_AL_2017",
           "name": "Calliostoma irerense",
           "rank": "SPECIES",
@@ -44631,22 +44181,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_GRANTIANUM_BERRY_1940",
-          "name": "Calliostoma grantianum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "Berry 1940",
-          "sourceIds": {
-            "checklistbank": "txn:390471"
-          },
-          "children": [],
-          "uuid": "8d99af9c-18a9-5cb-96b-fcda6eac2d472a",
-          "description": "Calliostoma grantianum is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_LIGNITICA_COOPER_1896",
           "name": "Calliostoma lignitica",
           "rank": "SPECIES",
@@ -44660,23 +44194,6 @@
           "children": [],
           "uuid": "56251bfc-5e37-5e0-8d7-d57365380529d3",
           "description": "Calliostoma lignitica is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_SUPRAGRANOSUM_CARPENTER_1864",
-          "name": "Calliostoma supragranosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "Carpenter 1864",
-          "sourceIds": {
-            "checklistbank": "txn:407411"
-          },
-          "children": [],
-          "uuid": "01329612-4479-572-abb-f62157c0fb8a80",
-          "commonName": "granulose topsnail",
-          "description": "Calliostoma supragranosum Carpenter, 1864 is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae, which was formerly placed within the Trochidae or top snails.",
           "speciesList": []
         },
         {
@@ -44776,38 +44293,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_MAPUCHERUM_NIELSEN_ET_AL_2004",
-          "name": "Calliostoma mapucherum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "Nielsen et al. 2004",
-          "sourceIds": {
-            "checklistbank": "txn:517756"
-          },
-          "children": [],
-          "uuid": "d33d5823-37eb-5d7-920-c1714a056688df",
-          "description": "Calliostoma mapucherum is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_KLEPPI_NIELSEN_ET_AL_2004",
-          "name": "Calliostoma kleppi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "Nielsen et al. 2004",
-          "sourceIds": {
-            "checklistbank": "txn:517757"
-          },
-          "children": [],
-          "uuid": "a60ea3ff-59fd-5da-ba3-9ffe8e2cacb44d",
-          "description": "Calliostoma kleppi is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_COVACEVICHI_NIELSEN_ET_AL_2004",
           "name": "Calliostoma covacevichi",
           "rank": "SPECIES",
@@ -44840,52 +44325,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_CALLIOSTOMA_DECIPIENS_GUPPY_1867",
-          "name": "Calliostoma decipiens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "(Guppy 1867)",
-          "sourceIds": {
-            "checklistbank": "txn:187397"
-          },
-          "children": [],
-          "uuid": "d7e67d5f-e2d7-5cf-a69-c14bdb41755212",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_BOSCIANUM_BRONGNIART_1823",
-          "name": "Calliostoma boscianum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calliostoma",
-          "authorship": "(Brongniart 1823)",
-          "sourceIds": {
-            "checklistbank": "txn:345345"
-          },
-          "children": [],
-          "uuid": "a9b1f318-2f62-5fe-9f8-6ca340c3c0f9a1",
-          "speciesList": []
-        },
-        {
-          "id": "SP_CALLIOSTOMA_EXIMIUM_REEVE_1842",
-          "name": "Calliostoma eximium",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Calliostoma",
-          "authorship": "(Reeve 1842)",
-          "sourceIds": {
-            "checklistbank": "txn:489529"
-          },
-          "children": [],
-          "uuid": "c5562483-ae84-55b-9c3-88636bdd563436",
-          "description": "Calliostoma eximium is a species of sea snail, a marine gastropod mollusk in the family Calliostomatidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_CALLIOSTOMA_STRIATUM_LINNAEUS_1758",
           "name": "Calliostoma striatum",
           "rank": "SPECIES",
@@ -44909,32 +44348,32 @@
           },
           "children": [],
           "uuid": "bf9ccbd5-a9f4-5d9-ac3-4641fb6d6837c1"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trochidae",
-      "speciesList": []
-    },
-    {
-      "id": "GENUS_DANILIA",
-      "name": "Danilia",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_DANILIA_AFFINIS_DAUTZENBERG_FISCHER_H_1896",
-          "name": "Danilia affinis",
+          "id": "SP_CALLIOSTOMA_KOMA_SCHIKAMA_ET_HABE_1965",
+          "name": "Calliostoma koma",
           "rank": "SPECIES",
           "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Danilia",
-          "authorship": "(Dautzenberg & Fischer H., 1896)",
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliostoma",
+          "authorship": "Schikama et Habe,1965",
           "sourceIds": {
-            "checklistbank": "61775"
+            "checklistbank-312616": "44265f7f-b0a6-4f70-b507-17bf02b43775"
           },
-          "children": [],
-          "uuid": "2750baa8-5e9a-591-968-3decfd7fb234d2",
-          "description": "Danilia affinis, is a species of sea snail, a marine gastropod mollusc in the family Chilodontaidae.",
-          "speciesList": []
+          "uuid": "7cad7e64-b637-4d87-ab38-681eb425b4d1"
+        },
+        {
+          "id": "SP_CALLIOSTOMA_ALBOREGIUM_AZUMA_1961",
+          "name": "Calliostoma alboregium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliostoma",
+          "authorship": "Azuma,1961",
+          "sourceIds": {
+            "checklistbank-312616": "a3e67140-35e7-4f6c-9b95-91c63dcad175"
+          },
+          "uuid": "ee659720-d88a-431a-a44b-6c703d08e186"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -44960,22 +44399,6 @@
           "children": [],
           "uuid": "5e8241d0-fb3f-5f0-94b-75f68577b631a3",
           "description": "Minolia chinensis is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_MINOLIA_PUNCTATA_ADAMS_1860",
-          "name": "Minolia punctata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Minolia",
-          "authorship": "Adams, 1860",
-          "sourceIds": {
-            "checklistbank": "taicol: 79368"
-          },
-          "children": [],
-          "uuid": "2e4e82e4-8d80-549-bf1-970df93eb4e52f",
-          "description": "Minolia punctata is a species of sea snail, a marine gastropod mollusk in the family Solariellidae.",
           "speciesList": []
         },
         {
@@ -45368,22 +44791,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_SOLARIELLA_NANSHAENSIS_DONG_2002",
-          "name": "Solariella nanshaensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "authorship": "Dong,2002",
-          "sourceIds": {
-            "checklistbank": "d507c983-de0b-4a7e-8c73-6d20f3e098d1"
-          },
-          "children": [],
-          "uuid": "0a4fc90b-8b38-552-bb2-e5f9c35d0cec9c",
-          "description": "Solariella nanshaensis is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_SOLARIELLA_SPLENDENS_G_B_SOWERBY_III_1897",
           "name": "Solariella splendens",
           "rank": "SPECIES",
@@ -45766,18 +45173,6 @@
           "children": []
         },
         {
-          "id": "SP_SOLARIELLA_QUINNI",
-          "name": "Solariella quinni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q60328849"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SOLARIELLA_MONODI",
           "name": "Solariella monodi",
           "rank": "SPECIES",
@@ -45942,18 +45337,6 @@
           "lineage": "Solariella",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3709799"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLARIELLA_MACULATA",
-          "name": "Solariella maculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3731796"
           },
           "children": []
         },
@@ -46127,18 +45510,6 @@
           "children": []
         },
         {
-          "id": "SP_SOLARIELLA_ANTARCTICA",
-          "name": "Solariella antarctica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solariella",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7556925"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SOLARIELLA_ORNATISSIMA_SCHEPMAN_1908",
           "name": "Solariella ornatissima",
           "rank": "SPECIES",
@@ -46308,6 +45679,19 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106307739"
           },
           "children": []
+        },
+        {
+          "id": "SP_SOLARIELLA_NANSHAENSIS_DONG_2002",
+          "name": "Solariella nanshaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solariella",
+          "authorship": "Dong,2002",
+          "sourceIds": {
+            "checklistbank-312616": "d507c983-de0b-4a7e-8c73-6d20f3e098d1"
+          },
+          "uuid": "37339d16-5cea-4a8c-8165-5eae29871632"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -46893,85 +46277,10 @@
       "speciesList": []
     },
     {
-      "id": "GENUS_PERRINIA",
-      "name": "Perrinia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PERRINIA_CONCINNA_A_ADAMS_1863",
-          "name": "Perrinia concinna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Perrinia",
-          "authorship": "A Adams,1863",
-          "sourceIds": {
-            "checklistbank": "a61e1406-0a1d-4be5-bced-e16007b3d763"
-          },
-          "children": [],
-          "uuid": "0c7d3fd9-275f-539-8ab-1951af3af61e79",
-          "description": "thumb|Basal view of a shell of Perrinia concinna thumb|Ventral view of a shell of Perrinia concinna.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_PERRINIA_MORRISONI",
-          "name": "Perrinia morrisoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Perrinia",
-          "sourceIds": {
-            "checklistbank": "895e3df8-03ec-42bf-abf3-19b00e964c86"
-          },
-          "children": [],
-          "uuid": "551c912f-3637-571-884-c28815c92bb201",
-          "speciesList": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trochidae",
-      "speciesList": []
-    },
-    {
       "id": "GENUS_TECTUS",
       "name": "Tectus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TECTUS_TRISERIALIS_LAMARCK_1822",
-          "name": "Tectus triserialis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Tectus",
-          "authorship": "Lamarck,1822",
-          "sourceIds": {
-            "checklistbank": "ab9ed678-5750-4716-a5a2-e315ebb2bd3b",
-            "checklistbank-127379": "07440daf-562f-4c4d-b4c3-8d534bf6a580"
-          },
-          "children": [],
-          "uuid": "9721f30b-0fec-58a-8ba-c157b2f6f49023",
-          "description": "Tectus triserialis is a species of sea snail, a marine gastropod mollusk in the family Tegulidae.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_TECTUS_PYRAMIS_BORN_1780",
-          "name": "Tectus pyramis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Tectus",
-          "authorship": "Born,1780",
-          "sourceIds": {
-            "checklistbank": "b0646b6d-cefa-4508-9f37-6090a33d2785",
-            "checklistbank-127379": "87a73df7-dabc-4f01-b386-d78a96b2ada8"
-          },
-          "children": [],
-          "uuid": "f1670e3f-c61d-5e6-93e-edcf7f51f5ed60",
-          "commonName": "pyramid top",
-          "description": "Tectus pyramis, common name the pyram top shell, is a species of sea snail, a marine gastropod mollusk in the family Turbinidae, the turban snails.",
-          "speciesList": []
-        },
         {
           "id": "SP_TECTUS_CONUS_GMELIN_1791",
           "name": "Tectus conus",
@@ -46987,23 +46296,6 @@
           "children": [],
           "uuid": "46dde3be-1746-513-875-f24a5d57c47511",
           "description": "Tectus conus is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_TECTUS_FENESTRATUS_GMELIN_1791",
-          "name": "Tectus fenestratus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Tectus",
-          "authorship": "(Gmelin, 1791)",
-          "sourceIds": {
-            "checklistbank": "taicol: 89580",
-            "checklistbank-127379": "36c64626-9f44-412a-b2a7-917f0533c94b"
-          },
-          "children": [],
-          "uuid": "5e9a695a-dbbf-579-8f0-a6e8bad5539b30",
-          "description": "Tectus fenestratus, common name the fenestrate top shell or the latticed top shell, is a species of sea snail, a marine gastropod mollusk in the family Tegulidae.",
           "speciesList": []
         },
         {
@@ -47041,22 +46333,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_TECTUS_ARCHITECTONICUS_A_ADAMS",
-          "name": "Tectus architectonicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Tectus",
-          "authorship": "A. Adams",
-          "sourceIds": {
-            "checklistbank": "075aa6fa-bc58-419b-b9c2-31d6251b3724"
-          },
-          "children": [],
-          "uuid": "d227d461-ac21-5b2-b01-c922f62f18d4b0",
-          "description": "Tectus architectonicus is a species of sea snail, a marine gastropod mollusk in the family Tegulidae.",
-          "speciesList": []
-        },
-        {
           "id": "SP_TECTUS_LUCASIANUS_BRONGNIART_1823",
           "name": "Tectus lucasianus",
           "rank": "SPECIES",
@@ -47089,22 +46365,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_TECTUS_COGNATUS_SOWERBY_1840",
-          "name": "Tectus cognatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tectus",
-          "authorship": "(Sowerby 1840)",
-          "sourceIds": {
-            "checklistbank": "txn:110050"
-          },
-          "children": [],
-          "uuid": "de934ba0-680a-545-8fa-1e62b10bd7671b",
-          "description": "Tectus cognatus is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
           "id": "SP_TECTUS_BOMASENSIS_MARTIN_1916",
           "name": "Tectus bomasensis",
           "rank": "SPECIES",
@@ -47118,22 +46378,6 @@
           "children": [],
           "uuid": "5b8a87fd-cffb-534-b87-596e0fc1e6fae6",
           "description": "Tectus bomasensis is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_TECTUS_GUERANGERI_D_ORBIGNY_1842",
-          "name": "Tectus guerangeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tectus",
-          "authorship": "(d'Orbigny 1842)",
-          "sourceIds": {
-            "checklistbank": "txn:163432"
-          },
-          "children": [],
-          "uuid": "5e48d312-5bc9-589-bce-7a5c8691527d6c",
-          "description": "Tectus guerangeri is a trochidae species found in its native region.",
           "speciesList": []
         },
         {
@@ -47201,21 +46445,6 @@
           "speciesList": []
         },
         {
-          "id": "SP_TECTUS_MARGARITACEUS_DESHAYES_1832",
-          "name": "Tectus margaritaceus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tectus",
-          "authorship": "(Deshayes 1832)",
-          "sourceIds": {
-            "checklistbank": "txn:123054"
-          },
-          "children": [],
-          "uuid": "083d9947-cbbf-54f-a6a-1d917b43982a0c",
-          "speciesList": []
-        },
-        {
           "id": "SP_TECTUS_PAGODALIS",
           "name": "Tectus pagodalis",
           "rank": "SPECIES",
@@ -47262,6 +46491,32 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106307841"
           },
           "children": []
+        },
+        {
+          "id": "SP_TECTUS_TRISERIALIS_LAMARCK_1822",
+          "name": "Tectus triserialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tectus",
+          "authorship": "Lamarck,1822",
+          "sourceIds": {
+            "checklistbank-312616": "ab9ed678-5750-4716-a5a2-e315ebb2bd3b"
+          },
+          "uuid": "ac128040-42e8-4271-97fa-ee2392bd2de0"
+        },
+        {
+          "id": "SP_TECTUS_PYRAMIS_BORN_1780",
+          "name": "Tectus pyramis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tectus",
+          "authorship": "Born,1780",
+          "sourceIds": {
+            "checklistbank-312616": "b0646b6d-cefa-4508-9f37-6090a33d2785"
+          },
+          "uuid": "03bff950-626a-41ee-a0fa-09eb258f53e6"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -47303,32 +46558,6 @@
           "children": [],
           "uuid": "dde43bf9-a7b8-5db-ae5-08d5e9d3076c5d",
           "description": "Granata elegans is a trochidae species found in its native region.",
-          "speciesList": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trochidae",
-      "speciesList": []
-    },
-    {
-      "id": "GENUS_ROCHIA",
-      "name": "Rochia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ROCHIA_MAXIMA_KOCH_1844",
-          "name": "Rochia maxima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Rochia",
-          "authorship": "(Koch, 1844)",
-          "sourceIds": {
-            "checklistbank": "taicol: 86572"
-          },
-          "children": [],
-          "uuid": "8def8d6e-b33f-543-865-f05737c05ec0f0",
-          "description": "Rochia maxima is a species of sea snail, a marine gastropod mollusk in the family Tegulidae.",
           "speciesList": []
         }
       ],
@@ -47381,22 +46610,6 @@
           "children": [],
           "uuid": "595d9430-927c-522-97a-247ccb78cb6f0f",
           "description": "Ginebis convexiusculus is a trochidae species found in its native region.",
-          "speciesList": []
-        },
-        {
-          "id": "SP_GINEBIS_CRUMPII_PILSBRY_1893",
-          "name": "Ginebis crumpii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "lineage": "Ginebis",
-          "authorship": "(Pilsbry, 1893)",
-          "sourceIds": {
-            "checklistbank": "taicol: 73620"
-          },
-          "children": [],
-          "uuid": "a01365f1-b16e-58d-851-0376f55e6c0111",
-          "description": "thumb|Dorsal view of a shell of Ginebis crumpii thumb|Basal view of a shell of Ginebis crumpii.",
           "speciesList": []
         },
         {
@@ -47775,22 +46988,6 @@
           "uuid": "208abc34-75ca-548-aa3-cd1b4fc821f7f6",
           "description": "Omphalotukaia hajimeanum is a trochidae species found in its native region.",
           "speciesList": []
-        },
-        {
-          "id": "SP_OMPHALOTUKAIA_NOBILIS_HIRASE_1922",
-          "name": "Omphalotukaia nobilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Omphalotukaia",
-          "authorship": "(Hirase, 1922)",
-          "sourceIds": {
-            "checklistbank": "taicol: 81561"
-          },
-          "children": [],
-          "uuid": "f4f4acf0-8230-54c-81a-c034636113d671",
-          "description": "Omphalotukaia nobilis is a trochidae species found in its native region.",
-          "speciesList": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -47996,7 +47193,8 @@
           "authorship": "(Brocchi, 1821)",
           "sourceIds": {
             "checklistbank": "618542",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6031646"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6031646",
+            "checklistbank-24510": "93968"
           },
           "children": [],
           "uuid": "d583bd18-656e-538-be6-e0ca6d2ccbdbcb",
@@ -49229,22 +48427,6 @@
           "uuid": "e41b27be-ace6-59b-b46-d68bf763c178a6",
           "description": "Astele engebiensis is a trochidae species found in its native region.",
           "speciesList": []
-        },
-        {
-          "id": "SP_ASTELE_CHILENSIS_D_ORBIGNY_1852",
-          "name": "Astele chilensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Astele",
-          "authorship": "(d'Orbigny 1852)",
-          "sourceIds": {
-            "checklistbank": "txn:517760"
-          },
-          "children": [],
-          "uuid": "17ca2764-9410-547-949-c0336ade4de288",
-          "description": "Astele chilensis is a trochidae species found in its native region.",
-          "speciesList": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -49846,52 +49028,6 @@
       "lineage": "trochidae"
     },
     {
-      "id": "GENUS_CIDARINA",
-      "name": "Cidarina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CIDARINA_CIDARIS_A_ADAMS_1864",
-          "name": "Cidarina cidaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidarina",
-          "authorship": "(A. Adams, 1864)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "70050"
-          },
-          "children": [],
-          "uuid": "7b32c9be-a176-5cbe-a49c-b26583582e4a"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trochidae"
-    },
-    {
-      "id": "GENUS_LAMELLITROCHUS",
-      "name": "Lamellitrochus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LAMELLITROCHUS_LAMELLOSUS_A_E_VERRILL_AND_S_SMITH_1880",
-          "name": "Lamellitrochus lamellosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamellitrochus",
-          "authorship": "(A. E. Verrill and S. Smith, 1880)",
-          "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "567752"
-          },
-          "children": [],
-          "uuid": "9ca6d7ea-a2f7-5a1d-8655-8838a2d5e08f"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trochidae"
-    },
-    {
       "id": "GENUS_OMPHALOMARGARITES",
       "name": "Omphalomargarites",
       "rank": "GENUS",
@@ -50286,10 +49422,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trochidae"
+    },
+    {
+      "id": "GENUS_PERRINIA",
+      "name": "Perrinia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "trochidae",
+      "children": [
+        {
+          "id": "SP_PERRINIA_CONCINNA_A_ADAMS_1863",
+          "name": "Perrinia concinna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Perrinia",
+          "authorship": "A Adams,1863",
+          "sourceIds": {
+            "checklistbank-312616": "a61e1406-0a1d-4be5-bced-e16007b3d763"
+          },
+          "uuid": "d5b22822-57df-40f8-958b-3171b7153d4f"
+        }
+      ]
     }
   ],
-  "genusCount": 233,
-  "speciesCount": 3044,
+  "genusCount": 228,
+  "speciesCount": 2991,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -367,11 +367,17 @@
             "col": [
               "6KHHL"
             ],
-            "checklistbank": "txn:82224",
-            "checklistbank-1174": "txn:82224"
+            "checklistbank": [
+              "txn:82224",
+              "33464"
+            ],
+            "checklistbank-1174": "txn:82224",
+            "checklistbank-2265": [
+              "69041"
+            ]
           },
           "uuid": "0ecdb1d5-ccdc-5d6-b11-ebb190c958e158",
-          "authorityIds": "col:6KHHL,gbif:8186067,itis:45821",
+          "authorityIds": "checklistbank:33464,checklistbank:txn:82224,checklistbank-1174:txn:82224,checklistbank-2265:69041,col:6KHHL,gbif:8186067,itis:45821",
           "authorship": "(Loeblich and Tappan 1957)"
         },
         {
@@ -392,10 +398,13 @@
             "col": [
               "6KHHH"
             ],
-            "checklistbank": "2517353"
+            "checklistbank": [
+              "2517353",
+              "ott5425030"
+            ]
           },
           "uuid": "56b00768-ba18-576-9d4-89e1e7a852e0af",
-          "authorityIds": "col:6KHHH,gbif:8382627",
+          "authorityIds": "checklistbank:2517353,checklistbank:ott5425030,col:6KHHH,gbif:8382627",
           "authorship": "(Natland, 1938)"
         },
         {
@@ -445,10 +454,13 @@
             ],
             "col": [
               "82MG4"
+            ],
+            "checklistbank": [
+              "ott8019165"
             ]
           },
           "uuid": "1f8e453f-6389-55e-910-04865376d4ffa2",
-          "authorityIds": "col:82MG4,gbif:10140092"
+          "authorityIds": "checklistbank:ott8019165,col:82MG4,gbif:10140092"
         },
         {
           "id": "GLOBIGERINITA_UVULA",
@@ -470,11 +482,17 @@
             "col": [
               "6KHHB"
             ],
-            "checklistbank": "txn:422377",
-            "checklistbank-1174": "txn:422377"
+            "checklistbank": [
+              "txn:422377",
+              "33465"
+            ],
+            "checklistbank-1174": "txn:422377",
+            "checklistbank-2265": [
+              "164914"
+            ]
           },
           "uuid": "74d88d4b-d8af-5db-a65-41cb9835782623",
-          "authorityIds": "col:6KHHB,gbif:7672896",
+          "authorityIds": "checklistbank:33465,checklistbank:txn:422377,checklistbank-1174:txn:422377,checklistbank-2265:164914,col:6KHHB,gbif:7672896",
           "authorship": "(Ehrenberg 1862)"
         },
         {
@@ -638,10 +656,13 @@
             ],
             "col": [
               "83QKL"
+            ],
+            "checklistbank": [
+              "ott8019166"
             ]
           },
           "uuid": "86507211-1ed3-560-9d9-95d088865367f0",
-          "authorityIds": "col:83QKL,gbif:9271257"
+          "authorityIds": "checklistbank:ott8019166,col:83QKL,gbif:9271257"
         },
         {
           "id": "TINOPHODELLA_PRAEMONITA",
@@ -660,10 +681,13 @@
             ],
             "col": [
               "83QKM"
+            ],
+            "checklistbank": [
+              "ott8019167"
             ]
           },
           "uuid": "126674e3-0751-537-afb-bc85f05006f51a",
-          "authorityIds": "col:83QKM,gbif:9505584"
+          "authorityIds": "checklistbank:ott8019167,col:83QKM,gbif:9505584"
         },
         {
           "id": "TINOPHODELLA_UVULA",
@@ -883,20 +907,6 @@
       "name": "Tenuitellinata",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_TENUITELLINATA_SELLEYI",
-          "name": "Tenuitellinata selleyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tenuitellinata",
-          "sourceIds": {
-            "checklistbank": "ott8019103"
-          },
-          "children": [],
-          "uuid": "79305ebf-8fb2-591-ab2-b3eb811a3d6207",
-          "description": "Tenuitellinata selleyi is a globigerinitidae species found in its native region."
-        },
         {
           "id": "SP_TENUITELLINATA_PRAESTAINFORTHI_BLOW_1979",
           "name": "Tenuitellinata praestainforthi",
@@ -1245,58 +1255,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "globigerinitidae"
-    },
-    {
-      "id": "GENUS_TENUITELLITA",
-      "name": "Tenuitellita",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TENUITELLITA_PARKERAE_BR_NNIMANN_AND_RESIG_1971",
-          "name": "Tenuitellita parkerae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tenuitellita",
-          "authorship": "(Brönnimann and Resig 1971)",
-          "sourceIds": {
-            "checklistbank": "txn:506627"
-          },
-          "children": [],
-          "uuid": "e9e05a88-d382-59f-b71-901cdaba49f410",
-          "description": "Tenuitellita parkerae is a globigerinitidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "globigerinitidae"
-    },
-    {
-      "id": "GENUS_MUTABELLA",
-      "name": "Mutabella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MUTABELLA_MIRABILIS_PEARSON_ET_AL_2001",
-          "name": "Mutabella mirabilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mutabella",
-          "authorship": "Pearson et al. 2001",
-          "sourceIds": {
-            "checklistbank": "txn:510241"
-          },
-          "children": [],
-          "uuid": "122684b8-afd2-52f-9fb-5c8e83071e7dc5",
-          "description": "Mutabella mirabilis is a globigerinitidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "globigerinitidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 61,
+  "genusCount": 14,
+  "speciesCount": 58,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

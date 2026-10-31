@@ -4453,10 +4453,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Geodia",
           "sourceIds": {
-            "checklistbank": "Geodia_tuberosa"
+            "checklistbank": [
+              "Geodia_tuberosa",
+              "991653"
+            ]
           },
           "children": [],
-          "uuid": "3c92986d-c453-5cf-91c-30d62a88e2e6d8"
+          "uuid": "3c92986d-c453-5cf-91c-30d62a88e2e6d8",
+          "description": "Geodia tuberosa is a ancorinidae species found in its native region.",
+          "authorityIds": "checklistbank:991653,checklistbank:Geodia_tuberosa"
         },
         {
           "id": "SP_GEODIA_CRIBRATA",
@@ -6988,9 +6993,12 @@
             ],
             "col": [
               "76GYC"
+            ],
+            "checklistbank": [
+              "53961"
             ]
           },
-          "authorityIds": "col:76GYC,itis:48671",
+          "authorityIds": "checklistbank:53961,col:76GYC,itis:48671",
           "authorship": "(Schmidt, 1864)"
         },
         {
@@ -7774,11 +7782,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Penares",
           "sourceIds": {
-            "checklistbank": "1584615"
+            "checklistbank": "1584615",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q108161802"
+            ]
           },
           "children": [],
           "uuid": "327b237b-2933-5e6-860-7cde78b255489a",
-          "description": "Penares angeli is a geodiidae species found in its native region."
+          "description": "Penares angeli is a geodiidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q108161802,checklistbank:1584615"
         },
         {
           "id": "SP_PENARES_SCLEROBESA_TOPSENT_1904",
@@ -12559,30 +12571,6 @@
       "lineage": "geodiidae"
     },
     {
-      "id": "GENUS_ALCYONIUM",
-      "name": "Alcyonium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ALCYONIUM_CYDONIUM_JAMESON_1811",
-          "name": "Alcyonium cydonium",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alcyonium",
-          "authorship": "Jameson, 1811",
-          "sourceIds": {
-            "checklistbank": "549772"
-          },
-          "children": [],
-          "uuid": "0a649ff6-849d-5c8-93b-d44d9885baf426",
-          "description": "Alcyonium cydonium is a geodiidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "geodiidae"
-    },
-    {
       "id": "GENUS_CORTICELLOPSIS",
       "name": "Corticellopsis",
       "rank": "GENUS",
@@ -12776,8 +12764,8 @@
       "lineage": "geodiidae"
     }
   ],
-  "genusCount": 37,
-  "speciesCount": 751,
+  "genusCount": 36,
+  "speciesCount": 750,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

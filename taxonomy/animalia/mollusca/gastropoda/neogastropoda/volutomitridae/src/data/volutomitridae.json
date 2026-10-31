@@ -3384,12 +3384,13 @@
               "7QS8P"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:1392989"
+              "urn:lsid:marinespecies.org:taxname:1392989",
+              "txn:188351"
             ],
             "gbif-backbone": "5934923",
             "checklistbank-316441": "7QS8P"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1392989,col:7QS8P",
+          "authorityIds": "checklistbank:txn:188351,checklistbank:urn:lsid:marinespecies.org:taxname:1392989,checklistbank-316441:7QS8P,col:7QS8P,gbif-backbone:5934923",
           "authorship": "(I. Lea, 1833)"
         },
         {
@@ -4226,9 +4227,12 @@
           "sourceIds": {
             "col": [
               "B22LW"
+            ],
+            "checklistbank": [
+              "txn:397389"
             ]
           },
-          "authorityIds": "col:B22LW",
+          "authorityIds": "checklistbank:txn:397389,col:B22LW",
           "description": "Conomitra capitolina is a volutomitridae species found in its native region."
         },
         {
@@ -4280,9 +4284,12 @@
           "sourceIds": {
             "col": [
               "BHYB5"
+            ],
+            "checklistbank": [
+              "txn:518718"
             ]
           },
-          "authorityIds": "col:BHYB5",
+          "authorityIds": "checklistbank:txn:518718,col:BHYB5",
           "description": "Conomitra antarctolirata is a volutomitridae species found in its native region."
         },
         {
@@ -4487,11 +4494,15 @@
           "lineage": "Conomitra",
           "authorship": "C. W. Cooke, 1926",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1632920"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1632920",
+              "txn:59823"
+            ]
           },
           "children": [],
           "uuid": "5263e0f2-48f9-52e-a40-9c188993cfb7ce",
-          "description": "Conomitra jacksonensis is a volutomitridae species found in its native region."
+          "description": "Conomitra jacksonensis is a volutomitridae species found in its native region.",
+          "authorityIds": "checklistbank:txn:59823,checklistbank:urn:lsid:marinespecies.org:taxname:1632920"
         },
         {
           "id": "SP_CONOMITRA_INTERMEDIA_DALL_1890",
@@ -4838,11 +4849,18 @@
           "lineage": "Exilioidea",
           "authorship": "(P. P. Carpenter, 1864)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:463447"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:463447",
+            "col": [
+              "3DL8H"
+            ],
+            "itis": [
+              "73955"
+            ]
           },
           "children": [],
           "uuid": "0b33b2b6-8109-51a-af9-46b391abdc89ac",
-          "description": "Exilioidea rectirostris is a volutomitridae species found in its native region."
+          "description": "Exilioidea rectirostris is a volutomitridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:463447,col:3DL8H,itis:73955"
         },
         {
           "id": "SP_EXILIOIDEA_RUFOCAUDATA_DALL_1896",
@@ -4853,11 +4871,15 @@
           "lineage": "Exilioidea",
           "authorship": "(Dall, 1896)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:463448"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:463448",
+            "col": [
+              "3DL8J"
+            ]
           },
           "children": [],
           "uuid": "ef12c38b-2781-528-b8e-ad7585cfebeff1",
-          "description": "Exilioidea rufocaudata is a volutomitridae species found in its native region."
+          "description": "Exilioidea rufocaudata is a volutomitridae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:463448,col:3DL8J"
         },
         {
           "id": "SP_EXILIOIDEA_KELSEYI_DALL_1908",
@@ -4868,7 +4890,14 @@
           "lineage": "Exilioidea",
           "authorship": "(Dall, 1908)",
           "children": [],
-          "uuid": "f8f3252d-4dca-59e-8eb-5dc27fa746265c"
+          "uuid": "f8f3252d-4dca-59e-8eb-5dc27fa746265c",
+          "description": "Exilioidea kelseyi is a ptychatractidae species found in its native region.",
+          "sourceIds": {
+            "checklistbank": [
+              "ott2902079"
+            ]
+          },
+          "authorityIds": "checklistbank:ott2902079"
         }
       ],
       "sourcedFrom": "catalogue of life",

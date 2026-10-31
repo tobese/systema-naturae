@@ -40,9 +40,12 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:325315"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:325315"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:325315",
+            "checklistbank-2169": [
+              "202433"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:325315,col:VH53",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:325315,checklistbank-2011:urn:lsid:marinespecies.org:taxname:325315,checklistbank-2169:202433,col:VH53",
           "authorship": "(G. C. Robson, 1930)",
           "description": "Cirroctopus glacialis is an octopus located in the Palmer Archipelago of Antarctica."
         },
@@ -59,9 +62,12 @@
             "col": [
               "VH54"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:342259"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:342259",
+              "167153"
+            ]
           },
-          "authorityIds": "col:VH54",
+          "authorityIds": "checklistbank:167153,checklistbank:urn:lsid:marinespecies.org:taxname:342259,col:VH54",
           "authorship": "O'Shea, 1999",
           "description": "Cirroctopus hochbergi (common name: Four-blotched umbrella octopus ) is a cirrate octopus living between 800 and 1,070 meters deep off the coast of New Zealand."
         },
@@ -79,11 +85,12 @@
               "VH55"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:410347"
+              "urn:lsid:marinespecies.org:taxname:410347",
+              "2750022"
             ],
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:410347"
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:410347,col:VH55",
+          "authorityIds": "checklistbank:2750022,checklistbank:urn:lsid:marinespecies.org:taxname:410347,checklistbank-2011:urn:lsid:marinespecies.org:taxname:410347,col:VH55",
           "authorship": "(S. S. Berry, 1917)",
           "description": "Cirroctopus mawsoni is a species of octopus known from only one specimen, which was collected by the Australasian Antarctic Expedition in the waters off Adélie Land between 530 and 550 meters deep."
         },
@@ -138,32 +145,6 @@
           "description": "Opisthoteuthis calypso is a cirroctopodidae species found in its native region."
         },
         {
-          "id": "SP_OPISTHOTEUTHIS_AGASSIZII",
-          "name": "Opisthoteuthis agassizii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Opisthoteuthis",
-          "sourceIds": {
-            "checklistbank": "Opisthoteuthis_agassizii"
-          },
-          "children": [],
-          "uuid": "ca9bd805-c04d-5dd-acc-3f4de6b7c3ca05"
-        },
-        {
-          "id": "SP_OPISTHOTEUTHIS_HARDYI",
-          "name": "Opisthoteuthis hardyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Opisthoteuthis",
-          "sourceIds": {
-            "checklistbank": "Opisthoteuthis_hardyi"
-          },
-          "children": [],
-          "uuid": "f9a0e88d-589a-5f8-8f3-a9b033b5dcca99"
-        },
-        {
           "id": "SP_OPISTHOTEUTHIS_PERSEPHONE",
           "name": "Opisthoteuthis persephone",
           "rank": "SPECIES",
@@ -175,19 +156,6 @@
           },
           "children": [],
           "uuid": "c0bcc2f9-0668-5b8-974-85ad34a95bce5a"
-        },
-        {
-          "id": "SP_OPISTHOTEUTHIS_PLUTO",
-          "name": "Opisthoteuthis pluto",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Opisthoteuthis",
-          "sourceIds": {
-            "checklistbank": "Opisthoteuthis_pluto"
-          },
-          "children": [],
-          "uuid": "347283e1-18e4-580-9e8-331aa25a044569"
         },
         {
           "id": "SP_OPISTHOTEUTHIS_VOSSI",
@@ -208,7 +176,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 12,
+  "speciesCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -56,9 +56,12 @@
             "col": [
               "4FPNZ"
             ],
-            "checklistbank": "31521"
+            "checklistbank": [
+              "31521",
+              "42047"
+            ]
           },
-          "authorityIds": "col:4FPNZ,itis:206768",
+          "authorityIds": "checklistbank:31521,checklistbank:42047,col:4FPNZ,itis:206768",
           "authorship": "(Johnston, 1847)"
         }
       ]
@@ -86,10 +89,11 @@
               "3BGNL"
             ],
             "checklistbank": [
-              "urn:lsid:marinespecies.org:taxname:470355"
+              "urn:lsid:marinespecies.org:taxname:470355",
+              "9e0e2e4b-8ce9-41b9-9e47-e1efdc201256"
             ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470355,col:3BGNL",
+          "authorityIds": "checklistbank:9e0e2e4b-8ce9-41b9-9e47-e1efdc201256,checklistbank:urn:lsid:marinespecies.org:taxname:470355,col:3BGNL",
           "authorship": "(Hincks, 1881)"
         },
         {
@@ -136,9 +140,12 @@
             "col": [
               "3BGNM"
             ],
-            "checklistbank": "31514"
+            "checklistbank": [
+              "31514",
+              "42045"
+            ]
           },
-          "authorityIds": "col:3BGNM,itis:206759",
+          "authorityIds": "checklistbank:31514,checklistbank:42045,col:3BGNM,itis:206759",
           "authorship": "(Busk, 1856)"
         },
         {
@@ -254,9 +261,12 @@
             "checklistbank-1081": [
               "urn:lsid:marinespecies.org:taxname:111516"
             ],
-            "checklistbank-316441": "3BGNP"
+            "checklistbank-316441": "3BGNP",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": [
+              "206760"
+            ]
           },
-          "authorityIds": "checklistbank:31516,checklistbank:urn:lsid:marinespecies.org:taxname:472714,checklistbank-1081:urn:lsid:marinespecies.org:taxname:111516,checklistbank-1174:txn:338461,checklistbank-2011:urn:lsid:marinespecies.org:taxname:111516,col:3BGNP,gbif-backbone:1007539,itis:206760",
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:206760,checklistbank:31516,checklistbank:urn:lsid:marinespecies.org:taxname:472714,checklistbank-1081:urn:lsid:marinespecies.org:taxname:111516,checklistbank-1174:txn:338461,checklistbank-2011:urn:lsid:marinespecies.org:taxname:111516,checklistbank-316441:3BGNP,col:3BGNP,gbif-backbone:1007539,itis:206760",
           "authorship": "(Audouin, 1826)"
         },
         {
@@ -645,9 +655,12 @@
             "col": [
               "3BGNW"
             ],
-            "checklistbank": "31520"
+            "checklistbank": [
+              "31520",
+              "urn:lsid:dyntaxa.se:Taxon:242403"
+            ]
           },
-          "authorityIds": "col:3BGNW,itis:156360",
+          "authorityIds": "checklistbank:31520,checklistbank:urn:lsid:dyntaxa.se:Taxon:242403,col:3BGNW,itis:156360",
           "authorship": "(Moll, 1803)"
         },
         {
@@ -1429,12 +1442,25 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chiastosella",
           "sourceIds": {
-            "checklistbank": "ott2939049"
+            "checklistbank": [
+              "ott2939049",
+              "9c07694d-d7d1-40e0-a9e8-43210d453dd9"
+            ],
+            "itis": [
+              "201579"
+            ],
+            "col": [
+              "TZ74"
+            ],
+            "checklistbank-127379": [
+              "9c07694d-d7d1-40e0-a9e8-43210d453dd9"
+            ]
           },
           "children": [],
           "uuid": "11f5b9b5-7a0a-545-a1d-a09e3d893f83f2",
           "description": "Chiastosella daedala is a escharinidae species found in its native region.",
-          "authorship": "(MacGillivray, 1882)"
+          "authorship": "(MacGillivray, 1882)",
+          "authorityIds": "checklistbank:9c07694d-d7d1-40e0-a9e8-43210d453dd9,checklistbank:ott2939049,checklistbank-127379:9c07694d-d7d1-40e0-a9e8-43210d453dd9,col:TZ74,itis:201579"
         },
         {
           "id": "SP_CHIASTOSELLA_ENIGMA",
@@ -1500,11 +1526,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chiastosella",
           "sourceIds": {
-            "checklistbank": "ott2939069"
+            "checklistbank": [
+              "ott2939069",
+              "c81543f1-032d-40bc-b771-d72f8080fbae"
+            ]
           },
           "children": [],
           "uuid": "d92f1d79-878d-5ac-870-90042152cef09d",
-          "description": "Chiastosella gabrieli is a escharinidae species found in its native region."
+          "description": "Chiastosella gabrieli is a escharinidae species found in its native region.",
+          "authorityIds": "checklistbank:c81543f1-032d-40bc-b771-d72f8080fbae,checklistbank:ott2939069"
         },
         {
           "id": "SP_CHIASTOSELLA_UMBONATA",
@@ -1571,11 +1601,15 @@
           "lineage": "Chiastosella",
           "authorship": "Canu and Bassler 1935",
           "sourceIds": {
-            "checklistbank": "txn:329924"
+            "checklistbank": "txn:329924",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q105957969"
+            ]
           },
           "children": [],
           "uuid": "407cb013-723d-5f1-a04-fa9a5dd3cfad5a",
-          "description": "Chiastosella porosa is a escharinidae species found in its native region."
+          "description": "Chiastosella porosa is a escharinidae species found in its native region.",
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q105957969,checklistbank:txn:329924"
         },
         {
           "id": "SP_CHIASTOSELLA_LAMELLATA_CANU_AND_BASSLER_1935",
@@ -3828,51 +3862,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HIPPOMENELLA_MUCRONELLIFORMIS_WATERS_1899",
-          "name": "Hippomenella mucronelliformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hippomenella",
-          "authorship": "(Waters, 1899)",
-          "sourceIds": {
-            "checklistbank": "31388"
-          },
-          "children": [],
-          "uuid": "cf417032-3dab-5c6-a29-f97c3a7d4b348b",
-          "description": "Hippomenella mucronelliformis is a escharinidae species found in its native region."
-        },
-        {
-          "id": "SP_HIPPOMENELLA_VELLICATA_HUTTON_1873",
-          "name": "Hippomenella vellicata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hippomenella",
-          "authorship": "(Hutton, 1873)",
-          "sourceIds": {
-            "checklistbank": "675301"
-          },
-          "children": [],
-          "uuid": "daec828a-0036-5dd-8f3-45c7e7fa4d46d6",
-          "description": "Hippomenella vellicata is a escharinidae species found in its native region."
-        },
-        {
-          "id": "SP_HIPPOMENELLA_AVICULARIS_LIVINGSTONE_1926",
-          "name": "Hippomenella avicularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hippomenella",
-          "authorship": "(Livingstone, 1926)",
-          "sourceIds": {
-            "checklistbank": "675302"
-          },
-          "children": [],
-          "uuid": "56b54a81-5031-543-88b-b1c4f5f52421d2",
-          "description": "Hippomenella avicularis is a escharinidae species found in its native region."
-        },
-        {
           "id": "SP_HIPPOMENELLA_FLAVA",
           "name": "Hippomenella flava",
           "rank": "SPECIES",
@@ -5112,7 +5101,7 @@
     }
   ],
   "genusCount": 24,
-  "speciesCount": 299,
+  "speciesCount": 296,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
