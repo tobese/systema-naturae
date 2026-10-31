@@ -66,3 +66,27 @@ func TestStopStartsNoFurtherSource(t *testing.T) {
 		t.Fatalf("a stopping pipeline touched a source: stage %q", e.Stage)
 	}
 }
+
+func TestStopDuringASourceStartsNoNext(t *testing.T) {
+	// One worker busy on a source, a stop requested while it runs: the next
+	// key must not start once the slot frees. The slot is held here by hand
+	// to stand in for the busy worker.
+	dir := t.TempDir()
+	p := NewPipeline(Config{RepoRoot: dir, QueueDir: dir, NoDownload: true, NoSideTasks: true, Workers: 1})
+	for _, k := range []string{"checklistbank-1", "checklistbank-2"} {
+		if err := p.store.Write(k, &queue.Entry{Key: k, Stage: queue.StageDownloaded}); err != nil {
+			t.Fatal(err)
+		}
+	}
+	// Mark the first as already taken so drain's first candidate is the
+	// second, then stop before drain gets to it.
+	if err := p.store.Write("checklistbank-1", &queue.Entry{Key: "checklistbank-1", Stage: queue.StageApplied}); err != nil {
+		t.Fatal(err)
+	}
+	p.Stop()
+	p.drain(context.Background())
+	e, _ := p.store.ReadOne("checklistbank-2")
+	if e.Stage != queue.StageDownloaded {
+		t.Fatalf("started a source after stop: %q", e.Stage)
+	}
+}

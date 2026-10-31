@@ -138,24 +138,30 @@ func (p *Pipeline) drain(ctx context.Context) {
 	sem := make(chan struct{}, p.cfg.Workers)
 	var wg sync.WaitGroup
 	for _, key := range queue.SortKeys(entries) {
-		if p.stopping() {
-			fmt.Println("stop requested -- not starting another source")
-			break
-		}
 		if !queue.CanProcess(entries[key].Stage) {
 			continue
 		}
-		// Re-read just before acting: the snapshot above can be hours old by
-		// the time this key's turn comes (see queue.Store.ReadOne).
-		entry, err := p.store.ReadOne(key)
-		if err != nil || !queue.CanProcess(entry.Stage) {
-			continue
-		}
+		// Take a worker slot first: with one worker this blocks until the
+		// previous source is done, and the stop check and the re-read below
+		// must happen after that wait, not before it -- checked before, a stop
+		// requested mid-source still let the next one start (2026-10-31).
 		select {
 		case <-ctx.Done():
 			wg.Wait()
 			return
 		case sem <- struct{}{}:
+		}
+		if p.stopping() {
+			<-sem
+			fmt.Println("stop requested -- not starting another source")
+			break
+		}
+		// Re-read just before acting: the snapshot above can be hours old by
+		// the time this key's turn comes (see queue.Store.ReadOne).
+		entry, err := p.store.ReadOne(key)
+		if err != nil || !queue.CanProcess(entry.Stage) {
+			<-sem
+			continue
 		}
 		wg.Add(1)
 		go func(key string, entry *queue.Entry) {
