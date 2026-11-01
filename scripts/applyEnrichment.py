@@ -24,7 +24,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import maintenanceLock  # noqa: E402
 from tree import ROOT, count_species, iter_species, save_json  # noqa: E402
 
-FIELDS = {"authorship", "yearPublished"}
+# subgenus: a field on the species, not a tree level (docs/sub-ranks-plan.md).
+FIELDS = {"authorship", "yearPublished", "subgenus"}
 # Its own log: import-log.jsonl is one record per import, read as such by
 # verifyTree and the dashboards.
 LOG = os.path.join(ROOT, "data", "enrichment-log.jsonl")
