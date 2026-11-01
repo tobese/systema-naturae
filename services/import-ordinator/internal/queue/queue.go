@@ -27,8 +27,11 @@ const (
 	StageApplied      Stage = "applied"
 	StageDeclined     Stage = "declined"
 	StageBlocked      Stage = "blocked"
-	StageNeedsRerun   Stage = "needs-rerun"
-	StageError        Stage = "error"
+	// StageParked: measured, and a human said "not now". Nothing here moves
+	// a source out of it; only sourceQueue.py set does (see its docstring).
+	StageParked     Stage = "parked"
+	StageNeedsRerun Stage = "needs-rerun"
+	StageError      Stage = "error"
 )
 
 // Entry is a source queue entry.
@@ -303,7 +306,7 @@ func SortKeys(entries map[string]*Entry) []string {
 // IsTerminal reports whether a stage is terminal.
 func IsTerminal(stage Stage) bool {
 	switch stage {
-	case StageApplied, StageDeclined, StageBlocked, StageError:
+	case StageApplied, StageDeclined, StageBlocked, StageParked, StageError:
 		return true
 	default:
 		return false

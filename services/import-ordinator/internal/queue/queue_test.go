@@ -64,3 +64,14 @@ func TestReadOneSeesAChangeMadeAfterRead(t *testing.T) {
 		t.Fatalf("ReadOne returned %q; a declined entry must not be processed", fresh.Stage)
 	}
 }
+
+// A parked source is a human's "not now": the drain must never pick it up
+// (COL26.10, 2026-11-01).
+func TestParkedIsNeverProcessed(t *testing.T) {
+	if CanProcess(StageParked) || IsActive(StageParked) {
+		t.Fatal("parked must be neither processable nor active")
+	}
+	if !IsTerminal(StageParked) {
+		t.Fatal("parked must count as a resting stage")
+	}
+}

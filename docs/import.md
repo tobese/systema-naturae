@@ -465,8 +465,13 @@ candidate → downloaded → triaging → triaged → queued → applying → ap
                                      ↑                                    ↑
                                   (dry run)                          (done)
 
-declined / blocked / needs-rerun   (terminal / holding states)
+declined / blocked / parked / error / needs-rerun   (terminal / holding states)
 ```
+
+`triaged` is only a waiting room; `parked` is a decision: a human measured
+the source and said "not now". Nothing in the pipeline (the Go ordinator,
+its side tasks, the refill) moves a source out of `parked` -- only
+`sourceQueue.py set` does -- and `reason` says what would unpark it.
 
 `needs-rerun` carries its own `rerunCommand` (a JSON argv list set via
 `sourceQueue.py set --stage needs-rerun --rerun-command '[...]'`) --

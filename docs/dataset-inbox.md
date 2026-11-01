@@ -19,7 +19,7 @@ was written. Superseded entries get struck through here, not rewritten below.
 ### Queue
 
 The queue's actual current state — every source's stage (candidate,
-downloaded, measured, queued, applied, declined, blocked, needs-rerun),
+downloaded, measured, queued, applied, declined, blocked, parked, error, needs-rerun),
 with per-stage numbers and reasons — lives in `data/source-queue/<key>.json`
 now, not in this file: a hand-written table here went stale within the
 same session that wrote it (declined/blocked verdicts recorded hours

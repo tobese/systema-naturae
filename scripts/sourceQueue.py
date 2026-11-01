@@ -37,6 +37,14 @@ through "triaged"):
     applied     -- split pipeline finished; `applied` holds the result
     declined    -- verdict is "decline"; `reason` says why
     blocked     -- can't proceed yet (no archive, needs a decision); `reason` says why
+    parked      -- measured, and a human decided "not now" (COL26.10, 2026-11-01:
+                   540 additions against ~500k id churn). Unlike `triaged`,
+                   which is only a waiting room, nothing in the pipeline --
+                   the Go ordinator, its side tasks, the refill -- ever moves
+                   a source out of `parked`; only `sourceQueue.py set` does.
+                   `reason` says why and what would unpark it
+    error       -- the Go ordinator's terminal stage for a failed transform or
+                   apply; `reason` holds the failing step and its output tail
     needs-rerun -- applied before, but something downstream changed (a
                    family got scaffolded, an importer bug got fixed) and
                    re-running would likely pick up more. `rerunCommand`
@@ -95,7 +103,7 @@ STORE = os.path.join(os.path.dirname(SCRIPT_DIR),
 EVENTS_LOG = os.path.join(DATA_DIR, "pipeline-events.jsonl")
 
 STAGES = ("candidate", "downloaded", "triaging", "transforming", "triaged", "queued",
-          "applying", "applied", "declined", "blocked", "needs-rerun")
+          "applying", "applied", "declined", "blocked", "parked", "needs-rerun", "error")
 
 
 def _entry_path(key: str) -> str:
@@ -345,7 +353,7 @@ def cmd_report(_args) -> None:
             if stage == "triaged" and row.get("triaged"):
                 m = row["triaged"]
                 extra = f"  staged {m.get('staged', '?')}"
-            if stage in ("declined", "blocked") and row.get("reason"):
+            if stage in ("declined", "blocked", "parked", "error") and row.get("reason"):
                 extra = f"  {row['reason']}"
             if stage == "applied" and row.get("applied"):
                 added = row["applied"].get("added")
