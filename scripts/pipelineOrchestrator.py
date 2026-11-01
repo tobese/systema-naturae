@@ -125,7 +125,9 @@ def process_nomenclatural(q: dict) -> None:
         result = subprocess.run(
             [sys.executable, os.path.join(here, "maintenanceSession.py"),
              "--run", f"{sys.executable} {os.path.join(here, 'nomenclatureTransform.py')} "
-                      f"{shlex.quote(archive)} {shlex.quote(key)} --apply",
+                      f"{shlex.quote(archive)} {shlex.quote(key)} --apply"
+                      + (f" --code {shlex.quote(entry['nomenclaturalCode'])}"
+                         if entry.get("nomenclaturalCode") else ""),
              "--run", f"{sys.executable} {os.path.join(here, 'applyEnrichment.py')} "
                       f"{shlex.quote(os.path.join(work, 'enrich.jsonl'))} --apply"],
             capture_output=True, text=True)

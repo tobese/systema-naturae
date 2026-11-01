@@ -21,9 +21,10 @@ and writes into <sources>/work/<work-slug>/:
   review-authorship.jsonl   our authorship and the source's disagree even
                    after taxamatch.same_authorship with the Wikidata author
                    index (DC. = de Candolle); a human call, never applied
-  review-basionym-pairs.jsonl  both names of a basionym / replacement pair
-                   held as separate species: one is a synonym of the other,
-                   which one is accepted is COL's/WCVP's call
+  review-basionym-pairs.jsonl  both names of a basionym / replacement /
+                   synonym pair held as separate species: one is a synonym of
+                   the other; which one is accepted is COL's/WCVP's call (a
+                   checklist-shaped source's own synonymy is one more vote)
   review-later-homonyms.jsonl  names we hold that the source marks as a
                    later homonym (illegitimate)
   summary.json
@@ -47,11 +48,16 @@ import taxamatch  # noqa: E402
 from buildSpeciesParquet import canonicalize  # noqa: E402
 from tree import ROOT, iter_family_files, iter_species_with_parent  # noqa: E402
 
-# Which of our kingdoms a nomenclatural code's index speaks for. IPNI covers
-# vascular plants only (ICN), so plantae.
-KINGDOMS_FOR = {"IPNI": ("plantae",)}
-SPECIES_RANKS = {"spec.", "species"}
-PAIR_RELATIONS = {"BASIONYM", "REPLACEMENT_NAME"}
+# The registry of nomenclatural sources, keyed by the archive's metadata alias
+# (or --code): which of our kingdoms each speaks for, and the author index's
+# code. IPNI covers vascular plants (ICN). Species Fungorum Plus is shaped
+# like a checklist (Taxon + Synonym tables) but used here for its names and
+# authorship -- being listed is the decision that it belongs on this track;
+# only a pure names index is recognised by shape (is_names_index).
+KINGDOMS_FOR = {"IPNI": ("plantae",), "Species Fungorum Plus": ("fungi",)}
+AUTHOR_CODE = {"IPNI": "bot", "Species Fungorum Plus": "bot"}
+SPECIES_RANKS = {"spec.", "sp.", "species"}
+PAIR_RELATIONS = {"BASIONYM", "REPLACEMENT_NAME", "SYNONYM"}
 
 
 def _rows(z, member):
@@ -108,6 +114,15 @@ def load_index(archive):
     if m:
         for r in _rows(z, m):
             rel.append((r.get("nameID"), r.get("relatedNameID"), r.get("type")))
+    # A checklist-shaped source (Species Fungorum Plus): its Synonym table
+    # links a synonym's name to its accepted taxon, whose name is the pair.
+    syn, tax = _member(z, "Synonym.tsv"), _member(z, "Taxon.tsv")
+    if syn and tax:
+        taxon_name = {r.get("ID"): r.get("nameID") for r in _rows(z, tax)}
+        for r in _rows(z, syn):
+            acc = taxon_name.get(r.get("taxonID"))
+            if acc and r.get("nameID") and acc != r.get("nameID"):
+                rel.append((r.get("nameID"), acc, "SYNONYM"))
     return names, rel
 
 
@@ -153,11 +168,6 @@ def main() -> int:
             return 4
         args.code = alias
 
-    if not is_names_index(args.archive):
-        print(f"  {args.archive} is not a names index (its Taxon table has a status or a "
-              f"parent) -- use transformColChecklist.py")
-        return 4
-
     print(f"  reading {args.archive}", flush=True)
     names, rel = load_index(args.archive)
     by_name = collections.defaultdict(list)
@@ -167,7 +177,7 @@ def main() -> int:
 
     try:
         import authorNames
-        idx = authorNames.load(code="bot" if args.code == "IPNI" else None)
+        idx = authorNames.load(code=AUTHOR_CODE.get(args.code))
         same_person = lambda a, b: authorNames.same_person(a, b, idx)  # noqa: E731
     except Exception as e:
         print(f"    author index unavailable ({e}); comparing strings only")
