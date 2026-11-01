@@ -94,7 +94,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "202209",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q194422",
             "checklistbank-1008": "ff49ccbd-2091-a666-68fa-20ef800fea52",
-            "checklistbank-312616": "3cdd78a2484541ada29df412612e0dd7"
+            "checklistbank-312616": "3cdd78a2484541ada29df412612e0dd7",
+            "checklistbank-311656": "https://www.gbif.org/species/2441368"
           },
           "authorityIds": "checklistbank:ott953151,checklistbank:urn:lsid:marinespecies.org:taxname:1670890,checklistbank-139831:26156,col:BTRF,itis:202209,wikidata:Q194422,wikispecies:Alligator_sinensis",
           "authorship": "Fauvel, 1879"
@@ -423,7 +424,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "202213",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q644453",
             "checklistbank-1008": "8b6851aa-83cc-a67e-a8dd-3780bc403672",
-            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/22528/"
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/22528/",
+            "checklistbank-304433": "https://www.gbif.org/species/5846511"
           },
           "authorityIds": "checklistbank:ott699848,checklistbank:urn:lsid:marinespecies.org:taxname:1478602,checklistbank-139831:116518,col:PBBS,gbif-backbone:6162979,itis:202213,wikidata:Q644453,wikispecies:Caiman_latirostris",
           "authorship": "(Daudin, 1802)"
@@ -754,6 +756,18 @@
           },
           "authorityIds": "checklistbank:443975,checklistbank:urn:lsid:marinespecies.org:taxname:1603226,checklistbank-139831:116538,col:4C47J,itis:551814,wikidata:Q757363,wikispecies:Paleosuchus_palpebrosus",
           "authorship": "(Cuvier, 1807)"
+        },
+        {
+          "id": "SP_PALEOSUCHUS_SP",
+          "name": "paleosuchus sp",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "paleosuchus",
+          "sourceIds": {
+            "checklistbank-32592": "ITP-0276"
+          },
+          "uuid": "faccc920-ce1b-4baa-826b-091264589cad"
         }
       ]
     },
@@ -1747,10 +1761,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "alligatoridae"
+    },
+    {
+      "id": "GENUS_ANDIS",
+      "name": "andis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "alligatoridae",
+      "children": [
+        {
+          "id": "SP_ANDIS_SP",
+          "name": "andis sp",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "andis",
+          "sourceIds": {
+            "checklistbank-32592": "ITP-0284"
+          },
+          "uuid": "e36bdf33-aa67-4613-9dda-3b716485a79f"
+        }
+      ]
     }
   ],
   "genusCount": 36,
-  "speciesCount": 84,
+  "speciesCount": 86,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

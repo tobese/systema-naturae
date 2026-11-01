@@ -165,7 +165,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q39600979",
             "checklistbank-28552": "https://www.gbif.org/species/2765942",
             "wfo-plant-list": "wfo-0000501039",
-            "checklistbank-312616": "T20171000033375"
+            "checklistbank-312616": "T20171000033375",
+            "checklistbank-315076": "2765942"
           },
           "authorityIds": "col:4LTW6,wfo:wfo-0000501039",
           "description": "Pontederia crassipes (formerly Eichhornia crassipes), commonly known as common water hyacinth, is an aquatic plant native to South America, naturalized throughout the world, and often invasive outside its native range."
@@ -306,7 +307,8 @@
             "checklistbank-314681": "urn:lsid:dyntaxa.se:Taxon:264417",
             "checklistbank-7888": "NBNSYS0000002209",
             "checklistbank-312243": "1859",
-            "checklistbank-9367": "gbif.org/species/2766030"
+            "checklistbank-9367": "gbif.org/species/2766030",
+            "checklistbank-315076": "2766030"
           },
           "authorityIds": "col:4LTW3,wfo:wfo-0000500933",
           "description": "Pontederia cordata, common name pickerelweed (USA) or pickerel weed (UK), is a monocotyledonous aquatic plant native to the Americas.",
@@ -454,7 +456,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q15598478",
             "wfo-plant-list": "wfo-0000501242",
             "checklistbank-21341": "gbif.org/species/2766055",
-            "checklistbank-313479": "ec.bio.spp.15763"
+            "checklistbank-313479": "ec.bio.spp.15763",
+            "checklistbank-315076": "2766055"
           },
           "authorityIds": "col:4LTX5,wfo:wfo-0000501242",
           "description": "Note: See discussion by Horn & Haynes (in Taxon 36: 623. 1987), who concur with Lowden's type choice.",
@@ -1687,7 +1690,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q94523984",
             "wfo-plant-list": "wfo-0000441523",
             "checklistbank-21341": "gbif.org/species/2766129",
-            "checklistbank-36535": "5308d60a-2e09-4674-98c7-c7e3db84906c"
+            "checklistbank-36535": "5308d60a-2e09-4674-98c7-c7e3db84906c",
+            "checklistbank-315076": "2766129"
           },
           "authorityIds": "col:3L7C7,itis:42618,wfo:wfo-0000441523",
           "description": "Heteranthera limosa is an annual flowering plant in the water hyacinth family known by the common names ducksalad and blue mudplantain.",
@@ -1774,7 +1778,8 @@
             "checklistbank-316600": "f50060e3-c8ea-4cde-91b4-e0fa977bb402",
             "checklistbank-36535": "750a41cf-d049-46c2-9cdc-00d3ae13a4cd",
             "checklistbank-313479": "ec.bio.spp.15758",
-            "checklistbank-316534": "81345"
+            "checklistbank-316534": "81345",
+            "checklistbank-315076": "2766151"
           },
           "authorityIds": "col:3L7CG,itis:42616,wfo:wfo-0000441633",
           "commonName": "Kidneyleaf mudplantain",
@@ -1920,7 +1925,8 @@
             "checklistbank-315074": "101504",
             "checklistbank-28907": "42135",
             "checklistbank-28952": "25808",
-            "checklistbank-28948": "37734"
+            "checklistbank-28948": "37734",
+            "checklistbank-28813": "1335"
           },
           "authorityIds": "col:3L7CH,itis:502964,wfo:wfo-0000441657",
           "description": "Arable land and market gardens (I1 level 2)",
@@ -2825,7 +2831,9 @@
             "checklistbank-24498": "103815",
             "checklistbank-24479": "165624",
             "checklistbank-31959": "8194",
-            "checklistbank-77934": "1334"
+            "checklistbank-77934": "1334",
+            "checklistbank-24500": "102094",
+            "checklistbank-31956": "2203"
           },
           "children": [],
           "uuid": "bdd2089a-2b9d-587-a34-c7a6c21e1dcecc",
@@ -3752,10 +3760,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pontederiaceae"
+    },
+    {
+      "id": "GENUS_KICHHORNIA",
+      "name": "kichhornia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "pontederiaceae",
+      "children": [
+        {
+          "id": "SP_KICHHORNIA_CRASSIPES",
+          "name": "kichhornia crassipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "kichhornia",
+          "sourceIds": {
+            "checklistbank-32592": "ITP-0009"
+          },
+          "uuid": "74b3b345-8d86-459e-82a4-8e08ae1e6134"
+        }
+      ]
     }
   ],
   "genusCount": 19,
-  "speciesCount": 188,
+  "speciesCount": 189,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

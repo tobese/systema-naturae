@@ -9511,7 +9511,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q8345159",
             "checklistbank-25815": "cae74847-b9de-4339-9a3a-6abf2d51f46c",
             "checklistbank-4947": "naturalized:species:Chile:taxon:1096",
-            "checklistbank-26137": "1190"
+            "checklistbank-26137": "1190",
+            "checklistbank-31956": "2100"
           },
           "uuid": "8e03bc51-8cd5-533-a5c-20f7023fa0e15a",
           "authorityIds": "checklistbank:237705,checklistbank:urn:lsid:marinespecies.org:taxname:1015176,checklistbank-139831:610382,col:69RMD,gbif:177750359,gbif:2353776,itis:640783,wikidata:Q8345159,wikispecies:Cheirodon_interruptus"
@@ -11726,7 +11727,8 @@
           "sourceIds": {
             "itis": [
               "640904"
-            ]
+            ],
+            "checklistbank-32592": "ITP-0274"
           },
           "authorityIds": "itis:640904",
           "description": "Cynopotamus amazonus is a characidae species found in its native region."
@@ -13313,7 +13315,8 @@
           "sourceIds": {
             "itis": [
               "162966"
-            ]
+            ],
+            "checklistbank-311656": "https://www.gbif.org/species/2354397"
           },
           "authorityIds": "itis:162966",
           "commonName": "Rummy-nose tetra",
@@ -14428,6 +14431,30 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q23072946"
           },
           "children": []
+        },
+        {
+          "id": "SP_HYPHESSOBRYCON_AMANDAE",
+          "name": "Hyphessobrycon amandae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyphessobrycon",
+          "sourceIds": {
+            "checklistbank-311656": "https://www.gbif.org/species/2354525"
+          },
+          "uuid": "da67a95e-f38a-444d-9a5a-71c3ff73bdd1"
+        },
+        {
+          "id": "SP_HYPHESSOBRYCON_PULCHRIPINNIS",
+          "name": "Hyphessobrycon pulchripinnis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyphessobrycon",
+          "sourceIds": {
+            "checklistbank-311656": "https://www.gbif.org/species/2354601"
+          },
+          "uuid": "b0ea203d-97c2-476f-8ca0-65cb5e9f6eca"
         }
       ]
     },
@@ -19200,7 +19227,8 @@
             "checklistbank-2265": "1180191",
             "checklistbank-2169": "1180191",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "162915",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2791026"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2791026",
+            "checklistbank-316046": "https://www.gbif.org/taxon/4MFG7"
           },
           "uuid": "ffb13882-d062-5a2-aca-142b1c509a479a",
           "authorityIds": "checklistbank:237755,checklistbank:urn:lsid:marinespecies.org:taxname:1017164,checklistbank-139831:610988,col:4MFG7,gbif:177752149,gbif:2353985,itis:162915,wikidata:Q2791026,wikispecies:Prionobrama_filigera"
@@ -28793,10 +28821,60 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "characidae"
+    },
+    {
+      "id": "GENUS_PARACHEIRODON",
+      "name": "Paracheirodon",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "characidae",
+      "children": [
+        {
+          "id": "SP_PARACHEIRODON_AXELRODI",
+          "name": "Paracheirodon axelrodi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracheirodon",
+          "sourceIds": {
+            "checklistbank-311656": "https://www.gbif.org/species/2353911"
+          },
+          "uuid": "dc0706d2-9b51-417f-8587-f5bff5fa82cf"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PSEUDOCHALCEUS",
+      "name": "Pseudochalceus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "characidae",
+      "children": [
+        {
+          "id": "SP_PSEUDOCHALCEUS_KYBURZI",
+          "name": "Pseudochalceus kyburzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudochalceus",
+          "sourceIds": {
+            "checklistbank-311656": "https://www.gbif.org/species/2353673"
+          },
+          "uuid": "ab974603-f43b-4c06-8ec8-cc064ceb8e75"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_COLOSSOMA",
+      "name": "colossoma",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "characidae",
+      "children": []
     }
   ],
   "genusCount": 193,
-  "speciesCount": 1439,
+  "speciesCount": 1443,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
