@@ -93,6 +93,20 @@ on each entry and the species panel prints as
 restrictive terms; CC BY-NC can propagate):
 > GBIF.org (YYYY) GBIF Occurrence/Species Download https://doi.org/[DOI]
 
+**GTDB (Genome Taxonomy Database)** — **CC BY-SA 4.0**, share-alike
+(https://creativecommons.org/licenses/by-sa/4.0/, stated on
+https://gtdb.ecogenomic.org/downloads). Bacteria and archaea; filled on
+q-bert, not yet in the portal. How to credit it is GTDB's own "Cite GTDB"
+section on https://gtdb.ecogenomic.org/about -- six papers, currently
+Parks et al. 2025 (NAR, doi:10.1093/nar/gkaf1040), Chuvochina et al. 2023
+(FEMS Microbiol Lett, doi:10.1093/femsle/fnad071), Parks et al. 2021 (NAR,
+doi:10.1093/nar/gkab776), Rinke et al. 2021 (Nat Microbiol,
+doi:10.1038/s41564-021-00918-8), Parks et al. 2020 (Nat Biotechnol,
+doi:10.1038/s41587-020-0501-8) and Parks et al. 2018 (Nat Biotechnol 36:996,
+nbt.4229). Read the list from that page when publishing; it grows with
+releases. Share-alike means data carrying GTDB content goes out under
+BY-SA. (Added 2026-11-01.)
+
 **POWO (Plants of the World Online)** — CC BY; cite POWO + WCVP for names/distribution:
 > POWO (2024). Plants of the World Online. Facilitated by the Royal Botanic
 > Gardens, Kew. https://powo.science.kew.org/ Retrieved [date].

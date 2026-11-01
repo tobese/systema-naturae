@@ -78,7 +78,8 @@ of what is held.
 - **GTDB licence: settled 2026-11-01.** gtdb.ecogenomic.org says CC BY-SA
   4.0 (ShareAlike), not the CC BY 4.0 our manifest had; corrected. The
   user judged it fine. ShareAlike means the bacteria data, once published,
-  goes out under BY-SA, with GTDB's citation. r232 (2026-04-15) is still the
+  goes out under BY-SA, credited as GTDB asks in "Cite GTDB" on
+  https://gtdb.ecogenomic.org/about (also in docs/data-sources-attribution.md). r232 (2026-04-15) is still the
   latest release and is what we hold; the HTTP mirrors serve it, so no
   torrent client is needed.
 - **LPSN**: registration and licence.
