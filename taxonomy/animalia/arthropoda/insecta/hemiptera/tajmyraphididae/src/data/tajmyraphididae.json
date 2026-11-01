@@ -157,9 +157,12 @@
             "col": [
               "8QVCY"
             ],
-            "checklistbank-1174": "txn:378817"
+            "checklistbank-1174": "txn:378817",
+            "gbif-backbone": [
+              "11153603"
+            ]
           },
-          "authorityIds": "col:8QVCY",
+          "authorityIds": "checklistbank-1174:txn:378817,col:8QVCY,gbif-backbone:11153603",
           "description": "Vasteantenatus hukawngi is a tajmyraphididae species found in its native region."
         },
         {
@@ -204,9 +207,12 @@
             "col": [
               "8R39J"
             ],
-            "checklistbank-1174": "txn:378815"
+            "checklistbank-1174": "txn:378815",
+            "gbif-backbone": [
+              "11121455"
+            ]
           },
-          "authorityIds": "col:8R39J",
+          "authorityIds": "checklistbank-1174:txn:378815,col:8R39J,gbif-backbone:11121455",
           "description": "Echinoaphis penalverii is a tajmyraphididae species found in its native region."
         }
       ],
@@ -242,108 +248,6 @@
       "lineage": "Tajmyraphididae"
     },
     {
-      "id": "GENUS_MONGOLAPHIS",
-      "name": "Mongolaphis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MONGOLAPHIS_LATERALIS_ZYLA_WEGIEREK_2020",
-          "name": "Mongolaphis lateralis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mongolaphis",
-          "authorship": "Zyla & Wegierek, 2020",
-          "sourceIds": {
-            "gbif-backbone": "11376895"
-          },
-          "children": [],
-          "uuid": "ad8ed5bb-f7e5-591a-b69f-2c568c344627"
-        },
-        {
-          "id": "SP_MONGOLAPHIS_MAGNA_ZYLA_WEGIEREK_2020",
-          "name": "Mongolaphis magna",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mongolaphis",
-          "authorship": "Zyla & Wegierek, 2020",
-          "sourceIds": {
-            "gbif-backbone": "11370544"
-          },
-          "children": [],
-          "uuid": "e7a8d0c5-fbbc-5b24-9e12-628808a3ff11"
-        },
-        {
-          "id": "SP_MONGOLAPHIS_MINUTA_ZYLA_WEGIEREK_2020",
-          "name": "Mongolaphis minuta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mongolaphis",
-          "authorship": "Zyla & Wegierek, 2020",
-          "sourceIds": {
-            "gbif-backbone": "11374961"
-          },
-          "children": [],
-          "uuid": "51837c06-b2f1-5900-88fd-fe0aa015dec5"
-        },
-        {
-          "id": "SP_MONGOLAPHIS_KONONOVAE_ZYLA_WEGIEREK_2020",
-          "name": "Mongolaphis kononovae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mongolaphis",
-          "authorship": "Zyla & Wegierek, 2020",
-          "sourceIds": {
-            "gbif-backbone": "11377748"
-          },
-          "children": [],
-          "uuid": "8e3b9e74-c377-55a3-b1ff-6e86863b29bf"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "†tajmyraphididae"
-    },
-    {
-      "id": "GENUS_INDIVISAPHIS",
-      "name": "Indivisaphis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_INDIVISAPHIS_PARVULA_ZYLA_WEGIEREK_2020",
-          "name": "Indivisaphis parvula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Indivisaphis",
-          "authorship": "Zyla & Wegierek, 2020",
-          "sourceIds": {
-            "gbif-backbone": "11378573"
-          },
-          "children": [],
-          "uuid": "3c48201d-83df-5e10-b83c-6cc9cac7b572"
-        },
-        {
-          "id": "SP_INDIVISAPHIS_ARCUATA_ZYLA_WEGIEREK_2020",
-          "name": "Indivisaphis arcuata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Indivisaphis",
-          "authorship": "Zyla & Wegierek, 2020",
-          "sourceIds": {
-            "gbif-backbone": "11373290"
-          },
-          "children": [],
-          "uuid": "7c1f9f6f-1c82-5cbf-8f42-17f598821450"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "†tajmyraphididae"
-    },
-    {
       "id": "GENUS_BURMITAPHIS",
       "name": "Burmitaphis",
       "rank": "GENUS",
@@ -362,7 +266,13 @@
             "checklistbank-1174": "txn:213458"
           },
           "uuid": "0e6f1f76-7bcd-4eff-8cb9-8281d6313b06",
-          "children": []
+          "children": [],
+          "description": "†Burmitaphis prolatum is a †tajmyraphidoidea > †burmitaphis species found in Asia region.",
+          "continents": [
+            "Asia"
+          ],
+          "yearPublished": "2005",
+          "extinct": true
         }
       ]
     },
@@ -385,7 +295,13 @@
             "checklistbank-1174": "txn:213460"
           },
           "uuid": "c85261b5-a1a9-461a-93da-7ea07abce283",
-          "children": []
+          "children": [],
+          "description": "†Caulinus burmitis is a †tajmyraphidoidea > †caulinus species found in Asia region.",
+          "continents": [
+            "Asia"
+          ],
+          "yearPublished": "2005",
+          "extinct": true
         }
       ]
     },
@@ -409,18 +325,24 @@
             "checklistbank-1061": "901504"
           },
           "uuid": "f2c406d3-d4f7-48ce-bc56-433bc1db41db",
-          "children": []
+          "children": [],
+          "description": "†Alavesiaphis margaritae is a †tajmyraphidoidea > †alavesiaphis species found in Europe region.",
+          "continents": [
+            "Europe"
+          ],
+          "yearPublished": "2008",
+          "extinct": true
         }
       ]
     }
   ],
-  "speciesCount": 18,
+  "speciesCount": 12,
   "appSlug": "tajmyraphididae",
   "lineage": "†Tajmyraphidoidea",
   "continents": [
     "Asia"
   ],
-  "genusCount": 12,
+  "genusCount": 10,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

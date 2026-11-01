@@ -800,7 +800,8 @@
             "checklistbank-2265": "110077",
             "checklistbank-2169": "110077",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "775011",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2706068"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2706068",
+            "checklistbank-24467": "126726"
           },
           "authorityIds": "col:6MN4Y,itis:775011,wikidata:Q2706068",
           "authorship": "(Schlegel, 1837)"
@@ -2559,7 +2560,8 @@
             ],
             "checklistbank": "65564",
             "wikispecies": "Hylarana_baramica",
-            "checklistbank-139831": "65564"
+            "checklistbank-139831": "65564",
+            "checklistbank-62703": "89cd1620-c6c9-467d-8f9f-a3c3add90815"
           },
           "authorityIds": "col:6MMS3,itis:775001",
           "commonName": "Baram River Frog",
@@ -2787,7 +2789,8 @@
             "checklistbank": "65582",
             "wikispecies": "Hylarana_glandulosa",
             "checklistbank-139831": "65582",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1616541"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1616541",
+            "checklistbank-62703": "5534c45f-60bf-4164-a23a-6cd43dde6d7e"
           },
           "authorityIds": "col:6MMT8,itis:775020",
           "commonName": "Rough Sided Frog/Water Dog",
@@ -4335,7 +4338,10 @@
           "lineage": "Rana",
           "authorship": "Spix, 1824",
           "children": [],
-          "uuid": "12236ccd-8b21-54a-b8f-d7c661ca5e80c3"
+          "uuid": "12236ccd-8b21-54a-b8f-d7c661ca5e80c3",
+          "sourceIds": {
+            "checklistbank-264127": "ANURA-004"
+          }
         },
         {
           "id": "SP_RANA_PRETIOSA_BAIRD_GIRARD_1853",
@@ -4502,7 +4508,8 @@
           "children": [],
           "uuid": "497e8e98-bfe9-56e-b0b-237847999659fa",
           "sourceIds": {
-            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18347/"
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/18347/",
+            "checklistbank-264127": "ANURA-003"
           }
         },
         {
@@ -4757,7 +4764,8 @@
           "uuid": "a58bdfa0-e73c-510-804-ce6d778bf3a29a",
           "sourceIds": {
             "checklistbank-1174": "txn:509652",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1284509"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1284509",
+            "checklistbank-103462": "NG:NCB:Biseni_fauna_Checklist:0000188"
           }
         },
         {
@@ -7977,7 +7985,8 @@
           "lineage": "Rana",
           "authorship": "Brocchi, 1877",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3007452"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3007452",
+            "checklistbank-264127": "ANURA-005"
           },
           "children": []
         },
@@ -9440,6 +9449,30 @@
             "checklistbank-23895": "2523"
           },
           "uuid": "f2bb054f-59d1-4309-a38d-3b06a7a75dad"
+        },
+        {
+          "id": "SP_RANA_PALAWANENSIS",
+          "name": "Rana palawanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rana",
+          "sourceIds": {
+            "checklistbank-62703": "b0d38cd4-9ede-403b-a22d-a81771741098"
+          },
+          "uuid": "278d4f42-dc74-4a2b-80a6-164cefcdef1e"
+        },
+        {
+          "id": "SP_RANA_BWANA",
+          "name": "Rana bwana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rana",
+          "sourceIds": {
+            "checklistbank-264127": "ANURA-002"
+          },
+          "uuid": "5caa5a65-8ef2-47d6-b34e-91e1cf0494e9"
         }
       ],
       "sourcedFrom": "worms",
@@ -20564,10 +20597,18 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ranidae"
+    },
+    {
+      "id": "GENUS_PYXICEPHALUS",
+      "name": "Pyxicephalus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ranidae",
+      "children": []
     }
   ],
   "genusCount": 60,
-  "speciesCount": 1109,
+  "speciesCount": 1111,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
