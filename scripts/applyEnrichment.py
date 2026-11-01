@@ -25,7 +25,9 @@ import maintenanceLock  # noqa: E402
 from tree import ROOT, count_species, iter_species, save_json  # noqa: E402
 
 # subgenus: a field on the species, not a tree level (docs/sub-ranks-plan.md).
-FIELDS = {"authorship", "yearPublished", "subgenus"}
+# authorIds / basionymAuthorIds: the authors track (docs/authors-track-plan.md);
+# every id must resolve in data/authors/people.jsonl (verifyTree).
+FIELDS = {"authorship", "yearPublished", "subgenus", "authorIds", "basionymAuthorIds"}
 # Its own log: import-log.jsonl is one record per import, read as such by
 # verifyTree and the dashboards.
 LOG = os.path.join(ROOT, "data", "enrichment-log.jsonl")
@@ -68,7 +70,7 @@ def main() -> int:
                     stat["node gone"] += 1
                     continue
                 for field, value in r["set"].items():
-                    if sp.get(field) not in (None, ""):
+                    if sp.get(field) not in (None, "", []):
                         stat[f"{field} already set"] += 1
                         continue
                     sp[field] = value

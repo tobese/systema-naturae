@@ -614,6 +614,9 @@ def check_authority_collisions():
                         if key:
                             seen[(kingdom, auth, str(key))].append(
                                 (n.get("name"), fam.slug))
+                    for f in ("authorIds", "basionymAuthorIds"):
+                        for a in n.get(f) or ():
+                            AUTHOR_REFS[a] += 1
                 st.extend(n.get("children") or [])
                 for sp in n.get("speciesList") or []:
                     if sp.get("rank") == "SPECIES":
@@ -643,6 +646,30 @@ def check_authority_collisions():
     else:
         ok("no two species share an authority id in one kingdom",
            f"{len(seen):,} identifiers checked")
+
+
+AUTHOR_REFS = collections.Counter()  # filled by check_authority_collisions' walk
+
+
+def check_author_ids():
+    """Every author id on a species resolves in the people registry.
+
+    The authors track (docs/authors-track-plan.md) writes `authorIds` /
+    `basionymAuthorIds` onto species and the people into
+    data/authors/people.jsonl, in that order inside one maintenance session.
+    An id with no person behind it is a link to nobody.
+    """
+    if not AUTHOR_REFS:
+        ok("every author id resolves in data/authors/people.jsonl", "no author ids yet")
+        return
+    from applyAuthors import known_ids
+    missing = [a for a in AUTHOR_REFS if a not in known_ids()]
+    if missing:
+        fail("every author id resolves in data/authors/people.jsonl",
+             f"{len(missing):,} of {len(AUTHOR_REFS):,} ids unknown, e.g. {', '.join(missing[:4])}")
+    else:
+        ok("every author id resolves in data/authors/people.jsonl",
+           f"{len(AUTHOR_REFS):,} people, {sum(AUTHOR_REFS.values()):,} links")
 
 
 def check_family_names():
@@ -825,6 +852,7 @@ def main() -> int:
     check_duplicate_species()
     check_species_names()
     check_authority_collisions()
+    check_author_ids()
     check_family_names()
     check_missing_lineage()
     check_lineage()

@@ -14,7 +14,7 @@ instead, holding maintenanceLock so the snapshot is consistent:
      it had just fixed.
   2. a temporary index from origin/main; `git add -A` of what Macie owns:
      taxonomy/{the six portal kingdoms}, their skeleton files in portal/data,
-     data/source-queue.
+     data/source-queue, data/authors (the people registry, once it exists).
   3. data/import-log.jsonl and data/pipeline-events.jsonl: both machines
      append to them, so origin's lines plus Macie's, never Macie's file.
   4. refuse if the result touches q-bert's paths (bacteria, viruses,
@@ -78,7 +78,8 @@ def main() -> int:
         try:
             git("read-tree", base, env=env)
             git("add", "-A", "--", *[f"taxonomy/{k}" for k in KINGDOMS], *SKELETONS,
-                "data/source-queue", env=env)
+                "data/source-queue",
+                *[p for p in ("data/authors",) if os.path.exists(os.path.join(ROOT, p))], env=env)
             for log in LOGS:
                 if not os.path.exists(os.path.join(ROOT, log)):
                     continue
