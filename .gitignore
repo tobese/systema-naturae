@@ -5,6 +5,9 @@ archives/
 node_modules/
 shared/node_modules
 dist/
+# portal/dist may be a symlink to the external volume (Macie, 2026-11-01);
+# a pattern ending in / does not match a symlink.
+portal/dist
 .DS_Store
 *.local
 .env
@@ -95,6 +98,7 @@ portal/data/.authority-index.sqlite3
 # from archives on the sources volume, rebuilt automatically when stale.
 portal/data/.genus-authority-register.sqlite3
 portal/public/data/kingdoms/
+portal/public/data/kingdoms
 portal/public/data/book/
 portal/data/non-english-descriptions.jsonl
 portal/data/commons-credits.jsonl
