@@ -192,6 +192,7 @@ def main() -> int:
 
     r = ICC.route_species(args.archive, kingdom_override=args.kingdom)
     ICC.record_misses(r, args.archive, args.apply)
+    ICC.record_unplaced(r, args.archive, args.apply)
 
     if not r.staged:
         print("\n  nothing to do")

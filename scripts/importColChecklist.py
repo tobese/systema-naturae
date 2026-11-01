@@ -301,6 +301,11 @@ def slug_hint(archive):
     key = m.get("key") or m.get("alias") or m.get("title")
     if not key:
         key = os.path.basename(archive).rsplit(".", 1)[0]
+        # The fetcher saves every dataset as <dir>/archive.zip; the bare
+        # filename lumped 2,250 pending-family rows from different sources
+        # under "checklistbank:archive" (found 2026-11-01).
+        if key == "archive":
+            key = os.path.basename(os.path.dirname(os.path.abspath(archive))) or key
     return re.sub(r"[^a-z0-9]+", "-", str(key).lower()).strip("-")[:40]
 
 
@@ -375,6 +380,12 @@ class RoutedSpecies:
         # "count": int, "samples": [(name, tid), ...]}}. See
         # record_unresolved() for the on-disk form.
         self.unresolved_detail = {}
+        # The records themselves, for the unplaced store (unplacedStore.py):
+        # (kingdom, family, genus, name, authorship, sourceId, reason). A
+        # name we hold in that kingdom under another family is not unplaced
+        # and is only counted.
+        self.unplaced = []
+        self.unplaced_held_by_name = 0
 
 
 def route_species(archive, kingdom_override="") -> RoutedSpecies:
@@ -620,6 +631,11 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             d["count"] += 1
             if len(d["samples"]) < 5:
                 d["samples"].append((t.get("name") or bare, tid))
+            if any(bare.lower() in names for names in ON_DISK_NAMES.values()):
+                r.unplaced_held_by_name += 1
+            else:
+                r.unplaced.append(("", fam_raw, g, bare, (t.get("authorship") or "").strip(),
+                                   tid, "kingdom-unresolved"))
             continue
         r.routed[k] += 1
         fams_k = KINDS[k][1]
@@ -634,6 +650,11 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             r.no_family[(k, fam or "(no family)")] += 1
             r.missed[(k, fam)] += 1
             r.refused += 1
+            if bare.lower() in ON_DISK_NAMES[k]:
+                r.unplaced_held_by_name += 1
+            else:
+                r.unplaced.append((k, fam_raw, g, bare, (t.get("authorship") or "").strip(),
+                                   tid, "family-not-held"))
             continue
         slug = fams_k[fam][0]
         if bare.lower() in ON_DISK_NAMES[k]:
@@ -709,6 +730,32 @@ def record_misses(r: RoutedSpecies, archive, apply_: bool):
         print(f"  (dry run: {sum(r.missed.values()):,} refusals across "
               f"{len({f for _, f in r.missed if f}):} families would be recorded "
               f"in the pending store)")
+
+
+def record_unplaced(r: RoutedSpecies, archive, apply_: bool):
+    """Keep the refused and unresolved-kingdom records themselves in the
+    unplaced store (scripts/unplacedStore.py) -- shared tail for main() and
+    transformColChecklist.py, written only on a real apply. Kingdoms this
+    machine does not write (scripts/writerKingdoms.py) are left to the
+    machine that does."""
+    rows = [row for row in r.unplaced if not row[0] or WK.may_write(row[0])]
+    if not rows:
+        return
+    if not apply_:
+        print(f"  (dry run: {len(rows):,} unplaced records would be kept in the "
+              f"unplaced store; {r.unplaced_held_by_name:,} more are held by "
+              f"name in another family)")
+        return
+    # Never fatal: losing these rows costs a re-read of the archive later;
+    # failing the import over them would cost the import.
+    try:
+        import unplacedStore
+        new, again = unplacedStore.record(rows, source=f"{SOURCE}:{slug_hint(archive)}")
+    except Exception as e:
+        print(f"  ! unplaced store not written: {e}")
+        return
+    print(f"  unplaced store: {new:,} new records, {again:,} seen before "
+          f"({r.unplaced_held_by_name:,} held by name in another family, not kept)")
 
 
 # Sibling to pendingFamilies.py's STORE/LINK pattern, same reasoning: derived
@@ -851,6 +898,7 @@ def main() -> int:
     meta = r.meta
     record_misses(r, args.archive, args.apply)
     record_unresolved(r, args.archive, args.apply)
+    record_unplaced(r, args.archive, args.apply)
     if args.diff_log:
         write_placement_diffs(r, args.diff_log, args.archive)
     staged = r.staged
