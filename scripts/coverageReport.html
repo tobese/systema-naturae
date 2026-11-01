@@ -142,6 +142,9 @@ function render() {
     while (n && n._depth > tr._depth) { if (n._depth === tr._depth + 1) kids.push(n); n = n.nextElementSibling; }
     kids.forEach(walk); } };
   for (const k of sorted(DATA.kingdoms)) { const tr = row(k, 0); body.appendChild(tr); walk(tr); }
+  const total = row({name: "All kingdoms", rank: "TOTAL", stats: DATA.total}, 0);
+  total.style.fontWeight = "600";
+  body.appendChild(total);
 }
 
 sortSel.addEventListener("change", render);
