@@ -39,7 +39,8 @@ KINGDOMS = ["animalia", "plantae", "fungi", "chromista", "protozoa", "archaea"]
 SKELETONS = ["portal/data/taxonomy.json", "portal/data/taxonomy-plantae-snippet.json",
              "portal/data/taxonomy-fungi.json", "portal/data/taxonomy-chromista.json",
              "portal/data/taxonomy-protozoa.json", "portal/data/taxonomy-archaea.json"]
-LOGS = ["data/import-log.jsonl", "data/pipeline-events.jsonl"]
+# enrichment-log: applyEnrichment.py (nomenclatural sources), 2026-11-01.
+LOGS = ["data/import-log.jsonl", "data/pipeline-events.jsonl", "data/enrichment-log.jsonl"]
 NOT_OURS = ("taxonomy/bacteria", "taxonomy/viruses", "data/source-queue-bv",
             "portal/data/taxonomy-bacteria", "portal/data/taxonomy-viruses",
             "scripts/", "services/", "portal/src/", "shared/")
@@ -79,7 +80,11 @@ def main() -> int:
             git("add", "-A", "--", *[f"taxonomy/{k}" for k in KINGDOMS], *SKELETONS,
                 "data/source-queue", env=env)
             for log in LOGS:
-                theirs = git("show", f"{base}:{log}").splitlines()
+                if not os.path.exists(os.path.join(ROOT, log)):
+                    continue
+                has = subprocess.run(["git", "cat-file", "-e", f"{base}:{log}"], cwd=ROOT,
+                                     capture_output=True).returncode == 0
+                theirs = git("show", f"{base}:{log}").splitlines() if has else []
                 with open(os.path.join(ROOT, log), encoding="utf-8") as fh:
                     ours = fh.read().splitlines()
                 seen = set(theirs)
