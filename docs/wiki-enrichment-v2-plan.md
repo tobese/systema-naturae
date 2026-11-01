@@ -66,6 +66,13 @@ article title.
 
 4. **Apply fill-only**, through `applyEnrichment.py` (new fields) in a
    maintenance session, per kingdom, dry run first:
+   - **no stubs** (decided 2026-11-01: an empty description is something to
+     compare against; stub text only looks like coverage). A page is a stub
+     when its wikitext carries a `{{…-stub}}` template -- Wikipedia's own
+     marking, not a length guess. Its lead is not written; the page is still
+     used for the other fields (common name, QID, title, taxobox), and the
+     skip is recorded in the run's ledger with the page id, so the stubs can
+     be counted and revisited when an article grows;
    - `description` + `sourcedFrom: "wikipedia"`: where the node has none, or
      only a template description ("… is a X species found in its native
      region", "a species in the genus …" -- the same test `buildData.ts`
@@ -87,10 +94,11 @@ article title.
 
 ## Open questions
 
-- **Stubs.** Many species articles are bot stubs ("X is a moth of the family
-  Y. It is found in Z."). Sourced and checkable, but thin: take them, take
-  them marked, or skip below a length? Measure the share in step 3.
-- **Template descriptions**: replace them (proposed), or only fill empty?
+- ~~Stubs~~: skipped (above). Measure their share in step 3.
+- **Template descriptions** are the same thing as a stub, only ours: if
+  stubs stay empty, the existing template descriptions ("… is a X species
+  found in its native region") arguably should be cleared too, so empty
+  means empty everywhere.
 - **Freshness**: the dump is 2026-06-01. Refresh Debbie's import before
   this, or take June now and diff by revision later?
 - **Coverage report**: count template descriptions as not described, so the
