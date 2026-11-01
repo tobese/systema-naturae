@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Systema Naturae: coverage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --bg:#fbfaf7; --fg:#22211f; --muted:#77736b; --line:#e4e0d8; --bar:#e9e5dc; --fill:#4f7a5a; --hover:#f2efe8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1b1b19; --fg:#e8e5de; --muted:#9a958b; --line:#33322e; --bar:#2e2d29; --fill:#7fae88; --hover:#262522; }
+  }
+  body { margin:0; padding:24px 32px; background:var(--bg); color:var(--fg); font:14px/1.4 -apple-system, system-ui, sans-serif; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .meta { color:var(--muted); margin-bottom:16px; }
+  .controls { margin-bottom:12px; display:flex; gap:16px; align-items:center; color:var(--muted); }
+  table { border-collapse:collapse; width:100%; }
+  th, td { padding:4px 8px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+  th { position:sticky; top:0; background:var(--bg); color:var(--muted); font-weight:500; }
+  th:first-child, td:first-child { text-align:left; width:40%; white-space:normal; }
+  tr.row:hover { background:var(--hover); }
+  .tog { display:inline-block; width:1.2em; color:var(--muted); cursor:pointer; user-select:none; }
+  .rank { color:var(--muted); font-size:11px; margin-left:6px; letter-spacing:.04em; }
+  .cn { color:var(--muted); margin-left:6px; }
+  .flag { color:#b0602c; font-size:11px; margin-left:6px; }
+  .bar { display:inline-block; width:80px; height:8px; background:var(--bar); border-radius:4px; vertical-align:middle; margin-right:6px; overflow:hidden; }
+  .bar > i { display:block; height:100%; background:var(--fill); }
+  .pct { display:inline-block; width:3.2em; }
+  .muted { color:var(--muted); }
+  .note { color:var(--muted); max-width:900px; margin-top:16px; font-size:12px; }
+</style>
+</head>
+<body>
+<h1>Coverage, kingdom to family</h1>
+<div class="meta" id="meta"></div>
+<div class="controls">
+  <label>Sort <select id="sort">
+    <option value="name">name</option>
+    <option value="held">species held</option>
+    <option value="gap">gap (stated &minus; held)</option>
+    <option value="described">described %, lowest first</option>
+  </select></label>
+  <label><input type="checkbox" id="hideEmpty"> hide families holding nothing</label>
+</div>
+<table>
+  <thead><tr>
+    <th>Taxon</th><th>Held</th><th>Stated</th><th>Held / stated</th>
+    <th>Described</th><th>Authored</th><th>Common name</th><th>Families (empty)</th>
+  </tr></thead>
+  <tbody id="body"></tbody>
+</table>
+<p class="note" id="note"></p>
+<script>
+const DATA = /*COVERAGE_DATA*/null;
+const fmt = n => n.toLocaleString("en-US");
+const pct = (a, b) => b ? a / b : 0;
+const body = document.getElementById("body");
+const sortSel = document.getElementById("sort");
+const hideEmpty = document.getElementById("hideEmpty");
+
+document.getElementById("meta").textContent =
+  `${fmt(DATA.total.held)} species held in ${fmt(DATA.total.families)} families · ` +
+  `generated ${DATA.generatedAt} from species.parquet built ${DATA.parquetBuiltAt}`;
+document.getElementById("note").textContent =
+  "Stated is the sum of the families' speciesCount. It is raised to what we hold whenever counts are resynced, " +
+  "so it is not an independent real-world total: held equal to stated often means no better total is recorded, not that the family is complete. " +
+  "Percentages in the last columns are of species held.";
+
+function bar(a, b) {
+  const p = Math.min(1, pct(a, b));
+  return `<span class="bar"><i style="width:${(p * 100).toFixed(1)}%"></i></span><span class="pct">${b ? Math.round(p * 100) + "%" : "–"}</span>`;
+}
+function share(a, b) { return b ? `${Math.round(pct(a, b) * 100)}%` : `<span class="muted">–</span>`; }
+
+function sorted(nodes) {
+  const by = sortSel.value, out = nodes.slice();
+  const key = {
+    name: n => n.name.toLowerCase(),
+    held: n => -n.stats.held,
+    gap: n => -(n.stats.stated - n.stats.held),
+    described: n => n.stats.held ? pct(n.stats.described, n.stats.held) : 2,
+  }[by];
+  // Families hung straight from a kingdom or phylum (no class/order) come
+  // after the ranked groups beside them, not interleaved with them.
+  const loose = n => n.rank === "FAMILY" ? 1 : 0;
+  out.sort((a, b) => { const x = key(a), y = key(b);
+    return loose(a) - loose(b) || (x < y ? -1 : x > y ? 1 : 0); });
+  return out;
+}
+
+function row(node, depth) {
+  const s = node.stats, kids = node.children || [];
+  const tr = document.createElement("tr");
+  tr.className = "row";
+  const name = `<span class="tog">${kids.length ? "▸" : ""}</span>${node.name}` +
+    `<span class="rank">${node.rank}</span>` +
+    (node.commonName ? `<span class="cn">${node.commonName}</span>` : "") +
+    (node.noFile ? `<span class="flag">no data file</span>` : "") +
+    (node.duplicateNode ? `<span class="flag">duplicate node, counted once above</span>` : "") +
+    (node.unplacedFiles && node.unplacedFiles.files
+      ? `<span class="flag">+${fmt(node.unplacedFiles.held)} species in ${fmt(node.unplacedFiles.files)} files no family node points to</span>` : "");
+  tr.innerHTML =
+    `<td style="padding-left:${8 + depth * 18}px">${name}</td>` +
+    `<td>${fmt(s.held)}</td><td>${fmt(s.stated)}</td><td>${bar(s.held, s.stated)}</td>` +
+    `<td>${share(s.described, s.held)}</td><td>${share(s.authored, s.held)}</td><td>${share(s.common, s.held)}</td>` +
+    `<td>${node.rank === "FAMILY" ? "" : fmt(s.families) + (s.emptyFamilies ? ` <span class="muted">(${fmt(s.emptyFamilies)})</span>` : "")}</td>`;
+  tr._node = node; tr._depth = depth; tr._open = false;
+  if (kids.length) {
+    tr.querySelector("td").style.cursor = "pointer";
+    tr.querySelector("td").addEventListener("click", () => toggle(tr));
+  }
+  return tr;
+}
+
+function visible(n) { return !(hideEmpty.checked && n.stats.held === 0); }
+
+function open(tr) {
+  let after = tr;
+  for (const child of sorted(tr._node.children).filter(visible)) {
+    const r = row(child, tr._depth + 1);
+    r._parent = tr;
+    after.after(r);
+    after = r;
+  }
+  tr._open = true;
+  tr.querySelector(".tog").textContent = "▾";
+}
+
+function close(tr) {
+  let next = tr.nextElementSibling;
+  while (next && next._depth > tr._depth) { const n = next.nextElementSibling; next.remove(); next = n; }
+  tr._open = false;
+  tr.querySelector(".tog").textContent = "▸";
+}
+
+function toggle(tr) { tr._open ? close(tr) : open(tr); }
+
+function render() {
+  // Keep what was open: re-open the same nodes after re-sorting.
+  const wasOpen = new Set([...body.children].filter(r => r._open).map(r => r._node));
+  body.innerHTML = "";
+  const walk = (tr) => { if (wasOpen.has(tr._node)) { open(tr); let n = tr.nextElementSibling; const kids = [];
+    while (n && n._depth > tr._depth) { if (n._depth === tr._depth + 1) kids.push(n); n = n.nextElementSibling; }
+    kids.forEach(walk); } };
+  for (const k of sorted(DATA.kingdoms)) { const tr = row(k, 0); body.appendChild(tr); walk(tr); }
+}
+
+sortSel.addEventListener("change", render);
+hideEmpty.addEventListener("change", render);
+render();
+</script>
+</body>
+</html>

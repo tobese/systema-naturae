@@ -83,6 +83,9 @@ portal/data/species.parquet.jsonl
 portal/data/.species-cache-*.parquet
 portal/data/.species-cache-*.parquet.jsonl
 portal/data/species-count-cache.json
+# Derived from species.parquet by scripts/coverageReport.py
+portal/data/coverage-report.json
+portal/data/coverage-report.html
 
 # Per-family name-parse-index sidecars — derived from name-parse-index.jsonl
 # by scripts/splitNameIndex.py; regenerated per machine for incremental sync.
