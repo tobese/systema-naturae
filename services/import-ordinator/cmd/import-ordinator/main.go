@@ -114,7 +114,9 @@ func main() {
 		}
 	}
 
-	applyTimeout := 180 * time.Minute
+	// 6h: 1174's apply (34k species across ~6,000 families) hit the old 3h
+	// limit on 2026-11-01. APPLY_TIMEOUT (minutes) overrides.
+	applyTimeout := 360 * time.Minute
 	if t := os.Getenv("APPLY_TIMEOUT"); t != "" {
 		if d, err := time.ParseDuration(t + "m"); err == nil {
 			applyTimeout = d

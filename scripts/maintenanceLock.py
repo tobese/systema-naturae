@@ -35,6 +35,12 @@ import subprocess
 _DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 LOCK_PATH = os.path.join(_DATA, ".maintenance.lock")
 HOLD_PATH = os.path.join(_DATA, ".maintenance.hold")
+# A maintenance pass blocked on the lock leaves `.maintenance.waiting.<pid>`
+# while it waits. The Go ordinator holds the lock for a whole drain pass and
+# checks for these between sources, ending the pass early so the waiting
+# pass gets in; without it an IPNI session waited 7 hours behind six large
+# re-takes (2026-11-01). Same name as maintlock.WaitingPrefix.
+WAITING_PREFIX = os.path.join(_DATA, ".maintenance.waiting.")
 ENV = "SN_MAINTENANCE_LOCK_PID"
 
 
@@ -74,8 +80,20 @@ def hold_exclusive():
     os.makedirs(os.path.dirname(LOCK_PATH), exist_ok=True)
     fh = open(LOCK_PATH, "w")
     previous = os.environ.get(ENV)
+    waiting = None
     try:
-        fcntl.flock(fh, fcntl.LOCK_EX)
+        try:
+            fcntl.flock(fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            waiting = f"{WAITING_PREFIX}{os.getpid()}"
+            with open(waiting, "w") as wf:
+                wf.write(str(os.getpid()))
+            print("  maintenance lock busy -- waiting (the ordinator ends its pass "
+                  "after the current source)", flush=True)
+            fcntl.flock(fh, fcntl.LOCK_EX)
+        finally:
+            if waiting and os.path.exists(waiting):
+                os.unlink(waiting)
         os.environ[ENV] = str(os.getpid())
         yield
     finally:

@@ -5,6 +5,7 @@ package maintlock
 
 import (
 	"errors"
+	"fmt"
 	"os"
 	"path/filepath"
 	"syscall"
@@ -47,4 +48,29 @@ func TryAcquire(path string) (l *Lock, ok bool, err error) {
 func (l *Lock) Release() {
 	syscall.Flock(int(l.f.Fd()), syscall.LOCK_UN)
 	l.f.Close()
+}
+
+// WaitingPrefix names the marker a maintenance pass blocked on the lock
+// leaves while it waits (data/.maintenance.waiting.<pid>); same name as
+// maintenanceLock.WAITING_PREFIX. The drain holds the lock for a whole pass,
+// so it checks this between sources and ends the pass early.
+const WaitingPrefix = ".maintenance.waiting."
+
+// SessionWaiting reports whether a live maintenance pass is waiting for the
+// lock in dir. Markers whose process is gone are removed.
+func SessionWaiting(dir string) bool {
+	matches, _ := filepath.Glob(filepath.Join(dir, WaitingPrefix+"*"))
+	waiting := false
+	for _, m := range matches {
+		var pid int
+		if _, err := fmt.Sscanf(filepath.Base(m)[len(WaitingPrefix):], "%d", &pid); err != nil || pid <= 1 {
+			continue
+		}
+		if err := syscall.Kill(pid, 0); err != nil && errors.Is(err, syscall.ESRCH) {
+			os.Remove(m)
+			continue
+		}
+		waiting = true
+	}
+	return waiting
 }

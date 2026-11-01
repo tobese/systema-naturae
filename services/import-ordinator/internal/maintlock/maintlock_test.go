@@ -3,6 +3,7 @@ package maintlock
 import (
 	"os"
 	"path/filepath"
+	"strconv"
 	"testing"
 )
 
@@ -39,4 +40,26 @@ func TestHoldFileRefusesWithLockFree(t *testing.T) {
 		t.Fatalf("not acquirable after the hold was cleared: ok=%v err=%v", ok, err)
 	}
 	l.Release()
+}
+
+func TestSessionWaiting(t *testing.T) {
+	dir := t.TempDir()
+	if SessionWaiting(dir) {
+		t.Fatal("waiting with no marker")
+	}
+	live := filepath.Join(dir, WaitingPrefix+strconv.Itoa(os.Getpid()))
+	os.WriteFile(live, nil, 0644)
+	if !SessionWaiting(dir) {
+		t.Fatal("live waiter not seen")
+	}
+	os.Remove(live)
+	// A pid far above any real one: the marker of a waiter that died.
+	dead := filepath.Join(dir, WaitingPrefix+"99999999")
+	os.WriteFile(dead, nil, 0644)
+	if SessionWaiting(dir) {
+		t.Fatal("dead waiter counted")
+	}
+	if _, err := os.Stat(dead); !os.IsNotExist(err) {
+		t.Fatal("dead waiter's marker not removed")
+	}
 }

@@ -161,6 +161,14 @@ func (p *Pipeline) drain(ctx context.Context) {
 			fmt.Println("stop requested -- not starting another source")
 			break
 		}
+		// A maintenance session waiting for the lock goes next: end this pass
+		// (and so release the lock) instead of starting another source. The
+		// rest of the queue is picked up by the next pass.
+		if maintlock.SessionWaiting(filepath.Join(p.cfg.RepoRoot, "data")) {
+			<-sem
+			fmt.Println("maintenance session waiting -- ending this pass after the current source")
+			break
+		}
 		// Re-read just before acting: the snapshot above can be hours old by
 		// the time this key's turn comes (see queue.Store.ReadOne).
 		entry, err := p.store.ReadOne(key)
