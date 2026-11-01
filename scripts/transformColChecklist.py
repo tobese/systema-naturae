@@ -190,6 +190,15 @@ def main() -> int:
               f"recognised DwCA/ColDP/ACEF table; skipping (unsupported format).")
         return 4
 
+    # Exit 5: a names index (IPNI) -- no species to route, but the
+    # enrichment path's job (nomenclatureTransform.py); the ordinator marks
+    # it kind "nomenclatural" and leaves it triaged for a human.
+    import nomenclatureTransform
+    if nomenclatureTransform.is_names_index(args.archive):
+        print(f"\n  {args.archive} is a names index (no status or parent in its "
+              f"Taxon table): a nomenclatural source, not a species import.")
+        return 5
+
     r = ICC.route_species(args.archive, kingdom_override=args.kingdom)
     ICC.record_misses(r, args.archive, args.apply)
     ICC.record_unplaced(r, args.archive, args.apply)

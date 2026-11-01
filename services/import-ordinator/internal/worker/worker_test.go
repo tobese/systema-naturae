@@ -2,6 +2,8 @@ package worker
 
 import (
 	"context"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 
@@ -101,5 +103,23 @@ func TestTriagedIsLeftForAHuman(t *testing.T) {
 	e, _ := p.store.ReadOne("checklistbank-1")
 	if e.Stage != queue.StageTriaged {
 		t.Fatalf("a triaged source was moved to %q", e.Stage)
+	}
+}
+
+func TestNomenclaturalIsNeverDrained(t *testing.T) {
+	// Queued, with a transform output on disk: a species source would go
+	// straight to apply. A names index belongs to the Python side tasks.
+	dir := t.TempDir()
+	src := t.TempDir()
+	os.MkdirAll(filepath.Join(src, "work", "checklistbank-2006"), 0755)
+	os.WriteFile(filepath.Join(src, "work", "checklistbank-2006", "transformed.jsonl"), []byte("{}\n"), 0644)
+	p := NewPipeline(Config{RepoRoot: dir, QueueDir: dir, SourcesRoot: src, NoDownload: true, NoSideTasks: true})
+	if err := p.store.Write("checklistbank-2006", &queue.Entry{Key: "checklistbank-2006", Stage: queue.StageQueued, Kind: "nomenclatural"}); err != nil {
+		t.Fatal(err)
+	}
+	p.drain(context.Background())
+	e, _ := p.store.ReadOne("checklistbank-2006")
+	if e.Stage != queue.StageQueued || e.Kind != "nomenclatural" {
+		t.Fatalf("a nomenclatural source was drained: stage %q kind %q", e.Stage, e.Kind)
 	}
 }

@@ -49,6 +49,7 @@ from __future__ import annotations
 
 import json
 import os
+import shlex
 import subprocess
 import sys
 import time
@@ -58,6 +59,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, SCRIPT_DIR)
 import importQueueDriver as IQD  # noqa: E402
 import maintenanceLock  # noqa: E402
+import sources  # noqa: E402
 import pendingFamilyWatcher as PFW  # noqa: E402
 
 CYCLE_SECONDS = 60
@@ -104,6 +106,43 @@ def process_needs_rerun(q: dict) -> None:
         print(f"  {key}: applied via stored rerunCommand", flush=True)
 
 
+def process_nomenclatural(q: dict) -> None:
+    """Run each queued nomenclatural source (a names index, `kind:
+    nomenclatural`, set by the ordinator on transform exit 5) through
+    nomenclatureTransform.py + applyEnrichment.py in one maintenance session:
+    the fills are checked by the same before/after verify as any other
+    maintenance pass, and a hold is left if an invariant got worse. The Go
+    ordinator never drains these (2026-11-01)."""
+    pending = [(k, v) for k, v in q.items()
+               if v.get("kind") == "nomenclatural" and v.get("stage") == "queued"]
+    here = os.path.dirname(os.path.abspath(__file__))
+    for key, entry in pending:
+        archive = entry.get("archivePath") or os.path.join(
+            sources.ROOT, "archives", key, "archive.zip")
+        work = os.path.join(sources.ROOT, "work", key)
+        print(f"\n== {key} (nomenclatural) -- enrichment", flush=True)
+        IQD.set_stage(q, key, "applying")
+        result = subprocess.run(
+            [sys.executable, os.path.join(here, "maintenanceSession.py"),
+             "--run", f"{sys.executable} {os.path.join(here, 'nomenclatureTransform.py')} "
+                      f"{shlex.quote(archive)} {shlex.quote(key)} --apply",
+             "--run", f"{sys.executable} {os.path.join(here, 'applyEnrichment.py')} "
+                      f"{shlex.quote(os.path.join(work, 'enrich.jsonl'))} --apply"],
+            capture_output=True, text=True)
+        for line in (result.stdout or "").splitlines()[-25:]:
+            print(f"    {line}", flush=True)
+        if result.returncode != 0:
+            IQD.set_stage(q, key, "error", reason=f"enrichment session rc={result.returncode}: "
+                          + " | ".join((result.stdout or result.stderr or "").splitlines()[-3:]))
+            continue
+        try:
+            counts = json.load(open(os.path.join(work, "summary.json")))["counts"]
+        except (OSError, ValueError, KeyError):
+            counts = {}
+        IQD.set_stage(q, key, "applied", enriched=counts)
+        print(f"  {key}: enriched", flush=True)
+
+
 def run_pass(drain: bool = True) -> None:
     q = IQD.load_queue()
     q = IQD.refill_queue(q)
@@ -112,6 +151,7 @@ def run_pass(drain: bool = True) -> None:
 
     q = IQD.load_queue()
     process_needs_rerun(q)
+    process_nomenclatural(IQD.load_queue())
 
     print("\n-- pending-family sweep --", flush=True)
     PFW.cycle()

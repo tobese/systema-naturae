@@ -69,21 +69,24 @@ def _member(z, name):
 
 
 def is_names_index(archive):
-    """A ColDP whose Taxon table carries no status and no parent, with a Name
-    table beside it: a nomenclatural index, not a checklist."""
+    """A ColDP with a Name table and no classification: no Synonym table, no
+    NameUsage table, and a Taxon table (if any) with no parent links. Status
+    says nothing -- a ColDP checklist's Taxon table is accepted by
+    definition and often leaves it blank (World Plants, 2026-11-01) -- and
+    the parent column is spelled parentID, parentId or parent_id."""
     try:
         z = zipfile.ZipFile(archive)
     except (OSError, zipfile.BadZipFile):
         return False
-    name, taxon = _member(z, "Name.tsv"), _member(z, "Taxon.tsv")
-    if not name:
+    if not _member(z, "Name.tsv") or _member(z, "NameUsage.tsv") or _member(z, "Synonym.tsv"):
         return False
+    taxon = _member(z, "Taxon.tsv")
     if not taxon:
         return True
     for i, r in enumerate(_rows(z, taxon)):
-        if r.get("status") or r.get("parentID"):
+        if any(v for k, v in r.items() if k.lower().replace("_", "") == "parentid"):
             return False
-        if i >= 1000:
+        if i >= 5000:
             break
     return True
 
@@ -131,12 +134,24 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("archive")
     ap.add_argument("work_slug")
-    ap.add_argument("--code", default="IPNI", choices=sorted(KINGDOMS_FOR))
+    ap.add_argument("--code", default="", choices=[""] + sorted(KINGDOMS_FOR),
+                    help="default: the archive's metadata alias, when it is one we map")
     ap.add_argument("--source-key", default="",
                     help="sourceIds key; default the work slug (checklistbank-2006)")
     ap.add_argument("--apply", action="store_true", help="write the work files")
     args = ap.parse_args()
     source_key = args.source_key or args.work_slug
+    if not args.code:
+        try:
+            import colChecklist
+            alias = (colChecklist.metadata(args.archive) or {}).get("alias") or ""
+        except Exception:
+            alias = ""
+        if alias not in KINGDOMS_FOR:
+            print(f"  no kingdom mapping for names index {alias or '(no alias)'!r}: add it to "
+                  f"KINGDOMS_FOR (which of our kingdoms its code speaks for), or pass --code")
+            return 4
+        args.code = alias
 
     if not is_names_index(args.archive):
         print(f"  {args.archive} is not a names index (its Taxon table has a status or a "

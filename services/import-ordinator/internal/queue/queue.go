@@ -40,13 +40,17 @@ const (
 // written by the Python tools), so a stage change here never drops data
 // another writer put in the file.
 type Entry struct {
-	Key             string         `json:"key"`
-	Title           string         `json:"title"`
-	Stage           Stage          `json:"stage"`
-	Licence         string         `json:"licence"`
-	Size            *int           `json:"size,omitempty"`
-	ArchivePath     string         `json:"archivePath,omitempty"`
-	KingdomOverride string         `json:"kingdomOverride,omitempty"`
+	Key             string `json:"key"`
+	Title           string `json:"title"`
+	Stage           Stage  `json:"stage"`
+	Licence         string `json:"licence"`
+	Size            *int   `json:"size,omitempty"`
+	ArchivePath     string `json:"archivePath,omitempty"`
+	KingdomOverride string `json:"kingdomOverride,omitempty"`
+	// Kind "nomenclatural": a names index (IPNI), enriched by
+	// nomenclatureTransform.py + applyEnrichment.py from the Python side
+	// tasks, never drained here.
+	Kind            string         `json:"kind,omitempty"`
 	Added           *int           `json:"added,omitempty"`
 	Merged          *int           `json:"merged,omitempty"`
 	Families        *int           `json:"families,omitempty"`
@@ -65,7 +69,7 @@ type entryAlias Entry
 
 // namedKeys are Entry's JSON tags; anything else in a file goes to Extra.
 var namedKeys = []string{"key", "title", "stage", "licence", "size", "archivePath",
-	"kingdomOverride", "added", "merged", "families", "crossFamily", "reason",
+	"kingdomOverride", "kind", "added", "merged", "families", "crossFamily", "reason",
 	"activePid", "activeStartedAt", "applied", "triaged", "history"}
 
 // UnmarshalJSON decodes the named fields and keeps the rest in Extra.

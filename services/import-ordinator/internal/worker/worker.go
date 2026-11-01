@@ -143,7 +143,7 @@ func (p *Pipeline) drain(ctx context.Context) {
 	sem := make(chan struct{}, p.cfg.Workers)
 	var wg sync.WaitGroup
 	for _, key := range queue.SortKeys(entries) {
-		if !queue.CanProcess(entries[key].Stage) {
+		if !queue.CanProcess(entries[key].Stage) || entries[key].Kind == "nomenclatural" {
 			continue
 		}
 		// Take a worker slot first: with one worker this blocks until the
@@ -301,6 +301,14 @@ func (p *Pipeline) processOne(ctx context.Context, key string, entry *queue.Entr
 		return
 	case 4:
 		p.store.SetStageReason(key, entry, queue.StageBlocked, "unsupported archive format (no .txtree, no DwCA/ColDP table)")
+		return
+	case 5:
+		// A names index: nothing for the species importer, but authorship,
+		// years and name relations for the enrichment path. Waits for a
+		// human like any triaged source; queued, the side tasks run it.
+		entry.Kind = "nomenclatural"
+		p.store.SetStageReason(key, entry, queue.StageTriaged,
+			"nomenclatural source (names index, no species): queue it to run nomenclatureTransform.py + applyEnrichment.py")
 		return
 	default:
 		// error, not back to downloaded: CanProcess picks downloaded up again

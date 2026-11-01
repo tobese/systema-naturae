@@ -468,6 +468,19 @@ candidate → downloaded → triaging → triaged → queued → applying → ap
 declined / blocked / parked / error / needs-rerun   (terminal / holding states)
 ```
 
+**Nomenclatural sources** (2026-11-01). A names index -- a ColDP with a
+Name table and no classification (no Synonym table, no parent links), e.g.
+IPNI -- offers no species, but carries authorship, years and name relations.
+`transformColChecklist.py` exits 5 for one; the ordinator then sets `kind:
+nomenclatural` and leaves it `triaged`, and never drains it. Queued, the side
+tasks (`pipelineOrchestrator.process_nomenclatural`) run
+`nomenclatureTransform.py` + `applyEnrichment.py` in one maintenance session:
+fills only (authorship and year where a species has none, the index id where
+the binomial is held once), never overwrites; disagreements, basionym pairs
+and later homonyms go to `review-*.jsonl` in the work dir for a human. A
+names index needs a `KINGDOMS_FOR` entry (which of our kingdoms its code
+speaks for) before it can run; IPNI is plantae.
+
 `triaged` is only a waiting room; `parked` is a decision: a human measured
 the source and said "not now". Nothing in the pipeline (the Go ordinator,
 its side tasks, the refill) moves a source out of `parked` -- only
