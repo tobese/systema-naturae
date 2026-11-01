@@ -114,8 +114,12 @@ for path in sorted(files):
                             node["continents"] = extra[name]["cont"]
                             fixed_cont[0] += 1
                     
+                    # Retired 2026-11-01: this wrote "<name> is a <family> species
+                    # found in its native region." onto every undescribed species,
+                    # which only looked like coverage. clearTemplateDescriptions.py
+                    # removes them; an empty description stays empty.
                     desc = node.get("description", "")
-                    if not desc or len(desc) < 30:
+                    if False:
                         cn = node.get("commonName", "")
                         conts = node.get("continents", [])
                         lineage = node.get("lineage", "")
