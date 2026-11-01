@@ -328,7 +328,11 @@ SOURCES = {
         "applied", "MB numbers merged into sourceIds 2026-10-08 (species_id_map); "
         "fungal authorship and name validity compared against GBIF "
         "(28,253 disagreements, no renames applied). NC: cross-check only "
-        "until a policy decision"),
+        "until a policy decision. Refresh by hand: /Images/MBList.zip is a "
+        "manually uploaded file behind a login (404 without one), and it lags "
+        "the export date on the front page -- on 2026-11-01 the page said 30 Oct "
+        "2026 but the zip still held the 7 Jan 2026 MBList.xlsx (byte-identical "
+        "to ours). cmp a fresh download against the archive before re-measuring"),
     "orthoptera": (
         "Orthoptera Species File", "DOI 10.15468/nn7jhc",
         "https://www.gbif.org/dataset/af66d4cf-0fd2-434b-9334-9806a5efa6f7",
