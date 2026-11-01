@@ -1,7 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
          name-index name-index-status verify verify-import triage \
          triage-sample serve fix-lineage fix-counts fix-duplicates check count \
-         idmap patch-ids fill-authority-ids authority-index sources-report coverage
+         idmap patch-ids fill-authority-ids authority-index sources-report coverage col-coverage
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -44,6 +44,12 @@ species-parquet:
 # rebuild refreshes it too; a failure here never fails the parquet build.
 coverage:
 	@$(PARQUET_PY) scripts/coverageReport.py
+
+# The same tree from COL's side (portal/data/col-coverage-report.{json,html}):
+# COL accepted species per family against the names we hold. Newest
+# catalogue-of-life-* archive by default; ARGS="--cache <taxa-cache>" for another.
+col-coverage:
+	@$(PARQUET_PY) scripts/colCoverageReport.py $(ARGS)
 
 count:
 	@$(PARQUET_PY) scripts/countIds.py $(ARGS)

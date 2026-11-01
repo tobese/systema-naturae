@@ -30,7 +30,7 @@
 </style>
 </head>
 <body>
-<h1>Coverage, kingdom to family</h1>
+<h1 id="title">Coverage, kingdom to family</h1>
 <div class="meta" id="meta"></div>
 <div class="controls">
   <label>Sort <select id="sort">
@@ -42,10 +42,7 @@
   <label><input type="checkbox" id="hideEmpty"> hide families holding nothing</label>
 </div>
 <table>
-  <thead><tr>
-    <th>Taxon</th><th>Held</th><th>Stated</th><th>Held / stated</th>
-    <th>Described</th><th>Authored</th><th>Common name</th><th>Families (empty)</th>
-  </tr></thead>
+  <thead><tr id="head"></tr></thead>
   <tbody id="body"></tbody>
 </table>
 <p class="note" id="note"></p>
@@ -57,10 +54,19 @@ const body = document.getElementById("body");
 const sortSel = document.getElementById("sort");
 const hideEmpty = document.getElementById("hideEmpty");
 
+const EXTRA = [["described", "Described"], ["authored", "Authored"], ["common", "Common name"]]
+  .filter(([k]) => k in DATA.metrics);
+if (!("described" in DATA.metrics)) sortSel.querySelector('option[value="described"]').remove();
+const LABEL = Object.assign({held: "Held", stated: "Stated"}, DATA.labels || {});
+if (DATA.title) { document.title = "Systema Naturae: " + DATA.title; document.getElementById("title").textContent = DATA.title; }
+document.getElementById("head").innerHTML =
+  `<th>Taxon</th><th>${LABEL.held}</th><th>${LABEL.stated}</th><th>${LABEL.held} / ${LABEL.stated}</th>` +
+  EXTRA.map(([, l]) => `<th>${l}</th>`).join("") + `<th>Families (empty)</th>`;
 document.getElementById("meta").textContent =
-  `${fmt(DATA.total.held)} species held in ${fmt(DATA.total.families)} families · ` +
-  `generated ${DATA.generatedAt} from species.parquet built ${DATA.parquetBuiltAt}`;
-document.getElementById("note").textContent =
+  `${LABEL.held}: ${fmt(DATA.total.held)} of ${fmt(DATA.total.stated)} ${LABEL.stated.toLowerCase()} in ${fmt(DATA.total.families)} families · ` +
+  `generated ${DATA.generatedAt} from species.parquet built ${DATA.parquetBuiltAt}` +
+  (DATA.source ? ` and ${DATA.source.cache.split("/").slice(-2).join("/")}` : "");
+document.getElementById("note").textContent = DATA.note ||
   "Stated is the sum of the families' speciesCount. It is raised to what we hold whenever counts are resynced, " +
   "so it is not an independent real-world total: held equal to stated often means no better total is recorded, not that the family is complete. " +
   "Percentages in the last columns are of species held.";
@@ -95,13 +101,14 @@ function row(node, depth) {
     `<span class="rank">${node.rank}</span>` +
     (node.commonName ? `<span class="cn">${node.commonName}</span>` : "") +
     (node.noFile ? `<span class="flag">no data file</span>` : "") +
+    (node.notInTree ? `<span class="flag">not in our tree</span>` : "") +
     (node.duplicateNode ? `<span class="flag">duplicate node, counted once above</span>` : "") +
     (node.unplacedFiles && node.unplacedFiles.files
       ? `<span class="flag">+${fmt(node.unplacedFiles.held)} species in ${fmt(node.unplacedFiles.files)} files no family node points to</span>` : "");
   tr.innerHTML =
     `<td style="padding-left:${8 + depth * 18}px">${name}</td>` +
     `<td>${fmt(s.held)}</td><td>${fmt(s.stated)}</td><td>${bar(s.held, s.stated)}</td>` +
-    `<td>${share(s.described, s.held)}</td><td>${share(s.authored, s.held)}</td><td>${share(s.common, s.held)}</td>` +
+    EXTRA.map(([k]) => `<td>${share(s[k], s.held)}</td>`).join("") +
     `<td>${node.rank === "FAMILY" ? "" : fmt(s.families) + (s.emptyFamilies ? ` <span class="muted">(${fmt(s.emptyFamilies)})</span>` : "")}</td>`;
   tr._node = node; tr._depth = depth; tr._open = false;
   if (kids.length) {
