@@ -185,7 +185,10 @@ def rows_for_family(fam, ranks: dict) -> list:
             # the count is its own column and the keys are kept as CSV.
             "authorityIds": ",".join(sorted(source_ids)),
             "canonicalName": _canon[0],
-            "authorship": _canon[1],
+            # The node's own field first: the column used to be only the
+            # inline remainder of `name`, so the 2026-11-01 IPNI measurement
+            # saw no authorship on species whose files carry one.
+            "authorship": (sp.get("authorship") or "").strip() or _canon[1],
         })
     return out
 
