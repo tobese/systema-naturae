@@ -75,6 +75,10 @@ of what is held.
   species; inventory-over-volume says mark at least.
 - **"uncultured X" and "Candidatus Genus" stored as species** (~4,400):
   not species; remove (or move to the unplaced store).
-- **GTDB licence**: ChecklistBank states none, our manifest says CC BY 4.0;
-  confirm on gtdb.ecogenomic.org before taking more from it.
+- **GTDB licence: settled 2026-11-01.** gtdb.ecogenomic.org says CC BY-SA
+  4.0 (ShareAlike), not the CC BY 4.0 our manifest had; corrected. The
+  user judged it fine. ShareAlike means the bacteria data, once published,
+  goes out under BY-SA, with GTDB's citation. r232 (2026-04-15) is still the
+  latest release and is what we hold; the HTTP mirrors serve it, so no
+  torrent client is needed.
 - **LPSN**: registration and licence.

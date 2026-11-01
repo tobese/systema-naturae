@@ -236,7 +236,11 @@ SOURCES = {
         "a97f36e5-ded1-49cc-bdec-ac6170fc7b9c); ColDP endpoint "
         "gtdb_r232_coldp.zip, issued 2026-08-25",
         "https://hosted-datasets.gbif.org/gtdb/gtdb_r232_coldp.zip",
-        "CC BY 4.0", "assessed",
+        # Was "CC BY 4.0". gtdb.ecogenomic.org/downloads: "Creative Commons
+        # Attribution-ShareAlike 4.0" (checked 2026-11-01). r232 (2026-04-15)
+        # is still the latest release; HTTP mirrors (data.gtdb.ecogenomic.org,
+        # Europe, UQ) as well as the torrent.
+        "CC BY-SA 4.0", "assessed",
         "DOWNLOADED AND READ, and it settles the question it was fetched for. "
         "242,895 accepted name usages: 189,801 bacterial species in 3,967 "
         "families plus 10,122 archaeal, 125 phyla, two domains (Bacteria, "
@@ -1954,7 +1958,7 @@ SOURCES = {
     "checklistbank-2214": (
         "Genome Taxonomy Database (GTDB) r232", "DOI 10.48580/dgz7q; version r232",
         "https://www.checklistbank.org/dataset/2214",
-        "not stated", "refused",
+        "CC BY-SA 4.0 (per gtdb.ecogenomic.org; ChecklistBank states none)", "refused",
         "GTDB microbial taxonomy. Status corrected 2026-10-17 from applied to "
         "refused: GTDB carries 189,801 bacterial species and the bacteria "
         "kingdom is on hold by decision (docs/bacteria-and-viruses.md, 2026-10-04), "
