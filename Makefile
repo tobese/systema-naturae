@@ -1,7 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
          name-index name-index-status verify verify-import triage \
          triage-sample serve fix-lineage fix-counts fix-duplicates check count \
-         idmap patch-ids fill-authority-ids authority-index sources-report
+         idmap patch-ids fill-authority-ids authority-index sources-report coverage
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -37,6 +37,13 @@ PARQUET_PY ?= $(shell test -x .venv-parquet/bin/python && \
                  echo .venv-parquet/bin/python || echo python3)
 species-parquet:
 	@$(PARQUET_PY) scripts/buildSpeciesParquet.py $(ARGS)
+	@-$(MAKE) --no-print-directory coverage
+
+# Kingdom-to-family coverage (portal/data/coverage-report.{json,html}), from
+# the parquet. Runs after every species-parquet, so a maintenance session's
+# rebuild refreshes it too; a failure here never fails the parquet build.
+coverage:
+	@$(PARQUET_PY) scripts/coverageReport.py
 
 count:
 	@$(PARQUET_PY) scripts/countIds.py $(ARGS)
