@@ -21,7 +21,9 @@
           "sourceIds": {
             "9ca92552-f23a-41a8-a140-01abaa31c931": "180737",
             "checklistbank-316441": "68XC7",
-            "gbif-backbone": "3216063"
+            "gbif-backbone": "3216063",
+            "catalogue-of-life-2026-10": "68XC7",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:263705"
           }
         },
         {
@@ -34,7 +36,8 @@
           "sourceIds": {
             "checklistbank-2265": "262905",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "1238512",
-            "checklistbank-316441": "CNGQ9"
+            "checklistbank-316441": "CNGQ9",
+            "catalogue-of-life-2026-10": "CNGQ9"
           },
           "children": [],
           "authorship": "Casamatta, S.R. Gomez & J.R. Johansen"
@@ -207,9 +210,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "capsosiraceae"
+    },
+    {
+      "id": "GENUS_GHOSHIA",
+      "name": "Ghoshia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "capsosiraceae",
+      "children": [
+        {
+          "id": "SP_GHOSHIA_BIFURCATA_MANDAL_AND_MAITHY_1984",
+          "name": "Ghoshia bifurcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ghoshia",
+          "authorship": "Mandal and Maithy 1984",
+          "sourceIds": {
+            "checklistbank-1174": "txn:463496"
+          },
+          "uuid": "fa2db5f6-447c-485a-a35b-903a7d6e5ec9"
+        }
+      ]
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 13,
   "appSlug": "capsosiraceae",
   "sourcedFrom": "ncbi-taxonomy",
   "genusCount": 5,
