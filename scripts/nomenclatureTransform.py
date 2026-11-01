@@ -45,6 +45,7 @@ import zipfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sources  # noqa: E402
 import taxamatch  # noqa: E402
+import writerKingdoms  # noqa: E402
 from buildSpeciesParquet import canonicalize  # noqa: E402
 from tree import ROOT, iter_family_files, iter_species_with_parent  # noqa: E402
 
@@ -54,8 +55,13 @@ from tree import ROOT, iter_family_files, iter_species_with_parent  # noqa: E402
 # like a checklist (Taxon + Synonym tables) but used here for its names and
 # authorship -- being listed is the decision that it belongs on this track;
 # only a pure names index is recognised by shape (is_names_index).
-KINGDOMS_FOR = {"IPNI": ("plantae",), "Species Fungorum Plus": ("fungi",)}
-AUTHOR_CODE = {"IPNI": "bot", "Species Fungorum Plus": "bot"}
+# LPSN (prokaryotes, ICNP) speaks for two kingdoms on two machines: Macie
+# writes archaea, q-bert bacteria (writerKingdoms); each run takes only the
+# kingdoms its machine may write. Its authors are in neither the zoological
+# nor the botanical index, so it compares with both (code None).
+KINGDOMS_FOR = {"IPNI": ("plantae",), "Species Fungorum Plus": ("fungi",),
+                "LPSN": ("archaea", "bacteria")}
+AUTHOR_CODE = {"IPNI": "bot", "Species Fungorum Plus": "bot", "LPSN": None}
 SPECIES_RANKS = {"spec.", "sp.", "species"}
 PAIR_RELATIONS = {"BASIONYM", "REPLACEMENT_NAME", "SYNONYM"}
 
@@ -188,6 +194,9 @@ def main() -> int:
     fills, conflicts, compare = [], [], []
     ours_all = {}
     for kingdom in KINGDOMS_FOR[args.code]:
+        if not writerKingdoms.may_write(kingdom):
+            print(f"  {kingdom}: not this machine's kingdom (SN_WRITE_KINGDOMS), skipped")
+            continue
         print(f"  reading our {kingdom} family files", flush=True)
         ours = held(kingdom)
         ours_all[kingdom] = ours

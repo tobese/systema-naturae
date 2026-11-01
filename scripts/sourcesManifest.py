@@ -276,18 +276,18 @@ SOURCES = {
         "verifyTree's KNOWN_CODE_LIKE_FAMILIES."),
     "lpsn": (
         "List of Prokaryotic names with Standing in Nomenclature",
-        "ChecklistBank dataset 2015, nomenclatural, issued "
-        "2026-10-04",
-        "https://www.checklistbank.org/dataset/2015", "CC BY 4.0",
-        "declined",
-        "DECLINED 2026-10-12: a nomenclatural register, not a "
-        "taxonomy. Type is 'nomenclatural', it has no taxon table, "
-        "and paging its species through the ChecklistBank API "
-        "returns zero accepted species -- the same shape that "
-        "declined ZooBank and the Australian Faunal Directory: a "
-        "name register with no accepted/synonym split and no "
-        "hierarchy to place names in. No archive export either "
-        "(both ColDP and DwCA 404)."),
+        "LPSN download lpsn_gss_2026-11-01.csv (fetched by the user, logged "
+        "in); ColDP made by scripts/lpsnToColdp.py",
+        "https://lpsn.dsmz.de",
+        "CC BY-SA 4.0; cite LPSN's latest reference with the access date and "
+        "link each record's page (lpsn.dsmz.de/text/copyright)",
+        "nomenclatural track",
+        "Declined 2026-10-12 as 'a nomenclatural register, not a taxonomy' -- "
+        "which is what the nomenclatural track (nomenclatureTransform.py, code "
+        "LPSN) takes. 28,367 validly published species names, 5,407 synonym "
+        "relations. Archaea on Macie (1,329 held: 329 authorship fills, 975 agree, "
+        "14 conflicts), bacteria on q-bert. Download is the only allowed bulk "
+        "route (no scraping)."),
     "silva-ssu": (
         "SILVA SSU Taxonomy", "ChecklistBank dataset 315045, DOI "
         "10.48580/dgxmn, v144 issued 2026-10-04",
