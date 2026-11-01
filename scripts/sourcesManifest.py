@@ -320,9 +320,15 @@ SOURCES = {
         "applied", "vascular plant names and distribution"),
     "mycobank": (
         "MycoBank MBList", "MycoBank / Index Fungorum",
-        "https://www.mycobank.org/page/Name%20search%20page", "CC BY 4.0",
-        "applied", "fungal authorship and name validity; compared against GBIF "
-        "(28,253 disagreements, no renames applied)"),
+        "https://www.mycobank.org/page/Name%20search%20page",
+        # Was "CC BY 4.0". MycoBank's own site states its data and content are
+        # CC BY-NC, "in unadapted form only" (which reads as ND too); the
+        # provider's statement wins over a CC BY link elsewhere (2026-11-01).
+        "CC BY-NC (MycoBank site terms; 'unadapted form only')",
+        "applied", "MB numbers merged into sourceIds 2026-10-08 (species_id_map); "
+        "fungal authorship and name validity compared against GBIF "
+        "(28,253 disagreements, no renames applied). NC: cross-check only "
+        "until a policy decision"),
     "orthoptera": (
         "Orthoptera Species File", "DOI 10.15468/nn7jhc",
         "https://www.gbif.org/dataset/af66d4cf-0fd2-434b-9334-9806a5efa6f7",
