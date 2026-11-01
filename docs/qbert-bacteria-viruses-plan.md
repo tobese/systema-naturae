@@ -1,6 +1,6 @@
 # q-bert: bacteria and viruses, what is left to take
 
-Status: **plan, 2026-11-01; nothing started.** Measured on Macie against
+Status: **steps 1, 2, 3, 5 done 2026-11-01; step 4 measured, not taken.** Measured on Macie against
 origin's copy of q-bert's two kingdoms (`c5b0df4ab61`, 2026-10-30) and the
 archives' routing caches. Setup and rules: docs/bacteria-and-viruses.md.
 
@@ -83,3 +83,14 @@ of what is held.
   latest release and is what we hold; the HTTP mirrors serve it, so no
   torrent client is needed.
 - **LPSN**: registration and licence.
+
+## Done (2026-11-01 evening)
+
+| step | result |
+|---|---|
+| 1 sync | q-bert at origin/main, binaries rebuilt, services restarted |
+| 2 mixed sources | COL 26.10, 1174, 2041, TAXREF, COL China, iNaturalist, UKSI, Denmark: +204 species, ~16,800 merged (`6901adc6e39`) |
+| 3 LPSN | bacteria: 8,754 authorships filled (8,193 with year), 3,209 LPSN ids; 23,002 agree, 939 conflicts, 4,748 synonym pairs both held (`863eb32b7c4`). Archaea on Macie. LPSN is CC BY-SA 4.0 |
+| 4 OTT | measured, **not taken**: of its 3,930 unheld bacteria names 3,188 are environmental/placeholder sequence names ("uncultured methanotroph", "proteobacterium KCB90", "X sp."), 661 Latin binomials -- some misrouted (a brittle star, a Solanum) -- and 81 other. LPSN already covers the validly published names |
+| 5 Wikidata | +20 species, 8,386 merged (`f53cfb9bc70`) |
+| ENA re-run | left out: its 30 Oct re-run already applied; the 1,542 virus names it still offers were refused then |
