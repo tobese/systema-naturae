@@ -440,6 +440,11 @@ KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = _load_allowlist(
     "known-same-kingdom-duplicates.json")
 KNOWN_CROSS_KINGDOM_HOMONYMS: set[str] = _load_allowlist(
     "known-cross-kingdom-homonyms.json")
+# "kingdom|dataset|id" -> reason: an authority-id collision no source decides
+# (2026-11-02: tie pairs, where nothing beyond the shared id backs either
+# family). Listed means documented, not resolved; one that disappears is a note.
+KNOWN_AUTHORITY_COLLISIONS: set[str] = _load_allowlist(
+    "known-authority-collisions.json")
 
 def check_duplicate_species():
     """No species id in two families *within one kingdom*.
@@ -637,6 +642,11 @@ def check_authority_collisions():
         nms = {nm for nm, _s in places}
         if all(_same_taxon(a, b) for a in nms for b in nms):
             dupes[k] = sorted(distinct)
+    gone = {k for k in KNOWN_AUTHORITY_COLLISIONS if tuple(k.split("|", 2)) not in dupes}
+    if gone:
+        notes.append(f"{len(gone)} documented authority collisions are resolved now: "
+                     f"{', '.join(sorted(gone)[:3])} -- drop them from data/known-authority-collisions.json")
+    dupes = {k: v for k, v in dupes.items() if "|".join(k) not in KNOWN_AUTHORITY_COLLISIONS}
     if dupes:
         ex = list(dupes)[:3]
         fail("no two species share an authority id in one kingdom",
@@ -645,7 +655,7 @@ def check_authority_collisions():
              + " -- run scripts/dedupeSpeciesAcrossFamilies.py")
     else:
         ok("no two species share an authority id in one kingdom",
-           f"{len(seen):,} identifiers checked")
+           f"{len(seen):,} identifiers checked, {len(KNOWN_AUTHORITY_COLLISIONS)} documented as unresolved")
 
 
 AUTHOR_REFS = collections.Counter()  # filled by check_authority_collisions' walk
