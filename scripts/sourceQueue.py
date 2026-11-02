@@ -335,6 +335,19 @@ def cmd_set(args) -> None:
     print(f"  {args.key}: -> {args.stage}")
 
 
+def cmd_tag(args) -> None:
+    """Record what kind of source this is (e.g. "legal-annex") without
+    moving its stage -- `set` would add a history entry for a stage change
+    that didn't happen."""
+    row = read_entry(args.key)
+    if row is None:
+        sys.exit(f"FATAL: {args.key} not in {STORE} -- run `add` first")
+    row["sourceType"] = args.source_type
+    write_entry(args.key, row)
+    log_event(args.key, row.get("stage"), action="tag", sourceType=args.source_type)
+    print(f"  {args.key}: sourceType={args.source_type} ({row.get('stage')})")
+
+
 def cmd_report(_args) -> None:
     doc = read_store()
     if not doc:
@@ -361,6 +374,8 @@ def cmd_report(_args) -> None:
                     extra = "  (no metrics recorded)"
                 else:
                     extra = f"  +{added}"
+            if row.get("sourceType"):
+                extra = f"  [{row['sourceType']}]{extra}"
             print(f"      {row['key']:>8}  {row.get('title', '')[:50]:<50}{extra}")
     for stage, rows in by_stage.items():
         print(f"\n  {stage} ({len(rows)}, unrecognized stage)")
@@ -410,10 +425,16 @@ def main() -> int:
                          "verbatim when it picks the source up, so store "
                          "exactly the command you'd run by hand")
 
+    p = sub.add_parser("tag", help="record a source's type without changing its stage")
+    p.add_argument("--key", required=True)
+    p.add_argument("--source-type", required=True,
+                    help='e.g. "legal-annex": an EU regulation/directive, '
+                         'Bern Convention or EEA/Natura 2000 annex list')
+
     sub.add_parser("report", help="print every source grouped by stage")
 
     args = ap.parse_args()
-    {"add": cmd_add, "set": cmd_set, "report": cmd_report}[args.cmd](args)
+    {"add": cmd_add, "set": cmd_set, "tag": cmd_tag, "report": cmd_report}[args.cmd](args)
     return 0
 
 

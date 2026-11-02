@@ -1,7 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
          name-index name-index-status verify verify-import triage \
          triage-sample serve fix-lineage fix-counts fix-duplicates check count \
-         idmap patch-ids fill-authority-ids authority-index sources-report coverage col-coverage
+         idmap patch-ids fill-authority-ids authority-index sources-report contributors coverage col-coverage
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -67,6 +67,16 @@ count:
 # last three imports left them describing a tree that no longer exists.
 sources-report:
 	cd portal && npx tsx scripts/aggregateSources.ts
+
+# Who the tree's content came from, by institution: data/contributors.json (the
+# registry), portal/public/data/contributors-report.json (registry + counts,
+# what the Sources modal's Contributors tab reads), logos under
+# portal/public/data/logos/, and data/licence-crosscheck.json (recorded licence
+# vs ChecklistBank's). Counts from the species parquet, metadata from the
+# ChecklistBank/GBIF APIs through a cache on the external volume. ARGS=--refresh
+# re-fetches it; ARGS=--offline never touches the network.
+contributors:
+	@$(PARQUET_PY) scripts/buildContributors.py $(ARGS)
 
 # Build the species_id_map staging table from GBIF cache + wiki-images.json.
 # One row per (scientific_name, source), deduplicated by confidence.

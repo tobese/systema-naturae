@@ -13,6 +13,8 @@ portal/dist
 .env
 # Screenshots / dev captures — keep in tmp/, never commit
 *.png
+# …except institution logos for the Contributors view (make contributors)
+!portal/public/data/logos/*.png
 tmp/
 portal/data/unified-taxonomy.json
 portal/data/unified-taxonomy-skeleton.json

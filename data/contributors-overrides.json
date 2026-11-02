@@ -1,0 +1,85 @@
+{
+  "_comment": "Hand corrections to scripts/buildContributors.py's registry. Keys starting with _ are ignored. Every value here must be something a reader can check: an institution that already exists in the registry (by id), or a name/url/logo with its source in _why. Never a description.",
+  "aggregatorPublishers": {
+    "f4ce3c03-7b38-445e-86e6-5f6b04b649d4": "Catalogue of Life publishes other people's checklists on GBIF (Wikidata Species, the Pterophoroidea/Alucitoidea catalogues); its own releases are assigned explicitly below"
+  },
+  "institutions": {
+    "wikidata": {
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org",
+      "logoSource": "https://www.wikidata.org/static/images/project-logos/wikidatawiki-2x.png",
+      "_why": "logo as given in ChecklistBank 314569's own metadata"
+    },
+    "wikispecies": {
+      "name": "Wikispecies",
+      "url": "https://species.wikimedia.org",
+      "logoSource": "https://www.wikidata.org/static/images/project-logos/specieswiki-2x.png",
+      "_why": "logo as given in ChecklistBank 314570's own metadata"
+    },
+    "wikipedia": {
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org",
+      "logoSource": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+      "_why": "the logo served on www.wikipedia.org"
+    },
+    "itis": {
+      "name": "Integrated Taxonomic Information System (ITIS)",
+      "url": "https://itis.gov",
+      "logoSource": "https://www.itis.gov/Static/images/ITIS_wordmark.png",
+      "_why": "title, url and logo as given in ChecklistBank 2144's own metadata; GBIF lists the Smithsonian NMNH as its publisher"
+    }
+  },
+  "datasets": {
+    "catalogue-of-life": {
+      "institution": "gbif-org-f4ce3c03-7b38-445e-86e6-5f6b04b649d4"
+    },
+    "checklistbank-316441": {
+      "institution": "gbif-org-f4ce3c03-7b38-445e-86e6-5f6b04b649d4"
+    },
+    "checklistbank-314569": {
+      "institution": "wikidata"
+    },
+    "src:wikidata": {
+      "institution": "wikidata",
+      "title": "Wikidata (statements fetched per species)",
+      "url": "https://www.wikidata.org"
+    },
+    "checklistbank-314570": {
+      "institution": "wikispecies"
+    },
+    "wikispecies": {
+      "institution": "wikispecies"
+    },
+    "src:wikipedia": {
+      "institution": "wikipedia",
+      "section": "text",
+      "title": "Wikipedia articles",
+      "url": "https://en.wikipedia.org"
+    },
+    "wikimedia-commons": {
+      "section": "text"
+    },
+    "nmnh": {
+      "section": "text"
+    },
+    "inaturalist": {
+      "institution": "self-checklistbank-139831",
+      "section": "text"
+    },
+    "src:powo": {
+      "institution": "gbif-org-061b4f20-f241-11da-a328-b8a03c50a862",
+      "section": "text",
+      "title": "Plants of the World Online",
+      "url": "https://powo.science.kew.org"
+    },
+    "worms": {
+      "institution": "gbif-org-d1f6b74b-1d53-44db-bed5-d08497095900"
+    },
+    "wfo-plant-list": {
+      "institution": "org-world-flora-online"
+    },
+    "checklistbank-2144": {
+      "institution": "itis"
+    }
+  }
+}

@@ -34,6 +34,20 @@ collects the open questions and points back to them.
 | 6 | **GBIF Backbone constituents** | CC0 / CC BY / **CC BY-NC**, per constituent dataset | Applied | 200,677 nodes tagged `gbif` have no dataset DOI, so no single record's licence can be stated ([`data-sources.md`](data-sources.md) gap 3). | Trace each node to its constituent dataset, or replace it from the constituent where that dataset is open. |
 | 7 | **Permission-based `websearch` sources**: FloraBase, Flora of China, NZPCN, SANBI | Permission, not a licence | Applied (~8 species) | See the attribution doc. | Get written permission, or replace them. |
 | 8 | **Unverified licences, not applied:** Fauna Europaea (2026, "other (unverified)"), Parhost fleas (1022, "other"), FLOW, Moss Tropicos, USDA PLANTS, Phasmida SF v2, EOL TraitBank, ZooBank ("per-publication rights vary"), Species Fungorum crawl (1028), Phyllachorales (1023), Rhytismatales (1025) | not stated / other | Assessed | Blocks taking them. | Check ChecklistBank and the publisher one by one, as done for the six resolved below. |
+| 9 | **Cockroach Species File** (ChecklistBank 1051) | ChecklistBank: **CC BY-NC**. Queue row: `cc by`. GBIF's copy of the same file (dataset 3e812f13, manifest `species-file-cockroach`): CC BY 4.0. | **Applied** 2026-10-22 (+171); found by `make contributors`' cross-check 2026-11-02. | 52 species carry its id, 7 with no other dataset id. The earlier GBIF-sourced import supplies text for 2,756 more, under CC BY. | Ask the Species File Group which licence holds; if NC, re-source the 7 from the GBIF copy. |
+| 10 | **Danish fungi** (2047, 32593) and **Vermont Fungi** (304886) | ChecklistBank: CC BY-NC. Queue rows: `cc by`. | Blocked anyway (the block reason already says NC). | The queue's `licence` field is what the pipeline's NC gate reads, so a wrong `cc by` there is a gate that would have let them through. | Correct the queue rows; check with the publishers (Natural History Museum of Denmark; J. Loomis for Vermont) whether NC is still current. |
+
+### Licence cross-check
+
+`make contributors` writes `data/licence-crosscheck.json`: every queue row and
+manifest entry whose recorded licence differs from ChecklistBank's current
+`license`. As of 2026-11-02, 33 differences. Five are ones where
+ChecklistBank says non-commercial and our record does not (rows 1, 9 and 10
+above). Most of the rest are records more restrictive than ChecklistBank
+(`cc by` recorded, ChecklistBank `cc0`) or "not stated" where ChecklistBank
+now states CC BY, so they're harmless but worth correcting. ChecklistBank's
+value is its *current* licence; a dataset can have been relicensed since we
+took it, so a difference is a question, not a verdict.
 
 ### Also open, on attribution rather than licence
 

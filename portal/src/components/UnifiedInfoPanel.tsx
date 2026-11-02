@@ -9,6 +9,7 @@ import { PORTAL_THEME } from "../colors";
 import { IUCN_COLORS } from "../iucnColors";
 import { useColorRegistry } from "./ColorRegistryContext.tsx";
 import { useDescriptionGate } from "../lib/descriptionContext";
+import SpeciesSources from "./SpeciesSources";
 
 interface Props {
   node: TaxonNode | null;
@@ -645,6 +646,8 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
           <span style={{ color: "#556" }}>Natural hybrid: </span>{NATURAL_HYBRIDS[node.id]}
         </div>
       )}
+
+      <SpeciesSources node={node} />
 
       <div style={{ marginTop: 16 }}>
         <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>Links</div>

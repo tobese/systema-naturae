@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
+import ContributorsView from "./ContributorsView";
 
 /**
  * Where the tree's content came from.
@@ -53,6 +54,7 @@ export default function SourcesModal({ kingdom = "animalia", onClose }: Props) {
   const [failed, setFailed] = useState(false);
   const [scope, setScope] = useState<string>(kingdom);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [view, setView] = useState<"contributors" | "counts">("contributors");
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") { e.stopPropagation(); onClose(); } };
@@ -84,7 +86,7 @@ export default function SourcesModal({ kingdom = "animalia", onClose }: Props) {
     <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.72)", zIndex: 200, display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
       <div onClick={(e) => e.stopPropagation()} style={{
         background: "#0f1117", border: "1px solid #1e2030", borderRadius: 10,
-        width: "100%", maxWidth: 720, maxHeight: "82vh", overflowY: "auto", position: "relative",
+        width: "100%", maxWidth: 780, maxHeight: "82vh", overflowY: "auto", position: "relative",
         padding: "22px 24px 24px",
       }}>
         <button onClick={onClose} title="Close" style={{
@@ -96,17 +98,27 @@ export default function SourcesModal({ kingdom = "animalia", onClose }: Props) {
           Provenance
         </div>
         <h2 style={{ margin: "0 0 4px", fontSize: 17, color: "#c0c0d8", fontWeight: 400 }}>Sources</h2>
+        <div style={{ display: "flex", gap: 6, marginTop: 10 }}>
+          {(["contributors", "counts"] as const).map((v) => (
+            <button key={v} onClick={() => setView(v)} style={{
+              background: view === v ? "#1e2030" : "transparent", color: view === v ? "#c0c0d8" : "#666",
+              border: "1px solid #1e2030", borderRadius: 6, padding: "3px 10px", fontSize: 12, cursor: "pointer",
+            }}>{v === "contributors" ? "Contributors" : "Per-node tallies"}</button>
+          ))}
+        </div>
 
-        {failed && (
+        {view === "contributors" && <ContributorsView scope={scope} setScope={setScope} />}
+
+        {view === "counts" && failed && (
           <p style={{ color: "#a08050", fontSize: 13, lineHeight: 1.6 }}>
             The source report has not been generated. Run{" "}
             <code style={{ color: "#c0c0d8" }}>make sources-report</code> in the repository root.
           </p>
         )}
 
-        {!failed && !report && <p style={{ color: "#666", fontSize: 13 }}>Loading…</p>}
+        {view === "counts" && !failed && !report && <p style={{ color: "#666", fontSize: 13 }}>Loading…</p>}
 
-        {tally && (
+        {view === "counts" && tally && (
           <>
             <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "14px 0 4px", flexWrap: "wrap" }}>
               <select

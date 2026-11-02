@@ -39,6 +39,9 @@ export interface TaxonNode {
    *  that no longer exist. */
   fossil?: boolean;
   sourcedFrom?: string;
+  /** The record's id in each dataset that supplied it, keyed by dataset
+   *  (`checklistbank-2144`, a GBIF dataset UUID, `col`, …). */
+  sourceIds?: Record<string, string | string[]>;
   /** Family-level enrichment coverage: "full" (all species enriched),
    *  "partial" (some), or "empty" (none). Set on FAMILY nodes. */
   enrichmentStatus?: "full" | "partial" | "empty";

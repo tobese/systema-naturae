@@ -37,51 +37,10 @@ const manifestPath = resolve(SOURCES_ROOT, "manifest.json");
 
 type Manifest = Record<string, { title?: string; url?: string; identifier?: string; licence?: string; status?: string }>;
 
-/**
- * Ids stamped on nodes that are not manifest keys: a container name covering
- * several datasets, or a source that was never downloaded.
- */
-const ALIASES: Record<string, { datasets: string[]; note?: string }> = {
-  // Container names. A node from ITIS and one from the Global Lepidoptera Index
-  // are both `checklistbank` in the tree; only the manifest tells them apart.
-  checklistbank: { datasets: ["checklistbank-2144", "checklistbank-55434"], note: "container name — one id for every ChecklistBank dataset; see Datasets" },
-  "catalogue of life": { datasets: ["catalogue-of-life"] },
-  col: { datasets: ["catalogue-of-life"] },
-  wfo: { datasets: ["wfo-plant-list"] },
-  gbif: { datasets: ["gbif-backbone"] },
-  commons: { datasets: ["wikimedia-commons"] },
-  nmnh: { datasets: ["nmnh"] },
-  // ITIS arrived through ChecklistBank 2144 (CC0), not the standalone manifest
-  // row, which records no licence at all.
-  itis: { datasets: ["checklistbank-2144"] },
-  // Never downloaded, or not a dataset at all.
-  wikipedia: { datasets: [], note: "article text, fetched per species; no archive" },
-  wikidata: { datasets: [], note: "statements via the API; images live in wiki-images.json" },
-  powo: { datasets: [], note: "fetched per species; no archive" },
-  nzpcn: { datasets: [], note: "1 node, permission-based" },
-  websearch: { datasets: [], note: "mixed provenance, some not openly licensed" },
-  ollama: { datasets: [], note: "generated locally by a model; not an external source" },
-  generated: { datasets: [], note: "template-generated from lineage" },
-  none: { datasets: [], note: "no provenance recorded — a blind spot, not a source" },
-  // The Species File Group, one manifest row each.
-  "afrotropical bees": { datasets: ["afrotropical-bees"] },
-  "aphid species file": { datasets: ["aphid-species-file"] },
-  "chrysididae species file": { datasets: ["species-file-chrysididae"] },
-  "cockroach species file": { datasets: ["species-file-cockroach"] },
-  "coleorrhyncha species file": { datasets: ["species-file-coleorrhyncha"] },
-  "coreoidea species file": { datasets: ["species-file-coreoidea"] },
-  "dermaptera species file": { datasets: ["species-file-dermaptera"] },
-  "embioptera species file": { datasets: ["species-file-embioptera"] },
-  "grylloblattodea species file": { datasets: ["species-file-grylloblattodea"] },
-  "lygaeoidea species file": { datasets: ["species-file-lygaeoidea"] },
-  "mantodea species file": { datasets: ["species-file-mantodea"] },
-  "mantophasmatodea species file": { datasets: ["species-file-mantophasmatodea"] },
-  "orthoptera species file": { datasets: ["orthoptera"] },
-  "phasmida species file": { datasets: ["species-file-phasmida"] },
-  "plecoptera species file": { datasets: ["species-file-plecoptera"] },
-  "psocodea species file": { datasets: ["species-file-psocodea"] },
-  "zoraptera species file": { datasets: ["species-file-zoraptera"] },
-};
+/** Ids stamped on nodes that are not manifest keys — see data/source-aliases.json. */
+const ALIASES: Record<string, { datasets: string[]; note?: string }> = JSON.parse(
+  readFileSync(resolve(portalRoot, "..", "data", "source-aliases.json"), "utf8"),
+).aliases;
 
 function loadManifest(): Manifest | null {
   if (!existsSync(manifestPath)) {
