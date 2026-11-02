@@ -194,7 +194,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q136765102"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q62046"
+          ]
         }
       ],
       "sourcedFrom": "worms",
@@ -215,7 +218,8 @@
           "authorship": "(C.L. Koch, 1841)",
           "children": [],
           "sourceIds": {
-            "gbif-backbone": "6899554"
+            "gbif-backbone": "6899554",
+            "checklistbank-281817": "225032"
           },
           "uuid": "b4360c09-a317-501-ad0-ac5dbcb784a834"
         },
@@ -430,7 +434,9 @@
             "checklistbank-2169": "36936",
             "checklistbank-7888": "NHMSYS0021292329",
             "checklistbank-51657": "a49dca8c-0543-4ee0-936b-b92dc4fb9d7c",
-            "checklistbank-183008": "d31aa373-e009-4a56-b7e2-c8df4e1b1f89"
+            "checklistbank-183008": "d31aa373-e009-4a56-b7e2-c8df4e1b1f89",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:6007234",
+            "checklistbank-281817": "221810"
           },
           "children": [],
           "uuid": "1eee73a1-58ba-51b-8f4-eb072b44961364",
@@ -807,10 +813,24 @@
           "sourceIds": {
             "gbif-backbone": "9093310",
             "checklistbank-2265": "474216",
-            "checklistbank-2169": "474216"
+            "checklistbank-2169": "474216",
+            "checklistbank-281817": "225006"
           },
           "children": [],
           "uuid": "38e52ebe-247c-516-b8e-4ac959087586da"
+        },
+        {
+          "id": "SP_MARSUPIALICHUS_ANDRETTAI_FAIN_1967",
+          "name": "Marsupialichus andrettai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marsupialichus",
+          "authorship": "Fain, 1967",
+          "sourceIds": {
+            "checklistbank-281817": "225028"
+          },
+          "uuid": "a7d7e28b-70f5-435a-a67d-7105d4f4bb2a"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1223,9 +1243,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "glycyphagidae"
+    },
+    {
+      "id": "GENUS_TROPILICHUS",
+      "name": "Tropilichus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "glycyphagidae",
+      "children": [
+        {
+          "id": "SP_TROPILICHUS_AFRAMERICANUS_FAIN_1968",
+          "name": "Tropilichus aframericanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tropilichus",
+          "authorship": "Fain, 1968",
+          "sourceIds": {
+            "checklistbank-281817": "225013"
+          },
+          "uuid": "b51ce9a5-9bdd-447f-9173-a2ba0ba846aa"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EUPYGOPUS",
+      "name": "Eupygopus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "glycyphagidae",
+      "children": [
+        {
+          "id": "SP_EUPYGOPUS_MICROCEROS_LUKOSCHUS_ROTHUIZEN_FAIN_1977",
+          "name": "Eupygopus microceros",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eupygopus",
+          "authorship": "Lukoschus, Rothuizen & Fain, 1977",
+          "sourceIds": {
+            "checklistbank-281817": "225036"
+          },
+          "uuid": "d8bdf97b-bd75-4319-8f40-82636c483cea"
+        }
+      ]
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 71,
   "appSlug": "glycyphagidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Arachnida",

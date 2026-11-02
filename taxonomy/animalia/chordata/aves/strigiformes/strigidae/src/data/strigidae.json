@@ -6,75 +6,6 @@
   "children": [
     {
       "id": "GENUS_ATHENE",
-      "name": "\"Athene",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ATHENE_CUNICULARIA_MOLINA_1782",
-          "name": "\"Athene cunicularia\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Athene",
-          "authorship": "\"(Molina, 1782)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:422611"
-          },
-          "children": [],
-          "uuid": "d81a8902-2b3d-5e9-9d5-e040abac2ab193",
-          "description": "\"Athene cunicularia\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_ATHENE_NOCTUA_SCOPOLI_1769",
-          "name": "\"Athene noctua\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Athene",
-          "authorship": "\"(Scopoli, 1769)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1562666"
-          },
-          "children": [],
-          "uuid": "d3528cfa-c78d-5a9-8b1-2648238705ed05",
-          "description": "\"Athene noctua\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_ATHENE_BRAMA_TEMMINCK_1821",
-          "name": "\"Athene brama\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Athene",
-          "authorship": "\"(Temminck, 1821)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1575715"
-          },
-          "children": [],
-          "uuid": "ed6ed9d9-e5be-587-a51-26d2fbcc167419",
-          "description": "\"Athene brama\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_ATHENE_BRAMA_FRANKLIN_1831",
-          "name": "\"Athene brama",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Athene",
-          "authorship": "\"(Franklin, 1831)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1575716"
-          },
-          "children": [],
-          "uuid": "b4473dd9-71e8-5c7-bf5-a81af17d334983",
-          "description": "\"Athene brama is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_ATHENE",
       "name": "Athene",
       "rank": "GENUS",
       "children": [
@@ -97,10 +28,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Athene",
           "sourceIds": {
-            "checklistbank": "Athene_brama"
+            "checklistbank": "Athene_brama",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1575715"
           },
           "children": [],
-          "uuid": "c153c7a0-a5ef-532-988-8bd5fc962605f9"
+          "uuid": "c153c7a0-a5ef-532-988-8bd5fc962605f9",
+          "authorship": "(Temminck, 1821)",
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_ATHENE_CUNICULARIA",
@@ -111,7 +47,8 @@
           "lineage": "Athene",
           "sourceIds": {
             "checklistbank": "Athene_cunicularia",
-            "checklistbank-304433": "https://www.gbif.org/species/6175969"
+            "checklistbank-304433": "https://www.gbif.org/species/6175969",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:422611"
           },
           "children": [],
           "uuid": "42463d20-1489-580-ab2-1afc7c2480881e",
@@ -126,7 +63,8 @@
           "lineage": "Athene",
           "sourceIds": {
             "checklistbank": "Athene_noctua",
-            "checklistbank-316441": "7JDVX"
+            "checklistbank-316441": "7JDVX",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1562666"
           },
           "children": [],
           "uuid": "258c2fe0-999a-5ce-b22-19686aab7cede2",
@@ -258,7 +196,10 @@
             "checklistbank-139831": "774219"
           },
           "children": [],
-          "uuid": "8301aa45-dac0-5f2-853-cabd5768499d70"
+          "uuid": "8301aa45-dac0-5f2-853-cabd5768499d70",
+          "authorIds": [
+            "Q112898980"
+          ]
         },
         {
           "id": "SP_ATHENE_ANGELIS_MOURER_CHAUVIR_ET_AL_1997",
@@ -303,7 +244,10 @@
           },
           "children": [],
           "authorship": "Hartert, 1913",
-          "uuid": "cf2f4f40-0294-52d9-b003-ddde48389865"
+          "uuid": "cf2f4f40-0294-52d9-b003-ddde48389865",
+          "authorIds": [
+            "Q62824"
+          ]
         },
         {
           "id": "SP_ATHENE_SPILOGASTRA",
@@ -328,7 +272,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q17353971"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q21503177",
+            "Q14849941"
+          ]
         },
         {
           "id": "SP_ATHENE_MINUTILLA",
@@ -516,60 +464,6 @@
     },
     {
       "id": "GENUS_ASIO",
-      "name": "\"Asio",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ASIO_FLAMMEUS_PONTOPPIDAN_1763",
-          "name": "\"Asio flammeus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Asio",
-          "authorship": "\"(Pontoppidan, 1763)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212685"
-          },
-          "children": [],
-          "uuid": "43ec7f69-547b-597-a30-6acd9791c57d0f",
-          "description": "\"Asio flammeus\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_ASIO_CAPENSIS_SMITH_1834",
-          "name": "\"Asio capensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Asio",
-          "authorship": "\"(Smith, 1834)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212686"
-          },
-          "children": [],
-          "uuid": "7ca382a3-2c88-557-b35-aa131840cf94f4",
-          "description": "\"Asio capensis\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_ASIO_OTUS_LINNAEUS_1758",
-          "name": "\"Asio otus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Asio",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476314"
-          },
-          "children": [],
-          "uuid": "b8b420c6-cfcd-5c6-a39-731f75af2cf3aa",
-          "description": "\"Asio otus\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_ASIO",
       "name": "Asio",
       "rank": "GENUS",
       "children": [
@@ -603,10 +497,14 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27610803",
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13655/",
             "checklistbank-23895": "2787",
-            "checklistbank-29666": "2018_1376"
+            "checklistbank-29666": "2018_1376",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:212686"
           },
           "children": [],
-          "uuid": "0e48bde4-4d5f-5f7-961-602b78cdfcb086"
+          "uuid": "0e48bde4-4d5f-5f7-961-602b78cdfcb086",
+          "authorIds": [
+            "Q507606"
+          ]
         },
         {
           "id": "SP_ASIO_ABYSSINICUS",
@@ -643,7 +541,8 @@
             "checklistbank-2036": "Asio_clamator",
             "checklistbank-316441": "CND2J",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "1244692",
-            "checklistbank-74965": "https://www.gbif.org/species/4843115"
+            "checklistbank-74965": "https://www.gbif.org/species/4843115",
+            "checklistbank-281817": "230163"
           },
           "children": [],
           "authorship": "(Vieillot, 1807)",
@@ -658,7 +557,8 @@
           "lineage": "Asio",
           "sourceIds": {
             "checklistbank": "Asio_flammeus",
-            "checklistbank-316441": "5FT3B"
+            "checklistbank-316441": "5FT3B",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:212685"
           },
           "children": [],
           "uuid": "c42bdf0d-7fc1-57e-929-6fad9ede936a31",
@@ -696,7 +596,8 @@
           "sourceIds": {
             "checklistbank": "Asio_otus",
             "checklistbank-316441": "5FT3N",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27610779"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27610779",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1476314"
           },
           "children": [],
           "uuid": "0fee09ff-3d8b-54a-8cc-6f58999469228b",
@@ -723,7 +624,8 @@
             "checklistbank-74965": "https://www.gbif.org/species/2497311",
             "checklistbank-21227": "gbif.org/species/2497311",
             "checklistbank-25996": "14225AVES",
-            "checklistbank-29649": "gbif.org/species/2497311"
+            "checklistbank-29649": "gbif.org/species/2497311",
+            "checklistbank-281817": "230168"
           },
           "children": [],
           "authorship": "(Wagler, 1832)",
@@ -893,30 +795,6 @@
     },
     {
       "id": "GENUS_MEGASCOPS",
-      "name": "\"Megascops",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MEGASCOPS_ASIO_LINNAEUS_1758",
-          "name": "\"Megascops asio\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Megascops",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484504"
-          },
-          "children": [],
-          "uuid": "96fadc92-da7e-5d8-8f9-5390f8316c44f3",
-          "description": "\"Megascops asio\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_MEGASCOPS",
       "name": "Megascops",
       "rank": "GENUS",
       "children": [
@@ -942,7 +820,10 @@
           },
           "children": [],
           "authorship": "(Cassin, 1849)",
-          "uuid": "6ab04b23-2e3a-596-854-1bca5488b6e000"
+          "uuid": "6ab04b23-2e3a-596-854-1bca5488b6e000",
+          "authorIds": [
+            "Q1349866"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_ASIO",
@@ -953,7 +834,8 @@
           "lineage": "Megascops",
           "sourceIds": {
             "checklistbank": "Megascops_asio",
-            "checklistbank-316441": "5JKTR"
+            "checklistbank-316441": "5JKTR",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1484504"
           },
           "children": [],
           "uuid": "aa17d938-23d6-5d7-84b-833ffd10eabfd3",
@@ -974,7 +856,8 @@
             "checklistbank-316441": "3YXDY",
             "checklistbank-2169": "507957",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "686676",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q786102"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q786102",
+            "checklistbank-281817": "230193"
           },
           "children": [],
           "authorship": "(Temminck, 1822)",
@@ -1025,7 +908,8 @@
             "checklistbank-25059": "gbif.org/species/2497365",
             "checklistbank-304433": "https://www.gbif.org/species/2497365",
             "checklistbank-21612": "gbif.org/species/2497365",
-            "checklistbank-29610": "gbif.org/species/2497365"
+            "checklistbank-29610": "gbif.org/species/2497365",
+            "checklistbank-281817": "230194"
           },
           "children": [],
           "authorship": "(Vieillot, 1817)",
@@ -1093,7 +977,10 @@
           },
           "children": [],
           "authorship": "(Ridgway, 1878)",
-          "uuid": "0fda263e-e666-59f-879-ed68d29c7afe92"
+          "uuid": "0fda263e-e666-59f-879-ed68d29c7afe92",
+          "authorIds": [
+            "Q940473"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_GUATEMALAE",
@@ -1136,7 +1023,10 @@
           },
           "children": [],
           "authorship": "(C.König & Straneck, 1989)",
-          "uuid": "42385d6d-5d47-591-a59-78588807c80fc0"
+          "uuid": "42385d6d-5d47-591-a59-78588807c80fc0",
+          "authorIds": [
+            "Q1098640"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_KENNICOTTII",
@@ -1218,11 +1108,15 @@
             "checklistbank-316441": "72W8Y",
             "checklistbank-2169": "3150118",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "1063248",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2166327"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2166327",
+            "checklistbank-281817": "230200"
           },
           "children": [],
           "authorship": "(Salvin, 1897)",
-          "uuid": "b149b6ea-61c1-522-ba4-32198f6fc16ed4"
+          "uuid": "b149b6ea-61c1-522-ba4-32198f6fc16ed4",
+          "authorIds": [
+            "Q933058"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_PETERSONI",
@@ -1265,7 +1159,11 @@
           },
           "children": [],
           "authorship": "(Bangs & Noble, 1918)",
-          "uuid": "69153831-5286-5fd-8ea-242a5557363652"
+          "uuid": "69153831-5286-5fd-8ea-242a5557363652",
+          "authorIds": [
+            "Q602234",
+            "Q455894"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_SANCTAECATARINAE",
@@ -1283,7 +1181,8 @@
             "checklistbank-2169": "3150119",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "686677",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1267110",
-            "checklistbank-304433": "https://www.gbif.org/species/2497406"
+            "checklistbank-304433": "https://www.gbif.org/species/2497406",
+            "checklistbank-281817": "230202"
           },
           "children": [],
           "authorship": "(Salvin, 1897)",
@@ -1309,7 +1208,10 @@
           },
           "children": [],
           "authorship": "(R.T.Moore, 1941)",
-          "uuid": "40f3f5d0-5bff-50d-87c-802df80526b39a"
+          "uuid": "40f3f5d0-5bff-50d-87c-802df80526b39a",
+          "authorIds": [
+            "Q3436404"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_TRICHOPSIS",
@@ -1329,7 +1231,10 @@
           },
           "children": [],
           "authorship": "(Wagler, 1832)",
-          "uuid": "e14fd9b7-4a78-5e0-9b0-b3af4e007d023d"
+          "uuid": "e14fd9b7-4a78-5e0-9b0-b3af4e007d023d",
+          "authorIds": [
+            "Q65327"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_WATSONII",
@@ -1349,7 +1254,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "686672",
             "checklistbank-55496": "https://www.gbif.org/species/2497332",
             "checklistbank-74965": "https://www.gbif.org/species/2497332",
-            "checklistbank-25059": "gbif.org/species/2497332"
+            "checklistbank-25059": "gbif.org/species/2497332",
+            "checklistbank-281817": "230205"
           },
           "children": [],
           "authorship": "(Cassin, 1848)",
@@ -1374,7 +1280,10 @@
           },
           "children": [],
           "authorship": "(Hekstra, 1982)",
-          "uuid": "158de435-f7f3-586-8ad-408290f1e2ed71"
+          "uuid": "158de435-f7f3-586-8ad-408290f1e2ed71",
+          "authorIds": [
+            "Q16298818"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_GILESI",
@@ -1395,7 +1304,10 @@
           },
           "children": [],
           "authorship": "Krabbe, 2017",
-          "uuid": "2a0949f3-6108-5c2-891-286156606ec86b"
+          "uuid": "2a0949f3-6108-5c2-891-286156606ec86b",
+          "authorIds": [
+            "Q449486"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_ALAGOENSIS",
@@ -1409,11 +1321,20 @@
             "gbif-backbone": "11213984",
             "checklistbank-316441": "QMZZT",
             "checklistbank-2169": "2803252",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q110266066"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q110266066",
+            "checklistbank-281817": "230191"
           },
           "children": [],
           "authorship": "Dantas, Weckstein, Bates, Oliveira, Catanach & Aleixo, 2021",
-          "uuid": "aac7a5e7-f0db-528-831-1d67285b024e65"
+          "uuid": "aac7a5e7-f0db-528-831-1d67285b024e65",
+          "authorIds": [
+            "Q50825005",
+            "Q21395824",
+            "Q23661097",
+            "Q110734140",
+            "Q56928743",
+            "Q21502427"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_STANGIAE",
@@ -1427,11 +1348,20 @@
             "gbif-backbone": "11145037",
             "checklistbank-2169": "2803253",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q110266065",
-            "checklistbank-37354": "2292"
+            "checklistbank-37354": "2292",
+            "checklistbank-281817": "230203"
           },
           "children": [],
           "authorship": "Dantas, Weckstein, Bates, Oliveira, Catanach & Aleixo, 2021",
-          "uuid": "22c2d90b-7a4f-55a-bb7-47fe9cd557fde7"
+          "uuid": "22c2d90b-7a4f-55a-bb7-47fe9cd557fde7",
+          "authorIds": [
+            "Q50825005",
+            "Q21395824",
+            "Q23661097",
+            "Q110734140",
+            "Q56928743",
+            "Q21502427"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_VERMICULATUS_RIDGWAY_1887",
@@ -1463,7 +1393,10 @@
             "checklistbank-53120": "TSN:686669"
           },
           "children": [],
-          "uuid": "3829c27b-fd04-582-9d5-a0f4b4434a983c"
+          "uuid": "3829c27b-fd04-582-9d5-a0f4b4434a983c",
+          "authorIds": [
+            "Q1752730"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_ATER_HEKSTRA_1982",
@@ -1493,7 +1426,10 @@
             "checklistbank-2169": "507960"
           },
           "children": [],
-          "uuid": "8e01eef3-dc5c-526-9ea-d65059dd6fc7fb"
+          "uuid": "8e01eef3-dc5c-526-9ea-d65059dd6fc7fb",
+          "authorIds": [
+            "Q983999"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_GUILDAYI_BRODKORB_MOURER_CHAUVIRE_1984",
@@ -1526,7 +1462,10 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13707/"
           },
           "children": [],
-          "uuid": "23556156-a62f-50a-ab3-4c6f3602634250"
+          "uuid": "23556156-a62f-50a-ab3-4c6f3602634250",
+          "authorIds": [
+            "Q741829"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_SP",
@@ -1551,11 +1490,15 @@
           "sourceIds": {
             "checklistbank-2265": "2803248",
             "checklistbank-2169": "2803248",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2502623"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2502623",
+            "checklistbank-281817": "230204"
           },
           "children": [],
           "authorship": "(Sclater, 1858)",
-          "uuid": "2db64b26-023c-5043-9b11-c6404766f28e"
+          "uuid": "2db64b26-023c-5043-9b11-c6404766f28e",
+          "authorIds": [
+            "Q435725"
+          ]
         },
         {
           "id": "SP_MEGASCOPS_LAMBI",
@@ -1636,75 +1579,6 @@
     },
     {
       "id": "GENUS_STRIX",
-      "name": "\"Strix",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STRIX_ALUCO_LINNAEUS_1758",
-          "name": "\"Strix aluco\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Strix",
-          "authorship": "\"Linnaeus, 1758\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558588"
-          },
-          "children": [],
-          "uuid": "53060286-95d2-56d-80e-2209cd22eec7c6",
-          "description": "\"Strix aluco\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_STRIX_URALENSIS_PALLAS_1771",
-          "name": "\"Strix uralensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Strix",
-          "authorship": "\"Pallas, 1771\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1461475"
-          },
-          "children": [],
-          "uuid": "eee880c0-8316-5b6-8bb-1bcd7b482538a1",
-          "description": "\"Strix uralensis\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_STRIX_VARIA_BARTON_1799",
-          "name": "\"Strix varia\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Strix",
-          "authorship": "\"Barton, 1799\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476283"
-          },
-          "children": [],
-          "uuid": "b0f49d08-8438-5ab-bb5-a463fa5c0ba0cc",
-          "description": "\"Strix varia\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_STRIX_SELOPUTO_HORSFIELD_1821",
-          "name": "\"Strix seloputo\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Strix",
-          "authorship": "\"Horsfield, 1821\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1485179"
-          },
-          "children": [],
-          "uuid": "7532a384-92ec-54a-bc8-cf21cb571deabb",
-          "description": "\"Strix seloputo\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_STRIX",
       "name": "Strix",
       "rank": "GENUS",
       "children": [
@@ -1720,7 +1594,10 @@
           "uuid": "a1d8b1e6-a60f-5c9-9ac-03cf9b974674a8",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122583653"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_BUBO_LINNAEUS_1758",
@@ -1734,7 +1611,10 @@
           "uuid": "67c9252f-fa22-5e2-b6a-374475cbc3fd65",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122583548"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_SCANDIACA_LINNAEUS_1758",
@@ -1748,7 +1628,10 @@
           "uuid": "4c1a528e-5a45-530-8b8-e0556b43412895",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106447896"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_ULULA_LINNAEUS_1758",
@@ -1762,7 +1645,10 @@
           "uuid": "18c551f5-3973-5b3-959-384204f685e9b4",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122583758"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_PASSERINA_LINNAEUS_1758",
@@ -1776,7 +1662,10 @@
           "uuid": "e08eee49-0bef-55a-9a7-9efbabb7c3952e",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122583794"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_NOCTUA_SCOPOLI_1769",
@@ -1801,7 +1690,10 @@
           "uuid": "a88df733-a241-5a4-bc2-8bdebef4bd623d",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106447888"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_FLAMMEUS_PONTOPPIDAN_1763",
@@ -1826,7 +1718,10 @@
           "uuid": "b27632e5-bffc-539-9e5-3d318df16583f3",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122583687"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_CHOLIBA_VIEILLOT_1817",
@@ -1960,10 +1855,14 @@
             "checklistbank-315631": "6ZWZ2",
             "checklistbank-7888": "NHMSYS0000533867",
             "checklistbank-312616": "0d3e733d8ccd4aad99c0fa008134ab64",
-            "checklistbank-24523": "88257"
+            "checklistbank-24523": "88257",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:100136"
           },
           "children": [],
-          "uuid": "4dd300eb-5c3e-56d-b79-2c037ab58d7c82"
+          "uuid": "4dd300eb-5c3e-56d-b79-2c037ab58d7c82",
+          "authorIds": [
+            "Q213570"
+          ]
         },
         {
           "id": "SP_STRIX_HUHULA",
@@ -1979,7 +1878,8 @@
             "checklistbank-2013": "bkbowl1",
             "checklistbank-2036": "Strix_huhula",
             "checklistbank-316441": "5LBVC",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "1063256"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "1063256",
+            "checklistbank-281817": "230212"
           },
           "children": [],
           "authorship": "Daudin, 1800",
@@ -2032,11 +1932,15 @@
           "lineage": "Strix",
           "sourceIds": {
             "checklistbank": "Strix_aluco",
-            "checklistbank-316441": "7KT92"
+            "checklistbank-316441": "7KT92",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:558588"
           },
           "children": [],
           "uuid": "3ceb49af-247e-570-be8-0c194628bcc055",
-          "authorship": "Linnaeus, 1758"
+          "authorship": "Linnaeus, 1758",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_BUTLERI",
@@ -2094,7 +1998,10 @@
           },
           "children": [],
           "authorship": "(Sharpe, 1875)",
-          "uuid": "f5069ad4-3e98-582-bca-ef479c8c5c927b"
+          "uuid": "f5069ad4-3e98-582-bca-ef479c8c5c927b",
+          "authorIds": [
+            "Q432586"
+          ]
         },
         {
           "id": "SP_STRIX_FULVESCENS",
@@ -2133,11 +2040,15 @@
             "checklistbank-316441": "532HH",
             "checklistbank-2169": "1577983",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "555431",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q899380"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q899380",
+            "checklistbank-281817": "230215"
           },
           "children": [],
           "authorship": "Temminck, 1825",
-          "uuid": "7482b5b9-448a-56e-bb9-9061bb3cad7e02"
+          "uuid": "7482b5b9-448a-56e-bb9-9061bb3cad7e02",
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_STRIX_LEPTOGRAMMICA",
@@ -2159,7 +2070,10 @@
           },
           "children": [],
           "authorship": "Temminck, 1832",
-          "uuid": "2e9a986e-8f75-52a-97b-87feee1192a376"
+          "uuid": "2e9a986e-8f75-52a-97b-87feee1192a376",
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_STRIX_OCCIDENTALIS",
@@ -2181,7 +2095,10 @@
           },
           "children": [],
           "authorship": "(Xántus de Vésey, 1860)",
-          "uuid": "1026b485-105a-50a-b7e-28a813898fd9a4"
+          "uuid": "1026b485-105a-50a-b7e-28a813898fd9a4",
+          "authorIds": [
+            "Q278153"
+          ]
         },
         {
           "id": "SP_STRIX_OCELLATA",
@@ -2222,7 +2139,10 @@
           },
           "children": [],
           "authorship": "P.P.King, 1827",
-          "uuid": "bfcbeedf-48b6-56b-bea-d472c26db2c6ae"
+          "uuid": "bfcbeedf-48b6-56b-bea-d472c26db2c6ae",
+          "authorIds": [
+            "Q1338334"
+          ]
         },
         {
           "id": "SP_STRIX_SELOPUTO",
@@ -2234,7 +2154,8 @@
           "sourceIds": {
             "checklistbank": "Strix_seloputo",
             "checklistbank-316441": "7L597",
-            "checklistbank-2169": "498212"
+            "checklistbank-2169": "498212",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1485179"
           },
           "children": [],
           "uuid": "df79690b-171a-5b1-908-ff44c0e1ddfd5f",
@@ -2248,10 +2169,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Strix",
           "sourceIds": {
-            "checklistbank": "Strix_uralensis"
+            "checklistbank": "Strix_uralensis",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1461475"
           },
           "children": [],
-          "uuid": "0716e415-bc3a-52b-81e-3dca0c3dc71a4f"
+          "uuid": "0716e415-bc3a-52b-81e-3dca0c3dc71a4f",
+          "authorship": "Pallas, 1771",
+          "authorIds": [
+            "Q155914"
+          ]
         },
         {
           "id": "SP_STRIX_VARIA",
@@ -2261,10 +2187,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Strix",
           "sourceIds": {
-            "checklistbank": "Strix_varia"
+            "checklistbank": "Strix_varia",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1476283"
           },
           "children": [],
-          "uuid": "e521f7c5-78cc-505-821-8f67e802a77436"
+          "uuid": "e521f7c5-78cc-505-821-8f67e802a77436",
+          "authorship": "Barton, 1799",
+          "authorIds": [
+            "Q276825"
+          ]
         },
         {
           "id": "SP_STRIX_WOODFORDII",
@@ -2280,7 +2211,9 @@
             "checklistbank-2036": "Strix_woodfordii",
             "checklistbank-316441": "5LBX9",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "686688",
-            "checklistbank-312242": "8896"
+            "checklistbank-312242": "8896",
+            "checklistbank-144979": "ARU-BIDAF2020140REG-AVES-CH-MAB-022",
+            "checklistbank-172235": "ARG-BIDAF2020140REG-Birds-Ch-38"
           },
           "children": [],
           "authorship": "(A.Smith, 1834)",
@@ -2301,7 +2234,8 @@
             "checklistbank-2036": "Strix_virgata",
             "checklistbank-316441": "5LBWX",
             "checklistbank-2169": "111829",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "686689"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "686689",
+            "checklistbank-281817": "230216"
           },
           "children": [],
           "authorship": "(Cassin, 1849)",
@@ -2364,7 +2298,12 @@
           },
           "children": [],
           "authorship": "Kirwan, Schweizer & Copete, 2015",
-          "uuid": "930fdc71-3eeb-5af-af0-051652fa921594"
+          "uuid": "930fdc71-3eeb-5af-af0-051652fa921594",
+          "authorIds": [
+            "Q21502622",
+            "Q22108524",
+            "Q27528314"
+          ]
         },
         {
           "id": "SP_STRIX_SARTORII",
@@ -2385,7 +2324,10 @@
           },
           "children": [],
           "authorship": "(Ridgway, 1874)",
-          "uuid": "dd36464d-72b5-573-96d-4455ec343cabb2"
+          "uuid": "dd36464d-72b5-573-96d-4455ec343cabb2",
+          "authorIds": [
+            "Q940473"
+          ]
         },
         {
           "id": "SP_STRIX_MELITENSIS_LYDEKKER_1891",
@@ -2841,7 +2783,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q40564310"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q735026"
+          ],
+          "authorship": "Hodgson, 1836"
         },
         {
           "id": "SP_STRIX_CAPENSIS",
@@ -2986,7 +2932,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122583609"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_STRIX_ORIENTALIS",
@@ -3083,7 +3032,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q131309154"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q31621",
+            "Q60725"
+          ]
         },
         {
           "id": "SP_STRIX_SORORCULA",
@@ -3132,7 +3085,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q809240"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q60592"
+          ]
         },
         {
           "id": "SP_STRIX_NIASENSIS_SALVADORI_1887",
@@ -3145,7 +3101,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1769164"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q704169"
+          ]
         },
         {
           "id": "SP_STRIX_JAVANICA",
@@ -3284,7 +3243,6 @@
             "Europe"
           ],
           "subspeciesCount": 0,
-          "description": "Pyrroglaux podargina (Palau Owl) is a strigidae species found in Europe region.",
           "sourcedFrom": "gbif",
           "children": [],
           "uuid": "969728f6-8fe5-5d4-a07-3cc291632432c2",
@@ -3346,33 +3304,13 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13782/"
           },
           "authorityIds": "col:7G8JY,itis:555470,wikidata:Q1265643",
-          "authorship": "O'Neill & Graves, 1977"
+          "authorship": "O'Neill & Graves, 1977",
+          "authorIds": [
+            "Q21388086",
+            "Q21340224"
+          ]
         }
       ]
-    },
-    {
-      "id": "GENUS_OTUS",
-      "name": "\"Otus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OTUS_SCOPS_LINNAEUS_1758",
-          "name": "\"Otus scops\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Otus",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1566271"
-          },
-          "children": [],
-          "uuid": "49c7a388-eabc-514-8d1-f43f2c77de4338",
-          "description": "\"Otus scops\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
     },
     {
       "id": "GENUS_OTUS",
@@ -3541,7 +3479,10 @@
           },
           "children": [],
           "authorship": "Rasmussen, 1998",
-          "uuid": "904266e7-bb0b-579-bab-5d879026c9e44b"
+          "uuid": "904266e7-bb0b-579-bab-5d879026c9e44b",
+          "authorIds": [
+            "Q436696"
+          ]
         },
         {
           "id": "SP_OTUS_ANGELINAE",
@@ -3661,7 +3602,10 @@
           },
           "children": [],
           "authorship": "Lambert & Rasmussen, 1998",
-          "uuid": "c8e4f25b-d0b4-51f-ac6-b42da110121f78"
+          "uuid": "c8e4f25b-d0b4-51f-ac6-b42da110121f78",
+          "authorIds": [
+            "Q436696"
+          ]
         },
         {
           "id": "SP_OTUS_ELEGANS",
@@ -3700,7 +3644,10 @@
           },
           "children": [],
           "authorship": "Riley, 1927",
-          "uuid": "ce23229e-005a-5c5-ae9-6f553dff68000c"
+          "uuid": "ce23229e-005a-5c5-ae9-6f553dff68000c",
+          "authorIds": [
+            "Q3090499"
+          ]
         },
         {
           "id": "SP_OTUS_FULIGINOSUS",
@@ -3741,7 +3688,10 @@
           },
           "children": [],
           "authorship": "(Giebel, 1872)",
-          "uuid": "d03ed99d-627c-5e8-ba1-c7b40cb4f4b69f"
+          "uuid": "d03ed99d-627c-5e8-ba1-c7b40cb4f4b69f",
+          "authorIds": [
+            "Q78295"
+          ]
         },
         {
           "id": "SP_OTUS_ICTERORHYNCHUS",
@@ -3802,7 +3752,10 @@
           },
           "children": [],
           "authorship": "Ripley, 1966",
-          "uuid": "a5c2c69e-acd1-5c4-810-07a82b66eb6711"
+          "uuid": "a5c2c69e-acd1-5c4-810-07a82b66eb6711",
+          "authorIds": [
+            "Q249244"
+          ]
         },
         {
           "id": "SP_OTUS_LEMPIJI",
@@ -3961,7 +3914,10 @@
           },
           "children": [],
           "authorship": "Benson, 1960",
-          "uuid": "02df49b6-bfe9-537-89f-32690d872201a7"
+          "uuid": "02df49b6-bfe9-537-89f-32690d872201a7",
+          "authorIds": [
+            "Q715072"
+          ]
         },
         {
           "id": "SP_OTUS_MEGALOTIS",
@@ -3982,7 +3938,10 @@
           },
           "children": [],
           "authorship": "(Walden, 1875)",
-          "uuid": "6353cdb1-60e9-5d0-a09-2fa4c25175325e"
+          "uuid": "6353cdb1-60e9-5d0-a09-2fa4c25175325e",
+          "authorIds": [
+            "Q709742"
+          ]
         },
         {
           "id": "SP_OTUS_MENTAWI",
@@ -4002,7 +3961,11 @@
           },
           "children": [],
           "authorship": "Chasen & Kloss, 1926",
-          "uuid": "5acdefd6-9e50-506-9b0-a14194491453ea"
+          "uuid": "5acdefd6-9e50-506-9b0-a14194491453ea",
+          "authorIds": [
+            "Q3042008",
+            "Q2329574"
+          ]
         },
         {
           "id": "SP_OTUS_MINDORENSIS",
@@ -4043,7 +4006,11 @@
           },
           "children": [],
           "authorship": "Ripley & Rabor, 1968",
-          "uuid": "9704cab2-d11d-59d-989-816a2b0842230e"
+          "uuid": "9704cab2-d11d-59d-989-816a2b0842230e",
+          "authorIds": [
+            "Q249244",
+            "Q442217"
+          ]
         },
         {
           "id": "SP_OTUS_MOHELIENSIS",
@@ -4123,7 +4090,10 @@
           },
           "children": [],
           "authorship": "(Horsfield, 1821)",
-          "uuid": "58796b51-e23f-54d-bd4-12a8a3e9ea4be4"
+          "uuid": "58796b51-e23f-54d-bd4-12a8a3e9ea4be4",
+          "authorIds": [
+            "Q507763"
+          ]
         },
         {
           "id": "SP_OTUS_RUTILUS",
@@ -4164,7 +4134,10 @@
           },
           "children": [],
           "authorship": "(Cassin, 1849)",
-          "uuid": "6ffef8e9-5b73-552-b83-ba476c84bff8ae"
+          "uuid": "6ffef8e9-5b73-552-b83-ba476c84bff8ae",
+          "authorIds": [
+            "Q1349866"
+          ]
         },
         {
           "id": "SP_OTUS_SCOPS",
@@ -4175,7 +4148,8 @@
           "lineage": "Otus",
           "sourceIds": {
             "checklistbank": "Otus_scops",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q171563"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q171563",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1566271"
           },
           "children": [],
           "uuid": "263fed2d-890c-5e9-8ab-fb6837d32bd0c7",
@@ -4200,7 +4174,11 @@
           },
           "children": [],
           "authorship": "Temminck & Schlegel, 1844",
-          "uuid": "70cc85af-38db-5fe-8fd-51fe8af3f758d4"
+          "uuid": "70cc85af-38db-5fe-8fd-51fe8af3f758d4",
+          "authorIds": [
+            "Q31621",
+            "Q60725"
+          ]
         },
         {
           "id": "SP_OTUS_SENEGALENSIS",
@@ -4221,7 +4199,10 @@
           },
           "children": [],
           "authorship": "(Swainson, 1837)",
-          "uuid": "9b409850-99d6-589-937-5ac6dfd777d2f8"
+          "uuid": "9b409850-99d6-589-937-5ac6dfd777d2f8",
+          "authorIds": [
+            "Q444164"
+          ]
         },
         {
           "id": "SP_OTUS_SILVICOLA",
@@ -4282,7 +4263,11 @@
           },
           "children": [],
           "authorship": "Warakagoda & Rasmussen, 2004",
-          "uuid": "7a94571b-69cc-5fa-b0d-3212994da31961"
+          "uuid": "7a94571b-69cc-5fa-b0d-3212994da31961",
+          "authorIds": [
+            "Q5250547",
+            "Q436696"
+          ]
         },
         {
           "id": "SP_OTUS_UMBRA",
@@ -4416,7 +4401,10 @@
           },
           "children": [],
           "authorship": "Sangster, B.F.King, Verbelen & Trainor, 2013",
-          "uuid": "a5d2f7b9-2617-5ec-91a-c8f5f583c2f609"
+          "uuid": "a5d2f7b9-2617-5ec-91a-c8f5f583c2f609",
+          "authorIds": [
+            "Q5544282"
+          ]
         },
         {
           "id": "SP_OTUS_SIAOENSIS",
@@ -4511,7 +4499,10 @@
           },
           "children": [],
           "authorship": "(Tweeddale, 1879)",
-          "uuid": "947a7509-9565-520-9a4-b0f60dfa7a0569"
+          "uuid": "947a7509-9565-520-9a4-b0f60dfa7a0569",
+          "authorIds": [
+            "Q709742"
+          ]
         },
         {
           "id": "SP_OTUS_NIGRORUM",
@@ -4532,7 +4523,10 @@
           },
           "children": [],
           "authorship": "Rand, 1950",
-          "uuid": "36835d01-cadf-5e1-875-65c6178c68b768"
+          "uuid": "36835d01-cadf-5e1-875-65c6178c68b768",
+          "authorIds": [
+            "Q730026"
+          ]
         },
         {
           "id": "SP_OTUS_MENDENI",
@@ -4613,7 +4607,10 @@
           },
           "children": [],
           "authorship": "(Hartert, 1898)",
-          "uuid": "a561cdf8-a194-5c0-a69-80318b02582707"
+          "uuid": "a561cdf8-a194-5c0-a69-80318b02582707",
+          "authorIds": [
+            "Q62824"
+          ]
         },
         {
           "id": "SP_OTUS_TEMPESTATIS",
@@ -4632,7 +4629,10 @@
           },
           "children": [],
           "uuid": "a4660c71-46d0-531-a83-1db3be6abdd4c0",
-          "authorship": "(E. J. O. Hartert, 1904)"
+          "authorship": "(E. J. O. Hartert, 1904)",
+          "authorIds": [
+            "Q62824"
+          ]
         },
         {
           "id": "SP_OTUS_BIKEGILA",
@@ -4653,7 +4653,19 @@
           },
           "children": [],
           "authorship": "Melo, Freitas, Verbelen, da Costa, Pereira, Fuchs, Sangster, Correia, de Lima & Crottini, 2022",
-          "uuid": "3a1dde31-bf87-5ee-b41-228e8d810c3322"
+          "uuid": "3a1dde31-bf87-5ee-b41-228e8d810c3322",
+          "authorIds": [
+            "Q25796457",
+            "Q114961202",
+            "Q114961055",
+            "Q114960965",
+            "Q28148138",
+            "Q5544282",
+            "Q114960940",
+            "Q28381799",
+            "Q22112978",
+            "Q115131225"
+          ]
         },
         {
           "id": "SP_OTUS_VERMICULATUS_SALVIN_1897",
@@ -5014,7 +5026,10 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13760/"
           },
           "authorityIds": "wikidata:Q1264898",
-          "authorship": "(Gosse, 1847)"
+          "authorship": "(Gosse, 1847)",
+          "authorIds": [
+            "Q443062"
+          ]
         },
         {
           "id": "SP_PSEUDOSCOPS_GAMMICUS",
@@ -5073,7 +5088,10 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13718/"
           },
           "authorityIds": "col:47FJP,itis:555482,wikidata:Q863066",
-          "authorship": "Beavan, 1867"
+          "authorship": "Beavan, 1867",
+          "authorIds": [
+            "Q602895"
+          ]
         },
         {
           "id": "NINOX_BOOBOOK",
@@ -5151,7 +5169,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1273941"
           },
           "authorityIds": "col:47FJT,itis:686700,wikidata:Q1273941",
-          "authorship": "Indrawan & Somadikarta, 2004"
+          "authorship": "Indrawan & Somadikarta, 2004",
+          "authorIds": [
+            "Q21388659",
+            "Q11893953"
+          ]
         },
         {
           "id": "NINOX_CONNIVENS",
@@ -5318,7 +5340,6 @@
             "Europe"
           ],
           "subspeciesCount": 0,
-          "description": "Ninox jacquinoti (Solomon hawk-owl) is a strigidae species found in Europe region.",
           "sourcedFrom": "gbif",
           "children": [],
           "uuid": "6651b569-6b5c-589-a4d-c09ff60ee611d9",
@@ -5411,7 +5432,18 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2913604"
           },
           "authorityIds": "col:47FK5,itis:1063268,wikidata:Q2913604",
-          "authorship": "Rasmussen, Allen, Collar et al., 2012"
+          "authorship": "Rasmussen, Allen, Collar et al., 2012",
+          "authorIds": [
+            "Q436696",
+            "Q21390934",
+            "Q22110285",
+            "Q59870452",
+            "Q22110239",
+            "Q22111897",
+            "Q22110187",
+            "Q22110323",
+            "Q19758114"
+          ]
         },
         {
           "id": "NINOX_MALAITAE",
@@ -5508,7 +5540,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q601497"
           },
           "authorityIds": "col:47FK8,itis:1063265,wikidata:Q601497",
-          "authorship": "Ogilvie-Grant, 1896"
+          "authorship": "Ogilvie-Grant, 1896",
+          "authorIds": [
+            "Q1349942"
+          ]
         },
         {
           "id": "NINOX_NATALIS",
@@ -5548,7 +5583,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1256551"
           },
           "authorityIds": "col:47FK9,itis:686701,wikidata:Q1256551",
-          "authorship": "Lister"
+          "authorship": "Lister",
+          "authorIds": [
+            "Q1707314"
+          ]
         },
         {
           "id": "NINOX_NIPALENSIS",
@@ -5558,7 +5596,6 @@
           "lineage": "Ninox",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ninox nipalensis is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ca6588da-66c4-580-912-f02692eb38fb20",
@@ -5651,7 +5688,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3342038"
           },
           "authorityIds": "col:47FKB,itis:1063263,wikidata:Q3342038",
-          "authorship": "Hume, 1872"
+          "authorship": "Hume, 1872",
+          "authorIds": [
+            "Q455438"
+          ]
         },
         {
           "id": "NINOX_OCHRACEA",
@@ -5769,7 +5809,10 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13720/"
           },
           "authorityIds": "col:47FKF,itis:555484,wikidata:Q181308",
-          "authorship": "Bonaparte, 1855"
+          "authorship": "Bonaparte, 1855",
+          "authorIds": [
+            "Q157521"
+          ]
         },
         {
           "id": "NINOX_PLESSENI",
@@ -5804,7 +5847,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q60793192"
           },
           "authorityIds": "col:CP57M,itis:1244676,wikidata:Q60793192",
-          "authorship": "Stresemann, 1929"
+          "authorship": "Stresemann, 1929",
+          "authorIds": [
+            "Q62357"
+          ]
         },
         {
           "id": "NINOX_PUNCTULATA",
@@ -5916,7 +5962,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q180693"
           },
           "authorityIds": "col:47FKJ,itis:1063269,wikidata:Q180693",
-          "authorship": "Oustalet, 1880"
+          "authorship": "Oustalet, 1880",
+          "authorIds": [
+            "Q286285"
+          ]
         },
         {
           "id": "NINOX_ROTIENSIS",
@@ -5953,7 +6002,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q60700036"
           },
           "authorityIds": "col:CP57P,itis:1244674,wikidata:Q60700036",
-          "authorship": "Johnstone & Darnell, 1997"
+          "authorship": "Johnstone & Darnell, 1997",
+          "authorIds": [
+            "Q7364841",
+            "Q127427362"
+          ]
         },
         {
           "id": "NINOX_RUDOLFI",
@@ -5994,7 +6047,10 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/13715/"
           },
           "authorityIds": "col:47FKL,itis:555478,wikidata:Q1266005",
-          "authorship": "Meyer, 1882"
+          "authorship": "Meyer, 1882",
+          "authorIds": [
+            "Q63167"
+          ]
         },
         {
           "id": "NINOX_RUFA",
@@ -6072,7 +6128,18 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1830400"
           },
           "authorityIds": "col:47FKN,itis:1063267,wikidata:Q1830400",
-          "authorship": "Rasmussen, Allen, Collar et al., 2012"
+          "authorship": "Rasmussen, Allen, Collar et al., 2012",
+          "authorIds": [
+            "Q436696",
+            "Q21390934",
+            "Q22110285",
+            "Q59870452",
+            "Q22110239",
+            "Q22111897",
+            "Q22110187",
+            "Q22110323",
+            "Q19758114"
+          ]
         },
         {
           "id": "NINOX_SCUTULATA",
@@ -6152,7 +6219,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q180696"
           },
           "authorityIds": "col:47FKQ,itis:1063264,wikidata:Q180696",
-          "authorship": "Tweeddale, 1878"
+          "authorship": "Tweeddale, 1878",
+          "authorIds": [
+            "Q709742"
+          ]
         },
         {
           "id": "NINOX_SPILONOTUS",
@@ -6191,7 +6261,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2724476"
           },
           "authorityIds": "col:47FKR,itis:1063266,wikidata:Q2724476",
-          "authorship": "Bourns & Worcester, 1894"
+          "authorship": "Bourns & Worcester, 1894",
+          "authorIds": [
+            "Q1347283",
+            "Q530805"
+          ]
         },
         {
           "id": "NINOX_SQUAMIPILA",
@@ -6321,7 +6395,6 @@
           "lineage": "Ninox",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ninox superciliaris (White-browed Owl) is a strigidae species found in its native region.",
           "sourcedFrom": "gbif",
           "children": [],
           "uuid": "70002c46-98bc-5ca-ba2-470d8463ae3897",
@@ -6442,8 +6515,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q117263370"
           },
           "authorityIds": "col:CP56S,itis:1244673",
-          "commonName": "Laughing owl",
-          "description": "Ninox albifacies (Laughing owl) is a strigidae species found in its native region."
+          "commonName": "Laughing owl"
         },
         {
           "id": "SP_NINOX_FUSCA_VIEILLOT_1817",
@@ -6468,8 +6540,7 @@
             "checklistbank-2265": "1889271"
           },
           "authorityIds": "col:CP573,itis:1244675",
-          "commonName": "Timor Boobook",
-          "description": "Ninox fusca (Timor Boobook) is a strigidae species found in its native region."
+          "commonName": "Timor Boobook"
         },
         {
           "id": "SP_NINOX_HANTU_WALLACE_1863",
@@ -6493,8 +6564,7 @@
             "checklistbank-139831": "1289579"
           },
           "authorityIds": "col:CP576,itis:1244678",
-          "commonName": "Buru Boobook",
-          "description": "Ninox hantu (Buru Boobook) is a strigidae species found in its native region."
+          "commonName": "Buru Boobook"
         },
         {
           "id": "SP_NINOX_LEUCOPSIS_GOULD_1838",
@@ -6520,8 +6590,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q21087251"
           },
           "authorityIds": "col:CP56Q,itis:1244677",
-          "commonName": "Tasmanian Boobook",
-          "description": "Ninox leucopsis (Tasmanian Boobook) is a strigidae species found in its native region."
+          "commonName": "Tasmanian Boobook"
         },
         {
           "id": "SP_NINOX_LURIDA",
@@ -6534,8 +6603,7 @@
             "checklistbank": "ott7068892"
           },
           "children": [],
-          "uuid": "b7bb2394-63c6-5ec-b4c-b9cf3f76b5414a",
-          "description": "Ninox lurida is a strigidae species found in its native region."
+          "uuid": "b7bb2394-63c6-5ec-b4c-b9cf3f76b5414a"
         },
         {
           "id": "SP_NINOX_DUBIOSA",
@@ -6548,8 +6616,7 @@
             "checklistbank": "ott7663228"
           },
           "children": [],
-          "uuid": "10b324c2-dd3d-5f7-b46-e17e998b509bf4",
-          "description": "Ninox dubiosa is a strigidae species found in its native region."
+          "uuid": "10b324c2-dd3d-5f7-b46-e17e998b509bf4"
         },
         {
           "id": "SP_NINOX_EVERETTI",
@@ -6562,8 +6629,7 @@
             "checklistbank": "ott7663229"
           },
           "children": [],
-          "uuid": "3e735ce1-22f2-593-ba9-1c5bc998a14532",
-          "description": "Ninox everetti is a strigidae species found in its native region."
+          "uuid": "3e735ce1-22f2-593-ba9-1c5bc998a14532"
         },
         {
           "id": "SP_NINOX_INNOMINATA",
@@ -6576,8 +6642,7 @@
             "checklistbank": "ott7663230"
           },
           "children": [],
-          "uuid": "1b99c9a5-0c7a-5d5-b9e-3a17da911572c0",
-          "description": "Ninox innominata is a strigidae species found in its native region."
+          "uuid": "1b99c9a5-0c7a-5d5-b9e-3a17da911572c0"
         },
         {
           "id": "SP_NINOX_LABUANENSIS",
@@ -6590,8 +6655,7 @@
             "checklistbank": "ott7663231"
           },
           "children": [],
-          "uuid": "abcfad80-23e8-532-a6e-b2373997ccad12",
-          "description": "Ninox labuanensis is a strigidae species found in its native region."
+          "uuid": "abcfad80-23e8-532-a6e-b2373997ccad12"
         },
         {
           "id": "SP_NINOX_MACROPTERA",
@@ -6604,8 +6668,7 @@
             "checklistbank": "ott7663232"
           },
           "children": [],
-          "uuid": "844b905a-20e3-5c9-a1d-973e2a4dd49160",
-          "description": "Ninox macroptera is a strigidae species found in its native region."
+          "uuid": "844b905a-20e3-5c9-a1d-973e2a4dd49160"
         },
         {
           "id": "SP_NINOX_PERVERSA",
@@ -6618,8 +6681,7 @@
             "checklistbank": "ott7663233"
           },
           "children": [],
-          "uuid": "073caba4-84d5-5f5-aae-ae1ea02a66eaa4",
-          "description": "Ninox perversa is a strigidae species found in its native region."
+          "uuid": "073caba4-84d5-5f5-aae-ae1ea02a66eaa4"
         },
         {
           "id": "SP_NINOX_SOLOMONIS",
@@ -6632,8 +6694,7 @@
             "checklistbank": "ott7663234"
           },
           "children": [],
-          "uuid": "072d2463-c743-5fd-8d7-caad497c6a88aa",
-          "description": "Ninox solomonis is a strigidae species found in its native region."
+          "uuid": "072d2463-c743-5fd-8d7-caad497c6a88aa"
         },
         {
           "id": "SP_NINOX_GRANTI",
@@ -6699,30 +6760,6 @@
     },
     {
       "id": "GENUS_SCOTOPELIA",
-      "name": "\"Scotopelia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SCOTOPELIA_PELI_BONAPARTE_1850",
-          "name": "\"Scotopelia peli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Scotopelia",
-          "authorship": "\"(Bonaparte, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212684"
-          },
-          "children": [],
-          "uuid": "b25c9037-295b-5f3-94a-441509b546f5e0",
-          "description": "\"Scotopelia peli\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_SCOTOPELIA",
       "name": "Scotopelia",
       "rank": "GENUS",
       "children": [
@@ -6744,7 +6781,10 @@
           },
           "children": [],
           "authorship": "Sharpe, 1875",
-          "uuid": "1a0de434-5d7d-569-b8f-25a509c542fc2e"
+          "uuid": "1a0de434-5d7d-569-b8f-25a509c542fc2e",
+          "authorIds": [
+            "Q432586"
+          ]
         },
         {
           "id": "SP_SCOTOPELIA_PELI",
@@ -6754,10 +6794,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Scotopelia",
           "sourceIds": {
-            "checklistbank": "Scotopelia_peli"
+            "checklistbank": "Scotopelia_peli",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:212684"
           },
           "children": [],
-          "uuid": "1148e647-3887-5cb-bc9-78caaa786fc639"
+          "uuid": "1148e647-3887-5cb-bc9-78caaa786fc639",
+          "authorship": "(Bonaparte, 1850)"
         },
         {
           "id": "SP_SCOTOPELIA_USSHERI",
@@ -6778,7 +6820,10 @@
           },
           "children": [],
           "authorship": "Sharpe, 1871",
-          "uuid": "ee06074c-790f-513-882-ce77c34d578c78"
+          "uuid": "ee06074c-790f-513-882-ce77c34d578c78",
+          "authorIds": [
+            "Q432586"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6832,36 +6877,13 @@
             "checklistbank-21227": "gbif.org/species/2497873",
             "checklistbank-25996": "14235AVES",
             "checklistbank-53732": "2497873",
-            "checklistbank-53120": "TSN:555441"
+            "checklistbank-53120": "TSN:555441",
+            "checklistbank-281817": "230188"
           },
           "authorityIds": "col:3W4JC,itis:555441,wikidata:Q1259391",
           "authorship": "(Daudin, 1800)"
         }
       ]
-    },
-    {
-      "id": "GENUS_PULSATRIX",
-      "name": "\"Pulsatrix",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PULSATRIX_PERSPICILLATA_LATHAM_1790",
-          "name": "\"Pulsatrix perspicillata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pulsatrix",
-          "authorship": "\"(Latham, 1790)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476321"
-          },
-          "children": [],
-          "uuid": "fd1eb7dc-58fa-538-9ee-47f0adb50e3ca1",
-          "description": "\"Pulsatrix perspicillata\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
     },
     {
       "id": "GENUS_PULSATRIX",
@@ -6882,7 +6904,8 @@
             "checklistbank-2036": "Pulsatrix_koeniswaldiana",
             "checklistbank-316441": "4QGWZ",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "555444",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q974890"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q974890",
+            "checklistbank-281817": "230207"
           },
           "children": [],
           "authorship": "(M.Bertoni & W.Bertoni, 1901)",
@@ -6905,7 +6928,10 @@
           },
           "children": [],
           "authorship": "(Tschudi, 1844)",
-          "uuid": "47adf30f-a47d-5b8-8f2-343a84b14c6d78"
+          "uuid": "47adf30f-a47d-5b8-8f2-343a84b14c6d78",
+          "authorIds": [
+            "Q123016"
+          ]
         },
         {
           "id": "SP_PULSATRIX_PERSPICILLATA",
@@ -6916,7 +6942,8 @@
           "lineage": "Pulsatrix",
           "sourceIds": {
             "checklistbank": "Pulsatrix_perspicillata",
-            "gbif-backbone": "6176073"
+            "gbif-backbone": "6176073",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1476321"
           },
           "children": [],
           "authorship": "Ridgway, 1914",
@@ -6948,7 +6975,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q177086"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q61282"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7042,30 +7072,6 @@
     },
     {
       "id": "GENUS_SURNIA",
-      "name": "\"Surnia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SURNIA_ULULA_LINNAEUS_1758",
-          "name": "\"Surnia ulula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Surnia",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484602"
-          },
-          "children": [],
-          "uuid": "6a38ec26-6b6a-57d-8d9-db7b7ce7f041e5",
-          "description": "\"Surnia ulula\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_SURNIA",
       "name": "Surnia",
       "rank": "GENUS",
       "children": [
@@ -7108,7 +7114,8 @@
           "lineage": "Surnia",
           "sourceIds": {
             "checklistbank-139831": "20372",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27610562"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27610562",
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484602"
           },
           "uuid": "40279d3f-af2c-44de-bb9c-57657d54dd49",
           "children": [],
@@ -7155,45 +7162,6 @@
           "authorship": "(Gray, GR, 1844)"
         }
       ]
-    },
-    {
-      "id": "GENUS_GLAUCIDIUM",
-      "name": "\"Glaucidium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GLAUCIDIUM_PASSERINUM_LINNAEUS_1758",
-          "name": "\"Glaucidium passerinum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Glaucidium",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1629578"
-          },
-          "children": [],
-          "uuid": "e586134a-aa19-5f6-829-00ff48941deec8",
-          "description": "\"Glaucidium passerinum\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_GLAUCIDIUM_CASTANOTUM_BLYTH_1850",
-          "name": "\"Glaucidium castanotum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Glaucidium",
-          "authorship": "\"(Blyth, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1657358"
-          },
-          "children": [],
-          "uuid": "fa3dc5f4-f479-5ed-bd6-41e2a7f64be012",
-          "description": "\"Glaucidium castanotum\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
     },
     {
       "id": "GENUS_GLAUCIDIUM",
@@ -7260,7 +7228,8 @@
             "checklistbank-21227": "gbif.org/species/5232118",
             "checklistbank-25996": "14230AVES",
             "checklistbank-25059": "gbif.org/species/5232118",
-            "checklistbank-304433": "https://www.gbif.org/species/7191258"
+            "checklistbank-304433": "https://www.gbif.org/species/7191258",
+            "checklistbank-281817": "230180"
           },
           "children": [],
           "authorship": "(Gmelin, 1788)",
@@ -7283,7 +7252,10 @@
           },
           "children": [],
           "authorship": "P.L.Sclater, 1857",
-          "uuid": "e5d7cec0-139d-5c4-97a-bf0d1627f1601d"
+          "uuid": "e5d7cec0-139d-5c4-97a-bf0d1627f1601d",
+          "authorIds": [
+            "Q435725"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_CAPENSE",
@@ -7318,7 +7290,8 @@
             "checklistbank-2036": "Glaucidium_castanotum",
             "checklistbank-316441": "3G63R",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "1063259",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1260299"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1260299",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1657358"
           },
           "children": [],
           "uuid": "6337246d-e346-54f-a46-9b732168157c3d",
@@ -7421,7 +7394,10 @@
           },
           "children": [],
           "authorship": "Wagler, 1832",
-          "uuid": "2067373f-3923-549-a56-a270a58fa58409"
+          "uuid": "2067373f-3923-549-a56-a270a58fa58409",
+          "authorIds": [
+            "Q65327"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_GRISEICEPS",
@@ -7443,7 +7419,10 @@
           },
           "children": [],
           "authorship": "Sharpe, 1875",
-          "uuid": "29320bd7-0862-5ab-95a-7fde766c0d9bab"
+          "uuid": "29320bd7-0862-5ab-95a-7fde766c0d9bab",
+          "authorIds": [
+            "Q432586"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_HARDYI",
@@ -7462,11 +7441,15 @@
             "checklistbank-2169": "126883",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "555449",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q287071",
-            "checklistbank-74965": "https://www.gbif.org/species/5232089"
+            "checklistbank-74965": "https://www.gbif.org/species/5232089",
+            "checklistbank-281817": "230184"
           },
           "children": [],
           "authorship": "Vielliard, 1989",
-          "uuid": "2132522f-d729-5fa-9ca-ff1c2bd6fc0d41"
+          "uuid": "2132522f-d729-5fa-9ca-ff1c2bd6fc0d41",
+          "authorIds": [
+            "Q10304822"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_HOSKINSII",
@@ -7485,7 +7468,10 @@
           },
           "children": [],
           "authorship": "Brewster, 1888",
-          "uuid": "10650939-caa2-535-9c9-784c065f711fd6"
+          "uuid": "10650939-caa2-535-9c9-784c065f711fd6",
+          "authorIds": [
+            "Q2119625"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_JARDINII",
@@ -7526,7 +7512,8 @@
             "checklistbank-2036": "Glaucidium_minutissimum",
             "checklistbank-316441": "3G642",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "555450",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1268802"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1268802",
+            "checklistbank-281817": "230185"
           },
           "children": [],
           "authorship": "(zu Wied-Neuwied, 1830)",
@@ -7546,11 +7533,17 @@
             "checklistbank-2036": "Glaucidium_mooreorum",
             "checklistbank-316441": "3G643",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "686694",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1268642"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1268642",
+            "checklistbank-281817": "230186"
           },
           "children": [],
           "authorship": "Silva, Coelho & Gonzaga, 2003",
-          "uuid": "7c958cbe-c3b4-5f0-86c-f52adb71b9ca70"
+          "uuid": "7c958cbe-c3b4-5f0-86c-f52adb71b9ca70",
+          "authorIds": [
+            "Q21388852",
+            "Q21390293",
+            "Q21492701"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_NANA",
@@ -7597,7 +7590,11 @@
           },
           "children": [],
           "authorship": "Robbins & Stiles, 1999",
-          "uuid": "6913450a-17a2-5f4-be1-2f4c2acf0ecb64"
+          "uuid": "6913450a-17a2-5f4-be1-2f4c2acf0ecb64",
+          "authorIds": [
+            "Q16990154",
+            "Q11859261"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_PALMARUM",
@@ -7618,7 +7615,10 @@
           },
           "children": [],
           "authorship": "Nelson, 1901",
-          "uuid": "f2fff4b8-1356-50f-bef-6b50adaf54eae3"
+          "uuid": "f2fff4b8-1356-50f-bef-6b50adaf54eae3",
+          "authorIds": [
+            "Q536268"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_PARKERI",
@@ -7638,7 +7638,11 @@
           },
           "children": [],
           "authorship": "Robbins & S.N.G.Howell, 1995",
-          "uuid": "94c0c323-835d-51a-840-c08aa85af60961"
+          "uuid": "94c0c323-835d-51a-840-c08aa85af60961",
+          "authorIds": [
+            "Q16990154",
+            "Q23073228"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_PASSERINUM",
@@ -7649,7 +7653,8 @@
           "lineage": "Glaucidium",
           "sourceIds": {
             "checklistbank": "Glaucidium_passerinum",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q191155"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q191155",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1629578"
           },
           "children": [],
           "uuid": "609aaa5d-b750-503-b5c-a8e7660e35e06c",
@@ -7735,7 +7740,11 @@
           },
           "children": [],
           "authorship": "Lowery & R.J.Newman, 1949",
-          "uuid": "14921bf9-469e-528-b6d-d6480539e0ce48"
+          "uuid": "14921bf9-469e-528-b6d-d6480539e0ce48",
+          "authorIds": [
+            "Q11860391",
+            "Q22110179"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_SIJU",
@@ -7775,7 +7784,10 @@
           },
           "children": [],
           "authorship": "Reichenow, 1893",
-          "uuid": "cc8aa17d-6f8a-500-a80-88924a1a8e3083"
+          "uuid": "cc8aa17d-6f8a-500-a80-88924a1a8e3083",
+          "authorIds": [
+            "Q62349"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_TEPHRONOTUM",
@@ -7792,11 +7804,15 @@
             "checklistbank-316441": "5HGYQ",
             "checklistbank-2169": "126856",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "555459",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q975302"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q975302",
+            "checklistbank-172235": "ARG-BIDAF2020140REG-Birds-Ch-37"
           },
           "children": [],
           "authorship": "Sharpe, 1875",
-          "uuid": "df027907-0141-5f6-b9a-45c7840f842f93"
+          "uuid": "df027907-0141-5f6-b9a-45c7840f842f93",
+          "authorIds": [
+            "Q432586"
+          ]
         },
         {
           "id": "SP_GLAUCIDIUM_CASTANEUM_NEUMANN_1893",
@@ -7951,7 +7967,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126213768"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q432586"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8007,45 +8026,6 @@
     },
     {
       "id": "GENUS_AEGOLIUS",
-      "name": "\"Aegolius",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AEGOLIUS_GRADYI_OLSON_2012",
-          "name": "\"Aegolius gradyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aegolius",
-          "authorship": "\"Olson, 2012\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484303"
-          },
-          "children": [],
-          "uuid": "a83b19bb-9eba-5b5-b31-60ba79c7bfe6c2",
-          "description": "\"Aegolius gradyi\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_AEGOLIUS_FUNEREUS_LINNAEUS_1758",
-          "name": "\"Aegolius funereus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aegolius",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1629498"
-          },
-          "children": [],
-          "uuid": "6f3e2e45-8b8a-5c9-873-0ae02373766eb4",
-          "description": "\"Aegolius funereus\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_AEGOLIUS",
       "name": "Aegolius",
       "rank": "GENUS",
       "children": [
@@ -8083,7 +8063,8 @@
           "lineage": "Aegolius",
           "sourceIds": {
             "checklistbank": "Aegolius_funereus",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q174466"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q174466",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1629498"
           },
           "children": [],
           "uuid": "50ff135e-9727-5e9-b2b-71bfc82c965205",
@@ -8106,7 +8087,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "555474",
             "checklistbank-74965": "https://www.gbif.org/species/5232210",
             "checklistbank-29649": "gbif.org/species/5232210",
-            "checklistbank-304433": "https://www.gbif.org/species/6176229"
+            "checklistbank-304433": "https://www.gbif.org/species/6176229",
+            "checklistbank-281817": "230159"
           },
           "children": [],
           "authorship": "(Cassin, 1849)",
@@ -8157,34 +8139,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Aegolius",
           "sourceIds": {
-            "checklistbank-139831": "372447"
+            "checklistbank-139831": "372447",
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484303"
           },
           "uuid": "4b68b4f4-8a72-4677-978d-3903b62cb721",
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
-    },
-    {
-      "id": "GENUS_KETUPA",
-      "name": "\"Ketupa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_KETUPA_ZEYLONENSIS_GMELIN_1788",
-          "name": "\"Ketupa zeylonensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ketupa",
-          "authorship": "\"(Gmelin, 1788)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649196"
-          },
           "children": [],
-          "uuid": "f018b580-817c-5e0-b75-a188fe0faaef26",
-          "description": "\"Ketupa zeylonensis\" is a strigidae species found in its native region."
+          "authorship": "Olson, 2012"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8265,11 +8225,15 @@
             "gbif-backbone": "5232229",
             "checklistbank-2036": "Ketupa_zeylonensis",
             "checklistbank-316441": "3R6SM",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "555419"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "555419",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1649196"
           },
           "children": [],
           "authorship": "(J.F.Gmelin, 1788)",
-          "uuid": "aa376772-dffb-5fc-be1-972e0c49c6dfb6"
+          "uuid": "aa376772-dffb-5fc-be1-972e0c49c6dfb6",
+          "authorIds": [
+            "Q57230"
+          ]
         },
         {
           "id": "SP_KETUPA_LEUCOSTICTA",
@@ -8563,7 +8527,13 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q955155"
           },
           "authorityIds": "wikidata:Q955155",
-          "authorship": "Mourer-Chauviré, Bour, Moutou & Ribes, 1994"
+          "authorship": "Mourer-Chauviré, Bour, Moutou & Ribes, 1994",
+          "authorIds": [
+            "Q14849941",
+            "Q19843946",
+            "Q47482803",
+            "Q56512039"
+          ]
         },
         {
           "id": "MASCARENOTUS_MURIVORUS",
@@ -8599,7 +8569,6 @@
           "lineage": "Mascarenotus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Mascarenotus sauzieri (Mauritius Owl) is a strigidae species found in its native region.",
           "sourcedFrom": "gbif",
           "children": [],
           "uuid": "e4457e44-5252-556-afa-bedeafc51ca3fd",
@@ -8617,75 +8586,6 @@
           "authorship": "(Newton & Gadow, 1893)"
         }
       ]
-    },
-    {
-      "id": "GENUS_BUBO",
-      "name": "\"Bubo",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BUBO_SCANDIACUS_LINNAEUS_1758",
-          "name": "\"Bubo scandiacus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bubo",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1459996"
-          },
-          "children": [],
-          "uuid": "93e5b8d9-3794-57f-a30-1ba4cdb30a1708",
-          "description": "\"Bubo scandiacus\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_BUBO_MAGELLANICUS_LESSON_1828",
-          "name": "\"Bubo magellanicus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bubo",
-          "authorship": "\"(Lesson, 1828)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476307"
-          },
-          "children": [],
-          "uuid": "f94ae5a3-9c7f-564-923-65e6508588845a",
-          "description": "\"Bubo magellanicus\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_BUBO_VIRGINIANUS_GMELIN_1788",
-          "name": "\"Bubo virginianus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bubo",
-          "authorship": "\"(Gmelin, 1788)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484319"
-          },
-          "children": [],
-          "uuid": "fdfe6d58-1b02-514-a89-931c24e4b47f8e",
-          "description": "\"Bubo virginianus\" is a strigidae species found in its native region."
-        },
-        {
-          "id": "SP_BUBO_BUBO_LINNAEUS_1758",
-          "name": "\"Bubo bubo\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bubo",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1506637"
-          },
-          "children": [],
-          "uuid": "9b14efaf-5e22-528-ad1-0d6453241acb93",
-          "description": "\"Bubo bubo\" is a strigidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "strigidae"
     },
     {
       "id": "GENUS_BUBO",
@@ -8742,7 +8642,10 @@
             "checklistbank-2265": "1564486"
           },
           "children": [],
-          "uuid": "badf96ed-f596-53a-a68-fdb05cb3c706b3"
+          "uuid": "badf96ed-f596-53a-a68-fdb05cb3c706b3",
+          "authorIds": [
+            "Q1368988"
+          ]
         },
         {
           "id": "SP_BUBO_BUBO",
@@ -8754,7 +8657,8 @@
           "sourceIds": {
             "checklistbank": "Bubo_bubo",
             "checklistbank-316441": "5G2SG",
-            "checklistbank-316046": "https://www.gbif.org/taxon/NKSD"
+            "checklistbank-316046": "https://www.gbif.org/taxon/NKSD",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1506637"
           },
           "children": [],
           "uuid": "c35195fa-5e7f-5e0-9c1-32d41a9471844c",
@@ -8779,7 +8683,8 @@
             "checklistbank-74965": "https://www.gbif.org/species/5959118",
             "checklistbank-7888": "NHMSYS0001689429",
             "checklistbank-304433": "https://www.gbif.org/species/5959118",
-            "checklistbank-316046": "https://www.gbif.org/taxon/NKTR"
+            "checklistbank-316046": "https://www.gbif.org/taxon/NKTR",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1484319"
           },
           "children": [],
           "authorship": "(J.F.Gmelin, 1788)",
@@ -8794,7 +8699,8 @@
           "lineage": "Bubo",
           "sourceIds": {
             "checklistbank": "Bubo_scandiacus",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q170177"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q170177",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1459996"
           },
           "children": [],
           "uuid": "99ad5620-6160-5b4-8a7-b34fe3887ebc96",
@@ -8822,7 +8728,10 @@
           },
           "children": [],
           "authorship": "(Temminck, 1821)",
-          "uuid": "319ec8f2-f9ff-5bd-85b-32f8b2c4103e7d"
+          "uuid": "319ec8f2-f9ff-5bd-85b-32f8b2c4103e7d",
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_BUBO_ASCALAPHUS",
@@ -8843,7 +8752,10 @@
           },
           "children": [],
           "authorship": "Savigny, 1809",
-          "uuid": "5a62ba0d-cc77-5a6-bc0-85c65057c10c95"
+          "uuid": "5a62ba0d-cc77-5a6-bc0-85c65057c10c95",
+          "authorIds": [
+            "Q637766"
+          ]
         },
         {
           "id": "SP_BUBO_BENGALENSIS",
@@ -8885,7 +8797,10 @@
           },
           "children": [],
           "authorship": "A.Smith, 1834",
-          "uuid": "f760861a-f3ba-591-a00-dde317aea9df70"
+          "uuid": "f760861a-f3ba-591-a00-dde317aea9df70",
+          "authorIds": [
+            "Q507606"
+          ]
         },
         {
           "id": "SP_BUBO_CINERASCENS",
@@ -8906,7 +8821,10 @@
           },
           "children": [],
           "authorship": "Guérin-Méneville, 1843",
-          "uuid": "3f842ae8-762a-551-945-7ec63f3617d6b2"
+          "uuid": "3f842ae8-762a-551-945-7ec63f3617d6b2",
+          "authorIds": [
+            "Q2560760"
+          ]
         },
         {
           "id": "SP_BUBO_COROMANDUS",
@@ -8954,11 +8872,15 @@
             "checklistbank": "Bubo_leucostictus",
             "gbif-backbone": "5959116",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1273322",
-            "checklistbank-103462": "NG:NCB:Biseni_fauna_Checklist:0000028"
+            "checklistbank-103462": "NG:NCB:Biseni_fauna_Checklist:0000028",
+            "checklistbank-172235": "ARG-BIDAF2020140REG-Birds-Ch-40"
           },
           "children": [],
           "authorship": "Hartlaub, 1855",
-          "uuid": "0e7fff3b-fcb5-553-830-6acfc8c868c5a6"
+          "uuid": "0e7fff3b-fcb5-553-830-6acfc8c868c5a6",
+          "authorIds": [
+            "Q62368"
+          ]
         },
         {
           "id": "SP_BUBO_MAGELLANICUS",
@@ -8973,11 +8895,15 @@
             "checklistbank-2036": "Bubo_magellanicus",
             "checklistbank-316441": "68SFN",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "686684",
-            "checklistbank-7888": "NHMSYS0020789045"
+            "checklistbank-7888": "NHMSYS0020789045",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1476307"
           },
           "children": [],
           "authorship": "(R.Lesson, 1828)",
-          "uuid": "cc16eca0-d75a-52c-a2e-35590b139c6b8a"
+          "uuid": "cc16eca0-d75a-52c-a2e-35590b139c6b8a",
+          "authorIds": [
+            "Q318217"
+          ]
         },
         {
           "id": "SP_BUBO_NIPALENSIS",
@@ -8995,7 +8921,10 @@
           },
           "children": [],
           "authorship": "Hodgson, 1836",
-          "uuid": "10fa1d91-bf22-5d8-9e9-fe50b00685fa13"
+          "uuid": "10fa1d91-bf22-5d8-9e9-fe50b00685fa13",
+          "authorIds": [
+            "Q735026"
+          ]
         },
         {
           "id": "SP_BUBO_PHILIPPENSIS",
@@ -9012,7 +8941,10 @@
           },
           "children": [],
           "authorship": "Kaup, 1851",
-          "uuid": "2f31e054-996c-5ca-a17-d1a5ea88015f65"
+          "uuid": "2f31e054-996c-5ca-a17-d1a5ea88015f65",
+          "authorIds": [
+            "Q31651"
+          ]
         },
         {
           "id": "SP_BUBO_POENSIS",
@@ -9025,11 +8957,15 @@
             "checklistbank": "Bubo_poensis",
             "gbif-backbone": "5959135",
             "checklistbank-2169": "2499925",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q629757"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q629757",
+            "checklistbank-172235": "ARG-BIDAF2020140REG-Birds-Ch-39"
           },
           "children": [],
           "authorship": "Fraser, 1854",
-          "uuid": "8d5737c3-9eaf-5e2-8cc-ef8633bc05440b"
+          "uuid": "8d5737c3-9eaf-5e2-8cc-ef8633bc05440b",
+          "authorIds": [
+            "Q1383810"
+          ]
         },
         {
           "id": "SP_BUBO_SHELLEYI",
@@ -9045,7 +8981,10 @@
           },
           "children": [],
           "authorship": "(Sharpe & Ussher, 1872)",
-          "uuid": "16620741-7df2-522-8ac-93231c5d60d9e8"
+          "uuid": "16620741-7df2-522-8ac-93231c5d60d9e8",
+          "authorIds": [
+            "Q432586"
+          ]
         },
         {
           "id": "SP_BUBO_SUMATRANUS",
@@ -9079,7 +9018,10 @@
           },
           "children": [],
           "authorship": "Reichenow, 1908",
-          "uuid": "392a02af-b6b7-590-844-e986d9807d12f3"
+          "uuid": "392a02af-b6b7-590-844-e986d9807d12f3",
+          "authorIds": [
+            "Q62349"
+          ]
         },
         {
           "id": "SP_BUBO_LONGAEVUS_UMANS_KA_1979",
@@ -9405,7 +9347,10 @@
             "checklistbank-25996": "19144AVES"
           },
           "authorityIds": "col:4PJKF,itis:1063247,wikidata:Q27074736",
-          "authorship": "(Kaup, 1853)"
+          "authorship": "(Kaup, 1853)",
+          "authorIds": [
+            "Q31651"
+          ]
         }
       ]
     },
@@ -9454,7 +9399,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27074741"
           },
           "authorityIds": "col:3Y477,itis:1063251,wikidata:Q27074741",
-          "authorship": "(Sclater & Salvin, 1868)"
+          "authorship": "(Sclater & Salvin, 1868)",
+          "authorIds": [
+            "Q435725",
+            "Q933058"
+          ]
         },
         {
           "id": "SP_MARGAROBYAS_ABRONENSIS_ZELENKOV_GONZALEZ_2021",
@@ -9487,7 +9436,6 @@
           "lineage": "Grallistrix",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Grallistrix auceps (long-legged Kauai owl) is a strigidae species found in its native region.",
           "sourcedFrom": "gbif",
           "children": [],
           "uuid": "79ad17db-f2ad-53b-a40-8c7915c0b33229",
@@ -9512,7 +9460,6 @@
           "lineage": "Grallistrix",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Grallistrix erdmani (Maui Stilt-owl) is a strigidae species found in its native region.",
           "sourcedFrom": "inaturalist",
           "children": [],
           "uuid": "8a8d5ac1-dfb9-5c1-a13-f26e0ba11b5357",
@@ -9537,7 +9484,6 @@
           "lineage": "Grallistrix",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Grallistrix geleches (Moloka'i Stilt-owl) is a strigidae species found in its native region.",
           "sourcedFrom": "inaturalist",
           "children": [],
           "uuid": "66d677d3-4f11-504-84c-fc0479616f4bca",
@@ -9562,7 +9508,6 @@
           "lineage": "Grallistrix",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Grallistrix orion (O'ahu Stilt-owl) is a strigidae species found in its native region.",
           "sourcedFrom": "inaturalist",
           "children": [],
           "uuid": "1e8a93fa-1954-5c7-a3a-0d578bcdd72518",
@@ -9596,7 +9541,6 @@
           "lineage": "Ornimegalonyx",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ornimegalonyx ewingi is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c3e39b57-b20d-53e-bd9-6da18a0817ef44",
@@ -9655,7 +9599,6 @@
           "lineage": "Necrobyas",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Necrobyas edwardsi is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a57c82b8-873c-590-96e-fdbfec21938570",
@@ -9674,7 +9617,6 @@
           "lineage": "Necrobyas",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Necrobyas harpax is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "b271abd4-eb1d-50d-8ea-99489e010315d0",
@@ -9693,7 +9635,6 @@
           "lineage": "Necrobyas",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Necrobyas minimus is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "9b88177b-e129-573-ba2-7b3c998d1fa387",
@@ -9712,7 +9653,6 @@
           "lineage": "Necrobyas",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Necrobyas rossignoli is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "eb4a370a-f90a-5ed-996-3aba4af49094da",
@@ -9764,8 +9704,7 @@
             "checklistbank": "txn:368515",
             "checklistbank-1174": "txn:368515"
           },
-          "commonName": "Brea owl",
-          "description": "Oraristrix brea (Brea owl) is a strigidae species found in its native region."
+          "commonName": "Brea owl"
         }
       ]
     },
@@ -9784,7 +9723,6 @@
           "lineage": "Basityto",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Basityto rummeli is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c8c77fcf-2efe-5f3-84d-3c979efe39da03",
@@ -9812,7 +9750,6 @@
           "lineage": "Eoglaucidium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Eoglaucidium palias is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "429bd4ae-ce9f-57c-909-1808a71f83bee9",
@@ -9839,7 +9776,6 @@
           "lineage": "Scops",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Scops cristatus is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c59f3a69-f076-527-b57-1baf28f1e328f9",
@@ -9855,7 +9791,6 @@
           "lineage": "Scops",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Scops spec is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c62bd964-e1ff-54a-a27-edcc761bcedcd2",
@@ -9877,8 +9812,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41019594"
           },
           "children": [],
-          "uuid": "79c37060-0d4f-549-bd6-09bf5297fa5ed3",
-          "description": "Scops guatemalae is a strigidae species found in its native region."
+          "uuid": "79c37060-0d4f-549-bd6-09bf5297fa5ed3"
         },
         {
           "id": "SP_SCOPS_RORAIMAE_SALVIN_1897",
@@ -9893,8 +9827,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41019685"
           },
           "children": [],
-          "uuid": "528633d6-7fe1-501-a5f-d45b387ca9dd35",
-          "description": "Scops roraimae is a strigidae species found in its native region."
+          "uuid": "528633d6-7fe1-501-a5f-d45b387ca9dd35"
         },
         {
           "id": "SP_SCOPS_RUTILUS_PUCHERAN_1849",
@@ -9910,8 +9843,7 @@
           },
           "children": [],
           "uuid": "b6242f81-182a-534-adb-a63a3590fa9e9d",
-          "commonName": "Malagasy scops-owl",
-          "description": "Scops rutilus (Malagasy scops-owl) is a strigidae species found in its native region."
+          "commonName": "Malagasy scops-owl"
         },
         {
           "id": "SP_SCOPS_INGENS",
@@ -10320,7 +10252,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109563473"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q727876"
+          ]
         },
         {
           "id": "SP_SCOPS_BOURUENSIS",
@@ -10351,7 +10286,6 @@
           "lineage": "Mioglaux",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Mioglaux debellatrix is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d6d72580-842d-552-94e-6313545b29ec3a",
@@ -10379,7 +10313,6 @@
           "lineage": "Strigogyps",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Strigogyps dubius is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "513aecaf-77f0-5a5-b14-4c97d36494015d",
@@ -10401,8 +10334,7 @@
             "checklistbank": "ott6155364"
           },
           "children": [],
-          "uuid": "9b18f1bc-379c-5c3-b97-fb50bcf65904e4",
-          "description": "Strigogyps minor is a strigidae species found in its native region."
+          "uuid": "9b18f1bc-379c-5c3-b97-fb50bcf65904e4"
         }
       ]
     },
@@ -10421,7 +10353,6 @@
           "lineage": "Intulula",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Intulula tinnipara is a strigidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "aae50010-74da-595-bbe-a52351b9a86163",
@@ -10463,8 +10394,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q117263422"
           },
           "authorityIds": "col:CPKYF,itis:1244679",
-          "commonName": "Collared Owlet",
-          "description": "Taenioptynx brodiei (Collared Owlet) is a strigidae species found in its native region."
+          "commonName": "Collared Owlet"
         },
         {
           "id": "SP_TAENIOPTYNX_SYLVATICUS_BONAPARTE_1850",
@@ -10489,8 +10419,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q117254729"
           },
           "authorityIds": "col:CPKYJ,itis:1244680",
-          "commonName": "Sunda Owlet",
-          "description": "Taenioptynx sylvaticus (Sunda Owlet) is a strigidae species found in its native region."
+          "commonName": "Sunda Owlet"
         },
         {
           "id": "SP_TAENIOPTYNX_SYLVATICUM",
@@ -10536,8 +10465,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q21366616"
           },
           "authorityIds": "col:6L72Y,itis:1063586",
-          "commonName": "Puerto Rican Owl",
-          "description": "Gymnasio nudipes (Puerto Rican Owl) is a strigidae species found in its native region."
+          "commonName": "Puerto Rican Owl"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -10562,8 +10490,7 @@
           },
           "children": [],
           "uuid": "1b8ca0ed-2cde-5a8-b6a-87b48328b7babc",
-          "commonName": "Snowy Owl",
-          "description": "Nyctea scandiaca (Snowy Owl) is a strigidae species found in its native region."
+          "commonName": "Snowy Owl"
         },
         {
           "id": "SP_NYCTEA_NIVEA",
@@ -10576,8 +10503,7 @@
             "checklistbank": "416715"
           },
           "children": [],
-          "uuid": "152223f7-4846-5ba-be6-23ffb579372062",
-          "description": "Nyctea nivea is a strigidae species found in its native region."
+          "uuid": "152223f7-4846-5ba-be6-23ffb579372062"
         },
         {
           "id": "SP_NYCTEA_NYCTEA_LINNAEUS_1758",
@@ -10591,8 +10517,7 @@
             "checklistbank": "416716"
           },
           "children": [],
-          "uuid": "2bb6883b-f967-5c3-84e-bc860851644f64",
-          "description": "Nyctea nyctea is a strigidae species found in its native region."
+          "uuid": "2bb6883b-f967-5c3-84e-bc860851644f64"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10620,8 +10545,7 @@
           },
           "children": [],
           "uuid": "d5a57d00-dd6d-535-aff-03bd4a44bed829",
-          "commonName": "Mottled Owl",
-          "description": "Ciccaba virgata (Mottled Owl) is a strigidae species found in its native region."
+          "commonName": "Mottled Owl"
         },
         {
           "id": "SP_CICCABA_HUHULA_DAUDIN_1800",
@@ -10638,8 +10562,7 @@
           },
           "children": [],
           "uuid": "4e4877ad-30db-53d-a55-b3cb6e647a3f96",
-          "commonName": "Black-banded Owl",
-          "description": "Ciccaba huhula (Black-banded Owl) is a strigidae species found in its native region."
+          "commonName": "Black-banded Owl"
         },
         {
           "id": "SP_CICCABA_SUPERCILIARIS_CHUBB_1916",
@@ -10654,8 +10577,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q40653217"
           },
           "children": [],
-          "uuid": "a83765a5-5a4c-581-bdc-f18e07880568ed",
-          "description": "Ciccaba superciliaris is a strigidae species found in its native region."
+          "uuid": "a83765a5-5a4c-581-bdc-f18e07880568ed"
         },
         {
           "id": "SP_CICCABA_NIGROLINEATA",
@@ -10676,8 +10598,7 @@
           "children": [],
           "authorship": "Sclater, 1859",
           "uuid": "d3baa9f4-9fd0-524-a9c-f94de0a673217c",
-          "commonName": "black & white owl",
-          "description": "Ciccaba nigrolineata (black & white owl) is a strigidae species found in its native region."
+          "commonName": "black & white owl"
         },
         {
           "id": "SP_CICCABA_ALBITARSIS",
@@ -10694,7 +10615,6 @@
           "children": [],
           "uuid": "8cce38be-65fe-54c-8d6-dfb89cc26a70e1",
           "commonName": "Rufous-banded Owl",
-          "description": "Ciccaba albitarsis (Rufous-banded Owl) is a strigidae species found in its native region.",
           "authorship": "(Bonaparte, 1850)"
         },
         {
@@ -10708,8 +10628,7 @@
             "checklistbank": "ott7663219"
           },
           "children": [],
-          "uuid": "24af96c7-78a3-57c-b6d-b809d976a8024d",
-          "description": "Ciccaba albitarse is a strigidae species found in its native region."
+          "uuid": "24af96c7-78a3-57c-b6d-b809d976a8024d"
         },
         {
           "id": "SP_CICCABA_ALBITARSUS_BONAPARTE_1850",
@@ -10758,8 +10677,7 @@
             "checklistbank": "782455"
           },
           "children": [],
-          "uuid": "c77d8327-4d5b-519-bb4-1bfa9daa3c02e7",
-          "description": "Ephialtes watsonii is a strigidae species found in its native region."
+          "uuid": "c77d8327-4d5b-519-bb4-1bfa9daa3c02e7"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10783,8 +10701,7 @@
           },
           "children": [],
           "uuid": "14f6a207-4e8d-527-9ea-abd18f269598e8",
-          "commonName": "mottled owl",
-          "description": "Syrnium virgatum (mottled owl) is a strigidae species found in its native region."
+          "commonName": "mottled owl"
         },
         {
           "id": "SP_SYRNIUM_BOHNDORFFI",
@@ -10797,8 +10714,7 @@
             "checklistbank": "ott7663257"
           },
           "children": [],
-          "uuid": "a00fa696-8df7-5a2-973-610246a943884c",
-          "description": "Syrnium bohndorffi is a strigidae species found in its native region."
+          "uuid": "a00fa696-8df7-5a2-973-610246a943884c"
         },
         {
           "id": "SP_SYRNIUM_HODGSONI",
@@ -10811,8 +10727,7 @@
             "checklistbank": "ott7663258"
           },
           "children": [],
-          "uuid": "71f21386-9c4c-55f-a21-e5a6ba9b3d05e6",
-          "description": "Syrnium hodgsoni is a strigidae species found in its native region."
+          "uuid": "71f21386-9c4c-55f-a21-e5a6ba9b3d05e6"
         },
         {
           "id": "SP_SYRNIUM_SPILONOTUM",
@@ -10825,8 +10740,7 @@
             "checklistbank": "ott7663259"
           },
           "children": [],
-          "uuid": "837e6d50-434f-5dc-9b8-f3b01bbe7dd0db",
-          "description": "Syrnium spilonotum is a strigidae species found in its native region."
+          "uuid": "837e6d50-434f-5dc-9b8-f3b01bbe7dd0db"
         },
         {
           "id": "SP_SYRNIUM_WOODFORDI",
@@ -10839,8 +10753,7 @@
             "checklistbank": "ott7663260"
           },
           "children": [],
-          "uuid": "899f8998-f1b8-5eb-aac-8c9b943cf58a5c",
-          "description": "Syrnium woodfordi is a strigidae species found in its native region."
+          "uuid": "899f8998-f1b8-5eb-aac-8c9b943cf58a5c"
         },
         {
           "id": "SP_SYRNIUM_ZONOCERCUS",
@@ -10853,8 +10766,7 @@
             "checklistbank": "ott7663261"
           },
           "children": [],
-          "uuid": "5284cbd4-ca63-51f-adf-ae7341b9d26ac8",
-          "description": "Syrnium zonocercus is a strigidae species found in its native region."
+          "uuid": "5284cbd4-ca63-51f-adf-ae7341b9d26ac8"
         },
         {
           "id": "SP_SYRNIUM_ALBITARSE",
@@ -11011,8 +10923,7 @@
           },
           "children": [],
           "uuid": "a8695cbf-4e7f-5a6-b19-a3ea2ca20e2cda",
-          "commonName": "burrowing owl",
-          "description": "Speotyto cunicularia (burrowing owl) is a strigidae species found in its native region."
+          "commonName": "burrowing owl"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11036,8 +10947,7 @@
           },
           "children": [],
           "uuid": "1a7da20d-e4c0-5b8-bd3-c686fcd69c44a0",
-          "commonName": "stygian owl",
-          "description": "Nyctalops stygius (stygian owl) is a strigidae species found in its native region."
+          "commonName": "stygian owl"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11060,8 +10970,7 @@
           },
           "children": [],
           "uuid": "8e4c17ea-23de-51b-a08-468f4987165ff3",
-          "commonName": "Giant scops owl",
-          "description": "Mimizuku gurneyi (Giant scops owl) is a strigidae species found in its native region."
+          "commonName": "Giant scops owl"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11083,8 +10992,7 @@
             "checklistbank": "ott7663239"
           },
           "children": [],
-          "uuid": "6baba1c4-9df7-5ac-880-15e336c2e4d985",
-          "description": "Pisorhina balia is a strigidae species found in its native region."
+          "uuid": "6baba1c4-9df7-5ac-880-15e336c2e4d985"
         },
         {
           "id": "SP_PISORHINA_SCOPS",
@@ -11097,8 +11005,7 @@
             "checklistbank": "ott7663240"
           },
           "children": [],
-          "uuid": "b3fe07eb-4d13-5a1-831-cd1546f115eb7e",
-          "description": "Pisorhina scops is a strigidae species found in its native region."
+          "uuid": "b3fe07eb-4d13-5a1-831-cd1546f115eb7e"
         },
         {
           "id": "SP_PISORHINA_UGANDAE",
@@ -11111,8 +11018,7 @@
             "checklistbank": "ott7663241"
           },
           "children": [],
-          "uuid": "2921265e-ae54-52c-bac-dd6aa3ad54690b",
-          "description": "Pisorhina ugandae is a strigidae species found in its native region."
+          "uuid": "2921265e-ae54-52c-bac-dd6aa3ad54690b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11135,8 +11041,7 @@
             "checklistbank": "txn:335047"
           },
           "children": [],
-          "uuid": "0f56164e-95c0-555-add-3d9b8333e6b3bd",
-          "description": "Prosybris antiqua is a strigidae species found in its native region."
+          "uuid": "0f56164e-95c0-555-add-3d9b8333e6b3bd"
         },
         {
           "id": "SP_PROSYBRIS_MEDIUS_MOURER_CHAUVIR_1987",
@@ -11150,8 +11055,7 @@
             "checklistbank": "txn:430229"
           },
           "children": [],
-          "uuid": "d1a88ec2-87f5-514-b66-0f04bf6a95b4c8",
-          "description": "Prosybris medius is a strigidae species found in its native region."
+          "uuid": "d1a88ec2-87f5-514-b66-0f04bf6a95b4c8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11174,8 +11078,7 @@
             "checklistbank": "txn:430226"
           },
           "children": [],
-          "uuid": "70f5b1c9-e49a-511-99c-0b8fb9e855a23b",
-          "description": "Palaeoglaux artophoron is a strigidae species found in its native region."
+          "uuid": "70f5b1c9-e49a-511-99c-0b8fb9e855a23b"
         },
         {
           "id": "SP_PALAEOGLAUX_PERRIERENSIS_MOURER_CHAUVIR_1987",
@@ -11189,8 +11092,7 @@
             "checklistbank": "txn:430227"
           },
           "children": [],
-          "uuid": "8420250c-9373-5d3-b71-f0de0194b45a0f",
-          "description": "Palaeoglaux perrierensis is a strigidae species found in its native region."
+          "uuid": "8420250c-9373-5d3-b71-f0de0194b45a0f"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11214,8 +11116,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122848150"
           },
           "children": [],
-          "uuid": "74402501-b366-540-933-c7b077b68af107",
-          "description": "Miosurnia diurna is a strigidae species found in its native region."
+          "uuid": "74402501-b366-540-933-c7b077b68af107"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11238,8 +11139,7 @@
             "checklistbank": "txn:487018"
           },
           "children": [],
-          "uuid": "467b02ee-7ae4-5b0-a7e-78b7feafde4868",
-          "description": "Micropallas whitneyi is a strigidae species found in its native region."
+          "uuid": "467b02ee-7ae4-5b0-a7e-78b7feafde4868"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11400,8 +11300,8 @@
       "lineage": "strigidae"
     }
   ],
-  "genusCount": 68,
-  "speciesCount": 602,
+  "genusCount": 56,
+  "speciesCount": 577,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1,15 +1,29 @@
 {
-  "added": 68,
-  "applied": {
-    "added": 68,
-    "at": "2026-10-22T16:10:24",
-    "families": 416,
-    "refusalRate": 0.0,
-    "refused": 0
-  },
+  "key": "checklistbank-2000",
+  "title": "Batch import - checklistbank-2000",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 130095024,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-2000/archive.zip",
-  "crossFamily": 54,
+  "added": 68,
+  "merged": 64448,
   "families": 416,
+  "crossFamily": 54,
+  "reason": "user 2026-11-01: apply the newer version (measured 2026-10-31); re-transform from the new archive, not the stale 22 Oct transform",
+  "applied": {
+    "added": 60,
+    "merged": 67406,
+    "crossFamily": 2284,
+    "families": 420,
+    "at": "2026-11-01T11:48:38Z"
+  },
+  "triaged": {
+    "offered": 393721,
+    "alreadyHeld": 298163,
+    "staged": 67486,
+    "refused": 0,
+    "refusalRate": 0
+  },
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -26,22 +40,30 @@
     {
       "at": "2026-10-31T23:13:43+0100",
       "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T09:24:22+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-11-01T11:43:26Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-01T11:45:37Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T11:45:37Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-01T11:45:37Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-01T11:48:38Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-2000",
-  "licence": "cc by",
-  "merged": 64448,
-  "reason": "newer version measured 2026-10-31: 2275 species would be added; dry run in archives/checklistbank-2000/dryrun.txt; waiting on the user",
-  "size": 130095024,
-  "stage": "triaged",
-  "title": "Batch import - checklistbank-2000",
-  "triaged": {
-    "alreadyHeld": 298160,
-    "families": null,
-    "missedFamilies": null,
-    "offered": 393721,
-    "refusalRate": 0.0,
-    "refused": 0,
-    "staged": 67489
-  }
+  ]
 }

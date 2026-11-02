@@ -6,30 +6,6 @@
   "children": [
     {
       "id": "GENUS_PUDU",
-      "name": "\"Pudu",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PUDU_PUDA_MOLINA_1782",
-          "name": "\"Pudu puda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pudu",
-          "authorship": "\"(Molina, 1782)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603300"
-          },
-          "children": [],
-          "uuid": "c8eaf29f-8cd6-534-910-7725731088691e",
-          "description": "\"Pudu puda\" is a cervidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cervidae"
-    },
-    {
-      "id": "GENUS_PUDU",
       "name": "Pudu",
       "rank": "GENUS",
       "children": [
@@ -41,10 +17,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pudu",
           "sourceIds": {
-            "checklistbank": "Pudu_puda"
+            "checklistbank": "Pudu_puda",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1603300"
           },
           "children": [],
-          "uuid": "81d39935-c4ca-5fa-a16-4f807333a28d0f"
+          "uuid": "81d39935-c4ca-5fa-a16-4f807333a28d0f",
+          "authorship": "(Molina, 1782)"
         },
         {
           "id": "SP_PUDU_MEPHISTOPHELES_DE_WINTON",
@@ -137,10 +115,14 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12676/",
             "checklistbank-28960": "2339",
             "checklistbank-7888": "NBNSYS0000005148",
-            "checklistbank-312616": "af8d3d3b129b4dc4ad46a3bd275faf40"
+            "checklistbank-312616": "af8d3d3b129b4dc4ad46a3bd275faf40",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:6011560"
           },
           "authorityIds": "col:6MJGG,itis:625054,wikidata:Q192573",
-          "authorship": "Swinhoe, 1870"
+          "authorship": "Swinhoe, 1870",
+          "authorIds": [
+            "Q468149"
+          ]
         }
       ]
     },
@@ -205,7 +187,9 @@
             "checklistbank-28806": "1082",
             "checklistbank-26137": "1090",
             "checklistbank-77941": "122581",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552475"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552475",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:6011555",
+            "checklistbank-281817": "225357"
           },
           "authorityIds": "col:K49Z,itis:552474,wikidata:Q232054",
           "authorship": "(Erxleben, 1777)"
@@ -333,8 +317,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Axis",
-          "uuid": "f63ffea3-73c5-5f8-b90-bec87d3a9a3ad6",
-          "description": "Axis sunda is a cervidae species found in its native region."
+          "uuid": "f63ffea3-73c5-5f8-b90-bec87d3a9a3ad6"
         },
         {
           "id": "SP_AXIS_KYUSHUENSIS",
@@ -345,11 +328,13 @@
           "children": [],
           "lineage": "Axis",
           "uuid": "c3dbc6ee-d2ff-550-819-138d98f94315eb",
-          "description": "Axis kyushuensis is a cervidae species found in its native region.",
           "authorship": "Grubb, 2000",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121366165"
-          }
+          },
+          "authorIds": [
+            "Q2075299"
+          ]
         },
         {
           "id": "SP_AXIS_LYDEKKERI",
@@ -360,11 +345,13 @@
           "children": [],
           "lineage": "Axis",
           "uuid": "ff110a7c-ae3e-539-b71-e3e0122e2ad384",
-          "description": "Axis lydekkeri is a cervidae species found in its native region.",
           "authorship": "Martin, 1886",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q114408617"
-          }
+          },
+          "authorIds": [
+            "Q72782"
+          ]
         },
         {
           "id": "SP_AXIS_JAPONICUS",
@@ -408,7 +395,6 @@
           "lineage": "Elaphurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Elaphurus davidiamis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1575bfeb-bf44-538-a67-f4112a7eb961fd",
@@ -470,8 +456,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Elaphurus",
-          "uuid": "1048f03c-f861-55c-915-d65c203ec99f11",
-          "description": "Elaphurus formosanus is a cervidae species found in its native region."
+          "uuid": "1048f03c-f861-55c-915-d65c203ec99f11"
         },
         {
           "id": "SP_ELAPHURUS_BIFURCATUS_TEILHARD_DE_CHARDIN_AND_PIVETEAU_1930",
@@ -485,8 +470,7 @@
             "checklistbank": "txn:475381"
           },
           "children": [],
-          "uuid": "2615e526-1b31-5ef-a02-162b431c1396f1",
-          "description": "Elaphurus bifurcatus is a cervidae species found in its native region."
+          "uuid": "2615e526-1b31-5ef-a02-162b431c1396f1"
         },
         {
           "id": "SP_ELAPHURUS_SHIKAMAI",
@@ -563,7 +547,8 @@
             "checklistbank-316260": "https://wingeds.world/sp/91727",
             "checklistbank-53684": "1444",
             "checklistbank-31963": "6584",
-            "checklistbank-312616": "fe13b1ff56dd4b339798502f8d1c57b6"
+            "checklistbank-312616": "fe13b1ff56dd4b339798502f8d1c57b6",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:206046"
           },
           "authorityIds": "col:BHC3,itis:180703,wikidata:Q35517",
           "authorship": "(Linnaeus, 1758)"
@@ -604,7 +589,6 @@
           "lineage": "Alces",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Alces machlis (elk) is a cervidae species found in its native region.",
           "sourcedFrom": "gbif",
           "children": [],
           "uuid": "23e0dddc-c07d-540-bc9-5c2829bff45bbb",
@@ -626,8 +610,7 @@
             "checklistbank": "61053"
           },
           "children": [],
-          "uuid": "04f4d23d-6ff1-5ba-b06-1d37083faa3992",
-          "description": "Alces machilis is a cervidae species found in its native region."
+          "uuid": "04f4d23d-6ff1-5ba-b06-1d37083faa3992"
         },
         {
           "id": "SP_ALCES_BEDFORDIAE",
@@ -640,8 +623,7 @@
             "checklistbank": "ott7655667"
           },
           "children": [],
-          "uuid": "b581a9c4-e1d5-5e0-9ad-f1aa8d28d0e3ab",
-          "description": "Alces bedfordiae is a cervidae species found in its native region."
+          "uuid": "b581a9c4-e1d5-5e0-9ad-f1aa8d28d0e3ab"
         },
         {
           "id": "SP_ALCES_FOSSILIS_KERR_1792",
@@ -655,8 +637,7 @@
             "checklistbank": "txn:234002"
           },
           "children": [],
-          "uuid": "a46506e3-c9b4-574-89a-8a21141bc92d64",
-          "description": "Alces fossilis is a cervidae species found in its native region."
+          "uuid": "a46506e3-c9b4-574-89a-8a21141bc92d64"
         },
         {
           "id": "SP_ALCES_ALCE_LINNAEUS_1758",
@@ -778,7 +759,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q539569"
           },
           "authorityIds": "col:44KXJ,itis:625056,wikidata:Q539569",
-          "authorship": "Groves & Grubb, 1982"
+          "authorship": "Groves & Grubb, 1982",
+          "authorIds": [
+            "Q510661",
+            "Q2075299"
+          ]
         },
         {
           "id": "MUNTIACUS_CRINIFRONS",
@@ -816,7 +801,10 @@
             "checklistbank-312616": "a388770d0c2b406099110214db065977"
           },
           "authorityIds": "col:44KXK,itis:625057,wikidata:Q600743",
-          "authorship": "(Sclater, 1885)"
+          "authorship": "(Sclater, 1885)",
+          "authorIds": [
+            "Q435725"
+          ]
         },
         {
           "id": "MUNTIACUS_FEAE",
@@ -854,7 +842,11 @@
             "checklistbank-312616": "147a4c37611f472cb13d61543efabd1e"
           },
           "authorityIds": "col:44KXL,itis:625058,wikidata:Q1418780",
-          "authorship": "(Thomas et Doria, 1889)"
+          "authorship": "(Thomas et Doria, 1889)",
+          "authorIds": [
+            "Q318207",
+            "Q1219227"
+          ]
         },
         {
           "id": "MUNTIACUS_GONGSHANENSIS",
@@ -1007,7 +999,12 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q908454"
           },
           "authorityIds": "col:44KXQ,itis:898204,wikidata:Q908454",
-          "authorship": "Amato, Egan & Rabinowitz, 1999"
+          "authorship": "Amato, Egan & Rabinowitz, 1999",
+          "authorIds": [
+            "Q50809137",
+            "Q108127573",
+            "Q4707575"
+          ]
         },
         {
           "id": "MUNTIACUS_REEVESI",
@@ -1058,7 +1055,8 @@
             "checklistbank-31952": "1818",
             "checklistbank-312616": "2ae4ca2714d142319cc7b2b6c1f60c9b",
             "checklistbank-21627": "urn:lsid:dyntaxa.se:Taxon:6007821",
-            "checklistbank-315647": "48efef4a-8511-40f9-a76c-fd62635437f3"
+            "checklistbank-315647": "48efef4a-8511-40f9-a76c-fd62635437f3",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:6007821"
           },
           "authorityIds": "col:44KXR,itis:625061,wikidata:Q695973",
           "authorship": "(Ogilby, 1839)"
@@ -1200,7 +1198,9 @@
           },
           "authorityIds": "col:QSBW9,itis:1277264",
           "commonName": "Barking Deer",
-          "description": "Muntiacus vaginalis (Barking Deer) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q438869"
+          ]
         },
         {
           "id": "SP_MUNTIACUS_MALABARICUS_LYDEKKER_1915",
@@ -1222,8 +1222,7 @@
             "checklistbank-9802": "1006331"
           },
           "authorityIds": "col:VBQQX,itis:1277261",
-          "commonName": "Malabar Red Muntjac",
-          "description": "Muntiacus malabaricus (Malabar Red Muntjac) is a cervidae species found in its native region."
+          "commonName": "Malabar Red Muntjac"
         },
         {
           "id": "SP_MUNTIACUS_MONTANUS",
@@ -1240,8 +1239,7 @@
             "checklistbank": "txn:237903",
             "checklistbank-1174": "txn:237903",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q951776"
-          },
-          "description": "Muntiacus montanus (Sumatran Muntjac) is a cervidae species found in its native region."
+          }
         },
         {
           "id": "SP_MUNTIACUS_PLIOCAENICUS",
@@ -1251,8 +1249,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Muntiacus",
-          "uuid": "7524f372-0941-585-bba-4cdb4426faf941",
-          "description": "Muntiacus pliocaenicus is a cervidae species found in its native region."
+          "uuid": "7524f372-0941-585-bba-4cdb4426faf941"
         },
         {
           "id": "SP_MUNTIACUS_LACRYMANS",
@@ -1265,8 +1262,7 @@
             "checklistbank": "ott7655665"
           },
           "children": [],
-          "uuid": "117e07f1-5af0-5d0-a13-62580a072c1c65",
-          "description": "Muntiacus lacrymans is a cervidae species found in its native region."
+          "uuid": "117e07f1-5af0-5d0-a13-62580a072c1c65"
         },
         {
           "id": "SP_MUNTIACUS_SP",
@@ -1279,8 +1275,7 @@
             "checklistbank": "63130"
           },
           "children": [],
-          "uuid": "85266a87-b70c-5cd-a7a-8deea27d4ff20a",
-          "description": "Muntiacus sp. is a cervidae species found in its native region."
+          "uuid": "85266a87-b70c-5cd-a7a-8deea27d4ff20a"
         },
         {
           "id": "SP_MUNTIACUS_MOSCHATUS_BLAINVILLE_1816",
@@ -1294,8 +1289,7 @@
             "checklistbank": "txn:237899"
           },
           "children": [],
-          "uuid": "25385989-8ef9-538-80f-26f29dfe1d9908",
-          "description": "Muntiacus moschatus is a cervidae species found in its native region."
+          "uuid": "25385989-8ef9-538-80f-26f29dfe1d9908"
         },
         {
           "id": "SP_MUNTIACUS_NANUS_TEILHARD_DE_CHARDIN_AND_TRASSAERT_1937",
@@ -1309,8 +1303,7 @@
             "checklistbank": "txn:473759"
           },
           "children": [],
-          "uuid": "0541e153-db99-55b-8ce-e599cbffdc048a",
-          "description": "Muntiacus nanus is a cervidae species found in its native region."
+          "uuid": "0541e153-db99-55b-8ce-e599cbffdc048a"
         },
         {
           "id": "SP_MUNTIACUS_BOHLINI_TEILHARD_DE_CHARDIN_1940",
@@ -1324,8 +1317,7 @@
             "checklistbank": "txn:473760"
           },
           "children": [],
-          "uuid": "4fb29148-6826-510-b6e-5af02df7474710",
-          "description": "Muntiacus bohlini is a cervidae species found in its native region."
+          "uuid": "4fb29148-6826-510-b6e-5af02df7474710"
         },
         {
           "id": "SP_MUNTIACUS_LACUSTRIS_TEILHARD_DE_CHARDIN_AND_TRASSAERT_1937",
@@ -1340,8 +1332,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125622756"
           },
           "children": [],
-          "uuid": "8f3c33f0-bb7d-52b-842-4280d6d5646216",
-          "description": "Muntiacus lacustris is a cervidae species found in its native region."
+          "uuid": "8f3c33f0-bb7d-52b-842-4280d6d5646216"
         },
         {
           "id": "SP_MUNTIACUS_LEILAOENSIS_DONG_ET_AL_2004",
@@ -1355,8 +1346,7 @@
             "checklistbank": "txn:473762"
           },
           "children": [],
-          "uuid": "849f7946-8f21-5ff-989-7e19eb96184e65",
-          "description": "Muntiacus leilaoensis is a cervidae species found in its native region."
+          "uuid": "849f7946-8f21-5ff-989-7e19eb96184e65"
         },
         {
           "id": "SP_MUNTIACUS_NORINGENENSIS_DONG_2007",
@@ -1370,8 +1360,7 @@
             "checklistbank": "txn:473763"
           },
           "children": [],
-          "uuid": "e91d1fc5-c349-502-aae-6e7db8b917baaf",
-          "description": "Muntiacus noringenensis is a cervidae species found in its native region."
+          "uuid": "e91d1fc5-c349-502-aae-6e7db8b917baaf"
         },
         {
           "id": "SP_MUNTIACUS_FENGHOENSIS_CHOW_1956",
@@ -1385,8 +1374,7 @@
             "checklistbank": "txn:473764"
           },
           "children": [],
-          "uuid": "20e43d09-2bd7-586-951-d384772c55b1e3",
-          "description": "Muntiacus fenghoensis is a cervidae species found in its native region."
+          "uuid": "20e43d09-2bd7-586-951-d384772c55b1e3"
         },
         {
           "id": "SP_MUNTIACUS_ZHAOTONGENSIS_DONG_ET_AL_2014",
@@ -1401,8 +1389,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125623295"
           },
           "children": [],
-          "uuid": "80befc05-bce0-579-8f9-df8fdd927ee75d",
-          "description": "Muntiacus zhaotongensis is a cervidae species found in its native region."
+          "uuid": "80befc05-bce0-579-8f9-df8fdd927ee75d"
         },
         {
           "id": "SP_MUNTIACUS_NIGRIPES",
@@ -1439,7 +1426,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123176079"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q11531073"
+          ]
         },
         {
           "id": "SP_MUNTIACUS_AUREUS_SMITH_1826",
@@ -1471,7 +1461,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Alces brevitrabalis (Cervus Brevitrabalis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ded190ad-545c-570-bda-4dc0ff20b9572d",
@@ -1488,7 +1477,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus anocerus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e685d79f-29ff-5e9-a3a-aa38407f19dcd7",
@@ -1507,7 +1495,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus bertholdi is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "dad49874-2bd8-532-a59-792cef8af5d223",
@@ -1526,7 +1513,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus cornaliai is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "49952fd4-f064-52f-b92-70db8c443141d9",
@@ -1545,7 +1531,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus costrizensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c132c948-ab5c-5bb-a36-e4bfecdf821eef",
@@ -1564,7 +1549,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus curtocerus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "34e4ea71-0f05-566-be7-e5dd8a6efd212c",
@@ -1583,7 +1567,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus dicranocerus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d3b5d488-a6c4-5d1-abb-824855df3e39e5",
@@ -1602,7 +1585,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus elaphoides is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d70f0e43-5d4e-56d-99d-4b0c4f15fcd424",
@@ -1681,10 +1663,15 @@
             "checklistbank-288374": "HABITATDIRECT-UA-ANNEX.II:171",
             "checklistbank-77947": "100120",
             "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180696",
-            "checklistbank-24520": "84078"
+            "checklistbank-24520": "84078",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:206043",
+            "checklistbank-281817": "239341"
           },
           "authorityIds": "col:T56G,itis:180695,wikidata:Q79794",
-          "authorship": "Linnaeus, 1758"
+          "authorship": "Linnaeus, 1758",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "CERVUS_FORTIS",
@@ -1694,7 +1681,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus fortis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "41611a96-9734-5ce-8d6-86cb891b43046f",
@@ -1750,7 +1736,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus humilis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4da410f9-ab59-514-801-76329545d3a889",
@@ -1773,7 +1758,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus kokubuni is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ac5b4529-7288-52c-beb-341cda6849ff45",
@@ -1787,7 +1771,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q100254871"
           },
           "authorityIds": "wikidata:Q100254871",
-          "authorship": "Shikama 1937"
+          "authorship": "Shikama 1937",
+          "authorIds": [
+            "Q11677315"
+          ]
         },
         {
           "id": "CERVUS_KOPSCHI",
@@ -1797,7 +1784,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus kopschi is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f8f8147a-1a7b-50c-91e-2b072985b58208",
@@ -1809,7 +1795,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122912039"
           },
           "authorityIds": "wikidata:Q122912039",
-          "authorship": "Swinhoe, 1873"
+          "authorship": "Swinhoe, 1873",
+          "authorIds": [
+            "Q468149"
+          ]
         },
         {
           "id": "CERVUS_LATUS",
@@ -1819,7 +1808,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus latus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "2ad45fef-b246-5d8-85c-e234b04a1b9cce",
@@ -1838,7 +1826,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus lydekkeri is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f98967e3-a31d-503-917-e5358301110e6a",
@@ -1862,7 +1849,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus mediterraneus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ecdae3fe-aa9a-53a-843-c7cf7db00bddcf",
@@ -1900,7 +1886,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus nanus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "de473e34-7475-58e-98b-37d82ee5acd744",
@@ -1975,7 +1960,8 @@
             "checklistbank-21627": "urn:lsid:dyntaxa.se:Taxon:6011557",
             "checklistbank-77941": "122621",
             "checklistbank-24506": "95845",
-            "checklistbank-28808": "1078"
+            "checklistbank-28808": "1078",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:6011557"
           },
           "authorityIds": "col:T56N,itis:180696,wikidata:Q190516",
           "authorship": "Temminck, 1838"
@@ -1988,7 +1974,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus nudipalpebra is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "39ddee78-6fd8-5da-b9e-c27c7eb0258f78",
@@ -2011,7 +1996,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus obscurus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7e37f6f0-983e-5c4-a09-f8a9dfe3b57141",
@@ -2030,7 +2014,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus partschii is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f1d40130-34cd-525-8ae-c64f5fc31ee8cc",
@@ -2049,7 +2032,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus pulchellus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f55179c7-f641-52f-b80-7d791fbda51329",
@@ -2061,7 +2043,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123076092"
           },
           "authorityIds": "wikidata:Q123076092",
-          "authorship": "Imaizumi, 1970"
+          "authorship": "Imaizumi, 1970",
+          "authorIds": [
+            "Q11377239"
+          ]
         },
         {
           "id": "CERVUS_RUSCINENSIS",
@@ -2071,7 +2056,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus ruscinensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1b3eb12e-9b4f-525-9be-afa52cc4a4d762",
@@ -2090,7 +2074,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus sedgwickii is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "8bb026b3-a3a7-5ff-8d0-dd4c2a3e533b95",
@@ -2109,7 +2092,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus sintikuensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "9eebc92f-3e15-5d9-b08-3eaf67792cf95e",
@@ -2123,7 +2105,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124727971"
           },
           "authorityIds": "wikidata:Q124727971",
-          "authorship": "Shikama 1937"
+          "authorship": "Shikama 1937",
+          "authorIds": [
+            "Q11677315"
+          ]
         },
         {
           "id": "CERVUS_SYATINENSIS",
@@ -2133,7 +2118,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus syatinensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d18dc110-3108-5f4-a1c-a37c8cd3da3ad8",
@@ -2147,7 +2131,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124728034"
           },
           "authorityIds": "wikidata:Q124728034",
-          "authorship": "Shikama 1937"
+          "authorship": "Shikama 1937",
+          "authorIds": [
+            "Q11677315"
+          ]
         },
         {
           "id": "CERVUS_TIMORIENSIS",
@@ -2157,7 +2144,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus timoriensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4959b573-4f3e-564-a9c-1b7762ceccc36e",
@@ -2175,7 +2161,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus trigonocerus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "86d4e087-1e5e-5bd-82b-2e160b4462c953",
@@ -2216,7 +2201,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus xanthopygus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "bbb23501-8d8b-597-877-b93c7db2973e92",
@@ -2238,7 +2222,6 @@
           "lineage": "Cervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus yesoensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e4dc9813-2efa-5d2-856-5749140620b5f6",
@@ -2276,7 +2259,9 @@
           },
           "authorityIds": "col:5XN8M,itis:898259",
           "commonName": "elk",
-          "description": "Cervus canadensis (elk) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q60938"
+          ]
         },
         {
           "id": "SP_CERVUS_ALBIROSTRIS_PRZEWALSKI_1883",
@@ -2303,7 +2288,9 @@
           },
           "authorityIds": "col:T569,itis:625045",
           "commonName": "Thorold's Deer",
-          "description": "Cervus albirostris (Thorold's Deer) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q192442"
+          ]
         },
         {
           "id": "SP_CERVUS_ASTYLODON",
@@ -2332,8 +2319,7 @@
             "checklistbank": "61011"
           },
           "children": [],
-          "uuid": "6195a729-8eee-526-af4-b6e0798fb9c2f9",
-          "description": "Cervus hippelaphus is a cervidae species found in its native region."
+          "uuid": "6195a729-8eee-526-af4-b6e0798fb9c2f9"
         },
         {
           "id": "SP_CERVUS_MONTANUS_BOTEZAT_1903",
@@ -2347,8 +2333,7 @@
             "checklistbank": "61012"
           },
           "children": [],
-          "uuid": "550963a3-8c38-59d-963-48d31ae581c9e4",
-          "description": "Cervus montanus is a cervidae species found in its native region."
+          "uuid": "550963a3-8c38-59d-963-48d31ae581c9e4"
         },
         {
           "id": "SP_CERVUS_RHENANUS_MATSCHIE_1907",
@@ -2363,8 +2348,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2314137"
           },
           "children": [],
-          "uuid": "c4d7ca7d-a1a6-5d5-b4a-6f204b167e02fa",
-          "description": "Cervus rhenanus is a cervidae species found in its native region."
+          "uuid": "c4d7ca7d-a1a6-5d5-b4a-6f204b167e02fa"
         },
         {
           "id": "SP_CERVUS_SCOTICUS_L_NNBERG_1906",
@@ -2378,8 +2362,7 @@
             "checklistbank": "61016"
           },
           "children": [],
-          "uuid": "1479b311-9e75-509-aec-25c528e565024c",
-          "description": "Cervus scoticus is a cervidae species found in its native region."
+          "uuid": "1479b311-9e75-509-aec-25c528e565024c"
         },
         {
           "id": "SP_CERVUS_MINOR_WAGNER_1855",
@@ -2393,8 +2376,7 @@
             "checklistbank": "61022"
           },
           "children": [],
-          "uuid": "900b874a-0972-509-b24-176ad993fff609",
-          "description": "Cervus minor is a cervidae species found in its native region."
+          "uuid": "900b874a-0972-509-b24-176ad993fff609"
         },
         {
           "id": "SP_CERVUS_PLINII_ZIMMERMANN_1780",
@@ -2408,8 +2390,7 @@
             "checklistbank": "61032"
           },
           "children": [],
-          "uuid": "bb751d42-f12f-579-8db-7880434da00fc9",
-          "description": "Cervus plinii is a cervidae species found in its native region."
+          "uuid": "bb751d42-f12f-579-8db-7880434da00fc9"
         },
         {
           "id": "SP_CERVUS_LEUCAETHIOPS_J_B_FISCHER_1829",
@@ -2423,8 +2404,7 @@
             "checklistbank": "61034"
           },
           "children": [],
-          "uuid": "16a106ae-709a-562-8fa-11393aca612936",
-          "description": "Cervus leucaethiops is a cervidae species found in its native region."
+          "uuid": "16a106ae-709a-562-8fa-11393aca612936"
         },
         {
           "id": "SP_CERVUS_CAPREOLUS_LINNAEUS_1758",
@@ -2441,7 +2421,9 @@
           "children": [],
           "uuid": "9fff5829-5118-5d4-b1b-18c002361bca17",
           "commonName": "European roe deer",
-          "description": "Cervus capreolus (European roe deer) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_TIMORENSIS_BLAINVILLE_1822",
@@ -2456,8 +2438,7 @@
             "checklistbank-127379": "d08d7660-7063-46fe-8de9-2f9613608710"
           },
           "children": [],
-          "uuid": "795bfa02-593b-5d8-8e0-860ae42722cec6",
-          "description": "Cervus timorensis is a cervidae species found in its native region."
+          "uuid": "795bfa02-593b-5d8-8e0-860ae42722cec6"
         },
         {
           "id": "SP_CERVUS_NESTII",
@@ -2472,8 +2453,7 @@
           },
           "children": [],
           "authorship": "(Azzaroli 1947)",
-          "uuid": "74592076-9cef-591-b69-33fc4138ac8d74",
-          "description": "Cervus nestii is a cervidae species found in its native region."
+          "uuid": "74592076-9cef-591-b69-33fc4138ac8d74"
         },
         {
           "id": "SP_CERVUS_TARANDUS_LINNAEUS_1758",
@@ -2490,7 +2470,9 @@
           "children": [],
           "uuid": "8ee45d43-246e-55c-870-4964ebcf18a50e",
           "commonName": "reindeer",
-          "description": "Cervus tarandus (reindeer) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_ALCES_LINNAEUS_1758",
@@ -2507,7 +2489,9 @@
           "children": [],
           "uuid": "23adb52d-7f14-526-900-cd00d31ebbec78",
           "commonName": "moose",
-          "description": "Cervus alces (moose) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_UNICOLOR_KERR",
@@ -2524,8 +2508,7 @@
           },
           "children": [],
           "uuid": "98c09783-a6f2-508-bbc-8e03c9804f8c34",
-          "commonName": "sambar",
-          "description": "Cervus unicolor (sambar) is a cervidae species found in its native region."
+          "commonName": "sambar"
         },
         {
           "id": "SP_CERVUS_AFFINIS",
@@ -2538,8 +2521,7 @@
             "checklistbank": "ott7655613"
           },
           "children": [],
-          "uuid": "742ce72b-852a-5c8-a5f-ed14c362642af6",
-          "description": "Cervus affinis is a cervidae species found in its native region."
+          "uuid": "742ce72b-852a-5c8-a5f-ed14c362642af6"
         },
         {
           "id": "SP_CERVUS_ALBICORNIS",
@@ -2552,8 +2534,7 @@
             "checklistbank": "ott7655614"
           },
           "children": [],
-          "uuid": "2005c4d8-c065-54d-adb-7441ae160855a5",
-          "description": "Cervus albicornis is a cervidae species found in its native region."
+          "uuid": "2005c4d8-c065-54d-adb-7441ae160855a5"
         },
         {
           "id": "SP_CERVUS_BACTRIANUS",
@@ -2566,8 +2547,7 @@
             "checklistbank": "ott7655616"
           },
           "children": [],
-          "uuid": "bc794dfa-2898-5b4-9a9-55af40cd147355",
-          "description": "Cervus bactrianus is a cervidae species found in its native region."
+          "uuid": "bc794dfa-2898-5b4-9a9-55af40cd147355"
         },
         {
           "id": "SP_CERVUS_BEDFORDIANUS",
@@ -2580,8 +2560,7 @@
             "checklistbank": "ott7655617"
           },
           "children": [],
-          "uuid": "d2887b23-c34b-55d-b2d-220f48c7b01515",
-          "description": "Cervus bedfordianus is a cervidae species found in its native region."
+          "uuid": "d2887b23-c34b-55d-b2d-220f48c7b01515"
         },
         {
           "id": "SP_CERVUS_BROWNI",
@@ -2594,8 +2573,7 @@
             "checklistbank": "ott7655619"
           },
           "children": [],
-          "uuid": "148a1c8c-a13d-548-91b-a62880cfd03bc0",
-          "description": "Cervus browni is a cervidae species found in its native region."
+          "uuid": "148a1c8c-a13d-548-91b-a62880cfd03bc0"
         },
         {
           "id": "SP_CERVUS_CASHMEERIANUS",
@@ -2608,8 +2586,7 @@
             "checklistbank": "ott7655620"
           },
           "children": [],
-          "uuid": "14ad455a-b4db-568-bf7-f60adcb457447d",
-          "description": "Cervus cashmeerianus is a cervidae species found in its native region."
+          "uuid": "14ad455a-b4db-568-bf7-f60adcb457447d"
         },
         {
           "id": "SP_CERVUS_CASHMERENSIS",
@@ -2622,8 +2599,7 @@
             "checklistbank": "ott7655621"
           },
           "children": [],
-          "uuid": "790f7673-6966-593-8a6-c81c8106183ae2",
-          "description": "Cervus cashmerensis is a cervidae species found in its native region."
+          "uuid": "790f7673-6966-593-8a6-c81c8106183ae2"
         },
         {
           "id": "SP_CERVUS_CASHMIRIANUS",
@@ -2636,8 +2612,7 @@
             "checklistbank": "ott7655622"
           },
           "children": [],
-          "uuid": "a0985a61-2a33-558-9e6-2c47d82f025519",
-          "description": "Cervus cashmirianus is a cervidae species found in its native region."
+          "uuid": "a0985a61-2a33-558-9e6-2c47d82f025519"
         },
         {
           "id": "SP_CERVUS_CASPERIANUS",
@@ -2650,8 +2625,7 @@
             "checklistbank": "ott7655623"
           },
           "children": [],
-          "uuid": "a60e118c-67c2-530-9b6-5fac94ce15c5bc",
-          "description": "Cervus casperianus is a cervidae species found in its native region."
+          "uuid": "a60e118c-67c2-530-9b6-5fac94ce15c5bc"
         },
         {
           "id": "SP_CERVUS_DIMORPHE",
@@ -2664,8 +2638,7 @@
             "checklistbank": "ott7655627"
           },
           "children": [],
-          "uuid": "22a8b153-63c4-533-a11-a1113823cc0880",
-          "description": "Cervus dimorphe is a cervidae species found in its native region."
+          "uuid": "22a8b153-63c4-533-a11-a1113823cc0880"
         },
         {
           "id": "SP_CERVUS_DYBOWSKII",
@@ -2678,8 +2651,7 @@
             "checklistbank": "ott7655628"
           },
           "children": [],
-          "uuid": "8a1bb415-2f3a-586-bcf-65b71b55c1a271",
-          "description": "Cervus dybowskii is a cervidae species found in its native region."
+          "uuid": "8a1bb415-2f3a-586-bcf-65b71b55c1a271"
         },
         {
           "id": "SP_CERVUS_EUOPIS",
@@ -2692,8 +2664,7 @@
             "checklistbank": "ott7655630"
           },
           "children": [],
-          "uuid": "68e4088d-367b-507-bb2-bec7cdaf60020c",
-          "description": "Cervus euopis is a cervidae species found in its native region."
+          "uuid": "68e4088d-367b-507-bb2-bec7cdaf60020c"
         },
         {
           "id": "SP_CERVUS_EUSTEPHANUS",
@@ -2706,8 +2677,7 @@
             "checklistbank": "ott7655631"
           },
           "children": [],
-          "uuid": "b85bd831-8a74-5a6-a88-f84cdea65bceef",
-          "description": "Cervus eustephanus is a cervidae species found in its native region."
+          "uuid": "b85bd831-8a74-5a6-a88-f84cdea65bceef"
         },
         {
           "id": "SP_CERVUS_GOUAZOUPIRA",
@@ -2720,8 +2690,7 @@
             "checklistbank": "ott7655632"
           },
           "children": [],
-          "uuid": "05e4e3bc-a1b2-5bb-8aa-fb59cedc6b40c0",
-          "description": "Cervus gouazoupira is a cervidae species found in its native region."
+          "uuid": "05e4e3bc-a1b2-5bb-8aa-fb59cedc6b40c0"
         },
         {
           "id": "SP_CERVUS_HETEROCERUS",
@@ -2734,8 +2703,7 @@
             "checklistbank": "ott7655633"
           },
           "children": [],
-          "uuid": "dd5f2b7e-27ed-531-b88-812b96432bf4c1",
-          "description": "Cervus heterocerus is a cervidae species found in its native region."
+          "uuid": "dd5f2b7e-27ed-531-b88-812b96432bf4c1"
         },
         {
           "id": "SP_CERVUS_MACNEILLI",
@@ -2748,8 +2716,7 @@
             "checklistbank": "ott7655635"
           },
           "children": [],
-          "uuid": "9bc7bc47-725b-5e2-a1b-0ff15967923b65",
-          "description": "Cervus macneilli is a cervidae species found in its native region."
+          "uuid": "9bc7bc47-725b-5e2-a1b-0ff15967923b65"
         },
         {
           "id": "SP_CERVUS_MANDARINUS",
@@ -2764,8 +2731,10 @@
           },
           "children": [],
           "uuid": "0e1d7bde-8368-5c6-949-376b3a217a08b5",
-          "description": "Cervus mandarinus is a cervidae species found in its native region.",
-          "authorship": "Milne-Edwards, 1871"
+          "authorship": "Milne-Edwards, 1871",
+          "authorIds": [
+            "Q542059"
+          ]
         },
         {
           "id": "SP_CERVUS_MEXICANUS",
@@ -2778,8 +2747,7 @@
             "checklistbank": "ott7655638"
           },
           "children": [],
-          "uuid": "c94e0fa7-3d16-595-998-2706cb0629acd1",
-          "description": "Cervus mexicanus is a cervidae species found in its native region."
+          "uuid": "c94e0fa7-3d16-595-998-2706cb0629acd1"
         },
         {
           "id": "SP_CERVUS_MUNTJAK",
@@ -2794,8 +2762,10 @@
           },
           "children": [],
           "uuid": "fed5ca81-06a6-512-bcc-b50569f1ef7145",
-          "description": "Cervus muntjak is a cervidae species found in its native region.",
-          "authorship": "von Zimmermann, 1780"
+          "authorship": "von Zimmermann, 1780",
+          "authorIds": [
+            "Q213607"
+          ]
         },
         {
           "id": "SP_CERVUS_PERUVIANUS",
@@ -2808,8 +2778,7 @@
             "checklistbank": "ott7655642"
           },
           "children": [],
-          "uuid": "73bae212-ac79-5b8-a0c-a46ec857d51a56",
-          "description": "Cervus peruvianus is a cervidae species found in its native region."
+          "uuid": "73bae212-ac79-5b8-a0c-a46ec857d51a56"
         },
         {
           "id": "SP_CERVUS_SAVINI",
@@ -2822,8 +2791,7 @@
             "checklistbank": "ott7655643"
           },
           "children": [],
-          "uuid": "7af207db-7b0b-5ac-b79-4c9c012acc3b9e",
-          "description": "Cervus savini is a cervidae species found in its native region."
+          "uuid": "7af207db-7b0b-5ac-b79-4c9c012acc3b9e"
         },
         {
           "id": "SP_CERVUS_SPATULATUS",
@@ -2836,8 +2804,7 @@
             "checklistbank": "ott7655644"
           },
           "children": [],
-          "uuid": "13e2d657-9a02-52b-b8c-2cfe31fddd3678",
-          "description": "Cervus spatulatus is a cervidae species found in its native region."
+          "uuid": "13e2d657-9a02-52b-b8c-2cfe31fddd3678"
         },
         {
           "id": "SP_CERVUS_TAVISTOCKI",
@@ -2850,8 +2817,7 @@
             "checklistbank": "ott7655645"
           },
           "children": [],
-          "uuid": "c4ba1bca-4a4e-50c-8a1-59a52130aac7c0",
-          "description": "Cervus tavistocki is a cervidae species found in its native region."
+          "uuid": "c4ba1bca-4a4e-50c-8a1-59a52130aac7c0"
         },
         {
           "id": "SP_CERVUS_THOROLDI",
@@ -2864,8 +2830,7 @@
             "checklistbank": "ott7655646"
           },
           "children": [],
-          "uuid": "c0fda7aa-1d90-518-895-1fc41c67dc0ffd",
-          "description": "Cervus thoroldi is a cervidae species found in its native region."
+          "uuid": "c0fda7aa-1d90-518-895-1fc41c67dc0ffd"
         },
         {
           "id": "SP_CERVUS_TIBETANUS",
@@ -2878,8 +2843,7 @@
             "checklistbank": "ott7655647"
           },
           "children": [],
-          "uuid": "67fe9e39-d617-53e-ad3-1fe36af075a2f5",
-          "description": "Cervus tibetanus is a cervidae species found in its native region."
+          "uuid": "67fe9e39-d617-53e-ad3-1fe36af075a2f5"
         },
         {
           "id": "SP_CERVUS_BREVITRABALIS_COPE_1889",
@@ -2893,8 +2857,7 @@
             "checklistbank": "txn:43851"
           },
           "children": [],
-          "uuid": "9442547c-3f90-579-b5e-5d938ce0afb4fd",
-          "description": "Cervus brevitrabalis is a cervidae species found in its native region."
+          "uuid": "9442547c-3f90-579-b5e-5d938ce0afb4fd"
         },
         {
           "id": "SP_CERVUS_BEZOARTICUS_LINNAEUS_1758",
@@ -2911,7 +2874,9 @@
           "children": [],
           "uuid": "06b531f1-25bb-547-a58-d99067c4dc0568",
           "commonName": "Pampas deer",
-          "description": "Cervus bezoarticus (Pampas deer) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_SCHOMBURGKI_BLYTHE_1863",
@@ -2926,8 +2891,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10447187"
           },
           "children": [],
-          "uuid": "91dc0858-8e82-5f6-99d-52ca499d0dd182",
-          "description": "Cervus schomburgki is a cervidae species found in its native region."
+          "uuid": "91dc0858-8e82-5f6-99d-52ca499d0dd182"
         },
         {
           "id": "SP_CERVUS_GOUAZOUBIRA_FISCHER_1814",
@@ -2943,7 +2907,9 @@
           },
           "children": [],
           "uuid": "f9feb628-c713-5d7-a8d-b84319d1430706",
-          "description": "Cervus gouazoubira is a cervidae species found in its native region."
+          "authorIds": [
+            "Q57802"
+          ]
         },
         {
           "id": "SP_CERVUS_ALFREDI_SCLATER_1870",
@@ -2959,8 +2925,7 @@
           },
           "children": [],
           "uuid": "a6baf117-fa97-5fe-b49-664387b281ff66",
-          "commonName": "Visayan Spotted Deer",
-          "description": "Cervus alfredi (Visayan Spotted Deer) is a cervidae species found in its native region."
+          "commonName": "Visayan Spotted Deer"
         },
         {
           "id": "SP_CERVUS_MARIANNUS_DESMAREST_1822",
@@ -2976,7 +2941,9 @@
           "children": [],
           "uuid": "7a015dfa-e8bf-50f-bc4-7a2a284243b913",
           "commonName": "Philippine brown deer",
-          "description": "Cervus mariannus (Philippine brown deer) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q33528"
+          ]
         },
         {
           "id": "SP_CERVUS_ELEGANS_TEILHARD_DE_CHARDIN_AND_PIVETEAU_1930",
@@ -2990,8 +2957,7 @@
             "checklistbank": "txn:473774"
           },
           "children": [],
-          "uuid": "98a1ce51-2071-51d-a2a-02d6b1e0be7401",
-          "description": "Cervus elegans is a cervidae species found in its native region."
+          "uuid": "98a1ce51-2071-51d-a2a-02d6b1e0be7401"
         },
         {
           "id": "SP_CERVUS_AUSTRALIS_DE_SERRES_1838",
@@ -3005,8 +2971,7 @@
             "checklistbank": "txn:473921"
           },
           "children": [],
-          "uuid": "791491c4-fea2-55c-bc4-c0694e84d7289f",
-          "description": "Cervus australis is a cervidae species found in its native region."
+          "uuid": "791491c4-fea2-55c-bc4-c0694e84d7289f"
         },
         {
           "id": "SP_CERVUS_PEROLENSIS_AZZAROLI_1952",
@@ -3021,8 +2986,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126693532"
           },
           "children": [],
-          "uuid": "c0f48b4a-0b3b-592-a41-0ba99044594f78",
-          "description": "Cervus perolensis is a cervidae species found in its native region."
+          "uuid": "c0f48b4a-0b3b-592-a41-0ba99044594f78"
         },
         {
           "id": "SP_CERVUS_SIVALENSIS_LYDEKKER_1876",
@@ -3037,8 +3001,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41081836"
           },
           "children": [],
-          "uuid": "77bbbd32-8762-560-82e-1eebadbcbe4099",
-          "description": "Cervus sivalensis is a cervidae species found in its native region."
+          "uuid": "77bbbd32-8762-560-82e-1eebadbcbe4099"
         },
         {
           "id": "SP_CERVUS_TUBERCULATUS_GERVAIS_AND_AMEGHINO_1880",
@@ -3052,8 +3015,7 @@
             "checklistbank": "txn:475489"
           },
           "children": [],
-          "uuid": "efb17396-bdc9-51b-b63-7727a3a13411d2",
-          "description": "Cervus tuberculatus is a cervidae species found in its native region."
+          "uuid": "efb17396-bdc9-51b-b63-7727a3a13411d2"
         },
         {
           "id": "SP_CERVUS_PERCULTUS_AMEGHINO_1902",
@@ -3067,8 +3029,7 @@
             "checklistbank": "txn:475490"
           },
           "children": [],
-          "uuid": "ff5cbfc5-2bc1-5ef-952-d4bf363082c6a9",
-          "description": "Cervus percultus is a cervidae species found in its native region."
+          "uuid": "ff5cbfc5-2bc1-5ef-952-d4bf363082c6a9"
         },
         {
           "id": "SP_CERVUS_SIMPLICIDENS_LYDEKKER_1876",
@@ -3083,8 +3044,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107575692"
           },
           "children": [],
-          "uuid": "a8ed1fdb-d11d-590-8f8-7a4e2c0eaccdb1",
-          "description": "Cervus simplicidens is a cervidae species found in its native region."
+          "uuid": "a8ed1fdb-d11d-590-8f8-7a4e2c0eaccdb1"
         },
         {
           "id": "SP_CERVUS_LEPTODUS_KOKEN_1885",
@@ -3098,8 +3058,7 @@
             "checklistbank": "txn:476364"
           },
           "children": [],
-          "uuid": "9303d387-8325-56b-847-07cfc4fe954f81",
-          "description": "Cervus leptodus is a cervidae species found in its native region."
+          "uuid": "9303d387-8325-56b-847-07cfc4fe954f81"
         },
         {
           "id": "SP_CERVUS_ARISTOTELIS_LYDEKKER_1886",
@@ -3114,8 +3073,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41081670"
           },
           "children": [],
-          "uuid": "aa2f655a-0628-5c7-918-3fc119cf2c519a",
-          "description": "Cervus aristotelis is a cervidae species found in its native region."
+          "uuid": "aa2f655a-0628-5c7-918-3fc119cf2c519a"
         },
         {
           "id": "SP_CERVUS_MONGOLIAE_GAUDRY_1872",
@@ -3129,8 +3087,7 @@
             "checklistbank": "txn:476366"
           },
           "children": [],
-          "uuid": "c1ede9af-47ac-5f9-89f-0b6c6d6033b6ae",
-          "description": "Cervus mongoliae is a cervidae species found in its native region."
+          "uuid": "c1ede9af-47ac-5f9-89f-0b6c6d6033b6ae"
         },
         {
           "id": "SP_CERVUS_TRIPLIDENS_LYDEKKER_1876",
@@ -3144,8 +3101,7 @@
             "checklistbank": "txn:478210"
           },
           "children": [],
-          "uuid": "69b6b981-a1ec-5e5-bca-00a8093960ae04",
-          "description": "Cervus triplidens is a cervidae species found in its native region."
+          "uuid": "69b6b981-a1ec-5e5-bca-00a8093960ae04"
         },
         {
           "id": "SP_CERVUS_TYPICUS_LYDEKKER_1898",
@@ -3291,7 +3247,10 @@
           "uuid": "589282ea-ae27-541-8d1-b946fbb726091e",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122181964"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_PLATYCEROS_CUVIER_1798",
@@ -3412,7 +3371,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q113302738"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q433721"
+          ]
         },
         {
           "id": "SP_CERVUS_JAVANICUS_OSBECK_1765",
@@ -3425,7 +3387,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121365807"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q55069930"
+          ]
         },
         {
           "id": "SP_CERVUS_ETUERIARIUM",
@@ -3450,7 +3415,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q102104873"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q11677315"
+          ]
         },
         {
           "id": "SP_CERVUS_CAMELOPARDALIS_VON_LINN_1758",
@@ -3463,7 +3431,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q110259076"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_EQUINUS",
@@ -3488,7 +3459,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121366259"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q435781"
+          ]
         },
         {
           "id": "SP_CERVUS_GUINEENSIS_VON_LINN_1758",
@@ -3501,7 +3475,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122182054"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERVUS_YABEI_SHIKAMA_1938",
@@ -3514,7 +3491,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122834849"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q11677315"
+          ]
         },
         {
           "id": "SP_CERVUS_PERRIERI",
@@ -3551,7 +3531,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123176455"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q11531073"
+          ]
         },
         {
           "id": "SP_CERVUS_VERTICORNIS",
@@ -3576,7 +3559,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q44361336"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_CERVUS_REEVESI_OGILBY_1839",
@@ -3589,7 +3575,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109647139"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q597658"
+          ]
         },
         {
           "id": "SP_CERVUS_KAZUSENSIS_MATSUMOTO_1926",
@@ -3602,7 +3591,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q112867268"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q11531073"
+          ]
         },
         {
           "id": "SP_CERVUS_NEMORIVAGUS_CUVIER_1817",
@@ -3615,7 +3607,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125745779"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q467962"
+          ]
         },
         {
           "id": "SP_CERVUS_RUFUS_ILLIGER_1815",
@@ -3628,7 +3623,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q128051540"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q58832"
+          ]
         },
         {
           "id": "SP_CERVUS_BROOKEI",
@@ -3701,7 +3699,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122891032"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q155914"
+          ]
         },
         {
           "id": "SP_CERVUS_SUTTONENSIS",
@@ -3750,7 +3751,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125219461"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q966125"
+          ]
         },
         {
           "id": "SP_CERVUS_HORTULORUM_SWINHOE_1864",
@@ -3763,7 +3767,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41081777"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q468149"
+          ]
         },
         {
           "id": "SP_CERVUS_AKIYOSHIENSIS_TSUKA_1977",
@@ -3776,7 +3783,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q112765415"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q108510892"
+          ]
         },
         {
           "id": "SP_CERVUS_TAIOUANUS_BLYTH_1861",
@@ -3789,7 +3799,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q113302740"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q358754"
+          ]
         },
         {
           "id": "SP_CERVUS_MANTCHURICUS_SWINHOE_1864",
@@ -3802,7 +3815,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123075001"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q468149"
+          ]
         },
         {
           "id": "SP_CERVUS_MARAL",
@@ -3839,7 +3855,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q64809970"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q123776"
+          ]
         },
         {
           "id": "SP_CERVUS_RUFINUS",
@@ -3895,7 +3914,8 @@
             "checklistbank-2169": "248133",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "625062",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q504501",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625063"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625063",
+            "checklistbank-281817": "49701"
           },
           "authorityIds": "col:M2J6,itis:625062,wikidata:Q504501",
           "authorship": "Illiger, 1815"
@@ -3908,7 +3928,6 @@
           "lineage": "Blastocerus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Blastocerus extraneus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "05c85828-5574-506-b7f-5abddfd6dbae45",
@@ -3927,7 +3946,6 @@
           "lineage": "Blastocerus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus aspeitianus (Blastocerus Aspeitianus) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ef661539-7ab9-533-99d-59c1c4dabb6147",
@@ -3944,7 +3962,6 @@
           "lineage": "Blastocerus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus campestris (Blastocerus Campestris) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "325a90e1-8765-561-a76-f34b6678a9cd69",
@@ -3961,7 +3978,6 @@
           "lineage": "Blastocerus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus paludosus (Blastocerus Paludosus) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "9904041c-ae4c-5c2-b67-79fcce2a2d9f6f",
@@ -3981,8 +3997,7 @@
             "checklistbank": "ott7655668"
           },
           "children": [],
-          "uuid": "61e5a56b-8ab7-55f-8be-a8e93c61ba3400",
-          "description": "Blastocerus sylvestris is a cervidae species found in its native region."
+          "uuid": "61e5a56b-8ab7-55f-8be-a8e93c61ba3400"
         },
         {
           "id": "SP_BLASTOCERUS_SP",
@@ -4013,7 +4028,6 @@
           "lineage": "Odocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cariacus dolichopsis (Odocoileus Dolichopsis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "00d42898-670c-53e-8c6-ff3d1f6b3976bb",
@@ -4030,7 +4044,6 @@
           "lineage": "Odocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Dama rothschildi (Odocoileus Rothschildi) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "3e265541-a28a-5e6-bf2-fd7a9e1bcf7f78",
@@ -4096,7 +4109,6 @@
           "lineage": "Odocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Odocoileus laevicornis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "8c97084f-9fc6-55b-a9d-85af1469f1e32d",
@@ -4139,7 +4151,6 @@
           "lineage": "Odocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Odocoileus salinae is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a0e53c2f-0700-524-afe-7f444f4f56da88",
@@ -4158,7 +4169,6 @@
           "lineage": "Odocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Odocoileus sellardsiae is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "148db569-09ff-532-a6c-a703bfb1c6553b",
@@ -4177,7 +4187,6 @@
           "lineage": "Odocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Odocoileus speleus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "0b9951a2-78a2-55d-b78-8d43b4130383fe",
@@ -4232,7 +4241,9 @@
             "checklistbank-30064": "gbif.org/species/4262310",
             "checklistbank-212265": "gbif.org/species/4262310",
             "checklistbank-212266": "gbif.org/species/2440965",
-            "checklistbank-21627": "urn:lsid:dyntaxa.se:Taxon:257771"
+            "checklistbank-21627": "urn:lsid:dyntaxa.se:Taxon:257771",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:257771",
+            "checklistbank-281817": "51571"
           },
           "authorityIds": "col:48NBQ,itis:180699,wikidata:Q215887",
           "authorship": "Zimmermann, 1780"
@@ -4261,8 +4272,7 @@
             "checklistbank-2265": "1380314"
           },
           "authorityIds": "col:VBNG7,itis:1277290",
-          "commonName": "Yucatan Brown Brocket",
-          "description": "Odocoileus pandora (Yucatan Brown Brocket) is a cervidae species found in its native region."
+          "commonName": "Yucatan Brown Brocket"
         },
         {
           "id": "SP_ODOCOILEUS_CARIACOU_BODDAERT_1784",
@@ -4277,8 +4287,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16613188"
           },
           "children": [],
-          "uuid": "11837639-951b-570-89f-31e34656d97b74",
-          "description": "Odocoileus cariacou is a cervidae species found in its native region."
+          "uuid": "11837639-951b-570-89f-31e34656d97b74"
         },
         {
           "id": "SP_ODOCOILEUS_VIRGINIANUS",
@@ -4291,8 +4300,7 @@
             "checklistbank": "2759971"
           },
           "children": [],
-          "uuid": "6ee00766-eea5-57d-981-e9b704c2116b47",
-          "description": "Odocoileus ×virginianus is a cervidae species found in its native region."
+          "uuid": "6ee00766-eea5-57d-981-e9b704c2116b47"
         },
         {
           "id": "SP_ODOCOILEUS_DOLICHOPSIS_COPE_1878",
@@ -4306,8 +4314,7 @@
             "checklistbank": "txn:44927"
           },
           "children": [],
-          "uuid": "9eb3c25d-f7f5-57d-898-59e2b3eccda61f",
-          "description": "Odocoileus dolichopsis is a cervidae species found in its native region."
+          "uuid": "9eb3c25d-f7f5-57d-898-59e2b3eccda61f"
         },
         {
           "id": "SP_ODOCOILEUS_ROTHSCHILDI_THOMAS_1902",
@@ -4322,8 +4329,7 @@
             "gbif-backbone": "8589067"
           },
           "children": [],
-          "uuid": "520c1aae-24b5-5a1-b07-aefeb3fceb5149",
-          "description": "Odocoileus rothschildi is a cervidae species found in its native region."
+          "uuid": "520c1aae-24b5-5a1-b07-aefeb3fceb5149"
         },
         {
           "id": "SP_ODOCOILEUS_LUCASI_HAY_1927",
@@ -4338,8 +4344,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7077903"
           },
           "children": [],
-          "uuid": "e862e5cb-8996-578-a38-bed17c89db80c9",
-          "description": "Odocoileus lucasi is a cervidae species found in its native region."
+          "uuid": "e862e5cb-8996-578-a38-bed17c89db80c9"
         },
         {
           "id": "SP_ODOCOILEUS_SP",
@@ -4450,36 +4455,13 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "625073",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6055210",
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12683/",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625074"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625074",
+            "checklistbank-281817": "73016"
           },
           "authorityIds": "col:4BNWT,itis:625073,wikidata:Q674003",
           "authorship": "Linnaeus, 1758"
         }
       ]
-    },
-    {
-      "id": "GENUS_HIPPOCAMELUS",
-      "name": "\"Hippocamelus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HIPPOCAMELUS_BISULCUS_MOLINA_1782",
-          "name": "\"Hippocamelus bisulcus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hippocamelus",
-          "authorship": "\"(Molina, 1782)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603292"
-          },
-          "children": [],
-          "uuid": "051f2b63-c7bc-563-bd9-80e5d34359df75",
-          "description": "\"Hippocamelus bisulcus\" is a cervidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cervidae"
     },
     {
       "id": "GENUS_HIPPOCAMELUS",
@@ -4514,10 +4496,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hippocamelus",
           "sourceIds": {
-            "checklistbank": "Hippocamelus_bisulcus"
+            "checklistbank": "Hippocamelus_bisulcus",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1603292"
           },
           "children": [],
-          "uuid": "9d63628d-aaeb-557-840-5f8a8d45d5bfb6"
+          "uuid": "9d63628d-aaeb-557-840-5f8a8d45d5bfb6",
+          "authorship": "(Molina, 1782)"
         },
         {
           "id": "SP_HIPPOCAMELUS_ANTISIENSIS_D_ORBIGNY",
@@ -4618,7 +4602,10 @@
             "checklistbank-312616": "441604480d6e48828855b6bf84b633dc"
           },
           "authorityIds": "col:38ZPX,itis:625055,wikidata:Q723575",
-          "authorship": "Milne-Edwards,1872"
+          "authorship": "Milne-Edwards,1872",
+          "authorIds": [
+            "Q505173"
+          ]
         },
         {
           "id": "SP_ELAPHODUS_ICHANGENSIS",
@@ -4631,8 +4618,7 @@
             "checklistbank": "ott7655663"
           },
           "children": [],
-          "uuid": "c35efb6a-4132-547-98d-b083577dff5af7",
-          "description": "Elaphodus ichangensis is a cervidae species found in its native region."
+          "uuid": "c35efb6a-4132-547-98d-b083577dff5af7"
         },
         {
           "id": "SP_ELAPHODUS_MICHIANUS",
@@ -4645,8 +4631,7 @@
             "checklistbank": "ott7655664"
           },
           "children": [],
-          "uuid": "296806fd-144e-54f-8f5-cf05a8012ac7bf",
-          "description": "Elaphodus michianus is a cervidae species found in its native region."
+          "uuid": "296806fd-144e-54f-8f5-cf05a8012ac7bf"
         }
       ]
     },
@@ -4768,8 +4753,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Rucervus",
-          "uuid": "667d9618-7a63-550-bea-e7ce30a87be150",
-          "description": "Rucervus radulescui is a cervidae species found in its native region."
+          "uuid": "667d9618-7a63-550-bea-e7ce30a87be150"
         },
         {
           "id": "SP_RUCERVUS_PLATYCEROS",
@@ -4782,8 +4766,7 @@
             "checklistbank": "ott7655657"
           },
           "children": [],
-          "uuid": "03b696a6-4af0-59a-8ef-5be85ddd8bc7a0",
-          "description": "Rucervus platyceros is a cervidae species found in its native region."
+          "uuid": "03b696a6-4af0-59a-8ef-5be85ddd8bc7a0"
         },
         {
           "id": "SP_RUCERVUS_THAMIN",
@@ -4796,8 +4779,7 @@
             "checklistbank": "ott7655658"
           },
           "children": [],
-          "uuid": "83f703ad-26fc-5ad-b8a-e2570048d039aa",
-          "description": "Rucervus thamin is a cervidae species found in its native region."
+          "uuid": "83f703ad-26fc-5ad-b8a-e2570048d039aa"
         },
         {
           "id": "SP_RUCERVUS_GIGANS",
@@ -4929,7 +4911,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20908366",
             "checklistbank-28950": "4735",
             "checklistbank-24479": "165691",
-            "checklistbank-28807": "1487"
+            "checklistbank-28807": "1487",
+            "checklistbank-281817": "225427"
           },
           "authorityIds": "col:4TQSK,itis:898214,wikidata:Q663412",
           "authorship": "de Blainville, 1822"
@@ -4969,7 +4952,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "898215",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20908375",
             "checklistbank-24512": "5226",
-            "checklistbank-312616": "889ae34755cb4890ac37f9dadf0a43fa"
+            "checklistbank-312616": "889ae34755cb4890ac37f9dadf0a43fa",
+            "checklistbank-281817": "225426"
           },
           "authorityIds": "col:4TQSL,itis:898215,wikidata:Q229337",
           "authorship": "Kerr, 1792"
@@ -4986,8 +4970,7 @@
             "checklistbank": "txn:234280"
           },
           "children": [],
-          "uuid": "64ce7502-e161-5d9-b9b-03425948c782a8",
-          "description": "Rusa equina is a cervidae species found in its native region."
+          "uuid": "64ce7502-e161-5d9-b9b-03425948c782a8"
         },
         {
           "id": "SP_RUSA_KENDENGENSIS_DUBOIS_1908",
@@ -5002,8 +4985,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126924062"
           },
           "children": [],
-          "uuid": "be021193-50d3-59b-a7c-d71820d6651b53",
-          "description": "Rusa kendengensis is a cervidae species found in its native region."
+          "uuid": "be021193-50d3-59b-a7c-d71820d6651b53"
         }
       ]
     },
@@ -5022,7 +5004,6 @@
           "lineage": "Antifer",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Antifer crassus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "bcde5544-edca-58d-960-b97ed2c5a39f26",
@@ -5041,7 +5022,6 @@
           "lineage": "Antifer",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Antifer niemeyeri is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7f6ab015-40ce-597-8a9-876113c603b181",
@@ -5060,7 +5040,6 @@
           "lineage": "Antifer",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus ultra (Antifer Ultra) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "893de41d-01e3-5de-b13-538448d7c9f32b",
@@ -5082,8 +5061,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6385718"
           },
           "children": [],
-          "uuid": "dbda97bf-16a7-5f4-aa4-23e32f3b2874fb",
-          "description": "Antifer ultra is a cervidae species found in its native region."
+          "uuid": "dbda97bf-16a7-5f4-aa4-23e32f3b2874fb"
         },
         {
           "id": "SP_ANTIFER_ENSENADENSIS",
@@ -5173,7 +5151,6 @@
           "lineage": "Praemegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus cazioti (Praemegaceros Cazioti) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "de503351-029f-55a-826-d7833714bf0f86",
@@ -5190,7 +5167,6 @@
           "lineage": "Praemegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus dawkinsi (Praemegaceros Dawkinsi) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "008c8914-0be2-5da-823-0334efdaa94259",
@@ -5207,7 +5183,6 @@
           "lineage": "Praemegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus pliotarandoides (Praemegaceros Pliotarandoides) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "b9cd49c6-b130-545-87a-7f793e9697f241",
@@ -5224,7 +5199,6 @@
           "lineage": "Praemegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus solihacus (Praemegaceros Solihacus) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e22f50c0-9e7a-5eb-983-ba38afa05132f0",
@@ -5246,8 +5220,7 @@
           },
           "children": [],
           "authorship": "(Deperet 1897)",
-          "uuid": "354957e5-401b-509-a7c-8e0547c3b51cf6",
-          "description": "Praemegaceros cazioti is a cervidae species found in its native region."
+          "uuid": "354957e5-401b-509-a7c-8e0547c3b51cf6"
         },
         {
           "id": "SP_PRAEMEGACEROS_DAWKINSI_NEWTON_1882",
@@ -5261,8 +5234,7 @@
             "checklistbank": "txn:115128"
           },
           "children": [],
-          "uuid": "0d66b3e5-646a-55b-96b-513fff79d082ce",
-          "description": "Praemegaceros dawkinsi is a cervidae species found in its native region."
+          "uuid": "0d66b3e5-646a-55b-96b-513fff79d082ce"
         },
         {
           "id": "SP_PRAEMEGACEROS_SOLIHACUS_ROBERT_1830",
@@ -5276,8 +5248,7 @@
             "checklistbank": "txn:374681"
           },
           "children": [],
-          "uuid": "7031ba0d-6b1a-5bd-b7f-10afc6ac83b077",
-          "description": "Praemegaceros solihacus is a cervidae species found in its native region."
+          "uuid": "7031ba0d-6b1a-5bd-b7f-10afc6ac83b077"
         },
         {
           "id": "SP_PRAEMEGACEROS_PLIOTARANDOIDES_DE_ALESSANDRI_1903",
@@ -5291,8 +5262,7 @@
             "checklistbank": "txn:374686"
           },
           "children": [],
-          "uuid": "eef127d8-ca4e-562-8d3-243d787e74a7e6",
-          "description": "Praemegaceros pliotarandoides is a cervidae species found in its native region."
+          "uuid": "eef127d8-ca4e-562-8d3-243d787e74a7e6"
         },
         {
           "id": "SP_PRAEMEGACEROS_VERTICORNIS_DAWKINS_1872",
@@ -5306,8 +5276,7 @@
             "checklistbank": "txn:501011"
           },
           "children": [],
-          "uuid": "0d0c4c57-03af-5aa-b24-fb457b06a858fe",
-          "description": "Praemegaceros verticornis is a cervidae species found in its native region."
+          "uuid": "0d0c4c57-03af-5aa-b24-fb457b06a858fe"
         },
         {
           "id": "SP_PRAEMEGACEROS_DAWKINSII",
@@ -5364,7 +5333,6 @@
           "lineage": "Euprox",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Euprox robustus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a212cfa4-d6c2-570-896-ebd703b09ae5e4",
@@ -5393,8 +5361,7 @@
           "sourceIds": {
             "checklistbank": "txn:473958",
             "checklistbank-1174": "txn:473958"
-          },
-          "description": "Euprox altus is a cervidae species found in its native region."
+          }
         },
         {
           "id": "SP_EUPROX_FURCATUS_HENSEL_1859",
@@ -5408,8 +5375,7 @@
             "checklistbank": "txn:473056"
           },
           "children": [],
-          "uuid": "5eeaaabc-f82b-5cc-b86-598750a49aee7f",
-          "description": "Euprox furcatus is a cervidae species found in its native region."
+          "uuid": "5eeaaabc-f82b-5cc-b86-598750a49aee7f"
         }
       ]
     },
@@ -5428,7 +5394,6 @@
           "lineage": "Stephanocemas",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Stephanocemas chinghaiensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "46875458-0ad8-5a6-972-6e54af416476b7",
@@ -5445,7 +5410,6 @@
           "lineage": "Stephanocemas",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Stephanocemas rucha is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a211047b-d0bb-56c-bd2-645ace98423a85",
@@ -5455,30 +5419,6 @@
           }
         }
       ]
-    },
-    {
-      "id": "GENUS_RANGIFER",
-      "name": "\"Rangifer",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_RANGIFER_TARANDUS_LINNAEUS_1758",
-          "name": "\"Rangifer tarandus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rangifer",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:993630"
-          },
-          "children": [],
-          "uuid": "1b806dbe-16b9-531-970-a668ab1d2aeef0",
-          "description": "\"Rangifer tarandus\" is a cervidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cervidae"
     },
     {
       "id": "GENUS_RANGIFER",
@@ -5515,7 +5455,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3022131",
             "checklistbank-25428": "52893",
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12684/",
-            "checklistbank-316046": "https://www.gbif.org/taxon/4RF6J"
+            "checklistbank-316046": "https://www.gbif.org/taxon/4RF6J",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:993630"
           },
           "children": [],
           "uuid": "9c5c28c9-db41-52b-9f7-ad041d49204759"
@@ -5663,7 +5604,9 @@
             "checklistbank-74965": "https://www.gbif.org/species/5220123",
             "checklistbank-21227": "gbif.org/species/5220123",
             "checklistbank-32592": "ITP-0368",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625068"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625068",
+            "checklistbank-30647": "RNSCC229",
+            "checklistbank-281817": "50308"
           },
           "authorityIds": "col:3YJ7P,itis:625067,wikidata:Q1763357",
           "authorship": "Erxleben, 1777"
@@ -5676,7 +5619,6 @@
           "lineage": "Mazama",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Mazama bicenii is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1e5be3fe-1866-556-9dc-e9ad33d6e466ac",
@@ -5717,7 +5659,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2277840"
           },
           "authorityIds": "col:3YJ7Q,itis:898199,wikidata:Q2277840",
-          "authorship": "Duarte, 1996"
+          "authorship": "Duarte, 1996",
+          "authorIds": [
+            "Q22113024"
+          ]
         },
         {
           "id": "MAZAMA_BRICENII",
@@ -5745,7 +5690,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2240396"
           },
           "authorityIds": "wikidata:Q2240396",
-          "authorship": "Thomas, 1908"
+          "authorship": "Thomas, 1908",
+          "authorIds": [
+            "Q318207"
+          ]
         },
         {
           "id": "MAZAMA_CHUNYI",
@@ -5780,7 +5728,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2478473"
           },
           "authorityIds": "col:3YJ7S,itis:625069,wikidata:Q2478473",
-          "authorship": "Hershkovitz, 1959"
+          "authorship": "Hershkovitz, 1959",
+          "authorIds": [
+            "Q537642"
+          ]
         },
         {
           "id": "MAZAMA_DORSATA",
@@ -5790,7 +5741,6 @@
           "lineage": "Mazama",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Mazama dorsata is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "b0dac664-53d2-5b5-a95-b23c95ef30189b",
@@ -5857,7 +5807,8 @@
             "checklistbank-2265": "397613",
             "checklistbank-2169": "397613",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2223955",
-            "checklistbank-25250": "https://www.gbif.org/species/5220125"
+            "checklistbank-25250": "https://www.gbif.org/species/5220125",
+            "checklistbank-281817": "82796"
           },
           "authorityIds": "wikidata:Q2223955",
           "authorship": "Hensel, 1872"
@@ -5884,7 +5835,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q659889"
           },
           "authorityIds": "wikidata:Q659889",
-          "authorship": "Merriam 1901"
+          "authorship": "Merriam 1901",
+          "authorIds": [
+            "Q721433"
+          ]
         },
         {
           "id": "MAZAMA_RUFINA",
@@ -5932,7 +5886,6 @@
           "lineage": "Mazama",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Mazama sericea is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c0e1892d-77da-576-89f-3812883b798e8e",
@@ -6002,7 +5955,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q21503379"
           },
           "authorityIds": "wikidata:Q21503379",
-          "authorship": "Van Roosmalen & Van Hooft, 2015"
+          "authorship": "Van Roosmalen & Van Hooft, 2015",
+          "authorIds": [
+            "Q1370462",
+            "Q87718642"
+          ]
         },
         {
           "id": "SP_MAZAMA_NEMORIVAGA_F_CUVIER_1817",
@@ -6026,8 +5983,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2484923"
           },
           "authorityIds": "col:QG5Q9,itis:1277288",
-          "commonName": "Amazonian Brown Brocket",
-          "description": "Mazama nemorivaga (Amazonian Brown Brocket) is a cervidae species found in its native region."
+          "commonName": "Amazonian Brown Brocket"
         },
         {
           "id": "SP_MAZAMA_NANUS_HENSEL_1872",
@@ -6052,8 +6008,7 @@
             "checklistbank-9802": "1006296"
           },
           "authorityIds": "col:3YJ7W,itis:1277286",
-          "commonName": "Lesser Brocket",
-          "description": "Mazama nanus (Lesser Brocket) is a cervidae species found in its native region."
+          "commonName": "Lesser Brocket"
         },
         {
           "id": "SP_MAZAMA_RUFA",
@@ -6068,9 +6023,9 @@
           "sourceIds": {
             "checklistbank": "212731",
             "checklistbank-2169": "2909882",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q97126589"
-          },
-          "description": "Mazama rufa is a cervidae species found in its native region."
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q97126589",
+            "checklistbank-281817": "212731"
+          }
         },
         {
           "id": "SP_MAZAMA_REPERTICIA",
@@ -6080,8 +6035,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mazama",
-          "uuid": "5f44df72-86bf-576-868-cdbd023a39865d",
-          "description": "Mazama reperticia is a cervidae species found in its native region."
+          "uuid": "5f44df72-86bf-576-868-cdbd023a39865d"
         },
         {
           "id": "SP_MAZAMA_ZETTA",
@@ -6092,11 +6046,13 @@
           "children": [],
           "lineage": "Mazama",
           "uuid": "b7aa67d0-68b8-5fc-9b9-b033583e6cbdeb",
-          "description": "Mazama zetta is a cervidae species found in its native region.",
           "authorship": "Thomas, 1913",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16605729"
-          }
+          },
+          "authorIds": [
+            "Q318207"
+          ]
         },
         {
           "id": "SP_MAZAMA_JUCUNDA",
@@ -6111,9 +6067,9 @@
           "sourceIds": {
             "checklistbank": "212735",
             "checklistbank-2169": "3237076",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125564579"
-          },
-          "description": "Mazama jucunda is a cervidae species found in its native region."
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125564579",
+            "checklistbank-281817": "212735"
+          }
         },
         {
           "id": "SP_MAZAMA_TSCHUDII",
@@ -6123,8 +6079,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mazama",
-          "uuid": "9b69cd11-a64f-5bc-9ee-7abb55ff1c879d",
-          "description": "Mazama tschudii is a cervidae species found in its native region."
+          "uuid": "9b69cd11-a64f-5bc-9ee-7abb55ff1c879d"
         },
         {
           "id": "SP_MAZAMA_GOUAZOUPIRA",
@@ -6137,8 +6092,7 @@
             "checklistbank": "ott15447"
           },
           "children": [],
-          "uuid": "48387f57-aba5-562-a94-4c9a2c4cb8fa1f",
-          "description": "Mazama gouazoupira is a cervidae species found in its native region."
+          "uuid": "48387f57-aba5-562-a94-4c9a2c4cb8fa1f"
         },
         {
           "id": "SP_MAZAMA_SARAE",
@@ -6151,8 +6105,7 @@
             "checklistbank": "ott7655673"
           },
           "children": [],
-          "uuid": "a1af94b1-96e5-5d8-8c4-76578a5dee96c8",
-          "description": "Mazama sarae is a cervidae species found in its native region."
+          "uuid": "a1af94b1-96e5-5d8-8c4-76578a5dee96c8"
         },
         {
           "id": "SP_MAZAMA_SHEILA",
@@ -6167,8 +6120,10 @@
           },
           "children": [],
           "uuid": "40bfe0e7-131c-574-a71-d5a8ac7992327d",
-          "description": "Mazama sheila is a cervidae species found in its native region.",
-          "authorship": "Thomas, 1913"
+          "authorship": "Thomas, 1913",
+          "authorIds": [
+            "Q318207"
+          ]
         },
         {
           "id": "SP_MAZAMA_SP",
@@ -6196,7 +6151,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16605720"
           },
           "uuid": "a389ee86-258f-46a2-82e1-d88de19a45c7",
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q502994"
+          ]
         },
         {
           "id": "SP_MAZAMA_OCHROLEUCA",
@@ -6221,7 +6179,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16605726"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q502994"
+          ]
         },
         {
           "id": "SP_MAZAMA_SANCTAEMARTAE_ALLEN_1915",
@@ -6234,7 +6195,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q17622080"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q502994"
+          ]
         }
       ]
     },
@@ -6290,7 +6254,8 @@
             "checklistbank-53684": "1446",
             "checklistbank-7888": "NHMSYS0000080203",
             "checklistbank-31952": "1232",
-            "checklistbank-31963": "6773"
+            "checklistbank-31963": "6773",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:206045"
           },
           "authorityIds": "col:QSF3,itis:625063,wikidata:Q122069",
           "authorship": "(Linnaeus, 1758)"
@@ -6303,7 +6268,6 @@
           "lineage": "Capreolus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Capreolus constantini is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "3c6a445c-908f-5e8-812-804f9896c01393",
@@ -6322,7 +6286,6 @@
           "lineage": "Capreolus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Capreolus formosanus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5b533468-313b-569-b4f-7744928f09e276",
@@ -6336,7 +6299,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q100254565"
           },
           "authorityIds": "wikidata:Q100254565",
-          "authorship": "Shikama 1937"
+          "authorship": "Shikama 1937",
+          "authorIds": [
+            "Q11677315"
+          ]
         },
         {
           "id": "CAPREOLUS_PYGARGUS",
@@ -6390,7 +6356,6 @@
           "lineage": "Capreolus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Capreolus sussenbornensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "152fbd34-b8ff-585-be9-f9b73842759064",
@@ -6414,8 +6379,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Capreolus",
-          "uuid": "0bdecff7-cfaa-5fc-9f9-bde66988f3e1bd",
-          "description": "Capreolus tokunagai is a cervidae species found in its native region."
+          "uuid": "0bdecff7-cfaa-5fc-9f9-bde66988f3e1bd"
         },
         {
           "id": "SP_CAPREOLUS_BEDFORDI",
@@ -6428,8 +6392,7 @@
             "checklistbank": "ott7655669"
           },
           "children": [],
-          "uuid": "99e13c28-7b96-5d9-afd-0e6b8489f7dfc3",
-          "description": "Capreolus bedfordi is a cervidae species found in its native region."
+          "uuid": "99e13c28-7b96-5d9-afd-0e6b8489f7dfc3"
         },
         {
           "id": "SP_CAPREOLUS_COXI",
@@ -6442,8 +6405,7 @@
             "checklistbank": "ott7655670"
           },
           "children": [],
-          "uuid": "c0e09202-13f9-5a9-a6d-15e34e23a853eb",
-          "description": "Capreolus coxi is a cervidae species found in its native region."
+          "uuid": "c0e09202-13f9-5a9-a6d-15e34e23a853eb"
         },
         {
           "id": "SP_CAPREOLUS_CUSANUS",
@@ -6510,7 +6472,6 @@
           "lineage": "Dama",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cariacus laevicornis (Dama Laevicornis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "39fca2f1-26f3-588-943-fcc9d3556673e8",
@@ -6527,7 +6488,6 @@
           "lineage": "Dama",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus somonensis (Dama Somonensis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e29fe481-29f2-5b9-994-13f0fab0868f11",
@@ -6641,7 +6601,9 @@
             "checklistbank-77941": "122669",
             "checklistbank-28945": "31267",
             "checklistbank-29006": "1355",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552473"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552473",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:206044",
+            "checklistbank-281817": "239570"
           },
           "authorityIds": "col:342N9,itis:552472,wikidata:Q159857",
           "authorship": "(Linnaeus, 1758)"
@@ -6673,8 +6635,7 @@
             "checklistbank-315281": "alien_species_cyprus:taxon:bb003479bb89d0a51a63ddced6ec9029"
           },
           "authorityIds": "col:6CB22,itis:625052",
-          "commonName": "Persian Fallow Deer",
-          "description": "Dama mesopotamica (Persian Fallow Deer) is a cervidae species found in its native region."
+          "commonName": "Persian Fallow Deer"
         },
         {
           "id": "SP_DAMA_ROBERTI",
@@ -6689,8 +6650,7 @@
           },
           "children": [],
           "authorship": "Breda and Lister 2013",
-          "uuid": "ee6ad237-3faf-50a-b88-c7aa02610b8ffd",
-          "description": "Dama roberti is a cervidae species found in its native region."
+          "uuid": "ee6ad237-3faf-50a-b88-c7aa02610b8ffd"
         },
         {
           "id": "SP_DAMA_SP",
@@ -6703,8 +6663,7 @@
             "checklistbank": "66310"
           },
           "children": [],
-          "uuid": "6ad1db48-c079-50b-b74-a2f98c581669a8",
-          "description": "Dama sp. is a cervidae species found in its native region."
+          "uuid": "6ad1db48-c079-50b-b74-a2f98c581669a8"
         },
         {
           "id": "SP_DAMA_LAEVICORNIS_COPE_1896",
@@ -6719,8 +6678,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126924111"
           },
           "children": [],
-          "uuid": "b9de0f6c-9ed9-5fb-a74-7c70eaf5cda210",
-          "description": "Dama laevicornis is a cervidae species found in its native region."
+          "uuid": "b9de0f6c-9ed9-5fb-a74-7c70eaf5cda210"
         },
         {
           "id": "SP_DAMA_EURYGONOS_AZZAROLI_1947",
@@ -6734,8 +6692,7 @@
             "checklistbank": "txn:473756"
           },
           "children": [],
-          "uuid": "cb8b9897-0df6-5af-b22-ae1edb8d81a809",
-          "description": "Dama eurygonos is a cervidae species found in its native region."
+          "uuid": "cb8b9897-0df6-5af-b22-ae1edb8d81a809"
         },
         {
           "id": "SP_DAMA_RHENANA_DU_BOIS_1904",
@@ -6749,8 +6706,7 @@
             "checklistbank": "txn:501004"
           },
           "children": [],
-          "uuid": "954119a4-a900-54e-92b-2e308f7c2a2fbb",
-          "description": "Dama rhenana is a cervidae species found in its native region."
+          "uuid": "954119a4-a900-54e-92b-2e308f7c2a2fbb"
         },
         {
           "id": "SP_DAMA_CELIAE_VAN_DER_MADE_RODR_GUEZ_ALBA_MARTOS_GAMARRA_RUBIO_JARA_PANERA_YRAVEDRA_2023",
@@ -6822,7 +6778,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus algericus (Megaloceros Algericus) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "568c26aa-2a4e-59e-929-b44fbcb693e154",
@@ -6839,7 +6794,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaceros baotouensis (Megaloceros Baotouensis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1f178640-0843-5b5-9d7-756b9f210108dd",
@@ -6858,7 +6812,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaloceros cazioti is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1bfadbd8-3bd4-55c-927-ea3f1ee99d38dd",
@@ -6877,7 +6830,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaloceros euryceros is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "bd9a3417-0379-539-89f-f94dbe94f361ce",
@@ -6926,7 +6878,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaloceros luochuanensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a842e9dc-9751-573-bfb-be8782f5a16087",
@@ -6951,7 +6902,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaloceros matritensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "0ac1dcf5-3b37-513-976-c7f08e384f4a3b",
@@ -6964,7 +6914,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q104533950"
           },
           "authorityIds": "wikidata:Q104533950",
-          "authorship": "van der Made, 2019"
+          "authorship": "van der Made, 2019",
+          "authorIds": [
+            "Q53957714"
+          ]
         },
         {
           "id": "MEGALOCEROS_NOVOCARTHAGINIENSIS",
@@ -6974,7 +6927,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaloceros novocarthaginiensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "bf26b74f-2d5b-53f-94d-00f23271a23a2f",
@@ -6987,7 +6939,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q115927092"
           },
           "authorityIds": "wikidata:Q115927092",
-          "authorship": "van der Made, 2015"
+          "authorship": "van der Made, 2015",
+          "authorIds": [
+            "Q53957714"
+          ]
         },
         {
           "id": "MEGALOCEROS_SARDUS",
@@ -6997,7 +6952,6 @@
           "lineage": "Megaloceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaloceros sardus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "06c20d41-98dc-595-997-b7984f4d87f8c4",
@@ -7018,8 +6972,7 @@
             "checklistbank": "2835066"
           },
           "children": [],
-          "uuid": "bcb81099-1af7-589-aa2-9075945f734f90",
-          "description": "Megaloceros sp. is a cervidae species found in its native region."
+          "uuid": "bcb81099-1af7-589-aa2-9075945f734f90"
         },
         {
           "id": "SP_MEGALOCEROS_ALGERICUS_LYDEKKER_1890",
@@ -7034,8 +6987,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126687268"
           },
           "children": [],
-          "uuid": "5ec24adf-de02-5d3-886-0a7b9e4053713b",
-          "description": "Megaloceros algericus is a cervidae species found in its native region."
+          "uuid": "5ec24adf-de02-5d3-886-0a7b9e4053713b"
         },
         {
           "id": "SP_MEGALOCEROS_IBERICUS",
@@ -7098,7 +7050,6 @@
           "lineage": "Przewalskium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Przewalskium albirostre is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "33d353b1-8aab-5f5-83d-dde0c0e2acbf85",
@@ -7121,8 +7072,7 @@
           },
           "children": [],
           "uuid": "6fdbecbb-944b-5fc-b31-93018ad11a0d39",
-          "commonName": "White-lipped Deer",
-          "description": "Przewalskium albirostris (White-lipped Deer) is a cervidae species found in its native region."
+          "commonName": "White-lipped Deer"
         }
       ]
     },
@@ -7174,7 +7124,6 @@
           "lineage": "Megaceroides",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megaceroides verticornis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "18ec3f96-8de1-571-824-75a0c335ea1129",
@@ -7216,7 +7165,6 @@
           "lineage": "Croizetoceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus ramosus (Croizetoceros Ramosus) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7b24018a-b584-5dd-89c-771cd2ae96e802",
@@ -7233,7 +7181,6 @@
           "lineage": "Croizetoceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Croizetoceros proramosus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1e57dbc7-9af5-5d5-bc1-4f941fe51e9cdd",
@@ -7256,8 +7203,7 @@
             "checklistbank": "txn:335197"
           },
           "children": [],
-          "uuid": "22199336-0cd9-547-831-f4a052e3550553",
-          "description": "Croizetoceros ramosus is a cervidae species found in its native region."
+          "uuid": "22199336-0cd9-547-831-f4a052e3550553"
         },
         {
           "id": "SP_CROIZETOCEROS_PYRENAICUS_MENNECART_ET_AL_2017",
@@ -7271,8 +7217,7 @@
             "checklistbank": "txn:335198"
           },
           "children": [],
-          "uuid": "c5929317-2d0f-5cf-bc5-95f20f0e0a8742",
-          "description": "Croizetoceros pyrenaicus is a cervidae species found in its native region."
+          "uuid": "c5929317-2d0f-5cf-bc5-95f20f0e0a8742"
         }
       ]
     },
@@ -7291,7 +7236,6 @@
           "lineage": "Paracervulus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Paracervulus australis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c2957273-db30-5ee-baa-c04b426179ea75",
@@ -7310,7 +7254,6 @@
           "lineage": "Paracervulus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Paracervulus christoli is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5ed9b4fc-81d2-54d-b35-6ee2d6c31f2e41",
@@ -7329,7 +7272,6 @@
           "lineage": "Paracervulus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Paracervulus perpinianensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4d09a1f0-387e-507-a20-49a93107eb1e97",
@@ -7357,7 +7299,6 @@
           "lineage": "Lucentia",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Lucentia iberica is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f695ba64-75ca-5c5-885-eb7d0ca4ded695",
@@ -7380,8 +7321,7 @@
             "checklistbank": "txn:473960"
           },
           "children": [],
-          "uuid": "ac04504e-10f9-5d4-87e-2579aba5432571",
-          "description": "Lucentia pierensis is a cervidae species found in its native region."
+          "uuid": "ac04504e-10f9-5d4-87e-2579aba5432571"
         }
       ]
     },
@@ -7400,7 +7340,6 @@
           "lineage": "Cervavitus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervavitus cauvieri is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4ef9f911-42c8-530-b65-91a69f5c6e35e3",
@@ -7424,8 +7363,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107398089"
           },
           "children": [],
-          "uuid": "3a414cde-a837-5a6-afc-f135fd9e64161d",
-          "description": "Cervavitus novorossiae is a cervidae species found in its native region."
+          "uuid": "3a414cde-a837-5a6-afc-f135fd9e64161d"
         },
         {
           "id": "SP_CERVAVITUS_SHANXIUS_DONG_AND_HU_1994",
@@ -7439,8 +7377,7 @@
             "checklistbank": "txn:473769"
           },
           "children": [],
-          "uuid": "a4390142-a1cf-5d5-9b2-4747abe6403319",
-          "description": "Cervavitus shanxius is a cervidae species found in its native region."
+          "uuid": "a4390142-a1cf-5d5-9b2-4747abe6403319"
         },
         {
           "id": "SP_CERVAVITUS_HUADEENSIS_QIU_1979",
@@ -7454,8 +7391,7 @@
             "checklistbank": "txn:473770"
           },
           "children": [],
-          "uuid": "8ac716da-d358-510-b2f-705d9c63fe1964",
-          "description": "Cervavitus huadeensis is a cervidae species found in its native region."
+          "uuid": "8ac716da-d358-510-b2f-705d9c63fe1964"
         },
         {
           "id": "SP_CERVAVITUS_ULTIMUS_LIN_ET_AL_1978",
@@ -7470,8 +7406,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126688813"
           },
           "children": [],
-          "uuid": "ae7ed336-13cc-5e6-b75-954ecff17fdc78",
-          "description": "Cervavitus ultimus is a cervidae species found in its native region."
+          "uuid": "ae7ed336-13cc-5e6-b75-954ecff17fdc78"
         },
         {
           "id": "SP_CERVAVITUS_FENQII_HAN_1987",
@@ -7485,8 +7420,7 @@
             "checklistbank": "txn:473773"
           },
           "children": [],
-          "uuid": "28860ffb-0c08-531-bc6-b73c46a506dd92",
-          "description": "Cervavitus fenqii is a cervidae species found in its native region."
+          "uuid": "28860ffb-0c08-531-bc6-b73c46a506dd92"
         }
       ]
     },
@@ -7532,7 +7466,6 @@
           "lineage": "Procervulus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Procervulus ginsburgi is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "065e3183-d679-5b9-99b-39302fb5418526",
@@ -7559,7 +7492,6 @@
           "lineage": "Eocoileus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Eocoileus gentryorum is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4c3a9c9d-9fde-5f2-91a-313b9ce3756c47",
@@ -7587,7 +7519,6 @@
           "lineage": "Cervalces",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus latifrons (Cervalces Latifrons) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "3ad54215-e968-585-8c2-905b49692db765",
@@ -7604,7 +7535,6 @@
           "lineage": "Cervalces",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus scotti (Cervalces Scotti) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a4929e9a-bfa3-5ce-878-c65409f0bca3c4",
@@ -7642,7 +7572,10 @@
           },
           "children": [],
           "uuid": "989c6e11-0e85-52f-a05-6d41bea70e4801",
-          "description": "Cervalces scotti, also known as stag-moose, is an extinct species of large deer that lived in North America during the Late Pleistocene epoch."
+          "description": "Cervalces scotti, also known as stag-moose, is an extinct species of large deer that lived in North America during the Late Pleistocene epoch.",
+          "authorIds": [
+            "Q444953"
+          ]
         },
         {
           "id": "SP_CERVALCES_POSTREMUS_VANGENGEIM_AND_FLEROV_1965",
@@ -7656,8 +7589,7 @@
             "checklistbank": "txn:463815"
           },
           "children": [],
-          "uuid": "ec95f40f-8fc6-51c-bbb-b67a9cff219676",
-          "description": "Cervalces postremus is a cervidae species found in its native region."
+          "uuid": "ec95f40f-8fc6-51c-bbb-b67a9cff219676"
         },
         {
           "id": "SP_CERVALCES_CARNUTORUM_LAUGEL_1862",
@@ -7670,7 +7602,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121433875"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q2871271"
+          ]
         }
       ]
     },
@@ -7689,7 +7624,6 @@
           "lineage": "Morenelaphus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus brachyceros (Morenelaphus Brachyceros) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "74f224e4-186a-51d-a43-14dc1fd1ceebba",
@@ -7711,8 +7645,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q134572493"
           },
           "children": [],
-          "uuid": "1306a757-ff9e-5a1-ae9-408b2b3c3c512a",
-          "description": "Morenelaphus brachyceros is a cervidae species found in its native region."
+          "uuid": "1306a757-ff9e-5a1-ae9-408b2b3c3c512a"
         }
       ]
     },
@@ -7731,7 +7664,6 @@
           "lineage": "Epieuryceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Epieuryceros truncus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "50d1b94e-c92c-536-9dc-952ff0ac3ee354",
@@ -7764,7 +7696,6 @@
           "lineage": "Paraceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus avius (Paraceros Avius) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f2be294b-1a53-506-a56-88f7c42dc2bb80",
@@ -7781,7 +7712,6 @@
           "lineage": "Paraceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus ensenadensis (Paraceros Ensenadensis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "037f4038-8a57-569-8cd-d2af5f659007e9",
@@ -7798,7 +7728,6 @@
           "lineage": "Paraceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus fragilis (Paraceros Fragilis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7799f525-2774-506-996-6dfef58199884d",
@@ -7815,7 +7744,6 @@
           "lineage": "Paraceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Paraceros vulneratus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5ca19fcf-3a34-51d-a68-acee4122851ce0",
@@ -7838,8 +7766,7 @@
             "checklistbank": "txn:364241"
           },
           "children": [],
-          "uuid": "002c6078-438f-5ff-86a-fd90193467cab2",
-          "description": "Paraceros ensenadensis is a cervidae species found in its native region."
+          "uuid": "002c6078-438f-5ff-86a-fd90193467cab2"
         },
         {
           "id": "SP_PARACEROS_FRAGILIS_AMEGHINO_1888",
@@ -7853,8 +7780,7 @@
             "checklistbank": "txn:247790"
           },
           "children": [],
-          "uuid": "ff26bf88-5156-56f-b55-26a737da64afc7",
-          "description": "Paraceros fragilis is a cervidae species found in its native region."
+          "uuid": "ff26bf88-5156-56f-b55-26a737da64afc7"
         },
         {
           "id": "SP_PARACEROS_AVIUS_AMEGHINO_1888",
@@ -7868,8 +7794,7 @@
             "checklistbank": "txn:364245"
           },
           "children": [],
-          "uuid": "5a127fbd-89e7-5d4-91e-6ca2fb4fa381ea",
-          "description": "Paraceros avius is a cervidae species found in its native region."
+          "uuid": "5a127fbd-89e7-5d4-91e-6ca2fb4fa381ea"
         }
       ]
     },
@@ -7888,7 +7813,6 @@
           "lineage": "Navahoceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus lascrucensis (Navahoceros Lascrucensis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e94aadaf-73a4-5df-a37-8a39b50180be8f",
@@ -7905,7 +7829,6 @@
           "lineage": "Navahoceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Rangifer fricki (Navahoceros Fricki) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d3369b18-6c1a-587-bc5-72d1897fb49aac",
@@ -7926,8 +7849,7 @@
             "checklistbank": "txn:51306"
           },
           "children": [],
-          "uuid": "ae2d46de-c25a-5ce-a14-e40d80ae101aa9",
-          "description": "Navahoceros fricki is a cervidae species found in its native region."
+          "uuid": "ae2d46de-c25a-5ce-a14-e40d80ae101aa9"
         }
       ]
     },
@@ -7946,7 +7868,6 @@
           "lineage": "Cariacus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus brachycerus (Cariacus Brachycerus) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4a4dfe27-716b-504-850-025e383ec7b447",
@@ -7967,8 +7888,7 @@
             "checklistbank": "txn:247780"
           },
           "children": [],
-          "uuid": "98e1f9f3-ece8-5b1-8da-c945ca1c704ba4",
-          "description": "Cariacus brachyceros is a cervidae species found in its native region."
+          "uuid": "98e1f9f3-ece8-5b1-8da-c945ca1c704ba4"
         },
         {
           "id": "SP_CARIACUS_LEPTOCEPHALUS",
@@ -8011,7 +7931,6 @@
           "lineage": "Agalmaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Blastocerus blicki (Agalmaceros Blicki) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "beeb360b-61bb-5d1-800-61422adeb836ab",
@@ -8033,8 +7952,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q30673307"
           },
           "children": [],
-          "uuid": "b7a36bde-dd18-5cc-9bd-9dd48bd188c681",
-          "description": "Agalmaceros blicki is a cervidae species found in its native region."
+          "uuid": "b7a36bde-dd18-5cc-9bd-9dd48bd188c681"
         }
       ]
     },
@@ -8072,7 +7990,6 @@
           "lineage": "Libralces",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Libralces minor is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e0b692f5-8c2e-50b-947-babb2a00ac09bf",
@@ -8096,7 +8013,6 @@
           "lineage": "Libralces",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Libralces reynoldsi is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1b574232-1f50-54c-bee-d16fea0c65ddd2",
@@ -8124,7 +8040,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Anoglochis cretensis (Candiacervus Cretensis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "6b8c56ee-7af8-535-bd8-7794d26076fa83",
@@ -8144,7 +8059,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Candiacervus devosi is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "8e9c5712-b69a-52d-b0b-3f844595ed4845",
@@ -8163,7 +8077,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Candiacervus listeri is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c3b25274-d7ca-555-b21-16e5035ce2d1b5",
@@ -8182,7 +8095,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Candiacervus rethymnensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "664faa7a-e320-581-937-ba53716acadf2d",
@@ -8201,7 +8113,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Candiacervus reumeri is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "8cb8fc48-3e81-589-892-df51182789510e",
@@ -8244,7 +8155,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus dorothensis (Candiacervus Dorothensis) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "3c984d54-5c8b-57c-a33-6e58e0dc898ea9",
@@ -8261,7 +8171,6 @@
           "lineage": "Candiacervus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Cervus major (Candiacervus Major) is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "94fa4d65-4960-5a3-9c5-ede90f526a71b3",
@@ -8283,8 +8192,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q5184707"
           },
           "children": [],
-          "uuid": "e6dce28e-7dff-546-a91-1111941b7986c0",
-          "description": "Candiacervus cretensis is a cervidae species found in its native region."
+          "uuid": "e6dce28e-7dff-546-a91-1111941b7986c0"
         },
         {
           "id": "SP_CANDIACERVUS_MAJOR_CAPASSO_BARBATO_AND_PETRONIO_1986",
@@ -8299,8 +8207,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126719650"
           },
           "children": [],
-          "uuid": "aa598987-641c-5fa-b29-e66a144eb0f8f6",
-          "description": "Candiacervus major is a cervidae species found in its native region."
+          "uuid": "aa598987-641c-5fa-b29-e66a144eb0f8f6"
         },
         {
           "id": "SP_CANDIACERVUS_DOROTHENSIS_CAPASSO_BARBATO_1992",
@@ -8314,8 +8221,7 @@
             "checklistbank": "txn:393944"
           },
           "children": [],
-          "uuid": "72de1535-0db6-50d-913-6a194603a88e4f",
-          "description": "Candiacervus dorothensis is a cervidae species found in its native region."
+          "uuid": "72de1535-0db6-50d-913-6a194603a88e4f"
         }
       ]
     },
@@ -8334,7 +8240,6 @@
           "lineage": "Pseudalces",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudalces mirandus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "bd8b8131-ec74-54e-924-ccec1b72a2261c",
@@ -8362,7 +8267,6 @@
           "lineage": "Praesinomegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Praesinomegaceros asiaticus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "64dab06e-3013-59c-b96-f747e22fcb9f4d",
@@ -8381,7 +8285,6 @@
           "lineage": "Praesinomegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Praesinomegaceros bakri is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "13a7567e-dc95-552-ae7-67c6f24c2c6052",
@@ -8406,7 +8309,6 @@
           "lineage": "Praesinomegaceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Praesinomegaceros venustus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ee09fb54-50d3-5e2-b0e-dbc4aee2494072",
@@ -8434,7 +8336,6 @@
           "lineage": "Torontoceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Torontoceros hypogaeus is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "24cf1093-0a9f-515-b6c-37219be8283317",
@@ -8468,7 +8369,6 @@
           "lineage": "Rohnia",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Rohnia minuta is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5858cc49-5746-5eb-ab5-398f3a986874b0",
@@ -8554,7 +8454,6 @@
           "lineage": "Eucladoceros",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Eucladoceros montenegrensis is a cervidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "6a9f1aed-380f-52e-8b0-852e8324a5aed6",
@@ -8567,7 +8466,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q104534000"
           },
           "authorityIds": "wikidata:Q104534000",
-          "authorship": "van der Made & Dimitrijevic, 2015"
+          "authorship": "van der Made & Dimitrijevic, 2015",
+          "authorIds": [
+            "Q53957714",
+            "Q83912918"
+          ]
         },
         {
           "id": "SP_EUCLADOCEROS_CTENOIDES_NESTI_1841",
@@ -8581,8 +8484,7 @@
             "checklistbank": "txn:473928"
           },
           "children": [],
-          "uuid": "bbf642e3-f3cf-529-961-bec8fc893f2e29",
-          "description": "Eucladoceros ctenoides is a cervidae species found in its native region."
+          "uuid": "bbf642e3-f3cf-529-961-bec8fc893f2e29"
         },
         {
           "id": "SP_EUCLADOCEROS_BOULEI_TEILHARD_DE_CHARDIN_AND_PIVETEAU_1930",
@@ -8596,8 +8498,7 @@
             "checklistbank": "txn:475382"
           },
           "children": [],
-          "uuid": "037893e6-f779-553-bca-209284a30951e3",
-          "description": "Eucladoceros boulei is a cervidae species found in its native region."
+          "uuid": "037893e6-f779-553-bca-209284a30951e3"
         },
         {
           "id": "SP_EUCLADOCEROS_TEGULENSIS_DU_BOIS_1904",
@@ -8611,8 +8512,7 @@
             "checklistbank": "txn:501002"
           },
           "children": [],
-          "uuid": "0b450039-da4c-5e7-91f-181a5a6af478d7",
-          "description": "Eucladoceros tegulensis is a cervidae species found in its native region."
+          "uuid": "0b450039-da4c-5e7-91f-181a5a6af478d7"
         },
         {
           "id": "SP_EUCLADOCEROS_DICRANIOS_NESTI_1841",
@@ -8627,8 +8527,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q5116108"
           },
           "children": [],
-          "uuid": "22f9912c-1716-5b4-ac5-fb875b337517d9",
-          "description": "Eucladoceros dicranios is a cervidae species found in its native region."
+          "uuid": "22f9912c-1716-5b4-ac5-fb875b337517d9"
         }
       ]
     },
@@ -8658,8 +8557,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q24955639"
           },
           "authorityIds": "col:R8XXX,itis:1277278",
-          "commonName": "Brow-antlered Deer",
-          "description": "Panolia eldii (Brow-antlered Deer) is a cervidae species found in its native region."
+          "commonName": "Brow-antlered Deer"
         },
         {
           "id": "SP_PANOLIA_PLATYCEROS",
@@ -8696,8 +8594,7 @@
             "checklistbank": "52407",
             "checklistbank-2169": "52407",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125744907"
-          },
-          "description": "Subulo gouazoubira is a cervidae species found in its native region."
+          }
         },
         {
           "id": "SP_SUBULO_CHUNYI",
@@ -8707,8 +8604,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Subulo",
-          "uuid": "b62d4d13-e13e-506-a33-a6051c4046fa71",
-          "description": "Subulo chunyi is a cervidae species found in its native region."
+          "uuid": "b62d4d13-e13e-506-a33-a6051c4046fa71"
         },
         {
           "id": "SP_SUBULO_GOUZOUBIRA_G_FISCHER_1814",
@@ -8722,8 +8618,7 @@
             "checklistbank": "220875"
           },
           "children": [],
-          "uuid": "4ea55a9f-950e-554-be4-de94b77e44337b",
-          "description": "Subulo gouzoubira is a cervidae species found in its native region."
+          "uuid": "4ea55a9f-950e-554-be4-de94b77e44337b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8742,8 +8637,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Andinocervus",
-          "uuid": "ff107ca7-fe59-5c0-b53-65c58269d420dd",
-          "description": "Andinocervus rufinus is a cervidae species found in its native region."
+          "uuid": "ff107ca7-fe59-5c0-b53-65c58269d420dd"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8763,7 +8657,6 @@
           "children": [],
           "lineage": "Pudella",
           "uuid": "3198c27a-ce95-586-967-ef2b597f9cd5e2",
-          "description": "Pudella mephistophiles is a cervidae species found in its native region.",
           "authorship": "(De Winton, 1896)",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125665932"
@@ -8777,8 +8670,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Pudella",
-          "uuid": "e9a3626c-c63a-5c2-bb2-28a75cb93bbe5e",
-          "description": "Pudella carlae is a cervidae species found in its native region."
+          "uuid": "e9a3626c-c63a-5c2-bb2-28a75cb93bbe5e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8797,8 +8689,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Lagomeryx",
-          "uuid": "f415d5cd-23b0-515-a0c-5412acbc955ff6",
-          "description": "Lagomeryx manai is a cervidae species found in its native region."
+          "uuid": "f415d5cd-23b0-515-a0c-5412acbc955ff6"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8822,9 +8713,9 @@
           "sourceIds": {
             "checklistbank": "220877",
             "checklistbank-2169": "397661",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125745384"
-          },
-          "description": "Passalites nemorivagus is a cervidae species found in its native region."
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125745384",
+            "checklistbank-281817": "220877"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8843,8 +8734,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Hyelaphus",
-          "uuid": "360f929f-0413-561-b5e-2fe4eea6729aee",
-          "description": "Hyelaphus annamiticus is a cervidae species found in its native region."
+          "uuid": "360f929f-0413-561-b5e-2fe4eea6729aee"
         },
         {
           "id": "SP_HYELAPHUS_PORCINUS_ZIMMERMANN_1780",
@@ -8859,8 +8749,7 @@
             "checklistbank-2265": "2494278"
           },
           "children": [],
-          "uuid": "1108c752-cbb8-551-a25-004f4b86fbb770",
-          "description": "Hyelaphus porcinus is a cervidae species found in its native region."
+          "uuid": "1108c752-cbb8-551-a25-004f4b86fbb770"
         },
         {
           "id": "SP_HYELAPHUS_CALAMIANENSIS_HEUDE_1888",
@@ -8874,8 +8763,7 @@
             "checklistbank": "txn:374555"
           },
           "children": [],
-          "uuid": "7535dad3-c06e-51e-872-90ce0dca6e096a",
-          "description": "Hyelaphus calamianensis is a cervidae species found in its native region."
+          "uuid": "7535dad3-c06e-51e-872-90ce0dca6e096a"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8894,8 +8782,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Sinomegaceros",
-          "uuid": "0f7a01f1-9b6b-557-83e-791e8280fad48f",
-          "description": "Sinomegaceros yabei is a cervidae species found in its native region."
+          "uuid": "0f7a01f1-9b6b-557-83e-791e8280fad48f"
         },
         {
           "id": "SP_SINOMEGACEROS_PACHYOSTEUS",
@@ -8910,8 +8797,7 @@
           },
           "children": [],
           "authorship": "Young, 1932",
-          "uuid": "1186e13a-23a5-595-840-aace444ca6641d",
-          "description": "Sinomegaceros pachyosteus is a cervidae species found in its native region."
+          "uuid": "1186e13a-23a5-595-840-aace444ca6641d"
         },
         {
           "id": "SP_SINOMEGACEROS_ORDOSIANUS_YOUNG_1932",
@@ -8926,8 +8812,7 @@
             "checklistbank-2265": "3104232"
           },
           "children": [],
-          "uuid": "c87b14f8-c59a-5c9-878-f7a3dbc37e55ce",
-          "description": "Sinomegaceros ordosianus is a cervidae species found in its native region."
+          "uuid": "c87b14f8-c59a-5c9-878-f7a3dbc37e55ce"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8946,8 +8831,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Praeelaphus",
-          "uuid": "51ad1d1b-b998-581-9cf-6a2677b580a504",
-          "description": "Praeelaphus australorientalis is a cervidae species found in its native region."
+          "uuid": "51ad1d1b-b998-581-9cf-6a2677b580a504"
         },
         {
           "id": "SP_PRAEELAPHUS_ETUERIARUM_CROIZET_AND_JOBERT_1828",
@@ -8961,8 +8845,7 @@
             "checklistbank": "txn:473937"
           },
           "children": [],
-          "uuid": "ecfac5c4-6d01-577-a42-60f983f1751482",
-          "description": "Praeelaphus etueriarum is a cervidae species found in its native region."
+          "uuid": "ecfac5c4-6d01-577-a42-60f983f1751482"
         },
         {
           "id": "SP_PRAEELAPHUS_PERRIERI_CROIZET_AND_JOBERT_1828",
@@ -8976,8 +8859,7 @@
             "checklistbank": "txn:473939"
           },
           "children": [],
-          "uuid": "3bfff4ac-af7b-5b8-99f-a8084886b3eaba",
-          "description": "Praeelaphus perrieri is a cervidae species found in its native region."
+          "uuid": "3bfff4ac-af7b-5b8-99f-a8084886b3eaba"
         },
         {
           "id": "SP_PRAEELAPHUS_ARVERNENSIS_CROIZET_AND_JOBERT_1828",
@@ -8991,8 +8873,7 @@
             "checklistbank": "txn:473941"
           },
           "children": [],
-          "uuid": "09c6abd4-91d1-5c5-853-f639383f4ad01e",
-          "description": "Praeelaphus arvernensis is a cervidae species found in its native region."
+          "uuid": "09c6abd4-91d1-5c5-853-f639383f4ad01e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9018,8 +8899,7 @@
             "checklistbank": "3127178",
             "checklistbank-2169": "3127178",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125217631"
-          },
-          "description": "Bisbalus citus (knifehorn deer) is a cervidae species found in its native region."
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9042,8 +8922,7 @@
             "checklistbank": "416710"
           },
           "children": [],
-          "uuid": "afe34ed6-f9ef-54e-a85-f6802e6f036fa4",
-          "description": "Megaceros euryceros is a cervidae species found in its native region."
+          "uuid": "afe34ed6-f9ef-54e-a85-f6802e6f036fa4"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9068,7 +8947,9 @@
           "children": [],
           "uuid": "a8d8b7ce-fc14-5eb-bf1-47ab8ac9541023",
           "commonName": "red brocket",
-          "description": "Moschus americanus (red brocket) is a cervidae species found in its native region."
+          "authorIds": [
+            "Q60938"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9090,8 +8971,7 @@
             "checklistbank": "ott972315"
           },
           "children": [],
-          "uuid": "26692e62-6541-550-a66-f2b74a26947822",
-          "description": "Cervidae sp. is a cervidae species found in its native region."
+          "uuid": "26692e62-6541-550-a66-f2b74a26947822"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9113,8 +8993,7 @@
             "checklistbank": "3112189"
           },
           "children": [],
-          "uuid": "42eec8ee-8043-512-835-38ead65902b097",
-          "description": "Odocoileinae gen. is a cervidae species found in its native region."
+          "uuid": "42eec8ee-8043-512-835-38ead65902b097"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9137,8 +9016,7 @@
             "checklistbank": "txn:108955"
           },
           "children": [],
-          "uuid": "272261cd-9343-518-a86-db84747f6d2336",
-          "description": "Eumeryx culminis is a cervidae species found in its native region."
+          "uuid": "272261cd-9343-518-a86-db84747f6d2336"
         },
         {
           "id": "SP_EUMERYX_IMBELLIS_VISLOBOKOVA_1983",
@@ -9152,8 +9030,7 @@
             "checklistbank": "txn:347106"
           },
           "children": [],
-          "uuid": "ac38fe73-483c-539-a92-98bb2143fb4f35",
-          "description": "Eumeryx imbellis is a cervidae species found in its native region."
+          "uuid": "ac38fe73-483c-539-a92-98bb2143fb4f35"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9176,8 +9053,7 @@
             "checklistbank": "txn:149400"
           },
           "children": [],
-          "uuid": "73a6d83a-9fef-5d5-8f0-03a07677fe272e",
-          "description": "Megamuntiacus vuquangensis is a cervidae species found in its native region."
+          "uuid": "73a6d83a-9fef-5d5-8f0-03a07677fe272e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9200,8 +9076,7 @@
             "checklistbank": "txn:247788"
           },
           "children": [],
-          "uuid": "a8d201df-ab5c-587-8ca-b6cb25ec6561d9",
-          "description": "Blastoceros campestris is a cervidae species found in its native region."
+          "uuid": "a8d201df-ab5c-587-8ca-b6cb25ec6561d9"
         },
         {
           "id": "SP_BLASTOCEROS_PALUDOSUS_DESMAREST_1822",
@@ -9215,8 +9090,7 @@
             "checklistbank": "txn:247782"
           },
           "children": [],
-          "uuid": "f08011af-67c6-5ea-916-1040cba24407ef",
-          "description": "Blastoceros paludosus is a cervidae species found in its native region."
+          "uuid": "f08011af-67c6-5ea-916-1040cba24407ef"
         },
         {
           "id": "SP_BLASTOCEROS_AZPEITIANUS_AMEGHINO_1888",
@@ -9230,8 +9104,7 @@
             "checklistbank": "txn:247786"
           },
           "children": [],
-          "uuid": "f01791cf-469a-52e-925-9799fd5bb4cb2e",
-          "description": "Blastoceros azpeitianus is a cervidae species found in its native region."
+          "uuid": "f01791cf-469a-52e-925-9799fd5bb4cb2e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9254,8 +9127,7 @@
             "checklistbank": "txn:364251"
           },
           "children": [],
-          "uuid": "323b27bd-bb22-521-8f6-d511e243553bc0",
-          "description": "Furcifer sulcatus is a cervidae species found in its native region."
+          "uuid": "323b27bd-bb22-521-8f6-d511e243553bc0"
         },
         {
           "id": "SP_FURCIFER_BISULCUS_MOLINA_1782",
@@ -9269,8 +9141,7 @@
             "checklistbank": "txn:364253"
           },
           "children": [],
-          "uuid": "6878bc73-637f-588-948-7f81d8f8aa40da",
-          "description": "Furcifer bisulcus is a cervidae species found in its native region."
+          "uuid": "6878bc73-637f-588-948-7f81d8f8aa40da"
         },
         {
           "id": "SP_FURCIFER_SELENITICUS_AMEGHINO_1888",
@@ -9284,8 +9155,7 @@
             "checklistbank": "txn:247792"
           },
           "children": [],
-          "uuid": "bbdbee35-4ccc-52f-93c-d5137dd9972e32",
-          "description": "Furcifer seleniticus is a cervidae species found in its native region."
+          "uuid": "bbdbee35-4ccc-52f-93c-d5137dd9972e32"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9308,8 +9178,7 @@
             "checklistbank": "txn:463742"
           },
           "children": [],
-          "uuid": "9568c5cf-dc47-52c-92f-e58690c63ea129",
-          "description": "Nemomeryx vyaensis is a cervidae species found in its native region."
+          "uuid": "9568c5cf-dc47-52c-92f-e58690c63ea129"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9332,8 +9201,7 @@
             "checklistbank": "txn:470119"
           },
           "children": [],
-          "uuid": "8d0764fd-4d8e-504-a9c-f8c46914c12851",
-          "description": "Cervavus rutimeyeri is a cervidae species found in its native region."
+          "uuid": "8d0764fd-4d8e-504-a9c-f8c46914c12851"
         },
         {
           "id": "SP_CERVAVUS_SPECIOSUS_SCHLOSSER_1903",
@@ -9347,8 +9215,7 @@
             "checklistbank": "txn:470120"
           },
           "children": [],
-          "uuid": "5c132835-0c3a-559-98e-c783705b171112",
-          "description": "Cervavus speciosus is a cervidae species found in its native region."
+          "uuid": "5c132835-0c3a-559-98e-c783705b171112"
         },
         {
           "id": "SP_CERVAVUS_OWENI_KOKEN_1885",
@@ -9363,8 +9230,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q112867117"
           },
           "children": [],
-          "uuid": "e603b7ab-f903-5ad-b6a-da57a0d1a75d37",
-          "description": "Cervavus oweni is a cervidae species found in its native region."
+          "uuid": "e603b7ab-f903-5ad-b6a-da57a0d1a75d37"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9387,8 +9253,7 @@
             "checklistbank": "txn:470173"
           },
           "children": [],
-          "uuid": "a3fe5c04-3d90-50e-831-1d555bfc345927",
-          "description": "Nipponicervus longdanensis is a cervidae species found in its native region."
+          "uuid": "a3fe5c04-3d90-50e-831-1d555bfc345927"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9412,8 +9277,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q139960174"
           },
           "children": [],
-          "uuid": "9fa27e77-e16a-5f4-ba5-c3c5a8a1605f2f",
-          "description": "Metacervocerus punjabiensis is a cervidae species found in its native region."
+          "uuid": "9fa27e77-e16a-5f4-ba5-c3c5a8a1605f2f"
         },
         {
           "id": "SP_METACERVOCERUS_PARDINENSIS_CROIZET_AND_JOBERT_1828",
@@ -9427,8 +9291,7 @@
             "checklistbank": "txn:473749"
           },
           "children": [],
-          "uuid": "d44919ba-8077-5db-b9a-8981539c630167",
-          "description": "Metacervocerus pardinensis is a cervidae species found in its native region."
+          "uuid": "d44919ba-8077-5db-b9a-8981539c630167"
         },
         {
           "id": "SP_METACERVOCERUS_RHENANUS_DUBOIS_1904",
@@ -9442,8 +9305,7 @@
             "checklistbank": "txn:473751"
           },
           "children": [],
-          "uuid": "bbb06320-a417-55b-af6-ccf2f09b3f9ad6",
-          "description": "Metacervocerus rhenanus is a cervidae species found in its native region."
+          "uuid": "bbb06320-a417-55b-af6-ccf2f09b3f9ad6"
         },
         {
           "id": "SP_METACERVOCERUS_SHANSIUS_TEILHARD_DE_CHARDIN_AND_TRASSAERT_1937",
@@ -9457,8 +9319,7 @@
             "checklistbank": "txn:473752"
           },
           "children": [],
-          "uuid": "a0c6b513-7d02-575-aa6-751968ff6acc3f",
-          "description": "Metacervocerus shansius is a cervidae species found in its native region."
+          "uuid": "a0c6b513-7d02-575-aa6-751968ff6acc3f"
         },
         {
           "id": "SP_METACERVOCERUS_PHILISI_MENNECART_ET_AL_2017",
@@ -9472,8 +9333,7 @@
             "checklistbank": "txn:473923"
           },
           "children": [],
-          "uuid": "01b96e0c-2b88-55e-9a5-fde54b42089eb4",
-          "description": "Metacervocerus philisi is a cervidae species found in its native region."
+          "uuid": "01b96e0c-2b88-55e-9a5-fde54b42089eb4"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9496,8 +9356,7 @@
             "checklistbank": "txn:473765"
           },
           "children": [],
-          "uuid": "df0fecaa-8ac0-53e-bbd-87d2fe83f71250",
-          "description": "Eostylocerus blainvillei is a cervidae species found in its native region."
+          "uuid": "df0fecaa-8ac0-53e-bbd-87d2fe83f71250"
         },
         {
           "id": "SP_EOSTYLOCERUS_HEZHENGENSIS_DENG_ET_AL_2014",
@@ -9511,8 +9370,7 @@
             "checklistbank": "txn:473926"
           },
           "children": [],
-          "uuid": "a866e995-b66a-5fb-af9-7e670d0a2f8317",
-          "description": "Eostylocerus hezhengensis is a cervidae species found in its native region."
+          "uuid": "a866e995-b66a-5fb-af9-7e670d0a2f8317"
         },
         {
           "id": "SP_EOSTYLOCERUS_TRIANGULARIS_ZDANSKY_1925",
@@ -9526,8 +9384,7 @@
             "checklistbank": "txn:473927"
           },
           "children": [],
-          "uuid": "4e81de59-dd1c-50c-a1e-fa49541c993fad",
-          "description": "Eostylocerus triangularis is a cervidae species found in its native region."
+          "uuid": "4e81de59-dd1c-50c-a1e-fa49541c993fad"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9550,8 +9407,7 @@
             "checklistbank": "txn:473766"
           },
           "children": [],
-          "uuid": "7c4b806a-c1dd-5c1-9f4-934f457cc05bd2",
-          "description": "Metacervulus lepidus is a cervidae species found in its native region."
+          "uuid": "7c4b806a-c1dd-5c1-9f4-934f457cc05bd2"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9575,8 +9431,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124429264"
           },
           "children": [],
-          "uuid": "79ec81d6-6220-562-b4d-08c3c74d891559",
-          "description": "Arvernoceros ardei is a cervidae species found in its native region."
+          "uuid": "79ec81d6-6220-562-b4d-08c3c74d891559"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9600,8 +9455,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q30894090"
           },
           "children": [],
-          "uuid": "82e92a7d-c67a-560-b9e-0ef4c4c77c1863",
-          "description": "Palaeoplatyceros hispanicus is a cervidae species found in its native region."
+          "uuid": "82e92a7d-c67a-560-b9e-0ef4c4c77c1863"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9624,8 +9478,7 @@
             "checklistbank": "txn:473934"
           },
           "children": [],
-          "uuid": "b4b2081b-4bd6-51f-b4d-27a3757376a47b",
-          "description": "Pliocervus matheronis is a cervidae species found in its native region."
+          "uuid": "b4b2081b-4bd6-51f-b4d-27a3757376a47b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9648,8 +9501,7 @@
             "checklistbank": "txn:473943"
           },
           "children": [],
-          "uuid": "0d0ac5e1-1119-5df-a16-9008eb50b5e5c3",
-          "description": "Procapreolus cusanus is a cervidae species found in its native region."
+          "uuid": "0d0ac5e1-1119-5df-a16-9008eb50b5e5c3"
         },
         {
           "id": "SP_PROCAPREOLUS_LOCZYI_POHLIG_1911",
@@ -9663,8 +9515,7 @@
             "checklistbank": "txn:473945"
           },
           "children": [],
-          "uuid": "0f156836-c627-53e-a2c-78c189967faace",
-          "description": "Procapreolus loczyi is a cervidae species found in its native region."
+          "uuid": "0f156836-c627-53e-a2c-78c189967faace"
         },
         {
           "id": "SP_PROCAPREOLUS_LATIFRONS_SCHLOSSER_1924",
@@ -9678,8 +9529,7 @@
             "checklistbank": "txn:473947"
           },
           "children": [],
-          "uuid": "6bbacf03-6667-5e2-b5b-23de2e8a53c3fd",
-          "description": "Procapreolus latifrons is a cervidae species found in its native region."
+          "uuid": "6bbacf03-6667-5e2-b5b-23de2e8a53c3fd"
         },
         {
           "id": "SP_PROCAPREOLUS_UKRAINICUS_KOROTKEVICH_1965",
@@ -9693,8 +9543,7 @@
             "checklistbank": "txn:473949"
           },
           "children": [],
-          "uuid": "00ca7558-fb34-514-82e-f60b2631617d34",
-          "description": "Procapreolus ukrainicus is a cervidae species found in its native region."
+          "uuid": "00ca7558-fb34-514-82e-f60b2631617d34"
         },
         {
           "id": "SP_PROCAPREOLUS_FLOROVI_KOROTKEVICH_1974",
@@ -9708,8 +9557,7 @@
             "checklistbank": "txn:473950"
           },
           "children": [],
-          "uuid": "77179048-63c4-5b4-9f6-8d54f0ef427849",
-          "description": "Procapreolus florovi is a cervidae species found in its native region."
+          "uuid": "77179048-63c4-5b4-9f6-8d54f0ef427849"
         },
         {
           "id": "SP_PROCAPREOLUS_GRAECUS_AZANZA_1995",
@@ -9723,8 +9571,7 @@
             "checklistbank": "txn:473951"
           },
           "children": [],
-          "uuid": "a2d204b4-34d1-5be-920-46c67fc5c8e2c9",
-          "description": "Procapreolus graecus is a cervidae species found in its native region."
+          "uuid": "a2d204b4-34d1-5be-920-46c67fc5c8e2c9"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9747,8 +9594,7 @@
             "checklistbank": "txn:509360"
           },
           "children": [],
-          "uuid": "65fed805-41b6-5f8-a16-c0cb12b4bbc2a9",
-          "description": "Neomegaloceros gracilis is a cervidae species found in its native region."
+          "uuid": "65fed805-41b6-5f8-a16-c0cb12b4bbc2a9"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9772,7 +9618,9 @@
           },
           "children": [],
           "uuid": "b07f22a2-081c-519-93e-1c3c9817dafe9f",
-          "description": "Alce gigantea is a cervidae species found in its native region."
+          "authorIds": [
+            "Q58588"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9873,7 +9721,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123068967"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q2779126"
+          ]
         },
         {
           "id": "SP_SIKA_YESOENSIS_HEUDE_1884",
@@ -9886,7 +9737,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123068602"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q2779126"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10099,8 +9953,8 @@
       "children": []
     }
   ],
-  "genusCount": 94,
-  "speciesCount": 515,
+  "genusCount": 92,
+  "speciesCount": 512,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

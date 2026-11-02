@@ -29,7 +29,8 @@
             "col": [
               "72JQ8"
             ],
-            "checklistbank": "478407"
+            "checklistbank": "478407",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:593074"
           },
           "authorityIds": "col:72JQ8,wikidata:Q13767075",
           "authorship": "(McMurrich, 1893)"
@@ -41,7 +42,6 @@
           "commonName": "many-tentacled sea anemone",
           "lineage": "Liponema",
           "subspeciesCount": 0,
-          "description": "Liponema multicorne (many-tentacled sea anemone) is a liponematidae species found in Europe region.",
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
@@ -54,7 +54,8 @@
             ],
             "col": [
               "6QJQ9"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:593072"
           },
           "authorityIds": "col:6QJQ9,wikidata:Q13767080",
           "authorship": "(Verrill, 1880)"
@@ -66,7 +67,6 @@
           "commonName": "",
           "lineage": "Liponema",
           "subspeciesCount": 0,
-          "description": "Liponema multiporum Hertwig, 1882 is a liponematidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "876b550d-8ed0-51e-b18-d4d27b228bf89d",
@@ -93,8 +93,7 @@
             ],
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2444268"
           },
-          "authorityIds": "itis:52585",
-          "description": "Liponema multicornis is a liponematidae species found in its native region."
+          "authorityIds": "itis:52585"
         },
         {
           "id": "SP_LIPONEMA_MULTIPORA_HERTWIG_1882",
@@ -112,8 +111,7 @@
             ],
             "checklistbank": "1363621"
           },
-          "authorityIds": "itis:52586",
-          "description": "Liponema multipora is a liponematidae species found in its native region."
+          "authorityIds": "itis:52586"
         },
         {
           "id": "SP_LIPONEMA_BREVICORNIS_MCMURRICH_1893",
@@ -131,8 +129,7 @@
             ]
           },
           "authorityIds": "itis:52587",
-          "commonName": "tentacle shedding anemone",
-          "description": "Liponema brevicornis (tentacle shedding anemone) is a liponematidae species found in its native region."
+          "commonName": "tentacle shedding anemone"
         },
         {
           "id": "SP_LIPONEMA_MULTIPORUM",
@@ -145,8 +142,7 @@
             "checklistbank": "673205"
           },
           "children": [],
-          "uuid": "9edf4586-732e-5e6-89b-0bb89b54e81388",
-          "description": "Liponema multiporum is a liponematidae species found in its native region."
+          "uuid": "9edf4586-732e-5e6-89b-0bb89b54e81388"
         },
         {
           "id": "SP_LIPONEMA_BREVICIRRATA",
@@ -171,6 +167,19 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105888452"
           },
           "children": []
+        },
+        {
+          "id": "SP_LIPONEMA_MULTIPORA",
+          "name": "Liponema multipora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liponema",
+          "sourceIds": {
+            "checklistbank-139831": "1363621"
+          },
+          "uuid": "586e0721-411b-4ed8-8884-579cbc067cd2",
+          "children": []
         }
       ]
     },
@@ -188,7 +197,6 @@
           "commonName": "",
           "lineage": "Aulorchis",
           "subspeciesCount": 0,
-          "description": "Aulorchis paradoxa Hertwig, 1888 is a liponematidae species found in its native region.",
           "sourcedFrom": "none",
           "authorship": "Hertwig",
           "yearPublished": "1888",
@@ -212,66 +220,13 @@
             "checklistbank": "ott3674692"
           },
           "children": [],
-          "uuid": "9eb96427-80a0-5f8-bd3-7a4680e47193b4",
-          "description": "Aulorchis paradoxa is a liponematidae species found in its native region."
+          "uuid": "9eb96427-80a0-5f8-bd3-7a4680e47193b4"
         }
       ]
-    },
-    {
-      "id": "GENUS_LIPONEMA",
-      "name": "\"Liponema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LIPONEMA_MULTICORNE_VERRILL_1880",
-          "name": "\"Liponema multicorne\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liponema",
-          "authorship": "\"(Verrill, 1880)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:593072"
-          },
-          "children": [],
-          "uuid": "069424c7-1dec-5cf-a9d-3c6dc208228cb9",
-          "description": "\"Liponema multicorne\" is a liponematidae species found in its native region."
-        },
-        {
-          "id": "SP_LIPONEMA_BREVICORNE_MCMURRICH_1893",
-          "name": "\"Liponema brevicorne\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liponema",
-          "authorship": "\"(McMurrich, 1893)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:593074"
-          },
-          "children": [],
-          "uuid": "edcdffaf-78e7-598-891-6b74b4af453d1e",
-          "description": "\"Liponema brevicorne\" is a liponematidae species found in its native region."
-        },
-        {
-          "id": "SP_LIPONEMA_MULTIPORA",
-          "name": "Liponema multipora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liponema",
-          "sourceIds": {
-            "checklistbank-139831": "1363621"
-          },
-          "uuid": "586e0721-411b-4ed8-8884-579cbc067cd2",
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "liponematidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 14,
+  "genusCount": 2,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

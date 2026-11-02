@@ -60,7 +60,8 @@
             "checklistbank": "87136",
             "checklistbank-2169": "50236",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q18461",
-            "checklistbank-244663": "2864467"
+            "checklistbank-244663": "2864467",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:594757"
           },
           "authorityIds": "col:NZ5R,itis:38886,wfo:wfo-0000762573",
           "description": "Butomus umbellatus is a Eurasian plant species in the family Butomaceae.",
@@ -69,7 +70,10 @@
             "Europe",
             "North America"
           ],
-          "authorship": "L., 1753"
+          "authorship": "L., 1753",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_BUTOMUS_CAESALPINII_NECK_1768",
@@ -83,8 +87,7 @@
             "checklistbank": "87133"
           },
           "children": [],
-          "uuid": "79c377b6-b905-5f5-ab4-3ef583be09f205",
-          "description": "Butomus caesalpinii is a butomaceae species found in its native region."
+          "uuid": "79c377b6-b905-5f5-ab4-3ef583be09f205"
         },
         {
           "id": "SP_BUTOMUS_FLORIDUS_GAERTN_1788",
@@ -99,8 +102,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q113038601"
           },
           "children": [],
-          "uuid": "9c89c20c-bd95-52c-bca-0ed3748db75533",
-          "description": "Butomus floridus is a butomaceae species found in its native region."
+          "uuid": "9c89c20c-bd95-52c-bca-0ed3748db75533"
         },
         {
           "id": "SP_BUTOMUS_SP",
@@ -113,8 +115,7 @@
             "checklistbank": "ott5700596"
           },
           "children": [],
-          "uuid": "2f9cddee-51e2-530-a49-4f1291e0994502",
-          "description": "Butomus sp. is a butomaceae species found in its native region."
+          "uuid": "2f9cddee-51e2-530-a49-4f1291e0994502"
         },
         {
           "id": "SP_BUTOMUS_HYPERICOIDES",
@@ -127,8 +128,7 @@
             "checklistbank": "ott7581540"
           },
           "children": [],
-          "uuid": "78906f31-e56b-587-846-44dc5113293dcc",
-          "description": "Butomus hypericoides is a butomaceae species found in its native region."
+          "uuid": "78906f31-e56b-587-846-44dc5113293dcc"
         },
         {
           "id": "SP_BUTOMUS_VULGARIS_G_LDENST_DT_1791",
@@ -141,7 +141,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q113038602"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q529222"
+          ]
         },
         {
           "id": "SP_BUTOMUS_LANCEOLATUS_ROXBURGH_1832",
@@ -154,7 +157,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q65932086"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q748967"
+          ]
         },
         {
           "id": "SP_BUTOMUS_LATIFOLIUS_DON_1825",
@@ -167,6 +173,23 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q65932088"
           },
+          "children": [],
+          "authorIds": [
+            "Q1174244"
+          ]
+        },
+        {
+          "id": "SP_BUTOMUS_JUNCEUS_TURCZ",
+          "name": "Butomus junceus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Butomus",
+          "authorship": "Turcz.",
+          "sourceIds": {
+            "checklistbank-2232": "301533"
+          },
+          "uuid": "bf81d13f-95c2-4db6-ae84-67fad5b30fb1",
           "children": []
         }
       ]
@@ -195,44 +218,6 @@
       ]
     },
     {
-      "id": "GENUS_BUTOMUS",
-      "name": "\"Butomus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BUTOMUS_UMBELLATUS_L",
-          "name": "\"Butomus umbellatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Butomus",
-          "authorship": "L.",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:594757"
-          },
-          "children": [],
-          "uuid": "28454ce9-2787-5c7-8a2-076edbdc6c9a2e",
-          "description": "\"Butomus umbellatus\" is a butomaceae species found in its native region."
-        },
-        {
-          "id": "SP_BUTOMUS_JUNCEUS_TURCZ",
-          "name": "Butomus junceus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Butomus",
-          "authorship": "Turcz.",
-          "sourceIds": {
-            "checklistbank-2232": "301533"
-          },
-          "uuid": "bf81d13f-95c2-4db6-ae84-67fad5b30fb1",
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "butomaceae"
-    },
-    {
       "id": "GENUS_HYDROCLEYS",
       "name": "Hydrocleys",
       "rank": "GENUS",
@@ -255,8 +240,8 @@
       "lineage": "butomaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 13,
+  "genusCount": 3,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

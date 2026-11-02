@@ -6,30 +6,6 @@
   "children": [
     {
       "id": "GENUS_NUMIDA",
-      "name": "\"Numida",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NUMIDA_MELEAGRIS_LINNAEUS_1758",
-          "name": "\"Numida meleagris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Numida",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611561"
-          },
-          "children": [],
-          "uuid": "c2e23191-8d2d-599-876-80bb1833fb5da1",
-          "description": "\"Numida meleagris\" is a numididae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "numididae"
-    },
-    {
-      "id": "GENUS_NUMIDA",
       "name": "Numida",
       "rank": "GENUS",
       "children": [
@@ -43,7 +19,8 @@
           "sourceIds": {
             "checklistbank": "Numida_meleagris",
             "checklistbank-127379": "d5bec3d6-3c2c-4335-94aa-2d9679032ed4",
-            "checklistbank-316046": "https://www.gbif.org/taxon/6SCXZ"
+            "checklistbank-316046": "https://www.gbif.org/taxon/6SCXZ",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1611561"
           },
           "children": [],
           "uuid": "692c7177-07b4-572-b92-eb1436f8f5280e",
@@ -127,45 +104,6 @@
     },
     {
       "id": "GENUS_GUTTERA",
-      "name": "\"Guttera",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GUTTERA_PLUMIFERA_CASSIN_1857",
-          "name": "\"Guttera plumifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Guttera",
-          "authorship": "\"(Cassin, 1857)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1580098"
-          },
-          "children": [],
-          "uuid": "34fc0e11-5837-581-a82-972ddea3e54967",
-          "description": "\"Guttera plumifera\" is a numididae species found in its native region."
-        },
-        {
-          "id": "SP_GUTTERA_PLUMIFERA_REICHENOW_1912",
-          "name": "\"Guttera plumifera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Guttera",
-          "authorship": "\"Reichenow, 1912\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1580101"
-          },
-          "children": [],
-          "uuid": "9dd23419-9080-58e-853-ffa12987dc78e1",
-          "description": "\"Guttera plumifera is a numididae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "numididae"
-    },
-    {
-      "id": "GENUS_GUTTERA",
       "name": "Guttera",
       "rank": "GENUS",
       "children": [
@@ -177,10 +115,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Guttera",
           "sourceIds": {
-            "checklistbank": "Guttera_plumifera"
+            "checklistbank": "Guttera_plumifera",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580098"
           },
           "children": [],
-          "uuid": "90e0da62-da77-56b-8e8-d5a5cb83c27628"
+          "uuid": "90e0da62-da77-56b-8e8-d5a5cb83c27628",
+          "authorship": "(Cassin, 1857)",
+          "authorIds": [
+            "Q1349866"
+          ]
         },
         {
           "id": "SP_GUTTERA_PUCHERANI",
@@ -194,11 +137,15 @@
             "checklistbank-2013": "cregui3",
             "checklistbank-2036": "Guttera_pucherani",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "176131",
-            "checklistbank-312242": "5406"
+            "checklistbank-312242": "5406",
+            "checklistbank-281817": "239833"
           },
           "children": [],
           "uuid": "c131e22c-4e7d-5e1-836-60eb6aca6c7412",
-          "authorship": "(Hartlaub, 1861)"
+          "authorship": "(Hartlaub, 1861)",
+          "authorIds": [
+            "Q62368"
+          ]
         },
         {
           "id": "SP_GUTTERA_VERREAUXI",
@@ -210,7 +157,9 @@
           "sourceIds": {
             "checklistbank-139831": "1424113",
             "checklistbank-2013": "cregui2",
-            "checklistbank-2036": "Guttera_verreauxi"
+            "checklistbank-2036": "Guttera_verreauxi",
+            "checklistbank-144979": "ARU-BIDAF2020140REG-AVES-CH-MAB-251",
+            "checklistbank-172235": "ARG-BIDAF2020140REG-Birds-Ch-01"
           },
           "uuid": "ac5a2e01-ef91-43c9-9d12-d277bfe28cd9",
           "children": []
@@ -273,7 +222,8 @@
             "checklistbank-2169": "8992",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "176133",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q390270",
-            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/11411/"
+            "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/11411/",
+            "checklistbank-281817": "239057"
           },
           "authorityIds": "col:9RWG,itis:176133,wikidata:Q390270",
           "children": [],
@@ -324,7 +274,10 @@
           },
           "authorityIds": "col:5TQ98,itis:176123,wikidata:Q717074",
           "children": [],
-          "authorship": "Bonaparte, 1850"
+          "authorship": "Bonaparte, 1850",
+          "authorIds": [
+            "Q157521"
+          ]
         },
         {
           "id": "AGELASTES_NIGER",
@@ -384,8 +337,7 @@
           },
           "children": [],
           "uuid": "06380567-532a-5ea-824-8481dd8bcaa35b",
-          "commonName": "helmeted guineafowl",
-          "description": "Phasianus meleagris (helmeted guineafowl) is a numididae species found in its native region."
+          "commonName": "helmeted guineafowl"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -407,8 +359,7 @@
             "checklistbank": "8997"
           },
           "children": [],
-          "uuid": "1752ca7f-e836-59f-879-28b846bb130b25",
-          "description": "Numididae sp. is a numididae species found in its native region."
+          "uuid": "1752ca7f-e836-59f-879-28b846bb130b25"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -431,8 +382,7 @@
             "checklistbank": "txn:134710"
           },
           "children": [],
-          "uuid": "de47ee71-d1ac-52c-a50-4ffe78b8a35fd3",
-          "description": "Telecrex grangeri is a numididae species found in its native region."
+          "uuid": "de47ee71-d1ac-52c-a50-4ffe78b8a35fd3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -454,6 +404,6 @@
     "9ca92552-f23a-41a8-a140-01abaa31c931": "176121",
     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q171953"
   },
-  "genusCount": 9,
-  "speciesCount": 20
+  "genusCount": 7,
+  "speciesCount": 17
 }

@@ -3,7 +3,7 @@
   "name": "Echimyopodidae",
   "rank": "FAMILY",
   "appSlug": "echimyopodidae",
-  "speciesCount": 15,
+  "speciesCount": 19,
   "children": [
     {
       "id": "GENUS_BLOMIA",
@@ -64,7 +64,8 @@
           "authorship": "Van Bronswijk & de Cock",
           "sourceIds": {
             "gbif-backbone": "5799849",
-            "checklistbank-316441": "M626H"
+            "checklistbank-316441": "M626H",
+            "checklistbank-281817": "23631"
           },
           "children": [],
           "uuid": "59b11e13-c8cd-58db-a1d4-52819f6c8941"
@@ -94,7 +95,23 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q136771899"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q4188887"
+          ]
+        },
+        {
+          "id": "SP_BLOMIA_KULAGINI_ZAKHVATKIN_1936",
+          "name": "Blomia kulagini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blomia",
+          "authorship": "(Zakhvatkin, 1936)",
+          "sourceIds": {
+            "checklistbank-281817": "221812"
+          },
+          "uuid": "e68463bc-656e-4a58-bebb-021a12926ac2"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -197,7 +214,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4553578"
           },
           "uuid": "36cbddcc-955d-46d7-b085-7ba56728ab2d",
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q21340631"
+          ]
         },
         {
           "id": "SP_MARSUPIOPUS_ZYZOMYS_LUKOSCHUS_JANSSEN_DUIJGHUIJSEN_FAIN",
@@ -255,10 +275,58 @@
           },
           "children": [],
           "uuid": "9481fd6d-1fc1-580e-828c-9fa2eb142bbc"
+        },
+        {
+          "id": "SP_ORYZOMYOPUS_PARANAE_FAIN_1967",
+          "name": "Oryzomyopus paranae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oryzomyopus",
+          "authorship": "Fain, 1967",
+          "sourceIds": {
+            "checklistbank-281817": "47991"
+          },
+          "uuid": "6e2f0bf0-265a-4290-a7cc-7707b26da0e0"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "echimyopodidae"
+    },
+    {
+      "id": "GENUS_ECHIMYOPUS",
+      "name": "Echimyopus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "echimyopodidae",
+      "children": [
+        {
+          "id": "SP_ECHIMYOPUS_BRASILIENSIS_FAIN_1967",
+          "name": "Echimyopus brasiliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echimyopus",
+          "authorship": "Fain, 1967",
+          "sourceIds": {
+            "checklistbank-281817": "79684"
+          },
+          "uuid": "b943841c-8273-4601-a9af-8b09fb8da4b8"
+        },
+        {
+          "id": "SP_ECHIMYOPUS_CAPARTI_FAIN_1969",
+          "name": "Echimyopus caparti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echimyopus",
+          "authorship": "Fain, 1969",
+          "sourceIds": {
+            "checklistbank-281817": "225027"
+          },
+          "uuid": "93a836ca-f85c-4741-92be-bce69597c608"
+        }
+      ]
     }
   ],
   "genusCount": 4,

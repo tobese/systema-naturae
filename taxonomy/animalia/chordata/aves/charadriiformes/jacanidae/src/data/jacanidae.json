@@ -6,45 +6,6 @@
   "children": [
     {
       "id": "GENUS_JACANA",
-      "name": "\"Jacana",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_JACANA_SPINOSA_LINNAEUS_1758",
-          "name": "\"Jacana spinosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Jacana",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:422604"
-          },
-          "children": [],
-          "uuid": "b814b605-73fb-57e-bf7-2582ab6b2f1c6d",
-          "description": "\"Jacana spinosa\" is a jacanidae species found in its native region."
-        },
-        {
-          "id": "SP_JACANA_JACANA_LINNAEUS_1766",
-          "name": "\"Jacana jacana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Jacana",
-          "authorship": "\"(Linnaeus, 1766)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476333"
-          },
-          "children": [],
-          "uuid": "ecffa849-edbe-54b-ac4-c90c0ed49d5ca6",
-          "description": "\"Jacana jacana\" is a jacanidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "jacanidae"
-    },
-    {
-      "id": "GENUS_JACANA",
       "name": "Jacana",
       "rank": "GENUS",
       "children": [
@@ -56,7 +17,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Jacana",
           "sourceIds": {
-            "checklistbank": "Jacana_jacana"
+            "checklistbank": "Jacana_jacana",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1476333"
           },
           "children": [],
           "uuid": "7d430707-af3c-58b-b6a-6213557d18eda6",
@@ -70,10 +32,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Jacana",
           "sourceIds": {
-            "checklistbank": "Jacana_spinosa"
+            "checklistbank": "Jacana_spinosa",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:422604"
           },
           "children": [],
-          "uuid": "4952189e-b1d8-545-9ba-c1229babe0aa67"
+          "uuid": "4952189e-b1d8-545-9ba-c1229babe0aa67",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "SP_JACANA_FARRANDI_OLSON_1976",
@@ -95,30 +59,6 @@
     },
     {
       "id": "GENUS_ACTOPHILORNIS",
-      "name": "\"Actophilornis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ACTOPHILORNIS_AFRICANUS_GMELIN_1789",
-          "name": "\"Actophilornis africanus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actophilornis",
-          "authorship": "\"(Gmelin, 1789)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1451015"
-          },
-          "children": [],
-          "uuid": "f356c359-0d62-50f-b20-cf21f569b9757a",
-          "description": "\"Actophilornis africanus\" is a jacanidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "jacanidae"
-    },
-    {
-      "id": "GENUS_ACTOPHILORNIS",
       "name": "Actophilornis",
       "rank": "GENUS",
       "children": [
@@ -133,7 +73,8 @@
             "checklistbank": "Actophilornis_africanus",
             "gbif-backbone": "2481853",
             "checklistbank-2036": "Actophilornis_africanus",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "176454"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "176454",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1451015"
           },
           "children": [],
           "authorship": "(J.F.Gmelin, 1789)",
@@ -215,30 +156,6 @@
     },
     {
       "id": "GENUS_HYDROPHASIANUS",
-      "name": "\"Hydrophasianus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HYDROPHASIANUS_CHIRURGUS_SCOPOLI_1786",
-          "name": "\"Hydrophasianus chirurgus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hydrophasianus",
-          "authorship": "\"(Scopoli, 1786)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034716"
-          },
-          "children": [],
-          "uuid": "8afaa86a-3875-56c-a6c-70883d85fea459",
-          "description": "\"Hydrophasianus chirurgus\" is a jacanidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "jacanidae"
-    },
-    {
-      "id": "GENUS_HYDROPHASIANUS",
       "name": "Hydrophasianus",
       "rank": "GENUS",
       "children": [
@@ -250,10 +167,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hydrophasianus",
           "sourceIds": {
-            "checklistbank-139831": "4589"
+            "checklistbank-139831": "4589",
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034716"
           },
           "children": [],
-          "uuid": "ed585a0e-3cc2-53a1-a21c-9d7b8dbba6e3"
+          "uuid": "ed585a0e-3cc2-53a1-a21c-9d7b8dbba6e3",
+          "authorship": "(Scopoli, 1786)"
         },
         {
           "id": "SP_HYDROPHASIANUS_TORQUATA",
@@ -408,8 +327,7 @@
             "checklistbank": "927250"
           },
           "children": [],
-          "uuid": "7863a502-5a03-5f1-86a-fbbe52b0c783ad",
-          "description": "Parra Jacana is a jacanidae species found in its native region."
+          "uuid": "7863a502-5a03-5f1-86a-fbbe52b0c783ad"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -432,8 +350,7 @@
             "checklistbank": "txn:206588"
           },
           "children": [],
-          "uuid": "9d937afd-2a71-58e-965-dd8043f69242c4",
-          "description": "Nupharanassa bulotorum is a jacanidae species found in its native region."
+          "uuid": "9d937afd-2a71-58e-965-dd8043f69242c4"
         },
         {
           "id": "SP_NUPHARANASSA_TOLUTARIA_RASMUSSEN_ET_AL_1987",
@@ -447,8 +364,7 @@
             "checklistbank": "txn:206589"
           },
           "children": [],
-          "uuid": "62ec26d7-b7af-574-a8d-b1c1034539faca",
-          "description": "Nupharanassa tolutaria is a jacanidae species found in its native region."
+          "uuid": "62ec26d7-b7af-574-a8d-b1c1034539faca"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -472,8 +388,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61893481"
           },
           "children": [],
-          "uuid": "52343424-a1b7-596-a6d-801f1269c5d2e3",
-          "description": "Janipes nymphaeobates is a jacanidae species found in its native region."
+          "uuid": "52343424-a1b7-596-a6d-801f1269c5d2e3"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -494,6 +409,6 @@
     "9ca92552-f23a-41a8-a140-01abaa31c931": "176447",
     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q212929"
   },
-  "genusCount": 12,
-  "speciesCount": 20
+  "genusCount": 9,
+  "speciesCount": 16
 }

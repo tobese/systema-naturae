@@ -6,30 +6,6 @@
   "children": [
     {
       "id": "GENUS_PRIONAILURUS",
-      "name": "\"Prionailurus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PRIONAILURUS_VIVERRINUS_BENNETT_1833",
-          "name": "\"Prionailurus viverrinus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prionailurus",
-          "authorship": "\"(Bennett, 1833)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1460006"
-          },
-          "children": [],
-          "uuid": "0642a486-a8c6-5c2-910-03e6f0de3a273b",
-          "description": "\"Prionailurus viverrinus\" is a felidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "felidae"
-    },
-    {
-      "id": "GENUS_PRIONAILURUS",
       "name": "Prionailurus",
       "rank": "GENUS",
       "children": [
@@ -85,10 +61,12 @@
           "lineage": "Prionailurus",
           "sourceIds": {
             "checklistbank": "Prionailurus_viverrinus",
-            "checklistbank-316046": "https://www.gbif.org/taxon/4MF7G"
+            "checklistbank-316046": "https://www.gbif.org/taxon/4MF7G",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1460006"
           },
           "children": [],
-          "uuid": "eee96d7f-0c29-5b4-b9d-1c5f726d14b939"
+          "uuid": "eee96d7f-0c29-5b4-b9d-1c5f726d14b939",
+          "authorship": "(Bennett, 1833)"
         },
         {
           "id": "SP_PRIONAILURUS_JAVANENSIS",
@@ -178,7 +156,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Felis vorohuensis (Leopardus Vorohuensis) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "2c04f4ef-5909-53e-863-2bf0dae53a2355",
@@ -219,7 +196,8 @@
             "checklistbank-9802": "1005992",
             "checklistbank-316441": "3T785",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "726250",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q133763"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q133763",
+            "checklistbank-281817": "91116"
           },
           "authorityIds": "col:3T785,itis:726250,wikidata:Q133763",
           "authorship": "(Cope, 1889)"
@@ -260,7 +238,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Leopardus ellioti is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "760d2f8d-29cc-566-ab3-347e89145c5847",
@@ -308,7 +285,8 @@
             "checklistbank-2169": "46844",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "726252",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907057",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=726253"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=726253",
+            "checklistbank-281817": "53148"
           },
           "authorityIds": "col:3T787,itis:726252,wikidata:Q42682",
           "authorship": "(d'Orbigny & Gervais, 1844)"
@@ -386,7 +364,8 @@
             "checklistbank-2169": "1608501",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "933421",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16590235",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=933422"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=933422",
+            "checklistbank-281817": "141022"
           },
           "authorityIds": "col:6P8KN,itis:933421,wikidata:Q16590235",
           "authorship": "(Hensel, 1872)"
@@ -399,7 +378,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Leopardus hernandesii is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "40209709-b2d9-5a8-a44-61ed5a926dbb3b",
@@ -450,7 +428,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Leopardus japonensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "49833918-f0ef-544-9a8-38eb823a78308a",
@@ -462,7 +439,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122936989"
           },
           "authorityIds": "wikidata:Q122936989",
-          "authorship": "Gray, 1862"
+          "authorship": "Gray, 1862",
+          "authorIds": [
+            "Q191963"
+          ]
         },
         {
           "id": "LEOPARDUS_PAJEROS",
@@ -540,7 +520,8 @@
             "checklistbank-74965": "https://www.gbif.org/species/2434982",
             "checklistbank-21227": "gbif.org/species/2434982",
             "checklistbank-315647": "5fa0f8f3-d0dc-4fb1-95d7-1d121edfe7f0",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552471"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552471",
+            "checklistbank-281817": "34033"
           },
           "authorityIds": "col:3T78D,itis:552470,wikidata:Q33261",
           "authorship": "(Linnaeus, 1758)"
@@ -553,7 +534,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Leopardus perniger is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "87dd1f1e-8ab3-572-803-dddeca07d340bb",
@@ -575,7 +555,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Leopardus pictus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c39362bf-e81a-574-8bf-3788c82ffd00a0",
@@ -598,7 +577,6 @@
           "lineage": "Leopardus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Leopardus poliopardus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d416e24f-7d7e-59e-b00-4312cdc7ec7fad",
@@ -650,7 +628,8 @@
             "checklistbank-30064": "gbif.org/species/6164563",
             "checklistbank-212265": "gbif.org/species/6164563",
             "checklistbank-212266": "gbif.org/species/2434930",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=621869"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=621869",
+            "checklistbank-281817": "35163"
           },
           "authorityIds": "col:6P8MM,itis:621868,wikidata:Q205948",
           "authorship": "(Schreber, 1775)"
@@ -718,7 +697,8 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12454/",
             "checklistbank-74965": "https://www.gbif.org/species/2434950",
             "checklistbank-21227": "gbif.org/species/2434950",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552470"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552470",
+            "checklistbank-281817": "65521"
           },
           "authorityIds": "col:3T78F,itis:552469,wikidata:Q192421",
           "authorship": "(Schinz, 1821)"
@@ -741,11 +721,11 @@
               "1229733"
             ],
             "checklistbank": "242645",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q96575733"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q96575733",
+            "checklistbank-281817": "242645"
           },
           "authorityIds": "col:CFYCB,itis:1229733",
-          "commonName": "Muñoa's Pampas Cat",
-          "description": "Leopardus munoai (Muñoa's Pampas Cat) is a felidae species found in its native region."
+          "commonName": "Muñoa's Pampas Cat"
         },
         {
           "id": "SP_LEOPARDUS_GARLEPPI_MATSCHIE_1912",
@@ -771,8 +751,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q96575311"
           },
           "authorityIds": "col:CFYC9,itis:1229732",
-          "commonName": "Northern Pampas Cat",
-          "description": "Leopardus garleppi (Northern Pampas Cat) is a felidae species found in its native region."
+          "commonName": "Northern Pampas Cat"
         },
         {
           "id": "SP_LEOPARDUS_NARINENSIS_RUIZ_GARC_A_2018",
@@ -827,7 +806,9 @@
           "continents": [
             "South America"
           ],
-          "description": "Leopardus colocola (Central Chilean Colocolo) is a felidae species found in South America region."
+          "authorIds": [
+            "Q55068526"
+          ]
         },
         {
           "id": "SP_LEOPARDUS_JACOBITA",
@@ -846,8 +827,7 @@
             "checklistbank-2169": "713925",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q213047",
             "checklistbank-25250": "fdada0c5-2c9d-4db7-bb01-efccf09f6c2b"
-          },
-          "description": "Leopardus jacobita (Andean cat) is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_LEOPARDUS_FASCIATUS",
@@ -858,7 +838,6 @@
           "children": [],
           "lineage": "Leopardus",
           "uuid": "79981e5a-f858-531-809-a312555162d4a8",
-          "description": "Leopardus fasciatus is a felidae species found in its native region.",
           "authorship": "Martínez-Lanfranco & González, 2022",
           "sourceIds": {
             "checklistbank-316441": "Q3Z4L",
@@ -879,8 +858,7 @@
             "checklistbank": "3370154",
             "checklistbank-2169": "3370154",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124399735"
-          },
-          "description": "Leopardus pardinoides is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_LEOPARDUS_EMILIAE_O_THOMAS_1914",
@@ -897,7 +875,9 @@
           },
           "children": [],
           "uuid": "a1bf49b7-cf82-5b0-8f5-b321cef96611c6",
-          "description": "Leopardus emiliae is a felidae species found in its native region."
+          "authorIds": [
+            "Q318207"
+          ]
         },
         {
           "id": "SP_LEOPARDUS_VOROHUENSIS_BERTA_1983",
@@ -912,8 +892,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q16590238"
           },
           "children": [],
-          "uuid": "5eebd2a2-95e0-5b8-82a-90bb36b08b0c1d",
-          "description": "Leopardus vorohuensis is a felidae species found in its native region."
+          "uuid": "5eebd2a2-95e0-5b8-82a-90bb36b08b0c1d"
         },
         {
           "id": "SP_LEOPARDUS_HORSFIELDII",
@@ -974,7 +953,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41084117"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q468149"
+          ]
         },
         {
           "id": "SP_LEOPARDUS_GRISEUS",
@@ -1036,7 +1018,8 @@
             "checklistbank-29666": "2018_2336",
             "checklistbank-316260": "https://wingeds.world/sp/89169",
             "checklistbank-311656": "https://www.gbif.org/species/2435010",
-            "checklistbank-315647": "4b8ba264-2c75-4a48-8643-d84ef2cd2523"
+            "checklistbank-315647": "4b8ba264-2c75-4a48-8643-d84ef2cd2523",
+            "checklistbank-281817": "239268"
           },
           "authorityIds": "col:QZRR,itis:552775,wikidata:Q30847",
           "authorship": "(Schreber, 1776)"
@@ -1049,7 +1032,6 @@
           "lineage": "Caracal",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Caracal melanotis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f4eba7c0-6635-559-961-0ccd8ccb53b3a9",
@@ -1079,8 +1061,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q111027611"
           },
           "authorityIds": "col:CFJ2J,itis:1229766",
-          "commonName": "Golden Cat",
-          "description": "Caracal aurata (Golden Cat) is a felidae species found in its native region."
+          "commonName": "Golden Cat"
         },
         {
           "id": "SP_CARACAL_AURATUS",
@@ -1096,8 +1077,7 @@
             "checklistbank": "3369756",
             "checklistbank-2169": "3369756",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q134355622"
-          },
-          "description": "Caracal auratus is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_CARACAL_SERVAL_SCHREBER_1776",
@@ -1112,8 +1092,7 @@
           },
           "children": [],
           "uuid": "c580bec3-97d4-51b-a27-9380a1ef438b57",
-          "commonName": "serval",
-          "description": "Caracal serval (serval) is a felidae species found in its native region."
+          "commonName": "serval"
         },
         {
           "id": "SP_CARACAL_DEPERETI",
@@ -1128,45 +1107,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_FELIS",
-      "name": "\"Felis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FELIS_CATUS_LINNAEUS_1758",
-          "name": "\"Felis catus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Felis",
-          "authorship": "\"Linnaeus, 1758\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1461480"
-          },
-          "children": [],
-          "uuid": "de474462-198d-575-ba1-b6e8fc0d24c13c",
-          "description": "\"Felis catus\" is a felidae species found in its native region."
-        },
-        {
-          "id": "SP_FELIS_SILVESTRIS_SCHREBER_1775",
-          "name": "\"Felis silvestris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Felis",
-          "authorship": "\"Schreber, 1775\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1526001"
-          },
-          "children": [],
-          "uuid": "379be30f-6e61-56a-988-d2b73d631d6240",
-          "description": "\"Felis silvestris\" is a felidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "felidae"
     },
     {
       "id": "GENUS_FELIS",
@@ -1236,7 +1176,10 @@
           "uuid": "2b30c985-dc68-528-995-02945cbdd474dc",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41170771"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_FELIS_SPELAEA_GOLDFUSS_1810",
@@ -1250,7 +1193,10 @@
           "uuid": "6c32a5f1-18e3-573-8e6-661c56efc5a53c",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121788213"
-          }
+          },
+          "authorIds": [
+            "Q60622"
+          ]
         },
         {
           "id": "SP_FELIS_CONCOLOR_LINNAEUS_1771",
@@ -1278,7 +1224,10 @@
           "uuid": "fc3ea1b5-6a5e-5f4-8aa-fc32c6cae7c1c0",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122170181"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_FELIS_TIGRINA_SCHREBER_1775",
@@ -1331,7 +1280,10 @@
           "uuid": "81ee69da-6f6c-575-83c-fc64a92845f5b3",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q47450956"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_FELIS_LEO_LINNAEUS_1758",
@@ -1345,7 +1297,10 @@
           "uuid": "0a3fe0c0-4daf-589-9d5-e8b32d6a5a85ed",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q40494195"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_FELIS_YAGUAROUNDI_LAC_P_DE_1809",
@@ -1367,7 +1322,10 @@
           "lineage": "Felis",
           "authorship": "Temminck, 1827",
           "children": [],
-          "uuid": "b410c5c8-6d99-5bb-9df-b051642e5229d9"
+          "uuid": "b410c5c8-6d99-5bb-9df-b051642e5229d9",
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_FELIS_ONCA_LINNAEUS_1758",
@@ -1381,7 +1339,10 @@
           "uuid": "9cc773bf-1433-575-b70-19e6da7b67c7ef",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122170157"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_FELIS_REYI_LAVAUDEN_1929",
@@ -1426,10 +1387,14 @@
             "checklistbank-288375": "HABITATDIRECT-UA-ANNEX.IV:129",
             "checklistbank-31948": "1030",
             "checklistbank-77947": "100190",
-            "checklistbank-24480": "200177"
+            "checklistbank-24480": "200177",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1526001"
           },
           "children": [],
-          "uuid": "bf04f924-be69-54f-8eb-2adc79b2d968dd"
+          "uuid": "bf04f924-be69-54f-8eb-2adc79b2d968dd",
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_CHAUS_SCHREBER_1777",
@@ -1447,7 +1412,10 @@
             "checklistbank-2265": "61376"
           },
           "children": [],
-          "uuid": "1a16d183-dadc-556-ae4-245cb3f937acd8"
+          "uuid": "1a16d183-dadc-556-ae4-245cb3f937acd8",
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_MARGARITA_LOCHE_1858",
@@ -1468,7 +1436,10 @@
             "checklistbank-316046": "https://www.gbif.org/taxon/5HC22"
           },
           "children": [],
-          "uuid": "f62d884e-5705-533-bfc-e8438b3f3cb881"
+          "uuid": "f62d884e-5705-533-bfc-e8438b3f3cb881",
+          "authorIds": [
+            "Q1972428"
+          ]
         },
         {
           "id": "SP_FELIS_CATUS",
@@ -1481,11 +1452,15 @@
             "checklistbank": "Felis_catus",
             "checklistbank-127379": "7de6b16a-f854-4b4b-88cf-81868ce74ad8",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122375256",
-            "checklistbank-4947": "naturalized:species:Chile:taxon:924"
+            "checklistbank-4947": "naturalized:species:Chile:taxon:924",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1461480"
           },
           "children": [],
           "uuid": "5a147880-3c42-5f6-8f5-84ca06b8313c6a",
-          "authorship": "Linnaeus, 1758"
+          "authorship": "Linnaeus, 1758",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_FELIS_BIETI",
@@ -1505,7 +1480,10 @@
           },
           "children": [],
           "authorship": "Milne-Edwards, 1892",
-          "uuid": "139886d6-e769-53b-816-82accc899997f2"
+          "uuid": "139886d6-e769-53b-816-82accc899997f2",
+          "authorIds": [
+            "Q542059"
+          ]
         },
         {
           "id": "SP_FELIS_NIGRIPES",
@@ -1526,7 +1504,10 @@
           },
           "children": [],
           "authorship": "Burchell, 1824",
-          "uuid": "2590fb63-1e1c-551-9ef-6885c05ee1d9f9"
+          "uuid": "2590fb63-1e1c-551-9ef-6885c05ee1d9f9",
+          "authorIds": [
+            "Q1397207"
+          ]
         },
         {
           "id": "SP_FELIS_LYBICA",
@@ -1545,7 +1526,10 @@
           },
           "children": [],
           "uuid": "d1763825-05db-59b-9c2-de372e9b16a267",
-          "authorship": "Forster 1780"
+          "authorship": "Forster 1780",
+          "authorIds": [
+            "Q58062"
+          ]
         },
         {
           "id": "SP_FELIS_LUNENSIS",
@@ -1563,7 +1547,10 @@
           },
           "children": [],
           "authorship": "Martelli, 1906",
-          "uuid": "e6e559dd-b7a6-591-89e-bcb52b81028d32"
+          "uuid": "e6e559dd-b7a6-591-89e-bcb52b81028d32",
+          "authorIds": [
+            "Q4002954"
+          ]
         },
         {
           "id": "SP_FELIS_REXROADENSIS",
@@ -1594,7 +1581,10 @@
           },
           "children": [],
           "uuid": "b6c19e58-44ff-528-ad2-744941a0c1bea5",
-          "authorship": "Stach, 1961"
+          "authorship": "Stach, 1961",
+          "authorIds": [
+            "Q11719057"
+          ]
         },
         {
           "id": "SP_FELIS_OBSCURA",
@@ -1695,7 +1685,10 @@
             "gbif-backbone": "11148701"
           },
           "children": [],
-          "uuid": "35a8bcf0-59a9-5f3-822-82b2c89d74a646"
+          "uuid": "35a8bcf0-59a9-5f3-822-82b2c89d74a646",
+          "authorIds": [
+            "Q62095"
+          ]
         },
         {
           "id": "SP_FELIS_NIGRA_ERXLEBEN_1777",
@@ -1709,7 +1702,10 @@
             "gbif-backbone": "8916927"
           },
           "children": [],
-          "uuid": "6c18412a-07d2-5b4-a1a-765021d096a78b"
+          "uuid": "6c18412a-07d2-5b4-a1a-765021d096a78b",
+          "authorIds": [
+            "Q60938"
+          ]
         },
         {
           "id": "SP_FELIS_LONGICAUDATA_VALENCIENNES_1856",
@@ -1765,7 +1761,10 @@
             "gbif-backbone": "9029391"
           },
           "children": [],
-          "uuid": "cb07fb0b-8952-554-967-a70393423ced41"
+          "uuid": "cb07fb0b-8952-554-967-a70393423ced41",
+          "authorIds": [
+            "Q33528"
+          ]
         },
         {
           "id": "SP_FELIS_PROPUMA_AMEGHINO_1904",
@@ -2392,7 +2391,11 @@
             "gbif-backbone": "9816312"
           },
           "children": [],
-          "uuid": "61531970-7d74-541-848-227d9a37e3ba2f"
+          "uuid": "61531970-7d74-541-848-227d9a37e3ba2f",
+          "authorIds": [
+            "Q20752381",
+            "Q53503012"
+          ]
         },
         {
           "id": "SP_FELIS_VULGARIS_KERR_1792",
@@ -2466,7 +2469,11 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374759"
           },
           "uuid": "3e55de5a-6972-48dc-81af-5760717a7b3a",
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q721433",
+            "Q20534948"
+          ]
         },
         {
           "id": "SP_FELIS_DOMESTICUS_ERXLEBEN_1777",
@@ -2539,7 +2546,10 @@
             "checklistbank-316441": "V33CK"
           },
           "children": [],
-          "uuid": "559b130c-0076-5850-9029-2f7b60570338"
+          "uuid": "559b130c-0076-5850-9029-2f7b60570338",
+          "authorIds": [
+            "Q78948"
+          ]
         },
         {
           "id": "SP_FELIS_HILLIANUS_COPE_1892",
@@ -2610,7 +2620,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122871164"
           },
           "children": [],
-          "uuid": "b2b182ea-6648-50fb-84ed-ab2899ee387d"
+          "uuid": "b2b182ea-6648-50fb-84ed-ab2899ee387d",
+          "authorIds": [
+            "Q2977432"
+          ]
         },
         {
           "id": "SP_FELIS_SP",
@@ -2723,7 +2736,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374793"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q721433"
+          ]
         },
         {
           "id": "SP_FELIS_OREGONENSIS_RAFINESQUE_1832",
@@ -2736,7 +2752,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374844"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q364857"
+          ]
         },
         {
           "id": "SP_FELIS_BREVIROSTRIS_CROIZET_JOBERT_1828",
@@ -2749,7 +2768,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122841386"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q20752381",
+            "Q53503012"
+          ]
         },
         {
           "id": "SP_FELIS_BRACHYRHYNCHA",
@@ -2786,7 +2809,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41083400"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q33528"
+          ]
         },
         {
           "id": "SP_FELIS_RUBIGINOSUS",
@@ -2811,7 +2837,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41083483"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_WAGATI",
@@ -2836,7 +2865,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121781824"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q521190"
+          ]
         },
         {
           "id": "SP_FELIS_ETRUSCUS_CAMPANA_1916",
@@ -2849,7 +2881,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121912541"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q98552868"
+          ]
         },
         {
           "id": "SP_FELIS_OLYMPUS",
@@ -2874,7 +2909,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374745"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q20534948"
+          ]
         },
         {
           "id": "SP_FELIS_BANGSI_MERRIAM_1901",
@@ -2900,7 +2938,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122375202"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q62095"
+          ]
         },
         {
           "id": "SP_FELIS_PIRRENSIS_GOLDMAN_1914",
@@ -2913,7 +2954,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125830707"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q1291546"
+          ]
         },
         {
           "id": "SP_FELIS_JAGUARUNDI",
@@ -2949,7 +2993,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41170743"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q191963"
+          ],
+          "authorship": "Gray, 1830"
         },
         {
           "id": "SP_FELIS_CAPENSIS",
@@ -2986,7 +3034,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106448127"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q448369"
+          ]
         },
         {
           "id": "SP_FELIS_JUBATA_SCHREBER_1775",
@@ -2999,7 +3050,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122360017"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_CORYI_BANGS_1899",
@@ -3012,7 +3066,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374680"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q602234"
+          ]
         },
         {
           "id": "SP_FELIS_HIPPOLESTES_MERRIAM_1901",
@@ -3038,7 +3095,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q23753222"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q31621"
+          ]
         },
         {
           "id": "SP_FELIS_AGRIUS",
@@ -3099,7 +3159,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121788043"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q78948"
+          ]
         },
         {
           "id": "SP_FELIS_DAEMON_SATUNIN_1904",
@@ -3112,7 +3175,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122224944"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q4409061"
+          ]
         },
         {
           "id": "SP_FELIS_DAGGETTI_MERRIAM_1918",
@@ -3125,7 +3191,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374716"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q721433"
+          ]
         },
         {
           "id": "SP_FELIS_TIGRIS_TEMMINCK_1844",
@@ -3151,7 +3220,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q24284231"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_DOMINICANORUM",
@@ -3200,7 +3272,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122750262"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q332479",
+            "Q507763"
+          ]
         },
         {
           "id": "SP_FELIS_PARDINENSIS_CROIZET_JOBERT_1828",
@@ -3213,7 +3289,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122841188"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q20752381",
+            "Q53503012"
+          ]
         },
         {
           "id": "SP_FELIS_ARVERNENSIS_CROIZET_JOBERT_1828",
@@ -3226,7 +3306,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122841200"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q20752381",
+            "Q53503012"
+          ]
         },
         {
           "id": "SP_FELIS_MEGANTEREON_CROIZET_JOBERT_1828",
@@ -3239,7 +3323,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122841419"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q20752381",
+            "Q53503012"
+          ]
         },
         {
           "id": "SP_FELIS_TOGOENSIS_MATSCHIE_1893",
@@ -3252,7 +3340,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125968780"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q77135"
+          ]
         },
         {
           "id": "SP_FELIS_MACULATA",
@@ -3313,7 +3404,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124799234"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q1292410"
+          ]
         },
         {
           "id": "SP_FELIS_GRACILIS_HORSFIELD_1821",
@@ -3363,7 +3457,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109647289"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q55068526"
+          ]
         },
         {
           "id": "SP_FELIS_SERVAL_SCHREBER_1776",
@@ -3376,7 +3473,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109647291"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_LEIODON_WEITHOFER_1888",
@@ -3389,7 +3489,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121391636"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q94292162"
+          ]
         },
         {
           "id": "SP_FELIS_CENTRALIS_MEARNS_1901",
@@ -3402,7 +3505,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122375286"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q35616"
+          ]
         },
         {
           "id": "SP_FELIS_PAJEROS_DESMAREST_1816",
@@ -3415,7 +3521,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122747967"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q33528"
+          ]
         },
         {
           "id": "SP_FELIS_BRACCATA_COPE_1889",
@@ -3428,7 +3537,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123038044"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q298933"
+          ]
         },
         {
           "id": "SP_FELIS_SENEGALENSIS",
@@ -3453,7 +3565,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41083332"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q383324"
+          ]
         },
         {
           "id": "SP_FELIS_NEPALENSIS",
@@ -3502,7 +3617,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q41083504"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q507763"
+          ]
         },
         {
           "id": "SP_FELIS_CALIFORNICA",
@@ -3527,7 +3645,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122374829"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q472232"
+          ]
         },
         {
           "id": "SP_FELIS_PENNSYLVANICA",
@@ -3552,7 +3673,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122653062"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q162688"
+          ]
         },
         {
           "id": "SP_FELIS_LEOPARDALIS",
@@ -3577,7 +3701,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123038996"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q2598203"
+          ]
         },
         {
           "id": "SP_FELIS_VENATICA_GRIFFITH_1821",
@@ -3590,7 +3717,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124799173"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q1292410"
+          ]
         },
         {
           "id": "SP_FELIS_CONSTANTINA_FORSTER_1780",
@@ -3603,7 +3733,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q125973946"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q58062"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3651,7 +3784,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10943942"
           },
           "authorityIds": "col:46H7Y,itis:933419,wikidata:Q275163",
-          "authorship": "(Cuvier 1823)"
+          "authorship": "(Cuvier 1823)",
+          "authorIds": [
+            "Q171969"
+          ]
         },
         {
           "id": "NEOFELIS_NEBULOSA",
@@ -3741,7 +3877,10 @@
             "checklistbank-312616": "0b713c499d5a451ea99a2ac95ee4fd67"
           },
           "authorityIds": "col:4DJJ2,itis:621872,wikidata:Q80191",
-          "authorship": "(Martin 1837)"
+          "authorship": "(Martin 1837)",
+          "authorIds": [
+            "Q2139341"
+          ]
         },
         {
           "id": "SP_PARDOFELIS_BADIA_GRAY_1874",
@@ -3756,8 +3895,7 @@
           },
           "children": [],
           "uuid": "538e214a-f9fc-565-a8e-c5fe9657399680",
-          "commonName": "bay cat",
-          "description": "Pardofelis badia (bay cat) is a felidae species found in its native region."
+          "commonName": "bay cat"
         },
         {
           "id": "SP_PARDOFELIS_TEMMINCKII_VIGORS_AND_HORSFIELD_1827",
@@ -3773,8 +3911,7 @@
           },
           "children": [],
           "uuid": "15478c88-9ee6-58b-b52-7ce21e9b37ea55",
-          "commonName": "Asian golden cat",
-          "description": "Pardofelis temminckii (Asian golden cat) is a felidae species found in its native region."
+          "commonName": "Asian golden cat"
         }
       ]
     },
@@ -3864,30 +4001,6 @@
     },
     {
       "id": "GENUS_PUMA",
-      "name": "\"Puma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PUMA_CONCOLOR_LINNAEUS_1771",
-          "name": "\"Puma concolor\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Puma",
-          "authorship": "\"(Linnaeus, 1771)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1860277"
-          },
-          "children": [],
-          "uuid": "80bad7a9-3af2-5ae-b1a-cd2717f1d0bbe2",
-          "description": "\"Puma concolor\" is a felidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "felidae"
-    },
-    {
-      "id": "GENUS_PUMA",
       "name": "Puma",
       "rank": "GENUS",
       "children": [
@@ -3902,7 +4015,8 @@
             "checklistbank": "Puma_concolor",
             "gbif-backbone": "6164624",
             "checklistbank-316441": "5KSLV",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q9064708"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q9064708",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1860277"
           },
           "children": [],
           "authorship": "(Merriam, 1901)",
@@ -3922,7 +4036,10 @@
           },
           "children": [],
           "uuid": "3dc186ba-c9dc-574-8fd-592ebdb368d22b",
-          "authorship": "(Gazin 1933)"
+          "authorship": "(Gazin 1933)",
+          "authorIds": [
+            "Q37223"
+          ]
         },
         {
           "id": "SP_PUMA_YAGOUAROUNDI_GEOFFROY_SAINT_HILAIRE_1803",
@@ -3936,7 +4053,8 @@
             "checklistbank-2008": "459562",
             "checklistbank-1174": "txn:46533",
             "checklistbank-2265": "1608482",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907135"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907135",
+            "checklistbank-30647": "RNSCC219"
           },
           "children": [],
           "uuid": "bb8f2e56-a006-51d-b10-ef8d817d3ab8eb"
@@ -4030,7 +4148,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "552766",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q5035205",
             "checklistbank-312242": "16075",
-            "checklistbank-316046": "https://www.gbif.org/taxon/3THH7"
+            "checklistbank-316046": "https://www.gbif.org/taxon/3THH7",
+            "checklistbank-281817": "240766"
           },
           "authorityIds": "col:3THH7,itis:552766,wikidata:Q42699",
           "authorship": "(Schreber, 1766)"
@@ -4046,8 +4165,7 @@
             "checklistbank": "ott7656140"
           },
           "children": [],
-          "uuid": "14a169f7-841f-51e-9f9-174a777e7827a9",
-          "description": "Leptailurus servalina is a felidae species found in its native region."
+          "uuid": "14a169f7-841f-51e-9f9-174a777e7827a9"
         },
         {
           "id": "SP_LEPTAILURUS_SERVAL",
@@ -4060,8 +4178,7 @@
             "checklistbank": "1403448"
           },
           "children": [],
-          "uuid": "a427f6c9-6ab0-59b-bf1-b4cd92cd07b509",
-          "description": "Leptailurus ×serval is a felidae species found in its native region."
+          "uuid": "a427f6c9-6ab0-59b-bf1-b4cd92cd07b509"
         }
       ]
     },
@@ -4096,45 +4213,6 @@
           "authorship": "(Schreber, 1775)"
         }
       ]
-    },
-    {
-      "id": "GENUS_LYNX",
-      "name": "\"Lynx",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LYNX_CANADENSIS_KERR_1792",
-          "name": "\"Lynx canadensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lynx",
-          "authorship": "\"Kerr, 1792\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1597411"
-          },
-          "children": [],
-          "uuid": "05a521a8-0ed5-502-ae8-2829cec0d24755",
-          "description": "\"Lynx canadensis\" is a felidae species found in its native region."
-        },
-        {
-          "id": "SP_LYNX_RUFUS_SCHREBER_1777",
-          "name": "\"Lynx rufus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lynx",
-          "authorship": "\"(Schreber, 1777)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1597412"
-          },
-          "children": [],
-          "uuid": "22258847-30a3-58e-b4b-089b00c9424e48",
-          "description": "\"Lynx rufus\" is a felidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "felidae"
     },
     {
       "id": "GENUS_LYNX",
@@ -4178,7 +4256,8 @@
           "sourceIds": {
             "checklistbank": "Lynx_canadensis",
             "gbif-backbone": "6164654",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907095"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907095",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1597411"
           },
           "children": [],
           "authorship": "Bangs, 1897",
@@ -4194,7 +4273,8 @@
           "sourceIds": {
             "checklistbank": "Lynx_rufus",
             "gbif-backbone": "6164669",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907102"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20907102",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1597412"
           },
           "children": [],
           "authorship": "J.A.Allen, 1903",
@@ -4427,7 +4507,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121011228"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q21338855"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4464,7 +4547,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4033270"
           },
           "authorityIds": "wikidata:Q4033270",
-          "authorship": "Geraads 1997"
+          "authorship": "Geraads 1997",
+          "authorIds": [
+            "Q21338855"
+          ]
         },
         {
           "id": "ACINONYX_GUTTATUS",
@@ -4474,7 +4560,6 @@
           "lineage": "Acinonyx",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Acinonyx guttatus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "40671518-09af-536-9a8-32a9de24e974d5",
@@ -4494,7 +4579,6 @@
           "lineage": "Acinonyx",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Acinonyx hecki is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "957c36a7-bbc4-53d-844-717375068c5a26",
@@ -4506,7 +4590,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124790873"
           },
           "authorityIds": "wikidata:Q124790873",
-          "authorship": "Hilzheimer, 1913"
+          "authorship": "Hilzheimer, 1913",
+          "authorIds": [
+            "Q85246"
+          ]
         },
         {
           "id": "ACINONYX_JUBATUS",
@@ -4587,7 +4674,6 @@
           "lineage": "Acinonyx",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Acinonyx raddei is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "798e9680-32b8-52b-9d6-1fe3076ff6ad3f",
@@ -4609,7 +4695,6 @@
           "lineage": "Acinonyx",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Acinonyx venator is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "0bd4a2a3-ebe5-51e-a5d-907ed6e08491ff",
@@ -4631,8 +4716,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Acinonyx",
-          "uuid": "09224599-1fce-529-9b7-95fb3ac09e084c",
-          "description": "Acinonyx kurteni is a felidae species found in its native region."
+          "uuid": "09224599-1fce-529-9b7-95fb3ac09e084c"
         },
         {
           "id": "SP_ACINONYX_PLEISTOCAENICUS",
@@ -4643,7 +4727,6 @@
           "children": [],
           "lineage": "Acinonyx",
           "uuid": "73ad8eb0-2685-5ca-b79-aac5ce6d7bb043",
-          "description": "Acinonyx pleistocaenicus is a felidae species found in its native region.",
           "authorship": "(Zdansky, 1925)",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126372014"
@@ -4658,11 +4741,13 @@
           "children": [],
           "lineage": "Acinonyx",
           "uuid": "10025334-743e-5a2-aff-c7a52188f80323",
-          "description": "Acinonyx intermedius is a felidae species found in its native region.",
           "authorship": "Thenius, 1954",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q123260114"
-          }
+          },
+          "authorIds": [
+            "Q1353358"
+          ]
         }
       ]
     },
@@ -4730,7 +4815,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q110969473"
           },
           "authorityIds": "wikidata:Q110969473",
-          "authorship": "Hibbard 1934"
+          "authorship": "Hibbard 1934",
+          "authorIds": [
+            "Q5129065"
+          ]
         }
       ]
     },
@@ -4749,7 +4837,6 @@
           "lineage": "Nimravides",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Nimravides galiani is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "433aa18f-d460-542-888-900e83f931a9b2",
@@ -4774,7 +4861,6 @@
           "lineage": "Nimravides",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus hibbardi (Nimravides Hibbardi) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ffd892b7-aa3e-501-adc-41b992017219b2",
@@ -4791,7 +4877,6 @@
           "lineage": "Nimravides",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus pedionomus (Nimravides Pedionomus) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ca06f843-7189-53a-b0e-e928d68166e64b",
@@ -4808,7 +4893,6 @@
           "lineage": "Nimravides",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus thinobates (Nimravides Thinobates) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "31b5df7d-9bec-5e4-ae1-f1467b193cc9b1",
@@ -4830,8 +4914,7 @@
           "sourceIds": {
             "checklistbank": "txn:51142",
             "checklistbank-1174": "txn:51142"
-          },
-          "description": "Nimravides hibbardi is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_NIMRAVIDES_PEDIONOMUS",
@@ -4846,8 +4929,7 @@
           "sourceIds": {
             "checklistbank": "txn:51145",
             "checklistbank-1174": "txn:51145"
-          },
-          "description": "Nimravides pedionomus is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_NIMRAVIDES_THINOBATES",
@@ -4862,8 +4944,7 @@
           "sourceIds": {
             "checklistbank": "txn:51147",
             "checklistbank-1174": "txn:51147"
-          },
-          "description": "Nimravides thinobates is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_NIMRAVIDES_CATOCOPIS_COPE_1887",
@@ -4876,7 +4957,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122073749"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q298933"
+          ]
         }
       ]
     },
@@ -4895,7 +4979,6 @@
           "lineage": "Sivapanthera",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Sivapanthera arvernensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "da98aa18-256a-598-8ce-da1df48656e6d1",
@@ -4924,8 +5007,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126718327"
           },
           "children": [],
-          "uuid": "f9dd3195-909e-59f-aea-92834a7d215915",
-          "description": "Sivapanthera linxiaensis is a felidae species found in its native region."
+          "uuid": "f9dd3195-909e-59f-aea-92834a7d215915"
         }
       ]
     },
@@ -4944,7 +5026,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Dinobastis serus (Homotherium Serus) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "0a0294ad-304a-585-b2a-adde5c80210ece"
@@ -4984,7 +5065,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Homotherium sainzelli is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "513adaf2-534c-509-90e-ed702f4c5d89ce",
@@ -5003,7 +5083,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Homotherium ultimum is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "30f58396-cec2-5aa-b1c-812a0c25c7b4bc",
@@ -5044,7 +5123,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ischyrosmilus crusafonti (Homotherium Crusafonti) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "98a0018b-6c52-5c1-b12-a746370cdbd283"
@@ -5057,7 +5135,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ischyrosmilus idahoensis (Homotherium Idahoensis) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4c383185-17fc-505-ab7-746ab5a975b8d6"
@@ -5070,7 +5147,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ischyrosmilus johnstoni (Homotherium Johnstoni) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "9b5ec5a2-e5f9-597-b9e-d29d26d9727c4f"
@@ -5083,7 +5159,6 @@
           "lineage": "Homotherium",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machaerodus ischyrus (Homotherium Ischyrus) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4c79b24e-82de-528-bb4-c831a404aac39e",
@@ -5105,8 +5180,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q18746553"
           },
           "children": [],
-          "uuid": "00e957c8-91e4-576-af7-810ab4eab9ee8a",
-          "description": "Homotherium crusafonti is a felidae species found in its native region."
+          "uuid": "00e957c8-91e4-576-af7-810ab4eab9ee8a"
         },
         {
           "id": "SP_HOMOTHERIUM_IDAHOENSIS_MERRIAM_1918",
@@ -5120,8 +5194,7 @@
             "checklistbank": "txn:47388"
           },
           "children": [],
-          "uuid": "b3c3db78-eb3c-5e7-992-6819a91fc5ca6a",
-          "description": "Homotherium idahoensis is a felidae species found in its native region."
+          "uuid": "b3c3db78-eb3c-5e7-992-6819a91fc5ca6a"
         },
         {
           "id": "SP_HOMOTHERIUM_ISCHYRUS_MERRIAM_1905",
@@ -5136,8 +5209,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122231701"
           },
           "children": [],
-          "uuid": "07fc1261-3370-5ba-bf7-50296718337b4e",
-          "description": "Homotherium ischyrus is a felidae species found in its native region."
+          "uuid": "07fc1261-3370-5ba-bf7-50296718337b4e"
         },
         {
           "id": "SP_HOMOTHERIUM_JOHNSTONI_MAWBY_1965",
@@ -5151,8 +5223,7 @@
             "checklistbank": "txn:47390"
           },
           "children": [],
-          "uuid": "3f9e8830-c20f-5d7-93d-16a48cb0c91cd2",
-          "description": "Homotherium johnstoni is a felidae species found in its native region."
+          "uuid": "3f9e8830-c20f-5d7-93d-16a48cb0c91cd2"
         },
         {
           "id": "SP_HOMOTHERIUM_CRENATIDENS_FABRINI_1890",
@@ -5166,8 +5237,7 @@
             "checklistbank": "txn:470071"
           },
           "children": [],
-          "uuid": "fccac7af-005f-5be-85a-9d92f0b90bff43",
-          "description": "Homotherium crenatidens is a felidae species found in its native region."
+          "uuid": "fccac7af-005f-5be-85a-9d92f0b90bff43"
         },
         {
           "id": "SP_HOMOTHERIUM_PROBLEMATICUM_COLLINGS_1972",
@@ -5181,8 +5251,7 @@
             "checklistbank": "txn:470211"
           },
           "children": [],
-          "uuid": "2597c692-cf8d-525-be4-96a24bd72fe8d7",
-          "description": "Homotherium problematicum is a felidae species found in its native region."
+          "uuid": "2597c692-cf8d-525-be4-96a24bd72fe8d7"
         },
         {
           "id": "SP_HOMOTHERIUM_HADARENSIS_PETTER_AND_HOWELL_1988",
@@ -5196,8 +5265,7 @@
             "checklistbank": "txn:470213"
           },
           "children": [],
-          "uuid": "e0a060cf-b66d-559-a8c-f57a862d075572",
-          "description": "Homotherium hadarensis is a felidae species found in its native region."
+          "uuid": "e0a060cf-b66d-559-a8c-f57a862d075572"
         },
         {
           "id": "SP_HOMOTHERIUM_SERUM",
@@ -5256,7 +5324,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20716453"
           },
           "authorityIds": "wikidata:Q20716453",
-          "authorship": "Hibbard 1934"
+          "authorship": "Hibbard 1934",
+          "authorIds": [
+            "Q5129065"
+          ]
         }
       ]
     },
@@ -5275,7 +5346,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus hesperus (Megantereon Hesperus) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "64c16830-bf89-5b8-b8c-916b1c7c2141fd",
@@ -5292,7 +5362,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megantereon eurynodon is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a329895d-698a-550-90f-6b295364abafc9",
@@ -5311,7 +5380,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megantereon falconeri is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "cead4a1d-1f54-552-ad8-4675ea98626b25",
@@ -5327,7 +5395,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q131624461"
           },
           "authorityIds": "wikidata:Q131624461",
-          "authorship": "Pomel 1853"
+          "authorship": "Pomel 1853",
+          "authorIds": [
+            "Q766920"
+          ]
         },
         {
           "id": "MEGANTEREON_GRACILIS",
@@ -5337,7 +5408,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megantereon gracilis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ad542a1b-eddb-5c6-9ee-2aa5266bc021c2",
@@ -5356,7 +5426,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megantereon inexpectatus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7cb817f2-b347-571-bf1-f50b67c8808799",
@@ -5379,7 +5448,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megantereon megantereon (Dirk-tooth Cat) is a felidae species found in its native region.",
           "sourcedFrom": "inaturalist",
           "children": [],
           "uuid": "16f88199-6b71-5ca-ba9-df67f61b30d80f",
@@ -5404,7 +5472,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Megantereon nihowanensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "488309f7-b380-572-97b-c1ba7e3bce268f",
@@ -5448,7 +5515,6 @@
           "lineage": "Megantereon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Ursus cultridens (Megantereon Cultridens) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "285aa00a-1fb9-548-ab1-3efac1dc73c080",
@@ -5473,8 +5539,7 @@
             "checklistbank": "txn:129878",
             "checklistbank-1174": "txn:129878",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122841708"
-          },
-          "description": "Megantereon cultridens is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_MEGANTEREON_HESPERUS",
@@ -5489,8 +5554,7 @@
           "sourceIds": {
             "checklistbank": "txn:47843",
             "checklistbank-1174": "txn:47843"
-          },
-          "description": "Megantereon hesperus is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_MEGANTEREON_VAKSHENSIS",
@@ -5500,8 +5564,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Megantereon",
-          "uuid": "4ac3ed35-4df9-574-b95-aafcd52121de99",
-          "description": "Megantereon vakshensis is a felidae species found in its native region."
+          "uuid": "4ac3ed35-4df9-574-b95-aafcd52121de99"
         },
         {
           "id": "SP_MEGANTEREON_ADROVERI",
@@ -5511,8 +5574,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Megantereon",
-          "uuid": "09535f23-04ce-59b-88f-ecf0e793adf00b",
-          "description": "Megantereon adroveri is a felidae species found in its native region."
+          "uuid": "09535f23-04ce-59b-88f-ecf0e793adf00b"
         }
       ]
     },
@@ -5565,7 +5627,6 @@
           "lineage": "Panthera",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Panthera antiquorum is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "86e099c8-d7f6-526-b2f-e713606b7b0073",
@@ -5609,7 +5670,6 @@
           "lineage": "Panthera",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Panthera blytheae is a felidae species found in its native region.",
           "sourcedFrom": "wikipedia",
           "children": [],
           "uuid": "b9c862f5-dce8-560-8f0-6e6b310a1877fa",
@@ -5662,7 +5722,6 @@
           "lineage": "Panthera",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Panthera hanensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "37d4f1ee-7989-50e-8c7-ff33e791ff8d39",
@@ -5703,7 +5762,8 @@
             "9ca92552-f23a-41a8-a140-01abaa31c931": "183803",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q140",
             "checklistbank-312242": "12712",
-            "checklistbank-316046": "https://www.gbif.org/taxon/5K5L7"
+            "checklistbank-316046": "https://www.gbif.org/taxon/5K5L7",
+            "checklistbank-281817": "240770"
           },
           "authorityIds": "col:4CGXP,itis:183803,wikidata:Q140",
           "authorship": "(Linnaeus, 1758)"
@@ -5751,7 +5811,8 @@
             "checklistbank-30064": "gbif.org/species/5219432",
             "checklistbank-212265": "gbif.org/species/5219432",
             "checklistbank-212266": "gbif.org/species/5219426",
-            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180594"
+            "checklistbank-25250": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180594",
+            "checklistbank-281817": "60794"
           },
           "authorityIds": "col:4CGXQ,itis:180593,wikidata:Q35694",
           "authorship": "(Linnaeus, 1758)"
@@ -5824,7 +5885,8 @@
             "checklistbank-312616": "21a9b936ec044afbb8f8cd92703f83a3",
             "checklistbank-311656": "https://www.gbif.org/species/5219440",
             "checklistbank-316046": "https://www.gbif.org/taxon/5K5LX",
-            "checklistbank-74754": "NG:NCB:UL_Checklist_SW_Coastal_Animals:0000181"
+            "checklistbank-74754": "NG:NCB:UL_Checklist_SW_Coastal_Animals:0000181",
+            "checklistbank-281817": "240772"
           },
           "authorityIds": "col:4CGXR,itis:183804,wikidata:Q34706",
           "authorship": "(Linnaeus, 1758)"
@@ -5868,7 +5930,8 @@
             "checklistbank-51696": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/12475/",
             "checklistbank-316260": "https://wingeds.world/sp/102839",
             "checklistbank-312616": "822db38dd20a430a996bfcfec622e7cf",
-            "checklistbank-316046": "https://www.gbif.org/taxon/5K5M2"
+            "checklistbank-316046": "https://www.gbif.org/taxon/5K5M2",
+            "checklistbank-281817": "240767"
           },
           "authorityIds": "col:4CGXS,itis:183805,wikidata:Q19939",
           "authorship": "(Linnaeus, 1758)"
@@ -5926,8 +5989,7 @@
             "checklistbank-316046": "https://www.gbif.org/taxon/4CGXT"
           },
           "authorityIds": "col:4CGXT,itis:933420",
-          "commonName": "Ounce",
-          "description": "Panthera uncia (Ounce) is a felidae species found in its native region."
+          "commonName": "Ounce"
         },
         {
           "id": "SP_PANTHERA_ATROX",
@@ -5938,7 +6000,6 @@
           "children": [],
           "lineage": "Panthera",
           "uuid": "c9786bee-ae23-51a-843-4b4fbf00383372",
-          "description": "Panthera atrox is a felidae species found in its native region.",
           "authorship": "(Leidy, 1853)",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q242358"
@@ -5968,7 +6029,6 @@
           "children": [],
           "lineage": "Panthera",
           "uuid": "f7ea3cb5-2fb7-5f4-81b-c870840f2f0e63",
-          "description": "Panthera shawi is a felidae species found in its native region.",
           "authorship": "(Broom, 1948)",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q56605486"
@@ -5983,11 +6043,13 @@
           "children": [],
           "lineage": "Panthera",
           "uuid": "cdeee3ec-2353-53a-8b4-f58c427ce1b582",
-          "description": "Panthera youngi is a felidae species found in its native region.",
           "authorship": "Pei, 1934",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2260339"
-          }
+          },
+          "authorIds": [
+            "Q704575"
+          ]
         },
         {
           "id": "SP_PANTHERA_PRINCIPIALIS",
@@ -5998,12 +6060,14 @@
           "children": [],
           "lineage": "Panthera",
           "uuid": "c7253211-8034-5d1-a21-df2698929a1a31",
-          "description": "Panthera principialis is a felidae species found in its native region.",
           "authorship": "Hemmer, 2022",
           "sourceIds": {
             "checklistbank-316441": "V2VKY",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q118612732"
-          }
+          },
+          "authorIds": [
+            "Q47805503"
+          ]
         },
         {
           "id": "SP_PANTHERA_LEO",
@@ -6016,8 +6080,7 @@
             "checklistbank": "235557"
           },
           "children": [],
-          "uuid": "fe061244-60e8-508-bfe-c2810c1e77305b",
-          "description": "Panthera ×leo is a felidae species found in its native region."
+          "uuid": "fe061244-60e8-508-bfe-c2810c1e77305b"
         },
         {
           "id": "SP_PANTHERA_SPELAEA",
@@ -6165,7 +6228,6 @@
           "lineage": "Smilodon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Felis fatalis (Smilodon Fatalis) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "333b3d3b-02b0-5d0-bcc-ec001368dcb146",
@@ -6182,7 +6244,6 @@
           "lineage": "Smilodon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Smilodon crucians is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d2997769-f14f-59a-b14-a22ef578cdca15",
@@ -6201,7 +6262,6 @@
           "lineage": "Smilodon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Smilodon gracilis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e8720993-7d61-514-91c-b0a99400195a93",
@@ -6226,7 +6286,6 @@
           "lineage": "Smilodon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Smilodontidion riggii (Smilodon Riggii) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "9b42013a-891b-51f-bfd-cd65077c78b6ac"
@@ -6244,8 +6303,7 @@
           "sourceIds": {
             "checklistbank": "txn:46515",
             "checklistbank-1174": "txn:46515"
-          },
-          "description": "Smilodon fatalis is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_SMILODON_RIGGII_KRAGLIEVICH_1948",
@@ -6260,8 +6318,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126690161"
           },
           "children": [],
-          "uuid": "b190968c-1572-52e-bd1-d5813e9bca2d4e",
-          "description": "Smilodon riggii is a felidae species found in its native region."
+          "uuid": "b190968c-1572-52e-bd1-d5813e9bca2d4e"
         },
         {
           "id": "SP_SMILODON_POPULATOR_LUND_1842",
@@ -6277,7 +6334,10 @@
             "checklistbank-2265": "339609"
           },
           "children": [],
-          "uuid": "b4f8cccd-99df-586-b07-d0e0796a8d9fac"
+          "uuid": "b4f8cccd-99df-586-b07-d0e0796a8d9fac",
+          "authorIds": [
+            "Q723809"
+          ]
         },
         {
           "id": "SP_SMILODON_NEOGAEUS",
@@ -6325,7 +6385,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Felis quadridentata (Pseudaelurus Quadridentata) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ea4154fe-0842-531-9db-fd4dd6fd81dedb",
@@ -6343,7 +6402,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Lynx stouti (Pseudaelurus Stouti) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "b1222c29-f48b-5bb-99c-dd951e8024161a",
@@ -6360,7 +6418,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus aeluroides is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5cb8d3a5-dc18-57b-881-53f9410372f7c6",
@@ -6384,7 +6441,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus africanus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "27a7874a-f428-547-8cd-d07c266cd1cb5a",
@@ -6407,7 +6463,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus cuspidatus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "03dec2ad-f1c6-548-850-3e6edc964ed8eb",
@@ -6431,7 +6486,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus guangheensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "aa11709d-6e41-5a0-bf6-e6e6f3e47aeaee",
@@ -6455,7 +6509,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus lorteti is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "1219baeb-4d23-586-ba5-442c47ecabe91e",
@@ -6478,7 +6531,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus marshi is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a2c03cc2-96bd-525-9cc-643649afe6485c",
@@ -6502,7 +6554,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus romieviensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "3dc590df-7dc2-572-b6d-316f48be086b19",
@@ -6527,7 +6578,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus skinneri is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "b9c8e59c-d181-500-a1c-514cfd19d5f172",
@@ -6551,7 +6601,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus turnauensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "db91d260-5cd3-5dd-8f2-1b249c04429ae6",
@@ -6573,7 +6622,6 @@
           "lineage": "Pseudaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Pseudaelurus validus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "b89e1ef7-4adf-522-a73-876df417339258",
@@ -6602,8 +6650,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27150055"
           },
           "children": [],
-          "uuid": "6f98adf7-27db-59b-875-94f0c37fe6be9d",
-          "description": "Pseudaelurus stouti is a felidae species found in its native region."
+          "uuid": "6f98adf7-27db-59b-875-94f0c37fe6be9d"
         },
         {
           "id": "SP_PSEUDAELURUS_INTREPIDUS_LEIDY_1858",
@@ -6618,8 +6665,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27150049"
           },
           "children": [],
-          "uuid": "a8a7d1c8-121f-50d-bfc-2ccc4c3a161a2b",
-          "description": "Pseudaelurus intrepidus is a felidae species found in its native region."
+          "uuid": "a8a7d1c8-121f-50d-bfc-2ccc4c3a161a2b"
         },
         {
           "id": "SP_PSEUDAELURUS_QUADRIDENTATUS_DE_BLAINVILLE_1843",
@@ -6634,8 +6680,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27150052"
           },
           "children": [],
-          "uuid": "81b66711-ffb5-5aa-a6a-2da9d49e3e8e6e",
-          "description": "Pseudaelurus quadridentatus is a felidae species found in its native region."
+          "uuid": "81b66711-ffb5-5aa-a6a-2da9d49e3e8e6e"
         },
         {
           "id": "SP_PSEUDAELURUS_EDWARDSI_FILHOL_1872",
@@ -6650,8 +6695,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27150047"
           },
           "children": [],
-          "uuid": "31f75abf-ae97-57d-9ff-7972a2aae40d94",
-          "description": "Pseudaelurus edwardsi is a felidae species found in its native region."
+          "uuid": "31f75abf-ae97-57d-9ff-7972a2aae40d94"
         }
       ]
     },
@@ -6695,7 +6739,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus catocopis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "06b578c9-80f0-5c7-9eb-02c03f53042744",
@@ -6739,7 +6782,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus irtyschensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "fc0f994a-301d-5d7-8db-2550c9f35938a7",
@@ -6758,7 +6800,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus ischimicus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7ec9eadf-5ccd-50a-b47-4dee58fba9eaeb",
@@ -6782,7 +6823,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus kabir is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d77ac0bd-0152-5a4-936-4a5af956c657ca",
@@ -6799,7 +6839,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus kurteni is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "724ef6cb-7962-5fa-bc4-6ee434f5cf13a5",
@@ -6818,7 +6857,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus lahayishupup is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ae0ba41d-377a-5f4-8a7-49fa61bed18b55",
@@ -6842,7 +6880,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus necator is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "395e69a6-5f58-539-94c-ef122fae23f1da",
@@ -6861,7 +6898,6 @@
           "lineage": "Machairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus schlosseri is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e3502f38-bd66-550-bac-a2a9d41e3b6a8b",
@@ -6873,7 +6909,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121391666"
           },
           "authorityIds": "wikidata:Q121391666",
-          "authorship": "Weithofer, 1888"
+          "authorship": "Weithofer, 1888",
+          "authorIds": [
+            "Q94292162"
+          ]
         },
         {
           "id": "SP_MACHAIRODUS_APHANISTUS",
@@ -6890,7 +6929,9 @@
             "checklistbank-1174": "txn:348648",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4043537"
           },
-          "description": "Machairodus aphanistus is a felidae species found in its native region."
+          "authorIds": [
+            "Q31651"
+          ]
         },
         {
           "id": "SP_MACHAIRODUS_TANNERI_MARTIN_AND_SCHULTZ_1975",
@@ -6904,8 +6945,7 @@
             "checklistbank": "txn:460252"
           },
           "children": [],
-          "uuid": "ce7b4c92-fab7-5fa-a5c-5ca10c7cc197d3",
-          "description": "Machairodus tanneri is a felidae species found in its native region."
+          "uuid": "ce7b4c92-fab7-5fa-a5c-5ca10c7cc197d3"
         },
         {
           "id": "SP_MACHAIRODUS_NIHOWANENSIS_TEILHARD_DE_CHARDIN_AND_PIVETEAU_1930",
@@ -6919,8 +6959,7 @@
             "checklistbank": "txn:475390"
           },
           "children": [],
-          "uuid": "53623f72-cbd4-54f-821-5f3448e27c6280",
-          "description": "Machairodus nihowanensis is a felidae species found in its native region."
+          "uuid": "53623f72-cbd4-54f-821-5f3448e27c6280"
         },
         {
           "id": "SP_MACHAIRODUS_HORRIBILIS_SCHLOSSER_1903",
@@ -6933,7 +6972,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107398024"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q3302314"
+          ]
         },
         {
           "id": "SP_MACHAIRODUS_PALANDERI_ZDANSKY_1924",
@@ -6946,7 +6988,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107398002"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q78948"
+          ]
         }
       ]
     },
@@ -6965,7 +7010,6 @@
           "lineage": "Amphimachairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Amphimachairodus alvarezi is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "474a5f9f-d0a9-557-ace-3cd1685b039436",
@@ -6991,7 +7035,6 @@
           "lineage": "Amphimachairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Amphimachairodus giganteus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "37133133-2e80-5af-a93-95baf0e0ff9d3d",
@@ -7042,7 +7085,6 @@
           "lineage": "Amphimachairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Amphimachairodus horribilis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "eb355021-0a83-50d-a7e-4087cc60a6b862",
@@ -7062,7 +7104,6 @@
           "lineage": "Amphimachairodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus coloradensis (Amphimachairodus Coloradensis) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "c5d3f07a-0163-5f0-bd0-8fc4736c7fc61a",
@@ -7079,8 +7120,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Amphimachairodus",
-          "uuid": "3b4031df-ceb6-515-b16-4c09f985b916ec",
-          "description": "Amphimachairodus kurteni is a felidae species found in its native region."
+          "uuid": "3b4031df-ceb6-515-b16-4c09f985b916ec"
         },
         {
           "id": "SP_AMPHIMACHAIRODUS_COLORADENSIS",
@@ -7095,8 +7135,7 @@
           "sourceIds": {
             "checklistbank": "txn:47842",
             "checklistbank-1174": "txn:47842"
-          },
-          "description": "Amphimachairodus coloradensis is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_AMPHIMACHAIRODUS_KABIR",
@@ -7106,8 +7145,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Amphimachairodus",
-          "uuid": "04a28641-5856-544-980-2b040e1c0b5bd2",
-          "description": "Amphimachairodus kabir is a felidae species found in its native region."
+          "uuid": "04a28641-5856-544-980-2b040e1c0b5bd2"
         }
       ]
     },
@@ -7155,8 +7193,7 @@
             "checklistbank": "txn:268531"
           },
           "children": [],
-          "uuid": "c95ef958-6b9c-59e-8c9-1780ba40223710",
-          "description": "Xenosmilus venezuelensis is a felidae species found in its native region."
+          "uuid": "c95ef958-6b9c-59e-8c9-1780ba40223710"
         }
       ]
     },
@@ -7200,7 +7237,6 @@
           "lineage": "Diamantofelis",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Diamantofelis minor is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "d177e1bf-ba18-531-931-cd2103d8265160",
@@ -7228,7 +7264,6 @@
           "lineage": "Archaelurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Archaelurus debilis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "439c903e-2d87-5e1-90c-dd10d7cf650eac",
@@ -7254,7 +7289,6 @@
           "lineage": "Drepanodon",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machaerodus niobrarensis (Drepanodon Niobrarensis) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "0632e9d7-8503-55a-93a-d8187f48d57d10"
@@ -7326,7 +7360,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122375313"
           },
           "authorityIds": "wikidata:Q122375313",
-          "authorship": "Zdansky 1924"
+          "authorship": "Zdansky 1924",
+          "authorIds": [
+            "Q78948"
+          ]
         },
         {
           "id": "PANTHERA_PALAEOONCA",
@@ -7336,7 +7373,6 @@
           "lineage": "Dinofelis",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Panthera palaeoonca (Dinofelis Palaeoonca) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "202dd260-8167-5cd-b46-9ebbac502b431c",
@@ -7357,8 +7393,7 @@
             "checklistbank": "txn:49736"
           },
           "children": [],
-          "uuid": "2e302dc0-6bb7-566-a83-f710a735447afc",
-          "description": "Dinofelis palaeoonca is a felidae species found in its native region."
+          "uuid": "2e302dc0-6bb7-566-a83-f710a735447afc"
         },
         {
           "id": "SP_DINOFELIS_CRISTATA_FALCONER_AND_CAUTLEY_1836",
@@ -7373,8 +7408,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107398116"
           },
           "children": [],
-          "uuid": "bb2dc0c8-0621-52a-89a-7c31055abca82a",
-          "description": "Dinofelis cristata is a felidae species found in its native region."
+          "uuid": "bb2dc0c8-0621-52a-89a-7c31055abca82a"
         },
         {
           "id": "SP_DINOFELIS_DIASTEMATA_ASTRE_1929",
@@ -7389,8 +7423,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q120432052"
           },
           "children": [],
-          "uuid": "4ab7a0d6-e212-54e-8e4-f0b801548780f0",
-          "description": "Dinofelis diastemata is a felidae species found in its native region."
+          "uuid": "4ab7a0d6-e212-54e-8e4-f0b801548780f0"
         },
         {
           "id": "SP_DINOFELIS_BARLOWI_BROOM_1937",
@@ -7405,7 +7438,9 @@
           },
           "children": [],
           "uuid": "1fd7a4e2-68f6-5d4-859-57bc450a639dea",
-          "description": "Dinofelis barlowi is a felidae species found in its native region."
+          "authorIds": [
+            "Q359576"
+          ]
         },
         {
           "id": "SP_DINOFELIS_DARTI_TOERIEN_1955",
@@ -7420,8 +7455,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q120431969"
           },
           "children": [],
-          "uuid": "2554e999-9064-5f1-b93-0c8965523b215c",
-          "description": "Dinofelis darti is a felidae species found in its native region."
+          "uuid": "2554e999-9064-5f1-b93-0c8965523b215c"
         },
         {
           "id": "SP_DINOFELIS_PIVETEAUI_EWER_1955",
@@ -7436,8 +7470,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q120432171"
           },
           "children": [],
-          "uuid": "ad0ac5bf-407b-5e5-bbb-6fab801d4da979",
-          "description": "Dinofelis piveteaui is a felidae species found in its native region."
+          "uuid": "ad0ac5bf-407b-5e5-bbb-6fab801d4da979"
         },
         {
           "id": "SP_DINOFELIS_PETTERI_WERDELIN_AND_LEWIS_2001",
@@ -7452,8 +7485,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q120432108"
           },
           "children": [],
-          "uuid": "cdbe3e4c-4267-541-a73-22e54298c1b365",
-          "description": "Dinofelis petteri is a felidae species found in its native region."
+          "uuid": "cdbe3e4c-4267-541-a73-22e54298c1b365"
         },
         {
           "id": "SP_DINOFELIS_ARONOKI_WERDELIN_AND_LEWIS_2001",
@@ -7468,8 +7500,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q120431689"
           },
           "children": [],
-          "uuid": "aaccfa27-f9b0-506-a97-61c8a160f74599",
-          "description": "Dinofelis aronoki is a felidae species found in its native region."
+          "uuid": "aaccfa27-f9b0-506-a97-61c8a160f74599"
         },
         {
           "id": "SP_DINOFELIS_WERDELINI_JIANGZUO_ET_AL_2023",
@@ -7484,8 +7515,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122041550"
           },
           "children": [],
-          "uuid": "565c60b8-7861-519-805-dcdd55dc31cba1",
-          "description": "Dinofelis werdelini is a felidae species found in its native region."
+          "uuid": "565c60b8-7861-519-805-dcdd55dc31cba1"
         },
         {
           "id": "SP_DINOFELIS_PALEOONCA_ZDANSKY_1924",
@@ -7498,7 +7528,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q5278583"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q78948"
+          ]
         }
       ]
     },
@@ -7517,7 +7550,6 @@
           "lineage": "Paramachaerodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus maximiliani (Paramachaerodus Maximiliani) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "06ea4eed-303a-5b0-96c-89159510138f27",
@@ -7534,7 +7566,6 @@
           "lineage": "Paramachaerodus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Machairodus orientalis (Paramachaerodus Orientalis) is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "525cf5c7-2e02-570-887-a7fc9c891d1c7f",
@@ -7556,8 +7587,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122231603"
           },
           "children": [],
-          "uuid": "f6c26f59-5211-5e7-83f-c08a4ab39322a9",
-          "description": "Paramachaerodus orientalis is a felidae species found in its native region."
+          "uuid": "f6c26f59-5211-5e7-83f-c08a4ab39322a9"
         },
         {
           "id": "SP_PARAMACHAERODUS_MAXIMILIANI_ZDANSKY_1924",
@@ -7572,8 +7602,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122231608"
           },
           "children": [],
-          "uuid": "ad9c46b7-7eb4-575-a9d-a98e401813deb0",
-          "description": "Paramachaerodus maximiliani is a felidae species found in its native region."
+          "uuid": "ad9c46b7-7eb4-575-a9d-a98e401813deb0"
         },
         {
           "id": "SP_PARAMACHAERODUS_TRANSASIATICUS_LI_AND_SPASSOV_2017",
@@ -7587,8 +7616,7 @@
             "checklistbank": "txn:470218"
           },
           "children": [],
-          "uuid": "f0b5bc8f-1ccf-51a-ab3-2c55e8e69f102d",
-          "description": "Paramachaerodus transasiaticus is a felidae species found in its native region."
+          "uuid": "f0b5bc8f-1ccf-51a-ab3-2c55e8e69f102d"
         },
         {
           "id": "SP_PARAMACHAERODUS_YINGLIANGI_JIANGZOU_ET_AL_2022",
@@ -7604,8 +7632,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122231612"
           },
           "children": [],
-          "uuid": "821d3926-e400-58d-9ce-a7ae0514fd2f8e",
-          "description": "Paramachaerodus yingliangi is a felidae species found in its native region."
+          "uuid": "821d3926-e400-58d-9ce-a7ae0514fd2f8e"
         },
         {
           "id": "SP_PARAMACHAERODUS_OGYGIA_KAUP_1833",
@@ -7619,8 +7646,7 @@
             "checklistbank": "txn:348650"
           },
           "children": [],
-          "uuid": "a0162029-4506-530-8f2-e8f931c31758da",
-          "description": "Paramachaerodus ogygia is a felidae species found in its native region."
+          "uuid": "a0162029-4506-530-8f2-e8f931c31758da"
         },
         {
           "id": "SP_PARAMACHAERODUS_SCHLOSSERI_WEITHOFER_1888",
@@ -7634,8 +7660,7 @@
             "checklistbank": "txn:394094"
           },
           "children": [],
-          "uuid": "d55cfe1c-a787-560-a53-0e3a53686e2c6a",
-          "description": "Paramachaerodus schlosseri is a felidae species found in its native region."
+          "uuid": "d55cfe1c-a787-560-a53-0e3a53686e2c6a"
         }
       ]
     },
@@ -7654,7 +7679,6 @@
           "lineage": "Katifelis",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Katifelis nightingalei is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "8592de7a-96d6-570-896-d40b4ebe823571",
@@ -7670,7 +7694,12 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q56326409"
           },
           "authorityIds": "wikidata:Q56326409",
-          "authorship": "Adrian et al. 2018"
+          "authorship": "Adrian et al. 2018",
+          "authorIds": [
+            "Q102068011",
+            "Q4357778",
+            "Q48017727"
+          ]
         }
       ]
     },
@@ -7689,7 +7718,6 @@
           "lineage": "Styriofelis",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Styriofelis vallesiensis is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "51bed46b-0789-56c-9e8-89562f3629507d",
@@ -7713,8 +7741,7 @@
             "checklistbank": "txn:136632",
             "checklistbank-1174": "txn:136632",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q119139126"
-          },
-          "description": "Styriofelis turnauensis is a felidae species found in its native region."
+          }
         }
       ]
     },
@@ -7733,7 +7760,6 @@
           "lineage": "Yoshi",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Yoshi garevskii is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "84ace7c8-fc49-55f-a5a-f84cbffe511924",
@@ -7764,8 +7790,7 @@
             "checklistbank": "txn:374760",
             "checklistbank-1174": "txn:374760",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107411031"
-          },
-          "description": "Yoshi minor is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_YOSHI_FAIE",
@@ -7781,8 +7806,7 @@
             "checklistbank": "txn:475325",
             "checklistbank-1174": "txn:475325",
             "checklistbank-316441": "TRKN2"
-          },
-          "description": "Yoshi faie is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_YOSHI_YONGDENGENSIS",
@@ -7798,8 +7822,7 @@
             "checklistbank": "txn:475323",
             "checklistbank-1174": "txn:475323",
             "checklistbank-316441": "TRKN6"
-          },
-          "description": "Yoshi yongdengensis is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_YOSHI_OBSCURA_HENDEY_1974",
@@ -7814,8 +7837,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122047315"
           },
           "children": [],
-          "uuid": "d8dc6144-553b-517-858-bfec9c4c1aa7ef",
-          "description": "Yoshi obscura is a felidae species found in its native region."
+          "uuid": "d8dc6144-553b-517-858-bfec9c4c1aa7ef"
         }
       ]
     },
@@ -7834,7 +7856,6 @@
           "lineage": "Metailurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Metailurus minor is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "a9ade5c8-a673-5c9-87d-654c1fcd8fa212",
@@ -7846,7 +7867,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q121787857"
           },
           "authorityIds": "wikidata:Q121787857",
-          "authorship": "(Zdansky, 1924)"
+          "authorship": "(Zdansky, 1924)",
+          "authorIds": [
+            "Q78948"
+          ]
         },
         {
           "id": "METAILURUS_PARVULUS",
@@ -7856,7 +7880,6 @@
           "lineage": "Metailurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Metailurus parvulus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "extinct": true,
           "children": [],
@@ -7876,8 +7899,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Metailurus",
-          "uuid": "5afc05dd-22b0-51c-a5f-38fd8bbda10f1a",
-          "description": "Metailurus boodon is a felidae species found in its native region."
+          "uuid": "5afc05dd-22b0-51c-a5f-38fd8bbda10f1a"
         },
         {
           "id": "SP_METAILURUS_MAJOR_ZDANSKY_1924",
@@ -7892,7 +7914,9 @@
           },
           "children": [],
           "uuid": "ed7c1f7a-4498-59a-a7f-99b31ee61e744f",
-          "description": "Metailurus major is a felidae species found in its native region."
+          "authorIds": [
+            "Q78948"
+          ]
         },
         {
           "id": "SP_METAILURUS_ULTIMUS_LI_2014",
@@ -7906,8 +7930,7 @@
             "checklistbank": "txn:470311"
           },
           "children": [],
-          "uuid": "2464e85a-4ccf-569-870-ffd699019f2c48",
-          "description": "Metailurus ultimus is a felidae species found in its native region."
+          "uuid": "2464e85a-4ccf-569-870-ffd699019f2c48"
         },
         {
           "id": "SP_METAILURUS_MONGOLIENSIS",
@@ -7950,7 +7973,6 @@
           "lineage": "Lokotunjailurus",
           "continents": [],
           "subspeciesCount": 0,
-          "description": "Lokotunjailurus emageritus is a felidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
           "uuid": "62c2db61-9afc-568-a58-ef2b465b914006",
@@ -7980,8 +8002,7 @@
           "sourceIds": {
             "checklistbank": "txn:470217",
             "checklistbank-1174": "txn:470217"
-          },
-          "description": "Lokotunjailurus fanonei is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_LOKOTUNJAILURUS_CHINSAMYAE_JIANGZUO_ET_AL_2023",
@@ -7996,8 +8017,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122040533"
           },
           "children": [],
-          "uuid": "0e2b9abd-c73d-562-84e-f7a01118519958",
-          "description": "Lokotunjailurus chinsamyae is a felidae species found in its native region."
+          "uuid": "0e2b9abd-c73d-562-84e-f7a01118519958"
         }
       ]
     },
@@ -8066,8 +8086,7 @@
             "checklistbank-316046": "https://www.gbif.org/taxon/4B7BN"
           },
           "authorityIds": "col:4B7BN,itis:552765",
-          "commonName": "manul",
-          "description": "Otocolobus manul (manul) is a felidae species found in its native region."
+          "commonName": "manul"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -8101,11 +8120,11 @@
             "checklistbank-139831": "197781",
             "checklistbank-9802": "1005991",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109312424",
-            "checklistbank-25250": "https://www.gbif.org/species/5787225"
+            "checklistbank-25250": "https://www.gbif.org/species/5787225",
+            "checklistbank-281817": "31228"
           },
           "authorityIds": "col:CFYBG,itis:1229748",
-          "commonName": "Eyra Cat",
-          "description": "Herpailurus yagouaroundi (Eyra Cat) is a felidae species found in its native region."
+          "commonName": "Eyra Cat"
         },
         {
           "id": "SP_HERPAILURUS_YAGUARONDI_LAC_P_DE_1809",
@@ -8121,8 +8140,7 @@
           },
           "children": [],
           "uuid": "e677c506-994c-5fe-85b-b02ea4aae4cb1a",
-          "commonName": "Jaguarondi",
-          "description": "Herpailurus yaguarondi (Jaguarondi) is a felidae species found in its native region."
+          "commonName": "Jaguarondi"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -8146,8 +8164,7 @@
           "sourceIds": {
             "checklistbank": "txn:45365",
             "checklistbank-1174": "txn:45365"
-          },
-          "description": "Miracinonyx inexpectatus is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_MIRACINONYX_TRUMANI",
@@ -8164,7 +8181,9 @@
             "checklistbank-1174": "txn:46530",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q56316534"
           },
-          "description": "Miracinonyx trumani is a felidae species found in its native region."
+          "authorIds": [
+            "Q21453128"
+          ]
         },
         {
           "id": "SP_MIRACINONYX_STUDERI_SAVAGE_1960",
@@ -8179,8 +8198,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126728393"
           },
           "children": [],
-          "uuid": "bcb444db-74b9-512-882-76b3a878fd77a7",
-          "description": "Miracinonyx studeri is a felidae species found in its native region."
+          "uuid": "bcb444db-74b9-512-882-76b3a878fd77a7"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8200,7 +8218,6 @@
           "children": [],
           "lineage": "Tchadailurus",
           "uuid": "9d1f18f0-ddb7-533-8dc-0fb487f4c23045",
-          "description": "Tchadailurus adei is a felidae species found in its native region.",
           "authorship": "Bonis, Peigné, Mackaye, Likius, Vignaud & Brunet, 2018",
           "sourceIds": {
             "checklistbank-316441": "TDBN9"
@@ -8224,11 +8241,13 @@
           "children": [],
           "lineage": "Promegantereon",
           "uuid": "ee0c8447-d3a5-585-a5b-d406439fec22cc",
-          "description": "Promegantereon ogygia is a felidae species found in its native region.",
           "authorship": "Kaup, 1832",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3922877"
-          }
+          },
+          "authorIds": [
+            "Q31651"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8253,8 +8272,7 @@
             "checklistbank": "txn:379126",
             "checklistbank-1174": "txn:379126",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3922171"
-          },
-          "description": "Pristifelis attica is a felidae species found in its native region."
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8278,8 +8296,7 @@
           "sourceIds": {
             "checklistbank": "txn:96582",
             "checklistbank-1174": "txn:96582"
-          },
-          "description": "Miopanthera lorteti is a felidae species found in its native region."
+          }
         },
         {
           "id": "SP_MIOPANTHERA_PAMIRI",
@@ -8294,8 +8311,7 @@
           "sourceIds": {
             "checklistbank": "txn:470153",
             "checklistbank-1174": "txn:470153"
-          },
-          "description": "Miopanthera pamiri is a felidae species found in its native region."
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8314,8 +8330,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Namafelis",
-          "uuid": "1b381132-bd12-594-87c-f5b9f4df3add6b",
-          "description": "Namafelis minor is a felidae species found in its native region."
+          "uuid": "1b381132-bd12-594-87c-f5b9f4df3add6b"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8335,11 +8350,13 @@
           "children": [],
           "lineage": "Asilifelis",
           "uuid": "7bdec86f-7df4-56c-b44-5b92da8fe2b3d3",
-          "description": "Asilifelis coteae is a felidae species found in its native region.",
           "authorship": "Werdelin, 2012",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3625119"
-          }
+          },
+          "authorIds": [
+            "Q4357778"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8363,8 +8380,7 @@
           "sourceIds": {
             "checklistbank": "txn:379129",
             "checklistbank-1174": "txn:379129"
-          },
-          "description": "Leptofelis vallesiensis is a felidae species found in its native region."
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8384,11 +8400,13 @@
           "children": [],
           "lineage": "Miomachairodus",
           "uuid": "3761669b-5044-542-bb4-e1865bc806aea5",
-          "description": "Miomachairodus pseudailuroides is a felidae species found in its native region.",
           "authorship": "Schmidt-Kittler, 1976",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q111032084"
-          }
+          },
+          "authorIds": [
+            "Q102061200"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8407,8 +8425,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Hemimachairodus",
-          "uuid": "f812ab1d-2cec-52c-b24-26769271e30a59",
-          "description": "Hemimachairodus zwierzyckii is a felidae species found in its native region."
+          "uuid": "f812ab1d-2cec-52c-b24-26769271e30a59"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8427,8 +8444,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Vishnufelis",
-          "uuid": "3741bb49-8d31-5aa-a20-87fe034bdab4e8",
-          "description": "Vishnufelis laticeps is a felidae species found in its native region."
+          "uuid": "3741bb49-8d31-5aa-a20-87fe034bdab4e8"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8448,11 +8464,19 @@
           "children": [],
           "lineage": "Pachypanthera",
           "uuid": "4cf6b222-0d27-5ea-b07-1148d19deb9ab6",
-          "description": "Pachypanthera piriyai is a felidae species found in its native region.",
           "authorship": "De Bonis, Chaimanee, Grohé, Chavasseau, Mazurier, Suraprasit & Jaeger, 2023",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122092402"
-          }
+          },
+          "authorIds": [
+            "Q1872059",
+            "Q21388531",
+            "Q37605227",
+            "Q26721079",
+            "Q90781675",
+            "Q26721076",
+            "Q21392446"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8471,8 +8495,7 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Sivapardus",
-          "uuid": "06b2098c-b586-54e-94e-26a2dced15016c",
-          "description": "Sivapardus punjabiensis is a felidae species found in its native region."
+          "uuid": "06b2098c-b586-54e-94e-26a2dced15016c"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8496,8 +8519,7 @@
           "sourceIds": {
             "checklistbank": "txn:498487",
             "checklistbank-1174": "txn:498487"
-          },
-          "description": "Magerifelis peignei is a felidae species found in its native region."
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8519,8 +8541,7 @@
             "checklistbank": "1935980"
           },
           "children": [],
-          "uuid": "4e047351-4693-509-aea-bacca277038613",
-          "description": "Felidae sp. is a felidae species found in its native region."
+          "uuid": "4e047351-4693-509-aea-bacca277038613"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8543,8 +8564,7 @@
             "checklistbank": "txn:47834"
           },
           "children": [],
-          "uuid": "908db967-369e-51b-b40-944cfde57f453f",
-          "description": "Machaerodus niobrarensis is a felidae species found in its native region."
+          "uuid": "908db967-369e-51b-b40-944cfde57f453f"
         },
         {
           "id": "SP_MACHAERODUS_ENSENADENSIS_AMEGHINO_1888",
@@ -8558,8 +8578,7 @@
             "checklistbank": "txn:475478"
           },
           "children": [],
-          "uuid": "e3a73089-805d-508-afc-c97fd7103d99da",
-          "description": "Machaerodus ensenadensis is a felidae species found in its native region."
+          "uuid": "e3a73089-805d-508-afc-c97fd7103d99da"
         },
         {
           "id": "SP_MACHAERODUS_CRENATIDENS",
@@ -8619,8 +8638,7 @@
             "checklistbank": "txn:272315"
           },
           "children": [],
-          "uuid": "dba28070-4b03-57e-9d5-652c8a3718a258",
-          "description": "Adeilosmilus kabir is a felidae species found in its native region."
+          "uuid": "dba28070-4b03-57e-9d5-652c8a3718a258"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8643,8 +8661,7 @@
             "checklistbank": "txn:475370"
           },
           "children": [],
-          "uuid": "aeec378a-f8e4-5d5-8f8-7bca34069e4fc7",
-          "description": "Jansofelis vaufreyi is a felidae species found in its native region."
+          "uuid": "aeec378a-f8e4-5d5-8f8-7bca34069e4fc7"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8824,7 +8841,10 @@
             "checklistbank-316441": "TZ9SL"
           },
           "children": [],
-          "uuid": "2ba7ee27-b8bb-5809-9154-0ce0c77fd4ab"
+          "uuid": "2ba7ee27-b8bb-5809-9154-0ce0c77fd4ab",
+          "authorIds": [
+            "Q21112"
+          ]
         },
         {
           "id": "SP_LEO_AFRICANUS_BREHM_1829",
@@ -8852,7 +8872,10 @@
             "checklistbank-316441": "V32ZM"
           },
           "children": [],
-          "uuid": "b95576be-0ba6-53e2-9183-97175e963e55"
+          "uuid": "b95576be-0ba6-53e2-9183-97175e963e55",
+          "authorIds": [
+            "Q126632"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8922,7 +8945,10 @@
             "checklistbank-316441": "V345J"
           },
           "children": [],
-          "uuid": "8c262b9b-8908-5c61-a68e-a0bfcaba8b01"
+          "uuid": "8c262b9b-8908-5c61-a68e-a0bfcaba8b01",
+          "authorIds": [
+            "Q15994693"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9035,7 +9061,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q119343429"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q126632"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9105,7 +9134,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q124799327"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q93568"
+          ]
         },
         {
           "id": "SP_CYNAILURUS_PLEISTOCAENICUS_ZDANSKY_1925",
@@ -9118,7 +9150,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q126372024"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q78948"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9249,7 +9284,11 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q122936769"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q957131",
+            "Q5371678"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9271,7 +9310,10 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q56327289"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q94292162"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9293,15 +9335,18 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q131311616"
           },
-          "children": []
+          "children": [],
+          "authorIds": [
+            "Q444953"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "felidae"
     }
   ],
-  "genusCount": 85,
-  "speciesCount": 505,
+  "genusCount": 81,
+  "speciesCount": 499,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

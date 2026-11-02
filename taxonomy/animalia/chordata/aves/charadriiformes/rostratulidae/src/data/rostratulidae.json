@@ -5,30 +5,6 @@
   "commonName": "Painted-snipes",
   "children": [
     {
-      "id": "GENUS_ROSTRATULA",
-      "name": "\"Rostratula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ROSTRATULA_BENGHALENSIS_LINNAEUS_1758",
-          "name": "\"Rostratula benghalensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rostratula",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548333"
-          },
-          "children": [],
-          "uuid": "a9a7ba68-beb2-572-af9-61bcf3ceebd502",
-          "description": "\"Rostratula benghalensis\" is a rostratulidae species found in its native region."
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "rostratulidae"
-    },
-    {
       "id": "GENUS_NYCTICRYPHES",
       "name": "Nycticryphes",
       "rank": "GENUS",
@@ -54,8 +30,7 @@
             "checklistbank-139831": "144499"
           },
           "authorityIds": "col:485KT,itis:176466",
-          "commonName": "American Painted-snipe",
-          "description": "Nycticryphes semicollaris (American Painted-snipe) is a rostratulidae species found in its native region."
+          "commonName": "American Painted-snipe"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -74,10 +49,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Rostratula",
           "sourceIds": {
-            "checklistbank": "Rostratula_benghalensis"
+            "checklistbank": "Rostratula_benghalensis",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1548333"
           },
           "children": [],
-          "uuid": "925eb4fe-86f2-509-a81-4b2dcfc6a14219"
+          "uuid": "925eb4fe-86f2-509-a81-4b2dcfc6a14219",
+          "authorship": "(Linnaeus, 1758)",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_ROSTRATULA_AUSTRALIS",
@@ -133,8 +113,8 @@
       "lineage": "rostratulidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 6,
+  "genusCount": 2,
+  "speciesCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -3,7 +3,7 @@
   "name": "Psoroptidae",
   "rank": "FAMILY",
   "appSlug": "psoroptidae",
-  "speciesCount": 38,
+  "speciesCount": 43,
   "children": [
     {
       "id": "GENUS_CAPARINIA",
@@ -168,7 +168,8 @@
           "sourceIds": {
             "gbif-backbone": "10286454",
             "checklistbank-2008": "1052563",
-            "checklistbank-2169": "411904"
+            "checklistbank-2169": "411904",
+            "checklistbank-281817": "197095"
           },
           "children": [],
           "authorship": "Hirst, 1924",
@@ -190,7 +191,8 @@
             "checklistbank-2265": "420257",
             "checklistbank-7888": "NHMSYS0021290664",
             "checklistbank-9712": "MSTSNM:Arter:023a8cf8-f785-ea11-aa77-501ac539d1ea",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6471256"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6471256",
+            "checklistbank-281817": "58922"
           },
           "children": [],
           "uuid": "f40ae0f0-9adf-5e59-98a0-f06a9025d305"
@@ -290,7 +292,8 @@
             "checklistbank-2169": "83912",
             "checklistbank-7888": "NHMSYS0021158052",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4357712",
-            "checklistbank-312242": "20284"
+            "checklistbank-312242": "20284",
+            "checklistbank-281817": "61385"
           },
           "children": [],
           "uuid": "1028e133-4f9a-564c-89d2-8928fa31abd2"
@@ -494,10 +497,14 @@
             "wikispecies": "Otodectes_cynotis",
             "checklistbank-2265": "179871",
             "checklistbank-30477": "239619",
-            "checklistbank-9712": "MSTSNM:Arter:5c6addf8-f785-ea11-aa77-501ac539d1ea"
+            "checklistbank-9712": "MSTSNM:Arter:5c6addf8-f785-ea11-aa77-501ac539d1ea",
+            "checklistbank-281817": "35553"
           },
           "children": [],
-          "uuid": "87dfde27-0186-560b-ac20-9ab5b70adc55"
+          "uuid": "87dfde27-0186-560b-ac20-9ab5b70adc55",
+          "authorIds": [
+            "Q55847612"
+          ]
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -521,6 +528,19 @@
           },
           "children": [],
           "uuid": "9d01cb59-46ba-5802-917e-d044305db279"
+        },
+        {
+          "id": "SP_FONSECALGES_JOHNJADINI_FAIN_1962",
+          "name": "Fonsecalges johnjadini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fonsecalges",
+          "authorship": "Fain, 1962",
+          "sourceIds": {
+            "checklistbank-281817": "88427"
+          },
+          "uuid": "8d83f5d6-c631-4408-8b73-82c524f15e09"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -681,6 +701,85 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psoroptidae"
+    },
+    {
+      "id": "GENUS_TROUESSALGES",
+      "name": "Trouessalges",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoroptidae",
+      "children": [
+        {
+          "id": "SP_TROUESSALGES_PECARI_FONSECA_1954",
+          "name": "Trouessalges pecari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trouessalges",
+          "authorship": "Fonseca, 1954",
+          "sourceIds": {
+            "checklistbank-281817": "22977"
+          },
+          "uuid": "ebd2c58f-b02c-4959-93dc-65e82b246d6d"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EDENTALGES",
+      "name": "Edentalges",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoroptidae",
+      "children": [
+        {
+          "id": "SP_EDENTALGES_BRADYPUS_FONSECA_1954",
+          "name": "Edentalges bradypus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Edentalges",
+          "authorship": "Fonseca, 1954",
+          "sourceIds": {
+            "checklistbank-281817": "34213"
+          },
+          "uuid": "cc25249d-4ef6-4561-902f-64c3719a4b95"
+        },
+        {
+          "id": "SP_EDENTALGES_QUADRILOBATUS_FONSECA_1954",
+          "name": "Edentalges quadrilobatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Edentalges",
+          "authorship": "Fonseca, 1954",
+          "sourceIds": {
+            "checklistbank-281817": "43118"
+          },
+          "uuid": "447a876a-43bc-4917-827a-6595ada089ae"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ECHIMYALGES",
+      "name": "Echimyalges",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "psoroptidae",
+      "children": [
+        {
+          "id": "SP_ECHIMYALGES_BELLUOMINII_FAIN_1967",
+          "name": "Echimyalges belluominii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echimyalges",
+          "authorship": "Fain, 1967",
+          "sourceIds": {
+            "checklistbank-281817": "50912"
+          },
+          "uuid": "578644f4-e7cd-4113-b59a-c3b870bc934f"
+        }
+      ]
     }
   ],
   "genusCount": 12,

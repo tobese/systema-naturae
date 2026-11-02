@@ -25,7 +25,8 @@
           "sourceIds": {
             "col": [
               "6ZHK5"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:410399"
           },
           "authorityIds": "col:6ZHK5",
           "authorship": "(G. C. Robson, 1924)"
@@ -69,8 +70,7 @@
             ],
             "checklistbank": "1505773"
           },
-          "authorityIds": "col:BSBPS",
-          "description": "Stauroteuthis kengrahami is a stauroteuthidae species found in its native region."
+          "authorityIds": "col:BSBPS"
         },
         {
           "id": "SP_STAUROTEUTHIS_SYRTENSIS",
@@ -102,8 +102,7 @@
             "checklistbank": "ott30979"
           },
           "children": [],
-          "uuid": "9ce41134-424d-557-acc-24d4324bd03a87",
-          "description": "Stauroteuthis sp. is a stauroteuthidae species found in its native region."
+          "uuid": "9ce41134-424d-557-acc-24d4324bd03a87"
         },
         {
           "id": "SP_STAUROTEUTHIS_MICROPS",
@@ -116,8 +115,7 @@
             "checklistbank": "ott7941056"
           },
           "children": [],
-          "uuid": "50b47d1f-36e6-505-817-9bf41bd0571b5d",
-          "description": "Stauroteuthis microps is a stauroteuthidae species found in its native region."
+          "uuid": "50b47d1f-36e6-505-817-9bf41bd0571b5d"
         },
         {
           "id": "SP_STAUROTEUTHIS_PTEROPUS",
@@ -141,6 +139,19 @@
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q107022242"
           },
+          "children": []
+        },
+        {
+          "id": "SP_STAUROTEUTHIS_KENGRAHAMI",
+          "name": "Stauroteuthis kengrahami",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stauroteuthis",
+          "sourceIds": {
+            "checklistbank-139831": "1505773"
+          },
+          "uuid": "2be24337-8934-43ad-833b-b2a32a385f6f",
           "children": []
         }
       ]
@@ -166,8 +177,7 @@
             ],
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3822140"
           },
-          "authorityIds": "itis:556399",
-          "description": "Chunioteuthis gilchristi is a stauroteuthidae species found in its native region."
+          "authorityIds": "itis:556399"
         },
         {
           "id": "SP_CHUNIOTEUTHIS_EBERSBACHII_GRIMPE_1916",
@@ -185,8 +195,7 @@
             ],
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3824671"
           },
-          "authorityIds": "itis:82695",
-          "description": "Chunioteuthis ebersbachii is a stauroteuthidae species found in its native region."
+          "authorityIds": "itis:82695"
         },
         {
           "id": "SP_CHUNIOTEUTHIS_SP",
@@ -203,47 +212,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stauroteuthidae"
-    },
-    {
-      "id": "GENUS_STAUROTEUTHIS",
-      "name": "\"Stauroteuthis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STAUROTEUTHIS_GILCHRISTI_G_C_ROBSON_1924",
-          "name": "\"Stauroteuthis gilchristi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stauroteuthis",
-          "authorship": "\"(G. C. Robson, 1924)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:410399"
-          },
-          "children": [],
-          "uuid": "37664177-501d-5f7-883-63080394571ef8",
-          "description": "\"Stauroteuthis gilchristi\" is a stauroteuthidae species found in its native region."
-        },
-        {
-          "id": "SP_STAUROTEUTHIS_KENGRAHAMI",
-          "name": "Stauroteuthis kengrahami",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stauroteuthis",
-          "sourceIds": {
-            "checklistbank-139831": "1505773"
-          },
-          "uuid": "2be24337-8934-43ad-833b-b2a32a385f6f",
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "stauroteuthidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 13,
+  "genusCount": 2,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

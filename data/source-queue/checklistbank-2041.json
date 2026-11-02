@@ -1,11 +1,25 @@
 {
-  "applied": {
-    "added": 3521,
-    "at": "2026-10-22T16:13:37+0200",
-    "crossFamily": 0,
-    "merged": 30935
-  },
+  "key": "checklistbank-2041",
+  "title": "Batch import - checklistbank-2041",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 15781663,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-2041/archive.zip",
+  "reason": "user 2026-11-01: apply the newer version (measured 2026-10-31); re-transform from the new archive, not the stale 22 Oct transform",
+  "applied": {
+    "added": 186,
+    "merged": 31051,
+    "crossFamily": 1051,
+    "families": 2618,
+    "at": "2026-11-01T13:30:32Z"
+  },
+  "triaged": {
+    "offered": 78778,
+    "alreadyHeld": 43099,
+    "staged": 31775,
+    "refused": 1209,
+    "refusalRate": 0.0153
+  },
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -22,21 +36,30 @@
     {
       "at": "2026-10-31T23:01:47+0100",
       "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T09:24:23+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-11-01T11:48:39Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-01T11:50:04Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T11:50:04Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-01T11:50:04Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-01T13:30:32Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-2041",
-  "licence": "cc by",
-  "reason": "newer version measured 2026-10-31: 1127 species would be added; dry run in archives/checklistbank-2041/dryrun.txt; waiting on the user",
-  "size": 15781663,
-  "stage": "triaged",
-  "title": "Batch import - checklistbank-2041",
-  "triaged": {
-    "alreadyHeld": 43101,
-    "families": null,
-    "missedFamilies": null,
-    "offered": 78778,
-    "refusalRate": 0.0154,
-    "refused": 1211,
-    "staged": 31771
-  }
+  ]
 }

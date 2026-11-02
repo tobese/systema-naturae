@@ -1,15 +1,29 @@
 {
-  "added": 2460,
-  "applied": {
-    "added": 2460,
-    "at": "2026-10-22T11:12:06",
-    "families": 428,
-    "refusalRate": 0.0,
-    "refused": 0
-  },
+  "key": "checklistbank-1141",
+  "title": "Batch import - checklistbank-1141",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 227318614,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-1141/archive.zip",
-  "crossFamily": 49,
+  "added": 2460,
+  "merged": 67052,
   "families": 428,
+  "crossFamily": 49,
+  "reason": "user 2026-11-01: apply the newer version (measured 2026-10-31); re-transform from the new archive, not the stale 22 Oct transform",
+  "applied": {
+    "added": 722,
+    "merged": 68831,
+    "crossFamily": 330,
+    "families": 429,
+    "at": "2026-11-01T08:41:09Z"
+  },
+  "triaged": {
+    "offered": 384137,
+    "alreadyHeld": 285112,
+    "staged": 69577,
+    "refused": 0,
+    "refusalRate": 0
+  },
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -26,22 +40,30 @@
     {
       "at": "2026-10-31T23:11:20+0100",
       "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T09:24:22+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-11-01T08:32:37Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-01T08:34:19Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T08:34:19Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-01T08:34:19Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-01T08:41:09Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-1141",
-  "licence": "cc by",
-  "merged": 67052,
-  "reason": "newer version measured 2026-10-31: 1070 species would be added; dry run in archives/checklistbank-1141/dryrun.txt; waiting on the user",
-  "size": 227318614,
-  "stage": "triaged",
-  "title": "Batch import - checklistbank-1141",
-  "triaged": {
-    "alreadyHeld": 285110,
-    "families": null,
-    "missedFamilies": null,
-    "offered": 384137,
-    "refusalRate": 0.0,
-    "refused": 0,
-    "staged": 69579
-  }
+  ]
 }

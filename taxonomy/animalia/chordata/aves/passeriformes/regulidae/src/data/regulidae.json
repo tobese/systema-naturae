@@ -51,7 +51,8 @@
             "checklistbank-51696": [
               "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/20182/"
             ],
-            "checklistbank-313280": "Regulus regulus"
+            "checklistbank-313280": "Regulus regulus",
+            "checklistbank-25198": "https://www.gbif.org/species/2484596"
           },
           "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q26657,checklistbank:1256,checklistbank:urn:lsid:marinespecies.org:taxname:558583,checklistbank-139831:344672,checklistbank-2169:68468,checklistbank-51696:http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_TaxaVaria/20182/,checklistbank-9712:MSTSNM:Arter:db042cf9-f785-ea11-aa77-501ac539d1ea,col:78SHD,itis:562698,wikidata:Q26657,wikispecies:Regulus_regulus",
           "authorship": "(Linnaeus, 1758)"
@@ -82,7 +83,8 @@
             "col": [
               "4RPW7"
             ],
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:103016"
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:103016",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:558582"
           },
           "authorityIds": "col:4RPW7,itis:916249,wikidata:Q27471",
           "authorship": "(Temminck, 1820)"
@@ -152,7 +154,8 @@
             ],
             "checklistbank": "101166",
             "checklistbank-2169": "73321",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27629003"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q27629003",
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1484559"
           },
           "authorityIds": "wikidata:Q576050",
           "authorship": "(Linnaeus, 1766)"
@@ -235,8 +238,7 @@
             "checklistbank": "Regulus_goodfellowi"
           },
           "authorityIds": "col:4RPW6,itis:562696",
-          "commonName": "Flamecrest",
-          "description": "Regulus goodfellowi (Flamecrest) is a kinglets species found in its native region."
+          "commonName": "Flamecrest"
         },
         {
           "id": "SP_REGULUS_BULGARICUS",
@@ -247,11 +249,13 @@
           "children": [],
           "lineage": "Regulus",
           "uuid": "645f2e48-fa8a-5f0-97f-69a960fceb1aea",
-          "description": "Regulus bulgaricus is a regulidae species found in its native region.",
           "authorship": "Boev, 1999",
           "sourceIds": {
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q7309717"
-          }
+          },
+          "authorIds": [
+            "Q21393806"
+          ]
         },
         {
           "id": "SP_REGULUS_IGNICAPILLUS_TEMMINCK_1820",
@@ -266,8 +270,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q50407575"
           },
           "children": [],
-          "uuid": "7330eaad-948a-5ec-928-01243dd70e41d2",
-          "description": "Regulus ignicapillus is a regulidae species found in its native region."
+          "uuid": "7330eaad-948a-5ec-928-01243dd70e41d2"
         },
         {
           "id": "SP_REGULUS_IGNICAPILLA",
@@ -280,8 +283,7 @@
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6003893"
           },
           "children": [],
-          "uuid": "ca618c76-9e2e-584-927-95b396c2414802",
-          "description": "Regulus ×ignicapilla is a regulidae species found in its native region."
+          "uuid": "ca618c76-9e2e-584-927-95b396c2414802"
         },
         {
           "id": "SP_REGULUS_CRISTATUS",
@@ -378,43 +380,6 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109563463"
           },
           "children": []
-        }
-      ]
-    },
-    {
-      "id": "GENUS_REGULUS",
-      "name": "\"Regulus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_REGULUS_IGNICAPILLA_TEMMINCK_1820",
-          "name": "\"Regulus ignicapilla\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Regulus",
-          "authorship": "\"(Temminck, 1820)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:558582"
-          },
-          "children": [],
-          "uuid": "88e60bc3-7ed3-5c0-b06-8c685e22039d39",
-          "description": "\"Regulus ignicapilla\" is a regulidae species found in its native region."
-        },
-        {
-          "id": "SP_REGULUS_CALENDULA_LINNAEUS_1766",
-          "name": "\"Regulus calendula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Regulus",
-          "authorship": "\"(Linnaeus, 1766)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484559"
-          },
-          "children": [],
-          "uuid": "1badcf4f-98ee-576-b39-8ef086e511ea03",
-          "description": "\"Regulus calendula\" is a regulidae species found in its native region."
         },
         {
           "id": "SP_REGULUS_GOODFELLOWI",
@@ -475,9 +440,7 @@
           "uuid": "f4ac7408-ee97-4e2c-ae72-26dfa37664ca",
           "children": []
         }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "regulidae"
+      ]
     },
     {
       "id": "GENUS_CORTHYLIO",
@@ -508,8 +471,7 @@
             "checklistbank-7888": "NHMSYS0021537858"
           },
           "authorityIds": "col:CQ6F3,itis:1245072",
-          "commonName": "Ruby-crowned Kinglet",
-          "description": "Corthylio calendula (Ruby-crowned Kinglet) is a regulidae species found in its native region."
+          "commonName": "Ruby-crowned Kinglet"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -532,8 +494,7 @@
             "checklistbank": "4310"
           },
           "children": [],
-          "uuid": "3a58cfe3-5701-549-a96-560bfeaa0c83b7",
-          "description": "Motacilla regulus is a regulidae species found in its native region."
+          "uuid": "3a58cfe3-5701-549-a96-560bfeaa0c83b7"
         },
         {
           "id": "SP_MOTACILLA_CALENDULA_LINNAEUS_1766",
@@ -547,8 +508,7 @@
             "checklistbank": "928592"
           },
           "children": [],
-          "uuid": "b397a910-4e1a-558-ae5-f6cfe8be9250b0",
-          "description": "Motacilla Calendula is a regulidae species found in its native region."
+          "uuid": "b397a910-4e1a-558-ae5-f6cfe8be9250b0"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -571,16 +531,15 @@
             "checklistbank": "4316"
           },
           "children": [],
-          "uuid": "df05f932-bf08-546-9a4-7403df6ec3b5ab",
-          "description": "Sylvia ignicapilla is a regulidae species found in its native region."
+          "uuid": "df05f932-bf08-546-9a4-7403df6ec3b5ab"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "regulidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 28,
+  "genusCount": 4,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -75,7 +75,8 @@
             "checklistbank-53133": "4527",
             "checklistbank-315631": "7JKP2",
             "checklistbank-7888": "NHMSYS0000530265",
-            "checklistbank-2036": "Certhia_brachydactyla"
+            "checklistbank-2036": "Certhia_brachydactyla",
+            "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:205866"
           },
           "authorityIds": "col:69N9M,itis:559138,wikidata:Q125895",
           "authorship": "C.L. Brehm, 1820"
@@ -320,8 +321,7 @@
             "checklistbank-2036": "Certhia_tianquanensis"
           },
           "authorityIds": "col:5XMXH,itis:916584",
-          "commonName": "Sichuan Treecreeper",
-          "description": "Certhia tianquanensis (Sichuan Treecreeper) is a treecreepers species found in its native region."
+          "commonName": "Sichuan Treecreeper"
         },
         {
           "id": "SP_CERTHIA_PUSILLA",
@@ -332,12 +332,14 @@
           "children": [],
           "lineage": "Certhia",
           "uuid": "9045596b-4f27-5e9-b74-6b8cb9f9e57a90",
-          "description": "Certhia pusilla is a certhiidae species found in its native region.",
           "authorship": "Linnæus, 1758",
           "sourceIds": {
             "gbif-backbone": "10847686",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q21250111"
-          }
+          },
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERTHIA_FAMILIARIS",
@@ -350,8 +352,7 @@
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:267306"
           },
           "children": [],
-          "uuid": "a1e421ca-7f28-506-8dd-72f0877c18f217",
-          "description": "Certhia ×familiaris is a certhiidae species found in its native region."
+          "uuid": "a1e421ca-7f28-506-8dd-72f0877c18f217"
         },
         {
           "id": "SP_CERTHIA_CHALYBEA_LINNAEUS_1766",
@@ -742,7 +743,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q25190912"
           },
           "children": [],
-          "uuid": "eb959695-f580-5d9-86e-59bee171252efa"
+          "uuid": "eb959695-f580-5d9-86e-59bee171252efa",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERTHIA_CRUENTATA_LINN_US_1758",
@@ -757,7 +761,10 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q133401187"
           },
           "children": [],
-          "uuid": "024bf5da-2564-52a-b8f-c856339873fa2e"
+          "uuid": "024bf5da-2564-52a-b8f-c856339873fa2e",
+          "authorIds": [
+            "Q1043"
+          ]
         },
         {
           "id": "SP_CERTHIA_GUTTURALIS_LINNAEUS_1766",
@@ -1123,14 +1130,7 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q109578050"
           },
           "children": []
-        }
-      ]
-    },
-    {
-      "id": "GENUS_CERTHIA",
-      "name": "\"Certhia",
-      "rank": "GENUS",
-      "children": [
+        },
         {
           "id": "SP_CERTHIA_BRACHYDACTYLA",
           "name": "Certhia brachydactyla",
@@ -1273,9 +1273,7 @@
           "uuid": "eee95cb7-b330-423e-af1d-ec3c6862b304",
           "children": []
         }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "certhiidae"
+      ]
     },
     {
       "id": "GENUS_SALPORNIS",
@@ -1294,8 +1292,7 @@
           },
           "children": [],
           "uuid": "4398f8c4-7aa1-557-9a8-6d85943fc35a14",
-          "commonName": "African Spotted Creeper",
-          "description": "Salpornis salvadori (African Spotted Creeper) is a certhiidae species found in its native region."
+          "commonName": "African Spotted Creeper"
         },
         {
           "id": "SP_SALPORNIS_SPILONOTUS",
@@ -1354,8 +1351,7 @@
           },
           "children": [],
           "uuid": "5f0516de-fa7e-5f5-a5c-4038b7f140fb0b",
-          "commonName": "Brown-throated Wren",
-          "description": "Troglodytes brunneicollis (Brown-throated Wren) is a certhiidae species found in its native region."
+          "commonName": "Brown-throated Wren"
         },
         {
           "id": "SP_TROGLODYTES_SP",
@@ -1368,8 +1364,7 @@
             "checklistbank": "371865"
           },
           "children": [],
-          "uuid": "044d1332-b256-577-96a-eda8cdb5ad7dc8",
-          "description": "Troglodytes sp. is a certhiidae species found in its native region."
+          "uuid": "044d1332-b256-577-96a-eda8cdb5ad7dc8"
         },
         {
           "id": "SP_TROGLODYTES_BEANI_RIDGWAY_1885",
@@ -1384,8 +1379,7 @@
           },
           "children": [],
           "uuid": "237b7c04-31b3-580-af8-b5e21c13ce1332",
-          "commonName": "Cozumel Wren",
-          "description": "Troglodytes beani (Cozumel Wren) is a certhiidae species found in its native region."
+          "commonName": "Cozumel Wren"
         },
         {
           "id": "SP_TROGLODYTES_MARTINICENSIS_SCLATER_1866",
@@ -1401,8 +1395,7 @@
           },
           "children": [],
           "uuid": "8575215a-da9c-55b-bfd-85eec2b6c8c54e",
-          "commonName": "Kalinago Wren",
-          "description": "Troglodytes martinicensis (Kalinago Wren) is a certhiidae species found in its native region."
+          "commonName": "Kalinago Wren"
         },
         {
           "id": "SP_TROGLODYTES_MUSCULUS",
@@ -1459,8 +1452,7 @@
           },
           "children": [],
           "uuid": "b6e2e9ce-fc19-5f9-a2c-53c75bbc6139d2",
-          "commonName": "White-browed Gnatcatcher",
-          "description": "Polioptila bilineata (White-browed Gnatcatcher) is a certhiidae species found in its native region."
+          "commonName": "White-browed Gnatcatcher"
         },
         {
           "id": "SP_POLIOPTILA_MAIOR_HELLMAYR_1900",
@@ -1475,8 +1467,7 @@
           },
           "children": [],
           "uuid": "304e0175-8fcf-5d9-b66-5001298f9626b4",
-          "commonName": "Maranon Gnatcatcher",
-          "description": "Polioptila maior (Maranon Gnatcatcher) is a certhiidae species found in its native region."
+          "commonName": "Maranon Gnatcatcher"
         },
         {
           "id": "SP_POLIOPTILA_ALBIVENTRIS_LAWRENCE_1885",
@@ -1491,8 +1482,7 @@
           },
           "children": [],
           "uuid": "51888eef-659c-568-98b-be9d4e190239c7",
-          "commonName": "Yucatan Gnatcatcher",
-          "description": "Polioptila albiventris (Yucatan Gnatcatcher) is a certhiidae species found in its native region."
+          "commonName": "Yucatan Gnatcatcher"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1518,8 +1508,7 @@
           },
           "children": [],
           "uuid": "1dd43603-429e-5ef-8a1-693aeddad5eace",
-          "commonName": "Spot-breasted Wren",
-          "description": "Thryothorus maculipectus (Spot-breasted Wren) is a certhiidae species found in its native region."
+          "commonName": "Spot-breasted Wren"
         },
         {
           "id": "SP_THRYOTHORUS_ALBINUCHA_CABOT_1847",
@@ -1535,8 +1524,7 @@
           },
           "children": [],
           "uuid": "46c56258-1eb8-530-845-16a3ec0d4f7fb1",
-          "commonName": "White-browed Wren",
-          "description": "Thryothorus albinucha (White-browed Wren) is a certhiidae species found in its native region."
+          "commonName": "White-browed Wren"
         },
         {
           "id": "SP_THRYOTHORUS_EUOPHRYS_SCLATER_1860",
@@ -1553,8 +1541,7 @@
           },
           "children": [],
           "uuid": "913e2aea-8347-5d2-8f4-eba4368e441b06",
-          "commonName": "Plain-tailed Wren",
-          "description": "Thryothorus euophrys (Plain-tailed Wren) is a certhiidae species found in its native region."
+          "commonName": "Plain-tailed Wren"
         },
         {
           "id": "SP_THRYOTHORUS_SCLATERI",
@@ -1568,8 +1555,7 @@
           },
           "children": [],
           "uuid": "3620f998-ac46-598-ad5-5f5b4ce7cfceb8",
-          "commonName": "Speckle-breasted Wren",
-          "description": "Thryothorus sclateri (Speckle-breasted Wren) is a certhiidae species found in its native region."
+          "commonName": "Speckle-breasted Wren"
         },
         {
           "id": "SP_THRYOTHORUS_MYSTACALIS",
@@ -1583,8 +1569,7 @@
           },
           "children": [],
           "uuid": "9fb783c8-fae4-520-a27-4f2e7ab7df5527",
-          "commonName": "Whiskered Wren",
-          "description": "Thryothorus mystacalis (Whiskered Wren) is a certhiidae species found in its native region."
+          "commonName": "Whiskered Wren"
         },
         {
           "id": "SP_THRYOTHORUS_SINALOA",
@@ -1598,8 +1583,7 @@
           },
           "children": [],
           "uuid": "0b93b66a-2b44-531-918-8baf0f70299132",
-          "commonName": "Sinaloa Wren",
-          "description": "Thryothorus sinaloa (Sinaloa Wren) is a certhiidae species found in its native region."
+          "commonName": "Sinaloa Wren"
         },
         {
           "id": "SP_THRYOTHORUS_MODESTUS",
@@ -1613,8 +1597,7 @@
           },
           "children": [],
           "uuid": "d8a54a29-caa0-5e1-815-0d14c640307820",
-          "commonName": "Plain Wren",
-          "description": "Thryothorus modestus (Plain Wren) is a certhiidae species found in its native region."
+          "commonName": "Plain Wren"
         },
         {
           "id": "SP_THRYOTHORUS_FELIX",
@@ -1628,8 +1611,7 @@
           },
           "children": [],
           "uuid": "88d7533d-9208-574-980-a86bbff0b1ded3",
-          "commonName": "Happy Wren",
-          "description": "Thryothorus felix (Happy Wren) is a certhiidae species found in its native region."
+          "commonName": "Happy Wren"
         },
         {
           "id": "SP_THRYOTHORUS_RUTILUS",
@@ -1643,8 +1625,7 @@
           },
           "children": [],
           "uuid": "59acfe91-db1b-5ae-99e-603919d3cf8670",
-          "commonName": "Rufous-breasted Wren",
-          "description": "Thryothorus rutilus (Rufous-breasted Wren) is a certhiidae species found in its native region."
+          "commonName": "Rufous-breasted Wren"
         },
         {
           "id": "SP_THRYOTHORUS_FASCIATOVENTRIS_LAFRESNAYE_1845",
@@ -1660,8 +1641,7 @@
           },
           "children": [],
           "uuid": "0d81ef99-c8f3-59c-86f-a5e67c50a1a524",
-          "commonName": "Black-bellied Wren",
-          "description": "Thryothorus fasciatoventris (Black-bellied Wren) is a certhiidae species found in its native region."
+          "commonName": "Black-bellied Wren"
         },
         {
           "id": "SP_THRYOTHORUS_SEMIBADIUS",
@@ -1690,8 +1670,7 @@
           },
           "children": [],
           "uuid": "dd910b7a-da8b-5a6-8ad-ea087dfd06f465",
-          "commonName": "Fawn-breasted Wren",
-          "description": "Thryothorus guarayanus (Fawn-breasted Wren) is a certhiidae species found in its native region."
+          "commonName": "Fawn-breasted Wren"
         },
         {
           "id": "SP_THRYOTHORUS_LONGIROSTRIS",
@@ -1705,8 +1684,7 @@
           },
           "children": [],
           "uuid": "763706b4-3705-53b-970-7d129e1996d340",
-          "commonName": "Long-billed Wren",
-          "description": "Thryothorus longirostris (Long-billed Wren) is a certhiidae species found in its native region."
+          "commonName": "Long-billed Wren"
         },
         {
           "id": "SP_THRYOTHORUS_ATROGULARIS",
@@ -1720,8 +1698,7 @@
           },
           "children": [],
           "uuid": "a694caed-60b1-566-83d-f4cd27acaac762",
-          "commonName": "Black-throated Wren",
-          "description": "Thryothorus atrogularis (Black-throated Wren) is a certhiidae species found in its native region."
+          "commonName": "Black-throated Wren"
         },
         {
           "id": "SP_THRYOTHORUS_THORACICUS",
@@ -1735,8 +1712,7 @@
           },
           "children": [],
           "uuid": "162f7299-6c0e-5c2-bdc-a255f1814bf296",
-          "commonName": "Stripe-breasted Wren",
-          "description": "Thryothorus thoracicus (Stripe-breasted Wren) is a certhiidae species found in its native region."
+          "commonName": "Stripe-breasted Wren"
         },
         {
           "id": "SP_THRYOTHORUS_LEUCOPOGON",
@@ -1753,8 +1729,7 @@
           "children": [],
           "authorityIds": "checklistbank:376323",
           "uuid": "83a8144a-d4d5-582-9dd-00a2f1ec8f6af0",
-          "commonName": "Stripe-throated Wren",
-          "description": "Thryothorus leucopogon (Stripe-throated Wren) is a certhiidae species found in its native region."
+          "commonName": "Stripe-throated Wren"
         },
         {
           "id": "SP_THRYOTHORUS_NIGRICAPILLUS",
@@ -1790,8 +1765,7 @@
           },
           "children": [],
           "uuid": "c154c8f0-44d0-5b0-b72-843b88b099cc6a",
-          "commonName": "Socorro Wren",
-          "description": "Thryomanes sissonii (Socorro Wren) is a certhiidae species found in its native region."
+          "commonName": "Socorro Wren"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1815,8 +1789,7 @@
             "checklistbank-2265": "2173134"
           },
           "children": [],
-          "uuid": "8352e98d-6dca-52e-9a1-a77dbbd03c2716",
-          "description": "Ramphocaenus rufiventris is a certhiidae species found in its native region."
+          "uuid": "8352e98d-6dca-52e-9a1-a77dbbd03c2716"
         },
         {
           "id": "SP_RAMPHOCAENUS_STICTURUS_HELLMAYR_1902",
@@ -1831,8 +1804,7 @@
           },
           "children": [],
           "uuid": "7fc18b87-4f7d-58c-8e3-4b68bf5a88a1a6",
-          "commonName": "Chattering Gnatwren",
-          "description": "Ramphocaenus sticturus (Chattering Gnatwren) is a certhiidae species found in its native region."
+          "commonName": "Chattering Gnatwren"
         }
       ],
       "sourcedFrom": "checklistbank",

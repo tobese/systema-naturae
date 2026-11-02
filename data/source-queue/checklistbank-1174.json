@@ -1,15 +1,29 @@
 {
-  "added": 18084,
-  "applied": {
-    "added": 18084,
-    "at": "2026-10-22T12:12:56",
-    "families": 5975,
-    "refusalRate": 0.1217,
-    "refused": 27701
-  },
+  "key": "checklistbank-1174",
+  "title": "Batch import - checklistbank-1174",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 35359887,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-1174/archive.zip",
-  "crossFamily": 542,
+  "added": 18084,
+  "merged": 32108,
   "families": 5975,
+  "crossFamily": 542,
+  "reason": "requeued 2026-11-01: apply timed out at 3h (partly written); re-apply today's transform under the 6h limit",
+  "applied": {
+    "added": 383,
+    "merged": 33334,
+    "crossFamily": 916,
+    "families": 4716,
+    "at": "2026-11-02T00:09:51Z"
+  },
+  "triaged": {
+    "offered": 227556,
+    "alreadyHeld": 161384,
+    "staged": 34060,
+    "refused": 21108,
+    "refusalRate": 0.0928
+  },
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -26,22 +40,42 @@
     {
       "at": "2026-10-31T23:08:51+0100",
       "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T09:24:22+0100",
+      "stage": "downloaded"
+    },
+    {
+      "at": "2026-11-01T08:41:10Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-01T08:43:26Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-11-01T08:43:26Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-01T08:43:26Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-01T11:43:26Z",
+      "stage": "error"
+    },
+    {
+      "at": "2026-11-01T16:47:54+0100",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-01T19:21:10Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-02T00:09:51Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-1174",
-  "licence": "cc by",
-  "merged": 32108,
-  "reason": "newer version measured 2026-10-31: 1795 species would be added; dry run in archives/checklistbank-1174/dryrun.txt; waiting on the user",
-  "size": 35359887,
-  "stage": "triaged",
-  "title": "Batch import - checklistbank-1174",
-  "triaged": {
-    "alreadyHeld": 161438,
-    "families": null,
-    "missedFamilies": null,
-    "offered": 227556,
-    "refusalRate": 0.0928,
-    "refused": 21108,
-    "staged": 34006
-  }
+  ]
 }
