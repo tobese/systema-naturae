@@ -1227,9 +1227,14 @@
             ],
             "gbif-backbone": "1004676",
             "checklistbank-316441": "886VC",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1410384"
+            "checklistbank-1081": [
+              "urn:lsid:marinespecies.org:taxname:1410384"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:220613"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:220613,col:886VC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:220613,checklistbank-1081:urn:lsid:marinespecies.org:taxname:1410384,checklistbank-2011:urn:lsid:marinespecies.org:taxname:220613,checklistbank-316441:886VC,col:886VC,gbif-backbone:1004676",
           "authorship": "(Haswell, 1881)"
         },
         {
@@ -3170,21 +3175,6 @@
           },
           "children": [],
           "uuid": "370bd8bd-bfbd-5ef0-80e6-96a6dcb0c937"
-        },
-        {
-          "id": "SP_CELLEPORARIA_GRANULOSA_HASWELL_1881",
-          "name": "Celleporaria granulosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Celleporaria",
-          "authorship": "(Haswell, 1881)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:220613",
-            "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:1410384"
-          },
-          "uuid": "b95f5c7e-725f-4e02-be8a-b79ba5ad6c16",
-          "children": []
         },
         {
           "id": "SP_CELLEPORARIA_PILAEFERA_CANU_BASSLER_1929",
@@ -16540,7 +16530,8 @@
           "sourceIds": {
             "checklistbank-28812": "1307"
           },
-          "uuid": "2f8acb74-bbf9-476d-b5bd-59daa27efa6c"
+          "uuid": "2f8acb74-bbf9-476d-b5bd-59daa27efa6c",
+          "children": []
         }
       ]
     },
@@ -19709,9 +19700,13 @@
           "sourceIds": {
             "col": [
               "3F3WG"
-            ]
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4265550"
           },
-          "authorityIds": "col:3F3WG"
+          "authorityIds": "col:3F3WG",
+          "authorIds": [
+            "Q19858629"
+          ]
         },
         {
           "id": "SP_GALEOPSIS_BIPATENS",
@@ -19733,7 +19728,8 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:470999",
             "gbif-backbone": "4985355",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:470999",
-            "checklistbank-316441": "3F3WT"
+            "checklistbank-316441": "3F3WT",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4260928"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470999,col:3F3WT",
           "authorship": "(Harmer, 1957)"
@@ -19759,7 +19755,8 @@
             "gbif-backbone": "4985364",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:470993",
             "checklistbank-316441": "6K7F7",
-            "checklistbank-312242": "43150"
+            "checklistbank-312242": "43150",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6409454"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470993,col:6K7F7",
           "authorship": "(Hayward & Cook, 1979)"
@@ -19784,7 +19781,8 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:470988",
             "gbif-backbone": "4985362",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:470988",
-            "checklistbank-316441": "3F3WW"
+            "checklistbank-316441": "3F3WW",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6409791"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470988,col:3F3WW",
           "authorship": "(Hayward, 1981)"
@@ -19826,7 +19824,8 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:471000",
             "gbif-backbone": "4985349",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:471000",
-            "checklistbank-316441": "3F3WZ"
+            "checklistbank-316441": "3F3WZ",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4265431"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:471000,col:3F3WZ",
           "authorship": "(Osburn, 1952)"
@@ -19852,7 +19851,8 @@
             "gbif-backbone": "4985357",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:470991",
             "checklistbank-316441": "3F3X8",
-            "checklistbank-312242": "43149"
+            "checklistbank-312242": "43149",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4257888"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470991,col:3F3X8",
           "authorship": "(Hayward & Cook, 1979)"
@@ -19941,9 +19941,14 @@
           "sourceIds": {
             "col": [
               "3F3Y8"
-            ]
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4258759"
           },
-          "authorityIds": "col:3F3Y8"
+          "authorityIds": "col:3F3Y8",
+          "authorIds": [
+            "Q19858629",
+            "Q18642823"
+          ]
         },
         {
           "id": "SP_GALEOPSIS_MARIONENSIS",
@@ -19966,7 +19971,8 @@
             "gbif-backbone": "4985352",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:471001",
             "checklistbank-127379": "d1b86902-a68b-40b3-8aec-1fbf19dc3576",
-            "checklistbank-316441": "3F3YJ"
+            "checklistbank-316441": "3F3YJ",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q6409568"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:471001,col:3F3YJ",
           "authorship": "(Busk, 1884)"
@@ -20001,9 +20007,13 @@
           "sourceIds": {
             "col": [
               "3F3YQ"
-            ]
+            ],
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4248730"
           },
-          "authorityIds": "col:3F3YQ"
+          "authorityIds": "col:3F3YQ",
+          "authorIds": [
+            "Q19858629"
+          ]
         },
         {
           "id": "SP_GALEOPSIS_NOVELLA_HAYWARD_1988",
@@ -20144,7 +20154,8 @@
             "gbif-backbone": "4985348",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:470987",
             "checklistbank-316441": "3F3ZC",
-            "checklistbank-2169": "2138268"
+            "checklistbank-2169": "2138268",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4250359"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470987,col:3F3ZC",
           "authorship": "(Hutton, 1873)"
@@ -20189,7 +20200,8 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:470996",
             "gbif-backbone": "4985350",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:470996",
-            "checklistbank-316441": "3F3ZN"
+            "checklistbank-316441": "3F3ZN",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4257125"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470996,col:3F3ZN",
           "authorship": "(Moyano, 1983)"
@@ -20259,7 +20271,8 @@
             "gbif-backbone": "4985365",
             "checklistbank-1081": "urn:lsid:marinespecies.org:taxname:471002",
             "checklistbank-127379": "5ea63de7-16e5-426c-886d-81e9a1585c3f",
-            "checklistbank-316441": "3F42D"
+            "checklistbank-316441": "3F42D",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4251677"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:471002,col:3F42D",
           "authorship": "(Kirkpatrick, 1888)"
@@ -22293,7 +22306,8 @@
           "sourceIds": {
             "checklistbank-23305": "161760"
           },
-          "uuid": "85115e0e-f3f8-46f7-b923-8062a6c16cf0"
+          "uuid": "85115e0e-f3f8-46f7-b923-8062a6c16cf0",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -22355,7 +22369,7 @@
     }
   ],
   "genusCount": 54,
-  "speciesCount": 1348,
+  "speciesCount": 1347,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

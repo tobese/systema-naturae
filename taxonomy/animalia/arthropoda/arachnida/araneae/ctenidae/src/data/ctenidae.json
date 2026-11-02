@@ -15622,7 +15622,8 @@
             "checklistbank": "53391",
             "checklistbank-139831": "53391",
             "checklistbank-2265": "6918",
-            "checklistbank-29611": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Animalia/4004015/"
+            "checklistbank-29611": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Animalia/4004015/",
+            "checklistbank-29350": "ad-hoc-checklist:taxon:d91a8abaf72f10b60ce4099bd58542ce"
           },
           "uuid": "0753879a-2a46-5e0-a80-018aaa525c9054",
           "authorityIds": "col:4GQ68,gbif:2152822,itis:886995",
@@ -15728,7 +15729,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2642565",
             "checklistbank-29611": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Animalia/4003700/",
             "checklistbank-174290": "680",
-            "checklistbank-281817": "58961"
+            "checklistbank-281817": "58961",
+            "checklistbank-29350": "ad-hoc-checklist:taxon:cbdc614106cabf7593745bf917c76fb4"
           },
           "uuid": "eb867810-2f8e-5c9-b6f-3e5dc337ec73c9",
           "authorityIds": "col:4GQ5X,gbif:5170395,itis:886991",
@@ -20206,9 +20208,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ctenidae"
+    },
+    {
+      "id": "GENUS_CUPIENNUS",
+      "name": "Cupiennus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenidae",
+      "children": [
+        {
+          "id": "SP_CUPIENNUS_GETAZI",
+          "name": "Cupiennus getazi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cupiennus",
+          "sourceIds": {
+            "checklistbank-29350": "ad-hoc-checklist:taxon:173853858071ce0d5c9852c9199a45e0"
+          },
+          "uuid": "1afd737c-a747-464e-9838-889d81cd7dbe"
+        }
+      ]
     }
   ],
-  "speciesCount": 822,
+  "speciesCount": 823,
   "appSlug": "ctenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",

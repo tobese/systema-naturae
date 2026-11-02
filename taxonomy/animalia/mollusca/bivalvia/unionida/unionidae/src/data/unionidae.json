@@ -41912,7 +41912,9 @@
             "checklistbank-21627": "urn:lsid:dyntaxa.se:Taxon:235136",
             "checklistbank-20831": "https://servicio.mapama.gob.es/iepnbespeciesweb/verDetalleTaxon?idTaxon=10607",
             "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:235136",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:857498"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:857498",
+            "checklistbank-20830": "https://servicio.mapama.gob.es/iepnbespeciesweb/verDetalleTaxon?idTaxon=10607",
+            "checklistbank-2436": "https://servicio.mapama.gob.es/iepnbespeciesweb/verDetalleTaxon?idTaxon=10607"
           },
           "authorityIds": "col:4XJB8,itis:983676"
         },
@@ -53464,6 +53466,18 @@
           },
           "uuid": "b8922ee5-095b-4fec-b60b-952bc5154ae4",
           "children": []
+        },
+        {
+          "id": "SP_COELATURA_MONCETI",
+          "name": "Coelatura monceti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coelatura",
+          "sourceIds": {
+            "checklistbank-239065": "aquaticMacroinvertebrateTaxaUganda_138"
+          },
+          "uuid": "33a0eed2-beb2-43c6-b47c-7324df7040cf"
         }
       ]
     },
@@ -62806,7 +62820,8 @@
           "sourceIds": {
             "checklistbank": "1903485",
             "gbif-backbone": "8780608",
-            "checklistbank-2169": "1903485"
+            "checklistbank-2169": "1903485",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q127325828"
           }
         },
         {
@@ -91264,10 +91279,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "unionidae"
+    },
+    {
+      "id": "GENUS_CAELATURA",
+      "name": "Caelatura",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "unionidae",
+      "children": [
+        {
+          "id": "SP_CAELATURA_ACUMINATA",
+          "name": "Caelatura acuminata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caelatura",
+          "sourceIds": {
+            "checklistbank-239065": "aquaticMacroinvertebrateTaxaUganda_291"
+          },
+          "uuid": "edb2b614-c288-480f-9b64-98d0ee3b17cd"
+        },
+        {
+          "id": "SP_CAELATURA_AEGYPTICA",
+          "name": "Caelatura aegyptica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caelatura",
+          "sourceIds": {
+            "checklistbank-239065": "aquaticMacroinvertebrateTaxaUganda_304"
+          },
+          "uuid": "b13815ce-11db-4615-a8d7-282b3ec856be"
+        }
+      ]
     }
   ],
   "genusCount": 353,
-  "speciesCount": 5321,
+  "speciesCount": 5324,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

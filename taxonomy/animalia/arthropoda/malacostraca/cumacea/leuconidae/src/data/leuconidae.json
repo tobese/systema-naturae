@@ -2985,7 +2985,8 @@
           "sourceIds": {
             "checklistbank-21626": "urn:lsid:dyntaxa.se:Taxon:234293"
           },
-          "uuid": "b6a73f33-13f3-453f-8b58-14b54d056d47"
+          "uuid": "b6a73f33-13f3-453f-8b58-14b54d056d47",
+          "children": []
         },
         {
           "id": "SP_LEUCON_ACUTIROSTRIS_G_O_SARS_1865",
@@ -2996,9 +2997,22 @@
           "lineage": "Leucon",
           "authorship": "G.O. Sars, 1865",
           "sourceIds": {
-            "checklistbank-7888": "NHMSYS0021050379"
+            "checklistbank-7888": [
+              "NHMSYS0021050379"
+            ],
+            "wikispecies": [
+              "Leucon_acutirostris"
+            ],
+            "checklistbank-316441": [
+              "6Q4PQ"
+            ],
+            "checklistbank-2169": [
+              "2546688"
+            ]
           },
-          "uuid": "248f96bb-bd3e-41ba-b362-0b1f49317375"
+          "uuid": "248f96bb-bd3e-41ba-b362-0b1f49317375",
+          "authorityIds": "checklistbank-2169:2546688,checklistbank-316441:6Q4PQ,checklistbank-7888:NHMSYS0021050379,wikispecies:Leucon_acutirostris",
+          "children": []
         },
         {
           "id": "SP_LEUCON_INEXCAVATUS",
@@ -3272,23 +3286,6 @@
           },
           "uuid": "2ed008de-f5ad-4a92-8a8d-cb465fcc356a",
           "children": []
-        },
-        {
-          "id": "SP_LEUCON_ACUTIROSTRIS",
-          "name": "Leucon acutirostris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leucon",
-          "sourceIds": {
-            "wikispecies": "Leucon_acutirostris",
-            "checklistbank-316441": "6Q4PQ",
-            "checklistbank-2169": "2546688",
-            "checklistbank-7888": "NHMSYS0021050379"
-          },
-          "uuid": "4d51bd3e-aa09-45bd-bc87-3440fb9f4dd3",
-          "children": [],
-          "authorship": "G.O. Sars, 1865"
         },
         {
           "id": "SP_LEUCON_TENUIROSTRIS",
@@ -4942,7 +4939,7 @@
       "lineage": "leuconidae"
     }
   ],
-  "speciesCount": 286,
+  "speciesCount": 285,
   "appSlug": "leuconidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

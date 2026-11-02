@@ -1201,7 +1201,8 @@
           "sourceIds": {
             "checklistbank-281817": "180366"
           },
-          "uuid": "eacc74bf-4dc2-469e-ac76-0ad4bf8850b0"
+          "uuid": "eacc74bf-4dc2-469e-ac76-0ad4bf8850b0",
+          "children": []
         }
       ],
       "speciesList": []
@@ -6981,7 +6982,8 @@
           "sourceIds": {
             "checklistbank-2041": "urn:lsid:dyntaxa.se:Taxon:6006545"
           },
-          "uuid": "fd4d33d7-925e-4547-a62d-a6418e37431e"
+          "uuid": "fd4d33d7-925e-4547-a62d-a6418e37431e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8831,7 +8833,8 @@
           "sourceIds": {
             "checklistbank-281817": "180453"
           },
-          "uuid": "04d798b1-8f74-430c-b49a-fe8e4587651c"
+          "uuid": "04d798b1-8f74-430c-b49a-fe8e4587651c",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9516,7 +9519,8 @@
           "sourceIds": {
             "checklistbank-281817": "180389"
           },
-          "uuid": "5bc9b0be-55b0-4819-b68c-6d4985703310"
+          "uuid": "5bc9b0be-55b0-4819-b68c-6d4985703310",
+          "children": []
         },
         {
           "id": "SP_MONTICELLIA_DIESINGI_MONTICELLI_1892",
@@ -9529,7 +9533,8 @@
           "sourceIds": {
             "checklistbank-281817": "195099"
           },
-          "uuid": "1f72592e-f84f-490b-b5d4-7e51250c7199"
+          "uuid": "1f72592e-f84f-490b-b5d4-7e51250c7199",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9989,7 +9994,8 @@
           "sourceIds": {
             "checklistbank-281817": "195060"
           },
-          "uuid": "6ad0e047-92b0-424d-a43a-7324774be240"
+          "uuid": "6ad0e047-92b0-424d-a43a-7324774be240",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10350,9 +10356,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Manaosia",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105743433"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q105743433"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1436042"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q105743433,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1436042"
         },
         {
           "id": "SP_MANAOSIA_PISCATORUM_DE_CHAMBRIER_VAUCHER_1999_ALVES_DE_CHAMBRIER_LUQUE_TAKEMOTO_TAVARES_SCHOLZ_2021",
@@ -10369,21 +10381,6 @@
           "children": [],
           "uuid": "9b9b3b19-b681-5eb-98b-ce22313c86c5ea",
           "speciesList": []
-        },
-        {
-          "id": "SP_MANAOSIA_BRACODEMOCA_WOODLAND_1935",
-          "name": "Manaosia bracodemoca",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Manaosia",
-          "authorship": "Woodland, 1935",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1436042",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105743433"
-          },
-          "uuid": "31b5a77e-4a26-4b1c-8bde-bfcb0c389b43",
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10391,7 +10388,7 @@
     }
   ],
   "genusCount": 85,
-  "speciesCount": 568,
+  "speciesCount": 567,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

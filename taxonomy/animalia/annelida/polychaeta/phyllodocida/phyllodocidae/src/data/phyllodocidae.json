@@ -1767,7 +1767,8 @@
           "sourceIds": {
             "checklistbank-281817": "223678"
           },
-          "uuid": "a926bfd0-2a77-40e0-98a0-3bafb727d09e"
+          "uuid": "a926bfd0-2a77-40e0-98a0-3bafb727d09e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3339,7 +3340,8 @@
           "sourceIds": {
             "checklistbank-139831": "408138",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "65287",
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:130624"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:130624",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2610533"
           },
           "children": [],
           "uuid": "5e47f81c-28d1-4d42-a44e-b6fb4ad0c43c",
@@ -3354,7 +3356,8 @@
           "lineage": "Eulalia",
           "sourceIds": {
             "checklistbank-139831": "524879",
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:333276"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:333276",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1903540"
           },
           "children": [],
           "uuid": "5b983922-fe9f-4bb9-ba84-6a14d8795c87",
@@ -3560,7 +3563,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Eulalia",
           "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "65292"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "65292",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3650227"
           },
           "children": [],
           "uuid": "cda399a8-54b4-5a2e-ad71-343cb3d1e603"
@@ -14663,9 +14667,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Clavadoce",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61624776"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q61624776"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:867025"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q61624776,checklistbank-2011:urn:lsid:marinespecies.org:taxname:867025"
         },
         {
           "id": "SP_CLAVADOCE_NIGRIMACULATA",
@@ -14689,9 +14699,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Clavadoce",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2365744"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q2365744"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:332708"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q2365744,checklistbank-2011:urn:lsid:marinespecies.org:taxname:332708"
         },
         {
           "id": "SP_CLAVADOCE_DORSOLOBATA",
@@ -14701,9 +14717,18 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Clavadoce",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61624772"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q61624772"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:867009"
+            ],
+            "checklistbank-127379": [
+              "34c32f20-355e-48ba-842a-de72cbfdcb00"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q61624772,checklistbank-127379:34c32f20-355e-48ba-842a-de72cbfdcb00,checklistbank-2011:urn:lsid:marinespecies.org:taxname:867009"
         },
         {
           "id": "SP_CLAVADOCE_SPLENDIDA",
@@ -14713,70 +14738,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Clavadoce",
           "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3057601"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
+              "Q3057601"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:327120"
+            ]
           },
-          "children": []
-        },
-        {
-          "id": "SP_CLAVADOCE_SPLENDIDA_HARTMAN_1936",
-          "name": "Clavadoce splendida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clavadoce",
-          "authorship": "Hartman, 1936",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:327120",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3057601"
-          },
-          "uuid": "5649de7b-d1ef-4fa6-a2ed-42af7187c442",
-          "children": []
-        },
-        {
-          "id": "SP_CLAVADOCE_ANNENKOVAE_USCHAKOV_1950",
-          "name": "Clavadoce annenkovae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clavadoce",
-          "authorship": "(Uschakov, 1950)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:332708",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2365744"
-          },
-          "uuid": "e0b8b561-3d51-4465-9af3-4f6efaa2d80a",
-          "children": []
-        },
-        {
-          "id": "SP_CLAVADOCE_DORSOLOBATA_HARTMANN_SCHR_DER_1987",
-          "name": "Clavadoce dorsolobata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clavadoce",
-          "authorship": "(Hartmann-Schröder, 1987)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:867009",
-            "checklistbank-127379": "34c32f20-355e-48ba-842a-de72cbfdcb00",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61624772"
-          },
-          "uuid": "155ca5be-4541-4d42-be38-050a210ff39f",
-          "children": []
-        },
-        {
-          "id": "SP_CLAVADOCE_CRISTATA_HARTMAN_FAUCHALD_1971",
-          "name": "Clavadoce cristata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clavadoce",
-          "authorship": "(Hartman & Fauchald, 1971)",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:867025",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q61624776"
-          },
-          "uuid": "412934d2-8e95-426b-863b-98f9962c1c04",
-          "children": []
+          "children": [],
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q3057601,checklistbank-2011:urn:lsid:marinespecies.org:taxname:327120"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -14847,7 +14817,7 @@
     }
   ],
   "genusCount": 78,
-  "speciesCount": 904,
+  "speciesCount": 900,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
