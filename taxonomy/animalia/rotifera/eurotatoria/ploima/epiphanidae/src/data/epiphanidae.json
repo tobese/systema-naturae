@@ -532,7 +532,8 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1796119",
             "checklistbank-127379": "bb8e4381-26ff-429c-bf05-07cc87b5e67e",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4169334"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4169334",
+            "checklistbank-316827": "424294"
           },
           "children": [],
           "uuid": "a1f302e0-9189-5df-826-299a89761698d0"
@@ -547,7 +548,8 @@
           "authorship": "Rodewald",
           "sourceIds": {
             "checklistbank": "1dfb1267-7069-41c5-9ec6-e72d0f39170a",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4173344"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4173344",
+            "checklistbank-316827": "424293"
           },
           "children": [],
           "uuid": "98649bb7-7972-524-b77-4587ef03e18fbc"
@@ -636,7 +638,8 @@
             "checklistbank": "311431",
             "checklistbank-127379": "a5bce787-d402-42ea-b93a-c5c97b4916ef",
             "checklistbank-9712": "MSTSNM:Arter:725eddf8-f785-ea11-aa77-501ac539d1ea",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q50735985"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q50735985",
+            "checklistbank-316827": "424295"
           },
           "children": [],
           "uuid": "ee2ebafa-a12a-595-9d7-7773c25b9621d5"
@@ -918,7 +921,8 @@
             "itis": [
               "58532"
             ],
-            "checklistbank": "ott2941140"
+            "checklistbank": "ott2941140",
+            "checklistbank-316827": "423877"
           },
           "authorityIds": "itis:58532"
         },
@@ -946,7 +950,8 @@
           "authorship": "(Barrois & Daday, 1894)",
           "sourceIds": {
             "checklistbank": "844742",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q49506694"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q49506694",
+            "checklistbank-316827": "423878"
           },
           "children": [],
           "uuid": "a03fcdd8-00ca-5a4-86f-4cb6893d8ce04a"
@@ -1019,19 +1024,6 @@
           },
           "children": [],
           "uuid": "ff8f2a9d-5c75-5a0-a8d-e424d4a95b7bda"
-        },
-        {
-          "id": "SP_EPIPHANES_SP",
-          "name": "Epiphanes sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Epiphanes",
-          "sourceIds": {
-            "checklistbank": "3469424"
-          },
-          "children": [],
-          "uuid": "35abc686-5375-582-ad1-40c47c65b29874"
         }
       ]
     },
@@ -1291,23 +1283,10 @@
       "id": "GENUS_EPIPHANIDAE",
       "name": "Epiphanidae",
       "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EPIPHANIDAE_SP",
-          "name": "Epiphanidae sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Epiphanidae",
-          "sourceIds": {
-            "checklistbank": "1804018"
-          },
-          "children": [],
-          "uuid": "c46a7693-7f5e-555-930-0be51c0b5d9c47"
-        }
-      ],
+      "children": [],
       "sourcedFrom": "checklistbank",
-      "lineage": "epiphanidae"
+      "lineage": "epiphanidae",
+      "noSpeciesHeld": true
     },
     {
       "id": "GENUS_RHINOPS",
@@ -1349,6 +1328,39 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "epiphanidae"
+    },
+    {
+      "id": "GENUS_LILIPHEROTROCHA",
+      "name": "Lilipherotrocha",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "epiphanidae",
+      "children": [
+        {
+          "id": "SP_LILIPHEROTROCHA_SUBTILIS",
+          "name": "Lilipherotrocha subtilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lilipherotrocha",
+          "sourceIds": {
+            "checklistbank-316827": "423875"
+          },
+          "uuid": "5aecaba3-65fa-4ad3-8728-cbb8ca0e0982"
+        },
+        {
+          "id": "SP_LILIPHEROTROCHA_SUBTILISSUBTILIS",
+          "name": "Lilipherotrocha subtilissubtilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lilipherotrocha",
+          "sourceIds": {
+            "checklistbank-316827": "423876"
+          },
+          "uuid": "790ec703-9ec5-45a0-abe5-3b45854ad54c"
+        }
+      ]
     }
   ],
   "genusCount": 16,
