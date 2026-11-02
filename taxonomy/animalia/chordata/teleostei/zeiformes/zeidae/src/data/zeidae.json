@@ -101,7 +101,8 @@
             "checklistbank-2169": "245696",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2016718",
             "checklistbank-23895": "3066",
-            "checklistbank-29666": "2018_0686"
+            "checklistbank-29666": "2018_0686",
+            "checklistbank-316854": "140927"
           },
           "uuid": "914befb8-e9ef-573-bd7-847d20aa244948",
           "authorityIds": "col:5D2L9,gbif:177711827,gbif:2415247",
@@ -164,7 +165,8 @@
           "sourceIds": {
             "itis": [
               "625290"
-            ]
+            ],
+            "checklistbank-316854": "140929"
           },
           "authorityIds": "itis:625290"
         },
@@ -179,7 +181,8 @@
           "sourceIds": {
             "checklistbank": "425936",
             "checklistbank-1174": "txn:419566",
-            "checklistbank-2169": "94939"
+            "checklistbank-2169": "94939",
+            "checklistbank-316854": "140928"
           },
           "children": [],
           "uuid": "a47c4b00-9764-549-977-f78f64c31c072a"
@@ -349,7 +352,8 @@
             "checklistbank-9712": "MSTSNM:Arter:80e275f9-f785-ea11-aa77-501ac539d1ea",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q106480971",
             "checklistbank-23895": "3067",
-            "checklistbank-29666": "2018_0687"
+            "checklistbank-29666": "2018_0687",
+            "checklistbank-316854": "140934"
           },
           "uuid": "73074231-eb5a-5b5-992-644cffd5d548ae",
           "authorityIds": "col:5D45H,gbif:177711833,gbif:7744449,itis:166287",
@@ -380,7 +384,8 @@
             ],
             "checklistbank": "ott244377",
             "checklistbank-139831": "115257",
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "625289"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "625289",
+            "checklistbank-316854": "140933"
           },
           "uuid": "9935b26c-8e93-514-9b0-a8474b073fdeb7",
           "authorityIds": "col:5D45D,gbif:177711832,gbif:5214859,itis:625289",
@@ -1036,9 +1041,78 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zeidae"
+    },
+    {
+      "id": "GENUS_CAPROMIMUS",
+      "name": "Capromimus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "zeidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_CYTTOMIMUS",
+      "name": "Cyttomimus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "zeidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_CYTTOPSIS",
+      "name": "Cyttopsis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "zeidae",
+      "children": []
+    },
+    {
+      "id": "GENUS_CYTTUS",
+      "name": "Cyttus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "zeidae",
+      "children": [
+        {
+          "id": "SP_CYTTUS_AUSTRALIS",
+          "name": "Cyttus australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyttus",
+          "sourceIds": {
+            "checklistbank-316854": "125585"
+          },
+          "uuid": "9bc9394b-927c-4f8f-8d84-7ab67a606ba3"
+        },
+        {
+          "id": "SP_CYTTUS_NOVAEZEALANDIAE",
+          "name": "Cyttus novaezealandiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyttus",
+          "sourceIds": {
+            "checklistbank-316854": "125586"
+          },
+          "uuid": "26925e7a-195b-495d-b169-b2a05eac124a"
+        },
+        {
+          "id": "SP_CYTTUS_TRAVERSI",
+          "name": "Cyttus traversi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyttus",
+          "sourceIds": {
+            "checklistbank-316854": "125587"
+          },
+          "uuid": "4f5f7ef2-1db4-4947-9bc5-e7b080ef7402"
+        }
+      ]
     }
   ],
-  "speciesCount": 63,
+  "speciesCount": 66,
   "appSlug": "zeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",

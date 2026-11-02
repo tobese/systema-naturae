@@ -317,7 +317,8 @@
             "checklistbank-312616": "7f82fb0b-97a8-4ca8-88af-39ab203a0441",
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:287143",
             "checklistbank-127379": "1178693c-ee3a-4511-839f-444dd5b0673f",
-            "checklistbank-139831": "1199890"
+            "checklistbank-139831": "1199890",
+            "checklistbank-316839": "257432"
           },
           "authorityIds": "col:RHX9,wikidata:Q2477458",
           "authorship": "Xu, Huang et Chen,1991"
@@ -464,7 +465,9 @@
             "itis": [
               "51463"
             ],
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4013177"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q4013177",
+            "checklistbank-316846": "255732",
+            "checklistbank-316839": "255732"
           },
           "authorityIds": "itis:51463",
           "commonName": "Box jellyfish"
@@ -546,7 +549,8 @@
           "lineage": "Carybdea",
           "authorship": "(Linnaeus, 1758)",
           "sourceIds": {
-            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:135279"
+            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:135279",
+            "checklistbank-316839": "254369"
           },
           "uuid": "dd52c1b1-86d2-4b98-88a0-4588471e7745",
           "children": []
@@ -560,7 +564,8 @@
           "lineage": "Carybdea",
           "authorship": "Conant, 1897",
           "sourceIds": {
-            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:287145"
+            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:287145",
+            "checklistbank-316839": "257433"
           },
           "uuid": "940aae10-44e2-4c3f-aec3-e97a5319d998",
           "children": []
@@ -592,6 +597,18 @@
           },
           "uuid": "33e89d7a-27ac-447f-acec-e99806ba95d4",
           "children": []
+        },
+        {
+          "id": "SP_CARYBDEA_GRANDIS",
+          "name": "Carybdea grandis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carybdea",
+          "sourceIds": {
+            "checklistbank-316839": "257431"
+          },
+          "uuid": "cf285a44-6ff0-4d4e-9a89-b48142f07a0c"
         }
       ]
     },
@@ -624,7 +641,9 @@
           "authorship": "Müller, 1859",
           "sourceIds": {
             "9ca92552-f23a-41a8-a140-01abaa31c931": "51466",
-            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:288081"
+            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:288081",
+            "checklistbank-316846": "2468381",
+            "checklistbank-316839": "255734"
           },
           "children": [],
           "uuid": "f7ce3721-1428-5d8d-8883-7e4c58150cfc"
@@ -639,7 +658,9 @@
           "authorship": "Haeckel, 1880",
           "sourceIds": {
             "9ca92552-f23a-41a8-a140-01abaa31c931": "51469",
-            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:220474"
+            "checklistbank-1181": "urn:lsid:marinespecies.org:taxname:220474",
+            "checklistbank-316846": "255733",
+            "checklistbank-316839": "255733"
           },
           "children": [],
           "uuid": "b193921a-1914-52ef-9442-c04d0f750fe6"
@@ -779,10 +800,24 @@
           "lineage": "Tripedalia",
           "authorship": "Conant, 1897",
           "sourceIds": {
-            "9ca92552-f23a-41a8-a140-01abaa31c931": "51472"
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "51472",
+            "checklistbank-316846": "255736",
+            "checklistbank-316839": "255736"
           },
           "children": [],
           "uuid": "21633c41-b228-5813-b27f-8503c58ee461"
+        },
+        {
+          "id": "SP_TRIPEDALIA_BINATA",
+          "name": "Tripedalia binata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tripedalia",
+          "sourceIds": {
+            "checklistbank-316846": "255735"
+          },
+          "uuid": "021d1117-422c-4ba9-a1e9-f7d81c1cd6f1"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -808,10 +843,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "carybdeidae"
+    },
+    {
+      "id": "GENUS_CARUKIA",
+      "name": "Carukia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "carybdeidae",
+      "children": [
+        {
+          "id": "SP_CARUKIA_BARNESI",
+          "name": "Carukia barnesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carukia",
+          "sourceIds": {
+            "checklistbank-316839": "255726"
+          },
+          "uuid": "f3a25e1f-f551-43d8-956c-dd9800698923"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MANOKIA",
+      "name": "Manokia",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "carybdeidae",
+      "children": [
+        {
+          "id": "SP_MANOKIA_STIASNYI",
+          "name": "Manokia stiasnyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manokia",
+          "sourceIds": {
+            "checklistbank-316839": "257434"
+          },
+          "uuid": "b87edd99-5cd2-42a9-bab6-6cda67df6e8d"
+        }
+      ]
     }
   ],
   "genusCount": 8,
-  "speciesCount": 40,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
