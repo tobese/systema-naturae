@@ -20867,11 +20867,17 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Trametes",
           "sourceIds": {
-            "checklistbank-51518": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100848836/"
+            "checklistbank-51518": [
+              "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100848836/"
+            ],
+            "checklistbank-285337": [
+              "https://id.biodiversity.org.au/instance/fungi/60064277"
+            ]
           },
           "uuid": "51e46e26-298c-485b-bc6a-63be3e1ec969",
           "children": [],
-          "authorship": "(Klotzsch) Imazeki"
+          "authorship": "(Klotzsch) Imazeki",
+          "authorityIds": "checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60064277,checklistbank-51518:http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100848836/"
         },
         {
           "id": "SP_TRAMETES_DECIPIENS_BRESADOLA_1920",
@@ -22855,21 +22861,6 @@
             "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60064276"
           },
           "uuid": "32249ca2-44a0-4b3c-9a64-d5d8fa150161",
-          "children": []
-        },
-        {
-          "id": "SP_TRAMETES_LEONINA_KLOTZSCH_IMAZEKI",
-          "name": "Trametes leonina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Trametes",
-          "authorship": "(Klotzsch) Imazeki",
-          "sourceIds": {
-            "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60064277",
-            "checklistbank-51518": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100848836/"
-          },
-          "uuid": "5ad1da81-6aed-46d4-b453-ca6f38000595",
           "children": []
         },
         {
@@ -30660,7 +30651,8 @@
           "sourceIds": {
             "checklistbank-24340": "gbif.org/species/3321494"
           },
-          "uuid": "4f342cee-6af4-4a57-b83d-191c54b03860"
+          "uuid": "4f342cee-6af4-4a57-b83d-191c54b03860",
+          "children": []
         }
       ],
       "authorship": "Fries"
@@ -36525,7 +36517,8 @@
           "sourceIds": {
             "checklistbank-28529": "INBO_RL_FUN_1999_NONVAL_99"
           },
-          "uuid": "f8ddac5b-c889-4d61-b3de-a0e71f25fd69"
+          "uuid": "f8ddac5b-c889-4d61-b3de-a0e71f25fd69",
+          "children": []
         }
       ],
       "authorship": "Pouzar"
@@ -93111,7 +93104,8 @@
           "sourceIds": {
             "checklistbank-24340": "gbif.org/species/5244831"
           },
-          "uuid": "fc5e750c-8e4b-4e46-a3fe-bb57b27d3fa6"
+          "uuid": "fc5e750c-8e4b-4e46-a3fe-bb57b27d3fa6",
+          "children": []
         },
         {
           "id": "SP_POLYPORUS_TENAX_VELEN",
@@ -93124,7 +93118,8 @@
           "sourceIds": {
             "checklistbank-24340": "gbif.org/species/5249385"
           },
-          "uuid": "0e5cf237-3e5f-46d6-a4b7-94bbe723a10a"
+          "uuid": "0e5cf237-3e5f-46d6-a4b7-94bbe723a10a",
+          "children": []
         },
         {
           "id": "SP_POLYPORUS_ABRUPTUS_BERK",
@@ -100502,7 +100497,8 @@
           "sourceIds": {
             "checklistbank-24340": "gbif.org/species/5465183"
           },
-          "uuid": "0414a6c7-4b67-4666-b5c8-d60beaf188a3"
+          "uuid": "0414a6c7-4b67-4666-b5c8-d60beaf188a3",
+          "children": []
         }
       ],
       "authorship": "Fries"
@@ -116219,19 +116215,6 @@
           "authorship": "Pers."
         },
         {
-          "id": "SP_PORIA_SANGUINOLENTA",
-          "name": "Poria sanguinolenta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Poria",
-          "sourceIds": {
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q108554178"
-          },
-          "children": [],
-          "authorship": "(Alb. & Schwein.) Cooke"
-        },
-        {
           "id": "SP_PORIA_WAKEFIELDII",
           "name": "Poria wakefieldii",
           "rank": "SPECIES",
@@ -127881,7 +127864,8 @@
           "authorship": "(L.) Quél., 1886",
           "sourceIds": {
             "checklistbank": "44913",
-            "checklistbank-105107": "HI-LIFE-FUNGI-1816"
+            "checklistbank-105107": "HI-LIFE-FUNGI-1816",
+            "checklistbank-23302": "170085"
           },
           "children": [],
           "uuid": "dd4f4f94-b1ca-52e-ab3-be1d73eba9f6ff"
@@ -160009,19 +159993,11 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polyporaceae"
-    },
-    {
-      "id": "GENUS_HELIOCYBE",
-      "name": "Heliocybe",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "polyporaceae",
-      "children": []
     }
   ],
   "authorship": "Corda",
-  "genusCount": 281,
-  "speciesCount": 8339,
+  "genusCount": 280,
+  "speciesCount": 8337,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
