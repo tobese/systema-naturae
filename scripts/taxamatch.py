@@ -556,6 +556,17 @@ def is_hybrid_marker(token):
     return (token or "").strip().lower() in _HYBRID_MARKERS
 
 
+# An "epithet" that only says the species is unidentified. `Genus sp.` is not
+# a species: 52,763 of them were in the tree on 2026-11-02 (41,708 with no
+# dataset recorded), counted as species and emptying nothing when removed but
+# their genus. The genus is kept; the placeholder never becomes a species.
+PLACEHOLDER_EPITHETS = {"sp", "spp", "ssp", "sp.", "spp.", "cf", "cf.", "aff", "aff.", "indet", "indet."}
+
+
+def is_placeholder_epithet(epithet) -> bool:
+    return (epithet or "").strip().lower() in PLACEHOLDER_EPITHETS
+
+
 def bare_binomial(name, parsed=None):
     """(genus, epithet) for a name we can store, or (None, None).
 
@@ -578,7 +589,7 @@ def bare_binomial(name, parsed=None):
         rest = tokens[1:] if tokens and tokens[:1] == [g] else tokens
         s = infra if infra and not is_hybrid_marker(infra) else (
             rest[0] if rest else None)
-    if not g or not s or is_hybrid_marker(s):
+    if not g or not s or is_hybrid_marker(s) or is_placeholder_epithet(s):
         return None, None
     return g, s
 

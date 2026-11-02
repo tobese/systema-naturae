@@ -574,6 +574,9 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
                 r.nonb += 1
                 continue
             bare, g, sid = cached.get("bare"), cached.get("g"), cached.get("sid")
+            if taxamatch.is_placeholder_epithet(((bare or "").split() + ["", ""])[1]):
+                r.nonb += 1      # routing cache from before the placeholder filter
+                continue
             fam_raw, fam, k = cached.get("fam_raw"), cached.get("fam"), cached.get("k")
             fid = cached.get("fid")
         else:

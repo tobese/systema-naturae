@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 Fix EMPTY_GENUS: Remove genus nodes with no children.
+
+A genus marked `noSpeciesHeld` (held as a genus, its placeholder species
+removed 2026-11-02 by removePlaceholderSpecies.py) is kept.
 """
 import json
 import glob
@@ -18,7 +21,7 @@ def remove_empty_genera(node):
     if isinstance(node, dict) and "children" in node:
         new_children = []
         for child in node.get("children", []):
-            if child.get("rank") == "GENUS" and not child.get("children"):
+            if child.get("rank") == "GENUS" and not child.get("children") and not child.get("noSpeciesHeld"):
                 print(f"  Removing empty genus: {child.get('name', 'unknown')}")
                 removed += 1
                 continue
@@ -47,7 +50,7 @@ def main():
                 if isinstance(node, dict) and "children" in node:
                     new_children = []
                     for child in node.get("children", []):
-                        if child.get("rank") == "GENUS" and not child.get("children"):
+                        if child.get("rank") == "GENUS" and not child.get("children") and not child.get("noSpeciesHeld"):
                             print(f"  Removing empty genus: {child.get('name', 'unknown')}")
                             removed += 1
                             continue

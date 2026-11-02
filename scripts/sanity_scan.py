@@ -355,7 +355,10 @@ def main() -> int:
             for n in subtree(doc):
                 if n.get("rank") == "GENUS":
                     kids = (n.get("children") or []) + (n.get("speciesList") or [])
-                    if not kids:
+                    # noSpeciesHeld: a genus we hold with no species (its only
+                    # "species" was a `Genus sp.` placeholder, removed
+                    # 2026-11-02) -- deliberate, not a defect.
+                    if not kids and not n.get("noSpeciesHeld"):
                         issues.append({"family": family, "issue": "EMPTY_GENUS",
                                        "detail": n.get("name") or ""})
         if "DUPLICATE_SPECIES" in checks:
