@@ -1,4 +1,18 @@
 {
+  "key": "checklistbank-2006",
+  "title": "",
+  "stage": "triaged",
+  "licence": "",
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-2006/archive.zip",
+  "kind": "nomenclatural",
+  "reason": "nomenclatural source (names index, no species): queue it to run nomenclatureTransform.py + applyEnrichment.py",
+  "triaged": {
+    "offered": 0,
+    "alreadyHeld": 0,
+    "staged": 0,
+    "refused": 0,
+    "refusalRate": null
+  },
   "history": [
     {
       "at": "2026-10-31T23:14:45+0100",
@@ -11,21 +25,14 @@
     {
       "at": "2026-11-02T07:40:44+0100",
       "stage": "queued"
+    },
+    {
+      "at": "2026-11-02T10:11:53Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-02T10:11:54Z",
+      "stage": "triaged"
     }
-  ],
-  "key": "checklistbank-2006",
-  "licence": "",
-  "reason": "IPNI names index, 0 species offered (no status/rank/parent in Taxon.tsv); queued 2026-11-02 (user) to apply anyway for consistency -- expected no-op",
-  "size": null,
-  "stage": "queued",
-  "title": "",
-  "triaged": {
-    "alreadyHeld": 0,
-    "families": null,
-    "missedFamilies": null,
-    "offered": 0,
-    "refusalRate": null,
-    "refused": 0,
-    "staged": 0
-  }
+  ]
 }
