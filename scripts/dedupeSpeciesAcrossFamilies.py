@@ -114,6 +114,7 @@ import argparse
 import collections
 import json
 import os
+import re
 import sys
 import time
 
@@ -314,6 +315,12 @@ def main() -> int:
                          "which is the only signal here that knows which FAMILY "
                          "is right: without it 1,242 species lost their correct "
                          "placement to a richer misfiled copy.")
+    ap.add_argument("--source-families", action="store_true",
+                    help="for a cross-family group on a ChecklistBank dataset's "
+                         "id with no family-pair decision, keep the copy in the "
+                         "family that dataset itself gives the record (read from "
+                         "the archive's taxa cache). Measured 2026-11-02: decides "
+                         "546 of the 547 groups the pair review does not cover.")
     args = ap.parse_args()
 
     authority_family = {}
@@ -468,14 +475,49 @@ def main() -> int:
     # collapsed only where the pair is decided, and left for the review
     # otherwise.
     pair_keep = {}
+    in_review = set()          # every pair the review lists, decided or not
     review_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                                "data", "family-pair-review.json")
     if os.path.exists(review_path):
         with open(review_path, encoding="utf-8") as fh:
             for p in json.load(fh).get("pairs", []):
+                in_review.add((p["kingdom"], frozenset((p["removeFrom"], p["keepIn"]))))
                 keep = {"follow-col": p["keepIn"], "follow-expert": p["removeFrom"]}.get(p.get("decision"))
                 if keep:
                     pair_keep[(p["kingdom"], frozenset((p["removeFrom"], p["keepIn"])))] = keep
+
+    # The issuing dataset's own family for a record, from its archive's taxa
+    # cache (colChecklist's sidecar: `family_name`, or the parent chain up to
+    # a FAMILY row). Loaded once per dataset, only when a group asks.
+    source_family_cache = {}
+
+    def source_family(auth, key):
+        m = re.fullmatch(r"checklistbank-(\d+)", auth or "")
+        if not (args.source_families and m):
+            return None
+        if auth not in source_family_cache:
+            import duckdb
+            import sources
+            path = os.path.join(sources.ROOT, "archives", auth, "archive.taxa-cache.parquet")
+            byid = {}
+            if os.path.exists(path):
+                con = duckdb.connect()
+                cols = con.sql(f"SELECT * FROM read_parquet({path!r}) LIMIT 0").columns
+                fam_col = ", family_name" if "family_name" in cols else ", NULL"
+                for row in con.execute(f"SELECT id, parent, rank, name{fam_col} "
+                                       f"FROM read_parquet({path!r})").fetchall():
+                    byid[str(row[0])] = row
+            source_family_cache[auth] = byid
+        byid = source_family_cache[auth]
+        node, seen = byid.get(str(key)), set()
+        while node and node[0] not in seen:
+            seen.add(node[0])
+            if node[4]:
+                return node[4].lower().replace(" ", "")
+            if (node[2] or "").lower() == "family":
+                return (node[3] or "").lower().replace(" ", "")
+            node = byid.get(str(node[1])) if node[1] else None
+        return None
 
     merged_groups = 0
     merged_fields = collections.Counter()
@@ -484,12 +526,19 @@ def main() -> int:
             fams = {file_family.get(fp[0]) for fp in places}
             if len(fams) > 1 and not (authority_family and auth == "gbif"):
                 keep_in = pair_keep.get((kingdom, frozenset(fams))) if len(fams) == 2 else None
+                how = "kept in the family the pair review chose"
+                # The issuing dataset decides only pairs the review does not
+                # list: a pair it lists but nobody has decided is the user's.
+                if keep_in is None and (kingdom, frozenset(fams)) not in in_review:
+                    sf = source_family(auth, key)
+                    if sf in fams:
+                        keep_in, how = sf, "kept in the family the issuing dataset gives"
                 if keep_in is None:
                     keep_report["left for the family-pair review (no decision for the pair)"] += 1
                     continue
                 in_keep = [fp for fp in places if file_family.get(fp[0]) == keep_in]
                 winner = max(in_keep, key=lambda fp: score(fp, auth, key))
-                keep_report[f"kept in the family the pair review chose"] += 1
+                keep_report[how] += 1
             else:
                 winner = max(places, key=lambda fp: score(fp, auth, key))
             # Copies inside ONE family are not a placement disagreement, they

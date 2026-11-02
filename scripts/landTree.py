@@ -31,6 +31,10 @@ logs and data/authors. One landing of 15,000 files is one CI run nobody can
 read; plantae, fungi, ... each on their own say which one turned it red.
 
     python3 scripts/landTree.py -F msg.txt --kingdom plantae --no-shared
+
+`--base <commit>` builds on that commit instead of origin/main, so several
+landings chain into one push: one CI run, and a history that still says
+which kingdom changed what.
 """
 import argparse
 import os
@@ -69,6 +73,8 @@ def main() -> int:
                     help="skip the count resync (it runs by default)")
     ap.add_argument("--kingdom", action="append", choices=KINGDOMS, default=[],
                     help="land only this kingdom (repeatable; default: all six)")
+    ap.add_argument("--base", default="",
+                    help="build on this commit instead of origin/main (chain landings)")
     ap.add_argument("--no-shared", action="store_true",
                     help="leave out data/source-queue, data/authors and the logs")
     args = ap.parse_args()
@@ -81,7 +87,7 @@ def main() -> int:
             subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "resyncFamilyCounts.py"),
                             "--apply"], cwd=ROOT, check=True)
         git("fetch", "-q", "origin")
-        base = git("rev-parse", "origin/main").strip()
+        base = git("rev-parse", args.base or "origin/main").strip()
         fd, idx = tempfile.mkstemp(prefix="land-index-")
         os.close(fd)
         os.unlink(idx)
@@ -122,7 +128,7 @@ def main() -> int:
         finally:
             if os.path.exists(idx):
                 os.unlink(idx)
-    print(f"  commit {commit[:11]} on {base[:11]}")
+    print(f"  commit {commit} on {base[:11]}")
     if args.push:
         git("push", "-q", "origin", f"{commit}:refs/heads/main")
         print("  pushed")
