@@ -204,6 +204,11 @@ Decided 2026-11-02. A commit is either **code** or **data**, never both.
   head succeeded. It also refuses while that run is still going (`gh run
   watch`). A push that is the fix goes through with
   `SN_PUSH_OVER_RED="<why>" git push`, logged in `.git/push-gate.log`.
+  The same hook warns when a pushed file passes 90 MiB and refuses at 99
+  (GitHub rejects anything over 100 MiB; the override does not apply).
+  Asteraceae is 76 MB (2026-11-02). The answer to a file growing towards the
+  limit is splitting it, not Git LFS: every rewrite of a family file would
+  count against the LFS quota, and our scripts read blobs straight from git.
 
 **Why:** a data landing touches tens of thousands of family files. Mixed with
 code, a regression can't be bisected or reverted without the other half, and a

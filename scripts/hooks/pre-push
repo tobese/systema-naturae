@@ -17,7 +17,14 @@ turn green: set SN_PUSH_OVER_RED to the reason. It is printed and appended to
     SN_PUSH_OVER_RED="fixes the homonym check" git push
 
 Installed with `git config core.hooksPath scripts/hooks` (CLAUDE.md, "Git").
-Only pushes to refs/heads/main are gated.
+Only pushes to refs/heads/main are gated on CI.
+
+Every push is also checked for file size (2026-11-02, after Asteraceae
+reached 76 MB): a file the push would upload above WARN_MIB is reported, one
+at or above REFUSE_MIB refuses the push -- GitHub rejects anything over 100
+MiB outright, and SN_PUSH_OVER_RED does not change that. The fix for a file
+that grows towards it is to split it, not Git LFS (every rewrite of a family
+file would count against the LFS quota).
 """
 import json
 import os
@@ -26,6 +33,30 @@ import sys
 import time
 
 WORKFLOW = "verify.yml"
+WARN_MIB = 90
+REFUSE_MIB = 99
+MIB = 1024 * 1024
+
+
+def large_files(updates):
+    """(path, bytes) for every blob the push would upload at or above
+    WARN_MIB, from `git rev-list --objects` over the pushed range."""
+    out = []
+    for local_sha, remote_sha in updates:
+        if set(local_sha) == {"0"}:
+            continue                   # deleting a ref uploads nothing
+        rng = [local_sha, "--not", "--remotes"] if set(remote_sha) == {"0"} else [f"{remote_sha}..{local_sha}"]
+        objs = subprocess.run(["git", "rev-list", "--objects", *rng],
+                              capture_output=True, text=True).stdout
+        if not objs:
+            continue
+        sizes = subprocess.run(["git", "cat-file", "--batch-check=%(objecttype) %(objectsize) %(rest)"],
+                               input=objs, capture_output=True, text=True).stdout
+        for line in sizes.splitlines():
+            kind, size, *rest = line.split(" ", 2)
+            if kind == "blob" and int(size) >= WARN_MIB * MIB:
+                out.append((rest[0] if rest else "?", int(size)))
+    return sorted(set(out), key=lambda x: -x[1])
 
 
 def gh_run_for(sha):
@@ -46,8 +77,17 @@ def log(line):
 
 
 def main() -> int:
-    remote_shas = [parts[3] for parts in (l.split() for l in sys.stdin if l.strip())
-                   if len(parts) == 4 and parts[2] == "refs/heads/main"]
+    lines = [l.split() for l in sys.stdin if l.strip()]
+    big = large_files([(p[1], p[3]) for p in lines if len(p) == 4])
+    for path, size in big:
+        print(f"pre-push: {path} is {size / MIB:.1f} MiB "
+              f"(warn at {WARN_MIB}, refuse at {REFUSE_MIB}; GitHub rejects files over 100 MiB)",
+              file=sys.stderr)
+    if any(size >= REFUSE_MIB * MIB for _p, size in big):
+        print(f"pre-push: refused -- a file is at or above {REFUSE_MIB} MiB; split it "
+              f"(SN_PUSH_OVER_RED does not apply: GitHub would reject it)", file=sys.stderr)
+        return 1
+    remote_shas = [p[3] for p in lines if len(p) == 4 and p[2] == "refs/heads/main"]
     if not remote_shas:
         return 0
     base = remote_shas[0]
