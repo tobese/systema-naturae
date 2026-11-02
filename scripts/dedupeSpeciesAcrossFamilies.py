@@ -458,11 +458,40 @@ def main() -> int:
 
 
 
+    # Which family keeps a species two families hold, as decided in the
+    # family-pair review (data/family-pair-review.json): follow-col keeps
+    # COL's family, follow-expert the one COL would empty. Only a GBIF key
+    # with the family cache says anything about the family itself; for every
+    # other id the score below falls through to richness and then the path,
+    # and on 2026-11-02 that would have kept Sarax in Charontidae over
+    # Charinidae by alphabet. So a cross-family group on any other id is
+    # collapsed only where the pair is decided, and left for the review
+    # otherwise.
+    pair_keep = {}
+    review_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                               "data", "family-pair-review.json")
+    if os.path.exists(review_path):
+        with open(review_path, encoding="utf-8") as fh:
+            for p in json.load(fh).get("pairs", []):
+                keep = {"follow-col": p["keepIn"], "follow-expert": p["removeFrom"]}.get(p.get("decision"))
+                if keep:
+                    pair_keep[(p["kingdom"], frozenset((p["removeFrom"], p["keepIn"])))] = keep
+
     merged_groups = 0
     merged_fields = collections.Counter()
     for kingdom, groups in auth_groups.items():
         for auth, key, places in groups:
-            winner = max(places, key=lambda fp: score(fp, auth, key))
+            fams = {file_family.get(fp[0]) for fp in places}
+            if len(fams) > 1 and not (authority_family and auth == "gbif"):
+                keep_in = pair_keep.get((kingdom, frozenset(fams))) if len(fams) == 2 else None
+                if keep_in is None:
+                    keep_report["left for the family-pair review (no decision for the pair)"] += 1
+                    continue
+                in_keep = [fp for fp in places if file_family.get(fp[0]) == keep_in]
+                winner = max(in_keep, key=lambda fp: score(fp, auth, key))
+                keep_report[f"kept in the family the pair review chose"] += 1
+            else:
+                winner = max(places, key=lambda fp: score(fp, auth, key))
             # Copies inside ONE family are not a placement disagreement, they
             # are one taxon written twice -- which is what an importer that
             # folds authorship into `name` produces, and 322,076 plantae

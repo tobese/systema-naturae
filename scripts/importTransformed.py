@@ -77,6 +77,28 @@ DECISIONS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__
                               "data", "cross-kingdom-homonym-decisions.json")
 
 
+def decided_removals() -> set:
+    """(species id, "kingdom/family") for every placement a recorded
+    cross-kingdom-homonym decision removed. Shared with importColChecklist.py,
+    whose direct-write path (re-takes, needs-rerun) put 45 removed placements
+    back on 10-30 because only this file checked."""
+    try:
+        with open(DECISIONS_PATH, encoding="utf-8") as fh:
+            decisions = json.load(fh)
+    except FileNotFoundError:
+        return set()
+    # removed_from is one "kingdom/family" or, for a name where every copy
+    # was an artifact (action "remove-both"), a list of them.
+    removed = set()
+    for sid, d in decisions.items():
+        if not str(d.get("action", "")).startswith("remove"):
+            continue
+        places = d.get("removed_from") or []
+        for place in [places] if isinstance(places, str) else places:
+            removed.add((sid, place))
+    return removed
+
+
 def drop_decided_removals(records: list) -> list:
     """Drop records that would re-create a placement already removed by a
     recorded cross-kingdom-homonym decision.
@@ -87,20 +109,9 @@ def drop_decided_removals(records: list) -> list:
     misrouted it still offers it, so without this every re-import of that
     source puts it back -- and verifyTree fails on the same pair again.
     """
-    try:
-        with open(DECISIONS_PATH, encoding="utf-8") as fh:
-            decisions = json.load(fh)
-    except FileNotFoundError:
+    removed = decided_removals()
+    if not removed:
         return records
-    # removed_from is one "kingdom/family" or, for a name where every copy
-    # was an artifact (action "remove-both"), a list of them.
-    removed = set()
-    for sid, d in decisions.items():
-        if not str(d.get("action", "")).startswith("remove"):
-            continue
-        places = d.get("removed_from") or []
-        for place in [places] if isinstance(places, str) else places:
-            removed.add((sid, place))
     kept = []
     for r in records:
         sid = (r.get("species") or {}).get("id")

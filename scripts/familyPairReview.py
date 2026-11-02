@@ -255,6 +255,14 @@ def main() -> int:
             row["decision"], row["decidedBy"] = old["decision"], old.get("decidedBy")
         review.append(row)
     review.sort(key=lambda r: -r["copies"])
+    # A decided pair that is no longer in the plan was applied (nothing left
+    # to move). Keep its row: the decision is a record, and
+    # dedupeSpeciesAcrossFamilies.py reads it to pick a family. 2026-11-02
+    # a rerun dropped 72 of the 80 follow-col decisions this way.
+    in_plan = {(r["kingdom"], r["removeFrom"], r["keepIn"]) for r in review}
+    for key, old in previous.items():
+        if key not in in_plan:
+            review.append({**old, "inPlan": False})
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:

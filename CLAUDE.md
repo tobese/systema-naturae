@@ -192,10 +192,24 @@ Decided 2026-11-02. A commit is either **code** or **data**, never both.
 - **Order: code first, then data**, so CI shows what each did on its own. A
   data commit that needs new code is only built after that code is on origin.
 - q-bert follows the same rule for bacteria/viruses.
+- **Small commits.** Land data at least daily, and split a big landing by
+  kingdom (`landTree.py --kingdom plantae --no-shared`, then the next). The
+  2026-11-02 landing was 15,339 files after two days, and its CI result could
+  not say which part did what. Uncommitted volume is also what makes `git
+  status` slow: git re-hashes every changed file (minutes at 17k files, seconds
+  at a few hundred). `git status -- <dir>` limits it to one directory.
+- **No push onto red CI.** `scripts/hooks/pre-push` (installed with `git config
+  core.hooksPath scripts/hooks`, on every checkout including q-bert's and the
+  test clone) refuses a push to main unless the verify run for origin/main's
+  head succeeded. It also refuses while that run is still going (`gh run
+  watch`). A push that is the fix goes through with
+  `SN_PUSH_OVER_RED="<why>" git push`, logged in `.git/push-gate.log`.
 
 **Why:** a data landing touches tens of thousands of family files. Mixed with
 code, a regression can't be bisected or reverted without the other half, and a
-red `verifyTree` can't be pinned on the code or on the data.
+red `verifyTree` can't be pinned on the code or on the data. Pushing onto a red
+main has the same effect over time: the next failure can't be told from the
+earlier one.
 
 ## Commands
 

@@ -24,6 +24,13 @@ instead, holding maintenanceLock so the snapshot is consistent:
 
     python3 scripts/landTree.py -F message.txt           # build, print, don't push
     python3 scripts/landTree.py -F message.txt --push
+
+Smaller commits (2026-11-02): `--kingdom K` (repeatable) lands only those
+kingdoms' family files and skeletons; `--no-shared` leaves out the queue, the
+logs and data/authors. One landing of 15,000 files is one CI run nobody can
+read; plantae, fungi, ... each on their own say which one turned it red.
+
+    python3 scripts/landTree.py -F msg.txt --kingdom plantae --no-shared
 """
 import argparse
 import os
@@ -60,6 +67,10 @@ def main() -> int:
     ap.add_argument("--push", action="store_true")
     ap.add_argument("--no-resync", action="store_true",
                     help="skip the count resync (it runs by default)")
+    ap.add_argument("--kingdom", action="append", choices=KINGDOMS, default=[],
+                    help="land only this kingdom (repeatable; default: all six)")
+    ap.add_argument("--no-shared", action="store_true",
+                    help="leave out data/source-queue, data/authors and the logs")
     args = ap.parse_args()
     with open(args.message_file, encoding="utf-8") as fh:
         message = fh.read()
@@ -77,10 +88,13 @@ def main() -> int:
         env = dict(os.environ, GIT_INDEX_FILE=idx)
         try:
             git("read-tree", base, env=env)
-            git("add", "-A", "--", *[f"taxonomy/{k}" for k in KINGDOMS], *SKELETONS,
-                "data/source-queue",
-                *[p for p in ("data/authors",) if os.path.exists(os.path.join(ROOT, p))], env=env)
-            for log in LOGS:
+            kingdoms = args.kingdom or KINGDOMS
+            skeletons = [s for s, k in zip(SKELETONS, KINGDOMS) if k in kingdoms]
+            shared = [] if args.no_shared else ["data/source-queue", *[
+                p for p in ("data/authors",) if os.path.exists(os.path.join(ROOT, p))]]
+            git("add", "-A", "--", *[f"taxonomy/{k}" for k in kingdoms], *skeletons,
+                *shared, env=env)
+            for log in ([] if args.no_shared else LOGS):
                 if not os.path.exists(os.path.join(ROOT, log)):
                     continue
                 has = subprocess.run(["git", "cat-file", "-e", f"{base}:{log}"], cwd=ROOT,

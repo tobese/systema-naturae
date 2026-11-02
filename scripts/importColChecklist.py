@@ -920,6 +920,8 @@ def main() -> int:
     print()
     added_total = dedup_total = 0
     files = None
+    from importTransformed import decided_removals
+    removed = decided_removals()
     for (kind, slug), rows in sorted(staged.items()):
         _tax_k, fams_k = KINDS[kind]
         # the family name, needed by the genera loop below for genus lineage
@@ -935,7 +937,12 @@ def main() -> int:
                      "lineage": fname}
             new_root["children"].append(gnode)
             for nm, a, sid in species:
-                sp = {"id": SF.node_id(SF.PREFIX["SPECIES"], nm, a or ""),
+                sp_id = SF.node_id(SF.PREFIX["SPECIES"], nm, a or "")
+                if (sp_id, f"{kind}/{slug}") in removed:
+                    print(f"  skipped {sp_id} -> {kind}/{slug}: "
+                          f"removed by a recorded homonym decision")
+                    continue
+                sp = {"id": sp_id,
                       "name": nm, "rank": "SPECIES", "subspeciesCount": 0,
                       "sourcedFrom": SOURCE, "lineage": g}
                 if a:
@@ -943,6 +950,8 @@ def main() -> int:
                 if sid:
                     sp["sourceIds"] = {r.source_key: sid}
                 gnode["children"].append(sp)
+            if not gnode["children"]:
+                new_root["children"].remove(gnode)   # every species skipped above
         # One index, built once. A recursive glob per family means a full walk
         # of a 14,085-file tree per family: 34 families took 7 minutes, which
         # puts Wikispecies' 736 at over two hours for what is a dict lookup.

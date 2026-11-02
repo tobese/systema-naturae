@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""Refuse a push to main while CI on origin's main is not green.
+
+Decided 2026-11-02: pushes kept landing on top of a red "Verify tree
+invariants" run, so a later failure could not be told from an earlier one.
+This checks the verify workflow's run for the commit origin/main points at
+now (the remote sha git hands this hook), via `gh`:
+
+  success                          -> push
+  queued / in progress / no run    -> refused: wait for it (gh run watch)
+  failure / cancelled / timed out  -> refused: fix first
+
+A push that is itself the fix needs a way through, or a red main could never
+turn green: set SN_PUSH_OVER_RED to the reason. It is printed and appended to
+.git/push-gate.log, and the run it overrode is named there.
+
+    SN_PUSH_OVER_RED="fixes the homonym check" git push
+
+Installed with `git config core.hooksPath scripts/hooks` (CLAUDE.md, "Git").
+Only pushes to refs/heads/main are gated.
+"""
+import json
+import os
+import subprocess
+import sys
+import time
+
+WORKFLOW = "verify.yml"
+
+
+def gh_run_for(sha):
+    r = subprocess.run(
+        ["gh", "run", "list", "--workflow", WORKFLOW, "--branch", "main", "--limit", "20",
+         "--json", "headSha,status,conclusion,databaseId,displayTitle,url"],
+        capture_output=True, text=True, timeout=60)
+    if r.returncode:
+        raise RuntimeError(r.stderr.strip() or "gh run list failed")
+    return next((x for x in json.loads(r.stdout) if x["headSha"] == sha), None)
+
+
+def log(line):
+    git_dir = subprocess.run(["git", "rev-parse", "--git-common-dir"],
+                             capture_output=True, text=True).stdout.strip() or ".git"
+    with open(os.path.join(git_dir, "push-gate.log"), "a", encoding="utf-8") as fh:
+        fh.write(f"{time.strftime('%Y-%m-%dT%H:%M:%S%z')} {line}\n")
+
+
+def main() -> int:
+    remote_shas = [parts[3] for parts in (l.split() for l in sys.stdin if l.strip())
+                   if len(parts) == 4 and parts[2] == "refs/heads/main"]
+    if not remote_shas:
+        return 0
+    base = remote_shas[0]
+    if set(base) == {"0"}:
+        return 0                       # main does not exist on the remote yet
+    override = os.environ.get("SN_PUSH_OVER_RED", "").strip()
+    try:
+        run = gh_run_for(base)
+    except Exception as e:             # no gh, no network: fail closed
+        state, detail = "unknown", f"could not ask GitHub ({e})"
+    else:
+        if run is None:
+            state, detail = "pending", f"no {WORKFLOW} run yet for origin/main {base[:11]}"
+        elif run["status"] != "completed":
+            state, detail = "pending", f"run {run['databaseId']} is {run['status']}"
+        else:
+            state = "green" if run["conclusion"] == "success" else "red"
+            detail = f"run {run['databaseId']} {run['conclusion']}: {run['displayTitle'][:60]}"
+    if state == "green":
+        return 0
+    if override:
+        print(f"pre-push: CI on origin/main is {state} ({detail}); pushing anyway: {override}",
+              file=sys.stderr)
+        log(f"OVERRIDE {state} {base[:11]} ({detail}): {override}")
+        return 0
+    print(f"pre-push: refused -- CI on origin/main is {state}: {detail}", file=sys.stderr)
+    if state == "pending":
+        print("  wait for it:  gh run watch", file=sys.stderr)
+    else:
+        print("  fix main first, or if this push is the fix:", file=sys.stderr)
+        print('  SN_PUSH_OVER_RED="<why>" git push ...', file=sys.stderr)
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
