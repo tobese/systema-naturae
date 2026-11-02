@@ -663,7 +663,8 @@ def check_author_ids():
         ok("every author id resolves in data/authors/people.jsonl", "no author ids yet")
         return
     from applyAuthors import known_ids
-    missing = [a for a in AUTHOR_REFS if a not in known_ids()]
+    known = known_ids()  # once: it parses all of people.jsonl
+    missing = [a for a in AUTHOR_REFS if a not in known]
     if missing:
         fail("every author id resolves in data/authors/people.jsonl",
              f"{len(missing):,} of {len(AUTHOR_REFS):,} ids unknown, e.g. {', '.join(missing[:4])}")
