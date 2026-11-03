@@ -121,7 +121,9 @@ SOURCES = {
     "species-file-cockroach": (
         "Cockroach Species File (Blattodea)", "Species File Group",
         "https://www.gbif.org/dataset/3e812f13-bd5f-46b6-9bae-710766be526d",
-        "CC BY 4.0", "applied",
+        # Was "CC BY 4.0": the archive we hold (sf_cockroach.zip) states CC BY-NC
+        # 4.0 in its own eml.xml (2019); found by the archive cross-check 2026-11-02.
+        "CC BY-NC 4.0 (stated in the archive's own eml.xml, 2019)", "applied",
         "5,312 taxa across 9 families; created the Blattodea order, which "
         "includes the termites (Isoptera is not ranked separately). 13,436 "
         "distribution rows and 144 English common names"),
@@ -329,7 +331,9 @@ SOURCES = {
         # CC BY-NC, "in unadapted form only" (which reads as ND too); the
         # provider's statement wins over a CC BY link elsewhere (2026-11-01).
         "CC BY-NC (MycoBank site terms; 'unadapted form only')",
-        "applied", "MB numbers merged into sourceIds 2026-10-08 (species_id_map); "
+        "applied", "Kept under the NC rule, decided 2026-11-02 (docs/licence-issues.md, "
+        "Policy): 875 species no open source holds. "
+        "MB numbers merged into sourceIds 2026-10-08 (species_id_map); "
         "fungal authorship and name validity compared against GBIF "
         "(28,253 disagreements, no renames applied). NC: cross-check only "
         "until a policy decision. Refresh by hand: /Images/MBList.zip is a "
@@ -1652,12 +1656,18 @@ SOURCES = {
         "genuinely new (after also clearing the stale taxa-cache the "
         "broken first run had written) -- applied."),
     "checklistbank-24580": (
-        "Checklist of Vermont Species", "DOI not recorded; version not recorded",
+        "Checklist of Vermont Species",
+        "DOI 10.48580/d328m (version 2026-08-31, 10.48580/d328m.v45); GBIF dataset "
+        "0b1735ff-6a66-454b-8686-cae1cbc732a2; Vermont Center for Ecostudies "
+        "(Vermont Atlas of Life, https://val.vtecostudies.org/)",
         "https://www.checklistbank.org/dataset/24580",
-        "CC BY", "applied",
+        "CC BY-NC 4.0 (stated in the archive's own eml.xml intellectualRights, "
+        "version 2026-08-31 as taken 2026-10-25; the 'CC BY' recorded at the "
+        "time was a recording error, corrected 2026-11-02)", "applied",
         "Triaged + applied 2026-10-25 (3rd-tier-by-size sweep, 38,995 "
         "size). Measured: 7,327 offered, 84 genuinely new -- modest, "
-        "applied."),
+        "applied. NC: kept under the NC rule decided 2026-11-02 (47 species "
+        "no open source holds); docs/licence-issues.md, Policy."),
     "checklistbank-51518": (
         "Taxon list of fungi and fungal-like organisms from Germany compiled by the DGfM",
         "DOI not recorded; version not recorded",

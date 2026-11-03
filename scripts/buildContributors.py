@@ -32,6 +32,7 @@ else the dataset stands as its own institution.
     python3 scripts/buildContributors.py [--refresh] [--offline] [--no-logos]
 """
 import argparse
+import collections
 import hashlib
 import html
 import json
@@ -43,6 +44,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import zipfile
 
 import duckdb
 
@@ -279,13 +281,69 @@ def norm_licence(s):
     if not s:
         return None
     t = s.lower().replace("_", " ").replace("–", "-")
-    if re.search(r"\bcc0\b|cc zero|public ?domain|\bpd\b", t):
+    # A licence URL (creativecommons.org/licenses/by-nc/4.0) or an SPDX-style
+    # id (CC-BY-NC-4.0) says the same thing as the words.
+    t = re.sub(r"creativecommons\.org/licenses/([a-z-]+)", lambda m: " cc " + m.group(1).replace("-", " "), t)
+    t = re.sub(r"\bcc-by", "cc by", t).replace("by-nc", "by nc").replace("by-sa", "by sa").replace("by-nd", "by nd")
+    if re.search(r"\bcc0\b|cc zero|publicdomain/zero|public ?domain|\bpd\b", t):
         return "cc0"
     m = re.search(r"\bcc[ -]?by((?:[ -](?:nc|sa|nd))*)", t)
     if not m:
         return None
     parts = re.findall(r"nc|sa|nd", m.group(1))
     return "cc by" + "".join("-" + p for p in parts)
+
+
+ARCHIVES = os.path.join(SOURCES_ROOT, "archives")
+META_NAMES = ("eml.xml", "metadata.yaml", "metadata.yml", "metadata.json")
+
+
+def archive_meta(slug):
+    """Licence and version as the archive we hold states them -- what we
+    actually took, as opposed to what ChecklistBank says today. Reads the
+    first of eml.xml / metadata.yaml / metadata.yml / Metadata.json found in
+    the archive's zips (archive.zip first). None when there is none."""
+    d = os.path.join(ARCHIVES, slug)
+    if not os.path.isdir(d):
+        return None
+    zips = sorted((f for f in os.listdir(d) if f.endswith(".zip")), key=lambda f: (f != "archive.zip", f))
+    for z in zips:
+        path = os.path.join(d, z)
+        try:
+            with zipfile.ZipFile(path) as zf:
+                cands = [n for n in zf.namelist() if os.path.basename(n).lower() in META_NAMES]
+                if not cands:
+                    continue
+                name = min(cands, key=lambda n: (META_NAMES.index(os.path.basename(n).lower()), len(n)))
+                text = zf.read(name)[:2_000_000].decode("utf-8", "replace")
+        except (zipfile.BadZipFile, OSError, KeyError):
+            continue
+        out = {"archive": f"{slug}/{z}", "file": name,
+               "taken": time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(path)))}
+        low = os.path.basename(name).lower()
+        if low == "eml.xml":
+            ir = re.search(r"<intellectualRights>(.*?)</intellectualRights>", text, re.S | re.I)
+            if ir:
+                url = re.search(r'url="([^"]+)"', ir.group(1))
+                out["licence"] = strip_html(ir.group(1))
+                out["licenceUrl"] = url.group(1) if url else None
+            pd = re.search(r"<pubDate>\s*([^<\s]+)", text)
+            out["version"] = pd.group(1) if pd else None
+        elif low == "metadata.json":
+            try:
+                j = json.loads(text)
+            except ValueError:
+                j = {}
+            out["licence"] = j.get("license")
+            out["version"] = j.get("version") or j.get("issued")
+        else:
+            for field, key in (("license", "licence"), ("version", "version"), ("issued", "issued")):
+                m = re.search(rf"^{field}:\s*['\"]?([^'\"\n]+)", text, re.M)
+                if m:
+                    out[key] = m.group(1).strip()
+            out["version"] = out.get("version") or out.get("issued")
+        return out
+    return None
 
 
 def licence_label(clb_licence):
@@ -440,6 +498,10 @@ def main() -> int:
                     "doi": d.get("doi"), "citation": strip_html(d.get("citation")),
                     "licence": licence_label(d.get("license")), "logoSource": d.get("logo"),
                     "version": d.get("version") or d.get("issued"),
+                    "versionDoi": d.get("versionDoi"),
+                    "identifiers": d.get("identifier") or [],
+                    "gbifKey": d.get("gbifKey"),
+                    "orcids": sorted({c["orcid"] for c in (d.get("creator") or []) if c.get("orcid")}),
                     "creators": [c.get("name") or " ".join(filter(None, [c.get("given"), c.get("family")]))
                                  for c in (d.get("creator") or [])][:8],
                 })
@@ -485,6 +547,18 @@ def main() -> int:
         elif m.get("licence") and len(m["licence"]) > len(entry["licence"] or ""):
             entry["licenceNote"] = m["licence"]
 
+        am = archive_meta(ds)
+        if am:
+            entry["asTaken"] = am
+            # The licence that governs our copy is the one the archive we took
+            # states; ChecklistBank's is today's and may have changed since.
+            taken = am.get("licenceUrl") or am.get("licence")
+            if norm_licence(taken):
+                if entry["licence"] and norm_licence(entry["licence"]) != norm_licence(taken):
+                    entry["licenceNote"] = (f"licence of the version we took ({am.get('version') or am['taken']}); "
+                                            f"ChecklistBank today: {entry['licence']}")
+                entry["licence"] = licence_label(taken) + (
+                    f" {v.group(1)}" if (v := re.search(r"/(\d\.\d)", taken or "")) else "")
         ov = overrides.get("datasets", {}).get(ds, {})
         entry.update({k: v for k, v in ov.items() if not k.startswith("_") and k != "institution"})
         if not entry["institution"]:
@@ -538,37 +612,42 @@ def main() -> int:
                     inst["logoSource"], inst["logoFrom"] = icon, "the site's own icon"
 
     # -- licence cross-check --------------------------------------------------
-    mismatches = []
-    for key, row in sorted(queue.items()):
+    # Three statements per source: what we recorded (queue row / manifest),
+    # what the archive we took says (asTaken), and what ChecklistBank says
+    # now. A difference between the last two means the source was relicensed
+    # after we took it.
+    rows = [(k, "queue", r.get("stage"), r.get("licence")) for k, r in sorted(queue.items())]
+    rows += [(k, "manifest", v.get("status"), v.get("licence")) for k, v in sorted(manifest.items())]
+    checks = []
+    for key, where, stage, recorded in rows:
         mm = CLB_RE.match(key)
-        if not mm:
-            continue
-        d = fetch.clb(mm.group(1))
-        if not d:
-            continue
-        clb, rec = norm_licence(d.get("license")), norm_licence(row.get("licence"))
-        if clb != rec:
-            mismatches.append({"key": key, "where": "queue", "stage": row.get("stage"),
-                               "title": d.get("title"), "recorded": row.get("licence"),
-                               "checklistbank": d.get("license"),
-                               "ncMissed": bool(clb and "nc" in clb and not (rec and "nc" in rec))})
-    for key, v in sorted(manifest.items()):
-        mm = CLB_RE.match(key)
-        if not mm:
-            continue
-        d = fetch.clb(mm.group(1))
-        if not d:
-            continue
-        clb, rec = norm_licence(d.get("license")), norm_licence(v.get("licence"))
-        if clb != rec:
-            mismatches.append({"key": key, "where": "manifest", "stage": v.get("status"),
-                               "title": d.get("title"), "recorded": v.get("licence"),
-                               "checklistbank": d.get("license"),
-                               "ncMissed": bool(clb and "nc" in clb and not (rec and "nc" in rec))})
+        d = fetch.clb(mm.group(1)) if mm else None
+        now = d.get("license") if d else None
+        am = archive_meta(key)
+        taken = am.get("licenceUrl") or am.get("licence") if am else None
+        n_rec, n_taken, n_now = norm_licence(recorded), norm_licence(taken), norm_licence(now)
+        flags = []
+        if n_taken and n_rec != n_taken:
+            flags.append("recorded differs from the archive")
+        if n_taken and n_now and n_taken != n_now:
+            flags.append("relicensed since taken")
+        if not n_taken and n_now and n_rec != n_now:
+            flags.append("recorded differs from ChecklistBank (archive states none)")
+        if any(x and "nc" in x for x in (n_taken, n_now)) and not (n_rec and "nc" in n_rec):
+            flags.append("NC not recorded")
+        if not (n_rec or n_taken or n_now):
+            flags.append("no licence anywhere")
+        if flags:
+            checks.append({"key": key, "where": where, "stage": stage,
+                           "title": (d or {}).get("title"),
+                           "url": f"https://www.checklistbank.org/dataset/{mm.group(1)}/about" if mm else None,
+                           "recorded": recorded, "asTaken": taken, "asTakenVersion": (am or {}).get("version"),
+                           "asTakenFile": f"{am['archive']}:{am['file']}" if am else None,
+                           "checklistbank": now, "flags": flags})
     _write(CROSSCHECK, {"generatedAt": _now(),
-                        "note": "recorded licence (queue row / manifest) vs ChecklistBank's current `license`; "
-                                "ncMissed = ChecklistBank says non-commercial, the record does not",
-                        "mismatches": mismatches})
+                        "note": "recorded (queue row / manifest) vs asTaken (the archive's own eml.xml / "
+                                "metadata.yaml / Metadata.json) vs checklistbank (its licence today)",
+                        "mismatches": checks})
 
     # -- write ---------------------------------------------------------------
     registry = {"generatedAt": _now(), "institutions": institutions, "datasets": datasets}
@@ -592,12 +671,13 @@ def main() -> int:
     print(f"  {len(datasets)} datasets, {len(institutions)} institutions "
           f"({sum(1 for i in institutions.values() if i.get('logo'))} with a logo); "
           f"{fetch.fetched} API documents fetched")
-    print(f"  licence cross-check: {len(mismatches)} mismatches, "
-          f"{sum(m['ncMissed'] for m in mismatches)} where ChecklistBank says NC and the record does not")
-    for m in mismatches:
-        if m["ncMissed"]:
-            print(f"      {m['key']:<22} {m['where']:<8} {str(m['stage']):<12} "
-                  f"recorded {m['recorded']!r} vs CLB {m['checklistbank']!r}  {str(m['title'])[:50]}")
+    flag_counts = collections.Counter(f for c in checks for f in c["flags"])
+    print(f"  licence cross-check: {len(checks)} sources flagged: "
+          + ", ".join(f"{v} {k}" for k, v in flag_counts.most_common()))
+    for c in checks:
+        if "NC not recorded" in c["flags"] or "relicensed since taken" in c["flags"]:
+            print(f"      {c['key']:<22} {c['where']:<8} {str(c['stage']):<10} rec {c['recorded']!r:<16.16} "
+                  f"taken {str(c['asTaken'])!r:<40.40} now {c['checklistbank']!r}  {str(c['title'])[:40]}")
     if unknown:
         print(f"  WARN  ids with no manifest entry or alias: {sorted(unknown)}")
     return 0

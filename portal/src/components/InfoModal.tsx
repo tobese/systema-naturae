@@ -6,19 +6,7 @@ interface Props {
   onClose: () => void;
 }
 
-// Kept in step with docs/data-sources.md. Only sources we actually draw on are
-// listed; the non-commercial ones we refused are deliberately absent, because a
-// reader cannot tell from a name whether a dataset is usable and naming them
-// would imply we had.
-const SOURCES = [
-  { name: "GBIF", licence: "per-dataset, CC0 / CC BY / CC BY-NC", url: "https://www.gbif.org" },
-  { name: "Wikipedia", licence: "CC BY-SA 4.0", url: "https://en.wikipedia.org" },
-  { name: "Plants of the World Online (RBG Kew)", licence: "CC BY", url: "https://powo.science.kew.org" },
-  { name: "Orthoptera Species File", licence: "CC BY 4.0", url: "https://doi.org/10.15468/nn7jhc" },
-  { name: "Smithsonian NMNH", licence: "CC0", url: "https://doi.org/10.5281/zenodo.20174554" },
-  { name: "Wikimedia Commons", licence: "per-file, CC0 / PD / CC BY / CC BY-SA", url: "https://commons.wikimedia.org" },
-  { name: "iNaturalist", licence: "CC BY-NC 4.0 for data, per-photo for images", url: "https://www.inaturalist.org" },
-];
+const DATA_LICENSE_URL = "https://github.com/tobese/systema-naturae/blob/main/DATA_LICENSE.md";
 
 export default function InfoModal({ onClose }: Props) {
   useEffect(() => {
@@ -146,34 +134,29 @@ export default function InfoModal({ onClose }: Props) {
                 Data sources &amp; licences
               </div>
               <p style={{ margin: "0 0 10px" }}>
-                This portal assembles its content from the sources below. Each is
-                reused under its own licence, and several require attribution —
-                which we owe and have tried to discharge. Where a licence permits
-                reuse only for non-commercial purposes, we have not used it.
+                Systema Naturae is a non-commercial project. Its data is compiled
+                from published sources: every record keeps the identifiers of the
+                sources it comes from, and each source's own licence applies to
+                what comes from it. The full list — institution, dataset,
+                citation and licence — is under <strong style={{ color: "#c0c0d8", fontWeight: 400 }}>Sources → Contributors</strong>,
+                filterable by licence.
               </p>
-              <ul style={{ margin: "0 0 10px", paddingLeft: 18, display: "flex", flexDirection: "column", gap: 4 }}>
-                {SOURCES.map(s => (
-                  <li key={s.name}>
-                    <span style={{ color: "#c0c0d8" }}>{s.name}</span>
-                    <span style={{ color: "#666" }}> — {s.licence}</span>
-                    {s.url && (
-                      <>
-                        {" "}
-                        <a href={s.url} target="_blank" rel="noreferrer noopener" style={{ color: "#556", fontSize: 11 }}>
-                          source
-                        </a>
-                      </>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <p style={{ margin: "0 0 10px" }}>
+                Most sources are CC0 or CC BY. Material from CC BY-SA sources
+                (Wikipedia text, for example) is share-alike; material from CC BY-NC
+                sources (MycoBank numbers, iNaturalist common names and a few
+                checklists) may not be reused commercially. What this project adds
+                — the compilation, structure and decisions — is licensed{" "}
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer noopener" style={{ color: "#8a8ac0" }}>CC BY 4.0</a>.
+                {" "}<a href={DATA_LICENSE_URL} target="_blank" rel="noreferrer noopener" style={{ color: "#556", fontSize: 11 }}>Data licence</a>
+              </p>
               <p style={{ margin: 0, fontSize: 12, color: "#666" }}>
                 Photographs are credited individually beneath the image, with the
                 author and licence where they are known; where they are not, we
                 link to the Wikimedia Commons file page, which carries them. Many
                 are CC BY-SA, whose share-alike terms apply to derivative use.
-                Full detail, including sources we assessed and declined, is in{" "}
-                <code style={{ color: "#777", fontSize: 11 }}>docs/data-sources.md</code>.
+                Licence decisions per source, including the ones we declined, are in{" "}
+                <code style={{ color: "#777", fontSize: 11 }}>docs/licence-issues.md</code>.
               </p>
             </div>
 

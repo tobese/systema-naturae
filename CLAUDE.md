@@ -171,6 +171,18 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 > pipeline (Python and Go) out until `maintenanceSession.py --release`. Scripts
 > that take the lock themselves run fine inside it (holder pid is inherited).
 
+## Licences: per part, the compilation CC BY 4.0
+
+Decided 2026-11-02. The project is **non-commercial**. Every record keeps its
+sources' ids and each source's own licence applies to what comes from it; what
+the project adds is **CC BY 4.0** (`DATA_LICENSE.md`). NC sources may be used
+(prefer the open version where both exist), but are never taken automatically:
+measured, taken by hand, recorded in `docs/licence-issues.md` (Policy) and the
+manifest, and shown by licence in the portal's Contributors view. The licence
+that counts is the one **the archive we took** states (`make contributors`
+reads it; `data/licence-crosscheck.json` compares it with what we recorded and
+what ChecklistBank says now). The code is MIT (`LICENSE`).
+
 ## Git: code and data land in separate commits
 
 Decided 2026-11-02. A commit is either **code** or **data**, never both.

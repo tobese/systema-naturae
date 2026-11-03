@@ -50,6 +50,50 @@ const SECTIONS: { id: string; heading: string; blurb: string }[] = [
 ];
 
 const NUM = new Intl.NumberFormat("en-US");
+
+/** Licence classes the view can be filtered by (docs/licence-issues.md, Policy). */
+const LICENCE_CLASSES: { id: string; label: string; note?: string }[] = [
+  { id: "cc0", label: "Public domain / CC0" },
+  { id: "by", label: "CC BY" },
+  { id: "by-sa", label: "CC BY-SA", note: "Share-alike: adaptations must carry the same licence." },
+  { id: "nc", label: "Non-commercial", note: "These data must not be reused commercially. Some are taken under the project's NC rule (no open source covers what they add); the others are open licence questions." },
+  { id: "mixed", label: "Mixed", note: "The licence varies per constituent dataset, and which constituent a record came from is not recorded, so its terms cannot be stated per species." },
+  { id: "other", label: "Other / not recorded" },
+];
+
+/**
+ * The Creative Commons deed for a licence statement, or null. The version is
+ * the one the statement names; without one, 4.0 -- what ChecklistBank's and
+ * GBIF's licence values ("cc by", "cc by nc") stand for.
+ */
+function licenceUrl(licence: string | null): string | null {
+  const l = (licence ?? "").toLowerCase().replace(/_/g, " ");
+  const explicit = l.match(/creativecommons\.org\/(licenses|publicdomain)\/[a-z-]+\/\d\.\d/);
+  if (explicit) return `https://${explicit[0]}/`;
+  const version = (l.match(/\b(\d\.\d)\b/) ?? [])[1];
+  if (/cc0|publicdomain\/zero|public ?domain/.test(l)) return "https://creativecommons.org/publicdomain/zero/1.0/";
+  const m = l.match(/\bcc[ -]?by((?:[ -](?:nc|sa|nd))*)/);
+  if (!m) return null;
+  const parts = ["by", ...(m[1].match(/nc|sa|nd/g) ?? [])];
+  return `https://creativecommons.org/licenses/${parts.join("-")}/${version ?? "4.0"}/`;
+}
+
+const CLASS_URL: Record<string, string> = {
+  cc0: "https://creativecommons.org/publicdomain/zero/1.0/",
+  by: "https://creativecommons.org/licenses/by/4.0/",
+  "by-sa": "https://creativecommons.org/licenses/by-sa/4.0/",
+  nc: "https://creativecommons.org/licenses/by-nc/4.0/",
+};
+
+function licenceClass(licence: string | null): string {
+  const l = (licence ?? "").toLowerCase();
+  if (/per (constituent|contributing)|per-dataset|\bmixed\b/.test(l)) return "mixed";
+  if (/\bnc\b|non.?commercial/.test(l)) return "nc";
+  if (/\bsa\b|share.?alike/.test(l)) return "by-sa";
+  if (/cc0|public ?domain/.test(l)) return "cc0";
+  if (/\bby\b/.test(l)) return "by";
+  return "other";
+}
 const BASE = import.meta.env.BASE_URL ?? "/";
 
 function inScope(counts: Record<string, number>, scope: string): number {
@@ -66,6 +110,7 @@ export default function ContributorsView({ scope, setScope }: { scope: string; s
   const [failed, setFailed] = useState(false);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<string | null>(null);
+  const [licence, setLicence] = useState<string>("all");
 
   useEffect(() => {
     fetch(`${BASE}data/contributors-report.json`)
@@ -89,6 +134,7 @@ export default function ContributorsView({ scope, setScope }: { scope: string; s
       }
       if (!counted && d.section !== "nomenclature" && !d.addedAtImport) continue;
       const inst = report.institutions[d.institution];
+      if (licence !== "all" && licenceClass(d.licence) !== licence) continue;
       if (q && ![d.title, d.alias, inst?.name, ...d.creators].some((s) => s?.toLowerCase().includes(q))) continue;
       const m = (bySection[d.section] ??= new Map());
       m.set(d.institution, [...(m.get(d.institution) ?? []), d]);
@@ -103,7 +149,19 @@ export default function ContributorsView({ scope, setScope }: { scope: string; s
       return { ...s, rows };
     });
     return { sections: out, hidden };
-  }, [report, scope, query]);
+  }, [report, scope, query, licence]);
+
+  // Datasets per licence class in this scope, for the chips.
+  const licenceCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    if (!report) return c;
+    for (const d of Object.values(report.datasets)) {
+      if (weight(d, scope) === 0 && d.section !== "nomenclature" && !(scope === "all" && d.addedAtImport)) continue;
+      const k = licenceClass(d.licence);
+      c[k] = (c[k] ?? 0) + 1;
+    }
+    return c;
+  }, [report, scope]);
 
   if (failed) {
     return (
@@ -137,6 +195,27 @@ export default function ContributorsView({ scope, setScope }: { scope: string; s
         placeholder="Search institutions, datasets, authors…"
         style={{ width: "100%", boxSizing: "border-box", margin: "12px 0 0", background: "#14161f", color: "#c0c0d8", border: "1px solid #1e2030", borderRadius: 6, padding: "6px 10px", fontSize: 12 }}
       />
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 10 }}>
+        {[{ id: "all", label: "All licences" }, ...LICENCE_CLASSES].map((c) => {
+          const n = c.id === "all" ? Object.values(licenceCounts).reduce((a, x) => a + x, 0) : licenceCounts[c.id] ?? 0;
+          if (c.id !== "all" && n === 0) return null;
+          const on = licence === c.id;
+          return (
+            <button key={c.id} onClick={() => setLicence(c.id)} style={{
+              background: on ? "#1e2030" : "transparent", color: on ? "#c0c0d8" : c.id === "nc" ? "#c0a060" : "#777",
+              border: `1px solid ${c.id === "nc" ? "#5a4a2a" : "#1e2030"}`, borderRadius: 12, padding: "2px 10px", fontSize: 11, cursor: "pointer",
+            }}>{c.label} <span style={{ color: "#555" }}>{n}</span></button>
+          );
+        })}
+      </div>
+      {LICENCE_CLASSES.find((c) => c.id === licence)?.note && (
+        <p style={{ margin: "8px 0 0", color: licence === "nc" ? "#a08050" : "#666", fontSize: 11, lineHeight: 1.5 }}>
+          {LICENCE_CLASSES.find((c) => c.id === licence)!.note}
+          {CLASS_URL[licence] && (
+            <> <a href={CLASS_URL[licence]} target="_blank" rel="noreferrer noopener" style={{ color: "#8a8ac0" }}>Licence text</a></>
+          )}
+        </p>
+      )}
       {groups.sections.map((s) => s.rows.length > 0 && (
         <div key={s.id} style={{ marginTop: 20 }}>
           <div style={{ fontSize: 11, color: "#c0c0d8", letterSpacing: "0.08em", textTransform: "uppercase" }}>
@@ -163,6 +242,11 @@ export default function ContributorsView({ scope, setScope }: { scope: string; s
         {noProv > 0 && <>{NUM.format(noProv)} species record no source at all. </>}
         {groups.hidden > 0 && <>{groups.hidden} more datasets are credited from their import record only; see All kingdoms. </>}
         Metadata from ChecklistBank and GBIF, {report.generatedAt.slice(0, 10)}.
+      </p>
+      <p style={{ color: "#555", fontSize: 11, lineHeight: 1.6, margin: "6px 0 0" }}>
+        Each part of the tree stays under its source's licence; what this project adds is{" "}
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer noopener" style={{ color: "#6a6a99" }}>CC BY 4.0</a>.{" "}
+        <a href="https://github.com/tobese/systema-naturae/blob/main/DATA_LICENSE.md" target="_blank" rel="noreferrer noopener" style={{ color: "#6a6a99" }}>Data licence</a>
       </p>
     </>
   );
@@ -225,7 +309,8 @@ function InstitutionCard({ inst, datasets, total, scope, open, toggle }: {
 function LicenceBadge({ licence }: { licence: string | null }) {
   const nc = !!licence && /\bNC\b/i.test(licence);
   const sa = !!licence && /\bSA\b/i.test(licence);
-  return (
+  const url = licenceUrl(licence);
+  const badge = (
     <span style={{
       fontSize: 10, padding: "1px 6px", borderRadius: 4, whiteSpace: "nowrap",
       border: `1px solid ${nc ? "#5a4a2a" : "#24263a"}`, color: nc ? "#c0a060" : licence ? "#8a8ab0" : "#7a6040",
@@ -233,6 +318,9 @@ function LicenceBadge({ licence }: { licence: string | null }) {
       {licence ?? "licence not recorded"}
     </span>
   );
+  return url
+    ? <a href={url} target="_blank" rel="noreferrer noopener" style={{ textDecoration: "none" }} title={`Licence text: ${url}`}>{badge}</a>
+    : badge;
 }
 
 function DatasetRow({ d, scope }: { d: Dataset; scope: string }) {

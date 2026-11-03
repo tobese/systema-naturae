@@ -1,303 +1,843 @@
 {
-  "generatedAt": "2026-11-02T08:38:18+0100",
-  "note": "recorded licence (queue row / manifest) vs ChecklistBank's current `license`; ncMissed = ChecklistBank says non-commercial, the record does not",
+  "generatedAt": "2026-11-03T07:17:54+0100",
+  "note": "recorded (queue row / manifest) vs asTaken (the archive's own eml.xml / metadata.yaml / Metadata.json) vs checklistbank (its licence today)",
   "mismatches": [
+    {
+      "key": "checklistbank-1010",
+      "where": "queue",
+      "stage": "blocked",
+      "title": "FishBase",
+      "url": "https://www.checklistbank.org/dataset/1010/about",
+      "recorded": "cc by",
+      "asTaken": "CC-BY-NC",
+      "asTakenVersion": "2026-10-12",
+      "asTakenFile": "checklistbank-1010/archive.zip:metadata.yml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken",
+        "NC not recorded"
+      ]
+    },
     {
       "key": "checklistbank-1051",
       "where": "queue",
       "stage": "applied",
       "title": "Cockroach Species File",
+      "url": "https://www.checklistbank.org/dataset/1051/about",
       "recorded": "cc by",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
       "checklistbank": "cc by nc",
-      "ncMissed": true
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)",
+        "NC not recorded"
+      ]
     },
     {
       "key": "checklistbank-126539",
       "where": "queue",
       "stage": "applied",
       "title": "Nomenclator Zoologicus",
+      "url": "https://www.checklistbank.org/dataset/126539/about",
       "recorded": "cc by",
+      "asTaken": "CC0",
+      "asTakenVersion": "0.2.1",
+      "asTakenFile": "checklistbank-126539/archive.zip:rdmpage-nomenclator-zoologicus-coldp-ac5ab06/metadata.yml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2006",
       "where": "queue",
-      "stage": "queued",
+      "stage": "triaged",
       "title": "International Plant Names Index (IPNI)",
+      "url": "https://www.checklistbank.org/dataset/2006/about",
       "recorded": "",
+      "asTaken": "CC-BY",
+      "asTakenVersion": "2026-10-25",
+      "asTakenFile": "checklistbank-2006/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-201891",
       "where": "queue",
       "stage": "declined",
       "title": "Open Tree of Life Synthetic Tree",
+      "url": "https://www.checklistbank.org/dataset/201891/about",
       "recorded": "cc by",
+      "asTaken": "CC0",
+      "asTakenVersion": "13.4",
+      "asTakenFile": "checklistbank-201891/archive.zip:metadata.yaml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2026",
       "where": "queue",
       "stage": "declined",
       "title": "Fauna Europaea",
+      "url": "https://www.checklistbank.org/dataset/2026/about",
       "recorded": "cc by",
+      "asTaken": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+      "asTakenVersion": "2016-09-09",
+      "asTakenFile": "checklistbank-2026/archive.zip:eml.xml",
       "checklistbank": "other",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-20359",
       "where": "queue",
       "stage": "applied",
       "title": "Global Register of Introduced and Invasive Species - Hawaii, United States (ver.2.0, 2022)",
+      "url": "https://www.checklistbank.org/dataset/20359/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2023-01-02",
+      "asTakenFile": "checklistbank-20359/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2037",
       "where": "queue",
       "stage": "declined",
       "title": "ZooBank DarwinCore Checklist Data",
+      "url": "https://www.checklistbank.org/dataset/2037/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2026-08-29",
+      "asTakenFile": "checklistbank-2037/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2041",
       "where": "queue",
       "stage": "applied",
       "title": "Dyntaxa. Svensk taxonomisk databas",
+      "url": "https://www.checklistbank.org/dataset/2041/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2026-10-30",
+      "asTakenFile": "checklistbank-2041/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
-    },
-    {
-      "key": "checklistbank-2047",
-      "where": "queue",
-      "stage": "blocked",
-      "title": "Danish Mycological Society - Checklist of Fungi",
-      "recorded": "cc by",
-      "checklistbank": "cc by nc",
-      "ncMissed": true
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2090",
       "where": "queue",
       "stage": "declined",
       "title": "EEA redlist",
+      "url": "https://www.checklistbank.org/dataset/2090/about",
       "recorded": "cc by",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)"
+      ]
     },
     {
       "key": "checklistbank-21626",
       "where": "queue",
       "stage": "applied",
       "title": "The Swedish Red List 2020",
+      "url": "https://www.checklistbank.org/dataset/21626/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2026-04-29",
+      "asTakenFile": "checklistbank-21626/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "checklistbank-2169",
+      "where": "queue",
+      "stage": "blocked",
+      "title": "NCBI Taxonomy",
+      "url": "https://www.checklistbank.org/dataset/2169/about",
+      "recorded": "cc by",
+      "asTaken": "CC0",
+      "asTakenVersion": "2026-04-17",
+      "asTakenFile": "checklistbank-2169/archive.zip:metadata.yaml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken"
+      ]
     },
     {
       "key": "checklistbank-29891",
       "where": "queue",
       "stage": "applied",
       "title": "RINSE - Registry of non-native species in the Two Seas region countries (Great Britain, France, Belgium and the Netherlands)",
+      "url": "https://www.checklistbank.org/dataset/29891/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2019-05-15",
+      "asTakenFile": "checklistbank-29891/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
-    },
-    {
-      "key": "checklistbank-304886",
-      "where": "queue",
-      "stage": "blocked",
-      "title": "Checklist of Vermont Fungi",
-      "recorded": "cc by",
-      "checklistbank": "cc by nc",
-      "ncMissed": true
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-307745",
       "where": "queue",
       "stage": "applied",
       "title": "Global Register of Introduced and Invasive Species - United States (Contiguous) (ver.2.0, 2022)",
+      "url": "https://www.checklistbank.org/dataset/307745/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2023-01-02",
+      "asTakenFile": "checklistbank-307745/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-308125",
       "where": "queue",
       "stage": "applied",
       "title": "Checklist of Vermont Plants from Known Occurrences",
+      "url": "https://www.checklistbank.org/dataset/308125/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2025-02-12",
+      "asTakenFile": "checklistbank-308125/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-308974",
       "where": "queue",
       "stage": "applied",
       "title": "The Protist Ribosomal Reference database (PR2)",
+      "url": "https://www.checklistbank.org/dataset/308974/about",
       "recorded": "cc by",
+      "asTaken": null,
+      "asTakenVersion": "5.1.0",
+      "asTakenFile": "checklistbank-308974/archive.zip:metadata.yaml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)"
+      ]
+    },
+    {
+      "key": "checklistbank-312616",
+      "where": "queue",
+      "stage": "declined",
+      "title": "Catalogue of Life China 2025 Annual Checklist",
+      "url": "https://www.checklistbank.org/dataset/312616/about",
+      "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "asTakenVersion": "2025-05-22",
+      "asTakenFile": "checklistbank-312616/archive.zip:eml.xml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken",
+        "NC not recorded"
+      ]
     },
     {
       "key": "checklistbank-315077",
       "where": "queue",
       "stage": "applied",
       "title": "The Swedish Red List 2025",
+      "url": "https://www.checklistbank.org/dataset/315077/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2026-04-30",
+      "asTakenFile": "checklistbank-315077/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
-    },
-    {
-      "key": "checklistbank-32593",
-      "where": "queue",
-      "stage": "blocked",
-      "title": "Checklist of Danish Fungi",
-      "recorded": "cc by",
-      "checklistbank": "cc by nc",
-      "ncMissed": true
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-35472",
       "where": "queue",
       "stage": "applied",
       "title": "Catalogue of Geadephaga (Coleoptera, Adephaga) of America, north of Mexico",
+      "url": "https://www.checklistbank.org/dataset/35472/about",
       "recorded": "cc by",
+      "asTaken": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "asTakenVersion": "2012-11-28",
+      "asTakenFile": "checklistbank-35472/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "checklistbank-53677",
+      "where": "queue",
+      "stage": "declined",
+      "title": "Archaeobotanical checklist for Archis",
+      "url": "https://www.checklistbank.org/dataset/53677/about",
+      "recorded": "cc by",
+      "asTaken": "CC0-1.0",
+      "asTakenVersion": "2.11.0",
+      "asTakenFile": "checklistbank-53677/archive.zip:data-archis-botany-main/metadata.yaml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken"
+      ]
+    },
+    {
+      "key": "checklistbank-53684",
+      "where": "queue",
+      "stage": "applied",
+      "title": "Archaeozoological checklist for Archis",
+      "url": "https://www.checklistbank.org/dataset/53684/about",
+      "recorded": "cc by",
+      "asTaken": "CC0-1.0",
+      "asTakenVersion": "2.11.0",
+      "asTakenFile": "checklistbank-53684/archive.zip:data-archis-zoology-main/metadata.yaml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken"
+      ]
     },
     {
       "key": "checklistbank-5738",
       "where": "queue",
       "stage": "applied",
       "title": "Annotated world checklist of the Trombiculidae and Leeuwenhoekiidae (1758 - 2021) (Acari: Trombiculoidea), with notes on nomenclature, taxonomy, and distribution",
+      "url": "https://www.checklistbank.org/dataset/5738/about",
       "recorded": "cc by",
+      "asTaken": "CC0",
+      "asTakenVersion": "1766909431911",
+      "asTakenFile": "checklistbank-5738/archive.zip:metadata.json",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "checklistbank-62703",
+      "where": "queue",
+      "stage": "applied",
+      "title": "BioAcoustica: Wildlife Sounds Database",
+      "url": "https://www.checklistbank.org/dataset/62703/about",
+      "recorded": "cc by",
+      "asTaken": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "asTakenVersion": null,
+      "asTakenFile": "checklistbank-62703/archive.zip:dwca/eml.xml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken",
+        "NC not recorded"
+      ]
     },
     {
       "key": "checklistbank-8011",
       "where": "queue",
       "stage": "applied",
       "title": "A checklist of seed plant of Gaoligongshan National Nature Reserve",
+      "url": "https://www.checklistbank.org/dataset/8011/about",
       "recorded": "cc by",
+      "asTaken": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "asTakenVersion": "2021-03-24",
+      "asTakenFile": "checklistbank-8011/archive.zip:eml.xml",
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "checklistbank-1022",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": "Parhost World Database of Fleas",
+      "url": "https://www.checklistbank.org/dataset/1022/about",
+      "recorded": "other",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": "other",
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "checklistbank-1023",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": "Phyllachorales",
+      "url": "https://www.checklistbank.org/dataset/1023/about",
+      "recorded": null,
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "checklistbank-1025",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": "Rhytismatales",
+      "url": "https://www.checklistbank.org/dataset/1025/about",
+      "recorded": null,
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "checklistbank-1028",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": "Index Fungorum API crawl",
+      "url": "https://www.checklistbank.org/dataset/1028/about",
+      "recorded": null,
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
     },
     {
       "key": "checklistbank-1101",
       "where": "manifest",
       "stage": "applied",
       "title": "Systema Dipterorum",
+      "url": "https://www.checklistbank.org/dataset/1101/about",
       "recorded": "not stated",
+      "asTaken": "cc by",
+      "asTakenVersion": "Oct 2026",
+      "asTakenFile": "checklistbank-1101/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-124661",
       "where": "manifest",
       "stage": "applied",
       "title": "Universal Chalcidoidea Database curated in TaxonWorks",
+      "url": "https://www.checklistbank.org/dataset/124661/about",
       "recorded": "not stated",
+      "asTaken": "cc by",
+      "asTakenVersion": "Oct 2026",
+      "asTakenFile": "checklistbank-124661/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-139831",
       "where": "manifest",
       "stage": "applied",
       "title": "iNaturalist Taxonomy",
+      "url": "https://www.checklistbank.org/dataset/139831/about",
       "recorded": "no IP restrictions stated",
+      "asTaken": "Taxonomic information should not represent creative work and thus may not be subject to intellectual property restrictions in many jurisdictions.",
+      "asTakenVersion": "2026-10-01",
+      "asTakenFile": "checklistbank-139831/archive.zip:eml.xml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)"
+      ]
     },
     {
       "key": "checklistbank-2000",
       "where": "manifest",
       "stage": "assessed",
       "title": "World Checklist of Vascular Plants",
+      "url": "https://www.checklistbank.org/dataset/2000/about",
       "recorded": "not stated",
+      "asTaken": null,
+      "asTakenVersion": "2026-10-28",
+      "asTakenFile": "checklistbank-2000/archive.zip:eml.xml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)"
+      ]
     },
     {
       "key": "checklistbank-2006",
       "where": "manifest",
       "stage": "declined",
       "title": "International Plant Names Index (IPNI)",
+      "url": "https://www.checklistbank.org/dataset/2006/about",
       "recorded": "CC0",
+      "asTaken": "CC-BY",
+      "asTakenVersion": "2026-10-25",
+      "asTakenFile": "checklistbank-2006/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "checklistbank-2026",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": "Fauna Europaea",
+      "url": "https://www.checklistbank.org/dataset/2026/about",
+      "recorded": "other (unverified)",
+      "asTaken": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+      "asTakenVersion": "2016-09-09",
+      "asTakenFile": "checklistbank-2026/archive.zip:eml.xml",
+      "checklistbank": "other",
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2169",
       "where": "manifest",
       "stage": "applied",
       "title": "NCBI Taxonomy",
+      "url": "https://www.checklistbank.org/dataset/2169/about",
       "recorded": "CC0",
+      "asTaken": "CC0",
+      "asTakenVersion": "2026-04-17",
+      "asTakenFile": "checklistbank-2169/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "relicensed since taken"
+      ]
     },
     {
       "key": "checklistbank-2214",
       "where": "manifest",
       "stage": "refused",
       "title": "Genome Taxonomy Database (GTDB) r232",
+      "url": "https://www.checklistbank.org/dataset/2214/about",
       "recorded": "CC BY-SA 4.0 (per gtdb.ecogenomic.org; ChecklistBank states none); cite per gtdb.ecogenomic.org/about ('Cite GTDB')",
+      "asTaken": "CC-BY-4.0",
+      "asTakenVersion": "r232",
+      "asTakenFile": "checklistbank-2214/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2256",
       "where": "manifest",
       "stage": "applied",
       "title": "World Catalogue of Opiliones",
+      "url": "https://www.checklistbank.org/dataset/2256/about",
       "recorded": "not stated",
+      "asTaken": "cc by",
+      "asTakenVersion": "Oct 2026",
+      "asTakenFile": "checklistbank-2256/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
     },
     {
       "key": "checklistbank-2265",
       "where": "manifest",
       "stage": "assessed",
       "title": "The European Nucleotide Archive (ENA) taxonomy",
+      "url": "https://www.checklistbank.org/dataset/2265/about",
       "recorded": "public",
+      "asTaken": "Public",
+      "asTakenVersion": "2010-12-08",
+      "asTakenFile": "checklistbank-2265/archive.zip:eml.xml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)"
+      ]
     },
     {
-      "key": "checklistbank-24580",
+      "key": "checklistbank-312616",
       "where": "manifest",
       "stage": "applied",
-      "title": "Checklist of Vermont Species",
+      "title": "Catalogue of Life China 2025 Annual Checklist",
+      "url": "https://www.checklistbank.org/dataset/312616/about",
       "recorded": "CC BY",
-      "checklistbank": "cc by nc",
-      "ncMissed": true
+      "asTaken": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "asTakenVersion": "2025-05-22",
+      "asTakenFile": "checklistbank-312616/archive.zip:eml.xml",
+      "checklistbank": "cc by",
+      "flags": [
+        "recorded differs from the archive",
+        "relicensed since taken",
+        "NC not recorded"
+      ]
     },
     {
       "key": "checklistbank-316045",
       "where": "manifest",
       "stage": "declined",
       "title": "sintax",
+      "url": "https://www.checklistbank.org/dataset/316045/about",
       "recorded": "CC BY",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
       "checklistbank": "cc0",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from ChecklistBank (archive states none)"
+      ]
     },
     {
       "key": "checklistbank-56185",
       "where": "manifest",
       "stage": "applied",
       "title": "The World Spider Catalog",
+      "url": "https://www.checklistbank.org/dataset/56185/about",
       "recorded": "not stated",
+      "asTaken": "cc by",
+      "asTakenVersion": "contact:",
+      "asTakenFile": "checklistbank-56185/archive.zip:metadata.yaml",
       "checklistbank": "cc by",
-      "ncMissed": false
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "eol-traitbank",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "notspecified",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "flickr-eol",
+      "where": "manifest",
+      "stage": "refused",
+      "title": null,
+      "url": null,
+      "recorded": "mostly non-commercial per image",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "flow",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "not stated",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "gbif-backbone",
+      "where": "manifest",
+      "stage": "applied",
+      "title": null,
+      "url": null,
+      "recorded": "CC0 / CC BY / CC BY-NC, per constituent dataset",
+      "asTaken": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "asTakenVersion": null,
+      "asTakenFile": "gbif-backbone/backbone.zip:eml.xml",
+      "checklistbank": null,
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "gbif-ipni",
+      "where": "manifest",
+      "stage": "genus-authority",
+      "title": null,
+      "url": null,
+      "recorded": "CC0",
+      "asTaken": "CC-BY",
+      "asTakenVersion": "2026-10-18",
+      "asTakenFile": "gbif-ipni/archive.zip:metadata.yaml",
+      "checklistbank": null,
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "gtdb",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "CC BY-SA 4.0; cite per gtdb.ecogenomic.org/about ('Cite GTDB')",
+      "asTaken": "CC-BY-4.0",
+      "asTakenVersion": "r232",
+      "asTakenFile": "gtdb/gtdb_r232_coldp.zip:metadata.yaml",
+      "checklistbank": null,
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "itis",
+      "where": "manifest",
+      "stage": "superseded by checklistbank-2144 (issued 2026-10-28); declined 2026-10-31",
+      "title": null,
+      "url": null,
+      "recorded": "not stated",
+      "asTaken": "cc0",
+      "asTakenVersion": "2026-08-26",
+      "asTakenFile": "itis/archive.zip:metadata.yaml",
+      "checklistbank": null,
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "moss-tropicos",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "not stated",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "msw3",
+      "where": "manifest",
+      "stage": "refused",
+      "title": null,
+      "url": null,
+      "recorded": "ALL RIGHTS RESERVED",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "species-file-phasmida-v2",
+      "where": "manifest",
+      "stage": "superseded by checklistbank-1050 (issued 2026-10-01); declined 2026-10-31",
+      "title": null,
+      "url": null,
+      "recorded": "not stated",
+      "asTaken": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "asTakenVersion": "2019-01-14",
+      "asTakenFile": "species-file-phasmida-v2/phasmida.zip:eml.xml",
+      "checklistbank": null,
+      "flags": [
+        "recorded differs from the archive"
+      ]
+    },
+    {
+      "key": "usda-plants",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "notspecified",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "usda-plants-extracted",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "not stated",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "zenodo-344329",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "notspecified",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
+    },
+    {
+      "key": "zoobank",
+      "where": "manifest",
+      "stage": "assessed",
+      "title": null,
+      "url": null,
+      "recorded": "open access registry; per-publication rights vary",
+      "asTaken": null,
+      "asTakenVersion": null,
+      "asTakenFile": null,
+      "checklistbank": null,
+      "flags": [
+        "no licence anywhere"
+      ]
     }
   ]
 }
