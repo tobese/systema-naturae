@@ -69,10 +69,12 @@ of what is held.
 
 ## Decisions for the user
 
-- **GTDB placeholders** (168,240 `sp<accession>` and `_A` names): keep as
-  species, keep but mark (a `placeholder` flag the portal can filter), or
-  move to the unplaced store. They are genome clusters, not described
-  species; inventory-over-volume says mark at least.
+- **GTDB placeholders: decided 2026-11-05 (user) -- keep, but mark.**
+  `scripts/markGenomePlaceholders.py` sets `placeholder` on the species node:
+  `"gtdb-genome"` (`CBDUSG01 sp965602895`) or `"gtdb-suffix"` (`Onstottus_A
+  frigus`). Bacteria on q-bert: 162,566 + 6,812 of 230,597 (`98ff38a7b45`);
+  archaea on Macie: 8,993 + 120 of 11,316. Moving them to the unplaced store
+  stays possible later; the flag is what the portal can filter on.
 - **"uncultured X" and "Candidatus Genus" stored as species** (~4,400):
   not species; remove (or move to the unplaced store).
 - **GTDB licence: settled 2026-11-01.** gtdb.ecogenomic.org says CC BY-SA
