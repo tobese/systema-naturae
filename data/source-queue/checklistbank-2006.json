@@ -1,18 +1,11 @@
 {
-  "key": "checklistbank-2006",
-  "title": "",
-  "stage": "triaged",
-  "licence": "",
-  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-2006/archive.zip",
-  "kind": "nomenclatural",
-  "reason": "nomenclatural source (names index, no species): queue it to run nomenclatureTransform.py + applyEnrichment.py",
-  "triaged": {
-    "offered": 0,
-    "alreadyHeld": 0,
-    "staged": 0,
-    "refused": 0,
-    "refusalRate": null
+  "applied": {
+    "added": null,
+    "at": "2026-11-05T12:49:36+0100",
+    "crossFamily": null,
+    "merged": null
   },
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-2006/archive.zip",
   "history": [
     {
       "at": "2026-10-31T23:14:45+0100",
@@ -33,6 +26,23 @@
     {
       "at": "2026-11-02T10:11:54Z",
       "stage": "triaged"
+    },
+    {
+      "at": "2026-11-05T12:49:36+0100",
+      "stage": "applied"
     }
-  ]
+  ],
+  "key": "checklistbank-2006",
+  "kind": "nomenclatural",
+  "licence": "",
+  "reason": "names index: applied through nomenclatureTransform.py + applyEnrichment.py (not the species path). First pass 2026-11-01: 24,564 authorships, 10,297 ids. Re-run 2026-11-05 against the grown tree: 10 authorships, 6 years, 6 ids, 8 files; 11,352 authorship conflicts and 102,812 basionym pairs stay in work/checklistbank-2006/review-*.jsonl for a human",
+  "stage": "applied",
+  "title": "",
+  "triaged": {
+    "alreadyHeld": 0,
+    "offered": 0,
+    "refusalRate": null,
+    "refused": 0,
+    "staged": 0
+  }
 }

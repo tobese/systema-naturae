@@ -1,4 +1,5 @@
 {
+  "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-316856/archive.zip",
   "history": [
     {
       "at": "2026-11-02T20:54:35+0100",
@@ -7,11 +8,43 @@
     {
       "at": "2026-11-02T19:55:00.761827+00:00",
       "stage": "downloaded"
+    },
+    {
+      "at": "2026-11-02T21:58:26Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-02T22:00:43Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-11-02T22:00:43Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-02T22:00:43Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-03T07:05:36Z",
+      "stage": "error"
+    },
+    {
+      "at": "2026-11-05T11:22:23+0100",
+      "stage": "declined"
     }
   ],
   "key": "checklistbank-316856",
   "licence": "cc by",
+  "reason": "applied 2026-11-03 (the ordinator's 6h timeout fired at 08:05, importwrite finished at 08:11: added 167,758), then reverted 2026-11-05 (user). Its 'accepted' rows are uBiota, uBio's 2015 merged classification: 25 of 40 sampled uBio-only additions are GBIF synonyms and every accepted name checked was already held, so the additions were mostly outdated combinations duplicating held species. quarantineSourceAdditions.py --base 7561a00 removed 261,645 uBio-only species and 15,122 new genera (0 species held at the base lost); 181 pending-family rows closed; uBio ids on two species stripped. Its ids on species held before stay as provenance. A names index: if it is ever wanted, only through nomenclatureTransform.py, never the species path",
   "size": 10321031,
-  "stage": "downloaded",
-  "title": "uBio NameBank and uBiota"
+  "stage": "declined",
+  "title": "uBio NameBank and uBiota",
+  "triaged": {
+    "alreadyHeld": 253258,
+    "offered": 995405,
+    "refusalRate": 0.0328,
+    "refused": 32688,
+    "staged": 707665
+  }
 }
