@@ -481,6 +481,17 @@ and later homonyms go to `review-*.jsonl` in the work dir for a human. A
 names index needs a `KINGDOMS_FOR` entry (which of our kingdoms its code
 speaks for) before it can run; IPNI is plantae.
 
+A NameUsage table of nothing but bare names, with no parents, is a names
+index too (2026-11-05: Index Animalium, which had failed as a checklist).
+**The transform decides whether to fill**, from the source itself: on the
+names both sides carry an authorship for, how often do they agree? Below 95%
+(or under 500 names compared) the verdict is `review-only`: nothing is
+filled, the would-be fills go to `review-fills.jsonl`, and the side task
+parks the source with the numbers. IPNI, Species Fungorum Plus and LPSN
+agree 98.4-98.7%; Index Animalium 69% -- Sherborn records a binomial's first
+printing, which in zoology is often a later combination or a re-listing, and
+14 of 26 sampled fills were wrong against GBIF.
+
 `triaged` is only a waiting room; `parked` is a decision: a human measured
 the source and said "not now". Nothing in the pipeline (the Go ordinator,
 its side tasks, the refill) moves a source out of `parked` -- only

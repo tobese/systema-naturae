@@ -29,6 +29,10 @@ and writes into <sources>/work/<work-slug>/:
                    later homonym (illegitimate)
   summary.json
 
+A source whose authorship agrees with ours on fewer than MIN_AGREEMENT of the
+names both carry fills nothing (verdict "review-only" in summary.json): its
+would-be fills go to review-fills.jsonl and the queue parks it.
+
 Read-only on the tree. Without --apply only the counts are printed.
 
     python3 scripts/nomenclatureTransform.py <archive.zip> <work-slug> [--apply]
@@ -39,6 +43,7 @@ import csv
 import io
 import json
 import os
+import re
 import sys
 import zipfile
 
@@ -59,10 +64,23 @@ from tree import ROOT, iter_family_files, iter_species_with_parent  # noqa: E402
 # writes archaea, q-bert bacteria (writerKingdoms); each run takes only the
 # kingdoms its machine may write. Its authors are in neither the zoological
 # nor the botanical index, so it compares with both (code None).
+# Index Animalium (Sherborn 1758-1850, 316855) is animal names as first
+# published: its authorship is "J. C. Fabricius" with the year apart, which
+# zoological_authorship() turns into our "Fabricius, 1798".
 KINGDOMS_FOR = {"IPNI": ("plantae",), "Species Fungorum Plus": ("fungi",),
-                "LPSN": ("archaea", "bacteria")}
-AUTHOR_CODE = {"IPNI": "bot", "Species Fungorum Plus": "bot", "LPSN": None}
+                "LPSN": ("archaea", "bacteria"), "Index Animalium": ("animalia",)}
+AUTHOR_CODE = {"IPNI": "bot", "Species Fungorum Plus": "bot", "LPSN": None,
+               "Index Animalium": "zoo"}
 SPECIES_RANKS = {"spec.", "sp.", "species"}
+# The verdict, from the source itself: on the names it shares with us and
+# where both sides give an authorship, how often do they agree? IPNI, Species
+# Fungorum Plus and LPSN agree 98.4-98.7%; Index Animalium 69% -- Sherborn
+# records a binomial's first printing, so a later combination's author or a
+# re-listing's year, and 14 of 26 sampled fills were wrong against GBIF
+# (2026-11-05). A source below the bar, or with too few names to judge,
+# fills nothing: its fills go to review-fills.jsonl for a human instead.
+MIN_AGREEMENT = 0.95
+MIN_COMPARED = 500
 PAIR_RELATIONS = {"BASIONYM", "REPLACEMENT_NAME", "SYNONYM"}
 
 
@@ -85,11 +103,33 @@ def is_names_index(archive):
     NameUsage table, and a Taxon table (if any) with no parent links. Status
     says nothing -- a ColDP checklist's Taxon table is accepted by
     definition and often leaves it blank (World Plants, 2026-11-01) -- and
-    the parent column is spelled parentID, parentId or parent_id."""
+    the parent column is spelled parentID, parentId or parent_id.
+
+    Also a NameUsage table that is nothing but bare names, with no parents:
+    Index Animalium (316855) is shaped so, and failed as a checklist with "no
+    column col:parentID". Status decides here, unlike above: MDD (9802) has
+    no parents either but is a checklist, its rows accepted or synonyms. The
+    whole table, not a sample: uBio (316856) opens with 12,000 bare names
+    and then carries its uBiota classification, accepted rows with parents;
+    a checklist stops at its first such row, so this stays quick for one."""
     try:
         z = zipfile.ZipFile(archive)
     except (OSError, zipfile.BadZipFile):
         return False
+    usage = _member(z, "NameUsage.tsv")
+    if usage and not _member(z, "Name.tsv") and not _member(z, "Synonym.tsv"):
+        n = 0
+        try:
+            for n, r in enumerate(_rows(z, usage), 1):
+                if any(v for k, v in r.items() if k.lower().replace("_", "") == "parentid"):
+                    return False
+                if (r.get("status") or "").strip().lower() != "bare name":
+                    return False
+        except (UnicodeDecodeError, csv.Error):
+            # not ours to read (NZ EPA 313481 is Latin-1): the checklist
+            # reader decides, as before this branch existed
+            return False
+        return n > 0
     if not _member(z, "Name.tsv") or _member(z, "NameUsage.tsv") or _member(z, "Synonym.tsv"):
         return False
     taxon = _member(z, "Taxon.tsv")
@@ -103,18 +143,43 @@ def is_names_index(archive):
     return True
 
 
-def load_index(archive):
-    """name id -> (canonical lower, authorship, year, status); relations."""
+_INITIALS = re.compile(r"\b(?:[A-Z][a-z]{0,2}\.\s*)+(?=\S)")
+
+
+def zoological_authorship(raw, year):
+    """Sherborn's "J. C. Fabricius" + 1798 -> "Fabricius, 1798", the form our
+    zoological species carry. Initials go ("G. R. Gray" -> "Gray", "W. de
+    Haan" -> "de Haan"), "in" stays ("Franklin in Gray, 1848"). No
+    parentheses: a matched binomial is the combination as first published.
+    Without a four-digit year there is nothing to fill, so ""."""
+    year = (year or "").strip()[:4]
+    if not raw or not year.isdigit():
+        return ""
+    who = " in ".join(_INITIALS.sub("", part).strip() for part in raw.split(" in "))
+    return f"{' '.join(who.split())}, {year}" if who else ""
+
+
+def load_index(archive, code=""):
+    """name id -> (canonical lower, authorship, year, status); relations.
+
+    The names are in Name.tsv, or NameUsage.tsv for a bare-name index
+    (Index Animalium), which has no rank: a binomial is a species there."""
     z = zipfile.ZipFile(archive)
     names = {}
-    for r in _rows(z, _member(z, "Name.tsv")):
-        if (r.get("rank") or "").lower() not in SPECIES_RANKS:
+    table = _member(z, "Name.tsv") or _member(z, "NameUsage.tsv")
+    zoo = AUTHOR_CODE.get(code) == "zoo"
+    for r in _rows(z, table):
+        rank = (r.get("rank") or "").lower()
+        if rank and rank not in SPECIES_RANKS:
             continue
         nm = " ".join((r.get("scientificName") or "").split())
-        if len(nm.split()) < 2:
+        if len(nm.split()) < 2 or (not rank and len(nm.split()) != 2):
             continue
-        names[r["ID"]] = (nm.lower(), (r.get("authorship") or "").strip(),
-                          (r.get("publishedInYear") or "").strip(), r.get("link") or "")
+        au = (r.get("authorship") or "").strip()
+        yr = (r.get("publishedInYear") or "").strip()
+        if zoo:
+            au = zoological_authorship(au, yr)
+        names[r["ID"]] = (nm.lower(), au, yr, r.get("link") or "")
     rel = []
     m = _member(z, "NameRelation.tsv")
     if m:
@@ -175,7 +240,7 @@ def main() -> int:
         args.code = alias
 
     print(f"  reading {args.archive}", flush=True)
-    names, rel = load_index(args.archive)
+    names, rel = load_index(args.archive, args.code)
     by_name = collections.defaultdict(list)
     for nid, (nm, au, yr, link) in names.items():
         by_name[nm].append((nid, au, yr))
@@ -260,13 +325,30 @@ def main() -> int:
     stat["basionym/replacement pairs both held"] = len(pairs)
     stat["later homonyms held"] = len({h["name"] for h in homonyms})
 
+    agree = (stat["authorship agrees (same string)"]
+             + stat["authorship agrees (same authors, other form)"])
+    compared = agree + stat["authorship conflicts"]
+    rate = agree / compared if compared else 0.0
+    if compared < MIN_COMPARED:
+        verdict = f"review-only: {compared:,} authorships compared, too few to judge (< {MIN_COMPARED})"
+    elif rate < MIN_AGREEMENT:
+        verdict = (f"review-only: agrees with our authorship on {rate:.1%} of {compared:,} "
+                   f"shared names (< {MIN_AGREEMENT:.0%})")
+    else:
+        verdict = f"fill: agrees on {rate:.1%} of {compared:,} shared names"
+    review_fills = []
+    if verdict.startswith("review-only"):
+        review_fills, fills = fills, []
+
     for k, v in stat.most_common():
         print(f"  {v:>10,}  {k}")
+    print(f"\n  verdict: {verdict}")
     if not args.apply:
         print("\n  (dry run -- pass --apply to write the work files)")
         return 0
     os.makedirs(work, exist_ok=True)
-    for fn, rows in (("enrich.jsonl", fills), ("review-authorship.jsonl", conflicts),
+    for fn, rows in (("enrich.jsonl", fills), ("review-fills.jsonl", review_fills),
+                     ("review-authorship.jsonl", conflicts),
                      ("review-basionym-pairs.jsonl", pairs),
                      ("review-later-homonyms.jsonl", homonyms)):
         with open(os.path.join(work, fn), "w", encoding="utf-8") as fh:
@@ -274,7 +356,8 @@ def main() -> int:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     with open(os.path.join(work, "summary.json"), "w", encoding="utf-8") as fh:
         json.dump({"archive": args.archive, "code": args.code, "source": source_key,
-                   "counts": dict(stat)}, fh, indent=1)
+                   "counts": dict(stat), "agreement": round(rate, 4),
+                   "verdict": verdict}, fh, indent=1)
         fh.write("\n")
     print(f"\n  wrote {work}/: enrich.jsonl ({len(fills):,}), review files, summary.json")
     return 0

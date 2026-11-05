@@ -138,9 +138,18 @@ def process_nomenclatural(q: dict) -> None:
                           + " | ".join((result.stdout or result.stderr or "").splitlines()[-3:]))
             continue
         try:
-            counts = json.load(open(os.path.join(work, "summary.json")))["counts"]
-        except (OSError, ValueError, KeyError):
-            counts = {}
+            summary = json.load(open(os.path.join(work, "summary.json")))
+        except (OSError, ValueError):
+            summary = {}
+        counts, verdict = summary.get("counts") or {}, summary.get("verdict") or ""
+        if verdict.startswith("review-only"):
+            # the transform's own measurement says its fills are not safe
+            # (Index Animalium, 2026-11-05): nothing was filled, a human decides
+            IQD.set_stage(q, key, "parked", enriched=counts,
+                          reason=f"nomenclatural {verdict}; would-be fills in "
+                                 f"work/{key}/review-fills.jsonl")
+            print(f"  {key}: parked ({verdict})", flush=True)
+            continue
         IQD.set_stage(q, key, "applied", enriched=counts)
         print(f"  {key}: enriched", flush=True)
 
