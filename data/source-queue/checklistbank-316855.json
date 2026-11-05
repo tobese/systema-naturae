@@ -20,11 +20,15 @@
     {
       "at": "2026-11-05T11:22:33+0100",
       "stage": "parked"
+    },
+    {
+      "at": "2026-11-05T18:08:39+0100",
+      "stage": "parked"
     }
   ],
   "key": "checklistbank-316855",
   "licence": "cc by",
-  "reason": "names index, not a checklist: Sherborn's Index Animalium 1758-1850, every row status 'bare name', no parentID/rank, names as originally printed (Colymbus aalge, not Uria aalge). Belongs on the nomenclatural track (nomenclatureTransform.py + applyEnrichment.py) like IPNI, but that reader takes Name.tsv names indexes only, and Sherborn's author strings ('E. Pontoppidan', year separate) need normalising before they can fill authorship. Parked 2026-11-05 pending the user's call on building that",
+  "reason": "names index (Sherborn 1758-1850, bare names, no parentID): the type is nomenclatural, but its fills are not safe. Measured 2026-11-05 with a NameUsage-reading nomenclatureTransform (scratch, not committed): 135,008 of our animalia species are in it, 22,582 would get authorship, 29,721 conflict (30%; IPNI ~1%). Of 26 sampled fills GBIF knows, 12 agree, 14 differ: Sherborn records a binomial's first printing, so a later combination's author (Melaenornis edolioides 'Gray, 1840' vs '(Swainson, 1837)'), a re-listing year (Linnaeus 1766 for 1758 names), OCR spellings. Useful as review evidence (work/checklistbank-316855-review/), not as an automatic fill. Parked for the user",
   "size": 422683,
   "stage": "parked",
   "title": "Index Animalium (uBio digital edition)"

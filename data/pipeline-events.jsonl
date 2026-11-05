@@ -10242,3 +10242,109 @@
 {"at": "2026-11-05T11:22:23+0100", "key": "checklistbank-316856", "stage": "declined", "action": "set", "reason": "applied 2026-11-03 (the ordinator's 6h timeout fired at 08:05, importwrite finished at 08:11: added 167,758), then reverted 2026-11-05 (user). Its 'accepted' rows are uBiota, uBio's 2015 merged classification: 25 of 40 sampled uBio-only additions are GBIF synonyms and every accepted name checked was already held, so the additions were mostly outdated combinations duplicating held species. quarantineSourceAdditions.py --base 7561a00 removed 261,645 uBio-only species and 15,122 new genera (0 species held at the base lost); 181 pending-family rows closed; uBio ids on two species stripped. Its ids on species held before stay as provenance. A names index: if it is ever wanted, only through nomenclatureTransform.py, never the species path"}
 {"at": "2026-11-05T11:22:33+0100", "key": "checklistbank-316855", "stage": "parked", "action": "set", "reason": "names index, not a checklist: Sherborn's Index Animalium 1758-1850, every row status 'bare name', no parentID/rank, names as originally printed (Colymbus aalge, not Uria aalge). Belongs on the nomenclatural track (nomenclatureTransform.py + applyEnrichment.py) like IPNI, but that reader takes Name.tsv names indexes only, and Sherborn's author strings ('E. Pontoppidan', year separate) need normalising before they can fill authorship. Parked 2026-11-05 pending the user's call on building that"}
 {"at": "2026-11-05T12:49:36+0100", "key": "checklistbank-2006", "stage": "applied", "action": "set", "reason": "names index: applied through nomenclatureTransform.py + applyEnrichment.py (not the species path). First pass 2026-11-01: 24,564 authorships, 10,297 ids. Re-run 2026-11-05 against the grown tree: 10 authorships, 6 years, 6 ids, 8 files; 11,352 authorship conflicts and 102,812 basionym pairs stay in work/checklistbank-2006/review-*.jsonl for a human"}
+{"at": "2026-11-05T18:08:39+0100", "key": "checklistbank-316855", "stage": "parked", "action": "set", "reason": "names index (Sherborn 1758-1850, bare names, no parentID): the type is nomenclatural, but its fills are not safe. Measured 2026-11-05 with a NameUsage-reading nomenclatureTransform (scratch, not committed): 135,008 of our animalia species are in it, 22,582 would get authorship, 29,721 conflict (30%; IPNI ~1%). Of 26 sampled fills GBIF knows, 12 agree, 14 differ: Sherborn records a binomial's first printing, so a later combination's author (Melaenornis edolioides 'Gray, 1840' vs '(Swainson, 1837)'), a re-listing year (Linnaeus 1766 for 1758 names), OCR spellings. Useful as review evidence (work/checklistbank-316855-review/), not as an automatic fill. Parked for the user"}
+{"at": "2026-11-05T18:33:40+0100", "key": "checklistbank-199241", "stage": "candidate", "action": "add", "title": "Digital Catalogue of Biodiversity of Poland — Animalia: Arthropoda: Chelicerata: Arachnida: Acari"}
+{"at": "2026-11-05T18:33:40+0100", "key": "checklistbank-199241", "stage": "parked", "action": "set", "reason": "NC (CC BY-NC 4.0 per the archive's eml.xml), measured by hand 2026-11-05: 527 new into 101 held families (mites), 864 merge as ids, 41 refused. Spelling: of 29 sampled new names GBIF has 8 under a corrected spelling (Heamaphysalis punctata = Haemaphysalis punctata, Brachydpoda, Pyemotes zwolferi...), 18 only to genus, 3 nothing; refused families include misspelt ones (ichtyostomatogasteridae, cytoditdae). ~28% misspellings would add duplicate species under wrong names. Recommendation: decline unless a spelling pass is built"}
+{"at": "2026-11-05T18:33:40+0100", "key": "checklistbank-9221", "stage": "candidate", "action": "add", "title": "Annotated checklist of endemic species from the Western Balkans"}
+{"at": "2026-11-05T18:33:40+0100", "key": "checklistbank-9221", "stage": "parked", "action": "set", "reason": "NC per ChecklistBank, but the archive itself states no licence (eml.xml), and the licence as taken is what counts. Measured by hand 2026-11-05: only 26 new species (15 families), 1,584 merge as ids, 9 refused. Too little to justify an unclear licence. Recommendation: decline"}
+{"at": "2026-11-05T18:35:40+0100", "key": "checklistbank-199241", "stage": "declined", "action": "set", "reason": "declined 2026-11-05 (user). NC (CC BY-NC 4.0 per the archive's eml.xml), measured by hand 2026-11-05: 527 new into 101 held families (mites), 864 merge as ids, 41 refused. Spelling: of 29 sampled new names GBIF has 8 under a corrected spelling (Heamaphysalis punctata = Haemaphysalis punctata, Brachydpoda, Pyemotes zwolferi...), 18 only to genus, 3 nothing; refused families include misspelt ones (ichtyostomatogasteridae, cytoditdae). ~28% misspellings would add duplicate species under wrong names. Recommendation: decline unless a spelling pass is built"}
+{"at": "2026-11-05T18:35:40+0100", "key": "checklistbank-9221", "stage": "declined", "action": "set", "reason": "declined 2026-11-05 (user). NC per ChecklistBank, but the archive itself states no licence (eml.xml), and the licence as taken is what counts. Measured by hand 2026-11-05: only 26 new species (15 families), 1,584 merge as ids, 9 refused. Too little to justify an unclear licence. Recommendation: decline"}
+{"at": "2026-11-05T19:03:16+0100", "key": "checklistbank-1021", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-02, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:16+0100", "key": "checklistbank-1044", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:16+0100", "key": "checklistbank-1081", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:17+0100", "key": "checklistbank-1108", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:17+0100", "key": "checklistbank-1128", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:17+0100", "key": "checklistbank-1133", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-02, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:17+0100", "key": "checklistbank-1193", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:17+0100", "key": "checklistbank-1200", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:18+0100", "key": "checklistbank-124661", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-02, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:18+0100", "key": "checklistbank-2256", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-02, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:18+0100", "key": "checklistbank-2302", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-01, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:18+0100", "key": "checklistbank-315880", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-11-02, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:18+0100", "key": "checklistbank-51518", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-10-30, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"at": "2026-11-05T19:03:19+0100", "key": "checklistbank-56185", "stage": "candidate", "action": "set", "reason": "re-take 2026-11-05: newer version on ChecklistBank under the same key (issued 2026-10-25, sourceVersions.py newer-same-key); old archive in archives-prev/"}
+{"action":"ordinator","at":"2026-11-05T19:04:07+0100","key":"checklistbank-1021","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:06:44+0100","key":"checklistbank-1021","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:06:44+0100","key":"checklistbank-1021","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:06:44+0100","key":"checklistbank-1021","stage":"applying"}
+{"action":"ordinator","added":24,"at":"2026-11-05T19:08:19+0100","crossFamily":0,"families":29,"key":"checklistbank-1021","merged":1299,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:08:19+0100","key":"checklistbank-1044","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:08:49+0100","key":"checklistbank-1044","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:08:49+0100","key":"checklistbank-1044","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:08:49+0100","key":"checklistbank-1044","stage":"applying"}
+{"action":"ordinator","added":4,"at":"2026-11-05T19:16:11+0100","crossFamily":0,"families":125,"key":"checklistbank-1044","merged":1991,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:16:11+0100","key":"checklistbank-1081","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:17:13+0100","key":"checklistbank-1081","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:17:13+0100","key":"checklistbank-1081","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:17:13+0100","key":"checklistbank-1081","stage":"applying"}
+{"action":"ordinator","added":5,"at":"2026-11-05T19:34:12+0100","crossFamily":0,"families":300,"key":"checklistbank-1081","merged":4159,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:34:12+0100","key":"checklistbank-1108","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:34:40+0100","key":"checklistbank-1108","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:34:40+0100","key":"checklistbank-1108","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:34:40+0100","key":"checklistbank-1108","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-11-05T19:40:53+0100","crossFamily":0,"families":81,"key":"checklistbank-1108","merged":280,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:40:53+0100","key":"checklistbank-1128","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:41:54+0100","key":"checklistbank-1128","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:41:54+0100","key":"checklistbank-1128","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:41:54+0100","key":"checklistbank-1128","stage":"applying"}
+{"at": "2026-11-05T19:42:48+0100", "key": "checklistbank-2047", "stage": "declined", "action": "set", "reason": "superseded 2026-11-05: the 2017 edition of the Danish fungi checklist; ChecklistBank 32593 (Checklist of Danish Fungi, issued 2026-02-27) is the current one. Later is later. (Blocked 2026-10-22 on the old one-NC-exception rule.)"}
+{"at": "2026-11-05T19:42:48+0100", "key": "checklistbank-32593", "stage": "parked", "action": "set", "reason": "NC (CC BY-NC 4.0 per the archive's eml.xml); blocked 2026-10-22 under the old rule, re-measured 2026-11-05 under the NC rule: 27 new species (18 families), 6,630 merge as ids, 589 refused (no family given). Value is corroboration of Danish fungi, not growth. Awaiting the user"}
+{"at": "2026-11-05T19:42:49+0100", "key": "checklistbank-304886", "stage": "parked", "action": "set", "reason": "NC (CC BY-NC 4.0 per the archive's eml.xml); re-measured 2026-11-05: 0 new species, 3,757 merge as ids, 8 refused. Corroboration only. Awaiting the user"}
+{"at": "2026-11-05T19:43:11+0100", "key": "checklistbank-310690", "stage": "candidate", "action": "add", "title": "GlobalTreeSearch"}
+{"at": "2026-11-05T19:43:11+0100", "key": "checklistbank-310690", "stage": "parked", "action": "set", "reason": "same key as the manifest's 'assessed' entry (NC, unmeasured); measured 2026-11-05 under the NC rule: 38 new species (23 families), 10,835 merge as ids, 0 refused. CC BY-NC 4.0 per the archive's eml.xml. Awaiting the user"}
+{"at": "2026-11-05T19:43:12+0100", "key": "checklistbank-304756", "stage": "candidate", "action": "add", "title": "AlgaeBase (AlgaeGNA)"}
+{"at": "2026-11-05T19:43:12+0100", "key": "checklistbank-304756", "stage": "parked", "action": "set", "reason": "same key as the manifest's deferred entry. Measured 2026-11-05: NOT AlgaeBase's own release but a 2021 Global Names Architecture export (alias AlgaeGNA, metadata provider GNA), and its eml.xml has an empty <license/> -- the licence as taken is none (ChecklistBank's 'CC BY-NC' is not in the archive). 22,462 new into 644 held families (chromista/plantae; 7,043 routed to bacteria = cyanobacteria, q-bert's), 40,003 merge as ids. Sample of 30 new: GBIF knows 6 (3 as synonyms), 24 unknown to GBIF (thin algae coverage; several fossil dinocysts/coccoliths). Not takeable as it stands"}
+{"action":"ordinator","added":3,"at":"2026-11-05T19:49:11+0100","crossFamily":0,"families":99,"key":"checklistbank-1128","merged":715,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:49:11+0100","key":"checklistbank-1133","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:49:40+0100","key":"checklistbank-1133","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:49:40+0100","key":"checklistbank-1133","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:49:40+0100","key":"checklistbank-1133","stage":"applying"}
+{"action":"ordinator","added":1,"at":"2026-11-05T19:52:16+0100","crossFamily":0,"families":49,"key":"checklistbank-1133","merged":776,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:52:16+0100","key":"checklistbank-1193","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:52:52+0100","key":"checklistbank-1193","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:52:52+0100","key":"checklistbank-1193","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:52:52+0100","key":"checklistbank-1193","stage":"applying"}
+{"action":"ordinator","added":2,"at":"2026-11-05T19:57:30+0100","crossFamily":7,"families":62,"key":"checklistbank-1193","merged":445,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T19:57:30+0100","key":"checklistbank-1200","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T19:57:58+0100","key":"checklistbank-1200","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T19:57:58+0100","key":"checklistbank-1200","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T19:57:58+0100","key":"checklistbank-1200","stage":"applying"}
+{"at": "2026-11-05T20:00:48+0100", "key": "checklistbank-304886", "stage": "declined", "action": "set", "reason": "declined 2026-11-05 (user): adds nothing new. NC (CC BY-NC 4.0 per the archive's eml.xml); re-measured 2026-11-05: 0 new species, 3,757 merge as ids, 8 refused. Corroboration only. Awaiting the user"}
+{"at": "2026-11-05T20:02:58+0100", "key": "checklistbank-2214", "stage": "blocked", "action": "set", "reason": "GTDB r232 on Macie (archaea side) measured 2026-11-05: 199,923 offered (bacteria 184,237, archaea 9,505, 6,181 unresolved), 192,483 already held, 1,259 merge as ids, 0 new species -- nothing for Macie to take. Bacteria and the placeholder decision are q-bert's: user decided 2026-11-05 to MARK the 168,240 genome placeholders (keep, flag them), per docs/qbert-bacteria-viruses-plan.md. Licence CC BY-SA 4.0 (settled 2026-11-01)"}
+{"action":"ordinator","added":5,"at":"2026-11-05T20:03:40+0100","crossFamily":23,"families":48,"key":"checklistbank-1200","merged":212,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T20:03:41+0100","key":"checklistbank-124661","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T20:04:24+0100","key":"checklistbank-124661","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T20:04:24+0100","key":"checklistbank-124661","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T20:04:24+0100","key":"checklistbank-124661","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-11-05T20:09:01+0100","crossFamily":4,"families":49,"key":"checklistbank-124661","merged":3318,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T20:09:01+0100","key":"checklistbank-2256","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T20:11:17+0100","key":"checklistbank-2256","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T20:11:17+0100","key":"checklistbank-2256","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T20:11:17+0100","key":"checklistbank-2256","stage":"applying"}
+{"action":"ordinator","added":8,"at":"2026-11-05T20:12:38+0100","crossFamily":0,"families":20,"key":"checklistbank-2256","merged":193,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T20:12:38+0100","key":"checklistbank-2302","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T20:13:10+0100","key":"checklistbank-2302","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T20:13:10+0100","key":"checklistbank-2302","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T20:13:10+0100","key":"checklistbank-2302","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-11-05T20:20:27+0100","crossFamily":5,"families":148,"key":"checklistbank-2302","merged":1538,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T20:20:27+0100","key":"checklistbank-315880","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T20:20:55+0100","key":"checklistbank-315880","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T20:20:55+0100","key":"checklistbank-315880","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T20:20:55+0100","key":"checklistbank-315880","stage":"applying"}
+{"action":"ordinator","added":3,"at":"2026-11-05T20:21:35+0100","crossFamily":0,"families":14,"key":"checklistbank-315880","merged":311,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T20:21:36+0100","key":"checklistbank-51518","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T20:22:04+0100","key":"checklistbank-51518","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T20:22:04+0100","key":"checklistbank-51518","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T20:22:04+0100","key":"checklistbank-51518","stage":"applying"}
+{"action":"ordinator","added":20,"at":"2026-11-05T20:24:36+0100","crossFamily":1821,"families":359,"key":"checklistbank-51518","merged":12586,"stage":"applied"}
+{"action":"ordinator","at":"2026-11-05T20:24:36+0100","key":"checklistbank-56185","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-05T20:25:19+0100","key":"checklistbank-56185","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-05T20:25:19+0100","key":"checklistbank-56185","stage":"queued"}
+{"action":"ordinator","at":"2026-11-05T20:25:19+0100","key":"checklistbank-56185","stage":"applying"}
+{"action":"ordinator","added":83,"at":"2026-11-05T20:27:13+0100","crossFamily":0,"families":37,"key":"checklistbank-56185","merged":15143,"stage":"applied"}
+{"at": "2026-11-05T20:29:06+0100", "key": "checklistbank-26853", "stage": "candidate", "action": "add", "title": "WRiMS"}
+{"at": "2026-11-05T20:30:41+0100", "key": "checklistbank-26853", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-11-05T20:32:31+0100","key":"checklistbank-26853","stage":"transforming"}
+{"action":"ordinator","added":0,"at":"2026-11-05T20:34:25+0100","crossFamily":0,"families":0,"key":"checklistbank-26853","merged":0,"stage":"applied"}
+{"at": "2026-11-05T20:35:43+0100", "key": "checklistbank-32593", "stage": "applied", "action": "set", "reason": "taken by hand 2026-11-05 (user) under the NC rule: CC BY-NC 4.0 per the archive's eml.xml; the current (2026) edition, 2047 declined as superseded. 28 added, 6,629 merged (1,041 into a copy held in another family)"}
+{"at": "2026-11-05T20:35:43+0100", "key": "checklistbank-310690", "stage": "applied", "action": "set", "reason": "taken by hand 2026-11-05 (user) under the NC rule: CC BY-NC 4.0 per the archive's eml.xml. 39 added, 10,832 merged"}
