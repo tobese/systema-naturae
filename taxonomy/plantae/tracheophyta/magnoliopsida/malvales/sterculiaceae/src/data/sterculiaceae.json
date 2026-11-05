@@ -1173,21 +1173,57 @@
           },
           "uuid": "4fb95f35-ed7c-4851-a6de-bb23960cfc86",
           "authorship": "Sprague",
-          "yearPublished": 1916
+          "yearPublished": 1916,
+          "children": []
         }
       ]
     },
     {
-      "id": "GENUS_THEOBROMA",
-      "name": "Theobroma",
+      "id": "GENUS_HELICTERES",
+      "name": "Helicteres",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HELICTERES_JAMAICENSIS",
+          "name": "Helicteres jamaicensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Helicteres",
+          "sourceIds": {
+            "checklistbank-316856": "2667400",
+            "checklistbank-301804": "https://www.gbif.org/species/5406690"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sterculiaceae"
+    },
+    {
+      "id": "GENUS_THEOBRAMA",
+      "name": "Theobrama",
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "sterculiaceae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_THEOBRAMA_CACAO",
+          "name": "Theobrama cacao",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Theobrama",
+          "sourceIds": {
+            "checklistbank-33219": "148"
+          },
+          "uuid": "130afd03-4092-48cc-8686-1d48c163f965"
+        }
+      ]
     }
   ],
-  "genusCount": 25,
-  "speciesCount": 67,
+  "genusCount": 28,
+  "speciesCount": 69,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -1198,6 +1234,7 @@
     },
     "checklistbank": "txn:53811",
     "checklistbank-1174": "txn:53811",
-    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1071125"
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1071125",
+    "checklistbank-316856": "450253"
   }
 }
