@@ -41,6 +41,18 @@ collects the open questions and points back to them.
     and the GBIF copy, CC BY-NC 4.0 as taken).
   - **BioAcoustica** ([62703](https://www.checklistbank.org/dataset/62703/about),
     CC BY-NC-SA 3.0 as taken): 342 species, 58 alone.
+  - **Checklist of Danish Fungi** ([32593](https://www.checklistbank.org/dataset/32593/about),
+    2026 edition, CC BY-NC 4.0 as taken), 2026-11-05: 28 species added, 6,629
+    corroborated. Its 2017 edition (2047) declined as superseded.
+  - **GlobalTreeSearch** ([310690](https://www.checklistbank.org/dataset/310690/about),
+    CC BY-NC 4.0 as taken), 2026-11-05: 39 species added, 10,832 corroborated.
+
+  Measured 2026-11-05 and not taken: Checklist of Vermont Fungi (304886, NC;
+  0 new), Poland Acari (199241, NC; ~28% misspelt names), Western Balkan
+  endemics (9221; no licence in the archive), and **AlgaeBase as ChecklistBank
+  serves it** (304756): a 2021 Global Names export with an empty `<license/>`,
+  not AlgaeBase's own release, so no licence as taken. AlgaeBase itself would
+  have to supply data under a stated licence.
 
   The project's own contribution is CC BY 4.0 (`DATA_LICENSE.md`).
 - **Enforcement:**
@@ -60,8 +72,8 @@ collects the open questions and points back to them.
 |---|---|---|---|---|---|
 | 1 | **Checklist of Vermont Species** (ChecklistBank [24580](https://www.checklistbank.org/dataset/24580/about)) | CC BY-NC 4.0, as the archive taken 2026-10-25 states (version 2026-08-31); the manifest's "CC BY" was a recording error, corrected. | **Decided 2026-11-02:** kept under the NC rule (above). | 47 species rest on it alone; 1,288 more carry its id beside other sources. | Done -- listed under the NC rule. |
 | 2 | **MycoBank** (`mycobank`) | CC BY-NC (MycoBank's site terms, 'unadapted form only'); three distributions state three things. | **Decided 2026-11-02 (user): kept under the NC rule.** | 173,644 fungal species carry its MB number, 875 rest on it alone; used for ids and authorship checks, no renames. | Done -- listed under the NC rule. Still worth recording the terms of the login it was downloaded with. |
-| 3 | **AlgaeBase** (ChecklistBank [304756](https://www.checklistbank.org/dataset/304756/about)) | CC BY-NC | Assessed, deferred since 2026-10-10. | Unmeasured. It is also the authority for some algal homonym calls (e.g. *Ulva plantaginifolia*, low/medium confidence in `data/cross-kingdom-homonym-decisions.json`). | Under the relaxed NC rule: may be taken -- measure first (what it adds that no open source holds). |
-| 4 | **GlobalTreeSearch** (ChecklistBank [310690](https://www.checklistbank.org/dataset/310690/about)) | CC BY-NC | Assessed | Unmeasured | Under the relaxed NC rule: may be taken -- measure first. |
+| 3 | **AlgaeBase** (ChecklistBank [304756](https://www.checklistbank.org/dataset/304756/about)) | CC BY-NC | Measured 2026-11-05: the ChecklistBank copy is a 2021 Global Names export (alias AlgaeGNA) whose archive states **no licence** (empty `<license/>`); ChecklistBank's CC BY-NC is not in it. | Would add 22,462 species to 644 held families, 40,003 corroborated. It is also the authority for some algal homonym calls (e.g. *Ulva plantaginifolia*, low/medium confidence in `data/cross-kingdom-homonym-decisions.json`). | Not takeable as served: parked. AlgaeBase itself would have to supply data under a stated licence. |
+| 4 | **GlobalTreeSearch** (ChecklistBank [310690](https://www.checklistbank.org/dataset/310690/about)) | CC BY-NC | **Taken 2026-11-05** under the NC rule (CC BY-NC 4.0 as taken). | 39 species added, 10,832 corroborated. | Done -- listed under the NC rule. |
 | 5 | **NC GBIF checklist sets** | CC BY-NC | 192 of the top 1,000 in the dashboard's GBIF tab, Add disabled. | Each needs a decision row. | Under the relaxed NC rule: may be taken one by one after measuring; the dashboard's Add stays disabled, so each is a by-hand call. |
 | 6 | **GBIF Backbone constituents** | CC0 / CC BY / **CC BY-NC**, per constituent dataset | Applied | 200,677 nodes tagged `gbif` have no dataset DOI, so no single record's licence can be stated ([`data-sources.md`](data-sources.md) gap 3). | Trace each node to its constituent dataset, or replace it from the constituent where that dataset is open. |
 | 7 | **Permission-based `websearch` sources**: FloraBase, Flora of China, NZPCN, SANBI | Permission, not a licence | Applied (~8 species) | See the attribution doc. | Get written permission, or replace them. |
