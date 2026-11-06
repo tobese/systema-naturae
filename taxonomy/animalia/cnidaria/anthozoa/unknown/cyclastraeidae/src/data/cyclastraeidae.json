@@ -3,7 +3,29 @@
   "name": "Cyclastraeidae",
   "rank": "FAMILY",
   "commonName": "Cyclastraeidae",
-  "children": [],
+  "children": [
+    {
+      "id": "GENUS_CYCLASTRAEA",
+      "name": "Cyclastraea",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclastraeidae",
+      "children": [
+        {
+          "id": "SP_CYCLASTRAEA_UNDETERMINED",
+          "name": "Cyclastraea undetermined",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclastraea",
+          "sourceIds": {
+            "checklistbank-282468": "B3D0A0D87867577389192F9AC70832BC.taxon"
+          },
+          "uuid": "ca189730-cf9d-43df-9016-3130c0b627e2"
+        }
+      ]
+    }
+  ],
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -12,5 +34,6 @@
       "orderKey": 714,
       "familyKey": 3250262
     }
-  }
+  },
+  "speciesCount": 1
 }
