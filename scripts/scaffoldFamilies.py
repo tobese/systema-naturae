@@ -270,6 +270,14 @@ def authority_chains(archive: str, ranks: list[str]):
     import colChecklist as K
     taxa = K.load_cached(archive)[0]
     by_id = {t["id"]: t for t in taxa}
+
+    def bare(t):
+        # COL's DwCA scientificName carries the authorship ("Gymnolaemata
+        # Allman, 1856"); the tree holds bare names, and a name with the
+        # authorship on would be created beside the one already held.
+        nm, au = (t.get("name") or "").strip(), (t.get("authorship") or "").strip()
+        return nm[:-len(au)].strip() if au and nm.endswith(au) else nm
+
     fams = {}
     for t in taxa:
         if (t.get("rank") or "").lower() != "family" or t.get("is_synonym"):
@@ -279,18 +287,18 @@ def authority_chains(archive: str, ranks: list[str]):
         while p in by_id and p not in seen:
             seen.add(p)
             n = by_id[p]
-            above.add((n.get("name") or "").lower())
+            above.add(bare(n).lower())
             r = (n.get("rank") or "").lower()
             if r == "family":
-                problem = f"the authority places it inside family {n['name']}"
+                problem = f"the authority places it inside family {bare(n)}"
             if r in ranks:
-                chain.append((r, n["name"]))
+                chain.append((r, bare(n)))
             p = n.get("parent")
         chain.reverse()
-        key = t["name"].lower()
+        key = bare(t).lower()
         prior = fams.get(key)
         if prior is None or (prior["problem"] and not problem):
-            fams[key] = {"family": t["name"], "chain": chain, "problem": problem,
+            fams[key] = {"family": bare(t), "chain": chain, "problem": problem,
                          "id": t["id"], "above": above}
     # Accepted species per family: walk each species up to its family.
     fam_ids = {v["id"]: k for k, v in fams.items()}
@@ -325,7 +333,8 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
     within = (rules.get("within") or "").lower()
     wanted = {f for f in pend if f not in held}
     auth = rules["authority"]
-    archive = os.path.join(_sources.ROOT, "archives", auth["key"], "archive.zip")
+    archive = os.path.join(_sources.ROOT, "archives", auth["key"],
+                           auth.get("archive") or "archive.zip")
     if not os.path.exists(archive):
         sys.exit(f"FATAL: authority archive not found at {archive}")
     rejects = [(re.compile(r["pattern"]), r["why"]) for r in rules.get("rejectNames", [])]
@@ -343,6 +352,22 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
     fams, spp = authority_chains(archive, ranks)
     refused: dict[str, list[str]] = {}
     added = []
+    # Every name already at a rank between KINGDOM and FAMILY, wherever it
+    # sits. With refuseParallel, a chain that would create one of these
+    # again is the authority and the tree disagreeing over where it goes;
+    # creating it would build a second branch beside the first, the way the
+    # virus tree got two Lenarviricota.
+    placed: dict[str, str] = {}
+
+    def index(n, path):
+        r = (n.get("rank") or "").lower()
+        if r in ranks:
+            placed.setdefault(n["name"].lower(), " > ".join(path))
+        for c in n.get("children") or []:
+            if (c.get("rank") or "") != "FAMILY":
+                index(c, path + [n.get("name") or ""])
+
+    index(tax, [])
 
     def refuse(why, fam):
         refused.setdefault(why, []).append(fam)
@@ -363,10 +388,27 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
         if bad:
             refuse(bad, rec["family"])
             continue
+        fp = rules.get("familyPattern")
+        if fp and not re.search(fp["pattern"], rec["family"]):
+            refuse(fp["why"], rec["family"])
+            continue
         chain = rec["chain"]
         if not chain and rules.get("unassigned") != "kingdom":
             refuse("the authority gives no rank above it", rec["family"])
             continue
+        if rules.get("refuseParallel"):
+            node, clash = tax, ""
+            for rank, nm in chain:
+                nxt = child_by_name(node, nm) if node is not None else None
+                if nxt is None and nm.lower() in placed:
+                    clash = (f"{rank} {nm} is held under {placed[nm.lower()]}, "
+                             f"not where {auth['key']} puts it")
+                    break
+                node = nxt
+            if clash:
+                refuse("the authority's chain disagrees with the tree's", rec["family"])
+                print(f"  ! {rec['family']}: {clash}")
+                continue
         parent, created, why = tax, [], ""
         for i, (rank, nm) in enumerate(chain):
             node = child_by_name(parent, nm)
@@ -382,6 +424,7 @@ def scaffold_by_rules(kingdom: str, rules: dict, apply_: bool) -> int:
                         "rank": rank.upper(), "children": []}
                 parent.setdefault("children", []).append(node)
                 created.append(f"{rank.upper()} {nm}")
+                placed.setdefault(nm.lower(), " > ".join(n for _, n in chain[:i]) or kingdom)
             parent = node
         if why:
             refuse(why, rec["family"])

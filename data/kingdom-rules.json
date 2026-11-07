@@ -24,25 +24,169 @@
     "within: a name the authority must have above the family. NCBI covers",
     "  all life, so a family refused with no kingdom (\"incertae sedis\") is",
     "  only taken for bacteria if NCBI puts it under Bacteria. ICTV is viruses",
-    "  only and needs none."
+    "  only and needs none.",
+    "authority.archive: the archive's file name in its directory when it is",
+    "  not archive.zip (COL's monthly DwCA keeps its own name).",
+    "refuseParallel: refuse a family whose authority chain would create a",
+    "  phylum/class/order the tree already holds somewhere else. COL and the",
+    "  tree disagree on some higher placements; creating the authority's",
+    "  version would build a second branch beside the tree's.",
+    "",
+    "The five eukaryote kingdoms (2026-11-07): Catalogue of Life is the",
+    "  authority. The Backbone path had placed everything it vouched for;",
+    "  the misses other sources left (Wikispecies, PBDB, ...) need a source",
+    "  that knows them as accepted families in that kingdom.",
+    "familyPattern: the family name must match it. Animal family names end",
+    "  in -idae (ICZN Art. 29), plant and fungal ones in -aceae (ICN Art.",
+    "  18); COL files some stomatopod superfamilies (Squillidea) at family",
+    "  rank. Chromista and protozoa fall under both codes, so none."
   ],
   "bacteria": {
-    "authority": {"key": "checklistbank-2169", "title": "NCBI Taxonomy", "licence": "CC0"},
-    "ranks": ["phylum", "class", "order"],
+    "authority": {
+      "key": "checklistbank-2169",
+      "title": "NCBI Taxonomy",
+      "licence": "CC0"
+    },
+    "ranks": [
+      "phylum",
+      "class",
+      "order"
+    ],
     "within": "Bacteria",
     "createTopRank": false,
     "unassigned": "refuse",
     "rejectNames": [
-      {"pattern": "_[A-Z]+[0-9]*$", "why": "GTDB placeholder suffix (Firmicutes_A, Sporomusales_A)"},
-      {"pattern": "^[A-Z]{1,6}-?[0-9]+$", "why": "alphanumeric placeholder (PS1, UBA9983)"},
-      {"pattern": "[0-9]{3,}", "why": "placeholder with a numeric id (bin or clone name)"}
+      {
+        "pattern": "_[A-Z]+[0-9]*$",
+        "why": "GTDB placeholder suffix (Firmicutes_A, Sporomusales_A)"
+      },
+      {
+        "pattern": "^[A-Z]{1,6}-?[0-9]+$",
+        "why": "alphanumeric placeholder (PS1, UBA9983)"
+      },
+      {
+        "pattern": "[0-9]{3,}",
+        "why": "placeholder with a numeric id (bin or clone name)"
+      }
     ]
   },
   "viruses": {
-    "authority": {"key": "checklistbank-1014", "title": "ICTV Master Species List (ChecklistBank 1014)", "licence": "CC BY 4.0"},
-    "ranks": ["realm", "kingdom", "phylum", "class", "order"],
+    "authority": {
+      "key": "checklistbank-1014",
+      "title": "ICTV Master Species List (ChecklistBank 1014)",
+      "licence": "CC BY 4.0"
+    },
+    "ranks": [
+      "realm",
+      "kingdom",
+      "phylum",
+      "class",
+      "order"
+    ],
     "createTopRank": false,
     "unassigned": "kingdom",
+    "rejectNames": []
+  },
+  "animalia": {
+    "authority": {
+      "key": "catalogue-of-life-2026-10",
+      "archive": "col2026-10-14_dwca.zip",
+      "title": "Catalogue of Life COL26.10",
+      "licence": "CC BY 4.0"
+    },
+    "ranks": [
+      "phylum",
+      "class",
+      "order"
+    ],
+    "within": "Animalia",
+    "createTopRank": false,
+    "refuseParallel": true,
+    "unassigned": "refuse",
+    "rejectNames": [],
+    "familyPattern": {
+      "pattern": "idae$",
+      "why": "not a family-group name ending in -idae (ICZN Art. 29)"
+    }
+  },
+  "plantae": {
+    "authority": {
+      "key": "catalogue-of-life-2026-10",
+      "archive": "col2026-10-14_dwca.zip",
+      "title": "Catalogue of Life COL26.10",
+      "licence": "CC BY 4.0"
+    },
+    "ranks": [
+      "phylum",
+      "class",
+      "order"
+    ],
+    "within": "Plantae",
+    "createTopRank": false,
+    "refuseParallel": true,
+    "unassigned": "refuse",
+    "rejectNames": [],
+    "familyPattern": {
+      "pattern": "aceae$",
+      "why": "not a family name ending in -aceae (ICN Art. 18)"
+    }
+  },
+  "fungi": {
+    "authority": {
+      "key": "catalogue-of-life-2026-10",
+      "archive": "col2026-10-14_dwca.zip",
+      "title": "Catalogue of Life COL26.10",
+      "licence": "CC BY 4.0"
+    },
+    "ranks": [
+      "phylum",
+      "class",
+      "order"
+    ],
+    "within": "Fungi",
+    "createTopRank": false,
+    "refuseParallel": true,
+    "unassigned": "refuse",
+    "rejectNames": [],
+    "familyPattern": {
+      "pattern": "aceae$",
+      "why": "not a family name ending in -aceae (ICN Art. 18)"
+    }
+  },
+  "chromista": {
+    "authority": {
+      "key": "catalogue-of-life-2026-10",
+      "archive": "col2026-10-14_dwca.zip",
+      "title": "Catalogue of Life COL26.10",
+      "licence": "CC BY 4.0"
+    },
+    "ranks": [
+      "phylum",
+      "class",
+      "order"
+    ],
+    "within": "Chromista",
+    "createTopRank": false,
+    "refuseParallel": true,
+    "unassigned": "refuse",
+    "rejectNames": []
+  },
+  "protozoa": {
+    "authority": {
+      "key": "catalogue-of-life-2026-10",
+      "archive": "col2026-10-14_dwca.zip",
+      "title": "Catalogue of Life COL26.10",
+      "licence": "CC BY 4.0"
+    },
+    "ranks": [
+      "phylum",
+      "class",
+      "order"
+    ],
+    "within": "Protozoa",
+    "createTopRank": false,
+    "refuseParallel": true,
+    "unassigned": "refuse",
     "rejectNames": []
   }
 }
