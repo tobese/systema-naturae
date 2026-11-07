@@ -26,6 +26,17 @@ if [ ! -d "$ROOT/archives" ]; then
   exit 1
 fi
 
+
+# Whole-archive test, not just the magic bytes: zip via unzip -t, the gzip'd
+# tars (LepIndex, ILDIS) via tar -tzf.
+archive_ok() {
+  case "$(head -c 2 "$1" 2>/dev/null | xxd -p 2>/dev/null)" in
+    504b) unzip -tqq "$1" >/dev/null 2>&1 ;;
+    1f8b) tar -tzf "$1" >/dev/null 2>&1 ;;
+    *) return 1 ;;
+  esac
+}
+
 for key in "$@"; do
   dest="$ROOT/archives/checklistbank-$key"
   mkdir -p "$dest"
@@ -34,8 +45,16 @@ for key in "$@"; do
   out="$dest/archive.zip"
 
   if [ -s "$out" ]; then
-    echo "== $key  already on disk ($(du -h "$out" | cut -f1))"
-    continue
+    if archive_ok "$out"; then
+      echo "== $key  already on disk ($(du -h "$out" | cut -f1))"
+      continue
+    fi
+    # A truncated download keeps its magic bytes, and the reader later calls
+    # it an "unsupported archive format" (20 such on 2026-11-03). Set it
+    # aside rather than delete it, and fetch again.
+    aside="$out.truncated-$(date +%Y%m%d)"
+    echo "== $key  on disk but fails its integrity test; moved to $(basename "$aside")"
+    mv "$out" "$aside"
   fi
 
   url="https://api.checklistbank.org/dataset/$key/archive.zip"
@@ -57,6 +76,14 @@ for key in "$@"; do
 
   if [ "$code" != "200" ] || [ ! -s "$out.part" ]; then
     echo "   FAILED http=$code — $(head -c 200 "$out.part" 2>/dev/null)"
+    rm -f "$out.part"
+    continue
+  fi
+
+  # Right magic, wrong length: a connection cut mid-transfer leaves a file
+  # that starts like a zip and has no central directory.
+  if ! archive_ok "$out.part"; then
+    echo "   FAILED truncated or corrupt archive (magic=$magic, $(stat -f%z "$out.part") bytes)"
     rm -f "$out.part"
     continue
   fi
