@@ -2126,7 +2126,8 @@
           "sourceIds": {
             "checklistbank-316845": "13371"
           },
-          "uuid": "959b6b55-0110-4d17-b78f-983bc74786a7"
+          "uuid": "959b6b55-0110-4d17-b78f-983bc74786a7",
+          "children": []
         },
         {
           "id": "SP_GERYGONE_RUFICAUDA",
@@ -2138,7 +2139,8 @@
           "sourceIds": {
             "checklistbank-316843": "13370"
           },
-          "uuid": "919ca9eb-d17a-461d-91ea-aaf297c5373f"
+          "uuid": "919ca9eb-d17a-461d-91ea-aaf297c5373f",
+          "children": []
         }
       ]
     },
@@ -2237,7 +2239,8 @@
           "sourceIds": {
             "checklistbank-316845": "3661"
           },
-          "uuid": "30ff8da8-aff6-4d69-8988-daa0d0f7247a"
+          "uuid": "30ff8da8-aff6-4d69-8988-daa0d0f7247a",
+          "children": []
         },
         {
           "id": "SP_HYLACOLA_CAUTUS",
@@ -2249,7 +2252,8 @@
           "sourceIds": {
             "checklistbank-316845": "3662"
           },
-          "uuid": "23da79e3-5663-42f1-a360-33f5bae73923"
+          "uuid": "23da79e3-5663-42f1-a360-33f5bae73923",
+          "children": []
         }
       ]
     },
@@ -3198,7 +3202,8 @@
           "sourceIds": {
             "checklistbank-316845": "13368"
           },
-          "uuid": "786e133e-d199-484f-a0fa-a973054fb4a4"
+          "uuid": "786e133e-d199-484f-a0fa-a973054fb4a4",
+          "children": []
         }
       ]
     },
@@ -3599,7 +3604,8 @@
           "sourceIds": {
             "checklistbank-316845": "13366"
           },
-          "uuid": "1628cc93-5153-45ab-9b00-abac58d082ad"
+          "uuid": "1628cc93-5153-45ab-9b00-abac58d082ad",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3693,33 +3699,10 @@
           "sourceIds": {
             "checklistbank-316845": "13369"
           },
-          "uuid": "1c888cb6-c41a-45e2-8d62-e2c33a929957"
+          "uuid": "1c888cb6-c41a-45e2-8d62-e2c33a929957",
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_EPTHIANURA",
-      "name": "Epthianura",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthizidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_ASHBYIA",
-      "name": "Ashbyia",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthizidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_DASYORNIS",
-      "name": "Dasyornis",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthizidae",
-      "children": []
     },
     {
       "id": "GENUS_MOHOUA",
@@ -3727,7 +3710,34 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "acanthizidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_MOHOUA_OCHROCEPHALA_GMELIN_1789",
+          "name": "Mohoua ochrocephala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mohoua",
+          "authorship": "(Gmelin, 1789)",
+          "sourceIds": {
+            "gbif-backbone": "2482622"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MOHOUA_ALBICILLA_LESSON_1830",
+          "name": "Mohoua albicilla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mohoua",
+          "authorship": "(Lesson, 1830)",
+          "sourceIds": {
+            "gbif-backbone": "2482624"
+          },
+          "children": []
+        }
+      ]
     },
     {
       "id": "GENUS_EPHTHIANURA",
@@ -3746,7 +3756,8 @@
           "sourceIds": {
             "checklistbank-316843": "13373"
           },
-          "uuid": "6b1b378a-2b7c-4bed-99de-562b7ad19787"
+          "uuid": "6b1b378a-2b7c-4bed-99de-562b7ad19787",
+          "children": []
         },
         {
           "id": "SP_EPHTHIANURA_AURIFRONS",
@@ -3758,7 +3769,8 @@
           "sourceIds": {
             "checklistbank-316843": "13375"
           },
-          "uuid": "411e35d0-b6da-4031-ad7c-32ea7f09f768"
+          "uuid": "411e35d0-b6da-4031-ad7c-32ea7f09f768",
+          "children": []
         },
         {
           "id": "SP_EPHTHIANURA_CROCEA",
@@ -3770,13 +3782,14 @@
           "sourceIds": {
             "checklistbank-316843": "13376"
           },
-          "uuid": "9d857512-6d85-4ca6-8145-fa6b8f92d3fb"
+          "uuid": "9d857512-6d85-4ca6-8145-fa6b8f92d3fb",
+          "children": []
         }
       ]
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 110,
+  "genusCount": 23,
+  "speciesCount": 112,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

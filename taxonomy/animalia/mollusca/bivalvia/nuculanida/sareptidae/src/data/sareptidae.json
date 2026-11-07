@@ -112,7 +112,8 @@
             "col": [
               "B23CT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1631649"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1631649",
+            "checklistbank-1174": "txn:84050"
           },
           "authorityIds": "col:B23CT",
           "authorship": "(Tate, 1886)"
@@ -550,7 +551,47 @@
       "id": "GENUS_PRISTIGLOMA",
       "name": "Pristigloma",
       "rank": "GENUS",
-      "children": [],
+      "children": [
+        {
+          "id": "SP_PRISTIGLOMA_NITENS_JEFFREYS_1876",
+          "name": "Pristigloma nitens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pristigloma",
+          "authorship": "(Jeffreys 1876)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:86006"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PRISTIGLOMA_ALBA_SAUNDERS_AND_ALLEN_1973",
+          "name": "Pristigloma alba",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pristigloma",
+          "authorship": "Saunders and Allen, 1973",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "79309"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PRISTIGLOMA_MINIMA_SEQUENZA_1873",
+          "name": "Pristigloma minima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pristigloma",
+          "authorship": "(Sequenza, 1873)",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "205523"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
       "lineage": "sareptidae",
       "noSpeciesHeld": true
@@ -796,6 +837,45 @@
           },
           "children": [],
           "uuid": "b2d6ee91-3a66-5f5-b59-14a60b0b4d68cf"
+        },
+        {
+          "id": "SP_PORTLANDIA_ARCTICA_GRAY_1824",
+          "name": "Portlandia arctica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Portlandia",
+          "authorship": "(Gray 1824)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:86129"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PORTLANDIA_GLACIALIS_WOOD_1828",
+          "name": "Portlandia glacialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Portlandia",
+          "authorship": "(Wood 1828)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:87524"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PORTLANDIA_ROSA_HANNA_1927",
+          "name": "Portlandia rosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Portlandia",
+          "authorship": "(Hanna 1927)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:86127"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -819,6 +899,19 @@
           },
           "children": [],
           "uuid": "be9ecc27-0304-59a-90a-13bb24da459f98"
+        },
+        {
+          "id": "SP_MEGAYOLDIA_THRACIAEFORMIS_STORER_1838",
+          "name": "Megayoldia thraciaeformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megayoldia",
+          "authorship": "(Storer 1838)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:86109"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -888,10 +981,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sareptidae"
+    },
+    {
+      "id": "GENUS_MICROGLOMA",
+      "name": "Microgloma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROGLOMA_TURNERAE_SAUNDERS_AND_ALLEN_1973",
+          "name": "Microgloma turnerae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microgloma",
+          "authorship": "Saunders and Allen, 1973",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "205525"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROGLOMA_YONGEI_SAUNDERS_AND_ALLEN_1973",
+          "name": "Microgloma yongei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microgloma",
+          "authorship": "Saunders and Allen, 1973",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "205526"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sareptidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 52,
+  "genusCount": 11,
+  "speciesCount": 61,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -903,6 +1031,7 @@
     "checklistbank": "a5a51d79-e7dc-4906-8d05-d70fc50e4b25",
     "checklistbank-2169": "102395",
     "9ca92552-f23a-41a8-a140-01abaa31c931": "566915",
-    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20889393"
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q20889393",
+    "checklistbank-1174": "txn:89382"
   }
 }

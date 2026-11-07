@@ -1010,7 +1010,8 @@
               "6C5RN"
             ],
             "checklistbank": "60700",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:140700"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:140700",
+            "checklistbank-1174": "txn:87194"
           },
           "authorityIds": "col:6C5RN",
           "authorship": "(Forbes, 1844)"
@@ -10595,16 +10596,78 @@
       "lineage": "propeamussiidae"
     },
     {
-      "id": "GENUS_HYALOPECTEN",
-      "name": "Hyalopecten",
+      "id": "GENUS_CHLAMYDELLA",
+      "name": "Chlamydella",
       "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHLAMYDELLA_FAVUS_HEDLEY_1902",
+          "name": "Chlamydella favus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chlamydella",
+          "authorship": "Hedley 1902",
+          "sourceIds": {
+            "checklistbank-1174": "txn:59675"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
-      "lineage": "propeamussiidae",
-      "children": []
+      "lineage": "propeamussiidae"
+    },
+    {
+      "id": "GENUS_CYCLOCHLAMYS",
+      "name": "Cyclochlamys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCLOCHLAMYS_TRANSENNA_SUTER_1913",
+          "name": "Cyclochlamys transenna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclochlamys",
+          "authorship": "(Suter 1913)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:90050"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLOCHLAMYS_MESTAYERAE_DELL_1956",
+          "name": "Cyclochlamys mestayerae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclochlamys",
+          "authorship": "Dell 1956",
+          "sourceIds": {
+            "checklistbank-1174": "txn:90052"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLOCHLAMYS_SHEPHERDI_LAWS_1939",
+          "name": "Cyclochlamys shepherdi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclochlamys",
+          "authorship": "(Laws 1939)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:339947"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "propeamussiidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 623,
+  "genusCount": 23,
+  "speciesCount": 627,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

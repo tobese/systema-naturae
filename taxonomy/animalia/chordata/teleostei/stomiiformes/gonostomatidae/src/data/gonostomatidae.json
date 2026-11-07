@@ -1415,7 +1415,8 @@
               "882892"
             ],
             "checklistbank-316854": "140351",
-            "checklistbank-316856": "2503372"
+            "checklistbank-316856": "2503372",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2230848"
           },
           "uuid": "b333bdb4-987d-5a2-b3c-43d9a42d49cb1d",
           "authorityIds": "checklistbank:882892,col:58YNH,gbif:177709922,gbif:2347412,itis:162201"
@@ -1675,10 +1676,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Diplophos",
           "sourceIds": {
-            "checklistbank-316854": "125958"
+            "checklistbank-316854": "125958",
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "622692"
           },
           "uuid": "6ebb4dff-2fc0-4c49-be27-93c5d55ef348",
-          "children": []
+          "children": [],
+          "authorship": "Krefft and Parin, 1972"
         },
         {
           "id": "SP_DIPLOPHOS_TAENIA",
@@ -1691,6 +1694,32 @@
             "checklistbank-316854": "125959"
           },
           "uuid": "7501f4c5-0df3-4404-b93f-55ac9b266c96",
+          "children": []
+        },
+        {
+          "id": "SP_DIPLOPHOS_AUSTRALIS_OZAWA_ODA_AND_IDA_1990",
+          "name": "Diplophos australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplophos",
+          "authorship": "Ozawa, Oda and Ida, 1990",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "622688",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3015730"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPLOPHOS_VICINIA",
+          "name": "Diplophos vicinia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplophos",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q116178483"
+          },
           "children": []
         }
       ],
@@ -2535,13 +2564,46 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gonostomatidae"
+    },
+    {
+      "id": "GENUS_MANDUCUS",
+      "name": "Manducus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MANDUCUS_GREYAE",
+          "name": "Manducus greyae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manducus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2607549"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MANDUCUS_MADERENSIS",
+          "name": "Manducus maderensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manducus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2008362"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gonostomatidae"
     }
   ],
-  "speciesCount": 126,
+  "speciesCount": 130,
   "appSlug": "gonostomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 30,
+  "genusCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

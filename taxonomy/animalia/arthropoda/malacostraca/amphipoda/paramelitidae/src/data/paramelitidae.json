@@ -1806,15 +1806,6 @@
       "lineage": "Paramelitidae"
     },
     {
-      "id": "GENUS_YILGARUS",
-      "name": "Yilgarus",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "paramelitidae",
-      "noSpeciesHeld": true
-    },
-    {
       "id": "GENUS_PARAMELITIDAE",
       "name": "Paramelitidae",
       "rank": "GENUS",
@@ -1857,9 +1848,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paramelitidae"
+    },
+    {
+      "id": "GENUS_GINIPHARGUS",
+      "name": "Giniphargus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GINIPHARGUS_PULCHELLUS",
+          "name": "Giniphargus pulchellus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Giniphargus",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13642520"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paramelitidae"
     }
   ],
-  "speciesCount": 90,
+  "speciesCount": 91,
   "appSlug": "paramelitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

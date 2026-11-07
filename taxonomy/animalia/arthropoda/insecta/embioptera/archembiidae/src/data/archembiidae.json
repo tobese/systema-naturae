@@ -524,9 +524,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Embolyntha",
           "sourceIds": {
-            "checklistbank-139831": "1041694"
+            "checklistbank-139831": "1041694",
+            "gbif-backbone": "1031059"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Ross, 2001)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1062,15 +1064,6 @@
       "lineage": "archembiidae"
     },
     {
-      "id": "GENUS_ARCHEMBIIDAE",
-      "name": "Archembiidae",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "archembiidae",
-      "noSpeciesHeld": true
-    },
-    {
       "id": "GENUS_MULTIVENA",
       "name": "Multivena",
       "rank": "GENUS",
@@ -1360,9 +1353,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "archembiidae"
+    },
+    {
+      "id": "GENUS_SORELLEMBIA",
+      "name": "Sorellembia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SORELLEMBIA_ESTHERAE_ENGEL_GRIMALDI_2006",
+          "name": "Sorellembia estherae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sorellembia",
+          "authorship": "Engel & Grimaldi, 2006",
+          "sourceIds": {
+            "gbif-backbone": "4387277"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archembiidae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 77,
   "appSlug": "archembiidae",
   "continents": [
     "South America"

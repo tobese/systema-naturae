@@ -15106,7 +15106,9 @@
             "checklistbank-77927": "180856",
             "checklistbank-5410": "Rep_Amp_Yunnan_kib_183",
             "checklistbank-316851": "193102",
-            "checklistbank-23326": "160093"
+            "checklistbank-23326": "160093",
+            "checklistbank-23364": "1844",
+            "checklistbank-28804": "1057"
           },
           "authorityIds": "col:3FGMJ,itis:174046,wikidata:Q1766871",
           "speciesList": []
@@ -58210,7 +58212,8 @@
             "checklistbank-28815": "1066",
             "checklistbank-77944": "111220",
             "checklistbank-28906": "47703",
-            "checklistbank-28816": "1066"
+            "checklistbank-28816": "1066",
+            "checklistbank-28804": "1061"
           },
           "children": [],
           "uuid": "5ffbff2f-aef6-5b5-a37-eaf871366dc1fa"
@@ -59407,7 +59410,8 @@
             "checklistbank-28814": "1079",
             "checklistbank-28815": "1067",
             "checklistbank-26118": "64536",
-            "checklistbank-28816": "1067"
+            "checklistbank-28816": "1067",
+            "checklistbank-28804": "1062"
           },
           "children": [],
           "uuid": "1bb02afe-0bff-5f7-b22-73385fad6ad8db",
@@ -59930,7 +59934,8 @@
             "checklistbank-26225": "48602",
             "checklistbank-28814": "1080",
             "checklistbank-28815": "1069",
-            "checklistbank-28816": "1069"
+            "checklistbank-28816": "1069",
+            "checklistbank-28804": "1063"
           },
           "children": [],
           "uuid": "b46a9751-3637-50a-b13-f3b6d904c25a46",
@@ -61580,17 +61585,10 @@
             "checklistbank-1174": "txn:376393"
           },
           "uuid": "d0dad340-912d-4654-ad62-0856f98e8bae",
-          "children": []
+          "children": [],
+          "authorship": "Dumeril and Bibron 1836"
         }
       ]
-    },
-    {
-      "id": "GENUS_RHACODACTYLUS",
-      "name": "Rhacodactylus",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "gekkonidae",
-      "children": []
     },
     {
       "id": "GENUS_COLEONYX",
@@ -61598,7 +61596,34 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "gekkonidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_COLEONYX_MITRATUS_PETERS_1863",
+          "name": "Coleonyx mitratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coleonyx",
+          "authorship": "Peters 1863",
+          "sourceIds": {
+            "checklistbank-1174": "txn:376243"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLEONYX_VARIEGATUS_BAIRD_1859",
+          "name": "Coleonyx variegatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coleonyx",
+          "authorship": "Baird 1859",
+          "sourceIds": {
+            "checklistbank-1174": "txn:376245"
+          },
+          "children": []
+        }
+      ]
     },
     {
       "id": "GENUS_TERATOSCINCUS",
@@ -61606,19 +61631,38 @@
       "rank": "GENUS",
       "sourcedFrom": "checklistbank",
       "lineage": "gekkonidae",
-      "children": []
-    },
-    {
-      "id": "GENUS_BAVAYIA",
-      "name": "Bavayia",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "gekkonidae",
-      "children": []
+      "children": [
+        {
+          "id": "SP_TERATOSCINCUS_MICROLEPIS_NIKOLSKY_1899",
+          "name": "Teratoscincus microlepis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teratoscincus",
+          "authorship": "Nikolsky 1899",
+          "sourceIds": {
+            "checklistbank-1174": "txn:376578"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TERATOSCINCUS_PRZEWALSKII_STRAUCH_1877",
+          "name": "Teratoscincus przewalskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teratoscincus",
+          "authorship": "Strauch 1877",
+          "sourceIds": {
+            "checklistbank-1174": "txn:376579"
+          },
+          "children": []
+        }
+      ]
     }
   ],
-  "genusCount": 106,
-  "speciesCount": 2131,
+  "genusCount": 104,
+  "speciesCount": 2135,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

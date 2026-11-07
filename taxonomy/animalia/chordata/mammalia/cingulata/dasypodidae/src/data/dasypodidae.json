@@ -860,6 +860,32 @@
           },
           "authorityIds": "wikidata:Q1761878",
           "authorship": "(Thomas, 1894)"
+        },
+        {
+          "id": "SP_CHAETOPHRACTUS_VILLOSUS_DESMAREST_1804",
+          "name": "Chaetophractus villosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetophractus",
+          "authorship": "Desmarest 1804",
+          "sourceIds": {
+            "checklistbank-1174": "txn:83806"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHAETOPHRACTUS_VELLEROSUS_GRAY_1865",
+          "name": "Chaetophractus vellerosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetophractus",
+          "authorship": "(Gray 1865)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:233288"
+          },
+          "children": []
         }
       ]
     },
@@ -999,10 +1025,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Euphractus",
           "sourceIds": {
-            "checklistbank-311656": "https://www.gbif.org/species/2440799"
+            "checklistbank-311656": "https://www.gbif.org/species/2440799",
+            "checklistbank-1174": "txn:104179",
+            "gbif-backbone": "6163133"
           },
           "uuid": "b30a9808-e856-4119-8bd8-88de78590258",
-          "children": []
+          "children": [],
+          "authorship": "(Linnaeus 1758)"
         }
       ]
     },
@@ -4014,16 +4043,104 @@
       "lineage": "dasypodidae"
     },
     {
-      "id": "GENUS_PRIODONTES",
-      "name": "Priodontes",
+      "id": "GENUS_TOLYPEUTES",
+      "name": "Tolypeutes",
       "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TOLYPEUTES_TRICINCTUS_LINNAEUS_1758",
+          "name": "Tolypeutes tricinctus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tolypeutes",
+          "authorship": "(Linnaeus 1758)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:104177"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TOLYPEUTES_MATACUS_DESMAREST_1804",
+          "name": "Tolypeutes matacus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tolypeutes",
+          "authorship": "(Desmarest, 1804)",
+          "sourceIds": {
+            "gbif-backbone": "2440792"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
-      "lineage": "dasypodidae",
-      "children": []
+      "lineage": "dasypodidae"
+    },
+    {
+      "id": "GENUS_CABASSOUS",
+      "name": "Cabassous",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CABASSOUS_CHACOENSIS_WETZEL_1980",
+          "name": "Cabassous chacoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cabassous",
+          "authorship": "Wetzel 1980",
+          "sourceIds": {
+            "checklistbank-1174": "txn:233290"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CABASSOUS_UNICINCTUS_LINNAEUS_1758",
+          "name": "Cabassous unicinctus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cabassous",
+          "authorship": "(Linnaeus 1758)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:104176"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CABASSOUS_TATOUAY_DESMAREST_1804",
+          "name": "Cabassous tatouay",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cabassous",
+          "authorship": "(Desmarest 1804)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:233739"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CABASSOUS_CENTRALIS_MILLER_1899",
+          "name": "Cabassous centralis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cabassous",
+          "authorship": "Miller 1899",
+          "sourceIds": {
+            "checklistbank-1174": "txn:438266"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasypodidae"
     }
   ],
-  "genusCount": 74,
-  "speciesCount": 220,
+  "genusCount": 75,
+  "speciesCount": 228,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

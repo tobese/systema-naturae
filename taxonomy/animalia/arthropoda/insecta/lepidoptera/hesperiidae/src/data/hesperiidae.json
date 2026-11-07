@@ -38094,7 +38094,8 @@
             "wikispecies": "Celaenorrhinus_consanguinea",
             "checklistbank-316441": "S2FS",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q3703344",
-            "checklistbank-55434": "349298"
+            "checklistbank-55434": "349298",
+            "catalogue-of-life-2026-10": "VS3M4"
           },
           "children": [],
           "uuid": "74f828d2-9e37-5fea-9404-37746b882879",
@@ -61313,7 +61314,9 @@
             "checklistbank": "ott730287",
             "checklistbank-2265": "354804",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q13431918",
-            "checklistbank-245042": "1947979"
+            "checklistbank-245042": "1947979",
+            "checklistbank-245038": "1947979",
+            "checklistbank-245039": "1947979"
           },
           "authorityIds": "col:JYWX",
           "commonName": "Spike Banded-Skipper"
@@ -123122,7 +123125,9 @@
           "sourceIds": {
             "checklistbank": "21326",
             "checklistbank-2169": "354953",
-            "checklistbank-245042": "5142832"
+            "checklistbank-245042": "5142832",
+            "checklistbank-245038": "5142832",
+            "checklistbank-245039": "5142832"
           },
           "children": [],
           "uuid": "652256b9-e14c-52d-bcf-dc164277d91b54",
@@ -149390,14 +149395,6 @@
       ]
     },
     {
-      "id": "GENUS_BUTLERIA",
-      "name": "butleria",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hesperiidae"
-    },
-    {
       "id": "GENUS_TERIA",
       "name": "Teria",
       "rank": "GENUS",
@@ -149414,16 +149411,60 @@
           "sourceIds": {
             "checklistbank-54142": "ark-ardnr-797-015"
           },
-          "uuid": "0347b5c4-2ab5-4ab8-9b54-e6b19d9fb4ea"
+          "uuid": "0347b5c4-2ab5-4ab8-9b54-e6b19d9fb4ea",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CALLIMORUS",
+      "name": "Callimorus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "hesperiidae",
+      "children": [
+        {
+          "id": "SP_CALLIMORUS_RADIOLA",
+          "name": "Callimorus radiola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callimorus",
+          "sourceIds": {
+            "checklistbank-245038": "7215138"
+          },
+          "uuid": "2cecb46e-0526-4dda-ad1a-cc4490234bc0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_IDAEA",
+      "name": "Idaea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_IDAEA_ALYSSUMATA",
+          "name": "Idaea alyssumata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Idaea",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q108082656"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hesperiidae"
     }
   ],
-  "speciesCount": 8034,
+  "speciesCount": 8036,
   "appSlug": "hesperiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 831,
+  "genusCount": 833,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

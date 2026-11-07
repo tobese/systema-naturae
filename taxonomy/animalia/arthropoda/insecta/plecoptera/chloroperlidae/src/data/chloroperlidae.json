@@ -1164,7 +1164,8 @@
                     "checklistbank-2265": "1646249",
                     "9ca92552-f23a-41a8-a140-01abaa31c931": "103231",
                     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10406043",
-                    "checklistbank-316856": "2633961"
+                    "checklistbank-316856": "2633961",
+                    "checklistbank-316603": "64"
                   },
                   "authorityIds": "col:BY53,itis:103231",
                   "speciesList": []
@@ -1761,7 +1762,8 @@
                     ],
                     "checklistbank": "ott5016078",
                     "9ca92552-f23a-41a8-a140-01abaa31c931": "103280",
-                    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10686574"
+                    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10686574",
+                    "checklistbank-316603": "77"
                   },
                   "authorityIds": "itis:103280",
                   "speciesList": []
@@ -5846,7 +5848,8 @@
                     "checklistbank-2265": "2461497",
                     "9ca92552-f23a-41a8-a140-01abaa31c931": "609891",
                     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10684267",
-                    "checklistbank-316856": "2723441"
+                    "checklistbank-316856": "2723441",
+                    "checklistbank-316603": "76"
                   },
                   "children": [],
                   "uuid": "d7da9ead-81fb-532-aa7-e9da3356490f30"
@@ -6774,9 +6777,68 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chloroperlidae"
+    },
+    {
+      "id": "GENUS_KATHROPERLA",
+      "name": "Kathroperla",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chloroperlidae",
+      "children": [
+        {
+          "id": "SP_KATHROPERLA_PERDITA_BANKS_1920",
+          "name": "Kathroperla perdita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kathroperla",
+          "authorship": "Banks 1920",
+          "sourceIds": {
+            "checklistbank-316603": "67"
+          },
+          "uuid": "0b082134-a6e1-46a5-86cb-b34207e911f9",
+          "children": []
+        },
+        {
+          "id": "SP_KATHROPERLA_TAKHOMA_STARK_AND_SURDICK_1987",
+          "name": "Kathroperla takhoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kathroperla",
+          "authorship": "Stark and Surdick, 1987",
+          "sourceIds": {
+            "9ca92552-f23a-41a8-a140-01abaa31c931": "103238"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PLUMAPERLA",
+      "name": "Plumaperla",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "chloroperlidae",
+      "children": [
+        {
+          "id": "SP_PLUMAPERLA_DIVERSA_FRISON_1935",
+          "name": "Plumaperla diversa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plumaperla",
+          "authorship": "(Frison 1935)",
+          "sourceIds": {
+            "checklistbank-316603": "70"
+          },
+          "uuid": "988cc3c2-1c7f-4ad6-a68a-fba689b97eac",
+          "children": []
+        }
+      ]
     }
   ],
-  "speciesCount": 278,
+  "speciesCount": 281,
   "appSlug": "chloroperlidae",
   "lineage": "Arctoperlaria > Perloidea",
   "continents": [
@@ -6785,7 +6847,7 @@
     "Europe",
     "North America"
   ],
-  "genusCount": 28,
+  "genusCount": 30,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

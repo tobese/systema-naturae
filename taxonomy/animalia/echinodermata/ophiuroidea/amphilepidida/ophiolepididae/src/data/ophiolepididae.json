@@ -2655,15 +2655,6 @@
       "lineage": "ophiolepididae"
     },
     {
-      "id": "GENUS_OPHIOPLOCUS",
-      "name": "Ophioplocus",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ophiolepididae",
-      "noSpeciesHeld": true
-    },
-    {
       "id": "GENUS_OPHIOSPHALMA",
       "name": "Ophiosphalma",
       "rank": "GENUS",
@@ -2700,24 +2691,6 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ophiolepididae"
-    },
-    {
-      "id": "GENUS_OPHIOZONELLA",
-      "name": "Ophiozonella",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ophiolepididae",
-      "noSpeciesHeld": true
-    },
-    {
-      "id": "GENUS_OPHIOMUSA",
-      "name": "Ophiomusa",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ophiolepididae",
-      "noSpeciesHeld": true
     },
     {
       "id": "GENUS_OPHIOCERES",
@@ -2807,15 +2780,6 @@
       "lineage": "ophiolepididae"
     },
     {
-      "id": "GENUS_ANOPHIURA",
-      "name": "Anophiura",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ophiolepididae",
-      "noSpeciesHeld": true
-    },
-    {
       "id": "GENUS_OPHIOMIDAS",
       "name": "Ophiomidas",
       "rank": "GENUS",
@@ -2849,15 +2813,6 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ophiolepididae"
-    },
-    {
-      "id": "GENUS_ASPIDOPHIURA",
-      "name": "Aspidophiura",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ophiolepididae",
-      "noSpeciesHeld": true
     },
     {
       "id": "GENUS_OPHIOMARIA",
@@ -3212,16 +3167,38 @@
           "sourceIds": {
             "checklistbank-1174": "txn:355678"
           },
-          "uuid": "d86d8afd-6fb8-45b9-a8eb-375ca8fa1a5e"
+          "uuid": "d86d8afd-6fb8-45b9-a8eb-375ca8fa1a5e",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ACTINOZONELLA",
+      "name": "Actinozonella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACTINOZONELLA_FALSA",
+          "name": "Actinozonella falsa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinozonella",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q140620466"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ophiolepididae"
     }
   ],
-  "speciesCount": 183,
+  "speciesCount": 184,
   "appSlug": "ophiolepididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Ophiuroidea",
-  "genusCount": 29,
+  "genusCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
