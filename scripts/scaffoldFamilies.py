@@ -104,7 +104,7 @@ def held_families(tax: dict) -> set[str]:
     return out
 
 
-def pending_rows(kingdom: str) -> dict[str, dict]:
+def pending_rows(kingdom: str, unplaced: bool = False) -> dict[str, dict]:
     """family-name-lower -> pending row, for the GBIF backbone rows of one kingdom."""
     out = {}
     if not os.path.exists(PENDING):
