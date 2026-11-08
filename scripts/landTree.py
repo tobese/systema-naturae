@@ -14,7 +14,8 @@ instead, holding maintenanceLock so the snapshot is consistent:
      it had just fixed.
   2. a temporary index from origin/main; `git add -A` of what Macie owns:
      taxonomy/{the six portal kingdoms}, their skeleton files in portal/data,
-     data/source-queue, data/authors (the people registry, once it exists).
+     data/source-queue, data/authors (the people registry), data/citations
+     (where each name was published, from buildCitations.py).
   3. data/import-log.jsonl and data/pipeline-events.jsonl: both machines
      append to them, so origin's lines plus Macie's, never Macie's file.
   4. refuse if the result touches q-bert's paths (bacteria, viruses,
@@ -27,7 +28,7 @@ instead, holding maintenanceLock so the snapshot is consistent:
 
 Smaller commits (2026-11-02): `--kingdom K` (repeatable) lands only those
 kingdoms' family files and skeletons; `--no-shared` leaves out the queue, the
-logs and data/authors. One landing of 15,000 files is one CI run nobody can
+logs, data/authors and data/citations. One landing of 15,000 files is one CI run nobody can
 read; plantae, fungi, ... each on their own say which one turned it red.
 
     python3 scripts/landTree.py -F msg.txt --kingdom plantae --no-shared
@@ -76,7 +77,7 @@ def main() -> int:
     ap.add_argument("--base", default="",
                     help="build on this commit instead of origin/main (chain landings)")
     ap.add_argument("--no-shared", action="store_true",
-                    help="leave out data/source-queue, data/authors and the logs")
+                    help="leave out data/source-queue, data/authors, data/citations and the logs")
     args = ap.parse_args()
     with open(args.message_file, encoding="utf-8") as fh:
         message = fh.read()
@@ -97,7 +98,7 @@ def main() -> int:
             kingdoms = args.kingdom or KINGDOMS
             skeletons = [s for s, k in zip(SKELETONS, KINGDOMS) if k in kingdoms]
             shared = [] if args.no_shared else ["data/source-queue", *[
-                p for p in ("data/authors",) if os.path.exists(os.path.join(ROOT, p))]]
+                p for p in ("data/authors", "data/citations") if os.path.exists(os.path.join(ROOT, p))]]
             git("add", "-A", "--", *[f"taxonomy/{k}" for k in kingdoms], *skeletons,
                 *shared, env=env)
             for log in ([] if args.no_shared else LOGS):

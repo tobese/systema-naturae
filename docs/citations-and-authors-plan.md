@@ -98,8 +98,27 @@ the book. The Contributors cards link to it. Same split-index approach.
 COL and several sources carry `namePublishedIn` (the reference behind
 "Linnaeus, 1758": *Systema Naturae*, 10th edition). Kept per species, it would
 be a third citation level — the original publication — and a natural fit for
-the author viewer (a person's publications). Not held today; needs an import
-pass that keeps it.
+the author viewer (a person's publications).
+
+**Started 2026-11-08 from COL XR** (checklistbank-316441).
+`scripts/buildCitations.py` joins the COL ids our species already carry
+(`sourceIds.col`, `sourceIds.checklistbank-316441`) to COL's
+`nameReferenceID` / `namePublishedInPage` and its Reference table, and writes
+two sidecars sharded like the authors' ones:
+
+    data/citations/species/<kingdom>/<xx>.json   speciesId → {r, p, pl}
+    data/citations/references/<xx>.json          col:<id>  → {citation, doi, link, year, via}
+
+`citation` is COL's text verbatim and `via` the dataset COL took it from.
+First run: 1,539,253 species linked to 720,615 references — plantae 99%,
+fungi 94%, chromista 71%, animalia 70%, protozoa 43%, archaea ~0% of the
+species that have a COL id. The files are rebuilt from scratch on every run
+and land with `landTree.py`'s shared paths; `verifyTree` fails on a link to a
+missing reference or to a species no longer in the tree.
+
+Next sources, for species COL leaves without a reference: WoRMS
+(checklistbank-2011, `namePublishedIn`), WCVP (2000) and IPNI (2006), which
+carry a referenceID and page.
 
 ## Order
 

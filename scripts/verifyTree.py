@@ -24,6 +24,7 @@ exit 0.
 """
 import argparse
 import collections
+import glob
 import json
 import os
 import re
@@ -683,6 +684,61 @@ def check_author_ids():
            f"{len(AUTHOR_REFS):,} people, {sum(AUTHOR_REFS.values()):,} links")
 
 
+def check_citations():
+    """Every citation link points at a species the tree holds and a reference
+    data/citations/references holds.
+
+    buildCitations.py writes the sidecars keyed by species id
+    (docs/citations-and-authors-plan.md, step 6). A species removed by a
+    dedupe or a homonym call after the build leaves its link behind; that is
+    an orphan, and re-running buildCitations.py --apply clears it.
+    """
+    base = os.path.join(ROOT, "data", "citations")
+    if not os.path.isdir(base):
+        ok("every citation link resolves", "no citations yet")
+        return
+    refs = set()
+    for f in glob.glob(os.path.join(base, "references", "*.json")):
+        refs.update(json.load(open(f, encoding="utf-8")))
+    links, dangling = [], []
+    for f in glob.glob(os.path.join(base, "species", "*", "*.json")):
+        kingdom = os.path.basename(os.path.dirname(f))
+        for sid, link in json.load(open(f, encoding="utf-8")).items():
+            links.append((kingdom, sid))
+            if link.get("r") not in refs:
+                dangling.append(sid)
+    orphans = None
+    try:
+        import duckdb
+        import tempfile
+        if not _parquet_unusable():
+            with tempfile.NamedTemporaryFile("w", suffix=".tsv", encoding="utf-8") as tmp:
+                tmp.write("kingdom\tid\n")
+                tmp.writelines(f"{k}\t{i}\n" for k, i in links)
+                tmp.flush()
+                orphans = [r[0] for r in duckdb.connect().execute("""
+                    SELECT c.id FROM read_csv(?, delim='\t', header=true, quote='',
+                                              all_varchar=true) c
+                    ANTI JOIN (SELECT kingdom, id FROM read_parquet(?)
+                               WHERE rank = 'SPECIES') t
+                    ON t.kingdom = c.kingdom AND t.id = c.id""",
+                    [tmp.name, PARQUET_PATH]).fetchall()]
+    except Exception:
+        pass
+    if dangling:
+        fail("every citation link resolves",
+             f"{len(dangling):,} links to no reference, e.g. {', '.join(dangling[:3])}"
+             " -- re-run scripts/buildCitations.py --apply")
+        return
+    # A species removed after the build leaves a link nothing looks up: stale,
+    # not wrong, so it is reported rather than failed.
+    detail = f"{len(links):,} links, {len(refs):,} references"
+    if orphans:
+        detail += (f"; {len(orphans):,} to species no longer in the tree"
+                   " (re-run scripts/buildCitations.py --apply)")
+    ok("every citation link resolves", detail)
+
+
 def check_family_names():
     """A FAMILY node's name should be a name.
 
@@ -864,6 +920,7 @@ def main() -> int:
     check_species_names()
     check_authority_collisions()
     check_author_ids()
+    check_citations()
     check_family_names()
     check_missing_lineage()
     check_lineage()
