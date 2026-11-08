@@ -435,7 +435,8 @@
             "col": [
               "835Y9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1042377"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1042377",
+            "checklistbank-1174": "txn:192445"
           },
           "authorityIds": "col:835Y9",
           "children": []
@@ -3964,7 +3965,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:199483"
           },
-          "uuid": "931202bb-99ea-4eae-af41-178a17124139"
+          "uuid": "931202bb-99ea-4eae-af41-178a17124139",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4011,7 +4013,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:183842"
           },
-          "uuid": "1c690b6c-e492-4f60-91ea-569b984ee537"
+          "uuid": "1c690b6c-e492-4f60-91ea-569b984ee537",
+          "children": []
         },
         {
           "id": "SP_REICHELINA_CHANGHSINGENSIS_SHENG_AND_CHANG_1958",
@@ -4024,7 +4027,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:237254"
           },
-          "uuid": "f31ed7ff-3e87-48ec-8177-e1124eeeea76"
+          "uuid": "f31ed7ff-3e87-48ec-8177-e1124eeeea76",
+          "children": []
         },
         {
           "id": "SP_REICHELINA_MEDIA_MIKLUKHO_MACLAY_1954",
@@ -4035,18 +4039,41 @@
           "lineage": "Reichelina",
           "authorship": "Miklukho-Maclay 1954",
           "sourceIds": {
-            "checklistbank-1174": "txn:243018"
+            "checklistbank-1174": "txn:243018",
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q23747457"
           },
-          "uuid": "17ddb3c6-0d7e-4d30-a8dd-ea9cc148a3ae"
+          "uuid": "17ddb3c6-0d7e-4d30-a8dd-ea9cc148a3ae",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PSEUDOKAHLERINA",
+      "name": "Pseudokahlerina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOKAHLERINA_COMPRESSA",
+          "name": "Pseudokahlerina compressa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudokahlerina",
+          "sourceIds": {
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q23747456"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ozawainellidae"
     }
   ],
-  "speciesCount": 234,
+  "speciesCount": 235,
   "appSlug": "ozawainellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",
-  "genusCount": 11,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -4055,6 +4082,7 @@
       "familyKey": 8149100
     },
     "checklistbank": "txn:72072",
-    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q12198077"
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q12198077",
+    "checklistbank-1174": "txn:72072"
   }
 }

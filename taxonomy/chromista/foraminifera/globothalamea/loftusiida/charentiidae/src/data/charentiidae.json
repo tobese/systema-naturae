@@ -74,7 +74,8 @@
             "col": [
               "826NM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:900295"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:900295",
+            "checklistbank-1174": "txn:419893"
           },
           "uuid": "21705248-44f0-5d2-8d8-68416fa76cc34e",
           "authorityIds": "col:826NM,gbif:9055070",
@@ -671,10 +672,45 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Charentiidae"
+    },
+    {
+      "id": "GENUS_PENEROPLIS",
+      "name": "Peneroplis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENEROPLIS_MAUII_DORREEN_1948",
+          "name": "Peneroplis mauii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peneroplis",
+          "authorship": "Dorreen 1948",
+          "sourceIds": {
+            "checklistbank-1174": "txn:153356"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PENEROPLIS_THOMASI_HENSON_1950",
+          "name": "Peneroplis thomasi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peneroplis",
+          "authorship": "Henson 1950",
+          "sourceIds": {
+            "checklistbank-1174": "txn:384452"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charentiidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 27,
+  "genusCount": 10,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -682,6 +718,7 @@
       "classKey": 7434778,
       "orderKey": 8258225,
       "familyKey": 8403691
-    }
+    },
+    "checklistbank-1174": "txn:154161"
   }
 }

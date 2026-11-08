@@ -173,7 +173,8 @@
             ],
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
               "Q108258808"
-            ]
+            ],
+            "checklistbank-139831": "1074090"
           },
           "uuid": "55ae5874-f312-5da-af8-a7533a2a171192",
           "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q108258808,checklistbank:1074090,checklistbank:2038739,checklistbank-2169:2038739,checklistbank-271842:macrofungi.CL.2023.10.1230,col:4KBHL,gbif:3330110,gbif-backbone:3330110,mycobank:337236",
@@ -485,7 +486,8 @@
             ],
             "gbif-backbone": "3330106",
             "checklistbank-316441": "4KBHW",
-            "checklistbank-312616": "dbc1f9c2-e829-4812-b8b5-a7c179af20ad"
+            "checklistbank-312616": "dbc1f9c2-e829-4812-b8b5-a7c179af20ad",
+            "checklistbank-139831": "1136880"
           },
           "uuid": "3d468072-bae8-50e-9ec-ec72a3081768c1",
           "authorityIds": "checklistbank:2598217,checklistbank:dbc1f9c2-e829-4812-b8b5-a7c179af20ad,checklistbank-316441:4KBHW,col:4KBHW,gbif:3330106,gbif-backbone:3330106,mycobank:129778"
@@ -517,7 +519,8 @@
             ],
             "gbif-backbone": "11413028",
             "checklistbank-316441": "B2WND",
-            "checklistbank-2169": "2929821"
+            "checklistbank-2169": "2929821",
+            "checklistbank-139831": "1555913"
           },
           "uuid": "e6906f0d-1949-541-a11-1fe18952a68253",
           "authorityIds": "checklistbank:1555913,checklistbank:2929821,checklistbank-2169:2929821,checklistbank-316441:B2WND,col:B2WND,gbif:11413028,gbif-backbone:11413028,mycobank:839244"
@@ -554,7 +557,8 @@
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": [
               "Q10634446"
             ],
-            "checklistbank-312616": "4e05e77c-7b5c-44cd-b60e-17ebeef0cdb3"
+            "checklistbank-312616": "4e05e77c-7b5c-44cd-b60e-17ebeef0cdb3",
+            "checklistbank-139831": "383712"
           },
           "uuid": "0a4a94e4-9621-51b-997-86654abb6b0144",
           "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q10634446,checklistbank:1051816,checklistbank:4e05e77c-7b5c-44cd-b60e-17ebeef0cdb3,checklistbank-2169:1051816,checklistbank-285337:https://id.biodiversity.org.au/instance/fungi/60062184,checklistbank-316441:4KBHZ,col:4KBHZ,gbif:2527778,gbif-backbone:2527778,mycobank:320693",
@@ -742,7 +746,8 @@
             "gbif-backbone": "3330105",
             "checklistbank-316441": "4KBJ7",
             "checklistbank-2169": "3059514",
-            "checklistbank-312616": "30043ebb-f321-42bb-9fa6-fea59a1faa38"
+            "checklistbank-312616": "30043ebb-f321-42bb-9fa6-fea59a1faa38",
+            "checklistbank-139831": "1581700"
           },
           "uuid": "0d0dd2b9-d9b3-539-84a-3367b3ea1baefc",
           "authorityIds": "checklistbank:30043ebb-f321-42bb-9fa6-fea59a1faa38,checklistbank:3059514,checklistbank-2169:3059514,checklistbank-316441:4KBJ7,col:4KBJ7,gbif:3330105,gbif-backbone:3330105,mycobank:129780"
@@ -18622,15 +18627,6 @@
       "lineage": "crepidotaceae"
     },
     {
-      "id": "GENUS_CREPIDOTACEAE",
-      "name": "Crepidotaceae",
-      "rank": "GENUS",
-      "children": [],
-      "sourcedFrom": "checklistbank",
-      "lineage": "crepidotaceae",
-      "noSpeciesHeld": true
-    },
-    {
       "id": "GENUS_PHOLIOTA",
       "name": "Pholiota",
       "rank": "GENUS",
@@ -18712,11 +18708,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "crepidotaceae"
+    },
+    {
+      "id": "GENUS_PHAEOSOLENIA",
+      "name": "Phaeosolenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHAEOSOLENIA_DENSA",
+          "name": "Phaeosolenia densa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeosolenia",
+          "sourceIds": {
+            "checklistbank-139831": "383511"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHAEOSOLENIA_INCONSPICUA",
+          "name": "Phaeosolenia inconspicua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeosolenia",
+          "sourceIds": {
+            "checklistbank-139831": "1109035"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "crepidotaceae"
     }
   ],
   "authorship": "(S. Imai) Singer",
   "genusCount": 38,
-  "speciesCount": 648,
+  "speciesCount": 650,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

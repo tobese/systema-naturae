@@ -1987,7 +1987,8 @@
           "sourceIds": {
             "checklistbank-37354": "369"
           },
-          "uuid": "711a0d7d-9606-48d9-ac7f-bc3beeaa5880"
+          "uuid": "711a0d7d-9606-48d9-ac7f-bc3beeaa5880",
+          "children": []
         }
       ]
     },
@@ -4826,10 +4827,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyclamminidae"
+    },
+    {
+      "id": "GENUS_PSEUDOCYCLAMMINA",
+      "name": "Pseudocyclammina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCYCLAMMINA_LITUUS_YOKOYAMA_1890",
+          "name": "Pseudocyclammina lituus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocyclammina",
+          "authorship": "(Yokoyama 1890)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:423178"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclamminidae"
     }
   ],
-  "genusCount": 28,
-  "speciesCount": 205,
+  "genusCount": 29,
+  "speciesCount": 206,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -4839,6 +4862,7 @@
       "familyKey": 4906046
     },
     "checklistbank": "txn:112257",
-    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10871035"
+    "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q10871035",
+    "checklistbank-1174": "txn:112257"
   }
 }

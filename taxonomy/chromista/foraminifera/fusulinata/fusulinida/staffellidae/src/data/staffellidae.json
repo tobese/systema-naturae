@@ -2063,7 +2063,8 @@
             "col": [
               "BHCJZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1316279"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1316279",
+            "gbif-backbone": "10206239"
           },
           "authorityIds": "col:BHCJZ",
           "children": [],
@@ -2744,7 +2745,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:199492"
           },
-          "uuid": "c6f009cf-e107-4692-b287-cde836a66668"
+          "uuid": "c6f009cf-e107-4692-b287-cde836a66668",
+          "children": []
         },
         {
           "id": "SP_NANKINELLA_NANJIANGENSIS_CHANG_AND_WANG_1974",
@@ -2757,7 +2759,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:236146"
           },
-          "uuid": "d100aae5-caa2-40e3-8f07-833b0785ec70"
+          "uuid": "d100aae5-caa2-40e3-8f07-833b0785ec70",
+          "children": []
         },
         {
           "id": "SP_NANKINELLA_KUZUENSIS_IGO_AND_IGO_1977",
@@ -2770,7 +2773,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:238790"
           },
-          "uuid": "f012a12b-2471-47a6-9571-4213001b3a32"
+          "uuid": "f012a12b-2471-47a6-9571-4213001b3a32",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2829,7 +2833,34 @@
           "sourceIds": {
             "checklistbank-1174": "txn:238791"
           },
-          "uuid": "9832b55a-8ec5-4e7e-94f6-547675a8cde8"
+          "uuid": "9832b55a-8ec5-4e7e-94f6-547675a8cde8",
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOREICHELINA_LONGLINENSIS_HUANG_1984",
+          "name": "Pseudoreichelina longlinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoreichelina",
+          "authorship": "Huang, 1984",
+          "sourceIds": {
+            "gbif-backbone": "10423668"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOREICHELINA_POROZHIJENSIS_SOLOVIEVA_1985",
+          "name": "Pseudoreichelina porozhijensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoreichelina",
+          "authorship": "Solovieva, 1985",
+          "sourceIds": {
+            "gbif-backbone": "9793844"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2913,7 +2944,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:236052"
           },
-          "uuid": "2ab20363-eb7c-4905-bca2-d069241b934c"
+          "uuid": "2ab20363-eb7c-4905-bca2-d069241b934c",
+          "children": []
         },
         {
           "id": "SP_KAHLERINA_USSURICA_SOSNINA_1956",
@@ -2926,7 +2958,8 @@
           "sourceIds": {
             "checklistbank-1174": "txn:238918"
           },
-          "uuid": "49b098c8-cb7b-434a-852b-ca39941a7799"
+          "uuid": "49b098c8-cb7b-434a-852b-ca39941a7799",
+          "children": []
         },
         {
           "id": "SP_KAHLERINA_SICILIANA_SKINNER_AND_WILDE_1966",
@@ -2939,16 +2972,65 @@
           "sourceIds": {
             "checklistbank-1174": "txn:239032"
           },
-          "uuid": "f7aff89f-f456-4f0c-b2b7-5fcec2c38267"
+          "uuid": "f7aff89f-f456-4f0c-b2b7-5fcec2c38267",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_EOVERBEEKINA",
+      "name": "Eoverbeekina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOVERBEEKINA_SAZHIENSIS_ZHANG_DONG_1986",
+          "name": "Eoverbeekina sazhiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoverbeekina",
+          "authorship": "Zhang & Dong, 1986",
+          "sourceIds": {
+            "gbif-backbone": "11811905"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOVERBEEKINA_YISHANENSIS_LINNAEUS_1977",
+          "name": "Eoverbeekina yishanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoverbeekina",
+          "authorship": "Linnaeus, 1977",
+          "sourceIds": {
+            "gbif-backbone": "9754039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOVERBEEKINA_REGULARIS_LINNAEUS_1977",
+          "name": "Eoverbeekina regularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoverbeekina",
+          "authorship": "Linnaeus, 1977",
+          "sourceIds": {
+            "gbif-backbone": "9748924"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "staffellidae"
     }
   ],
-  "speciesCount": 162,
+  "speciesCount": 167,
   "appSlug": "staffellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",
-  "genusCount": 23,
+  "genusCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

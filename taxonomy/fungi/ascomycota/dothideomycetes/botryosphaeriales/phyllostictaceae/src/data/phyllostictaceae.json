@@ -70146,7 +70146,8 @@
             "checklistbank-164210": "2611366",
             "checklistbank-32593": "69328"
           },
-          "uuid": "8a3fd275-af0b-4a61-a23a-72dec8ae6c52"
+          "uuid": "8a3fd275-af0b-4a61-a23a-72dec8ae6c52",
+          "children": []
         },
         {
           "id": "SP_PHYLLOSTICTA_SUBEFFUSA_ELLIS_EVERH_TEHON_G_L_STOUT",
@@ -70159,7 +70160,8 @@
           "sourceIds": {
             "checklistbank-164210": "2612018"
           },
-          "uuid": "39265c3c-7152-4faf-9ef0-240f7d212bf1"
+          "uuid": "39265c3c-7152-4faf-9ef0-240f7d212bf1",
+          "children": []
         }
       ],
       "authorship": "Persoon"
@@ -72060,7 +72062,8 @@
             "checklistbank-7888": [
               "BMSSYS0000044046"
             ],
-            "checklistbank-51518": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100103791/"
+            "checklistbank-51518": "http://services.snsb.info/DTNtaxonlists/rest/v0.1/names/DiversityTaxonNames_Fungi/100103791/",
+            "checklistbank-139831": "1585946"
           },
           "uuid": "6545c639-2d74-551-b44-82a876080f4b6d",
           "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q10457401,checklistbank:1585946,checklistbank:390890,checklistbank:865890,checklistbank-316441:XCVX,checklistbank-7888:BMSSYS0000044046,col:XCVX,gbif:2612833,gbif-backbone:2612833,mycobank:489000"
@@ -72979,26 +72982,42 @@
       "lineage": "phyllostictaceae"
     },
     {
-      "id": "GENUS_PHYLLOSTICTACEAE",
-      "name": "Phyllostictaceae",
+      "id": "GENUS_PSEUDOFUSICOCCUM",
+      "name": "Pseudofusicoccum",
       "rank": "GENUS",
-      "children": [],
+      "children": [
+        {
+          "id": "SP_PSEUDOFUSICOCCUM_ADANSONIAE",
+          "name": "Pseudofusicoccum adansoniae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudofusicoccum",
+          "sourceIds": {
+            "checklistbank-139831": "947301"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOFUSICOCCUM_KIMBERLEYENSE",
+          "name": "Pseudofusicoccum kimberleyense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudofusicoccum",
+          "sourceIds": {
+            "checklistbank-139831": "1571041"
+          },
+          "children": []
+        }
+      ],
       "sourcedFrom": "checklistbank",
-      "lineage": "phyllostictaceae",
-      "noSpeciesHeld": true
-    },
-    {
-      "id": "GENUS_PHOMA",
-      "name": "Phoma",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "phyllostictaceae",
-      "children": []
+      "lineage": "phyllostictaceae"
     }
   ],
   "authorship": "Fries",
-  "genusCount": 18,
-  "speciesCount": 2824,
+  "genusCount": 17,
+  "speciesCount": 2826,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
