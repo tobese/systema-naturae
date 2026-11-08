@@ -126,6 +126,24 @@ Next: WCVP (2000) and IPNI (2006), which carry a referenceID and page — though
 plantae is at 99% from COL already, so the gap that matters is animalia's
 ~430,000 species with a COL id and no reference.
 
+Measured 2026-11-09 for the rest of animalia's gap (2,079,296 species with no
+citation, most of them without a COL XR id at all): nothing else we hold
+closes much of it.
+
+- **Wikidata Species** (GBIF ac5f72cf…, 1.7M of the uncited carry its QID):
+  links only ~26,000 species to a reference, and its Reference.tsv rows are
+  bare item links (`Q102105754` → wikidata.org) with no title, author or
+  year. Usable only by fetching each item from Wikidata — not done.
+- **ITIS** (`publishedInID`): ~2,400 species, and the referenced rows carry no
+  citation text.
+- **uBio** carries referenceIDs for 245,000 but was reverted (2026-11-05).
+- The rest of the top sources by count (GBIF Backbone, 139831, 2265, 2169,
+  2008) carry no publication field.
+
+The next real source for animals is outside what we hold: Nomenclator
+Zoologicus (316817, genus level) and the Reptile Database with literature
+(223917), neither registered yet.
+
 ## Order
 
 1 → 2 → 3 → 4 → 5 → 6. Step 1 is quick and useful on its own; 2 is what
