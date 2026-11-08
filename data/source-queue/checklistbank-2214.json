@@ -1,5 +1,25 @@
 {
+  "key": "checklistbank-2214",
+  "title": "Batch import - checklistbank-2214",
+  "stage": "applied",
+  "licence": "cc by",
+  "size": 21578429,
   "archivePath": "/Volumes/MacieExternal/sources/archives/checklistbank-2214/archive.zip",
+  "reason": "re-queued 2026-11-07 (user): run r232 through Macie's pipeline for its archaea (1,259 merge as ids per the 11-05 measurement); q-bert's run took nothing (d8297605b24)",
+  "applied": {
+    "added": 0,
+    "merged": 1259,
+    "crossFamily": 0,
+    "families": 106,
+    "at": "2026-11-07T18:15:48Z"
+  },
+  "triaged": {
+    "offered": 199923,
+    "alreadyHeld": 192483,
+    "staged": 1259,
+    "refused": 0,
+    "refusalRate": 0
+  },
   "history": [
     {
       "at": "2026-10-22T09:00:00+0200",
@@ -20,12 +40,30 @@
     {
       "at": "2026-11-05T20:02:58+0100",
       "stage": "blocked"
+    },
+    {
+      "at": "2026-11-07T19:12:23+0100",
+      "stage": "candidate"
+    },
+    {
+      "at": "2026-11-07T18:13:31Z",
+      "stage": "transforming"
+    },
+    {
+      "at": "2026-11-07T18:15:13Z",
+      "stage": "triaged"
+    },
+    {
+      "at": "2026-11-07T18:15:13Z",
+      "stage": "queued"
+    },
+    {
+      "at": "2026-11-07T18:15:13Z",
+      "stage": "applying"
+    },
+    {
+      "at": "2026-11-07T18:15:48Z",
+      "stage": "applied"
     }
-  ],
-  "key": "checklistbank-2214",
-  "licence": "cc by",
-  "reason": "GTDB r232 on Macie (archaea side) measured 2026-11-05: 199,923 offered (bacteria 184,237, archaea 9,505, 6,181 unresolved), 192,483 already held, 1,259 merge as ids, 0 new species -- nothing for Macie to take. Bacteria and the placeholder decision are q-bert's: user decided 2026-11-05 to MARK the 168,240 genome placeholders (keep, flag them), per docs/qbert-bacteria-viruses-plan.md. Licence CC BY-SA 4.0 (settled 2026-11-01)",
-  "size": 21578429,
-  "stage": "blocked",
-  "title": "Batch import - checklistbank-2214"
+  ]
 }
