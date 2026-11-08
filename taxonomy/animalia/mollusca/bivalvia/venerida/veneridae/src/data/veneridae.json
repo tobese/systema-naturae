@@ -59875,21 +59875,6 @@
           "children": []
         },
         {
-          "id": "SP_CHIONE_SEYMOURENSIS_DALL_OCHSNER_1928",
-          "name": "Chione seymourensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chione",
-          "authorship": "Dall & Ochsner, 1928",
-          "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1673205",
-            "gbif-backbone": "9514771"
-          },
-          "uuid": "fbc46f31-299b-47a3-a9de-d7a1f7db65d0",
-          "children": []
-        },
-        {
           "id": "SP_CHIONE_BAINBRIDGENSIS_DALL_1916",
           "name": "Chione bainbridgensis",
           "rank": "SPECIES",
@@ -59957,21 +59942,6 @@
             "checklistbank-1174": "txn:99337"
           },
           "uuid": "832c2437-b85e-49f4-b13e-a650353a514c",
-          "children": []
-        },
-        {
-          "id": "SP_CHIONE_RICHTHOFENI_HERTLEIN_AND_JORDAN_1927",
-          "name": "Chione richthofeni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chione",
-          "authorship": "(Hertlein and Jordan 1927)",
-          "sourceIds": {
-            "checklistbank-1174": "txn:103077",
-            "gbif-backbone": "5932354"
-          },
-          "uuid": "c3d30dab-0d9a-4747-ba81-bf2c3646b5f1",
           "children": []
         },
         {
@@ -60084,36 +60054,6 @@
             "checklistbank-1174": "txn:71572"
           },
           "uuid": "bf20b2ad-57fe-451f-8b37-a152144824f1",
-          "children": []
-        },
-        {
-          "id": "SP_CHIONE_TEGULUM_BROWN_AND_PILSBRY_1911",
-          "name": "Chione tegulum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chione",
-          "authorship": "(Brown and Pilsbry 1911)",
-          "sourceIds": {
-            "checklistbank-1174": "txn:161767",
-            "gbif-backbone": "8706484"
-          },
-          "uuid": "2b471aca-bbe3-483a-9d6e-4bca6d1476d1",
-          "children": []
-        },
-        {
-          "id": "SP_CHIONE_SECHUNTANA_HANNA_AND_ISRAELSKY_1925",
-          "name": "Chione sechuntana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chione",
-          "authorship": "(Hanna and Israelsky 1925)",
-          "sourceIds": {
-            "checklistbank-1174": "txn:162093",
-            "gbif-backbone": "8476986"
-          },
-          "uuid": "92a34b3f-a34f-48aa-af2a-917b9aa6fb23",
           "children": []
         },
         {
@@ -64571,9 +64511,14 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1673205"
             ],
-            "gbif-backbone": "9514771"
+            "gbif-backbone": [
+              "9514771"
+            ],
+            "checklistbank-2011": [
+              "urn:lsid:marinespecies.org:taxname:1673205"
+            ]
           },
-          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1673205,col:BPR2P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1673205,checklistbank-2011:urn:lsid:marinespecies.org:taxname:1673205,col:BPR2P,gbif-backbone:9514771",
           "authorship": "Dall & Ochsner, 1928"
         },
         {
@@ -65443,8 +65388,14 @@
           "authorship": "(Hertlein and Jordan 1927)",
           "sourceIds": {
             "checklistbank": "txn:103077",
-            "gbif-backbone": "5932354"
-          }
+            "gbif-backbone": [
+              "5932354"
+            ],
+            "checklistbank-1174": [
+              "txn:103077"
+            ]
+          },
+          "authorityIds": "checklistbank:txn:103077,checklistbank-1174:txn:103077,gbif-backbone:5932354"
         },
         {
           "id": "SP_CHIONE_SECHUNTANA",
@@ -65459,8 +65410,14 @@
           "authorship": "(Hanna and Israelsky 1925)",
           "sourceIds": {
             "checklistbank": "txn:162093",
-            "gbif-backbone": "8476986"
-          }
+            "gbif-backbone": [
+              "8476986"
+            ],
+            "checklistbank-1174": [
+              "txn:162093"
+            ]
+          },
+          "authorityIds": "checklistbank:txn:162093,checklistbank-1174:txn:162093,gbif-backbone:8476986"
         },
         {
           "id": "SP_CHIONE_SEMIPLICATA",
@@ -65507,8 +65464,14 @@
           "authorship": "(Brown and Pilsbry 1911)",
           "sourceIds": {
             "checklistbank": "txn:161767",
-            "gbif-backbone": "8706484"
-          }
+            "gbif-backbone": [
+              "8706484"
+            ],
+            "checklistbank-1174": [
+              "txn:161767"
+            ]
+          },
+          "authorityIds": "checklistbank:txn:161767,checklistbank-1174:txn:161767,gbif-backbone:8706484"
         },
         {
           "id": "SP_CHIONE_VARIABILIS",
@@ -80225,7 +80188,7 @@
     }
   ],
   "genusCount": 279,
-  "speciesCount": 4866,
+  "speciesCount": 4862,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

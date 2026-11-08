@@ -25295,9 +25295,14 @@
             ],
             "checklistbank": "txn:107338",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1307556",
-            "checklistbank-316856": "2686719"
+            "checklistbank-316856": [
+              "2686719"
+            ],
+            "checklistbank-1174": [
+              "txn:107338"
+            ]
           },
-          "authorityIds": "itis:75320"
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q1307556,checklistbank:txn:107338,checklistbank-1174:txn:107338,checklistbank-316856:2686719,itis:75320"
         },
         {
           "id": "SP_CONUS_BAJANENSIS_USTICKE_1968",
@@ -25495,9 +25500,14 @@
             "checklistbank": "txn:503416",
             "gbif-backbone": "8932156",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q1609720",
-            "checklistbank-316856": "2686762"
+            "checklistbank-316856": [
+              "2686762"
+            ],
+            "checklistbank-1174": [
+              "txn:503416"
+            ]
           },
-          "authorityIds": "itis:75391"
+          "authorityIds": "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5:Q1609720,checklistbank:txn:503416,checklistbank-1174:txn:503416,checklistbank-316856:2686762,gbif-backbone:8932156,itis:75391"
         },
         {
           "id": "SP_CONUS_USTICKEI_MILLER_IN_USTICKE_1959",
@@ -31709,10 +31719,16 @@
           "authorship": "Hwass, 1792",
           "sourceIds": {
             "checklistbank": "585913",
-            "checklistbank-316856": "2799399"
+            "checklistbank-316856": [
+              "2799399"
+            ],
+            "checklistbank-1174": [
+              "txn:107332"
+            ]
           },
           "children": [],
-          "uuid": "2ab17d45-4542-5bb-b0e-2a286bf25b40ce"
+          "uuid": "2ab17d45-4542-5bb-b0e-2a286bf25b40ce",
+          "authorityIds": "checklistbank:585913,checklistbank-1174:txn:107332,checklistbank-316856:2799399"
         },
         {
           "id": "SP_CONUS_LAPULAPUI_DA_MOTTA_R_MARTIN_1982",
@@ -53634,21 +53650,6 @@
           "children": []
         },
         {
-          "id": "SP_CONUS_TESTUDINARIUS_MARTINI_1773",
-          "name": "Conus testudinarius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Conus",
-          "authorship": "(Martini 1773)",
-          "sourceIds": {
-            "checklistbank-1174": "txn:107332",
-            "checklistbank-316856": "2799399"
-          },
-          "uuid": "dfc1e9e9-50b3-457e-b305-be9f18f6112d",
-          "children": []
-        },
-        {
           "id": "SP_CONUS_AMADIS_MARTINI_1773",
           "name": "Conus amadis",
           "rank": "SPECIES",
@@ -53660,21 +53661,6 @@
             "checklistbank-1174": "txn:107334"
           },
           "uuid": "2f15c694-94fd-4f0f-a36e-993d508241bb",
-          "children": []
-        },
-        {
-          "id": "SP_CONUS_ARCUATUS_SOWERBY_1829",
-          "name": "Conus arcuatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Conus",
-          "authorship": "(Sowerby 1829)",
-          "sourceIds": {
-            "checklistbank-1174": "txn:107338",
-            "checklistbank-316856": "2686719"
-          },
-          "uuid": "2bfa30ad-d8bc-47be-9ef6-46c6e7538cce",
           "children": []
         },
         {
@@ -54165,21 +54151,6 @@
             "checklistbank-1174": "txn:503413"
           },
           "uuid": "39351668-d3fc-4a7a-8a42-5a2912af4d8e",
-          "children": []
-        },
-        {
-          "id": "SP_CONUS_TORNATUS_BRODERIP_1833",
-          "name": "Conus tornatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Conus",
-          "authorship": "Broderip 1833",
-          "sourceIds": {
-            "checklistbank-1174": "txn:503416",
-            "checklistbank-316856": "2686762"
-          },
-          "uuid": "1a65c35c-fb59-4aaa-8802-a32aa9c90541",
           "children": []
         },
         {
@@ -95020,7 +94991,7 @@
     }
   ],
   "genusCount": 221,
-  "speciesCount": 5978,
+  "speciesCount": 5975,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

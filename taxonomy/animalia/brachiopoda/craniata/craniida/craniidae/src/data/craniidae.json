@@ -2324,9 +2324,14 @@
             ],
             "checklistbank": "txn:282823",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "156775",
-            "checklistbank-316856": "594828"
+            "checklistbank-316856": [
+              "594828"
+            ],
+            "checklistbank-1174": [
+              "txn:282823"
+            ]
           },
-          "authorityIds": "itis:156775"
+          "authorityIds": "9ca92552-f23a-41a8-a140-01abaa31c931:156775,checklistbank:txn:282823,checklistbank-1174:txn:282823,checklistbank-316856:594828,itis:156775"
         },
         {
           "id": "SP_CRANIA_VALDIVIAE_HELMCKE_1940",
@@ -2754,21 +2759,6 @@
           "authorship": "Joubin, 1901",
           "children": [],
           "uuid": "da3d9e87-0914-5f5-a0a-a80ac1a85e1793"
-        },
-        {
-          "id": "SP_CRANIA_HUTTONI_THOMSON_1916",
-          "name": "Crania huttoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Crania",
-          "authorship": "Thomson 1916",
-          "sourceIds": {
-            "checklistbank-1174": "txn:282823",
-            "checklistbank-316856": "594828"
-          },
-          "uuid": "93209e24-67ad-4299-ae8b-5cc49b9f4dee",
-          "children": []
         }
       ]
     },
@@ -3827,7 +3817,7 @@
     }
   ],
   "genusCount": 29,
-  "speciesCount": 241,
+  "speciesCount": 240,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

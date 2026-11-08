@@ -5213,9 +5213,14 @@
               "79134"
             ],
             "checklistbank": "txn:107608",
-            "checklistbank-316856": "2691883"
+            "checklistbank-316856": [
+              "2691883"
+            ],
+            "checklistbank-1174": [
+              "txn:107608"
+            ]
           },
-          "authorityIds": "itis:79134",
+          "authorityIds": "checklistbank:txn:107608,checklistbank-1174:txn:107608,checklistbank-316856:2691883,itis:79134",
           "commonName": "dolphintooth nutclam",
           "description": "Nucula delphinodonta, or the dolphin-tooth nut shell clam, is a marine bivalve mollusc in the family Nuculidae described by J.W."
         },
@@ -10923,21 +10928,6 @@
             "checklistbank-1174": "txn:102789"
           },
           "uuid": "55a108e6-6667-42f4-b67d-4b8bb76efa3f",
-          "children": []
-        },
-        {
-          "id": "SP_NUCULA_DELPHINODONTA_MIGHELS_AND_ADAMS_1842",
-          "name": "Nucula delphinodonta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nucula",
-          "authorship": "(Mighels and Adams 1842)",
-          "sourceIds": {
-            "checklistbank-1174": "txn:107608",
-            "checklistbank-316856": "2691883"
-          },
-          "uuid": "4cf3c3e0-53eb-4f5e-b92a-07c2f4162bd8",
           "children": []
         },
         {
@@ -21009,27 +20999,6 @@
             ]
           },
           "authorityIds": "col:CSXGS"
-        },
-        {
-          "id": "SP_PRAELEDA_MULTIDENTATA_J_C_W_COPE_1999",
-          "name": "Praeleda multidentata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "J. C. W. Cope, 1999",
-          "children": [],
-          "lineage": "Praeleda",
-          "uuid": "153d4364-40ba-5fd-99e-197dc41065bd8c",
-          "sourceIds": {
-            "col": [
-              "V982X"
-            ],
-            "checklistbank": [
-              "txn:478783"
-            ],
-            "checklistbank-1174": "txn:478783"
-          },
-          "authorityIds": "checklistbank:txn:478783,col:V982X"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -21465,7 +21434,7 @@
     }
   ],
   "genusCount": 43,
-  "speciesCount": 1363,
+  "speciesCount": 1361,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
