@@ -116,9 +116,15 @@ species that have a COL id. The files are rebuilt from scratch on every run
 and land with `landTree.py`'s shared paths; `verifyTree` fails on a link to a
 missing reference or to a species no longer in the tree.
 
-Next sources, for species COL leaves without a reference: WoRMS
-(checklistbank-2011, `namePublishedIn`), WCVP (2000) and IPNI (2006), which
-carry a referenceID and page.
+WoRMS (checklistbank-2011) fills in for species COL leaves without a
+reference, joined on the WoRMS taxonID in `sourceIds`: its `namePublishedIn`
+is text on the name, so a WoRMS reference is keyed `worms:<md5 of the
+text>[:12]` and the same text is one reference. It adds 22,800 species
+(animalia 14,039, chromista 8,504) and ~10,800 references.
+
+Next: WCVP (2000) and IPNI (2006), which carry a referenceID and page — though
+plantae is at 99% from COL already, so the gap that matters is animalia's
+~430,000 species with a COL id and no reference.
 
 ## Order
 

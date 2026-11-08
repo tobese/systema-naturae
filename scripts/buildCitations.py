@@ -21,7 +21,15 @@ Only references some species points at are written.
 
 A species with several COL ids takes the first (sorted) that has a
 reference. Re-running rebuilds every sidecar from scratch: the files are a
-pure function of the tree and the archive.
+pure function of the tree and the archives.
+
+A species COL leaves without a reference falls back to WoRMS
+(checklistbank-2011), joined on the WoRMS taxonID it carries in
+`sourceIds.checklistbank-2011`. WoRMS states `namePublishedIn` as text on
+the name itself, without a reference id for most rows, so a WoRMS reference
+is keyed `worms:<md5 of the text>[:12]`: the same text is one reference.
+`namePublishedInID`, when present, is a DOI URL and kept as `link`. The text
+is WoRMS's verbatim, inline HTML (<em>, <i>) included.
 
     python3 scripts/buildCitations.py            # measure, write nothing
     python3 scripts/buildCitations.py --apply
@@ -43,6 +51,10 @@ from tree import ROOT, iter_family_files, kingdom_names  # noqa: E402
 DATASET = "checklistbank-316441"
 ARCHIVE = os.path.join(sources.ROOT, "archives", DATASET, "archive.zip")
 WORK = os.path.join(sources.ROOT, "work", "citations-" + DATASET)
+WORMS = "checklistbank-2011"
+WORMS_ARCHIVE = os.path.join(sources.ROOT, "archives", WORMS, "archive.zip")
+WORMS_WORK = os.path.join(sources.ROOT, "work", "citations-" + WORMS)
+YEAR = re.compile(r"1[5-9]\d\d|20\d\d")
 OUT = os.path.join(ROOT, "data", "citations")
 COL_KEYS = ("col", DATASET)
 
@@ -61,8 +73,15 @@ def col_ids(sp) -> list[str]:
     return sorted(ids)
 
 
+def worms_id(sp):
+    v = (sp.get("sourceIds") or {}).get(WORMS)
+    v = v[0] if isinstance(v, list) and v else v
+    return str(v) if v else None
+
+
 def tree_species():
-    """(kingdom, species id, [COL ids]) for every species that has a COL id."""
+    """(kingdom, species id, [COL ids], WoRMS id) for every species that has
+    either."""
     for kingdom in kingdom_names():
         for fam in iter_family_files(kingdom):
             with open(fam.path, encoding="utf-8") as fh:
@@ -73,21 +92,21 @@ def tree_species():
                 st.extend(n.get("children") or [])
                 for sp in [n, *(n.get("speciesList") or [])]:
                     if sp.get("rank") == "SPECIES" and sp.get("id"):
-                        ids = col_ids(sp)
-                        if ids:
-                            yield kingdom, sp["id"], ids
+                        ids, w = col_ids(sp), worms_id(sp)
+                        if ids or w:
+                            yield kingdom, sp["id"], ids, w
 
 
-def extract():
-    """NameUsage.tsv and Reference.tsv out of the archive, once."""
-    os.makedirs(WORK, exist_ok=True)
-    for member in ("NameUsage.tsv", "Reference.tsv"):
-        dst = os.path.join(WORK, member)
-        if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(ARCHIVE):
+def extract(archive, work, members):
+    """Members out of an archive, once per archive version."""
+    os.makedirs(work, exist_ok=True)
+    for member in members:
+        dst = os.path.join(work, member)
+        if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(archive):
             continue
-        print(f"  extracting {member} from {ARCHIVE}", flush=True)
+        print(f"  extracting {member} from {archive}", flush=True)
         with open(dst + ".part", "wb") as fh:
-            subprocess.run(["unzip", "-p", ARCHIVE, member], stdout=fh, check=True)
+            subprocess.run(["unzip", "-p", archive, member], stdout=fh, check=True)
         os.replace(dst + ".part", dst)
 
 
@@ -112,7 +131,8 @@ def main() -> int:
     args = ap.parse_args()
 
     import duckdb
-    extract()
+    extract(ARCHIVE, WORK, ("NameUsage.tsv", "Reference.tsv"))
+    extract(WORMS_ARCHIVE, WORMS_WORK, ("taxon.txt",))
     con = duckdb.connect()
     opts = "delim='\\t', header=true, quote='', escape='', all_varchar=true, ignore_errors=true"
     con.execute(f"""CREATE TABLE nu AS SELECT "col:ID" AS id, "col:nameReferenceID" AS ref,
@@ -121,11 +141,13 @@ def main() -> int:
                     WHERE "col:nameReferenceID" IS NOT NULL AND "col:nameReferenceID" <> ''""")
 
     print("  reading the tree's species", flush=True)
-    rows, held = [], collections.Counter()
-    for kingdom, sid, ids in tree_species():
+    rows, wrows, held = [], [], collections.Counter()
+    for kingdom, sid, ids, w in tree_species():
         held[kingdom] += 1
         for rank, cid in enumerate(ids):
             rows.append((kingdom, sid, cid, rank))
+        if w:
+            wrows.append((kingdom, sid, w))
     con.execute("CREATE TABLE sp (kingdom VARCHAR, sid VARCHAR, cid VARCHAR, rk INTEGER)")
     con.executemany("INSERT INTO sp VALUES (?, ?, ?, ?)", rows)
     del rows
@@ -162,18 +184,42 @@ def main() -> int:
         rec = {"citation": citation}
         # COL's `issued` is sometimes page text from IPNI ("-42, fig. 12");
         # only a plain year is kept.
-        year = issued if issued and re.fullmatch(r"1[5-9]\d\d|20\d\d", issued) else None
+        year = issued if issued and YEAR.fullmatch(issued) else None
         for k, v in (("doi", doi), ("link", link), ("year", year),
                      ("via", f"checklistbank-{via}" if via else None)):
             if v:
                 rec[k] = v
         references[shard("col:" + rid)]["col:" + rid] = rec
 
+    # WoRMS, for the species COL left without one.
+    con.execute("CREATE TABLE ws (kingdom VARCHAR, sid VARCHAR, w VARCHAR)")
+    con.executemany("INSERT INTO ws VALUES (?, ?, ?)",
+                    [r for r in wrows if r[1] not in species.get(r[0], {}).get(shard(r[1]), ())])
+    del wrows
+    wopts = ("delim='\\t', header=true, quote='\"', escape='\"', strict_mode=false, "
+             "all_varchar=true, ignore_errors=true")
+    per_worms = collections.Counter()
+    for kingdom, sid, text, pid, year in con.execute(f"""
+            SELECT ws.kingdom, ws.sid, t.namePublishedIn, t.namePublishedInID,
+                   t.namePublishedInYear
+            FROM ws JOIN read_csv('{os.path.join(WORMS_WORK, "taxon.txt")}', {wopts}) t
+              ON t.taxonID = ws.w
+            WHERE t.namePublishedIn IS NOT NULL AND trim(t.namePublishedIn) <> ''""").fetchall():
+        text = text.strip()
+        key = "worms:" + hashlib.md5(text.encode("utf-8")).hexdigest()[:12]
+        species[kingdom][shard(sid)][sid] = {"r": key}
+        per_worms[kingdom] += 1
+        rec = references[shard(key)].setdefault(key, {"citation": text, "via": WORMS})
+        if year and YEAR.fullmatch(year):
+            rec.setdefault("year", year)
+        if pid and pid.startswith("http"):
+            rec.setdefault("link", pid)
+
     for kingdom in kingdom_names():
-        n, h = per_kingdom[kingdom], held[kingdom]
-        print(f"  {kingdom:10} {n:>10,} of {h:>10,} species with a COL id get a reference"
-              f" ({100 * n / max(1, h):.0f}%)")
-    print(f"  {sum(per_kingdom.values()):,} species links, "
+        n, w, h = per_kingdom[kingdom], per_worms[kingdom], held[kingdom]
+        print(f"  {kingdom:10} {n:>10,} from COL + {w:>8,} from WoRMS of {h:>10,} species"
+              f" with a COL or WoRMS id ({100 * (n + w) / max(1, h):.0f}%)")
+    print(f"  {sum(per_kingdom.values()) + sum(per_worms.values()):,} species links, "
           f"{sum(len(v) for v in references.values()):,} references")
     if not args.apply:
         print("\n  (dry run -- pass --apply to write data/citations)")
