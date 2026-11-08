@@ -13362,5 +13362,160 @@
    "plantae/asteraceae"
   ],
   "kept": []
+ },
+ "SP_PSEUDOLARYNGODUS_SPECTABILIS": {
+  "decided": "2026-11-08",
+  "action": "remove",
+  "evidence": "Pseudolaryngodus spectabilis Malipatil & Gao, 2019 is a rhyparochromid bug (COL 8QNQQ, in animalia/rhyparochromidae); the Myrtaceae copy rests only on an OTT id (ott7641190) and no plant genus Pseudolaryngodus is known",
+  "confidence": "high",
+  "decidedBy": "claude, overnight 2026-11-08 (red CI on d8c0b487521), for review",
+  "placements": [
+   {
+    "kingdom": "plantae",
+    "family": "myrtaceae",
+    "sources": [
+     "checklistbank"
+    ]
+   },
+   {
+    "kingdom": "animalia",
+    "family": "rhyparochromidae",
+    "sources": [
+     "col"
+    ]
+   }
+  ],
+  "removed_from": "plantae/myrtaceae",
+  "kept": [
+   "animalia/rhyparochromidae"
+  ]
+ },
+ "SP_PULMOMERUS_LEVATUS": {
+  "decided": "2026-11-08",
+  "action": "remove",
+  "evidence": "Pulmomerus levatus Cervantes & Brailovsky, 2012 is a rhyparochromid bug; the Moraceae copy carries the bug's own ids (COL S3RN3, Wikidata Q118741017), so it is the same organism placed in a plant family",
+  "confidence": "high",
+  "decidedBy": "claude, overnight 2026-11-08 (red CI on d8c0b487521), for review",
+  "placements": [
+   {
+    "kingdom": "plantae",
+    "family": "moraceae",
+    "sources": [
+     "col",
+     "wikidata"
+    ]
+   },
+   {
+    "kingdom": "animalia",
+    "family": "rhyparochromidae",
+    "sources": [
+     "col"
+    ]
+   }
+  ],
+  "removed_from": "plantae/moraceae",
+  "kept": [
+   "animalia/rhyparochromidae"
+  ]
+ },
+ "SP_CARBONICOLA_MYRMECINA": {
+  "decided": "2026-11-08",
+  "action": "remove",
+  "evidence": "Carbonicola myrmecina (Ach.) Bendiksby & Timdal is a lichen (GBIF: Fungi only); the bivalve copy rests on a Wikidata item whose parent is the homonym bivalve genus",
+  "confidence": "high",
+  "decidedBy": "user, 2026-11-08 (GBIF lookup: no animal species of this name)",
+  "placements": [
+   {
+    "kingdom": "animalia",
+    "family": "carbonicolidae",
+    "sources": [
+     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5"
+    ]
+   },
+   {
+    "kingdom": "fungi",
+    "family": "lecanoraceae",
+    "sources": []
+   }
+  ],
+  "removed_from": "animalia/carbonicolidae",
+  "kept": [
+   "fungi/lecanoraceae"
+  ]
+ },
+ "SP_GRAPHIUM_APHTHOSAE": {
+  "decided": "2026-11-08",
+  "action": "remove",
+  "evidence": "Graphium aphthosae Alstrup & D.Hawksw. is a lichenicolous fungus (Microascales); no swallowtail of that name, the Papilionidae copy rests on Wikidata only",
+  "confidence": "high",
+  "decidedBy": "user, 2026-11-08 (GBIF lookup: no animal species of this name)",
+  "placements": [
+   {
+    "kingdom": "animalia",
+    "family": "papilionidae",
+    "sources": [
+     "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5"
+    ]
+   },
+   {
+    "kingdom": "fungi",
+    "family": "graphiaceae",
+    "sources": []
+   }
+  ],
+  "removed_from": "animalia/papilionidae",
+  "kept": [
+   "fungi/graphiaceae"
+  ]
+ },
+ "SP_MALLOCHIA_ECHINULATA": {
+  "decided": "2026-11-08",
+  "action": "remove",
+  "evidence": "Mallochia echinulata (B.G.Dutta & G.R.Ghosh) Arx & Samson is an onygenalean fungus (GBIF: Fungi only); the ichneumonid copy rests on an OTT id only",
+  "confidence": "high",
+  "decidedBy": "user, 2026-11-08 (GBIF lookup: no animal species of this name)",
+  "placements": [
+   {
+    "kingdom": "animalia",
+    "family": "ichneumonidae",
+    "sources": [
+     "checklistbank"
+    ]
+   },
+   {
+    "kingdom": "fungi",
+    "family": "onygenaceae",
+    "sources": []
+   }
+  ],
+  "removed_from": "animalia/ichneumonidae",
+  "kept": [
+   "fungi/onygenaceae"
+  ]
+ },
+ "SP_TRICHODA_LARUS_M_LLER_1786": {
+  "decided": "2026-11-08",
+  "action": "remove",
+  "evidence": "Trichoda larus Müller, 1786 is an accepted ciliate (CoL: Oxytrichidae); in Chaetonotidae the name is only a synonym (of a Chaetonotus), not a species",
+  "confidence": "high",
+  "decidedBy": "user, 2026-11-08 (GBIF lookup: no animal species of this name)",
+  "placements": [
+   {
+    "kingdom": "animalia",
+    "family": "chaetonotidae",
+    "sources": [
+     "checklistbank"
+    ]
+   },
+   {
+    "kingdom": "chromista",
+    "family": "holostichidae",
+    "sources": []
+   }
+  ],
+  "removed_from": "animalia/chaetonotidae",
+  "kept": [
+   "chromista/holostichidae"
+  ]
  }
 }
