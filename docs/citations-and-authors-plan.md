@@ -140,9 +140,17 @@ closes much of it.
 - The rest of the top sources by count (GBIF Backbone, 139831, 2265, 2169,
   2008) carry no publication field.
 
-The next real source for animals is outside what we hold: Nomenclator
-Zoologicus (316817, genus level) and the Reptile Database with literature
-(223917), neither registered yet.
+The next real source for animals is outside what we hold: the Reptile
+Database with literature (223917, registered 2026-11-09; reptiles are 26%
+cited). Nomenclator Zoologicus is already held as Rod Page's ColDP (126539),
+so 316817, an older edition, was not registered.
+
+A third pass (2026-11-09) matches by name what has neither id: a species with
+no COL or WoRMS link whose canonical name, in its kingdom, is exactly one
+accepted COL XR species takes that species' reference, marked `"by": "name"`.
+A name COL holds twice as accepted (homonyms, split placements) is left alone.
+It adds 492,061 links (animalia 277,113, plantae 171,393, fungi 39,850,
+chromista 4,347, protozoa 358), for 2,055,048 links to 777,116 references.
 
 ## Order
 

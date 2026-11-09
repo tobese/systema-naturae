@@ -31,6 +31,13 @@ is keyed `worms:<md5 of the text>[:12]`: the same text is one reference.
 `namePublishedInID`, when present, is a DOI URL and kept as `link`. The text
 is WoRMS's verbatim, inline HTML (<em>, <i>) included.
 
+A species with neither falls back to COL by name (2026-11-09): ~500k of our
+species carry no COL id though COL XR holds the same name, most of them
+imported from other sources and never merged with COL. The match is the
+canonical name (buildSpeciesParquet.canonicalize) against COL's accepted
+species of the same kingdom, taken only when exactly one accepted species
+has that name; the link carries `"by": "name"` so it can be told apart.
+
     python3 scripts/buildCitations.py            # measure, write nothing
     python3 scripts/buildCitations.py --apply
 """
@@ -46,6 +53,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sources  # noqa: E402
+from buildSpeciesParquet import canonicalize  # noqa: E402
 from tree import ROOT, iter_family_files, kingdom_names  # noqa: E402
 
 DATASET = "checklistbank-316441"
@@ -80,8 +88,8 @@ def worms_id(sp):
 
 
 def tree_species():
-    """(kingdom, species id, [COL ids], WoRMS id) for every species that has
-    either."""
+    """(kingdom, species id, [COL ids], WoRMS id, canonical name) for every
+    species."""
     for kingdom in kingdom_names():
         for fam in iter_family_files(kingdom):
             with open(fam.path, encoding="utf-8") as fh:
@@ -92,9 +100,9 @@ def tree_species():
                 st.extend(n.get("children") or [])
                 for sp in [n, *(n.get("speciesList") or [])]:
                     if sp.get("rank") == "SPECIES" and sp.get("id"):
-                        ids, w = col_ids(sp), worms_id(sp)
-                        if ids or w:
-                            yield kingdom, sp["id"], ids, w
+                        name = sp.get("name") or ""
+                        canon = canonicalize(name, name.split(" ")[0], "SPECIES")[0]
+                        yield kingdom, sp["id"], col_ids(sp), worms_id(sp), canon
 
 
 def extract(archive, work, members):
@@ -125,6 +133,32 @@ def write_shards(base: str, by_shard: dict) -> int:
     return len(by_shard)
 
 
+def load_col_refs(con, ref_ids, references, opts) -> set:
+    """COL Reference rows for `ref_ids` into `references`; the ids that have
+    citation text."""
+    con.execute("CREATE OR REPLACE TABLE used (ref VARCHAR)")
+    con.executemany("INSERT INTO used VALUES (?)", [(r,) for r in sorted(ref_ids)])
+    have = set()
+    for rid, citation, doi, link, issued, via in con.execute(f"""
+            SELECT r."col:ID", r."col:citation", r."col:doi", r."col:link",
+                   r."col:issued", r."col:sourceID"
+            FROM read_csv('{os.path.join(WORK, "Reference.tsv")}', {opts}) r
+            JOIN used u ON u.ref = r."col:ID" """).fetchall():
+        if not citation:
+            continue
+        have.add(rid)
+        rec = {"citation": citation}
+        # COL's `issued` is sometimes page text from IPNI ("-42, fig. 12");
+        # only a plain year is kept.
+        year = issued if issued and YEAR.fullmatch(issued) else None
+        for k, v in (("doi", doi), ("link", link), ("year", year),
+                     ("via", f"checklistbank-{via}" if via else None)):
+            if v:
+                rec[k] = v
+        references[shard("col:" + rid)]["col:" + rid] = rec
+    return have
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
@@ -141,13 +175,14 @@ def main() -> int:
                     WHERE "col:nameReferenceID" IS NOT NULL AND "col:nameReferenceID" <> ''""")
 
     print("  reading the tree's species", flush=True)
-    rows, wrows, held = [], [], collections.Counter()
-    for kingdom, sid, ids, w in tree_species():
+    rows, wrows, names, held = [], [], [], collections.Counter()
+    for kingdom, sid, ids, w, canon in tree_species():
         held[kingdom] += 1
         for rank, cid in enumerate(ids):
             rows.append((kingdom, sid, cid, rank))
         if w:
             wrows.append((kingdom, sid, w))
+        names.append((kingdom, sid, canon))
     con.execute("CREATE TABLE sp (kingdom VARCHAR, sid VARCHAR, cid VARCHAR, rk INTEGER)")
     con.executemany("INSERT INTO sp VALUES (?, ?, ?, ?)", rows)
     del rows
@@ -156,15 +191,8 @@ def main() -> int:
                              SELECT sp.kingdom, sp.sid, nu.ref, nu.page, nu.pagelink,
                                     row_number() OVER (PARTITION BY sp.kingdom, sp.sid ORDER BY sp.rk) AS n
                              FROM sp JOIN nu ON nu.id = sp.cid) WHERE n = 1""").fetchall()
-    used = sorted({r[2] for r in links})
-    con.execute("CREATE TABLE used (ref VARCHAR)")
-    con.executemany("INSERT INTO used VALUES (?)", [(r,) for r in used])
-    refs = con.execute(f"""SELECT r."col:ID", r."col:citation", r."col:doi", r."col:link",
-                                  r."col:issued", r."col:sourceID"
-                           FROM read_csv('{os.path.join(WORK, "Reference.tsv")}', {opts}) r
-                           JOIN used u ON u.ref = r."col:ID" """).fetchall()
-
-    have_ref = {r[0] for r in refs if r[1]}
+    references = collections.defaultdict(dict)
+    have_ref = load_col_refs(con, {r[2] for r in links}, references, opts)
     per_kingdom = collections.Counter()
     species = collections.defaultdict(lambda: collections.defaultdict(dict))
     for kingdom, sid, ref, page, pagelink in links:
@@ -177,19 +205,6 @@ def main() -> int:
             link["pl"] = pagelink
         species[kingdom][shard(sid)][sid] = link
         per_kingdom[kingdom] += 1
-    references = collections.defaultdict(dict)
-    for rid, citation, doi, link, issued, via in refs:
-        if not citation:
-            continue
-        rec = {"citation": citation}
-        # COL's `issued` is sometimes page text from IPNI ("-42, fig. 12");
-        # only a plain year is kept.
-        year = issued if issued and YEAR.fullmatch(issued) else None
-        for k, v in (("doi", doi), ("link", link), ("year", year),
-                     ("via", f"checklistbank-{via}" if via else None)):
-            if v:
-                rec[k] = v
-        references[shard("col:" + rid)]["col:" + rid] = rec
 
     # WoRMS, for the species COL left without one.
     con.execute("CREATE TABLE ws (kingdom VARCHAR, sid VARCHAR, w VARCHAR)")
@@ -215,12 +230,45 @@ def main() -> int:
         if pid and pid.startswith("http"):
             rec.setdefault("link", pid)
 
+    # COL by name, for the species neither id reached.
+    con.execute("CREATE TABLE sn (kingdom VARCHAR, sid VARCHAR, nm VARCHAR)")
+    con.executemany("INSERT INTO sn VALUES (?, ?, ?)",
+                    [r for r in names
+                     if r[2] and r[1] not in species.get(r[0], {}).get(shard(r[1]), ())])
+    del names
+    byname = con.execute(f"""
+        WITH acc AS (
+            SELECT lower("col:kingdom") AS k, "col:scientificName" AS nm,
+                   "col:nameReferenceID" AS ref, "col:namePublishedInPage" AS page,
+                   "col:namePublishedInPageLink" AS pagelink
+            FROM read_csv('{os.path.join(WORK, "NameUsage.tsv")}', {opts})
+            WHERE "col:rank" = 'species' AND "col:status" = 'accepted'),
+        one AS (
+            SELECT k, nm, any_value(ref) AS ref, any_value(page) AS page,
+                   any_value(pagelink) AS pagelink
+            FROM acc GROUP BY k, nm HAVING count(*) = 1)
+        SELECT sn.kingdom, sn.sid, one.ref, one.page, one.pagelink
+        FROM sn JOIN one ON one.k = sn.kingdom AND one.nm = sn.nm
+        WHERE one.ref IS NOT NULL AND one.ref <> ''""").fetchall()
+    have_ref |= load_col_refs(con, {r[2] for r in byname} - have_ref, references, opts)
+    per_name = collections.Counter()
+    for kingdom, sid, ref, page, pagelink in byname:
+        if ref not in have_ref:
+            continue
+        link = {"r": "col:" + ref, "by": "name"}
+        if page:
+            link["p"] = page
+        if pagelink:
+            link["pl"] = pagelink
+        species[kingdom][shard(sid)][sid] = link
+        per_name[kingdom] += 1
+
     for kingdom in kingdom_names():
-        n, w, h = per_kingdom[kingdom], per_worms[kingdom], held[kingdom]
-        print(f"  {kingdom:10} {n:>10,} from COL + {w:>8,} from WoRMS of {h:>10,} species"
-              f" with a COL or WoRMS id ({100 * (n + w) / max(1, h):.0f}%)")
-    print(f"  {sum(per_kingdom.values()) + sum(per_worms.values()):,} species links, "
-          f"{sum(len(v) for v in references.values()):,} references")
+        n, w, m, h = per_kingdom[kingdom], per_worms[kingdom], per_name[kingdom], held[kingdom]
+        print(f"  {kingdom:10} {n:>9,} by COL id + {w:>7,} by WoRMS id + {m:>7,} by COL name"
+              f" of {h:>9,} species ({100 * (n + w + m) / max(1, h):.0f}%)")
+    print(f"  {sum(per_kingdom.values()) + sum(per_worms.values()) + sum(per_name.values()):,}"
+          f" species links, {sum(len(v) for v in references.values()):,} references")
     if not args.apply:
         print("\n  (dry run -- pass --apply to write data/citations)")
         return 0
