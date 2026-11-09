@@ -63,6 +63,11 @@
 >   families we *already hold*, none re-imported yet. Re-applying the
 >   Backbone on q-bert is what places them (stale counts; the dry run is the
 >   measurement).
+>   **Measured 2026-11-09: not worth a re-apply.** The Backbone holds only
+>   47,550 accepted bacteria and 16,057 accepted virus species; against
+>   q-bert's tree that is ~4 new bacteria and ~200 new viruses (the virus
+>   figure approximate: matched on the first two name tokens). The pending
+>   counts above are stale per-family tallies, not names the Backbone has.
 > - **The virus tree has two parallel structures:** 298 families under a
 >   bare Phylum > Class > Order path and 95 under ICTV's Realm > Kingdom >
 >   Phylum > Class > Order, with 46 phyla/classes/orders present in both
