@@ -132,6 +132,7 @@ func (d *Dashboard) HandleQueue(w http.ResponseWriter, r *http.Request) {
 			"applied":      7,
 			"blocked":      8,
 			"parked":       8,
+			"legal":        8,
 			"error":        9,
 			"declined":     9,
 		}

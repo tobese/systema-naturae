@@ -103,7 +103,8 @@ STORE = os.path.join(os.path.dirname(SCRIPT_DIR),
 EVENTS_LOG = os.path.join(DATA_DIR, "pipeline-events.jsonl")
 
 STAGES = ("candidate", "downloaded", "triaging", "transforming", "triaged", "queued",
-          "applying", "applied", "declined", "blocked", "parked", "needs-rerun", "error")
+          "applying", "applied", "declined", "blocked", "parked", "legal", "needs-rerun",
+          "error")
 
 
 def _entry_path(key: str) -> str:
@@ -366,7 +367,7 @@ def cmd_report(_args) -> None:
             if stage == "triaged" and row.get("triaged"):
                 m = row["triaged"]
                 extra = f"  staged {m.get('staged', '?')}"
-            if stage in ("declined", "blocked", "parked", "error") and row.get("reason"):
+            if stage in ("declined", "blocked", "parked", "legal", "error") and row.get("reason"):
                 extra = f"  {row['reason']}"
             if stage == "applied" and row.get("applied"):
                 added = row["applied"].get("added")

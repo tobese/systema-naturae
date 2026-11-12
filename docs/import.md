@@ -465,7 +465,7 @@ candidate → downloaded → triaging → triaged → queued → applying → ap
                                      ↑                                    ↑
                                   (dry run)                          (done)
 
-declined / blocked / parked / error / needs-rerun   (terminal / holding states)
+declined / blocked / parked / legal / error / needs-rerun   (terminal / holding states)
 ```
 
 **Nomenclatural sources** (2026-11-01). A names index -- a ColDP with a
@@ -496,6 +496,15 @@ printing, which in zoology is often a later combination or a re-listing, and
 the source and said "not now". Nothing in the pipeline (the Go ordinator,
 its side tasks, the refill) moves a source out of `parked` -- only
 `sourceQueue.py set` does -- and `reason` says what would unpark it.
+
+`legal` (2026-11-12) is for a legal or regulatory list -- an EU directive
+annex, the Bern Convention, an EEA/Natura 2000 list -- rather than a
+taxonomy: it names species a law covers, often under broad or outdated
+groupings, and offers nothing a checklist does. Before this stage they were
+declined, parked or blocked case by case (each tagged `sourceType:
+legal-annex`); `legal` keeps them together for a possible legal-status layer
+(see `BACKLOG.md`). Like `parked`, nothing in the pipeline moves a source
+out of it.
 
 `needs-rerun` carries its own `rerunCommand` (a JSON argv list set via
 `sourceQueue.py set --stage needs-rerun --rerun-command '[...]'`) --

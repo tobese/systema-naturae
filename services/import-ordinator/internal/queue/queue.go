@@ -29,7 +29,12 @@ const (
 	StageBlocked      Stage = "blocked"
 	// StageParked: measured, and a human said "not now". Nothing here moves
 	// a source out of it; only sourceQueue.py set does (see its docstring).
-	StageParked     Stage = "parked"
+	StageParked Stage = "parked"
+	// StageLegal: a legal or regulatory list (EU directive annex, Bern
+	// Convention, EEA/Natura 2000), not a taxonomy. Kept apart from declined
+	// so the set can be used later for a legal-status layer; like parked,
+	// only sourceQueue.py set moves a source out of it.
+	StageLegal      Stage = "legal"
 	StageNeedsRerun Stage = "needs-rerun"
 	StageError      Stage = "error"
 )
@@ -310,7 +315,7 @@ func SortKeys(entries map[string]*Entry) []string {
 // IsTerminal reports whether a stage is terminal.
 func IsTerminal(stage Stage) bool {
 	switch stage {
-	case StageApplied, StageDeclined, StageBlocked, StageParked, StageError:
+	case StageApplied, StageDeclined, StageBlocked, StageParked, StageLegal, StageError:
 		return true
 	default:
 		return false

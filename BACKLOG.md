@@ -303,6 +303,36 @@ a family file and wrong by 93% on a built order file — which is why `tree.py`
 descends both and is deliberately uniform rather than source-aware.
    (.git 1.2 GB) and `portal/public/data` is 2.0 GB of built output.
 
+## Legal status from the `legal` sources
+
+Added 2026-11-12. ChecklistBank carries a few dozen legal and regulatory
+lists: EU Birds and Habitats Directive annexes, the Bern Convention
+appendices, EEA/Natura 2000 and Emerald lists, EU invasive-species
+regulations, NZ EPA HSNO. They are not taxonomies and were never imported
+as one. Some fail the transform outright (no `col:parentID`), others name
+broad or outdated groupings. They now rest at queue stage `legal`, so they
+can be found again (`sourceQueue.py report`).
+
+What they could give: a per-species legal status ("Habitats Directive Annex
+IV", "Bern Convention Appendix II", "EU invasive species of Union concern"),
+held next to the tree the way `iucnStatus` is, and shown in the info panel.
+
+Open before starting:
+
+- **Where it lives.** A sidecar keyed by species id, like `wiki-images.json`
+  or `data/citations`, not a field written into every family file.
+- **Matching.** Annex lists name species with their own authorship and
+  sometimes genus-level or "all species of" entries; decide what counts as a
+  match and what is left for review.
+- **Versions.** Annexes are amended; keep the instrument and its date with
+  each status, so a later amendment is a new record, not an overwrite.
+- **Licences.** Most are CC0/CC BY on ChecklistBank, but check each archive
+  as taken (`docs/licence-issues.md`).
+- **Sources at `legal` today:** the 5 moved on 2026-11-12
+  (checklistbank-314974, -314308, -2110, -2107, -2097). Another 16 tagged
+  `sourceType: legal-annex` still sit at declined, parked or blocked; move
+  them to `legal` when this starts.
+
 ## Book: no phylum level
 
 The book goes kingdom selector → Part (CLASS) → Chapter (ORDER) → Family → Genus →

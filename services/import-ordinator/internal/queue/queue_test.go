@@ -75,3 +75,14 @@ func TestParkedIsNeverProcessed(t *testing.T) {
 		t.Fatal("parked must count as a resting stage")
 	}
 }
+
+// A legal list is held back for a later legal-status layer, never drained
+// as a checklist (2026-11-12).
+func TestLegalIsNeverProcessed(t *testing.T) {
+	if CanProcess(StageLegal) || IsActive(StageLegal) {
+		t.Fatal("legal must be neither processable nor active")
+	}
+	if !IsTerminal(StageLegal) {
+		t.Fatal("legal must count as a resting stage")
+	}
+}
