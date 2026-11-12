@@ -1,0 +1,595 @@
+{
+ "generatedAt": "2026-11-13T00:23:22",
+ "dump": "enwiki-20260601-pages-articles-multistream.xml.bz2",
+ "speciesParquet": "2026-11-12T16:06:43",
+ "note": "Leads, not records: a name here has an English Wikipedia article and no node in the tree. Wikipedia is not a source the tree takes names from; the list points at datasets not imported yet and synonyms not resolved. bacteria/viruses are matched against their family files on this checkout (q-bert writes them), so they are only as current as its last landing.",
+ "taxoboxArticles": 496126,
+ "taxonomyTemplates": 149524,
+ "articles": {
+  "compared, species": 387820,
+  "above species rank": 105120,
+  "compared, subspecies": 2032,
+  "name not a plain binomial or trinomial": 554,
+  "second article for the same name": 545,
+  "box without a taxon name": 55
+ },
+ "totals": {
+  "SPECIES held": 384521,
+  "SPECIES not held, genus held": 1344,
+  "SPECIES not held, genus not held": 1955,
+  "SUBSPECIES held": 78,
+  "SUBSPECIES not held, genus held": 2,
+  "SUBSPECIES species held, genus held": 1951,
+  "SUBSPECIES species held, genus not held": 1
+ },
+ "byKingdom": {
+  "animalia": {
+   "SPECIES held": 288766,
+   "SPECIES not held, genus held": 1106,
+   "SPECIES not held, genus not held": 1677,
+   "SUBSPECIES held": 2,
+   "SUBSPECIES not held, genus held": 2,
+   "SUBSPECIES species held, genus held": 1505
+  },
+  "archaea": {
+   "SPECIES held": 137,
+   "SPECIES not held, genus held": 1,
+   "SPECIES not held, genus not held": 1
+  },
+  "bacteria": {
+   "SPECIES held": 7868,
+   "SPECIES not held, genus held": 29,
+   "SPECIES not held, genus not held": 3,
+   "SUBSPECIES held": 2,
+   "SUBSPECIES species held, genus held": 14
+  },
+  "chromista": {
+   "SPECIES held": 950,
+   "SPECIES not held, genus held": 4,
+   "SPECIES not held, genus not held": 22
+  },
+  "fungi": {
+   "SPECIES held": 11116,
+   "SPECIES not held, genus held": 73,
+   "SPECIES not held, genus not held": 93,
+   "SUBSPECIES held": 22,
+   "SUBSPECIES species held, genus held": 1
+  },
+  "plantae": {
+   "SPECIES held": 74710,
+   "SPECIES not held, genus held": 109,
+   "SPECIES not held, genus not held": 70,
+   "SUBSPECIES held": 52,
+   "SUBSPECIES species held, genus held": 429
+  },
+  "protozoa": {
+   "SPECIES held": 172,
+   "SPECIES not held, genus held": 3,
+   "SPECIES not held, genus not held": 17,
+   "SUBSPECIES species held, genus held": 2
+  },
+  "unknown": {
+   "SPECIES held": 125,
+   "SPECIES not held, genus held": 9,
+   "SPECIES not held, genus not held": 64,
+   "SUBSPECIES species held, genus not held": 1
+  },
+  "viruses": {
+   "SPECIES held": 677,
+   "SPECIES not held, genus held": 10,
+   "SPECIES not held, genus not held": 8
+  }
+ },
+ "speciesNotHeldExtinct": {
+  "animalia": 2025,
+  "bacteria": 21,
+  "chromista": 10,
+  "fungi": 56,
+  "plantae": 88,
+  "protozoa": 9,
+  "unknown": 36,
+  "viruses": 7
+ },
+ "topFamiliesNotHeld": [
+  {
+   "kingdom": "animalia",
+   "family": "?",
+   "species": 1089
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Erebidae",
+   "species": 177
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Cerambycidae",
+   "species": 71
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Incertae sedis",
+   "species": 67
+  },
+  {
+   "kingdom": "unknown",
+   "family": "?",
+   "species": 55
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Crambidae",
+   "species": 55
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Chrysomelidae",
+   "species": 47
+  },
+  {
+   "kingdom": "fungi",
+   "family": "Incertae sedis",
+   "species": 43
+  },
+  {
+   "kingdom": "plantae",
+   "family": "?",
+   "species": 42
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Pyralidae",
+   "species": 42
+  },
+  {
+   "kingdom": "fungi",
+   "family": "Clavicipitaceae",
+   "species": 41
+  },
+  {
+   "kingdom": "fungi",
+   "family": "?",
+   "species": 31
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Lycaenidae",
+   "species": 30
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Autostichidae",
+   "species": 24
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Ulidiidae",
+   "species": 23
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Cosmopterigidae",
+   "species": 22
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Nymphalidae",
+   "species": 21
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Noctuidae",
+   "species": 21
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Trinchesiidae",
+   "species": 21
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Carabidae",
+   "species": 18
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Nymphaeaceae",
+   "species": 18
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Cyprinidae",
+   "species": 17
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Geometridae",
+   "species": 17
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Mordellidae",
+   "species": 17
+  },
+  {
+   "kingdom": "fungi",
+   "family": "Elsinoaceae",
+   "species": 13
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Eulimidae",
+   "species": 10
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Scarabaeidae",
+   "species": 10
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Lepismatidae",
+   "species": 10
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Rhacophoridae",
+   "species": 9
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Bithyniidae",
+   "species": 9
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Tephritidae",
+   "species": 9
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Machimosauridae",
+   "species": 9
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Tachinidae",
+   "species": 8
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Tortricidae",
+   "species": 8
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Hesperiidae",
+   "species": 7
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Fabaceae",
+   "species": 7
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Asteraceae",
+   "species": 7
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Camaenidae",
+   "species": 7
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Gelechiidae",
+   "species": 7
+  },
+  {
+   "kingdom": "chromista",
+   "family": "?",
+   "species": 7
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Choreutidae",
+   "species": 7
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Bothremydidae",
+   "species": 7
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Cicindelidae",
+   "species": 6
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Incertae sedis",
+   "species": 6
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Muricidae",
+   "species": 6
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Suidae",
+   "species": 6
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Acrolepiidae",
+   "species": 6
+  },
+  {
+   "kingdom": "bacteria",
+   "family": "Rhodobacteraceae",
+   "species": 6
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Varasichthyidae",
+   "species": 5
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Pyramidellidae",
+   "species": 5
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Muscicapidae",
+   "species": 5
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Labridae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Saturnaliidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Formicidae",
+   "species": 4
+  },
+  {
+   "kingdom": "viruses",
+   "family": "Retroviridae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Elasmosauridae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Nodosauridae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Cricetidae",
+   "species": 4
+  },
+  {
+   "kingdom": "unknown",
+   "family": "Pospiviroidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Soricidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Ranidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Dytiscidae",
+   "species": 4
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Myrtaceae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Bovidae",
+   "species": 4
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Orchidaceae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Vespidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Xenocyprididae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Fasciolariidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Volutidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Heliozelidae",
+   "species": 4
+  },
+  {
+   "kingdom": "viruses",
+   "family": "Pandoraviridae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Buchanosteidae",
+   "species": 4
+  },
+  {
+   "kingdom": "viruses",
+   "family": "?",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Anatidae",
+   "species": 4
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Lessemsauridae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Saltasauridae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Vespertilionidae",
+   "species": 3
+  },
+  {
+   "kingdom": "fungi",
+   "family": "Tricholomataceae",
+   "species": 3
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Malvaceae",
+   "species": 3
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Arecaceae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Rallidae",
+   "species": 3
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Rutaceae",
+   "species": 3
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Magnoliaceae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Trochidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Sunellidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Osteoglossidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Plethodidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Pseudomelatomidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "incertae sedis",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Proterosuchidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Palaemonidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Terebridae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Columbellidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Sciuridae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Agamidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Buprestidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Hepialidae",
+   "species": 3
+  },
+  {
+   "kingdom": "plantae",
+   "family": "Apocynaceae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Titanosuchidae",
+   "species": 3
+  },
+  {
+   "kingdom": "animalia",
+   "family": "Cossidae",
+   "species": 3
+  }
+ ]
+}
