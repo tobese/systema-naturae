@@ -19875,3 +19875,31 @@
 {"action":"ordinator","added":0,"at":"2026-11-12T15:21:17+0100","crossFamily":0,"families":0,"key":"checklistbank-89308","merged":0,"stage":"applied"}
 {"action":"ordinator","at":"2026-11-12T15:21:17+0100","key":"checklistbank-9780","stage":"transforming"}
 {"action":"ordinator","added":0,"at":"2026-11-12T15:21:37+0100","crossFamily":0,"families":0,"key":"checklistbank-9780","merged":0,"stage":"applied"}
+{"at": "2026-11-12T17:24:36+0100", "key": "checklistbank-314974", "stage": "error", "action": "tag", "sourceType": "legal-annex"}
+{"at": "2026-11-12T17:24:37+0100", "key": "checklistbank-314974", "stage": "legal", "action": "set", "reason": "legal annex list (EU directive / EEA), not a taxonomy; held at legal for a possible legal-status layer (BACKLOG.md), 2026-11-12"}
+{"at": "2026-11-12T17:24:39+0100", "key": "checklistbank-314308", "stage": "error", "action": "tag", "sourceType": "legal-annex"}
+{"at": "2026-11-12T17:24:41+0100", "key": "checklistbank-314308", "stage": "legal", "action": "set", "reason": "legal annex list (EU directive / EEA), not a taxonomy; held at legal for a possible legal-status layer (BACKLOG.md), 2026-11-12"}
+{"at": "2026-11-12T17:24:42+0100", "key": "checklistbank-2110", "stage": "blocked", "action": "tag", "sourceType": "legal-annex"}
+{"at": "2026-11-12T17:24:44+0100", "key": "checklistbank-2110", "stage": "legal", "action": "set", "reason": "legal annex list (EU directive / EEA), not a taxonomy; held at legal for a possible legal-status layer (BACKLOG.md), 2026-11-12"}
+{"at": "2026-11-12T17:24:46+0100", "key": "checklistbank-2107", "stage": "blocked", "action": "tag", "sourceType": "legal-annex"}
+{"at": "2026-11-12T17:24:47+0100", "key": "checklistbank-2107", "stage": "legal", "action": "set", "reason": "legal annex list (EU directive / EEA), not a taxonomy; held at legal for a possible legal-status layer (BACKLOG.md), 2026-11-12"}
+{"at": "2026-11-12T17:24:49+0100", "key": "checklistbank-2097", "stage": "blocked", "action": "tag", "sourceType": "legal-annex"}
+{"at": "2026-11-12T17:24:50+0100", "key": "checklistbank-2097", "stage": "legal", "action": "set", "reason": "legal annex list (EU directive / EEA), not a taxonomy; held at legal for a possible legal-status layer (BACKLOG.md), 2026-11-12"}
+{"at": "2026-11-12T21:59:12+0100", "key": "checklistbank-317018", "stage": "candidate", "action": "add", "title": "Checklist of the Vascular Plants of Vermont, USA"}
+{"at": "2026-11-12T21:59:27+0100", "key": "checklistbank-317018", "stage": "downloaded", "action": "driver"}
+{"action":"ordinator","at":"2026-11-12T22:03:19+0100","key":"checklistbank-317018","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-12T22:08:03+0100","key":"checklistbank-317018","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-12T22:08:03+0100","key":"checklistbank-317018","stage":"queued"}
+{"action":"ordinator","at":"2026-11-12T22:08:03+0100","key":"checklistbank-317018","stage":"applying"}
+{"action":"ordinator","added":7,"at":"2026-11-12T22:24:58+0100","crossFamily":5,"families":108,"key":"checklistbank-317018","merged":978,"stage":"applied"}
+{"at": "2026-11-12T23:26:15+0100", "key": "checklistbank-316691", "stage": "candidate", "action": "add", "title": "Catalogue of Life 2026-10-16 XR"}
+{"at": "2026-11-12T23:26:15+0100", "key": "checklistbank-316691", "stage": "downloaded", "action": "set", "reason": "COL26.10 XR, newer release of checklistbank-316441 (COL26.9 XR). Measured 2026-11-12: dry run +494 into held families, 617,813 merges (adds sourceIds), 20,962 refused for want of a family; direct diff vs 26.9: 11,038 newly accepted names, 294 missing from the six kingdoms. Queued for apply on user go-ahead."}
+{"action":"ordinator","at":"2026-11-12T23:28:24+0100","key":"checklistbank-316691","stage":"transforming"}
+{"action":"ordinator","at":"2026-11-12T23:54:50+0100","key":"checklistbank-316691","stage":"triaged"}
+{"action":"ordinator","at":"2026-11-12T23:54:50+0100","key":"checklistbank-316691","stage":"queued"}
+{"action":"ordinator","at":"2026-11-12T23:54:50+0100","key":"checklistbank-316691","stage":"applying"}
+{"action":"ordinator","at":"2026-11-13T00:28:55+0100","key":"checklistbank-316691","reason":"apply failed (rc=1): importwriteClient.ImportWriteError: POST /family/aeolosauridae/flush failed: 500 flush: open /Users/tb/Dev/systema-naturae/taxonomy/animalia/chordata/aeolosauridae/src/data/.importwrite-2829178957.tmp: no space left on device","stage":"error"}
+{"action":"ordinator","at":"2026-11-13T00:30:21+0100","key":"checklistbank-316691","reason":"reset: left in applying by an interrupted run","stage":"queued"}
+{"action":"ordinator","at":"2026-11-13T00:30:21+0100","key":"checklistbank-316691","stage":"applying"}
+{"action":"ordinator","at":"2026-11-13T06:30:21+0100","key":"checklistbank-316691","reason":"apply timed out after 6h0m0s","stage":"error"}
+{"at": "2026-11-13T19:50:16+0100", "key": "checklistbank-316691", "stage": "applied", "action": "set", "reason": "COL26.10 XR. Apply 1 failed 2026-11-13 00:28 (internal disk full); apply 2 killed by the 6h limit at 06:30 after animalia a..vespidae (~297k records, its counts were never logged). The rest (308,454 records, vespidae onward) applied 2026-11-13 19:48 by hand in a maintenanceSession: +248, 294,071 merged, 2,751 families; the added/merged here cover only that part. 22 new cross-kingdom duplicates follow COL26.10 XR's own placement (e.g. Urostylis blattiformis Bergroth under Plantae/Asteraceae): open, see homonym decisions."}
