@@ -401,7 +401,8 @@
           "lineage": "Lepidopus",
           "authorship": "Savigny, 1856",
           "sourceIds": {
-            "gbif-backbone": "8841677"
+            "gbif-backbone": "8841677",
+            "checklistbank-316691": "Q6YHT"
           },
           "children": [],
           "uuid": "cd858294-dbe9-5ff-9f3-c7fc9c5f50a071"
@@ -1002,7 +1003,8 @@
           "lineage": "Trichiurus",
           "authorship": "Griffith, Smith & Smith, 1834",
           "sourceIds": {
-            "gbif-backbone": "8800069"
+            "gbif-backbone": "8800069",
+            "checklistbank-316691": "TMT4Z"
           },
           "children": [],
           "uuid": "31657084-c02e-5f0-b59-db44197d09ee31"
@@ -2744,9 +2746,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trichiuridae"
+    },
+    {
+      "id": "GENUS_ENCHELYOPUS",
+      "name": "Enchelyopus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "trichiuridae",
+      "children": [
+        {
+          "id": "SP_ENCHELYOPUS_VIVIPARUS_MEUSCHEN_1778",
+          "name": "Enchelyopus viviparus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enchelyopus",
+          "authorship": "Meuschen, 1778",
+          "sourceIds": {
+            "checklistbank-316691": "NWXHB"
+          },
+          "uuid": "fe2b46ba-df20-44bc-a936-f823298b0670"
+        },
+        {
+          "id": "SP_ENCHELYOPUS_LUMPENUS_MEUSCHEN_1778",
+          "name": "Enchelyopus lumpenus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enchelyopus",
+          "authorship": "Meuschen, 1778",
+          "sourceIds": {
+            "checklistbank-316691": "NWXGC"
+          },
+          "uuid": "014d15c7-8284-4e21-b803-b35411057a35"
+        }
+      ]
     }
   ],
-  "speciesCount": 131,
+  "speciesCount": 133,
   "appSlug": "trichiuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",

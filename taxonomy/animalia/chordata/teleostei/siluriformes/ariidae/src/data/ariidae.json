@@ -2585,7 +2585,8 @@
           "authorship": "Jardine, 1841",
           "sourceIds": {
             "gbif-backbone": "9084322",
-            "checklistbank-316441": "LFGLC"
+            "checklistbank-316441": "LFGLC",
+            "checklistbank-316691": "LFGLC"
           },
           "children": [],
           "uuid": "908f3253-9f41-5c7-826-d28f5d0a73acaf"
@@ -2614,7 +2615,8 @@
           "sourceIds": {
             "gbif-backbone": "8192477",
             "checklistbank-316441": "LFF7B",
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q11906551"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q11906551",
+            "checklistbank-316691": "LFF7B"
           },
           "children": [],
           "uuid": "8e13d0d0-b349-5e6-b17-10ee8dc613c6ac"
@@ -7965,7 +7967,8 @@
             "checklistbank-316441": "4KG27",
             "9ca92552-f23a-41a8-a140-01abaa31c931": "680775",
             "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q2195517",
-            "checklistbank-312616": "7d8062a48dda48ec848af91e41f20167"
+            "checklistbank-312616": "7d8062a48dda48ec848af91e41f20167",
+            "checklistbank-316691": "4KG27"
           },
           "children": [],
           "uuid": "04f231f4-b849-5ae-b5c-11aafd4bd8b805",
@@ -10165,6 +10168,18 @@
           },
           "children": [],
           "uuid": "d03345ed-d677-541-82f-b93ad2e94a986a"
+        },
+        {
+          "id": "SP_KYATAPHISA_CAELATA",
+          "name": "Kyataphisa caelata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kyataphisa",
+          "sourceIds": {
+            "checklistbank-316691": "VSMXG"
+          },
+          "uuid": "0bd6437e-1bd4-4977-9a34-44145e602463"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11808,9 +11823,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ariidae"
+    },
+    {
+      "id": "GENUS_CATASTOMA",
+      "name": "Catastoma",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "ariidae",
+      "children": [
+        {
+          "id": "SP_CATASTOMA_NASUTUM_KUHL_VAN_HASSELT_IN_CUVIER_VALENCIENNES_1840",
+          "name": "Catastoma nasutum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Catastoma",
+          "authorship": "Kuhl & van Hasselt in Cuvier & Valenciennes, 1840",
+          "sourceIds": {
+            "checklistbank-316691": "M7Y2F"
+          },
+          "uuid": "e0d8e003-597c-4d5c-b2f1-179ce78dcba6"
+        }
+      ]
     }
   ],
-  "speciesCount": 662,
+  "speciesCount": 664,
   "appSlug": "ariidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",

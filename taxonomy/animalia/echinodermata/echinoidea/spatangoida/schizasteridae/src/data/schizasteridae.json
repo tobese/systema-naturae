@@ -1835,7 +1835,8 @@
             "col": [
               "79VGZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034517"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1034517",
+            "checklistbank-316691": "7J3L6"
           },
           "authorityIds": "col:79VGZ",
           "authorship": "Chavanon, 1974"
@@ -4399,7 +4400,8 @@
             "checklistbank-1174": [
               "txn:416432"
             ],
-            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105757880"
+            "ac5f72cf-172d-4eb4-ad8c-db66ea1c78e5": "Q105757880",
+            "checklistbank-316691": "7HLDR"
           },
           "authorityIds": "checklistbank:txn:416432,checklistbank:urn:lsid:marinespecies.org:taxname:757701,checklistbank-1174:txn:416432,col:6SR65,gbif-backbone:7353776"
         },
@@ -7817,9 +7819,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "schizasteridae"
+    },
+    {
+      "id": "GENUS_PARABATUS",
+      "name": "Parabatus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizasteridae",
+      "children": [
+        {
+          "id": "SP_PARABATUS_GRACILIS_MORLEY_1913",
+          "name": "Parabatus gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parabatus",
+          "authorship": "Morley, 1913",
+          "sourceIds": {
+            "checklistbank-316691": "RFCSB"
+          },
+          "uuid": "cfa40e63-399a-4857-aa7a-ff28335ea11b"
+        }
+      ]
     }
   ],
-  "speciesCount": 459,
+  "speciesCount": 460,
   "appSlug": "schizasteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",
