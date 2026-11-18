@@ -303,6 +303,27 @@ a family file and wrong by 93% on a built order file — which is why `tree.py`
 descends both and is deliberately uniform rather than source-aware.
    (.git 1.2 GB) and `portal/public/data` is 2.0 GB of built output.
 
+## COL 26.11: follow up the 26.10 XR cross-kingdom copies
+
+Added 2026-11-18. When COL26.11 (base and XR) is out (`checkColRelease.py`),
+check how it places the 22 names in `docs/col-26.10-xr-misplacements.md`
+before or while applying it:
+
+- **The 6 open ones**, allowlisted as UNRESOLVED in
+  `data/known-cross-kingdom-homonyms.json` (`3b54646`) so CI could gate:
+  *Dinamoeba mirabilis*, *Isospora annthomassonae*, *Kempia longicolpites*,
+  *Ophiocordyceps gotrae*, *O. yuanyangensis*, *Phialina salinarum*. If
+  26.11 settles a kingdom (or other ChecklistBank datasets now reach 3:1),
+  record the decision in `data/cross-kingdom-homonym-decisions.json`, remove
+  the other copy and take the id out of the allowlist. The animal copies of
+  *Isospora* (Tyrannidae) and the two *Ophiocordyceps* (Hepialidae) look like
+  the host taken for the parent.
+- **The 14 decided as COL26.10 XR misfilings.** If 26.11 still files them
+  under the homonym genus, they are worth reporting to COL; the decisions
+  file already stops `importTransformed.py` re-adding them.
+- **New ones.** A 26.11 XR apply can add more of the same shape; verifyTree's
+  cross-kingdom check is where they show up.
+
 ## Legal status from the `legal` sources
 
 Added 2026-11-12. ChecklistBank carries a few dozen legal and regulatory
